@@ -82,6 +82,24 @@ Rules:
 	ra2|rules/civilian-props.yaml
 	ra2|rules/trees.yaml
 	ra2|rules/civilian-naval.yaml
+	ra2|modern-factions/common.yaml
+	ra2|modern-factions/aircraft-ai.yaml
+	ra2|modern-factions/shared-replacements.yaml
+	ra2|modern-factions/bot-types.yaml
+	ra2|modern-factions/china.yaml
+	ra2|modern-factions/china-roster.yaml
+	ra2|modern-factions/china-ai.yaml
+	ra2|modern-factions/china-audio.yaml
+	ra2|modern-factions/iran.yaml
+	ra2|modern-factions/iran-roster.yaml
+	ra2|modern-factions/iran-ai.yaml
+	ra2|modern-factions/iran-audio.yaml
+	ra2|modern-factions/iran-roles.yaml
+	ra2|modern-factions/turkey.yaml
+	ra2|modern-factions/turkey-roster.yaml
+	ra2|modern-factions/turkey-ai.yaml
+	ra2|modern-factions/turkey-audio.yaml
+	ra2|modern-factions/turkey-roles.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -99,9 +117,19 @@ Sequences:
 	ra2|sequences/tech-structures.yaml
 	ra2|sequences/trees.yaml
 	ra2|sequences/vehicles.yaml
+	ra2|modern-factions/china-sequences.yaml
+	ra2|modern-factions/china-roster-sequences.yaml
+	ra2|modern-factions/iran-sequences.yaml
+	ra2|modern-factions/iran-roster-sequences.yaml
+	ra2|modern-factions/turkey-sequences.yaml
+	ra2|modern-factions/turkey-roster-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
+	ra2|modern-factions/voxels.yaml
+	ra2|modern-factions/china-voxels.yaml
+	ra2|modern-factions/iran-voxels.yaml
+	ra2|modern-factions/turkey-voxels.yaml
 
 Cursors:
 	ra2|cursors.yaml
@@ -178,9 +206,16 @@ Weapons:
 	ra2|weapons/misc.yaml
 	ra2|weapons/missiles.yaml
 	ra2|weapons/zaps.yaml
+	ra2|modern-factions/weapons.yaml
+	ra2|modern-factions/china-weapons.yaml
+	ra2|modern-factions/iran-weapons.yaml
+	ra2|modern-factions/turkey-weapons.yaml
 
 Voices:
 	ra2|audio/voices.yaml
+	ra2|modern-factions/china-voices.yaml
+	ra2|modern-factions/iran-voices.yaml
+	ra2|modern-factions/turkey-voices.yaml
 
 Notifications:
 	ra2|audio/notifications.yaml
@@ -209,6 +244,10 @@ FluentMessages:
 	ra2|languages/rules/en.ftl
 	ra2|languages/native-preview.ftl
 	ra2|languages/ai.ftl
+	ra2|modern-factions/messages.ftl
+	ra2|modern-factions/china-messages.ftl
+	ra2|modern-factions/iran-messages.ftl
+	ra2|modern-factions/turkey-messages.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml

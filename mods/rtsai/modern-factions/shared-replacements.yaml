@@ -1,0 +1,132 @@
+aegis:
+	Buildable:
+		Prerequisites: radar, ~gayard, ~!faction.china, ~!faction.turkey
+
+apoc:
+	Buildable:
+		Prerequisites: ~naweap, natech, ~!faction.iran
+
+atesla:
+	Buildable:
+		Prerequisites: power, radar, ~structures.allies, ~!faction.china, ~!faction.turkey
+
+carrier:
+	Buildable:
+		Prerequisites: gatech, ~gayard, ~!faction.china, ~!faction.turkey
+
+cleg:
+	Buildable:
+		Prerequisites: ~gapile, gatech, ~!faction.china, ~!faction.turkey
+
+dest:
+	Buildable:
+		Prerequisites: ~gayard, ~!faction.china, ~!faction.turkey
+
+dlph:
+	Buildable:
+		Prerequisites: gatech, ~gayard, ~!faction.china, ~!faction.turkey
+
+dron:
+	Buildable:
+		Prerequisites: ~naweap, ~!faction.iran
+
+e1:
+	Buildable:
+		Prerequisites: ~gapile, ~!faction.china, ~!faction.turkey
+
+e2:
+	Buildable:
+		Prerequisites: ~nahand, ~!faction.iran
+
+flakt:
+	Buildable:
+		Prerequisites: naradr, ~nahand, ~!faction.iran
+
+fv:
+	Buildable:
+		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey
+
+gapill:
+	Buildable:
+		Prerequisites: barracks, ~structures.allies, ~!faction.china, ~!faction.turkey
+
+htnk:
+	Buildable:
+		Prerequisites: ~naweap, ~!faction.iran
+
+hyd:
+	Buildable:
+		Prerequisites: naradr, ~nayard, ~!faction.iran
+
+ivan:
+	Buildable:
+		Prerequisites: naradr, ~nahand, ~!faction.iran
+
+jumpjet:
+	Buildable:
+		Prerequisites: ~gapile, radar, ~!faction.china, ~!faction.turkey
+
+lcrf:
+	Buildable:
+		Prerequisites: ~gayard, ~!faction.china
+
+mgtk:
+	Buildable:
+		Prerequisites: gatech, ~gaweap, ~!faction.china, ~!faction.turkey
+
+mtnk:
+	Buildable:
+		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey
+
+naflak:
+	Buildable:
+		Prerequisites: barracks, ~structures.soviets, ~!faction.iran
+
+nalasr:
+	Buildable:
+		Prerequisites: barracks, ~structures.soviets, ~!faction.iran
+
+nasam:
+	Buildable:
+		Prerequisites: barracks, ~structures.allies, ~!faction.china, ~!faction.turkey
+
+orca:
+	Buildable:
+		Prerequisites: ~aircraft.harrier, ~!faction.china, ~!faction.turkey
+
+shad:
+	Buildable:
+		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey
+
+shk:
+	Buildable:
+		Prerequisites: ~nahand, ~!faction.iran
+
+sqd:
+	Buildable:
+		Prerequisites: natech, ~nayard, ~!faction.iran
+
+sref:
+	Buildable:
+		Prerequisites: gatech, ~gaweap, ~!faction.china, ~!faction.turkey
+
+sub:
+	Buildable:
+		Prerequisites: ~nayard, ~!faction.iran
+
+tany:
+	Buildable:
+		Prerequisites: gatech, ~gapile, ~!faction.china, ~!faction.turkey
+
+tesla:
+	Buildable:
+		Prerequisites: naradr, ~structures.soviets, ~!faction.iran
+
+yuri:
+	Buildable:
+		Prerequisites: natech, ~nahand, ~!faction.iran
+
+zep:
+	Buildable:
+		Prerequisites: ~naweap, natech, ~!faction.iran
+

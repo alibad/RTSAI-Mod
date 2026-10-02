@@ -1,4 +1,7 @@
 Metrics:
+	FactionSuffix-china: allies
+	FactionSuffix-iran: soviets
+	FactionSuffix-turkey: allies
 	FactionSuffix-america: allies
 	FactionSuffix-korea: allies
 	FactionSuffix-france: allies

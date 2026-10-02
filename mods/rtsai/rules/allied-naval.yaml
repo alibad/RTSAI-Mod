@@ -280,8 +280,6 @@ carrier:
 	Mobile:
 		TurnSpeed: 4
 		Speed: 60
-	RevealsShroud:
-		Range: 7c0
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 512

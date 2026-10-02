@@ -1,0 +1,76 @@
+Player:
+	BaseBuilderBotModule@naval:
+		BuildingFractions:
+			garefn: 20
+			narefn: 20
+			gapowr: 20
+			napowr: 20
+			gapile: 12
+			nahand: 12
+			gaweap: 16
+			naweap: 16
+			gaairc: 8
+			amradr: 8
+			naradr: 8
+			gatech: 5
+			natech: 5
+	BaseBuilderBotModule@turtle:
+		BuildingFractions:
+			garefn: 20
+			narefn: 20
+			gapowr: 20
+			napowr: 20
+			gapile: 12
+			nahand: 12
+			gaweap: 16
+			naweap: 16
+			gaairc: 8
+			amradr: 8
+			naradr: 8
+			gatech: 5
+			natech: 5
+	BaseBuilderBotModule@rush:
+		BuildingFractions:
+			garefn: 20
+			narefn: 20
+			gapowr: 20
+			napowr: 20
+			gapile: 12
+			nahand: 12
+			gaweap: 16
+			naweap: 16
+			gaairc: 8
+			amradr: 8
+			naradr: 8
+			gatech: 5
+			natech: 5
+	BaseBuilderBotModule@medium:
+		BuildingFractions:
+			garefn: 20
+			narefn: 20
+			gapowr: 20
+			napowr: 20
+			gapile: 12
+			nahand: 12
+			gaweap: 16
+			naweap: 16
+			gaairc: 8
+			amradr: 8
+			naradr: 8
+			gatech: 5
+			natech: 5
+	BaseBuilderBotModule@normal:
+		BuildingFractions:
+			garefn: 20
+			narefn: 20
+			gapowr: 20
+			napowr: 20
+			gapile: 12
+			nahand: 12
+			gaweap: 16
+			naweap: 16
+			gaairc: 8
+			amradr: 8
+			naradr: 8
+			gatech: 5
+			natech: 5
