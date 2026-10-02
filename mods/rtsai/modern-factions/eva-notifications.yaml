@@ -1,0 +1,11 @@
+# Faction announcers (EVA) for the modern factions.
+# Speech notifications are looked up as <prefix><clip>.wav for the local player's faction, so each
+# modern faction hears its own announcer for every Speech notification in audio/notifications.yaml.
+# Audio, voices and licenses: modern-factions/audio/PROVENANCE.json and docs/audio-provenance.md.
+Speech:
+	Prefixes:
+		china: ra2|modern-factions/audio/eva/china/
+		iran: ra2|modern-factions/audio/eva/iran/
+		turkey: ra2|modern-factions/audio/eva/turkey/
+		saudi: ra2|modern-factions/audio/eva/saudi/
+		yemen: ra2|modern-factions/audio/eva/yemen/

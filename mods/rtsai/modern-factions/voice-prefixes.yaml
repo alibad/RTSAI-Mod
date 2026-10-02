@@ -1,0 +1,10 @@
+# Stock voice sets that are keyed by faction need the modern factions too; without an entry the
+# engine looks up an unprefixed file (e.g. sea.wav) that does not exist. The modern factions use
+# the RA2 engineer of their side: Allies (china, turkey, saudi) and Soviets (iran, yemen).
+EngineerVoice:
+	Prefixes:
+		china: iena
+		turkey: iena
+		saudi: iena
+		iran: iens
+		yemen: iens
