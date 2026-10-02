@@ -9,6 +9,9 @@ Player:
 			r2hodeidah: 24
 			r2sahaab: 10
 			r2mokha: 6
+		# Bots field the r2wadighost commando only after 20 minutes (balance-harness: it traded 0.5 per credit).
+		UnitDelays:
+			r2wadighost: 30000
 		UnitLimits:
 			r2yspot: 3
 			r2wadighost: 1
@@ -36,6 +39,8 @@ Player:
 			r2hodeidah: 24
 			r2sahaab: 10
 			r2mokha: 6
+		UnitDelays:
+			r2wadighost: 30000
 		UnitLimits:
 			r2yspot: 3
 			r2wadighost: 1
@@ -63,6 +68,8 @@ Player:
 			r2hodeidah: 24
 			r2sahaab: 10
 			r2mokha: 6
+		UnitDelays:
+			r2wadighost: 30000
 		UnitLimits:
 			r2yspot: 3
 			r2wadighost: 1
@@ -90,6 +97,8 @@ Player:
 			r2hodeidah: 24
 			r2sahaab: 10
 			r2mokha: 6
+		UnitDelays:
+			r2wadighost: 30000
 		UnitLimits:
 			r2yspot: 3
 			r2wadighost: 1
@@ -117,6 +126,8 @@ Player:
 			r2hodeidah: 24
 			r2sahaab: 10
 			r2mokha: 6
+		UnitDelays:
+			r2wadighost: 30000
 		UnitLimits:
 			r2yspot: 3
 			r2wadighost: 1

@@ -15,6 +15,9 @@ Player:
 			r2loiter: 8
 			r2peykaap: 24
 			r2ghadir: 18
+		# Bots field the r2shadowone commando only after 20 minutes (balance-harness: it traded 0.5 per credit).
+		UnitDelays:
+			r2shadowone: 30000
 		UnitLimits:
 			r2dronecontrol: 3
 			r2shadowone: 1
@@ -49,6 +52,8 @@ Player:
 			r2loiter: 8
 			r2peykaap: 24
 			r2ghadir: 18
+		UnitDelays:
+			r2shadowone: 30000
 		UnitLimits:
 			r2dronecontrol: 3
 			r2shadowone: 1
@@ -83,6 +88,8 @@ Player:
 			r2loiter: 23
 			r2peykaap: 24
 			r2ghadir: 18
+		UnitDelays:
+			r2shadowone: 30000
 		UnitLimits:
 			r2dronecontrol: 3
 			r2shadowone: 1
@@ -117,6 +124,8 @@ Player:
 			r2loiter: 8
 			r2peykaap: 24
 			r2ghadir: 18
+		UnitDelays:
+			r2shadowone: 30000
 		UnitLimits:
 			r2dronecontrol: 3
 			r2shadowone: 1
@@ -151,6 +160,8 @@ Player:
 			r2loiter: 8
 			r2peykaap: 54
 			r2ghadir: 48
+		UnitDelays:
+			r2shadowone: 30000
 		UnitLimits:
 			r2dronecontrol: 3
 			r2shadowone: 1
