@@ -75,7 +75,7 @@ Player:
 		SquadSizeModifier: 135
 		RoleShareModifiers:
 			line-infantry: 130
-			anti-armor: 110
+			anti-armor: 160
 			artillery: 140
 			strike-aircraft: 50
 			naval-screen: 140
