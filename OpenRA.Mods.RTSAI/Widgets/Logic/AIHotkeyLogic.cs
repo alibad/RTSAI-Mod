@@ -95,6 +95,10 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 		bool HandleKeyPress(KeyInput e)
 		{
+			// The lobby turned the co-commander off for this match: no voice, orders or AUTO.
+			if (CompanionBridge.IsDisabledForMatch)
+				return false;
+
 			var ask = askKey.GetValue();
 			if (e.Event == KeyInputEvent.Down && askKey.IsActivatedBy(e))
 			{

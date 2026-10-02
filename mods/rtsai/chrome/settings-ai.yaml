@@ -51,6 +51,68 @@ Container@AI_PANEL:
 							Font: TinyBold
 							Align: Center
 							Text: label-ai-companion-section
+				Container@AI_MODE_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 68
+					Children:
+						Label@AI_MODE_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-mode
+						DropDownButton@AI_MODE:
+							X: 10
+							Y: 25
+							Width: PARENT_WIDTH - 20
+							Height: 25
+						Label@AI_MODE_STATUS:
+							X: 10
+							Y: 51
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Font: Tiny
+				Container@EXTERNAL_AI_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 104
+					Children:
+						LabelForInput@EXTERNAL_ENDPOINT_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-external-endpoint
+							For: EXTERNAL_ENDPOINT
+						TextField@EXTERNAL_ENDPOINT:
+							X: 10
+							Y: 22
+							Width: PARENT_WIDTH - 20
+							Height: 25
+							MaxLength: 160
+						LabelForInput@EXTERNAL_MODEL_LABEL:
+							X: 10
+							Y: 52
+							Width: (PARENT_WIDTH - 30) / 2
+							Height: 20
+							Text: label-ai-external-model
+							For: EXTERNAL_MODEL
+						TextField@EXTERNAL_MODEL:
+							X: 10
+							Y: 74
+							Width: (PARENT_WIDTH - 30) / 2
+							Height: 25
+							MaxLength: 160
+						LabelForInput@EXTERNAL_KEY_LABEL:
+							X: 20 + (PARENT_WIDTH - 30) / 2
+							Y: 52
+							Width: (PARENT_WIDTH - 30) / 2
+							Height: 20
+							Text: label-ai-external-key
+							For: EXTERNAL_KEY
+						PasswordField@EXTERNAL_KEY:
+							X: 20 + (PARENT_WIDTH - 30) / 2
+							Y: 74
+							Width: (PARENT_WIDTH - 30) / 2
+							Height: 25
+							MaxLength: 300
 				Container@COMPANION_ENABLED_ROW:
 					Width: PARENT_WIDTH - 24
 					Height: 22
