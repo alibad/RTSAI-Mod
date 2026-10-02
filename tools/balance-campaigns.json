@@ -1,0 +1,53 @@
+{
+ "smoke": {
+  "description": "Two quick matches (one pairing, both orientations) that exercise the harness end to end.",
+  "seed": 7,
+  "wall_guard_seconds": 900,
+  "suites": [
+   {
+    "id": "smoke",
+    "factions": ["china", "russia"],
+    "bots": ["normal"],
+    "replicates": 1,
+    "tick_cap": 45000,
+    "maps": [{"map": "dustbowl", "title": "Dustbowl"}]
+   }
+  ]
+ },
+ "round-robin": {
+  "description": "Release round robin: the five modern factions plus one Allied (America) and one Soviet (Russia) RA2 baseline. Every pairing from both spawn orientations on two 1v1 land maps, normal bot on both sides. 40-minute cap (a 30-minute pilot drew 45% of games).",
+  "seed": 20261002,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": ["china", "iran", "turkey", "saudi", "yemen", "america", "russia"],
+    "bots": ["normal"],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {"map": "dustbowl", "title": "Dustbowl"},
+     {"map": "tournament-2A", "title": "Official Tournament Map A"}
+    ]
+   }
+  ]
+ },
+ "probe": {
+  "description": "One replicate of the round robin (84 games) for screening a tuning candidate. Copy it and add a suite \"rules\" overlay to try a change without editing the mod.",
+  "seed": 20261003,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "probe",
+    "factions": ["china", "iran", "turkey", "saudi", "yemen", "america", "russia"],
+    "bots": ["normal"],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {"map": "dustbowl", "title": "Dustbowl"},
+     {"map": "tournament-2A", "title": "Official Tournament Map A"}
+    ]
+   }
+  ]
+ }
+}
