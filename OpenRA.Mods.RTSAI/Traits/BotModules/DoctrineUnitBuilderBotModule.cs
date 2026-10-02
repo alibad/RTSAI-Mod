@@ -79,6 +79,14 @@ namespace OpenRA.Mods.RTSAI.Traits
 		// The profile's role shares after the faction doctrine.
 		public readonly FrozenDictionary<string, int> RoleShares;
 
+		// Anti-air response (BotDoctrine.AirDefenseShare): the shares in use switch to airDefenseShares while the
+		// visible enemy air value exceeds the bot's own air defense.
+		const int AirCheckInterval = 150;
+		readonly BotDoctrineInfo doctrine;
+		readonly FrozenDictionary<string, int> airDefenseShares;
+		FrozenDictionary<string, int> activeRoleShares;
+		bool airAlert;
+
 		IBotRequestPauseUnitProduction[] requestPause;
 		int idleUnitCount;
 		int currentQueueIndex = 0;
@@ -91,7 +99,10 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			world = self.World;
 			player = self.Owner;
-			RoleShares = BotDoctrineInfo.For(self)?.Apply(info.RoleShares) ?? info.RoleShares;
+			doctrine = BotDoctrineInfo.For(self);
+			RoleShares = doctrine?.Apply(info.RoleShares) ?? info.RoleShares;
+			activeRoleShares = RoleShares;
+			airDefenseShares = doctrine != null && doctrine.AirDefenseShare > 0 ? doctrine.WithAirDefense(RoleShares) : null;
 			unitsToBuild = new ActorIndex.OwnerAndNames(world,
 				DoctrineUnitBuilderBotModuleInfo.GetUnitTypesToTrack(info.UnitsToBuild, RoleShares, info.UnitQueues, world.Map.Rules.Actors.Values),
 				player);
@@ -122,6 +133,9 @@ namespace OpenRA.Mods.RTSAI.Traits
 				return;
 
 			ticks++;
+
+			if (airDefenseShares != null && ticks % AirCheckInterval == 0)
+				UpdateAirDefense();
 
 			if (ticks % FeedbackTime == 0)
 			{
@@ -169,7 +183,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		void BuildRandomUnit(IBot bot, ProductionQueue[] queues)
 		{
-			if (Info.UnitsToBuild.Count == 0 && RoleShares.Count == 0)
+			if (Info.UnitsToBuild.Count == 0 && activeRoleShares.Count == 0)
 				return;
 
 			// Pick a free queue
@@ -218,7 +232,32 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			var buildableThings = queue.BuildableItems().Shuffle(world.LocalRandom).ToArray();
 			var allUnits = unitsToBuild.Actors.Where(a => !a.IsDead).Select(actor => actor.Info).ToArray();
-			return ChooseUnitToBuild(Info, RoleShares, buildableThings, allUnits, world.WorldTick, HasAdequateAirUnitReloadBuildings, queue.Info.Type);
+			return ChooseUnitToBuild(Info, activeRoleShares, buildableThings, allUnits, world.WorldTick, HasAdequateAirUnitReloadBuildings, queue.Info.Type);
+		}
+
+		static int CostOf(ActorInfo actor) => actor.TraitInfoOrDefault<ValuedInfo>()?.Cost ?? 0;
+
+		void UpdateAirDefense()
+		{
+			var enemyAir = 0;
+			foreach (var actor in world.Actors)
+			{
+				if (actor.IsDead || !actor.IsInWorld || actor.Owner == null || player.RelationshipWith(actor.Owner) != PlayerRelationship.Enemy)
+					continue;
+
+				if (actor.GetEnabledTargetTypes().Overlaps(doctrine.AirThreatTargetTypes) && actor.CanBeViewedByPlayer(player))
+					enemyAir += CostOf(actor.Info);
+			}
+
+			var ownAirDefense = unitsToBuild.Actors.Where(a => !a.IsDead && a.Info.TraitInfos<StrategicRoleInfo>()
+				.Any(r => r.Roles.Contains(doctrine.AirDefenseRole))).Sum(a => CostOf(a.Info));
+			var alert = enemyAir > 0 && (long)ownAirDefense * 100 < (long)enemyAir * doctrine.AirDefenseRatio;
+			if (alert == airAlert)
+				return;
+
+			airAlert = alert;
+			activeRoleShares = alert ? airDefenseShares : RoleShares;
+			DoctrineLog.Write(player, $"air defense {(alert ? "on" : "off")}: enemy air {enemyAir}, own {ownAirDefense}");
 		}
 
 		public static ActorInfo ChooseUnitToBuild(DoctrineUnitBuilderBotModuleInfo info, FrozenDictionary<string, int> roleShares,

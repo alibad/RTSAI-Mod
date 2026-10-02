@@ -14,6 +14,7 @@ using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.RTSAI.Traits
@@ -44,12 +45,34 @@ namespace OpenRA.Mods.RTSAI.Traits
 			"of DoctrineSquadManagerBotModule). Below 100 attacks earlier in smaller groups; above 100 masses first.")]
 		public readonly int SquadSizeModifier = 100;
 
+		[Desc("Anti-air response for factions whose air defense cannot fight ground units: while the visible enemy",
+			"aircraft outvalue AirDefenseRatio percent of the bot's own AirDefenseRole units, that role's share is",
+			"raised to at least this value (DoctrineUnitBuilderBotModule). 0 disables the response.")]
+		public readonly int AirDefenseShare = 0;
+
+		[Desc("StrategicRole that answers aircraft.")]
+		public readonly string AirDefenseRole = "anti-air";
+
+		[Desc("Own air-defense value wanted, in percent of the visible enemy air value.")]
+		public readonly int AirDefenseRatio = 100;
+
+		[Desc("Target types that make a visible enemy actor an air threat (airborne units).")]
+		public readonly BitSet<TargetableType> AirThreatTargetTypes = new("Air");
+
 		// Called from bot module constructors, while the player actor is still being created.
 		public static BotDoctrineInfo For(Actor playerActor)
 		{
 			var faction = playerActor.Owner.Faction?.InternalName;
 			return faction == null ? null : playerActor.Info.TraitInfos<BotDoctrineInfo>()
 				.FirstOrDefault(d => d.Factions.Contains(faction));
+		}
+
+		// The role shares while answering an air threat: AirDefenseRole raised to AirDefenseShare.
+		public FrozenDictionary<string, int> WithAirDefense(FrozenDictionary<string, int> roleShares)
+		{
+			var shares = roleShares.ToDictionary(kv => kv.Key, kv => kv.Value);
+			shares[AirDefenseRole] = Math.Max(shares.GetValueOrDefault(AirDefenseRole), AirDefenseShare);
+			return shares.ToFrozenDictionary();
 		}
 
 		public FrozenDictionary<string, int> Apply(FrozenDictionary<string, int> roleShares)

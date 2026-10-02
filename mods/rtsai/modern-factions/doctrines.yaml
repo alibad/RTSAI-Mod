@@ -11,6 +11,8 @@
 # and sites are air-only (^AAMissile), unlike the stock IFV/flak units that share the anti-air role,
 # so every doctrine keeps anti-air low: in bot-vs-bot rounds they destroyed 0.02-0.15 credits per
 # credit spent. Other cuts follow the same measure (value destroyed per credit produced).
+# AirDefenseShare: anti-air stays low until visible enemy aircraft (including airborne rocketeers)
+# outvalue the bot's own anti-air units; then the role's share rises to 24 until they are matched.
 # SquadSizeModifier scales the profile's attack-squad size (a unit count): factions with cheap units
 # gather more of them, factions with expensive units fewer, so squads carry similar value.
 
@@ -19,6 +21,7 @@ Player:
 	BotDoctrine@china:
 		Factions: china
 		Doctrine: networked-combined-arms
+		AirDefenseShare: 24
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
 		RoleShareModifiers:
 			support: 150
@@ -33,6 +36,7 @@ Player:
 	BotDoctrine@iran:
 		Factions: iran
 		Doctrine: layered-denial
+		AirDefenseShare: 24
 		InitialBuildOrder: napowr, narefn, nahand, naweap, narefn, naradr, r2iraasite
 		SquadSizeModifier: 105
 		RoleShareModifiers:
@@ -45,6 +49,7 @@ Player:
 	BotDoctrine@turkey:
 		Factions: turkey
 		Doctrine: mobile-defense
+		AirDefenseShare: 24
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept, gaairc
 		RoleShareModifiers:
 			main-battle-tank: 130
@@ -57,6 +62,7 @@ Player:
 	BotDoctrine@saudi:
 		Factions: saudi
 		Doctrine: expeditionary
+		AirDefenseShare: 24
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
 		SquadSizeModifier: 70
 		RoleShareModifiers:
@@ -74,6 +80,7 @@ Player:
 	BotDoctrine@yemen:
 		Factions: yemen
 		Doctrine: asymmetric-defense
+		AirDefenseShare: 24
 		InitialBuildOrder: napowr, nahand, narefn, r2ybunker, naweap, narefn, naradr
 		SquadSizeModifier: 135
 		RoleShareModifiers:
