@@ -10,6 +10,9 @@ Player:
 			r2sadiq: 22
 			r2riyadh: 20
 			r2jubail: 5
+		# Bots field the r2falcon commando only after 20 minutes (balance-harness: it traded 0.5 per credit).
+		UnitDelays:
+			r2falcon: 30000
 		UnitLimits:
 			r2sajtac: 3
 			r2falcon: 1
@@ -27,7 +30,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@normal:
+	DoctrineSquadManagerBotModule@normal:
 	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2sang: 65
@@ -39,6 +42,8 @@ Player:
 			r2sadiq: 22
 			r2riyadh: 20
 			r2jubail: 5
+		UnitDelays:
+			r2falcon: 30000
 		UnitLimits:
 			r2sajtac: 3
 			r2falcon: 1
@@ -56,7 +61,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@medium:
+	DoctrineSquadManagerBotModule@medium:
 	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2sang: 65
@@ -68,6 +73,8 @@ Player:
 			r2sadiq: 22
 			r2riyadh: 20
 			r2jubail: 5
+		UnitDelays:
+			r2falcon: 30000
 		UnitLimits:
 			r2sajtac: 3
 			r2falcon: 1
@@ -85,7 +92,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@rush:
+	DoctrineSquadManagerBotModule@rush:
 	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2sang: 65
@@ -97,6 +104,8 @@ Player:
 			r2sadiq: 22
 			r2riyadh: 20
 			r2jubail: 5
+		UnitDelays:
+			r2falcon: 30000
 		UnitLimits:
 			r2sajtac: 3
 			r2falcon: 1
@@ -114,7 +123,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@turtle:
+	DoctrineSquadManagerBotModule@turtle:
 	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2sang: 65
@@ -126,6 +135,8 @@ Player:
 			r2sadiq: 22
 			r2riyadh: 20
 			r2jubail: 5
+		UnitDelays:
+			r2falcon: 30000
 		UnitLimits:
 			r2sajtac: 3
 			r2falcon: 1
@@ -143,4 +154,4 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@naval:
+	DoctrineSquadManagerBotModule@naval:

@@ -1,0 +1,316 @@
+{
+ "p1-aa": {
+  "description": "p1-aa",
+  "seed": 101,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "p1-aa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "Player:",
+     "\tBotDoctrine@china:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\tBotDoctrine@iran:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 60",
+     "\tBotDoctrine@turkey:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\tBotDoctrine@saudi:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 50",
+     "\tBotDoctrine@yemen:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40"
+    ]
+   }
+  ]
+ },
+ "p2a-doctrine": {
+  "description": "p2a-doctrine",
+  "seed": 201,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "p2a-doctrine",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "Player:",
+     "\tBotDoctrine@china:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tartillery: 60",
+     "\t\t\tsupport: 150",
+     "\tBotDoctrine@iran:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 60",
+     "\t\t\tanti-armor: 110",
+     "\t\t\tmain-battle-tank: 100",
+     "\t\t\tline-infantry: 100",
+     "\t\tInitialBuildOrder: napowr, narefn, nahand, naweap, naradr, r2iraasite",
+     "\tBotDoctrine@turkey:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tstrike-aircraft: 80",
+     "\tBotDoctrine@saudi:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 50",
+     "\t\t\tartillery: 80",
+     "\t\tInitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc",
+     "\tBotDoctrine@yemen:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tstrike-aircraft: 50"
+    ]
+   }
+  ]
+ },
+ "p2b-squads": {
+  "description": "p2b-squads",
+  "seed": 202,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "p2b-squads",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "Player:",
+     "\tBotDoctrine@china:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tartillery: 60",
+     "\t\t\tsupport: 150",
+     "\t\tSquadSizeModifier: 80",
+     "\tBotDoctrine@iran:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 60",
+     "\t\t\tanti-armor: 110",
+     "\t\t\tmain-battle-tank: 100",
+     "\t\t\tline-infantry: 100",
+     "\t\tInitialBuildOrder: napowr, narefn, nahand, naweap, naradr, r2iraasite",
+     "\t\tSquadSizeModifier: 105",
+     "\tBotDoctrine@turkey:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tstrike-aircraft: 80",
+     "\t\tSquadSizeModifier: 80",
+     "\tBotDoctrine@saudi:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 50",
+     "\t\t\tartillery: 80",
+     "\t\tInitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc",
+     "\t\tSquadSizeModifier: 70",
+     "\tBotDoctrine@yemen:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tstrike-aircraft: 50",
+     "\t\tSquadSizeModifier: 135"
+    ]
+   }
+  ]
+ },
+ "p3-costs": {
+  "description": "p3-costs",
+  "seed": 301,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "p3-costs",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "Player:",
+     "\tBotDoctrine@china:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tartillery: 60",
+     "\t\t\tsupport: 150",
+     "\t\tSquadSizeModifier: 80",
+     "\tBotDoctrine@iran:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 60",
+     "\t\t\tanti-armor: 110",
+     "\t\t\tmain-battle-tank: 100",
+     "\t\t\tline-infantry: 100",
+     "\t\tInitialBuildOrder: napowr, narefn, nahand, naweap, naradr, r2iraasite",
+     "\t\tSquadSizeModifier: 105",
+     "\tBotDoctrine@turkey:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tstrike-aircraft: 80",
+     "\t\tSquadSizeModifier: 80",
+     "\tBotDoctrine@saudi:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 50",
+     "\t\t\tartillery: 80",
+     "\t\tInitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc",
+     "\t\tSquadSizeModifier: 70",
+     "\tBotDoctrine@yemen:",
+     "\t\tRoleShareModifiers:",
+     "\t\t\tanti-air: 40",
+     "\t\t\tstrike-aircraft: 50",
+     "\t\tSquadSizeModifier: 135",
+     "r2cnrifle:",
+     "\tValued:",
+     "\t\tCost: 150",
+     "r2trrifle:",
+     "\tValued:",
+     "\t\tCost: 160",
+     "r2sang:",
+     "\tValued:",
+     "\t\tCost: 180",
+     "r2qilin:",
+     "\tValued:",
+     "\t\tCost: 750",
+     "r2bozkir:",
+     "\tValued:",
+     "\t\tCost: 850",
+     "r2m1a2s:",
+     "\tValued:",
+     "\t\tCost: 1100"
+    ]
+   }
+  ]
+ },
+ "p4-costs": {
+  "description": "p4-china-turkey-costs (on the tuned rules)",
+  "seed": 401,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "p4-costs",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "r2cnrifle:",
+     "\tValued:",
+     "\t\tCost: 150",
+     "r2qilin:",
+     "\tValued:",
+     "\t\tCost: 750",
+     "r2trrifle:",
+     "\tValued:",
+     "\t\tCost: 170",
+     "r2bozkir:",
+     "\tValued:",
+     "\t\tCost: 850"
+    ]
+   }
+  ]
+ }
+}

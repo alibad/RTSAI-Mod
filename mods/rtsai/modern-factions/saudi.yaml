@@ -108,7 +108,7 @@ r2m1a2s:
 		Prerequisites: ~faction.saudi, gaweap
 		Description: ra2-r2m1a2s-description
 	Valued:
-		Cost: 1250
+		Cost: 1100
 	Health:
 		HP: 520
 	Armor:
@@ -149,6 +149,10 @@ r2sads:
 		ScanRadius: 12
 	RevealsShroud:
 		Range: 11c0
+	# Air-only missiles traded 0-6 with rocketeers at equal value (tools/balance-duel.py); the reload
+	# drops from 120 to 42 ticks so the dedicated AA beats them, as the flak track does.
+	ReloadDelayMultiplier@AIRDEFENSE:
+		Modifier: 35
 
 r2caesar:
 	Inherits: ^R2ModernVehicle

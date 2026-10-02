@@ -29,7 +29,7 @@ Player:
 			r2hisar: 6
 			r2siper: 4
 			r2boran: 4
-	SquadManagerBotModule@normal:
+	DoctrineSquadManagerBotModule@normal:
 	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2trrifle: 65
@@ -60,7 +60,7 @@ Player:
 			r2hisar: 6
 			r2siper: 4
 			r2boran: 4
-	SquadManagerBotModule@medium:
+	DoctrineSquadManagerBotModule@medium:
 	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2trrifle: 65
@@ -91,7 +91,7 @@ Player:
 			r2hisar: 6
 			r2siper: 4
 			r2boran: 4
-	SquadManagerBotModule@rush:
+	DoctrineSquadManagerBotModule@rush:
 	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2trrifle: 65
@@ -122,7 +122,7 @@ Player:
 			r2hisar: 6
 			r2siper: 4
 			r2boran: 4
-	SquadManagerBotModule@turtle:
+	DoctrineSquadManagerBotModule@turtle:
 	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2trrifle: 65
@@ -153,4 +153,4 @@ Player:
 			r2hisar: 6
 			r2siper: 4
 			r2boran: 4
-	SquadManagerBotModule@naval:
+	DoctrineSquadManagerBotModule@naval:

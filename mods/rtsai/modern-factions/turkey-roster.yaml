@@ -31,7 +31,13 @@
 		Bounds: 600, 1500, 0, -530
 	RenderSprites:
 		PlayerPalette: turkeyplayer
-	-TakeCover:
+	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
+	# go prone, half speed while prone) and show the normal sequences.
+	TakeCover:
+		ProneSequencePrefix:
+	FirepowerMultiplier@ELITEARMS:
+		RequiresCondition: rank-elite
+		Modifier: 140
 	-WithDeathAnimation@effect:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: turkeyplayer
@@ -66,7 +72,7 @@ r2trrifle:
 		BuildPaletteOrder: 10
 		Description: ra2-r2trrifle-description
 	Valued:
-		Cost: 200
+		Cost: 155
 	Health:
 		HP: 125
 	RevealsShroud:
@@ -234,6 +240,10 @@ r2gokkalkan:
 		Weapon: R2AirDefense
 	AutoTarget:
 		ScanRadius: 10
+	# Air-only missiles traded 0-6 with rocketeers at equal value (tools/balance-duel.py); this doubles
+	# the rate of fire so the dedicated AA beats them, as the flak track does.
+	ReloadDelayMultiplier@AIRDEFENSE:
+		Modifier: 50
 
 r2turna:
 	Inherits: ^R2ModernDrone

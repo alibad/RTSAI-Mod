@@ -20,7 +20,13 @@
 		Bounds: 600, 1500, 0, -530
 	RenderSprites:
 		PlayerPalette: iranplayer
-	-TakeCover:
+	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
+	# go prone, half speed while prone) and show the normal sequences.
+	TakeCover:
+		ProneSequencePrefix:
+	FirepowerMultiplier@ELITEARMS:
+		RequiresCondition: rank-elite
+		Modifier: 140
 	-WithDeathAnimation@effect:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: iranplayer
@@ -44,7 +50,7 @@ r2basij:
 		BuildPaletteOrder: 10
 		Description: ra2-r2basij-description
 	Valued:
-		Cost: 100
+		Cost: 90
 	Health:
 		HP: 105
 	Mobile:

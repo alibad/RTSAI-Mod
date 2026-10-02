@@ -108,7 +108,7 @@ r2bozkir:
 		Prerequisites: ~faction.turkey, gaweap
 		Description: ra2-r2bozkir-description
 	Valued:
-		Cost: 950
+		Cost: 900
 	Health:
 		HP: 400
 	Armor:

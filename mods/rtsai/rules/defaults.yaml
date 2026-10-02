@@ -301,6 +301,12 @@
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Air
 		InvalidTargets: NoAutoTarget
+	# Actors that inherit a ground auto-target template first (the modern vehicles and defenses) keep
+	# its ATTACKANYTHING priority, which is active in the default stance and while attack-moving;
+	# without this it listed only ground targets, so their air-only weapons never fired at aircraft.
+	AutoTargetPriority@ATTACKANYTHING:
+		ValidTargets: Air
+		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAll:
 	AutoTarget:
@@ -813,6 +819,8 @@
 		DeathPaletteIsPlayerPalette: true
 		DeathTypes:
 			RadiationDeath: 1
+			# Overrides the infantry's PsychicDeath: 5; animals have no die5 (Crazy Ivan bomb crash).
+			PsychicDeath: 1
 			ElectroDeath: 2
 	-SpawnActorOnDeath@flames:
 	WithDeathAnimation@flames:

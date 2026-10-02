@@ -29,7 +29,13 @@
 		Bounds: 600, 1500, 0, -530
 	RenderSprites:
 		PlayerPalette: yemenplayer
-	-TakeCover:
+	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
+	# go prone, half speed while prone) and show the normal sequences.
+	TakeCover:
+		ProneSequencePrefix:
+	FirepowerMultiplier@ELITEARMS:
+		RequiresCondition: rank-elite
+		Modifier: 140
 	-WithDeathAnimation@effect:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: yemenplayer
@@ -53,7 +59,7 @@ r2ymr:
 		BuildPaletteOrder: 10
 		Description: ra2-r2ymr-description
 	Valued:
-		Cost: 100
+		Cost: 135
 	Health:
 		HP: 100
 	Mobile:
@@ -434,7 +440,8 @@ r2mokha:
 		UncloakOn: Attack, Damage
 		DetectionTypes: Cloak
 		IsPlayerPalette: true
-		RequiresCondition: !build-incomplete
+		# Unpowered concealment fails too, so a beaten Yemen base can always be found and destroyed.
+		RequiresCondition: !build-incomplete && !lowpower
 
 r2ybunker:
 	Inherits: ^R2YemenDefense
