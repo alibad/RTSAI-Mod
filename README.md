@@ -1,19 +1,59 @@
-This repository contains a bare development environment for creating a new mod/game on the [OpenRA](https://github.com/OpenRA/OpenRA) engine.
+# RTS AI
 
-These scripts and support files wrap and automatically manage a copy of the OpenRA game engine and common files during development, and generates Windows installers, macOS .app bundles, and Linux [AppImages](https://appimage.org/) for distribution.
+**A Red Alert 2 mod for [OpenRA](https://www.openra.net): five modern nations and an AI co-commander.**
 
-The key scripts in this SDK are:
+The co-commander watches your match, speaks up when it matters, answers spoken questions, and takes command only when you switch AUTO on. It sees only what you can see.
 
-| Windows               | Linux / macOS            | Purpose
-| --------------------- | ------------------------ | ------------- |
-| make.cmd              | Makefile                 | Compiles your project and fetches dependencies (including the OpenRA engine).
-| launch-game.cmd       | launch-game.sh           | Launches your project from the SDK directory.
-| launch-server.cmd     | launch-server.sh         | Launches a dedicated server for your project from the SDK directory.
-| utility.cmd           | utility.sh         | Launches the OpenRA Utility for your project.
-| &lt;not available&gt; | packaging/package-all.sh | Generates release installers for your project.
+Status: **in development.** The current public release is the OpenRA AI Classic alpha at [rtsai.net](https://rtsai.net). This repository is where the Red Alert 2 mod is being built. See `MIGRATION.md` for progress.
 
-To launch your project from the development environment you must first compile the project by running `make.cmd` (Windows), or opening a terminal in the SDK directory and running `make` (Linux / macOS).  You can then run `launch-game.cmd` (Windows) or `launch-game.sh` (Linux / macOS) to run your game.
+## You need your own Red Alert 2
 
-The `example` mod included in this repository provides the bare minimum structure to launch to the in-game main menu for the sole purpose of demonstrating the SDK.  See [Getting Started](https://github.com/OpenRA/OpenRAModTemplate/wiki/Getting-Started) on the Wiki for instructions on how to adapt this template for your own projects.  For common questions, please see the [FAQ](https://github.com/OpenRA/OpenRAModSDK/wiki/FAQ).  See [Updating to a new SDK or Engine version](https://github.com/OpenRA/OpenRAModSDK/wiki/Updating-to-a-new-SDK-or-Engine-version) for a guide on updating your mod a newer OpenRA release.
+This mod does not include any Command & Conquer: Red Alert 2 game data, and never will. On first launch, the content installer imports the copy you own from any of these:
 
-The OpenRA engine and SDK scripts are made available under the [GPLv3](https://github.com/OpenRA/OpenRA/blob/bleed/COPYING) license, and any executable code developed by a mod and loaded by the engine (i.e. custom mod DLLs, lua scripts) must be released under a compatible license.  Your mod data files (artwork, sound files, yaml, etc) are not part of your mod's source code, so you are free to distribute these assets under different terms (e.g. allowing redistribution in unmodified form, but not for use in other works).
+- Steam (Command & Conquer: The Ultimate Collection)
+- the EA app or Origin
+- the original disc or The First Decade
+
+Independent project. EA has not endorsed and does not support this mod.
+
+## Factions
+
+The original RA2 countries plus modern nations, each with its own doctrine, signature units and voice lines:
+
+| Nation | Status in this mod |
+|---|---|
+| China | Playable |
+| Iran | Playable |
+| Türkiye | Playable |
+| Saudi Arabia | Coming next |
+| Yemen | Coming next |
+
+These are fictional game factions, not claims about real-world forces. The shared faction catalog (names, roles and stories used by the game and the website) lives in [alibad/OpenRA-AI](https://github.com/alibad/OpenRA-AI/blob/main/catalog/factions.json).
+
+## Build and run (Windows)
+
+Requirements: the .NET 10 SDK.
+
+```powershell
+.\make.cmd all          # downloads the pinned engine and builds the mod
+.\make.cmd test         # rules and YAML checks
+.\launch-game.cmd       # start the game
+```
+
+The engine is the slim `rtsai/engine` branch of [alibad/OpenRA](https://github.com/alibad/OpenRA/tree/rtsai/engine): upstream OpenRA bleed plus a few small commits. They add loopback-service hosting for the companion, in-process screenshots, held-key tracking for push-to-talk, and a headless platform for automated tests. `mod.config` pins the exact commit.
+
+## Layout
+
+| Path | Contents |
+|---|---|
+| `mods/rtsai` | Game rules, maps, chrome and the modern factions |
+| `mods/rtsai-content` | The content installer that imports owned RA2 data |
+| `OpenRA.Mods.RA2` | RA2 game logic |
+| `OpenRA.Mods.RTSAI` | The AI companion bridge (loopback gRPC) and its in-game HUD |
+| `tools/` | Porting and validation scripts |
+
+The companion's voice and strategy service lives in [alibad/OpenRA-AI](https://github.com/alibad/OpenRA-AI) (`services/companion`).
+
+## License
+
+Code is GPLv3, like the OpenRA engine and the [OpenRA Mod SDK](https://github.com/OpenRA/OpenRAModSDK) this repository is built from. See `COPYING`.
