@@ -4,7 +4,7 @@ ra2-modern-saudi-description = Expeditionary arms: 13 Saudi units and three defe
     lasers guide armor, artillery and air strikes; the fleet screens
     and replenishes itself. Expensive platforms punish poor positioning.
 
-ra2-r2sang-name = National Guard
+ra2-r2sang-name = Saudi National Guard
 ra2-r2sang-description = Durable three-round burst infantry. Deploy to brace: +18% range,
     20% faster fire and 28% less damage; moving ends the brace.
     Weak vs armor and aircraft.
