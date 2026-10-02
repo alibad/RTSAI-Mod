@@ -181,6 +181,10 @@ r2mantis:
 		Weapon: R2AirDefense
 	AutoTarget:
 		ScanRadius: 10
+	# Air-only missiles traded 0-6 with rocketeers at equal value (tools/balance-duel.py); this doubles
+	# the rate of fire so the dedicated AA beats them, as the flak track does.
+	ReloadDelayMultiplier@AIRDEFENSE:
+		Modifier: 50
 
 r2cloud:
 	Inherits: ^R2ModernDrone
