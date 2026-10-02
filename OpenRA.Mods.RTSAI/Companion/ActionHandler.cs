@@ -133,7 +133,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 					return null;
 
 				default:
-					Log.Write("rl-bridge", $"Unknown action type: {cmd.Action}");
+					Log.Write(CompanionLog.Channel, $"Unknown action type: {cmd.Action}");
 					return null;
 			}
 		}
@@ -210,7 +210,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			if (string.IsNullOrEmpty(cmd.ItemType))
 			{
-				Log.Write("rl-bridge", "Production command missing item_type");
+				Log.Write(CompanionLog.Channel, "Production command missing item_type");
 				return null;
 			}
 
@@ -230,7 +230,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				}
 			}
 
-			Log.Write("rl-bridge", $"Cannot produce '{cmd.ItemType}': no capable production structure found");
+			Log.Write(CompanionLog.Channel, $"Cannot produce '{cmd.ItemType}': no capable production structure found");
 			return null;
 		}
 
@@ -277,7 +277,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			if (string.IsNullOrEmpty(cmd.ItemType))
 			{
-				Log.Write("rl-bridge", "PlaceBuilding command missing item_type");
+				Log.Write(CompanionLog.Channel, "PlaceBuilding command missing item_type");
 				return null;
 			}
 
@@ -307,7 +307,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 			if (producer == null)
 			{
-				Log.Write("rl-bridge", $"Cannot place '{cmd.ItemType}': no completed building in any production queue");
+				Log.Write(CompanionLog.Channel, $"Cannot place '{cmd.ItemType}': no completed building in any production queue");
 				return null;
 			}
 
@@ -322,7 +322,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				if (world.CanPlaceBuilding(requestedCell, actorInfo, bi, null)
 					&& bi.IsCloseEnoughToBase(world, player, actorInfo, requestedCell))
 				{
-					Log.Write("rl-bridge", $"Placing '{cmd.ItemType}' at requested ({cmd.TargetX},{cmd.TargetY})");
+					Log.Write(CompanionLog.Channel, $"Placing '{cmd.ItemType}' at requested ({cmd.TargetX},{cmd.TargetY})");
 					return MakePlaceOrder(cmd.ItemType, requestedCell, producer);
 				}
 			}
@@ -332,11 +332,11 @@ namespace OpenRA.Mods.RTSAI.Traits
 			var foundCell = FindPlacementCell(actorInfo, bi, baseCenter);
 			if (foundCell.HasValue)
 			{
-				Log.Write("rl-bridge", $"Auto-placed '{cmd.ItemType}' at ({foundCell.Value.X},{foundCell.Value.Y}) near base center ({baseCenter.X},{baseCenter.Y})");
+				Log.Write(CompanionLog.Channel, $"Auto-placed '{cmd.ItemType}' at ({foundCell.Value.X},{foundCell.Value.Y}) near base center ({baseCenter.X},{baseCenter.Y})");
 				return MakePlaceOrder(cmd.ItemType, foundCell.Value, producer);
 			}
 
-			Log.Write("rl-bridge", $"Cannot place '{cmd.ItemType}': no valid cell found near base");
+			Log.Write(CompanionLog.Channel, $"Cannot place '{cmd.ItemType}': no valid cell found near base");
 			return null;
 		}
 
@@ -501,7 +501,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			if (string.IsNullOrEmpty(cmd.ItemType))
 			{
-				Log.Write("rl-bridge", "CancelProduction command missing item_type");
+				Log.Write(CompanionLog.Channel, "CancelProduction command missing item_type");
 				return null;
 			}
 
@@ -521,7 +521,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				}
 			}
 
-			Log.Write("rl-bridge", $"Cannot cancel '{cmd.ItemType}': not in any production queue");
+			Log.Write(CompanionLog.Channel, $"Cannot cancel '{cmd.ItemType}': not in any production queue");
 			return null;
 		}
 

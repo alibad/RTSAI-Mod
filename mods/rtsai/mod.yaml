@@ -121,7 +121,7 @@ ChromeLayout:
 	common|chrome/ingame-infostats.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
-	common|chrome/ingame.yaml
+	ra2|chrome/ingame.yaml
 	ra2|chrome/ingame-observer.yaml
 	common|chrome/ingame-chat.yaml
 	common|chrome/ingame-transients.yaml
@@ -134,8 +134,8 @@ ChromeLayout:
 	ra2|chrome/ingame-debug.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-infochat.yaml
-	common|chrome/settings.yaml
-	common|chrome/settings-ai.yaml
+	ra2|chrome/settings.yaml
+	ra2|chrome/settings-ai.yaml
 	common|chrome/settings-gameplay.yaml
 	common|chrome/settings-display.yaml
 	common|chrome/settings-audio.yaml
@@ -208,6 +208,7 @@ FluentMessages:
 	common|fluent/rules.ftl
 	ra2|languages/rules/en.ftl
 	ra2|languages/native-preview.ftl
+	ra2|languages/ai.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -219,6 +220,7 @@ Hotkeys:
 	common|hotkeys/editor.yaml
 	common|hotkeys/control-groups.yaml
 	ra2|hotkeys.yaml
+	ra2|hotkeys-ai.yaml
 
 LoadScreen: LogoStripeLoadScreen
 	Image: ra2|uibits/loadscreen.png

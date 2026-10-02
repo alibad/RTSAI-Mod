@@ -1,0 +1,27 @@
+AIAsk: SPACE Ctrl
+	Description: hotkey-description-ai-ask
+	Types: AIAssistant
+	Contexts: player, spectator
+	Platform:
+		OSX: SPACE Alt
+
+AIAccept: RETURN Ctrl
+	Description: hotkey-description-ai-accept
+	Types: AIAssistant
+	Contexts: player, spectator
+
+AIReject: BACKSPACE Ctrl
+	Description: hotkey-description-ai-reject
+	Types: AIAssistant
+	Contexts: player, spectator
+
+AIToggleAuto: A Ctrl,Shift
+	Description: hotkey-description-ai-toggle-auto
+	Types: AIAssistant
+	Contexts: player, spectator
+
+AIToggleVoice: M Ctrl,Shift
+	Description: hotkey-description-ai-toggle-voice
+	Types: AIAssistant
+	Contexts: player, spectator
+

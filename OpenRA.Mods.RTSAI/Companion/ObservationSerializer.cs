@@ -334,7 +334,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				}
 			}
 			if (obs.Tick % 500 == 0 || obs.Tick < 10)
-				Log.Write("rl-bridge", $"Tick {obs.Tick}: {enemyCount} enemy actors, {buildingCount} buildings, {obs.VisibleEnemyBuildings.Count} visible bldgs");
+				Log.Write(CompanionLog.Channel, $"Tick {obs.Tick}: {enemyCount} enemy actors, {buildingCount} buildings, {obs.VisibleEnemyBuildings.Count} visible bldgs");
 		}
 
 		RLProto.RlBuildingInfo SerializeBuilding(Actor actor, float hpPercent, string owner)

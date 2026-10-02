@@ -1,0 +1,441 @@
+Container@AI_PANEL:
+	Logic: AISettingsLogic
+	Width: PARENT_WIDTH
+	Height: PARENT_HEIGHT
+	Children:
+		Container@AI_TAB_BAR:
+			Width: PARENT_WIDTH
+			Height: 30
+			Children:
+				Button@ASSISTANT_TAB:
+					Width: (PARENT_WIDTH - 15) / 4
+					Height: 25
+					Text: button-ai-tab-assistant
+					Font: Bold
+				Button@VOICE_TAB:
+					X: 5 + (PARENT_WIDTH - 15) / 4
+					Width: (PARENT_WIDTH - 15) / 4
+					Height: 25
+					Text: button-ai-tab-voice
+					Font: Bold
+				Button@MODELS_TAB:
+					X: 10 + 2 * (PARENT_WIDTH - 15) / 4
+					Width: (PARENT_WIDTH - 15) / 4
+					Height: 25
+					Text: button-ai-tab-models
+					Font: Bold
+				Button@USAGE_TAB:
+					X: 15 + 3 * (PARENT_WIDTH - 15) / 4
+					Width: (PARENT_WIDTH - 15) / 4
+					Height: 25
+					Text: button-ai-tab-usage
+					Font: Bold
+		ScrollPanel@SETTINGS_SCROLLPANEL:
+			Y: 35
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT - 100
+			CollapseHiddenChildren: True
+			TopBottomSpacing: 5
+			ItemSpacing: 8
+			Children:
+				Background@COMPANION_SECTION_HEADER:
+					X: 5
+					Width: PARENT_WIDTH - 34
+					Height: 13
+					Background: separator
+					ClickThrough: True
+					Children:
+						Label@LABEL:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+							Text: label-ai-companion-section
+				Container@COMPANION_ENABLED_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 22
+					Children:
+						Checkbox@AI_ENABLED:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: checkbox-ai-enabled
+				Container@COMPANION_PACE_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 50
+					Children:
+						Label@PACE_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-notification-pace
+						DropDownButton@PACE:
+							X: 10
+							Y: 25
+							Width: PARENT_WIDTH - 20
+							Height: 25
+				Container@STRATEGY_BRAIN_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 68
+					Children:
+						Label@STRATEGY_BRAIN_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-strategy-brain
+						DropDownButton@STRATEGY_BRAIN:
+							X: 10
+							Y: 25
+							Width: PARENT_WIDTH - 20
+							Height: 25
+						Label@STRATEGY_BRAIN_DESCRIPTION:
+							X: 10
+							Y: 51
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Font: Tiny
+							Text: label-ai-strategy-brain-description
+				Container@SHORTCUTS_HINT_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 40
+					Children:
+						Label@SHORTCUTS_HINT_TITLE:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 18
+							Font: Bold
+							Text: label-ai-shortcuts-title
+						Label@SHORTCUTS_HINT:
+							X: 10
+							Y: 19
+							Width: PARENT_WIDTH - 20
+							Height: 18
+							Font: Tiny
+							Text: label-ai-shortcuts-hint
+				Background@VOICE_SECTION_HEADER:
+					X: 5
+					Width: PARENT_WIDTH - 34
+					Height: 13
+					Background: separator
+					ClickThrough: True
+					Children:
+						Label@LABEL:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+							Text: label-ai-voice-section
+				Container@VOICE_SHORTCUT_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 48
+					Children:
+						Label@ASK_SHORTCUT:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 22
+							Font: Bold
+						Label@ASK_SHORTCUT_HINT:
+							X: 10
+							Y: 24
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Font: Tiny
+				Container@VOICE_ENABLED_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 22
+					Children:
+						Checkbox@VOICE_ENABLED:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: checkbox-ai-voice-enabled
+				Container@VOICE_PRIORITY_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 50
+					Children:
+						Label@VOICE_PRIORITY_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-voice-priority
+						DropDownButton@VOICE_PRIORITY:
+							X: 10
+							Y: 25
+							Width: PARENT_WIDTH - 20
+							Height: 25
+				Container@VOICE_ROUTES_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 50
+					Children:
+						Container@TRANSCRIBE_CONTAINER:
+							X: 10
+							Width: (PARENT_WIDTH - 40) / 3
+							Children:
+								Label@TRANSCRIBE_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-transcription-model
+								DropDownButton@TRANSCRIBE_MODEL:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+						Container@SPEECH_CONTAINER:
+							X: 20 + (PARENT_WIDTH - 40) / 3
+							Width: (PARENT_WIDTH - 40) / 3
+							Children:
+								Label@SPEECH_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-speech-model
+								DropDownButton@SPEECH_MODEL:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+						Container@VOICE_CONTAINER:
+							X: 30 + 2 * (PARENT_WIDTH - 40) / 3
+							Width: (PARENT_WIDTH - 40) / 3
+							Children:
+								Label@VOICE_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-speech-voice
+								DropDownButton@SPEECH_VOICE:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+				Background@MODEL_SECTION_HEADER:
+					X: 5
+					Width: PARENT_WIDTH - 34
+					Height: 13
+					Background: separator
+					ClickThrough: True
+					Children:
+						Label@LABEL:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+							Text: label-ai-model-section
+				Container@AUTO_PROFILE_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 93
+					Children:
+						DropDownButton@MODEL_SELECTION:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 25
+						Label@MODEL_SELECTION_SUMMARY:
+							X: 10
+							Y: 32
+							Width: PARENT_WIDTH - 20
+							Height: 60
+							Font: Tiny
+				Container@MODEL_READINESS_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 42
+					Children:
+						Label@MODEL_READINESS:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 40
+							Font: Tiny
+				Container@LOCAL_SETUP_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 76
+					Children:
+						Label@LOCAL_SETUP_TITLE:
+							X: 10
+							Width: PARENT_WIDTH - 190
+							Height: 20
+							Font: Bold
+							Text: label-ai-local-setup-title
+						Button@INSTALL_LOCAL_AI:
+							X: PARENT_WIDTH - 175
+							Width: 165
+							Height: 25
+							Font: Bold
+						Label@LOCAL_SETUP_STATUS:
+							X: 10
+							Y: 30
+							Width: PARENT_WIDTH - 20
+							Height: 38
+							Font: Tiny
+				Container@ADVANCED_MODELS_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 30
+					Children:
+						Button@ADVANCED_MODELS:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 25
+							Font: TinyBold
+				Container@LM_STUDIO_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 30
+					Children:
+						Button@DISCOVER_LM_STUDIO:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 25
+							Font: TinyBold
+				Container@MODEL_PICKER_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 50
+					Children:
+						Container@PROVIDER_CONTAINER:
+							X: 10
+							Width: PARENT_WIDTH / 2 - 20
+							Children:
+								Label@PROVIDER_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-provider
+								DropDownButton@PROVIDER:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+						Container@TEXT_MODEL_CONTAINER:
+							X: PARENT_WIDTH / 2 + 10
+							Width: PARENT_WIDTH / 2 - 20
+							Children:
+								Label@TEXT_MODEL_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-text-model
+								DropDownButton@TEXT_MODEL:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+				Container@VISION_PICKER_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 67
+					Children:
+						Label@VISION_MODEL_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-vision-model
+						DropDownButton@VISION_MODEL:
+							X: 10
+							Y: 25
+							Width: PARENT_WIDTH - 20
+							Height: 25
+						Label@PROVIDER_STATUS:
+							X: 10
+							Y: 51
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Font: Tiny
+				Container@CUSTOM_ENDPOINT_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 50
+					Children:
+						LabelForInput@CUSTOM_ENDPOINT_LABEL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 20
+							Text: label-ai-custom-endpoint
+							For: CUSTOM_ENDPOINT
+						TextField@CUSTOM_ENDPOINT:
+							X: 10
+							Y: 25
+							Width: PARENT_WIDTH - 20
+							Height: 25
+							MaxLength: 160
+				Container@CUSTOM_MODELS_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 50
+					Children:
+						Container@CUSTOM_TEXT_CONTAINER:
+							X: 10
+							Width: PARENT_WIDTH / 2 - 20
+							Children:
+								LabelForInput@CUSTOM_TEXT_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-custom-text-model
+									For: CUSTOM_TEXT_MODEL
+								TextField@CUSTOM_TEXT_MODEL:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+									MaxLength: 160
+						Container@CUSTOM_VISION_CONTAINER:
+							X: PARENT_WIDTH / 2 + 10
+							Width: PARENT_WIDTH / 2 - 20
+							Children:
+								LabelForInput@CUSTOM_VISION_LABEL:
+									Width: PARENT_WIDTH
+									Height: 20
+									Text: label-ai-custom-vision-model
+									For: CUSTOM_VISION_MODEL
+								TextField@CUSTOM_VISION_MODEL:
+									Y: 25
+									Width: PARENT_WIDTH
+									Height: 25
+									MaxLength: 160
+				Background@COST_SECTION_HEADER:
+					X: 5
+					Width: PARENT_WIDTH - 34
+					Height: 13
+					Background: separator
+					ClickThrough: True
+					Children:
+						Label@LABEL:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+							Text: label-ai-cost-section
+				Container@COST_ROW:
+					Width: PARENT_WIDTH - 24
+					Height: 62
+					Children:
+						Label@COST_TOTAL:
+							X: 10
+							Width: PARENT_WIDTH - 20
+							Height: 18
+							Font: Bold
+						Label@COST_BREAKDOWN:
+							X: 10
+							Y: 20
+							Width: PARENT_WIDTH - 20
+							Height: 18
+							Font: Tiny
+						Label@COST_ASSUMPTIONS:
+							X: 10
+							Y: 38
+							Width: PARENT_WIDTH - 20
+							Height: 24
+							Font: Tiny
+		Container@ACTIONS_ROW:
+			Y: PARENT_HEIGHT - 60
+			Width: PARENT_WIDTH
+			Height: 60
+			Children:
+				Label@STATUS:
+					X: 10
+					Width: PARENT_WIDTH - 20
+					Height: 18
+					Font: Tiny
+				Button@APPLY:
+					X: 10
+					Y: 25
+					Width: 150
+					Height: 25
+					Text: button-ai-apply
+					Font: Bold
+				Button@TEST:
+					X: 170
+					Y: 25
+					Width: 170
+					Height: 25
+					Text: button-ai-test
+					Font: Bold
+				Button@REFRESH_USAGE:
+					X: 350
+					Y: 25
+					Width: 150
+					Height: 25
+					Text: button-ai-refresh-costs
+					Font: Bold

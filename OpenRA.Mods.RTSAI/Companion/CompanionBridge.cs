@@ -24,12 +24,12 @@ namespace OpenRA.Mods.RTSAI.Traits
 {
 	[Desc("Publishes read-only, fog-respecting local-player observations for OpenRA AI.")]
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
-	public sealed class RTSAICompanionBridgeInfo : TraitInfo
+	public sealed class CompanionBridgeInfo : TraitInfo
 	{
 		[Desc("Number of game ticks between snapshots.")]
 		public readonly int ObservationInterval = 10;
 
-		public override object Create(ActorInitializer init) { return new RTSAICompanionBridge(this, init); }
+		public override object Create(ActorInitializer init) { return new CompanionBridge(this, init); }
 	}
 
 	/// <summary>
@@ -37,7 +37,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 	/// through the existing gRPC host. Separately confirmed actions are validated
 	/// on the game thread and queued without pausing play.
 	/// </summary>
-	public sealed class RTSAICompanionBridge : ITick, INotifyCreated, INotifyActorDisposing
+	public sealed class CompanionBridge : ITick, INotifyCreated, INotifyActorDisposing
 	{
 		static readonly object CurrentLock = new();
 		static readonly HashSet<RLProto.ActionType> AllowedActions =
@@ -73,12 +73,12 @@ namespace OpenRA.Mods.RTSAI.Traits
 		const int MaxSnapshotAgeTicks = 125;
 		const long SpokenStatusTimeoutMilliseconds = 12000;
 		const long ErrorStatusTimeoutMilliseconds = 4000;
-		static RTSAICompanionBridge current;
+		static CompanionBridge current;
 		static RLProto.CompanionStatus companionStatus = ReadyStatus();
 		static RLProto.CompanionThreat companionThreat = CalmThreat();
 		static long companionStatusUpdatedAt = Environment.TickCount64;
 
-		readonly RTSAICompanionBridgeInfo info;
+		readonly CompanionBridgeInfo info;
 		readonly World world;
 		readonly string episodeId = Guid.NewGuid().ToString("N")[..12];
 		readonly object observationLock = new();
@@ -112,7 +112,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			}
 		}
 
-		public RTSAICompanionBridge(RTSAICompanionBridgeInfo info, ActorInitializer init)
+		public CompanionBridge(CompanionBridgeInfo info, ActorInitializer init)
 		{
 			this.info = info;
 			world = init.World;
@@ -120,6 +120,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		void INotifyCreated.Created(Actor self)
 		{
+			CompanionLog.Ensure();
 			enabled = world.Type == WorldType.Regular
 				&& Environment.GetEnvironmentVariable("OPENRA_AI_COMPANION") == "1"
 				&& !world.IsReplay;
@@ -146,13 +147,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 			if (!string.IsNullOrEmpty(envPort) && int.TryParse(envPort, out var configuredPort))
 				port = configuredPort;
 
-			var thread = new Thread(() => RTSAIExternalBotBridge.StartGrpcServer(port))
-			{
-				IsBackground = true,
-				Name = "OpenRA-AI-Companion-gRPC"
-			};
-			thread.Start();
-			Log.Write("rl-bridge", $"OpenRA AI companion enabled on port {port} (trait {GetType().FullName} from {GetType().Assembly.GetName().Name})");
+			CompanionGrpcHost.Start(port);
+			Log.Write(CompanionLog.Channel, $"OpenRA AI companion enabled on port {port} (trait {GetType().FullName} from {GetType().Assembly.GetName().Name})");
 		}
 
 		void ITick.Tick(Actor self)
@@ -227,7 +223,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				if (!string.IsNullOrWhiteSpace(requestedStrategy))
 					assistantStrategyRequested = NormalizeAssistantStrategy(requestedStrategy);
 			}
-			else if (OpenRA.Mods.Common.Widgets.Logic.AIControlDisplay.IsExplicitManualModeState(state))
+			else if (Widgets.Logic.AIControlDisplay.IsExplicitManualModeState(state))
 			{
 				assistantAutoRequested = false;
 				if (!string.IsNullOrWhiteSpace(requestedStrategy))
@@ -264,7 +260,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				.FirstOrDefault(candidate => ((IBot)candidate).Info.Type == strategy);
 			if (bot == null)
 			{
-				Log.Write("rl-bridge", $"Native assistant strategy '{strategy}' is unavailable.");
+				Log.Write(CompanionLog.Channel, $"Native assistant strategy '{strategy}' is unavailable.");
 				return;
 			}
 
@@ -273,19 +269,21 @@ namespace OpenRA.Mods.RTSAI.Traits
 			assistantBot = bot;
 			activeAssistantStrategy = strategy;
 			assistantBot.Activate(player);
-			Log.Write("rl-bridge", $"Native assistant delegated the local player to OpenRA {strategy} AI.");
+			Log.Write(CompanionLog.Channel, $"Native assistant delegated the local player to OpenRA {strategy} AI.");
 		}
 
 		void StopNativeAssistant()
 		{
+			// The engine's ModularBot has no Deactivate; clearing IsEnabled stops its Tick from issuing
+			// orders while leaving ownership untouched. Activate() re-enables it on the next delegation.
 			if (assistantBot != null)
-				assistantBot.Deactivate();
+				assistantBot.IsEnabled = false;
 
 			if (assistantPlayerActor != null && assistantConditionToken != Actor.InvalidConditionToken)
 				assistantConditionToken = assistantPlayerActor.RevokeCondition(assistantConditionToken);
 
 			if (!string.IsNullOrEmpty(activeAssistantStrategy))
-				Log.Write("rl-bridge", $"Native assistant released OpenRA {activeAssistantStrategy} AI control.");
+				Log.Write(CompanionLog.Channel, $"Native assistant released OpenRA {activeAssistantStrategy} AI control.");
 
 			assistantBot = null;
 			assistantPlayerActor = null;
@@ -331,7 +329,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		internal static Task<RLProto.CompanionActionReceipt> ExecuteActions(
 			RLProto.CompanionActionRequest request)
 		{
-			RTSAICompanionBridge bridge;
+			CompanionBridge bridge;
 			lock (CurrentLock)
 				bridge = current;
 
@@ -372,7 +370,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				}
 				catch (Exception e)
 				{
-					Log.Write("rl-bridge", $"Confirmed companion action failed: {e}");
+					Log.Write(CompanionLog.Channel, $"Confirmed companion action failed: {e}");
 					receipt = RejectedReceipt(pending.Request, "The engine rejected the confirmed action.", world.WorldTick);
 				}
 
@@ -438,7 +436,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 				});
 			}
 
-			Log.Write("rl-bridge", $"Queued confirmed companion action {request.RequestId} at tick {world.WorldTick}");
+			Log.Write(CompanionLog.Channel, $"Queued confirmed companion action {request.RequestId} at tick {world.WorldTick}");
 			return receipt;
 		}
 
@@ -723,7 +721,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		internal static bool TryGetObservation(out RLProto.GameObservation observation)
 		{
-			RTSAICompanionBridge bridge;
+			CompanionBridge bridge;
 			lock (CurrentLock)
 				bridge = current;
 
@@ -748,7 +746,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		internal static bool TryGetState(out RLProto.GameState state)
 		{
-			RTSAICompanionBridge bridge;
+			CompanionBridge bridge;
 			lock (CurrentLock)
 				bridge = current;
 
@@ -843,7 +841,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		internal static Task<RLProto.CompanionFrame> CaptureFrame(CancellationToken cancellationToken)
 		{
-			RTSAICompanionBridge bridge;
+			CompanionBridge bridge;
 			lock (CurrentLock)
 			{
 				bridge = current;
