@@ -27,7 +27,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@normal:
+	DoctrineSquadManagerBotModule@normal:
 	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2sang: 65
@@ -56,7 +56,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@medium:
+	DoctrineSquadManagerBotModule@medium:
 	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2sang: 65
@@ -85,7 +85,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@rush:
+	DoctrineSquadManagerBotModule@rush:
 	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2sang: 65
@@ -114,7 +114,7 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@turtle:
+	DoctrineSquadManagerBotModule@turtle:
 	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2sang: 65
@@ -143,4 +143,4 @@ Player:
 			r2saguard: 6
 			r2sapatriot: 4
 			r2satow: 4
-	SquadManagerBotModule@naval:
+	DoctrineSquadManagerBotModule@naval:

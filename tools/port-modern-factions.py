@@ -21,8 +21,8 @@ The tool is incremental: it ports the requested factions that mod.yaml does not 
 recomputes the shared files (replacements, bot types, pools, flags, manifest) to include them.
 
 --doctrine-ai switches the bots to the role-aware modules in OpenRA.Mods.RTSAI (the fork's
-combined-arms AI): stock BaseBuilderBotModule/UnitBuilderBotModule become
-DoctrineBaseBuilderBotModule/DoctrineUnitBuilderBotModule, the fork's InitialBuildOrder openings
+combined-arms AI): stock BaseBuilderBotModule/UnitBuilderBotModule/SquadManagerBotModule become
+DoctrineBaseBuilderBotModule/DoctrineUnitBuilderBotModule/DoctrineSquadManagerBotModule, the fork's InitialBuildOrder openings
 and combined-arms-ai.yaml (RoleShares and stock StrategicRole tags) are restored from the source.
 
 Needs Pillow (e.g. OpenRA-AI/.venv). Run from the repo root:
@@ -56,7 +56,8 @@ FLAG_SIZE = (30, 15)
 SKIP = {"experiences.yaml", "combined-arms-ai.yaml"}
 MF = "ra2|modern-factions/"
 DOCTRINE_MODULES = {"BaseBuilderBotModule": "DoctrineBaseBuilderBotModule",
-                    "UnitBuilderBotModule": "DoctrineUnitBuilderBotModule"}
+                    "UnitBuilderBotModule": "DoctrineUnitBuilderBotModule",
+                    "SquadManagerBotModule": "DoctrineSquadManagerBotModule"}
 
 
 def fork_file(fork: Path, path: str) -> bytes:
@@ -314,7 +315,8 @@ def adopt_doctrine_ai(mod: Path, src: Path) -> None:
     write(aircraft_ai, text)
 
     # Role shares and stock-actor role tags. The Experience-only formation-size parameter is not
-    # ported: bots keep their per-profile SquadSize (rush 3 ... turtle 12).
+    # ported: bots keep their per-profile SquadSize (rush 3 ... turtle 12), scaled per faction by
+    # BotDoctrine.SquadSizeModifier (doctrines.yaml).
     text = (src / "combined-arms-ai.yaml").read_text(encoding="utf-8")
     text = re.sub(r"^\tSquadManagerBotModule@\w+:\n(?:\t\tExperience\w+: .*\n)+", "", text, flags=re.MULTILINE)
     text = pattern.sub(lambda m: m.group(1) + DOCTRINE_MODULES[m.group(2)] + "@", text)

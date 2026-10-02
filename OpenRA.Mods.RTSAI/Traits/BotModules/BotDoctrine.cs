@@ -20,7 +20,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 {
 	[TraitLocation(SystemActors.Player)]
 	[Desc("How bots of the listed factions play: the doctrine shapes the role mix of every bot profile",
-		"(DoctrineUnitBuilderBotModule.RoleShares) and the opening (DoctrineBaseBuilderBotModule.InitialBuildOrder).",
+		"(DoctrineUnitBuilderBotModule.RoleShares), the opening (DoctrineBaseBuilderBotModule.InitialBuildOrder)",
+		"and the attack-squad size (DoctrineSquadManagerBotModule).",
 		"Bot profiles (normal, rush, turtle, naval) set the base plan; the faction doctrine biases it.")]
 	public class BotDoctrineInfo : TraitInfo<BotDoctrine>
 	{
@@ -37,6 +38,10 @@ namespace OpenRA.Mods.RTSAI.Traits
 		[ActorReference]
 		[Desc("Faction opening. Replaces the bot profile's InitialBuildOrder for these factions when not empty.")]
 		public readonly ImmutableArray<string> InitialBuildOrder = [];
+
+		[Desc("Percent multiplier applied to the bot profile's attack-squad size (SquadSize and SquadSizeRandomBonus",
+			"of DoctrineSquadManagerBotModule). Below 100 attacks earlier in smaller groups; above 100 masses first.")]
+		public readonly int SquadSizeModifier = 100;
 
 		// Called from bot module constructors, while the player actor is still being created.
 		public static BotDoctrineInfo For(Actor playerActor)
