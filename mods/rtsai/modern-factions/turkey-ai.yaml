@@ -1,5 +1,5 @@
 Player:
-	UnitBuilderBotModule@normal:
+	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2trrifle: 65
 			r2trat: 25
@@ -20,7 +20,7 @@ Player:
 			r2deniz: 2
 			r2turna: 4
 			r2sahin: 4
-	BaseBuilderBotModule@normal:
+	DoctrineBaseBuilderBotModule@normal:
 		BuildingFractions:
 			r2hisar: 10
 			r2siper: 5
@@ -30,7 +30,7 @@ Player:
 			r2siper: 4
 			r2boran: 4
 	SquadManagerBotModule@normal:
-	UnitBuilderBotModule@medium:
+	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2trrifle: 65
 			r2trat: 25
@@ -51,7 +51,7 @@ Player:
 			r2deniz: 2
 			r2turna: 4
 			r2sahin: 4
-	BaseBuilderBotModule@medium:
+	DoctrineBaseBuilderBotModule@medium:
 		BuildingFractions:
 			r2hisar: 10
 			r2siper: 5
@@ -61,7 +61,7 @@ Player:
 			r2siper: 4
 			r2boran: 4
 	SquadManagerBotModule@medium:
-	UnitBuilderBotModule@rush:
+	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2trrifle: 65
 			r2trat: 25
@@ -82,7 +82,7 @@ Player:
 			r2deniz: 2
 			r2turna: 4
 			r2sahin: 4
-	BaseBuilderBotModule@rush:
+	DoctrineBaseBuilderBotModule@rush:
 		BuildingFractions:
 			r2hisar: 10
 			r2siper: 5
@@ -92,7 +92,7 @@ Player:
 			r2siper: 4
 			r2boran: 4
 	SquadManagerBotModule@rush:
-	UnitBuilderBotModule@turtle:
+	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2trrifle: 65
 			r2trat: 25
@@ -113,7 +113,7 @@ Player:
 			r2deniz: 2
 			r2turna: 4
 			r2sahin: 4
-	BaseBuilderBotModule@turtle:
+	DoctrineBaseBuilderBotModule@turtle:
 		BuildingFractions:
 			r2hisar: 10
 			r2siper: 5
@@ -123,7 +123,7 @@ Player:
 			r2siper: 4
 			r2boran: 4
 	SquadManagerBotModule@turtle:
-	UnitBuilderBotModule@naval:
+	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2trrifle: 65
 			r2trat: 25
@@ -144,7 +144,7 @@ Player:
 			r2deniz: 2
 			r2turna: 4
 			r2sahin: 4
-	BaseBuilderBotModule@naval:
+	DoctrineBaseBuilderBotModule@naval:
 		BuildingFractions:
 			r2hisar: 10
 			r2siper: 5

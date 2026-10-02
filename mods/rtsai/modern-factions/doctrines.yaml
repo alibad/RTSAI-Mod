@@ -1,0 +1,73 @@
+# Faction bot doctrines (OpenRA.Mods.RTSAI BotDoctrine). Each bot profile (normal, medium, rush,
+# turtle, naval) keeps its own RoleShares (combined-arms-ai.yaml); the doctrine scales them in
+# percent for its faction and replaces the generic opening (entries follow the tech tree: an entry
+# whose prerequisites are missing is skipped until it becomes buildable). Roles come from StrategicRole tags.
+# Doctrine identifiers match the product catalog (Experience "Doctrine" field).
+
+Player:
+	# Coordination: specialists and relays with the main force, amphibious lift, maritime reach.
+	BotDoctrine@china:
+		Factions: china
+		Doctrine: networked-combined-arms
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc
+		RoleShareModifiers:
+			support: 200
+			transport: 150
+			main-battle-tank: 110
+			naval-screen: 120
+			anti-submarine: 120
+			submarine: 120
+	# Layered denial: radar and an AA site before the factory, then long-range fires and drones.
+	BotDoctrine@iran:
+		Factions: iran
+		Doctrine: layered-denial
+		InitialBuildOrder: napowr, narefn, nahand, naradr, r2iraasite, naweap
+		RoleShareModifiers:
+			anti-air: 160
+			artillery: 150
+			anti-armor: 130
+			strike-aircraft: 130
+			submarine: 130
+			main-battle-tank: 80
+			line-infantry: 90
+	# Mobile defense: mechanized spearhead with an early service depot, carried infantry, drones and EW.
+	BotDoctrine@turkey:
+		Factions: turkey
+		Doctrine: mobile-defense
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gadept, gaairc
+		RoleShareModifiers:
+			main-battle-tank: 130
+			transport: 160
+			support: 130
+			strike-aircraft: 140
+			anti-air: 110
+			artillery: 80
+	# Expeditionary: air power (Air Force Command, JTAC radar) before armor; heavy armor and guided
+	# fires lead, infantry holds ground.
+	BotDoctrine@saudi:
+		Factions: saudi
+		Doctrine: expeditionary
+		InitialBuildOrder: gapowr, garefn, gapile, gaairc, gaweap
+		RoleShareModifiers:
+			main-battle-tank: 150
+			strike-aircraft: 150
+			interceptor: 150
+			artillery: 120
+			transport: 120
+			naval-screen: 110
+			line-infantry: 80
+			anti-armor: 90
+	# Asymmetric defense: cheap ambush infantry and technicals, guided rockets, one-way drones,
+	# linked boats. Barracks before the refinery and a concealed bunker early; little heavy equipment.
+	BotDoctrine@yemen:
+		Factions: yemen
+		Doctrine: asymmetric-defense
+		InitialBuildOrder: napowr, nahand, narefn, r2ybunker, naweap, naradr
+		RoleShareModifiers:
+			line-infantry: 130
+			anti-armor: 160
+			artillery: 140
+			strike-aircraft: 170
+			naval-screen: 140
+			anti-air: 90
+			transport: 50

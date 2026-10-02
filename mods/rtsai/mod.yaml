@@ -110,6 +110,8 @@ Rules:
 	ra2|modern-factions/yemen-ai.yaml
 	ra2|modern-factions/yemen-audio.yaml
 	ra2|modern-factions/yemen-roles.yaml
+	ra2|modern-factions/combined-arms-ai.yaml
+	ra2|modern-factions/doctrines.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml

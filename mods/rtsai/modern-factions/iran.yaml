@@ -45,7 +45,7 @@ Player:
 	ProvidesPrerequisite@iran:
 		Prerequisite: faction.iran
 		Factions: iran
-	UnitBuilderBotModule@normal:
+	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2karrar: 65
 			r2raad: 20
@@ -53,7 +53,7 @@ Player:
 			r2mohajer: 8
 		UnitLimits:
 			r2mohajer: 4
-	UnitBuilderBotModule@medium:
+	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2karrar: 65
 			r2raad: 20
@@ -61,7 +61,7 @@ Player:
 			r2mohajer: 8
 		UnitLimits:
 			r2mohajer: 4
-	UnitBuilderBotModule@rush:
+	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2karrar: 65
 			r2raad: 20
@@ -69,7 +69,7 @@ Player:
 			r2mohajer: 8
 		UnitLimits:
 			r2mohajer: 4
-	UnitBuilderBotModule@turtle:
+	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2karrar: 65
 			r2raad: 20
@@ -77,7 +77,7 @@ Player:
 			r2mohajer: 8
 		UnitLimits:
 			r2mohajer: 4
-	UnitBuilderBotModule@naval:
+	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2karrar: 65
 			r2raad: 20

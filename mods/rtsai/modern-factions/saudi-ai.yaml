@@ -1,5 +1,5 @@
 Player:
-	UnitBuilderBotModule@normal:
+	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2sang: 65
 			r2saat: 28
@@ -18,7 +18,7 @@ Player:
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
-	BaseBuilderBotModule@normal:
+	DoctrineBaseBuilderBotModule@normal:
 		BuildingFractions:
 			r2saguard: 10
 			r2sapatriot: 6
@@ -28,7 +28,7 @@ Player:
 			r2sapatriot: 4
 			r2satow: 4
 	SquadManagerBotModule@normal:
-	UnitBuilderBotModule@medium:
+	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2sang: 65
 			r2saat: 28
@@ -47,7 +47,7 @@ Player:
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
-	BaseBuilderBotModule@medium:
+	DoctrineBaseBuilderBotModule@medium:
 		BuildingFractions:
 			r2saguard: 10
 			r2sapatriot: 6
@@ -57,7 +57,7 @@ Player:
 			r2sapatriot: 4
 			r2satow: 4
 	SquadManagerBotModule@medium:
-	UnitBuilderBotModule@rush:
+	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2sang: 65
 			r2saat: 28
@@ -76,7 +76,7 @@ Player:
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
-	BaseBuilderBotModule@rush:
+	DoctrineBaseBuilderBotModule@rush:
 		BuildingFractions:
 			r2saguard: 10
 			r2sapatriot: 6
@@ -86,7 +86,7 @@ Player:
 			r2sapatriot: 4
 			r2satow: 4
 	SquadManagerBotModule@rush:
-	UnitBuilderBotModule@turtle:
+	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2sang: 65
 			r2saat: 28
@@ -105,7 +105,7 @@ Player:
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
-	BaseBuilderBotModule@turtle:
+	DoctrineBaseBuilderBotModule@turtle:
 		BuildingFractions:
 			r2saguard: 10
 			r2sapatriot: 6
@@ -115,7 +115,7 @@ Player:
 			r2sapatriot: 4
 			r2satow: 4
 	SquadManagerBotModule@turtle:
-	UnitBuilderBotModule@naval:
+	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2sang: 65
 			r2saat: 28
@@ -134,7 +134,7 @@ Player:
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
-	BaseBuilderBotModule@naval:
+	DoctrineBaseBuilderBotModule@naval:
 		BuildingFractions:
 			r2saguard: 10
 			r2sapatriot: 6

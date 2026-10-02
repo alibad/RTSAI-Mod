@@ -1,5 +1,5 @@
 Player:
-	UnitBuilderBotModule@normal:
+	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2ymr: 75
 			r2yrpg: 32
@@ -16,7 +16,7 @@ Player:
 			r2samad: 5
 			r2sahaab: 3
 			r2mokha: 2
-	BaseBuilderBotModule@normal:
+	DoctrineBaseBuilderBotModule@normal:
 		BuildingFractions:
 			r2ybunker: 10
 			r2yzunest: 7
@@ -26,7 +26,7 @@ Player:
 			r2yzunest: 4
 			r2ycoastal: 4
 	SquadManagerBotModule@normal:
-	UnitBuilderBotModule@medium:
+	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2ymr: 75
 			r2yrpg: 32
@@ -43,7 +43,7 @@ Player:
 			r2samad: 5
 			r2sahaab: 3
 			r2mokha: 2
-	BaseBuilderBotModule@medium:
+	DoctrineBaseBuilderBotModule@medium:
 		BuildingFractions:
 			r2ybunker: 10
 			r2yzunest: 7
@@ -53,7 +53,7 @@ Player:
 			r2yzunest: 4
 			r2ycoastal: 4
 	SquadManagerBotModule@medium:
-	UnitBuilderBotModule@rush:
+	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2ymr: 75
 			r2yrpg: 32
@@ -70,7 +70,7 @@ Player:
 			r2samad: 5
 			r2sahaab: 3
 			r2mokha: 2
-	BaseBuilderBotModule@rush:
+	DoctrineBaseBuilderBotModule@rush:
 		BuildingFractions:
 			r2ybunker: 10
 			r2yzunest: 7
@@ -80,7 +80,7 @@ Player:
 			r2yzunest: 4
 			r2ycoastal: 4
 	SquadManagerBotModule@rush:
-	UnitBuilderBotModule@turtle:
+	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2ymr: 75
 			r2yrpg: 32
@@ -97,7 +97,7 @@ Player:
 			r2samad: 5
 			r2sahaab: 3
 			r2mokha: 2
-	BaseBuilderBotModule@turtle:
+	DoctrineBaseBuilderBotModule@turtle:
 		BuildingFractions:
 			r2ybunker: 10
 			r2yzunest: 7
@@ -107,7 +107,7 @@ Player:
 			r2yzunest: 4
 			r2ycoastal: 4
 	SquadManagerBotModule@turtle:
-	UnitBuilderBotModule@naval:
+	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2ymr: 75
 			r2yrpg: 32
@@ -124,7 +124,7 @@ Player:
 			r2samad: 5
 			r2sahaab: 3
 			r2mokha: 2
-	BaseBuilderBotModule@naval:
+	DoctrineBaseBuilderBotModule@naval:
 		BuildingFractions:
 			r2ybunker: 10
 			r2yzunest: 7

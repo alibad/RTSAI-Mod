@@ -38,7 +38,7 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	BaseBuilderBotModule@normal:
+	DoctrineBaseBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		DefenseQueues: Support
 		ConstructionYardTypes: gacnst, nacnst
@@ -106,7 +106,7 @@ Player:
 		NavalProductionTypes: nayard, gayard
 		AirUnitsTypes: jumpjet, shad, zep, orca, beag
 		ProtectionTypes: gacnst, gapowr, gapile, garefn, gaairc, amradr, gaweap, gayard, gadept, gatech, gapill, nasam, gtgcan, gaorep, gaspysat, gagap, gaweat, gacsph, atesla, nacnst, napowr, nahand, narefn, naradr, naweap, nayard, nadept, nanrct, natech, naclon, napsis, nairon, namisl, naflak, tesla, nalasr, amcv, cmin, smcv, harv
-	UnitBuilderBotModule@normal:
+	DoctrineUnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		UnitsToBuild:
 			e1: 90
@@ -190,7 +190,7 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	BaseBuilderBotModule@medium:
+	DoctrineBaseBuilderBotModule@medium:
 		RequiresCondition: enable-medium-ai
 		DefenseQueues: Support
 		ConstructionYardTypes: gacnst, nacnst
@@ -258,7 +258,7 @@ Player:
 		NavalProductionTypes: nayard, gayard
 		AirUnitsTypes: jumpjet, shad, zep, orca, beag
 		ProtectionTypes: gacnst, gapowr, gapile, garefn, gaairc, amradr, gaweap, gayard, gadept, gatech, gapill, nasam, gtgcan, gaorep, gaspysat, gagap, gaweat, gacsph, atesla, nacnst, napowr, nahand, narefn, naradr, naweap, nayard, nadept, nanrct, natech, naclon, napsis, nairon, namisl, naflak, tesla, nalasr, amcv, cmin, smcv, harv
-	UnitBuilderBotModule@medium:
+	DoctrineUnitBuilderBotModule@medium:
 		RequiresCondition: enable-medium-ai
 		UnitsToBuild:
 			e1: 90
@@ -342,7 +342,7 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	BaseBuilderBotModule@rush:
+	DoctrineBaseBuilderBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		DefenseQueues: Support
 		ConstructionYardTypes: gacnst, nacnst
@@ -410,7 +410,7 @@ Player:
 		NavalProductionTypes: nayard, gayard
 		AirUnitsTypes: jumpjet, shad, zep, orca, beag
 		ProtectionTypes: gacnst, gapowr, gapile, garefn, gaairc, amradr, gaweap, gayard, gadept, gatech, gapill, nasam, gtgcan, gaorep, gaspysat, gagap, gaweat, gacsph, atesla, nacnst, napowr, nahand, narefn, naradr, naweap, nayard, nadept, nanrct, natech, naclon, napsis, nairon, namisl, naflak, tesla, nalasr, amcv, cmin, smcv, harv
-	UnitBuilderBotModule@rush:
+	DoctrineUnitBuilderBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		UnitsToBuild:
 			e1: 90
@@ -494,7 +494,7 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	BaseBuilderBotModule@turtle:
+	DoctrineBaseBuilderBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		DefenseQueues: Support
 		ConstructionYardTypes: gacnst, nacnst
@@ -562,7 +562,7 @@ Player:
 		NavalProductionTypes: nayard, gayard
 		AirUnitsTypes: jumpjet, shad, zep, orca, beag
 		ProtectionTypes: gacnst, gapowr, gapile, garefn, gaairc, amradr, gaweap, gayard, gadept, gatech, gapill, nasam, gtgcan, gaorep, gaspysat, gagap, gaweat, gacsph, atesla, nacnst, napowr, nahand, narefn, naradr, naweap, nayard, nadept, nanrct, natech, naclon, napsis, nairon, namisl, naflak, tesla, nalasr, amcv, cmin, smcv, harv
-	UnitBuilderBotModule@turtle:
+	DoctrineUnitBuilderBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		UnitsToBuild:
 			e1: 90
@@ -646,7 +646,7 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-	BaseBuilderBotModule@naval:
+	DoctrineBaseBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		DefenseQueues: Support
 		ConstructionYardTypes: gacnst, nacnst
@@ -714,7 +714,7 @@ Player:
 		NavalProductionTypes: nayard, gayard
 		AirUnitsTypes: jumpjet, shad, zep, orca, beag
 		ProtectionTypes: gacnst, gapowr, gapile, garefn, gaairc, amradr, gaweap, gayard, gadept, gatech, gapill, nasam, gtgcan, gaorep, gaspysat, gagap, gaweat, gacsph, atesla, nacnst, napowr, nahand, narefn, naradr, naweap, nayard, nadept, nanrct, natech, naclon, napsis, nairon, namisl, naflak, tesla, nalasr, amcv, cmin, smcv, harv
-	UnitBuilderBotModule@naval:
+	DoctrineUnitBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		UnitsToBuild:
 			e1: 90

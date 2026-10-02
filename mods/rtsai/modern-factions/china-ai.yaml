@@ -1,5 +1,5 @@
 Player:
-	UnitBuilderBotModule@normal:
+	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2cnrifle: 60
 			r2cnportable: 25
@@ -23,7 +23,7 @@ Player:
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
-	BaseBuilderBotModule@normal:
+	DoctrineBaseBuilderBotModule@normal:
 		BuildingFractions:
 			r2bastion: 9
 			r2skyshield: 7
@@ -33,7 +33,7 @@ Player:
 			r2skyshield: 5
 			r2spectrum: 2
 	SquadManagerBotModule@normal:
-	UnitBuilderBotModule@medium:
+	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2cnrifle: 60
 			r2cnportable: 25
@@ -57,7 +57,7 @@ Player:
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
-	BaseBuilderBotModule@medium:
+	DoctrineBaseBuilderBotModule@medium:
 		BuildingFractions:
 			r2bastion: 9
 			r2skyshield: 7
@@ -67,7 +67,7 @@ Player:
 			r2skyshield: 5
 			r2spectrum: 2
 	SquadManagerBotModule@medium:
-	UnitBuilderBotModule@rush:
+	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2cnrifle: 75
 			r2cnportable: 25
@@ -91,7 +91,7 @@ Player:
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
-	BaseBuilderBotModule@rush:
+	DoctrineBaseBuilderBotModule@rush:
 		BuildingFractions:
 			r2bastion: 9
 			r2skyshield: 7
@@ -101,7 +101,7 @@ Player:
 			r2skyshield: 5
 			r2spectrum: 2
 	SquadManagerBotModule@rush:
-	UnitBuilderBotModule@turtle:
+	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2cnrifle: 60
 			r2cnportable: 25
@@ -125,7 +125,7 @@ Player:
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
-	BaseBuilderBotModule@turtle:
+	DoctrineBaseBuilderBotModule@turtle:
 		BuildingFractions:
 			r2bastion: 15
 			r2skyshield: 7
@@ -135,7 +135,7 @@ Player:
 			r2skyshield: 5
 			r2spectrum: 2
 	SquadManagerBotModule@turtle:
-	UnitBuilderBotModule@naval:
+	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2cnrifle: 60
 			r2cnportable: 25
@@ -159,7 +159,7 @@ Player:
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
-	BaseBuilderBotModule@naval:
+	DoctrineBaseBuilderBotModule@naval:
 		BuildingFractions:
 			r2bastion: 9
 			r2skyshield: 7

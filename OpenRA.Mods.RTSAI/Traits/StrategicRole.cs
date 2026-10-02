@@ -26,8 +26,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 	}
 
 	// Moved from the alibad/OpenRA fork's Mods.Common (Traits/WorldWarIII/FactionDoctrine.cs) with the
-	// modern faction data. It is metadata only; the fork's role-based bot production that reads it
-	// (UnitBuilderBotModule.RoleShares) is not part of the slim engine yet.
+	// modern faction data. It does not change the simulation; DoctrineUnitBuilderBotModule.RoleShares
+	// reads it to recruit combined-arms armies.
 	[Desc("Declares reusable strategic roles and balance metadata without changing actor simulation behavior.")]
 	public class StrategicRoleInfo : TraitInfo
 	{
