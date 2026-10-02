@@ -73,11 +73,13 @@ Container@OBSERVER_WIDGETS:
 							Height: 23
 							X: 4
 							Y: 2
-						Label@LABEL:
+						LabelWithTooltip@LABEL:
 							X: 34
 							Width: PARENT_WIDTH
 							Height: 25
 							Shadow: True
+							TooltipContainer: TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
 						Label@NOFLAG_LABEL:
 							X: 5
 							Width: PARENT_WIDTH
@@ -631,13 +633,15 @@ Container@OBSERVER_WIDGETS:
 									Y: 2
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								Label@CASH:
 									X: 155
 									Y: 0
@@ -716,13 +720,15 @@ Container@OBSERVER_WIDGETS:
 									Y: 2
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								Label@CASH:
 									X: 155
 									Y: 0
@@ -787,13 +793,15 @@ Container@OBSERVER_WIDGETS:
 									Y: 2
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								ObserverProductionIcons@PRODUCTION_ICONS:
 									X: 155
 									Y: 0
@@ -822,13 +830,15 @@ Container@OBSERVER_WIDGETS:
 									Y: 2
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								ObserverSupportPowerIcons@SUPPORT_POWER_ICONS:
 									X: 155
 									Y: 0
@@ -859,13 +869,15 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								ObserverArmyIcons@ARMY_ICONS:
 									X: 155
 									Y: 0
@@ -894,13 +906,15 @@ Container@OBSERVER_WIDGETS:
 									Y: 2
 									ImageName: random
 									ImageCollection: flags
-								Label@PLAYER:
+								LabelWithTooltip@PLAYER:
 									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
 									Font: Bold
 									Shadow: True
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
 								Label@ASSETS_DESTROYED:
 									X: 155
 									Y: 0
@@ -970,7 +984,7 @@ Container@OBSERVER_WIDGETS:
 							Width: PARENT_WIDTH
 							Height: PARENT_HEIGHT
 							Color: 00000090
-						LineGraph@INCOME_GRAPH:
+						ScrollableLineGraph@INCOME_GRAPH:
 							X: 0
 							Y: 0
 							Width: PARENT_WIDTH - 5
@@ -996,7 +1010,7 @@ Container@OBSERVER_WIDGETS:
 							Width: PARENT_WIDTH
 							Height: PARENT_HEIGHT
 							Color: 00000090
-						LineGraph@ARMY_VALUE_GRAPH:
+						ScrollableLineGraph@ARMY_VALUE_GRAPH:
 							X: 0
 							Y: 0
 							Width: PARENT_WIDTH - 5
