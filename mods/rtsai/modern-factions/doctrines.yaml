@@ -24,11 +24,11 @@ Player:
 			naval-screen: 120
 			anti-submarine: 120
 			submarine: 120
-	# Layered denial: radar and an AA site before the factory, then long-range fires and drones.
+	# Layered denial: radar and an AA site right after the factory, then long-range fires and drones.
 	BotDoctrine@iran:
 		Factions: iran
 		Doctrine: layered-denial
-		InitialBuildOrder: napowr, narefn, nahand, naradr, r2iraasite, naweap
+		InitialBuildOrder: napowr, narefn, nahand, naweap, naradr, r2iraasite
 		RoleShareModifiers:
 			anti-air: 40
 			artillery: 150
@@ -46,12 +46,12 @@ Player:
 			strike-aircraft: 80
 			anti-air: 40
 			artillery: 80
-	# Expeditionary: air power (Air Force Command, JTAC radar) before armor; heavy armor and guided
-	# fires lead, infantry holds ground.
+	# Expeditionary: air power (Air Force Command, JTAC radar) right after the first armor; heavy
+	# armor and guided fires lead, infantry holds ground.
 	BotDoctrine@saudi:
 		Factions: saudi
 		Doctrine: expeditionary
-		InitialBuildOrder: gapowr, garefn, gapile, gaairc, gaweap
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc
 		RoleShareModifiers:
 			main-battle-tank: 150
 			strike-aircraft: 150
