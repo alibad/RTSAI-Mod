@@ -27,12 +27,13 @@ rm -rf "${DEST}"
 mkdir -p "${DEST}"
 git -C "${REPO}" archive "${ENGINE_VERSION}" | tar -x -C "${DEST}"
 
-# OpenRA.Mods.RA2 is owned by this mod (./OpenRA.Mods.RA2). Drop the engine copy
-# so both projects never write OpenRA.Mods.RA2.dll into engine/bin. This mirrors
-# the proposed slim-engine change (the fork's mods/ra still lists the dll; it is
-# not used by this mod).
-rm -rf "${DEST}/OpenRA.Mods.RA2"
-sed -i '/OpenRA.Mods.RA2/d' "${DEST}/OpenRA.slnx"
+# OpenRA.Mods.RA2 is owned by this mod (./OpenRA.Mods.RA2). The slim engine
+# (rtsai/engine) does not ship it; older fork pins did, so drop any engine copy
+# so only one OpenRA.Mods.RA2.dll is ever written into engine/bin.
+if [ -d "${DEST}/OpenRA.Mods.RA2" ]; then
+	rm -rf "${DEST}/OpenRA.Mods.RA2"
+	sed -i '/OpenRA.Mods.RA2/d' "${DEST}"/OpenRA.sln*
+fi
 
 # The engine's `make all` downloads the GeoIP database when it is missing or
 # older than 30 days. Reuse the local copy so the build needs no extra network.
