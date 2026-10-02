@@ -72,7 +72,7 @@ r2trrifle:
 		BuildPaletteOrder: 10
 		Description: ra2-r2trrifle-description
 	Valued:
-		Cost: 160
+		Cost: 155
 	Health:
 		HP: 125
 	RevealsShroud:
