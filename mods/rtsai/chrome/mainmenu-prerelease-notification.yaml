@@ -11,35 +11,35 @@ Background@MAINMENU_PRERELEASE_NOTIFICATION:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: Red Alert 2 developer preview
+			Text: mainmenu-prerelease-notification-prompt-title-text
 		Label@PROMPT_TEXT_A:
 			X: 15
 			Y: 50
 			Width: PARENT_WIDTH - 30
 			Height: 16
 			Align: Center
-			Text: This pre-alpha build of OpenRA's Red Alert 2 mod is made available
+			Text: mainmenu-prerelease-notification-prompt-text-a-text
 		Label@PROMPT_TEXT_B:
 			X: 15
 			Y: 68
 			Width: PARENT_WIDTH - 30
 			Height: 16
 			Align: Center
-			Text: for the community to follow development and as example for modders.
+			Text: mainmenu-prerelease-notification-prompt-text-b-text
 		Label@PROMPT_TEXT_C:
 			X: 15
 			Y: 104
 			Width: PARENT_WIDTH - 30
 			Height: 16
 			Align: Center
-			Text: Many features are missing or incomplete, performance has not been
+			Text: mainmenu-prerelease-notification-prompt-text-c-text
 		Label@PROMPT_TEXT_D:
 			X: 15
 			Y: 122
 			Width: PARENT_WIDTH - 30
 			Height: 16
 			Align: Center
-			Text: optimized, and balance will not be addressed until a future beta.
+			Text: mainmenu-prerelease-notification-prompt-text-d-text
 		Label@PROMPT_TEXT_E:
 			X: 15
 			Y: 140
@@ -51,5 +51,5 @@ Background@MAINMENU_PRERELEASE_NOTIFICATION:
 			Y: PARENT_HEIGHT - 45
 			Width: 120
 			Height: 25
-			Text: I Understand
+			Text: mainmenu-prerelease-notification-continue-button-text
 			Font: Bold

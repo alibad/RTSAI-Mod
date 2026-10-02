@@ -1,5 +1,5 @@
 Metadata:
-	Title: RTS AI
+	Title: mod-title
 	WindowTitle: ra2-preview-window-title
 	Version: {DEV_VERSION}
 
@@ -264,6 +264,7 @@ FluentMessages:
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
 	ra2|languages/rules/en.ftl
+	ra2|languages/chrome/en.ftl
 	ra2|languages/native-preview.ftl
 	ra2|languages/ai.ftl
 	ra2|modern-factions/messages.ftl
@@ -287,7 +288,6 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: ra2|uibits/loadscreen.png
-	Text: Carving wooden nickels..., Preparing paratroopers..., Welcoming you to Texas..., Optimizing helium mix..., Receiving thoughts..., Igniting boosters...
 
 ServerTraits:
 	LobbyCommands

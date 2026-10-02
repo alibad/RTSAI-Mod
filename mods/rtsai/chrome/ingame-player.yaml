@@ -59,8 +59,8 @@ Container@PLAYER_WIDGETS:
 					Height: 22
 					Font: TinyBold
 					VisualHeight: 0
-					TooltipText: Capture feedback
-					TooltipDesc: Save a fog-respecting screenshot and live game state, then open the local feedback form.
+					TooltipText: ingame-player-feedback-tooltip
+					TooltipDesc: ingame-player-feedback-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 				Button@ACTION_CONFIRM:
@@ -245,8 +245,8 @@ Container@PLAYER_WIDGETS:
 					IconSize: 60, 48
 					IconSpriteOffset: -1, -1
 					TooltipContainer: TOOLTIP_CONTAINER
-					ReadyText: READY
-					HoldText: ON HOLD
+					ReadyText: supportpowers-support-powers-palette.ready
+					HoldText: supportpowers-support-powers-palette.hold
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
 				Container@PALETTE_FOREGROUND:
@@ -289,8 +289,8 @@ Container@PLAYER_WIDGETS:
 					Background:
 					Key: AttackMove
 					DisableKeySound: true
-					TooltipText: Attack Move
-					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nHold {(Ctrl)} while targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
+					TooltipText: button-command-bar-attack-move.tooltip
+					TooltipDesc: ingame-player-attack-move-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -307,8 +307,8 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Background:
 					DisableKeySound: true
-					TooltipText: Force Move
-					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipText: ingame-player-force-move-tooltip
+					TooltipDesc: ingame-player-force-move-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -325,8 +325,8 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Background:
 					DisableKeySound: true
-					TooltipText: Force Attack
-					TooltipDesc: Selected units will attack the targeted unit or location\nignoring their default activity for the target.\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipText: ingame-player-force-attack-tooltip
+					TooltipDesc: ingame-player-force-attack-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -344,8 +344,8 @@ Container@PLAYER_WIDGETS:
 					Background:
 					Key: Guard
 					DisableKeySound: true
-					TooltipText: Guard
-					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
+					TooltipText: button-command-bar-guard.tooltip
+					TooltipDesc: ingame-player-guard-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -363,8 +363,8 @@ Container@PLAYER_WIDGETS:
 					Key: Deploy
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Deploy
-					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n - Demolition Trucks and MAD Tanks will self-destruct\n - Aircraft will return to base\n\nActs immediately on selected units.
+					TooltipText: hotkey-description-deploy
+					TooltipDesc: ingame-player-deploy-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -382,8 +382,8 @@ Container@PLAYER_WIDGETS:
 					Key: Scatter
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Scatter
-					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
+					TooltipText: button-command-bar-scatter.tooltip
+					TooltipDesc: ingame-player-scatter-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -401,8 +401,8 @@ Container@PLAYER_WIDGETS:
 					Key: Stop
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Stop
-					TooltipDesc: Selected units will stop their current activity.\nSelected buildings will reset their rally point.\n\nActs immediately on selected targets.
+					TooltipText: button-command-bar-stop.tooltip
+					TooltipDesc: ingame-player-stop-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -418,8 +418,8 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Background:
 					DisableKeySound: true
-					TooltipText: Waypoint Mode
-					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
+					TooltipText: button-command-bar-queue-orders.tooltip
+					TooltipDesc: ingame-player-queue-orders-tooltip-desc
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -444,8 +444,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Attack Anything Stance
-					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
+					TooltipText: button-stance-bar-attackanything.tooltip
+					TooltipDesc: button-stance-bar-attackanything.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -463,8 +463,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceDefend
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Defend Stance
-					TooltipDesc: Set the selected units to Defend stance:\n - Units will attack enemy units on sight\n - Units will not move or pursue enemies
+					TooltipText: button-stance-bar-defend.tooltip
+					TooltipDesc: button-stance-bar-defend.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -482,8 +482,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceReturnFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Return Fire Stance
-					TooltipDesc: Set the selected units to Return Fire stance:\n - Units will retaliate against enemies that attack them\n - Units will not move or pursue enemies
+					TooltipText: button-stance-bar-returnfire.tooltip
+					TooltipDesc: button-stance-bar-returnfire.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -501,8 +501,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceHoldFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Hold Fire Stance
-					TooltipDesc: Set the selected units to Hold Fire stance:\n - Units will not fire upon enemies\n - Units will not move or pursue enemies
+					TooltipText: button-stance-bar-holdfire.tooltip
+					TooltipDesc: button-stance-bar-holdfire.tooltipdesc
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -534,7 +534,7 @@ Container@PLAYER_WIDGETS:
 							Width: 62
 							Height: 23
 							Background: debug-button
-							TooltipText: Debug Menu
+							TooltipText: ingame-player-debug-button-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 						MenuButton@OPTIONS_BUTTON:
@@ -545,7 +545,7 @@ Container@PLAYER_WIDGETS:
 							Width: 69
 							Height: 23
 							Background: options-button
-							TooltipText: Options
+							TooltipText: label-menu-buttons-title
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 						Button@REPAIR_BUTTON:
@@ -556,7 +556,7 @@ Container@PLAYER_WIDGETS:
 							Height: 34
 							Background: repair-button
 							Key: Repair
-							TooltipText: Repair
+							TooltipText: ingame-player-repair-button-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -572,7 +572,7 @@ Container@PLAYER_WIDGETS:
 							Height: 34
 							Background: beacon-button
 							Key: PlaceBeacon
-							TooltipText: Place Beacon
+							TooltipText: ingame-player-beacon-button-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -588,7 +588,7 @@ Container@PLAYER_WIDGETS:
 							Height: 34
 							Background: sell-button
 							Key: Sell
-							TooltipText: Sell
+							TooltipText: ingame-player-sell-button-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -641,7 +641,6 @@ Container@PLAYER_WIDGETS:
 					Width: 50
 					Height: 23
 					Font: Bold
-					Text: {0}
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: SIMPLE_TOOLTIP
 					Children:
@@ -659,7 +658,6 @@ Container@PLAYER_WIDGETS:
 					Height: 23
 					Align: Right
 					Font: Bold
-					Text: {0}
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: SIMPLE_TOOLTIP
 					Children:
@@ -711,8 +709,8 @@ Container@PLAYER_WIDGETS:
 					X: 24
 					Y: 2
 					TooltipContainer: TOOLTIP_CONTAINER
-					ReadyText: READY
-					HoldText: ON HOLD
+					ReadyText: supportpowers-support-powers-palette.ready
+					HoldText: supportpowers-support-powers-palette.hold
 					IconSize: 60, 48
 					IconMargin: 2, 2
 					IconSpriteOffset: -1, -1
@@ -732,7 +730,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: buildings-button
-							TooltipText: Buildings
+							TooltipText: ingame-player-building-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building
 							Key: ProductionTypeBuilding
@@ -749,7 +747,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: support-button
-							TooltipText: Support
+							TooltipText: ingame-player-support-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Support
 							Key: ProductionTypeDefense
@@ -766,7 +764,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: infantry-button
-							TooltipText: Infantry
+							TooltipText: ingame-player-infantry-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Infantry
 							Key: ProductionTypeInfantry
@@ -783,7 +781,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: vehicles-button
-							TooltipText: Vehicles
+							TooltipText: ingame-player-vehicle-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Vehicle
 							Key: ProductionTypeVehicle
@@ -800,7 +798,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: aircrafts-button
-							TooltipText: Aircraft
+							TooltipText: ingame-player-aircraft-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Aircraft
 							Key: ProductionTypeAircraft
@@ -817,7 +815,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: ships-button
-							TooltipText: Naval
+							TooltipText: ingame-player-naval-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Ship
 							Key: ProductionTypeNaval
@@ -835,7 +833,7 @@ Container@PLAYER_WIDGETS:
 							Height: 27
 							VisualHeight: 0
 							Background: scrollup-buttons
-							TooltipText: Scroll up
+							TooltipText: button-production-types-scroll-up-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 						Button@SCROLL_DOWN_BUTTON:
 							Logic: AddFactionSuffixLogic
@@ -845,7 +843,7 @@ Container@PLAYER_WIDGETS:
 							Height: 27
 							VisualHeight: 0
 							Background: scrolldown-buttons
-							TooltipText: Scroll down
+							TooltipText: button-production-types-scroll-down-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 		Container@HPF_OVERLAY:
 			Logic: HierarchicalPathFinderOverlayLogic
@@ -857,11 +855,11 @@ Container@PLAYER_WIDGETS:
 				DropDownButton@HPF_OVERLAY_LOCOMOTOR:
 					Width: PARENT_WIDTH
 					Height: 25
-					Text: Select Locomotor
+					Text: dropdownbutton-hpf-overlay-locomotor
 					Font: Regular
 				DropDownButton@HPF_OVERLAY_CHECK:
 					Y: 0 + 35
 					Width: PARENT_WIDTH
 					Height: 25
-					Text: Select BlockedByActor
+					Text: dropdownbutton-hpf-overlay-check
 					Font: Regular

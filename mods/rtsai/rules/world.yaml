@@ -14,11 +14,11 @@
 			Ore:
 				Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
 				Palette: resource
-				Name: Valuable Minerals
+				Name: resource-ore-name
 			Gems:
 				Sequences: gem01, gem02, gem03, gem04, gem05, gem06, gem07, gem08, gem09, gem10, gem11, gem12
 				Palette: resource
-				Name: Valuable Minerals
+				Name: resource-gems-name
 	TerrainLighting:
 	DebugVisualizations:
 	Locomotor@FOOT:
@@ -123,68 +123,68 @@
 		FogPalette: shroud
 		ShroudPalette: shroud
 	Faction@random:
-		Name: Random
+		Name: faction-random-name
 		InternalName: Random
 		RandomFactionMembers: random-allies, random-soviets
 		Side: Randoms
-		Description: Random Country\nA random country will be chosen when the game starts.
+		Description: faction-random-description
 	Faction@allies:
-		Name: Allies
+		Name: faction-random-allies-name
 		InternalName: random-allies
 		RandomFactionMembers: america, germany, england, france, korea, china, turkey, saudi
 		Side: Randoms
-		Description: Random Allied Country\nA random Allied country will be chosen when the game starts.
+		Description: faction-random-allies-description
 	Faction@soviets:
-		Name: Soviets
+		Name: faction-random-soviets-name
 		InternalName: random-soviets
 		RandomFactionMembers: cuba, libya, iraq, russia, iran, yemen
 		Side: Randoms
-		Description: Random Soviet Country\nA random Soviet country will be chosen when the game starts.
+		Description: faction-random-soviets-description
 	Faction@1:
-		Name: America
+		Name: faction-america-name
 		InternalName: america
 		Side: Allies
-		Description: America\nSpecial Ability: Paratroopers
+		Description: faction-america-description
 	Faction@2:
-		Name: Germany
+		Name: faction-germany-name
 		InternalName: germany
 		Side: Allies
-		Description: Germany\nSpecial Vehicle: Tank Destroyer
+		Description: faction-germany-description
 	Faction@3:
-		Name: England
+		Name: faction-england-name
 		InternalName: england
 		Side: Allies
-		Description: England\nSpecial Infantry: Sniper
+		Description: faction-england-description
 	Faction@4:
-		Name: France
+		Name: faction-france-name
 		InternalName: france
 		Side: Allies
-		Description: France\nSpecial Building: Grand Cannon
+		Description: faction-france-description
 	Faction@5:
-		Name: Korea
+		Name: faction-korea-name
 		InternalName: korea
 		Side: Allies
-		Description: Korea\nSpecial Aircraft: Black Eagle
+		Description: faction-korea-description
 	Faction@6:
-		Name: Cuba
+		Name: faction-cuba-name
 		InternalName: cuba
 		Side: Soviets
-		Description: Cuba\nSpecial Infantry: Terrorist
+		Description: faction-cuba-description
 	Faction@7:
-		Name: Libya
+		Name: faction-libya-name
 		InternalName: libya
 		Side: Soviets
-		Description: Libya\nSpecial Vehicle: Demolition Truck
+		Description: faction-libya-description
 	Faction@8:
-		Name: Iraq
+		Name: faction-iraq-name
 		InternalName: iraq
 		Side: Soviets
-		Description: Iraq\nSpecial Infantry: Desolator
+		Description: faction-iraq-description
 	Faction@9:
-		Name: Russia
+		Name: faction-russia-name
 		InternalName: russia
 		Side: Soviets
-		Description: Russia\nSpecial Vehicle: Tesla Tank
+		Description: faction-russia-description
 	CliffBackImpassabilityLayer:
 	Selection:
 	ControlGroups:
