@@ -100,6 +100,16 @@ Rules:
 	ra2|modern-factions/turkey-ai.yaml
 	ra2|modern-factions/turkey-audio.yaml
 	ra2|modern-factions/turkey-roles.yaml
+	ra2|modern-factions/saudi.yaml
+	ra2|modern-factions/saudi-roster.yaml
+	ra2|modern-factions/saudi-ai.yaml
+	ra2|modern-factions/saudi-audio.yaml
+	ra2|modern-factions/saudi-roles.yaml
+	ra2|modern-factions/yemen.yaml
+	ra2|modern-factions/yemen-roster.yaml
+	ra2|modern-factions/yemen-ai.yaml
+	ra2|modern-factions/yemen-audio.yaml
+	ra2|modern-factions/yemen-roles.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -123,6 +133,10 @@ Sequences:
 	ra2|modern-factions/iran-roster-sequences.yaml
 	ra2|modern-factions/turkey-sequences.yaml
 	ra2|modern-factions/turkey-roster-sequences.yaml
+	ra2|modern-factions/saudi-sequences.yaml
+	ra2|modern-factions/saudi-roster-sequences.yaml
+	ra2|modern-factions/yemen-sequences.yaml
+	ra2|modern-factions/yemen-roster-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
@@ -130,6 +144,8 @@ ModelSequences:
 	ra2|modern-factions/china-voxels.yaml
 	ra2|modern-factions/iran-voxels.yaml
 	ra2|modern-factions/turkey-voxels.yaml
+	ra2|modern-factions/saudi-voxels.yaml
+	ra2|modern-factions/yemen-voxels.yaml
 
 Cursors:
 	ra2|cursors.yaml
@@ -210,12 +226,16 @@ Weapons:
 	ra2|modern-factions/china-weapons.yaml
 	ra2|modern-factions/iran-weapons.yaml
 	ra2|modern-factions/turkey-weapons.yaml
+	ra2|modern-factions/saudi-weapons.yaml
+	ra2|modern-factions/yemen-weapons.yaml
 
 Voices:
 	ra2|audio/voices.yaml
 	ra2|modern-factions/china-voices.yaml
 	ra2|modern-factions/iran-voices.yaml
 	ra2|modern-factions/turkey-voices.yaml
+	ra2|modern-factions/saudi-voices.yaml
+	ra2|modern-factions/yemen-voices.yaml
 
 Notifications:
 	ra2|audio/notifications.yaml
@@ -248,6 +268,8 @@ FluentMessages:
 	ra2|modern-factions/china-messages.ftl
 	ra2|modern-factions/iran-messages.ftl
 	ra2|modern-factions/turkey-messages.ftl
+	ra2|modern-factions/saudi-messages.ftl
+	ra2|modern-factions/yemen-messages.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml

@@ -1,70 +1,70 @@
 aegis:
 	Buildable:
-		Prerequisites: radar, ~gayard, ~!faction.china, ~!faction.turkey
+		Prerequisites: radar, ~gayard, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 apoc:
 	Buildable:
-		Prerequisites: ~naweap, natech, ~!faction.iran
+		Prerequisites: ~naweap, natech, ~!faction.iran, ~!faction.yemen
 
 atesla:
 	Buildable:
-		Prerequisites: power, radar, ~structures.allies, ~!faction.china, ~!faction.turkey
+		Prerequisites: power, radar, ~structures.allies, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 carrier:
 	Buildable:
-		Prerequisites: gatech, ~gayard, ~!faction.china, ~!faction.turkey
+		Prerequisites: gatech, ~gayard, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 cleg:
 	Buildable:
-		Prerequisites: ~gapile, gatech, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gapile, gatech, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 dest:
 	Buildable:
-		Prerequisites: ~gayard, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gayard, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 dlph:
 	Buildable:
-		Prerequisites: gatech, ~gayard, ~!faction.china, ~!faction.turkey
+		Prerequisites: gatech, ~gayard, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 dron:
 	Buildable:
-		Prerequisites: ~naweap, ~!faction.iran
+		Prerequisites: ~naweap, ~!faction.iran, ~!faction.yemen
 
 e1:
 	Buildable:
-		Prerequisites: ~gapile, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gapile, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 e2:
 	Buildable:
-		Prerequisites: ~nahand, ~!faction.iran
+		Prerequisites: ~nahand, ~!faction.iran, ~!faction.yemen
 
 flakt:
 	Buildable:
-		Prerequisites: naradr, ~nahand, ~!faction.iran
+		Prerequisites: naradr, ~nahand, ~!faction.iran, ~!faction.yemen
 
 fv:
 	Buildable:
-		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 gapill:
 	Buildable:
-		Prerequisites: barracks, ~structures.allies, ~!faction.china, ~!faction.turkey
+		Prerequisites: barracks, ~structures.allies, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 htnk:
 	Buildable:
-		Prerequisites: ~naweap, ~!faction.iran
+		Prerequisites: ~naweap, ~!faction.iran, ~!faction.yemen
 
 hyd:
 	Buildable:
-		Prerequisites: naradr, ~nayard, ~!faction.iran
+		Prerequisites: naradr, ~nayard, ~!faction.iran, ~!faction.yemen
 
 ivan:
 	Buildable:
-		Prerequisites: naradr, ~nahand, ~!faction.iran
+		Prerequisites: naradr, ~nahand, ~!faction.iran, ~!faction.yemen
 
 jumpjet:
 	Buildable:
-		Prerequisites: ~gapile, radar, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gapile, radar, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 lcrf:
 	Buildable:
@@ -72,61 +72,61 @@ lcrf:
 
 mgtk:
 	Buildable:
-		Prerequisites: gatech, ~gaweap, ~!faction.china, ~!faction.turkey
+		Prerequisites: gatech, ~gaweap, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 mtnk:
 	Buildable:
-		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 naflak:
 	Buildable:
-		Prerequisites: barracks, ~structures.soviets, ~!faction.iran
+		Prerequisites: barracks, ~structures.soviets, ~!faction.iran, ~!faction.yemen
 
 nalasr:
 	Buildable:
-		Prerequisites: barracks, ~structures.soviets, ~!faction.iran
+		Prerequisites: barracks, ~structures.soviets, ~!faction.iran, ~!faction.yemen
 
 nasam:
 	Buildable:
-		Prerequisites: barracks, ~structures.allies, ~!faction.china, ~!faction.turkey
+		Prerequisites: barracks, ~structures.allies, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 orca:
 	Buildable:
-		Prerequisites: ~aircraft.harrier, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~aircraft.harrier, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 shad:
 	Buildable:
-		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey
+		Prerequisites: ~gaweap, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 shk:
 	Buildable:
-		Prerequisites: ~nahand, ~!faction.iran
+		Prerequisites: ~nahand, ~!faction.iran, ~!faction.yemen
 
 sqd:
 	Buildable:
-		Prerequisites: natech, ~nayard, ~!faction.iran
+		Prerequisites: natech, ~nayard, ~!faction.iran, ~!faction.yemen
 
 sref:
 	Buildable:
-		Prerequisites: gatech, ~gaweap, ~!faction.china, ~!faction.turkey
+		Prerequisites: gatech, ~gaweap, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 sub:
 	Buildable:
-		Prerequisites: ~nayard, ~!faction.iran
+		Prerequisites: ~nayard, ~!faction.iran, ~!faction.yemen
 
 tany:
 	Buildable:
-		Prerequisites: gatech, ~gapile, ~!faction.china, ~!faction.turkey
+		Prerequisites: gatech, ~gapile, ~!faction.china, ~!faction.turkey, ~!faction.saudi
 
 tesla:
 	Buildable:
-		Prerequisites: naradr, ~structures.soviets, ~!faction.iran
+		Prerequisites: naradr, ~structures.soviets, ~!faction.iran, ~!faction.yemen
 
 yuri:
 	Buildable:
-		Prerequisites: natech, ~nahand, ~!faction.iran
+		Prerequisites: natech, ~nahand, ~!faction.iran, ~!faction.yemen
 
 zep:
 	Buildable:
-		Prerequisites: ~naweap, natech, ~!faction.iran
+		Prerequisites: ~naweap, natech, ~!faction.iran, ~!faction.yemen
 

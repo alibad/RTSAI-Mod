@@ -1,0 +1,146 @@
+Player:
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			r2sang: 65
+			r2saat: 28
+			r2sajtac: 7
+			r2falcon: 2
+			r2f15sa: 8
+			r2ah64sa: 8
+			r2sadiq: 22
+			r2riyadh: 20
+			r2jubail: 5
+		UnitLimits:
+			r2sajtac: 3
+			r2falcon: 1
+			r2caesar: 4
+			r2f15sa: 4
+			r2ah64sa: 4
+			r2riyadh: 4
+			r2jubail: 2
+	BaseBuilderBotModule@normal:
+		BuildingFractions:
+			r2saguard: 10
+			r2sapatriot: 6
+			r2satow: 5
+		BuildingLimits:
+			r2saguard: 6
+			r2sapatriot: 4
+			r2satow: 4
+	SquadManagerBotModule@normal:
+	UnitBuilderBotModule@medium:
+		UnitsToBuild:
+			r2sang: 65
+			r2saat: 28
+			r2sajtac: 7
+			r2falcon: 2
+			r2f15sa: 8
+			r2ah64sa: 8
+			r2sadiq: 22
+			r2riyadh: 20
+			r2jubail: 5
+		UnitLimits:
+			r2sajtac: 3
+			r2falcon: 1
+			r2caesar: 4
+			r2f15sa: 4
+			r2ah64sa: 4
+			r2riyadh: 4
+			r2jubail: 2
+	BaseBuilderBotModule@medium:
+		BuildingFractions:
+			r2saguard: 10
+			r2sapatriot: 6
+			r2satow: 5
+		BuildingLimits:
+			r2saguard: 6
+			r2sapatriot: 4
+			r2satow: 4
+	SquadManagerBotModule@medium:
+	UnitBuilderBotModule@rush:
+		UnitsToBuild:
+			r2sang: 65
+			r2saat: 28
+			r2sajtac: 7
+			r2falcon: 2
+			r2f15sa: 8
+			r2ah64sa: 8
+			r2sadiq: 22
+			r2riyadh: 20
+			r2jubail: 5
+		UnitLimits:
+			r2sajtac: 3
+			r2falcon: 1
+			r2caesar: 4
+			r2f15sa: 4
+			r2ah64sa: 4
+			r2riyadh: 4
+			r2jubail: 2
+	BaseBuilderBotModule@rush:
+		BuildingFractions:
+			r2saguard: 10
+			r2sapatriot: 6
+			r2satow: 5
+		BuildingLimits:
+			r2saguard: 6
+			r2sapatriot: 4
+			r2satow: 4
+	SquadManagerBotModule@rush:
+	UnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			r2sang: 65
+			r2saat: 28
+			r2sajtac: 7
+			r2falcon: 2
+			r2f15sa: 8
+			r2ah64sa: 8
+			r2sadiq: 22
+			r2riyadh: 20
+			r2jubail: 5
+		UnitLimits:
+			r2sajtac: 3
+			r2falcon: 1
+			r2caesar: 4
+			r2f15sa: 4
+			r2ah64sa: 4
+			r2riyadh: 4
+			r2jubail: 2
+	BaseBuilderBotModule@turtle:
+		BuildingFractions:
+			r2saguard: 10
+			r2sapatriot: 6
+			r2satow: 5
+		BuildingLimits:
+			r2saguard: 6
+			r2sapatriot: 4
+			r2satow: 4
+	SquadManagerBotModule@turtle:
+	UnitBuilderBotModule@naval:
+		UnitsToBuild:
+			r2sang: 65
+			r2saat: 28
+			r2sajtac: 7
+			r2falcon: 2
+			r2f15sa: 8
+			r2ah64sa: 8
+			r2sadiq: 22
+			r2riyadh: 20
+			r2jubail: 5
+		UnitLimits:
+			r2sajtac: 3
+			r2falcon: 1
+			r2caesar: 4
+			r2f15sa: 4
+			r2ah64sa: 4
+			r2riyadh: 4
+			r2jubail: 2
+	BaseBuilderBotModule@naval:
+		BuildingFractions:
+			r2saguard: 10
+			r2sapatriot: 6
+			r2satow: 5
+		BuildingLimits:
+			r2saguard: 6
+			r2sapatriot: 4
+			r2satow: 4
+	SquadManagerBotModule@naval:

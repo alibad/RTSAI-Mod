@@ -131,13 +131,13 @@
 	Faction@allies:
 		Name: Allies
 		InternalName: random-allies
-		RandomFactionMembers: america, germany, england, france, korea, china, turkey
+		RandomFactionMembers: america, germany, england, france, korea, china, turkey, saudi
 		Side: Randoms
 		Description: Random Allied Country\nA random Allied country will be chosen when the game starts.
 	Faction@soviets:
 		Name: Soviets
 		InternalName: random-soviets
-		RandomFactionMembers: cuba, libya, iraq, russia, iran
+		RandomFactionMembers: cuba, libya, iraq, russia, iran, yemen
 		Side: Randoms
 		Description: Random Soviet Country\nA random Soviet country will be chosen when the game starts.
 	Faction@1:
