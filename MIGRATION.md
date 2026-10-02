@@ -1,12 +1,173 @@
-# RTS AI → OpenRA Mod SDK migration: round A
+# RTS AI → OpenRA Mod SDK migration
+
+How each result was established: **[ran]** means a command was run and its output observed.
+**[inferred]** means it was reasoned from code or config and not run.
+
+# Round B: five complete factions (Phase 2)
+
+Date: 2026-10-02. The mod's `main` has 6 new commits on 8928ebd (5d352f6 … this document), local only. The engine
+branch `rtsai/engine` has one new commit on f2bfa43fba (5523a9907f), local only. `OpenRA-AI`, its worktrees, the
+canonical `OpenRA` checkout and `OpenRA-Upstreams` were only read.
+
+| Goal | Result |
+|---|---|
+| 1. Saudi Arabia and Yemen | Done. Plain mod factions with flags, voices and random-pool entries. One engine commit for the frigate's interceptor magazine |
+| 2. Arabic/RTL | Not added. The Saudi/Yemen content has no Arabic text, so the condition is not met |
+| 3. Faction bot doctrine | Done, mod only. Role-aware combined-arms modules plus a `BotDoctrine` per faction, with openings |
+| 4. Translation warnings | Done: 793 → 0 |
+| 5. HUD overlap | Fixed |
+
+## 1. Saudi Arabia and Yemen (5d352f6)
+
+`tools/port-modern-factions.py` is now incremental. It ports the requested factions that `mod.yaml` does not list yet,
+then recomputes the shared files: exclusions, bot type lists, pools, flags, metrics and the manifest.
+`--factions saudi,yemen --product ../OpenRA-AI-wt-ra2-red-sea` ported 226 files.
+
+- **Source.** `codex/ra2-red-sea` @ b3b0ebd, **working tree**.
+  - Included uncommitted edits: `saudi-messages.ftl`, `saudi-roster.yaml`, `saudi-weapons.yaml`,
+    `yemen-roster.yaml` and `yemen.yaml`. They cover the brace wording, the National Guard moving while braced,
+    the SUPPLIED/LINKED/GUIDED labels, the removed F-15 strike MinRange and the Hodeidah muzzle height.
+  - Not included: the untracked `scripts/validate-ra2-red-sea.py`, a product harness that runs on the fork engine.
+- **Names, pools and flags.**
+  - Display names are "Saudi Arabia" and "Yemen" (`ra2-modern-{saudi,yemen}-name`).
+  - Saudi Arabia joins `random-allies` and Yemen joins `random-soviets`.
+  - Lobby flags come from the fork's `glyphs-redsea.png` (atlas row y=256, x=90/120).
+- **Audio.** 75 files:
+  - 56 Arabic/English voice lines. The rsa-veh and naval lines come from the overlay, the rest from the fork's
+    `mods/ra/bits`.
+  - 19 Red Sea weapon and naval sounds.
+- **Fork-only features.**
+  - `NavalRadarVisibility` moved into `OpenRA.Mods.RTSAI`.
+  - The Saudi frigate's interceptor magazine (`JamsMissiles` AmmoPool/AmmoUsage/InterceptCooldown/InterceptSound)
+    cannot live in a mod, because `Missile` only asks the engine trait.
+  - Engine commit 5523a9907f adds it: 2 files, +56/−5, and nothing changes when the fields are unused.
+    `ENGINE_VERSION` is repinned to it.
+
+## 2. Arabic/RTL: not triggered
+
+A scan for Arabic code points (U+0600–U+06FF) found none in the Saudi/Yemen YAML/FTL (red-sea working tree and mod),
+nor in `catalog/factions.json` [ran]. All names and descriptions are English; Arabic exists only in the voice audio.
+So there is no engine change.
+
+Windowed captures [ran]:
+- Saudi player on the dev build: M1A2S, National Guard and ATGM team, with the green Saudi flag in the tooltip.
+- Yemen player on the packaged build, with the Yemen flag in the tooltip.
+
+All text renders. When Arabic text ships, port `UnicodeText.cs` and the font fallback from fork 35b0199795.
+
+## 3. Faction bot doctrine (21ff8f6)
+
+No engine change. Three modules in `OpenRA.Mods.RTSAI/Traits/BotModules`:
+- `DoctrineUnitBuilderBotModule`: the upstream unit builder plus the fork's `RoleShares` (StrategicRole shares
+  balanced per production queue).
+- `DoctrineBaseBuilderBotModule` (plus its queue manager): the upstream base builder plus the fork's
+  `InitialBuildOrder` and its low-power guard.
+- `BotDoctrine` (new; `modern-factions/doctrines.yaml`): per faction, `RoleShareModifiers` scale the bot profile's
+  RoleShares, and its own `InitialBuildOrder` replaces the profile's. The openings follow the tech tree.
+
+The five doctrines:
+
+| Faction | Doctrine | Opening | Role emphasis |
+|---|---|---|---|
+| China | networked-combined-arms | standard | support ×2, transport, navy |
+| Iran | layered-denial | radar and AA site before the factory | AA, artillery, anti-armor |
+| Türkiye | mobile-defense | early service depot | MBT, IFV transport, drones |
+| Saudi Arabia | expeditionary | Air Force Command before the factory | MBT, air, artillery |
+| Yemen | asymmetric-defense | barracks before the refinery, early bunker | infantry, RPG, rockets, drones, boats |
+
+Tooling:
+- `port-modern-factions.py --doctrine-ai` renames the stock modules in every bot profile and restores the
+  InitialBuildOrder openings. It also ports `combined-arms-ai.yaml`: RoleShares, bot caps and stock-actor roles.
+- `RTSAI_BOT_LOG=1` writes `Logs/bot-doctrine.log`.
+- `tools/replay-production.py` summarises the production in any replay.
+
+Evidence [ran]:
+- **Logs.** They show each faction's scaled shares, for example Saudi main-battle-tank 39 (profile 26) and Iran
+  (turtle) anti-air 28. They also show the bots following the doctrine openings.
+- **8-minute five-bot match.**
+  - China: rifle, portable, Qilin, PHL, Mantis.
+  - Iran: Toophan ×6, Basij ×5, Raad, plus radar and an AA site.
+  - Türkiye: service depot, Gökkalkan ×2, Bozkır.
+  - Saudi Arabia: AF Command, Patriot, TOW, Caesar, ATGM team.
+  - Yemen: bunker before the refinery, RPG ×5, Mountain Rifleman ×3, technical RR, MLR.
+- **A/B, 300 s, same five bots.** Every doctrine bot fielded vehicles, while the stock bots built mostly infantry.
+  Total output is similar: stock 13–29 production orders, doctrine 12–17. The upstream RA2 bot economy limits the
+  early-game pace, not these modules.
+
+## 4. Translation warnings (ebf61b8)
+
+`tools/fluentize.py` runs the lint and turns each reported literal into a Fluent key:
+- 437 rules messages, in `languages/rules/en.ftl`;
+- 40 chrome and hotkey messages, in `languages/chrome/en.ftl`;
+- 71 widget strings that reuse identical engine `common|fluent` keys.
+
+Special cases:
+- Two `{0}` labels lost their dead text.
+- The dead LoadScreen `Text` became `loadscreen-loading`.
+- `support-power-timer` takes upstream RA's format.
+- The old `{(Ctrl)}` markup became `<(Ctrl)>`.
+
+`make test`: 0 errors, 0 warnings [ran].
+
+## 5. HUD overlap (40901fa)
+
+- **Cause.** "AUTO: STARTING…", shown until the companion acknowledges, is wider than the fixed 72 px AUTO button,
+  so it was drawn over LOG. A capture of the early state showed "LOGAUTO: STARTING." [ran]
+- **Fix.** The strip's buttons grow to fit their text, and the layout uses the measured widths.
+- **After.** The buttons are separate in the startup state and with a two-line status [ran].
+- Also fixed a mojibake bullet in two error messages.
+
+## Acceptance [ran, on 446479f]
+
+| Check | Result |
+|---|---|
+| `make clean && make all` | exit 0, 0 warnings, 0 errors |
+| `make test` | exit 0, 0 errors, 0 warnings |
+| 180 s headless, each modern faction as a bot | 5 parallel runs, all exit 124 (timeout), 0 exceptions. Own units queued: China r2cnrifle, r2cnportable; Iran r2toophan, r2basij; Türkiye r2trat; Saudi r2sang, r2saat; Yemen r2yrpg, r2ymr |
+| Bot-vs-bot spectator | 300 s with five bots on the normal/rush/turtle/naval/normal profiles: 0 exceptions. An earlier 480 s run also had 0 |
+| Windowed capture, Saudi/Yemen | 1152×720 frames of the Saudi (dev) and Yemen (packaged) bases, with faction flags and the HUD |
+| Probe as Saudi Arabia (packaged build; also dev, windowed) | Observe ticks 20→150→260, units `amcv engineer r2m1a2s r2saat r2sang`. GetState `player_faction=saudi enemy_faction=yemen`. Deploy → `gacnst` |
+| Packaged Windows build | `spike-portable.sh`: 19 s, 404 files, 191 MB, `includedFrameworks` NETCore + AspNetCore 10.0.11. `RTSAI.exe` launched headless (the probe above, Kestrel loaded from the package) and windowed (the Yemen frame) |
+
+Housekeeping:
+- Every game process was stopped by PID after its run; none remain.
+- `%APPDATA%\OpenRA` was not written: the ModMetadata timestamp is unchanged since 2026-08-21.
+- The copied `.mix` files and the support dirs were deleted.
+
+## Reproduce (round B)
+```
+python tools/port-modern-factions.py --factions saudi,yemen --product ../OpenRA-AI-wt-ra2-red-sea --doctrine-ai  # applied
+python tools/fluentize.py                     # applied; finds nothing left to convert
+RTSAI_BOT_LOG=1 tools/run-headless.sh <support> 180 defcon-6 Multi1:normal:saudi yemen   # <support>/Logs/bot-doctrine.log
+python tools/replay-production.py <support>/Replays/rtsai/{DEV_VERSION}/<replay>.orarep
+# windowed + companion, then:
+OpenRA-AI/.venv/Scripts/python tools/probe-bridge.py --deploy-mcv --early-frame start.png --frame later.png --status "long text"
+packaging/windows/spike-portable.sh <outdir>   # then <outdir>/RTSAI.exe Engine.SupportDir=<support> ...
+```
+
+## Remaining gaps (round B)
+
+1. **Nothing is pushed.** `AUTOMATIC_ENGINE_SOURCE` cannot resolve 5523a9907f until `rtsai/engine` is pushed.
+2. **Balance is unproven.**
+   - The doctrine multipliers and openings come from the catalog doctrines, not from win-rate tuning.
+   - No automated balance matches with recorded outcomes have been run.
+   - Early bots are economy-bound on DEFCON 6.
+3. **Squads are not doctrine-aware.** SquadSize stays per profile. Not ported from the fork: the Experience-only
+   `formation-size` parameter and the SupportPower, Minelayer and AirStates bot changes.
+4. **Not ported:**
+   - the per-country validators (`validate-ra2-*.py`);
+   - the catalog flip in OpenRA-AI;
+   - painted cameos, EVA and website captures.
+5. **Packaging.** The NSIS installer, macOS and Linux were not run. makensis, rcedit and wine are not installed.
+6. **Translations.** The generated keys are English only. The upstream pre-release notice still names
+   "OpenRA's Red Alert 2 mod".
+
+# Round A
 
 Date: 2026-10-02. Mod repo: `RTSAI-Mod` (local only). Engine: branch `rtsai/engine` in the canonical
 OpenRA repo, worktree `C:\Users\Admin\Code\hq\games\OpenRA-wt-rtsai-engine` (local only, never pushed).
 The canonical checkout's working tree and branch (`main` @ 5ddc34cb91) were not touched. `OpenRA-AI` was
 only read (working tree on `refocus/phase-0`).
-
-How each result was established: **[ran]** means a command was run and its output observed.
-**[inferred]** means it was reasoned from code or config and not run.
 
 ## Done
 

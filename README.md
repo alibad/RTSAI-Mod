@@ -25,8 +25,8 @@ The original RA2 countries plus modern nations, each with its own doctrine, sign
 | China | Playable |
 | Iran | Playable |
 | Türkiye | Playable |
-| Saudi Arabia | Coming next |
-| Yemen | Coming next |
+| Saudi Arabia | Playable |
+| Yemen | Playable |
 
 These are fictional game factions, not claims about real-world forces. The shared faction catalog (names, roles and stories used by the game and the website) lives in [alibad/OpenRA-AI](https://github.com/alibad/OpenRA-AI/blob/main/catalog/factions.json).
 
@@ -40,7 +40,7 @@ Requirements: the .NET 10 SDK.
 .\launch-game.cmd       # start the game
 ```
 
-The engine is the slim `rtsai/engine` branch of [alibad/OpenRA](https://github.com/alibad/OpenRA/tree/rtsai/engine): upstream OpenRA bleed plus a few small commits. They add loopback-service hosting for the companion, in-process screenshots, held-key tracking for push-to-talk, and a headless platform for automated tests. `mod.config` pins the exact commit.
+The engine is the slim `rtsai/engine` branch of [alibad/OpenRA](https://github.com/alibad/OpenRA/tree/rtsai/engine): upstream OpenRA bleed plus a few small commits. They add loopback-service hosting for the companion, in-process screenshots, held-key tracking for push-to-talk, a headless platform for automated tests, and an interceptor magazine for missile jammers. `mod.config` pins the exact commit.
 
 ## Layout
 
@@ -49,7 +49,7 @@ The engine is the slim `rtsai/engine` branch of [alibad/OpenRA](https://github.c
 | `mods/rtsai` | Game rules, maps, chrome and the modern factions |
 | `mods/rtsai-content` | The content installer that imports owned RA2 data |
 | `OpenRA.Mods.RA2` | RA2 game logic |
-| `OpenRA.Mods.RTSAI` | The AI companion bridge (loopback gRPC) and its in-game HUD |
+| `OpenRA.Mods.RTSAI` | The AI companion bridge (loopback gRPC), its in-game HUD, and the faction bot doctrines |
 | `tools/` | Porting and validation scripts |
 
 The companion's voice and strategy service lives in [alibad/OpenRA-AI](https://github.com/alibad/OpenRA-AI) (`services/companion`).
