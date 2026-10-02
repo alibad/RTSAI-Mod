@@ -48,7 +48,7 @@ r2cnrifle:
 		BuildPaletteOrder: 10
 		Description: ra2-r2cnrifle-description
 	Valued:
-		Cost: 180
+		Cost: 150
 	Health:
 		HP: 115
 	RevealsShroud:
