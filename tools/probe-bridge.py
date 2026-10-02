@@ -27,6 +27,10 @@ def main() -> int:
     parser.add_argument("--interval", type=float, default=5.0)
     parser.add_argument("--deploy-mcv", action="store_true", help="ExecuteCompanionActions: deploy the first MCV, then re-observe")
     parser.add_argument("--frame", type=Path, help="also call CaptureCompanionFrame and save the PNG here")
+    parser.add_argument("--status", default="probe from RTSAI-Mod", help="UpdateCompanionStatus message (HUD strip text)")
+    parser.add_argument("--frame-delay", type=float, default=0.0, help="seconds to wait before CaptureCompanionFrame")
+    parser.add_argument("--early-frame", type=Path,
+                        help="CaptureCompanionFrame before UpdateCompanionStatus (the strip's startup state)")
     args = parser.parse_args()
 
     sys.path.insert(0, str(args.product / "services/companion/src"))
@@ -63,9 +67,15 @@ def main() -> int:
             "building_types": sorted({b.kind for b in snapshot.buildings})[:8],
         }))
 
+    if args.early_frame:
+        frame = bridge.capture_frame()
+        args.early_frame.write_bytes(frame.png)
+        print(json.dumps({"rpc": "CaptureCompanionFrame", **frame.metadata(), "saved": str(args.early_frame)}))
+
     state = bridge.state()
-    print(json.dumps({"rpc": "GetState", "keys": sorted(state)[:12]}))
-    accepted = bridge.update_companion_status(**_status_kwargs(bridge))
+    print(json.dumps({"rpc": "GetState", "keys": sorted(state)[:12],
+                      **{k: state[k] for k in ("player_faction", "enemy_faction", "tick") if k in state}}))
+    accepted = bridge.update_companion_status(**_status_kwargs(bridge, args.status))
     print(json.dumps({"rpc": "UpdateCompanionStatus", "accepted": accepted}))
     if args.deploy_mcv:
         from openra_ai_companion.models import ActionCommand  # noqa: E402
@@ -84,6 +94,7 @@ def main() -> int:
                           "buildings": sorted(b.kind for b in after.buildings)}))
 
     if args.frame:
+        time.sleep(args.frame_delay)
         frame = bridge.capture_frame()
         args.frame.write_bytes(frame.png)
         print(json.dumps({"rpc": "CaptureCompanionFrame", **frame.metadata(), "bytes": len(frame.png), "saved": str(args.frame)}))
@@ -91,11 +102,11 @@ def main() -> int:
     return 0
 
 
-def _status_kwargs(bridge) -> dict:
+def _status_kwargs(bridge, message: str) -> dict:
     import inspect
 
     params = inspect.signature(bridge.update_companion_status).parameters
-    values = {"state": "ready", "message": "probe from RTSAI-Mod spike", "detail": "spike"}
+    values = {"state": "ready", "message": message, "detail": "probe"}
     return {k: v for k, v in values.items() if k in params}
 
 

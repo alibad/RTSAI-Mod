@@ -53,6 +53,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		const int MaxFeedEntries = 80;
 		const int MinWidth = 430;
 		const int MaxWidth = 860;
+		const int ButtonTextPadding = 6;
 		sealed class FeedEntry
 		{
 			public readonly Widget Widget;
@@ -272,7 +273,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				{
 					Log.Write("debug", $"Failed to {operation} OpenRA AI action: {e}");
 					Game.RunAfterTick(() => CompanionBridge.UpdateLocalControlError(
-						"AI ACTION CONTROL UNAVAILABLE  â€¢  NOTHING WAS SENT"));
+						"AI ACTION CONTROL UNAVAILABLE  •  NOTHING WAS SENT"));
 				}
 				finally
 				{
@@ -322,7 +323,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				{
 					Log.Write("debug", $"Failed to update OpenRA AI auto mode: {e}");
 					Game.RunAfterTick(() => CompanionBridge.UpdateLocalControlError(
-						"AI AUTO CONTROL UNAVAILABLE  â€¢  MANUAL PLAY UNAFFECTED"));
+						"AI AUTO CONTROL UNAVAILABLE  •  MANUAL PLAY UNAFFECTED"));
 				}
 				finally
 				{
@@ -387,31 +388,40 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				var playableWidth = Math.Max(MinWidth, Game.Renderer.Resolution.Width - SidebarWidth);
 				var availableWidth = Math.Max(2 * HorizontalPadding + 1, playableWidth - 2 * EdgeMargin);
 				var maximumWidth = Math.Min(MaxWidth, availableWidth);
+				// Buttons are at least their designed width and grow to fit their current text, so a
+				// long label (AUTO: STARTING..., or a longer translation) cannot spill into its neighbour.
+				var voiceWidth = voiceButton.Bounds.Width = FitButton(voiceButton, VoiceButtonWidth);
+				var autoWidth = autoButton.Bounds.Width = FitButton(autoButton, AutoButtonWidth);
+				var feedWidthButton = feedToggleButton.Bounds.Width = FitButton(feedToggleButton, FeedButtonWidth);
+				var feedbackWidth = feedbackButton.Bounds.Width = FitButton(feedbackButton, FeedbackButtonWidth);
+				var confirmWidth = actionConfirmButton.Bounds.Width = FitButton(actionConfirmButton, ActionConfirmButtonWidth);
+				var cancelWidth = actionCancelButton.Bounds.Width = FitButton(actionCancelButton, ActionCancelButtonWidth);
+				var growth = voiceWidth - VoiceButtonWidth + feedWidthButton - FeedButtonWidth + feedbackWidth - FeedbackButtonWidth;
 				var actionControlsWidth = HasPendingAction()
-					? ActionConfirmButtonWidth + ActionCancelButtonWidth + 2 * ActionButtonGap
+					? confirmWidth + cancelWidth + 2 * ActionButtonGap
 					: 0;
-				var autoControlsWidth = AutoButtonWidth + AutoButtonGap;
-				var minimumWidth = Math.Min(MinWidth + actionControlsWidth + autoControlsWidth, maximumWidth);
+				var autoControlsWidth = autoWidth + AutoButtonGap;
+				var minimumWidth = Math.Min(MinWidth + growth + actionControlsWidth + autoControlsWidth, maximumWidth);
 				var desiredWidth = font.Measure(message).X + 2 * HorizontalPadding + ThreatPanelWidth +
-					VoiceButtonWidth + VoiceButtonGap + FeedbackButtonWidth + FeedbackButtonGap +
-					FeedButtonWidth + FeedButtonGap +
+					voiceWidth + VoiceButtonGap + feedbackWidth + FeedbackButtonGap +
+					feedWidthButton + FeedButtonGap +
 					actionControlsWidth + autoControlsWidth;
 				var width = Math.Clamp(desiredWidth, minimumWidth, maximumWidth);
 
 				widget.Bounds.X = Math.Max(EdgeMargin, (playableWidth - width) / 2);
 				widget.Bounds.Width = width;
 				statusButton.Bounds.X = HorizontalPadding + ThreatPanelWidth;
-				voiceButton.Bounds.X = width - VoiceButtonWidth - VoiceButtonMargin;
-				autoButton.Bounds.X = voiceButton.Bounds.X - AutoButtonGap - AutoButtonWidth;
+				voiceButton.Bounds.X = width - voiceWidth - VoiceButtonMargin;
+				autoButton.Bounds.X = voiceButton.Bounds.X - AutoButtonGap - autoWidth;
 				if (HasPendingAction())
 				{
-					actionCancelButton.Bounds.X = autoButton.Bounds.X - ActionButtonGap - ActionCancelButtonWidth;
-					actionConfirmButton.Bounds.X = actionCancelButton.Bounds.X - ActionButtonGap - ActionConfirmButtonWidth;
-					feedToggleButton.Bounds.X = actionConfirmButton.Bounds.X - FeedButtonGap - FeedButtonWidth;
+					actionCancelButton.Bounds.X = autoButton.Bounds.X - ActionButtonGap - cancelWidth;
+					actionConfirmButton.Bounds.X = actionCancelButton.Bounds.X - ActionButtonGap - confirmWidth;
+					feedToggleButton.Bounds.X = actionConfirmButton.Bounds.X - FeedButtonGap - feedWidthButton;
 				}
 				else
-					feedToggleButton.Bounds.X = autoButton.Bounds.X - FeedButtonGap - FeedButtonWidth;
-				feedbackButton.Bounds.X = feedToggleButton.Bounds.X - FeedbackButtonGap - FeedbackButtonWidth;
+					feedToggleButton.Bounds.X = autoButton.Bounds.X - FeedButtonGap - feedWidthButton;
+				feedbackButton.Bounds.X = feedToggleButton.Bounds.X - FeedbackButtonGap - feedbackWidth;
 				statusButton.Bounds.Width = Math.Max(1, feedbackButton.Bounds.X - FeedbackButtonGap - statusButton.Bounds.X);
 
 				displayMessage = FitToTwoLines(message, statusButton.Bounds.Width, font);
@@ -729,6 +739,15 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				"guarded" => Color.Gold,
 				_ => Color.LightGreen
 			};
+		}
+
+		static int FitButton(ButtonWidget button, int minimumWidth)
+		{
+			var text = button.GetText();
+			if (string.IsNullOrEmpty(text))
+				return minimumWidth;
+
+			return Math.Max(minimumWidth, Game.Renderer.Fonts[button.Font].Measure(text).X + 2 * ButtonTextPadding);
 		}
 
 		static string FitToTwoLines(string message, int width, SpriteFont font)
