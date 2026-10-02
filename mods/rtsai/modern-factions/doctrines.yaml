@@ -8,6 +8,8 @@
 # and sites are air-only (^AAMissile), unlike the stock IFV/flak units that share the anti-air role,
 # so every doctrine keeps anti-air low: in bot-vs-bot rounds they destroyed 0.02-0.15 credits per
 # credit spent. Other cuts follow the same measure (value destroyed per credit produced).
+# SquadSizeModifier scales the profile's attack-squad size (a unit count): factions with cheap units
+# gather more of them, factions with expensive units fewer, so squads carry similar value.
 
 Player:
 	# Coordination: specialists and relays with the main force, amphibious lift, maritime reach.
@@ -29,6 +31,7 @@ Player:
 		Factions: iran
 		Doctrine: layered-denial
 		InitialBuildOrder: napowr, narefn, nahand, naweap, naradr, r2iraasite
+		SquadSizeModifier: 105
 		RoleShareModifiers:
 			anti-air: 40
 			artillery: 150
@@ -52,6 +55,7 @@ Player:
 		Factions: saudi
 		Doctrine: expeditionary
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc
+		SquadSizeModifier: 70
 		RoleShareModifiers:
 			main-battle-tank: 150
 			strike-aircraft: 150
@@ -68,6 +72,7 @@ Player:
 		Factions: yemen
 		Doctrine: asymmetric-defense
 		InitialBuildOrder: napowr, nahand, narefn, r2ybunker, naweap, naradr
+		SquadSizeModifier: 135
 		RoleShareModifiers:
 			line-infantry: 130
 			anti-armor: 110
