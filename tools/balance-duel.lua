@@ -4,7 +4,7 @@ Unit-value duels, installed into a disposable copy of the blank map by tools/bal
 Each duel spawns two groups of (about) equal build value for the non-playable players DuelA and
 DuelB, orders both to attack-move through each other, and records what is left of each side when one
 side is gone or the duel times out. No bot is involved: this measures what the units are worth, not
-how well a bot uses them. Sides alternate between the west and east start lines.
+how well a bot uses them. Side A alternates between the west and east start lines per replicate.
 
 Output: one "DUEL|<id>|<tick>|<a value left>|<b value left>|<a alive>|<b alive>|<a value>|<b value>"
 line per duel in lua.log (value left = cost x remaining health fraction), then "DUELS|done".
@@ -43,7 +43,9 @@ local function Spawn(player, actorType, count, u, level)
 	for i = 0, count - 1 do
 		local column = math.floor(i / 8)
 		local cell = Cell(u + column * outward, Center.v - 8 + 2 * (i % 8))
-		local actor = Actor.Create(actorType, true, { Owner = player, Location = cell })
+		-- Face the enemy line: spawning with the default facing made one side turn around first.
+		local facing = outward < 0 and Angle.East or Angle.West
+		local actor = Actor.Create(actorType, true, { Owner = player, Location = cell, Facing = facing })
 		if level > 0 and actor.HasProperty("GiveLevels") then
 			actor.GiveLevels(level, true)
 		end
@@ -90,9 +92,12 @@ RunDuel = function(index)
 		return
 	end
 
+	-- Successive duels alternate between two separate fields, so nothing from the last one is near.
+	Center.v = index % 2 == 0 and 104 or 40
 	local west, east = Center.u - Gap, Center.u + Gap
+	-- Side A starts west in even replicates and east in odd ones, so start-line effects cancel per pair.
 	local ax, bx = west, east
-	if index % 2 == 0 then
+	if not duel.west then
 		ax, bx = east, west
 	end
 
@@ -122,13 +127,15 @@ RunDuel = function(index)
 		local bLeft, bAlive = Remaining(b)
 		local elapsed = DateTime.GameTime - started
 		if DEBUG and a[1] ~= nil and not a[1].IsDead and b[1] ~= nil and not b[1].IsDead then
-			print("DBG|" .. elapsed .. "|" .. tostring(a[1].Location) .. "|" .. tostring(b[1].Location) .. "|" .. tostring(a[1].Owner.InternalName) .. "|" .. tostring(A.IsAlliedWith(B)))
+			print("DBG|" .. duel.id .. "|" .. elapsed .. "|" .. tostring(a[1].Location) .. "|" .. tostring(b[1].Location) .. "|" .. a[1].Health .. "|" .. b[1].Health .. "|" .. tostring(a[1].Owner.InternalName) .. "|" .. tostring(b[1].Owner.InternalName))
 		end
 		if aAlive == 0 or bAlive == 0 or elapsed >= Timeout then
 			print(table.concat({ "DUEL", duel.id, tostring(elapsed), tostring(aLeft), tostring(bLeft),
 				tostring(aAlive), tostring(bAlive), tostring(aValue), tostring(bValue) }, "|"))
+			-- Husks appear a few ticks after a death; clear twice so none is left as a target.
 			Clear()
-			Trigger.AfterDelay(50, function() RunDuel(index + 1) end)
+			Trigger.AfterDelay(25, Clear)
+			Trigger.AfterDelay(75, function() RunDuel(index + 1) end)
 			return
 		end
 

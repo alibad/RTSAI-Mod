@@ -5,8 +5,8 @@ Each duel spawns two groups of equal build value (``--budget`` credits each, rou
 on the flat blank map, for two non-playable players, and orders both to attack-move through the other.
 It records the value left on each side (cost x health fraction) when one side is gone or the duel
 times out. ``--level 2`` makes both groups elite first, which shows what the veterancy system adds.
-Sides alternate between the two start lines across replicates. Uses the same headless, 1 ms-timestep
-setup as tools/balance-harness.py::
+Side A starts on the west line in even replicates and on the east line in odd ones, and successive
+duels use two separate fields. Uses the same headless, 1 ms-timestep setup as tools/balance-harness.py::
 
     python tools/balance-duel.py run --content <dir with ra2/> --output <scratch>/duels --parallel 4
 
@@ -44,6 +44,8 @@ GROUPS = {
     "rifle": [(s, m) for s in STOCK_RIFLE for m in MODERN_RIFLE],
     # Anti-tank infantry against the same tank (the Rhino), so the AT units can be compared.
     "at": [(a, "htnk") for a in ANTI_TANK],
+    # Anti-air units against America's rocketeers (airborne infantry), stock and modern.
+    "air": [(a, b) for b in ("jumpjet", "orca") for a in ("fv", "htk", "flakt", "r2mantis", "r2raad", "r2gokkalkan", "r2sads", "r2yzu")],
     # Stock against stock, to calibrate what "parity" means between the two RA2 sides.
     "ref": [("e1", "e2"), ("mtnk", "htnk")],
 }
@@ -53,15 +55,17 @@ def duel_specs(group: str, level: int, reps: int) -> list[dict]:
     specs = []
     for rep in range(reps):
         for a, b in GROUPS[group]:
-            specs.append({"id": f"{group}.L{level}.{a}-{b}.r{rep}", "a": a, "b": b, "level": level})
+            specs.append({"id": f"{group}.L{level}.{a}-{b}.r{rep}", "a": a, "b": b, "level": level, "west": rep % 2 == 0})
     return specs
 
 
 def lua_table(specs: list[dict]) -> str:
-    return ", ".join(f'{{ id = "{s["id"]}", a = "{s["a"]}", b = "{s["b"]}", level = {s["level"]} }}' for s in specs)
+    return ", ".join(f'{{ id = "{s["id"]}", a = "{s["a"]}", b = "{s["b"]}", level = {s["level"]}, '
+                     f'west = {"true" if s.get("west", True) else "false"} }}' for s in specs)
 
 
-def fixture(maps: Path, target: Path, specs: list[dict], budget: int, timeout: int, rules: str = "") -> None:
+def fixture(maps: Path, target: Path, specs: list[dict], budget: int, timeout: int, rules: str = "",
+            weapons: str = "") -> None:
     source = maps / BASE_MAP
     target.mkdir(parents=True)
     for item in source.iterdir():
@@ -80,6 +84,9 @@ def fixture(maps: Path, target: Path, specs: list[dict], budget: int, timeout: i
     text = text.replace("\nActors:\n", "\n" + players + "\nActors:\n\tActor0: mpspawn\n\t\tLocation: 15,-5\n"
                         "\t\tOwner: Neutral\n", 1)
     text = re.sub(r"^Rules:\n(?:\t[^\n]*\n)*", "", text, flags=re.MULTILINE).rstrip("\n") + "\n\nRules: duel-rules.yaml\n"
+    if weapons:
+        text += "\nWeapons: duel-weapons.yaml\n"
+        (target / "duel-weapons.yaml").write_text(weapons, encoding="utf-8", newline="\n")
     (target / "map.yaml").write_text(text, encoding="utf-8", newline="\n")
     (target / "duel-rules.yaml").write_text(
         "World:\n\t-StartGameNotification:\n\tScriptTriggers:\n\tLuaScript:\n\t\tScripts: balance-duel.lua\n\n" + rules,
@@ -90,7 +97,7 @@ def fixture(maps: Path, target: Path, specs: list[dict], budget: int, timeout: i
 
 
 def run_set(name: str, specs: list[dict], *, engine: Path, mods: Path, content: Path, output: Path,
-            budget: int, timeout: int, keep: bool = False, rules: str = "") -> list[dict]:
+            budget: int, timeout: int, keep: bool = False, rules: str = "", weapons: str = "") -> list[dict]:
     work = output / "sets" / name
     if work.exists():
         bh.clear_tree(work)
@@ -98,7 +105,7 @@ def run_set(name: str, specs: list[dict], *, engine: Path, mods: Path, content: 
     support.mkdir(parents=True)
     bh.link_directory(support / "Content", content)
     fixture(mods / bh.MOD / "maps", support / bh.user_map_dir(mods / bh.MOD) / "balance-duels", specs, budget, timeout,
-            rules)
+            rules, weapons)
     env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENRA_AI_", "RTSAI_"))}
     env["DOTNET_ROLL_FORWARD"] = env.get("DOTNET_ROLL_FORWARD", "Major")
     command = ["dotnet", str(engine / "bin" / "OpenRA.dll"), f"Engine.EngineDir={engine}",
@@ -164,19 +171,21 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--parallel", type=int, default=4)
     p.add_argument("--keep-support", action="store_true")
     p.add_argument("--rules", type=Path, help="MiniYAML file merged into the duel map's rules (try a stat change)")
+    p.add_argument("--weapons", type=Path, help="MiniYAML file merged into the duel map's weapons")
     args = parser.parse_args(argv)
     output = bh.absolute_path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     engine, content = bh.absolute_path(args.engine), bh.absolute_path(args.content)
     mods = bh.prepare_resources(output, bh.absolute_path(args.mods))
     rules = args.rules.read_text(encoding="utf-8") if args.rules else ""
+    weapons = args.weapons.read_text(encoding="utf-8") if args.weapons else ""
     if re.search(r"^World:", rules, re.MULTILINE):
         raise SystemExit("--rules may not redefine World")
     sets = [(f"{g}-L{lv}", duel_specs(g, int(lv), args.reps)) for g in args.groups.split(",") for lv in args.levels.split(",")]
     with ThreadPoolExecutor(max_workers=args.parallel) as executor:
         results = list(executor.map(lambda s: run_set(s[0], s[1], engine=engine, mods=mods, content=content,
                                                       output=output, budget=args.budget, timeout=args.timeout,
-                                                      keep=args.keep_support, rules=rules), sets))
+                                                      keep=args.keep_support, rules=rules, weapons=weapons), sets))
     bh.clear_tree(output / "resources")
     rows = [row for rs in results for row in rs]
     with (output / "duels.csv").open("w", encoding="utf-8", newline="") as handle:
