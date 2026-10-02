@@ -238,9 +238,11 @@ Voices:
 	ra2|modern-factions/turkey-voices.yaml
 	ra2|modern-factions/saudi-voices.yaml
 	ra2|modern-factions/yemen-voices.yaml
+	ra2|modern-factions/voice-prefixes.yaml
 
 Notifications:
 	ra2|audio/notifications.yaml
+	ra2|modern-factions/eva-notifications.yaml
 
 TileSets:
 	ra2|tilesets/temperat.yaml

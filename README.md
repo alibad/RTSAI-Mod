@@ -30,6 +30,10 @@ The original RA2 countries plus modern nations, each with its own doctrine, sign
 
 These are fictional game factions, not claims about real-world forces. The shared faction catalog (names, roles and stories used by the game and the website) lives in [alibad/OpenRA-AI](https://github.com/alibad/OpenRA-AI/blob/main/catalog/factions.json).
 
+Each modern nation also has its own announcer. Every modern voice is synthetic and made locally with
+openly licensed speech models; [docs/audio-provenance.md](docs/audio-provenance.md) lists the engines,
+licenses and voices.
+
 ## Build and run (Windows)
 
 Requirements: the .NET 10 SDK.
