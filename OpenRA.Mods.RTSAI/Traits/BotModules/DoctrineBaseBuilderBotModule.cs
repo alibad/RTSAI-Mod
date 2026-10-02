@@ -133,7 +133,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		[ActorReference]
 		[Desc("Optional opening build order: construct one of each eligible missing building before discretionary economy/defense expansion.",
-			"Unavailable faction/prerequisite entries are skipped. Empty preserves the existing AI behavior.",
+			"A building listed n times is wanted n times. Unavailable faction/prerequisite entries are skipped.",
+			"Empty preserves the existing AI behavior.",
 			"A BotDoctrine with its own InitialBuildOrder replaces this for its factions.")]
 		public readonly ImmutableArray<string> InitialBuildOrder = [];
 
@@ -230,11 +231,21 @@ namespace OpenRA.Mods.RTSAI.Traits
 		// The faction doctrine's opening, else the profile's.
 		public readonly ImmutableArray<string> InitialBuildOrder;
 
+		// The n-th entry of a building type is satisfied once n of them are owned or in production,
+		// so an opening can ask for a second refinery before the doctrine's support buildings.
 		public static string NextInitialBuilding(IEnumerable<string> priorities, IEnumerable<string> buildable, IEnumerable<string> owned)
 		{
 			var available = buildable.ToHashSet(StringComparer.Ordinal);
-			var existing = owned.ToHashSet(StringComparer.Ordinal);
-			return priorities.FirstOrDefault(name => available.Contains(name) && !existing.Contains(name));
+			var existing = owned.GroupBy(name => name, StringComparer.Ordinal).ToDictionary(g => g.Key, g => g.Count(), StringComparer.Ordinal);
+			var wanted = new Dictionary<string, int>(StringComparer.Ordinal);
+			foreach (var name in priorities)
+			{
+				wanted[name] = wanted.GetValueOrDefault(name) + 1;
+				if (available.Contains(name) && existing.GetValueOrDefault(name) < wanted[name])
+					return name;
+			}
+
+			return null;
 		}
 
 		public DoctrineBaseBuilderBotModule(Actor self, DoctrineBaseBuilderBotModuleInfo info)

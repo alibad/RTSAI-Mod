@@ -36,7 +36,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 		public readonly FrozenDictionary<string, int> RoleShareModifiers = FrozenDictionary<string, int>.Empty;
 
 		[ActorReference]
-		[Desc("Faction opening. Replaces the bot profile's InitialBuildOrder for these factions when not empty.")]
+		[Desc("Faction opening. Replaces the bot profile's InitialBuildOrder for these factions when not empty.",
+			"A building listed n times is wanted n times (e.g. a second refinery).")]
 		public readonly ImmutableArray<string> InitialBuildOrder = [];
 
 		[Desc("Percent multiplier applied to the bot profile's attack-squad size (SquadSize and SquadSizeRandomBonus",

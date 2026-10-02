@@ -1,7 +1,10 @@
 # Faction bot doctrines (OpenRA.Mods.RTSAI BotDoctrine). Each bot profile (normal, medium, rush,
 # turtle, naval) keeps its own RoleShares (combined-arms-ai.yaml); the doctrine scales them in
 # percent for its faction and replaces the generic opening (entries follow the tech tree: an entry
-# whose prerequisites are missing is skipped until it becomes buildable). Roles come from StrategicRole tags.
+# whose prerequisites are missing is skipped until it becomes buildable; a building listed twice is
+# wanted twice). Every opening takes a second refinery right after the factory: the support
+# buildings before it had cost the modern bots about 40% of America's income by 10 minutes.
+# Roles come from StrategicRole tags.
 # Doctrine identifiers match the product catalog (Experience "Doctrine" field).
 #
 # Tuned with tools/balance-harness.py (docs/balance.md). The modern factions' dedicated AA vehicles
@@ -16,7 +19,7 @@ Player:
 	BotDoctrine@china:
 		Factions: china
 		Doctrine: networked-combined-arms
-		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
 		RoleShareModifiers:
 			support: 150
 			transport: 150
@@ -30,7 +33,7 @@ Player:
 	BotDoctrine@iran:
 		Factions: iran
 		Doctrine: layered-denial
-		InitialBuildOrder: napowr, narefn, nahand, naweap, naradr, r2iraasite
+		InitialBuildOrder: napowr, narefn, nahand, naweap, narefn, naradr, r2iraasite
 		SquadSizeModifier: 105
 		RoleShareModifiers:
 			anti-air: 40
@@ -42,19 +45,19 @@ Player:
 	BotDoctrine@turkey:
 		Factions: turkey
 		Doctrine: mobile-defense
-		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gadept, gaairc
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept, gaairc
 		RoleShareModifiers:
 			main-battle-tank: 130
 			support: 130
 			strike-aircraft: 80
-			anti-air: 40
+			anti-air: 20
 			artillery: 80
 	# Expeditionary: air power (Air Force Command, JTAC radar) right after the first armor; heavy
 	# armor and guided fires lead, infantry holds ground.
 	BotDoctrine@saudi:
 		Factions: saudi
 		Doctrine: expeditionary
-		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
 		SquadSizeModifier: 70
 		RoleShareModifiers:
 			main-battle-tank: 150
@@ -71,7 +74,7 @@ Player:
 	BotDoctrine@yemen:
 		Factions: yemen
 		Doctrine: asymmetric-defense
-		InitialBuildOrder: napowr, nahand, narefn, r2ybunker, naweap, naradr
+		InitialBuildOrder: napowr, nahand, narefn, r2ybunker, naweap, narefn, naradr
 		SquadSizeModifier: 135
 		RoleShareModifiers:
 			line-infantry: 130
