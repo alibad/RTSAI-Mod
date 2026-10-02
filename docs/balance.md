@@ -1,9 +1,57 @@
 # Bot-vs-bot balance evidence
 
-Date: 2026-10-02. Branch `rtsai/balance` (local, not pushed). Engine `rtsai/engine` 5523a9907f (`ENGINE_VERSION`).
+Round 2: 2026-10-03. Branch `rtsai/balance` (local, not pushed), final rules at 31912c4. Engine `rtsai/engine`
+5523a9907f (`ENGINE_VERSION`).
 
-How each result was established: **[ran]** means the matches were played and the numbers come from their recorded
-results. **[inferred]** means it was reasoned from rules, code or those results and not tested directly.
+How each result was established: **[ran]** means the matches or duels were played and the numbers come from their
+recorded results. **[inferred]** means it was reasoned from rules, code or those results and not tested directly.
+
+## Current state (round 2)
+
+[ran] Final round robin: 252 games on Dustbowl and Official Tournament Map A, 0 errors, 67 tick-cap draws, median
+26.7 game minutes. Row's wins-losses (draws) against the column:
+
+| vs | china | iran | turkey | saudi | yemen | america | russia | Score |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **china** | — | 6-4 (2d) | 1-7 (4d) | 2-7 (3d) | 4-6 (2d) | 1-6 (5d) | 0-8 (4d) | 33% |
+| **iran** | 4-6 (2d) | — | 8-2 (2d) | 3-5 (4d) | 4-6 (2d) | 3-5 (4d) | 0-6 (6d) | 44% |
+| **turkey** | 7-1 (4d) | 2-8 (2d) | — | 2-6 (4d) | 2-6 (4d) | 1-9 (2d) | 1-7 (4d) | 35% |
+| **saudi** | 7-2 (3d) | 5-3 (4d) | 6-2 (4d) | — | 6-5 (1d) | 3-7 (2d) | 6-4 (2d) | 57% |
+| **yemen** | 6-4 (2d) | 6-4 (2d) | 6-2 (4d) | 5-6 (1d) | — | 2-6 (4d) | 5-3 (4d) | 54% |
+| **america** | 6-1 (5d) | 5-3 (4d) | 9-1 (2d) | 7-3 (2d) | 6-2 (4d) | — | 9-1 (2d) | 72% |
+| **russia** | 8-0 (4d) | 6-0 (6d) | 7-1 (4d) | 4-6 (2d) | 3-5 (4d) | 1-9 (2d) | — | 56% |
+
+Round-2 targets, as scores (draw = half a win); the final column has 95% Wilson intervals. "Start" is the round-1
+result (414f8fa, 252 games):
+
+| Faction | Target | Start | Pass 1 (84 games) | Pass 2a (238 games) | Final (252 games) | Met |
+|---|---|---:|---:|---:|---:|---|
+| China | vs modern 35-65% | 43% | 44% | 29% | 39% (26-53) | yes |
+| Iran | vs modern 35-65% | 44% | 50% | 56% | 50% (36-64) | yes |
+| Türkiye | vs modern 35-65% | 33% | 41% | 44% | 42% (29-56) | yes |
+| Saudi Arabia | vs modern 35-65% | 55% | 53% | 53% | 62% (48-75) | yes |
+| Yemen | vs modern 35-65% | 75% | 62% | 66% | 57% (43-70) | yes |
+| China | vs America+Russia ≥35% | 6% | 6% | 19% | 23% (11-43) | **no** |
+| Iran | vs America+Russia ≥35% | 10% | 19% | 37% | 33% (18-53) | **no** (edge) |
+| Türkiye | vs America+Russia ≥35% | 12% | 19% | 23% | 21% (9-40) | **no** |
+| Saudi Arabia | vs America+Russia ≥35% | 8% | 56% | 30% | 46% (28-65) | yes |
+| Yemen | vs America+Russia ≥35% | 23% | 44% | 30% | 46% (28-65) | yes |
+| America | vs modern ≤65% | 94% | 92% | 82% | 69% (57-79) | **no** (edge) |
+| Russia | vs modern ≤65% | 82% | 50% | 63% | 63% (51-74) | yes |
+
+Pass 1 is one replicate of the round robin at eba846d. Pass 2a is the round robin at c89a76c; 238 of its games
+finished before the anti-air targeting bug was found, and the 14 that would have mixed two rule sets were dropped.
+The final run is at 31912c4.
+
+**Verdict.** Two tuning passes closed most of the gap. The original countries won 96 of 101 decided games against
+the modern factions at the start of round 2 and 61 of 83 now, and all five modern factions are inside 35-65% among
+themselves. Four targets are still missed: China (23%), Türkiye (21%) and, narrowly, Iran (33%) against the
+originals, and America (69%, interval 57-79) against the modern factions. As asked, tuning stopped after two
+passes. What a third pass would take is under "What would still be needed".
+
+Naval map, Little Big Lake (126 games, 0 errors, 34 draws) [ran], reported separately and not tuned for: America
+53% and Russia 65% against the modern factions; among the modern factions China 33% and Saudi Arabia 73% fall
+outside 35-65%; against the originals China 50%, Saudi Arabia 62%, Yemen 38%, Türkiye 29% and Iran 25%.
 
 ## What this shows, and what it doesn't
 
@@ -13,13 +61,15 @@ evidence about the rules only through that filter.
 
 It shows:
 - unit types the bot buys but cannot use (they destroy little per credit spent);
+- with the duels (no bot), what a unit is worth for its cost against the stock RA2 equivalent;
 - openings that leave a faction without an army early;
-- rule bugs that stop a game from ending (one found and fixed) and crashes in long unattended games (one found).
+- rule bugs that stop a game from ending (one found and fixed) and crashes in long unattended games (one found, fixed in round 2).
 
 It does not show:
 - human balance. Humans micro, focus fire, scout, use abilities, garrison and pick counters; the bot does little of
   this. A unit the bot wastes can still be strong in human hands, and the reverse;
-- naval or mixed maps. Both maps are land 1v1 maps, so navies and naval doctrine weights are not measured;
+- naval balance beyond one map. The round robin uses two land maps; Little Big Lake, the only two-player naval map,
+  is reported separately (round 2) and was not tuned for;
 - other bot profiles (rush, turtle, naval, medium), team games, or anything after 40 game minutes;
 - kills that report no killer. [inferred] Chrono erasure and mind control seem not to: America's Chrono Legionnaire
   and Russia's Yuri show 0 value destroyed in the per-unit trade figures.
@@ -55,10 +105,101 @@ It does not show:
 - **Statistics.** Score = (wins + ½ draws) / games. Win rate = wins / games. Intervals are 95% Wilson intervals.
   The tuning target (35-65% for each modern faction) is applied to the **score**. With a fifth of games drawn, the
   strict win rate sits about 10 points lower for every faction, so both are reported.
+- **Duels** [ran] (round 2): `tools/balance-duel.py` measures unit value without any bot. On a copy of the flat blank
+  map, two non-playable players get groups of equal build value (the counts whose totals differ least, within 4%)
+  and attack-move through each other; the value left on each side is recorded. 8 duels per pair, side A alternating
+  between start lines, successive duels on separate fields, rank 0 and elite (rank 2). Each modern unit is compared
+  with its own side's stock unit, because the stock sides differ: the Conscript beats the GI 8-0 and the Rhino
+  beats the Grizzly at equal cost. Near parity a pair flips by about 3 of 8 between runs, so costs are set to within
+  a cost step, not closer.
+- **Naval map** (round 2): the same design on Little Big Lake, 3 replicates (126 games), reported separately.
 - **Probes.** A probe is one replicate (84 games, 24 per faction) with a rules overlay. At that size a faction's
   interval is about ±19 points, so probes screen candidates; only full round robins confirm.
 
-## Pilot: 30-minute cap
+## Round 2: why the original countries won
+
+The question was whether the bot plays the modern rosters badly or the modern units are worth less. The answer is
+**both, with unit value and two rule bugs first**. Numbers are on the round-1 rules (414f8fa) unless stated.
+
+1. **Unit value** [ran]. Equal-value duels against the same side's stock unit, rank 0, 8 duels each (modern wins
+   first):
+
+   | Unit (cost before → after) | Against | Before | After |
+   |---|---|---:|---:|
+   | Qilin (750 → 700) | Grizzly | 0-8 | 7-1 |
+   | Bozkır (950 → 900) | Grizzly | 4-4 | 4-4 |
+   | M1A2S (1250 → 1100) | Grizzly | 0-8 | 5-3 |
+   | Karrar (900 → 850) | Rhino | 0-8 | 7-1 |
+   | China rifleman (150 → 170) | GI | 5-3 | 7-1 |
+   | Saudi National Guard (220) | GI | 0-8 | 4-4 |
+   | Türkiye rifleman (200 → 155) | GI | 0-8 | 7-1 |
+   | Basij (100 → 90) | Conscript | 0-8 | 4-4 |
+   | Yemeni Mountain Rifleman (100 → 135) | Conscript | 8-0 | 5-3 |
+   | All nine | | 17 of 72 | 50 of 72 |
+
+   "After" includes the prone fix below, which shifted every rifleman pairing. Elite against elite, the modern MBTs
+   won 0 of 64 duels before and 47 of 64 after. Anti-tank infantry were already worth their cost (every type beats
+   the Rhino 8-0 at rank 0, like the Tesla trooper).
+2. **A prone asymmetry** [ran]. The modern infantry had TakeCover removed (no prone art), but their rifles inherit the
+   stock M60 or M1Carbine and their tank guns the stock 105mm or 120mm. Those damage types make RA2 infantry go prone
+   and take 70% or 50% damage; stock fire on modern infantry always did 100%.
+3. **Modern air defense never fired at aircraft** [ran]. Every modern AA vehicle and AA defense resolved to an
+   auto-target priority that, in the default stance and while attack-moving, listed only ground targets: the ground
+   and air auto-target templates merged badly (`--resolved-rules r2gokkalkan` shows it). In duels the Mantis, Raad,
+   Gökkalkan and SADS did no damage at all to rocketeers, Harriers, Nighthawks or a Kirov (0-8, 100% left), while
+   the stock flak track beat rocketeers 8-0. This is why their trade figures were 0.02-0.08 in round 1. America's air
+   (rocketeers, Harriers, Nighthawks, carrier drones) made 37% of its kills against the modern factions; rocketeers
+   alone made 23%.
+4. **Economy: the openings** [ran]. Every doctrine opening put its support buildings before a second refinery. In an
+   84-game probe at 10 minutes, America had 2.5 refineries and had earned 22.5k credits; the modern bots had 1.3-1.8
+   refineries and 11.3-14.3k. Final: America 2.3 and 20.6k, the modern bots 2.0-2.2 and 15.7-18.5k (Russia 1.2 and
+   10.7k).
+5. **Bot composition** [ran]. Infantry/vehicle splits were similar for all seven factions. The remaining waste was in
+   specific units: Türkiye's air-only AA was 16% of its first 10 minutes of production, and Iran still put 9.6% into
+   the Shadow One. Veterancy mattered little to the bots: averaged over 5-minute spans, at most 4% of any army's value was
+   elite, so the missing elite weapons matter mainly for human play.
+
+## Round 2: changes
+
+| Commit | Change | Kind |
+|---|---|---|
+| a0ebf1e, 1e0a5e0 | `tools/balance-duel.py` (+ `.lua`) unit-value duels; veterancy telemetry; `naval` campaign | Tools |
+| f3b0e84 | Crash fix: animals map PsychicDeath to `die1`. A Crazy Ivan bomb killing a cow had crashed the game. Verified headless: 24 animals killed by every effect damage type without an exception; the same test crashed before | Content bug |
+| c2e9b8f | Modern infantry get TakeCover back with an empty prone prefix (mechanics, no art). Modern units get FirepowerMultiplier 140 at elite rank, standing in for the stock elite weapon swaps (+25-67% damage) | Mechanics parity |
+| a8c91d5 | `^AutoTargetAir` also defines `@ATTACKANYTHING` with Air, so the modern AA targets aircraft. Stock air-only actors are unchanged (a duplicate priority) | Rule bug |
+| 97154a3, 31912c4 | Core unit costs set by duels (table above). The first calibration (97154a3) used a duel harness with a start-line bias; 31912c4 redoes it after the fix in 1e0a5e0 | Unit costs |
+| ddfc241 | Mantis, Raad and Gökkalkan reload ×0.5, SADS ×0.35. These are unit-level: the shared missile weapon, and the sites, ships and jets that use it, are unchanged. Against rocketeers: 0-8 before, 7-1 to 8-0 after | Unit stats |
+| eba846d | Count-aware `InitialBuildOrder` (a building listed twice is wanted twice). Every doctrine opening takes a second refinery right after the factory. Türkiye anti-air 40 → 20. Iran's bot never trains the Shadow One | Bot logic |
+| c89a76c | Anti-air response: while visible enemy aircraft outvalue the bot's own anti-air units, the doctrine raises the anti-air share to 24 (`BotDoctrine.AirDefenseShare`) | Bot logic |
+
+Commit messages before 1e0a5e0 quote duel results from the biased harness. The duel tables in this report all
+come from the fixed harness.
+
+## What would still be needed
+
+[inferred] from the final run's figures:
+
+- **China and Türkiye against the originals (23% and 21%).** Their armies still carry the most low-value spending.
+  China's PHL artillery is 13% of production at 0.53 destroyed per credit, its Cloud drone 7% at 0.33, and its submarine and
+  carrier about 5% at near 0 on land maps. Türkiye's anti-tank teams are 15% at 0.63, and the Sancak, Kuzgun and Aras
+  together about 9% at 0.31-0.33. Both factions' commandos (Red Spear, Grey Wolf) are about 8% at 0.72-0.78. A third
+  pass would cut these from the bots' mix. It would also make the bot's naval production depend on the map: every
+  faction, stock included, builds shipyards and ships on land maps. That is doctrine work, not a redesign, but it was
+  not run.
+- **America (69%).** Its remaining edge is its GIs (24% of its kills, including the free paratroopers), rocketeers
+  (14%), the Prism Tower (9%), Hornet carrier drones (7%) and Prism tanks (6%). The stock rules were left alone as the
+  reference. Getting America below 65% without touching them needs the modern bots to fight better, for example by
+  attacking before America's air and Prism units arrive. That is bot-behaviour work beyond doctrine weights.
+- **Naval map.** Not tuned: Saudi Arabia (73%) and China (33%) are outside the band among the modern factions.
+- **Duel resolution.** Duels near parity flip by about 3 of 8 between runs. Several modern core units now win their
+  duels 5-3 to 7-1 (Qilin, Karrar, M1A2S, China and Türkiye riflemen), so they may be slightly over-valued against
+  the stock units. That is within about one cost step.
+
+## Round 1 (2 October)
+
+The first round, kept as the record of how the round-1 rules were reached. Commit hashes are round-1 commits.
+
+### Pilot: 30-minute cap
 
 [ran] The first round robin (252 games, rules at 01adb19) used a 30-minute cap. 112 of 251 completed games (45%)
 hit the cap, 76 of 126 on Dustbowl. In 58 of those, one side fielded at least three times the other's army and
@@ -70,10 +211,10 @@ still had not finished. Every later run uses 40 minutes. The pilot also found:
   structures. Fixed in 846ad3c (the cloak also needs power now).
 - **A crash.** [ran] 1 of 252 games: `Image cow does not have a sequence named die5`, after a Crazy Ivan bomb
   (`IvanBomber`, `PsychicDeath`) killed a cow. [inferred] `^Animal` overrides `WithDeathAnimation@effect` but the
-  merge keeps the infantry's `PsychicDeath: 5`, and the cow has only `die1`/`die2`. Inherited RA2 content outside
-  this stream's files; **not fixed** here. It did not recur in the 1,000+ later games.
+  merge keeps the infantry's `PsychicDeath: 5`, and the cow has only `die1`/`die2`. Inherited RA2 content; not fixed in
+  round 1, fixed in round 2 (f3b0e84).
 
-## Before: rules at 01adb19
+### Before: rules at 01adb19
 
 [ran] 252 games, 0 errors, 60 tick-cap draws (45 of them on Dustbowl), median length 25.2 min.
 
@@ -102,7 +243,7 @@ Win matrix, row's wins-losses (draws) against the column:
 China was below the 35% band; Türkiye sat on it. Among themselves the modern factions were close; the large gap
 is to the two stock countries, which won 100 of the 106 decided games against them.
 
-## Diagnosis
+### Diagnosis
 
 Economies were similar: by 10 minutes every faction had earned 11-21k credits [ran]. The difference was what the
 bots bought. [ran] Per unit type, value destroyed per credit produced on the before rules, and on the doctrine-tuned
@@ -141,7 +282,7 @@ rules (the "after doctrine" round robin below):
   tick per 1,000 credits for China, Türkiye and Saudi Arabia, against 5.0 (GI), 6.0 (Conscript), 4.8 (Basij) and
   7.2 (Yemeni Mountain Rifleman); MBTs 1.05-1.33 against 1.55 (Grizzly) and 1.54 (Rhino).
 
-## Tuning steps
+### Tuning steps
 
 Doctrine weights and openings first, as asked; one cost change only after probes. Scores per faction [ran]:
 
@@ -168,7 +309,7 @@ Doctrine weights and openings first, as asked; one cost change only after probes
   China part was kept.
 - **After** (round robin, 414f8fa): Yemen's anti-armor cut reverted, China's cost change applied. See below.
 
-## Changes made
+### Changes made
 
 | Commit | Change | Evidence |
 |---|---|---|
@@ -182,7 +323,7 @@ Doctrine weights and openings first, as asked; one cost change only after probes
 | 17e15bd | Yemen anti-armor back to 160 | After-doctrine round robin: Yemen 62% |
 | 414f8fa | China rifleman 180→150, Qilin 850→750 credits (the only unit-stat change) | Lowest before tuning (26%), 29% after doctrine; per-credit damage; P4 |
 
-## After: rules at 414f8fa
+### After: rules at 414f8fa
 
 [ran] 252 games, 0 errors, 54 tick-cap draws (34 on Dustbowl), median length 24.9 min. This is the final win matrix.
 
@@ -222,7 +363,7 @@ What the tuning did and did not do:
 - [ran] Draws fell from 60 to 54 and errors stayed at 0. Dustbowl still produces most draws; its first slot scored
   61% (Tournament A: 48%), which the swapped spawns cancel within each pairing.
 
-## Remaining caveats
+### Round 1 caveats (superseded where round 2 addresses them)
 
 - **Three modern factions remain below 35%.** In order of evidence, the next candidates are:
   - Türkiye's Gökkalkan is still 8.2% of its production at 0.08 destroyed per credit; anti-air 40 → 20 would cut
@@ -246,27 +387,33 @@ What the tuning did and did not do:
 - **Noise.** A round robin gives each faction a 95% interval about ±11 points wide; a probe about ±19. Several
   committed changes (Türkiye transport, Iran strike-aircraft, the commando delay) were confirmed only as part of
   a whole round robin, not one at a time.
-- **Not fixed:** the `cow`/`die5` crash (see the pilot). Kill credit seems to be missing for chrono erasure and mind
+- **Not fixed in round 1:** the `cow`/`die5` crash (fixed in round 2). Kill credit seems to be missing for chrono erasure and mind
   control, so those units read zero in the per-unit table.
 - **Reproducibility.** The engine has no launch seed, so a match cannot be replayed from the campaign seed; each
   match's replay and engine seed are kept in the run directory (not in the repo).
 
 ## Data
 
-All in `docs/balance-data/`. Each `*.csv` has one row per match (`matches.csv` from the harness): map, factions and
-spawns per slot, result, winner, end reason, end tick and game minutes, wall seconds, engine seed, and per side the
-units produced (count, value, by type), structures placed, value destroyed and value lost. Each `*-summary.json`
-holds the aggregates the tables above come from (matrix, per-faction W-D-L, Wilson intervals, lengths, draws,
-per-unit trade).
+All files are in `docs/balance-data/`. Each `*.csv` has one row per match:
+- map, the factions and spawns per slot;
+- result, winner, end reason, end tick, game minutes, wall seconds and engine seed;
+- per side: units produced (count, value, by type), structures placed, value destroyed and value lost.
+
+Each `*-summary.json` holds the aggregates: matrix, per-faction W-D-L, Wilson intervals, lengths, draws and per-unit
+trade. The `r2-duels-*.csv` files have one row per duel: pair, level, replicate, ticks, and each side's value and
+value left.
 
 | Files | Run | Rules |
 |---|---|---|
-| `pilot-30min` | Round robin, 30-minute cap | 01adb19 |
-| `before` | Round robin | 01adb19 |
-| `probe-p1-aa`, `probe-p2a-doctrine`, `probe-p2b-squads`, `probe-p3-costs` | Probes; overlays in `probe-overlays.json` | 846ad3c + overlay |
-| `after-doctrine` | Round robin | 605f111 |
-| `probe-p4-china-turkey-costs` | Probe | 605f111 + overlay |
-| `after` | Round robin | 414f8fa |
+| `r2-duels-before`, `r2-duels-after` | Duels, rank 0 and 2, 8 per pair | 414f8fa / 31912c4 |
+| `r2-start-probe` | Probe (84 games) with veterancy telemetry | 414f8fa |
+| `r2-pass1` | Round robin, replicate 0 (84 games) | eba846d |
+| `r2-pass2`, `r2-pass2-naval` | Round robin (238 of 252) and naval (126) | c89a76c |
+| `r2-after`, `r2-after-naval` | Final round robin (252) and naval (126) | 31912c4 |
+| `pilot-30min` | Round 1: round robin, 30-minute cap | 01adb19 |
+| `before` | Round 1: round robin | 01adb19 |
+| `probe-p1-aa` … `probe-p4-china-turkey-costs`, `probe-overlays.json` | Round 1 probes | see round 1 |
+| `after-doctrine`, `after` | Round 1: round robins | 605f111, 414f8fa |
 
 ## Reproduce
 
@@ -274,12 +421,18 @@ per-unit trade).
 ./fetch-local-engine.sh && ./make.cmd all
 # <content> holds ra2/ra2.mix and ra2/language.mix copied from an owned Red Alert 2; delete it afterwards.
 python tools/balance-harness.py run --campaign round-robin --content <content> --output <scratch>/rr --parallel 8
+python tools/balance-harness.py run --campaign naval --content <content> --output <scratch>/naval --parallel 8
+python tools/balance-duel.py run --content <content> --output <scratch>/duels --parallel 8
 python tools/balance-harness.py run --campaign <probe> --campaigns-file docs/balance-data/probe-overlays.json \
     --content <content> --output <scratch>/<probe>
 python tools/balance-harness.py report --campaign round-robin --output <scratch>/rr   # rebuild the summary
 python tools/test_balance_harness.py                                                    # harness unit tests
 ```
 
-Add `--bot-log` to keep each match's `bot-doctrine.log` (role shares, opening, squad size and every build choice).
-`--keep-support` keeps the support directory; each match keeps its replay, which `tools/replay-production.py` reads.
-The `before` run used a snapshot of the 01adb19 `mods/` passed with `--mods`.
+Options:
+- `--bot-log` keeps each match's `bot-doctrine.log`: role shares, opening, squad size, air-defense switches and every
+  build choice.
+- `--keep-support` keeps the support directory.
+- Each match keeps its replay, which `tools/replay-production.py` reads.
+- A "before" run uses a `git archive` snapshot of the older `mods/`, passed with `--mods` (also accepted by the duel
+  tool).
