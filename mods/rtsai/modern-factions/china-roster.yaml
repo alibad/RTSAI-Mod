@@ -21,7 +21,13 @@
 		Bounds: 600, 1500, 0, -530
 	RenderSprites:
 		PlayerPalette: chinaplayer
-	-TakeCover:
+	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
+	# go prone, half speed while prone) and show the normal sequences.
+	TakeCover:
+		ProneSequencePrefix:
+	FirepowerMultiplier@ELITEARMS:
+		RequiresCondition: rank-elite
+		Modifier: 140
 	-WithDeathAnimation@effect:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: chinaplayer

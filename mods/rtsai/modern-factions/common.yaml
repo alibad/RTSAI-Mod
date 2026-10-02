@@ -67,6 +67,11 @@ Player:
 	HitShape:
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
+	# Stock RA2 units swap to a stronger elite weapon (+25-67% damage); modern units have none, so
+	# elite rank adds this on top of the shared veterancy bonuses instead.
+	FirepowerMultiplier@ELITEARMS:
+		RequiresCondition: rank-elite
+		Modifier: 140
 
 ^R2ModernDrone:
 	Inherits: ^Aircraft
