@@ -257,7 +257,13 @@ namespace OpenRA.Mods.RTSAI.Traits
 			}
 			catch (InvalidOperationException e)
 			{
+				Log.Write("rl-bridge", $"CaptureCompanionFrame failed: {e}");
 				throw new RpcException(new Status(StatusCode.FailedPrecondition, e.Message));
+			}
+			catch (Exception e) when (e is not RpcException and not OperationCanceledException)
+			{
+				Log.Write("rl-bridge", $"CaptureCompanionFrame failed: {e}");
+				throw new RpcException(new Status(StatusCode.Internal, e.Message));
 			}
 		}
 

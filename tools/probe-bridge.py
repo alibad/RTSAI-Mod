@@ -25,6 +25,8 @@ def main() -> int:
     parser.add_argument("--wait", type=float, default=90.0, help="seconds to wait for the first observation")
     parser.add_argument("--samples", type=int, default=3)
     parser.add_argument("--interval", type=float, default=5.0)
+    parser.add_argument("--deploy-mcv", action="store_true", help="ExecuteCompanionActions: deploy the first MCV, then re-observe")
+    parser.add_argument("--frame", type=Path, help="also call CaptureCompanionFrame and save the PNG here")
     args = parser.parse_args()
 
     sys.path.insert(0, str(args.product / "services/companion/src"))
@@ -65,6 +67,26 @@ def main() -> int:
     print(json.dumps({"rpc": "GetState", "keys": sorted(state)[:12]}))
     accepted = bridge.update_companion_status(**_status_kwargs(bridge))
     print(json.dumps({"rpc": "UpdateCompanionStatus", "accepted": accepted}))
+    if args.deploy_mcv:
+        from openra_ai_companion.models import ActionCommand  # noqa: E402
+
+        snapshot = bridge.observe()
+        mcv = next(u for u in snapshot.units if u.kind.endswith("mcv"))
+        receipt = bridge.execute_actions("spike-deploy-1", snapshot.tick, (ActionCommand("deploy", actor_id=mcv.actor_id),))
+        print(json.dumps({"rpc": "ExecuteCompanionActions", "accepted": receipt.accepted, "tick": receipt.game_tick,
+                          "detail": receipt.detail, "results": list(receipt.results)[:2]}))
+        for _ in range(30):
+            time.sleep(1.0)
+            after = bridge.observe()
+            if after.buildings:
+                break
+        print(json.dumps({"rpc": "Observe", "tick": after.tick, "units": sorted(u.kind for u in after.units),
+                          "buildings": sorted(b.kind for b in after.buildings)}))
+
+    if args.frame:
+        frame = bridge.capture_frame()
+        args.frame.write_bytes(frame.png)
+        print(json.dumps({"rpc": "CaptureCompanionFrame", **frame.metadata(), "bytes": len(frame.png), "saved": str(args.frame)}))
     bridge.close()
     return 0
 

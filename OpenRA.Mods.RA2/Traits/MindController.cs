@@ -11,7 +11,6 @@
 
 using System;
 using System.Collections.Generic;
-using OpenRA.Mods.Common.Experience;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -50,17 +49,14 @@ namespace OpenRA.Mods.RA2.Traits
 
 		public IEnumerable<Actor> Slaves => slaves;
 
-		// FORK: capacity follows the mind-control-and-disguise experience component when the
-		// player has tuned it, and falls back to the actor's own yaml value otherwise. Without
-		// this the component's Control capacity slider would silently stop governing anything
-		// once real RA2 mind control replaced the placeholder MindControlCapacity ledger.
+		// The fork engine's copy let the WW3 Experience composer override this; the RTSAI mod
+		// has no Experience system, so the actor's yaml value is authoritative.
 		readonly int capacity;
 
 		public MindController(MindControllerInfo info)
 			: base(info)
 		{
-			var catalog = Game.ModData.GetOrNull<ExperienceCatalog>();
-			capacity = catalog?.GetIntegerParameter("mind-control-and-disguise", "capacity", info.Capacity) ?? info.Capacity;
+			capacity = info.Capacity;
 		}
 
 		void StackControllingCondition(Actor self, string condition)

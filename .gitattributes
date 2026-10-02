@@ -8,3 +8,8 @@
 
 # Custom for Visual Studio
 *.cs     diff=csharp
+
+# Shell scripts and the shell-sourced mod.config must keep LF on every checkout
+*.sh eol=lf
+mod.config eol=lf
+user.config eol=lf
