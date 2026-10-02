@@ -73,7 +73,7 @@ r2sang:
 		BuildPaletteOrder: 10
 		Description: ra2-r2sang-description
 	Valued:
-		Cost: 220
+		Cost: 200
 	Health:
 		HP: 135
 	Mobile:

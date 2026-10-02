@@ -108,7 +108,7 @@ r2m1a2s:
 		Prerequisites: ~faction.saudi, gaweap
 		Description: ra2-r2m1a2s-description
 	Valued:
-		Cost: 1250
+		Cost: 1025
 	Health:
 		HP: 520
 	Armor:

@@ -102,7 +102,7 @@ r2karrar:
 		Prerequisites: ~faction.iran, naweap
 		Description: ra2-r2karrar-description
 	Valued:
-		Cost: 900
+		Cost: 850
 	Health:
 		HP: 420
 	Armor:

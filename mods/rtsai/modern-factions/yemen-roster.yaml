@@ -59,7 +59,7 @@ r2ymr:
 		BuildPaletteOrder: 10
 		Description: ra2-r2ymr-description
 	Valued:
-		Cost: 100
+		Cost: 135
 	Health:
 		HP: 100
 	Mobile:

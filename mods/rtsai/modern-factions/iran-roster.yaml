@@ -50,7 +50,7 @@ r2basij:
 		BuildPaletteOrder: 10
 		Description: ra2-r2basij-description
 	Valued:
-		Cost: 100
+		Cost: 80
 	Health:
 		HP: 105
 	Mobile:
