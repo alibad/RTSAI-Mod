@@ -16,6 +16,27 @@
 		</ProjectReference>
 	</ItemGroup>
 
+	<!--
+		AI companion bridge (spike): Kestrel-hosted gRPC server owned by the mod assembly.
+		Same package versions as the fork engine so a single copy of each dependency lands in bin/.
+	-->
+	<ItemGroup>
+		<PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
+		<PackageReference Include="Google.Protobuf" Version="3.29.3" />
+		<PackageReference Include="Grpc.Tools" Version="2.69.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Companion/Protos/rl_bridge.proto" GrpcServices="Server" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<None Include="$(EngineRootPath)/AUTHORS">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
