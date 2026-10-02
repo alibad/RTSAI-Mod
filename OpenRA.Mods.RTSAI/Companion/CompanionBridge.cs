@@ -17,6 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.RTSAI.Companion;
 using OpenRA.Traits;
 using RLProto = OpenRA.Mods.RTSAI.RL;
 
@@ -99,6 +100,10 @@ namespace OpenRA.Mods.RTSAI.Traits
 		RLProto.GameObservation latestObservation;
 		RLProto.GameState latestState;
 		bool enabled;
+		bool disabledForMatch;
+
+		/// <summary>The exact HUD text the lobby's multiplayer policy promises.</summary>
+		public const string DisabledForMatchMessage = "AI co-commander disabled for this match";
 
 		sealed class PendingActionRequest
 		{
@@ -121,26 +126,44 @@ namespace OpenRA.Mods.RTSAI.Traits
 		void INotifyCreated.Created(Actor self)
 		{
 			CompanionLog.Ensure();
+
+			// The companion runs when a launcher started it (OPENRA_AI_COMPANION=1) or when the game's
+			// own CompanionHost manages it - including when it is missing or crashed, so the HUD can say so.
 			enabled = world.Type == WorldType.Regular
-				&& Environment.GetEnvironmentVariable("OPENRA_AI_COMPANION") == "1"
+				&& (Environment.GetEnvironmentVariable("OPENRA_AI_COMPANION") == "1" || CompanionHost.Managed)
 				&& !world.IsReplay;
 			if (!enabled)
 				return;
 
+			// Multiplayer policy: the lobby's "AI co-commander" option, visible to every player.
+			disabledForMatch = !CompanionLobbyOptionInfo.AllowedFor(world.LobbyInfo);
 			var startup = StartupState(Environment.GetEnvironmentVariable);
 
 			lock (CurrentLock)
 			{
 				current = this;
-				companionStatusAcknowledged = startup.Ready;
-				assistantAutoRequested = startup.Ready && startup.Enabled && startup.AutoAct;
-				assistantStrategyRequested = NormalizeAssistantStrategy(startup.Strategy);
-				companionStatus = startup.Ready
-					? StartupStatus(startup.Enabled, startup.Muted, assistantAutoRequested, assistantStrategyRequested)
-					: ReadyStatus();
+				if (disabledForMatch)
+				{
+					companionStatusAcknowledged = true;
+					assistantAutoRequested = false;
+					companionStatus = DisabledForMatchStatus();
+				}
+				else
+				{
+					companionStatusAcknowledged = startup.Ready;
+					assistantAutoRequested = startup.Ready && startup.Enabled && startup.AutoAct;
+					assistantStrategyRequested = NormalizeAssistantStrategy(startup.Strategy);
+					companionStatus = startup.Ready
+						? StartupStatus(startup.Enabled, startup.Muted, assistantAutoRequested, assistantStrategyRequested)
+						: ReadyStatus();
+				}
+
 				companionThreat = CalmThreat();
 				companionStatusUpdatedAt = Environment.TickCount64;
 			}
+
+			if (disabledForMatch)
+				Log.Write(CompanionLog.Channel, "AI co-commander disabled for this match by the lobby option; advice, actions and AUTO are refused.");
 
 			var port = 9998;
 			var envPort = Environment.GetEnvironmentVariable("OPENRA_AI_GRPC_PORT");
@@ -155,6 +178,13 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			if (!enabled)
 				return;
+
+			if (disabledForMatch)
+			{
+				// No observations leave the game, and nothing the companion sends is executed.
+				ProcessPendingActions();
+				return;
+			}
 
 			SyncNativeAssistant();
 			ProcessPendingActions();
@@ -386,14 +416,17 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		RLProto.CompanionActionReceipt ValidateAndIssue(RLProto.CompanionActionRequest request)
 		{
+			if (disabledForMatch)
+				return RejectedReceipt(request, DisabledForMatchMessage + ".", world.WorldTick);
+
 			if (!TryGetStatus(out _, out _, out var statusEnabled, out _) || !statusEnabled)
 				return RejectedReceipt(request, "The companion action kill switch is disabled.", world.WorldTick);
 
 			if (world.LocalPlayer == null || world.LocalPlayer.Spectating)
 				return RejectedReceipt(request, "There is no controllable local player.", world.WorldTick);
 
-			if (world.LobbyInfo.NonBotClients.Count() != 1)
-				return RejectedReceipt(request, "Companion actions are currently limited to single-player matches.", world.WorldTick);
+			// Multiplayer: allowed only when the host left the lobby's "AI co-commander" option on,
+			// which every player can see (checked above through disabledForMatch).
 
 			if (request.Commands.Count == 0 || request.Commands.Count > MaxCommandsPerRequest)
 				return RejectedReceipt(request, $"A request must contain 1 to {MaxCommandsPerRequest} commands.", world.WorldTick);
@@ -725,7 +758,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			lock (CurrentLock)
 				bridge = current;
 
-			if (bridge == null)
+			if (bridge == null || bridge.disabledForMatch)
 			{
 				observation = null;
 				return false;
@@ -754,6 +787,12 @@ namespace OpenRA.Mods.RTSAI.Traits
 			{
 				state = null;
 				return false;
+			}
+
+			if (bridge.disabledForMatch)
+			{
+				state = new RLProto.GameState { EpisodeId = bridge.episodeId, Phase = "ai_disabled" };
+				return true;
 			}
 
 			lock (bridge.observationLock)
@@ -788,6 +827,27 @@ namespace OpenRA.Mods.RTSAI.Traits
 			};
 		}
 
+		static RLProto.CompanionStatus DisabledForMatchStatus()
+		{
+			return new RLProto.CompanionStatus
+			{
+				State = "disabled",
+				Message = DisabledForMatchMessage,
+				Enabled = false,
+				Muted = true
+			};
+		}
+
+		/// <summary>True while the current match has the lobby's "AI co-commander" option off.</summary>
+		public static bool IsDisabledForMatch
+		{
+			get
+			{
+				lock (CurrentLock)
+					return current != null && current.enabled && current.disabledForMatch;
+			}
+		}
+
 		static RLProto.CompanionThreat CalmThreat()
 		{
 			return new RLProto.CompanionThreat
@@ -815,7 +875,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			lock (CurrentLock)
 			{
-				if (current == null || !current.enabled)
+				if (current == null || !current.enabled || current.disabledForMatch)
 					return false;
 
 				companionStatus = status.Clone();
@@ -830,7 +890,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			lock (CurrentLock)
 			{
-				if (current == null || !current.enabled)
+				if (current == null || !current.enabled || current.disabledForMatch)
 					return false;
 
 				companionThreat = threat.Clone();
@@ -847,6 +907,9 @@ namespace OpenRA.Mods.RTSAI.Traits
 				bridge = current;
 				if (bridge == null || !bridge.enabled)
 					throw new InvalidOperationException("No active local companion match is available.");
+
+				if (bridge.disabledForMatch)
+					throw new InvalidOperationException(DisabledForMatchMessage + ".");
 			}
 
 			var completion = new TaskCompletionSource<RLProto.CompanionFrame>(
@@ -882,7 +945,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			lock (CurrentLock)
 			{
-				if (current == null || !current.enabled)
+				if (current == null || !current.enabled || current.disabledForMatch)
 					return false;
 
 				companionStatus = IdleStatus(companionStatus.Enabled, muted);
@@ -895,7 +958,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			lock (CurrentLock)
 			{
-				if (current == null || !current.enabled)
+				if (current == null || !current.enabled || current.disabledForMatch)
 					return false;
 
 				companionStatus.State = "error";
@@ -912,7 +975,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 			lock (CurrentLock)
 			{
-				if (current == null || !current.enabled)
+				if (current == null || !current.enabled || current.disabledForMatch)
 					return false;
 
 				companionStatus.State = state;
@@ -931,10 +994,17 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			lock (CurrentLock)
 			{
-				if (current == null || !current.enabled || !current.companionStatusAcknowledged)
+				if (current == null || !current.enabled)
 				{
 					autoActEnabled = false;
 					return false;
+				}
+
+				if (!current.companionStatusAcknowledged)
+				{
+					// A missing or stopped sidecar will never acknowledge: show AUTO as off, not "starting".
+					autoActEnabled = false;
+					return CompanionHost.State is CompanionHostState.Missing or CompanionHostState.Failed;
 				}
 
 				autoActEnabled = current.assistantAutoRequested;
@@ -996,6 +1066,19 @@ namespace OpenRA.Mods.RTSAI.Traits
 				message = companionStatus.Message;
 				statusEnabled = companionStatus.Enabled;
 				muted = companionStatus.Muted;
+
+				// While the game-hosted sidecar is missing, crashed, restarting or still starting, say so.
+				if (!current.disabledForMatch && CompanionHost.Managed
+					&& CompanionHost.TryGetHudOverride(current.companionStatusAcknowledged, out var hostState, out var hostMessage))
+				{
+					state = hostState;
+					message = hostMessage;
+					statusEnabled = hostState == "thinking" && statusEnabled;
+				}
+				else if (!current.disabledForMatch && CompanionHost.VoicePackProgress >= 0
+					&& state != null && (state == "ready" || state.StartsWith("ready:", StringComparison.Ordinal)))
+					message = $"AI READY  •  DOWNLOADING LOCAL VOICE {CompanionHost.VoicePackProgress}%  •  ALERTS SHOW ON SCREEN";
+
 				return true;
 			}
 		}

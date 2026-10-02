@@ -16,6 +16,7 @@ using System.Text.Json;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Common.Widgets.Logic;
+using OpenRA.Mods.RTSAI.Companion;
 using OpenRA.Mods.RTSAI.Traits;
 using OpenRA.Widgets;
 
@@ -48,6 +49,14 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			{ "lightweight", "Lightweight — protect game performance" },
 			{ "recommended", "Balanced — includes map images" },
 			{ "manual", "Manual — advanced settings" }
+		};
+
+		static readonly Dictionary<string, string> AIModeLabels = new()
+		{
+			{ CompanionHost.ModeHosted, "Hosted AI + local voice (recommended)" },
+			{ CompanionHost.ModeLocal, "Full local AI on this PC (about 1.8 GB download)" },
+			{ CompanionHost.ModeExternal, "External OpenAI-compatible endpoint (your API key)" },
+			{ CompanionHost.ModeOff, "Off" }
 		};
 
 		static readonly Dictionary<string, string> PaceLabels = new()
@@ -151,6 +160,12 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		string costAssumptions = "Estimates appear after the companion reports its active routes.";
 
 		ScrollPanelWidget scrollPanel;
+		string aiMode = CompanionHost.Mode;
+		bool externalDirty;
+		TextFieldWidget externalEndpoint;
+		TextFieldWidget externalModel;
+		PasswordFieldWidget externalKey;
+		LabelWidget aiModeStatus;
 		TextFieldWidget customEndpoint;
 		TextFieldWidget customTextModel;
 		TextFieldWidget customVisionModel;
@@ -174,6 +189,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			BindTab(panel.Get<ButtonWidget>("VOICE_TAB"), "voice");
 			BindTab(panel.Get<ButtonWidget>("MODELS_TAB"), "models");
 			BindTab(panel.Get<ButtonWidget>("USAGE_TAB"), "usage");
+			BindAIMode(panel);
 
 			foreach (var id in new[]
 			{
@@ -285,10 +301,59 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			};
 		}
 
+		void BindAIMode(Widget panel)
+		{
+			// Hosted / Local / External / Off. Handled by the game's CompanionHost, so it works even
+			// while the companion is off or missing (the rest of this panel talks to the companion).
+			aiMode = CompanionHost.Mode;
+			panel.Get("AI_MODE_ROW").IsVisible = () => selectedTab == "assistant";
+			panel.Get("EXTERNAL_AI_ROW").IsVisible = () => selectedTab == "assistant" && aiMode == CompanionHost.ModeExternal;
+			BindDropdown(panel.Get<DropDownButtonWidget>("AI_MODE"), () => AIModeLabels, () => aiMode, value =>
+			{
+				aiMode = value;
+				SettingsUtils.AdjustSettingsScrollPanelLayout(scrollPanel);
+				SetStatus(value == CompanionHost.Mode ? "" : "Select Apply Now to switch the co-commander to this mode.");
+			});
+			aiModeStatus = panel.Get<LabelWidget>("AI_MODE_STATUS");
+			aiModeStatus.GetText = () => WidgetUtils.TruncateText(CompanionHost.StatusLine(), aiModeStatus.Bounds.Width,
+				Game.Renderer.Fonts[aiModeStatus.Font]);
+			externalEndpoint = panel.Get<TextFieldWidget>("EXTERNAL_ENDPOINT");
+			externalModel = panel.Get<TextFieldWidget>("EXTERNAL_MODEL");
+			externalKey = panel.Get<PasswordFieldWidget>("EXTERNAL_KEY");
+			externalEndpoint.Text = "https://api.openai.com/v1";
+			externalModel.Text = "gpt-4.1-mini";
+			externalEndpoint.OnTextEdited = () => externalDirty = true;
+			externalModel.OnTextEdited = () => externalDirty = true;
+			externalKey.OnTextEdited = () => externalDirty = true;
+		}
+
+		bool ApplyAIModeIfChanged()
+		{
+			if (aiMode == CompanionHost.Mode && !(aiMode == CompanionHost.ModeExternal && externalDirty))
+				return false;
+
+			var external = aiMode == CompanionHost.ModeExternal
+				? new ExternalAISettings { Endpoint = externalEndpoint.Text, Model = externalModel.Text, ApiKey = externalKey.Text }
+				: null;
+
+			// The key goes straight to the companion's DPAPI-protected provider file; do not keep it here.
+			externalKey.Text = "";
+			externalDirty = false;
+			SetBusy($"Switching the co-commander to {CompanionHost.ModeLabel(aiMode)}…");
+			CompanionHost.ApplyMode(aiMode, external, (applied, message) => Game.RunAfterTick(() =>
+			{
+				SetIdle(message);
+				if (applied && aiMode != CompanionHost.ModeOff)
+					Game.RunAfterDelay(4000, () => _ = LoadAsync());
+			}));
+			return true;
+		}
+
 		Action ResetPanel(Widget panel)
 		{
 			return () =>
 			{
+				aiMode = CompanionHost.ModeHosted;
 				companionEnabled = true;
 				voiceEnabled = true;
 				selectedTab = "assistant";
@@ -431,6 +496,9 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		async System.Threading.Tasks.Task ApplyAsync()
 		{
 			YieldTextFocus();
+			if (ApplyAIModeIfChanged())
+				return;
+
 			SetBusy("Saving AI settings...");
 			try
 			{
@@ -746,6 +814,9 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 		void YieldTextFocus()
 		{
+			externalEndpoint?.YieldKeyboardFocus();
+			externalModel?.YieldKeyboardFocus();
+			externalKey?.YieldKeyboardFocus();
 			customEndpoint?.YieldKeyboardFocus();
 			customTextModel?.YieldKeyboardFocus();
 			customVisionModel?.YieldKeyboardFocus();

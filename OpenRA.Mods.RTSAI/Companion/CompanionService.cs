@@ -53,6 +53,9 @@ namespace OpenRA.Mods.RTSAI.Traits
 			if (CompanionBridge.TryGetObservation(out var observation))
 				return Task.FromResult(observation);
 
+			if (CompanionBridge.IsDisabledForMatch)
+				throw new RpcException(new Status(StatusCode.FailedPrecondition, CompanionBridge.DisabledForMatchMessage + "."));
+
 			throw new RpcException(new Status(StatusCode.Unavailable,
 				"No local companion observation is available. Start a match with OPENRA_AI_COMPANION=1."));
 		}

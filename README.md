@@ -40,6 +40,10 @@ Requirements: the .NET 10 SDK.
 .\launch-game.cmd       # start the game
 ```
 
+A Windows release (per-user installer, portable zip, voice pack) is built on Windows with
+`packaging\windows\build-release.ps1`; the first-launch flow, installer options, code signing and the AI
+companion host are described in [`docs/first-launch.md`](docs/first-launch.md).
+
 The engine is the slim `rtsai/engine` branch of [alibad/OpenRA](https://github.com/alibad/OpenRA/tree/rtsai/engine): upstream OpenRA bleed plus a few small commits. They add loopback-service hosting for the companion, in-process screenshots, held-key tracking for push-to-talk, a headless platform for automated tests, and an interceptor magazine for missile jammers. `mod.config` pins the exact commit.
 
 ## Layout

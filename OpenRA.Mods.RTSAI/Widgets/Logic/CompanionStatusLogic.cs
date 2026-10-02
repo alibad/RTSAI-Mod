@@ -508,11 +508,19 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			if (Ui.CurrentWindow()?.Id == "AI_WAR_ROOM_PANEL")
 				return;
 
-			Game.OpenWindow("AI_WAR_ROOM_PANEL", new WidgetArgs
+			try
 			{
-				{ "initialTab", initialTab },
-				{ "onExit", () => { } },
-			});
+				Game.OpenWindow("AI_WAR_ROOM_PANEL", new WidgetArgs
+				{
+					{ "initialTab", initialTab },
+					{ "onExit", () => { } },
+				});
+			}
+			catch (System.IO.InvalidDataException)
+			{
+				// The War Room panel has not been ported to the mod yet (MIGRATION.md). Opening it used to
+				// throw at every game over once the HUD was visible; the feed (LOG) stays available.
+			}
 		}
 
 		void AppendFeedEntry(string state, string message, int threatScore)

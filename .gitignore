@@ -45,3 +45,6 @@ _ReSharper.*/
 
 # IntelliJ files
 .idea
+
+# Windows release staging (packaging/windows/build-release.ps1)
+/packaging/windows/build/

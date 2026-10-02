@@ -267,6 +267,7 @@ FluentMessages:
 	ra2|languages/chrome/en.ftl
 	ra2|languages/native-preview.ftl
 	ra2|languages/ai.ftl
+	ra2|languages/ai-runtime.ftl
 	ra2|modern-factions/messages.ftl
 	ra2|modern-factions/china-messages.ftl
 	ra2|modern-factions/iran-messages.ftl
@@ -286,10 +287,11 @@ Hotkeys:
 	ra2|hotkeys.yaml
 	ra2|hotkeys-ai.yaml
 
-LoadScreen: LogoStripeLoadScreen
+LoadScreen: RTSAILoadScreen
 	Image: ra2|uibits/loadscreen.png
 
 ServerTraits:
+	CompanionLobbyPolicy
 	LobbyCommands
 	SkirmishLogic
 	PlayerPinger
