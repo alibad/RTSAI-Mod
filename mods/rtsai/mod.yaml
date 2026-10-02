@@ -6,13 +6,13 @@ Metadata:
 FileSystem: DefaultFileSystem
 	Packages:
 		^EngineDir
-		$example: example
+		$rtsai: example
 		^EngineDir|mods/common: common
 
 MapFolders:
 	example|maps: System
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Example.dll
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.RTSAI.dll
 
 AssetBrowser:
 	AudioExtensions: .wav
