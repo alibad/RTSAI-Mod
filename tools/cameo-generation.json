@@ -1,0 +1,2027 @@
+{
+ "r2ah64sa": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a modern attack helicopter with a tandem cockpit, a mast-mounted radar dome above the four-blade rotor, stub wings with missiles and rocket pods and a chin chain gun, desert tan paint, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A modern attack helicopter with a tandem cockpit, a mast-mounted radar dome above the four-blade rotor, stub wings with missiles and rocket pods and a chin chain gun, desert tan paint, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 381979718,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T18:57:48+0300",
+  "master_sha256": "2752ea65930251e6a16e8017ce91072013ce9a5d14dc24a4dbbf152eb5877c61",
+  "crop_box": [
+   38,
+   44,
+   727,
+   595
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "6ec91b91659886bddf9c4f6a7215258b6d55e6f291e2dc81160442bc3b655aa9"
+ },
+ "r2aras": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "an eight-wheeled armored personnel carrier with a sloped angular hull and a small remote turret with a light autocannon, olive green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled armored personnel carrier with a sloped angular hull and a small remote turret with a light autocannon, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 305260215,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T18:59:15+0300",
+  "master_sha256": "8a605f108f01037fc7a72ec829c8e34b63e0275b66a70c605b9fadd45197bfdd",
+  "crop_box": [
+   20,
+   28,
+   756,
+   616
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "6174f4651c263935e08c7b2c0acb1f05ac5b7d93438262370c7ed29b7157579d"
+ },
+ "r2azar": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a small single-seat light strike jet with straight wings carrying bombs and rockets under the wings, sand and brown desert camouflage, flying low",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small single-seat light strike jet with straight wings carrying bombs and rockets under the wings, sand and brown desert camouflage, flying low, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 886624665,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:00:41+0300",
+  "master_sha256": "68a657f40d147fa7f91056a3d117a585a36fdfe0693ab6c2f07dce438efcfd27",
+  "crop_box": [
+   28,
+   66,
+   745,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "a67cb9223bfcdeb11597c8bf65e6bc224cb8f90ce9b98b900a412cedfc29090e"
+ },
+ "r2basij": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "an Iranian militia rifleman in olive green fatigues and a soft field cap, holding a Kalashnikov-style assault rifle, ammunition vest",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An Iranian militia rifleman in olive green fatigues and a soft field cap, holding a Kalashnikov-style assault rifle, ammunition vest, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 158920240,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:01:54+0300",
+  "master_sha256": "28314f0c1c7424d72de6f37f96c367af8e594abf0766eff8bd0ff70a3a6a8ea9",
+  "crop_box": [
+   0,
+   36,
+   736,
+   624
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "ccc088dc5715e5658a18185cfc6a4b53ded4565982495eca6e7abf6b645527e6"
+ },
+ "r2bastion": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fortified concrete defensive gun emplacement with a squat armored turret carrying twin rapid-fire autocannons, sloped olive-green armor plates, sandbags and a hexagonal concrete base",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified concrete defensive gun emplacement with a squat armored turret carrying twin rapid-fire autocannons, sloped olive-green armor plates, sandbags and a hexagonal concrete base, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 970490498,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:03:32+0300",
+  "master_sha256": "ed0f4d968792273af9c47ce3ab6a9eb45e3934f864687c8a1409b365af572897",
+  "crop_box": [
+   90,
+   56,
+   736,
+   574
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "a19c149ec7f30dcd206c49cd6c7f1b14cc1b5b8d84d45cd544347b222c78b12a"
+ },
+ "r2boran": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fortified anti-armor gun turret with a long heavy cannon barrel on an armored rotating mount set into a concrete bunker base, olive green",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified anti-armor gun turret with a long heavy cannon barrel on an armored rotating mount set into a concrete bunker base, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 919747877,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:04:51+0300",
+  "master_sha256": "d9f4f92e9040be11cc1242a603bd2c223dc7bbad4181df1c10d6961fde5a71e1",
+  "crop_box": [
+   12,
+   43,
+   748,
+   632
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "c2b085d569f1bb3c4c9d2d767524f23edbf7a22964e3eaee65e778832679aca7"
+ },
+ "r2bradley": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a tracked infantry fighting vehicle with a boxy armored hull, a two-man turret with a 25 mm cannon and a twin anti-tank missile box launcher on the turret side, desert tan paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked infantry fighting vehicle with a boxy armored hull, a two-man turret with a 25 mm cannon and a twin anti-tank missile box launcher on the turret side, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 321823340,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:05:52+0300",
+  "master_sha256": "e9d91e078617890ca9329855c484f5d957e7ef9e22341bf950fa8e94d1d34428",
+  "crop_box": [
+   61,
+   73,
+   746,
+   621
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "2b646d288734c62281a4bdbf2b4bbb474ebf7f127c9327f19e18c8c62b6b1eb2"
+ },
+ "r2caesar": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a six-wheeled truck-mounted 155 mm self-propelled howitzer with a very long gun barrel over the cab and a recoil spade at the rear, desert tan paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A six-wheeled truck-mounted 155 mm self-propelled howitzer with a very long gun barrel over the cab and a recoil spade at the rear, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 104547640,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:06:51+0300",
+  "master_sha256": "675c220855143413c5045af9265dfa468cb6ab29fec1ca1e956df6ef87990b3c",
+  "crop_box": [
+   53,
+   56,
+   783,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "47228441aa59517be47061d6c9fe496d0d70abcf2ff6d1f0e391eec64e2c17e2"
+ },
+ "r2cnnetwork": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a Chinese army network technician soldier in green digital camouflage uniform and helmet, carrying a large radio backpack with a tall folding antenna mast, holding a rugged tablet and a compact carbine",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Chinese army network technician soldier in green digital camouflage uniform and helmet, carrying a large radio backpack with a tall folding antenna mast, holding a rugged tablet and a compact carbine, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 238893041,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:07:43+0300",
+  "master_sha256": "b1c091220e678139f5f1cb492564e5116f326471ef4f0d58e613b373fd020fa8",
+  "crop_box": [
+   0,
+   34,
+   736,
+   622
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "09a73e7fe0108013ff94be2024f345cc29b4511469a7ff22986834fb93c1e180"
+ },
+ "r2cnportable": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a Chinese army missile soldier in green digital camouflage uniform and helmet, kneeling and aiming a long shoulder-fired guided missile launcher tube",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Chinese army missile soldier in green digital camouflage uniform and helmet, kneeling and aiming a long shoulder-fired guided missile launcher tube, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 399268241,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:08:34+0300",
+  "master_sha256": "49e2af5519bbce21bbdba1f64e552429d0e93ea1684ce795f6dd5b8a5ec8c150",
+  "crop_box": [
+   4,
+   51,
+   740,
+   639
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "72a43a914432e75093c8db1d3b0370af2d047447ac8844b5da545248c14a8a47"
+ },
+ "r2cnrifle": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a Chinese army rifleman in green digital camouflage uniform, helmet and body armor, holding a modern bullpup assault rifle at the ready",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Chinese army rifleman in green digital camouflage uniform, helmet and body armor, holding a modern bullpup assault rifle at the ready, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 182623847,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:09:24+0300",
+  "master_sha256": "67104c50a18b456a4eb545bcbc42d1aa5caa7898086919540ddc409f3c22e666",
+  "crop_box": [
+   0,
+   30,
+   736,
+   619
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "e67383eb3fec79a4f3da7a7ed1080860718b9fad15757ac3d38b094d14a9cf68"
+ },
+ "r2coast": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a military six-wheeled truck carrying two large anti-ship cruise missile launch canisters raised at an angle on its back, sand desert camouflage",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military six-wheeled truck carrying two large anti-ship cruise missile launch canisters raised at an angle on its back, sand desert camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 143748117,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:10:14+0300",
+  "master_sha256": "c228ee20b2a74ce5fd2d891c02c90f86722e85a18871ea5f24a005f97af27128",
+  "crop_box": [
+   29,
+   51,
+   765,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "b89181939376ad0d3179a7493efb30ae3c454ccea88880021eceaf2bdc29b158"
+ },
+ "r2crane": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a large military medium-lift transport helicopter in dark green paint, single main rotor, fat cabin fuselage with open side door and a door-mounted machine gun, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large military medium-lift transport helicopter in dark green paint, single main rotor, fat cabin fuselage with open side door and a door-mounted machine gun, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 61072825,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:11:08+0300",
+  "master_sha256": "32d5b982d217b22e16dbdd8842de93289fb21c52f0bdd75a868a04dc1b1ef673",
+  "crop_box": [
+   36,
+   0,
+   772,
+   589
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "9fe9d6b5cef43fbf88c292fbf32e61c616ea201150bc2960a39c760729f911d2"
+ },
+ "r2deniz": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a tracked amphibious assault vehicle with a tall boxy boat-like armored hull and a small gun turret, olive green paint, emerging from the surf onto a beach",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked amphibious assault vehicle with a tall boxy boat-like armored hull and a small gun turret, olive green paint, emerging from the surf onto a beach, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 311438464,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:11:58+0300",
+  "master_sha256": "a887f88af057398f6e948ce996f3c597986c372be1226c7c73f32c9670ba4997",
+  "crop_box": [
+   36,
+   51,
+   772,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "75ba7d28f112aac8a339ced2b227fcf4a046880d62a99b0c547c2f093ed31119"
+ },
+ "r2dronecontrol": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "an Iranian soldier drone coordinator in desert camouflage uniform and helmet, holding a drone ground-control tablet with a small antenna, a compact carbine slung",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An Iranian soldier drone coordinator in desert camouflage uniform and helmet, holding a drone ground-control tablet with a small antenna, a compact carbine slung, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 819587119,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:12:46+0300",
+  "master_sha256": "d400146232f0b555caaee90e956ceb3fc4c0fad8855b67fd4cac5db1df1a5583",
+  "crop_box": [
+   11,
+   48,
+   747,
+   637
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "df052457a29e85ce1b6efc3c86a807e2a762952c4c6d86f3ee8ecca69b22e1cd"
+ },
+ "r2ege": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a grey stealthy naval missile corvette with angled superstructure, a bow gun and anti-ship missile launchers amidships, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey stealthy naval missile corvette with angled superstructure, a bow gun and anti-ship missile launchers amidships, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 181357540,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:13:37+0300",
+  "master_sha256": "355721d5120b2b8a7efd77aa747d3b05073ec529a8bd6fd0618bc41965d8cb6f",
+  "crop_box": [
+   10,
+   42,
+   746,
+   630
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "ff7f2d6310fbbe4c7803f58596344561620671d27ed3938e8d84d8598558ad72"
+ },
+ "r2f15sa": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a large twin-engine twin-tail multirole fighter jet with big rectangular air intakes, carrying missiles under the wings, light grey paint, banking in flight",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large twin-engine twin-tail multirole fighter jet with big rectangular air intakes, carrying missiles under the wings, light grey paint, banking in flight, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 989567859,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:14:27+0300",
+  "master_sha256": "ab89d595b9dc35a831dbf81aa26e3b5ef01aeb472cae557d049eb98b8b6ffff0",
+  "crop_box": [
+   6,
+   16,
+   742,
+   605
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "1c41bf81ecc7a58593914c07df02f43f5c0acfaeab62c2b26143403a30a971dc"
+ },
+ "r2falcon": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "an elite special forces commando wearing a desert shemagh scarf, plate carrier and helmet, holding a suppressed carbine, with explosive charges on his vest",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An elite special forces commando wearing a desert shemagh scarf, plate carrier and helmet, holding a suppressed carbine, with explosive charges on his vest, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 176810928,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:15:18+0300",
+  "master_sha256": "980aa408e5c154a4d75f759ca6af9e0c16436c07fc273cfa4512a33f0c32b085",
+  "crop_box": [
+   36,
+   29,
+   772,
+   617
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "d1ba91cc8c0eebc585a8b61732f00987e8dd0f5213cc336290aa46f2e147c255"
+ },
+ "r2ghadir": {
+  "variant": 3,
+  "kind": "ship",
+  "subject": "a small black modern military midget submarine surfaced in coastal water, a short rounded steel hull with a small streamlined steel conning tower and a periscope, low in the water, painted full-bleed edge to edge as a wide cinematic scene",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small black modern military midget submarine surfaced in coastal water, a short rounded steel hull with a small streamlined steel conning tower and a periscope, low in the water, painted full-bleed edge to edge as a wide cinematic scene, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 462974967,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:35:24+0300",
+  "master_sha256": "2ced722b8db0e6c00f53e018c2ff2da379d007175e08f5d196bbb88651bcb45a",
+  "crop_box": [
+   34,
+   51,
+   770,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "a1054b5d0891f18629ea328ce9d79d260a8db5b1a35cfe9c00366d832205c83f"
+ },
+ "r2gokkalkan": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a tracked mobile air-defense vehicle with a rotating launcher of four surface-to-air missile canisters and a compact radar on top, olive green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked mobile air-defense vehicle with a rotating launcher of four surface-to-air missile canisters and a compact radar on top, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 11389721,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:16:58+0300",
+  "master_sha256": "7c1e19ac44184b31c67a55588b73117383094854a496150b0572b3794a9a8c1f",
+  "crop_box": [
+   64,
+   79,
+   721,
+   604
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "b42f0188d38491b5b58137ee7b1576cec172364a66552c7da14fb2d42d3fe444"
+ },
+ "r2greywolf": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "an elite special forces commander in grey tactical gear and a dark beret, with a headset and a compact carbine, stern and confident",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An elite special forces commander in grey tactical gear and a dark beret, with a headset and a compact carbine, stern and confident, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 291043214,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:17:47+0300",
+  "master_sha256": "10bc19c138441f7b63a2e6649ada6d25bf767b43e198128eb351d36d314d9df3",
+  "crop_box": [
+   39,
+   35,
+   775,
+   624
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "ee9036edad1b8438305fec53d73bea4473f499c1878a98d03619d96fc265fc24"
+ },
+ "r2haiwang": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a grey naval drone carrier warship with a long flat flight deck and a small island superstructure, several small fixed-wing combat drones parked on deck, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey naval drone carrier warship with a long flat flight deck and a small island superstructure, several small fixed-wing combat drones parked on deck, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 268261212,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:18:36+0300",
+  "master_sha256": "baf3e1721f2c2c169928839de91af146fbb19551ce5e02291b5dd9fe6f1f1827",
+  "crop_box": [
+   88,
+   60,
+   782,
+   615
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "270eacf291c2f41cbf88d714c457cc73250861a7c01b14d442dbf5738ea9b833"
+ },
+ "r2haiying": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a sleek grey stealthy naval missile corvette with angular superstructure, a bow gun turret and box missile launchers amidships, cutting through dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A sleek grey stealthy naval missile corvette with angular superstructure, a bow gun turret and box missile launchers amidships, cutting through dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 778306519,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:19:25+0300",
+  "master_sha256": "8a1f9cb7700ec1f9311ec00f4499348a3983b22a6cb2edabdce763fd454226b4",
+  "crop_box": [
+   32,
+   45,
+   768,
+   633
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "b5ed63f9d219eb45d5049717474726e9db7753ad2fa623a4d491565a4417bc9b"
+ },
+ "r2hisar": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fortified sentry gun turret with twin heavy machine guns on an armored rotating mount over a concrete bunker base, olive green",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified sentry gun turret with twin heavy machine guns on an armored rotating mount over a concrete bunker base, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 558842400,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:24:56+0300",
+  "master_sha256": "f92dab98d9987e24563dad0238dd20c9a77736d0ca2bf862a40c9ae02def04e3",
+  "crop_box": [
+   91,
+   68,
+   731,
+   579
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "60dbc23ccefe6abf3efabefdfef65d40d99472607183174a0e7840bf43f0752b"
+ },
+ "r2hodeidah": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a small fast military missile boat with two angled anti-ship missile launch tubes on its rear deck, speeding across the water with a white wake",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small fast military missile boat with two angled anti-ship missile launch tubes on its rear deck, speeding across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 613677837,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:45:39+0300",
+  "master_sha256": "2c1b122cf2f5a1c0c9bfd2377698a06e65f06d33b783bf245c6ab193cd664ff0",
+  "crop_box": [
+   0,
+   64,
+   720,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "d039b1bacbbeb55805e79f78ae4f8a8fc6beba320d0c7a899580cee8370f916f"
+ },
+ "r2iraasite": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fixed air-defense missile site behind sandbag berms, a launcher with three surface-to-air missiles angled skyward next to a radar dish, sand and olive colors",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed air-defense missile site behind sandbag berms, a launcher with three surface-to-air missiles angled skyward next to a radar dish, sand and olive colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 321546223,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T19:57:02+0300",
+  "master_sha256": "089fbc7286944b9ec1353323e145b1b12489c88f8c74673a00314e6ffb2775c3",
+  "crop_box": [
+   65,
+   53,
+   724,
+   580
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "d07ef039208cfbd70ece1b9360b0c80dd9486a21df2a82aa072866b864fca92b"
+ },
+ "r2irbunker": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a squat reinforced concrete gun bunker with a heavy machine gun poking out of a firing slit, sandbags and a camouflage net, desert colors",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A squat reinforced concrete gun bunker with a heavy machine gun poking out of a firing slit, sandbags and a camouflage net, desert colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 897968120,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T20:07:22+0300",
+  "master_sha256": "2cf239d2c707ab5188aa259b3ea31e29021e0b4540727cea80db392e9eee629c",
+  "crop_box": [
+   90,
+   80,
+   748,
+   607
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "cd96635006635174218e321c85949d09564a853c0fb01ac3088030b5f91fd2d1"
+ },
+ "r2ircoast": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fixed coastal missile battery emplacement: two large missile launch tubes on a rotating mount set into a concrete revetment, desert sand colors",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed coastal missile battery emplacement: two large missile launch tubes on a rotating mount set into a concrete revetment, desert sand colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 13163214,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "model_offload",
+  "generated_at": "2026-10-02T20:09:40+0300",
+  "master_sha256": "f81002687001405bebd3011b8ec5d33c3c4ddb4825d4f477775e58e1de6c9695",
+  "crop_box": [
+   34,
+   51,
+   770,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "ca9203dda84f70da7ee58246a29a7f470959167dbafd1805c4f27b9451b49e2c"
+ },
+ "r2jiaolong": {
+  "variant": 2,
+  "kind": "ship",
+  "subject": "a dark grey modern military attack submarine surfaced and cruising, a long rounded steel hull with a streamlined steel conning tower and small dive planes, water spray around the hull",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A dark grey modern military attack submarine surfaced and cruising, a long rounded steel hull with a streamlined steel conning tower and small dive planes, water spray around the hull, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 364353238,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:16:48+0300",
+  "master_sha256": "6145d37d25ac956efdc4d69a97496968c725359ae3b512043771aefc1ac78756",
+  "crop_box": [
+   24,
+   51,
+   760,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "d939883d95196d23615e71885505b780fa039089a9885fa5938f43897676224b"
+ },
+ "r2jubail": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a large grey naval replenishment supply ship with fuel transfer rigs and cranes, a tall bridge superstructure at the stern, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey naval replenishment supply ship with fuel transfer rigs and cranes, a tall bridge superstructure at the stern, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 83352958,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:47:52+0300",
+  "master_sha256": "84f2571275d8a2fd7e301b699a304ed73b460c09b215260a4dadab4ed70db851",
+  "crop_box": [
+   31,
+   81,
+   721,
+   633
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "6ad57fd8c0ec04ca82b02456c57a5412930ea384ef186aa9381b787ac867d2bb"
+ },
+ "r2kunlun": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a large grey amphibious landing ship dock with a high boxy superstructure, a helicopter deck at the stern and a well deck, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey amphibious landing ship dock with a high boxy superstructure, a helicopter deck at the stern and a well deck, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 245795393,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:49:36+0300",
+  "master_sha256": "cdf9d102c28e4fadfaada11e3c5943201f4ad2c9eed5fe432396e368420d01a4",
+  "crop_box": [
+   58,
+   49,
+   794,
+   637
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "03766356bc4895673c0cdf0c22aef6331b48429a55b45b61c14bff54b2032785"
+ },
+ "r2loiter": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a small delta-wing loitering munition drone with a pointed nose, small wingtip fins and a rear pusher propeller, sand colored, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small delta-wing loitering munition drone with a pointed nose, small wingtip fins and a rear pusher propeller, sand colored, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 671964085,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:51:32+0300",
+  "master_sha256": "a629ba984bf5133870b5663e2c264a651390435f87ae144796603baeeb16a9ad",
+  "crop_box": [
+   56,
+   10,
+   791,
+   598
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "bb1ab06752f3479158eb6241c0229b719f816ea93bb37d6146b6514037ae840c"
+ },
+ "r2luyang": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a large grey guided-missile destroyer warship with an angular stealthy superstructure, flat radar panels on the mast, a bow naval gun and vertical missile launch cells, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey guided-missile destroyer warship with an angular stealthy superstructure, flat radar panels on the mast, a bow naval gun and vertical missile launch cells, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 368053682,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:53:30+0300",
+  "master_sha256": "ca01b8c627e207e22355ba4d4018a7e44336a5b8bc7b4d4359eefa07203d9426",
+  "crop_box": [
+   20,
+   42,
+   756,
+   631
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "46b2b0068d33b79ed5ba1067eb679ebc3f57e69fb5a5b0ccf70b4a4105cbddac"
+ },
+ "r2m1a2s": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a heavy main battle tank with a long 120 mm smoothbore gun, flat angular turret and long tracked hull with side skirts, desert tan paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A heavy main battle tank with a long 120 mm smoothbore gun, flat angular turret and long tracked hull with side skirts, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 950330114,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:55:31+0300",
+  "master_sha256": "c64f14b3867d44d2c1da84ae5fb8a06de9fa8276226f54a49138cc57b1fbee8a",
+  "crop_box": [
+   36,
+   51,
+   772,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "18922b6d437d9e0676ef3e9c2b6db64ca63e1b274a0bb973b932b6dcb2c9c665"
+ },
+ "r2marmara": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a large grey guided-missile frigate with an angular stealthy superstructure, a tall integrated radar mast and a bow naval gun, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey guided-missile frigate with an angular stealthy superstructure, a tall integrated radar mast and a bow naval gun, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 69142011,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:57:28+0300",
+  "master_sha256": "8fa8048ce32338f54c58601736cf1d910fb324036774c381cc3ce0f4057c0cb1",
+  "crop_box": [
+   14,
+   51,
+   750,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "e19e70cfd8eaa7181931fa0ba56e18410c05ae1c1dde5548f5097db37f774f20"
+ },
+ "r2mokha": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a small coastal surveillance boat with a tall radar mast and antennas over its cabin, cruising on the water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small coastal surveillance boat with a tall radar mast and antennas over its cabin, cruising on the water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 128443603,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T20:59:25+0300",
+  "master_sha256": "d0e000e2ed52c0ca2e89a3a4a1315bb5d7073dda3a55286bd8f64a1335bafc96",
+  "crop_box": [
+   6,
+   51,
+   742,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "0dc3149e1b6bcdd3a9482c401efe0649b4b883b3eca33850de0b49d941df68db"
+ },
+ "r2peykaap": {
+  "variant": 3,
+  "kind": "ship",
+  "subject": "a small fast military missile boat with two missile tubes on its deck, speeding across the water and throwing a white wake, painted full-bleed edge to edge as a wide cinematic scene",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small fast military missile boat with two missile tubes on its deck, speeding across the water and throwing a white wake, painted full-bleed edge to edge as a wide cinematic scene, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 922131792,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:36:42+0300",
+  "master_sha256": "7ee06b95f70eab852399ede644f136d28a507c28fc1245d71e177274e0216826",
+  "crop_box": [
+   0,
+   53,
+   670,
+   589
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "906425e49e31346e9f23ab1cb178009f80e1d2c05f8754cb6ee8c34fba34b85c"
+ },
+ "r2phl": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a military eight-wheeled heavy truck with a raised box rocket launcher pod of six large rocket tubes on the rear, olive green camouflage, armored cab",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military eight-wheeled heavy truck with a raised box rocket launcher pod of six large rocket tubes on the rear, olive green camouflage, armored cab, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 730741780,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:03:26+0300",
+  "master_sha256": "7fb8f4cfb483da756b0dd7a39e1009e865e05eca56a6a5da5bd9be12db2e7c75",
+  "crop_box": [
+   61,
+   62,
+   748,
+   612
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "626d7ff4ac3e2d5dd3cb6a1d340e76f899430704b6752a15784fe3c32139be51"
+ },
+ "r2poyraz": {
+  "variant": 2,
+  "kind": "ship",
+  "subject": "a small grey naval coastal patrol boat with a bow autocannon mount, speeding across the water with a white wake",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small grey naval coastal patrol boat with a bow autocannon mount, speeding across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 698319183,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:20:00+0300",
+  "master_sha256": "cd7e9ecea9f705f7582b14a1f61cc3cc2e241e8d35b1e1df356d837bc9610611",
+  "crop_box": [
+   5,
+   90,
+   687,
+   635
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "add3b7811954a83eff7057cd98b067eaa189f9cf57821f5d71ae83c05aa34598"
+ },
+ "r2redspear": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "an elite Chinese special forces marksman in dark tactical gear and helmet with night-vision mount, a red scarf, holding a long precision rifle",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An elite Chinese special forces marksman in dark tactical gear and helmet with night-vision mount, a red scarf, holding a long precision rifle, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 973256410,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:07:02+0300",
+  "master_sha256": "00c94029c1cbea1dc18bf805487d09d082e2e632f72e8071a3ecc124f976ebb6",
+  "crop_box": [
+   22,
+   21,
+   758,
+   610
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "554028ad472e76bac825743e98fd7daf251286e7d09c762d3a78214f4cd37da1"
+ },
+ "r2riyadh": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a grey stealth multi-role frigate with smooth angled sides, a bow naval gun, a CIWS gun mount and a radar mast, sailing on dark sea water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey stealth multi-role frigate with smooth angled sides, a bow naval gun, a CIWS gun mount and a radar mast, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 75741633,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:08:54+0300",
+  "master_sha256": "2bc1110f54d1497733b582dc84a77e70febcc7050aae51d174bebbfeedba58e1",
+  "crop_box": [
+   28,
+   35,
+   764,
+   623
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "7759593634fe7e57ada877b727e577a7b572b7283f7d02cf53dc26a293b045f6"
+ },
+ "r2saat": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a soldier in desert camouflage kneeling behind a tripod-mounted guided anti-tank missile launcher with a large optical sight",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in desert camouflage kneeling behind a tripod-mounted guided anti-tank missile launcher with a large optical sight, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 936945449,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:10:51+0300",
+  "master_sha256": "533f02fe47097dd41e841348fbaeafa18c33984cbfe6975acf14d75aa67e3d90",
+  "crop_box": [
+   44,
+   51,
+   780,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "1c12cf9cdd45a734b0fdf4a472497d0668e273bc527a37e20c20f11408b7a535"
+ },
+ "r2sadiq": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a fast naval patrol boat with a sharp hull and a rapid-fire deck cannon at the bow, speeding across the water with a white wake",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fast naval patrol boat with a sharp hull and a rapid-fire deck cannon at the bow, speeding across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 310867483,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:12:47+0300",
+  "master_sha256": "d970226e37fe81d790906a8b7e6ae63714bc66df2e6d5131957544a7915fa6dc",
+  "crop_box": [
+   0,
+   51,
+   736,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "f944b12d26e8b5661fb7f628e0a74c425d321accb96fab206fbd90fc4ba3c261"
+ },
+ "r2sads": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a mobile air-defense system truck with a raised rectangular box launcher of four surface-to-air missile canisters and a flat radar panel, desert tan paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mobile air-defense system truck with a raised rectangular box launcher of four surface-to-air missile canisters and a flat radar panel, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 570124495,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:14:44+0300",
+  "master_sha256": "92aea8128b4edec17b600fa1e2e93dc3a93bd35567e8dd3f7ad555e0559da15a",
+  "crop_box": [
+   74,
+   113,
+   720,
+   630
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "d055d05cdd45ff1100cb4ede09777adf82f374df7c784d4de4c980a71e21a6c6"
+ },
+ "r2saguard": {
+  "variant": 2,
+  "kind": "structure",
+  "subject": "a modern military guard post: a square reinforced-concrete watchtower on a sandbagged base with a flat armored roof, a heavy machine gun on the roof, a radio antenna and floodlights, desert tan colors",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A modern military guard post: a square reinforced-concrete watchtower on a sandbagged base with a flat armored roof, a heavy machine gun on the roof, a radio antenna and floodlights, desert tan colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 292996454,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:21:45+0300",
+  "master_sha256": "d95c6c3d3834e754491139a3ccae523747cfac847e9e2fb1193922d5961c544b",
+  "crop_box": [
+   39,
+   45,
+   775,
+   634
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "665ceae820fea816fcec73e5055f0ff2ed025814323d8af78fcda2b5f072247b"
+ },
+ "r2sahaab": {
+  "variant": 1,
+  "kind": "ship",
+  "subject": "a small low-profile unmanned explosive surface drone boat with no crew, a sleek dark grey hull with antennas, skimming fast across the water with a white wake",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small low-profile unmanned explosive surface drone boat with no crew, a sleek dark grey hull with antennas, skimming fast across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 120049668,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:18:45+0300",
+  "master_sha256": "e53a8e480561e825f1a10088d07499e5684bcfc5a89c7c4d7e464f7242882ee9",
+  "crop_box": [
+   52,
+   50,
+   788,
+   638
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "bc7529e4e6b8330fe45ddfbb6b66c9172d5b2196db2c9f7a0540e78ce9f900a0"
+ },
+ "r2sahin": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a grey twin-engine stealth fighter jet with angular diamond-shaped wings and twin canted tail fins, flying fast",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey twin-engine stealth fighter jet with angular diamond-shaped wings and twin canted tail fins, flying fast, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 392189578,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:20:46+0300",
+  "master_sha256": "f853d0ff8c1d18e647df05fb02f233bf75d12f16fcf931e9dfd5b25abc200b49",
+  "crop_box": [
+   44,
+   0,
+   780,
+   589
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "c2d9ae3a927974de4be8caed43e992e67187cab0d2d0e6d1f000efb88d6a0b12"
+ },
+ "r2sajtac": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a soldier forward air controller in desert camouflage, helmet and headset, looking through a tripod-mounted laser target designator, with a radio",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier forward air controller in desert camouflage, helmet and headset, looking through a tripod-mounted laser target designator, with a radio, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 846291330,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:22:45+0300",
+  "master_sha256": "1a79902e0b7cc5d3166137d6fb431c89e2a4c87790c05d0866a7caf5fc48e47d",
+  "crop_box": [
+   24,
+   40,
+   760,
+   629
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "22ea91a30b549f8ae061e26ff26d3038f501b2cfeb397664f49fd36b8edab9d4"
+ },
+ "r2samad": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a long-range fixed-wing drone with long straight wings, a slender fuselage, twin vertical tail fins and a rear pusher propeller, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A long-range fixed-wing drone with long straight wings, a slender fuselage, twin vertical tail fins and a rear pusher propeller, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 841398135,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:24:45+0300",
+  "master_sha256": "5c324dd615ac2272ae8dafdcbbe1b3bc2e33ea20ee205c68bc2b3812d4b48ae5",
+  "crop_box": [
+   20,
+   30,
+   756,
+   619
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "900217a43bea92a627d39824506be484852893a62888773016d8e4931a71e578"
+ },
+ "r2sang": {
+  "variant": 2,
+  "kind": "infantry",
+  "subject": "a soldier in desert camouflage uniform, helmet and body armor, holding an assault rifle at the ready",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in desert camouflage uniform, helmet and body armor, holding an assault rifle at the ready, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 889125433,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:25:01+0300",
+  "master_sha256": "f66e7823a6f6e202bcacf45ff7b9465155bc8fbb192c4bc7ac50b1f22e0366cc",
+  "crop_box": [
+   64,
+   31,
+   800,
+   619
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "62d21f6c6cbd759a0fbd1effe386acd14ac85d5ba703a1c291271625ad00bd67"
+ },
+ "r2sapatriot": {
+  "variant": 2,
+  "kind": "structure",
+  "subject": "a long-range surface-to-air missile battery on a concrete pad: a trailer launcher with four large rectangular box-shaped missile canisters raised steeply, beside a separate trailer carrying a flat rectangular phased-array radar panel, desert tan colors",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A long-range surface-to-air missile battery on a concrete pad: a trailer launcher with four large rectangular box-shaped missile canisters raised steeply, beside a separate trailer carrying a flat rectangular phased-array radar panel, desert tan colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 678723009,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:23:24+0300",
+  "master_sha256": "13fb5f3c9c337be58470384fc20761447a228861d4ade192dad66f507e428067",
+  "crop_box": [
+   39,
+   60,
+   765,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "097af11ea93131ddbca8d0978ffeaa11bd9444f530063ea84fa7e8bd8344c17b"
+ },
+ "r2satow": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fortified anti-tank missile emplacement: a guided missile launcher with a long tube on a pedestal turret behind a concrete and sandbag parapet, desert tan colors",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified anti-tank missile emplacement: a guided missile launcher with a long tube on a pedestal turret behind a concrete and sandbag parapet, desert tan colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 980255704,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:30:39+0300",
+  "master_sha256": "57896071d6f6b8f8b737b453f01d4b801cc78d5704fa6242b866c29cf1a2a186",
+  "crop_box": [
+   43,
+   59,
+   739,
+   616
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "a35fd13d2d6b8a8b0662408987a2aa2f494bbf67226e8d491d1393f0bc170f17"
+ },
+ "r2shadowone": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a stealth commando in black tactical gear with a balaclava and night-vision goggles, holding a suppressed submachine gun, emerging from shadows",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A stealth commando in black tactical gear with a balaclava and night-vision goggles, holding a suppressed submachine gun, emerging from shadows, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 186385282,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:32:36+0300",
+  "master_sha256": "d31a60420405a67bd0a3f2438e13a6a811490baad9052ec3c834b3ce900ec801",
+  "crop_box": [
+   0,
+   34,
+   736,
+   622
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "348b8d200761712fbecdcb092e5dbeaaf60174d0b784624656aaefb705a66340"
+ },
+ "r2siper": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fixed long-range air-defense battery: two large surface-to-air missile canisters on a launcher raised steeply skyward on a concrete pad next to a radar panel, olive green",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed long-range air-defense battery: two large surface-to-air missile canisters on a launcher raised steeply skyward on a concrete pad next to a radar panel, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 768600558,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:34:30+0300",
+  "master_sha256": "1f158757ca42ed158738d7a9bf54274f8ad2e9ee12f3edd6999f6c8c919d7cbb",
+  "crop_box": [
+   0,
+   16,
+   736,
+   604
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "9dd3dbbedd41a41a419fa803989b9ca7d23be15232c89a0ce258a1105f606e17"
+ },
+ "r2skyshield": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a fixed air-defense missile battery on a concrete pad, a rotating launcher with four upright surface-to-air missile canisters beside a small square radar panel, olive green",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed air-defense missile battery on a concrete pad, a rotating launcher with four upright surface-to-air missile canisters beside a small square radar panel, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 868330901,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:36:26+0300",
+  "master_sha256": "c517c7cb74dc6d7b74256a7cebc2259f373d0313f433ab0638e2f3f4dab71723",
+  "crop_box": [
+   56,
+   42,
+   726,
+   578
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "280419543006f3ea5d8bd4c2f30ce2c1a74b3ba041936d962a9c6fdcd43907fa"
+ },
+ "r2skyspear": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a dark grey twin-engine stealth air-superiority fighter jet with canard foreplanes and twin canted tail fins, flying fast with afterburners glowing",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A dark grey twin-engine stealth air-superiority fighter jet with canard foreplanes and twin canted tail fins, flying fast with afterburners glowing, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 473833564,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:38:04+0300",
+  "master_sha256": "d817178e88e80ccdf9b90ed3a1f2bdab74e52ab009ecd263f0a32fb17e1f8ebc",
+  "crop_box": [
+   1,
+   28,
+   734,
+   614
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "21d2d2c9bef3f29405de4c677854a3ea76a610f3b7507c58aadf11ac52ed2686"
+ },
+ "r2spectrum": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a military electronic warfare relay station: a lattice mast topped with flat radar and jamming antenna panels, on a fortified concrete base with equipment cabinets, glowing indicator lights",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military electronic warfare relay station: a lattice mast topped with flat radar and jamming antenna panels, on a fortified concrete base with equipment cabinets, glowing indicator lights, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 341346056,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:39:40+0300",
+  "master_sha256": "b46f74e97a03e27329244fb29a2f0630c82ea876e9211db3cb75013f6059145b",
+  "crop_box": [
+   0,
+   15,
+   736,
+   603
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "4e7b5c36584fa909730a2094e3f8dbbd5f2186da03e87e51360956053f6dde49"
+ },
+ "r2technical": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a rugged pickup truck technical with a heavy machine gun mounted on a pedestal in the cargo bed, dusty and battered, tan and white paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A rugged pickup truck technical with a heavy machine gun mounted on a pedestal in the cargo bed, dusty and battered, tan and white paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 626867931,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:41:14+0300",
+  "master_sha256": "7fa658dac13ee363d4f8d3f4a540e5bb0648e148536150460412510f0e9edae2",
+  "crop_box": [
+   74,
+   73,
+   765,
+   627
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "7af7fe8e813503869862a6c36bc619fe4ed8a8f2365e764d5fa3317d57852727"
+ },
+ "r2toophan": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "an Iranian anti-tank soldier in desert camouflage kneeling behind a tripod-mounted wire-guided anti-tank missile launcher",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An Iranian anti-tank soldier in desert camouflage kneeling behind a tripod-mounted wire-guided anti-tank missile launcher, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 265881195,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:42:50+0300",
+  "master_sha256": "b94e45706a14ed82049e19d9434d9f7ad8e6b189dee2dcf6ad52b5933ceae108",
+  "crop_box": [
+   42,
+   55,
+   773,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "e22f53d9a25eed2a9e71b7ee2247a181122d8463038a63107cdded1fd9d24e12"
+ },
+ "r2toufan": {
+  "variant": 3,
+  "kind": "aircraft",
+  "subject": "a Cobra-style attack helicopter with a very slim narrow fuselage, a long stepped tandem two-seat canopy, a bare rotor hub with a single wide two-blade main rotor, landing skids, stub wings carrying rocket pods and a chin gun turret, sand and brown desert camouflage, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Cobra-style attack helicopter with a very slim narrow fuselage, a long stepped tandem two-seat canopy, a bare rotor hub with a single wide two-blade main rotor, landing skids, stub wings carrying rocket pods and a chin gun turret, sand and brown desert camouflage, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 180517683,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:39:06+0300",
+  "master_sha256": "fbb22576299fef57a07253eeefd119ea06dd6a37f39347442d7f815b0130db15",
+  "crop_box": [
+   49,
+   49,
+   726,
+   590
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "254d74adf087c3fe5eddbd1ab1d01f0e32b48cdf8a8ba5238821bdce298b2d47"
+ },
+ "r2trat": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a soldier in green camouflage uniform and helmet, kneeling with a shoulder-fired anti-tank missile launcher on his shoulder, aiming",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in green camouflage uniform and helmet, kneeling with a shoulder-fired anti-tank missile launcher on his shoulder, aiming, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 27206841,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:46:13+0300",
+  "master_sha256": "b36eb07d90487930658affb83fec5bbedbb8c40e04b13fbfd40731b7ecca78a3",
+  "crop_box": [
+   0,
+   53,
+   734,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "82d37b38f9263d07cf6f5fa6de7fda7ba5e25a99da8a2e70e163b03b0c798652"
+ },
+ "r2trdroneop": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a soldier in green camouflage uniform and helmet holding a drone controller, a small quadcopter drone hovering beside him",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in green camouflage uniform and helmet holding a drone controller, a small quadcopter drone hovering beside him, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 875645408,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:47:39+0300",
+  "master_sha256": "ad5bfb93401ca6a7b9015d51c048097b0a44ca041367ef47dfadb7f6a7ee9ba9",
+  "crop_box": [
+   0,
+   29,
+   736,
+   618
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "ad49180d99c9a58682b301f1f028c6c086fe8da6a86b9c0330c8773386dee6a4"
+ },
+ "r2trrifle": {
+  "variant": 2,
+  "kind": "infantry",
+  "subject": "a mechanized infantry soldier in green camouflage uniform, helmet and body armor, holding a modern battle rifle at the ready",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mechanized infantry soldier in green camouflage uniform, helmet and body armor, holding a modern battle rifle at the ready, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 700424392,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:26:41+0300",
+  "master_sha256": "2039923a5c3322bc2902352f26b05448105f848f7487c3163306ae1863a141ef",
+  "crop_box": [
+   64,
+   34,
+   800,
+   623
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "f067370ae82106af32789169d00b2d989cf3a0d305be54eda960b7120ed55d77"
+ },
+ "r2turna": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a slim tandem two-seat attack helicopter with stub wings carrying anti-tank missiles, a chin cannon turret and a five-blade main rotor, dark olive grey paint, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A slim tandem two-seat attack helicopter with stub wings carrying anti-tank missiles, a chin cannon turret and a five-blade main rotor, dark olive grey paint, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 763968418,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:50:27+0300",
+  "master_sha256": "e0775f43e859a02ef02c282a1e552a3667cc85599df457d96092b7a71a2bc07f",
+  "crop_box": [
+   44,
+   22,
+   754,
+   589
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "833ea18bd919c5307e2cf1e1de56d623cbea9451d66d53161ae6f764551c29f9"
+ },
+ "r2wadighost": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a camouflaged infiltrator wrapped in a rocky desert-colored ghillie cloak and headscarf, holding a suppressed carbine, blending into the rocks",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A camouflaged infiltrator wrapped in a rocky desert-colored ghillie cloak and headscarf, holding a suppressed carbine, blending into the rocks, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 158267706,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:52:13+0300",
+  "master_sha256": "4f2117e84ec27aa182a3a6f6a12813d7beefdfee43bb7bbe851cd7142776ca99",
+  "crop_box": [
+   24,
+   51,
+   760,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "9ef8f5a40d18acbdc4f0328a9c412128647f204b1d702ce4167d78ab8324eaf3"
+ },
+ "r2ybunker": {
+  "variant": 2,
+  "kind": "structure",
+  "subject": "a camouflaged machine-gun bunker built into a rocky mountainside, stone walls, a firing slit with a heavy machine gun and a camouflage net",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A camouflaged machine-gun bunker built into a rocky mountainside, stone walls, a firing slit with a heavy machine gun and a camouflage net, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 417363689,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:29:18+0300",
+  "master_sha256": "71971a45f3a48fb6eb512b394e5faf101cfc4442995f195b1965f92fac8b12e8",
+  "crop_box": [
+   113,
+   93,
+   701,
+   563
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "9409edbe5091a73bf6c0ca44259aa7519ad40a024793fa6b462a88b5b04f22ef"
+ },
+ "r2ycoastal": {
+  "variant": 3,
+  "kind": "structure",
+  "subject": "a fixed coastal missile emplacement dug into a rocky hillside above the sea: two large missile launch tubes on a concrete mount angled toward the sky, half hidden under a camouflage net, no vehicle, painted full-bleed edge to edge as a wide cinematic scene",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed coastal missile emplacement dug into a rocky hillside above the sea: two large missile launch tubes on a concrete mount angled toward the sky, half hidden under a camouflage net, no vehicle, painted full-bleed edge to edge as a wide cinematic scene, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 473270367,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:37:55+0300",
+  "master_sha256": "ad79a87d3d179a85e5cea6293cc3a68a4af853aeb6c2365716f05850fbba9cee",
+  "crop_box": [
+   16,
+   51,
+   752,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "61a79e765f57e066581207d2277930d8eba39249c5b0e0bcf65e01eca1ed48fa"
+ },
+ "r2ymlr": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a military truck carrying one long ballistic missile raised on a hydraulic erector, sand and olive paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military truck carrying one long ballistic missile raised on a hydraulic erector, sand and olive paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 229795153,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:57:37+0300",
+  "master_sha256": "6c2ec030945b6b35895afac6fddde8c15842495467973e47f8f90eacf96f9c43",
+  "crop_box": [
+   52,
+   40,
+   788,
+   628
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "4116fae496c58c903a71bb494ba8f382125c35570bf0af4a6165ddb9de50a667"
+ },
+ "r2ymr": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a mountain fighter wearing a headwrap scarf and a traditional jacket with an ammunition belt, holding a Kalashnikov-style rifle, rocky mountains behind",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mountain fighter wearing a headwrap scarf and a traditional jacket with an ammunition belt, holding a Kalashnikov-style rifle, rocky mountains behind, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 711598781,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T21:59:21+0300",
+  "master_sha256": "8c19a7caa6549e637c03aff4993e2af63c3b223106fa5ba8e3e3f4ea25206456",
+  "crop_box": [
+   10,
+   31,
+   746,
+   620
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "b6e7832bf8d9d767fb2f284da6871c47432b88038e4158ee1b1d38bd0d3c8e0b"
+ },
+ "r2yrpg": {
+  "variant": 2,
+  "kind": "infantry",
+  "subject": "a mountain fighter wearing a headwrap scarf and a combat vest, aiming a rocket-propelled grenade launcher on his shoulder",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mountain fighter wearing a headwrap scarf and a combat vest, aiming a rocket-propelled grenade launcher on his shoulder, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 439133355,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:31:31+0300",
+  "master_sha256": "b0b2ffb4b2c8993ecdd15ba2d541a8aecd4629d9478960e97770a095796106ea",
+  "crop_box": [
+   0,
+   43,
+   736,
+   631
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "c59dce400dc759fe8fd8c2e505db5ee3d9e5f56ceeb2d77e63e7c05f191a9bd1"
+ },
+ "r2yspot": {
+  "variant": 1,
+  "kind": "infantry",
+  "subject": "a mountain fighter scout wearing a headwrap scarf, looking through binoculars, a rugged tablet and a radio on his vest",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mountain fighter scout wearing a headwrap scarf, looking through binoculars, a rugged tablet and a radio on his vest, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 281886987,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:02:57+0300",
+  "master_sha256": "c9be1b347ab9a2e7c7d9006503cee1f01e223cfb1a424ad79cb28fa0c75fba28",
+  "crop_box": [
+   30,
+   43,
+   766,
+   632
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "5d02db977626721ab6ecae7afbd2b628e8e8d919dc97cb39cbcf4b3a3aca12c6"
+ },
+ "r2ytechrr": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a rugged pickup truck technical with a long recoilless anti-tank rifle mounted in the cargo bed, dusty and battered, tan paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A rugged pickup truck technical with a long recoilless anti-tank rifle mounted in the cargo bed, dusty and battered, tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 339389694,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:04:38+0300",
+  "master_sha256": "ad1b8d53be69bdfa5e2678b3e8b57e752887590d5eca6863734b66f2718fb610",
+  "crop_box": [
+   32,
+   61,
+   755,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "3b30ff76f92f38e756a8c20282f94458755889009f0a1df6fc26944d3891619d"
+ },
+ "r2yzu": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a rugged pickup truck technical with a twin-barrel 23 mm anti-aircraft autocannon mounted in the cargo bed, barrels raised skyward, dusty tan paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A rugged pickup truck technical with a twin-barrel 23 mm anti-aircraft autocannon mounted in the cargo bed, barrels raised skyward, dusty tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 978821000,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:06:19+0300",
+  "master_sha256": "52fd6d5009ff76d025c0fc71022eb80cff83f21164a8493ee0c3a4721f49f80b",
+  "crop_box": [
+   54,
+   50,
+   776,
+   627
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "742d24d2ad3b999a8147a35bbfde4ddcd01671122cd0ec48e9204b58733015ba"
+ },
+ "r2yzunest": {
+  "variant": 1,
+  "kind": "structure",
+  "subject": "a sandbagged anti-aircraft gun nest with a twin-barrel 23 mm autocannon on a wheeled mount, barrels raised toward the sky, rocky ground",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A sandbagged anti-aircraft gun nest with a twin-barrel 23 mm autocannon on a wheeled mount, barrels raised toward the sky, rocky ground, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 679480310,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:07:56+0300",
+  "master_sha256": "a91caa9b91c6cc5784fc7b5f4d70c0d152e9c92551dde04ddee9a0f4c9e07050",
+  "crop_box": [
+   0,
+   51,
+   736,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "21903fbe62479b7b925fd909f0b4577402397194620bd73af10ef64605cc0514"
+ },
+ "r2zbd": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a tracked amphibious infantry fighting vehicle with a long boat-shaped bow and low hull, small turret with an autocannon, green camouflage, splashing through shallow water",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked amphibious infantry fighting vehicle with a long boat-shaped bow and low hull, small turret with an autocannon, green camouflage, splashing through shallow water, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 533031802,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T22:09:34+0300",
+  "master_sha256": "b57320ad4101bf2ed5dc385083d61634971ff43f1cf0cb9ba945944d3918d629",
+  "crop_box": [
+   52,
+   51,
+   788,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "da8ed42e96df76ce7a64086cbde3d463d5892c1fb998ca11d801a4521f4524fa"
+ }
+}
