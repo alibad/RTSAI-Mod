@@ -8,77 +8,89 @@ messages or notes and not run.
 
 ## Scope
 
-The review covers 330 files [ran]:
+The review covers 307 files [ran]:
 
 - 87 build-palette cameos (`modern-factions/icons`);
-- 63 files in the five `*-art` folders: 35 SHP sprites, 7 palettes, 16 review sheets and 5 build manifests;
+- 42 files in the five `*-art` folders: 35 SHP sprites and 7 palettes;
 - 173 voxel files (`modern-factions/voxels`): 86 VXL/HVA model pairs and `modern.pal`;
-- the 2 voxel build manifests;
 - the 5 modern-faction flag regions of `mods/rtsai/uibits/buttons.png`.
 
-Rules, Fluent text and audio are out of scope (the voices have their own provenance).
+Rules, Fluent text and audio are out of scope (the voices have their own provenance). Every file in scope is
+referenced by the mod's rules, sequences or chrome [ran: `art-provenance.py --check`].
 
 ## Summary
 
 | Art | Files | Origin | Status |
 |---|---|---|---|
-| Cameos painted in this change | 75 | Qwen-Image, text-to-image, run locally | Prompt, seed, model revision, crop and hashes recorded |
-| Cameos painted on 2026-09-03 | 12 | Codex's built-in OpenAI image tool, cut from three 2×2 portrait atlases | **Flagged**: model, seed and per-image prompt not recorded |
+| Cameos | 87 | Qwen-Image, text-to-image, run locally | Prompt, seed, model revision, runtime, crop and hashes recorded |
 | Infantry and defence SHP sprites | 35 | Rendered from meshes written in Python | Clean |
-| Review sheets | 16 | Renders of the same SHP frames | **Flagged**: not used at runtime |
-| Palettes and manifests | 14 | Computed by the same builders | Clean |
-| Voxel models (VXL/HVA) and `modern.pal` | 173 | Exported from the same meshes | Clean |
+| Palettes (`*-art/*.pal`, `voxels/modern.pal`) | 8 | Computed by the same builders | Clean |
+| Voxel models (VXL/HVA) | 172 | Exported from the same meshes | Clean |
 | Lobby flags | 5 | Drawn with PIL primitives | Clean; redrawn pixel-identical [ran] |
 
-**No file was found to contain, embed or derive from Red Alert 2 game data** (method below).
+**No file was found to contain, embed or derive from Red Alert 2 game data** (method below). No file is flagged
+in the record [ran].
 
 ## 1. Cameos (`icons/`, 60×48 RGB PNG)
 
 The sidebar draws cameos at `IconSize: 60, 48` (`chrome/ingame-player.yaml`). Every one of the 87 buildable modern
 actors has its own cameo, and every cameo is used. The Saudi `strike` support power reuses `r2f15sa.png` [ran].
 
-### Before this change
+### What they replaced
 
-- **12 painted:** Qilin, Lynx, Mantis, Cloud, Karrar, Raad, Fajr, Mohajer, Bozkır, Yıldırım, Sancak and Kuzgun.
-  `OpenRA-AI/scripts/build-ra2-faction-art.py` cut them from `assets/ra2-modern-factions/{china,iran,turkey}-portraits-v1.png`
-  and padded each to 60×48 [inferred from the code; the hashes match the product tree, ran].
-- **75 placeholders:** single renders of the same meshes as the battlefield sprites and voxels. 44 of them come
-  from China, Iran and Türkiye (`scripts/ra2_{china,iran,turkey}_assets.py`, OpenRA-AI main). The other 31 are every
-  Saudi and Yemeni cameo (`scripts/ra2_red_sea_assets.py`, codex/ra2-red-sea d96247a) [ran: hash match, commit log].
+All 87 were painted on 2026-10-02 with `tools/paint-cameos.py` [ran]. Each icon's `replaced` field in the JSON
+says what was there before.
+
+- **75 placeholders.** These were single renders of the same meshes as the battlefield sprites and voxels.
+  - 44 came from China, Iran and Türkiye (`scripts/ra2_{china,iran,turkey}_assets.py`, OpenRA-AI main).
+  - 31 were every Saudi and Yemeni cameo (`scripts/ra2_red_sea_assets.py`, codex/ra2-red-sea d96247a).
+
+  [ran: hash match, commit log]
+- **12 painted cameos.** Qilin, Lynx, Mantis, Cloud, Karrar, Raad, Fajr, Mohajer, Bozkır, Yıldırım, Sancak and Kuzgun
+  were cut from `OpenRA-AI/assets/ra2-modern-factions/{china,iran,turkey}-portraits-v1.png`.
+  - Those portraits were made on 2026-09-03 with Codex's built-in OpenAI image tool.
+  - Their model, seed and per-image prompts were never recorded. The prompt cited
+    `assets/china-faction/icon-sources/china-unit-cameo-atlas-v1.png`, which has no provenance note of its own.
+  - In the palette they were darker, smaller in frame and padded with side bars, so the China, Iran and Türkiye
+    tabs mixed two looks [ran: windowed captures].
+  - Repainting them makes every cameo traceable and the set uniform.
 - **Missing:** none [ran].
 
-### Painted in this change (75)
+### How they are painted
 
-`tools/paint-cameos.py` replaced all 75 placeholders.
-
-- **Prompt.** One shared style wraps a per-unit identity from `tools/cameo-subjects.json`. Each identity was written
-  from the unit's rules, Fluent name and description, and its catalog entry where it has one. Examples: the
-  Bradley's 25 mm turret with its TOW box, CAESAR's truck-mounted 155 mm gun with rear spade, the ZU-23's twin
-  barrels in a pickup bed, and Sahaab as an uncrewed explosive boat.
-- **Style.** A painted three-quarter view under a warm key light and cool rim light, on the dark teal-charcoal studio
-  background of the 12 approved cameos. The prompt never names a game or a publisher.
+- **Prompt.** One shared style wraps a per-unit identity from `tools/cameo-subjects.json`.
+  - Each identity was written from the unit's rules, Fluent name and description, and its catalog entry where it
+    has one.
+  - For the 12 repaints, the identities also use the descriptions in `OpenRA-AI/assets/ra2-modern-factions/README.md`.
+  - Examples: the Bradley's 25 mm turret with its TOW box, CAESAR's truck-mounted 155 mm gun with rear spade, Fajr's
+    tilted grid rocket rack, Cloud as a tailless flying wing, and Sahaab as an uncrewed explosive boat.
+- **Style.** A painted three-quarter view under a warm key light and cool rim light, on a dark teal-charcoal studio
+  background. The prompt never names a game or a publisher.
 - **Negative prompt.** It excludes text, logos, insignia and flags.
 - **Generation.** 800×640 master, 28 steps, true CFG 4.0, seed `crc32(actor) mod 1e9 + variant − 1`.
-  - 27 of the installed masters came from the shared server, with whole-model offload.
-  - Another job then filled most of the GPU, and the server slowed to minutes per step. The other 48 were made by
+  - 27 masters came from the shared Qwen-Image server, with whole-model offload.
+  - Another job then filled most of the GPU, and the server slowed to minutes per step. The other 60 were made by
     `paint-cameos.py --backend local`, which loads the same model, revision and fp8 quantization in-process with
     block-level group offload.
   - Each cameo records its `runtime`.
-- **Rerolls.** 12 first masters were rejected and rerolled with a new seed: 8 once (variant 2) and 4 twice
-  (variant 3). Some subjects were reworded for the rerolls:
-  - the two submarines had been drawn with cloth sails;
-  - the Guard Tower had been drawn as a medieval castle;
-  - the Toufan had been drawn with an Apache's mast radar;
-  - the Yemeni coastal battery had been drawn as a tracked vehicle;
-  - six masters had been framed as rounded "app icons", and one had a UI badge.
-- **Post-processing, to 60×48.** A deterministic subject-aware 5:4 crop, a Lanczos downscale, then a light
-  contrast and unsharp pass so the silhouette reads at native size.
-- **Review.** Every master and cameo was checked by eye for a correct unit type and for text or logos. Rerolled
-  masters are listed in the JSON (`variant` > 1).
+- **Review [ran].** Every master and cameo was checked by eye for a correct unit type and for text or logos.
+- **Rerolls.** 14 first masters were rejected and rerolled with a new seed: 10 once and 4 twice. Some subjects were
+  reworded for the rerolls. The faults were:
+  - two submarines drawn with cloth sails;
+  - the Guard Tower drawn as a medieval castle;
+  - the Toufan drawn with an Apache's mast radar;
+  - the Yemeni coastal battery drawn as a tracked vehicle;
+  - the Mantis drawn with a tank gun;
+  - the Cloud drawn with tail fins;
+  - six masters framed as rounded "app icons", and one with a UI badge.
+
+  Rerolled cameos carry `variant` > 1 in the record.
+- **Post-processing, to 60×48.** A deterministic subject-aware 5:4 crop keeps 55–92% of the master width. It is
+  followed by a Lanczos downscale, then a light contrast and unsharp pass so the silhouette reads at native size.
 - **Records.** For each cameo, `tools/cameo-generation.json` and the JSON hold:
   - the exact prompt and negative prompt;
   - the seed, steps, CFG and master size;
-  - the model and its revision;
+  - the model, its revision and the runtime;
   - the master's SHA-256, the crop box and the cameo's SHA-256.
 
   The masters themselves are not in the repository.
@@ -113,11 +125,12 @@ actors has its own cameo, and every cameo is used. The Saudi `strike` support po
   - `{china,iran,turkey}_directional_assets`, `red_sea_directional_vehicle` and `red_sea_infantry`.
 
   The only external data is the RA2 voxel normal-vector table. It is parsed from OpenRA's own GPL source
-  `VoxelNormalsPalette.cs`; it is format data, not art. (`build-ra2-faction-art.py` opens only the project's own
-  portrait atlases, for the 12 cameos above.)
+  `VoxelNormalsPalette.cs`; it is format data, not art.
 - **Font.** `FreeSansBold.ttf` is used only for the faction preview sheets, which are not in the mod.
-- **Reproducibility.** The `manifest.json` / `*-voxel-manifest.json` SHA-256 values match the shipped files [ran].
-  Re-running the product builders was not part of this review [inferred: deterministic code].
+- **Manifests.** The build manifests (`*-art/manifest.json`, `voxel-manifest.json`, `red-sea-voxel-manifest.json`)
+  stay in the product checkouts; `art-provenance.py` reads the voxel manifests from there. Their SHA-256 values
+  matched the shipped files before the manifests were removed from the mod [ran].
+- **Re-running the builders.** This was not part of the review [inferred: deterministic code].
 
 ## 3. Lobby flags
 
@@ -139,37 +152,37 @@ actors has its own cameo, and every cameo is used. The Saudi `strike` support po
 - **Visual comparison.** A visual comparison against the owned RA2 cameos was not made, because nothing in the
   pipeline could carry them in.
 
-## 5. Flagged for the owner
+## 5. Removed, kept and notes
 
-1. **The 12 cameos from 2026-09-03 cannot be reproduced.**
-   - The notes say "built-in image-generation tool" with a shared prompt; the model, seed and per-image prompts
-     are not recorded.
-   - The prompt cites two reference images: `assets/china-faction/icon-sources/china-unit-cameo-atlas-v1.png` (no
-     provenance note of its own; added in OpenRA-AI 4ea0002) and the Turkey concept board (OpenAI-generated, documented).
-   - There is no sign of RA2-derived content.
-   - They also look different in the palette. They are darker, smaller in frame and padded with side bars, so the
-     China, Iran and Türkiye vehicle tabs mix two looks [ran: windowed captures].
-   - Options: keep them as they are, or repaint them with `tools/paint-cameos.py` for one fully documented set.
-     That means adding the 12 to `cameo-subjects.json`.
-2. **16 review sheets** (`*-art/*-review.png`, about 340 KB) are developer contact sheets. No rule uses them.
-   They can be dropped from the mod.
-3. **Small marks in the new masters.**
-   - Some infantry masters show a national-flag patch on a sleeve or launcher, despite the negative prompt.
-   - A few masters have a pseudo-signature scribble in a corner. The crop keeps at most 92% of the master, which
-     drops most corners.
-   - Neither is legible at 60×48, and neither is a real logo or text.
+- **Removed from the mod.** 23 files that nothing referenced [ran]:
+  - 16 developer review sheets (`*-art/*-review.png`, 343 KB);
+  - the five `*-art/manifest.json`;
+  - `voxel-manifest.json` and `red-sea-voxel-manifest.json`.
+
+  A full re-port with `tools/port-modern-factions.py` would copy them back from the product. Delete them again,
+  or teach the port to skip them.
+- **Kept although the game does not load them.**
+  - The five `*-replacements.yaml` files are inputs that `port-modern-factions.py` merges into
+    `shared-replacements.yaml` on every run [ran: `combined_replacements` reads them from the mod].
+  - `ART-PROVENANCE.json` itself.
+- **Small marks in the masters.**
+  - Some infantry masters show a national-flag patch on a sleeve or launcher, despite the negative prompt.
+  - A few have a pseudo-signature scribble in a corner. The crop keeps at most 92% of the master, which drops most
+    corners.
+  - Neither is legible at 60×48, and neither is a real logo or text.
 
 ## 6. Acceptance [ran]
 
 - **Build and lint.** `make all` exits 0 with 0 warnings and 0 errors. `make test` exits 0 with no warnings.
-- **Provenance check.** `tools/art-provenance.py --check` reports that all 330 files are covered.
+- **Provenance check.** `tools/art-provenance.py --check` reports that all 307 files are covered and none are
+  flagged.
 - **Windowed matches.**
   - Setup: the dev build at 1280×800, with owned RA2 data copied into an isolated support dir and deleted
-    afterwards. Each faction played a scratch copy of DEFCON 6 that gives the player a production base without a
+    afterwards. Each match was a scratch copy of DEFCON 6 that gives the player a production base without a
     construction yard.
   - Each match ran 170 s with 0 exceptions.
-  - `CaptureCompanionFrame` recorded the Infantry, Vehicle and Aircraft tabs for all five factions, with the new
-    cameos in place. The frames contain RA2 UI, so they are not in the repository.
+  - `CaptureCompanionFrame` recorded the build palette for all five factions with the 75 first cameos, and the
+    China Vehicle tab again after the 12 repaints. The frames contain RA2 UI, so they are not in the repository.
 
 ## 7. Outside this scope (seen in passing, not reviewed)
 
@@ -186,7 +199,7 @@ python tools/paint-cameos.py generate --work <dir> --only r2x --variant 2
 python tools/paint-cameos.py generate --backend local --work <dir>
 python tools/paint-cameos.py install  --work <dir> --pick r2x=2         # 60x48 icons + tools/cameo-generation.json
 python tools/art-provenance.py                                          # rebuild ART-PROVENANCE.json
-python tools/art-provenance.py --check                                  # every file covered and current
+python tools/art-provenance.py --check                                  # covered, referenced, unflagged, current
 # art-provenance.py reads ../OpenRA-AI and ../OpenRA-AI-wt-ra2-red-sea (--product, --red-sea) to match sources
 ```
 

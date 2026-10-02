@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "scope": "Every art file under mods/rtsai/modern-factions (icons, *-art SHP/PAL/review sheets, voxels, manifests) and the five modern-faction flag regions of mods/rtsai/uibits/buttons.png. Rules, Fluent text and audio are out of scope.",
+ "scope": "Every art file under mods/rtsai/modern-factions (icons, *-art SHP sprites and palettes, voxels) and the five modern-faction flag regions of mods/rtsai/uibits/buttons.png. Rules, Fluent text, audio and this record are out of scope.",
  "generatedBy": "tools/art-provenance.py",
  "sources": {
   "OpenRA-AI": {
@@ -29,16 +29,6 @@
    "inputs": "Text prompt and negative prompt only. No reference, init or control image.",
    "notConfusedWith": "Not Qwen-Image-2512 and not qwen-image-2.1 (the latter is licensed for non-commercial use only)."
   },
-  "openai-image-tool": {
-   "kind": "text-to-image model behind the Codex built-in image-generation tool",
-   "model": "not recorded",
-   "license": "not recorded in the project; OpenAI's terms assign output rights to the user (not re-verified here)",
-   "evidence": [
-    "OpenRA-AI/assets/ra2-modern-factions/README.md: 'original project unit portraits made with the built-in image-generation tool on 2026-09-03', shared prompt and per-faction unit descriptions",
-    "Sibling project notes name the same tool 'Codex's built-in OpenAI image-generation tool' (OpenRA-AI/assets/red-sea-2026/icon-sources/production-icon-prompts.md)"
-   ],
-   "inputs": "Text prompt; the README lists project concept images as references (see flags)."
-  },
   "project-geometry": {
    "kind": "deterministic renders and exports of hand-authored 3D meshes defined in Python",
    "license": "GPL-3.0-or-later (project code and its output; OpenRA-AI/assets/ra2-modern-factions/README.md)",
@@ -51,28 +41,18 @@
   }
  },
  "commercialRa2Data": "None found. No file matches, embeds or was built from Red Alert 2 game data; the art builders read no MIX/SHP/VXL/HVA/PAL/image input, the cameos are text-to-image, and the flags are redrawn identically from code. See docs/art-provenance.md for the method.",
+ "removed": "2026-10-02: 16 *-art/*-review.png developer sheets, the five *-art/manifest.json and the two voxel build manifests (voxel-manifest.json, red-sea-voxel-manifest.json) left the mod; nothing referenced them. The build manifests remain in the product checkouts, and the hashes are recorded here.",
  "summary": {
-  "files": 330,
+  "files": 307,
   "byOrigin": {
-   "generated/openai-image-tool": 12,
-   "generated/qwen-image": 75,
-   "procedural/-": 7,
+   "generated/qwen-image": 87,
    "procedural/procedural-flag": 5,
    "procedural/project-geometry": 8,
-   "rendered-from-project-geometry/project-geometry": 223
+   "rendered-from-project-geometry/project-geometry": 207
   },
-  "flags": {
-   "generator-model-and-seed-unrecorded": 12,
-   "unreferenced-review-sheet": 16
-  }
+  "flags": {}
  },
- "flagDefinitions": {
-  "generator-model-and-seed-unrecorded": "Generated with the Codex built-in OpenAI image tool; the exact model, seed and per-image prompt were not recorded. The prompt names project concept images as references, and assets/china-faction/icon-sources/china-unit-cameo-atlas-v1.png has no provenance note of its own. No sign of RA2-derived content, but the origin cannot be reproduced.",
-  "unreferenced-review-sheet": "Developer review sheet copied with the faction art; no rule or sequence uses it.",
-  "placeholder-render": "Model-render placeholder cameo, not painted.",
-  "unclear-origin": "No matching source file was found.",
-  "redraw-mismatch": "The flag region differs from a fresh procedural draw."
- },
+ "flagDefinitions": {},
  "files": {
   "china-art/china.pal": {
    "sha256": "d96c03452094f506efa9095a406c95ca7958ffb26a318574eb16647b47a8dd5a",
@@ -87,19 +67,6 @@
    "generator": "project-geometry",
    "script": "scripts/ra2_china_assets.py (sprite_palette)",
    "runtime": "referenced by rules/sequences"
-  },
-  "china-art/manifest.json": {
-   "sha256": "9d0ece02673cf256d573ff374da4dab304f55e94335415f2f9883b70ce318058",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/china-art/manifest.json",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
-   "type": "build manifest (frame counts, sizes, SHA-256)",
-   "origin": "procedural",
-   "script": "scripts/ra2_china_assets.py",
-   "runtime": "not referenced at runtime"
   },
   "china-art/r2bastion.shp": {
    "sha256": "140fc6659ae0a59868d79d3eb109d14b54c9ac27f344a2a0256b1e3fbc939702",
@@ -214,6 +181,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a modern attack helicopter with a tandem cockpit, a mast-mounted radar dome above the four-blade rotor, stub wings with missiles and rocket pods and a chin chain gun, desert tan paint, flying",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A modern attack helicopter with a tandem cockpit, a mast-mounted radar dome above the four-blade rotor, stub wings with missiles and rocket pods and a chin chain gun, desert tan paint, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -236,7 +204,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2aras.png": {
@@ -247,6 +215,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an eight-wheeled armored personnel carrier with a sloped angular hull and a small remote turret with a light autocannon, olive green paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled armored personnel carrier with a sloped angular hull and a small remote turret with a light autocannon, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -269,7 +238,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2azar.png": {
@@ -280,6 +249,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a small single-seat light strike jet with straight wings carrying bombs and rockets under the wings, sand and brown desert camouflage, flying low",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small single-seat light strike jet with straight wings carrying bombs and rockets under the wings, sand and brown desert camouflage, flying low, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -302,7 +272,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2basij.png": {
@@ -313,6 +283,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an Iranian militia rifleman in olive green fatigues and a soft field cap, holding a Kalashnikov-style assault rifle, ammunition vest",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An Iranian militia rifleman in olive green fatigues and a soft field cap, holding a Kalashnikov-style assault rifle, ammunition vest, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -335,7 +306,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2bastion.png": {
@@ -346,6 +317,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fortified concrete defensive gun emplacement with a squat armored turret carrying twin rapid-fire autocannons, sloped olive-green armor plates, sandbags and a hexagonal concrete base",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified concrete defensive gun emplacement with a squat armored turret carrying twin rapid-fire autocannons, sloped olive-green armor plates, sandbags and a hexagonal concrete base, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -368,7 +340,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2boran.png": {
@@ -379,6 +351,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fortified anti-armor gun turret with a long heavy cannon barrel on an armored rotating mount set into a concrete bunker base, olive green",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified anti-armor gun turret with a long heavy cannon barrel on an armored rotating mount set into a concrete bunker base, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -401,25 +374,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2bozkir.png": {
-   "sha256": "dc7c0b26f5540744d159e85ba1ac0816c0bbc654ade862836ac195557ee34bc0",
+   "sha256": "204682e44a71e8589a036f445349e7304dc07c12133ac8a93a1b389da2e355cc",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 0 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/turkey-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2bozkir.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a modern main battle tank with an angular turret and a single long cannon, olive green paint",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A modern main battle tank with an angular turret and a single long cannon, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 697009141,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "fcd6660bf7c4df77f0db0df519c6e7b1d2051f5e7ade78413f3f76c4931b3f41",
+    "crop_box": [
+     46,
+     74,
+     753,
+     640
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/turkey-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2bradley.png": {
@@ -430,6 +419,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a tracked infantry fighting vehicle with a boxy armored hull, a two-man turret with a 25 mm cannon and a twin anti-tank missile box launcher on the turret side, desert tan paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked infantry fighting vehicle with a boxy armored hull, a two-man turret with a 25 mm cannon and a twin anti-tank missile box launcher on the turret side, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -452,7 +442,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2caesar.png": {
@@ -463,6 +453,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a six-wheeled truck-mounted 155 mm self-propelled howitzer with a very long gun barrel over the cab and a recoil spade at the rear, desert tan paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A six-wheeled truck-mounted 155 mm self-propelled howitzer with a very long gun barrel over the cab and a recoil spade at the rear, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -485,25 +476,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2cloud.png": {
-   "sha256": "81296a44dae208fedfc1bcc34c0bef783de74f05eb2b3696af74fad39bcd732c",
+   "sha256": "6938b5e4563bfce5b5d2f57c5af4856015343ac2ea88e39aa8d6e075cd82a418",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 3 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/china-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2cloud.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 2,
+    "subject": "a dark slate grey uncrewed flying-wing drone shaped like a wide flat arrowhead, a smooth blended tailless body with a single engine intake on top, flying",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A dark slate grey uncrewed flying-wing drone shaped like a wide flat arrowhead, a smooth blended tailless body with a single engine intake on top, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 532451092,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "f5d1fd22b4cbe2783aa4e46834deaa1992847f442752523ea3624a58dae1c78f",
+    "crop_box": [
+     18,
+     5,
+     754,
+     594
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/china-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2cnnetwork.png": {
@@ -514,6 +521,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a Chinese army network technician soldier in green digital camouflage uniform and helmet, carrying a large radio backpack with a tall folding antenna mast, holding a rugged tablet and a compact carbine",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Chinese army network technician soldier in green digital camouflage uniform and helmet, carrying a large radio backpack with a tall folding antenna mast, holding a rugged tablet and a compact carbine, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -536,7 +544,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2cnportable.png": {
@@ -547,6 +555,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a Chinese army missile soldier in green digital camouflage uniform and helmet, kneeling and aiming a long shoulder-fired guided missile launcher tube",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Chinese army missile soldier in green digital camouflage uniform and helmet, kneeling and aiming a long shoulder-fired guided missile launcher tube, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -569,7 +578,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2cnrifle.png": {
@@ -580,6 +589,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a Chinese army rifleman in green digital camouflage uniform, helmet and body armor, holding a modern bullpup assault rifle at the ready",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Chinese army rifleman in green digital camouflage uniform, helmet and body armor, holding a modern bullpup assault rifle at the ready, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -602,7 +612,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2coast.png": {
@@ -613,6 +623,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a military six-wheeled truck carrying two large anti-ship cruise missile launch canisters raised at an angle on its back, sand desert camouflage",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military six-wheeled truck carrying two large anti-ship cruise missile launch canisters raised at an angle on its back, sand desert camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -635,7 +646,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2crane.png": {
@@ -646,6 +657,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a large military medium-lift transport helicopter in dark green paint, single main rotor, fat cabin fuselage with open side door and a door-mounted machine gun, flying",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large military medium-lift transport helicopter in dark green paint, single main rotor, fat cabin fuselage with open side door and a door-mounted machine gun, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -668,7 +680,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2deniz.png": {
@@ -679,6 +691,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a tracked amphibious assault vehicle with a tall boxy boat-like armored hull and a small gun turret, olive green paint, emerging from the surf onto a beach",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked amphibious assault vehicle with a tall boxy boat-like armored hull and a small gun turret, olive green paint, emerging from the surf onto a beach, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -701,7 +714,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2dronecontrol.png": {
@@ -712,6 +725,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an Iranian soldier drone coordinator in desert camouflage uniform and helmet, holding a drone ground-control tablet with a small antenna, a compact carbine slung",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An Iranian soldier drone coordinator in desert camouflage uniform and helmet, holding a drone ground-control tablet with a small antenna, a compact carbine slung, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -734,7 +748,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ege.png": {
@@ -745,6 +759,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a grey stealthy naval missile corvette with angled superstructure, a bow gun and anti-ship missile launchers amidships, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey stealthy naval missile corvette with angled superstructure, a bow gun and anti-ship missile launchers amidships, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -767,7 +782,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2f15sa.png": {
@@ -778,6 +793,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a large twin-engine twin-tail multirole fighter jet with big rectangular air intakes, carrying missiles under the wings, light grey paint, banking in flight",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large twin-engine twin-tail multirole fighter jet with big rectangular air intakes, carrying missiles under the wings, light grey paint, banking in flight, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -800,25 +816,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2fajr.png": {
-   "sha256": "4c84370839a204edabdbdcc55b8579b11f93580525ae7ec964902d28c023ac6d",
+   "sha256": "fa1dedbe28f73be6a6831062ec81f74bf12beede039c0d7f8b5f8b3809f6070b",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 2 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/iran-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2fajr.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "an eight-wheeled military truck carrying a large tilted rectangular launcher packed with a grid of rocket tubes, sand and olive camouflage",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled military truck carrying a large tilted rectangular launcher packed with a grid of rocket tubes, sand and olive camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 518894202,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "c69104c9ffe1ad1cdffc68b8d05fd888981f57883cad46aa5b1f5c2e8a270da7",
+    "crop_box": [
+     49,
+     56,
+     778,
+     640
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/iran-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2falcon.png": {
@@ -829,6 +861,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an elite special forces commando wearing a desert shemagh scarf, plate carrier and helmet, holding a suppressed carbine, with explosive charges on his vest",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An elite special forces commando wearing a desert shemagh scarf, plate carrier and helmet, holding a suppressed carbine, with explosive charges on his vest, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -851,7 +884,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ghadir.png": {
@@ -862,6 +895,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 3,
     "subject": "a small black modern military midget submarine surfaced in coastal water, a short rounded steel hull with a small streamlined steel conning tower and a periscope, low in the water, painted full-bleed edge to edge as a wide cinematic scene",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small black modern military midget submarine surfaced in coastal water, a short rounded steel hull with a small streamlined steel conning tower and a periscope, low in the water, painted full-bleed edge to edge as a wide cinematic scene, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -884,7 +918,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2gokkalkan.png": {
@@ -895,6 +929,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a tracked mobile air-defense vehicle with a rotating launcher of four surface-to-air missile canisters and a compact radar on top, olive green paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked mobile air-defense vehicle with a rotating launcher of four surface-to-air missile canisters and a compact radar on top, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -917,7 +952,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2greywolf.png": {
@@ -928,6 +963,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an elite special forces commander in grey tactical gear and a dark beret, with a headset and a compact carbine, stern and confident",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An elite special forces commander in grey tactical gear and a dark beret, with a headset and a compact carbine, stern and confident, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -950,7 +986,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2haiwang.png": {
@@ -961,6 +997,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a grey naval drone carrier warship with a long flat flight deck and a small island superstructure, several small fixed-wing combat drones parked on deck, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey naval drone carrier warship with a long flat flight deck and a small island superstructure, several small fixed-wing combat drones parked on deck, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -983,7 +1020,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2haiying.png": {
@@ -994,6 +1031,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a sleek grey stealthy naval missile corvette with angular superstructure, a bow gun turret and box missile launchers amidships, cutting through dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A sleek grey stealthy naval missile corvette with angular superstructure, a bow gun turret and box missile launchers amidships, cutting through dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1016,7 +1054,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hisar.png": {
@@ -1027,6 +1065,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fortified sentry gun turret with twin heavy machine guns on an armored rotating mount over a concrete bunker base, olive green",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified sentry gun turret with twin heavy machine guns on an armored rotating mount over a concrete bunker base, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1049,7 +1088,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hodeidah.png": {
@@ -1060,6 +1099,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a small fast military missile boat with two angled anti-ship missile launch tubes on its rear deck, speeding across the water with a white wake",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small fast military missile boat with two angled anti-ship missile launch tubes on its rear deck, speeding across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1082,7 +1122,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2iraasite.png": {
@@ -1093,6 +1133,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fixed air-defense missile site behind sandbag berms, a launcher with three surface-to-air missiles angled skyward next to a radar dish, sand and olive colors",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed air-defense missile site behind sandbag berms, a launcher with three surface-to-air missiles angled skyward next to a radar dish, sand and olive colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1115,7 +1156,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2irbunker.png": {
@@ -1126,6 +1167,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a squat reinforced concrete gun bunker with a heavy machine gun poking out of a firing slit, sandbags and a camouflage net, desert colors",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A squat reinforced concrete gun bunker with a heavy machine gun poking out of a firing slit, sandbags and a camouflage net, desert colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1148,7 +1190,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ircoast.png": {
@@ -1159,6 +1201,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fixed coastal missile battery emplacement: two large missile launch tubes on a rotating mount set into a concrete revetment, desert sand colors",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed coastal missile battery emplacement: two large missile launch tubes on a rotating mount set into a concrete revetment, desert sand colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1181,7 +1224,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2jiaolong.png": {
@@ -1192,6 +1235,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a dark grey modern military attack submarine surfaced and cruising, a long rounded steel hull with a streamlined steel conning tower and small dive planes, water spray around the hull",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A dark grey modern military attack submarine surfaced and cruising, a long rounded steel hull with a streamlined steel conning tower and small dive planes, water spray around the hull, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1214,7 +1258,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2jubail.png": {
@@ -1225,6 +1269,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a large grey naval replenishment supply ship with fuel transfer rigs and cranes, a tall bridge superstructure at the stern, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey naval replenishment supply ship with fuel transfer rigs and cranes, a tall bridge superstructure at the stern, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1247,25 +1292,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2karrar.png": {
-   "sha256": "2972673db0958df718b1f225ffaee679d5a9860ea2c7f46167c7a3b51a615b5c",
+   "sha256": "1ce82dc1b656cbcc7ea09c564eb01c956a57bb10e486b2a14dfecba6505ef980",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 0 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/iran-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2karrar.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a main battle tank with an angular turret, a long cannon and roof-mounted optics, sand and olive camouflage",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A main battle tank with an angular turret, a long cannon and roof-mounted optics, sand and olive camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 644137540,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "f761330c3b251102f507e3368141a9dd997365a50f744ed58ed9da722177c4ba",
+    "crop_box": [
+     61,
+     86,
+     752,
+     640
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/iran-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2kunlun.png": {
@@ -1276,6 +1337,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a large grey amphibious landing ship dock with a high boxy superstructure, a helicopter deck at the stern and a well deck, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey amphibious landing ship dock with a high boxy superstructure, a helicopter deck at the stern and a well deck, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1298,25 +1360,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2kuzgun.png": {
-   "sha256": "3a95330ceafbcfba9c3710b36937b98f76422a7dcfcb9ba0fd57103046e6aca1",
+   "sha256": "f7a53226a1986dcd203e5e0934432b939e61c28a83ee363cdc303b7f563c1923",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 3 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/turkey-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2kuzgun.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a slate grey long-wing reconnaissance and strike drone with two raised tail fins, sensors under its belly and small munitions under the wings, flying",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A slate grey long-wing reconnaissance and strike drone with two raised tail fins, sensors under its belly and small munitions under the wings, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 458712936,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "e20723e99ddbe5c0bc05bc51360fcb8d9a2b11f067b4bd166d053afffb7d727c",
+    "crop_box": [
+     12,
+     5,
+     748,
+     593
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/turkey-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2loiter.png": {
@@ -1327,6 +1405,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a small delta-wing loitering munition drone with a pointed nose, small wingtip fins and a rear pusher propeller, sand colored, flying",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small delta-wing loitering munition drone with a pointed nose, small wingtip fins and a rear pusher propeller, sand colored, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1349,7 +1428,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2luyang.png": {
@@ -1360,6 +1439,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a large grey guided-missile destroyer warship with an angular stealthy superstructure, flat radar panels on the mast, a bow naval gun and vertical missile launch cells, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey guided-missile destroyer warship with an angular stealthy superstructure, flat radar panels on the mast, a bow naval gun and vertical missile launch cells, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1382,25 +1462,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2lynx.png": {
-   "sha256": "824a6a81d9ca0d4c8a2e2547edab9c2f528de225bc4c41c2df24dc339a63cba1",
+   "sha256": "cba1e5e69193c01653fff9e059dffdd9b12771a31bfd8213d570cb564df04ec2",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 1 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/china-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2lynx.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a compact tracked command and reconnaissance vehicle with a small turret carrying an autocannon and a tall electro-optical sensor mast, dark green paint",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A compact tracked command and reconnaissance vehicle with a small turret carrying an autocannon and a tall electro-optical sensor mast, dark green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 746827468,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "6c5ef7882638cbc7a1ea7930dabc4db15cba98a6cb55508b30546cd985b12045",
+    "crop_box": [
+     59,
+     72,
+     731,
+     609
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/china-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2m1a2s.png": {
@@ -1411,6 +1507,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a heavy main battle tank with a long 120 mm smoothbore gun, flat angular turret and long tracked hull with side skirts, desert tan paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A heavy main battle tank with a long 120 mm smoothbore gun, flat angular turret and long tracked hull with side skirts, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1433,25 +1530,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2mantis.png": {
-   "sha256": "77f3e70547f3553a395b1cf9c636ab53f3429caa59ea872edad77ac41b2f98b9",
+   "sha256": "d5828cf300bbcad2c53e9eee0c9011d62b0fc4daac7b9b6c9f4c1e78f9c3add1",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 2 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/china-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2mantis.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 2,
+    "subject": "a tracked mobile surface-to-air missile vehicle whose turret is a missile launcher: two large rectangular missile boxes on either side of a flat upright radar panel, dark green paint",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked mobile surface-to-air missile vehicle whose turret is a missile launcher: two large rectangular missile boxes on either side of a flat upright radar panel, dark green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 369509715,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "2cc6aae26c9338b6239f729d83bb90e7b6d8872018af1557d52d49dea5ff5ffa",
+    "crop_box": [
+     45,
+     40,
+     779,
+     627
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/china-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2marmara.png": {
@@ -1462,6 +1575,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a large grey guided-missile frigate with an angular stealthy superstructure, a tall integrated radar mast and a bow naval gun, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A large grey guided-missile frigate with an angular stealthy superstructure, a tall integrated radar mast and a bow naval gun, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1484,25 +1598,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2mohajer.png": {
-   "sha256": "fee620005b80b7506ba7c0f23bdd04590623de27a3994d7d3ad49fe4836c47c0",
+   "sha256": "e753091894749525918e7dbccf352d7c6347ec7d5d70b24e47e56c3f4a5937ee",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 3 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/iran-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2mohajer.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a slender long-wing reconnaissance drone with twin tail booms, a sensor turret under the nose and small pods under the wings, light grey, flying",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A slender long-wing reconnaissance drone with twin tail booms, a sensor turret under the nose and small pods under the wings, light grey, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 627988153,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "b1c4d0aab23ab77582c0a57ac23e265dfb3e0ab6033f0f60368b9d0dc4091c34",
+    "crop_box": [
+     20,
+     5,
+     756,
+     593
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/iran-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2mokha.png": {
@@ -1513,6 +1643,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a small coastal surveillance boat with a tall radar mast and antennas over its cabin, cruising on the water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small coastal surveillance boat with a tall radar mast and antennas over its cabin, cruising on the water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1535,7 +1666,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2peykaap.png": {
@@ -1546,6 +1677,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 3,
     "subject": "a small fast military missile boat with two missile tubes on its deck, speeding across the water and throwing a white wake, painted full-bleed edge to edge as a wide cinematic scene",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small fast military missile boat with two missile tubes on its deck, speeding across the water and throwing a white wake, painted full-bleed edge to edge as a wide cinematic scene, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1568,7 +1700,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2phl.png": {
@@ -1579,6 +1711,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a military eight-wheeled heavy truck with a raised box rocket launcher pod of six large rocket tubes on the rear, olive green camouflage, armored cab",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military eight-wheeled heavy truck with a raised box rocket launcher pod of six large rocket tubes on the rear, olive green camouflage, armored cab, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1601,7 +1734,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2poyraz.png": {
@@ -1612,6 +1745,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a small grey naval coastal patrol boat with a bow autocannon mount, speeding across the water with a white wake",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small grey naval coastal patrol boat with a bow autocannon mount, speeding across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1634,43 +1768,75 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2qilin.png": {
-   "sha256": "bc65a64158010fd9eab05f9fdb4bea5b1e4429684b4d3c3a5c6516ec494bab11",
+   "sha256": "b00bfe12f66795856a471cac49d7d74f16e1103f7848efcacce35b535621aa4c",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 0 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/china-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2qilin.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a low-profile main battle tank with an angular welded turret and a single long cannon, six road wheels behind side skirts and rear engine grilles, dark green paint",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A low-profile main battle tank with an angular welded turret and a single long cannon, six road wheels behind side skirts and rear engine grilles, dark green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 917675481,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "af0cb18e63e330d23ee8209ed52efd495194297eb34d132050fea0afe295436c",
+    "crop_box": [
+     46,
+     65,
+     765,
+     640
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/china-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2raad.png": {
-   "sha256": "168ec9cc86d9ab01591c6b6b077406c13bc317ed6a40aa6e0de4313e406a9624",
+   "sha256": "229ed13155c878ca9ec76d0054649352199386f59fc13bec12dff29421c45f12",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 1 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/iran-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2raad.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "an eight-wheeled military truck carrying a launcher with two raised rectangular surface-to-air missile boxes and a radar on top, sand and olive camouflage",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled military truck carrying a launcher with two raised rectangular surface-to-air missile boxes and a radar on top, sand and olive camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 463354920,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "89c25964045f445d4eebb57004b30bd4c0a9e3e5e7854e1bddee2243dcf988ce",
+    "crop_box": [
+     86,
+     58,
+     727,
+     572
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/iran-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2redspear.png": {
@@ -1681,6 +1847,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an elite Chinese special forces marksman in dark tactical gear and helmet with night-vision mount, a red scarf, holding a long precision rifle",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An elite Chinese special forces marksman in dark tactical gear and helmet with night-vision mount, a red scarf, holding a long precision rifle, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1703,7 +1870,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2riyadh.png": {
@@ -1714,6 +1881,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a grey stealth multi-role frigate with smooth angled sides, a bow naval gun, a CIWS gun mount and a radar mast, sailing on dark sea water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey stealth multi-role frigate with smooth angled sides, a bow naval gun, a CIWS gun mount and a radar mast, sailing on dark sea water, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1736,7 +1904,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2saat.png": {
@@ -1747,6 +1915,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a soldier in desert camouflage kneeling behind a tripod-mounted guided anti-tank missile launcher with a large optical sight",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in desert camouflage kneeling behind a tripod-mounted guided anti-tank missile launcher with a large optical sight, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1769,7 +1938,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sadiq.png": {
@@ -1780,6 +1949,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fast naval patrol boat with a sharp hull and a rapid-fire deck cannon at the bow, speeding across the water with a white wake",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fast naval patrol boat with a sharp hull and a rapid-fire deck cannon at the bow, speeding across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1802,7 +1972,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sads.png": {
@@ -1813,6 +1983,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a mobile air-defense system truck with a raised rectangular box launcher of four surface-to-air missile canisters and a flat radar panel, desert tan paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mobile air-defense system truck with a raised rectangular box launcher of four surface-to-air missile canisters and a flat radar panel, desert tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1835,7 +2006,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2saguard.png": {
@@ -1846,6 +2017,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a modern military guard post: a square reinforced-concrete watchtower on a sandbagged base with a flat armored roof, a heavy machine gun on the roof, a radio antenna and floodlights, desert tan colors",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A modern military guard post: a square reinforced-concrete watchtower on a sandbagged base with a flat armored roof, a heavy machine gun on the roof, a radio antenna and floodlights, desert tan colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1868,7 +2040,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sahaab.png": {
@@ -1879,6 +2051,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a small low-profile unmanned explosive surface drone boat with no crew, a sleek dark grey hull with antennas, skimming fast across the water with a white wake",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A small low-profile unmanned explosive surface drone boat with no crew, a sleek dark grey hull with antennas, skimming fast across the water with a white wake, three-quarter bow view from slightly above, the whole vessel centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1901,7 +2074,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sahin.png": {
@@ -1912,6 +2085,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a grey twin-engine stealth fighter jet with angular diamond-shaped wings and twin canted tail fins, flying fast",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A grey twin-engine stealth fighter jet with angular diamond-shaped wings and twin canted tail fins, flying fast, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1934,7 +2108,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sajtac.png": {
@@ -1945,6 +2119,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a soldier forward air controller in desert camouflage, helmet and headset, looking through a tripod-mounted laser target designator, with a radio",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier forward air controller in desert camouflage, helmet and headset, looking through a tripod-mounted laser target designator, with a radio, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -1967,7 +2142,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2samad.png": {
@@ -1978,6 +2153,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a long-range fixed-wing drone with long straight wings, a slender fuselage, twin vertical tail fins and a rear pusher propeller, flying",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A long-range fixed-wing drone with long straight wings, a slender fuselage, twin vertical tail fins and a rear pusher propeller, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2000,25 +2176,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sancak.png": {
-   "sha256": "3166b89605a03a7cf0d35cfdf108a99b40522b41d51971a731778a2462fac442",
+   "sha256": "9c489a59a36cc5382b0790f34258c3befda187d86eac83194e49b8b9b11a24b1",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 2 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/turkey-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2sancak.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "a six-wheeled armored electronic-warfare and reconnaissance truck with a raised rectangular radar panel, several antennas and a small defensive machine gun, olive green paint",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A six-wheeled armored electronic-warfare and reconnaissance truck with a raised rectangular radar panel, several antennas and a small defensive machine gun, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 862730002,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "3ff1a1d8d545aaf818931e4594e505eeab5ff4dee20c03cb3be248b78c7d0a6e",
+    "crop_box": [
+     77,
+     45,
+     744,
+     579
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/turkey-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sang.png": {
@@ -2029,6 +2221,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a soldier in desert camouflage uniform, helmet and body armor, holding an assault rifle at the ready",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in desert camouflage uniform, helmet and body armor, holding an assault rifle at the ready, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2051,7 +2244,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sapatriot.png": {
@@ -2062,6 +2255,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a long-range surface-to-air missile battery on a concrete pad: a trailer launcher with four large rectangular box-shaped missile canisters raised steeply, beside a separate trailer carrying a flat rectangular phased-array radar panel, desert tan colors",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A long-range surface-to-air missile battery on a concrete pad: a trailer launcher with four large rectangular box-shaped missile canisters raised steeply, beside a separate trailer carrying a flat rectangular phased-array radar panel, desert tan colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2084,7 +2278,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2satow.png": {
@@ -2095,6 +2289,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fortified anti-tank missile emplacement: a guided missile launcher with a long tube on a pedestal turret behind a concrete and sandbag parapet, desert tan colors",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fortified anti-tank missile emplacement: a guided missile launcher with a long tube on a pedestal turret behind a concrete and sandbag parapet, desert tan colors, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2117,7 +2312,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2shadowone.png": {
@@ -2128,6 +2323,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a stealth commando in black tactical gear with a balaclava and night-vision goggles, holding a suppressed submachine gun, emerging from shadows",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A stealth commando in black tactical gear with a balaclava and night-vision goggles, holding a suppressed submachine gun, emerging from shadows, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2150,7 +2346,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2siper.png": {
@@ -2161,6 +2357,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fixed long-range air-defense battery: two large surface-to-air missile canisters on a launcher raised steeply skyward on a concrete pad next to a radar panel, olive green",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed long-range air-defense battery: two large surface-to-air missile canisters on a launcher raised steeply skyward on a concrete pad next to a radar panel, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2183,7 +2380,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2skyshield.png": {
@@ -2194,6 +2391,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a fixed air-defense missile battery on a concrete pad, a rotating launcher with four upright surface-to-air missile canisters beside a small square radar panel, olive green",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed air-defense missile battery on a concrete pad, a rotating launcher with four upright surface-to-air missile canisters beside a small square radar panel, olive green, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2216,7 +2414,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2skyspear.png": {
@@ -2227,6 +2425,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a dark grey twin-engine stealth air-superiority fighter jet with canard foreplanes and twin canted tail fins, flying fast with afterburners glowing",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A dark grey twin-engine stealth air-superiority fighter jet with canard foreplanes and twin canted tail fins, flying fast with afterburners glowing, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2249,7 +2448,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2spectrum.png": {
@@ -2260,6 +2459,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a military electronic warfare relay station: a lattice mast topped with flat radar and jamming antenna panels, on a fortified concrete base with equipment cabinets, glowing indicator lights",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military electronic warfare relay station: a lattice mast topped with flat radar and jamming antenna panels, on a fortified concrete base with equipment cabinets, glowing indicator lights, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2282,7 +2482,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2technical.png": {
@@ -2293,6 +2493,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a rugged pickup truck technical with a heavy machine gun mounted on a pedestal in the cargo bed, dusty and battered, tan and white paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A rugged pickup truck technical with a heavy machine gun mounted on a pedestal in the cargo bed, dusty and battered, tan and white paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2315,7 +2516,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2toophan.png": {
@@ -2326,6 +2527,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "an Iranian anti-tank soldier in desert camouflage kneeling behind a tripod-mounted wire-guided anti-tank missile launcher",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An Iranian anti-tank soldier in desert camouflage kneeling behind a tripod-mounted wire-guided anti-tank missile launcher, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2348,7 +2550,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2toufan.png": {
@@ -2359,6 +2561,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 3,
     "subject": "a Cobra-style attack helicopter with a very slim narrow fuselage, a long stepped tandem two-seat canopy, a bare rotor hub with a single wide two-blade main rotor, landing skids, stub wings carrying rocket pods and a chin gun turret, sand and brown desert camouflage, flying",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A Cobra-style attack helicopter with a very slim narrow fuselage, a long stepped tandem two-seat canopy, a bare rotor hub with a single wide two-blade main rotor, landing skids, stub wings carrying rocket pods and a chin gun turret, sand and brown desert camouflage, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2381,7 +2584,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2trat.png": {
@@ -2392,6 +2595,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a soldier in green camouflage uniform and helmet, kneeling with a shoulder-fired anti-tank missile launcher on his shoulder, aiming",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in green camouflage uniform and helmet, kneeling with a shoulder-fired anti-tank missile launcher on his shoulder, aiming, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2414,7 +2618,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2trdroneop.png": {
@@ -2425,6 +2629,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a soldier in green camouflage uniform and helmet holding a drone controller, a small quadcopter drone hovering beside him",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A soldier in green camouflage uniform and helmet holding a drone controller, a small quadcopter drone hovering beside him, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2447,7 +2652,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2trrifle.png": {
@@ -2458,6 +2663,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a mechanized infantry soldier in green camouflage uniform, helmet and body armor, holding a modern battle rifle at the ready",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mechanized infantry soldier in green camouflage uniform, helmet and body armor, holding a modern battle rifle at the ready, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2480,7 +2686,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2turna.png": {
@@ -2491,6 +2697,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a slim tandem two-seat attack helicopter with stub wings carrying anti-tank missiles, a chin cannon turret and a five-blade main rotor, dark olive grey paint, flying",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A slim tandem two-seat attack helicopter with stub wings carrying anti-tank missiles, a chin cannon turret and a five-blade main rotor, dark olive grey paint, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2513,7 +2720,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2wadighost.png": {
@@ -2524,6 +2731,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a camouflaged infiltrator wrapped in a rocky desert-colored ghillie cloak and headscarf, holding a suppressed carbine, blending into the rocks",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A camouflaged infiltrator wrapped in a rocky desert-colored ghillie cloak and headscarf, holding a suppressed carbine, blending into the rocks, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2546,7 +2754,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ybunker.png": {
@@ -2557,6 +2765,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a camouflaged machine-gun bunker built into a rocky mountainside, stone walls, a firing slit with a heavy machine gun and a camouflage net",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A camouflaged machine-gun bunker built into a rocky mountainside, stone walls, a firing slit with a heavy machine gun and a camouflage net, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2579,7 +2788,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ycoastal.png": {
@@ -2590,6 +2799,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 3,
     "subject": "a fixed coastal missile emplacement dug into a rocky hillside above the sea: two large missile launch tubes on a concrete mount angled toward the sky, half hidden under a camouflage net, no vehicle, painted full-bleed edge to edge as a wide cinematic scene",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A fixed coastal missile emplacement dug into a rocky hillside above the sea: two large missile launch tubes on a concrete mount angled toward the sky, half hidden under a camouflage net, no vehicle, painted full-bleed edge to edge as a wide cinematic scene, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2612,25 +2822,41 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yildirim.png": {
-   "sha256": "5f666e59632f2d0bb87fc0d0ff6e3cd6075e3dce8cdb4251838dffe77d63c4ad",
+   "sha256": "9fb1ac01c611d918ce1d2ee5c7383399f0a229ccb6858bd461b4ec38444f0d0f",
    "type": "build-palette cameo, 60x48 RGB PNG",
    "origin": "generated",
-   "generator": "openai-image-tool",
-   "date": "2026-09-03",
-   "derivation": "cell 1 (row-major) of the 2x2 atlas OpenRA-AI/assets/ra2-modern-factions/turkey-portraits-v1.png, padded to 60x48 with RGB (10, 22, 26) by scripts/build-ra2-faction-art.py",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/icons/r2yildirim.png",
-    "commit": "c4e227c33c41da8f8c1ea5ce85576f70137c0461",
-    "date": "2026-09-03"
+   "generator": "qwen-image",
+   "date": "2026-10-02",
+   "tool": "tools/paint-cameos.py",
+   "generation": {
+    "variant": 1,
+    "subject": "an eight-wheeled self-propelled howitzer truck with an armored cab and a long 155 mm gun on a rear turret, olive green paint",
+    "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled self-propelled howitzer truck with an armored cab and a long 155 mm gun on a rear turret, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+    "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+    "seed": 958628122,
+    "steps": 28,
+    "cfg": 4.0,
+    "master_size": [
+     800,
+     640
+    ],
+    "model": "Qwen/Qwen-Image",
+    "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+    "master_sha256": "deeef1f236900dc0cd1a8f8c824140a5e0aab2115be6b8981d1d9262369a37ea",
+    "crop_box": [
+     66,
+     62,
+     761,
+     617
+    ],
+    "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "flags": [
-    "generator-model-and-seed-unrecorded"
-   ],
+   "replaced": "painted cameo cut from OpenRA-AI assets/ra2-modern-factions/turkey-portraits-v1.png (Codex built-in OpenAI image tool, 2026-09-03; model, seed and prompt unrecorded)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ymlr.png": {
@@ -2641,6 +2867,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a military truck carrying one long ballistic missile raised on a hydraulic erector, sand and olive paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A military truck carrying one long ballistic missile raised on a hydraulic erector, sand and olive paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2663,7 +2890,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ymr.png": {
@@ -2674,6 +2901,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a mountain fighter wearing a headwrap scarf and a traditional jacket with an ammunition belt, holding a Kalashnikov-style rifle, rocky mountains behind",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mountain fighter wearing a headwrap scarf and a traditional jacket with an ammunition belt, holding a Kalashnikov-style rifle, rocky mountains behind, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2696,7 +2924,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yrpg.png": {
@@ -2707,6 +2935,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 2,
     "subject": "a mountain fighter wearing a headwrap scarf and a combat vest, aiming a rocket-propelled grenade launcher on his shoulder",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mountain fighter wearing a headwrap scarf and a combat vest, aiming a rocket-propelled grenade launcher on his shoulder, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2729,7 +2958,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yspot.png": {
@@ -2740,6 +2969,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a mountain fighter scout wearing a headwrap scarf, looking through binoculars, a rugged tablet and a radio on his vest",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A mountain fighter scout wearing a headwrap scarf, looking through binoculars, a rugged tablet and a radio on his vest, knee-up portrait of one person in three-quarter view, centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2762,7 +2992,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ytechrr.png": {
@@ -2773,6 +3003,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a rugged pickup truck technical with a long recoilless anti-tank rifle mounted in the cargo bed, dusty and battered, tan paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A rugged pickup truck technical with a long recoilless anti-tank rifle mounted in the cargo bed, dusty and battered, tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2795,7 +3026,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yzu.png": {
@@ -2806,6 +3037,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a rugged pickup truck technical with a twin-barrel 23 mm anti-aircraft autocannon mounted in the cargo bed, barrels raised skyward, dusty tan paint",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A rugged pickup truck technical with a twin-barrel 23 mm anti-aircraft autocannon mounted in the cargo bed, barrels raised skyward, dusty tan paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2828,7 +3060,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yzunest.png": {
@@ -2839,6 +3071,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a sandbagged anti-aircraft gun nest with a twin-barrel 23 mm autocannon on a wheeled mount, barrels raised toward the sky, rocky ground",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A sandbagged anti-aircraft gun nest with a twin-barrel 23 mm autocannon on a wheeled mount, barrels raised toward the sky, rocky ground, three-quarter view from slightly above, the whole structure centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2861,7 +3094,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2zbd.png": {
@@ -2872,6 +3105,7 @@
    "date": "2026-10-02",
    "tool": "tools/paint-cameos.py",
    "generation": {
+    "variant": 1,
     "subject": "a tracked amphibious infantry fighting vehicle with a long boat-shaped bow and low hull, small turret with an autocannon, green camouflage, splashing through shallow water",
     "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked amphibious infantry fighting vehicle with a long boat-shaped bow and low hull, small turret with an autocannon, green camouflage, splashing through shallow water, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
     "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
@@ -2894,7 +3128,7 @@
     ],
     "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG"
    },
-   "replaced": "model-render placeholder from the faction port",
+   "replaced": "single render of the unit's project mesh (placeholder from the faction port)",
    "runtime": "referenced by rules/sequences"
   },
   "iran-art/iran.pal": {
@@ -2911,36 +3145,6 @@
    "script": "scripts/ra2_iran_assets.py (sprite_palette)",
    "runtime": "referenced by rules/sequences"
   },
-  "iran-art/manifest.json": {
-   "sha256": "5bcdf015d35d484c5c60a7288f29852af343ec851b2da1f84308af70391d68e3",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/iran-art/manifest.json",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
-   "type": "build manifest (frame counts, sizes, SHA-256)",
-   "origin": "procedural",
-   "script": "scripts/ra2_iran_assets.py",
-   "runtime": "not referenced at runtime"
-  },
-  "iran-art/r2basij-review.png": {
-   "sha256": "81ffc6b89b3baab116722ff4da1d28d2a3f261daa731e98c85a6f6647c21b5df",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/iran-art/r2basij-review.png",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_iran_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "iran-art/r2basij.shp": {
    "sha256": "ec77a524d60a87b4ca65633af462490a1ee6c9e4a3b25eb193e0389a8b61245e",
    "source": {
@@ -2955,23 +3159,6 @@
    "script": "scripts/ra2_iran_assets.py",
    "geometry": "scripts/iran_directional_assets.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "iran-art/r2dronecontrol-review.png": {
-   "sha256": "47ac9a58c1e162b421255392c95c7295150370be831faa4cc2b18fe758ed3fcb",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/iran-art/r2dronecontrol-review.png",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_iran_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "iran-art/r2dronecontrol.shp": {
    "sha256": "6ff3d8fc8f1ab40f2c320464a1842a8e2efd68effb925d7469456f19b25b9739",
@@ -3033,23 +3220,6 @@
    "geometry": "scripts/iran_directional_assets.py",
    "runtime": "referenced by rules/sequences"
   },
-  "iran-art/r2shadowone-review.png": {
-   "sha256": "a441a7977fc7c37d6a2008f1b366606bca6496dc7cb118ffe6534c4aed3ff0f9",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/iran-art/r2shadowone-review.png",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_iran_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "iran-art/r2shadowone.shp": {
    "sha256": "7cdf42d355dff4bfcf368fcba007be181e56210b53730df2c5b015c1e4c14862",
    "source": {
@@ -3064,23 +3234,6 @@
    "script": "scripts/ra2_iran_assets.py",
    "geometry": "scripts/iran_directional_assets.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "iran-art/r2toophan-review.png": {
-   "sha256": "278bd9c62da28825eb434cdc3d62ba5669f882c7d03260cfd79ee12750ba45a7",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/iran-art/r2toophan-review.png",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_iran_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "iran-art/r2toophan.shp": {
    "sha256": "87eefd0400f5813caf0375672dcc0cb33a69c230bbef18379cc856271b30686b",
@@ -3097,47 +3250,6 @@
    "geometry": "scripts/iran_directional_assets.py",
    "runtime": "referenced by rules/sequences"
   },
-  "red-sea-voxel-manifest.json": {
-   "sha256": "29711d03c14d7311f17f22c6598d2537d38059388ec804c276c0a84ae85670b0",
-   "type": "voxel build manifest",
-   "origin": "procedural",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/red-sea-voxel-manifest.json",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   }
-  },
-  "saudi-art/manifest.json": {
-   "sha256": "14854da0064f7634d213728b2dc68c66f783766a6ad4b125afafcddc6f47b5b7",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/saudi-art/manifest.json",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "build manifest (frame counts, sizes, SHA-256)",
-   "origin": "procedural",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "runtime": "not referenced at runtime"
-  },
-  "saudi-art/r2falcon-review.png": {
-   "sha256": "be62478ce6e60b718162bbf6b68bd76ea5bddfa8dde02672573339e16ff9ca39",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/saudi-art/r2falcon-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "saudi-art/r2falcon.shp": {
    "sha256": "69a06965c47a205c87f8f0125b48e419bd66cdf300de23ef8a243820db962cad",
    "source": {
@@ -3152,23 +3264,6 @@
    "script": "scripts/ra2_red_sea_assets.py",
    "geometry": "scripts/red_sea_directional_vehicle.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "saudi-art/r2saat-review.png": {
-   "sha256": "83caa7550d92fd275db3e99543a542046ebdc4688939cd292a12d4a5feaea5d3",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/saudi-art/r2saat-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "saudi-art/r2saat.shp": {
    "sha256": "da825c2add5870bf545bb501e09c2b8d6792832d5948278969f76dd6623e6273",
@@ -3200,23 +3295,6 @@
    "geometry": "scripts/red_sea_directional_vehicle.py",
    "runtime": "referenced by rules/sequences"
   },
-  "saudi-art/r2sajtac-review.png": {
-   "sha256": "b2ca15b73903a3caef513c46e918272314b7865289551b0c63ba407bdd67429e",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/saudi-art/r2sajtac-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "saudi-art/r2sajtac.shp": {
    "sha256": "f4627428aa8641144d8db48658fe7c07af905602b11954148d10343b40be4ed3",
    "source": {
@@ -3231,23 +3309,6 @@
    "script": "scripts/ra2_red_sea_assets.py",
    "geometry": "scripts/red_sea_directional_vehicle.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "saudi-art/r2sang-review.png": {
-   "sha256": "db30bbfebc336c9a538004399e8abb2d5148c7d78dea2451148bbd33bbad3ef3",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/saudi-art/r2sang-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "saudi-art/r2sang.shp": {
    "sha256": "cc5acd935241aa0b9a5588cd7235fe0ae3a5b1c07d827d2e5f08bd87ba943ad3",
@@ -3322,19 +3383,6 @@
    "script": "scripts/ra2_red_sea_assets.py (sprite_palette)",
    "runtime": "referenced by rules/sequences"
   },
-  "turkey-art/manifest.json": {
-   "sha256": "f97627ac7c4dede42617cc25003edb142f4063cef36423e9d8f73388fef53ef0",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/turkey-art/manifest.json",
-    "commit": "9866b9e6528a609d6ef656affc396e3718bf2123",
-    "date": "2026-09-03"
-   },
-   "type": "build manifest (frame counts, sizes, SHA-256)",
-   "origin": "procedural",
-   "script": "scripts/ra2_turkey_assets.py",
-   "runtime": "not referenced at runtime"
-  },
   "turkey-art/r2boran.shp": {
    "sha256": "b5f83af506fa7befcb2d8822cb1cc2e2ed8846efc3ac1ba75e32307bd74fa148",
    "source": {
@@ -3349,23 +3397,6 @@
    "script": "scripts/ra2_turkey_assets.py",
    "geometry": "scripts/turkey_directional_assets.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "turkey-art/r2greywolf-review.png": {
-   "sha256": "a427ef13718da2c4e6d6999f73fd546f2472a2bc30cb481ab3cfd12cdd38c19d",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/turkey-art/r2greywolf-review.png",
-    "commit": "9866b9e6528a609d6ef656affc396e3718bf2123",
-    "date": "2026-09-03"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_turkey_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "turkey-art/r2greywolf.shp": {
    "sha256": "064f7d30c490216a82773ce7af98be8bedf0af169ce54523566a6730cda5be8a",
@@ -3412,23 +3443,6 @@
    "geometry": "scripts/turkey_directional_assets.py",
    "runtime": "referenced by rules/sequences"
   },
-  "turkey-art/r2trat-review.png": {
-   "sha256": "c913941ab3b0c1716a156452110c4da25a3c745f63963461c8363fe7a0f68e37",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/turkey-art/r2trat-review.png",
-    "commit": "9866b9e6528a609d6ef656affc396e3718bf2123",
-    "date": "2026-09-03"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_turkey_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "turkey-art/r2trat.shp": {
    "sha256": "c7d6f89fc974a882bd11ff672be8c8956f521aa990918ff1457c81b739b1fd16",
    "source": {
@@ -3444,23 +3458,6 @@
    "geometry": "scripts/turkey_directional_assets.py",
    "runtime": "referenced by rules/sequences"
   },
-  "turkey-art/r2trdroneop-review.png": {
-   "sha256": "e408ce34dc772bba2da61385409e1baf3a907bb3c7d0bec5f5a7a4f11e6e636e",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/turkey-art/r2trdroneop-review.png",
-    "commit": "9866b9e6528a609d6ef656affc396e3718bf2123",
-    "date": "2026-09-03"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_turkey_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "turkey-art/r2trdroneop.shp": {
    "sha256": "2fb34cb87f25a8eecb224038139d1b2fa400440a958deb3035f32baaa77fab6b",
    "source": {
@@ -3475,23 +3472,6 @@
    "script": "scripts/ra2_turkey_assets.py",
    "geometry": "scripts/turkey_directional_assets.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "turkey-art/r2trrifle-review.png": {
-   "sha256": "05fa4dab782a82a46915294ee8a205d131e5bd98d6277b6bc3dfcc1b8aa9fdb7",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/turkey-art/r2trrifle-review.png",
-    "commit": "9866b9e6528a609d6ef656affc396e3718bf2123",
-    "date": "2026-09-03"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_turkey_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "turkey-art/r2trrifle.shp": {
    "sha256": "1f8feaa979d98337eb429260908db9f30302072ea9e4d22c6acd6277d9944fc4",
@@ -3521,17 +3501,6 @@
    "generator": "project-geometry",
    "script": "scripts/ra2_turkey_assets.py (sprite_palette)",
    "runtime": "referenced by rules/sequences"
-  },
-  "voxel-manifest.json": {
-   "sha256": "f91d2ba4754f1f49ba83ec9ab9f5bb6b883355bec579ad047bfb03c69868c139",
-   "type": "voxel build manifest",
-   "origin": "procedural",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/voxel-manifest.json",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   }
   },
   "voxels/modern.pal": {
    "sha256": "b448ddfcc47cf66471e3df2331645e66a40d2c71b7aefe8371a0a6e12e49b186",
@@ -5955,36 +5924,6 @@
    "script": "scripts/ra2_faction_voxels.py",
    "runtime": "referenced by rules/sequences"
   },
-  "yemen-art/manifest.json": {
-   "sha256": "3f45971c8bbf15eea631898005e6d48b0b9145a7783817a41a40932734ff7631",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/yemen-art/manifest.json",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "build manifest (frame counts, sizes, SHA-256)",
-   "origin": "procedural",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "runtime": "not referenced at runtime"
-  },
-  "yemen-art/r2wadighost-review.png": {
-   "sha256": "f0e771e0ffb0ff79f4c438d29ef0bec7391f1d1e9f9f80bec897cd6a20eefcb8",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/yemen-art/r2wadighost-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "yemen-art/r2wadighost.shp": {
    "sha256": "73ee9416bd88ad7d74ae2c5746aded37cbb25d0e28fafb96e77eeb90fe952688",
    "source": {
@@ -6030,23 +5969,6 @@
    "geometry": "scripts/red_sea_directional_vehicle.py",
    "runtime": "referenced by rules/sequences"
   },
-  "yemen-art/r2ymr-review.png": {
-   "sha256": "c660f29b7821ab05efc4bb40b727ec929d6a4e253a04c0d14ab7995d841eb203",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/yemen-art/r2ymr-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "yemen-art/r2ymr.shp": {
    "sha256": "e39fc7932ff2a52a8ebc087339c1d3df6294cb83b92a511da3d420c78a0d639a",
    "source": {
@@ -6062,23 +5984,6 @@
    "geometry": "scripts/red_sea_directional_vehicle.py",
    "runtime": "referenced by rules/sequences"
   },
-  "yemen-art/r2yrpg-review.png": {
-   "sha256": "c1c8c9659c1f997e8ace1130accaaadf264ba48de725c5d74c47badc74787d7a",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/yemen-art/r2yrpg-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
-  },
   "yemen-art/r2yrpg.shp": {
    "sha256": "796dbe4f8c354a3e06a53074007f9c4bdfedabd65d932610eb22119dab63207d",
    "source": {
@@ -6093,23 +5998,6 @@
    "script": "scripts/ra2_red_sea_assets.py",
    "geometry": "scripts/red_sea_directional_vehicle.py",
    "runtime": "referenced by rules/sequences"
-  },
-  "yemen-art/r2yspot-review.png": {
-   "sha256": "78f89181665f5fdf0a689225c2b50898236895d4a6eea3e4f5c7ac32ec63f1cd",
-   "source": {
-    "repo": "OpenRA-AI codex/ra2-red-sea",
-    "path": "apps/installer/ra2/modern-factions/yemen-art/r2yspot-review.png",
-    "commit": "d96247ae08ed6f22103cb9b47a119ec8be46c7d0",
-    "date": "2026-09-28"
-   },
-   "type": "review contact sheet of the SHP frames",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_red_sea_assets.py",
-   "flags": [
-    "unreferenced-review-sheet"
-   ],
-   "runtime": "not referenced at runtime"
   },
   "yemen-art/r2yspot.shp": {
    "sha256": "03e28e3f41ce6b658ee4b1bbe9988718b5470acb7206e20d771d7469e2230fb2",
@@ -6171,6 +6059,7 @@
   },
   "../uibits/buttons.png#china": {
    "sha256": "befa2decdae26dfa7903513fa31e342e2cae75eb38ea3c4a670166a47aef5d65",
+   "hashOf": "raw RGBA bytes of the region",
    "type": "lobby flag, 30x15 region of the RA2 button atlas",
    "region": [
     0,
@@ -6182,10 +6071,12 @@
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-red-sea-ui.py draw_china_flag @ c1036b2175b92d4b7248b2ea7eb1e5f16348d927",
    "chain": "drawn into alibad/OpenRA mods/ra/uibits/glyphs-redsea.png @ 5ddc34cb91e52953d4844c169075a0dbbd79e139, cropped at 192,128 by tools/port-modern-factions.py extend_flags()",
-   "verifiedRedraw": true
+   "verifiedRedraw": true,
+   "runtime": "referenced by chrome.yaml (flags)"
   },
   "../uibits/buttons.png#iran": {
    "sha256": "8836c871172c2b3762a2b8dd094ab263772cb7e8209944bb23daa71ca4611919",
+   "hashOf": "raw RGBA bytes of the region",
    "type": "lobby flag, 30x15 region of the RA2 button atlas",
    "region": [
     30,
@@ -6197,10 +6088,12 @@
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-red-sea-ui.py draw_iran_flag @ c1036b2175b92d4b7248b2ea7eb1e5f16348d927",
    "chain": "drawn into alibad/OpenRA mods/ra/uibits/glyphs-redsea.png @ 5ddc34cb91e52953d4844c169075a0dbbd79e139, cropped at 226,33 by tools/port-modern-factions.py extend_flags()",
-   "verifiedRedraw": true
+   "verifiedRedraw": true,
+   "runtime": "referenced by chrome.yaml (flags)"
   },
   "../uibits/buttons.png#turkey": {
    "sha256": "e525746ff49d38022b9c4f6abbc242dabd8d12cc92dc49125405e35840f09052",
+   "hashOf": "raw RGBA bytes of the region",
    "type": "lobby flag, 30x15 region of the RA2 button atlas",
    "region": [
     60,
@@ -6212,10 +6105,12 @@
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-red-sea-ui.py draw_turkey_flag @ c1036b2175b92d4b7248b2ea7eb1e5f16348d927",
    "chain": "drawn into alibad/OpenRA mods/ra/uibits/glyphs-redsea.png @ 5ddc34cb91e52953d4844c169075a0dbbd79e139, cropped at 226,113 by tools/port-modern-factions.py extend_flags()",
-   "verifiedRedraw": true
+   "verifiedRedraw": true,
+   "runtime": "referenced by chrome.yaml (flags)"
   },
   "../uibits/buttons.png#saudi": {
    "sha256": "ffeac3338076e71d98513c841eb84a88993b3f191a029e103cdcef7f53727ce7",
+   "hashOf": "raw RGBA bytes of the region",
    "type": "lobby flag, 30x15 region of the RA2 button atlas",
    "region": [
     90,
@@ -6227,10 +6122,12 @@
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-red-sea-ui.py draw_saudi_flag @ c1036b2175b92d4b7248b2ea7eb1e5f16348d927",
    "chain": "drawn into alibad/OpenRA mods/ra/uibits/glyphs-redsea.png @ 5ddc34cb91e52953d4844c169075a0dbbd79e139, cropped at 226,1 by tools/port-modern-factions.py extend_flags()",
-   "verifiedRedraw": true
+   "verifiedRedraw": true,
+   "runtime": "referenced by chrome.yaml (flags)"
   },
   "../uibits/buttons.png#yemen": {
    "sha256": "03c7725119b94446e11b05fccc4342c65b559e241754b24dfa5e6b62f5b2ab7f",
+   "hashOf": "raw RGBA bytes of the region",
    "type": "lobby flag, 30x15 region of the RA2 button atlas",
    "region": [
     120,
@@ -6242,7 +6139,8 @@
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-red-sea-ui.py draw_yemen_flag @ c1036b2175b92d4b7248b2ea7eb1e5f16348d927",
    "chain": "drawn into alibad/OpenRA mods/ra/uibits/glyphs-redsea.png @ 5ddc34cb91e52953d4844c169075a0dbbd79e139, cropped at 226,17 by tools/port-modern-factions.py extend_flags()",
-   "verifiedRedraw": true
+   "verifiedRedraw": true,
+   "runtime": "referenced by chrome.yaml (flags)"
   }
  }
 }

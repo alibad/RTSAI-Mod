@@ -2023,5 +2023,329 @@
   ],
   "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
   "icon_sha256": "da8ed42e96df76ce7a64086cbde3d463d5892c1fb998ca11d801a4521f4524fa"
+ },
+ "r2bozkir": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a modern main battle tank with an angular turret and a single long cannon, olive green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A modern main battle tank with an angular turret and a single long cannon, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 697009141,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:13:54+0300",
+  "master_sha256": "fcd6660bf7c4df77f0db0df519c6e7b1d2051f5e7ade78413f3f76c4931b3f41",
+  "crop_box": [
+   46,
+   74,
+   753,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "204682e44a71e8589a036f445349e7304dc07c12133ac8a93a1b389da2e355cc"
+ },
+ "r2cloud": {
+  "variant": 2,
+  "kind": "aircraft",
+  "subject": "a dark slate grey uncrewed flying-wing drone shaped like a wide flat arrowhead, a smooth blended tailless body with a single engine intake on top, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A dark slate grey uncrewed flying-wing drone shaped like a wide flat arrowhead, a smooth blended tailless body with a single engine intake on top, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 532451092,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:28:39+0300",
+  "master_sha256": "f5d1fd22b4cbe2783aa4e46834deaa1992847f442752523ea3624a58dae1c78f",
+  "crop_box": [
+   18,
+   5,
+   754,
+   594
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "6938b5e4563bfce5b5d2f57c5af4856015343ac2ea88e39aa8d6e075cd82a418"
+ },
+ "r2fajr": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "an eight-wheeled military truck carrying a large tilted rectangular launcher packed with a grid of rocket tubes, sand and olive camouflage",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled military truck carrying a large tilted rectangular launcher packed with a grid of rocket tubes, sand and olive camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 518894202,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:10:36+0300",
+  "master_sha256": "c69104c9ffe1ad1cdffc68b8d05fd888981f57883cad46aa5b1f5c2e8a270da7",
+  "crop_box": [
+   49,
+   56,
+   778,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "fa1dedbe28f73be6a6831062ec81f74bf12beede039c0d7f8b5f8b3809f6070b"
+ },
+ "r2karrar": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a main battle tank with an angular turret, a long cannon and roof-mounted optics, sand and olive camouflage",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A main battle tank with an angular turret, a long cannon and roof-mounted optics, sand and olive camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 644137540,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:07:28+0300",
+  "master_sha256": "f761330c3b251102f507e3368141a9dd997365a50f744ed58ed9da722177c4ba",
+  "crop_box": [
+   61,
+   86,
+   752,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "1ce82dc1b656cbcc7ea09c564eb01c956a57bb10e486b2a14dfecba6505ef980"
+ },
+ "r2kuzgun": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a slate grey long-wing reconnaissance and strike drone with two raised tail fins, sensors under its belly and small munitions under the wings, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A slate grey long-wing reconnaissance and strike drone with two raised tail fins, sensors under its belly and small munitions under the wings, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 458712936,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:18:49+0300",
+  "master_sha256": "e20723e99ddbe5c0bc05bc51360fcb8d9a2b11f067b4bd166d053afffb7d727c",
+  "crop_box": [
+   12,
+   5,
+   748,
+   593
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "f7a53226a1986dcd203e5e0934432b939e61c28a83ee363cdc303b7f563c1923"
+ },
+ "r2lynx": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a compact tracked command and reconnaissance vehicle with a small turret carrying an autocannon and a tall electro-optical sensor mast, dark green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A compact tracked command and reconnaissance vehicle with a small turret carrying an autocannon and a tall electro-optical sensor mast, dark green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 746827468,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:04:03+0300",
+  "master_sha256": "6c5ef7882638cbc7a1ea7930dabc4db15cba98a6cb55508b30546cd985b12045",
+  "crop_box": [
+   59,
+   72,
+   731,
+   609
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "cba1e5e69193c01653fff9e059dffdd9b12771a31bfd8213d570cb564df04ec2"
+ },
+ "r2mantis": {
+  "variant": 2,
+  "kind": "vehicle",
+  "subject": "a tracked mobile surface-to-air missile vehicle whose turret is a missile launcher: two large rectangular missile boxes on either side of a flat upright radar panel, dark green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A tracked mobile surface-to-air missile vehicle whose turret is a missile launcher: two large rectangular missile boxes on either side of a flat upright radar panel, dark green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 369509715,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:27:06+0300",
+  "master_sha256": "2cc6aae26c9338b6239f729d83bb90e7b6d8872018af1557d52d49dea5ff5ffa",
+  "crop_box": [
+   45,
+   40,
+   779,
+   627
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "d5828cf300bbcad2c53e9eee0c9011d62b0fc4daac7b9b6c9f4c1e78f9c3add1"
+ },
+ "r2mohajer": {
+  "variant": 1,
+  "kind": "aircraft",
+  "subject": "a slender long-wing reconnaissance drone with twin tail booms, a sensor turret under the nose and small pods under the wings, light grey, flying",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A slender long-wing reconnaissance drone with twin tail booms, a sensor turret under the nose and small pods under the wings, light grey, flying, three-quarter view in flight, the whole aircraft centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 627988153,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:12:16+0300",
+  "master_sha256": "b1c4d0aab23ab77582c0a57ac23e265dfb3e0ab6033f0f60368b9d0dc4091c34",
+  "crop_box": [
+   20,
+   5,
+   756,
+   593
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "e753091894749525918e7dbccf352d7c6347ec7d5d70b24e47e56c3f4a5937ee"
+ },
+ "r2qilin": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a low-profile main battle tank with an angular welded turret and a single long cannon, six road wheels behind side skirts and rear engine grilles, dark green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A low-profile main battle tank with an angular welded turret and a single long cannon, six road wheels behind side skirts and rear engine grilles, dark green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 917675481,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:02:47+0300",
+  "master_sha256": "af0cb18e63e330d23ee8209ed52efd495194297eb34d132050fea0afe295436c",
+  "crop_box": [
+   46,
+   65,
+   765,
+   640
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "b00bfe12f66795856a471cac49d7d74f16e1103f7848efcacce35b535621aa4c"
+ },
+ "r2raad": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "an eight-wheeled military truck carrying a launcher with two raised rectangular surface-to-air missile boxes and a radar on top, sand and olive camouflage",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled military truck carrying a launcher with two raised rectangular surface-to-air missile boxes and a radar on top, sand and olive camouflage, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 463354920,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:08:57+0300",
+  "master_sha256": "89c25964045f445d4eebb57004b30bd4c0a9e3e5e7854e1bddee2243dcf988ce",
+  "crop_box": [
+   86,
+   58,
+   727,
+   572
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "229ed13155c878ca9ec76d0054649352199386f59fc13bec12dff29421c45f12"
+ },
+ "r2sancak": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "a six-wheeled armored electronic-warfare and reconnaissance truck with a raised rectangular radar panel, several antennas and a small defensive machine gun, olive green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. A six-wheeled armored electronic-warfare and reconnaissance truck with a raised rectangular radar panel, several antennas and a small defensive machine gun, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 862730002,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:17:11+0300",
+  "master_sha256": "3ff1a1d8d545aaf818931e4594e505eeab5ff4dee20c03cb3be248b78c7d0a6e",
+  "crop_box": [
+   77,
+   45,
+   744,
+   579
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "9c489a59a36cc5382b0790f34258c3befda187d86eac83194e49b8b9b11a24b1"
+ },
+ "r2yildirim": {
+  "variant": 1,
+  "kind": "vehicle",
+  "subject": "an eight-wheeled self-propelled howitzer truck with an armored cab and a long 155 mm gun on a rear turret, olive green paint",
+  "prompt": "Painted unit portrait for a real-time strategy game build menu icon. An eight-wheeled self-propelled howitzer truck with an armored cab and a long 155 mm gun on a rear turret, olive green paint, three-quarter front view from slightly above, the whole vehicle centered and filling most of the frame. Dramatic cinematic lighting: warm key light from the upper left, cool rim light, deep shadows. Detailed semi-realistic digital painting with painterly brushwork and crisp edges, strong readable silhouette, muted military colors, dark smoky teal-charcoal studio background with a soft vignette. No text.",
+  "negative_prompt": "text, letters, words, numbers, caption, logo, emblem, insignia, national flag, watermark, signature, frame, border, user interface, multiple subjects, duplicate, collage, cropped, cut off, out of frame, blurry, low quality, jpeg artifacts, cartoon, anime, toy, plastic model, lowres, deformed",
+  "seed": 958628122,
+  "steps": 28,
+  "cfg": 4.0,
+  "master_size": [
+   800,
+   640
+  ],
+  "model": "Qwen/Qwen-Image",
+  "model_revision": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "runtime": "group_offload block_level/1 stream (paint-cameos --backend local)",
+  "generated_at": "2026-10-02T23:15:34+0300",
+  "master_sha256": "deeef1f236900dc0cd1a8f8c824140a5e0aab2115be6b8981d1d9262369a37ea",
+  "crop_box": [
+   66,
+   62,
+   761,
+   617
+  ],
+  "postprocess": "subject-aware 5:4 crop (edge-energy bounding box, 7% margin, 55-92% of the master width), Lanczos downscale to 60x48, contrast x1.12, colour x1.08, unsharp mask r0.8/55%/2, RGB PNG",
+  "icon_sha256": "9fb1ac01c611d918ce1d2ee5c7383399f0a229ccb6858bd461b4ec38444f0d0f"
  }
 }
