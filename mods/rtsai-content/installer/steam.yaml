@@ -1,0 +1,19 @@
+steam: C&C Red Alert 2 and Yuri's Revenge (Steam version, English)
+	Type: Steam
+		AppId: 2229850
+	IDFiles:
+		THEME.MIX: 184f99e3292ab19c71c08a1ad7097ce739396190
+	Install:
+		# Base game files:
+		ContentPackage@ra2:
+			Name: ra2
+			Actions:
+				Copy: .
+					^SupportDir|Content/ra2/language.mix: language.mix
+					^SupportDir|Content/ra2/ra2.mix: ra2.mix
+		# Base game music (optional):
+		ContentPackage@ra2-music:
+			Name: ra2-music
+			Actions:
+				Copy: .
+					^SupportDir|Content/ra2/theme.mix: THEME.MIX
