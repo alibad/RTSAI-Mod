@@ -78,15 +78,26 @@ local function Sample()
 	for _, player in ipairs(Combatants) do
 		local stats = Stats[player.InternalName]
 		-- Army: living armed non-building actors, valued at their build cost.
-		local army, armed = 0, 0
+		local army, armed, veteran, elite = 0, 0, 0, 0
 		local actors = player.GetActors()
 		for _, actor in ipairs(actors) do
 			if IsBuilding(actor) then
 				-- Construction yards from deployed MCVs and captured buildings.
 				Track(actor, "Building")
 			elseif actor.HasProperty("Attack") then
-				army = army + CostOf(actor.Type)
+				local cost = CostOf(actor.Type)
+				army = army + cost
 				armed = armed + 1
+				-- Army value at rank veteran (level 1) and elite (level 2).
+				if actor.HasProperty("Level") then
+					local level = actor.Level
+					if level >= 1 then
+						veteran = veteran + cost
+					end
+					if level >= 2 then
+						elite = elite + cost
+					end
+				end
 			end
 		end
 
@@ -96,7 +107,7 @@ local function Sample()
 			player.UnitsKilled, player.UnitsLost,
 			player.BuildingsKilled, player.BuildingsLost,
 			army, armed, stats.unitSpend, stats.buildingSpend,
-			#actors
+			#actors, veteran, elite
 		})
 	end
 end

@@ -49,5 +49,20 @@
     ]
    }
   ]
+ },
+ "naval": {
+  "description": "The round robin on the mod's only 2-player naval map (Little Big Lake): every pairing from both spawn orientations, normal bot, 40-minute cap. Reported separately from the land round robin.",
+  "seed": 20261004,
+  "wall_guard_seconds": 1200,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": ["china", "iran", "turkey", "saudi", "yemen", "america", "russia"],
+    "bots": ["normal"],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [{"map": "little-big-lake", "title": "Little Big Lake"}]
+   }
+  ]
  }
 }

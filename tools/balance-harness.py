@@ -395,7 +395,7 @@ def run_match(match: Match, *, engine: Path, mods: Path, content: Path, output: 
 
 SAMPLE_FIELDS = ("cash", "resources", "kills_cost", "deaths_cost", "units_killed", "units_lost",
                  "buildings_killed", "buildings_lost", "army_value", "armed_units", "unit_spend",
-                 "building_spend", "actors")
+                 "building_spend", "actors", "veteran_value", "elite_value")
 
 
 def parse_telemetry(text: str, match_id: str) -> dict:
