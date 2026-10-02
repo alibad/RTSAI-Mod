@@ -106,6 +106,13 @@ class HarnessTests(unittest.TestCase):
         row = bh.csv_row(win)
         self.assertEqual((row["winner"], row["production_0"], row["structures_1"]), ("china", "r2cnrifle:1", 1))
 
+    def test_rules_overlay(self):
+        campaign = {"name": "t", "seed": 1, "suites": [dict(CAMPAIGN["suites"][0], rules=["Player:", "\t-BotDoctrine@china:"])]}
+        self.assertTrue(all(m.rules == "Player:\n\t-BotDoctrine@china:\n" for m in bh.plan(campaign)))
+        self.assertEqual(bh.plan(CAMPAIGN)[0].rules, "")
+        with self.assertRaises(ValueError):
+            bh.suite_rules({"rules": ["World:", "\tCrateSpawner:"]})
+
     def test_wilson_interval(self):
         low, high = bh.wilson(5, 10)
         self.assertAlmostEqual(low, 0.237, places=3)
