@@ -3,6 +3,11 @@
 # percent for its faction and replaces the generic opening (entries follow the tech tree: an entry
 # whose prerequisites are missing is skipped until it becomes buildable). Roles come from StrategicRole tags.
 # Doctrine identifiers match the product catalog (Experience "Doctrine" field).
+#
+# Tuned with tools/balance-harness.py (docs/balance.md). The modern factions' dedicated AA vehicles
+# and sites are air-only (^AAMissile), unlike the stock IFV/flak units that share the anti-air role,
+# so every doctrine keeps anti-air low: in bot-vs-bot rounds they destroyed 0.02-0.15 credits per
+# credit spent. Other cuts follow the same measure (value destroyed per credit produced).
 
 Player:
 	# Coordination: specialists and relays with the main force, amphibious lift, maritime reach.
@@ -11,9 +16,11 @@ Player:
 		Doctrine: networked-combined-arms
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gaairc
 		RoleShareModifiers:
-			support: 200
+			support: 150
 			transport: 150
 			main-battle-tank: 110
+			artillery: 60
+			anti-air: 40
 			naval-screen: 120
 			anti-submarine: 120
 			submarine: 120
@@ -23,13 +30,11 @@ Player:
 		Doctrine: layered-denial
 		InitialBuildOrder: napowr, narefn, nahand, naradr, r2iraasite, naweap
 		RoleShareModifiers:
-			anti-air: 160
+			anti-air: 40
 			artillery: 150
-			anti-armor: 130
-			strike-aircraft: 130
+			anti-armor: 110
+			strike-aircraft: 80
 			submarine: 130
-			main-battle-tank: 80
-			line-infantry: 90
 	# Mobile defense: mechanized spearhead with an early service depot, carried infantry, drones and EW.
 	BotDoctrine@turkey:
 		Factions: turkey
@@ -37,10 +42,9 @@ Player:
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, gadept, gaairc
 		RoleShareModifiers:
 			main-battle-tank: 130
-			transport: 160
 			support: 130
-			strike-aircraft: 140
-			anti-air: 110
+			strike-aircraft: 80
+			anti-air: 40
 			artillery: 80
 	# Expeditionary: air power (Air Force Command, JTAC radar) before armor; heavy armor and guided
 	# fires lead, infantry holds ground.
@@ -52,7 +56,8 @@ Player:
 			main-battle-tank: 150
 			strike-aircraft: 150
 			interceptor: 150
-			artillery: 120
+			artillery: 80
+			anti-air: 50
 			transport: 120
 			naval-screen: 110
 			line-infantry: 80
@@ -65,9 +70,9 @@ Player:
 		InitialBuildOrder: napowr, nahand, narefn, r2ybunker, naweap, naradr
 		RoleShareModifiers:
 			line-infantry: 130
-			anti-armor: 160
+			anti-armor: 110
 			artillery: 140
-			strike-aircraft: 170
+			strike-aircraft: 50
 			naval-screen: 140
-			anti-air: 90
+			anti-air: 40
 			transport: 50
