@@ -213,6 +213,40 @@ window, error dialog or log lines; launching again worked, and build 2's first l
 folder worked. `%APPDATA%\OpenRA-AI\settings.json` changed at 19:45 local during the session with a
 `local` provider; none of these test runs used that folder or that provider.
 
+## Release build 0.2.0-alpha.1 (3 October 2026)
+
+Built from the merged `main` checkouts: RTSAI-Mod `6a39dad` (engine `5523a9907f`; `make all` and `make test`
+0 warnings, 0 errors [ran]) and OpenRA-AI `8f8e8c6` (companion frozen with `scripts/package-rtsai-companion.ps1`,
+249 MB, no `edge_tts` [ran]). Unsigned. Outputs in the S1 scratchpad `release-final\` [ran]:
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `RTSAI-0.2.0-alpha.1-win-x64-setup.exe` | 148,223,263 | `2536c1b364b2e35340b91e4aa823a681235130dfc0a88e3ff3bce5d39bda5fbc` |
+| `RTSAI-0.2.0-alpha.1-win-x64-portable.zip` | 203,513,064 | `2b0b98c6b339d5ab917f712c69cac04fc5bfeddf594d4288da322339c590f39c` |
+| `RTSAI-VoicePack-0.2.0-alpha.1.zip` | 222,741,604 | `55e269c49f7882912c35f31eda6d9dc32903b6857342f3bbd4901ce7db5a5aef` |
+
+The payload has 87 cameos, 555 announcer clips and no `.mix` file [ran].
+
+Acceptance on these exact files, in fresh scratch folders, the game windowed and only while needed:
+
+| Check | Result |
+|---|---|
+| Silent install (`/S`, default hosted), setup alone | [ran] exit 0 in 40 s; voice pack downloaded from the pinned URLs and verified; uninstall entry, Start menu and desktop shortcut created |
+| First launch, empty support folder | [ran] the game started in the content installer (window "OpenRA", responding) and wrote only `ModMetadata` and empty logs. The owner declined screen control, so the import was **not clicked through the UI** |
+| RA2 import | [ran, programmatic] a scratch tool hosted the **installed** `OpenRA.Game.dll`/`OpenRA.Mods.Common.dll` (hash-identical) and the installed `rtsai-content` mod, and ran the content installer's own code (sources from `ModContent`, `*SourceResolver.FindSourcePath`, then each package's `*SourceAction`, required packages as the UI preselects). Disc, Origin and TFD not found; Steam found at `D:\SteamLibrary\…\Command & Conquer Red Alert II`; `install.log` copied `language.mix` and `ra2.mix`; base files installed |
+| Skirmish as Saudi Arabia | [ran] `Launch.Map` The Alamo, `Launch.Faction=saudi` vs a normal bot. Bridge: `player_faction saudi`, units `r2sang` ×3, `r2saat`, `r2m1a2s`; with AUTO on, a construction yard and power plant by tick 1,770 |
+| Skirmish as China | [ran] `Launch.Faction=china`: `player_faction china`, units `r2cnrifle` ×2, `r2cnportable`, `r2qilin` |
+| Companion auto-start, local voice | [ran] first mod launch: installer choice applied, hosted configured, sidecar in a job, "co-commander ready", "local voice ready". Kokoro said "Enemy armor spotted near the refinery." (112,684-byte WAV, 5.6 s cold) and Whisper transcribed it verbatim |
+| Hosted call through the local proxy | [ran] RTSAI-Web `main` (10a866e) exported to the scratchpad, Node preset, `mock-anthropic.mjs`: a question with two images went through (install `0891a871`, 1,955 / 39 tokens, mock-estimated $0.00215) |
+| Proxy answering 503 (`RTSAI_AI_KILL_SWITCH=1`) | [ran] in the China match: "Hosted AI is paused right now. Critical alerts continue." (`deterministic-fallback`), route `none`, HUD "AI ALERTS ONLY • HOSTED AI PAUSED", then the alert "Power Plant has completed production." |
+| New icons | [ran] the 87 installed cameos are byte-identical to the repo's painted set. **Not seen in the build palette**: switching to a unit tab needs input, which was not available; the captured Saudi frame shows the structure tab (stock Allied structures) |
+| Faction announcer | [ran, logged] in a copy of the portable build with the Saudi announcer folder hidden, a headless Saudi match logged `LoadSound, file does not exist: ra2|modern-factions/audio/eva/saudi/120.wav` (the game-start line from the Saudi announcer); a second headless run from that copy as China logged nothing (its clips loaded). In the real Saudi and China matches `sound.log` stayed empty. Not heard |
+| Exit | [ran] closing each window left no game, companion or whisper-server process; the sidecar TEMP folder was emptied |
+| Uninstall | [ran] install folder, uninstall entry, Start menu folder, desktop shortcut and join protocol removed. Kept: the support folder (`ai-companion`, `Content`, `GeneratedMissions`, `Logs`, `maps`, `ModMetadata`, `Replays`, `settings.yaml`). `%TEMP%`: nothing from the game; re-running the installer's download step with a private TEMP left nothing either. New entries there came from other work on the machine (puppeteer/remotion, the scratch tool's `dotnet build`) |
+| `%APPDATA%\OpenRA*` | [ran] unchanged: OpenRA 407 files (newest 2026-08-21), OpenRA-AI 3 files (newest 2026-10-02T19:35Z) before and after |
+
+Copied RA2 data and every process started for this run were removed or stopped afterwards [ran].
+
 ## Files
 
 | Repo | Path | Purpose |
