@@ -61,7 +61,7 @@ ra2-r2mokha-description = Links USVs and coordinates missile fire within 6 cells
     emission reveals it. Detects submarines. Requires radar.
 
 ra2-r2ybunker-name = Mountain Bunker
-ra2-r2ybunker-description = Camouflaged machine-gun nest; firing or damage reveals it.
+ra2-r2ybunker-description = Camouflaged machine-gun nest; firing, damage or low power reveals it.
     Requires power. Weak vs armor.
 
 ra2-r2yzunest-name = ZU-23 Nest
@@ -69,6 +69,6 @@ ra2-r2yzunest-description = Twin-cannon air defense. Cannot attack ground target
     Requires radar and power.
 
 ra2-r2ycoastal-name = Coastal Missile Battery
-ra2-r2ycoastal-description = Camouflaged anti-ship and anti-vehicle missiles. Minimum
-    range: 3 cells. Surveillance links add range.
+ra2-r2ycoastal-description = Camouflaged anti-ship and anti-vehicle missiles; firing, damage
+    or low power reveals it. Minimum range: 3 cells. Surveillance links add range.
     Requires radar and power.

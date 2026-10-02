@@ -434,7 +434,8 @@ r2mokha:
 		UncloakOn: Attack, Damage
 		DetectionTypes: Cloak
 		IsPlayerPalette: true
-		RequiresCondition: !build-incomplete
+		# Unpowered concealment fails too, so a beaten Yemen base can always be found and destroyed.
+		RequiresCondition: !build-incomplete && !lowpower
 
 r2ybunker:
 	Inherits: ^R2YemenDefense
