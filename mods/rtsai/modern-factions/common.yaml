@@ -21,6 +21,13 @@ Player:
 		Factions: yemen
 
 ^Palettes:
+	PaletteFromFile@qilin:
+		Name: qilin
+		Filename: ra2|modern-factions/voxels/r2qilin.ra2-jade.pal
+	PlayerColorPalette@qilin:
+		BasePalette: qilin
+		BaseName: qilinplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PaletteFromFile@modern:
 		Name: modern
 		Filename: ra2|modern-factions/voxels/modern.pal

@@ -6,7 +6,7 @@
   "OpenRA-AI": {
    "repo": "OpenRA-AI",
    "branch": "main",
-   "head": "8f8e8c6712866fe151a2917aed2b8f887eedae12"
+   "head": "b652de9d4706b56bced772f969c1d37dec6c9ced"
   },
   "OpenRA-AI codex/ra2-red-sea": {
    "repo": "OpenRA-AI-wt-ra2-red-sea",
@@ -43,12 +43,14 @@
  "commercialRa2Data": "None found. No file matches, embeds or was built from Red Alert 2 game data; the art builders read no MIX/SHP/VXL/HVA/PAL/image input, the cameos are text-to-image, and the flags are redrawn identically from code. See docs/art-provenance.md for the method.",
  "removed": "2026-10-02: 16 *-art/*-review.png developer sheets, the five *-art/manifest.json and the two voxel build manifests (voxel-manifest.json, red-sea-voxel-manifest.json) left the mod; nothing referenced them. The build manifests remain in the product checkouts, and the hashes are recorded here.",
  "summary": {
-  "files": 307,
+  "files": 308,
   "byOrigin": {
+   "generated/forge-voxel": 2,
    "generated/qwen-image": 87,
+   "procedural/forge-voxel": 1,
    "procedural/procedural-flag": 5,
    "procedural/project-geometry": 8,
-   "rendered-from-project-geometry/project-geometry": 207
+   "rendered-from-project-geometry/project-geometry": 205
   },
   "flags": {}
  },
@@ -5042,18 +5044,48 @@
    "script": "scripts/ra2_faction_voxels.py",
    "runtime": "referenced by rules/sequences"
   },
-  "voxels/r2qilin.vxl": {
-   "sha256": "ed1d08d085303fa58e3a28cb67e1447e4cc9f230de1ca7b178413ac1f9fbc814",
+  "voxels/r2qilin.ra2-jade.pal": {
+   "sha256": "0e3d2f5e17acb0d289c7d567f3965bc042f673c81cb5552f06f3e9c0295d69e6",
+   "type": "voxel palette",
+   "origin": "procedural",
+   "generator": "forge-voxel",
+   "date": "2026-10-04",
    "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/voxels/r2qilin.vxl",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
+    "repo": "RTSAI-Art (local)",
+    "commit": "6ac68b6",
+    "path": "units/r2qilin/candidates/voxel-v4-ra2-jade/r2qilin.voxel-v4-ra2-jade.pal"
    },
+   "tool": "RTSAI-Art tools/palette_pass.py",
+   "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "prompt": "Single isolated game-asset model of one unit for a fictional real-time strategy video game, for 3D reconstruction: three-quarter view from the front-left and about 25 degrees above, the whole unit in frame with margin, nothing else in the image, transparent background, no ground, no shadow. Subject: a low-profile main battle tank with a faceted, wedge-fronted welded turret, a single long smoothbore cannon, six road wheels per side behind angular side skirts, rear engine grilles and a short sensor mast on the turret roof. Clean pre-rendered 3D game-asset look with flat, even, shadowless studio lighting (no strong highlights, no baked cast shadows) so the surface colors are true. Crisp panel lines, large readable shapes. Faction look: high-tech, precise and networked. Dark jade green and grey-green camouflage in large angular blocks, matte composite armor built from faceted wedge-shaped plates, low sleek silhouettes, small sensor domes and short antenna masts, dark gunmetal running gear, cyan-tinted optics and sensor glass. Player-color panels (the turret side panels and a narrow band along the top of the side skirts) are painted flat signal red. Exactly the design shown in the concept sheet provided. No text, no letters, no numbers, no logos, no flags, no insignia, no national or unit markings, no watermark, no user interface.",
+    "seed": null,
+    "runtime": "TRELLIS mesh, CPU Forge palette pass",
+    "sourceCandidate": "voxel-v2",
+    "meshCandidate": "voxel-v1"
+   },
+   "runtime": "referenced by rules/sequences"
+  },
+  "voxels/r2qilin.vxl": {
+   "sha256": "24def496ebd35045914a79bffccaccf581e1ecb85368c133f00bcfcbadbacd49",
    "type": "RA2 voxel model",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_faction_voxels.py",
+   "origin": "generated",
+   "generator": "forge-voxel",
+   "date": "2026-10-04",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "commit": "6ac68b6",
+    "path": "units/r2qilin/candidates/voxel-v4-ra2-jade/r2qilin.vxl"
+   },
+   "tool": "RTSAI-Art tools/palette_pass.py",
+   "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "prompt": "Single isolated game-asset model of one unit for a fictional real-time strategy video game, for 3D reconstruction: three-quarter view from the front-left and about 25 degrees above, the whole unit in frame with margin, nothing else in the image, transparent background, no ground, no shadow. Subject: a low-profile main battle tank with a faceted, wedge-fronted welded turret, a single long smoothbore cannon, six road wheels per side behind angular side skirts, rear engine grilles and a short sensor mast on the turret roof. Clean pre-rendered 3D game-asset look with flat, even, shadowless studio lighting (no strong highlights, no baked cast shadows) so the surface colors are true. Crisp panel lines, large readable shapes. Faction look: high-tech, precise and networked. Dark jade green and grey-green camouflage in large angular blocks, matte composite armor built from faceted wedge-shaped plates, low sleek silhouettes, small sensor domes and short antenna masts, dark gunmetal running gear, cyan-tinted optics and sensor glass. Player-color panels (the turret side panels and a narrow band along the top of the side skirts) are painted flat signal red. Exactly the design shown in the concept sheet provided. No text, no letters, no numbers, no logos, no flags, no insignia, no national or unit markings, no watermark, no user interface.",
+    "seed": null,
+    "runtime": "TRELLIS mesh, CPU Forge palette pass",
+    "sourceCandidate": "voxel-v2",
+    "meshCandidate": "voxel-v1"
+   },
    "runtime": "referenced by rules/sequences"
   },
   "voxels/r2qilintur.hva": {
@@ -5071,17 +5103,25 @@
    "runtime": "referenced by rules/sequences"
   },
   "voxels/r2qilintur.vxl": {
-   "sha256": "87731af7797f3f6e0ee55859c1eb7499a206f9425bce20602fa63346c679ee8d",
-   "source": {
-    "repo": "OpenRA-AI",
-    "path": "apps/installer/ra2/modern-factions/voxels/r2qilintur.vxl",
-    "commit": "26d154415ebc0530f893a5b80af0e4ad38677b7f",
-    "date": "2026-09-05"
-   },
+   "sha256": "311002a79dacc89be33add7d60bce03ea70d13c553eb24446afb7af9119f43d3",
    "type": "RA2 voxel model",
-   "origin": "rendered-from-project-geometry",
-   "generator": "project-geometry",
-   "script": "scripts/ra2_faction_voxels.py",
+   "origin": "generated",
+   "generator": "forge-voxel",
+   "date": "2026-10-04",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "commit": "6ac68b6",
+    "path": "units/r2qilin/candidates/voxel-v4-ra2-jade/dropin/r2qilintur.vxl"
+   },
+   "tool": "RTSAI-Art tools/palette_pass.py",
+   "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "prompt": "Single isolated game-asset model of one unit for a fictional real-time strategy video game, for 3D reconstruction: three-quarter view from the front-left and about 25 degrees above, the whole unit in frame with margin, nothing else in the image, transparent background, no ground, no shadow. Subject: a low-profile main battle tank with a faceted, wedge-fronted welded turret, a single long smoothbore cannon, six road wheels per side behind angular side skirts, rear engine grilles and a short sensor mast on the turret roof. Clean pre-rendered 3D game-asset look with flat, even, shadowless studio lighting (no strong highlights, no baked cast shadows) so the surface colors are true. Crisp panel lines, large readable shapes. Faction look: high-tech, precise and networked. Dark jade green and grey-green camouflage in large angular blocks, matte composite armor built from faceted wedge-shaped plates, low sleek silhouettes, small sensor domes and short antenna masts, dark gunmetal running gear, cyan-tinted optics and sensor glass. Player-color panels (the turret side panels and a narrow band along the top of the side skirts) are painted flat signal red. Exactly the design shown in the concept sheet provided. No text, no letters, no numbers, no logos, no flags, no insignia, no national or unit markings, no watermark, no user interface.",
+    "seed": null,
+    "runtime": "TRELLIS mesh, CPU Forge palette pass",
+    "sourceCandidate": "voxel-v2",
+    "meshCandidate": "voxel-v1"
+   },
    "runtime": "referenced by rules/sequences"
   },
   "voxels/r2raad.hva": {

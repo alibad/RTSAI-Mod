@@ -1,5 +1,17 @@
 # Art provenance: the five modern factions
 
+## Local Qilin replacement, 4 October 2026
+
+[ran] Qilin alone now uses the Forge's `voxel-v4-ra2-jade`: the existing Sunburst reference and TRELLIS mesh,
+revoxelized in the Forge, then an authored jade palette, dark running gear and connected player-colour panels.
+Its complete source chain and installed SHA-256 values are in `docs/art-sources/qilin-forge.json`.
+The palette and voxel headers contain authored colours only. Original RA2 data remains local and is not imported.
+The owner approved the Qilin-first light/scale experiment; release art approval is still pending.
+
+[ran] The source is RTSAI-Art local commit `6ac68b6`; 15/15 tank-family quality checks pass. The public Art Lab's
+publication guard intentionally has not been expanded to accept the new `forge-voxel` generator yet. Its current
+interactive settings/snapshot and the real-game visual comparison still need verification before publication.
+
 Date: 2026-10-02. The per-file record is `mods/rtsai/modern-factions/ART-PROVENANCE.json`, written by
 `tools/art-provenance.py`. This page explains it and lists what needs the owner's attention.
 

@@ -100,6 +100,11 @@ gaweap:
 
 r2qilin:
 	Inherits: ^R2ModernVehicle
+	RenderVoxels:
+		PlayerPalette: qilinplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
 	StrategicRole:
 		Domain: ground
 		Roles: main-battle-tank

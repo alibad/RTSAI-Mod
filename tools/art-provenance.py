@@ -145,6 +145,15 @@ def cameo_entry(stem: str, digest: str, cameos: dict) -> dict:
 
 
 def art_entry(rel: str, digest: str, sources: list[Source], voxel_owner: dict) -> dict:
+    # Forge imports have a committed, per-file source chain and digest. They
+    # cannot silently fall back to the old procedural-geometry attribution.
+    forge_record = ROOT / "docs/art-sources/qilin-forge.json"
+    if forge_record.exists():
+        forge = json.loads(forge_record.read_text(encoding="utf-8")).get("files", {}).get(rel)
+        if forge:
+            if forge["sha256"] != digest:
+                return {"sha256": digest, "origin": "unknown", "flags": ["forge-hash-mismatch"]}
+            return forge
     folder, name = rel.split("/", 1) if "/" in rel else ("", rel)
     entry: dict = {"sha256": digest}
     origin = next((s for s in sources if s.matches(rel, digest)), None)
