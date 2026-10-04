@@ -1,0 +1,47 @@
+r2hztechnical:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hztechnical.png
+
+r2hzrecoilless:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzrecoilless.png
+
+r2hzescort:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzescort.png
+
+r2hzrockets:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzrockets.png
+
+r2hzdrone:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzdrone.png
+
+r2hzmissileboat:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzmissileboat.png
+
+r2hzskiff:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzskiff.png
+
+r2hzsurvey:
+	Inherits@MC: ^MindControllable
+	Inherits@Muzzle: ^WithCannonMuzzle
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzsurvey.png

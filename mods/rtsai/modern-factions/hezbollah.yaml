@@ -1,0 +1,295 @@
+World:
+	Faction@hezbollah:
+		Name: ra2-modern-hezbollah-name
+		InternalName: hezbollah
+		Side: Soviets
+		Description: ra2-modern-hezbollah-description
+	StartingUnits@hezbollah-none:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: hezbollah
+		BaseActor: smcv
+		BaseActorFacing: 896
+	StartingUnits@hezbollah-light:
+		Class: light
+		ClassName: options-starting-units.light
+		Factions: hezbollah
+		BaseActor: smcv
+		BaseActorFacing: 896
+		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzrifle, r2hzat
+		SupportActorsFacing: 896
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@hezbollah-medium:
+		Class: medium
+		ClassName: options-starting-units.medium
+		Factions: hezbollah
+		BaseActor: smcv
+		BaseActorFacing: 896
+		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzrifle, r2hzat, r2hztechnical, r2hztechnical, engineer
+		SupportActorsFacing: 896
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@hezbollah-heavy:
+		Class: heavy
+		ClassName: options-starting-units.heavy
+		Factions: hezbollah
+		BaseActor: smcv
+		BaseActorFacing: 896
+		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat, r2hzat, r2hzspotter, r2hztechnical, r2hzrecoilless, r2hzescort, r2hzrockets, engineer
+		SupportActorsFacing: 896
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+Player:
+	ProvidesPrerequisite@hezbollah:
+		Prerequisite: faction.hezbollah
+		Factions: hezbollah
+	DoctrineUnitBuilderBotModule@normal:
+		UnitsToBuild:
+			r2hztechnical: 45
+			r2hzrecoilless: 40
+			r2hzescort: 20
+			r2hzrockets: 22
+		UnitLimits:
+			r2hzrockets: 4
+	DoctrineUnitBuilderBotModule@medium:
+		UnitsToBuild:
+			r2hztechnical: 45
+			r2hzrecoilless: 40
+			r2hzescort: 20
+			r2hzrockets: 22
+		UnitLimits:
+			r2hzrockets: 4
+	DoctrineUnitBuilderBotModule@rush:
+		UnitsToBuild:
+			r2hztechnical: 45
+			r2hzrecoilless: 40
+			r2hzescort: 20
+			r2hzrockets: 22
+		UnitLimits:
+			r2hzrockets: 4
+	DoctrineUnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			r2hztechnical: 45
+			r2hzrecoilless: 40
+			r2hzescort: 20
+			r2hzrockets: 22
+		UnitLimits:
+			r2hzrockets: 4
+	DoctrineUnitBuilderBotModule@naval:
+		UnitsToBuild:
+			r2hztechnical: 45
+			r2hzrecoilless: 40
+			r2hzescort: 20
+			r2hzrockets: 22
+		UnitLimits:
+			r2hzrockets: 4
+
+naweap:
+	GrantConditionOnProduction@hezbollah-drone:
+		Actors: r2hzdrone
+		Condition: roof-open
+		Duration: 50
+		ShowSelectionBar: false
+
+# The shipyard's shore relay keeps a fresh Sahaab boat controllable at the pier.
+nayard:
+	GrantConditionOnFaction@hezbollah-relay:
+		Condition: hezbollah-relay
+		Factions: hezbollah
+	ProximityExternalCondition@hezbollah-relay:
+		Condition: r2-hz-link
+		Range: 6c0
+		ValidRelationships: Ally
+		RequiresCondition: hezbollah-relay
+
+dog:
+	RenderSprites:
+		FactionImages:
+			hezbollah: dog
+
+^R2HezbollahVoxels:
+	RenderVoxels:
+		PlayerPalette: hezbollahvoxelplayer
+
+# Drone Spotter guidance: longer reach and faster reloads, never stacking.
+^R2HezbollahGuided:
+	ExternalCondition@guidance:
+		Condition: r2-hz-guidance
+	RangeMultiplier@guidance:
+		Modifier: 120
+		RequiresCondition: r2-hz-guidance
+	ReloadDelayMultiplier@guidance:
+		Modifier: 80
+		RequiresCondition: r2-hz-guidance
+	WithTextDecoration@guidance:
+		Text: GUIDED
+		Position: Top
+		Margin: 0, -14
+		Color: 70F0E0
+		RequiresSelection: true
+		RequiresCondition: r2-hz-guidance
+
+r2hztechnical:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2HezbollahVoxels
+	Tooltip:
+		Name: levant-r2hztechnical-name
+	Buildable:
+		BuildPaletteOrder: 11
+		Prerequisites: ~faction.hezbollah, naweap
+		Description: levant-r2hztechnical-description
+	Valued:
+		Cost: 400
+	Health:
+		HP: 180
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 150
+		Locomotor: wheeled
+		TurnSpeed: 32
+	Turreted:
+		Offset: -147,0,0
+		TurnSpeed: 40
+	Armament:
+		Weapon: R2HZTechnicalMG
+		LocalOffset: 380,0,420
+		MuzzleSequence: muzzle
+	RevealsShroud:
+		Range: 8c0
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzrecoilless:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2HezbollahVoxels
+	Tooltip:
+		Name: levant-r2hzrecoilless-name
+	Buildable:
+		BuildPaletteOrder: 21
+		Prerequisites: ~faction.hezbollah, naweap
+		Description: levant-r2hzrecoilless-description
+	Valued:
+		Cost: 550
+	Health:
+		HP: 170
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 145
+		Locomotor: wheeled
+		TurnSpeed: 32
+	Turreted:
+		Offset: -147,0,0
+		TurnSpeed: 32
+	Armament:
+		Weapon: R2HZRecoillessRifle
+		LocalOffset: 470,0,400
+		MuzzleSequence: muzzle
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzescort:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2HezbollahVoxels
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Tooltip:
+		Name: levant-r2hzescort-name
+	Buildable:
+		BuildPaletteOrder: 41
+		Prerequisites: ~faction.hezbollah, naweap
+		Description: levant-r2hzescort-description
+	Valued:
+		Cost: 600
+	Health:
+		HP: 190
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+		Locomotor: wheeled
+		TurnSpeed: 32
+	Turreted:
+		Offset: -147,0,0
+		TurnSpeed: 48
+	Armament:
+		Weapon: R2HZZU23
+		LocalOffset: 440,0,480
+	AutoTarget:
+		ScanRadius: 9
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzrockets:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2HezbollahVoxels
+	Inherits@guidance: ^R2HezbollahGuided
+	Tooltip:
+		Name: levant-r2hzrockets-name
+	Buildable:
+		BuildPaletteOrder: 61
+		Prerequisites: ~faction.hezbollah, naweap, radar
+		Description: levant-r2hzrockets-description
+	Valued:
+		Cost: 900
+	Health:
+		HP: 180
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 90
+		Locomotor: wheeled
+	-WithVoxelTurret:
+	-Turreted:
+	-AttackTurreted:
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 32
+	Armament:
+		Weapon: R2HZYemenStrikeMissile
+		LocalOffset: 300,0,520
+		ReloadingCondition: reloading
+	# The empty erector is the visible reload window; flank it then.
+	-WithVoxelBody:
+	WithVoxelBody@loaded:
+		RequiresCondition: !reloading
+	WithVoxelBody@empty:
+		Sequence: empty
+		RequiresCondition: reloading
+	WithRangeCircle:
+		Range: 13c0
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+	GrantConditionOnMovement@setup:
+		Condition: moving
+	ReloadDelayMultiplier@setup:
+		Modifier: 70
+		RequiresCondition: !moving
+	WithTextDecoration@setup:
+		Text: SET
+		Color: B3B881
+		RequiresCondition: !moving
+		RequiresSelection: true

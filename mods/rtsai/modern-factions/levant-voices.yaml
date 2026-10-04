@@ -1,0 +1,11 @@
+LevantInfantryVoice:
+	Inherits: GIVoice
+	Voices:
+		Demolish: igiata
+		Build: igisea
+		Action: igimoa
+LevantVehicleVoice:
+	Inherits: AlliedVehicleVoice
+	Voices:
+		Die: vgrasea
+		Action: vgrasea

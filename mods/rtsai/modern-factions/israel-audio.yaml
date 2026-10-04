@@ -1,0 +1,63 @@
+r2ilrifle:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2ilat:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2ilobserver:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2ilrecon:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2merkava:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilshield:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilhowitzer:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2namer:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilfalcon:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilgunship:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilpatrol:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilfrigate:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2iltender:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilsentry:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilbattery:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2ilatpost:
+	Voiced:
+		VoiceSet: LevantVehicleVoice

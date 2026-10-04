@@ -1,4 +1,6 @@
 Metrics:
+	FactionSuffix-israel: allies
+	FactionSuffix-hezbollah: soviets
 	FactionSuffix-saudi: allies
 	FactionSuffix-yemen: soviets
 	FactionSuffix-china: allies

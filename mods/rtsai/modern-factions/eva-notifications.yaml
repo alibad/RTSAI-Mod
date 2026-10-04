@@ -4,6 +4,8 @@
 # Audio, voices and licenses: modern-factions/audio/PROVENANCE.json and docs/audio-provenance.md.
 Speech:
 	Prefixes:
+		israel: ceva
+		hezbollah: csof
 		china: ra2|modern-factions/audio/eva/china/
 		iran: ra2|modern-factions/audio/eva/iran/
 		turkey: ra2|modern-factions/audio/eva/turkey/

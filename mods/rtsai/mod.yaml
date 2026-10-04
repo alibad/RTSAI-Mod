@@ -83,6 +83,7 @@ Rules:
 	ra2|rules/trees.yaml
 	ra2|rules/civilian-naval.yaml
 	ra2|modern-factions/common.yaml
+	ra2|modern-factions/levant-common.yaml
 	ra2|modern-factions/aircraft-ai.yaml
 	ra2|modern-factions/shared-replacements.yaml
 	ra2|modern-factions/bot-types.yaml
@@ -101,15 +102,25 @@ Rules:
 	ra2|modern-factions/turkey-audio.yaml
 	ra2|modern-factions/turkey-roles.yaml
 	ra2|modern-factions/saudi.yaml
+	ra2|modern-factions/israel.yaml
 	ra2|modern-factions/saudi-roster.yaml
+	ra2|modern-factions/israel-roster.yaml
 	ra2|modern-factions/saudi-ai.yaml
+	ra2|modern-factions/israel-ai.yaml
 	ra2|modern-factions/saudi-audio.yaml
+	ra2|modern-factions/israel-audio.yaml
 	ra2|modern-factions/saudi-roles.yaml
+	ra2|modern-factions/israel-roles.yaml
 	ra2|modern-factions/yemen.yaml
+	ra2|modern-factions/hezbollah.yaml
 	ra2|modern-factions/yemen-roster.yaml
+	ra2|modern-factions/hezbollah-roster.yaml
 	ra2|modern-factions/yemen-ai.yaml
+	ra2|modern-factions/hezbollah-ai.yaml
 	ra2|modern-factions/yemen-audio.yaml
+	ra2|modern-factions/hezbollah-audio.yaml
 	ra2|modern-factions/yemen-roles.yaml
+	ra2|modern-factions/hezbollah-roles.yaml
 	ra2|modern-factions/combined-arms-ai.yaml
 	ra2|modern-factions/doctrines.yaml
 
@@ -136,9 +147,13 @@ Sequences:
 	ra2|modern-factions/turkey-sequences.yaml
 	ra2|modern-factions/turkey-roster-sequences.yaml
 	ra2|modern-factions/saudi-sequences.yaml
+	ra2|modern-factions/israel-sequences.yaml
 	ra2|modern-factions/saudi-roster-sequences.yaml
+	ra2|modern-factions/israel-roster-sequences.yaml
 	ra2|modern-factions/yemen-sequences.yaml
+	ra2|modern-factions/hezbollah-sequences.yaml
 	ra2|modern-factions/yemen-roster-sequences.yaml
+	ra2|modern-factions/hezbollah-roster-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
@@ -147,7 +162,9 @@ ModelSequences:
 	ra2|modern-factions/iran-voxels.yaml
 	ra2|modern-factions/turkey-voxels.yaml
 	ra2|modern-factions/saudi-voxels.yaml
+	ra2|modern-factions/israel-voxels.yaml
 	ra2|modern-factions/yemen-voxels.yaml
+	ra2|modern-factions/hezbollah-voxels.yaml
 
 Cursors:
 	ra2|cursors.yaml
@@ -229,9 +246,12 @@ Weapons:
 	ra2|modern-factions/iran-weapons.yaml
 	ra2|modern-factions/turkey-weapons.yaml
 	ra2|modern-factions/saudi-weapons.yaml
+	ra2|modern-factions/israel-weapons.yaml
 	ra2|modern-factions/yemen-weapons.yaml
+	ra2|modern-factions/hezbollah-weapons.yaml
 
 Voices:
+	ra2|modern-factions/levant-voices.yaml
 	ra2|audio/voices.yaml
 	ra2|modern-factions/china-voices.yaml
 	ra2|modern-factions/iran-voices.yaml
@@ -275,7 +295,9 @@ FluentMessages:
 	ra2|modern-factions/iran-messages.ftl
 	ra2|modern-factions/turkey-messages.ftl
 	ra2|modern-factions/saudi-messages.ftl
+	ra2|modern-factions/israel-messages.ftl
 	ra2|modern-factions/yemen-messages.ftl
+	ra2|modern-factions/hezbollah-messages.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml

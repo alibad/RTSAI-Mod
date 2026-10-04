@@ -3,6 +3,8 @@
 # the RA2 engineer of their side: Allies (china, turkey, saudi) and Soviets (iran, yemen).
 EngineerVoice:
 	Prefixes:
+		israel: iena
+		hezbollah: iens
 		china: iena
 		turkey: iena
 		saudi: iena

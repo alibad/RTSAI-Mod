@@ -131,13 +131,13 @@
 	Faction@allies:
 		Name: faction-random-allies-name
 		InternalName: random-allies
-		RandomFactionMembers: america, germany, england, france, korea, china, turkey, saudi
+		RandomFactionMembers: america, germany, england, france, korea, china, turkey, saudi, israel
 		Side: Randoms
 		Description: faction-random-allies-description
 	Faction@soviets:
 		Name: faction-random-soviets-name
 		InternalName: random-soviets
-		RandomFactionMembers: cuba, libya, iraq, russia, iran, yemen
+		RandomFactionMembers: cuba, libya, iraq, russia, iran, yemen, hezbollah
 		Side: Randoms
 		Description: faction-random-soviets-description
 	Faction@1:

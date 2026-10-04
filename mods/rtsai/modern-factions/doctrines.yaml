@@ -91,3 +91,27 @@ Player:
 			naval-screen: 140
 			anti-air: 40
 			transport: 50
+
+	BotDoctrine@israel:
+		Factions: israel
+		Doctrine: precision-support
+		AirDefenseShare: 24
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc, r2ilrelay
+		SquadSizeModifier: 75
+		RoleShareModifiers:
+			main-battle-tank: 135
+			support: 140
+			transport: 120
+			anti-air: 40
+	BotDoctrine@hezbollah:
+		Factions: hezbollah
+		Doctrine: concealed-defense
+		AirDefenseShare: 24
+		InitialBuildOrder: napowr, nahand, narefn, r2hzbunker, naweap, narefn, naradr, r2hzrelay
+		SquadSizeModifier: 130
+		RoleShareModifiers:
+			line-infantry: 140
+			anti-armor: 140
+			artillery: 125
+			support: 120
+			anti-air: 40

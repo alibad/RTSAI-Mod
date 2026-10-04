@@ -1,0 +1,257 @@
+World:
+	Faction@israel:
+		Name: ra2-modern-israel-name
+		InternalName: israel
+		Side: Allies
+		Description: ra2-modern-israel-description
+	StartingUnits@israel-none:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: israel
+		BaseActor: amcv
+		BaseActorFacing: 896
+	StartingUnits@israel-light:
+		Class: light
+		ClassName: options-starting-units.light
+		Factions: israel
+		BaseActor: amcv
+		BaseActorFacing: 896
+		SupportActors: r2ilrifle, r2ilrifle, r2ilrifle, r2ilat
+		SupportActorsFacing: 896
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@israel-medium:
+		Class: medium
+		ClassName: options-starting-units.medium
+		Factions: israel
+		BaseActor: amcv
+		BaseActorFacing: 896
+		SupportActors: r2ilrifle, r2ilrifle, r2ilrifle, r2ilat, r2merkava, engineer
+		SupportActorsFacing: 896
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@israel-heavy:
+		Class: heavy
+		ClassName: options-starting-units.heavy
+		Factions: israel
+		BaseActor: amcv
+		BaseActorFacing: 896
+		SupportActors: r2ilrifle, r2ilrifle, r2ilat, r2ilobserver, r2merkava, r2namer, r2ilshield, engineer
+		SupportActorsFacing: 896
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+Player:
+	ProvidesPrerequisite@israel:
+		Prerequisite: faction.israel
+		Factions: israel
+	DoctrineUnitBuilderBotModule@normal:
+		UnitsToBuild:
+			r2merkava: 60
+			r2ilshield: 20
+			r2ilhowitzer: 20
+			r2namer: 12
+		UnitLimits:
+			r2namer: 3
+	DoctrineUnitBuilderBotModule@medium:
+		UnitsToBuild:
+			r2merkava: 60
+			r2ilshield: 20
+			r2ilhowitzer: 20
+			r2namer: 12
+		UnitLimits:
+			r2namer: 3
+	DoctrineUnitBuilderBotModule@rush:
+		UnitsToBuild:
+			r2merkava: 60
+			r2ilshield: 20
+			r2ilhowitzer: 20
+			r2namer: 12
+		UnitLimits:
+			r2namer: 3
+	DoctrineUnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			r2merkava: 60
+			r2ilshield: 20
+			r2ilhowitzer: 20
+			r2namer: 12
+		UnitLimits:
+			r2namer: 3
+	DoctrineUnitBuilderBotModule@naval:
+		UnitsToBuild:
+			r2merkava: 60
+			r2ilshield: 20
+			r2ilhowitzer: 20
+			r2namer: 12
+		UnitLimits:
+			r2namer: 3
+
+gaairc:
+	ProvidesPrerequisite@harrier-israel:
+		Prerequisite: aircraft.harrier
+		Factions: israel
+
+gaweap:
+	GrantConditionOnProduction@israel-helicopter:
+		Actors: r2ilgunship
+		Condition: roof-open
+		Duration: 50
+		ShowSelectionBar: false
+
+r2merkava:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2IsraelVoxels
+	Tooltip:
+		Name: levant-r2merkava-name
+	Buildable:
+		BuildPaletteOrder: 21
+		Prerequisites: ~faction.israel, gaweap
+		Description: levant-r2merkava-description
+	Valued:
+		Cost: 1450
+	Health:
+		HP: 640
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 80
+	Turreted:
+		TurnSpeed: 24
+	Armament:
+		Weapon: R2ILAbramsGun
+		LocalOffset: 900,0,450
+		MuzzleSequence: muzzle
+
+	Inherits@coordination: ^LevantIsraelCoordination
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+r2ilshield:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2IsraelVoxels
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Tooltip:
+		Name: levant-r2ilshield-name
+	Buildable:
+		BuildPaletteOrder: 41
+		Prerequisites: ~faction.israel, gaweap, radar
+		Description: levant-r2ilshield-description
+	Valued:
+		Cost: 1050
+	Health:
+		HP: 240
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 105
+	Turreted:
+		Offset: -128,0,0
+	Armament:
+		Weapon: R2ILSADSInterceptor
+		LocalOffset: 600,0,450
+	AutoTarget:
+		ScanRadius: 12
+	RevealsShroud:
+		Range: 11c0
+	# Air-only missiles traded 0-6 with rocketeers at equal value (tools/balance-duel.py); the reload
+	# drops from 120 to 42 ticks so the dedicated AA beats them, as the flak track does.
+	ReloadDelayMultiplier@AIRDEFENSE:
+		Modifier: 35
+
+	Inherits@coordination: ^LevantIsraelCoordination
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+r2ilhowitzer:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2IsraelVoxels
+	Tooltip:
+		Name: levant-r2ilhowitzer-name
+	Buildable:
+		BuildPaletteOrder: 61
+		Prerequisites: ~faction.israel, gaweap, radar
+		Description: levant-r2ilhowitzer-description
+	Valued:
+		Cost: 1250
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 115
+		Locomotor: wheeled
+	-WithVoxelTurret:
+	-Turreted:
+	-AttackTurreted:
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 32
+	Armament:
+		Weapon: R2ILCaesarShell
+		LocalOffset: 780,0,450
+		MuzzleSequence: muzzle
+	WithRangeCircle:
+		Range: 13c0
+
+	Inherits@coordination: ^LevantIsraelCoordination
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+r2namer:
+	Inherits: ^R2ModernVehicle
+	Inherits@palette: ^R2IsraelVoxels
+	Tooltip:
+		Name: levant-r2namer-name
+	Buildable:
+		BuildPaletteOrder: 31
+		Prerequisites: ~faction.israel, gaweap
+		Description: levant-r2namer-description
+	Valued:
+		Cost: 1050
+	Health:
+		HP: 420
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+		PauseOnCondition: loading || chronodisable
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		UnloadVoice: Move
+		LoadingCondition: loading
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		Palette: pips
+	Armament:
+		Weapon: R2ILBradleyCannon
+		LocalOffset: 500,30,480
+		MuzzleSequence: muzzle
+	Armament@tow:
+		Name: secondary
+		Weapon: R2ILBradleyTOW
+		LocalOffset: 300,-210,480
+	AttackTurreted:
+		Armaments: primary, secondary
+
+	Inherits@coordination: ^LevantIsraelCoordination
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair

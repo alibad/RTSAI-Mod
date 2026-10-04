@@ -1,0 +1,623 @@
+# Hezbollah: dispersed, concealed and inexpensive. Drone Spotters guide RPGs and
+# missile trucks; coastal forces need surveillance links; defenses hide until
+# they fire. Heavy armor and prepared detection punish long exposed trades.
+^Palettes:
+	PaletteFromFile@hezbollah:
+		Name: hezbollah-art
+		Filename: ra2|modern-factions/hezbollah-art/hezbollah.pal
+	PlayerColorPalette@hezbollah:
+		BasePalette: hezbollah-art
+		BaseName: hezbollahplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@hezbollah-voxels:
+		Name: hezbollah-voxels
+		Filename: ra2|modern-factions/hezbollah-art/hezbollah-voxels.pal
+	PlayerColorPalette@hezbollah-voxels:
+		BasePalette: hezbollah-voxels
+		BaseName: hezbollahvoxelplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+
+^R2HezbollahInfantry:
+	Inherits: ^Infantry
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@MC: ^MindControllable
+	Buildable:
+		Queue: Infantry
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 600, 1500, 0, -530
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
+	# go prone, half speed while prone) and show the normal sequences.
+	TakeCover:
+		ProneSequencePrefix:
+	FirepowerMultiplier@ELITEARMS:
+		RequiresCondition: rank-elite
+		Modifier: 140
+	-WithDeathAnimation@effect:
+	WithDeathAnimation@normal:
+		DeathSequencePalette: hezbollahplayer
+		DeathPaletteIsPlayerPalette: true
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 32
+	Armament:
+		Weapon: R2HZMountainRifle
+	ProducibleWithLevel:
+		Prerequisites: barracks.infiltrated
+	RevealsShroud:
+		Range: 5c0
+
+r2hzrifle:
+	Inherits: ^R2HezbollahInfantry
+	Tooltip:
+		Name: levant-r2hzrifle-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nahand
+		BuildPaletteOrder: 10
+		Description: levant-r2hzrifle-description
+	Valued:
+		Cost: 135
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 66
+	Cloak:
+		InitialDelay: 85
+		CloakDelay: 95
+		UncloakOn: Attack, Move, Damage
+		DetectionTypes: Cloak
+		IsPlayerPalette: true
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzat:
+	Inherits: ^R2HezbollahInfantry
+	Inherits@guidance: ^R2HezbollahGuided
+	Tooltip:
+		Name: levant-r2hzat-name
+	WithColoredOverlay@guidance:
+		Color: 52E7D628
+		RequiresCondition: r2-hz-guidance
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nahand
+		BuildPaletteOrder: 20
+		Description: levant-r2hzat-description
+	Valued:
+		Cost: 300
+	Health:
+		HP: 95
+	Mobile:
+		Speed: 60
+	Armament:
+		Weapon: R2HZYemenRPG
+	RevealsShroud:
+		Range: 6c0
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzspotter:
+	Inherits: ^R2HezbollahInfantry
+	Tooltip:
+		Name: levant-r2hzspotter-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nahand, radar
+		BuildPaletteOrder: 60
+		Description: levant-r2hzspotter-description
+	Valued:
+		Cost: 525
+	Health:
+		HP: 90
+	Mobile:
+		Speed: 64
+	Armament:
+		Weapon: R2HZSpotterCarbine
+	RevealsShroud:
+		Range: 10c0
+	DetectCloaked:
+		DetectionTypes: Cloak
+		Range: 7c0
+	RenderDetectionCircle:
+	ProximityExternalCondition@guidance:
+		Condition: r2-hz-guidance
+		Range: 6c0
+		ValidRelationships: Ally
+	WithRangeCircle@guidance:
+		Range: 6c0
+		Color: 52E7D680
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzscout:
+	Inherits: ^R2HezbollahInfantry
+	Tooltip:
+		Name: levant-r2hzscout-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nahand, natech
+		BuildPaletteOrder: 140
+		BuildLimit: 1
+		Description: levant-r2hzscout-description
+	Valued:
+		Cost: 1650
+	Health:
+		HP: 170
+	Mobile:
+		Speed: 82
+	Armament:
+		Weapon: R2HZGhostCarbine
+	Armament@remote:
+		Name: secondary
+		Weapon: R2HZRemoteCharge
+	AttackFrontal:
+		Armaments: primary, secondary
+	Demolition:
+		DetonationDelay: 80
+		Voice: Demolish
+	Passenger:
+		CustomPipType: red
+	# Persistent camouflage: moving does not reveal the Ghost, attacking does.
+	Cloak:
+		InitialDelay: 40
+		CloakDelay: 70
+		UncloakOn: Attack, Demolish, Damage
+		DetectionTypes: Cloak
+		IsPlayerPalette: true
+	RevealsShroud:
+		Range: 7c0
+	VoiceAnnouncement:
+		Voice: Build
+
+# One-way loitering munition: removed on its terminal attack, no rearming.
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzdrone:
+	Inherits: ^R2ModernDrone
+	Inherits@palette: ^R2HezbollahVoxels
+	Tooltip:
+		Name: levant-r2hzdrone-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, naweap, radar
+		BuildPaletteOrder: 85
+		Description: levant-r2hzdrone-description
+	Valued:
+		Cost: 700
+	Health:
+		HP: 90
+	Aircraft:
+		Speed: 150
+		CruiseAltitude: 1536
+	Armament:
+		Weapon: R2HZSamadWarhead
+	AmbientSound@loiter:
+		SoundFiles: ra2|modern-factions/audio/redsea-drone-loiter.wav
+		RequiresCondition: cruising
+	RevealsShroud:
+		Range: 8c0
+	GrantConditionOnAttack:
+		Condition: expended
+	KillsSelf:
+		RequiresCondition: expended
+		RemoveInstead: true
+	SpawnActorOnDeath:
+		Actor: r2hzdronehusk
+
+r2hzdronehusk:
+	Inherits: ^R2DroneHusk
+	Inherits@palette: ^R2HezbollahVoxels
+	RenderVoxels:
+		Image: r2hzdrone
+
+^R2HezbollahShip:
+	Inherits: ^Ship
+	Tooltip:
+		GenericName: ra2-modern-ship
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@MC: ^MindControllable
+	Buildable:
+		Queue: Ship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RenderSprites:
+	RenderVoxels:
+		PlayerPalette: hezbollahvoxelplayer
+		Scale: 22
+		LightAmbientColor: -0.3,-0.3,-0.3
+		LightDiffuseColor: 0.75,0.75,0.75
+	WithVoxelBody:
+	Selectable:
+		Bounds: 1500, 3000, 0, -289
+	RevealsShroud:
+		Range: 8c0
+	HitShape:
+
+r2hzmissileboat:
+	Inherits: ^R2HezbollahShip
+	Tooltip:
+		Name: levant-r2hzmissileboat-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nayard, radar
+		BuildPaletteOrder: 20
+		Description: levant-r2hzmissileboat-description
+	Valued:
+		Cost: 1100
+	Health:
+		HP: 300
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 120
+		TurnSpeed: 28
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 48
+	Armament:
+		Weapon: R2HZHodeidahMissile
+		# Sea-level muzzles below ~500 spawn the missile into the water.
+		LocalOffset: 600,-200,520, 600,200,520
+	# Mokha surveillance links coordinate the missile craft's fire.
+	ExternalCondition@targeting:
+		Condition: r2-hz-targeting
+	RangeMultiplier@targeting:
+		Modifier: 120
+		RequiresCondition: r2-hz-targeting
+	FirepowerMultiplier@targeting:
+		Modifier: 112
+		RequiresCondition: r2-hz-targeting
+	WithTextDecoration@targeting:
+		Text: LINKED
+		Position: Top
+		Margin: 0, -14
+		Color: E08060
+		RequiresSelection: true
+		RequiresCondition: r2-hz-targeting
+	# Firing reveals the craft in explored enemy fog for eight seconds.
+	-HiddenUnderFog:
+	NavalRadarVisibility:
+		RequiresCondition: missile-revealed
+	GrantConditionOnAttack@reveal:
+		Condition: missile-revealed
+		RevokeDelay: 190
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzskiff:
+	Inherits: ^R2HezbollahShip
+	Tooltip:
+		Name: levant-r2hzskiff-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nayard
+		BuildPaletteOrder: 10
+		Description: levant-r2hzskiff-description
+	Valued:
+		Cost: 300
+	Health:
+		HP: 90
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+		TurnSpeed: 40
+		PauseOnCondition: !r2-hz-link || chronodisable
+	ExternalCondition@link:
+		Condition: r2-hz-link
+	Selectable:
+		Bounds: 1000, 1500, 0, -200
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 24
+	Armament:
+		Weapon: R2HZUSVCharge
+	GrantConditionOnAttack@trigger:
+		Condition: usv-triggered
+	KillsSelf:
+		RequiresCondition: usv-triggered
+	RevealsShroud:
+		Range: 3c0
+	RevealsShroud@link:
+		Range: 5c0
+		RequiresCondition: r2-hz-link
+	WithTextDecoration@nolink:
+		Text: NO LINK
+		Position: Top
+		Margin: 0, -10
+		Color: E07050
+		RequiresSelection: true
+		RequiresCondition: !r2-hz-link
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+r2hzsurvey:
+	Inherits: ^R2HezbollahShip
+	Tooltip:
+		Name: levant-r2hzsurvey-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nayard, radar
+		BuildPaletteOrder: 30
+		Description: levant-r2hzsurvey-description
+	Valued:
+		Cost: 900
+	Health:
+		HP: 280
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 105
+	WithVoxelTurret:
+	Turreted:
+		Offset: 531,0,0
+		TurnSpeed: 36
+	AttackTurreted:
+		Voice: Attack
+	Armament:
+		Weapon: R2HZMokhaGun
+		LocalOffset: 280,0,300
+	DetectCloaked:
+		DetectionTypes: Underwater, Cloak
+		Range: 6c0
+	DetectCloakedMultiplier@radar:
+		Modifier: 175
+		RequiresCondition: active-radar
+	RenderDetectionCircle:
+	RevealsShroudMultiplier@radar:
+		Modifier: 165
+		RequiresCondition: active-radar
+	# Passive links reach 6 cells; deployed active radar extends them to 14
+	# but reveals the craft in explored enemy fog.
+	ProximityExternalCondition@link:
+		Condition: r2-hz-link
+		Range: 6c0
+		ValidRelationships: Ally
+	ProximityExternalCondition@targeting:
+		Condition: r2-hz-targeting
+		Range: 6c0
+		ValidRelationships: Ally
+	ProximityExternalCondition@radar-link:
+		Condition: r2-hz-link
+		Range: 14c0
+		ValidRelationships: Ally
+		RequiresCondition: active-radar
+	ProximityExternalCondition@radar-targeting:
+		Condition: r2-hz-targeting
+		Range: 14c0
+		ValidRelationships: Ally
+		RequiresCondition: active-radar
+	WithRangeCircle@link:
+		Range: 6c0
+		Color: E0604060
+		RequiresCondition: !active-radar
+	WithRangeCircle@radar:
+		Range: 14c0
+		Color: E0604080
+		RequiresCondition: active-radar
+	GrantConditionOnDeploy@radar:
+		DeployedCondition: active-radar
+		SkipMakeAnimation: true
+		UndeployOnMove: false
+		DeploySounds: ra2|modern-factions/audio/naval-radar-sweep.wav
+		UndeploySounds: ra2|modern-factions/audio/naval-radar-sweep.wav
+	-HiddenUnderFog:
+	NavalRadarVisibility:
+		RequiresCondition: active-radar
+	WithTextDecoration@radar:
+		Text: RADAR
+		Position: Top
+		Margin: 0, -14
+		Color: E08060
+		RequiresSelection: true
+		RequiresCondition: active-radar
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+^R2HezbollahDefense:
+	Inherits: ^SupportBuilding
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Buildable:
+		Queue: Support
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: Steel
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	Turreted:
+		TurnSpeed: 28
+		InitialFacing: 640
+	BodyOrientation:
+		QuantizedFacings: 32
+	AttackTurreted:
+		Voice: Attack
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: lowpower
+	IsometricSelectable:
+		Height: 40
+	Armament:
+		Weapon: R2HZBunkerMG
+		LocalOffset: 500,0,500
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	RevealsShroud:
+		Range: 8c0
+	RequiresBuildableArea:
+		Adjacent: 6
+
+# Concealed positions: camouflaged until they fire or are hit.
+^R2HezbollahConcealed:
+	Cloak:
+		InitialDelay: 125
+		CloakDelay: 125
+		UncloakOn: Attack, Damage
+		DetectionTypes: Cloak
+		IsPlayerPalette: true
+		# Unpowered concealment fails too, so a beaten Hezbollah base can always be found and destroyed.
+		RequiresCondition: !build-incomplete && !lowpower
+
+r2hzbunker:
+	Inherits: ^R2HezbollahDefense
+	Inherits@concealed: ^R2HezbollahConcealed
+	Tooltip:
+		Name: levant-r2hzbunker-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, barracks
+		BuildPaletteOrder: 20
+		Description: levant-r2hzbunker-description
+	Valued:
+		Cost: 450
+	Health:
+		HP: 550
+	Power:
+		Amount: -10
+	WithRangeCircle:
+		Range: 5c512
+
+r2hzaanest:
+	Inherits: ^R2HezbollahDefense
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Tooltip:
+		Name: levant-r2hzaanest-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, barracks, radar
+		BuildPaletteOrder: 30
+		Description: levant-r2hzaanest-description
+	Valued:
+		Cost: 800
+	Health:
+		HP: 450
+	Power:
+		Amount: -30
+	Armament:
+		Weapon: R2HZZUNest
+		LocalOffset: 700,0,650
+	WithRangeCircle:
+		Range: 9c0
+
+r2hzcoastal:
+	Inherits: ^R2HezbollahDefense
+	Inherits@concealed: ^R2HezbollahConcealed
+	Tooltip:
+		Name: levant-r2hzcoastal-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, radar
+		BuildPaletteOrder: 40
+		Description: levant-r2hzcoastal-description
+	Valued:
+		Cost: 1200
+	Health:
+		HP: 600
+	Power:
+		Amount: -50
+	Armament:
+		Weapon: R2HZYemenCoastalMissile
+		LocalOffset: 600,0,650
+	# Surveillance-craft links also coordinate the shore battery.
+	ExternalCondition@targeting:
+		Condition: r2-hz-targeting
+	RangeMultiplier@targeting:
+		Modifier: 120
+		RequiresCondition: r2-hz-targeting
+	WithRangeCircle:
+		Range: 12c0
+
+
+r2hzrelay:
+	Inherits: ^R2HezbollahDefense
+	Tooltip:
+		Name: levant-r2hzrelay-name
+	Buildable:
+		Queue: Support
+		Prerequisites: ~faction.hezbollah, radar
+		BuildPaletteOrder: 65
+		Description: levant-r2hzrelay-description
+	Valued:
+		Cost: 750
+	Health:
+		HP: 420
+	-Armament:
+	-AttackTurreted:
+	-WithSpriteTurret:
+	-Turreted:
+	-AutoTarget:
+	-AutoTargetPriority@DEFAULT:
+	-AutoTargetPriority@ATTACKANYTHING:
+	RenderSprites:
+		Image: r2hzrelay
+	Power:
+		Amount: -35
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	ProximityExternalCondition@link:
+		Condition: r2-hz-guidance
+		Range: 6c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
+	DetectCloaked:
+		Range: 5c0
+		RequiresCondition: !lowpower && !build-incomplete
+	WithRangeCircle@link:
+		Range: 6c0
+		Color: B3B88180
+	StrategicRole:
+		Roles: support
+		Domain: defense
+
+r2hzworkshop:
+	Inherits: r2hzrelay
+	Tooltip:
+		Name: levant-r2hzworkshop-name
+	Buildable:
+		BuildPaletteOrder: 66
+		Description: levant-r2hzworkshop-description
+	Valued:
+		Cost: 900
+	-ProximityExternalCondition@link:
+	-DetectCloaked:
+	ProximityExternalCondition@repair:
+		Condition: hezbollah-repair
+		Range: 4c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
+	WithRangeCircle@link:
+		Range: 4c0
+	RenderSprites:
+		Image: r2hzworkshop

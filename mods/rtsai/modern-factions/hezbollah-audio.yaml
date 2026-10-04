@@ -1,0 +1,59 @@
+r2hzrifle:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2hzat:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2hzspotter:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2hzscout:
+	Voiced:
+		VoiceSet: LevantInfantryVoice
+
+r2hztechnical:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzrecoilless:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzescort:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzrockets:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzdrone:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzmissileboat:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzskiff:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzsurvey:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzbunker:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzaanest:
+	Voiced:
+		VoiceSet: LevantVehicleVoice
+
+r2hzcoastal:
+	Voiced:
+		VoiceSet: LevantVehicleVoice

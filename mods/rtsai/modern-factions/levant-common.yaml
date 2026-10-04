@@ -1,0 +1,19 @@
+^LevantIsraelCoordination:
+	ExternalCondition@coordination:
+		Condition: israel-linked
+	ReloadDelayMultiplier@coordination:
+		Modifier: 85
+		RequiresCondition: israel-linked
+	WithTextDecoration@coordination:
+		Text: LINK
+		Color: 80B8FF
+		RequiresCondition: israel-linked
+		RequiresSelection: true
+
+Player:
+	ProvidesPrerequisite@israel:
+		Prerequisite: faction.israel
+		Factions: israel
+	ProvidesPrerequisite@hezbollah:
+		Prerequisite: faction.hezbollah
+		Factions: hezbollah

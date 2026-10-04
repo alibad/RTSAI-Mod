@@ -1,0 +1,74 @@
+r2hzrifle:
+	StrategicRole:
+		Roles: line-infantry
+		Domain: ground
+
+r2hzat:
+	StrategicRole:
+		Roles: anti-armor
+		Domain: ground
+
+r2hzspotter:
+	StrategicRole:
+		Roles: support
+		Domain: ground
+
+r2hzscout:
+	StrategicRole:
+		Roles: line-infantry
+		Domain: ground
+
+r2hztechnical:
+	StrategicRole:
+		Roles: line-infantry
+		Domain: ground
+
+r2hzrecoilless:
+	StrategicRole:
+		Roles: anti-armor
+		Domain: ground
+
+r2hzescort:
+	StrategicRole:
+		Roles: anti-air
+		Domain: ground
+
+r2hzrockets:
+	StrategicRole:
+		Roles: artillery
+		Domain: ground
+
+r2hzdrone:
+	StrategicRole:
+		Roles: strike-aircraft
+		Domain: air
+
+r2hzmissileboat:
+	StrategicRole:
+		Roles: naval-screen
+		Domain: naval
+
+r2hzskiff:
+	StrategicRole:
+		Roles: naval-screen
+		Domain: naval
+
+r2hzsurvey:
+	StrategicRole:
+		Roles: support
+		Domain: naval
+
+r2hzbunker:
+	StrategicRole:
+		Roles: line-infantry
+		Domain: defense
+
+r2hzaanest:
+	StrategicRole:
+		Roles: anti-air
+		Domain: defense
+
+r2hzcoastal:
+	StrategicRole:
+		Roles: anti-armor
+		Domain: defense

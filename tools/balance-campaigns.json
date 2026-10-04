@@ -6,11 +6,21 @@
   "suites": [
    {
     "id": "smoke",
-    "factions": ["china", "russia"],
-    "bots": ["normal"],
+    "factions": [
+     "china",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
     "replicates": 1,
     "tick_cap": 45000,
-    "maps": [{"map": "dustbowl", "title": "Dustbowl"}]
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     }
+    ]
    }
   ]
  },
@@ -21,13 +31,29 @@
   "suites": [
    {
     "id": "rr",
-    "factions": ["china", "iran", "turkey", "saudi", "yemen", "america", "russia"],
-    "bots": ["normal"],
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
     "replicates": 3,
     "tick_cap": 60000,
     "maps": [
-     {"map": "dustbowl", "title": "Dustbowl"},
-     {"map": "tournament-2A", "title": "Official Tournament Map A"}
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
     ]
    }
   ]
@@ -39,13 +65,29 @@
   "suites": [
    {
     "id": "probe",
-    "factions": ["china", "iran", "turkey", "saudi", "yemen", "america", "russia"],
-    "bots": ["normal"],
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
     "replicates": 1,
     "tick_cap": 60000,
     "maps": [
-     {"map": "dustbowl", "title": "Dustbowl"},
-     {"map": "tournament-2A", "title": "Official Tournament Map A"}
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
     ]
    }
   ]
@@ -57,11 +99,51 @@
   "suites": [
    {
     "id": "naval",
-    "factions": ["china", "iran", "turkey", "saudi", "yemen", "america", "russia"],
-    "bots": ["normal"],
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
     "replicates": 3,
     "tick_cap": 60000,
-    "maps": [{"map": "little-big-lake", "title": "Little Big Lake"}]
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ]
+   }
+  ]
+ },
+ "levant-smoke": {
+  "description": "Local development smoke for the new factions: both starting orientations on Dustbowl. Tests bot construction and own-roster production; not a release balance certificate.",
+  "seed": 20261004,
+  "wall_guard_seconds": 300,
+  "suites": [
+   {
+    "id": "levant",
+    "factions": [
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 15000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     }
+    ]
    }
   ]
  }

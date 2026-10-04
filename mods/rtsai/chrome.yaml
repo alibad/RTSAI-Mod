@@ -1591,7 +1591,9 @@ reload-icon:
 		disabled-11: 944, 136, 16, 16
 
 flags:
-	Image: buttons.png
+	Image: ra2|modern-factions/ui/faction-flags.png
+	Image3x: ra2|modern-factions/ui/faction-flags-3x.png
+	Image2x: ra2|modern-factions/ui/faction-flags-2x.png
 	Regions:
 		china: 0, 256, 30, 15
 		iran: 30, 256, 30, 15
@@ -1611,6 +1613,8 @@ flags:
 		random-allies: 0, 105, 45, 21
 		random-soviets: 45, 105, 45, 21
 		spectator: 45, 84, 45, 21
+		israel: 260, 1, 30, 15
+		hezbollah: 260, 17, 30, 15
 
 music:
 	Image: musicplayer.png
