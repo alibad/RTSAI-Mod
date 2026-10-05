@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import shutil
 import sys
 import tempfile
@@ -106,7 +107,12 @@ def transcribe(args) -> int:
         writer.writeheader()
         writer.writerows(rows)
     print(f"{len(rows)} lines -> {sheet}", flush=True)
-    return 0
+    # Exit here, while `model` is still referenced. On Windows with CUDA, releasing a CTranslate2 Whisper model that
+    # has run a task="translate" pass kills the process with 0xC0000409, whether the release comes from `del`,
+    # unload_model() or interpreter shutdown (bisected on 6 October 2026; transcription and language ID alone exit
+    # cleanly). os._exit ends the process without releasing it. The sheet is written and both streams are flushed.
+    sys.stderr.flush()
+    os._exit(0)
 
 
 def regenerate(args) -> int:
@@ -160,9 +166,7 @@ def main() -> int:
     sub.choices["regenerate"].add_argument("--seeds", type=int, default=24)
     sub.choices["regenerate"].add_argument("files", nargs="+")
     args = parser.parse_args()
-    # On Windows, CTranslate2's CUDA teardown can end `transcribe` with exit code 0xC0000409 after the sheet is
-    # written; the run is complete when it has printed "<n> lines -> <sheet>".
-    return transcribe(args) if args.command == "transcribe" else regenerate(args)
+    return transcribe(args) if args.command == "transcribe" else regenerate(args)  # transcribe exits via os._exit
 
 
 if __name__ == "__main__":
