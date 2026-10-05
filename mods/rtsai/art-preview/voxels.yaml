@@ -1,1 +1,14 @@
 # Art preview overlay (voxels). Loaded last so it overrides the faction files. Local branch rtsai/art-preview only.
+
+# glb-route:r2mantis begin
+r2mantis:
+	idle: ra2|art-preview/voxels/r2mantis
+	turret: ra2|art-preview/voxels/r2mantistur
+# glb-route:r2mantis end
+
+# glb-route:r2luyang begin
+r2luyang:
+	idle: ra2|art-preview/voxels/r2luyang
+	turret: ra2|art-preview/voxels/r2luyangtur
+	barrel: ra2|art-preview/voxels/r2luyangbarl
+# glb-route:r2luyang end

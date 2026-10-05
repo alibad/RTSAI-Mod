@@ -1,1 +1,41 @@
 # Art preview overlay (vehicles). Loaded last so it overrides the faction files. Local branch rtsai/art-preview only.
+
+# glb-route:palette-china begin
+^Palettes:
+	PaletteFromFile@r2glbchina:
+		Name: r2glbchina
+		Filename: ra2|art-preview/voxels/china-glb.pal
+	PlayerColorPalette@r2glbchina:
+		BasePalette: r2glbchina
+		BaseName: r2glbchinaplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-china end
+
+# glb-route:r2mantis begin
+r2mantis:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -36,0,0
+	Armament:
+		LocalOffset: 19,-231,656, 19,231,656
+# glb-route:r2mantis end
+
+# glb-route:r2luyang begin
+r2luyang:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 443,0,0
+	Armament:
+		LocalOffset: 584,-1,411
+		Recoil: 64
+		RecoilRecovery: 12
+	WithVoxelBarrel:
+# glb-route:r2luyang end
