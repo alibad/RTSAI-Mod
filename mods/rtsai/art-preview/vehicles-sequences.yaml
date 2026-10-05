@@ -150,3 +150,137 @@ r2lynx:
 		Facings: 32
 		ShadowStart: 96
 # glb-route:r2lynx end
+
+# glb-route:r2azar begin
+r2azar:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2azar.shp
+		Facings: 32
+# glb-route:r2azar end
+
+# glb-route:r2coast begin
+r2coast:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2coast.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2coast.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2coast end
+
+# glb-route:r2fajr begin
+r2fajr:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2fajr.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2fajr.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2fajr end
+
+# glb-route:r2ghadir begin
+r2ghadir:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ghadir.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2ghadir end
+
+# glb-route:r2karrar begin
+r2karrar:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2karrar.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2karrar.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2karrar end
+
+# glb-route:r2loiter begin
+r2loiter:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2loiter.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2loiter.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2loiter end
+
+# glb-route:r2mohajer begin
+r2mohajer:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2mohajer.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2mohajer.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2mohajer end
+
+# glb-route:r2peykaap begin
+r2peykaap:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2peykaap.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2peykaap.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2peykaap end
+
+# glb-route:r2raad begin
+r2raad:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2raad.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2raad.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|art-preview/vehicles/r2raad.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2raad end
+
+# glb-route:r2toufan begin
+r2toufan:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2toufan.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2toufan.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|art-preview/vehicles/r2toufan.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2toufan end

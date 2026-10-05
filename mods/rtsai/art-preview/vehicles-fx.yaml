@@ -1316,9 +1316,6 @@ r2mohajer:
 	Armament:
 		MuzzleSequence: muzzle-launch
 	WithMuzzleOverlay:
-	-WithVoxelBody:
-	WithVoxelHelicopterBody:
-		TickRate: 1
 # glb-fx:r2mohajer end
 
 # glb-fx:r2loiter begin
@@ -1335,9 +1332,6 @@ r2loiter:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
-	-WithVoxelBody:
-	WithVoxelHelicopterBody:
-		TickRate: 1
 # glb-fx:r2loiter end
 
 # glb-fx:r2toufan begin

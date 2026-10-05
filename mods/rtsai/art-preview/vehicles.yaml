@@ -238,151 +238,205 @@ r2jubail:
 
 # glb-route:r2karrar begin
 r2karrar:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -67,0,0
+		Offset: -72,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 738,-2,413
+		LocalOffset: 260,-2,413
 		Recoil: 72
 		RecoilRecovery: 14
-	WithVoxelBarrel:
 # glb-route:r2karrar end
 
 # glb-route:r2raad begin
 r2raad:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -52,0,0
+		Offset: -55,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 198,-181,790, 198,161,790
-	WithAnimatedVoxelModel@radar:
-		Sequence: radar
-		TickRate: 3
+		LocalOffset: 213,-194,848, 213,173,848
 # glb-route:r2raad end
 
 # glb-route:r2fajr begin
 r2fajr:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -357,0,0
+		Offset: -376,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 437,1,608
+		LocalOffset: 461,1,642
 # glb-route:r2fajr end
 
 # glb-route:r2coast begin
 r2coast:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -304,0,0
+		Offset: -322,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 231,-143,662, 231,143,662
+		LocalOffset: 245,-151,701, 245,151,701
 # glb-route:r2coast end
 
 # glb-route:r2mohajer begin
 r2mohajer:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2mohajerhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+		Image: r2mohajer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2mohajer end
 
 # glb-route:r2loiter begin
 r2loiter:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2loiterhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+		Image: r2loiter
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2loiter end
 
 # glb-route:r2toufan begin
 r2toufan:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
 	-WithVoxelBody:
-	WithVoxelHelicopterBody:
-		Sequence: idle
+	-WithVoxelHelicopterBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@landed:
+		Name: landed
+		Sequence: idle-landed
+		RequiresCondition: !airborne
 
 r2toufanhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+		Image: r2toufan
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2toufan end
 
 # glb-route:r2azar begin
 r2azar:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 43,-250,74
 
 r2azarhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+		Image: r2azar
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 # glb-route:r2azar end
 
 # glb-route:r2peykaap begin
 r2peykaap:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 295,0,0
+		Offset: 323,0,0
+	WithSpriteTurret:
 	Armament@AA:
-		LocalOffset: 483,3,276
+		LocalOffset: 528,3,302
 	Armament:
 		LocalOffset: 423,0,520
 # glb-route:r2peykaap end
 
 # glb-route:r2ghadir begin
 r2ghadir:
-	RenderVoxels:
-		PlayerPalette: r2glbiranplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-iranplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 # glb-route:r2ghadir end
 
 # glb-route:r2qilin begin
@@ -1145,3 +1199,15 @@ r2marmara:
 		BaseName: r2prerender-chinaplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-china end
+
+# glb-route:palette-prerender-iran begin
+^Palettes:
+	PaletteFromFile@r2prerender-iran:
+		Name: r2prerender-iran
+		Filename: ra2|art-preview/vehicles/iran-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-iran:
+		BasePalette: r2prerender-iran
+		BaseName: r2prerender-iranplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-iran end
