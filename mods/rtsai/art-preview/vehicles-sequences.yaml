@@ -284,3 +284,82 @@ r2toufan:
 		Stride: 4
 		Facings: 32
 # glb-route:r2toufan end
+
+# glb-route:r2bozkir begin
+r2bozkir:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2bozkir.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2bozkir.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2bozkir end
+
+# glb-route:r2deniz begin
+r2deniz:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2deniz.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2deniz.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2deniz end
+
+# glb-route:r2kuzgun begin
+r2kuzgun:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2kuzgun.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2kuzgun.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2kuzgun end
+
+# glb-route:r2poyraz begin
+r2poyraz:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2poyraz.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2poyraz.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2poyraz end
+
+# glb-route:r2sancak begin
+r2sancak:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2sancak.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2sancak.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2sancak end
+
+# glb-route:r2yildirim begin
+r2yildirim:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2yildirim.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2yildirim.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2yildirim end

@@ -235,12 +235,6 @@ r2aras:
 	turret: ra2|art-preview/voxels/r2arastur
 # glb-route:r2aras end
 
-# glb-route:r2bozkir begin
-r2bozkir:
-	idle: ra2|art-preview/voxels/r2bozkir
-	turret: ra2|art-preview/voxels/r2bozkirtur
-	barrel: ra2|art-preview/voxels/r2bozkirbarl
-# glb-route:r2bozkir end
 
 # glb-route:r2gokkalkan begin
 r2gokkalkan:
@@ -248,34 +242,14 @@ r2gokkalkan:
 	turret: ra2|art-preview/voxels/r2gokkalkantur
 # glb-route:r2gokkalkan end
 
-# glb-route:r2yildirim begin
-r2yildirim:
-	idle: ra2|art-preview/voxels/r2yildirim
-	turret: ra2|art-preview/voxels/r2yildirimtur
-	barrel: ra2|art-preview/voxels/r2yildirimbarl
-# glb-route:r2yildirim end
 
-# glb-route:r2deniz begin
-r2deniz:
-	idle: ra2|art-preview/voxels/r2deniz
-	turret: ra2|art-preview/voxels/r2deniztur
-# glb-route:r2deniz end
 
-# glb-route:r2sancak begin
-r2sancak:
-	idle: ra2|art-preview/voxels/r2sancak
-	turret: ra2|art-preview/voxels/r2sancaktur
-# glb-route:r2sancak end
 
 # glb-route:r2sahin begin
 r2sahin:
 	idle: ra2|art-preview/voxels/r2sahin
 # glb-route:r2sahin end
 
-# glb-route:r2kuzgun begin
-r2kuzgun:
-	idle: ra2|art-preview/voxels/r2kuzgun
-# glb-route:r2kuzgun end
 
 # glb-route:r2turna begin
 r2turna:
@@ -284,12 +258,6 @@ r2turna:
 	slow-rotor: ra2|art-preview/voxels/r2turnatur
 # glb-route:r2turna end
 
-# glb-route:r2poyraz begin
-r2poyraz:
-	idle: ra2|art-preview/voxels/r2poyraz
-	turret: ra2|art-preview/voxels/r2poyraztur
-	barrel: ra2|art-preview/voxels/r2poyrazbarl
-# glb-route:r2poyraz end
 
 # glb-route:r2ege begin
 r2ege:

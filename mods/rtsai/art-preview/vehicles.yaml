@@ -1017,18 +1017,21 @@ r2aras:
 
 # glb-route:r2bozkir begin
 r2bozkir:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -112,0,0
+		Offset: -117,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 841,4,394
+		LocalOffset: 881,4,413
 		Recoil: 85
 		RecoilRecovery: 25
-	WithVoxelBarrel:
 # glb-route:r2bozkir end
 
 # glb-route:r2gokkalkan begin
@@ -1046,44 +1049,55 @@ r2gokkalkan:
 
 # glb-route:r2yildirim begin
 r2yildirim:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -152,0,0
+		Offset: -162,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 914,-3,743
+		LocalOffset: 976,-3,793
 		Recoil: 100
 		RecoilRecovery: 20
-	WithVoxelBarrel:
 # glb-route:r2yildirim end
 
 # glb-route:r2deniz begin
 r2deniz:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 194,0,0
+		Offset: 204,0,0
+	WithSpriteTurret:
 	Armament:
 		LocalOffset: 260,0,520
 # glb-route:r2deniz end
 
 # glb-route:r2sancak begin
 r2sancak:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -146,0,0
+		Offset: -159,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 377,-7,453
+		LocalOffset: -71,-152,530
 # glb-route:r2sancak end
 
 # glb-route:r2sahin begin
@@ -1104,18 +1118,26 @@ r2sahinhusk:
 
 # glb-route:r2kuzgun begin
 r2kuzgun:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2kuzgunhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+		Image: r2kuzgun
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2kuzgun end
 
 # glb-route:r2turna begin
@@ -1136,18 +1158,21 @@ r2turnahusk:
 
 # glb-route:r2poyraz begin
 r2poyraz:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 321,0,0
+		Offset: 340,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 500,-3,296
+		LocalOffset: 530,-3,314
 		Recoil: 48
 		RecoilRecovery: 16
-	WithVoxelBarrel:
 # glb-route:r2poyraz end
 
 # glb-route:r2ege begin
@@ -1211,3 +1236,15 @@ r2marmara:
 		BaseName: r2prerender-iranplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-iran end
+
+# glb-route:palette-prerender-turkey begin
+^Palettes:
+	PaletteFromFile@r2prerender-turkey:
+		Name: r2prerender-turkey
+		Filename: ra2|art-preview/vehicles/turkey-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-turkey:
+		BasePalette: r2prerender-turkey
+		BaseName: r2prerender-turkeyplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-turkey end

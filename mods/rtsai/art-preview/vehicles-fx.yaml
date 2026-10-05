@@ -492,9 +492,6 @@ r2kuzgun:
 	Armament:
 		MuzzleSequence: muzzle-launch
 	WithMuzzleOverlay:
-	-WithVoxelBody:
-	WithVoxelHelicopterBody:
-		TickRate: 1
 # glb-fx:r2kuzgun end
 
 # glb-fx:r2f15sa begin
