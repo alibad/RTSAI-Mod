@@ -203,6 +203,7 @@ r2yzu:
 # glb-route:r2ymlr begin
 r2ymlr:
 	idle: ra2|art-preview/voxels/r2ymlr
+	rack: ra2|art-preview/voxels/r2ymlrrack
 	empty: ra2|art-preview/voxels/r2ymlr
 # glb-route:r2ymlr end
 

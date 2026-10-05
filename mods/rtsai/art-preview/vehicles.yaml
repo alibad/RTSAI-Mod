@@ -161,7 +161,9 @@ r2sadiq:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
-		Offset: 314,0,0
+		Offset: 394,0,0
+	Armament:
+		LocalOffset: 289,-8,223
 # glb-route:r2sadiq end
 
 # glb-route:r2riyadh begin
@@ -520,7 +522,11 @@ r2ymlr:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 146,-113,621, 146,113,621
+		LocalOffset: 157,-113,621, 157,113,621
+	WithVoxelBody@chassis:
+	WithVoxelBody@loaded:
+		Sequence: rack
+	-WithVoxelBody@empty:
 # glb-route:r2ymlr end
 
 # glb-route:r2samad begin
