@@ -47,6 +47,12 @@ Arabic is Modern Standard Arabic for both Saudi Arabia and Yemen; Chatterbox has
 Arabic. The Persian fine-tune was trained on read speech, so the Persian lines are flatter than the
 others.
 
+Israel and Hezbollah have no generated voice lines and no announcer of their own. Their units use
+the stock RA2 voice sets through `levant-voices.yaml` (the GI and the Allied vehicle crew), and
+`eva-notifications.yaml` gives them the stock Allied and Soviet announcers (`ceva`, `csof`). All of
+that is read from the player's own Red Alert 2 files; the mod ships no audio for either faction, so
+they speak English and there is no Hebrew or Arabic line of theirs to review.
+
 ## Quality check
 
 The cloned engines sample, so each line is generated with up to 6 seeds (8 for Persian), stopping
@@ -64,12 +70,12 @@ speaking-rate offsets become tempo factors (for example −6% becomes 0.94).
 
 | Set | Files | Engines | Exact transcript | Highest error rate |
 |---|---|---|---|---|
-| Unit voice lines | 148 | 74 Kokoro, 50 Chatterbox, 24 MOSS | 139 | 0.15 |
+| Unit voice lines | 148 | 74 Kokoro, 50 Chatterbox, 24 MOSS | 139 (142 after the review below) | 0.15 (0.14 after) |
 | Announcer clips | 555 (111 × 5) | Kokoro | 537 | 0.13 |
 
-The remaining mismatches are recognizer homophones such as "ore miner" heard as "or minor", or
-"route" as "root". One may be a real slip: `iran-naval-attack-fa.wav` was heard as تسبیح for
-تثبیت. Native speakers should review all non-English lines before release.
+The remaining mismatches are mostly recognizer homophones such as "ore miner" heard as "or minor",
+or "route" as "root". Four Persian lines were real slips; they were regenerated on 5 October (see
+[Native-speaker review](#native-speaker-review)).
 
 Compared with the edge-tts files:
 - Same format: 44.1 kHz mono 16-bit PCM.
@@ -78,6 +84,82 @@ Compared with the edge-tts files:
 - Loudness changed by −0.2 LUFS (median; 10th–90th percentile −2.1 to +1.5).
 - The Persian lines rose from −24.2 to −18.7 LUFS. They had been about 4 dB quieter than the
   English lines of the same units.
+
+## Native-speaker review
+
+**Status: native-speaker sign-off has not happened. It is an owner gate before release.** What
+exists is a machine-assisted first pass (5 October 2026), written up line by line in
+[`voice-review.csv`](voice-review.csv) so a native speaker can confirm or correct each line quickly.
+
+The sheet has one row per non-English line: the script, its English line, a literal meaning of the
+script, a fresh Whisper transcript of the shipped file and its error rate, Whisper's language ID,
+Whisper's own English translation (a hint only; it is often wrong on clips this short), the verdict,
+the action and notes. The `native_speaker` column is empty, waiting for the reviewer.
+
+How the first pass was done:
+1. Every shipped non-English file was transcribed again with the pinned Whisper large-v3: forced to
+   the line's language with the generator's settings, then with automatic language ID, then
+   translated to English (`tools/voice-review.py transcribe`).
+2. Each transcript was compared with the script and with the transcript taken at generation time.
+   Spelling-only differences (for example ث/س or ع/ء in Persian, traditional Chinese characters) and
+   exact homophones are not slips.
+3. Each script was read against its English line for wrong words, unnatural phrasing, the wrong
+   script or dialect, and a tone that fits a military RTS. The reviewer is not a native speaker of
+   any of these languages, so wording points are suggestions for the native pass, not changes.
+4. A line was regenerated only when both transcriptions heard a different content word.
+
+| Language | Faction | Lines checked | Regenerated | Flagged for a native check | No issue found |
+|---|---|---|---|---|---|
+| Persian (fa-IR) | Iran | 24 | 4 | 7 (plus 2 of the regenerated) | 13 |
+| Arabic (ar-SA, MSA) | Saudi Arabia | 14 | 0 | 4 | 10 |
+| Arabic (ar-YE, MSA) | Yemen | 14 | 0 | 4 | 10 |
+| Turkish (tr-TR) | Türkiye | 12 | 0 | 1 | 11 |
+| Mandarin (zh-CN) | China | 10 | 0 | 1 | 9 |
+| None | Israel, Hezbollah | 0 | 0 | 0 | 0 |
+| **Total** | | **74** | **4** | **17** | **53** |
+
+### Regenerated lines
+
+| File | Script | Shipped take heard as | New take heard as (generation; shipped file) |
+|---|---|---|---|
+| `iran-naval-attack-fa.wav` | ردیابی تثبیت شد. | ردیابی تسبیح شد ("rosary") | تسبیت; تسکیت |
+| `shadow-action-fa.wav` | نقطه ورود مشخص شد. | نقطه برود ("should go") | exact; exact |
+| `iran-drone-select-fa.wav` | پیوند داده برقرار است. | پیاند (no v) | exact; exact |
+| `iran-naval-select-fa.wav` | خدمه دریایی آماده است. | خدم ("servants") | exact; exact |
+
+The text, speaker, English reference clip, MOSS-TTS-Nano Persian fine-tune and Iran processing
+chain are unchanged (`tools/voice-review.py regenerate`, with `RTSAI_MOSS_PYTHON` set to a
+transformers 4.57 interpreter). The one change is the seed range: 1–24 instead of 1–8, because the
+documented range had already produced the shipped take. MOSS sampling on the GPU is not
+bit-reproducible between runs (`shadow-action-fa` passes at seed 1 now and did not on 2 October),
+so a seed identifies a take only within its run. Each record in `PROVENANCE.json` has a `review`
+entry with the replaced seed and transcript. تسبیت sounds the same as تثبیت, because ث and س are both
+/s/ in Persian. The Iran chain normalizes peak, not loudness: three new takes are within 0.5 LU of
+the old ones, and `iran-drone-select-fa` went from −20.4 to −17.2 LUFS, still inside the range of
+the Persian set.
+
+### For the native speaker, in order
+
+1. **Persian accent.** Whisper's language ID often does not recognize the MOSS clips as Persian. Six
+   clips of two or more words score below 0.5 for `fa` (for example `iran-inf-action-fa` scores
+   en 0.65), while the Arabic, Turkish and Mandarin clips score 0.9–1.0. This may be an accent
+   carried over from the English reference clip.
+2. **`iran-naval-attack-fa`**: listen for "tasbit". The wording is a calque of "Track is steady";
+   ردیابی پایدار است or هدف قفل شد may sound more natural.
+3. **Heard differently by one of the two transcriptions:** `iran-drone-move-fa` (به‌روز),
+   `rsa-inf-action-ar`, `rsa-veh-select-ar`, and the Yemeni Ghost lines `rye-ghost-action-ar`,
+   `rye-ghost-build-ar` and `rye-ghost-select-ar` (is the ḥ of الشبح audible?).
+4. **Wording suggestions:** `iran-drone-action-fa` (تصویر واضح است for "picture is clear"),
+   `shadow-attack-fa` (جدا شد reads as "separated"), the Saudi call sign فالكون in
+   `rsa-falcon-build-ar` and `rsa-falcon-select-ar` (the English "Falcon One", or الصقر),
+   `rye-naval-select-ar`, and `tr-greywolf-attack-tr` ("İşaretimle" for "on my mark").
+5. **`rcn-redspear-select-zh`**: 红矛 is an exact homophone of 红毛 (hóng máo), an old slur for
+   Westerners. Confirm that the call sign works by ear.
+6. **Dialect:** Yemen speaks Modern Standard Arabic, not Yemeni Arabic.
+
+A wording change belongs in the OpenRA-AI generator scripts, which hold the scripts; regenerate the
+line afterwards with the generator or `tools/voice-review.py regenerate`, then re-run
+`tools/voice-review.py transcribe`, which refreshes the machine columns and keeps the human ones.
 
 ## Announcers
 
@@ -99,6 +181,8 @@ it, a modern engineer looks up unprefixed file names that do not exist.
 - `generate-rtsai-mod-audio.py` refuses to run if the rules reference a shipped file that is neither
   a generated voice line nor a listed sound effect. It runs speech recognition on the 23 sound
   effects to confirm that none contains speech.
+- `tools/naval-sfx.py` regenerates the four naval sounds in memory and exits non-zero if a shipped
+  file differs by a single byte.
 
 ## Reproduce
 
@@ -113,6 +197,18 @@ python scripts/generate-rtsai-mod-audio.py --mod ../RTSAI-Mod --eva-only --eva-c
 
 Partial runs merge their records into `PROVENANCE.json`. Set `RTSAI_MOSS_PYTHON` to the Persian
 worker's interpreter.
+
+From this repository, in the same Python environment:
+
+```
+python tools/voice-review.py transcribe --openra-ai ../OpenRA-AI       # refresh docs/voice-review.csv
+python tools/voice-review.py regenerate --openra-ai ../OpenRA-AI --mod <scratch copy> --seeds 24 shadow-action-fa.wav
+python tools/naval-sfx.py                                               # check the naval sounds (stdlib only)
+```
+
+The 5 October review ran in a Python 3.12 environment with torch 2.11 (CUDA 12.8), `kokoro` 0.9.4,
+`chatterbox-tts` 0.1.7, transformers 5.2.0 and `faster-whisper` 1.2.1. The Persian worker used
+transformers 4.57.6.
 
 ## Rejected options
 
@@ -137,10 +233,45 @@ worker's interpreter.
 - **Persian fine-tune.** It is published by an individual (`nimaaaAI`), not by OpenMOSS. Its weights
   are loaded with `torch.load(weights_only=True)` and its code is not run; the model code comes from
   the pinned OpenMOSS revision.
+- **Native-speaker sign-off.** Still open, and a release gate: a native speaker of Persian, Arabic
+  (ideally Saudi and Yemeni), Turkish and Mandarin should fill the `native_speaker` column of
+  [`voice-review.csv`](voice-review.csv). The first pass found likely accent problems in the Persian
+  lines that only a listener can judge.
+- **Israel and Hezbollah voices.** Both use stock English RA2 voices and announcers. Whether they
+  should get their own lines (Hebrew; Lebanese Arabic) is a product decision.
+- **OpenRA-AI wording.** `generate-rtsai-mod-audio.py` in OpenRA-AI still describes the naval sounds
+  by the fork path only. A full regeneration would overwrite the source text in `PROVENANCE.json`
+  until its `SFX` entry is updated to name `generate_naval_assets.py`.
 
 ## Sound effects
 
-The 23 weapon, naval and network sounds were not regenerated. Speech recognition finds no speech in
-any of them. Nineteen come from procedural generators in OpenRA-AI (`generate-china-sfx.py`,
-`generate-red-sea-sfx.py`). The four `naval-*` files came from the fork commit 1d76c546f1 with no
-generator or provenance record. Their origin should be confirmed before release.
+The 23 weapon, naval and network sounds are procedural. None was regenerated, and speech recognition
+finds no speech in any of them. Nineteen come from procedural generators in OpenRA-AI
+(`generate-china-sfx.py`, `generate-red-sea-sfx.py`).
+
+### Naval sounds
+
+The four `naval-*` files are procedural too. Their generator had been overlooked: it was added in the
+same fork commit as the files.
+
+- **Origin.** The `alibad/OpenRA` commit `1d76c546f1` ("Add Saudi and Yemen naval systems",
+  12 August 2026, Ali Badereddin) added `mods/ra/bits/naval/*.wav` together with the script that
+  wrote them, `packaging/naval/generate_naval_assets.py`. The copy in the OpenRA-AI checkout is
+  `engine/openra/packaging/naval/`.
+- **How they are made.** Its `synth()` computes each sound from sine waves and white noise. The
+  noise comes from Python's `random.Random`, seeded with the sound's name. Output is 22.05 kHz mono
+  16-bit, peak-normalized to 0.70. No recording, sample library or EA/RA2 audio is involved.
+- **License.** The code is the project's own, under the fork's GPL-3.0. Its output carries no
+  third-party rights.
+- **Proof.** Re-running that commit's script reproduces all four files byte for byte.
+  `tools/naval-sfx.py` carries the four formulas and checks the shipped files from this repository
+  (identical under Python 3.11 and 3.12).
+
+The files, their names and their loudness are unchanged, so no rules changed.
+
+| Shipped file | Fork name | Length | SHA-256 |
+|---|---|---|---|
+| `naval-ciws-burst.wav` | `ciws-burst` | 0.34 s | `a1765138adeb92ab05e45981309ace6675e8ecab244f2ccbcaf3c6444dcfccf2` |
+| `naval-missile-launch.wav` | `missile-launch` | 0.72 s | `9d926359fc598027274bc99ebeeeb7d97f927e0c245379d318aa4f6e4e67936a` |
+| `naval-naval-alarm.wav` | `naval-alarm` | 1.05 s | `4e93158c02fc87c9e99545e9028950f7f81cb165354e309109c1d235d27d9f68` |
+| `naval-radar-sweep.wav` | `radar-sweep` | 0.82 s | `275b2381ce7ab5aadba5adf9476bd2f1eb0d2b95fd377009cc6043e9c9ab217b` |

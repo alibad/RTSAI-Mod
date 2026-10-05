@@ -1,6 +1,6 @@
 {
  "schema": "rtsai-audio-provenance/1",
- "updated": "2026-10-02",
+ "updated": "2026-10-05",
  "policy": "Every shipped voice and announcer line is generated locally by an engine whose code, weights and voice allow redistribution of the output in a GPL game, commercial use included. No real person's voice is cloned: non-English speakers are cloned from English clips spoken by Kokoro voicepacks.",
  "reproduce": "OpenRA-AI: python scripts/generate-rtsai-mod-audio.py --mod <RTSAI-Mod>",
  "engines": {
@@ -154,6 +154,20 @@
  "qa": {
   "asr": "faster-whisper 1.2.1, Systran/faster-whisper-large-v3@edaa852ec7e145841d8ffdb056a99866b5f0a478 (int8_float16, word timestamps)",
   "metric": "character error rate against the script after punctuation/diacritic normalization"
+ },
+ "voice_review": {
+  "date": "2026-10-05",
+  "status": "machine-assisted first pass only; native-speaker sign-off is still required (owner gate)",
+  "sheet": "docs/voice-review.csv",
+  "method": "every non-English line re-transcribed from the shipped file with the pinned Whisper large-v3 (forced language, automatic language ID, translation), compared with the generation-time transcript, the script and its English line, and judged for wording; a line was regenerated when both transcriptions heard a different content word",
+  "lines_checked": 74,
+  "regenerated": [
+   "iran-drone-select-fa.wav",
+   "iran-naval-attack-fa.wav",
+   "iran-naval-select-fa.wav",
+   "shadow-action-fa.wav"
+  ],
+  "tool": "RTSAI-Mod tools/voice-review.py (transcribe, regenerate)"
  },
  "rejected": [
   {
@@ -839,13 +853,13 @@
    "model_revision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
    "license": "Apache-2.0",
    "tempo": 1.0,
-   "seed": 1,
-   "takes": 8,
+   "seed": 5,
+   "takes": 6,
    "qa": {
-    "asr_transcript": "پیاند داده برقرار است.",
-    "cer": 0.056
+    "asr_transcript": "پیوند داده برقرار است.",
+    "cer": 0.0
    },
-   "generated_at": "2026-10-02",
+   "generated_at": "2026-10-05",
    "generator_version": "rtsai-voices-1",
    "base_model": "OpenMOSS-Team/MOSS-TTS-Nano@44502f80dbf9743528fa921cc544d662c685ebec",
    "codec": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano@6aa02b01e445cc585582cf0ba480bc3ea6c8dd68",
@@ -853,10 +867,16 @@
    "sample_rate": 44100,
    "channels": 1,
    "sample_width_bits": 16,
-   "duration_seconds": 2.34,
+   "duration_seconds": 1.98,
    "synthetic_voice_disclosed": true,
    "real_person_imitation": false,
-   "generator": "OpenRA-AI scripts/generate-iran-voices.py"
+   "generator": "OpenRA-AI scripts/generate-iran-voices.py",
+   "review": {
+    "regenerated": "first-pass voice review (docs/voice-review.csv)",
+    "seed_range": "1-24",
+    "replaced_seed": 1,
+    "replaced_asr_transcript": "پیاند داده برقرار است."
+   }
   },
   {
    "filename": "iran-inf-action-en.wav",
@@ -1325,13 +1345,13 @@
    "model_revision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
    "license": "Apache-2.0",
    "tempo": 1.0,
-   "seed": 2,
-   "takes": 6,
+   "seed": 5,
+   "takes": 21,
    "qa": {
-    "asr_transcript": "ردیابی تسبیح شد.",
-    "cer": 0.154
+    "asr_transcript": "ردیابی تسبیت شد.",
+    "cer": 0.077
    },
-   "generated_at": "2026-10-02",
+   "generated_at": "2026-10-05",
    "generator_version": "rtsai-voices-1",
    "base_model": "OpenMOSS-Team/MOSS-TTS-Nano@44502f80dbf9743528fa921cc544d662c685ebec",
    "codec": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano@6aa02b01e445cc585582cf0ba480bc3ea6c8dd68",
@@ -1339,10 +1359,16 @@
    "sample_rate": 44100,
    "channels": 1,
    "sample_width_bits": 16,
-   "duration_seconds": 1.81,
+   "duration_seconds": 1.46,
    "synthetic_voice_disclosed": true,
    "real_person_imitation": false,
-   "generator": "OpenRA-AI scripts/generate-iran-voices.py"
+   "generator": "OpenRA-AI scripts/generate-iran-voices.py",
+   "review": {
+    "regenerated": "first-pass voice review (docs/voice-review.csv)",
+    "seed_range": "1-24",
+    "replaced_seed": 2,
+    "replaced_asr_transcript": "ردیابی تسبیح شد."
+   }
   },
   {
    "filename": "iran-naval-move-en.wav",
@@ -1491,13 +1517,13 @@
    "model_revision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
    "license": "Apache-2.0",
    "tempo": 1.0,
-   "seed": 8,
-   "takes": 6,
+   "seed": 12,
+   "takes": 10,
    "qa": {
-    "asr_transcript": "خدم دریایی آماده است.",
-    "cer": 0.056
+    "asr_transcript": "خدمه در یایی آماده است.",
+    "cer": 0.0
    },
-   "generated_at": "2026-10-02",
+   "generated_at": "2026-10-05",
    "generator_version": "rtsai-voices-1",
    "base_model": "OpenMOSS-Team/MOSS-TTS-Nano@44502f80dbf9743528fa921cc544d662c685ebec",
    "codec": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano@6aa02b01e445cc585582cf0ba480bc3ea6c8dd68",
@@ -1505,10 +1531,16 @@
    "sample_rate": 44100,
    "channels": 1,
    "sample_width_bits": 16,
-   "duration_seconds": 1.83,
+   "duration_seconds": 1.88,
    "synthetic_voice_disclosed": true,
    "real_person_imitation": false,
-   "generator": "OpenRA-AI scripts/generate-iran-voices.py"
+   "generator": "OpenRA-AI scripts/generate-iran-voices.py",
+   "review": {
+    "regenerated": "first-pass voice review (docs/voice-review.csv)",
+    "seed_range": "1-24",
+    "replaced_seed": 8,
+    "replaced_asr_transcript": "خدم دریایی آماده است."
+   }
   },
   {
    "filename": "iran-veh-action-en.wav",
@@ -5025,13 +5057,13 @@
    "model_revision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
    "license": "Apache-2.0",
    "tempo": 1.0,
-   "seed": 3,
-   "takes": 6,
+   "seed": 1,
+   "takes": 10,
    "qa": {
-    "asr_transcript": "نقطه برود مشخص شد.",
-    "cer": 0.071
+    "asr_transcript": "نقطه ورود مشخص شد.",
+    "cer": 0.0
    },
-   "generated_at": "2026-10-02",
+   "generated_at": "2026-10-05",
    "generator_version": "rtsai-voices-1",
    "base_model": "OpenMOSS-Team/MOSS-TTS-Nano@44502f80dbf9743528fa921cc544d662c685ebec",
    "codec": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano@6aa02b01e445cc585582cf0ba480bc3ea6c8dd68",
@@ -5039,10 +5071,16 @@
    "sample_rate": 44100,
    "channels": 1,
    "sample_width_bits": 16,
-   "duration_seconds": 2.23,
+   "duration_seconds": 1.86,
    "synthetic_voice_disclosed": true,
    "real_person_imitation": false,
-   "generator": "OpenRA-AI scripts/generate-iran-voices.py"
+   "generator": "OpenRA-AI scripts/generate-iran-voices.py",
+   "review": {
+    "regenerated": "first-pass voice review (docs/voice-review.csv)",
+    "seed_range": "1-24",
+    "replaced_seed": 3,
+    "replaced_asr_transcript": "نقطه برود مشخص شد."
+   }
   },
   {
    "filename": "shadow-attack-en.wav",
@@ -26262,23 +26300,31 @@
   },
   {
    "filename": "naval-ciws-burst.wav",
-   "source": "alibad/OpenRA fork mods/ra/bits/naval (1d76c546f1, 'Add Saudi and Yemen naval systems')",
-   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)"
+   "source": "procedural: alibad/OpenRA packaging/naval/generate_naval_assets.py, synth(\"ciws-burst\"), added with its output in 1d76c546f1 ('Add Saudi and Yemen naval systems'); sine/noise formulas and Python's random.Random seeded with the name, no recordings",
+   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)",
+   "sha256": "a1765138adeb92ab05e45981309ace6675e8ecab244f2ccbcaf3c6444dcfccf2",
+   "reproduce": "RTSAI-Mod: python tools/naval-sfx.py (byte-identical)"
   },
   {
    "filename": "naval-missile-launch.wav",
-   "source": "alibad/OpenRA fork mods/ra/bits/naval (1d76c546f1, 'Add Saudi and Yemen naval systems')",
-   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)"
+   "source": "procedural: alibad/OpenRA packaging/naval/generate_naval_assets.py, synth(\"missile-launch\"), added with its output in 1d76c546f1 ('Add Saudi and Yemen naval systems'); sine/noise formulas and Python's random.Random seeded with the name, no recordings",
+   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)",
+   "sha256": "9d926359fc598027274bc99ebeeeb7d97f927e0c245379d318aa4f6e4e67936a",
+   "reproduce": "RTSAI-Mod: python tools/naval-sfx.py (byte-identical)"
   },
   {
    "filename": "naval-naval-alarm.wav",
-   "source": "alibad/OpenRA fork mods/ra/bits/naval (1d76c546f1, 'Add Saudi and Yemen naval systems')",
-   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)"
+   "source": "procedural: alibad/OpenRA packaging/naval/generate_naval_assets.py, synth(\"naval-alarm\"), added with its output in 1d76c546f1 ('Add Saudi and Yemen naval systems'); sine/noise formulas and Python's random.Random seeded with the name, no recordings",
+   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)",
+   "sha256": "4e93158c02fc87c9e99545e9028950f7f81cb165354e309109c1d235d27d9f68",
+   "reproduce": "RTSAI-Mod: python tools/naval-sfx.py (byte-identical)"
   },
   {
    "filename": "naval-radar-sweep.wav",
-   "source": "alibad/OpenRA fork mods/ra/bits/naval (1d76c546f1, 'Add Saudi and Yemen naval systems')",
-   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)"
+   "source": "procedural: alibad/OpenRA packaging/naval/generate_naval_assets.py, synth(\"radar-sweep\"), added with its output in 1d76c546f1 ('Add Saudi and Yemen naval systems'); sine/noise formulas and Python's random.Random seeded with the name, no recordings",
+   "speech_check": "no speech detected (Whisper large-v3 with voice-activity filter)",
+   "sha256": "275b2381ce7ab5aadba5adf9476bd2f1eb0d2b95fd377009cc6043e9c9ab217b",
+   "reproduce": "RTSAI-Mod: python tools/naval-sfx.py (byte-identical)"
   },
   {
    "filename": "redsea-ah64-cannon.wav",
