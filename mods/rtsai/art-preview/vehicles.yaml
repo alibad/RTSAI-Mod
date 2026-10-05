@@ -841,3 +841,200 @@ r2hzsurvey:
 		BaseName: r2glbhezbollahplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-hezbollah end
+
+# glb-route:palette-turkey begin
+^Palettes:
+	PaletteFromFile@r2glbturkey:
+		Name: r2glbturkey
+		Filename: ra2|art-preview/voxels/turkey-glb.pal
+	PlayerColorPalette@r2glbturkey:
+		BasePalette: r2glbturkey
+		BaseName: r2glbturkeyplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-turkey end
+
+# glb-route:r2aras begin
+r2aras:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 93,0,0
+	Armament:
+		LocalOffset: 395,10,493
+# glb-route:r2aras end
+
+# glb-route:r2bozkir begin
+r2bozkir:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -112,0,0
+	Armament:
+		LocalOffset: 841,4,394
+		Recoil: 85
+		RecoilRecovery: 25
+	WithVoxelBarrel:
+# glb-route:r2bozkir end
+
+# glb-route:r2gokkalkan begin
+r2gokkalkan:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -101,0,0
+	Armament:
+		LocalOffset: 404,-55,524, 404,55,524
+# glb-route:r2gokkalkan end
+
+# glb-route:r2yildirim begin
+r2yildirim:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -152,0,0
+	Armament:
+		LocalOffset: 914,-3,743
+		Recoil: 100
+		RecoilRecovery: 20
+	WithVoxelBarrel:
+# glb-route:r2yildirim end
+
+# glb-route:r2deniz begin
+r2deniz:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 194,0,0
+	Armament:
+		LocalOffset: 260,0,520
+# glb-route:r2deniz end
+
+# glb-route:r2sancak begin
+r2sancak:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -190,0,0
+	Armament:
+		LocalOffset: 90,0,440
+# glb-route:r2sancak end
+
+# glb-route:r2sahin begin
+r2sahin:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2sahinhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2sahin end
+
+# glb-route:r2kuzgun begin
+r2kuzgun:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2kuzgunhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2kuzgun end
+
+# glb-route:r2turna begin
+r2turna:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2turnahusk:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2turna end
+
+# glb-route:r2poyraz begin
+r2poyraz:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 321,0,0
+	Armament:
+		LocalOffset: 500,-3,296
+		Recoil: 48
+		RecoilRecovery: 16
+	WithVoxelBarrel:
+# glb-route:r2poyraz end
+
+# glb-route:r2ege begin
+r2ege:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 519,0,0
+	Armament:
+		LocalOffset: 504,5,358
+		Recoil: 64
+		RecoilRecovery: 12
+	Armament@ASW:
+		LocalOffset: -800,-125,238, -800,125,238
+		Turret: none
+	WithVoxelBarrel:
+# glb-route:r2ege end
+
+# glb-route:r2marmara begin
+r2marmara:
+	RenderVoxels:
+		PlayerPalette: r2glbturkeyplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 678,0,0
+	Armament:
+		LocalOffset: 327,8,328
+		Recoil: 64
+		RecoilRecovery: 12
+	Armament@AA:
+		LocalOffset: -324,-7,467, 13,5,471
+		Turret: none
+	WithVoxelBarrel:
+# glb-route:r2marmara end
