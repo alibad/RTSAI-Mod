@@ -338,11 +338,11 @@ r2peykaap:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
-		Offset: 284,0,0
+		Offset: 295,0,0
 	Armament:
-		LocalOffset: 423,3,259
+		LocalOffset: 483,3,276
 	Armament@AA:
-		LocalOffset: 423,3,259
+		LocalOffset: 483,3,276
 # glb-route:r2peykaap end
 
 # glb-route:r2ghadir begin
