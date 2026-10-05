@@ -1035,12 +1035,12 @@ r2marmara:
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
 		Offset: 671,0,0
-	Armament:
-		LocalOffset: 1009,0,398
-		Recoil: 64
-		RecoilRecovery: 12
 	Armament@AA:
 		LocalOffset: -334,-5,479, 19,-5,467
 		Turret: none
+	Armament:
+		LocalOffset: 435,0,432
+		Recoil: 64
+		RecoilRecovery: 12
 	WithVoxelBarrel:
 # glb-route:r2marmara end
