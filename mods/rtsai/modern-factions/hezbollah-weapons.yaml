@@ -14,17 +14,11 @@ R2HZYemenRPG:
 	MinRange: 0c768
 	ReloadDelay: 90
 	Report: ra2|modern-factions/audio/redsea-rpg-launch.wav
-	# Launched at ground level. The engine's missile terrain lookahead counts 512 per height level, but
-	# RA2 terrain rises 724 per level, so on ground of height level H the missile thinks it is already
-	# 212*H above the ground. When that exceeds CruiseAltitude it turns down at once and hits the ground
-	# on its first tick. With 256 that happened on every level-2+ cell, which is most RA2 maps. 2816
-	# stays above the error on every shipped map (highest level 12). The 32-64 launch angle clears a
-	# ramp next to the shooter. Damage, range and reload are unchanged.
 	Projectile: Missile
 		Speed: 300
-		MinimumLaunchAngle: 32
-		MaximumLaunchAngle: 64
-		CruiseAltitude: 2816
+		MinimumLaunchAngle: 0
+		MaximumLaunchAngle: 16
+		CruiseAltitude: 256
 		RangeLimit: 7c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 80
