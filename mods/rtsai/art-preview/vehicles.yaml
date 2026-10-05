@@ -665,9 +665,9 @@ r2ilgunship:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament@primary:
-		LocalOffset: 929,-3,70
+		LocalOffset: 963,-4,74
 	Armament@rockets:
-		LocalOffset: 268,-368,167, 268,368,167
+		LocalOffset: 258,-392,183, 258,392,183
 
 r2ilgunshiphusk:
 	RenderVoxels:
@@ -736,9 +736,9 @@ r2hzrecoilless:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
-		Offset: -142,0,0
+		Offset: -106,0,0
 	Armament:
-		LocalOffset: 389,-2,574
+		LocalOffset: 392,-2,574
 # glb-route:r2hzrecoilless end
 
 # glb-route:r2hzescort begin
