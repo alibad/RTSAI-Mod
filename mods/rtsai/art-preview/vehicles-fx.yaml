@@ -413,7 +413,7 @@ r2lynx:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -157,0,659
@@ -565,7 +565,7 @@ r2ilpatrol:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -255,0,650
@@ -682,7 +682,7 @@ r2sadiq:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -283,0,613
@@ -765,7 +765,7 @@ r2hzrecoilless:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -181,0,471
@@ -815,7 +815,7 @@ r2ytechrr:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,448
@@ -840,7 +840,7 @@ r2hztechnical:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,471
@@ -892,7 +892,7 @@ r2yzu:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,659
@@ -919,7 +919,7 @@ r2technical:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -157,0,612
@@ -966,7 +966,7 @@ r2hzescort:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -169,0,471
@@ -1174,7 +1174,7 @@ r2sahaab:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -224,0,494
@@ -1199,7 +1199,7 @@ r2mokha:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -224,0,444
@@ -1387,7 +1387,7 @@ r2peykaap:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -263,0,609
@@ -1469,7 +1469,7 @@ r2sancak:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,612
@@ -1521,7 +1521,7 @@ r2hzmissileboat:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -275,0,603
@@ -1549,7 +1549,7 @@ r2hzsurvey:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -263,0,795
@@ -1577,7 +1577,7 @@ r2hzskiff:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -204,0,339
@@ -1627,7 +1627,7 @@ r2hodeidah:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -236,0,541
@@ -1683,7 +1683,7 @@ r2poyraz:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: r2fxsmoke
+		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
 		Offset: -251,0,690

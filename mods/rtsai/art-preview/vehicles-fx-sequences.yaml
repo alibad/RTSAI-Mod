@@ -215,7 +215,12 @@ r2marmara:
 # glb-fx:images begin
 r2fxsmoke:
 	idle:
-		Filename: smokey2.shp
+		Filename: lgrysmk1.shp
+		Length: *
+		ZOffset: 1024
+r2fxsmoke-small:
+	idle:
+		Filename: sgrysmk1.shp
 		Length: *
 		ZOffset: 1024
 r2fxfire-small:
