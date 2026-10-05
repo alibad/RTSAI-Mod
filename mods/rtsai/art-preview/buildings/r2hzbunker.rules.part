@@ -3,7 +3,8 @@ r2hzbunker:
 		PlayerPalette: r2bldhzbunkerplayer
 	-WithSpriteTurret:
 	Armament:
-		LocalOffset: 0,0,477
+		Turret: slit
+		LocalOffset: -467,-467,477
 	WithAttackAnimation:
 		Sequence: fire
 		DelayRelativeTo: Attack

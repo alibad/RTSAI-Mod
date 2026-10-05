@@ -3,7 +3,8 @@ r2irbunker:
 		PlayerPalette: r2bldirbunkerplayer
 	-WithSpriteTurret:
 	Armament:
-		LocalOffset: 0,0,421
+		Turret: slit
+		LocalOffset: -460,-387,421
 	WithAttackAnimation:
 		Sequence: fire
 		DelayRelativeTo: Attack

@@ -2,6 +2,8 @@ r2ilworkshop:
 	RenderSprites:
 		PlayerPalette: r2bldilworkshopplayer
 	-WithIdleOverlay@dish:
+	IsometricSelectable:
+		Height: 50
 ^Palettes:
 	PaletteFromFile@r2bldilworkshop:
 		Name: r2bldilworkshop

@@ -5,6 +5,8 @@ r2ilrelay:
 		Sequence: active
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower
+	IsometricSelectable:
+		Height: 64
 ^Palettes:
 	PaletteFromFile@r2bldilrelay:
 		Name: r2bldilrelay

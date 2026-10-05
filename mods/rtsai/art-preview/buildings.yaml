@@ -46,7 +46,8 @@ r2hzbunker:
 		PlayerPalette: r2bldhzbunkerplayer
 	-WithSpriteTurret:
 	Armament:
-		LocalOffset: 0,0,477
+		Turret: slit
+		LocalOffset: -467,-467,477
 	WithAttackAnimation:
 		Sequence: fire
 		DelayRelativeTo: Attack
@@ -70,6 +71,8 @@ r2hzrelay:
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower
 		Offset: 193,-24,0
+	IsometricSelectable:
+		Height: 70
 
 r2hzworkshop:
 	RenderSprites:
@@ -103,6 +106,8 @@ r2ilrelay:
 		Sequence: active
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower
+	IsometricSelectable:
+		Height: 64
 
 r2ilsentry:
 	RenderSprites:
@@ -118,6 +123,8 @@ r2ilworkshop:
 	RenderSprites:
 		PlayerPalette: r2bldilworkshopplayer
 	-WithIdleOverlay@dish:
+	IsometricSelectable:
+		Height: 50
 
 r2iraasite:
 	RenderSprites:
@@ -134,7 +141,8 @@ r2irbunker:
 		PlayerPalette: r2bldirbunkerplayer
 	-WithSpriteTurret:
 	Armament:
-		LocalOffset: 0,0,421
+		Turret: slit
+		LocalOffset: -460,-387,421
 	WithAttackAnimation:
 		Sequence: fire
 		DelayRelativeTo: Attack
@@ -211,7 +219,8 @@ r2ybunker:
 		PlayerPalette: r2bldybunkerplayer
 	-WithSpriteTurret:
 	Armament:
-		LocalOffset: 0,0,461
+		Turret: slit
+		LocalOffset: -399,-399,461
 	WithAttackAnimation:
 		Sequence: fire
 		DelayRelativeTo: Attack

@@ -6,6 +6,8 @@ r2hzrelay:
 		RequiresCondition: !build-incomplete
 		PauseOnCondition: lowpower
 		Offset: 193,-24,0
+	IsometricSelectable:
+		Height: 70
 ^Palettes:
 	PaletteFromFile@r2bldhzrelay:
 		Name: r2bldhzrelay
