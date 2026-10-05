@@ -247,7 +247,7 @@ r2fajr:
 	Turreted:
 		Offset: -357,0,0
 	Armament:
-		LocalOffset: 448,1,610
+		LocalOffset: 437,1,608
 # glb-route:r2fajr end
 
 # glb-route:r2coast begin
