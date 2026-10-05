@@ -162,6 +162,7 @@ Sequences:
 	ra2|art-preview/vehicles-fx-sequences.yaml
 	ra2|art-preview/infantry-sequences.yaml
 	ra2|art-preview/buildings-sequences.yaml
+	ra2|art-preview/icons-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
