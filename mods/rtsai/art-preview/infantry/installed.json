@@ -17,7 +17,7 @@
   "candidate": "units/r2cnportable/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "4b093ff00ef4f7332933338ff1dc0687cd65519260a86f6b74358febb29c2a78",
-  "installedAt": "2026-10-05T05:52:00.729557+00:00",
+  "installedAt": "2026-10-05T07:46:49.898369+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2redspear": {
@@ -52,7 +52,7 @@
   "candidate": "units/r2toophan/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "b943a790dd974ca1694ca1c029f08a2a5bd289415290c19bcaa565223cbee055",
-  "installedAt": "2026-10-05T05:52:00.752604+00:00",
+  "installedAt": "2026-10-05T07:46:49.878073+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2greywolf": {
@@ -66,7 +66,7 @@
   "candidate": "units/r2trat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "fd41dd100631b56c5ce2840bb88886d0d0a4c77bcee264f5c4ecf41183369806",
-  "installedAt": "2026-10-05T06:29:07.581609+00:00",
+  "installedAt": "2026-10-05T07:46:49.870056+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2trdroneop": {
@@ -94,7 +94,7 @@
   "candidate": "units/r2saat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "6c824568574d95c38d5c417188876ed630cb36e67a0946298393649a09878863",
-  "installedAt": "2026-10-05T07:20:52.147410+00:00",
+  "installedAt": "2026-10-05T07:46:49.889863+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2sajtac": {
@@ -129,7 +129,7 @@
   "candidate": "units/r2yrpg/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "20716b90db38ca3f00c56b3de8e61daa4f034194f648ac6e99c32e9de7a71905",
-  "installedAt": "2026-10-05T05:52:00.834390+00:00",
+  "installedAt": "2026-10-05T07:46:49.848600+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2yspot": {
@@ -143,7 +143,7 @@
   "candidate": "units/r2ilat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "d8fb7b6d555b83c7e0f1ab7248f4481ccc5e41d6e78ce341ab38e4d13dd1d8fc",
-  "installedAt": "2026-10-05T05:52:00.865979+00:00",
+  "installedAt": "2026-10-05T07:46:49.864048+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2ilobserver": {
@@ -192,7 +192,7 @@
   "candidate": "units/r2hzat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
   "sha256": "7a746dbd9f368a1f5e984ccb4b02fa9a96032a9ad249bf38bb39441537bc9ca2",
-  "installedAt": "2026-10-05T07:05:51.798794+00:00",
+  "installedAt": "2026-10-05T07:46:49.855821+00:00",
   "reviewStatus": "unreviewed"
  }
 }
