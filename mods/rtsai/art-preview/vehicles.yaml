@@ -938,9 +938,9 @@ r2sancak:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
-		Offset: -190,0,0
+		Offset: -146,0,0
 	Armament:
-		LocalOffset: 90,0,440
+		LocalOffset: 377,-7,453
 # glb-route:r2sancak end
 
 # glb-route:r2sahin begin
@@ -1034,13 +1034,13 @@ r2marmara:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
-		Offset: 678,0,0
+		Offset: 671,0,0
 	Armament:
-		LocalOffset: 327,8,328
+		LocalOffset: 1009,0,398
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@AA:
-		LocalOffset: -324,-7,467, 13,5,471
+		LocalOffset: -334,-5,479, 19,-5,467
 		Turret: none
 	WithVoxelBarrel:
 # glb-route:r2marmara end
