@@ -580,3 +580,264 @@ r2mokha:
 		BaseName: r2glbyemenplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-yemen end
+
+# glb-route:r2merkava begin
+r2merkava:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -124,0,0
+	Armament:
+		LocalOffset: 854,1,409
+		Recoil: 85
+		RecoilRecovery: 17
+	WithVoxelBarrel:
+# glb-route:r2merkava end
+
+# glb-route:r2namer begin
+r2namer:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 238,0,0
+	Armament:
+		LocalOffset: 303,49,482
+# glb-route:r2namer end
+
+# glb-route:r2ilshield begin
+r2ilshield:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -14,0,0
+	Armament:
+		LocalOffset: 106,-335,514, 106,335,514
+# glb-route:r2ilshield end
+
+# glb-route:r2ilhowitzer begin
+r2ilhowitzer:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: 651,4,737
+# glb-route:r2ilhowitzer end
+
+# glb-route:r2ilfalcon begin
+r2ilfalcon:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2ilfalconhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2ilstrike:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2ilfalcon end
+
+# glb-route:r2ilgunship begin
+r2ilgunship:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament@primary:
+		LocalOffset: 929,-3,70
+	Armament@rockets:
+		LocalOffset: 268,-368,167, 268,368,167
+
+r2ilgunshiphusk:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2ilgunship end
+
+# glb-route:r2ilpatrol begin
+r2ilpatrol:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 230,0,0
+	Armament:
+		LocalOffset: 449,11,285
+# glb-route:r2ilpatrol end
+
+# glb-route:r2ilfrigate begin
+r2ilfrigate:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 508,0,0
+	Armament@primary:
+		LocalOffset: 509,-2,394
+		Recoil: 64
+		RecoilRecovery: 12
+	WithVoxelBarrel:
+# glb-route:r2ilfrigate end
+
+# glb-route:r2iltender begin
+r2iltender:
+	RenderVoxels:
+		PlayerPalette: r2glbisraelplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2iltender end
+
+# glb-route:r2hztechnical begin
+r2hztechnical:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -176,0,0
+	Armament:
+		LocalOffset: 147,-5,588
+# glb-route:r2hztechnical end
+
+# glb-route:r2hzrecoilless begin
+r2hzrecoilless:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -142,0,0
+	Armament:
+		LocalOffset: 389,-2,574
+# glb-route:r2hzrecoilless end
+
+# glb-route:r2hzescort begin
+r2hzescort:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -348,0,0
+	Armament:
+		LocalOffset: 310,-84,667, 310,83,667
+# glb-route:r2hzescort end
+
+# glb-route:r2hzrockets begin
+r2hzrockets:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: 32,-6,568
+	-WithVoxelBody@loaded:
+	-WithVoxelBody@empty:
+	WithVoxelBody@chassis:
+	WithVoxelBody@pod:
+		Sequence: pod
+		RequiresCondition: !reloading
+# glb-route:r2hzrockets end
+
+# glb-route:r2hzdrone begin
+r2hzdrone:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2hzdronehusk:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2hzdrone end
+
+# glb-route:r2hzskiff begin
+r2hzskiff:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2hzskiff end
+
+# glb-route:r2hzmissileboat begin
+r2hzmissileboat:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: 247,-233,520, 247,233,520
+# glb-route:r2hzmissileboat end
+
+# glb-route:r2hzsurvey begin
+r2hzsurvey:
+	RenderVoxels:
+		PlayerPalette: r2glbhezbollahplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 365,0,0
+	Armament:
+		LocalOffset: 281,3,330
+# glb-route:r2hzsurvey end
+
+# glb-route:palette-israel begin
+^Palettes:
+	PaletteFromFile@r2glbisrael:
+		Name: r2glbisrael
+		Filename: ra2|art-preview/voxels/israel-glb.pal
+	PlayerColorPalette@r2glbisrael:
+		BasePalette: r2glbisrael
+		BaseName: r2glbisraelplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-israel end
+
+# glb-route:palette-hezbollah begin
+^Palettes:
+	PaletteFromFile@r2glbhezbollah:
+		Name: r2glbhezbollah
+		Filename: ra2|art-preview/voxels/hezbollah-glb.pal
+	PlayerColorPalette@r2glbhezbollah:
+		BasePalette: r2glbhezbollah
+		BaseName: r2glbhezbollahplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-hezbollah end
