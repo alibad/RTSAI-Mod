@@ -1,7 +1,7 @@
-r2skyshield:
+r2ycoastal:
 	Defaults:
-		Filename: ra2|art-preview/buildings/r2skyshield.shp
-		Offset: 4, -18, 18
+		Filename: ra2|art-preview/buildings/r2ycoastal.shp
+		Offset: 4, -20, 20
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -48,5 +48,5 @@ r2skyshield:
 		Tick: 50
 		ZOffset: 0
 	icon:
-		Filename: ra2|modern-factions/icons/r2skyshield.png
+		Filename: ra2|modern-factions/icons/r2ycoastal.png
 		Offset: 0, 0

@@ -1,7 +1,7 @@
-r2skyshield:
+r2yzunest:
 	Defaults:
-		Filename: ra2|art-preview/buildings/r2skyshield.shp
-		Offset: 4, -18, 18
+		Filename: ra2|art-preview/buildings/r2yzunest.shp
+		Offset: 4, -20, 20
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -25,28 +25,28 @@ r2skyshield:
 		ShadowStart: 102
 	fire:
 		Start: 134
-		Length: 2
+		Length: 4
 		Facings: 32
-		ShadowStart: 326
-		Tick: 60
+		ShadowStart: 518
+		Tick: 40
 	damaged-fire:
-		Start: 198
-		Length: 2
-		Facings: 32
-		ShadowStart: 326
-		Tick: 60
-	critical-fire:
 		Start: 262
-		Length: 2
+		Length: 4
 		Facings: 32
-		ShadowStart: 326
-		Tick: 60
-	make:
+		ShadowStart: 518
+		Tick: 40
+	critical-fire:
 		Start: 390
+		Length: 4
+		Facings: 32
+		ShadowStart: 518
+		Tick: 40
+	make:
+		Start: 646
 		Length: 12
-		ShadowStart: 402
+		ShadowStart: 658
 		Tick: 50
 		ZOffset: 0
 	icon:
-		Filename: ra2|modern-factions/icons/r2skyshield.png
+		Filename: ra2|modern-factions/icons/r2yzunest.png
 		Offset: 0, 0

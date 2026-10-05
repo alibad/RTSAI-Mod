@@ -1,0 +1,13 @@
+r2ilworkshop:
+	RenderSprites:
+		PlayerPalette: r2bldilworkshopplayer
+	-WithIdleOverlay@dish:
+^Palettes:
+	PaletteFromFile@r2bldilworkshop:
+		Name: r2bldilworkshop
+		Filename: ra2|art-preview/buildings/r2ilworkshop.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2bldilworkshop:
+		BasePalette: r2bldilworkshop
+		BaseName: r2bldilworkshopplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31

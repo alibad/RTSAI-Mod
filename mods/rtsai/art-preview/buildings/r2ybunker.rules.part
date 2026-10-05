@@ -1,0 +1,19 @@
+r2ybunker:
+	RenderSprites:
+		PlayerPalette: r2bldybunkerplayer
+	-WithSpriteTurret:
+	Armament:
+		LocalOffset: 0,0,461
+	WithAttackAnimation:
+		Sequence: fire
+		DelayRelativeTo: Attack
+		RequiresCondition: !build-incomplete
+^Palettes:
+	PaletteFromFile@r2bldybunker:
+		Name: r2bldybunker
+		Filename: ra2|art-preview/buildings/r2ybunker.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2bldybunker:
+		BasePalette: r2bldybunker
+		BaseName: r2bldybunkerplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31

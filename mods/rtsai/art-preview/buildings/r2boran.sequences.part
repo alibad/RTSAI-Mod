@@ -1,7 +1,7 @@
-r2skyshield:
+r2boran:
 	Defaults:
-		Filename: ra2|art-preview/buildings/r2skyshield.shp
-		Offset: 4, -18, 18
+		Filename: ra2|art-preview/buildings/r2boran.shp
+		Offset: 4, -20, 20
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -28,19 +28,19 @@ r2skyshield:
 		Length: 2
 		Facings: 32
 		ShadowStart: 326
-		Tick: 60
+		Tick: 40
 	damaged-fire:
 		Start: 198
 		Length: 2
 		Facings: 32
 		ShadowStart: 326
-		Tick: 60
+		Tick: 40
 	critical-fire:
 		Start: 262
 		Length: 2
 		Facings: 32
 		ShadowStart: 326
-		Tick: 60
+		Tick: 40
 	make:
 		Start: 390
 		Length: 12
@@ -48,5 +48,5 @@ r2skyshield:
 		Tick: 50
 		ZOffset: 0
 	icon:
-		Filename: ra2|modern-factions/icons/r2skyshield.png
+		Filename: ra2|modern-factions/icons/r2boran.png
 		Offset: 0, 0

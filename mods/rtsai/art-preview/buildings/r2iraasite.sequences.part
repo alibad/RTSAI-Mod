@@ -1,7 +1,7 @@
-r2skyshield:
+r2iraasite:
 	Defaults:
-		Filename: ra2|art-preview/buildings/r2skyshield.shp
-		Offset: 4, -18, 18
+		Filename: ra2|art-preview/buildings/r2iraasite.shp
+		Offset: 4, -20, 20
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -25,28 +25,28 @@ r2skyshield:
 		ShadowStart: 102
 	fire:
 		Start: 134
-		Length: 2
+		Length: 3
 		Facings: 32
-		ShadowStart: 326
+		ShadowStart: 422
 		Tick: 60
 	damaged-fire:
-		Start: 198
-		Length: 2
+		Start: 230
+		Length: 3
 		Facings: 32
-		ShadowStart: 326
+		ShadowStart: 422
 		Tick: 60
 	critical-fire:
-		Start: 262
-		Length: 2
+		Start: 326
+		Length: 3
 		Facings: 32
-		ShadowStart: 326
+		ShadowStart: 422
 		Tick: 60
 	make:
-		Start: 390
+		Start: 518
 		Length: 12
-		ShadowStart: 402
+		ShadowStart: 530
 		Tick: 50
 		ZOffset: 0
 	icon:
-		Filename: ra2|modern-factions/icons/r2skyshield.png
+		Filename: ra2|modern-factions/icons/r2iraasite.png
 		Offset: 0, 0

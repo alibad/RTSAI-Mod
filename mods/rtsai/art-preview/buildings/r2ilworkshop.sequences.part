@@ -1,0 +1,22 @@
+r2ilworkshop:
+	Defaults:
+		Filename: ra2|art-preview/buildings/r2ilworkshop.shp
+		Offset: 4, -20, 20
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 6
+		Length: 12
+		ShadowStart: 18
+		Tick: 50
+		ZOffset: 0
+	icon:
+		Filename: ra2|modern-factions/icons/r2ilworkshop.png
+		Offset: 0, 0

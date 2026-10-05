@@ -1,0 +1,18 @@
+r2satow:
+	RenderSprites:
+		PlayerPalette: r2bldsatowplayer
+	Armament:
+		LocalOffset: 480,132,955
+	WithTurretAttackAnimation:
+		Sequence: fire
+		DelayRelativeTo: Attack
+		RequiresCondition: !build-incomplete
+^Palettes:
+	PaletteFromFile@r2bldsatow:
+		Name: r2bldsatow
+		Filename: ra2|art-preview/buildings/r2satow.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2bldsatow:
+		BasePalette: r2bldsatow
+		BaseName: r2bldsatowplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
