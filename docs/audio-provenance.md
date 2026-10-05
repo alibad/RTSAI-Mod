@@ -15,7 +15,7 @@ service. Nothing grants redistribution of that output, so all of it has been rep
 | Language | Engine (pinned revision) | License | Evidence |
 |---|---|---|---|
 | English (unit lines and announcers) | Kokoro-82M v1.0, `hexgrad/Kokoro-82M@f3ff357`, `kokoro` 0.9.4 | Apache-2.0 (code, weights and voicepacks) | [Model card](https://huggingface.co/hexgrad/Kokoro-82M): `license: apache-2.0`; trained on permissive or non-copyrighted audio (see open points) |
-| Arabic, Turkish, Mandarin | Chatterbox Multilingual V2, `ResembleAI/chatterbox@5bb1f6e` (`t3_mtl23ls_v2`), `chatterbox-tts` 0.1.7 | MIT | [Model card](https://huggingface.co/ResembleAI/chatterbox): `license: mit`; lists ar, tr, zh |
+| Arabic (Modern Standard and Lebanese), Hebrew, Turkish, Mandarin | Chatterbox Multilingual V2, `ResembleAI/chatterbox@5bb1f6e` (`t3_mtl23ls_v2`), `chatterbox-tts` 0.1.7 | MIT | [Model card](https://huggingface.co/ResembleAI/chatterbox): `license: mit`; lists ar, he, tr, zh |
 | Persian | MOSS-TTS-Nano with the Persian fine-tune `nimaaaAI/MOSS-TTS-Nano-Persian@dcfd7f2`, on `OpenMOSS-Team/MOSS-TTS-Nano@44502f8` and `MOSS-Audio-Tokenizer-Nano@6aa02b0` | Apache-2.0 | Fine-tune [LICENSE](https://huggingface.co/nimaaaAI/MOSS-TTS-Nano-Persian/blob/main/LICENSE) (Apache-2.0, trained only on Mozilla Common Voice Persian, CC0); base and codec cards `license: apache-2.0`; [GitHub](https://github.com/OpenMOSS/MOSS-TTS-Nano) LICENSE Apache-2.0 |
 
 Chatterbox embeds Resemble's inaudible Perth watermark in its output. It is left in place.
@@ -27,11 +27,17 @@ No real person's voice is cloned. Each speaker is a Kokoro voicepack, or the ave
 - English lines are spoken by the voicepack directly.
 - For the other languages, the voicepack first speaks a fixed English reference sentence. Each
   faction's crew therefore keeps one synthetic timbre in both of its languages.
-- Arabic, Turkish and Mandarin are a two-step clone with Chatterbox:
+- Arabic, Hebrew, Turkish and Mandarin are a two-step clone with Chatterbox:
   1. From the English clip at `cfg_weight` 0 (the model card's setting against carrying an accent
      across), it speaks the same sentence in the target language.
   2. Each line is cloned from that native clip at the default `cfg_weight` 0.5. Reference and
      target then share a language, as the model card recommends.
+- Hezbollah's native clip is a Lebanese Arabic sentence (`NATIVE_REFERENCE_TEXT["ar-LB"]`), so its
+  lines are cloned from Lebanese rather than Modern Standard Arabic speech.
+- Hebrew is read with vowel points (niqqud), written by hand in `generate-levant-voices.py`.
+  Chatterbox's Hebrew front end expects pointed text; it would add the points with the optional
+  `dicta_onnx` diacritizer, which is not installed. The unpointed script is what the sheet shows and
+  what speech recognition is checked against.
 - Persian is cloned by MOSS-TTS-Nano directly from the English clip. That is how the Persian
   fine-tune is documented to be used.
 
@@ -42,16 +48,55 @@ No real person's voice is cloned. Each speaker is a Kokoro voicepack, or the ave
 | Türkiye | `am_fenrir` | `bm_lewis` | `af_heart`, clean broadcast voice |
 | Saudi Arabia | `bm_george` | `bm_fable` | `af_kore`, operations room with a short room tail |
 | Yemen | `am_fenrir` + `bm_fable` | `bm_lewis` + `am_michael` | `af_aoede`, lo-fi field radio |
+| Israel | `am_puck` + `bm_lewis` | `am_michael` + `am_adam` | `bf_emma` + `af_heart`, clipped digital command net |
+| Hezbollah | `am_fenrir` + `am_michael` | `bm_george` + `am_puck` | `bf_isabella`, VHF field radio with a short slap |
 
-Arabic is Modern Standard Arabic for both Saudi Arabia and Yemen; Chatterbox has no regional
-Arabic. The Persian fine-tune was trained on read speech, so the Persian lines are flatter than the
-others.
+Arabic is Modern Standard Arabic for Saudi Arabia and Yemen. Hezbollah's lines are written in
+Lebanese Arabic (هلق، عم، شو، منتحرك) and cloned from a Lebanese reference; Chatterbox has no
+dialect setting, so how Lebanese they sound is for the native reviewer. The Persian fine-tune was
+trained on read speech, so the Persian lines are flatter than the others.
 
-Israel and Hezbollah have no generated voice lines and no announcer of their own. Their units use
-the stock RA2 voice sets through `levant-voices.yaml` (the GI and the Allied vehicle crew), and
-`eva-notifications.yaml` gives them the stock Allied and Soviet announcers (`ceva`, `csof`). All of
-that is read from the player's own Red Alert 2 files; the mod ships no audio for either faction, so
-they speak English and there is no Hebrew or Arabic line of theirs to review.
+Israel and Hezbollah (since 5 October) have the same inventory as Iran: six voice sets of select,
+move, attack and action lines, each in the faction's language and in English (24 + 24 lines), plus
+their own announcer. `levant-voices.yaml` defines the sets (`R2Israel*Voice`, `R2Hezbollah*Voice`):
+infantry, forward observer or field spotter, the recon specialist or scout, vehicles (also used by
+their defenses, as before), aircraft or drone, and naval. `israel-audio.yaml` and
+`hezbollah-audio.yaml` assign them to the units, and `eva-notifications.yaml` points both factions
+at their announcer folders instead of the stock `ceva` and `csof`. Every line is a neutral unit
+acknowledgement or report, like the other factions': no slogans, no religious or political phrases,
+no real people or operations.
+
+### Engine check (5 October 2026)
+
+Before the Hebrew and Lebanese lines were made, every licensed engine that might speak the language
+read the faction's own 24 scripts, two seeds each, from the same synthetic speaker. Each raw take
+was transcribed by Whisper large-v3 forced to the language, and language-identified automatically.
+The columns are the mean character error rate of each line's best take, the lines with a clean take
+(error rate 0.05 or less), and the mean probability Whisper gives the target language over all
+takes.
+
+| Language | Candidate | CER | Clean lines | Language ID | Result |
+|---|---|---|---|---|---|
+| Hebrew | Chatterbox, unpointed text | 0.21 | 4/24 | 0.51 | rejected |
+| Hebrew | Chatterbox, pointed text | 0.05 | 18/24 | 0.69 | **used** |
+| Hebrew | MOSS-TTS-Nano base (Hebrew is not one of its 20 languages) | 0.46 | 0/24 | 0.02 | rejected |
+| Hebrew, Arabic | Kokoro-82M | — | — | — | no Hebrew or Arabic front end |
+| Lebanese Arabic | Chatterbox, Lebanese reference | 0.03 | 18/24 | 0.90 | **used** |
+| Lebanese Arabic | MOSS-TTS-Nano base | 0.19 | 4/24 | 0.46 | rejected |
+| Persian | MOSS fine-tune from the English clip (shipped), seeds 1–2 / 3–4 | 0.09 / 0.17 | 12 / 7 | 0.65 / 0.57 | **kept** |
+| Persian | MOSS fine-tune from a synthetic Persian clip | 0.13 | 9/24 | 0.54 | rejected |
+| Persian | MOSS-TTS-Nano base | 0.19 | 4/24 | 0.05 | rejected |
+| Persian | MOSS fine-tune, `bm_george` reference | 0.14 | 12/24 | 0.44 | rejected |
+| Persian | MOSS fine-tune, `am_fenrir` reference, seeds 1–2 / 3–4 | 0.03 / 0.16 | 17 / 9 | 0.76 / 0.71 | not clearly better |
+| Persian | MOSS fine-tune, `am_fenrir` blends (`+am_michael`, `+bm_lewis`), seeds 1–2 / 3–4 | 0.07 / 0.13 | 11 / 11 | 0.69 / 0.69 | not clearly better |
+
+Persian was tested for the accent the first review found. A reference built on `am_fenrir` raised
+Persian language ID by about 0.07–0.14 on both seed sets, but the transcripts were not consistently
+better: its CER advantage on seeds 1–2 did not repeat on seeds 3–4, and over four seeds the blends'
+mean take error was 0.16 against 0.18. So the Persian set was not switched. Chatterbox has no
+Persian, and the other Persian engines are rejected on license grounds (see below). Seed 4 fails
+for MOSS on most lines, so the seeds 3–4 rows have fewer takes. The probe script and its raw
+results are not shipped; the outcomes are also recorded under `rejected` in `PROVENANCE.json`.
 
 ## Quality check
 
@@ -66,16 +111,21 @@ The original processing chains are reapplied unchanged after synthesis: each gen
 compression and loudness filters, then its radio beep, noise floor and fades. The old edge-tts
 speaking-rate offsets become tempo factors (for example −6% becomes 0.94).
 
-### Results (2 October 2026)
+### Results
 
 | Set | Files | Engines | Exact transcript | Highest error rate |
 |---|---|---|---|---|
-| Unit voice lines | 148 | 74 Kokoro, 50 Chatterbox, 24 MOSS | 139 (142 after the review below) | 0.15 (0.14 after) |
-| Announcer clips | 555 (111 × 5) | Kokoro | 537 | 0.13 |
+| Unit voice lines, 2 October | 148 | 74 Kokoro, 50 Chatterbox, 24 MOSS | 139 | 0.15 |
+| Unit voice lines, 6 October | 244 | 122 Kokoro, 98 Chatterbox, 24 MOSS | 231 | 0.14 |
+| Announcer clips, 2 October | 555 (111 × 5) | Kokoro | 537 | 0.13 |
+| Announcer clips, 6 October | 777 (111 × 7) | Kokoro | 743 | 0.20 |
 
 The remaining mismatches are mostly recognizer homophones such as "ore miner" heard as "or minor",
-or "route" as "root". Four Persian lines were real slips; they were regenerated on 5 October (see
-[Native-speaker review](#native-speaker-review)).
+or "route" as "root", and Whisper writing Lebanese contractions in their long form (عالشاشة as
+على الشاشة). The real slips found by the review were regenerated (see
+[Native-speaker review](#native-speaker-review)). The Israel announcer is `bf_emma` blended with
+`af_heart`: `bf_emma` alone added a syllable to four clips ("Unit lost" heard as "Unit Laster"),
+and the blend reads all 111 cleanly.
 
 Compared with the edge-tts files:
 - Same format: 44.1 kHz mono 16-bit PCM.
@@ -88,7 +138,8 @@ Compared with the edge-tts files:
 ## Native-speaker review
 
 **Status: native-speaker sign-off has not happened. It is an owner gate before release.** What
-exists is a machine-assisted first pass (5 October 2026), written up line by line in
+exists is a machine-assisted first pass (5 October 2026, extended on 6 October to the new Hebrew and
+Lebanese lines and the changed call signs), written up line by line in
 [`voice-review.csv`](voice-review.csv) so a native speaker can confirm or correct each line quickly.
 
 The sheet has one row per non-English line: the script, its English line, a literal meaning of the
@@ -106,17 +157,19 @@ How the first pass was done:
 3. Each script was read against its English line for wrong words, unnatural phrasing, the wrong
    script or dialect, and a tone that fits a military RTS. The reviewer is not a native speaker of
    any of these languages, so wording points are suggestions for the native pass, not changes.
-4. A line was regenerated only when both transcriptions heard a different content word.
+4. A line was regenerated when both transcriptions heard a different content word, and when a
+   changed call sign was not heard as written.
 
 | Language | Faction | Lines checked | Regenerated | Flagged for a native check | No issue found |
 |---|---|---|---|---|---|
 | Persian (fa-IR) | Iran | 24 | 4 | 7 (plus 2 of the regenerated) | 13 |
-| Arabic (ar-SA, MSA) | Saudi Arabia | 14 | 0 | 4 | 10 |
+| Arabic (ar-SA, MSA) | Saudi Arabia | 14 | 2 (call sign) | 2 (plus 1) | 10 |
 | Arabic (ar-YE, MSA) | Yemen | 14 | 0 | 4 | 10 |
 | Turkish (tr-TR) | Türkiye | 12 | 0 | 1 | 11 |
-| Mandarin (zh-CN) | China | 10 | 0 | 1 | 9 |
-| None | Israel, Hezbollah | 0 | 0 | 0 | 0 |
-| **Total** | | **74** | **4** | **17** | **53** |
+| Mandarin (zh-CN) | China | 10 | 1 (call sign) | 0 (plus 1) | 9 |
+| Hebrew (he-IL) | Israel | 24 (new) | 0 | 5 | 19 |
+| Lebanese Arabic (ar-LB) | Hezbollah | 24 (new) | 2 | 4 (plus 1) | 18 |
+| **Total** | | **122** | **9** | **23 (plus 5)** | **90** |
 
 ### Regenerated lines
 
@@ -126,8 +179,13 @@ How the first pass was done:
 | `shadow-action-fa.wav` | نقطه ورود مشخص شد. | نقطه برود ("should go") | exact; exact |
 | `iran-drone-select-fa.wav` | پیوند داده برقرار است. | پیاند (no v) | exact; exact |
 | `iran-naval-select-fa.wav` | خدمه دریایی آماده است. | خدم ("servants") | exact; exact |
+| `hz-veh-select-ar.wav` | الطاقم جاهز. | الطاقة مجاهز ("the energy") | exact; exact |
+| `hz-spotter-move-ar.wav` | رايح عالتلة. | رايحة (feminine) | exact; رايحة |
+| `rsa-falcon-build-ar.wav` | الصقر في الميدان. | السقر (no emphatic ص) | exact; exact |
+| `rsa-falcon-select-ar.wav` | الصقر واحد جاهز. | السقر | exact; exact |
 
-The text, speaker, English reference clip, MOSS-TTS-Nano Persian fine-tune and Iran processing
+The Persian lines were regenerated on 5 October and the Arabic ones on 6 October. The text,
+speaker, English reference clip, MOSS-TTS-Nano Persian fine-tune and Iran processing
 chain are unchanged (`tools/voice-review.py regenerate`, with `RTSAI_MOSS_PYTHON` set to a
 transformers 4.57 interpreter). The one change is the seed range: 1–24 instead of 1–8, because the
 documented range had already produced the shipped take. MOSS sampling on the GPU is not
@@ -153,9 +211,19 @@ the Persian set.
    `shadow-attack-fa` (جدا شد reads as "separated"), the Saudi call sign فالكون in
    `rsa-falcon-build-ar` and `rsa-falcon-select-ar` (the English "Falcon One", or الصقر),
    `rye-naval-select-ar`, and `tr-greywolf-attack-tr` ("İşaretimle" for "on my mark").
-5. **`rcn-redspear-select-zh`**: 红矛 is an exact homophone of 红毛 (hóng máo), an old slur for
-   Westerners. Confirm that the call sign works by ear.
-6. **Dialect:** Yemen speaks Modern Standard Arabic, not Yemeni Arabic.
+5. **Call signs (changed 6 October).** Saudi فالكون is now الصقر; in `rsa-falcon-select-ar`,
+   الصقر واحد puts the article on a numbered call sign, and صقر واحد جاهز may sound more natural.
+   China's 红矛 is now 赤矛, which avoids the slur homophone 红毛. Whisper still hears 赤毛 ("red hair
+   or fur"), an exact homophone that is not a slur; confirm by ear. The English names stay
+   "Falcon One" and "Red Spear"; no Fluent string contained the Arabic or Chinese call sign.
+6. **Hebrew (new).** Language ID is weak on `il-observer-select-he`, `il-recon-move-he` and
+   `il-inf-attack-he`. One transcription heard a different word in `il-inf-attack-he` (בוטחים),
+   `il-recon-select-he` (הסייעה) and `il-veh-move-he` (נעין). The vowel points fed to the engine are
+   in `generate-levant-voices.py`.
+7. **Lebanese Arabic (new).** Does it sound Lebanese? Whisper wrote نحن for نحنا in
+   `hz-inf-select-ar`. Listen to `hz-spotter-move-ar` (رايح or رايحة?) and `hz-scout-move-ar`; and
+   `hz-naval-action-ar` may be heard as من غير ("without") rather than منغيّر.
+8. **Dialect:** Yemen speaks Modern Standard Arabic, not Yemeni Arabic.
 
 A wording change belongs in the OpenRA-AI generator scripts, which hold the scripts; regenerate the
 line afterwards with the generator or `tools/voice-review.py regenerate`, then re-run
@@ -165,7 +233,7 @@ line afterwards with the generator or `tools/voice-review.py regenerate`, then r
 
 `mods/rtsai/modern-factions/eva-notifications.yaml` adds a Speech prefix for each modern faction,
 so the engine plays `audio/eva/<faction>/<clip>.wav` for that faction's player. Every Speech clip in
-`audio/notifications.yaml` has a line for all five factions. The wording is original, not a
+`audio/notifications.yaml` has a line for all seven factions (Israel and Hezbollah since 5 October). The wording is original, not a
 transcript of the Red Alert 2 announcer. Announcers are English so alerts stay clear for every
 player. Files are IMA ADPCM WAV at 22.05 kHz mono, the format RA2's own announcer uses.
 
@@ -196,7 +264,9 @@ python scripts/generate-rtsai-mod-audio.py --mod ../RTSAI-Mod --eva-only --eva-c
 ```
 
 Partial runs merge their records into `PROVENANCE.json`. Set `RTSAI_MOSS_PYTHON` to the Persian
-worker's interpreter.
+worker's interpreter. The Israel and Hezbollah lines come from `scripts/generate-levant-voices.py`,
+which the driver loads like the other faction generators; their announcers are in
+`generate-faction-eva.py`. Hebrew needs no diacritizer: the points are in the script.
 
 From this repository, in the same Python environment:
 
@@ -223,6 +293,9 @@ transformers 4.57.6.
 | `facebook/mms-tts-*` | CC BY-NC 4.0 |
 | Coqui XTTS-v2 | Coqui Public Model License (non-commercial) |
 | Kokoro Mandarin voicepacks | License-compatible, but graded D on the model card |
+| Kokoro for Hebrew or Arabic | No Hebrew or Arabic front end |
+| MOSS-TTS-Nano base for Hebrew, Lebanese Arabic or Persian | Worse in the [engine check](#engine-check-5-october-2026); no Hebrew |
+| Chatterbox Hebrew without vowel points | CER 0.21 against 0.05 with points |
 
 ## Open points for the owner
 
@@ -233,12 +306,12 @@ transformers 4.57.6.
 - **Persian fine-tune.** It is published by an individual (`nimaaaAI`), not by OpenMOSS. Its weights
   are loaded with `torch.load(weights_only=True)` and its code is not run; the model code comes from
   the pinned OpenMOSS revision.
-- **Native-speaker sign-off.** Still open, and a release gate: a native speaker of Persian, Arabic
-  (ideally Saudi and Yemeni), Turkish and Mandarin should fill the `native_speaker` column of
-  [`voice-review.csv`](voice-review.csv). The first pass found likely accent problems in the Persian
-  lines that only a listener can judge.
-- **Israel and Hezbollah voices.** Both use stock English RA2 voices and announcers. Whether they
-  should get their own lines (Hebrew; Lebanese Arabic) is a product decision.
+- **Native-speaker sign-off.** Still open, and a release gate: a native speaker of Persian, Hebrew,
+  Arabic (ideally Saudi, Yemeni and Lebanese), Turkish and Mandarin should fill the `native_speaker`
+  column of [`voice-review.csv`](voice-review.csv). The first pass found likely accent problems in
+  the Persian lines, and weaker Hebrew language ID on some lines, that only a listener can judge.
+- **Hebrew vowel points** were written by hand for the TTS input only; a Hebrew reader should glance
+  at them in `generate-levant-voices.py` (`POINTED`) if a line sounds wrong.
 - **OpenRA-AI wording.** `generate-rtsai-mod-audio.py` in OpenRA-AI still describes the naval sounds
   by the fork path only. A full regeneration would overwrite the source text in `PROVENANCE.json`
   until its `SFX` entry is updated to name `generate_naval_assets.py`.
