@@ -2,29 +2,190 @@
  "r2cnrifle": {
   "candidate": "units/r2cnrifle/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "df8b4786e45dca0e34ec90664071f4e85048db83051249444813c10983de878c",
-  "installedAt": "2026-10-05T02:32:24.755349+00:00",
+  "sha256": "d60a609970ad773f2bdd5485980615e8a9fb26a165d17035987ffdf227c5bd39",
+  "installedAt": "2026-10-05T05:52:00.723605+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2cnnetwork": {
   "candidate": "units/r2cnnetwork/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "fff3e81a446fc8bb5aed95a2e3db51f5401896a987f2c32c8cee8c148043eba1",
-  "installedAt": "2026-10-05T02:32:24.778461+00:00",
+  "sha256": "28827cba8d861ae951e46d5c4d2a5b5224313520a86b5cec2731812ca5a0cbb5",
+  "installedAt": "2026-10-05T06:29:07.546806+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2cnportable": {
   "candidate": "units/r2cnportable/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "eab18404e8c9c7e309ec167e4f4afaabd4d9c22a756b939296f81b4682dc15ec",
-  "installedAt": "2026-10-05T02:32:24.762385+00:00",
+  "sha256": "4b093ff00ef4f7332933338ff1dc0687cd65519260a86f6b74358febb29c2a78",
+  "installedAt": "2026-10-05T05:52:00.729557+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2redspear": {
   "candidate": "units/r2redspear/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "78098f4d30a675e7cc1c6e610427b9170f5e19db8da62f2ca5018e225bbdc38a",
-  "installedAt": "2026-10-05T02:32:24.786227+00:00",
+  "sha256": "c5e49a7aa1f6e54ceb6c6eee406774f52d092a937c41048371f22ab472bd3efb",
+  "installedAt": "2026-10-05T06:29:07.523461+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2basij": {
+  "candidate": "units/r2basij/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "04e200a7bc38c90f0bc7587e30acaaab193352fd3ef70d83aca3f58ec3b85fca",
+  "installedAt": "2026-10-05T05:52:00.744584+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2dronecontrol": {
+  "candidate": "units/r2dronecontrol/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "7e3693a5290e83dedf1a72f2f3af223c6375552f574d426e9a31f31107a0e9cd",
+  "installedAt": "2026-10-05T05:52:00.768652+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2shadowone": {
+  "candidate": "units/r2shadowone/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "9779026ba20af98b36c3e5e1404ab65139a00e45c8a0222851c4aab4a39cf30c",
+  "installedAt": "2026-10-05T05:52:00.760123+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2toophan": {
+  "candidate": "units/r2toophan/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "b943a790dd974ca1694ca1c029f08a2a5bd289415290c19bcaa565223cbee055",
+  "installedAt": "2026-10-05T05:52:00.752604+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2greywolf": {
+  "candidate": "units/r2greywolf/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "70923aec7344e18877c4095ffb98726799013eaf7d210a15a9c0d5bac4227ce8",
+  "installedAt": "2026-10-05T05:52:00.790247+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2trat": {
+  "candidate": "units/r2trat/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "fd41dd100631b56c5ce2840bb88886d0d0a4c77bcee264f5c4ecf41183369806",
+  "installedAt": "2026-10-05T06:29:07.581609+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2trdroneop": {
+  "candidate": "units/r2trdroneop/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "74b416fe73f4d50bdb9237c20b68e91d9391e15a3f35a3e29c9f1518aa824e50",
+  "installedAt": "2026-10-05T06:29:07.530942+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2trrifle": {
+  "candidate": "units/r2trrifle/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "1e991d8b87e7afc4b342b0eb5eaf61936585781e8ceb87dee46a6d7f0e10de4f",
+  "installedAt": "2026-10-05T05:52:00.775696+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2falcon": {
+  "candidate": "units/r2falcon/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "03b11634e09d748d6fdf998a2fe1c6536ed0cf108948e0cd4a2d4986eb4b7d0f",
+  "installedAt": "2026-10-05T05:52:00.807822+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2saat": {
+  "candidate": "units/r2saat/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "2566bcb67efc1dadda93ccd7d11fe9f601bba9a40a225062306ae015bc1b54f0",
+  "installedAt": "2026-10-05T06:29:07.572192+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2sajtac": {
+  "candidate": "units/r2sajtac/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "b87e7c80b4dfab369115a91d09bb66675b29a391b3a9bf0d538138c70819af0f",
+  "installedAt": "2026-10-05T05:52:00.817848+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2sang": {
+  "candidate": "units/r2sang/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "d2052b8c411addf6c76cfeb6f98ac86d649b3a39f24b4a8afc36ec0b048b3dcd",
+  "installedAt": "2026-10-05T06:29:07.538736+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2wadighost": {
+  "candidate": "units/r2wadighost/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "288ed9e75dc7d08bdb13d3d4c64b75c5e3b5fbd33d7936ec2c6b288be702ac7e",
+  "installedAt": "2026-10-05T05:52:00.848444+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2ymr": {
+  "candidate": "units/r2ymr/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "c81ceae27dbddb34293eb072ea0d9b64216168eee1a3b79ab47e37eb690e9f88",
+  "installedAt": "2026-10-05T05:52:00.827875+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2yrpg": {
+  "candidate": "units/r2yrpg/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "20716b90db38ca3f00c56b3de8e61daa4f034194f648ac6e99c32e9de7a71905",
+  "installedAt": "2026-10-05T05:52:00.834390+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2yspot": {
+  "candidate": "units/r2yspot/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "07350346136e5f1abbbb555d00aa0521a50965639dfbffa3d8d330d71adec4b5",
+  "installedAt": "2026-10-05T06:29:07.564376+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2ilat": {
+  "candidate": "units/r2ilat/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "d8fb7b6d555b83c7e0f1ab7248f4481ccc5e41d6e78ce341ab38e4d13dd1d8fc",
+  "installedAt": "2026-10-05T05:52:00.865979+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2ilobserver": {
+  "candidate": "units/r2ilobserver/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "1d8bb557c5e456a49edd8a83848d68317b2cb4c24a4931fbcb6491143a1fec50",
+  "installedAt": "2026-10-05T06:29:07.554844+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2ilrecon": {
+  "candidate": "units/r2ilrecon/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "a2917518d0f62d68053cd0f5cf16bafd8b7155d5e711f6335013d83119d08751",
+  "installedAt": "2026-10-05T05:52:00.874148+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2ilrifle": {
+  "candidate": "units/r2ilrifle/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "66c986824be2e5150860c27baf7700d600a2ad202a8ca8ef2d604782f2e6bb02",
+  "installedAt": "2026-10-05T05:52:00.857463+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2hzrifle": {
+  "candidate": "units/r2hzrifle/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "38765c9a6c867a56957927f004446dbd4afd35a0423ab1c88760dc70c5453e95",
+  "installedAt": "2026-10-05T05:52:00.888170+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2hzscout": {
+  "candidate": "units/r2hzscout/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "0b459ec63669063b45eae9534be7ad7c5d17cd69468503bbfc8555773d0fbe56",
+  "installedAt": "2026-10-05T05:52:00.895685+00:00",
+  "reviewStatus": "unreviewed"
+ },
+ "r2hzspotter": {
+  "candidate": "units/r2hzspotter/candidates/sprite-v3-glb",
+  "fromMesh": "mesh-v1-role-rebuild",
+  "sha256": "f97ba9f08d1f46a0a5431db4ab405483f94fc24d22e5919074ad141ecd24c582",
+  "installedAt": "2026-10-05T05:52:00.903706+00:00",
   "reviewStatus": "unreviewed"
  }
 }
