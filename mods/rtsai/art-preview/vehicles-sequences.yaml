@@ -1,1 +1,152 @@
 # Art preview overlay (vehicles-sequences). Loaded last so it overrides the faction files. Local branch rtsai/art-preview only.
+
+# glb-route:r2cloud begin
+r2cloud:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2cloud.shp
+		Facings: 32
+# glb-route:r2cloud end
+
+# glb-route:r2crane begin
+r2crane:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2crane.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2crane.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|art-preview/vehicles/r2crane.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2crane end
+
+# glb-route:r2haiwang begin
+r2haiwang:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2haiwang.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2haiwang end
+
+# glb-route:r2haiying begin
+r2haiying:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2haiying.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2haiying.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2haiying end
+
+# glb-route:r2kunlun begin
+r2kunlun:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2kunlun.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2kunlun end
+
+# glb-route:r2luyang begin
+r2luyang:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2luyang.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2luyang.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2luyang end
+
+# glb-route:r2mantis begin
+r2mantis:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2mantis.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2mantis.shp
+		Start: 64
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+	turret-still:
+		Filename: ra2|art-preview/vehicles/r2mantis.shp
+		Start: 64
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+# glb-route:r2mantis end
+
+# glb-route:r2phl begin
+r2phl:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2phl.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2phl end
+
+# glb-route:r2qilin begin
+r2qilin:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2qilin.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2qilin.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2qilin end
+
+# glb-route:r2skyspear begin
+r2skyspear:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2skyspear.shp
+		Facings: 32
+# glb-route:r2skyspear end
+
+# glb-route:r2zbd begin
+r2zbd:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2zbd.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2zbd.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2zbd end
+
+# glb-route:r2jiaolong begin
+r2jiaolong:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2jiaolong.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2jiaolong end
+
+# glb-route:r2lynx begin
+r2lynx:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2lynx.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2lynx.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2lynx end

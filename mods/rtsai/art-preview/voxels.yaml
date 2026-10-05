@@ -1,23 +1,7 @@
 # Art preview overlay (voxels). Loaded last so it overrides the faction files. Local branch rtsai/art-preview only.
 
-# glb-route:r2mantis begin
-r2mantis:
-	idle: ra2|art-preview/voxels/r2mantis
-	turret: ra2|art-preview/voxels/r2mantistur
-	radar: ra2|art-preview/voxels/r2mantisradar
-# glb-route:r2mantis end
 
-# glb-route:r2luyang begin
-r2luyang:
-	idle: ra2|art-preview/voxels/r2luyang
-	turret: ra2|art-preview/voxels/r2luyangtur
-	barrel: ra2|art-preview/voxels/r2luyangbarl
-# glb-route:r2luyang end
 
-# glb-route:r2crane begin
-r2crane:
-	idle: ra2|art-preview/voxels/r2crane
-# glb-route:r2crane end
 
 # glb-route:r2m1a2s begin
 r2m1a2s:
@@ -131,60 +115,15 @@ r2ghadir:
 	idle: ra2|art-preview/voxels/r2ghadir
 # glb-route:r2ghadir end
 
-# glb-route:r2qilin begin
-r2qilin:
-	idle: ra2|art-preview/voxels/r2qilin
-	turret: ra2|art-preview/voxels/r2qilintur
-	barrel: ra2|art-preview/voxels/r2qilinbarl
-# glb-route:r2qilin end
 
-# glb-route:r2zbd begin
-r2zbd:
-	idle: ra2|art-preview/voxels/r2zbd
-	turret: ra2|art-preview/voxels/r2zbdtur
-# glb-route:r2zbd end
 
-# glb-route:r2phl begin
-r2phl:
-	idle: ra2|art-preview/voxels/r2phl
-# glb-route:r2phl end
 
-# glb-route:r2lynx begin
-r2lynx:
-	idle: ra2|art-preview/voxels/r2lynx
-	turret: ra2|art-preview/voxels/r2lynxtur
-# glb-route:r2lynx end
 
-# glb-route:r2skyspear begin
-r2skyspear:
-	idle: ra2|art-preview/voxels/r2skyspear
-# glb-route:r2skyspear end
 
-# glb-route:r2cloud begin
-r2cloud:
-	idle: ra2|art-preview/voxels/r2cloud
-# glb-route:r2cloud end
 
-# glb-route:r2haiying begin
-r2haiying:
-	idle: ra2|art-preview/voxels/r2haiying
-	turret: ra2|art-preview/voxels/r2haiyingtur
-# glb-route:r2haiying end
 
-# glb-route:r2kunlun begin
-r2kunlun:
-	idle: ra2|art-preview/voxels/r2kunlun
-# glb-route:r2kunlun end
 
-# glb-route:r2haiwang begin
-r2haiwang:
-	idle: ra2|art-preview/voxels/r2haiwang
-# glb-route:r2haiwang end
 
-# glb-route:r2jiaolong begin
-r2jiaolong:
-	idle: ra2|art-preview/voxels/r2jiaolong
-# glb-route:r2jiaolong end
 
 # glb-route:r2technical begin
 r2technical:

@@ -13,51 +13,67 @@
 
 # glb-route:r2mantis begin
 r2mantis:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -36,0,0
+		Offset: -39,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 19,-231,656, 19,231,656
-	WithAnimatedVoxelModel@radar:
-		Sequence: radar
-		TickRate: 3
-		Turret: primary
+		LocalOffset: 20,-248,704, 20,248,704
 # glb-route:r2mantis end
 
 # glb-route:r2luyang begin
 r2luyang:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 443,0,0
+		Offset: 468,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 584,-1,411
+		LocalOffset: 616,-1,434
 		Recoil: 64
 		RecoilRecovery: 12
-	WithVoxelBarrel:
 # glb-route:r2luyang end
 
 # glb-route:r2crane begin
 r2crane:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelHelicopterBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@landed:
+		Name: landed
+		Sequence: idle-landed
+		RequiresCondition: !airborne
 
 r2cranehusk:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+		Image: r2crane
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2crane end
 
 # glb-route:r2m1a2s begin
@@ -371,123 +387,162 @@ r2ghadir:
 
 # glb-route:r2qilin begin
 r2qilin:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
 		Offset: -1,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 766,2,436
+		LocalOffset: 809,2,460
 		Recoil: 72
 		RecoilRecovery: 14
-	WithVoxelBarrel:
 # glb-route:r2qilin end
 
 # glb-route:r2zbd begin
 r2zbd:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -217,0,0
+		Offset: -228,0,0
+	WithSpriteTurret:
 # glb-route:r2zbd end
 
 # glb-route:r2phl begin
 r2phl:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 129,-135,601, 129,135,601
+		LocalOffset: 135,-142,630, 135,142,630
 # glb-route:r2phl end
 
 # glb-route:r2lynx begin
 r2lynx:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 100,0,0
+		Offset: 113,0,0
+	WithSpriteTurret:
 # glb-route:r2lynx end
 
 # glb-route:r2skyspear begin
 r2skyspear:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2skyspearhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+		Image: r2skyspear
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 # glb-route:r2skyspear end
 
 # glb-route:r2cloud begin
 r2cloud:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2cloudhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+		Image: r2cloud
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 # glb-route:r2cloud end
 
 # glb-route:r2haiying begin
 r2haiying:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 482,0,0
+		Offset: 510,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 233,2,291
+		LocalOffset: 246,2,307
 # glb-route:r2haiying end
 
 # glb-route:r2kunlun begin
 r2kunlun:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 # glb-route:r2kunlun end
 
 # glb-route:r2haiwang begin
 r2haiwang:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: -452,0,655
 # glb-route:r2haiwang end
 
 # glb-route:r2jiaolong begin
 r2jiaolong:
-	RenderVoxels:
-		PlayerPalette: r2glbchinaplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-chinaplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 # glb-route:r2jiaolong end
 
 # glb-route:r2technical begin
@@ -1078,3 +1133,15 @@ r2marmara:
 		RecoilRecovery: 12
 	WithVoxelBarrel:
 # glb-route:r2marmara end
+
+# glb-route:palette-prerender-china begin
+^Palettes:
+	PaletteFromFile@r2prerender-china:
+		Name: r2prerender-china
+		Filename: ra2|art-preview/vehicles/china-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-china:
+		BasePalette: r2prerender-china
+		BaseName: r2prerender-chinaplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-china end
