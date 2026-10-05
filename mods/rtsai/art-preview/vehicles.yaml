@@ -474,3 +474,109 @@ r2jiaolong:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 # glb-route:r2jiaolong end
+
+# glb-route:r2technical begin
+r2technical:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -167,0,0
+# glb-route:r2technical end
+
+# glb-route:r2ytechrr begin
+r2ytechrr:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -251,0,0
+	Armament:
+		LocalOffset: 542,0,508
+# glb-route:r2ytechrr end
+
+# glb-route:r2yzu begin
+r2yzu:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -225,0,0
+	Armament:
+		LocalOffset: 12,-46,588, 12,46,588
+# glb-route:r2yzu end
+
+# glb-route:r2ymlr begin
+r2ymlr:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: 146,-113,621, 146,113,621
+# glb-route:r2ymlr end
+
+# glb-route:r2samad begin
+r2samad:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2samadhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2samad end
+
+# glb-route:r2sahaab begin
+r2sahaab:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2sahaab end
+
+# glb-route:r2hodeidah begin
+r2hodeidah:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: -402,-73,520, -402,73,520
+# glb-route:r2hodeidah end
+
+# glb-route:r2mokha begin
+r2mokha:
+	RenderVoxels:
+		PlayerPalette: r2glbyemenplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 35,-69,0
+# glb-route:r2mokha end
+
+# glb-route:palette-yemen begin
+^Palettes:
+	PaletteFromFile@r2glbyemen:
+		Name: r2glbyemen
+		Filename: ra2|art-preview/voxels/yemen-glb.pal
+	PlayerColorPalette@r2glbyemen:
+		BasePalette: r2glbyemen
+		BaseName: r2glbyemenplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-yemen end

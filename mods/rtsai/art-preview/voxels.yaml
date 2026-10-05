@@ -181,3 +181,48 @@ r2haiwang:
 r2jiaolong:
 	idle: ra2|art-preview/voxels/r2jiaolong
 # glb-route:r2jiaolong end
+
+# glb-route:r2technical begin
+r2technical:
+	idle: ra2|art-preview/voxels/r2technical
+	turret: ra2|art-preview/voxels/r2technicaltur
+# glb-route:r2technical end
+
+# glb-route:r2ytechrr begin
+r2ytechrr:
+	idle: ra2|art-preview/voxels/r2ytechrr
+	turret: ra2|art-preview/voxels/r2ytechrrtur
+# glb-route:r2ytechrr end
+
+# glb-route:r2yzu begin
+r2yzu:
+	idle: ra2|art-preview/voxels/r2yzu
+	turret: ra2|art-preview/voxels/r2yzutur
+# glb-route:r2yzu end
+
+# glb-route:r2ymlr begin
+r2ymlr:
+	idle: ra2|art-preview/voxels/r2ymlr
+	empty: ra2|art-preview/voxels/r2ymlr
+# glb-route:r2ymlr end
+
+# glb-route:r2samad begin
+r2samad:
+	idle: ra2|art-preview/voxels/r2samad
+# glb-route:r2samad end
+
+# glb-route:r2sahaab begin
+r2sahaab:
+	idle: ra2|art-preview/voxels/r2sahaab
+# glb-route:r2sahaab end
+
+# glb-route:r2hodeidah begin
+r2hodeidah:
+	idle: ra2|art-preview/voxels/r2hodeidah
+# glb-route:r2hodeidah end
+
+# glb-route:r2mokha begin
+r2mokha:
+	idle: ra2|art-preview/voxels/r2mokha
+	turret: ra2|art-preview/voxels/r2mokhatur
+# glb-route:r2mokha end
