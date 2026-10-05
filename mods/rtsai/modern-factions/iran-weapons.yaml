@@ -154,8 +154,6 @@ R2PeykaapMissile:
 	BurstDelays: 10
 	Projectile: Missile
 		CruiseAltitude: 256
-		# Sea-skimming at 256 and moving 373/tick, the default 298 proximity window is stepped over and the missile never detonates.
-		CloseEnough: 400
 		MinimumLaunchAngle: 0
 		MaximumLaunchAngle: 32
 		RangeLimit: 12c0
