@@ -363,3 +363,86 @@ r2yildirim:
 		Facings: 32
 		ShadowStart: 96
 # glb-route:r2yildirim end
+
+# glb-route:r2caesar begin
+r2caesar:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2caesar.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2caesar end
+
+# glb-route:r2f15sa begin
+r2f15sa:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2f15sa.shp
+		Facings: 32
+# glb-route:r2f15sa end
+
+# glb-route:r2jubail begin
+r2jubail:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2jubail.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2jubail end
+
+# glb-route:r2m1a2s begin
+r2m1a2s:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2m1a2s.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2m1a2s.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2m1a2s end
+
+# glb-route:r2riyadh begin
+r2riyadh:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2riyadh.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2riyadh.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2riyadh end
+
+# glb-route:r2sadiq begin
+r2sadiq:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2sadiq.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2sadiq.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2sadiq end
+
+# glb-route:r2sads begin
+r2sads:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2sads.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2sads.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|art-preview/vehicles/r2sads.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2sads end

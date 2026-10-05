@@ -3,12 +3,6 @@
 
 
 
-# glb-route:r2m1a2s begin
-r2m1a2s:
-	idle: ra2|art-preview/voxels/r2m1a2s
-	turret: ra2|art-preview/voxels/r2m1a2stur
-	barrel: ra2|art-preview/voxels/r2m1a2sbarl
-# glb-route:r2m1a2s end
 
 # glb-route:r2bradley begin
 r2bradley:
@@ -16,22 +10,8 @@ r2bradley:
 	turret: ra2|art-preview/voxels/r2bradleytur
 # glb-route:r2bradley end
 
-# glb-route:r2sads begin
-r2sads:
-	idle: ra2|art-preview/voxels/r2sads
-	turret: ra2|art-preview/voxels/r2sadstur
-	radar: ra2|art-preview/voxels/r2sadsradar
-# glb-route:r2sads end
 
-# glb-route:r2caesar begin
-r2caesar:
-	idle: ra2|art-preview/voxels/r2caesar
-# glb-route:r2caesar end
 
-# glb-route:r2f15sa begin
-r2f15sa:
-	idle: ra2|art-preview/voxels/r2f15sa
-# glb-route:r2f15sa end
 
 # glb-route:r2ah64sa begin
 r2ah64sa:
@@ -40,23 +20,8 @@ r2ah64sa:
 	slow-rotor: ra2|art-preview/voxels/r2ah64sa
 # glb-route:r2ah64sa end
 
-# glb-route:r2sadiq begin
-r2sadiq:
-	idle: ra2|art-preview/voxels/r2sadiq
-	turret: ra2|art-preview/voxels/r2sadiqtur
-# glb-route:r2sadiq end
 
-# glb-route:r2riyadh begin
-r2riyadh:
-	idle: ra2|art-preview/voxels/r2riyadh
-	turret: ra2|art-preview/voxels/r2riyadhtur
-	barrel: ra2|art-preview/voxels/r2riyadhbarl
-# glb-route:r2riyadh end
 
-# glb-route:r2jubail begin
-r2jubail:
-	idle: ra2|art-preview/voxels/r2jubail
-# glb-route:r2jubail end
 
 
 

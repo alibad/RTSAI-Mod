@@ -78,18 +78,21 @@ r2cranehusk:
 
 # glb-route:r2m1a2s begin
 r2m1a2s:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -81,0,0
+		Offset: -85,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 846,1,423
+		LocalOffset: 894,1,447
 		Recoil: 48
 		RecoilRecovery: 10
-	WithVoxelBarrel:
 # glb-route:r2m1a2s end
 
 # glb-route:r2bradley begin
@@ -109,52 +112,66 @@ r2bradley:
 
 # glb-route:r2sads begin
 r2sads:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -235,0,0
+		Offset: -248,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 240,-129,616, 240,129,616
-	WithAnimatedVoxelModel@radar:
-		Sequence: radar
-		TickRate: 3
+		LocalOffset: 253,-136,650, 253,136,650
 # glb-route:r2sads end
 
 # glb-route:r2caesar begin
 r2caesar:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 633,-3,683
+		LocalOffset: 265,-3,479
 # glb-route:r2caesar end
 
 # glb-route:r2f15sa begin
 r2f15sa:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2f15sahusk:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+		Image: r2f15sa
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2f15strike:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+		Image: r2f15sa
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 # glb-route:r2f15sa end
 
 # glb-route:r2ah64sa begin
@@ -178,40 +195,49 @@ r2ah64sahusk:
 
 # glb-route:r2sadiq begin
 r2sadiq:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 394,0,0
+		Offset: 419,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 289,-8,223
+		LocalOffset: -5,10,237
 # glb-route:r2sadiq end
 
 # glb-route:r2riyadh begin
 r2riyadh:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 595,0,0
+		Offset: 623,0,0
+	WithSpriteTurret:
 	Armament@primary:
-		LocalOffset: 386,5,310
+		LocalOffset: 404,5,325
 		Recoil: 64
 		RecoilRecovery: 12
-	WithVoxelBarrel:
 # glb-route:r2riyadh end
 
 # glb-route:r2jubail begin
 r2jubail:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 # glb-route:r2jubail end
 
 # glb-route:palette-saudi begin
@@ -1248,3 +1274,15 @@ r2marmara:
 		BaseName: r2prerender-turkeyplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-turkey end
+
+# glb-route:palette-prerender-saudi begin
+^Palettes:
+	PaletteFromFile@r2prerender-saudi:
+		Name: r2prerender-saudi
+		Filename: ra2|art-preview/vehicles/saudi-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-saudi:
+		BasePalette: r2prerender-saudi
+		BaseName: r2prerender-saudiplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-saudi end
