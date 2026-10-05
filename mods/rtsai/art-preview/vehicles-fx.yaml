@@ -11,13 +11,13 @@ r2mantis:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,425
+		Offset: -165,0,377
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -165,0,230
@@ -25,6 +25,8 @@ r2mantis:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2mantis end
 
 # glb-fx:r2luyang begin
@@ -36,13 +38,13 @@ r2luyang:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -396,0,1050
+		Offset: -396,0,1002
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -396,0,667
@@ -50,6 +52,9 @@ r2luyang:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
 		EmptyWeapon: R2FXShipDeathMedium
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2luyang end
 
 # glb-fx:r2crane begin
@@ -77,13 +82,13 @@ r2bozkir:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -173,0,425
+		Offset: -173,0,377
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -173,0,230
@@ -102,13 +107,13 @@ r2karrar:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,660
+		Offset: -165,0,612
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -165,0,394
@@ -127,13 +132,13 @@ r2m1a2s:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,448
+		Offset: -181,0,400
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -181,0,246
@@ -152,13 +157,13 @@ r2merkava:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -173,0,401
+		Offset: -173,0,353
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -173,0,213
@@ -177,13 +182,13 @@ r2qilin:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,448
+		Offset: -181,0,400
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -181,0,246
@@ -202,13 +207,13 @@ r2namer:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,543
+		Offset: -192,0,495
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -192,0,312
@@ -216,6 +221,8 @@ r2namer:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament@tow:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2namer end
 
 # glb-fx:r2zbd begin
@@ -227,13 +234,13 @@ r2zbd:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -196,0,637
+		Offset: -196,0,589
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -196,0,378
@@ -252,13 +259,13 @@ r2bradley:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,613
+		Offset: -165,0,565
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -165,0,361
@@ -266,6 +273,8 @@ r2bradley:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament@tow:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2bradley end
 
 # glb-fx:r2ilshield begin
@@ -277,13 +286,13 @@ r2ilshield:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,378
+		Offset: -165,0,330
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -165,0,197
@@ -291,6 +300,8 @@ r2ilshield:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2ilshield end
 
 # glb-fx:r2ilhowitzer begin
@@ -302,13 +313,13 @@ r2ilhowitzer:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,872
+		Offset: -224,0,824
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -224,0,543
@@ -327,13 +338,13 @@ r2phl:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -189,0,801
+		Offset: -189,0,753
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -189,0,493
@@ -341,6 +352,8 @@ r2phl:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2phl end
 
 # glb-fx:r2sads begin
@@ -352,13 +365,13 @@ r2sads:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,801
+		Offset: -192,0,753
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -192,0,493
@@ -366,6 +379,8 @@ r2sads:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2sads end
 
 # glb-fx:r2ilfalcon begin
@@ -382,6 +397,11 @@ r2ilfalcon:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	Armament@strike:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2ilfalcon end
 
 # glb-fx:r2lynx begin
@@ -393,13 +413,13 @@ r2lynx:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -157,0,707
+		Offset: -157,0,659
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -157,0,427
@@ -423,6 +443,11 @@ r2ilgunship:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament@primary:
+		MuzzleSequence: muzzle
+	Armament@rockets:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2ilgunship end
 
 # glb-fx:r2caesar begin
@@ -434,13 +459,13 @@ r2caesar:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,825
+		Offset: -224,0,777
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -224,0,510
@@ -464,6 +489,12 @@ r2kuzgun:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
+	-WithVoxelBody:
+	WithVoxelHelicopterBody:
+		TickRate: 1
 # glb-fx:r2kuzgun end
 
 # glb-fx:r2f15sa begin
@@ -480,6 +511,11 @@ r2f15sa:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	Armament@strike:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2f15sa end
 
 # glb-fx:r2sahin begin
@@ -496,6 +532,9 @@ r2sahin:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2sahin end
 
 # glb-fx:r2skyspear begin
@@ -512,6 +551,9 @@ r2skyspear:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2skyspear end
 
 # glb-fx:r2ilpatrol begin
@@ -523,13 +565,13 @@ r2ilpatrol:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -255,0,698
+		Offset: -255,0,650
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -255,0,421
@@ -537,6 +579,9 @@ r2ilpatrol:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2ilpatrol end
 
 # glb-fx:r2cloud begin
@@ -553,6 +598,9 @@ r2cloud:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2cloud end
 
 # glb-fx:r2ilfrigate begin
@@ -564,13 +612,13 @@ r2ilfrigate:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -357,0,881
+		Offset: -357,0,833
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -357,0,549
@@ -578,6 +626,11 @@ r2ilfrigate:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
 		EmptyWeapon: R2FXShipDeathMedium
+	Armament@primary:
+		MuzzleSequence: muzzle
+	Armament@ciws:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2ilfrigate end
 
 # glb-fx:r2turna begin
@@ -594,6 +647,9 @@ r2turna:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2turna end
 
 # glb-fx:r2ah64sa begin
@@ -610,6 +666,11 @@ r2ah64sa:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament@primary:
+		MuzzleSequence: muzzle
+	Armament@rockets:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2ah64sa end
 
 # glb-fx:r2sadiq begin
@@ -621,13 +682,13 @@ r2sadiq:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -283,0,661
+		Offset: -283,0,613
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -283,0,395
@@ -635,6 +696,9 @@ r2sadiq:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2sadiq end
 
 # glb-fx:r2riyadh begin
@@ -646,13 +710,13 @@ r2riyadh:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -377,0,878
+		Offset: -377,0,830
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -377,0,547
@@ -660,6 +724,11 @@ r2riyadh:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
 		EmptyWeapon: R2FXShipDeathMedium
+	Armament@primary:
+		MuzzleSequence: muzzle
+	Armament@ciws:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2riyadh end
 
 # glb-fx:r2jubail begin
@@ -671,13 +740,13 @@ r2jubail:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -291,0,898
+		Offset: -291,0,850
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: largefire
+		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
 		Offset: -291,0,561
@@ -696,13 +765,13 @@ r2hzrecoilless:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,519
+		Offset: -181,0,471
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -181,0,296
@@ -721,13 +790,13 @@ r2iltender:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -318,0,883
+		Offset: -318,0,835
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: largefire
+		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
 		Offset: -318,0,550
@@ -746,13 +815,13 @@ r2ytechrr:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,496
+		Offset: -161,0,448
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,280
@@ -771,13 +840,13 @@ r2hztechnical:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,519
+		Offset: -161,0,471
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,296
@@ -796,13 +865,13 @@ r2ymlr:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,566
+		Offset: -192,0,518
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -192,0,329
@@ -810,6 +879,8 @@ r2ymlr:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2ymlr end
 
 # glb-fx:r2yzu begin
@@ -821,13 +892,13 @@ r2yzu:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,707
+		Offset: -161,0,659
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,427
@@ -835,6 +906,8 @@ r2yzu:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
 		EmptyWeapon: R2FXDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
 # glb-fx:r2yzu end
 
 # glb-fx:r2technical begin
@@ -846,13 +919,13 @@ r2technical:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -157,0,660
+		Offset: -157,0,612
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -157,0,394
@@ -876,6 +949,12 @@ r2hzdrone:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	-WithVoxelBody:
+	WithVoxelHelicopterBody:
+		TickRate: 1
 # glb-fx:r2hzdrone end
 
 # glb-fx:r2hzescort begin
@@ -887,13 +966,13 @@ r2hzescort:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -169,0,519
+		Offset: -169,0,471
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -169,0,296
@@ -901,6 +980,8 @@ r2hzescort:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
 		EmptyWeapon: R2FXDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
 # glb-fx:r2hzescort end
 
 # glb-fx:r2yildirim begin
@@ -912,13 +993,13 @@ r2yildirim:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,448
+		Offset: -181,0,400
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -181,0,246
@@ -942,6 +1023,12 @@ r2samad:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	-WithVoxelBody:
+	WithVoxelHelicopterBody:
+		TickRate: 1
 # glb-fx:r2samad end
 
 # glb-fx:r2aras begin
@@ -953,13 +1040,13 @@ r2aras:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -185,0,543
+		Offset: -185,0,495
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -185,0,312
@@ -967,6 +1054,8 @@ r2aras:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle
 # glb-fx:r2aras end
 
 # glb-fx:r2deniz begin
@@ -978,13 +1067,13 @@ r2deniz:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -208,0,543
+		Offset: -208,0,495
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -208,0,312
@@ -992,6 +1081,8 @@ r2deniz:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle
 # glb-fx:r2deniz end
 
 # glb-fx:r2haiying begin
@@ -1003,13 +1094,13 @@ r2haiying:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -271,0,801
+		Offset: -271,0,753
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -271,0,493
@@ -1017,6 +1108,11 @@ r2haiying:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
 		EmptyWeapon: R2FXShipDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
+	Armament@AA:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2haiying end
 
 # glb-fx:r2kunlun begin
@@ -1028,13 +1124,13 @@ r2kunlun:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -330,0,759
+		Offset: -330,0,711
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: largefire
+		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
 		Offset: -330,0,464
@@ -1053,13 +1149,13 @@ r2jiaolong:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -361,0,701
+		Offset: -361,0,653
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -361,0,423
@@ -1078,13 +1174,13 @@ r2sahaab:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,542
+		Offset: -224,0,494
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -224,0,312
@@ -1103,13 +1199,13 @@ r2mokha:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,492
+		Offset: -224,0,444
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -224,0,277
@@ -1117,6 +1213,9 @@ r2mokha:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2mokha end
 
 # glb-fx:r2raad begin
@@ -1128,13 +1227,13 @@ r2raad:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -200,0,519
+		Offset: -200,0,471
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -200,0,296
@@ -1142,6 +1241,8 @@ r2raad:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2raad end
 
 # glb-fx:r2fajr begin
@@ -1153,13 +1254,13 @@ r2fajr:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -189,0,590
+		Offset: -189,0,542
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -189,0,345
@@ -1167,6 +1268,8 @@ r2fajr:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2fajr end
 
 # glb-fx:r2coast begin
@@ -1178,13 +1281,13 @@ r2coast:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -216,0,637
+		Offset: -216,0,589
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -216,0,378
@@ -1192,6 +1295,8 @@ r2coast:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2coast end
 
 # glb-fx:r2mohajer begin
@@ -1208,6 +1313,12 @@ r2mohajer:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
+	-WithVoxelBody:
+	WithVoxelHelicopterBody:
+		TickRate: 1
 # glb-fx:r2mohajer end
 
 # glb-fx:r2loiter begin
@@ -1224,6 +1335,9 @@ r2loiter:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	-WithVoxelBody:
+	WithVoxelHelicopterBody:
+		TickRate: 1
 # glb-fx:r2loiter end
 
 # glb-fx:r2toufan begin
@@ -1240,6 +1354,9 @@ r2toufan:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2toufan end
 
 # glb-fx:r2azar begin
@@ -1256,6 +1373,9 @@ r2azar:
 		MovingInterval: 3
 		SpawnAtLastPosition: false
 		RequiresCondition: r2fx-heavy
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2azar end
 
 # glb-fx:r2peykaap begin
@@ -1267,13 +1387,13 @@ r2peykaap:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -263,0,657
+		Offset: -263,0,609
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -263,0,392
@@ -1281,6 +1401,11 @@ r2peykaap:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle-launch
+	Armament@AA:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2peykaap end
 
 # glb-fx:r2ghadir begin
@@ -1292,13 +1417,13 @@ r2ghadir:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -310,0,700
+		Offset: -310,0,652
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -310,0,422
@@ -1317,13 +1442,13 @@ r2gokkalkan:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -185,0,448
+		Offset: -185,0,400
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -185,0,246
@@ -1331,6 +1456,8 @@ r2gokkalkan:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2gokkalkan end
 
 # glb-fx:r2sancak begin
@@ -1342,13 +1469,13 @@ r2sancak:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,660
+		Offset: -161,0,612
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -161,0,394
@@ -1367,13 +1494,13 @@ r2hzrockets:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -196,0,566
+		Offset: -196,0,518
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -196,0,329
@@ -1381,6 +1508,8 @@ r2hzrockets:
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
 		EmptyWeapon: R2FXDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
 # glb-fx:r2hzrockets end
 
 # glb-fx:r2hzmissileboat begin
@@ -1392,13 +1521,13 @@ r2hzmissileboat:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -275,0,651
+		Offset: -275,0,603
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -275,0,388
@@ -1406,6 +1535,9 @@ r2hzmissileboat:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2hzmissileboat end
 
 # glb-fx:r2hzsurvey begin
@@ -1417,13 +1549,13 @@ r2hzsurvey:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -263,0,843
+		Offset: -263,0,795
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -263,0,522
@@ -1431,6 +1563,9 @@ r2hzsurvey:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2hzsurvey end
 
 # glb-fx:r2hzskiff begin
@@ -1442,13 +1577,13 @@ r2hzskiff:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -204,0,387
+		Offset: -204,0,339
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -204,0,203
@@ -1467,13 +1602,13 @@ r2haiwang:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -396,0,1012
+		Offset: -396,0,964
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: largefire
+		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
 		Offset: -396,0,641
@@ -1492,13 +1627,13 @@ r2hodeidah:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -236,0,589
+		Offset: -236,0,541
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -236,0,345
@@ -1506,6 +1641,9 @@ r2hodeidah:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2hodeidah end
 
 # glb-fx:r2ege begin
@@ -1517,13 +1655,13 @@ r2ege:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -361,0,864
+		Offset: -361,0,816
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -361,0,537
@@ -1531,6 +1669,9 @@ r2ege:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
 		EmptyWeapon: R2FXShipDeathMedium
+	Armament:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2ege end
 
 # glb-fx:r2poyraz begin
@@ -1542,13 +1683,13 @@ r2poyraz:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: smallsmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -251,0,738
+		Offset: -251,0,690
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: smallfire
+		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
 		Offset: -251,0,449
@@ -1556,6 +1697,9 @@ r2poyraz:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
 		EmptyWeapon: R2FXShipDeathSmall
+	Armament:
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 # glb-fx:r2poyraz end
 
 # glb-fx:r2marmara begin
@@ -1567,13 +1711,13 @@ r2marmara:
 		Condition: r2fx-critical
 		ValidDamageStates: Critical
 	WithIdleOverlay@R2FXSMOKE:
-		Image: largesmoke
+		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -400,0,904
+		Offset: -400,0,856
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
-		Image: mediumfire
+		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
 		Offset: -400,0,565
@@ -1581,4 +1725,9 @@ r2marmara:
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
 		EmptyWeapon: R2FXShipDeathMedium
+	Armament:
+		MuzzleSequence: muzzle
+	Armament@AA:
+		MuzzleSequence: muzzle-launch
+	WithMuzzleOverlay:
 # glb-fx:r2marmara end
