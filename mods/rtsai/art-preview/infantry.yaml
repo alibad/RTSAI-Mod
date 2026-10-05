@@ -252,6 +252,10 @@ r2cnportable:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2cnportable-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 44,59,1069
+	Armament@AA:
+		LocalOffset: 44,59,1069
 
 r2cnrifle:
 	RenderSprites:
@@ -297,6 +301,8 @@ r2hzat:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2hzat-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 147,38,1077
 
 r2hzrifle:
 	RenderSprites:
@@ -333,6 +339,8 @@ r2ilat:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2ilat-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 116,28,1076
 
 r2ilobserver:
 	RenderSprites:
@@ -378,6 +386,8 @@ r2saat:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2saat-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 56,9,1105
 
 r2sajtac:
 	RenderSprites:
@@ -414,6 +424,8 @@ r2toophan:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2toophan-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 71,25,1053
 
 r2trat:
 	RenderSprites:
@@ -423,6 +435,8 @@ r2trat:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2trat-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 136,91,1130
 
 r2trdroneop:
 	RenderSprites:
@@ -468,6 +482,8 @@ r2yrpg:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2yrpg-glb-player
 		DeathPaletteIsPlayerPalette: true
+	Armament:
+		LocalOffset: 62,-17,1088
 
 r2yspot:
 	RenderSprites:
