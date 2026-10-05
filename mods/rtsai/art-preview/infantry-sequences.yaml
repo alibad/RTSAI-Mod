@@ -1,1 +1,309 @@
 # Art preview overlay (infantry-sequences). Loaded last so it overrides the faction files. Local branch rtsai/art-preview only.
+
+r2cnnetwork:
+	Defaults:
+		Filename: ra2|art-preview/infantry/r2cnnetwork.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 508
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 90
+		ShadowStart: 516
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 580
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 676
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		Tick: 110
+		ShadowStart: 772
+	prone-stand:
+		Start: 312
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 820
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 828
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 842
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 856
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 904
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 952
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 984
+
+r2cnportable:
+	Defaults:
+		Filename: ra2|art-preview/infantry/r2cnportable.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 508
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 90
+		ShadowStart: 516
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 580
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 676
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		Tick: 110
+		ShadowStart: 772
+	prone-stand:
+		Start: 312
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 820
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 828
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 842
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 856
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 904
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 952
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 984
+
+r2cnrifle:
+	Defaults:
+		Filename: ra2|art-preview/infantry/r2cnrifle.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 508
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 90
+		ShadowStart: 516
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 580
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 676
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		Tick: 110
+		ShadowStart: 772
+	prone-stand:
+		Start: 312
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 820
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 828
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 842
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 856
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 904
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 952
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 984
+
+r2redspear:
+	Defaults:
+		Filename: ra2|art-preview/infantry/r2redspear.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 508
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 90
+		ShadowStart: 516
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 580
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		Tick: 120
+		ShadowStart: 676
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		Tick: 110
+		ShadowStart: 772
+	prone-stand:
+		Start: 312
+		Length: 1
+		Facings: 8
+		Tick: 160
+		ShadowStart: 820
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 828
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		Tick: 70
+		ShadowStart: 842
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 856
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		Tick: 80
+		ShadowStart: 904
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 952
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		Tick: 80
+		ShadowStart: 984

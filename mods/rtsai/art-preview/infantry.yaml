@@ -1,1 +1,71 @@
 # Art preview overlay (infantry). Loaded last so it overrides the faction files. Local branch rtsai/art-preview only.
+
+^Palettes:
+	PaletteFromFile@r2cnnetwork-glb:
+		Name: r2cnnetwork-glb
+		Filename: ra2|art-preview/infantry/r2cnnetwork.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2cnnetwork-glb:
+		BasePalette: r2cnnetwork-glb
+		BaseName: r2cnnetwork-glb-player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@r2cnportable-glb:
+		Name: r2cnportable-glb
+		Filename: ra2|art-preview/infantry/r2cnportable.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2cnportable-glb:
+		BasePalette: r2cnportable-glb
+		BaseName: r2cnportable-glb-player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@r2cnrifle-glb:
+		Name: r2cnrifle-glb
+		Filename: ra2|art-preview/infantry/r2cnrifle.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2cnrifle-glb:
+		BasePalette: r2cnrifle-glb
+		BaseName: r2cnrifle-glb-player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@r2redspear-glb:
+		Name: r2redspear-glb
+		Filename: ra2|art-preview/infantry/r2redspear.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2redspear-glb:
+		BasePalette: r2redspear-glb
+		BaseName: r2redspear-glb-player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+
+r2cnnetwork:
+	RenderSprites:
+		PlayerPalette: r2cnnetwork-glb-player
+	TakeCover:
+		ProneSequencePrefix: prone-
+	WithDeathAnimation@normal:
+		DeathSequencePalette: r2cnnetwork-glb-player
+		DeathPaletteIsPlayerPalette: true
+
+r2cnportable:
+	RenderSprites:
+		PlayerPalette: r2cnportable-glb-player
+	TakeCover:
+		ProneSequencePrefix: prone-
+	WithDeathAnimation@normal:
+		DeathSequencePalette: r2cnportable-glb-player
+		DeathPaletteIsPlayerPalette: true
+
+r2cnrifle:
+	RenderSprites:
+		PlayerPalette: r2cnrifle-glb-player
+	TakeCover:
+		ProneSequencePrefix: prone-
+	WithDeathAnimation@normal:
+		DeathSequencePalette: r2cnrifle-glb-player
+		DeathPaletteIsPlayerPalette: true
+
+r2redspear:
+	RenderSprites:
+		PlayerPalette: r2redspear-glb-player
+	TakeCover:
+		ProneSequencePrefix: prone-
+	WithDeathAnimation@normal:
+		DeathSequencePalette: r2redspear-glb-player
+		DeathPaletteIsPlayerPalette: true
