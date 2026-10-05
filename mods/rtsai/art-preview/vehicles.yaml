@@ -199,3 +199,157 @@ r2jubail:
 		BaseName: r2glbsaudiplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-saudi end
+
+# glb-route:palette-iran begin
+^Palettes:
+	PaletteFromFile@r2glbiran:
+		Name: r2glbiran
+		Filename: ra2|art-preview/voxels/iran-glb.pal
+	PlayerColorPalette@r2glbiran:
+		BasePalette: r2glbiran
+		BaseName: r2glbiranplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-iran end
+
+# glb-route:r2karrar begin
+r2karrar:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -67,0,0
+	Armament:
+		LocalOffset: 738,-2,413
+# glb-route:r2karrar end
+
+# glb-route:r2raad begin
+r2raad:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -52,0,0
+	Armament:
+		LocalOffset: 198,-181,790, 198,161,790
+# glb-route:r2raad end
+
+# glb-route:r2fajr begin
+r2fajr:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -357,0,0
+	Armament:
+		LocalOffset: 448,1,610
+# glb-route:r2fajr end
+
+# glb-route:r2coast begin
+r2coast:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -304,0,0
+	Armament:
+		LocalOffset: 231,-143,662, 231,143,662
+# glb-route:r2coast end
+
+# glb-route:r2mohajer begin
+r2mohajer:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2mohajerhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2mohajer end
+
+# glb-route:r2loiter begin
+r2loiter:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2loiterhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2loiter end
+
+# glb-route:r2toufan begin
+r2toufan:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	-WithVoxelBody:
+	WithVoxelHelicopterBody:
+		Sequence: idle
+
+r2toufanhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2toufan end
+
+# glb-route:r2azar begin
+r2azar:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2azarhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2azar end
+
+# glb-route:r2peykaap begin
+r2peykaap:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 284,0,0
+	Armament:
+		LocalOffset: 423,3,259
+	Armament@AA:
+		LocalOffset: 423,3,259
+# glb-route:r2peykaap end
+
+# glb-route:r2ghadir begin
+r2ghadir:
+	RenderVoxels:
+		PlayerPalette: r2glbiranplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2ghadir end

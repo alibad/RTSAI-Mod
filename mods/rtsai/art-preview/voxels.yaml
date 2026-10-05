@@ -71,3 +71,58 @@ r2riyadh:
 r2jubail:
 	idle: ra2|art-preview/voxels/r2jubail
 # glb-route:r2jubail end
+
+# glb-route:r2karrar begin
+r2karrar:
+	idle: ra2|art-preview/voxels/r2karrar
+	turret: ra2|art-preview/voxels/r2karrartur
+# glb-route:r2karrar end
+
+# glb-route:r2raad begin
+r2raad:
+	idle: ra2|art-preview/voxels/r2raad
+	turret: ra2|art-preview/voxels/r2raadtur
+# glb-route:r2raad end
+
+# glb-route:r2fajr begin
+r2fajr:
+	idle: ra2|art-preview/voxels/r2fajr
+	turret: ra2|art-preview/voxels/r2fajrtur
+# glb-route:r2fajr end
+
+# glb-route:r2coast begin
+r2coast:
+	idle: ra2|art-preview/voxels/r2coast
+	turret: ra2|art-preview/voxels/r2coasttur
+# glb-route:r2coast end
+
+# glb-route:r2mohajer begin
+r2mohajer:
+	idle: ra2|art-preview/voxels/r2mohajer
+# glb-route:r2mohajer end
+
+# glb-route:r2loiter begin
+r2loiter:
+	idle: ra2|art-preview/voxels/r2loiter
+# glb-route:r2loiter end
+
+# glb-route:r2toufan begin
+r2toufan:
+	idle: ra2|art-preview/voxels/r2toufan
+# glb-route:r2toufan end
+
+# glb-route:r2azar begin
+r2azar:
+	idle: ra2|art-preview/voxels/r2azar
+# glb-route:r2azar end
+
+# glb-route:r2peykaap begin
+r2peykaap:
+	idle: ra2|art-preview/voxels/r2peykaap
+	turret: ra2|art-preview/voxels/r2peykaaptur
+# glb-route:r2peykaap end
+
+# glb-route:r2ghadir begin
+r2ghadir:
+	idle: ra2|art-preview/voxels/r2ghadir
+# glb-route:r2ghadir end
