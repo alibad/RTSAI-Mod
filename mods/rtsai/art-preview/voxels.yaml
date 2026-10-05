@@ -12,3 +12,8 @@ r2luyang:
 	turret: ra2|art-preview/voxels/r2luyangtur
 	barrel: ra2|art-preview/voxels/r2luyangbarl
 # glb-route:r2luyang end
+
+# glb-route:r2crane begin
+r2crane:
+	idle: ra2|art-preview/voxels/r2crane
+# glb-route:r2crane end
