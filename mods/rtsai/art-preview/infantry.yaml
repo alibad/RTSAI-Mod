@@ -57,6 +57,14 @@
 		BasePalette: r2greywolf-glb
 		BaseName: r2greywolf-glb-player
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@r2hzat-glb:
+		Name: r2hzat-glb
+		Filename: ra2|art-preview/infantry/r2hzat.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2hzat-glb:
+		BasePalette: r2hzat-glb
+		BaseName: r2hzat-glb-player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PaletteFromFile@r2hzrifle-glb:
 		Name: r2hzrifle-glb
 		Filename: ra2|art-preview/infantry/r2hzrifle.pal
@@ -279,6 +287,15 @@ r2greywolf:
 		ProneSequencePrefix: prone-
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2greywolf-glb-player
+		DeathPaletteIsPlayerPalette: true
+
+r2hzat:
+	RenderSprites:
+		PlayerPalette: r2hzat-glb-player
+	TakeCover:
+		ProneSequencePrefix: prone-
+	WithDeathAnimation@normal:
+		DeathSequencePalette: r2hzat-glb-player
 		DeathPaletteIsPlayerPalette: true
 
 r2hzrifle:
