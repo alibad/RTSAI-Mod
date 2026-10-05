@@ -1,0 +1,3 @@
+# Art preview overlay: vehicle animation pass sequences (tools/anim_fx.py; local branch rtsai/art-preview only).
+# Loaded after vehicles.yaml. One "# glb-fx:<actor>" block per unit; regenerate, never hand-edit.
+

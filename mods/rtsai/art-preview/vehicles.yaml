@@ -22,6 +22,10 @@ r2mantis:
 		Offset: -36,0,0
 	Armament:
 		LocalOffset: 19,-231,656, 19,231,656
+	WithAnimatedVoxelModel@radar:
+		Sequence: radar
+		TickRate: 3
+		Turret: primary
 # glb-route:r2mantis end
 
 # glb-route:r2luyang begin
@@ -98,6 +102,9 @@ r2sads:
 		Offset: -235,0,0
 	Armament:
 		LocalOffset: 240,-129,616, 240,129,616
+	WithAnimatedVoxelModel@radar:
+		Sequence: radar
+		TickRate: 3
 # glb-route:r2sads end
 
 # glb-route:r2caesar begin
@@ -224,6 +231,9 @@ r2karrar:
 		Offset: -67,0,0
 	Armament:
 		LocalOffset: 738,-2,413
+		Recoil: 72
+		RecoilRecovery: 14
+	WithVoxelBarrel:
 # glb-route:r2karrar end
 
 # glb-route:r2raad begin
@@ -237,6 +247,9 @@ r2raad:
 		Offset: -52,0,0
 	Armament:
 		LocalOffset: 198,-181,790, 198,161,790
+	WithAnimatedVoxelModel@radar:
+		Sequence: radar
+		TickRate: 3
 # glb-route:r2raad end
 
 # glb-route:r2fajr begin
@@ -499,6 +512,9 @@ r2ytechrr:
 		Offset: -251,0,0
 	Armament:
 		LocalOffset: 542,0,508
+		Recoil: 40
+		RecoilRecovery: 8
+	WithVoxelBarrel:
 # glb-route:r2ytechrr end
 
 # glb-route:r2yzu begin
@@ -627,6 +643,10 @@ r2ilshield:
 		Offset: -14,0,0
 	Armament:
 		LocalOffset: 106,-335,514, 106,335,514
+	WithAnimatedVoxelModel@radar:
+		Sequence: radar
+		TickRate: 3
+		Turret: primary
 # glb-route:r2ilshield end
 
 # glb-route:r2ilhowitzer begin
@@ -710,6 +730,10 @@ r2ilfrigate:
 		Recoil: 64
 		RecoilRecovery: 12
 	WithVoxelBarrel:
+	WithAnimatedVoxelModel@radar:
+		Sequence: radar
+		TickRate: 3
+		RequiresCondition: active-radar
 # glb-route:r2ilfrigate end
 
 # glb-route:r2iltender begin
@@ -745,6 +769,9 @@ r2hzrecoilless:
 		Offset: -106,0,0
 	Armament:
 		LocalOffset: 392,-2,574
+		Recoil: 40
+		RecoilRecovery: 8
+	WithVoxelBarrel:
 # glb-route:r2hzrecoilless end
 
 # glb-route:r2hzescort begin
@@ -758,6 +785,9 @@ r2hzescort:
 		Offset: -348,0,0
 	Armament:
 		LocalOffset: 310,-84,667, 310,83,667
+		Recoil: 56
+		RecoilRecovery: 11
+	WithVoxelBarrel:
 # glb-route:r2hzescort end
 
 # glb-route:r2hzrockets begin
@@ -824,6 +854,10 @@ r2hzsurvey:
 		Offset: 365,0,0
 	Armament:
 		LocalOffset: 281,3,330
+	WithAnimatedVoxelModel@radar:
+		Sequence: radar
+		TickRate: 3
+		RequiresCondition: active-radar
 # glb-route:r2hzsurvey end
 
 # glb-route:palette-israel begin

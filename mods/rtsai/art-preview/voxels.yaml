@@ -4,6 +4,7 @@
 r2mantis:
 	idle: ra2|art-preview/voxels/r2mantis
 	turret: ra2|art-preview/voxels/r2mantistur
+	radar: ra2|art-preview/voxels/r2mantisradar
 # glb-route:r2mantis end
 
 # glb-route:r2luyang begin
@@ -35,6 +36,7 @@ r2bradley:
 r2sads:
 	idle: ra2|art-preview/voxels/r2sads
 	turret: ra2|art-preview/voxels/r2sadstur
+	radar: ra2|art-preview/voxels/r2sadsradar
 # glb-route:r2sads end
 
 # glb-route:r2caesar begin
@@ -76,12 +78,14 @@ r2jubail:
 r2karrar:
 	idle: ra2|art-preview/voxels/r2karrar
 	turret: ra2|art-preview/voxels/r2karrartur
+	barrel: ra2|art-preview/voxels/r2karrarbarl
 # glb-route:r2karrar end
 
 # glb-route:r2raad begin
 r2raad:
 	idle: ra2|art-preview/voxels/r2raad
 	turret: ra2|art-preview/voxels/r2raadtur
+	radar: ra2|art-preview/voxels/r2raadradar
 # glb-route:r2raad end
 
 # glb-route:r2fajr begin
@@ -192,6 +196,7 @@ r2technical:
 r2ytechrr:
 	idle: ra2|art-preview/voxels/r2ytechrr
 	turret: ra2|art-preview/voxels/r2ytechrrtur
+	barrel: ra2|art-preview/voxels/r2ytechrrbarl
 # glb-route:r2ytechrr end
 
 # glb-route:r2yzu begin
@@ -245,6 +250,7 @@ r2namer:
 r2ilshield:
 	idle: ra2|art-preview/voxels/r2ilshield
 	turret: ra2|art-preview/voxels/r2ilshieldtur
+	radar: ra2|art-preview/voxels/r2ilshieldradar
 # glb-route:r2ilshield end
 
 # glb-route:r2ilhowitzer begin
@@ -275,6 +281,7 @@ r2ilfrigate:
 	idle: ra2|art-preview/voxels/r2ilfrigate
 	turret: ra2|art-preview/voxels/r2ilfrigatetur
 	barrel: ra2|art-preview/voxels/r2ilfrigatebarl
+	radar: ra2|art-preview/voxels/r2ilfrigateradar
 # glb-route:r2ilfrigate end
 
 # glb-route:r2iltender begin
@@ -292,12 +299,14 @@ r2hztechnical:
 r2hzrecoilless:
 	idle: ra2|art-preview/voxels/r2hzrecoilless
 	turret: ra2|art-preview/voxels/r2hzrecoillesstur
+	barrel: ra2|art-preview/voxels/r2hzrecoillessbarl
 # glb-route:r2hzrecoilless end
 
 # glb-route:r2hzescort begin
 r2hzescort:
 	idle: ra2|art-preview/voxels/r2hzescort
 	turret: ra2|art-preview/voxels/r2hzescorttur
+	barrel: ra2|art-preview/voxels/r2hzescortbarl
 # glb-route:r2hzescort end
 
 # glb-route:r2hzrockets begin
@@ -325,6 +334,7 @@ r2hzmissileboat:
 r2hzsurvey:
 	idle: ra2|art-preview/voxels/r2hzsurvey
 	turret: ra2|art-preview/voxels/r2hzsurveytur
+	radar: ra2|art-preview/voxels/r2hzsurveyradar
 # glb-route:r2hzsurvey end
 
 # glb-route:r2aras begin

@@ -124,6 +124,7 @@ Rules:
 	ra2|modern-factions/combined-arms-ai.yaml
 	ra2|modern-factions/doctrines.yaml
 	ra2|art-preview/vehicles.yaml
+	ra2|art-preview/vehicles-fx.yaml
 	ra2|art-preview/infantry.yaml
 	ra2|art-preview/buildings.yaml
 
@@ -158,6 +159,7 @@ Sequences:
 	ra2|modern-factions/yemen-roster-sequences.yaml
 	ra2|modern-factions/hezbollah-roster-sequences.yaml
 	ra2|art-preview/vehicles-sequences.yaml
+	ra2|art-preview/vehicles-fx-sequences.yaml
 	ra2|art-preview/infantry-sequences.yaml
 	ra2|art-preview/buildings-sequences.yaml
 
@@ -256,6 +258,7 @@ Weapons:
 	ra2|modern-factions/israel-weapons.yaml
 	ra2|modern-factions/yemen-weapons.yaml
 	ra2|modern-factions/hezbollah-weapons.yaml
+	ra2|art-preview/vehicles-fx-weapons.yaml
 
 Voices:
 	ra2|modern-factions/levant-voices.yaml

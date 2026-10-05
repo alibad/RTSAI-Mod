@@ -1,0 +1,1584 @@
+# Art preview overlay: vehicle animation pass (tools/anim_fx.py; local branch rtsai/art-preview only).
+# Loaded after vehicles.yaml. One "# glb-fx:<actor>" block per unit; regenerate, never hand-edit.
+
+
+# glb-fx:r2mantis begin
+r2mantis:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,425
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,230
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2mantis end
+
+# glb-fx:r2luyang begin
+r2luyang:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -396,0,1050
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -396,0,667
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2luyang end
+
+# glb-fx:r2crane begin
+r2crane:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2crane end
+
+# glb-fx:r2bozkir begin
+r2bozkir:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -173,0,425
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -173,0,230
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2bozkir end
+
+# glb-fx:r2karrar begin
+r2karrar:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,660
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,394
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2karrar end
+
+# glb-fx:r2m1a2s begin
+r2m1a2s:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,448
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,246
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2m1a2s end
+
+# glb-fx:r2merkava begin
+r2merkava:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -173,0,401
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -173,0,213
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2merkava end
+
+# glb-fx:r2qilin begin
+r2qilin:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,448
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,246
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2qilin end
+
+# glb-fx:r2namer begin
+r2namer:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -192,0,543
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -192,0,312
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2namer end
+
+# glb-fx:r2zbd begin
+r2zbd:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -196,0,637
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -196,0,378
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2zbd end
+
+# glb-fx:r2bradley begin
+r2bradley:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,613
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,361
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2bradley end
+
+# glb-fx:r2ilshield begin
+r2ilshield:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,378
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -165,0,197
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2ilshield end
+
+# glb-fx:r2ilhowitzer begin
+r2ilhowitzer:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,872
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,543
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2ilhowitzer end
+
+# glb-fx:r2phl begin
+r2phl:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -189,0,801
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -189,0,493
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2phl end
+
+# glb-fx:r2sads begin
+r2sads:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -192,0,801
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -192,0,493
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2sads end
+
+# glb-fx:r2ilfalcon begin
+r2ilfalcon:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2ilfalcon end
+
+# glb-fx:r2lynx begin
+r2lynx:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -157,0,707
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -157,0,427
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2lynx end
+
+# glb-fx:r2ilgunship begin
+r2ilgunship:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2ilgunship end
+
+# glb-fx:r2caesar begin
+r2caesar:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,825
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,510
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2caesar end
+
+# glb-fx:r2kuzgun begin
+r2kuzgun:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2kuzgun end
+
+# glb-fx:r2f15sa begin
+r2f15sa:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2f15sa end
+
+# glb-fx:r2sahin begin
+r2sahin:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2sahin end
+
+# glb-fx:r2skyspear begin
+r2skyspear:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2skyspear end
+
+# glb-fx:r2ilpatrol begin
+r2ilpatrol:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -255,0,698
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -255,0,421
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2ilpatrol end
+
+# glb-fx:r2cloud begin
+r2cloud:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2cloud end
+
+# glb-fx:r2ilfrigate begin
+r2ilfrigate:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -357,0,881
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -357,0,549
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2ilfrigate end
+
+# glb-fx:r2turna begin
+r2turna:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2turna end
+
+# glb-fx:r2ah64sa begin
+r2ah64sa:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2ah64sa end
+
+# glb-fx:r2sadiq begin
+r2sadiq:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -283,0,661
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -283,0,395
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2sadiq end
+
+# glb-fx:r2riyadh begin
+r2riyadh:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -377,0,878
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -377,0,547
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2riyadh end
+
+# glb-fx:r2jubail begin
+r2jubail:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -291,0,898
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: largefire
+		Sequence: idle
+		Palette: effect
+		Offset: -291,0,561
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathLarge
+		EmptyWeapon: R2FXShipDeathLarge
+# glb-fx:r2jubail end
+
+# glb-fx:r2hzrecoilless begin
+r2hzrecoilless:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,519
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,296
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2hzrecoilless end
+
+# glb-fx:r2iltender begin
+r2iltender:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -318,0,883
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: largefire
+		Sequence: idle
+		Palette: effect
+		Offset: -318,0,550
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathLarge
+		EmptyWeapon: R2FXShipDeathLarge
+# glb-fx:r2iltender end
+
+# glb-fx:r2ytechrr begin
+r2ytechrr:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,496
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,280
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2ytechrr end
+
+# glb-fx:r2hztechnical begin
+r2hztechnical:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,519
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,296
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2hztechnical end
+
+# glb-fx:r2ymlr begin
+r2ymlr:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -192,0,566
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -192,0,329
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2ymlr end
+
+# glb-fx:r2yzu begin
+r2yzu:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,707
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,427
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2yzu end
+
+# glb-fx:r2technical begin
+r2technical:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -157,0,660
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -157,0,394
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2technical end
+
+# glb-fx:r2hzdrone begin
+r2hzdrone:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2hzdrone end
+
+# glb-fx:r2hzescort begin
+r2hzescort:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -169,0,519
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -169,0,296
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2hzescort end
+
+# glb-fx:r2yildirim begin
+r2yildirim:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,448
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -181,0,246
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2yildirim end
+
+# glb-fx:r2samad begin
+r2samad:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2samad end
+
+# glb-fx:r2aras begin
+r2aras:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -185,0,543
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -185,0,312
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2aras end
+
+# glb-fx:r2deniz begin
+r2deniz:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -208,0,543
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -208,0,312
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2deniz end
+
+# glb-fx:r2haiying begin
+r2haiying:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -271,0,801
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -271,0,493
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2haiying end
+
+# glb-fx:r2kunlun begin
+r2kunlun:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -330,0,759
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: largefire
+		Sequence: idle
+		Palette: effect
+		Offset: -330,0,464
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathLarge
+		EmptyWeapon: R2FXShipDeathLarge
+# glb-fx:r2kunlun end
+
+# glb-fx:r2jiaolong begin
+r2jiaolong:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -361,0,701
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -361,0,423
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2jiaolong end
+
+# glb-fx:r2sahaab begin
+r2sahaab:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,542
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,312
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2sahaab end
+
+# glb-fx:r2mokha begin
+r2mokha:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,492
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -224,0,277
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2mokha end
+
+# glb-fx:r2raad begin
+r2raad:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -200,0,519
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -200,0,296
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2raad end
+
+# glb-fx:r2fajr begin
+r2fajr:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -189,0,590
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -189,0,345
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2fajr end
+
+# glb-fx:r2coast begin
+r2coast:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -216,0,637
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -216,0,378
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2coast end
+
+# glb-fx:r2mohajer begin
+r2mohajer:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2mohajer end
+
+# glb-fx:r2loiter begin
+r2loiter:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2loiter end
+
+# glb-fx:r2toufan begin
+r2toufan:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2toufan end
+
+# glb-fx:r2azar begin
+r2azar:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	LeavesTrails@R2FXSMOKE:
+		Image: smallsmoke
+		Palette: effect
+		Type: CenterPosition
+		TrailWhileStationary: true
+		StationaryInterval: 6
+		MovingInterval: 3
+		SpawnAtLastPosition: false
+		RequiresCondition: r2fx-heavy
+# glb-fx:r2azar end
+
+# glb-fx:r2peykaap begin
+r2peykaap:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -263,0,657
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -263,0,392
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2peykaap end
+
+# glb-fx:r2ghadir begin
+r2ghadir:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -310,0,700
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -310,0,422
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2ghadir end
+
+# glb-fx:r2gokkalkan begin
+r2gokkalkan:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -185,0,448
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -185,0,246
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2gokkalkan end
+
+# glb-fx:r2sancak begin
+r2sancak:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,660
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,394
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+# glb-fx:r2sancak end
+
+# glb-fx:r2hzrockets begin
+r2hzrockets:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -196,0,566
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -196,0,329
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathMedium
+		EmptyWeapon: R2FXDeathMedium
+# glb-fx:r2hzrockets end
+
+# glb-fx:r2hzmissileboat begin
+r2hzmissileboat:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -275,0,651
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -275,0,388
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2hzmissileboat end
+
+# glb-fx:r2hzsurvey begin
+r2hzsurvey:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -263,0,843
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -263,0,522
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2hzsurvey end
+
+# glb-fx:r2hzskiff begin
+r2hzskiff:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -204,0,387
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -204,0,203
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2hzskiff end
+
+# glb-fx:r2haiwang begin
+r2haiwang:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -396,0,1012
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: largefire
+		Sequence: idle
+		Palette: effect
+		Offset: -396,0,641
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathLarge
+		EmptyWeapon: R2FXShipDeathLarge
+# glb-fx:r2haiwang end
+
+# glb-fx:r2hodeidah begin
+r2hodeidah:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -236,0,589
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -236,0,345
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2hodeidah end
+
+# glb-fx:r2ege begin
+r2ege:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -361,0,864
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -361,0,537
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2ege end
+
+# glb-fx:r2poyraz begin
+r2poyraz:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: smallsmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -251,0,738
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: smallfire
+		Sequence: idle
+		Palette: effect
+		Offset: -251,0,449
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathSmall
+		EmptyWeapon: R2FXShipDeathSmall
+# glb-fx:r2poyraz end
+
+# glb-fx:r2marmara begin
+r2marmara:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: largesmoke
+		Sequence: idle
+		Palette: effect
+		Offset: -400,0,904
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: mediumfire
+		Sequence: idle
+		Palette: effect
+		Offset: -400,0,565
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXShipDeathMedium
+		EmptyWeapon: R2FXShipDeathMedium
+# glb-fx:r2marmara end
