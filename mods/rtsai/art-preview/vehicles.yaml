@@ -105,9 +105,9 @@ r2bradley:
 	Turreted:
 		Offset: 5,0,0
 	Armament:
-		LocalOffset: 573,-4,508
+		LocalOffset: 571,-4,884
 	Armament@tow:
-		LocalOffset: 177,-174,522, 177,176,522
+		LocalOffset: 177,-174,908, 177,176,908
 # glb-route:r2bradley end
 
 # glb-route:r2sads begin
@@ -182,7 +182,7 @@ r2ah64sa:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament@rockets:
-		LocalOffset: 472,-459,132, 472,459,132
+		LocalOffset: 471,-458,230, 471,458,230
 	-WithVoxelBody:
 
 r2ah64sahusk:
@@ -634,6 +634,8 @@ r2technical:
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
 		Offset: -167,0,0
+	Armament:
+		LocalOffset: 336,-2,948
 # glb-route:r2technical end
 
 # glb-route:r2ytechrr begin
@@ -646,7 +648,7 @@ r2ytechrr:
 	Turreted:
 		Offset: -251,0,0
 	Armament:
-		LocalOffset: 542,0,508
+		LocalOffset: 541,0,884
 		Recoil: 40
 		RecoilRecovery: 8
 	WithVoxelBarrel:
@@ -662,7 +664,7 @@ r2yzu:
 	Turreted:
 		Offset: -225,0,0
 	Armament:
-		LocalOffset: 12,-46,588, 12,46,588
+		LocalOffset: 12,-46,1023, 12,46,1023
 # glb-route:r2yzu end
 
 # glb-route:r2ymlr begin
@@ -673,7 +675,7 @@ r2ymlr:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 157,-113,621, 157,113,621
+		LocalOffset: 157,-113,1080, 157,113,1080
 	WithVoxelBody@chassis:
 	WithVoxelBody@loaded:
 		Sequence: rack
@@ -713,7 +715,7 @@ r2hodeidah:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: -402,-73,520, -402,73,520
+		LocalOffset: -401,-73,746, -401,73,746
 # glb-route:r2hodeidah end
 
 # glb-route:r2mokha begin
@@ -725,6 +727,8 @@ r2mokha:
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
 		Offset: 35,-69,0
+	Armament:
+		LocalOffset: 163,0,809
 # glb-route:r2mokha end
 
 # glb-route:palette-yemen begin
@@ -748,7 +752,7 @@ r2merkava:
 	Turreted:
 		Offset: -124,0,0
 	Armament:
-		LocalOffset: 854,1,409
+		LocalOffset: 852,1,711
 		Recoil: 85
 		RecoilRecovery: 17
 	WithVoxelBarrel:
@@ -764,7 +768,9 @@ r2namer:
 	Turreted:
 		Offset: 238,0,0
 	Armament:
-		LocalOffset: 303,49,482
+		LocalOffset: 302,49,838
+	Armament@tow:
+		LocalOffset: 302,-49,838
 # glb-route:r2namer end
 
 # glb-route:r2ilshield begin
@@ -777,7 +783,7 @@ r2ilshield:
 	Turreted:
 		Offset: -14,0,0
 	Armament:
-		LocalOffset: 106,-335,514, 106,335,514
+		LocalOffset: 106,-334,894, 106,334,894
 	WithAnimatedVoxelModel@radar:
 		Sequence: radar
 		TickRate: 3
@@ -792,7 +798,7 @@ r2ilhowitzer:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 651,4,737
+		LocalOffset: 649,4,1282
 # glb-route:r2ilhowitzer end
 
 # glb-route:r2ilfalcon begin
@@ -802,6 +808,10 @@ r2ilfalcon:
 		Scale: 11.7
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: -50,-219,70, -50,219,70
+	Armament@strike:
+		LocalOffset: 100,0,35
 
 r2ilfalconhusk:
 	RenderVoxels:
@@ -826,9 +836,9 @@ r2ilgunship:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament@primary:
-		LocalOffset: 963,-4,74
+		LocalOffset: 960,-4,129
 	Armament@rockets:
-		LocalOffset: 258,-392,183, 258,392,183
+		LocalOffset: 257,-391,318, 257,391,318
 
 r2ilgunshiphusk:
 	RenderVoxels:
@@ -848,7 +858,7 @@ r2ilpatrol:
 	Turreted:
 		Offset: 230,0,0
 	Armament:
-		LocalOffset: 449,11,285
+		LocalOffset: 448,11,496
 # glb-route:r2ilpatrol end
 
 # glb-route:r2ilfrigate begin
@@ -861,9 +871,12 @@ r2ilfrigate:
 	Turreted:
 		Offset: 508,0,0
 	Armament@primary:
-		LocalOffset: 509,-2,394
+		LocalOffset: 508,-2,685
 		Recoil: 64
 		RecoilRecovery: 12
+	Armament@ciws:
+		LocalOffset: 229,0,661
+		Turret: none
 	WithVoxelBarrel:
 	WithAnimatedVoxelModel@radar:
 		Sequence: radar
@@ -890,7 +903,7 @@ r2hztechnical:
 	Turreted:
 		Offset: -176,0,0
 	Armament:
-		LocalOffset: 147,-5,588
+		LocalOffset: 147,-5,1023
 # glb-route:r2hztechnical end
 
 # glb-route:r2hzrecoilless begin
@@ -903,7 +916,7 @@ r2hzrecoilless:
 	Turreted:
 		Offset: -106,0,0
 	Armament:
-		LocalOffset: 392,-2,574
+		LocalOffset: 391,-2,999
 		Recoil: 40
 		RecoilRecovery: 8
 	WithVoxelBarrel:
@@ -919,7 +932,7 @@ r2hzescort:
 	Turreted:
 		Offset: -348,0,0
 	Armament:
-		LocalOffset: 310,-84,667, 310,83,667
+		LocalOffset: 309,-84,1160, 309,83,1160
 		Recoil: 56
 		RecoilRecovery: 11
 	WithVoxelBarrel:
@@ -933,7 +946,7 @@ r2hzrockets:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 32,-6,568
+		LocalOffset: 32,-6,988
 	-WithVoxelBody@loaded:
 	-WithVoxelBody@empty:
 	WithVoxelBody@chassis:
@@ -975,7 +988,7 @@ r2hzmissileboat:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 247,-233,520, 247,233,520
+		LocalOffset: 297,-232,659, 297,232,659
 # glb-route:r2hzmissileboat end
 
 # glb-route:r2hzsurvey begin
@@ -988,7 +1001,7 @@ r2hzsurvey:
 	Turreted:
 		Offset: 365,0,0
 	Armament:
-		LocalOffset: 281,3,330
+		LocalOffset: 280,3,574
 	WithAnimatedVoxelModel@radar:
 		Sequence: radar
 		TickRate: 3
@@ -1038,7 +1051,7 @@ r2aras:
 	Turreted:
 		Offset: 93,0,0
 	Armament:
-		LocalOffset: 395,10,493
+		LocalOffset: 394,10,858
 # glb-route:r2aras end
 
 # glb-route:r2bozkir begin
@@ -1070,7 +1083,7 @@ r2gokkalkan:
 	Turreted:
 		Offset: -101,0,0
 	Armament:
-		LocalOffset: 404,-55,524, 404,55,524
+		LocalOffset: 403,-55,912, 403,55,912
 # glb-route:r2gokkalkan end
 
 # glb-route:r2yildirim begin
@@ -1133,6 +1146,8 @@ r2sahin:
 		Scale: 11.7
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: -60,-349,104, -60,349,104
 
 r2sahinhusk:
 	RenderVoxels:
@@ -1173,6 +1188,8 @@ r2turna:
 		Scale: 11.7
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: 50,-389,470, 50,389,470
 
 r2turnahusk:
 	RenderVoxels:
@@ -1211,11 +1228,11 @@ r2ege:
 	Turreted:
 		Offset: 519,0,0
 	Armament:
-		LocalOffset: 504,5,358
+		LocalOffset: 503,5,623
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@ASW:
-		LocalOffset: -800,-125,238, -800,125,238
+		LocalOffset: -798,-125,414, -798,125,414
 		Turret: none
 	WithVoxelBarrel:
 # glb-route:r2ege end
@@ -1230,10 +1247,10 @@ r2marmara:
 	Turreted:
 		Offset: 671,0,0
 	Armament@AA:
-		LocalOffset: -334,-5,479, 19,-5,467
+		LocalOffset: -333,-5,833, 19,-5,812
 		Turret: none
 	Armament:
-		LocalOffset: 435,0,432
+		LocalOffset: 434,0,751
 		Recoil: 64
 		RecoilRecovery: 12
 	WithVoxelBarrel:

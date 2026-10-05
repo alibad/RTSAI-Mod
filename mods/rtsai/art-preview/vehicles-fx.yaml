@@ -14,13 +14,13 @@ r2mantis:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,377
+		Offset: -165,0,621
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,230
+		Offset: -165,0,401
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -41,13 +41,13 @@ r2luyang:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -396,0,1002
+		Offset: -396,0,1708
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -396,0,667
+		Offset: -396,0,1162
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -85,13 +85,13 @@ r2bozkir:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -173,0,377
+		Offset: -173,0,621
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -173,0,230
+		Offset: -173,0,401
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -110,13 +110,13 @@ r2karrar:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,612
+		Offset: -165,0,1030
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,394
+		Offset: -165,0,687
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -135,13 +135,13 @@ r2m1a2s:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,400
+		Offset: -181,0,661
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,246
+		Offset: -181,0,429
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -160,13 +160,13 @@ r2merkava:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -173,0,353
+		Offset: -173,0,580
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -173,0,213
+		Offset: -173,0,372
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -185,13 +185,13 @@ r2qilin:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,400
+		Offset: -181,0,661
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,246
+		Offset: -181,0,429
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -210,13 +210,13 @@ r2namer:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,495
+		Offset: -192,0,825
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,312
+		Offset: -192,0,543
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -237,13 +237,13 @@ r2zbd:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -196,0,589
+		Offset: -196,0,989
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -196,0,378
+		Offset: -196,0,658
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -262,13 +262,13 @@ r2bradley:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,565
+		Offset: -165,0,948
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,361
+		Offset: -165,0,630
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -289,13 +289,13 @@ r2ilshield:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,330
+		Offset: -165,0,539
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -165,0,197
+		Offset: -165,0,343
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -316,13 +316,13 @@ r2ilhowitzer:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,824
+		Offset: -224,0,1398
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,543
+		Offset: -224,0,944
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -341,13 +341,13 @@ r2phl:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -189,0,753
+		Offset: -189,0,1275
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -189,0,493
+		Offset: -189,0,858
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -368,13 +368,13 @@ r2sads:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,753
+		Offset: -192,0,1275
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,493
+		Offset: -192,0,858
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -416,13 +416,13 @@ r2lynx:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -157,0,659
+		Offset: -157,0,1112
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -157,0,427
+		Offset: -157,0,744
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -462,13 +462,13 @@ r2caesar:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,777
+		Offset: -224,0,1316
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,510
+		Offset: -224,0,887
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -565,13 +565,13 @@ r2ilpatrol:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -255,0,650
+		Offset: -255,0,1095
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -255,0,421
+		Offset: -255,0,732
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -612,13 +612,13 @@ r2ilfrigate:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -357,0,833
+		Offset: -357,0,1415
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -357,0,549
+		Offset: -357,0,956
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -682,13 +682,13 @@ r2sadiq:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -283,0,613
+		Offset: -283,0,1032
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -283,0,395
+		Offset: -283,0,688
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -710,13 +710,13 @@ r2riyadh:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -377,0,830
+		Offset: -377,0,1408
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -377,0,547
+		Offset: -377,0,951
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -740,13 +740,13 @@ r2jubail:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -291,0,850
+		Offset: -291,0,1444
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
-		Offset: -291,0,561
+		Offset: -291,0,977
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathLarge
@@ -765,13 +765,13 @@ r2hzrecoilless:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,471
+		Offset: -181,0,784
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,296
+		Offset: -181,0,515
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -790,13 +790,13 @@ r2iltender:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -318,0,835
+		Offset: -318,0,1417
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
-		Offset: -318,0,550
+		Offset: -318,0,958
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathLarge
@@ -815,13 +815,13 @@ r2ytechrr:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,448
+		Offset: -161,0,743
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,280
+		Offset: -161,0,486
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -840,13 +840,13 @@ r2hztechnical:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,471
+		Offset: -161,0,784
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,296
+		Offset: -161,0,515
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -865,13 +865,13 @@ r2ymlr:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,518
+		Offset: -192,0,866
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -192,0,329
+		Offset: -192,0,572
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -892,13 +892,13 @@ r2yzu:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,659
+		Offset: -161,0,1112
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,427
+		Offset: -161,0,744
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -919,13 +919,13 @@ r2technical:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -157,0,612
+		Offset: -157,0,1030
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -157,0,394
+		Offset: -157,0,687
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -966,13 +966,13 @@ r2hzescort:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -169,0,471
+		Offset: -169,0,784
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -169,0,296
+		Offset: -169,0,515
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -993,13 +993,13 @@ r2yildirim:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,400
+		Offset: -181,0,661
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -181,0,246
+		Offset: -181,0,429
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1040,13 +1040,13 @@ r2aras:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -185,0,495
+		Offset: -185,0,825
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -185,0,312
+		Offset: -185,0,543
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1067,13 +1067,13 @@ r2deniz:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -208,0,495
+		Offset: -208,0,825
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -208,0,312
+		Offset: -208,0,543
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1094,13 +1094,13 @@ r2haiying:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -271,0,753
+		Offset: -271,0,1275
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -271,0,493
+		Offset: -271,0,858
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -1124,13 +1124,13 @@ r2kunlun:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -330,0,711
+		Offset: -330,0,1202
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
-		Offset: -330,0,464
+		Offset: -330,0,807
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathLarge
@@ -1149,13 +1149,13 @@ r2jiaolong:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -361,0,653
+		Offset: -361,0,1101
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -361,0,423
+		Offset: -361,0,737
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -1174,13 +1174,13 @@ r2sahaab:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,494
+		Offset: -224,0,824
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,312
+		Offset: -224,0,543
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1199,13 +1199,13 @@ r2mokha:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,444
+		Offset: -224,0,736
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -224,0,277
+		Offset: -224,0,481
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1227,13 +1227,13 @@ r2raad:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -200,0,471
+		Offset: -200,0,784
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -200,0,296
+		Offset: -200,0,515
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1254,13 +1254,13 @@ r2fajr:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -189,0,542
+		Offset: -189,0,907
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -189,0,345
+		Offset: -189,0,601
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1281,13 +1281,13 @@ r2coast:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -216,0,589
+		Offset: -216,0,989
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -216,0,378
+		Offset: -216,0,658
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1381,13 +1381,13 @@ r2peykaap:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -263,0,609
+		Offset: -263,0,1024
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -263,0,392
+		Offset: -263,0,683
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1411,13 +1411,13 @@ r2ghadir:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -310,0,652
+		Offset: -310,0,1098
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -310,0,422
+		Offset: -310,0,735
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -1436,13 +1436,13 @@ r2gokkalkan:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -185,0,400
+		Offset: -185,0,661
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -185,0,246
+		Offset: -185,0,429
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1463,13 +1463,13 @@ r2sancak:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,612
+		Offset: -161,0,1030
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -161,0,394
+		Offset: -161,0,687
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathSmall
@@ -1488,13 +1488,13 @@ r2hzrockets:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -196,0,518
+		Offset: -196,0,866
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -196,0,329
+		Offset: -196,0,572
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXDeathMedium
@@ -1515,13 +1515,13 @@ r2hzmissileboat:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -275,0,603
+		Offset: -275,0,1013
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -275,0,388
+		Offset: -275,0,675
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1543,13 +1543,13 @@ r2hzsurvey:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -263,0,795
+		Offset: -263,0,1347
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -263,0,522
+		Offset: -263,0,909
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1571,13 +1571,13 @@ r2hzskiff:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -204,0,339
+		Offset: -204,0,555
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -204,0,203
+		Offset: -204,0,354
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1596,13 +1596,13 @@ r2haiwang:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -396,0,964
+		Offset: -396,0,1641
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-large
 		Sequence: idle
 		Palette: effect
-		Offset: -396,0,641
+		Offset: -396,0,1115
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathLarge
@@ -1621,13 +1621,13 @@ r2hodeidah:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -236,0,541
+		Offset: -236,0,907
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -236,0,345
+		Offset: -236,0,601
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1649,13 +1649,13 @@ r2ege:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -361,0,816
+		Offset: -361,0,1385
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -361,0,537
+		Offset: -361,0,935
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
@@ -1677,13 +1677,13 @@ r2poyraz:
 		Image: r2fxsmoke-small
 		Sequence: idle
 		Palette: effect
-		Offset: -251,0,690
+		Offset: -251,0,1166
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-small
 		Sequence: idle
 		Palette: effect
-		Offset: -251,0,449
+		Offset: -251,0,782
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathSmall
@@ -1705,13 +1705,13 @@ r2marmara:
 		Image: r2fxsmoke
 		Sequence: idle
 		Palette: effect
-		Offset: -400,0,856
+		Offset: -400,0,1455
 		RequiresCondition: r2fx-heavy
 	WithIdleOverlay@R2FXFIRE:
 		Image: r2fxfire-medium
 		Sequence: idle
 		Palette: effect
-		Offset: -400,0,565
+		Offset: -400,0,984
 		RequiresCondition: r2fx-critical
 	FireWarheadsOnDeath:
 		Weapon: R2FXShipDeathMedium
