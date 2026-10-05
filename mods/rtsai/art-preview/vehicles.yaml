@@ -353,3 +353,124 @@ r2ghadir:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 # glb-route:r2ghadir end
+
+# glb-route:r2qilin begin
+r2qilin:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -1,0,0
+	Armament:
+		LocalOffset: 766,2,436
+		Recoil: 72
+		RecoilRecovery: 14
+	WithVoxelBarrel:
+# glb-route:r2qilin end
+
+# glb-route:r2zbd begin
+r2zbd:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: -217,0,0
+# glb-route:r2zbd end
+
+# glb-route:r2phl begin
+r2phl:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Armament:
+		LocalOffset: 129,-135,601, 129,135,601
+# glb-route:r2phl end
+
+# glb-route:r2lynx begin
+r2lynx:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 100,0,0
+# glb-route:r2lynx end
+
+# glb-route:r2skyspear begin
+r2skyspear:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2skyspearhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2skyspear end
+
+# glb-route:r2cloud begin
+r2cloud:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+
+r2cloudhusk:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2cloud end
+
+# glb-route:r2haiying begin
+r2haiying:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	Turreted:
+		Offset: 482,0,0
+	Armament:
+		LocalOffset: 233,2,291
+# glb-route:r2haiying end
+
+# glb-route:r2kunlun begin
+r2kunlun:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2kunlun end
+
+# glb-route:r2haiwang begin
+r2haiwang:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2haiwang end
+
+# glb-route:r2jiaolong begin
+r2jiaolong:
+	RenderVoxels:
+		PlayerPalette: r2glbchinaplayer
+		Scale: 11.7
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+# glb-route:r2jiaolong end
