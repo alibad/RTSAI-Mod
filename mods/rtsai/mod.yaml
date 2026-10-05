@@ -123,6 +123,9 @@ Rules:
 	ra2|modern-factions/hezbollah-roles.yaml
 	ra2|modern-factions/combined-arms-ai.yaml
 	ra2|modern-factions/doctrines.yaml
+	ra2|art-preview/vehicles.yaml
+	ra2|art-preview/infantry.yaml
+	ra2|art-preview/buildings.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -154,6 +157,9 @@ Sequences:
 	ra2|modern-factions/hezbollah-sequences.yaml
 	ra2|modern-factions/yemen-roster-sequences.yaml
 	ra2|modern-factions/hezbollah-roster-sequences.yaml
+	ra2|art-preview/vehicles-sequences.yaml
+	ra2|art-preview/infantry-sequences.yaml
+	ra2|art-preview/buildings-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
@@ -165,6 +171,7 @@ ModelSequences:
 	ra2|modern-factions/israel-voxels.yaml
 	ra2|modern-factions/yemen-voxels.yaml
 	ra2|modern-factions/hezbollah-voxels.yaml
+	ra2|art-preview/voxels.yaml
 
 Cursors:
 	ra2|cursors.yaml
