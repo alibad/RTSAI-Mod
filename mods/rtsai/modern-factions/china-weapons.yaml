@@ -55,11 +55,12 @@ R2ChinaRedSpearRifle:
 	Warhead@1Dam: SpreadDamage
 		Damage: 22
 
+# Round 4: Burst 2 -> 3, ReloadDelay 40 -> 30, the Bradley's 20mm output (the ZBD traded 0.33 per credit).
 R2ChinaIFVCannon:
 	Inherits: R2ReconGun
 	Range: 6c0
-	ReloadDelay: 40
-	Burst: 2
+	ReloadDelay: 30
+	Burst: 3
 	BurstDelays: 5
 	Warhead@1Dam: SpreadDamage
 		Damage: 14

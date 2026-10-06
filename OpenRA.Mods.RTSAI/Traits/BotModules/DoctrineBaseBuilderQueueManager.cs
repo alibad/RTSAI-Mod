@@ -107,7 +107,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 			if (waterState == WaterCheck.NotChecked)
 			{
-				if (AIUtils.IsAreaAvailable<BaseProvider>(world, player, world.Map, baseBuilder.Info.MaxBaseRadius, baseBuilder.Info.WaterTerrainTypes))
+				if (AIUtils.IsAreaAvailable<BaseProvider>(world, player, world.Map, baseBuilder.Info.MaxBaseRadius, baseBuilder.Info.WaterTerrainTypes)
+					&& NavalTargetReachable())
 					waterState = WaterCheck.EnoughWater;
 				else
 				{
@@ -273,6 +274,47 @@ namespace OpenRA.Mods.RTSAI.Traits
 			}
 
 			return true;
+		}
+
+		// RTS AI: the upstream water check accepts any 3x3 water near the base, so bots built shipyards and
+		// ships on rivers and ponds that never reach the enemy (7-13% of their spending on the land maps of
+		// docs/balance.md, round 4). Naval production now also needs a naval path from that water to water
+		// within NavalTargetRadius cells of an enemy start location.
+		bool NavalTargetReachable()
+		{
+			var info = baseBuilder.Info;
+			if (info.NavalTargetRadius <= 0)
+				return true;
+
+			var map = world.Map;
+			var locomotor = world.WorldActor.TraitsImplementing<Locomotor>().FirstOrDefault(l => l.Info.Name == info.NavalLocomotor);
+			var pathFinder = world.WorldActor.TraitOrDefault<IPathFinder>();
+			if (locomotor == null || pathFinder == null)
+				return true;
+
+			bool IsWater(CPos c) => map.Contains(c) && info.WaterTerrainTypes.Contains(map.GetTerrainInfo(c).Type);
+
+			// Launch water: the 3x3 water areas the upstream check accepts, one representative per water body.
+			var launch = new List<CPos>();
+			foreach (var cell in world.ActorsHavingTrait<BaseProvider>().Where(a => a.Owner == player)
+				.SelectMany(a => map.FindTilesInCircle(a.Location, info.MaxBaseRadius)))
+			{
+				if (!IsWater(cell) || !Util.AdjacentCells(world, Target.FromCell(world, cell)).All(IsWater))
+					continue;
+
+				if (!launch.Any(l => l == cell || pathFinder.PathExistsForLocomotor(locomotor, l, cell)))
+					launch.Add(cell);
+			}
+
+			var reachable = launch.Count > 0 && world.Players
+				.Where(p => p.Playable && !p.NonCombatant && p.RelationshipWith(player) == PlayerRelationship.Enemy)
+				.SelectMany(p => map.FindTilesInCircle(p.HomeLocation, info.NavalTargetRadius))
+				.Where(IsWater)
+				.Any(target => launch.Any(l => pathFinder.PathExistsForLocomotor(locomotor, l, target)));
+
+			DoctrineLog.Write(player, $"naval: {launch.Count} water bodies near the base; " +
+				$"{(reachable ? "one reaches" : "none reaches")} within {info.NavalTargetRadius} cells of an enemy start");
+			return reachable;
 		}
 
 		ActorInfo GetProducibleBuilding(FrozenSet<string> actors, IEnumerable<ActorInfo> buildables, Func<ActorInfo, int> orderBy = null)

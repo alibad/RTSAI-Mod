@@ -17,7 +17,7 @@ Player:
 			r2ilobserver: 3
 			r2ilrecon: 1
 			r2ilhowitzer: 4
-			r2ilfalcon: 4
+			r2ilfalcon: 1
 			r2ilgunship: 4
 			r2ilfrigate: 4
 			r2iltender: 2
@@ -48,7 +48,7 @@ Player:
 			r2ilobserver: 3
 			r2ilrecon: 1
 			r2ilhowitzer: 4
-			r2ilfalcon: 4
+			r2ilfalcon: 1
 			r2ilgunship: 4
 			r2ilfrigate: 4
 			r2iltender: 2
@@ -79,7 +79,7 @@ Player:
 			r2ilobserver: 3
 			r2ilrecon: 1
 			r2ilhowitzer: 4
-			r2ilfalcon: 4
+			r2ilfalcon: 1
 			r2ilgunship: 4
 			r2ilfrigate: 4
 			r2iltender: 2
@@ -110,7 +110,7 @@ Player:
 			r2ilobserver: 3
 			r2ilrecon: 1
 			r2ilhowitzer: 4
-			r2ilfalcon: 4
+			r2ilfalcon: 1
 			r2ilgunship: 4
 			r2ilfrigate: 4
 			r2iltender: 2
@@ -141,7 +141,7 @@ Player:
 			r2ilobserver: 3
 			r2ilrecon: 1
 			r2ilhowitzer: 4
-			r2ilfalcon: 4
+			r2ilfalcon: 1
 			r2ilgunship: 4
 			r2ilfrigate: 4
 			r2iltender: 2

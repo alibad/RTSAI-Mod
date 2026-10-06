@@ -19,6 +19,8 @@
 # destroyed per credit against 0.6-0.8 for most tanks), so
 # China (140), Turkiye (130) and Iran (120) field more line infantry; China's Mantis (0.27 per credit) and
 # Turkiye's Sancak (0.23) were cut back, and Iran's Toophan share returns to 100.
+# Round 4: China support 150 -> 100 (Lynx 0.24 per credit); Turkiye main-battle-tank 130 -> 110 (Bozkir 30%
+# of production at 0.83 per credit).
 
 Player:
 	# Coordination: specialists and relays with the main force, amphibious lift, maritime reach.
@@ -29,7 +31,6 @@ Player:
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
 		RoleShareModifiers:
 			line-infantry: 140
-			support: 150
 			transport: 150
 			main-battle-tank: 110
 			artillery: 60
@@ -58,7 +59,7 @@ Player:
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept, gaairc
 		RoleShareModifiers:
 			line-infantry: 130
-			main-battle-tank: 130
+			main-battle-tank: 110
 			strike-aircraft: 80
 			anti-air: 20
 			artillery: 80

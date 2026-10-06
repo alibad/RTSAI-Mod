@@ -84,8 +84,10 @@ r2yrpg:
 		Prerequisites: ~faction.yemen, nahand
 		BuildPaletteOrder: 20
 		Description: ra2-r2yrpg-description
+	# 300 -> 350 (round 4): the most anti-armour damage per credit of any team, now level with the
+	# Saudi ATGM's at a shorter range.
 	Valued:
-		Cost: 300
+		Cost: 350
 	Health:
 		HP: 95
 	Mobile:

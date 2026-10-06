@@ -23,7 +23,7 @@ Player:
 			r2redspear: 1
 			r2zbd: 4
 			r2phl: 6
-			r2skyspear: 4
+			r2skyspear: 1
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
@@ -59,7 +59,7 @@ Player:
 			r2redspear: 1
 			r2zbd: 4
 			r2phl: 6
-			r2skyspear: 4
+			r2skyspear: 1
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
@@ -95,7 +95,7 @@ Player:
 			r2redspear: 1
 			r2zbd: 4
 			r2phl: 6
-			r2skyspear: 4
+			r2skyspear: 1
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
@@ -131,7 +131,7 @@ Player:
 			r2redspear: 1
 			r2zbd: 4
 			r2phl: 6
-			r2skyspear: 4
+			r2skyspear: 1
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
@@ -167,7 +167,7 @@ Player:
 			r2redspear: 1
 			r2zbd: 4
 			r2phl: 6
-			r2skyspear: 4
+			r2skyspear: 1
 			r2crane: 2
 			r2haiwang: 2
 			r2kunlun: 2
