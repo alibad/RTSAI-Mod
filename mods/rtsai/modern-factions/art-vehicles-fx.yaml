@@ -1,7 +1,6 @@
 # Modern-faction vehicle animation layer (RTSAI-Art tools/anim_fx.py): damage smoke and fire, death explosions, muzzle
 # and launch effects. Loaded after art-vehicles.yaml. One "# glb-fx:<actor>" block per unit; regenerate, never hand-edit.
 
-
 # glb-fx:r2mantis begin
 r2mantis:
 	GrantConditionOnDamageState@R2FXHEAVY:

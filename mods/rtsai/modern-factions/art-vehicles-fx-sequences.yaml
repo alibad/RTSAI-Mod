@@ -1,7 +1,6 @@
 # Modern-faction vehicle animation layer sequences (RTSAI-Art tools/anim_fx.py).
 # Loaded after art-vehicles-sequences.yaml. One "# glb-fx:<actor>" block per unit; regenerate, never hand-edit.
 
-
 # glb-fx:r2mantis begin
 r2mantis:
 	muzzle-launch:

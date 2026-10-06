@@ -340,7 +340,13 @@ def main() -> None:
     parser.add_argument("--fork", type=Path, default=ROOT.parent / "OpenRA")
     parser.add_argument("--factions", default=",".join(FACTIONS), help="comma-separated internal names")
     parser.add_argument("--doctrine-ai", action="store_true", help="use the role-aware OpenRA.Mods.RTSAI bot modules")
+    parser.add_argument("--legacy-port", action="store_true",
+                        help="really re-port from the product (overwrites rules and brings the placeholder art back)")
     args = parser.parse_args()
+    if not args.legacy_port:
+        raise SystemExit("port-modern-factions.py bootstrapped the factions from OpenRA-AI (rounds A/B). Since 2026-10-06 the "
+                         "faction rules are maintained here and the art comes from RTSAI-Art's installers "
+                         "(modern-factions/art-*.yaml); a re-port would overwrite both. Pass --legacy-port to do it anyway.")
 
     src = args.product / "apps/installer/ra2/modern-factions"
     mod = ROOT / "mods/rtsai"

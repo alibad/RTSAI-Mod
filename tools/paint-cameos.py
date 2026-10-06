@@ -16,7 +16,9 @@ Masters stay outside the repository.
 
 `install` turns the chosen master of every actor (variant 1 unless --pick says otherwise) into
 mods/rtsai/modern-factions/icons/<actor>.png and records the prompt, seed, model, crop and hashes in
-tools/cameo-generation.json, which tools/art-provenance.py folds into ART-PROVENANCE.json.
+tools/cameo-generation.json. SUPERSEDED on 2026-10-06: the game's cameos are now rendered from the project's
+3D models by RTSAI-Art tools/cameo_render.py; `install` refuses unless --legacy. The Qwen cameos and their
+record are archived in RTSAI-Art history/ (and history/_records/ART-PROVENANCE.json).
 
 No reference images are given to the model: every cameo is text-to-image. Needs Pillow, numpy and
 requests (e.g. OpenRA-AI/.venv).
@@ -206,6 +208,11 @@ def cameo(master):
 def install(args) -> None:
     from PIL import Image
 
+    if not getattr(args, "legacy", False):
+        raise SystemExit("The Qwen-Image cameos were superseded on 2026-10-06 by the rendered cameos (RTSAI-Art "
+                         "tools/cameo_render.py install) and are archived in RTSAI-Art history/. Installing would "
+                         "overwrite the approved icons; pass --legacy to do it anyway.")
+
     table = subjects()
     work = Path(args.work)
     picks = dict(item.split("=") for item in args.pick.split(",")) if args.pick else {}
@@ -249,6 +256,7 @@ def main() -> None:
     gen.add_argument("--no-stream", action="store_true", help="--backend local: synchronous block transfers")
     inst = sub.add_parser("install")
     inst.add_argument("--work", required=True)
+    inst.add_argument("--legacy", action="store_true", help="overwrite the approved rendered cameos (pre-2026-10-06 flow)")
     inst.add_argument("--pick", help="actor=variant,... (default: the recorded or first variant)")
     args = parser.parse_args()
     generate(args) if args.command == "generate" else install(args)
