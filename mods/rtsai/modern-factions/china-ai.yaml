@@ -14,6 +14,10 @@ Player:
 			r2haiying: 12
 			r2kunlun: 3
 			r2jiaolong: 10
+		# Bots field the r2redspear commando only after 20 minutes, like the other five (balance-harness:
+		# it traded 0.6-0.8 per credit).
+		UnitDelays:
+			r2redspear: 30000
 		UnitLimits:
 			r2cnnetwork: 3
 			r2redspear: 1
@@ -48,6 +52,8 @@ Player:
 			r2haiying: 12
 			r2kunlun: 3
 			r2jiaolong: 10
+		UnitDelays:
+			r2redspear: 30000
 		UnitLimits:
 			r2cnnetwork: 3
 			r2redspear: 1
@@ -82,6 +88,8 @@ Player:
 			r2haiying: 12
 			r2kunlun: 3
 			r2jiaolong: 10
+		UnitDelays:
+			r2redspear: 30000
 		UnitLimits:
 			r2cnnetwork: 3
 			r2redspear: 1
@@ -116,6 +124,8 @@ Player:
 			r2haiying: 12
 			r2kunlun: 3
 			r2jiaolong: 10
+		UnitDelays:
+			r2redspear: 30000
 		UnitLimits:
 			r2cnnetwork: 3
 			r2redspear: 1
@@ -150,6 +160,8 @@ Player:
 			r2haiying: 28
 			r2kunlun: 3
 			r2jiaolong: 25
+		UnitDelays:
+			r2redspear: 30000
 		UnitLimits:
 			r2cnnetwork: 3
 			r2redspear: 1

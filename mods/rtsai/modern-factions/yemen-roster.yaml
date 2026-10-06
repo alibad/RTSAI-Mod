@@ -58,8 +58,9 @@ r2ymr:
 		Prerequisites: ~faction.yemen, nahand
 		BuildPaletteOrder: 10
 		Description: ra2-r2ymr-description
+	# 135 -> 150 with its Hezbollah twin (2.2 destroyed per credit in the round-3 baseline).
 	Valued:
-		Cost: 135
+		Cost: 150
 	Health:
 		HP: 100
 	Mobile:
