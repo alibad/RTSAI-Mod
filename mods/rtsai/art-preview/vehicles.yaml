@@ -1369,14 +1369,14 @@ r2marmara:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
 	Turreted:
-		Offset: 737,0,0
+		Offset: 741,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 130,0,600
+		LocalOffset: 232,0,671
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@AA:
-		LocalOffset: -366,5,916, 21,5,893
+		LocalOffset: -365,5,913, 21,5,891
 		Turret: none
 # glb-route:r2marmara end
 
