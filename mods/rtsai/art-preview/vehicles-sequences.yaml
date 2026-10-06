@@ -554,3 +554,93 @@ r2bradley:
 		Facings: 32
 		ShadowStart: 96
 # glb-route:r2bradley end
+
+# glb-route:r2hodeidah begin
+r2hodeidah:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hodeidah.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hodeidah end
+
+# glb-route:r2mokha begin
+r2mokha:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2mokha.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2mokha.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2mokha end
+
+# glb-route:r2sahaab begin
+r2sahaab:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2sahaab.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2sahaab end
+
+# glb-route:r2samad begin
+r2samad:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2samad.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2samad.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2samad end
+
+# glb-route:r2technical begin
+r2technical:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2technical.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2technical.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2technical end
+
+# glb-route:r2ymlr begin
+r2ymlr:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ymlr.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2ymlr end
+
+# glb-route:r2ytechrr begin
+r2ytechrr:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ytechrr.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2ytechrr.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2ytechrr end
+
+# glb-route:r2yzu begin
+r2yzu:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2yzu.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2yzu.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2yzu end

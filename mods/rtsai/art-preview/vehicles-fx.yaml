@@ -905,6 +905,8 @@ r2yzu:
 		EmptyWeapon: R2FXDeathSmall
 	Armament:
 		MuzzleSequence: muzzle
+		Recoil: 40
+		RecoilRecovery: 10
 # glb-fx:r2yzu end
 
 # glb-fx:r2technical begin
@@ -1023,9 +1025,6 @@ r2samad:
 	Armament:
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
-	-WithVoxelBody:
-	WithVoxelHelicopterBody:
-		TickRate: 1
 # glb-fx:r2samad end
 
 # glb-fx:r2aras begin

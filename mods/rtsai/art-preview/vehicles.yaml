@@ -684,108 +684,138 @@ r2jiaolong:
 
 # glb-route:r2technical begin
 r2technical:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -167,0,0
+		Offset: -186,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 336,2,948
+		LocalOffset: 374,2,1056
 # glb-route:r2technical end
 
 # glb-route:r2ytechrr begin
 r2ytechrr:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -251,0,0
+		Offset: -284,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 541,0,884
+		LocalOffset: 611,0,1002
 		Recoil: 40
 		RecoilRecovery: 8
-	WithVoxelBarrel:
 # glb-route:r2ytechrr end
 
 # glb-route:r2yzu begin
 r2yzu:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -225,0,0
+		Offset: -244,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 12,46,1023, 12,-46,1023
+		LocalOffset: 370,73,1331, 370,-73,1331
 # glb-route:r2yzu end
 
 # glb-route:r2ymlr begin
 r2ymlr:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
-	Armament:
-		LocalOffset: 157,113,1080, 157,-113,1080
-	WithVoxelBody@chassis:
-	WithVoxelBody@loaded:
-		Sequence: rack
+	-RenderVoxels:
+	-WithVoxelBody@loaded:
 	-WithVoxelBody@empty:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 168,121,1163, 168,-121,1163
 # glb-route:r2ymlr end
 
 # glb-route:r2samad begin
 r2samad:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 75,0,10
 
 r2samadhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+		Image: r2samad
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2samad end
 
 # glb-route:r2sahaab begin
 r2sahaab:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 3,-3,236
 # glb-route:r2sahaab end
 
 # glb-route:r2hodeidah begin
 r2hodeidah:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: -401,73,746, -401,-73,746
+		LocalOffset: -422,76,785, -422,-76,785
 # glb-route:r2hodeidah end
 
 # glb-route:r2mokha begin
 r2mokha:
-	RenderVoxels:
-		PlayerPalette: r2glbyemenplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-yemenplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 35,69,0
+		Offset: 131,6,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 163,0,809
+		LocalOffset: 50,-16,751
 # glb-route:r2mokha end
 
 # glb-route:palette-yemen begin
@@ -1397,3 +1427,15 @@ r2marmara:
 		BaseName: r2prerender-saudiplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-saudi end
+
+# glb-route:palette-prerender-yemen begin
+^Palettes:
+	PaletteFromFile@r2prerender-yemen:
+		Name: r2prerender-yemen
+		Filename: ra2|art-preview/vehicles/yemen-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-yemen:
+		BasePalette: r2prerender-yemen
+		BaseName: r2prerender-yemenplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-yemen end
