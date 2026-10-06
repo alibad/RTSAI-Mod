@@ -1081,15 +1081,19 @@ r2hzsurvey:
 
 # glb-route:r2aras begin
 r2aras:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 93,0,0
+		Offset: 99,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 394,-10,858
+		LocalOffset: 416,-10,907
 # glb-route:r2aras end
 
 # glb-route:r2bozkir begin
@@ -1113,15 +1117,19 @@ r2bozkir:
 
 # glb-route:r2gokkalkan begin
 r2gokkalkan:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -101,0,0
+		Offset: -107,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 403,55,912, 403,-55,912
+		LocalOffset: 426,58,964, 426,-58,964
 # glb-route:r2gokkalkan end
 
 # glb-route:r2yildirim begin
@@ -1174,25 +1182,32 @@ r2sancak:
 		Offset: -159,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: -71,-152,530
+		LocalOffset: -40,0,913
 # glb-route:r2sancak end
 
 # glb-route:r2sahin begin
 r2sahin:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: -60,349,104, -60,-349,104
+		LocalOffset: 6,-1,23
 
 r2sahinhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+		Image: r2sahin
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 # glb-route:r2sahin end
 
 # glb-route:r2kuzgun begin
@@ -1223,20 +1238,34 @@ r2kuzgunhusk:
 
 # glb-route:r2turna begin
 r2turna:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelHelicopterBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@landed:
+		Name: landed
+		Sequence: idle-landed
+		RequiresCondition: !airborne
 	Armament:
-		LocalOffset: 50,389,470, 50,-389,470
+		LocalOffset: 1018,-3,448
 
 r2turnahusk:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+		Image: r2turna
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2turna end
 
 # glb-route:r2poyraz begin
@@ -1260,40 +1289,46 @@ r2poyraz:
 
 # glb-route:r2ege begin
 r2ege:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 519,0,0
+		Offset: 552,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 503,-5,623
+		LocalOffset: 534,-5,663
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@ASW:
-		LocalOffset: -798,125,414, -798,-125,414
+		LocalOffset: -849,133,440, -849,-133,440
 		Turret: none
-	WithVoxelBarrel:
 # glb-route:r2ege end
 
 # glb-route:r2marmara begin
 r2marmara:
-	RenderVoxels:
-		PlayerPalette: r2glbturkeyplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-turkeyplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 671,0,0
-	Armament@AA:
-		LocalOffset: -333,5,833, 19,5,812
-		Turret: none
+		Offset: 737,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 434,0,751
+		LocalOffset: 130,0,600
 		Recoil: 64
 		RecoilRecovery: 12
-	WithVoxelBarrel:
+	Armament@AA:
+		LocalOffset: -366,5,916, 21,5,893
+		Turret: none
 # glb-route:r2marmara end
 
 # glb-route:palette-prerender-china begin

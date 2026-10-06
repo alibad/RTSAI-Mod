@@ -194,46 +194,14 @@ r2hzsurvey:
 	radar: ra2|art-preview/voxels/r2hzsurveyradar
 # glb-route:r2hzsurvey end
 
-# glb-route:r2aras begin
-r2aras:
-	idle: ra2|art-preview/voxels/r2aras
-	turret: ra2|art-preview/voxels/r2arastur
-# glb-route:r2aras end
-
-
-# glb-route:r2gokkalkan begin
-r2gokkalkan:
-	idle: ra2|art-preview/voxels/r2gokkalkan
-	turret: ra2|art-preview/voxels/r2gokkalkantur
-# glb-route:r2gokkalkan end
 
 
 
 
-# glb-route:r2sahin begin
-r2sahin:
-	idle: ra2|art-preview/voxels/r2sahin
-# glb-route:r2sahin end
 
 
-# glb-route:r2turna begin
-r2turna:
-	idle: ra2|art-preview/voxels/r2turna
-	rotor: ra2|art-preview/voxels/r2turnatur
-	slow-rotor: ra2|art-preview/voxels/r2turnatur
-# glb-route:r2turna end
 
 
-# glb-route:r2ege begin
-r2ege:
-	idle: ra2|art-preview/voxels/r2ege
-	turret: ra2|art-preview/voxels/r2egetur
-	barrel: ra2|art-preview/voxels/r2egebarl
-# glb-route:r2ege end
 
-# glb-route:r2marmara begin
-r2marmara:
-	idle: ra2|art-preview/voxels/r2marmara
-	turret: ra2|art-preview/voxels/r2marmaratur
-	barrel: ra2|art-preview/voxels/r2marmarabarl
-# glb-route:r2marmara end
+
+
