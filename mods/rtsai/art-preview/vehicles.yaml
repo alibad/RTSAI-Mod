@@ -831,153 +831,200 @@ r2mokha:
 
 # glb-route:r2merkava begin
 r2merkava:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -124,0,0
+		Offset: -132,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 852,-1,711
+		LocalOffset: 904,-1,754
 		Recoil: 85
 		RecoilRecovery: 17
-	WithVoxelBarrel:
 # glb-route:r2merkava end
 
 # glb-route:r2namer begin
 r2namer:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 238,0,0
+		Offset: 253,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 302,-49,838
+		LocalOffset: 321,-52,891
 	Armament@tow:
-		LocalOffset: 302,49,838
+		LocalOffset: 321,52,890
 # glb-route:r2namer end
 
 # glb-route:r2ilshield begin
 r2ilshield:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
 		Offset: -14,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 106,334,894, 106,-334,894
-	WithAnimatedVoxelModel@radar:
-		Sequence: radar
-		TickRate: 3
-		Turret: primary
+		LocalOffset: 111,352,940, 111,-352,940
 # glb-route:r2ilshield end
 
 # glb-route:r2ilhowitzer begin
 r2ilhowitzer:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 649,-4,1282
+		LocalOffset: 694,-4,1371
 # glb-route:r2ilhowitzer end
 
 # glb-route:r2ilfalcon begin
 r2ilfalcon:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: -50,219,70, -50,-219,70
+		LocalOffset: -55,242,77, -55,-242,77
 	Armament@strike:
-		LocalOffset: 100,0,35
+		LocalOffset: 110,0,38
 
 r2ilfalconhusk:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+		Image: r2ilfalcon
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 
 r2ilstrike:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+		Image: r2ilfalcon
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
 # glb-route:r2ilfalcon end
 
 # glb-route:r2ilgunship begin
 r2ilgunship:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelHelicopterBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@landed:
+		Name: landed
+		Sequence: idle-landed
+		RequiresCondition: !airborne
 	Armament@primary:
-		LocalOffset: 960,4,129
+		LocalOffset: 1030,4,137
 	Armament@rockets:
-		LocalOffset: 257,391,318, 257,-391,318
+		LocalOffset: 276,419,343, 276,-419,343
 
 r2ilgunshiphusk:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+		Image: r2ilgunship
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2ilgunship end
 
 # glb-route:r2ilpatrol begin
 r2ilpatrol:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 230,0,0
+		Offset: 246,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 448,-11,496
+		LocalOffset: 478,-12,529
 # glb-route:r2ilpatrol end
 
 # glb-route:r2ilfrigate begin
 r2ilfrigate:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+		RequiresCondition: active-radar
+	WithFacingSpriteBody@still:
+		Name: still
+		Sequence: idle-still
+		RequiresCondition: !active-radar
 	Turreted:
-		Offset: 508,0,0
+		Offset: 536,0,0
+	WithSpriteTurret:
 	Armament@primary:
-		LocalOffset: 508,2,685
+		LocalOffset: 535,2,723
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@ciws:
-		LocalOffset: 229,0,661
+		LocalOffset: 242,0,697
 		Turret: none
-	WithVoxelBarrel:
-	WithAnimatedVoxelModel@radar:
-		Sequence: radar
-		TickRate: 3
-		RequiresCondition: active-radar
+	Armament@asw:
+		LocalOffset: 0,0,0
+		Turret: none
 # glb-route:r2ilfrigate end
 
 # glb-route:r2iltender begin
 r2iltender:
-	RenderVoxels:
-		PlayerPalette: r2glbisraelplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-israelplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 # glb-route:r2iltender end
 
 # glb-route:r2hztechnical begin
@@ -1439,3 +1486,15 @@ r2marmara:
 		BaseName: r2prerender-yemenplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-yemen end
+
+# glb-route:palette-prerender-israel begin
+^Palettes:
+	PaletteFromFile@r2prerender-israel:
+		Name: r2prerender-israel
+		Filename: ra2|art-preview/vehicles/israel-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-israel:
+		BasePalette: r2prerender-israel
+		BaseName: r2prerender-israelplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-israel end

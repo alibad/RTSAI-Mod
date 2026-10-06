@@ -40,61 +40,14 @@
 
 
 
-# glb-route:r2merkava begin
-r2merkava:
-	idle: ra2|art-preview/voxels/r2merkava
-	turret: ra2|art-preview/voxels/r2merkavatur
-	barrel: ra2|art-preview/voxels/r2merkavabarl
-# glb-route:r2merkava end
 
-# glb-route:r2namer begin
-r2namer:
-	idle: ra2|art-preview/voxels/r2namer
-	turret: ra2|art-preview/voxels/r2namertur
-# glb-route:r2namer end
 
-# glb-route:r2ilshield begin
-r2ilshield:
-	idle: ra2|art-preview/voxels/r2ilshield
-	turret: ra2|art-preview/voxels/r2ilshieldtur
-	radar: ra2|art-preview/voxels/r2ilshieldradar
-# glb-route:r2ilshield end
 
-# glb-route:r2ilhowitzer begin
-r2ilhowitzer:
-	idle: ra2|art-preview/voxels/r2ilhowitzer
-# glb-route:r2ilhowitzer end
 
-# glb-route:r2ilfalcon begin
-r2ilfalcon:
-	idle: ra2|art-preview/voxels/r2ilfalcon
-# glb-route:r2ilfalcon end
 
-# glb-route:r2ilgunship begin
-r2ilgunship:
-	idle: ra2|art-preview/voxels/r2ilgunship
-	rotor: ra2|art-preview/voxels/r2ilgunshiptur
-	slow-rotor: ra2|art-preview/voxels/r2ilgunshiptur
-# glb-route:r2ilgunship end
 
-# glb-route:r2ilpatrol begin
-r2ilpatrol:
-	idle: ra2|art-preview/voxels/r2ilpatrol
-	turret: ra2|art-preview/voxels/r2ilpatroltur
-# glb-route:r2ilpatrol end
 
-# glb-route:r2ilfrigate begin
-r2ilfrigate:
-	idle: ra2|art-preview/voxels/r2ilfrigate
-	turret: ra2|art-preview/voxels/r2ilfrigatetur
-	barrel: ra2|art-preview/voxels/r2ilfrigatebarl
-	radar: ra2|art-preview/voxels/r2ilfrigateradar
-# glb-route:r2ilfrigate end
 
-# glb-route:r2iltender begin
-r2iltender:
-	idle: ra2|art-preview/voxels/r2iltender
-# glb-route:r2iltender end
 
 # glb-route:r2hztechnical begin
 r2hztechnical:

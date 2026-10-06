@@ -644,3 +644,126 @@ r2yzu:
 		Facings: 32
 		ShadowStart: 96
 # glb-route:r2yzu end
+
+# glb-route:r2ilfalcon begin
+r2ilfalcon:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ilfalcon.shp
+		Facings: 32
+# glb-route:r2ilfalcon end
+
+# glb-route:r2ilfrigate begin
+r2ilfrigate:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ilfrigate.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2ilfrigate.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|art-preview/vehicles/r2ilfrigate.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2ilfrigate end
+
+# glb-route:r2ilgunship begin
+r2ilgunship:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ilgunship.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2ilgunship.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|art-preview/vehicles/r2ilgunship.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2ilgunship end
+
+# glb-route:r2ilhowitzer begin
+r2ilhowitzer:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ilhowitzer.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2ilhowitzer end
+
+# glb-route:r2ilpatrol begin
+r2ilpatrol:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ilpatrol.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2ilpatrol.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2ilpatrol end
+
+# glb-route:r2ilshield begin
+r2ilshield:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ilshield.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2ilshield.shp
+		Start: 64
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+	turret-still:
+		Filename: ra2|art-preview/vehicles/r2ilshield.shp
+		Start: 64
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+# glb-route:r2ilshield end
+
+# glb-route:r2iltender begin
+r2iltender:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2iltender.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2iltender end
+
+# glb-route:r2merkava begin
+r2merkava:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2merkava.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2merkava.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2merkava end
+
+# glb-route:r2namer begin
+r2namer:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2namer.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2namer.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2namer end
