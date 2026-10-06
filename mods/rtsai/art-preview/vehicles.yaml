@@ -25,7 +25,7 @@ r2mantis:
 		Offset: -39,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 20,-248,704, 20,248,704
+		LocalOffset: 21,248,1224, 21,-248,1224
 # glb-route:r2mantis end
 
 # glb-route:r2luyang begin
@@ -530,7 +530,7 @@ r2phl:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 135,-142,630, 135,142,630
+		LocalOffset: 135,141,1096, 135,-141,1096
 # glb-route:r2phl end
 
 # glb-route:r2lynx begin
@@ -546,6 +546,8 @@ r2lynx:
 	Turreted:
 		Offset: 113,0,0
 	WithSpriteTurret:
+	Armament:
+		LocalOffset: 281,-36,962
 # glb-route:r2lynx end
 
 # glb-route:r2skyspear begin
@@ -612,7 +614,10 @@ r2haiying:
 		Offset: 510,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 246,2,307
+		LocalOffset: 246,-2,535
+	Armament@AA:
+		LocalOffset: 510,43,488
+		Turret: none
 # glb-route:r2haiying end
 
 # glb-route:r2kunlun begin
