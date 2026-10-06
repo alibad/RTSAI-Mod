@@ -1228,10 +1228,10 @@ r2sancak:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
 	Turreted:
-		Offset: -159,0,0
+		Offset: -156,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: -40,0,913
+		LocalOffset: 400,7,838
 # glb-route:r2sancak end
 
 # glb-route:r2sahin begin
