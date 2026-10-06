@@ -745,9 +745,13 @@ r2ymlr:
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
+		RequiresCondition: !reloading
+	WithFacingSpriteBody@empty:
+		Name: empty
+		Sequence: empty
+		RequiresCondition: reloading
 	Armament:
 		LocalOffset: 168,121,1163, 168,-121,1163
-		-ReloadingCondition:
 # glb-route:r2ymlr end
 
 # glb-route:r2samad begin
@@ -1093,9 +1097,13 @@ r2hzrockets:
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
+		RequiresCondition: !reloading
+	WithFacingSpriteBody@empty:
+		Name: empty
+		Sequence: empty
+		RequiresCondition: reloading
 	Armament:
 		LocalOffset: 33,6,1034
-		-ReloadingCondition:
 # glb-route:r2hzrockets end
 
 # glb-route:r2hzdrone begin

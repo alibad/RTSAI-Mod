@@ -617,6 +617,11 @@ r2ymlr:
 		Filename: ra2|art-preview/vehicles/r2ymlr.shp
 		Facings: 32
 		ShadowStart: 32
+	empty:
+		Filename: ra2|art-preview/vehicles/r2ymlr.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
 # glb-route:r2ymlr end
 
 # glb-route:r2ytechrr begin
@@ -822,6 +827,11 @@ r2hzrockets:
 		Filename: ra2|art-preview/vehicles/r2hzrockets.shp
 		Facings: 32
 		ShadowStart: 32
+	empty:
+		Filename: ra2|art-preview/vehicles/r2hzrockets.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
 # glb-route:r2hzrockets end
 
 # glb-route:r2hzskiff begin
