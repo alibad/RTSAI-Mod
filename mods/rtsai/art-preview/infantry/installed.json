@@ -2,197 +2,197 @@
  "r2cnrifle": {
   "candidate": "units/r2cnrifle/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "0e43cda7cdaafa69473768023fb60624709e354f3c6ad7ae8eae1e29d562e983",
-  "installedAt": "2026-10-06T00:21:50.192705+00:00",
+  "sha256": "c58263c546b4368c1077f5c81849e445d4046d5c96a7a49d72e6c89cc6da845a",
+  "installedAt": "2026-10-06T03:13:32.771055+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2cnnetwork": {
   "candidate": "units/r2cnnetwork/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "2dd56ab5c1b7ab5e5baf032e1976be809ddf1297d12b3f4304e9c5954c88257d",
-  "installedAt": "2026-10-06T00:21:50.216451+00:00",
+  "sha256": "7e6ba32098c1536a322b7df3d87116d3ba8ed98203933ff9e01390f63817be20",
+  "installedAt": "2026-10-06T03:13:32.787647+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2cnportable": {
   "candidate": "units/r2cnportable/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "4394ef3ea413c52dc16b0509d12aaae830ee2c5c22a9426515c0551cc050960c",
-  "installedAt": "2026-10-06T00:21:50.206944+00:00",
+  "sha256": "945bbf879a0052981a5b3cecdb8e67433fd411f54891beeeea330f7fc062fcc7",
+  "installedAt": "2026-10-06T03:13:32.778264+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2redspear": {
   "candidate": "units/r2redspear/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "111a9927fc7e82ef4631892260e7cb8d6edcfe85dc59e869641409e76d9ed702",
-  "installedAt": "2026-10-06T00:21:50.227301+00:00",
+  "sha256": "e1e2f9511ff28e64899f945d3a2b341165da83e088f0990a5e7d28f68fa1a6ae",
+  "installedAt": "2026-10-06T03:13:32.795795+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2basij": {
   "candidate": "units/r2basij/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "f7facd91e611f16dc060855dd9bc8a72502a5c8971479a2f2421f0fccaabfb2f",
-  "installedAt": "2026-10-06T00:21:50.236811+00:00",
+  "sha256": "fd8d7a35b73aaf5619aa081e359c7223f2d21429af1e806095b04c2baa5408b5",
+  "installedAt": "2026-10-06T03:13:32.804932+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2dronecontrol": {
   "candidate": "units/r2dronecontrol/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "527862a83fa135e70d5ad00a95fb50a0309f68d9d8f9f386fe4e1feba9dff6a5",
-  "installedAt": "2026-10-06T00:21:50.256056+00:00",
+  "sha256": "25df16277fe412822f67134afcf1edf6cd34e36fc4d046d23fcc5462e56efb50",
+  "installedAt": "2026-10-06T03:13:32.824483+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2shadowone": {
   "candidate": "units/r2shadowone/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "26517f3b42461bfb6c9aff91999b06d81eeafbdc02ae3401ed76300cffe22e61",
-  "installedAt": "2026-10-06T00:21:50.266834+00:00",
+  "sha256": "9f142664358a642c13b63d07e400214ab8191d55ab520f6bacc8663fc492536d",
+  "installedAt": "2026-10-06T03:13:32.833869+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2toophan": {
   "candidate": "units/r2toophan/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "ca6fd0e964e13ef6d261a44d808467d7c0c7200f7f6d6fd4ce1165ae148ce049",
-  "installedAt": "2026-10-06T00:21:50.246016+00:00",
+  "sha256": "678eabfc24126e8ce98809f3d6309f0a51bce9dd97ca496b94e38a12397d6984",
+  "installedAt": "2026-10-06T03:13:32.815445+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2greywolf": {
   "candidate": "units/r2greywolf/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "0d199fe34c2d93edbdba84610d5ce51ef6956f9726adf086799ada863218d864",
-  "installedAt": "2026-10-06T00:21:50.312494+00:00",
+  "sha256": "79642ae55851558a9c0860bbbf3a6f518dc7e11e4651a16150e36122c822f521",
+  "installedAt": "2026-10-06T03:13:32.864005+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2trat": {
   "candidate": "units/r2trat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "929742bfdac65de9924fde43369dd28ac710e5266b0158c212670cfd59d96ba7",
-  "installedAt": "2026-10-06T00:21:50.291744+00:00",
+  "sha256": "f60ff47811a8f4faadbd6c939409af50b91dff609f017e4663af1c19182a5171",
+  "installedAt": "2026-10-06T03:13:32.849349+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2trdroneop": {
   "candidate": "units/r2trdroneop/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "9aff17d43be4d7229c9ddb81fb16f965ff3273356e5aaa2bd957d50c4320cf1a",
-  "installedAt": "2026-10-06T00:21:50.302388+00:00",
+  "sha256": "be0866f9667551c1edaff5b61fb661d687186b7f7075663028d7887573b786d4",
+  "installedAt": "2026-10-06T03:13:32.856492+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2trrifle": {
   "candidate": "units/r2trrifle/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "529e7a281ac4d44dc6cac9ca4d10cba7b3b4ccb3d15615f451fb32e27eb04b70",
-  "installedAt": "2026-10-06T00:21:50.277943+00:00",
+  "sha256": "71235e8bbbb9f70a8033917eacb5d04286719b6d74448071cf3c6af988ff8326",
+  "installedAt": "2026-10-06T03:13:32.841223+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2falcon": {
   "candidate": "units/r2falcon/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "ee52f20726cd6e679f049a87aaf9276d7003772f80aaa505201ec142026469a9",
-  "installedAt": "2026-10-06T00:21:50.351840+00:00",
+  "sha256": "35e221218502ca9bca92d3b66bd7ce1dc045e720842238b77390228d7f1d3da8",
+  "installedAt": "2026-10-06T03:13:32.904978+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2saat": {
   "candidate": "units/r2saat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "8c5a5a1b7e7ce33f0ce66f743c569a7b6b55e4ce38338849909a5a6ffd235a78",
-  "installedAt": "2026-10-06T00:21:50.333907+00:00",
+  "sha256": "0e554349b2dac2ac0b90dd86489b3d33f4e82c57ccc32a5e830b177fbfe03a39",
+  "installedAt": "2026-10-06T03:13:32.887602+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2sajtac": {
   "candidate": "units/r2sajtac/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "f36b1a8b8c55fa31d511dd321eda6502f878a90b7af3b57ea1eacc794dc92300",
-  "installedAt": "2026-10-06T00:21:50.342418+00:00",
+  "sha256": "71073b973037990884c4028b8eb30cda1dcb8234b24df48c156437f80c260b9f",
+  "installedAt": "2026-10-06T03:13:32.896944+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2sang": {
   "candidate": "units/r2sang/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "65eb25e4a55f0b933a78becce07c1bd048301f3b4cc24c3a4607486a9db05431",
-  "installedAt": "2026-10-06T00:21:50.320233+00:00",
+  "sha256": "1107e6a602c41ed4a6810782a530f9c352b9f0208b3b1ee7fdbe3d300b320de1",
+  "installedAt": "2026-10-06T03:13:32.872984+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2wadighost": {
   "candidate": "units/r2wadighost/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "9ed10015d031215f8dd6fb617f4854663b204e4d3239bc8aa2c1c53b39b2f741",
-  "installedAt": "2026-10-06T00:21:50.386101+00:00",
+  "sha256": "155cbf285b4eca1f82c14a177891017b808fb770f2772f9dc50763cc796bd0b2",
+  "installedAt": "2026-10-06T03:13:32.937379+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2ymr": {
   "candidate": "units/r2ymr/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "03245828017c9e0a9cbe7298df2d926421333e12cce72861e105e68d023945ed",
-  "installedAt": "2026-10-06T00:21:50.361443+00:00",
+  "sha256": "72d4d9a7f2ed23082a2860a38078d49364cc31c6268b437dbd642fcff77de6e8",
+  "installedAt": "2026-10-06T03:13:32.914120+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2yrpg": {
   "candidate": "units/r2yrpg/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "7ba69f65378364398da6022c761620976850ef088af2f224e3f3a5bf7810e21d",
-  "installedAt": "2026-10-06T00:21:50.369187+00:00",
+  "sha256": "7b203ccc135cf18f6e9d84dd4fe1b9384b5c65100f558738a473bc4c8e594cb1",
+  "installedAt": "2026-10-06T03:13:32.922125+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2yspot": {
   "candidate": "units/r2yspot/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "a6a41369e1786cd5755f4ba86a6c34768fa89c8e7ba3f55bdfdd67c975733b25",
-  "installedAt": "2026-10-06T00:21:50.377706+00:00",
+  "sha256": "0e7614a0296face45ffe040f24afcb6e09be7a526bdcba1a1b5307ef29ad6057",
+  "installedAt": "2026-10-06T03:13:32.929868+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2ilat": {
   "candidate": "units/r2ilat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "fa69996ac8a2ebf4a44cbc2d1eca52f7b357c5667a4e36280a4e7fa933918b56",
-  "installedAt": "2026-10-06T00:21:50.403430+00:00",
+  "sha256": "b95abcca95009466499c1c6471a30a3713d8ebef741b6c0a484b377e7b9d17ac",
+  "installedAt": "2026-10-06T03:13:32.956046+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2ilobserver": {
   "candidate": "units/r2ilobserver/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "3d560d15490c9cc45ca84f83b2a817ed56d0f3cc05a2f773fb1faa152bc649ad",
-  "installedAt": "2026-10-06T00:21:50.413941+00:00",
+  "sha256": "2575fe8630eb5a095797223f562faef511b87a16717ee5fbe83147512e8215ac",
+  "installedAt": "2026-10-06T03:13:32.962708+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2ilrecon": {
   "candidate": "units/r2ilrecon/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "6df8db799ef4fba6669eca497b9b10a800cdccb23907dbec1938902a28c1f1c1",
-  "installedAt": "2026-10-06T00:21:50.423955+00:00",
+  "sha256": "c829d746e42e898e5e94d5fa1ce1dd1b4921a635cf7b25665f9723ddf59bd76e",
+  "installedAt": "2026-10-06T03:13:32.970736+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2ilrifle": {
   "candidate": "units/r2ilrifle/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "a907e924315c2e613be6aeb255fdc3e06f463931b4330e6c8f66af5150bc4bae",
-  "installedAt": "2026-10-06T00:21:50.394279+00:00",
+  "sha256": "593c059a7d6ca76c50a92e6f98f42c3aa76ad31ba337687e1cc6e7ce8db05df9",
+  "installedAt": "2026-10-06T03:13:32.946526+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2hzrifle": {
   "candidate": "units/r2hzrifle/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "3d9488b628c5312b22f20fec6c313d3c8081573f3927f4a337fc20cd1878e9f6",
-  "installedAt": "2026-10-06T00:21:50.431606+00:00",
+  "sha256": "81af79789d5745188840bc4a9465ee5d44de70271e3feb44d3714d82757f8b5e",
+  "installedAt": "2026-10-06T03:13:32.979315+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2hzscout": {
   "candidate": "units/r2hzscout/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "236043eccd7601f5cb5c98133aad2f41bf49848a96a1c5182dd590202c325293",
-  "installedAt": "2026-10-06T00:21:50.456719+00:00",
+  "sha256": "1fc23751bf96d36d3dda0bd45f4108cb41b7e40c82c1b86738c9be38bce1162c",
+  "installedAt": "2026-10-06T03:13:33.002673+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2hzspotter": {
   "candidate": "units/r2hzspotter/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "0d5b987daabd67df11ba030af728a28d128a2829092b448a7977210abc44d678",
-  "installedAt": "2026-10-06T00:21:50.446966+00:00",
+  "sha256": "3af7bf20d0e7dd7d2a2134d78bb5fefef9a906b443920dbb30980f7b0008947a",
+  "installedAt": "2026-10-06T03:13:32.995159+00:00",
   "reviewStatus": "unreviewed"
  },
  "r2hzat": {
   "candidate": "units/r2hzat/candidates/sprite-v3-glb",
   "fromMesh": "mesh-v1-role-rebuild",
-  "sha256": "3016c0d1e5fef83f4dcba1cf366226181ed272187007ed601f18d9556a1c89f7",
-  "installedAt": "2026-10-06T00:21:50.438201+00:00",
+  "sha256": "48af10844f26d84066f7534b811ba51607588bd749b375d552fd1cfb82572f42",
+  "installedAt": "2026-10-06T03:13:32.987127+00:00",
   "reviewStatus": "unreviewed"
  }
 }
