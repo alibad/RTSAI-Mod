@@ -1070,7 +1070,7 @@ r2aras:
 	Turreted:
 		Offset: 93,0,0
 	Armament:
-		LocalOffset: 394,10,858
+		LocalOffset: 394,-10,858
 # glb-route:r2aras end
 
 # glb-route:r2bozkir begin
@@ -1087,7 +1087,7 @@ r2bozkir:
 		Offset: -117,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 881,4,413
+		LocalOffset: 879,-4,718
 		Recoil: 85
 		RecoilRecovery: 25
 # glb-route:r2bozkir end
@@ -1102,7 +1102,7 @@ r2gokkalkan:
 	Turreted:
 		Offset: -101,0,0
 	Armament:
-		LocalOffset: 403,-55,912, 403,55,912
+		LocalOffset: 403,55,912, 403,-55,912
 # glb-route:r2gokkalkan end
 
 # glb-route:r2yildirim begin
@@ -1119,7 +1119,7 @@ r2yildirim:
 		Offset: -162,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 976,-3,793
+		LocalOffset: 972,4,1380
 		Recoil: 100
 		RecoilRecovery: 20
 # glb-route:r2yildirim end
@@ -1138,7 +1138,7 @@ r2deniz:
 		Offset: 204,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 260,0,520
+		LocalOffset: 254,-27,979
 # glb-route:r2deniz end
 
 # glb-route:r2sancak begin
@@ -1166,7 +1166,7 @@ r2sahin:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: -60,-349,104, -60,349,104
+		LocalOffset: -60,349,104, -60,-349,104
 
 r2sahinhusk:
 	RenderVoxels:
@@ -1186,6 +1186,8 @@ r2kuzgun:
 		QuantizedFacings: 32
 	WithShadow:
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 22,0,216
 
 r2kuzgunhusk:
 	-RenderVoxels:
@@ -1208,7 +1210,7 @@ r2turna:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 50,-389,470, 50,389,470
+		LocalOffset: 50,389,470, 50,-389,470
 
 r2turnahusk:
 	RenderVoxels:
@@ -1232,7 +1234,7 @@ r2poyraz:
 		Offset: 340,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 530,-3,314
+		LocalOffset: 529,4,546
 		Recoil: 48
 		RecoilRecovery: 16
 # glb-route:r2poyraz end
@@ -1247,11 +1249,11 @@ r2ege:
 	Turreted:
 		Offset: 519,0,0
 	Armament:
-		LocalOffset: 503,5,623
+		LocalOffset: 503,-5,623
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@ASW:
-		LocalOffset: -798,-125,414, -798,125,414
+		LocalOffset: -798,125,414, -798,-125,414
 		Turret: none
 	WithVoxelBarrel:
 # glb-route:r2ege end
@@ -1266,7 +1268,7 @@ r2marmara:
 	Turreted:
 		Offset: 671,0,0
 	Armament@AA:
-		LocalOffset: -333,-5,833, 19,-5,812
+		LocalOffset: -333,5,833, 19,5,812
 		Turret: none
 	Armament:
 		LocalOffset: 434,0,751
