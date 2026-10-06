@@ -781,7 +781,7 @@ r2merkava:
 	Turreted:
 		Offset: -124,0,0
 	Armament:
-		LocalOffset: 852,1,711
+		LocalOffset: 852,-1,711
 		Recoil: 85
 		RecoilRecovery: 17
 	WithVoxelBarrel:
@@ -797,9 +797,9 @@ r2namer:
 	Turreted:
 		Offset: 238,0,0
 	Armament:
-		LocalOffset: 302,49,838
-	Armament@tow:
 		LocalOffset: 302,-49,838
+	Armament@tow:
+		LocalOffset: 302,49,838
 # glb-route:r2namer end
 
 # glb-route:r2ilshield begin
@@ -812,7 +812,7 @@ r2ilshield:
 	Turreted:
 		Offset: -14,0,0
 	Armament:
-		LocalOffset: 106,-334,894, 106,334,894
+		LocalOffset: 106,334,894, 106,-334,894
 	WithAnimatedVoxelModel@radar:
 		Sequence: radar
 		TickRate: 3
@@ -827,7 +827,7 @@ r2ilhowitzer:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 649,4,1282
+		LocalOffset: 649,-4,1282
 # glb-route:r2ilhowitzer end
 
 # glb-route:r2ilfalcon begin
@@ -838,7 +838,7 @@ r2ilfalcon:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: -50,-219,70, -50,219,70
+		LocalOffset: -50,219,70, -50,-219,70
 	Armament@strike:
 		LocalOffset: 100,0,35
 
@@ -865,9 +865,9 @@ r2ilgunship:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament@primary:
-		LocalOffset: 960,-4,129
+		LocalOffset: 960,4,129
 	Armament@rockets:
-		LocalOffset: 257,-391,318, 257,391,318
+		LocalOffset: 257,391,318, 257,-391,318
 
 r2ilgunshiphusk:
 	RenderVoxels:
@@ -887,7 +887,7 @@ r2ilpatrol:
 	Turreted:
 		Offset: 230,0,0
 	Armament:
-		LocalOffset: 448,11,496
+		LocalOffset: 448,-11,496
 # glb-route:r2ilpatrol end
 
 # glb-route:r2ilfrigate begin
@@ -900,7 +900,7 @@ r2ilfrigate:
 	Turreted:
 		Offset: 508,0,0
 	Armament@primary:
-		LocalOffset: 508,-2,685
+		LocalOffset: 508,2,685
 		Recoil: 64
 		RecoilRecovery: 12
 	Armament@ciws:
