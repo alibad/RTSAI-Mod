@@ -291,7 +291,7 @@ r2karrar:
 		Offset: -72,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 260,-2,413
+		LocalOffset: 793,3,775
 		Recoil: 72
 		RecoilRecovery: 14
 # glb-route:r2karrar end
@@ -310,7 +310,7 @@ r2raad:
 		Offset: -55,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 213,-194,848, 213,173,848
+		LocalOffset: 212,194,1476, 212,-173,1476
 # glb-route:r2raad end
 
 # glb-route:r2fajr begin
@@ -327,7 +327,7 @@ r2fajr:
 		Offset: -376,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 461,1,642
+		LocalOffset: 460,-1,1116
 # glb-route:r2fajr end
 
 # glb-route:r2coast begin
@@ -344,7 +344,7 @@ r2coast:
 		Offset: -322,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 245,-151,701, 245,151,701
+		LocalOffset: 244,151,1220, 244,-151,1220
 # glb-route:r2coast end
 
 # glb-route:r2mohajer begin
@@ -415,6 +415,8 @@ r2toufan:
 		Name: landed
 		Sequence: idle-landed
 		RequiresCondition: !airborne
+	Armament:
+		LocalOffset: 1066,9,119
 
 r2toufanhusk:
 	-RenderVoxels:
@@ -440,7 +442,7 @@ r2azar:
 	WithShadow:
 	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 43,-250,74
+		LocalOffset: 39,3,20
 
 r2azarhusk:
 	-RenderVoxels:
@@ -467,10 +469,10 @@ r2peykaap:
 	Turreted:
 		Offset: 323,0,0
 	WithSpriteTurret:
-	Armament@AA:
-		LocalOffset: 528,3,302
 	Armament:
-		LocalOffset: 423,0,520
+		LocalOffset: 547,2,526
+	Armament@AA:
+		LocalOffset: 527,-3,525
 # glb-route:r2peykaap end
 
 # glb-route:r2ghadir begin
@@ -482,6 +484,8 @@ r2ghadir:
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 998,0,-12
 # glb-route:r2ghadir end
 
 # glb-route:r2qilin begin
