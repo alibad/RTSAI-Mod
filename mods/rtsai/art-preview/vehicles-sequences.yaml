@@ -523,3 +523,34 @@ r2turna:
 		Stride: 4
 		Facings: 32
 # glb-route:r2turna end
+
+# glb-route:r2ah64sa begin
+r2ah64sa:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2ah64sa.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2ah64sa.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|art-preview/vehicles/r2ah64sa.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2ah64sa end
+
+# glb-route:r2bradley begin
+r2bradley:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2bradley.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2bradley.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2bradley end

@@ -4,21 +4,10 @@
 
 
 
-# glb-route:r2bradley begin
-r2bradley:
-	idle: ra2|art-preview/voxels/r2bradley
-	turret: ra2|art-preview/voxels/r2bradleytur
-# glb-route:r2bradley end
 
 
 
 
-# glb-route:r2ah64sa begin
-r2ah64sa:
-	idle: ra2|art-preview/voxels/r2ah64sa
-	rotor: ra2|art-preview/voxels/r2ah64sa
-	slow-rotor: ra2|art-preview/voxels/r2ah64sa
-# glb-route:r2ah64sa end
 
 
 

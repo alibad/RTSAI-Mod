@@ -102,17 +102,21 @@ r2m1a2s:
 
 # glb-route:r2bradley begin
 r2bradley:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: 5,0,0
+		Offset: 6,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 571,4,884
+		LocalOffset: 604,4,936
 	Armament@tow:
-		LocalOffset: 177,174,908, 177,-176,908
+		LocalOffset: 187,183,961, 187,-186,961
 # glb-route:r2bradley end
 
 # glb-route:r2sads begin
@@ -142,7 +146,7 @@ r2caesar:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 265,-3,479
+		LocalOffset: 690,4,1298
 # glb-route:r2caesar end
 
 # glb-route:r2f15sa begin
@@ -185,21 +189,36 @@ r2f15strike:
 
 # glb-route:r2ah64sa begin
 r2ah64sa:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
-	Armament@rockets:
-		LocalOffset: 471,458,230, 471,-458,230
+	-RenderVoxels:
 	-WithVoxelBody:
+	-WithVoxelHelicopterBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		RequiresCondition: airborne
+	WithFacingSpriteBody@landed:
+		Name: landed
+		Sequence: idle-landed
+		RequiresCondition: !airborne
+	Armament@primary:
+		LocalOffset: 1147,-44,69
+	Armament@rockets:
+		LocalOffset: 481,469,236, 481,-469,236
 
 r2ah64sahusk:
-	RenderVoxels:
-		PlayerPalette: r2glbsaudiplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-saudiplayer
+		Image: r2ah64sa
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2ah64sa end
 
 # glb-route:r2sadiq begin
