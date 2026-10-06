@@ -42,9 +42,12 @@ r2luyang:
 		Offset: 468,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 616,-1,434
+		LocalOffset: 614,1,754
 		Recoil: 64
 		RecoilRecovery: 12
+	Armament@ASW:
+		LocalOffset: 469,-9,479
+		Turret: none
 # glb-route:r2luyang end
 
 # glb-route:r2crane begin
@@ -62,6 +65,8 @@ r2crane:
 		Name: landed
 		Sequence: idle-landed
 		RequiresCondition: !airborne
+	Armament:
+		LocalOffset: 962,4,376
 
 r2cranehusk:
 	-RenderVoxels:
@@ -479,7 +484,7 @@ r2qilin:
 		Offset: -1,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 809,2,460
+		LocalOffset: 806,-2,801
 		Recoil: 72
 		RecoilRecovery: 14
 # glb-route:r2qilin end
@@ -497,6 +502,8 @@ r2zbd:
 	Turreted:
 		Offset: -228,0,0
 	WithSpriteTurret:
+	Armament:
+		LocalOffset: 154,3,964
 # glb-route:r2zbd end
 
 # glb-route:r2phl begin
@@ -537,6 +544,8 @@ r2skyspear:
 		QuantizedFacings: 32
 	WithShadow:
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 32,0,26
 
 r2skyspearhusk:
 	-RenderVoxels:
@@ -560,6 +569,8 @@ r2cloud:
 		QuantizedFacings: 32
 	WithShadow:
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 143,-1,72
 
 r2cloudhusk:
 	-RenderVoxels:
@@ -611,7 +622,7 @@ r2haiwang:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: -452,0,655
+		LocalOffset: -482,1,1143
 # glb-route:r2haiwang end
 
 # glb-route:r2jiaolong begin
@@ -623,6 +634,10 @@ r2jiaolong:
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 1151,-1,66
+	Armament@Elite:
+		LocalOffset: 1151,-1,66
 # glb-route:r2jiaolong end
 
 # glb-route:r2technical begin
