@@ -95,7 +95,7 @@ r2m1a2s:
 		Offset: -85,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 894,1,447
+		LocalOffset: 891,-1,777
 		Recoil: 48
 		RecoilRecovery: 10
 # glb-route:r2m1a2s end
@@ -110,9 +110,9 @@ r2bradley:
 	Turreted:
 		Offset: 5,0,0
 	Armament:
-		LocalOffset: 571,-4,884
+		LocalOffset: 571,4,884
 	Armament@tow:
-		LocalOffset: 177,-174,908, 177,176,908
+		LocalOffset: 177,174,908, 177,-176,908
 # glb-route:r2bradley end
 
 # glb-route:r2sads begin
@@ -129,7 +129,7 @@ r2sads:
 		Offset: -248,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: 253,-136,650, 253,136,650
+		LocalOffset: 252,136,1131, 252,-136,1131
 # glb-route:r2sads end
 
 # glb-route:r2caesar begin
@@ -155,6 +155,10 @@ r2f15sa:
 		QuantizedFacings: 32
 	WithShadow:
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: -32,0,77
+	Armament@strike:
+		LocalOffset: -32,0,77
 
 r2f15sahusk:
 	-RenderVoxels:
@@ -187,7 +191,7 @@ r2ah64sa:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament@rockets:
-		LocalOffset: 471,-458,230, 471,458,230
+		LocalOffset: 471,458,230, 471,-458,230
 	-WithVoxelBody:
 
 r2ah64sahusk:
@@ -212,7 +216,7 @@ r2sadiq:
 		Offset: 419,0,0
 	WithSpriteTurret:
 	Armament:
-		LocalOffset: -5,10,237
+		LocalOffset: 306,8,412
 # glb-route:r2sadiq end
 
 # glb-route:r2riyadh begin
@@ -229,9 +233,15 @@ r2riyadh:
 		Offset: 623,0,0
 	WithSpriteTurret:
 	Armament@primary:
-		LocalOffset: 404,5,325
+		LocalOffset: 403,-5,565
 		Recoil: 64
 		RecoilRecovery: 12
+	Armament@ciws:
+		LocalOffset: 300,0,750
+		Turret: none
+	Armament@asw:
+		LocalOffset: 602,4,363
+		Turret: none
 # glb-route:r2riyadh end
 
 # glb-route:r2jubail begin
