@@ -951,9 +951,6 @@ r2hzdrone:
 	Armament:
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
-	-WithVoxelBody:
-	WithVoxelHelicopterBody:
-		TickRate: 1
 # glb-fx:r2hzdrone end
 
 # glb-fx:r2hzescort begin

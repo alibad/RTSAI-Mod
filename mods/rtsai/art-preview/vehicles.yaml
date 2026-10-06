@@ -1029,117 +1029,145 @@ r2iltender:
 
 # glb-route:r2hztechnical begin
 r2hztechnical:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -176,0,0
+		Offset: -190,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 452,2,1153
+		LocalOffset: 487,2,1244
 # glb-route:r2hztechnical end
 
 # glb-route:r2hzrecoilless begin
 r2hzrecoilless:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -106,0,0
+		Offset: -121,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 391,2,999
+		LocalOffset: 446,3,1139
 		Recoil: 40
 		RecoilRecovery: 8
-	WithVoxelBarrel:
 # glb-route:r2hzrecoilless end
 
 # glb-route:r2hzescort begin
 r2hzescort:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Turreted:
-		Offset: -348,0,0
+		Offset: -380,0,0
+	WithSpriteTurret:
 	Armament:
-		LocalOffset: 309,84,1160, 309,-83,1160
+		LocalOffset: 338,91,1266, 338,-91,1266
 		Recoil: 56
 		RecoilRecovery: 11
-	WithVoxelBarrel:
 # glb-route:r2hzescort end
 
 # glb-route:r2hzrockets begin
 r2hzrockets:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
-	Armament:
-		LocalOffset: 32,6,988
+	-RenderVoxels:
 	-WithVoxelBody@loaded:
 	-WithVoxelBody@empty:
-	WithVoxelBody@chassis:
-	WithVoxelBody@pod:
-		Sequence: pod
-		RequiresCondition: !reloading
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 33,6,1034
 # glb-route:r2hzrockets end
 
 # glb-route:r2hzdrone begin
 r2hzdrone:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 62,-15,76
 
 r2hzdronehusk:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+		Image: r2hzdrone
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+		Sequence: idle-still
 # glb-route:r2hzdrone end
 
 # glb-route:r2hzskiff begin
 r2hzskiff:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: 520,0,434
 # glb-route:r2hzskiff end
 
 # glb-route:r2hzmissileboat begin
 r2hzmissileboat:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 	Armament:
-		LocalOffset: 297,232,659, 297,-232,659
+		LocalOffset: 323,252,717, 323,-252,717
 # glb-route:r2hzmissileboat end
 
 # glb-route:r2hzsurvey begin
 r2hzsurvey:
-	RenderVoxels:
-		PlayerPalette: r2glbhezbollahplayer
-		Scale: 11.7
-		LightAmbientColor: -0.5,-0.5,-0.5
-		LightDiffuseColor: 1.4,1.4,1.4
-	Turreted:
-		Offset: 365,0,0
-	Armament:
-		LocalOffset: 280,-3,574
-	WithAnimatedVoxelModel@radar:
-		Sequence: radar
-		TickRate: 3
+	-RenderVoxels:
+	-WithVoxelBody:
+	-WithVoxelTurret:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
 		RequiresCondition: active-radar
+	WithFacingSpriteBody@still:
+		Name: still
+		Sequence: idle-still
+		RequiresCondition: !active-radar
+	Turreted:
+		Offset: 401,0,0
+	WithSpriteTurret:
+	Armament:
+		LocalOffset: 308,-3,631
 # glb-route:r2hzsurvey end
 
 # glb-route:palette-israel begin
@@ -1498,3 +1526,15 @@ r2marmara:
 		BaseName: r2prerender-israelplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-israel end
+
+# glb-route:palette-prerender-hezbollah begin
+^Palettes:
+	PaletteFromFile@r2prerender-hezbollah:
+		Name: r2prerender-hezbollah
+		Filename: ra2|art-preview/vehicles/hezbollah-prerender.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2prerender-hezbollah:
+		BasePalette: r2prerender-hezbollah
+		BaseName: r2prerender-hezbollahplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+# glb-route:palette-prerender-hezbollah end

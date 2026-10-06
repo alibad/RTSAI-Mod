@@ -767,3 +767,101 @@ r2namer:
 		Facings: 32
 		ShadowStart: 96
 # glb-route:r2namer end
+
+# glb-route:r2hzdrone begin
+r2hzdrone:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzdrone.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2hzdrone.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2hzdrone end
+
+# glb-route:r2hzescort begin
+r2hzescort:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzescort.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2hzescort.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hzescort end
+
+# glb-route:r2hzmissileboat begin
+r2hzmissileboat:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzmissileboat.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hzmissileboat end
+
+# glb-route:r2hzrecoilless begin
+r2hzrecoilless:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzrecoilless.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2hzrecoilless.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hzrecoilless end
+
+# glb-route:r2hzrockets begin
+r2hzrockets:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzrockets.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hzrockets end
+
+# glb-route:r2hzskiff begin
+r2hzskiff:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzskiff.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hzskiff end
+
+# glb-route:r2hzsurvey begin
+r2hzsurvey:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hzsurvey.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|art-preview/vehicles/r2hzsurvey.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|art-preview/vehicles/r2hzsurvey.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2hzsurvey end
+
+# glb-route:r2hztechnical begin
+r2hztechnical:
+	idle:
+		Filename: ra2|art-preview/vehicles/r2hztechnical.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|art-preview/vehicles/r2hztechnical.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hztechnical end

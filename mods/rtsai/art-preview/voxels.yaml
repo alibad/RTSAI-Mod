@@ -49,53 +49,13 @@
 
 
 
-# glb-route:r2hztechnical begin
-r2hztechnical:
-	idle: ra2|art-preview/voxels/r2hztechnical
-	turret: ra2|art-preview/voxels/r2hztechnicaltur
-# glb-route:r2hztechnical end
 
-# glb-route:r2hzrecoilless begin
-r2hzrecoilless:
-	idle: ra2|art-preview/voxels/r2hzrecoilless
-	turret: ra2|art-preview/voxels/r2hzrecoillesstur
-	barrel: ra2|art-preview/voxels/r2hzrecoillessbarl
-# glb-route:r2hzrecoilless end
 
-# glb-route:r2hzescort begin
-r2hzescort:
-	idle: ra2|art-preview/voxels/r2hzescort
-	turret: ra2|art-preview/voxels/r2hzescorttur
-	barrel: ra2|art-preview/voxels/r2hzescortbarl
-# glb-route:r2hzescort end
 
-# glb-route:r2hzrockets begin
-r2hzrockets:
-	idle: ra2|art-preview/voxels/r2hzrockets
-	pod: ra2|art-preview/voxels/r2hzrocketspod
-# glb-route:r2hzrockets end
 
-# glb-route:r2hzdrone begin
-r2hzdrone:
-	idle: ra2|art-preview/voxels/r2hzdrone
-# glb-route:r2hzdrone end
 
-# glb-route:r2hzskiff begin
-r2hzskiff:
-	idle: ra2|art-preview/voxels/r2hzskiff
-# glb-route:r2hzskiff end
 
-# glb-route:r2hzmissileboat begin
-r2hzmissileboat:
-	idle: ra2|art-preview/voxels/r2hzmissileboat
-# glb-route:r2hzmissileboat end
 
-# glb-route:r2hzsurvey begin
-r2hzsurvey:
-	idle: ra2|art-preview/voxels/r2hzsurvey
-	turret: ra2|art-preview/voxels/r2hzsurveytur
-	radar: ra2|art-preview/voxels/r2hzsurveyradar
-# glb-route:r2hzsurvey end
 
 
 
