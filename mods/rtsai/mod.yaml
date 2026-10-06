@@ -9,47 +9,23 @@ ModCredits:
 
 PackageFormats: Mix, AudioBag
 
-FileSystem: ContentInstallerFileSystem
-	SystemPackages:
+# Standalone prototype (rtsai/standalone): no Red Alert 2 content is mounted and the content installer is gone.
+# Every file the game loads comes from this mod or the engine. standalone/placeholders holds project-drawn
+# stand-ins named after the EA files that rules and sequences still reference (tools/standalone-placeholders.py);
+# it is mounted first so any real project art with the same name wins.
+FileSystem: DefaultFileSystem
+	Packages:
 		^EngineDir
 		$rtsai: ra2
 		^EngineDir|mods/common: common
-		~^SupportDir|Content/ra2: content
 		ra2|uibits
-	ContentPackages:
-		# Red Alert 2 (original game files installed by rtsai-content)
-		content|language.mix: lang
-		content|ra2.mix: ra2mix
-		~content|theme.mix
-		lang|cameo.mix: cameo
-		~lang|audio.mix: audio
-		~audio|audio.bag
-		~lang|audio.bag
-		ra2mix|cache.mix: cache
-		ra2mix|conquer.mix: conquer
-		ra2mix|generic.mix
-		ra2mix|isogen.mix
-		ra2mix|isosnow.mix
-		ra2mix|isotemp.mix
-		ra2mix|isourb.mix
-		ra2mix|load.mix
-		ra2mix|local.mix: local
-		ra2mix|neutral.mix
-		ra2mix|sidec01.mix
-		ra2mix|sidec02.mix
-		ra2mix|sno.mix
-		ra2mix|snow.mix
-		ra2mix|tem.mix
-		ra2mix|temperat.mix
-		ra2mix|urb.mix
-		ra2mix|urban.mix
-		# Mod-provided packages load after content so they can override it.
+		ra2|standalone/placeholders
+		ra2|standalone/placeholders/conquer: conquer
 		ra2|bits
 		ra2|bits/cameos
 		ra2|bits/structures
 		ra2|bits/animations
 		ra2|bits/projectiles
-	ContentInstallerMod: rtsai-content
 
 MapFolders:
 	ra2|maps: System
@@ -267,9 +243,9 @@ Notifications:
 	ra2|modern-factions/eva-notifications.yaml
 
 TileSets:
-	ra2|tilesets/temperat.yaml
-	ra2|tilesets/snow.yaml
-	ra2|tilesets/urban.yaml
+	ra2|standalone/tilesets/temperat.yaml
+	ra2|standalone/tilesets/snow.yaml
+	ra2|standalone/tilesets/urban.yaml
 
 MapGrid:
 	Type: RectangularIsometric
