@@ -15,7 +15,8 @@
 # outvalue the bot's own anti-air units; then the role's share rises to 24 until they are matched.
 # SquadSizeModifier scales the profile's attack-squad size (a unit count): factions with cheap units
 # gather more of them, factions with expensive units fewer, so squads carry similar value.
-# Round 3: riflemen were the most cost-effective unit of every faction (1.3-2.2 destroyed per credit), so
+# Round 3: riflemen were the most cost-effective unit of China, Turkiye, Iran, Yemen and Hezbollah (1.6-1.9
+# destroyed per credit against 0.6-0.8 for most tanks), so
 # China (140), Turkiye (130) and Iran (120) field more line infantry; China's Mantis (0.27 per credit) and
 # Turkiye's Sancak (0.23) were cut back, and Iran's Toophan share returns to 100.
 

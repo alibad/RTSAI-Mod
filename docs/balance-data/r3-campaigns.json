@@ -1,0 +1,264 @@
+{
+ "r3-round-robin": {
+  "description": "Round 3 baseline land round robin (rules 243c138): the seven modern factions plus America and Russia, every pairing with a modern faction (America-Russia omitted), both spawn orientations, two land maps, 3 replicates (12 games per pairing, as round 2).",
+  "seed": 20261005,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r3-naval": {
+  "description": "Round 3 baseline naval round robin (Little Big Lake, rules 243c138): same pairings, both orientations, 3 replicates (6 games per pairing, as round 2).",
+  "seed": 20261006,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ]
+   }
+  ]
+ },
+ "r3-probe-a": {
+  "description": "Round 3 probe P1: one replicate of r3-round-robin (140 games), run on rules 243c138 plus changes 1-8 of docs/balance.md (round 3).",
+  "seed": 20261011,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "probe",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r3-probe-b": {
+  "description": "Round 3 probe P2: one replicate of r3-round-robin (140 games), run on rules 243c138 plus changes 1-10.",
+  "seed": 20261012,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "probe",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r3-final": {
+  "description": "Round 3 final land round robin (same design as r3-round-robin), run on rules e15542b plus changes 1-15 (= a47654a).",
+  "seed": 20261021,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r3-final-naval": {
+  "description": "Round 3 final naval round robin (Little Big Lake), run on the final rules.",
+  "seed": 20261022,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ]
+   }
+  ]
+ }
+}

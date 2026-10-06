@@ -1,12 +1,269 @@
 # Bot-vs-bot balance evidence
 
-Round 2: 2026-10-03. Branch `rtsai/balance` (local, not pushed), final rules at 31912c4. Engine `rtsai/engine`
-5523a9907f (`ENGINE_VERSION`).
+Round 3: 2026-10-06, on the art preview. Branch `rtsai/art-preview` (local, not pushed), rules a47654a, engine
+`rtsai/engine` 265db7a4a7 (local-only Missile fixes: missiles fired over raised ground or ramps now hit). The
+round-2 and round-1 records follow the round-3 sections.
 
 How each result was established: **[ran]** means the matches or duels were played and the numbers come from their
 recorded results. **[inferred]** means it was reasoned from rules, code or those results and not tested directly.
 
-## Current state (round 2)
+## Current state (round 3)
+
+[ran] Final round robin on the round-3 rules (a47654a): 420 games on Dustbowl and Official Tournament Map A, 0 errors,
+102 tick-cap draws, median 26.0 game minutes. Row's wins-losses (draws) against the column; the last two columns are
+the row's score with its 95% Wilson interval:
+
+| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **china** | — | 5-5 (2d) | 7-3 (2d) | 2-7 (3d) | 1-9 (2d) | 4-5 (3d) | 1-10 (1d) | 1-7 (4d) | 3-5 (4d) | 37% (27-48) | 33% (18-53) |
+| **iran** | 5-5 (2d) | — | 9-2 (1d) | 8-1 (3d) | 1-7 (4d) | 7-2 (3d) | 2-6 (4d) | 1-6 (5d) | 5-5 (2d) | 56% (45-67) | 40% (23-59) |
+| **turkey** | 3-7 (2d) | 2-9 (1d) | — | 4-4 (4d) | 3-7 (2d) | 7-3 (2d) | 4-6 (2d) | 3-4 (5d) | 4-5 (3d) | 41% (30-53) | 46% (28-65) |
+| **saudi** | 7-2 (3d) | 1-8 (3d) | 4-4 (4d) | — | 4-6 (2d) | 4-5 (3d) | 4-7 (1d) | 4-5 (3d) | 8-0 (4d) | 44% (34-56) | 65% (45-80) |
+| **yemen** | 9-1 (2d) | 7-1 (4d) | 7-3 (2d) | 6-4 (2d) | — | 5-4 (3d) | 5-1 (6d) | 3-8 (1d) | 6-5 (1d) | 67% (56-77) | 42% (24-61) |
+| **israel** | 5-4 (3d) | 2-7 (3d) | 3-7 (2d) | 5-4 (3d) | 4-5 (3d) | — | 3-6 (3d) | 4-6 (2d) | 6-2 (4d) | 42% (32-54) | 54% (35-72) |
+| **hezbollah** | 10-1 (1d) | 6-2 (4d) | 6-4 (2d) | 7-4 (1d) | 1-5 (6d) | 6-3 (3d) | — | 4-5 (3d) | 5-2 (5d) | 62% (50-72) | 54% (35-72) |
+| **america** | 7-1 (4d) | 6-1 (5d) | 4-3 (5d) | 5-4 (3d) | 8-3 (1d) | 6-4 (2d) | 5-4 (3d) | — | — | 62% (52-72) | — |
+| **russia** | 5-3 (4d) | 5-5 (2d) | 5-4 (3d) | 0-8 (4d) | 5-6 (1d) | 2-6 (4d) | 2-5 (5d) | — | — | 42% (32-53) | — |
+
+Targets, as scores (draw = half a win). Baseline and Final are full round robins (420 games each: a modern faction
+plays 72 games against the other modern factions and 24 against America and Russia, an original country 84 against
+the modern factions); P1 and P2 are one-replicate probes (140 games), so their scores move by ±20-30 points between
+runs and are shown without intervals:
+
+| Faction | Target | Baseline | P1 | P2 | Final | Met |
+|---|---|---:|---:|---:|---:|---|
+| China | vs modern 35-65% | 21% (13-32) | 19% | 23% | 37% (27-48) | yes |
+| Iran | vs modern 35-65% | 53% (42-65) | 71% | 50% | 56% (45-67) | yes |
+| Türkiye | vs modern 35-65% | 38% (27-49) | 35% | 33% | 41% (30-53) | yes |
+| Saudi Arabia | vs modern 35-65% | 55% (43-66) | 42% | 60% | 44% (34-56) | yes |
+| Yemen | vs modern 35-65% | 79% (68-87) | 60% | 71% | 67% (56-77) | **no** |
+| Israel | vs modern 35-65% | 35% (25-46) | 58% | 46% | 42% (32-54) | yes |
+| Hezbollah | vs modern 35-65% | 69% (58-79) | 65% | 67% | 62% (50-72) | yes |
+| China | vs America+Russia ≥35% | 21% (9-40) | 44% | 62% | 33% (18-53) | **no** |
+| Iran | vs America+Russia ≥35% | 33% (18-53) | 44% | 44% | 40% (23-59) | yes |
+| Türkiye | vs America+Russia ≥35% | 25% (12-45) | 31% | 19% | 46% (28-65) | yes |
+| Saudi Arabia | vs America+Russia ≥35% | 52% (33-70) | 38% | 56% | 65% (45-80) | yes |
+| Yemen | vs America+Russia ≥35% | 46% (28-65) | 38% | 88% | 42% (24-61) | yes |
+| Israel | vs America+Russia ≥35% | 31% (16-51) | 44% | 31% | 54% (35-72) | yes |
+| Hezbollah | vs America+Russia ≥35% | 35% (20-55) | 69% | 44% | 54% (35-72) | yes |
+| America | vs modern ≤65% | 71% (61-80) | 55% | 62% | 62% (52-72) | yes |
+| Russia | vs modern ≤65% | 59% (48-69) | 57% | 39% | 42% (32-53) | yes |
+
+**Verdict.** [ran] Three tuning rounds moved every faction that was named. China went from 21% to 37% against the
+modern factions and from 21% to 33% against America and Russia; Türkiye from 38% to 41% and from 25% to 46%; Iran from
+33% to 40% against the originals; Israel from 35% to 42% and from 31% to 54%. America fell from 71% (61-80) to 62%
+(52-72) against the modern factions without any change to its rules. Fourteen of the sixteen targets are met at the
+point estimate. Two are missed narrowly, both inside their own intervals:
+
+- Yemen scores 67% (56-77) against the modern factions (baseline 79%).
+- China scores 33% (18-53) against America and Russia (baseline 21%).
+
+Tuning stopped after three rounds, as asked. Both misses have a cause the numbers here do not remove. They are
+described under "Round 3: what numbers did not fix".
+
+Naval map, Little Big Lake [ran], reported separately and not tuned for. Each run is 6 games per pairing, 210 games.
+Before: rules 243c138, 0 errors, 68 draws. After: the final rules, 51 draws. Score (95% Wilson interval):
+
+| Faction | Before: vs modern | Before: vs America+Russia | After: vs modern | After: vs America+Russia |
+|---|---:|---:|---:|---:|
+| China | 28% (16-44) | 29% (11-57) | 38% (24-54) | 38% (16-65) |
+| Iran | 57% (41-72) | 46% (22-71) | 50% (34-66) | 50% (25-75) |
+| Türkiye | 44% (30-60) | 33% (14-61) | 40% (26-56) | 46% (22-71) |
+| Saudi Arabia | 56% (40-70) | 54% (29-78) | 47% (32-63) | 50% (25-75) |
+| Yemen | 61% (45-75) | 46% (22-71) | 65% (48-79) | 58% (32-81) |
+| Israel | 49% (33-64) | 54% (29-78) | 43% (28-59) | 71% (43-89) |
+| Hezbollah | 56% (40-70) | 21% (7-49) | 69% (52-81) | 50% (25-75) |
+| America | 58% (43-72) | — | 46% (32-61) | — |
+| Russia | 61% (46-74) | — | 50% (36-64) | — |
+
+**Engine crash found (being fixed).** [ran] 2 of the 210 games in the after run crashed: yemen-hezbollah r0 at 36
+minutes and iran-yemen r1 at 29 minutes.
+- The error is `System.DivideByZeroException` in `WRot.SLerp`, called from the terrain-orientation smoothing in
+  `Move.MovePart.Tick`. There `terrainOrientationMargin = Math.Min(margin, Distance / 2)` can be 0.
+- This is an engine bug, not a rule. The engine owner is reproducing and fixing it from these two replays.
+- The two games are void, so the "After" columns count 208 games.
+- The before run (210 games) and the land runs (1,120 games) had no crash.
+
+On the naval map the band is met more fully after round 3 than before.
+- Before, China was at 28% against the modern factions and Hezbollah at 21% against the originals.
+- After, every modern faction scores at least 38% against America and Russia.
+- Against each other, all seven modern factions are within 35-65% except Hezbollah, at 69% (52-81). Yemen sits on the
+  edge at 65%.
+- America scores 46% and Russia 50% against the modern factions.
+
+Round 2's naval figures (five modern factions, older engine and art) are not comparable.
+
+## Round 3: method
+
+- **What was measured.** Branch `rtsai/art-preview`: the new faction art and the art agents' muzzle offsets, with the
+  local engine `rtsai/engine` 265db7a4a7. That engine has two Missile fixes. ae14ce6b01 makes missiles fired over
+  raised ground hit. 265db7a4a7 keeps low-cruise missiles clear of ramps, which fixed misses by the Yemen and
+  Hezbollah RPGs, the Iran Toophan and the coastal launchers. The engine was re-pinned to 265db7a4a7 while the first
+  baseline was running. That baseline was discarded and the whole baseline was replayed on the new engine.
+- **Factions and design.** The seven modern factions (now including the local Israel and Hezbollah packs) plus America
+  and Russia. Every pairing with a modern faction was played (35 pairings; America-Russia was not played). Each was
+  played from both spawn orientations on both maps with 3 replicates: 12 games per pairing as in round 2, 420 games per
+  round robin. The naval map, Little Big Lake, used 6 games per pairing (210 games). Bots: `normal` on both sides,
+  40-minute cap, same harness and telemetry as round 2. Campaign definitions: `docs/balance-data/r3-campaigns.json`.
+- **Frozen rules per run.** Other agents committed art while round 3 ran. Each run therefore used a `git archive`
+  snapshot of `mods/`, plus the candidate's rule edits, and a private copy of the built engine. Commits and engine
+  rebuilds during a run could not change it.
+  - Baseline: rules 243c138.
+  - P1, P2: 243c138 + the candidate changes.
+  - Final: e15542b + the round-3 changes. a47654a commits the same changes on top of later art-only commits.
+  - Between 243c138 and e15542b, and up to a47654a, only art-preview overlay files (sprite installs, muzzle offsets)
+    and audio changed. The coordinator classed these as non-material. They were not measured separately.
+- **Execution.** `OPENRA_AI_HOST=0`, 3 games at a time. The game processes ran at Normal priority: at the shared
+  BelowNormal priority, concurrent Blender renders held each game to about 0.1 core. Priority changes only the speed,
+  not the simulation.
+- **Disk incident.** The disk filled up briefly (not from this harness). 9 final games were recorded as errors and
+  were replayed; no counted game was affected.
+- **Reading probes.** A one-replicate probe gives each faction 24 games against the modern factions and 8 against the
+  originals. Its score intervals are about ±20 and ±30 points. Probes were therefore read mainly through per-unit
+  trade (enemy value destroyed per credit produced), which moves much less between runs. The full round robin
+  confirms.
+
+## Round 3: why China and Türkiye lost (baseline)
+
+[ran] Baseline round robin, 420 games, 0 errors, 90 draws, median 26.1 min:
+
+| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **china** | — | 1-9 (2d) | 2-9 (1d) | 2-8 (2d) | 1-11 | 3-3 (6d) | 0-11 (1d) | 1-8 (3d) | 2-9 (1d) | 21% (13-32) | 21% (9-40) |
+| **iran** | 9-1 (2d) | — | 6-2 (4d) | 4-3 (5d) | 1-8 (3d) | 5-4 (3d) | 4-6 (2d) | 2-9 (1d) | 4-5 (3d) | 53% (42-65) | 33% (18-53) |
+| **turkey** | 9-2 (1d) | 2-6 (4d) | — | 2-5 (5d) | 0-11 (1d) | 6-4 (2d) | 1-10 (1d) | 1-6 (5d) | 0-7 (5d) | 38% (27-49) | 25% (12-45) |
+| **saudi** | 8-2 (2d) | 3-4 (5d) | 5-2 (5d) | — | 3-6 (3d) | 9-1 (2d) | 3-9 | 2-6 (4d) | 8-3 (1d) | 55% (43-66) | 52% (33-70) |
+| **yemen** | 11-1 | 8-1 (3d) | 11-0 (1d) | 6-3 (3d) | — | 10-0 (2d) | 5-4 (3d) | 4-7 (1d) | 4-3 (5d) | 79% (68-87) | 46% (28-65) |
+| **israel** | 3-3 (6d) | 4-5 (3d) | 4-6 (2d) | 1-9 (2d) | 0-10 (2d) | — | 4-5 (3d) | 3-7 (2d) | 3-8 (1d) | 35% (25-46) | 31% (16-51) |
+| **hezbollah** | 11-0 (1d) | 6-4 (2d) | 10-1 (1d) | 9-3 | 4-5 (3d) | 5-4 (3d) | — | 2-8 (2d) | 3-4 (5d) | 69% (58-79) | 35% (20-55) |
+| **america** | 8-1 (3d) | 9-2 (1d) | 6-1 (5d) | 6-2 (4d) | 7-4 (1d) | 7-3 (2d) | 8-2 (2d) | — | — | 71% (61-80) | — |
+| **russia** | 9-2 (1d) | 5-4 (3d) | 7-0 (5d) | 3-8 (1d) | 3-4 (5d) | 8-3 (1d) | 4-3 (5d) | — | — | 59% (48-69) | — |
+
+[ran] figures from that run unless marked:
+
+1. **Not the economy.** By 10 minutes China and Türkiye had each earned 22.3k credits with 2.1-2.2 refineries. Iran,
+   Yemen and Hezbollah had earned 20.3-20.8k, America 23.5k.
+2. **The smallest standing armies.** Army value at 5 and 10 minutes:
+   - China 2.6k and 3.1k, Türkiye 2.5k and 3.1k;
+   - Iran 4.5k and 6.0k, Yemen 4.8k and 5.9k, Hezbollah 4.5k and 6.2k.
+
+   In the first 10 minutes China and Türkiye traded about even (7.4k and 7.3k destroyed for 7.8k and 7.7k lost), while
+   Yemen and Hezbollah destroyed 9.6-9.7k for 7.2-7.7k lost. China and Türkiye also put 0.9-2.0k more into buildings
+   (Air Force Command, Türkiye's early service depot, AA sites and tech). Their mean time to the first enemy building
+   destroyed was 22 minutes, counting games with none as 40. Hezbollah's was 10 and Yemen's 11.
+3. **Low-value spending.** Share of production and enemy value destroyed per credit:
+
+   | Faction | Unit | Share | Destroyed / credit |
+   |---|---|---:|---:|
+   | China | Qilin (MBT) | 19.3% | 0.75 |
+   | China | PHL (rocket artillery) | 14.3% | 0.47 |
+   | China | Red Spear (commando) | 8.0% | 0.77 |
+   | China | Cloud (armed drone) | 6.5% | 0.38 |
+   | China | Mantis (air-only AA) | 4.5% | 0.27 |
+   | China | Rifleman | 10.0% | 1.67 |
+   | Türkiye | Bozkır (MBT) | 27.1% | 0.65 |
+   | Türkiye | Grey Wolf (commando) | 7.6% | 0.85 |
+   | Türkiye | Sancak, Aras, Kuzgun | 8.6% | 0.23-0.35 |
+   | Türkiye | Rifleman | 8.6% | 1.64 |
+   | Iran | Toophan (ATGM team) | 33.8% | 0.84 |
+   | Iran | Basij | 11.7% | 1.68 |
+   | Israel | Merkava (MBT) | 30.8% | 0.63 |
+   | Yemen, Hezbollah | Rifleman | 12.8%, 16.1% | 1.93, 1.79 |
+   | Saudi, Iran, Russia | M1A2S, Karrar, Rhino | 24.3%, 17.5%, 12.6% | 0.80, 0.76, 1.17 |
+
+   Riflemen were the most cost-effective unit of China, Türkiye, Iran, Yemen and Hezbollah (1.6-1.9 destroyed per
+   credit; most MBTs 0.6-0.8). China and Türkiye fielded the fewest of them.
+4. **Unit-stat causes** [inferred from the rules; the probes then confirmed the per-unit effect]:
+   - Qilin and Bozkır fire the 105mm base, range 5c0. They are outranged by every modern ATGM team (6c-8c), the Rhino's
+     and Karrar's 120mm (5c768) and the M1A2S/Merkava gun (6c).
+   - The Bozkır costs as much as the Rhino and has the same HP (900 credits, 400 HP), but it dealt 80 damage every 70
+     ticks against the Rhino's 90 every 65.
+   - The China and Türkiye portable ATGMs dealt about 1.6 heavy-armour damage per tick per 1,000 credits at 6c. The
+     Saudi and Israeli ATGM deals 2.4 at 8c, and those teams destroyed 1.36-1.41 per credit against 0.90-0.94.
+   - The PHL rockets had Inaccuracy 1c0 and did 60% against heavy armour.
+   - `R2DroneMissile` did 35 damage every 140 ticks for a 1,000-credit drone (Cloud, Kuzgun, Mohajer). That is a
+     quarter of a Qilin's damage rate at 1.4 times its cost.
+5. **Bot doctrine.** China and Türkiye were the only modern factions without the 20-minute bot delay on their
+   commando.
+
+Other findings:
+- **Israel.** [ran] `bot-types.yaml` never listed Israel's or Hezbollah's aircraft, ships and defenses (the Levant
+  packs were added after the port tool built the lists), so their jets and boats joined the ground squads. Israel's
+  Merkava had the same gun as the 1,100-credit M1A2S, 23% more HP, and cost 1,450.
+- **Yemen and Hezbollah** (79% and 69% against the modern factions). Their riflemen, at 135 credits, were the most
+  cost-effective units in the game (1.93 and 1.79 destroyed per credit).
+- **America** (71%). [ran] Against the modern factions its GIs made 22% of its kills at 1.94 destroyed per credit. This
+  includes the free paratroopers, whose cost is not counted. Rocketeers made 12% (1.43) and Prism tanks 10% (1.48). The
+  Chrono Legionnaire was 11% of America's production but records no kills, because erased units are not reported as
+  killed. No America change was needed in the end. Its score fell as the modern factions improved.
+
+## Round 3: changes
+
+All changes are in a47654a. P1 and P2 are the probes; "final" is the final round robin. The last column gives enemy
+value destroyed per credit produced, baseline → final, for the unit changed.
+
+| # | Change | Reason | In | Destroyed / credit |
+|---|---|---|---|---|
+| 1 | `bot-types.yaml`: Israel's and Hezbollah's aircraft (`AirUnitsTypes`), ships (`NavalUnitsTypes`) and defenses (`DefenseTypes`) added to all five bot profiles | Bug: Levant units missing from the bot type lists | P1 | Israel's jet 0.20 → 0.28 (P1 0.62) |
+| 2 | Bots train China's Red Spear and Türkiye's Grey Wolf only after 20 minutes (`UnitDelays` 30000), as the other five commandos | Commandos 8% of production at 0.77-0.85 | P1 | share 8.0 → 5.9%, 7.6 → 5.4% |
+| 3 | China line infantry 100 → 140, Türkiye 100 → 130 (`RoleShareModifiers`) | Riflemen China's and Türkiye's most cost-effective unit (1.67, 1.64 per credit) | P1 | rifle share 10.0 → 12.6%, 8.6 → 11.0% |
+| 4 | PHL rockets: Inaccuracy 1c0 → 0c512; 80% against heavy and 90% against medium armour (were 60/75) | 14% of China's production at 0.47 | P1 | 0.47 → 0.78 |
+| 5 | `R2DroneMissile` damage 35 → 60 (Cloud, Kuzgun, Mohajer) | 1,000-credit drones at 0.30-0.38 | P1 | Cloud 0.38 → 0.66, Kuzgun 0.30 → 0.38 |
+| 6 | Bozkır gun reload 70 → 60 | Rhino damage per credit at the Rhino's cost | P1 | 0.65 → 0.64 alone (P1) |
+| 7 | Merkava 1,450 → 1,250 credits | Same gun as the 1,100 M1A2S | P1 | 0.63 → 0.75 |
+| 8 | Hezbollah rifleman 135 → 150 credits | 69% against the modern factions; 1.79 per credit | P1 | 1.79 → 1.66 |
+| 9 | Qilin and Bozkır guns: range 5c0 → 5c768, the reach of the Rhino's and Karrar's 120mm | Outranged by every ATGM team | P2 | Qilin 0.75 → 0.77, Bozkır 0.65 → 0.82 (P2 0.86) |
+| 10 | China anti-air share 40 → 25 | Mantis 0.27 per credit | P2 | Mantis share 4.5 → 3.1% |
+| 11 | China portable ATGM: damage 65 → 80, range 6c → 7c | 1.6 vs 2.4 damage per tick per 1,000 credits for the Saudi ATGM | final | 0.90 → 1.22 |
+| 12 | Türkiye portable ATGM: damage 60 → 75, range 6c → 7c | as 11 | final | 0.94 → 1.22 |
+| 13 | Türkiye support share 130 → 100 | Sancak 0.23 per credit | final | Sancak share 3.4 → 3.7% (unchanged) |
+| 14 | Yemeni Mountain Rifleman 135 → 150 credits | Yemen 79% against the modern factions; same step as its Hezbollah twin (8) | final | 1.93 → 1.85 |
+| 15 | Iran line infantry 100 → 120, anti-armor 110 → 100 | Basij 1.68 per credit, Toophan 0.84; Iran 33% against the originals | final | Basij share 11.7 → 14.8% |
+
+Each change answers a measured cause; none is a blanket cost cut. Weak units were made worth their cost. Where the bot
+misuses a unit (commandos, Mantis, Sancak), the bot now buys fewer of them. Yemen and Hezbollah were trimmed one cost
+step each because their scores were above the band. America's and Russia's rules are unchanged.
+
+The three rounds [ran]:
+- **P1** (changes 1-8). The changed units moved as intended: PHL 0.47 → 0.87, Cloud 0.38 → 0.69, Israel's jet
+  0.20 → 0.62, Merkava 0.63 → 0.79. China (19%) and Türkiye (35%) still trailed the other modern factions, and the
+  Bozkır reload alone did not change the Bozkır's value (0.65 → 0.64).
+- **P2** (+ 9-10). The longer range raised the Qilin to 0.81 and the Bozkır to 0.86 per credit. Pooled over P1 and
+  P2 (48 games each), China scored 53% against America and Russia but 21% against the modern factions: 0-8 against
+  Yemen, 0-6 against Saudi Arabia and Hezbollah. Its tanks still met ATGM teams that outranged and outdamaged its own.
+  This pointed to change 11.
+- **Final** (+ 11-15), the full round robin above. Changes 11-15 were not probed separately.
+
+## Round 3: what numbers did not fix
+
+- **Yemen against the modern factions (67%).** [ran] The modern doctrines put half their production into vehicles
+  (China 50%, Türkiye 52%, Saudi Arabia and Israel 50%, Iran 46%). Yemen's army of RPG teams, recoilless trucks and
+  cheap riflemen is built to kill vehicles: its RPG teams were 26% of its production. The same army scores only 42%
+  against America and Russia, which field more infantry. [inferred] A rock-paper-scissors effect of the doctrines, not
+  of one unit. Another cost step on Yemen would take its score against the originals towards 35%. Moving the other
+  modern doctrines away from vehicles would change their identity.
+- **Free units by side.** [ran] The Soviet-side factions (Iran, Yemen, Hezbollah, Russia) build the stock Cloning Vats,
+  and their cloned infantry was 10-12% of the unit value they fielded. The Allied-side modern factions (China,
+  Türkiye, Saudi Arabia, Israel) have no equivalent. America has its paratroopers. This side asymmetry comes from
+  stock RA2 and was left alone. It favors the infantry-heavy Soviet-side factions.
+- **China against the originals (33%).** [ran] China lost to America 1-7 (4 draws) and to Russia 3-5 (4 draws). Its
+  army is still half vehicles, which meet America's GIs, rocketeers and Prism tanks and Russia's Tesla coils.
+  Interval 18-53.
+- **Airfield jets.** [inferred from `DoctrineUnitBuilderBotModule`] The bot gives each production queue a turn, and
+  in the Plane queue the jet is the only unit of its role, so a faction with an airfield keeps building jets up to its
+  unit limit. Role shares cannot lower that; only unit limits can. [ran] Saudi Arabia's F-15 was 12% of its production
+  at 0.32 destroyed per credit, Israel's jet 11.5% at 0.28 and America's Harrier 11.5% at 0.42.
+- **Ships on land maps.** [ran] Every faction builds a shipyard when its base has water, and ships were 7-13% of
+  production on Dustbowl and Tournament Map A (China 13%, Türkiye 11%), mostly destroying nothing. This is the
+  upstream base builder.
+- **Russia** fell from 59% to 42% against the modern factions with no change to its rules, because the modern factions
+  improved. Russia is a reference, not a target.
+- **Not measured:** human play, other bot profiles, team games, kills by chrono erasure. Unit values were read from the
+  bot games; no duels were run in round 3.
+
+## Round 2 result (2026-10-03)
+
+Branch `rtsai/balance` (local, not pushed), final rules at 31912c4, engine `rtsai/engine` 5523a9907f.
 
 [ran] Final round robin: 252 games on Dustbowl and Official Tournament Map A, 0 errors, 67 tick-cap draws, median
 26.7 game minutes. Row's wins-losses (draws) against the column:
@@ -47,7 +304,7 @@ The final run is at 31912c4.
 the modern factions at the start of round 2 and 61 of 83 now, and all five modern factions are inside 35-65% among
 themselves. Four targets are still missed: China (23%), Türkiye (21%) and, narrowly, Iran (33%) against the
 originals, and America (69%, interval 57-79) against the modern factions. As asked, tuning stopped after two
-passes. What a third pass would take is under "What would still be needed".
+passes. What a third pass would take is under "Round 2: what would still be needed".
 
 Naval map, Little Big Lake (126 games, 0 errors, 34 draws) [ran], reported separately and not tuned for: America
 53% and Russia 65% against the modern factions; among the modern factions China 33% and Saudi Arabia 73% fall
@@ -91,12 +348,12 @@ It does not show:
   - A suite can carry a MiniYAML `rules` overlay. The tuning candidates were screened this way, on map copies,
     without editing the mod.
 - **Factions.** The five modern nations plus two original RA2 countries as baselines: America (Allied) and Russia
-  (Soviet).
+  (Soviet). Round 3 adds Israel and Hezbollah (see "Round 3: method").
 - **Bots.** `normal` on both sides, with the mod's doctrine bot modules. The stock countries use the same modules
   without a doctrine.
 - **Maps.** Two land 1v1 maps from the mod: Dustbowl (70x152) and Official Tournament Map A (87x134), both temperate.
   [inferred] Short game is on (the upstream lobby default), so a player loses with their last building.
-- **Design.** All 21 pairings, each from both spawn orientations on both maps, 3 replicates: 12 games per pairing,
+- **Design** (rounds 1-2). All 21 pairings, each from both spawn orientations on both maps, 3 replicates: 12 games per pairing,
   72 per faction, 252 per round robin. Order is shuffled with a fixed seed. The engine seeds its RNGs from the
   clock, so replicates are independent samples, not reruns. Launches are spaced 0.5 s apart because two
   simultaneous starts were seen to share a seed; no run below has a duplicate seed.
@@ -175,8 +432,9 @@ The question was whether the bot plays the modern rosters badly or the modern un
 Commit messages before 1e0a5e0 quote duel results from the biased harness. The duel tables in this report all
 come from the fixed harness.
 
-## What would still be needed
+## Round 2: what would still be needed
 
+Round 3 acted on the first two items (China's and Türkiye's spending, America); see the round-3 sections.
 [inferred] from the final run's figures:
 
 - **China and Türkiye against the originals (23% and 21%).** Their armies still carry the most low-value spending.
@@ -405,6 +663,10 @@ value left.
 
 | Files | Run | Rules |
 |---|---|---|
+| `r3-baseline`, `r3-baseline-naval` | Round 3: baseline round robin (420) and naval (210) | 243c138 |
+| `r3-p1`, `r3-p2` | Round 3: probes, one replicate (140 each) | 243c138 + changes 1-8, 1-10 |
+| `r3-final`, `r3-final-naval` | Round 3: final round robin (420) and naval (210) | e15542b + changes 1-15 (= a47654a) |
+| `r3-campaigns.json` | Round 3 campaign definitions (`--campaigns-file`) | — |
 | `r2-duels-before`, `r2-duels-after` | Duels, rank 0 and 2, 8 per pair | 414f8fa / 31912c4 |
 | `r2-start-probe` | Probe (84 games) with veterancy telemetry | 414f8fa |
 | `r2-pass1` | Round robin, replicate 0 (84 games) | eba846d |
@@ -427,6 +689,11 @@ python tools/balance-harness.py run --campaign <probe> --campaigns-file docs/bal
     --content <content> --output <scratch>/<probe>
 python tools/balance-harness.py report --campaign round-robin --output <scratch>/rr   # rebuild the summary
 python tools/test_balance_harness.py                                                    # harness unit tests
+# Round 3 (art preview, local engine): 9 factions, 420 land games, 210 naval
+python tools/balance-harness.py run --campaign r3-round-robin --campaigns-file docs/balance-data/r3-campaigns.json \
+    --content <content> --output <scratch>/r3 --parallel 3
+python tools/balance-harness.py run --campaign r3-naval --campaigns-file docs/balance-data/r3-campaigns.json \
+    --content <content> --output <scratch>/r3-naval --parallel 3
 ```
 
 Options:
