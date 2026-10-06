@@ -1,7 +1,8 @@
 # Bot-vs-bot balance evidence
 
 Round 3: 2026-10-06, on the art preview. Branch `rtsai/art-preview` (local, not pushed), rules a47654a, engine
-`rtsai/engine` 265db7a4a7 (local-only Missile fixes: missiles fired over raised ground or ramps now hit). The
+`rtsai/engine` 265db7a4a7 (local-only Missile fixes: missiles fired over raised ground or ramps now hit; the
+preview now pins 68c1e95557, which also fixes a crash found in this round). The
 round-2 and round-1 records follow the round-3 sections.
 
 How each result was established: **[ran]** means the matches or duels were played and the numbers come from their
@@ -62,36 +63,40 @@ Tuning stopped after three rounds, as asked. Both misses have a cause the number
 described under "Round 3: what numbers did not fix".
 
 Naval map, Little Big Lake [ran], reported separately and not tuned for. Each run is 6 games per pairing, 210 games.
-Before: rules 243c138, 0 errors, 68 draws. After: the final rules, 51 draws. Score (95% Wilson interval):
+Before: rules 243c138, 0 errors, 68 draws. After: the final rules, 51 draws, 0 errors after the replay described below.
+Score (95% Wilson interval):
 
 | Faction | Before: vs modern | Before: vs America+Russia | After: vs modern | After: vs America+Russia |
 |---|---:|---:|---:|---:|
 | China | 28% (16-44) | 29% (11-57) | 38% (24-54) | 38% (16-65) |
-| Iran | 57% (41-72) | 46% (22-71) | 50% (34-66) | 50% (25-75) |
+| Iran | 57% (41-72) | 46% (22-71) | 49% (33-64) | 50% (25-75) |
 | Türkiye | 44% (30-60) | 33% (14-61) | 40% (26-56) | 46% (22-71) |
 | Saudi Arabia | 56% (40-70) | 54% (29-78) | 47% (32-63) | 50% (25-75) |
-| Yemen | 61% (45-75) | 46% (22-71) | 65% (48-79) | 58% (32-81) |
+| Yemen | 61% (45-75) | 46% (22-71) | 64% (48-78) | 58% (32-81) |
 | Israel | 49% (33-64) | 54% (29-78) | 43% (28-59) | 71% (43-89) |
-| Hezbollah | 56% (40-70) | 21% (7-49) | 69% (52-81) | 50% (25-75) |
+| Hezbollah | 56% (40-70) | 21% (7-49) | 69% (53-82) | 50% (25-75) |
 | America | 58% (43-72) | — | 46% (32-61) | — |
 | Russia | 61% (46-74) | — | 50% (36-64) | — |
-
-**Engine crash found (being fixed).** [ran] 2 of the 210 games in the after run crashed: yemen-hezbollah r0 at 36
-minutes and iran-yemen r1 at 29 minutes.
-- The error is `System.DivideByZeroException` in `WRot.SLerp`, called from the terrain-orientation smoothing in
-  `Move.MovePart.Tick`. There `terrainOrientationMargin = Math.Min(margin, Distance / 2)` can be 0.
-- This is an engine bug, not a rule. The engine owner is reproducing and fixing it from these two replays.
-- The two games are void, so the "After" columns count 208 games.
-- The before run (210 games) and the land runs (1,120 games) had no crash.
 
 On the naval map the band is met more fully after round 3 than before.
 - Before, China was at 28% against the modern factions and Hezbollah at 21% against the originals.
 - After, every modern faction scores at least 38% against America and Russia.
-- Against each other, all seven modern factions are within 35-65% except Hezbollah, at 69% (52-81). Yemen sits on the
-  edge at 65%.
+- Against each other, all seven modern factions are within 35-65% except Hezbollah, at 69% (53-82).
 - America scores 46% and Russia 50% against the modern factions.
 
 Round 2's naval figures (five modern factions, older engine and art) are not comparable.
+
+**Engine crash found and fixed.** [ran] 2 of the 210 games in the after run crashed: yemen-hezbollah r0 and
+iran-yemen r1.
+- The error was `System.DivideByZeroException` in `WRot.SLerp`.
+- The engine owner traced it to one Little Big Lake cell, where a full-tile slope lies next to a half-ramp sloped
+  about the same axis. A vehicle tilting between them (Hezbollah's rocket truck in one game, Yemen's missile launcher
+  in the other) made `SLerp` blend two rotations one angle step apart. Integer truncation zeroed both weights, and the
+  normalisation then divided by zero.
+- The fix is `rtsai/engine` 68c1e95557, preview pin 8c74dd4. It changes the result for no other input, so the other
+  games stand. It is not specific to the naval map: any ramp pair of that shape can trigger it, though the 1,120 land
+  games here did not.
+- The two crashed games were voided and replayed on 68c1e95557. The table counts all 210.
 
 ## Round 3: method
 
@@ -100,6 +105,8 @@ Round 2's naval figures (five modern factions, older engine and art) are not com
   raised ground hit. 265db7a4a7 keeps low-cruise missiles clear of ramps, which fixed misses by the Yemen and
   Hezbollah RPGs, the Iran Toophan and the coastal launchers. The engine was re-pinned to 265db7a4a7 while the first
   baseline was running. That baseline was discarded and the whole baseline was replayed on the new engine.
+  Round 3 found a crash in that engine (`WRot.SLerp`, see the naval section). It was fixed in 68c1e95557, which
+  changes no other result. The two crashed naval games were replayed on it.
 - **Factions and design.** The seven modern factions (now including the local Israel and Hezbollah packs) plus America
   and Russia. Every pairing with a modern faction was played (35 pairings; America-Russia was not played). Each was
   played from both spawn orientations on both maps with 3 replicates: 12 games per pairing as in round 2, 420 games per
