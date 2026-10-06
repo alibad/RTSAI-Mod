@@ -1,0 +1,12 @@
+r2spectrum:
+	RenderSprites:
+		PlayerPalette: r2bldspectrumplayer
+^Palettes:
+	PaletteFromFile@r2bldspectrum:
+		Name: r2bldspectrum
+		Filename: ra2|art-preview/buildings/r2spectrum.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2bldspectrum:
+		BasePalette: r2bldspectrum
+		BaseName: r2bldspectrumplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31

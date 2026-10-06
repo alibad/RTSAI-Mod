@@ -128,6 +128,14 @@ namespace OpenRA.Mods.RTSAI.Traits
 		[Desc("Terrain types which are considered water for base building purposes.")]
 		public readonly FrozenSet<string> WaterTerrainTypes = new HashSet<string> { "Water" }.ToFrozenSet();
 
+		[Desc("Naval production only when ships launched from the water near the base can reach water within this many",
+			"cells of an enemy start location (about half a base plus a destroyer's gun range). Upstream bots build a",
+			"shipyard on any water near the base, including rivers and ponds that never reach the enemy. 0 disables the check.")]
+		public readonly int NavalTargetRadius = 16;
+
+		[Desc("Locomotor whose paths decide whether naval units can reach the enemy (NavalTargetRadius).")]
+		public readonly string NavalLocomotor = "naval";
+
 		[Desc("What buildings to the AI should build.", "What integer percentage of the total base must be this type of building.")]
 		public readonly FrozenDictionary<string, int> BuildingFractions = null;
 

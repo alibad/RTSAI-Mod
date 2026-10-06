@@ -1,63 +1,63 @@
 r2ilrifle:
 	Voiced:
-		VoiceSet: LevantInfantryVoice
+		VoiceSet: R2IsraelinfantryVoice
 
 r2ilat:
 	Voiced:
-		VoiceSet: LevantInfantryVoice
+		VoiceSet: R2IsraelinfantryVoice
 
 r2ilobserver:
 	Voiced:
-		VoiceSet: LevantInfantryVoice
+		VoiceSet: R2IsraelobserverVoice
 
 r2ilrecon:
 	Voiced:
-		VoiceSet: LevantInfantryVoice
+		VoiceSet: R2IsraelreconVoice
 
 r2merkava:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice
 
 r2ilshield:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice
 
 r2ilhowitzer:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice
 
 r2namer:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice
 
 r2ilfalcon:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelairVoice
 
 r2ilgunship:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelairVoice
 
 r2ilpatrol:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelnavalVoice
 
 r2ilfrigate:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelnavalVoice
 
 r2iltender:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelnavalVoice
 
 r2ilsentry:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice
 
 r2ilbattery:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice
 
 r2ilatpost:
 	Voiced:
-		VoiceSet: LevantVehicleVoice
+		VoiceSet: R2IsraelvehicleVoice

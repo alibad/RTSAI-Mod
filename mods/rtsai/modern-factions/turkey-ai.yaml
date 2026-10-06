@@ -13,13 +13,17 @@ Player:
 			r2poyraz: 20
 			r2ege: 20
 			r2marmara: 8
+		# Bots field the r2greywolf commando only after 20 minutes, like the other five (balance-harness:
+		# it traded 0.6-0.8 per credit).
+		UnitDelays:
+			r2greywolf: 30000
 		UnitLimits:
 			r2trdroneop: 3
 			r2greywolf: 1
 			r2aras: 3
 			r2deniz: 2
 			r2turna: 4
-			r2sahin: 4
+			r2sahin: 1
 	DoctrineBaseBuilderBotModule@normal:
 		BuildingFractions:
 			r2hisar: 10
@@ -44,13 +48,15 @@ Player:
 			r2poyraz: 20
 			r2ege: 20
 			r2marmara: 8
+		UnitDelays:
+			r2greywolf: 30000
 		UnitLimits:
 			r2trdroneop: 3
 			r2greywolf: 1
 			r2aras: 3
 			r2deniz: 2
 			r2turna: 4
-			r2sahin: 4
+			r2sahin: 1
 	DoctrineBaseBuilderBotModule@medium:
 		BuildingFractions:
 			r2hisar: 10
@@ -75,13 +81,15 @@ Player:
 			r2poyraz: 20
 			r2ege: 20
 			r2marmara: 8
+		UnitDelays:
+			r2greywolf: 30000
 		UnitLimits:
 			r2trdroneop: 3
 			r2greywolf: 1
 			r2aras: 3
 			r2deniz: 2
 			r2turna: 4
-			r2sahin: 4
+			r2sahin: 1
 	DoctrineBaseBuilderBotModule@rush:
 		BuildingFractions:
 			r2hisar: 10
@@ -106,13 +114,15 @@ Player:
 			r2poyraz: 20
 			r2ege: 20
 			r2marmara: 8
+		UnitDelays:
+			r2greywolf: 30000
 		UnitLimits:
 			r2trdroneop: 3
 			r2greywolf: 1
 			r2aras: 3
 			r2deniz: 2
 			r2turna: 4
-			r2sahin: 4
+			r2sahin: 1
 	DoctrineBaseBuilderBotModule@turtle:
 		BuildingFractions:
 			r2hisar: 10
@@ -137,13 +147,15 @@ Player:
 			r2poyraz: 20
 			r2ege: 20
 			r2marmara: 8
+		UnitDelays:
+			r2greywolf: 30000
 		UnitLimits:
 			r2trdroneop: 3
 			r2greywolf: 1
 			r2aras: 3
 			r2deniz: 2
 			r2turna: 4
-			r2sahin: 4
+			r2sahin: 1
 	DoctrineBaseBuilderBotModule@naval:
 		BuildingFractions:
 			r2hisar: 10

@@ -17,7 +17,7 @@ Player:
 			r2sajtac: 3
 			r2falcon: 1
 			r2caesar: 4
-			r2f15sa: 4
+			r2f15sa: 1
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
@@ -48,7 +48,7 @@ Player:
 			r2sajtac: 3
 			r2falcon: 1
 			r2caesar: 4
-			r2f15sa: 4
+			r2f15sa: 1
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
@@ -79,7 +79,7 @@ Player:
 			r2sajtac: 3
 			r2falcon: 1
 			r2caesar: 4
-			r2f15sa: 4
+			r2f15sa: 1
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
@@ -110,7 +110,7 @@ Player:
 			r2sajtac: 3
 			r2falcon: 1
 			r2caesar: 4
-			r2f15sa: 4
+			r2f15sa: 1
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2
@@ -141,7 +141,7 @@ Player:
 			r2sajtac: 3
 			r2falcon: 1
 			r2caesar: 4
-			r2f15sa: 4
+			r2f15sa: 1
 			r2ah64sa: 4
 			r2riyadh: 4
 			r2jubail: 2

@@ -7,9 +7,10 @@ R2ServiceRifle:
 	Warhead@1Dam: SpreadDamage
 		Damage: 7
 
+# Round 3: damage 60 -> 75, range 6c -> 7c (0.94 per credit against 1.4-1.5 for the Saudi ATGM).
 R2PortableAT:
 	Inherits: Maverick
-	Range: 6c0
+	Range: 7c0
 	MinRange: 1c0
 	ReloadDelay: 100
 	Projectile: Missile
@@ -18,7 +19,7 @@ R2PortableAT:
 		CruiseAltitude: 768
 		RangeLimit: 10c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
+		Damage: 75
 		Versus:
 			None: 15
 			Flak: 25

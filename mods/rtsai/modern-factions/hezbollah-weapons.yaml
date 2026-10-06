@@ -222,7 +222,7 @@ R2HZHodeidahMissile:
 			Concrete: 50
 
 R2HZUSVCharge:
-	Range: 0c768
+	Range: 1c512
 	ReloadDelay: 1000
 	ValidTargets: Water
 	Report: ra2|modern-factions/audio/naval-naval-alarm.wav

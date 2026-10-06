@@ -1,0 +1,219 @@
+{
+ "r4-base": {
+  "description": "Round 4 baseline land round robin: round-3 rules (a47654a) plus the bot spending fix (naval reachability check, one airfield jet per type), same design as r3-round-robin.",
+  "seed": 20261031,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r4-base-naval": {
+  "description": "Round 4 baseline naval round robin (Little Big Lake), same rules as r4-base.",
+  "seed": 20261032,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ]
+   }
+  ]
+ },
+ "r4-probe": {
+  "description": "Round 4 probe: one replicate (140 games) on r4-base rules plus changes 18-21 of docs/balance.md.",
+  "seed": 20261033,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "probe",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r4-final": {
+  "description": "Round 4 final land round robin on e2c07b0 (bot fix plus changes 18-21).",
+  "seed": 20261041,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "r4-final-naval": {
+  "description": "Round 4 final naval round robin (Little Big Lake) on e2c07b0.",
+  "seed": 20261042,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -107,8 +107,9 @@ r2merkava:
 		BuildPaletteOrder: 21
 		Prerequisites: ~faction.israel, gaweap
 		Description: levant-r2merkava-description
+	# Same gun as the 1100-credit M1A2S with 23% more HP: 1450 traded 0.63 per credit.
 	Valued:
-		Cost: 1450
+		Cost: 1250
 	Health:
 		HP: 640
 	Armor:

@@ -1,0 +1,53 @@
+r2hzaanest:
+	Defaults:
+		Filename: ra2|art-preview/buildings/r2hzaanest.shp
+		Offset: 4, -20, 20
+	-recoil:
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	turret:
+		Start: 6
+		Facings: 32
+		ShadowStart: 102
+	damaged-turret:
+		Start: 38
+		Facings: 32
+		ShadowStart: 102
+	critical-turret:
+		Start: 70
+		Facings: 32
+		ShadowStart: 102
+	fire:
+		Start: 134
+		Length: 4
+		Facings: 32
+		ShadowStart: 518
+		Tick: 40
+	damaged-fire:
+		Start: 262
+		Length: 4
+		Facings: 32
+		ShadowStart: 518
+		Tick: 40
+	critical-fire:
+		Start: 390
+		Length: 4
+		Facings: 32
+		ShadowStart: 518
+		Tick: 40
+	make:
+		Start: 646
+		Length: 12
+		ShadowStart: 658
+		Tick: 50
+		ZOffset: 0
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzaanest.png
+		Offset: 0, 0

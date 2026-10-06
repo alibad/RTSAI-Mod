@@ -1,0 +1,19 @@
+r2hzrelay:
+	RenderSprites:
+		PlayerPalette: r2bldhzrelayplayer
+	WithIdleOverlay@dish:
+		Sequence: active
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: lowpower
+		Offset: 193,-24,0
+	IsometricSelectable:
+		Height: 70
+^Palettes:
+	PaletteFromFile@r2bldhzrelay:
+		Name: r2bldhzrelay
+		Filename: ra2|art-preview/buildings/r2hzrelay.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2bldhzrelay:
+		BasePalette: r2bldhzrelay
+		BaseName: r2bldhzrelayplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31

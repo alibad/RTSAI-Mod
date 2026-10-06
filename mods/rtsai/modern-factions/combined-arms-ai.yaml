@@ -16,7 +16,11 @@ Player:
 			submarine: 6
 		# Conservative preview tuning, not proven competitive balance: two specialists each.
 		# Bot-only caps; native human build limits remain unchanged.
+		# Round 4 (docs/balance.md): one airfield jet of each type alive at a time. The bot builds a jet
+		# whenever its airfield queue is free and a pad is empty, so jets took about 12% of spending.
 		UnitLimits:
+			orca: 1
+			beag: 1
 			snipe: 2
 			deso: 2
 			ivan: 2
@@ -36,7 +40,11 @@ Player:
 			naval-screen: 8
 			anti-submarine: 6
 			submarine: 6
+		# Round 4 (docs/balance.md): one airfield jet of each type alive at a time. The bot builds a jet
+		# whenever its airfield queue is free and a pad is empty, so jets took about 12% of spending.
 		UnitLimits:
+			orca: 1
+			beag: 1
 			snipe: 2
 			deso: 2
 			ivan: 2
@@ -56,7 +64,11 @@ Player:
 			naval-screen: 6
 			anti-submarine: 4
 			submarine: 4
+		# Round 4 (docs/balance.md): one airfield jet of each type alive at a time. The bot builds a jet
+		# whenever its airfield queue is free and a pad is empty, so jets took about 12% of spending.
 		UnitLimits:
+			orca: 1
+			beag: 1
 			snipe: 2
 			deso: 2
 			ivan: 2
@@ -76,7 +88,11 @@ Player:
 			naval-screen: 8
 			anti-submarine: 6
 			submarine: 6
+		# Round 4 (docs/balance.md): one airfield jet of each type alive at a time. The bot builds a jet
+		# whenever its airfield queue is free and a pad is empty, so jets took about 12% of spending.
 		UnitLimits:
+			orca: 1
+			beag: 1
 			snipe: 2
 			deso: 2
 			ivan: 2
@@ -96,7 +112,11 @@ Player:
 			naval-screen: 30
 			anti-submarine: 20
 			submarine: 18
+		# Round 4 (docs/balance.md): one airfield jet of each type alive at a time. The bot builds a jet
+		# whenever its airfield queue is free and a pad is empty, so jets took about 12% of spending.
 		UnitLimits:
+			orca: 1
+			beag: 1
 			snipe: 2
 			deso: 2
 			ivan: 2

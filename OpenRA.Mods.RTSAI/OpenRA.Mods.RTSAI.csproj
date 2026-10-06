@@ -14,6 +14,11 @@
 		<ProjectReference Include="$(EngineRootPath)/OpenRA.Mods.Common/OpenRA.Mods.Common.csproj">
 			<Private>False</Private>
 		</ProjectReference>
+
+		<!-- Art preview: WithAnimatedVoxelModel draws through Mods.Cnc's RenderVoxels. -->
+		<ProjectReference Include="$(EngineRootPath)/OpenRA.Mods.Cnc/OpenRA.Mods.Cnc.csproj">
+			<Private>False</Private>
+		</ProjectReference>
 	</ItemGroup>
 
 	<!--

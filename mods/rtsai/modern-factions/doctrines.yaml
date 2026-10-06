@@ -15,6 +15,12 @@
 # outvalue the bot's own anti-air units; then the role's share rises to 24 until they are matched.
 # SquadSizeModifier scales the profile's attack-squad size (a unit count): factions with cheap units
 # gather more of them, factions with expensive units fewer, so squads carry similar value.
+# Round 3: riflemen were the most cost-effective unit of China, Turkiye, Iran, Yemen and Hezbollah (1.6-1.9
+# destroyed per credit against 0.6-0.8 for most tanks), so
+# China (140), Turkiye (130) and Iran (120) field more line infantry; China's Mantis (0.27 per credit) and
+# Turkiye's Sancak (0.23) were cut back, and Iran's Toophan share returns to 100.
+# Round 4: China support 150 -> 100 (Lynx 0.24 per credit); Turkiye main-battle-tank 130 -> 110 (Bozkir 30%
+# of production at 0.83 per credit).
 
 Player:
 	# Coordination: specialists and relays with the main force, amphibious lift, maritime reach.
@@ -24,11 +30,11 @@ Player:
 		AirDefenseShare: 24
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
 		RoleShareModifiers:
-			support: 150
+			line-infantry: 140
 			transport: 150
 			main-battle-tank: 110
 			artillery: 60
-			anti-air: 40
+			anti-air: 25
 			naval-screen: 120
 			anti-submarine: 120
 			submarine: 120
@@ -40,9 +46,9 @@ Player:
 		InitialBuildOrder: napowr, narefn, nahand, naweap, narefn, naradr, r2iraasite
 		SquadSizeModifier: 105
 		RoleShareModifiers:
+			line-infantry: 120
 			anti-air: 40
 			artillery: 150
-			anti-armor: 110
 			strike-aircraft: 80
 			submarine: 130
 	# Mobile defense: mechanized spearhead with an early service depot, carried infantry, drones and EW.
@@ -52,8 +58,8 @@ Player:
 		AirDefenseShare: 24
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept, gaairc
 		RoleShareModifiers:
-			main-battle-tank: 130
-			support: 130
+			line-infantry: 130
+			main-battle-tank: 110
 			strike-aircraft: 80
 			anti-air: 20
 			artillery: 80

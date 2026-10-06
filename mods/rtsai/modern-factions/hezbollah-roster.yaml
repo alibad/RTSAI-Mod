@@ -58,8 +58,9 @@ r2hzrifle:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 10
 		Description: levant-r2hzrifle-description
+	# 135 -> 150: the most cost-effective unit in the round-3 baseline (1.9 destroyed per credit).
 	Valued:
-		Cost: 135
+		Cost: 150
 	Health:
 		HP: 100
 	Mobile:
@@ -90,8 +91,10 @@ r2hzat:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 20
 		Description: levant-r2hzat-description
+	# 300 -> 350 (round 4): the most anti-armour damage per credit of any team, now level with the
+	# Saudi ATGM's at a shorter range.
 	Valued:
-		Cost: 300
+		Cost: 350
 	Health:
 		HP: 95
 	Mobile:

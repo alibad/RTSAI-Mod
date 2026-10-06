@@ -1,5 +1,8 @@
+# Round 3: the Qilin and Bozkir reach 5c768 like the 120mm of the Rhino and Karrar (105mm base: 5c0);
+# outranged by every ATGM team, they traded 0.65-0.76 per credit (docs/balance.md).
 R2QilinGun:
 	Inherits: 105mm
+	Range: 5c768
 	ReloadDelay: 65
 	Warhead@1Dam: SpreadDamage
 		Damage: 68
@@ -10,9 +13,11 @@ R2KarrarGun:
 	Warhead@1Dam: SpreadDamage
 		Damage: 90
 
+# Reload 70 -> 60: Rhino damage per credit at the Rhino's cost.
 R2BozkirGun:
 	Inherits: 105mm
-	ReloadDelay: 70
+	Range: 5c768
+	ReloadDelay: 60
 	Warhead@1Dam: SpreadDamage
 		Damage: 80
 
@@ -66,9 +71,10 @@ R2RocketSalvo:
 		Damage: 30
 		Spread: 256
 
+# Damage 35 -> 60: the 1000-credit Cloud, Kuzgun and Mohajer traded 0.3-0.4 per credit.
 R2DroneMissile:
 	Inherits: Maverick
 	Range: 6c0
 	ReloadDelay: 140
 	Warhead@1Dam: SpreadDamage
-		Damage: 35
+		Damage: 60

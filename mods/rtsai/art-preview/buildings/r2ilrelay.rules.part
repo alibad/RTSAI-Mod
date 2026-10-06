@@ -1,0 +1,18 @@
+r2ilrelay:
+	RenderSprites:
+		PlayerPalette: r2bldilrelayplayer
+	WithIdleOverlay@dish:
+		Sequence: active
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: lowpower
+	IsometricSelectable:
+		Height: 64
+^Palettes:
+	PaletteFromFile@r2bldilrelay:
+		Name: r2bldilrelay
+		Filename: ra2|art-preview/buildings/r2ilrelay.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2bldilrelay:
+		BasePalette: r2bldilrelay
+		BaseName: r2bldilrelayplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
