@@ -747,6 +747,7 @@ r2ymlr:
 	WithFacingSpriteBody:
 	Armament:
 		LocalOffset: 168,121,1163, 168,-121,1163
+		-ReloadingCondition:
 # glb-route:r2ymlr end
 
 # glb-route:r2samad begin
@@ -1094,6 +1095,7 @@ r2hzrockets:
 	WithFacingSpriteBody:
 	Armament:
 		LocalOffset: 33,6,1034
+		-ReloadingCondition:
 # glb-route:r2hzrockets end
 
 # glb-route:r2hzdrone begin
