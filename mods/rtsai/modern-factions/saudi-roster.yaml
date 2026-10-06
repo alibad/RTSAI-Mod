@@ -1,22 +1,6 @@
 # Saudi Arabia: expeditionary combined arms. JTAC laser marks only amplify
 # Saudi guided weapons (ATGM, TOW, howitzer, Hellfire, F-15 strike and the
 # Falcon One precision bomb); they are not a global damage buff.
-^Palettes:
-	PaletteFromFile@saudi:
-		Name: saudi-art
-		Filename: ra2|modern-factions/saudi-art/saudi.pal
-	PlayerColorPalette@saudi:
-		BasePalette: saudi-art
-		BaseName: saudiplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-	PaletteFromFile@saudi-voxels:
-		Name: saudi-voxels
-		Filename: ra2|modern-factions/saudi-art/saudi-voxels.pal
-	PlayerColorPalette@saudi-voxels:
-		BasePalette: saudi-voxels
-		BaseName: saudivoxelplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^ExistsInWorld:
 	ExternalCondition@R2LASED:
 		Condition: r2-lased
@@ -26,10 +10,6 @@
 	WithColoredOverlay@R2LASED:
 		Color: FF303022
 		RequiresCondition: r2-lased
-
-^R2SaudiVoxels:
-	RenderVoxels:
-		PlayerPalette: saudivoxelplayer
 
 ^R2SaudiInfantry:
 	Inherits: ^Infantry
@@ -41,19 +21,10 @@
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 600, 1500, 0, -530
-	RenderSprites:
-		PlayerPalette: saudiplayer
-	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
-	# go prone, half speed while prone) and show the normal sequences.
-	TakeCover:
-		ProneSequencePrefix:
 	FirepowerMultiplier@ELITEARMS:
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
-	WithDeathAnimation@normal:
-		DeathSequencePalette: saudiplayer
-		DeathPaletteIsPlayerPalette: true
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
@@ -193,7 +164,6 @@ r2falcon:
 r2f15sa:
 	Inherits: orca
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	Inherits@palette: ^R2SaudiVoxels
 	Tooltip:
 		Name: ra2-r2f15sa-name
 	Buildable:
@@ -230,30 +200,18 @@ r2f15sa:
 		AmmoPools: aam, strike
 	RenderSprites:
 		Image: r2f15sa
-	RenderVoxels:
-		Image: r2f15sa
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	SpawnActorOnDeath:
 		Actor: r2f15sahusk
 
 r2f15sahusk:
 	Inherits: orcahusk
-	Inherits@palette: ^R2SaudiVoxels
 	Tooltip:
 		Name: ra2-r2f15sa-name
 		GenericName: ra2-modern-husk
-	RenderVoxels:
-		Image: r2f15sa
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 # Falcon One's precision strike: a single F-15SA pass, not a buildable unit.
 r2f15strike:
 	Inherits: pdplane
-	Inherits@palette: ^R2SaudiVoxels
 	-ParaDrop:
 	-Cargo:
 	Tooltip:
@@ -270,19 +228,11 @@ r2f15strike:
 		Ammo: 1
 	Armament:
 		Weapon: R2PrecisionBomb
-	RenderSprites:
-		Image: r2f15sa
-	RenderVoxels:
-		Image: r2f15sa
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	SpawnActorOnDeath:
 		Actor: r2f15sahusk
 
 r2ah64sa:
 	Inherits: ^R2ModernDrone
-	Inherits@palette: ^R2SaudiVoxels
 	Tooltip:
 		Name: ra2-r2ah64sa-name
 	Buildable:
@@ -297,24 +247,16 @@ r2ah64sa:
 		Speed: 150
 	Armament@primary:
 		Weapon: R2ApacheCannon
-		LocalOffset: 700,0,-100
 	Armament@rockets:
 		Name: secondary
 		Weapon: R2ApacheRockets
-		LocalOffset: 200,-330,-60, 200,330,-60
 	AttackAircraft:
 		Armaments: primary, secondary
-	WithVoxelHelicopterBody:
-		Sequence: rotor
-		TickRate: 1
 	SpawnActorOnDeath:
 		Actor: r2ah64sahusk
 
 r2ah64sahusk:
 	Inherits: ^R2DroneHusk
-	Inherits@palette: ^R2SaudiVoxels
-	RenderVoxels:
-		Image: r2ah64sa
 
 ^R2SaudiShip:
 	Inherits: ^Ship
@@ -327,13 +269,6 @@ r2ah64sahusk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: saudivoxelplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
-	WithVoxelTurret:
 	Turreted:
 		TurnSpeed: 32
 	AttackTurreted:
@@ -378,11 +313,9 @@ r2sadiq:
 		Speed: 150
 		TurnSpeed: 36
 	Turreted:
-		Offset: 553,0,0
 		TurnSpeed: 44
 	Armament:
 		Weapon: R2SadiqCannon
-		LocalOffset: 330,0,330
 	DetectCloaked:
 		DetectionTypes: Underwater
 		Range: 5c0
@@ -405,19 +338,15 @@ r2riyadh:
 	Mobile:
 		Speed: 75
 	Turreted:
-		Offset: 907,0,0
 		TurnSpeed: 28
 	Armament@primary:
 		Weapon: R2FrigateGun
-		LocalOffset: 560,0,450
 	Armament@ciws:
 		Name: secondary
 		Weapon: R2FrigateCIWS
-		LocalOffset: 0,0,300
 	Armament@asw:
 		Name: asw
 		Weapon: R2FrigateASW
-		LocalOffset: 0,0,0
 	AttackTurreted:
 		Armaments: primary, secondary, asw
 	RevealsShroudMultiplier@radar:
@@ -505,7 +434,6 @@ r2jubail:
 		Type: Heavy
 	Mobile:
 		Speed: 55
-	-WithVoxelTurret:
 	-Turreted:
 	-AttackTurreted:
 	-AutoTarget:
@@ -532,8 +460,6 @@ r2jubail:
 		Dimensions: 1, 1
 	Armor:
 		Type: Steel
-	RenderSprites:
-		PlayerPalette: saudiplayer
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	Turreted:
@@ -549,7 +475,6 @@ r2jubail:
 		Height: 40
 	Armament:
 		Weapon: R2GuardTowerMG
-		LocalOffset: 550,0,700
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical

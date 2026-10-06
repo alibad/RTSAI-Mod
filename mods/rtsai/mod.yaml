@@ -123,10 +123,10 @@ Rules:
 	ra2|modern-factions/hezbollah-roles.yaml
 	ra2|modern-factions/combined-arms-ai.yaml
 	ra2|modern-factions/doctrines.yaml
-	ra2|art-preview/vehicles.yaml
-	ra2|art-preview/vehicles-fx.yaml
-	ra2|art-preview/infantry.yaml
-	ra2|art-preview/buildings.yaml
+	ra2|modern-factions/art-vehicles.yaml
+	ra2|modern-factions/art-vehicles-fx.yaml
+	ra2|modern-factions/art-infantry.yaml
+	ra2|modern-factions/art-buildings.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -158,11 +158,11 @@ Sequences:
 	ra2|modern-factions/hezbollah-sequences.yaml
 	ra2|modern-factions/yemen-roster-sequences.yaml
 	ra2|modern-factions/hezbollah-roster-sequences.yaml
-	ra2|art-preview/vehicles-sequences.yaml
-	ra2|art-preview/vehicles-fx-sequences.yaml
-	ra2|art-preview/infantry-sequences.yaml
-	ra2|art-preview/buildings-sequences.yaml
-	ra2|art-preview/icons-sequences.yaml
+	ra2|modern-factions/art-vehicles-sequences.yaml
+	ra2|modern-factions/art-vehicles-fx-sequences.yaml
+	ra2|modern-factions/art-infantry-sequences.yaml
+	ra2|modern-factions/art-buildings-sequences.yaml
+	ra2|modern-factions/art-icons-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
@@ -174,7 +174,6 @@ ModelSequences:
 	ra2|modern-factions/israel-voxels.yaml
 	ra2|modern-factions/yemen-voxels.yaml
 	ra2|modern-factions/hezbollah-voxels.yaml
-	ra2|art-preview/voxels.yaml
 
 Cursors:
 	ra2|cursors.yaml
@@ -259,7 +258,7 @@ Weapons:
 	ra2|modern-factions/israel-weapons.yaml
 	ra2|modern-factions/yemen-weapons.yaml
 	ra2|modern-factions/hezbollah-weapons.yaml
-	ra2|art-preview/vehicles-fx-weapons.yaml
+	ra2|modern-factions/art-vehicles-fx-weapons.yaml
 
 Voices:
 	ra2|modern-factions/levant-voices.yaml

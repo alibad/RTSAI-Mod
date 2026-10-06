@@ -1,53 +1,35 @@
 r2merkava:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2merkava.png
 
 r2ilshield:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2ilshield.png
 
 r2ilhowitzer:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2ilhowitzer.png
 
 r2namer:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2namer.png
 
 r2ilfalcon:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2ilfalcon.png
 
 r2ilgunship:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2ilgunship.png
 
 r2ilpatrol:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2ilpatrol.png
 
 r2ilfrigate:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2ilfrigate.png
 
 r2iltender:
 	Inherits@MC: ^MindControllable
 	Inherits@Muzzle: ^WithCannonMuzzle
-	icon:
-		Filename: ra2|modern-factions/icons/r2iltender.png

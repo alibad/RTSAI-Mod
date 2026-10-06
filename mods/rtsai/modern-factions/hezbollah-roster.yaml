@@ -1,22 +1,6 @@
 # Hezbollah: dispersed, concealed and inexpensive. Drone Spotters guide RPGs and
 # missile trucks; coastal forces need surveillance links; defenses hide until
 # they fire. Heavy armor and prepared detection punish long exposed trades.
-^Palettes:
-	PaletteFromFile@hezbollah:
-		Name: hezbollah-art
-		Filename: ra2|modern-factions/hezbollah-art/hezbollah.pal
-	PlayerColorPalette@hezbollah:
-		BasePalette: hezbollah-art
-		BaseName: hezbollahplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-	PaletteFromFile@hezbollah-voxels:
-		Name: hezbollah-voxels
-		Filename: ra2|modern-factions/hezbollah-art/hezbollah-voxels.pal
-	PlayerColorPalette@hezbollah-voxels:
-		BasePalette: hezbollah-voxels
-		BaseName: hezbollahvoxelplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^R2HezbollahInfantry:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -27,19 +11,10 @@
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 600, 1500, 0, -530
-	RenderSprites:
-		PlayerPalette: hezbollahplayer
-	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
-	# go prone, half speed while prone) and show the normal sequences.
-	TakeCover:
-		ProneSequencePrefix:
 	FirepowerMultiplier@ELITEARMS:
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
-	WithDeathAnimation@normal:
-		DeathSequencePalette: hezbollahplayer
-		DeathPaletteIsPlayerPalette: true
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
@@ -197,7 +172,6 @@ r2hzscout:
 		RequiresCondition: hezbollah-repair
 r2hzdrone:
 	Inherits: ^R2ModernDrone
-	Inherits@palette: ^R2HezbollahVoxels
 	Tooltip:
 		Name: levant-r2hzdrone-name
 	Buildable:
@@ -228,9 +202,6 @@ r2hzdrone:
 
 r2hzdronehusk:
 	Inherits: ^R2DroneHusk
-	Inherits@palette: ^R2HezbollahVoxels
-	RenderVoxels:
-		Image: r2hzdrone
 
 ^R2HezbollahShip:
 	Inherits: ^Ship
@@ -243,12 +214,6 @@ r2hzdronehusk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: hezbollahvoxelplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
 	Selectable:
 		Bounds: 1500, 3000, 0, -289
 	RevealsShroud:
@@ -277,8 +242,6 @@ r2hzmissileboat:
 		FacingTolerance: 48
 	Armament:
 		Weapon: R2HZHodeidahMissile
-		# Sea-level muzzles below ~500 spawn the missile into the water.
-		LocalOffset: 600,-200,520, 600,200,520
 	# Mokha surveillance links coordinate the missile craft's fire.
 	ExternalCondition@targeting:
 		Condition: r2-hz-targeting
@@ -377,15 +340,12 @@ r2hzsurvey:
 		Type: Light
 	Mobile:
 		Speed: 105
-	WithVoxelTurret:
 	Turreted:
-		Offset: 531,0,0
 		TurnSpeed: 36
 	AttackTurreted:
 		Voice: Attack
 	Armament:
 		Weapon: R2HZMokhaGun
-		LocalOffset: 280,0,300
 	DetectCloaked:
 		DetectionTypes: Underwater, Cloak
 		Range: 6c0
@@ -458,8 +418,6 @@ r2hzsurvey:
 		Dimensions: 1, 1
 	Armor:
 		Type: Steel
-	RenderSprites:
-		PlayerPalette: hezbollahplayer
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	Turreted:
@@ -475,7 +433,6 @@ r2hzsurvey:
 		Height: 40
 	Armament:
 		Weapon: R2HZBunkerMG
-		LocalOffset: 500,0,500
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
@@ -530,7 +487,6 @@ r2hzaanest:
 		Amount: -30
 	Armament:
 		Weapon: R2HZZUNest
-		LocalOffset: 700,0,650
 	WithRangeCircle:
 		Range: 9c0
 
@@ -551,7 +507,6 @@ r2hzcoastal:
 		Amount: -50
 	Armament:
 		Weapon: R2HZYemenCoastalMissile
-		LocalOffset: 600,0,650
 	# Surveillance-craft links also coordinate the shore battery.
 	ExternalCondition@targeting:
 		Condition: r2-hz-targeting
@@ -560,7 +515,6 @@ r2hzcoastal:
 		RequiresCondition: r2-hz-targeting
 	WithRangeCircle:
 		Range: 12c0
-
 
 r2hzrelay:
 	Inherits: ^R2HezbollahDefense

@@ -1,13 +1,4 @@
 # Turkey's full combat roster. Shared Allied economy/support remain native.
-^Palettes:
-	PaletteFromFile@turkey:
-		Name: turkey-art
-		Filename: ra2|modern-factions/turkey-art/turkey.pal
-	PlayerColorPalette@turkey:
-		BasePalette: turkey-art
-		BaseName: turkeyplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^ExistsInWorld:
 	ExternalCondition@R2DESIGNATED:
 		Condition: r2-designated
@@ -29,19 +20,10 @@
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 600, 1500, 0, -530
-	RenderSprites:
-		PlayerPalette: turkeyplayer
-	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
-	# go prone, half speed while prone) and show the normal sequences.
-	TakeCover:
-		ProneSequencePrefix:
 	FirepowerMultiplier@ELITEARMS:
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
-	WithDeathAnimation@normal:
-		DeathSequencePalette: turkeyplayer
-		DeathPaletteIsPlayerPalette: true
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
@@ -262,16 +244,11 @@ r2turna:
 		Speed: 165
 	Armament:
 		Weapon: R2GunshipMissile
-	WithVoxelHelicopterBody:
-		Sequence: rotor
-		TickRate: 1
 	SpawnActorOnDeath:
 		Actor: r2turnahusk
 
 r2turnahusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2turna
 
 r2sahin:
 	Inherits: orca
@@ -294,12 +271,6 @@ r2sahin:
 		Ammo: 4
 	RenderSprites:
 		Image: r2sahin
-	RenderVoxels:
-		Image: r2sahin
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	SpawnActorOnDeath:
 		Actor: r2sahinhusk
 
@@ -308,12 +279,6 @@ r2sahinhusk:
 	Tooltip:
 		Name: ra2-r2sahin-name
 		GenericName: ra2-modern-husk
-	RenderVoxels:
-		Image: r2sahin
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 ^R2TurkishShip:
 	Inherits: ^Ship
@@ -327,20 +292,12 @@ r2sahinhusk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
-	WithVoxelTurret:
 	Turreted:
 		TurnSpeed: 32
 	AttackTurreted:
 		Voice: Attack
 	Armament:
 		Weapon: R2NavalGun
-		LocalOffset: 800,0,550
 	Mobile:
 		Speed: 90
 	Selectable:
@@ -373,7 +330,6 @@ r2marmara:
 		Speed: 70
 	Armament@AA:
 		Weapon: R2AirDefense
-		LocalOffset: -400,0,600
 
 r2ege:
 	Inherits: ^R2TurkishShip
@@ -393,7 +349,6 @@ r2ege:
 		Weapon: R2CoastalMissile
 	Armament@ASW:
 		Weapon: R2DepthCharge
-		LocalOffset: 0,0,0
 
 r2poyraz:
 	Inherits: ^R2TurkishShip
@@ -424,8 +379,6 @@ r2poyraz:
 		Dimensions: 1, 1
 	Armor:
 		Type: Steel
-	RenderSprites:
-		PlayerPalette: turkeyplayer
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	Turreted:
@@ -441,7 +394,6 @@ r2poyraz:
 		Height: 40
 	Armament:
 		Weapon: R2SentryGun
-		LocalOffset: 550,0,700
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical

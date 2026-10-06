@@ -100,7 +100,6 @@ gaweap:
 
 r2merkava:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2IsraelVoxels
 	Tooltip:
 		Name: levant-r2merkava-name
 	Buildable:
@@ -120,7 +119,6 @@ r2merkava:
 		TurnSpeed: 24
 	Armament:
 		Weapon: R2ILAbramsGun
-		LocalOffset: 900,0,450
 		MuzzleSequence: muzzle
 
 	Inherits@coordination: ^LevantIsraelCoordination
@@ -133,7 +131,6 @@ r2merkava:
 		RequiresCondition: israel-repair
 r2ilshield:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2IsraelVoxels
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: levant-r2ilshield-name
@@ -149,11 +146,8 @@ r2ilshield:
 		Type: Light
 	Mobile:
 		Speed: 105
-	Turreted:
-		Offset: -128,0,0
 	Armament:
 		Weapon: R2ILSADSInterceptor
-		LocalOffset: 600,0,450
 	AutoTarget:
 		ScanRadius: 12
 	RevealsShroud:
@@ -173,7 +167,6 @@ r2ilshield:
 		RequiresCondition: israel-repair
 r2ilhowitzer:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2IsraelVoxels
 	Tooltip:
 		Name: levant-r2ilhowitzer-name
 	Buildable:
@@ -189,7 +182,6 @@ r2ilhowitzer:
 	Mobile:
 		Speed: 115
 		Locomotor: wheeled
-	-WithVoxelTurret:
 	-Turreted:
 	-AttackTurreted:
 	AttackFrontal:
@@ -197,7 +189,6 @@ r2ilhowitzer:
 		FacingTolerance: 32
 	Armament:
 		Weapon: R2ILCaesarShell
-		LocalOffset: 780,0,450
 		MuzzleSequence: muzzle
 	WithRangeCircle:
 		Range: 13c0
@@ -212,7 +203,6 @@ r2ilhowitzer:
 		RequiresCondition: israel-repair
 r2namer:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2IsraelVoxels
 	Tooltip:
 		Name: levant-r2namer-name
 	Buildable:
@@ -239,12 +229,10 @@ r2namer:
 		Palette: pips
 	Armament:
 		Weapon: R2ILBradleyCannon
-		LocalOffset: 500,30,480
 		MuzzleSequence: muzzle
 	Armament@tow:
 		Name: secondary
 		Weapon: R2ILBradleyTOW
-		LocalOffset: 300,-210,480
 	AttackTurreted:
 		Armaments: primary, secondary
 

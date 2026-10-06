@@ -109,10 +109,6 @@ dog:
 		FactionImages:
 			hezbollah: dog
 
-^R2HezbollahVoxels:
-	RenderVoxels:
-		PlayerPalette: hezbollahvoxelplayer
-
 # Drone Spotter guidance: longer reach and faster reloads, never stacking.
 ^R2HezbollahGuided:
 	ExternalCondition@guidance:
@@ -133,7 +129,6 @@ dog:
 
 r2hztechnical:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2HezbollahVoxels
 	Tooltip:
 		Name: levant-r2hztechnical-name
 	Buildable:
@@ -151,11 +146,9 @@ r2hztechnical:
 		Locomotor: wheeled
 		TurnSpeed: 32
 	Turreted:
-		Offset: -147,0,0
 		TurnSpeed: 40
 	Armament:
 		Weapon: R2HZTechnicalMG
-		LocalOffset: 380,0,420
 		MuzzleSequence: muzzle
 	RevealsShroud:
 		Range: 8c0
@@ -169,7 +162,6 @@ r2hztechnical:
 		RequiresCondition: hezbollah-repair
 r2hzrecoilless:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2HezbollahVoxels
 	Tooltip:
 		Name: levant-r2hzrecoilless-name
 	Buildable:
@@ -187,11 +179,9 @@ r2hzrecoilless:
 		Locomotor: wheeled
 		TurnSpeed: 32
 	Turreted:
-		Offset: -147,0,0
 		TurnSpeed: 32
 	Armament:
 		Weapon: R2HZRecoillessRifle
-		LocalOffset: 470,0,400
 		MuzzleSequence: muzzle
 
 	ExternalCondition@repair:
@@ -203,7 +193,6 @@ r2hzrecoilless:
 		RequiresCondition: hezbollah-repair
 r2hzescort:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2HezbollahVoxels
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: levant-r2hzescort-name
@@ -222,11 +211,9 @@ r2hzescort:
 		Locomotor: wheeled
 		TurnSpeed: 32
 	Turreted:
-		Offset: -147,0,0
 		TurnSpeed: 48
 	Armament:
 		Weapon: R2HZZU23
-		LocalOffset: 440,0,480
 	AutoTarget:
 		ScanRadius: 9
 
@@ -239,7 +226,6 @@ r2hzescort:
 		RequiresCondition: hezbollah-repair
 r2hzrockets:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2HezbollahVoxels
 	Inherits@guidance: ^R2HezbollahGuided
 	Tooltip:
 		Name: levant-r2hzrockets-name
@@ -256,7 +242,6 @@ r2hzrockets:
 	Mobile:
 		Speed: 90
 		Locomotor: wheeled
-	-WithVoxelTurret:
 	-Turreted:
 	-AttackTurreted:
 	AttackFrontal:
@@ -264,15 +249,8 @@ r2hzrockets:
 		FacingTolerance: 32
 	Armament:
 		Weapon: R2HZYemenStrikeMissile
-		LocalOffset: 300,0,520
 		ReloadingCondition: reloading
 	# The empty erector is the visible reload window; flank it then.
-	-WithVoxelBody:
-	WithVoxelBody@loaded:
-		RequiresCondition: !reloading
-	WithVoxelBody@empty:
-		Sequence: empty
-		RequiresCondition: reloading
 	WithRangeCircle:
 		Range: 13c0
 

@@ -1,13 +1,4 @@
 # Iran wins by screening fragile salvo platforms and contesting approaches.
-^Palettes:
-	PaletteFromFile@iran:
-		Name: iran-art
-		Filename: ra2|modern-factions/iran-art/iran.pal
-	PlayerColorPalette@iran:
-		BasePalette: iran-art
-		BaseName: iranplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^R2IranInfantry:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -18,19 +9,10 @@
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 600, 1500, 0, -530
-	RenderSprites:
-		PlayerPalette: iranplayer
-	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
-	# go prone, half speed while prone) and show the normal sequences.
-	TakeCover:
-		ProneSequencePrefix:
 	FirepowerMultiplier@ELITEARMS:
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
-	WithDeathAnimation@normal:
-		DeathSequencePalette: iranplayer
-		DeathPaletteIsPlayerPalette: true
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
@@ -199,16 +181,11 @@ r2toufan:
 		Speed: 145
 	Armament:
 		Weapon: R2ToufanRocket
-	WithVoxelHelicopterBody:
-		Sequence: rotor
-		TickRate: 1
 	SpawnActorOnDeath:
 		Actor: r2toufanhusk
 
 r2toufanhusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2toufan
 
 # Launches from the native Soviet war factory, like the existing Kirov.
 # No unavailable Soviet airfield or ammunition/rearming promise is introduced.
@@ -239,8 +216,6 @@ r2azar:
 
 r2azarhusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2azar
 
 r2loiter:
 	Inherits: ^R2ModernDrone
@@ -269,8 +244,6 @@ r2loiter:
 
 r2loiterhusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2loiter
 
 r2peykaap:
 	Inherits: ^Ship
@@ -296,23 +269,14 @@ r2peykaap:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
-	WithVoxelTurret:
 	Turreted:
 		TurnSpeed: 32
 	AttackTurreted:
 		Voice: Attack
 	Armament:
 		Weapon: R2PeykaapMissile
-		LocalOffset: 500,0,500
 	Armament@AA:
 		Weapon: R2PeykaapAA
-		LocalOffset: 500,0,500
 	Selectable:
 		Bounds: 1500, 3000, 0, -289
 	RevealsShroud:
@@ -351,12 +315,6 @@ r2ghadir:
 		Range: 7c0
 	RenderSprites:
 		Image: r2ghadir
-	RenderVoxels:
-		Image: r2ghadir
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 ^R2IranDefense:
 	Inherits: ^SupportBuilding
@@ -368,8 +326,6 @@ r2ghadir:
 		Dimensions: 1, 1
 	Armor:
 		Type: Steel
-	RenderSprites:
-		PlayerPalette: iranplayer
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	Turreted:
@@ -385,7 +341,6 @@ r2ghadir:
 		Height: 40
 	Armament:
 		Weapon: R2BunkerGun
-		LocalOffset: 550,0,700
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical

@@ -20,22 +20,6 @@ Player:
 		Prerequisite: faction.yemen
 		Factions: yemen
 
-^Palettes:
-	PaletteFromFile@qilin:
-		Name: qilin
-		Filename: ra2|modern-factions/voxels/r2qilin.ra2-jade.pal
-	PlayerColorPalette@qilin:
-		BasePalette: qilin
-		BaseName: qilinplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-	PaletteFromFile@modern:
-		Name: modern
-		Filename: ra2|modern-factions/voxels/modern.pal
-	PlayerColorPalette@modern:
-		BasePalette: modern
-		BaseName: modernplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^R2ModernVehicle:
 	Inherits: ^Vehicle
 	Tooltip:
@@ -47,21 +31,10 @@ Player:
 	Buildable:
 		Queue: Vehicle
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		# The stock palette is pre-darkened for RA2's overbright voxel light.
-		# Our authored material palette needs a bounded highlight instead.
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
-	WithVoxelTurret:
 	Turreted:
 		TurnSpeed: 28
 	AttackTurreted:
 		Voice: Attack
-	Armament:
-		LocalOffset: 700,0,450
 	WithMuzzleOverlay:
 	RevealsShroud:
 		Range: 8c0
@@ -91,12 +64,6 @@ Player:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
 	RevealsShroud:
 		Range: 11c0
 		Type: CenterPosition
@@ -144,11 +111,6 @@ Player:
 	Tooltip:
 		Name: ra2-modern-husk
 		GenericName: ra2-modern-husk
-	RenderVoxels:
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	FallsToEarth:
 		Explosion: PlaneExplode
 		MaximumSpinSpeed: 10

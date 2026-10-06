@@ -100,7 +100,6 @@ gaweap:
 
 r2m1a2s:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2SaudiVoxels
 	Tooltip:
 		Name: ra2-r2m1a2s-name
 	Buildable:
@@ -119,12 +118,10 @@ r2m1a2s:
 		TurnSpeed: 24
 	Armament:
 		Weapon: R2AbramsGun
-		LocalOffset: 900,0,450
 		MuzzleSequence: muzzle
 
 r2sads:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2SaudiVoxels
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: ra2-r2sads-name
@@ -140,11 +137,8 @@ r2sads:
 		Type: Light
 	Mobile:
 		Speed: 105
-	Turreted:
-		Offset: -128,0,0
 	Armament:
 		Weapon: R2SADSInterceptor
-		LocalOffset: 600,0,450
 	AutoTarget:
 		ScanRadius: 12
 	RevealsShroud:
@@ -156,7 +150,6 @@ r2sads:
 
 r2caesar:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2SaudiVoxels
 	Tooltip:
 		Name: ra2-r2caesar-name
 	Buildable:
@@ -172,7 +165,6 @@ r2caesar:
 	Mobile:
 		Speed: 115
 		Locomotor: wheeled
-	-WithVoxelTurret:
 	-Turreted:
 	-AttackTurreted:
 	AttackFrontal:
@@ -180,14 +172,12 @@ r2caesar:
 		FacingTolerance: 32
 	Armament:
 		Weapon: R2CaesarShell
-		LocalOffset: 780,0,450
 		MuzzleSequence: muzzle
 	WithRangeCircle:
 		Range: 13c0
 
 r2bradley:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2SaudiVoxels
 	Tooltip:
 		Name: ra2-r2bradley-name
 	Buildable:
@@ -214,11 +204,9 @@ r2bradley:
 		Palette: pips
 	Armament:
 		Weapon: R2BradleyCannon
-		LocalOffset: 500,30,480
 		MuzzleSequence: muzzle
 	Armament@tow:
 		Name: secondary
 		Weapon: R2BradleyTOW
-		LocalOffset: 300,-210,480
 	AttackTurreted:
 		Armaments: primary, secondary

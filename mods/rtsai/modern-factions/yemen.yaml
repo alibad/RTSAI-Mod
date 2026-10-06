@@ -109,10 +109,6 @@ dog:
 		FactionImages:
 			yemen: dog
 
-^R2YemenVoxels:
-	RenderVoxels:
-		PlayerPalette: yemenvoxelplayer
-
 # Drone Spotter guidance: longer reach and faster reloads, never stacking.
 ^R2YemenGuided:
 	ExternalCondition@guidance:
@@ -133,7 +129,6 @@ dog:
 
 r2technical:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2YemenVoxels
 	Tooltip:
 		Name: ra2-r2technical-name
 	Buildable:
@@ -151,18 +146,15 @@ r2technical:
 		Locomotor: wheeled
 		TurnSpeed: 32
 	Turreted:
-		Offset: -147,0,0
 		TurnSpeed: 40
 	Armament:
 		Weapon: R2TechnicalMG
-		LocalOffset: 380,0,420
 		MuzzleSequence: muzzle
 	RevealsShroud:
 		Range: 8c0
 
 r2ytechrr:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2YemenVoxels
 	Tooltip:
 		Name: ra2-r2ytechrr-name
 	Buildable:
@@ -180,16 +172,13 @@ r2ytechrr:
 		Locomotor: wheeled
 		TurnSpeed: 32
 	Turreted:
-		Offset: -147,0,0
 		TurnSpeed: 32
 	Armament:
 		Weapon: R2RecoillessRifle
-		LocalOffset: 470,0,400
 		MuzzleSequence: muzzle
 
 r2yzu:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2YemenVoxels
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: ra2-r2yzu-name
@@ -208,17 +197,14 @@ r2yzu:
 		Locomotor: wheeled
 		TurnSpeed: 32
 	Turreted:
-		Offset: -147,0,0
 		TurnSpeed: 48
 	Armament:
 		Weapon: R2ZU23
-		LocalOffset: 440,0,480
 	AutoTarget:
 		ScanRadius: 9
 
 r2ymlr:
 	Inherits: ^R2ModernVehicle
-	Inherits@palette: ^R2YemenVoxels
 	Inherits@guidance: ^R2YemenGuided
 	Tooltip:
 		Name: ra2-r2ymlr-name
@@ -235,7 +221,6 @@ r2ymlr:
 	Mobile:
 		Speed: 90
 		Locomotor: wheeled
-	-WithVoxelTurret:
 	-Turreted:
 	-AttackTurreted:
 	AttackFrontal:
@@ -243,14 +228,7 @@ r2ymlr:
 		FacingTolerance: 32
 	Armament:
 		Weapon: R2YemenStrikeMissile
-		LocalOffset: 300,0,520
 		ReloadingCondition: reloading
 	# The empty erector is the visible reload window; flank it then.
-	-WithVoxelBody:
-	WithVoxelBody@loaded:
-		RequiresCondition: !reloading
-	WithVoxelBody@empty:
-		Sequence: empty
-		RequiresCondition: reloading
 	WithRangeCircle:
 		Range: 13c0

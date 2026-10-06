@@ -1,22 +1,6 @@
 # Yemen: dispersed, concealed and inexpensive. Drone Spotters guide RPGs and
 # missile trucks; coastal forces need surveillance links; defenses hide until
 # they fire. Heavy armor and prepared detection punish long exposed trades.
-^Palettes:
-	PaletteFromFile@yemen:
-		Name: yemen-art
-		Filename: ra2|modern-factions/yemen-art/yemen.pal
-	PlayerColorPalette@yemen:
-		BasePalette: yemen-art
-		BaseName: yemenplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-	PaletteFromFile@yemen-voxels:
-		Name: yemen-voxels
-		Filename: ra2|modern-factions/yemen-art/yemen-voxels.pal
-	PlayerColorPalette@yemen-voxels:
-		BasePalette: yemen-voxels
-		BaseName: yemenvoxelplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^R2YemenInfantry:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -27,19 +11,10 @@
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 600, 1500, 0, -530
-	RenderSprites:
-		PlayerPalette: yemenplayer
-	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
-	# go prone, half speed while prone) and show the normal sequences.
-	TakeCover:
-		ProneSequencePrefix:
 	FirepowerMultiplier@ELITEARMS:
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
-	WithDeathAnimation@normal:
-		DeathSequencePalette: yemenplayer
-		DeathPaletteIsPlayerPalette: true
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
@@ -169,7 +144,6 @@ r2wadighost:
 # One-way loitering munition: removed on its terminal attack, no rearming.
 r2samad:
 	Inherits: ^R2ModernDrone
-	Inherits@palette: ^R2YemenVoxels
 	Tooltip:
 		Name: ra2-r2samad-name
 	Buildable:
@@ -200,9 +174,6 @@ r2samad:
 
 r2samadhusk:
 	Inherits: ^R2DroneHusk
-	Inherits@palette: ^R2YemenVoxels
-	RenderVoxels:
-		Image: r2samad
 
 ^R2YemenShip:
 	Inherits: ^Ship
@@ -215,12 +186,6 @@ r2samadhusk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: yemenvoxelplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
 	Selectable:
 		Bounds: 1500, 3000, 0, -289
 	RevealsShroud:
@@ -249,8 +214,6 @@ r2hodeidah:
 		FacingTolerance: 48
 	Armament:
 		Weapon: R2HodeidahMissile
-		# Sea-level muzzles below ~500 spawn the missile into the water.
-		LocalOffset: 600,-200,520, 600,200,520
 	# Mokha surveillance links coordinate the missile craft's fire.
 	ExternalCondition@targeting:
 		Condition: r2-ye-targeting
@@ -335,15 +298,12 @@ r2mokha:
 		Type: Light
 	Mobile:
 		Speed: 105
-	WithVoxelTurret:
 	Turreted:
-		Offset: 531,0,0
 		TurnSpeed: 36
 	AttackTurreted:
 		Voice: Attack
 	Armament:
 		Weapon: R2MokhaGun
-		LocalOffset: 280,0,300
 	DetectCloaked:
 		DetectionTypes: Underwater, Cloak
 		Range: 6c0
@@ -409,8 +369,6 @@ r2mokha:
 		Dimensions: 1, 1
 	Armor:
 		Type: Steel
-	RenderSprites:
-		PlayerPalette: yemenplayer
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	Turreted:
@@ -426,7 +384,6 @@ r2mokha:
 		Height: 40
 	Armament:
 		Weapon: R2BunkerMG
-		LocalOffset: 500,0,500
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
@@ -481,7 +438,6 @@ r2yzunest:
 		Amount: -30
 	Armament:
 		Weapon: R2ZUNest
-		LocalOffset: 700,0,650
 	WithRangeCircle:
 		Range: 9c0
 
@@ -502,7 +458,6 @@ r2ycoastal:
 		Amount: -50
 	Armament:
 		Weapon: R2YemenCoastalMissile
-		LocalOffset: 600,0,650
 	# Surveillance-craft links also coordinate the shore battery.
 	ExternalCondition@targeting:
 		Condition: r2-ye-targeting

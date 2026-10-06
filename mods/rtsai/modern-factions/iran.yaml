@@ -192,5 +192,3 @@ r2mohajer:
 
 r2mohajerhusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2mohajer

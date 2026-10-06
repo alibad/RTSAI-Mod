@@ -199,5 +199,3 @@ r2kuzgun:
 
 r2kuzgunhusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2kuzgun

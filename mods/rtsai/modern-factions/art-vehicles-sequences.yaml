@@ -1,0 +1,878 @@
+# Modern-faction vehicles, ships and aircraft: prerendered sprite sequences (modern-factions/vehicles/).
+# Written by RTSAI-Art tools/vehicle_install.py, one "# glb-route:<actor>" block per actor; reinstall, never hand-edit.
+
+# glb-route:r2cloud begin
+r2cloud:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2cloud.shp
+		Facings: 32
+# glb-route:r2cloud end
+
+# glb-route:r2crane begin
+r2crane:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2crane.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2crane.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|modern-factions/vehicles/r2crane.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2crane end
+
+# glb-route:r2haiwang begin
+r2haiwang:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2haiwang.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2haiwang end
+
+# glb-route:r2haiying begin
+r2haiying:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2haiying.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2haiying.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2haiying end
+
+# glb-route:r2kunlun begin
+r2kunlun:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2kunlun.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2kunlun end
+
+# glb-route:r2luyang begin
+r2luyang:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2luyang.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2luyang.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2luyang end
+
+# glb-route:r2mantis begin
+r2mantis:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2mantis.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2mantis.shp
+		Start: 64
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+	turret-still:
+		Filename: ra2|modern-factions/vehicles/r2mantis.shp
+		Start: 64
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+# glb-route:r2mantis end
+
+# glb-route:r2phl begin
+r2phl:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2phl.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2phl end
+
+# glb-route:r2qilin begin
+r2qilin:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2qilin.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2qilin.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2qilin end
+
+# glb-route:r2skyspear begin
+r2skyspear:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2skyspear.shp
+		Facings: 32
+# glb-route:r2skyspear end
+
+# glb-route:r2zbd begin
+r2zbd:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2zbd.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2zbd.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2zbd end
+
+# glb-route:r2jiaolong begin
+r2jiaolong:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2jiaolong.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2jiaolong end
+
+# glb-route:r2lynx begin
+r2lynx:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2lynx.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2lynx.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2lynx end
+
+# glb-route:r2azar begin
+r2azar:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2azar.shp
+		Facings: 32
+# glb-route:r2azar end
+
+# glb-route:r2coast begin
+r2coast:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2coast.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2coast.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2coast end
+
+# glb-route:r2fajr begin
+r2fajr:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2fajr.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2fajr.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2fajr end
+
+# glb-route:r2ghadir begin
+r2ghadir:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ghadir.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2ghadir end
+
+# glb-route:r2karrar begin
+r2karrar:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2karrar.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2karrar.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2karrar end
+
+# glb-route:r2loiter begin
+r2loiter:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2loiter.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2loiter.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2loiter end
+
+# glb-route:r2mohajer begin
+r2mohajer:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2mohajer.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2mohajer.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2mohajer end
+
+# glb-route:r2peykaap begin
+r2peykaap:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2peykaap.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2peykaap.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2peykaap end
+
+# glb-route:r2raad begin
+r2raad:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2raad.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2raad.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2raad.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2raad end
+
+# glb-route:r2toufan begin
+r2toufan:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2toufan.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2toufan.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|modern-factions/vehicles/r2toufan.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2toufan end
+
+# glb-route:r2bozkir begin
+r2bozkir:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2bozkir.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2bozkir.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2bozkir end
+
+# glb-route:r2deniz begin
+r2deniz:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2deniz.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2deniz.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2deniz end
+
+# glb-route:r2kuzgun begin
+r2kuzgun:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2kuzgun.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2kuzgun.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2kuzgun end
+
+# glb-route:r2poyraz begin
+r2poyraz:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2poyraz.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2poyraz.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2poyraz end
+
+# glb-route:r2sancak begin
+r2sancak:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2sancak.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2sancak.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2sancak end
+
+# glb-route:r2yildirim begin
+r2yildirim:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2yildirim.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2yildirim.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2yildirim end
+
+# glb-route:r2caesar begin
+r2caesar:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2caesar.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2caesar end
+
+# glb-route:r2f15sa begin
+r2f15sa:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2f15sa.shp
+		Facings: 32
+# glb-route:r2f15sa end
+
+# glb-route:r2jubail begin
+r2jubail:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2jubail.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2jubail end
+
+# glb-route:r2m1a2s begin
+r2m1a2s:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2m1a2s.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2m1a2s.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2m1a2s end
+
+# glb-route:r2riyadh begin
+r2riyadh:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2riyadh.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2riyadh.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2riyadh end
+
+# glb-route:r2sadiq begin
+r2sadiq:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2sadiq.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2sadiq.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2sadiq end
+
+# glb-route:r2sads begin
+r2sads:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2sads.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2sads.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2sads.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2sads end
+
+# glb-route:r2aras begin
+r2aras:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2aras.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2aras.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2aras end
+
+# glb-route:r2ege begin
+r2ege:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ege.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2ege.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2ege end
+
+# glb-route:r2gokkalkan begin
+r2gokkalkan:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2gokkalkan.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2gokkalkan.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2gokkalkan end
+
+# glb-route:r2marmara begin
+r2marmara:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2marmara.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2marmara.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2marmara end
+
+# glb-route:r2sahin begin
+r2sahin:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2sahin.shp
+		Facings: 32
+# glb-route:r2sahin end
+
+# glb-route:r2turna begin
+r2turna:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2turna.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2turna.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|modern-factions/vehicles/r2turna.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2turna end
+
+# glb-route:r2ah64sa begin
+r2ah64sa:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ah64sa.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2ah64sa.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|modern-factions/vehicles/r2ah64sa.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2ah64sa end
+
+# glb-route:r2bradley begin
+r2bradley:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2bradley.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2bradley.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2bradley end
+
+# glb-route:r2hodeidah begin
+r2hodeidah:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hodeidah.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hodeidah end
+
+# glb-route:r2mokha begin
+r2mokha:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2mokha.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2mokha.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2mokha end
+
+# glb-route:r2sahaab begin
+r2sahaab:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2sahaab.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2sahaab end
+
+# glb-route:r2samad begin
+r2samad:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2samad.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2samad.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2samad end
+
+# glb-route:r2technical begin
+r2technical:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2technical.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2technical.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2technical end
+
+# glb-route:r2ymlr begin
+r2ymlr:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ymlr.shp
+		Facings: 32
+		ShadowStart: 32
+	empty:
+		Filename: ra2|modern-factions/vehicles/r2ymlr.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2ymlr end
+
+# glb-route:r2ytechrr begin
+r2ytechrr:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ytechrr.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2ytechrr.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2ytechrr end
+
+# glb-route:r2yzu begin
+r2yzu:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2yzu.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2yzu.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2yzu end
+
+# glb-route:r2ilfalcon begin
+r2ilfalcon:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ilfalcon.shp
+		Facings: 32
+# glb-route:r2ilfalcon end
+
+# glb-route:r2ilfrigate begin
+r2ilfrigate:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ilfrigate.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2ilfrigate.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2ilfrigate.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2ilfrigate end
+
+# glb-route:r2ilgunship begin
+r2ilgunship:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ilgunship.shp
+		Length: 4
+		Tick: 40
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2ilgunship.shp
+		Stride: 4
+		Facings: 32
+	idle-landed:
+		Filename: ra2|modern-factions/vehicles/r2ilgunship.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2ilgunship end
+
+# glb-route:r2ilhowitzer begin
+r2ilhowitzer:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ilhowitzer.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2ilhowitzer end
+
+# glb-route:r2ilpatrol begin
+r2ilpatrol:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ilpatrol.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2ilpatrol.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2ilpatrol end
+
+# glb-route:r2ilshield begin
+r2ilshield:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2ilshield.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2ilshield.shp
+		Start: 64
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+	turret-still:
+		Filename: ra2|modern-factions/vehicles/r2ilshield.shp
+		Start: 64
+		Stride: 8
+		Facings: 32
+		ShadowStart: 320
+# glb-route:r2ilshield end
+
+# glb-route:r2iltender begin
+r2iltender:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2iltender.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2iltender end
+
+# glb-route:r2merkava begin
+r2merkava:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2merkava.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2merkava.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2merkava end
+
+# glb-route:r2namer begin
+r2namer:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2namer.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2namer.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2namer end
+
+# glb-route:r2hzdrone begin
+r2hzdrone:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzdrone.shp
+		Length: 4
+		Tick: 120
+		Stride: 4
+		Facings: 32
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2hzdrone.shp
+		Stride: 4
+		Facings: 32
+# glb-route:r2hzdrone end
+
+# glb-route:r2hzescort begin
+r2hzescort:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzescort.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2hzescort.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hzescort end
+
+# glb-route:r2hzmissileboat begin
+r2hzmissileboat:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzmissileboat.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hzmissileboat end
+
+# glb-route:r2hzrecoilless begin
+r2hzrecoilless:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzrecoilless.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2hzrecoilless.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hzrecoilless end
+
+# glb-route:r2hzrockets begin
+r2hzrockets:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzrockets.shp
+		Facings: 32
+		ShadowStart: 32
+	empty:
+		Filename: ra2|modern-factions/vehicles/r2hzrockets.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hzrockets end
+
+# glb-route:r2hzskiff begin
+r2hzskiff:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzskiff.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hzskiff end
+
+# glb-route:r2hzsurvey begin
+r2hzsurvey:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzsurvey.shp
+		Length: 8
+		Tick: 120
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	idle-still:
+		Filename: ra2|modern-factions/vehicles/r2hzsurvey.shp
+		Stride: 8
+		Facings: 32
+		ShadowStart: 256
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2hzsurvey.shp
+		Start: 512
+		Facings: 32
+		ShadowStart: 544
+# glb-route:r2hzsurvey end
+
+# glb-route:r2hztechnical begin
+r2hztechnical:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hztechnical.shp
+		Facings: 32
+		ShadowStart: 32
+	turret:
+		Filename: ra2|modern-factions/vehicles/r2hztechnical.shp
+		Start: 64
+		Facings: 32
+		ShadowStart: 96
+# glb-route:r2hztechnical end

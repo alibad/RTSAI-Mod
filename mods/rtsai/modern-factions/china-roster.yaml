@@ -1,13 +1,4 @@
 # China: coordinated precision and support with explicit specialist counters.
-^Palettes:
-	PaletteFromFile@china:
-		Name: china-art
-		Filename: ra2|modern-factions/china-art/china.pal
-	PlayerColorPalette@china:
-		BasePalette: china-art
-		BaseName: chinaplayer
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-
 ^R2ChineseInfantry:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -19,19 +10,10 @@
 		AddToArmyValue: true
 	Selectable:
 		Bounds: 600, 1500, 0, -530
-	RenderSprites:
-		PlayerPalette: chinaplayer
-	# No prone art: keep the RA2 prone mechanics (less damage from weapons that make infantry
-	# go prone, half speed while prone) and show the normal sequences.
-	TakeCover:
-		ProneSequencePrefix:
 	FirepowerMultiplier@ELITEARMS:
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
-	WithDeathAnimation@normal:
-		DeathSequencePalette: chinaplayer
-		DeathPaletteIsPlayerPalette: true
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
@@ -257,7 +239,6 @@ r2phl:
 		Type: Light
 	Mobile:
 		Speed: 90
-	-WithVoxelTurret:
 	-Turreted:
 	-AttackTurreted:
 	AttackFrontal:
@@ -265,7 +246,6 @@ r2phl:
 		FacingTolerance: 64
 	Armament:
 		Weapon: R2ChinaLongbowRockets
-		LocalOffset: 500,0,700
 	WithRangeCircle:
 		Range: 12c0
 
@@ -293,12 +273,6 @@ r2skyspear:
 		Ammo: 4
 	RenderSprites:
 		Image: r2skyspear
-	RenderVoxels:
-		Image: r2skyspear
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	SpawnActorOnDeath:
 		Actor: r2skyspearhusk
 
@@ -307,12 +281,6 @@ r2skyspearhusk:
 	Tooltip:
 		Name: ra2-r2skyspear-name
 		GenericName: ra2-modern-husk
-	RenderVoxels:
-		Image: r2skyspear
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 r2crane:
 	Inherits: shad
@@ -337,19 +305,11 @@ r2crane:
 		Speed: 155
 	RenderSprites:
 		Image: r2crane
-	RenderVoxels:
-		Image: r2crane
-		PlayerPalette: modernplayer
-		Scale: 15.2
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	SpawnActorOnDeath:
 		Actor: r2cranehusk
 
 r2cranehusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2crane
 
 ^R2ChineseShip:
 	Inherits: ^Ship
@@ -361,20 +321,12 @@ r2cranehusk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RenderSprites:
-	RenderVoxels:
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
-	WithVoxelBody:
-	WithVoxelTurret:
 	Turreted:
 		TurnSpeed: 28
 	AttackTurreted:
 		Voice: Attack
 	Armament:
 		Weapon: R2ChinaNavalGun
-		LocalOffset: 800,0,550
 	Mobile:
 		Speed: 85
 	Selectable:
@@ -409,7 +361,6 @@ r2luyang:
 		Type: Heavy
 	Armament@ASW:
 		Weapon: R2ChinaASW
-		LocalOffset: 0,0,0
 
 r2haiying:
 	Inherits: ^R2ChineseShip
@@ -435,7 +386,6 @@ r2haiying:
 		Weapon: R2ChinaCoastalMissile
 	Armament@AA:
 		Weapon: R2ChinaNavalAA
-		LocalOffset: 0,0,600
 
 r2haiwang:
 	Inherits: carrier
@@ -459,12 +409,6 @@ r2haiwang:
 		RespawnTicks: 450
 	RenderSprites:
 		Image: r2haiwang
-	RenderVoxels:
-		Image: r2haiwang
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 r2haiwangdrone:
 	Inherits: hornet
@@ -472,22 +416,11 @@ r2haiwangdrone:
 		RearmActors: r2haiwang
 	Tooltip:
 		Name: ra2-r2cloud-name
-	RenderSprites:
-		Image: r2cloud
-	RenderVoxels:
-		Image: r2cloud
-		PlayerPalette: modernplayer
-		Scale: 9
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 	SpawnActorOnDeath:
 		Actor: r2haiwangdronehusk
 
 r2haiwangdronehusk:
 	Inherits: ^R2DroneHusk
-	RenderVoxels:
-		Image: r2cloud
-		Scale: 9
 
 r2kunlun:
 	Inherits: lcrf
@@ -513,12 +446,6 @@ r2kunlun:
 		MaxWeight: 16
 	RenderSprites:
 		Image: r2kunlun
-	RenderVoxels:
-		Image: r2kunlun
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 r2jiaolong:
 	Inherits: sub
@@ -541,12 +468,6 @@ r2jiaolong:
 		Speed: 80
 	RenderSprites:
 		Image: r2jiaolong
-	RenderVoxels:
-		Image: r2jiaolong
-		PlayerPalette: modernplayer
-		Scale: 22
-		LightAmbientColor: -0.3,-0.3,-0.3
-		LightDiffuseColor: 0.75,0.75,0.75
 
 ^R2ChineseDefense:
 	Inherits: ^SupportBuilding
@@ -559,8 +480,6 @@ r2jiaolong:
 		Dimensions: 1, 1
 	Armor:
 		Type: Steel
-	RenderSprites:
-		PlayerPalette: chinaplayer
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	Turreted:
@@ -576,7 +495,6 @@ r2jiaolong:
 		Height: 40
 	Armament:
 		Weapon: R2ChinaBastion
-		LocalOffset: 550,0,700
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
