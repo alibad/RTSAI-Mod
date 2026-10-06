@@ -166,14 +166,6 @@ Sequences:
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
-	ra2|modern-factions/voxels.yaml
-	ra2|modern-factions/china-voxels.yaml
-	ra2|modern-factions/iran-voxels.yaml
-	ra2|modern-factions/turkey-voxels.yaml
-	ra2|modern-factions/saudi-voxels.yaml
-	ra2|modern-factions/israel-voxels.yaml
-	ra2|modern-factions/yemen-voxels.yaml
-	ra2|modern-factions/hezbollah-voxels.yaml
 
 Cursors:
 	ra2|cursors.yaml
