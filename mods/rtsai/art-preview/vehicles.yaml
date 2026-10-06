@@ -664,7 +664,7 @@ r2technical:
 	Turreted:
 		Offset: -167,0,0
 	Armament:
-		LocalOffset: 336,-2,948
+		LocalOffset: 336,2,948
 # glb-route:r2technical end
 
 # glb-route:r2ytechrr begin
@@ -693,7 +693,7 @@ r2yzu:
 	Turreted:
 		Offset: -225,0,0
 	Armament:
-		LocalOffset: 12,-46,1023, 12,46,1023
+		LocalOffset: 12,46,1023, 12,-46,1023
 # glb-route:r2yzu end
 
 # glb-route:r2ymlr begin
@@ -704,7 +704,7 @@ r2ymlr:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 157,-113,1080, 157,113,1080
+		LocalOffset: 157,113,1080, 157,-113,1080
 	WithVoxelBody@chassis:
 	WithVoxelBody@loaded:
 		Sequence: rack
@@ -744,7 +744,7 @@ r2hodeidah:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: -401,-73,746, -401,73,746
+		LocalOffset: -401,73,746, -401,-73,746
 # glb-route:r2hodeidah end
 
 # glb-route:r2mokha begin
@@ -755,7 +755,7 @@ r2mokha:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Turreted:
-		Offset: 35,-69,0
+		Offset: 35,69,0
 	Armament:
 		LocalOffset: 163,0,809
 # glb-route:r2mokha end
