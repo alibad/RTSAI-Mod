@@ -347,6 +347,8 @@ r2mohajer:
 		QuantizedFacings: 32
 	WithShadow:
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: -3,0,96
 
 r2mohajerhusk:
 	-RenderVoxels:
@@ -371,6 +373,8 @@ r2loiter:
 		QuantizedFacings: 32
 	WithShadow:
 	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: -18,2,67
 
 r2loiterhusk:
 	-RenderVoxels:
