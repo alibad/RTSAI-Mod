@@ -249,7 +249,7 @@ r2cnportable:
 		PlayerPalette: r2cnportable-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -82,-22,-485
+		ProneOffset: 27,12,-536
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2cnportable-glb-player
 		DeathPaletteIsPlayerPalette: true
@@ -299,7 +299,7 @@ r2hzat:
 		PlayerPalette: r2hzat-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -64,23,-596
+		ProneOffset: 62,63,-579
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2hzat-glb-player
 		DeathPaletteIsPlayerPalette: true
@@ -338,7 +338,7 @@ r2ilat:
 		PlayerPalette: r2ilat-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -65,-76,-410
+		ProneOffset: 67,-37,-597
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2ilat-glb-player
 		DeathPaletteIsPlayerPalette: true
@@ -386,7 +386,7 @@ r2saat:
 		PlayerPalette: r2saat-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -59,31,-442
+		ProneOffset: 69,70,-522
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2saat-glb-player
 		DeathPaletteIsPlayerPalette: true
@@ -425,7 +425,7 @@ r2toophan:
 		PlayerPalette: r2toophan-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -60,-29,-258
+		ProneOffset: 60,5,-407
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2toophan-glb-player
 		DeathPaletteIsPlayerPalette: true
@@ -437,7 +437,7 @@ r2trat:
 		PlayerPalette: r2trat-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -96,-134,-495
+		ProneOffset: 26,-100,-632
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2trat-glb-player
 		DeathPaletteIsPlayerPalette: true
@@ -485,7 +485,7 @@ r2yrpg:
 		PlayerPalette: r2yrpg-glb-player
 	TakeCover:
 		ProneSequencePrefix: prone-
-		ProneOffset: -58,131,-645
+		ProneOffset: 65,168,-659
 	WithDeathAnimation@normal:
 		DeathSequencePalette: r2yrpg-glb-player
 		DeathPaletteIsPlayerPalette: true
