@@ -932,7 +932,7 @@ r2hztechnical:
 	Turreted:
 		Offset: -176,0,0
 	Armament:
-		LocalOffset: 147,-5,1023
+		LocalOffset: 452,2,1153
 # glb-route:r2hztechnical end
 
 # glb-route:r2hzrecoilless begin
@@ -945,7 +945,7 @@ r2hzrecoilless:
 	Turreted:
 		Offset: -106,0,0
 	Armament:
-		LocalOffset: 391,-2,999
+		LocalOffset: 391,2,999
 		Recoil: 40
 		RecoilRecovery: 8
 	WithVoxelBarrel:
@@ -961,7 +961,7 @@ r2hzescort:
 	Turreted:
 		Offset: -348,0,0
 	Armament:
-		LocalOffset: 309,-84,1160, 309,83,1160
+		LocalOffset: 309,84,1160, 309,-83,1160
 		Recoil: 56
 		RecoilRecovery: 11
 	WithVoxelBarrel:
@@ -975,7 +975,7 @@ r2hzrockets:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 32,-6,988
+		LocalOffset: 32,6,988
 	-WithVoxelBody@loaded:
 	-WithVoxelBody@empty:
 	WithVoxelBody@chassis:
@@ -1017,7 +1017,7 @@ r2hzmissileboat:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	Armament:
-		LocalOffset: 297,-232,659, 297,232,659
+		LocalOffset: 297,232,659, 297,-232,659
 # glb-route:r2hzmissileboat end
 
 # glb-route:r2hzsurvey begin
@@ -1030,7 +1030,7 @@ r2hzsurvey:
 	Turreted:
 		Offset: 365,0,0
 	Armament:
-		LocalOffset: 280,3,574
+		LocalOffset: 280,-3,574
 	WithAnimatedVoxelModel@radar:
 		Sequence: radar
 		TickRate: 3
