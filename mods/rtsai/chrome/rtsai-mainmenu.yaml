@@ -19,7 +19,9 @@ Container@MAINMENU:
 			Height: WINDOW_HEIGHT
 			ImageCollection: rtsai-menu
 			ImageName: backdrop
-			FocusX: 0.7
+			SafeLeft: 580
+			SafeRight: 1810
+			InsetLeft: 341
 		ColorBlock@MENU_BAND:
 			Width: 340
 			Height: WINDOW_HEIGHT

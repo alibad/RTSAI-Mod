@@ -60,7 +60,8 @@ debt). Bot matches with no exceptions: Israel vs Yemen on Twin Fords (6 min), T�
 (5 min). Placeholder debt went from 1,933 to 980 files.
 
 Found on the way: the RA2 table's tile `ZOffset: -15` assumes TMP tiles with per-pixel depth; on flat tiles it hid
-the whole resource layer, so the generated tileset sets 0. Diagonal generated roads show a one-cell staircase edge.
+the whole resource layer, so the generated tileset sets 0. Diagonal generated roads showed a one-cell staircase
+edge (fixed in Phase 3).
 
 ### Phase 3: in progress [ran]
 
@@ -72,6 +73,21 @@ the whole resource layer, so the generated tileset sets 0. Diagonal generated ro
 - **Audio wired**: the audio agent's SFX, UI sounds, stock-unit voices and music (plus its polish pass: loop seams,
   dog barks, death cries). `--check-standalone --strict-audio` finds 0 unresolved sounds for what the 7 factions
   can field; `make test` runs it.
+- **Branded main menu** (`chrome/rtsai-mainmenu.yaml`, replacing the stock layout; same widget ids and logic):
+  - a full-window backdrop of one flagship per faction (Qilin, Karrar, Bozkir, M1A2S, Merkava, the Yemeni launcher,
+    Hezbollah rockets), rendered from the project's own GLB meshes in RTSAI-Art on a procedural desert at golden
+    hour (`tools/standalone-menu.py`, Blender Cycles on the CPU). The new `CoverImageWidget` scales it to cover any
+    window, and the vehicles stay inside a safe area, so 16:10 and 4:3 windows crop only sky and sand;
+  - the product name from `-product-name`, in a new 56 px `Hero` font;
+  - the version line shows the manifest version for packaged builds (`make version`), and otherwise the git commit
+    the mod assembly was built from (an MSBuild stamp), instead of `{DEV_VERSION}`;
+  - the forum-account box is now a single small link at the top right;
+  - no news box and no content manager.
+- **Roads without staircases**: generated roads now run only along the cell axes (2:1 on screen) and the screen
+  horizontal and vertical. Along those directions, whole rows of corners switch together, so each edge is one
+  straight run. Each road is a Z of those legs and stays symmetric (`tools/standalone-maps.py`).
+- `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
+  first draw). `--list-placeholders` prints every placeholder still in use.
 - Placeholder debt: 116 of the 980 stand-in files are still reachable, all in shared units and effects (next
   delivery).
 
@@ -91,6 +107,35 @@ rosters (`Buildable: Prerequisites: ~disabled`); the classic add-on keeps them. 
 
 The bots need no change: `rules/ai.yaml` lists `nanrct`, `gagap`, `naclon` and `namisl` in its building fractions,
 and bots skip what they cannot build. Soviet-side bots still build power through `napowr`.
+
+**Standalone balance smoke** [ran]: `tools/balance-harness.py run --campaign standalone-smoke --standalone`.
+- Setup: headless, no RA2 content linked anywhere, the 7 factions on the base kit, Twin Fords and Harbor Line.
+  Every pairing was played from both spawn orientations with the normal bot and a 40-minute cap: 84 matches.
+- **Stability:** 84 of 84 complete. No crash, hang, exception or Lua error.
+- **Endings:** 44 conquests, 40 draws at the cap (48%). Median length 22.5 game minutes; Harbor Line 19.1,
+  Twin Fords 31.7.
+- **Map fairness:** first-slot score 56% on Harbor Line and 46% on Twin Fords (42 games each, within noise).
+- **Factions:**
+
+  | Faction | Score (draw = ½) | W-D-L |
+  |---|---|---|
+  | Saudi Arabia | 56% | 10-7-7 |
+  | Israel | 54% | 6-14-4 |
+  | Hezbollah | 54% | 9-8-7 |
+  | Yemen | 52% | 6-13-5 |
+  | Iran | 50% | 5-14-5 |
+  | China | 42% | 4-12-8 |
+  | Türkiye | 42% | 4-12-8 |
+
+  All 95% intervals overlap 50%. Nothing is broken; China and Türkiye are the ones to watch.
+- Every faction built power, refineries, production and tech on the kit: about 3 power plants and 15 structures
+  per game.
+- **For the balance pass:**
+  - No bot builds a superweapon in the standalone game. Bot fractions only ever listed the missile silo, and the
+    bot support-power logic only knows paratroopers and the nuke; the Strategic Uplink and EW Array have no bot
+    decisions.
+  - With no damage superweapon and no reactor, half the games reach the cap. The full balance pass should compare
+    against a rules overlay that restores the 8 cut buildings, to measure how much of that the cuts cause.
 
 ### Deliverables for Phase 3
 
@@ -261,7 +306,10 @@ python tools/standalone-maps.py                  # Twin Fords, Harbor Line
 python tools/build-classic-manifest.py           # after any manifest change (make test checks it)
 python tools/standalone-smoke.py skirmish --observe --map twin-fords --bots Multi0:normal:israel,Multi1:normal:yemen \
     --seconds 360 --out <scratch>/match       # --look X,Y holds the camera on a cell
+python tools/standalone-kit-rules.py             # base kit rules (after a kit delivery)
+python tools/standalone-menu.py                  # main-menu backdrop (Blender, CPU, ~2 min); --quick for a draft
+python tools/balance-harness.py run --campaign standalone-smoke --standalone --output <scratch>/smoke --parallel 10
 ```
 
-This branch changes C# (`SurvivorReplacements`, `--check-standalone`), so build first: `./make.cmd all`, then
+This branch changes C# (`SurvivorReplacements`, `--check-standalone`, the menu widgets), so build first: `./make.cmd all`, then
 `./make.cmd test`. The worktree uses its own copy of the engine at the pinned commit (gitignored).

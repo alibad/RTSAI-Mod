@@ -41,9 +41,11 @@ LINEUP = [
     ("r2bozkir", 0.285, "front", -3.0),     # Türkiye
     ("r2m1a2s", 0.625, "front", 3.0),       # Saudi Arabia
 ]
-# Safe area: the menu draws the picture to cover the window (cropping 16:10 and 4:3 at the sides) with a 340 px menu
-# band on the left, so the vehicles stay between about x = 600 and x = 1850 of the 1920 px frame.
+# Safe area: the menu draws the picture to cover the window (16:10 and 4:3 windows crop the sides) behind a 340 px
+# menu band, and keeps the lineup's columns centred in the uncovered part; at 16:10 the whole lineup stays in view.
 FRONT, BACK, FACING = 28.0, 37.0, 35.0
+SAFE_AREA = (580, 1810)       # image columns the lineup occupies: CoverImage@BACKDROP SafeLeft/SafeRight in
+                              # chrome/rtsai-mainmenu.yaml (update both after moving the lineup)
 LENS_MM = 30.0
 CAMERA_HEIGHT = 7.0
 
