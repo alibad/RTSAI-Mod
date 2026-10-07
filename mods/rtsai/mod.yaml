@@ -146,6 +146,7 @@ Sequences:
 	ra2|modern-factions/art-infantry-sequences.yaml
 	ra2|modern-factions/art-buildings-sequences.yaml
 	ra2|modern-factions/art-icons-sequences.yaml
+	ra2|standalone/sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml

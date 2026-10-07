@@ -1,0 +1,8 @@
+# Standalone-only sequence overrides: project-drawn art in place of RA2 files (tools/standalone-art.py).
+# The classic add-on does not load this file, so it keeps the original look with the player's own files.
+
+shroud:
+	Defaults:
+		Filename: ra2|standalone/art/shroud.png
+	fog:
+		Filename: ra2|standalone/art/fog.png
