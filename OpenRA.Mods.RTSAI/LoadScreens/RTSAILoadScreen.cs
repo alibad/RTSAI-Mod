@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Linq;
 using System.Numerics;
 using OpenRA.FileSystem;
@@ -23,12 +24,19 @@ namespace OpenRA.Mods.RTSAI.LoadScreens
 	/// <summary>
 	/// The upstream logo-and-stripe load screen (LogoStripeLoadScreen is sealed, so its drawing is
 	/// repeated here), plus the AI companion lifecycle: the sidecar starts when the mod starts and
-	/// stops when the mod is disposed on exit.
+	/// stops when the mod is disposed on exit. Below the stripe it shows one faction tip at a time, generated from the
+	/// shared faction catalog (tools/faction-loading-tips.py writes modern-factions/loading-tips.ftl).
 	/// </summary>
 	public sealed class RTSAILoadScreen : SheetLoadScreen
 	{
 		[FluentReference]
 		const string Loading = "loadscreen-loading";
+
+		[FluentReference]
+		const string FactionTips = "loadscreen-faction-tips";
+
+		// Long enough to read a tip; a tip changes only on long loads.
+		const int TipMilliseconds = 7000;
 
 		Rectangle stripeRect;
 		Vector2 logoPos;
@@ -39,12 +47,20 @@ namespace OpenRA.Mods.RTSAI.LoadScreens
 		Size lastResolution;
 
 		string[] messages = [];
+		string[] tips = [];
+		int firstTip;
+		long tipsShownSince;
 
 		public override void Init(Manifest manifest, IReadOnlyFileSystem fileSystem)
 		{
 			base.Init(manifest, fileSystem);
 
 			messages = FluentProvider.GetMessage(Loading).Split(',').Select(x => x.Trim()).ToArray();
+			if (FluentProvider.TryGetMessage(FactionTips, out var factionTips))
+				tips = factionTips.Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+			firstTip = tips.Length > 0 ? Game.CosmeticRandom.Next(tips.Length) : 0;
+			tipsShownSince = Game.RunTime;
 		}
 
 		public override void StartGame(Arguments args)
@@ -82,6 +98,19 @@ namespace OpenRA.Mods.RTSAI.LoadScreens
 				var text = messages.Random(Game.CosmeticRandom);
 				var textSize = r.Fonts["Bold"].Measure(text);
 				r.Fonts["Bold"].DrawText(text, new Vector2(r.Resolution.Width - textSize.X - 20, r.Resolution.Height - textSize.Y - 20), Color.White);
+			}
+
+			if (r.Fonts != null && tips.Length > 0)
+			{
+				var font = r.Fonts["Bold"];
+				var tip = tips[(firstTip + (int)((Game.RunTime - tipsShownSince) / TipMilliseconds)) % tips.Length];
+				var y = stripeRect.Bottom + 24;
+				foreach (var line in WidgetUtils.WrapText(tip, Math.Max(lastResolution.Width - 80, 200), font).Split('\n'))
+				{
+					var lineSize = font.Measure(line);
+					font.DrawText(line, new Vector2((lastResolution.Width - lineSize.X) / 2, y), Color.White);
+					y += lineSize.Y + 4;
+				}
 			}
 		}
 

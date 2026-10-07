@@ -288,6 +288,7 @@ FluentMessages:
 	ra2|modern-factions/israel-messages.ftl
 	ra2|modern-factions/yemen-messages.ftl
 	ra2|modern-factions/hezbollah-messages.ftl
+	ra2|modern-factions/loading-tips.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml
