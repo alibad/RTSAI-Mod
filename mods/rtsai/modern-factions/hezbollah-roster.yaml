@@ -22,7 +22,8 @@
 		Weapon: R2HZMountainRifle
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
-	# Doctrine: every fighter leaves the barracks Veteran.
+	# Doctrine: every fighter leaves the barracks Veteran and earns Elite at the usual rate (balance trim 5: the
+	# 60% promotion thresholds made elite riflemen snowball where they killed most cheaply, the modern factions).
 	ProducibleWithLevel@doctrine:
 		InitialLevels: 1
 	# Hill fighters: rough ground is cover (80 -> 90 in balance trim 1, docs/balance.md round 5).
@@ -58,9 +59,6 @@ r2hzrifle:
 		HP: 130
 	Mobile:
 		Speed: 66
-	# Promotion at 60% of the usual kills (the thresholds are a share of this value, not of the cost).
-	GainsExperience:
-		ExperienceModifier: 165
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
@@ -95,8 +93,6 @@ r2hzat:
 		Weapon: R2HZYemenRPG
 	RevealsShroud:
 		Range: 6c0
-	GainsExperience:
-		ExperienceModifier: 300
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
@@ -136,8 +132,6 @@ r2hzspotter:
 		Condition: r2-hz-fpvlink
 		Range: 6c0
 		ValidRelationships: Ally
-	GainsExperience:
-		ExperienceModifier: 270
 	WithRangeCircle@guidance:
 		Range: 6c0
 		Color: 52E7D680
@@ -158,16 +152,14 @@ r2hzscout:
 		BuildPaletteOrder: 140
 		BuildLimit: 1
 		Description: levant-r2hzscout-description
-	# The faction's hero (every faction has one build-limit-1 commando): 1650 -> 1800, 170 -> 240 HP, leaves the
-	# barracks Elite (template Veteran + this level), carbine 30 -> 34.
+	# The faction's hero (every faction has one build-limit-1 commando): 1650 -> 1800, 170 -> 240 HP, carbine 30 -> 34;
+	# leaves the barracks Veteran like every fighter (balance trim 5; it started Elite before).
 	Valued:
 		Cost: 1800
 	Health:
 		HP: 240
 	Mobile:
 		Speed: 82
-	ProducibleWithLevel@hero:
-		InitialLevels: 1
 	Armament:
 		Weapon: R2HZGhostCarbine
 	Armament@remote:
@@ -246,8 +238,6 @@ r2hzfpv:
 		Color: E0504080
 	RevealsShroud:
 		Range: 7c0
-	GainsExperience:
-		ExperienceModifier: 300
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair

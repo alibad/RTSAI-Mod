@@ -4,7 +4,7 @@ ra2-modern-hezbollah-description = Fictional RTS faction: few veteran fighters, 
     New local development roster; balance and final art approval pending.
 
 levant-r2hzrifle-name = Line Fighter
-levant-r2hzrifle-description = Veteran rifle infantry, fewer and stronger: leaves the barracks Veteran, promotes quickly and takes less damage on rough ground. Conceals while stationary; moving, firing or taking damage reveals it. Detectors and splash defeat it.
+levant-r2hzrifle-description = Veteran rifle infantry, fewer and stronger: leaves the barracks Veteran and takes less damage on rough ground. Conceals while stationary; moving, firing or taking damage reveals it. Detectors and splash defeat it.
 
 levant-r2hzat-name = Ridge Missile Team
 levant-r2hzat-description = Veteran ambush team with a basic shoulder-fired rocket. Conceals while stationary; a signal post or spotter improves range and reload. Vulnerable to infantry, detectors and air attacks.
@@ -16,7 +16,7 @@ levant-r2hzfpv-description = Veteran drone team that launches three one-way FPV 
 levant-r2hzquad-name = FPV Drone
 
 levant-r2hzscout-name = Cedar Scout
-levant-r2hzscout-description = The faction's hero: one concealed scout who leaves the barracks Elite, with a suppressed carbine and demolition ability. Firing or damage breaks concealment. Vulnerable once detected.
+levant-r2hzscout-description = The faction's hero: one concealed Veteran scout with a suppressed carbine and demolition ability. Firing or damage breaks concealment. Vulnerable once detected.
 
 levant-r2hztechnical-name = Cedar Technical
 levant-r2hztechnical-description = Fast and inexpensive machine-gun vehicle. Strong against exposed infantry, weak against armor and air attacks.
