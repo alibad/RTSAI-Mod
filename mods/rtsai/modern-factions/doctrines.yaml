@@ -109,15 +109,19 @@ Player:
 			support: 140
 			transport: 120
 			anti-air: 40
+	# Salvo and swarm (docs/hezbollah-doctrine.md): few veteran fighters, rocket volume, FPV drone teams
+	# (the drone-swarm role, share in hezbollah-ai.yaml). Pricier units: squads back to the profile's size. The
+	# concealed bunker leaves the opening and is built with the other defenses.
 	BotDoctrine@hezbollah:
 		Factions: hezbollah
-		Doctrine: concealed-defense
+		Doctrine: salvo-and-swarm
 		AirDefenseShare: 24
-		InitialBuildOrder: napowr, nahand, narefn, r2hzbunker, naweap, narefn, naradr, r2hzrelay
-		SquadSizeModifier: 130
+		InitialBuildOrder: napowr, nahand, narefn, naweap, narefn, naradr, r2hzrelay
+		SquadSizeModifier: 100
 		RoleShareModifiers:
-			line-infantry: 140
-			anti-armor: 140
-			artillery: 125
-			support: 120
+			line-infantry: 100
+			anti-armor: 120
+			artillery: 175
+			support: 100
 			anti-air: 40
+			strike-aircraft: 50

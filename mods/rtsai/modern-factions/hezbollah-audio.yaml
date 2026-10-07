@@ -14,6 +14,10 @@ r2hzscout:
 	Voiced:
 		VoiceSet: R2HezbollahscoutVoice
 
+r2hzfpv:
+	Voiced:
+		VoiceSet: R2HezbollahfpvVoice
+
 r2hztechnical:
 	Voiced:
 		VoiceSet: R2HezbollahvehicleVoice
@@ -27,6 +31,10 @@ r2hzescort:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzrockets:
+	Voiced:
+		VoiceSet: R2HezbollahvehicleVoice
+
+r2hzrail:
 	Voiced:
 		VoiceSet: R2HezbollahvehicleVoice
 

@@ -16,7 +16,7 @@ World:
 		Factions: hezbollah
 		BaseActor: smcv
 		BaseActorFacing: 896
-		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzrifle, r2hzat
+		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat
 		SupportActorsFacing: 896
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
@@ -26,7 +26,7 @@ World:
 		Factions: hezbollah
 		BaseActor: smcv
 		BaseActorFacing: 896
-		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzrifle, r2hzat, r2hztechnical, r2hztechnical, engineer
+		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat, r2hztechnical, r2hzrail, engineer
 		SupportActorsFacing: 896
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
@@ -36,7 +36,7 @@ World:
 		Factions: hezbollah
 		BaseActor: smcv
 		BaseActorFacing: 896
-		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat, r2hzat, r2hzspotter, r2hztechnical, r2hzrecoilless, r2hzescort, r2hzrockets, engineer
+		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat, r2hzfpv, r2hzspotter, r2hztechnical, r2hzrecoilless, r2hzescort, r2hzrockets, engineer
 		SupportActorsFacing: 896
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
@@ -51,40 +51,50 @@ Player:
 			r2hzrecoilless: 40
 			r2hzescort: 20
 			r2hzrockets: 22
+			r2hzrail: 30
 		UnitLimits:
-			r2hzrockets: 4
+			r2hzrockets: 5
+			r2hzrail: 6
 	DoctrineUnitBuilderBotModule@medium:
 		UnitsToBuild:
 			r2hztechnical: 45
 			r2hzrecoilless: 40
 			r2hzescort: 20
 			r2hzrockets: 22
+			r2hzrail: 30
 		UnitLimits:
-			r2hzrockets: 4
+			r2hzrockets: 5
+			r2hzrail: 6
 	DoctrineUnitBuilderBotModule@rush:
 		UnitsToBuild:
 			r2hztechnical: 45
 			r2hzrecoilless: 40
 			r2hzescort: 20
 			r2hzrockets: 22
+			r2hzrail: 30
 		UnitLimits:
-			r2hzrockets: 4
+			r2hzrockets: 5
+			r2hzrail: 6
 	DoctrineUnitBuilderBotModule@turtle:
 		UnitsToBuild:
 			r2hztechnical: 45
 			r2hzrecoilless: 40
 			r2hzescort: 20
 			r2hzrockets: 22
+			r2hzrail: 30
 		UnitLimits:
-			r2hzrockets: 4
+			r2hzrockets: 5
+			r2hzrail: 6
 	DoctrineUnitBuilderBotModule@naval:
 		UnitsToBuild:
 			r2hztechnical: 45
 			r2hzrecoilless: 40
 			r2hzescort: 20
 			r2hzrockets: 22
+			r2hzrail: 30
 		UnitLimits:
-			r2hzrockets: 4
+			r2hzrockets: 5
+			r2hzrail: 6
 
 naweap:
 	GrantConditionOnProduction@hezbollah-drone:
@@ -168,8 +178,9 @@ r2hzrecoilless:
 		BuildPaletteOrder: 21
 		Prerequisites: ~faction.hezbollah, naweap
 		Description: levant-r2hzrecoilless-description
+	# Salvo and swarm: 550 -> 475 (recoilless 85 -> 78): basic anti-armour, more of them.
 	Valued:
-		Cost: 550
+		Cost: 475
 	Health:
 		HP: 170
 	Armor:
@@ -233,8 +244,10 @@ r2hzrockets:
 		BuildPaletteOrder: 61
 		Prerequisites: ~faction.hezbollah, naweap, radar
 		Description: levant-r2hzrockets-description
+	# Salvo and swarm: 900 -> 800; one strike missile -> a volley of 8 unguided rockets (the art is a tube
+	# launcher). The empty launcher is the visible reload window; flank it then.
 	Valued:
-		Cost: 900
+		Cost: 800
 	Health:
 		HP: 180
 	Armor:
@@ -248,11 +261,10 @@ r2hzrockets:
 		Voice: Attack
 		FacingTolerance: 32
 	Armament:
-		Weapon: R2HZYemenStrikeMissile
+		Weapon: R2HZRocketVolley
 		ReloadingCondition: reloading
-	# The empty erector is the visible reload window; flank it then.
 	WithRangeCircle:
-		Range: 13c0
+		Range: 12c0
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
@@ -271,3 +283,42 @@ r2hzrockets:
 		Color: B3B881
 		RequiresCondition: !moving
 		RequiresSelection: true
+
+# Rail Technical (Salvo and swarm): the cheap launcher. A pickup with a fixed rail pack of four unguided rockets,
+# fired forward; no radar needed. Guided by spotters and signal posts like the rocket battery.
+r2hzrail:
+	Inherits: ^R2ModernVehicle
+	Inherits@guidance: ^R2HezbollahGuided
+	Tooltip:
+		Name: levant-r2hzrail-name
+	Buildable:
+		BuildPaletteOrder: 55
+		Prerequisites: ~faction.hezbollah, naweap
+		Description: levant-r2hzrail-description
+	Valued:
+		Cost: 450
+	Health:
+		HP: 140
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+		Locomotor: wheeled
+		TurnSpeed: 32
+	-Turreted:
+	-AttackTurreted:
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 48
+	Armament:
+		Weapon: R2HZRailRockets
+	WithRangeCircle:
+		Range: 10c0
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair

@@ -6,11 +6,12 @@ R2HZMountainRifle:
 	BurstDelays: 5
 	Report: ra2|modern-factions/audio/redsea-mountain-rifle.wav
 	Warhead@1Dam: SpreadDamage
-		Damage: 13
+		Damage: 16
 
+# Basic shoulder-fired anti-armour rocket (Salvo and swarm: 80 -> 90 damage, 4.5 -> 5 cells).
 R2HZYemenRPG:
 	Inherits: Maverick
-	Range: 4c512
+	Range: 5c0
 	MinRange: 0c768
 	ReloadDelay: 90
 	Report: ra2|modern-factions/audio/redsea-rpg-launch.wav
@@ -19,9 +20,9 @@ R2HZYemenRPG:
 		MinimumLaunchAngle: 0
 		MaximumLaunchAngle: 16
 		CruiseAltitude: 256
-		RangeLimit: 7c0
+		RangeLimit: 7c512
 	Warhead@1Dam: SpreadDamage
-		Damage: 80
+		Damage: 90
 		Versus:
 			None: 12
 			Flak: 20
@@ -53,7 +54,7 @@ R2HZGhostCarbine:
 	BurstDelays: 5
 	Report: ra2|modern-factions/audio/redsea-suppressed.wav
 	Warhead@1Dam: SpreadDamage
-		Damage: 30
+		Damage: 34
 		Versus:
 			None: 100
 			Flak: 90
@@ -112,7 +113,7 @@ R2HZRecoillessRifle:
 	ReloadDelay: 100
 	Report: ra2|modern-factions/audio/redsea-rpg-launch.wav
 	Warhead@1Dam: SpreadDamage
-		Damage: 85
+		Damage: 78
 		Versus:
 			None: 25
 			Flak: 25
@@ -133,8 +134,79 @@ R2HZZU23:
 	Warhead@1Dam: SpreadDamage
 		Damage: 14
 
-# Mobile Missile Launcher: long-range salvo with a minimum range. Drone
-# guidance extends range and shortens reload (^R2HezbollahGuided).
+# Mobile Rocket Battery (Salvo and swarm): a volley of 8 unguided rockets with real scatter. Volume over
+# precision: it punishes clusters, infantry and buildings and wastes rockets on a lone fast target. Guidance
+# (^R2HezbollahGuided) extends range and shortens the reload.
+R2HZRocketVolley:
+	Inherits: Maverick
+	Range: 12c0
+	MinRange: 4c0
+	ReloadDelay: 260
+	Burst: 8
+	BurstDelays: 4
+	ValidTargets: Ground, Water
+	Report: ra2|modern-factions/audio/redsea-mobile-launch.wav
+	Projectile: Missile
+		Speed: 300
+		RangeLimit: 18c0
+		MinimumLaunchAngle: 64
+		MaximumLaunchAngle: 128
+		CruiseAltitude: 2c0
+		Inaccuracy: 1c256
+	Warhead@1Dam: SpreadDamage
+		Damage: 30
+		Spread: 384
+		Falloff: 100, 50, 20, 0
+		Versus:
+			None: 60
+			Flak: 65
+			Plate: 70
+			Light: 100
+			Medium: 85
+			Heavy: 70
+			Wood: 120
+			Steel: 100
+			Concrete: 90
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
+
+# Rail Technical (Salvo and swarm): the cheap launcher. Four unguided rockets from a pickup rail pack.
+R2HZRailRockets:
+	Inherits: Maverick
+	Range: 10c0
+	MinRange: 3c0
+	ReloadDelay: 200
+	Burst: 4
+	BurstDelays: 6
+	ValidTargets: Ground, Water
+	Report: ra2|modern-factions/audio/redsea-rpg-launch.wav
+	Projectile: Missile
+		Speed: 320
+		RangeLimit: 14c0
+		MinimumLaunchAngle: 32
+		MaximumLaunchAngle: 96
+		CruiseAltitude: 1c512
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 28
+		Spread: 320
+		Falloff: 100, 50, 20, 0
+		Versus:
+			None: 80
+			Flak: 80
+			Plate: 80
+			Light: 100
+			Medium: 70
+			Heavy: 50
+			Wood: 110
+			Steel: 90
+			Concrete: 70
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
+
+# The round-4 strike missile, kept for reference; no Hezbollah unit fires it since Salvo and swarm.
 R2HZYemenStrikeMissile:
 	Inherits: Maverick
 	Range: 13c0
@@ -173,7 +245,7 @@ R2HZSamadWarhead:
 	Projectile: Bullet
 		Speed: 2048
 	Warhead@1Dam: SpreadDamage
-		Damage: 220
+		Damage: 150
 		Spread: 384
 		Versus:
 			None: 30
@@ -188,13 +260,14 @@ R2HZSamadWarhead:
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
 
+# Salvo and swarm: three smaller missiles a cycle (2 x 60 / 160 -> 3 x 42 / 170).
 R2HZHodeidahMissile:
 	Inherits: Maverick
 	Range: 10c0
 	MinRange: 3c0
-	Burst: 2
-	BurstDelays: 12
-	ReloadDelay: 160
+	Burst: 3
+	BurstDelays: 10
+	ReloadDelay: 170
 	ValidTargets: Water, Ground
 	Report: ra2|modern-factions/audio/naval-missile-launch.wav
 	Projectile: Missile
@@ -203,7 +276,7 @@ R2HZHodeidahMissile:
 		MaximumLaunchAngle: 32
 		RangeLimit: 14c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
+		Damage: 42
 		Versus:
 			None: 20
 			Flak: 25
@@ -266,13 +339,14 @@ R2HZZUNest:
 	Warhead@1Dam: SpreadDamage
 		Damage: 16
 
+# Salvo and swarm: four smaller missiles a cycle (2 x 75 / 170 -> 4 x 42 / 210).
 R2HZYemenCoastalMissile:
 	Inherits: Maverick
 	Range: 12c0
 	MinRange: 3c0
-	Burst: 2
-	BurstDelays: 12
-	ReloadDelay: 170
+	Burst: 4
+	BurstDelays: 8
+	ReloadDelay: 210
 	ValidTargets: Water, Ground
 	Report: ra2|modern-factions/audio/naval-missile-launch.wav
 	Projectile: Missile
@@ -281,7 +355,7 @@ R2HZYemenCoastalMissile:
 		MinimumLaunchAngle: 0
 		MaximumLaunchAngle: 32
 	Warhead@1Dam: SpreadDamage
-		Damage: 75
+		Damage: 42
 		Versus:
 			None: 10
 			Flak: 20
@@ -292,3 +366,46 @@ R2HZYemenCoastalMissile:
 			Wood: 60
 			Steel: 60
 			Concrete: 50
+
+# FPV Team launch link (CarrierParent ArmamentNames: launcher): each shot launches one drone at the target, so the
+# reload is the launch cadence. No damage of its own.
+R2HZFPVLink:
+	ReloadDelay: 25
+	Range: 7c0
+	ValidTargets: Ground, Water
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		ValidTargets: Ground, Water
+
+# FPV micro-drone charge: one-way, against infantry and light vehicles; armour and buildings shrug it off.
+R2HZFPVCharge:
+	ReloadDelay: 100
+	Range: 1c0
+	ValidTargets: Ground, Water
+	Report: ra2|modern-factions/audio/redsea-drone-strike.wav
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 192
+		Damage: 75
+		ValidTargets: Ground, Water
+		Versus:
+			None: 110
+			Flak: 110
+			Plate: 90
+			Light: 120
+			Medium: 70
+			Heavy: 40
+			Wood: 40
+			Steel: 30
+			Concrete: 20
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
+		ValidTargets: Ground, Water, Air
+
+# A downed FPV drone's small pop (effect only).
+R2HZFPVBurst:
+	Warhead@1Eff: CreateEffect
+		Explosions: small_clsn
+		ValidTargets: Ground, Water, Air
