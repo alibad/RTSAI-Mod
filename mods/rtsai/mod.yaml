@@ -147,7 +147,8 @@ Sequences:
 	ra2|modern-factions/art-buildings-sequences.yaml
 	ra2|modern-factions/art-icons-sequences.yaml
 	ra2|standalone/base/kit-sequences.yaml
-	ra2|standalone/economy-sequences.yaml
+	ra2|standalone/units/units-sequences.yaml
+	ra2|standalone/kit-extra-sequences.yaml
 	ra2|standalone/sequences.yaml
 
 ModelSequences:

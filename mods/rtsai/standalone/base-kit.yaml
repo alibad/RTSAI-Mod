@@ -9,6 +9,11 @@
 		BasePalette: kitbase
 		BaseName: kitplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	ColorPickerPalette@kitcolorpicker:
+		Name: kitcolorpicker
+		BasePalette: kitbase
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+		AllowModifiers: false
 
 gacnst:
 	RenderSprites:
@@ -97,6 +102,9 @@ garefn:
 	Power@purifier:
 		Amount: -50
 		RequiresCondition: purified
+	WithIdleOverlay@purifier:
+		Sequence: idle-purifier
+		RequiresCondition: purified && !build-incomplete
 
 narefn:
 	RenderSprites:
@@ -418,6 +426,158 @@ nanrct:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+
+# Shared vehicles on the kit (standalone/units): sprites instead of the stock voxels.
+amcv:
+	WithVoxelBody:
+		RequiresCondition: false
+	RenderSprites:
+		Image: mcv-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: mcv-china
+			iran: mcv-iran
+			turkey: mcv-turkey
+			saudi: mcv-saudi
+			israel: mcv-israel
+			yemen: mcv-yemen
+			hezbollah: mcv-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+
+smcv:
+	WithVoxelBody:
+		RequiresCondition: false
+	RenderSprites:
+		Image: mcv-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: mcv-china
+			iran: mcv-iran
+			turkey: mcv-turkey
+			saudi: mcv-saudi
+			israel: mcv-israel
+			yemen: mcv-yemen
+			hezbollah: mcv-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+
+cmin:
+	-WithVoxelUnloadBody:
+	RenderSprites:
+		Image: harv-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: harv-china
+			iran: harv-iran
+			turkey: harv-turkey
+			saudi: harv-saudi
+			israel: harv-israel
+			yemen: harv-yemen
+			hezbollah: harv-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+
+harv:
+	WithVoxelTurret:
+		RequiresCondition: false
+	-WithVoxelUnloadBody:
+	RenderSprites:
+		Image: harv-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: harv-china
+			iran: harv-iran
+			turkey: harv-turkey
+			saudi: harv-saudi
+			israel: harv-israel
+			yemen: harv-yemen
+			hezbollah: harv-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+
+htk:
+	WithVoxelTurret:
+		RequiresCondition: false
+	WithVoxelBody:
+		RequiresCondition: false
+	RenderSprites:
+		Image: htk-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: htk-china
+			iran: htk-iran
+			turkey: htk-turkey
+			saudi: htk-saudi
+			israel: htk-israel
+			yemen: htk-yemen
+			hezbollah: htk-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	WithSpriteTurret:
+	Turreted:
+		Offset: 0,0,582
+	Armament@primary:
+		LocalOffset: 489,-244,212, 489,244,212
+	Armament@secondary:
+		LocalOffset: 489,-244,212, 489,244,212
+
+sapc:
+	WithVoxelBody:
+		RequiresCondition: false
+	RenderSprites:
+		Image: sapc-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: sapc-china
+			iran: sapc-iran
+			turkey: sapc-turkey
+			saudi: sapc-saudi
+			israel: sapc-israel
+			yemen: sapc-yemen
+			hezbollah: sapc-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+
+lcrf:
+	WithVoxelBody:
+		RequiresCondition: false
+	RenderSprites:
+		Image: lcrf-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: lcrf-china
+			iran: lcrf-iran
+			turkey: lcrf-turkey
+			saudi: lcrf-saudi
+			israel: lcrf-israel
+			yemen: lcrf-yemen
+			hezbollah: lcrf-hezbollah
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+
+r2kunlun:
+	RenderSprites:
+		Image: r2kunlun
+		FactionImages:
+			china: r2kunlun
+			iran: r2kunlun
+			turkey: r2kunlun
+			saudi: r2kunlun
+			israel: r2kunlun
+			yemen: r2kunlun
+			hezbollah: r2kunlun
+
+amcv.colorpicker:
+	RenderSprites:
+		Palette: kitcolorpicker
 
 # Economy compensation (coordinator, 7 October 2026): the refinery upgrade that replaces the ore purifier.
 # The heavy power plant is nanrct above; the refinery's socket is in garefn above.

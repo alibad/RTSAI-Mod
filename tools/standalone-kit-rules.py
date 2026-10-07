@@ -16,7 +16,10 @@ buildings with the player's own RA2 files):
     reactor's 2000 power for 1000 credits, kit role `hpwr`), the Allied side a refinery upgrade (a plug placed on a
     refinery: +25% on the ore it processes, the ore purifier's bonus). Until the kit ships `hpwr` and the purifier
     pieces, interim images reuse the kit's power-plant and refinery art with badge icons drawn here
-    (standalone/art/econ/, standalone/economy-sequences.yaml).
+    (standalone/art/econ/, standalone/kit-extra-sequences.yaml);
+  - the shared vehicles (standalone/units, kit v2): MCV, harvester, AA track, amphibious APC and landing craft render
+    the kit's 32-facing sprites instead of the stock voxels, painted per faction; their images inherit the stock
+    effect sequences their traits play (mind control, muzzle, harvest, chrono-miner warps).
 
 usage: python tools/standalone-kit-rules.py
 """
@@ -30,7 +33,8 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "mods" / "rtsai" / "standalone" / "base-kit.yaml"
 KIT = ROOT / "mods" / "rtsai" / "standalone" / "base"
-ECON_SEQ = ROOT / "mods" / "rtsai" / "standalone" / "economy-sequences.yaml"
+UNITS_DIR = ROOT / "mods" / "rtsai" / "standalone" / "units"
+EXTRA_SEQ = ROOT / "mods" / "rtsai" / "standalone" / "kit-extra-sequences.yaml"
 ECON_ART = ROOT / "mods" / "rtsai" / "standalone" / "art" / "econ"
 FONT = ROOT / "engine" / "mods" / "common" / "FreeSansBold.ttf"
 FACTIONS = ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]
@@ -91,6 +95,54 @@ TEXT = {
     "nairon": ("Tooltip", "GrantExternalConditionPower@IRONCURTAIN", "sw2"),
 }
 
+# Shared vehicles on the kit (standalone/units): actor -> kit image role, voxel render traits to switch off, extra
+# rules. Conditional voxel traits are switched off (RequiresCondition: false) rather than removed, because other
+# actors inherit these and remove them themselves (r2kunlun from lcrf, amcv.colorpicker from amcv); RenderVoxels
+# stays and draws nothing. WithVoxelUnloadBody is not conditional and nothing inherits the harvesters: removed.
+VOXEL_OFF = "false"   # a constant-false condition: the voxel trait never enables
+UNITS = {
+    "amcv": ("mcv", ["WithVoxelBody"], [], ""),
+    "smcv": ("mcv", ["WithVoxelBody"], [], ""),
+    "cmin": ("harv", [], ["WithVoxelUnloadBody"], ""),
+    "harv": ("harv", ["WithVoxelTurret"], ["WithVoxelUnloadBody"], ""),
+    "htk": ("htk", ["WithVoxelTurret", "WithVoxelBody"], [],
+            "\tWithSpriteTurret:\n\tTurreted:\n\t\tOffset: 0,0,582\n"
+            "\tArmament@primary:\n\t\tLocalOffset: 489,-244,212, 489,244,212\n"
+            "\tArmament@secondary:\n\t\tLocalOffset: 489,-244,212, 489,244,212\n"),
+    "sapc": ("sapc", ["WithVoxelBody"], [], ""),
+    "lcrf": ("lcrf", ["WithVoxelBody"], [], ""),
+}
+# Actors that inherit a converted unit but keep their own look.
+UNIT_INHERITORS = {
+    # China's Kunlun landing ship inherits lcrf and renders its own prerendered sprite.
+    "r2kunlun": "\tRenderSprites:\n\t\tImage: r2kunlun\n\t\tFactionImages:\n" + "".join(
+        f"\t\t\t{f}: r2kunlun\n" for f in ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]),
+    # The lobby colour picker's preview: the kit MCV on the kit palette, remapped live to the picked colour.
+    "amcv.colorpicker": "\tRenderSprites:\n\t\tPalette: kitcolorpicker\n",
+}
+# The stock images whose effect sequences each kit unit image inherits (all name their own files).
+UNIT_SEQUENCE_LINKS = {"mcv": ["amcv"], "harv": ["cmin", "harv"], "htk": ["htk"], "sapc": ["sapc"], "lcrf": ["lcrf"]}
+
+
+def units() -> str:
+    out = ["# Shared vehicles on the kit (standalone/units): sprites instead of the stock voxels.\n"]
+    done = set()
+    for actor, (role, off, drop, extra) in UNITS.items():
+        if not kit_has(f"{role}-china", units=True):
+            continue
+        done.add(actor)
+        out.append(f"{actor}:\n" + "".join(f"\t{t}:\n\t\tRequiresCondition: {VOXEL_OFF}\n" for t in off)
+                   + "".join(f"\t-{t}:\n" for t in drop)
+                   + f"\tRenderSprites:\n\t\tImage: {role}-china\n\t\tPlayerPalette: kitplayer\n\t\tFactionImages:\n"
+                   + "".join(f"\t\t\t{f}: {role}-{f}\n" for f in FACTIONS)
+                   + "\tBodyOrientation:\n\t\tQuantizedFacings: 32\n\tWithFacingSpriteBody:\n" + extra + "\n")
+    parents = {"r2kunlun": "lcrf", "amcv.colorpicker": "amcv"}
+    for actor, text in UNIT_INHERITORS.items():
+        if parents[actor] in done:
+            out.append(f"{actor}:\n{text}\n")
+    return "".join(out)
+
+
 # Economy compensation. The heavy plant keeps the reactor's numbers (Power 2000, Cost 1000, needs the tech centre) on
 # the kit footprint; it dies like any building (the reactor's nuclear blast was EA art and is not the kit's look).
 HPWR_FOOTPRINT = {True: ("3,3", "xxx xxx xxx", "-1536, -1536", "1536, 1536"),     # the kit's hpwr (3x3)
@@ -101,8 +153,11 @@ PURIFIER_POWER = -50
 BOTS = ("normal", "medium", "rush", "turtle", "naval")
 
 
-def kit_has(image: str, sequence: str | None = None) -> bool:
-    text = (KIT / "kit-sequences.yaml").read_text(encoding="utf-8").replace("\r\n", "\n")
+def kit_has(image: str, sequence: str | None = None, units: bool = False) -> bool:
+    path = UNITS_DIR / "units-sequences.yaml" if units else KIT / "kit-sequences.yaml"
+    if not path.exists():
+        return False
+    text = path.read_text(encoding="utf-8").replace("\r\n", "\n")
     block = re.search(rf"(?ms)^{re.escape(image)}:\n(.*?)(?=^\S|\Z)", text)
     if block is None:
         return False
@@ -123,10 +178,18 @@ def badge_icon(src: Path, dst: Path, label: str, colour):
     im.save(dst, optimize=True)
 
 
-def economy_interim() -> str:
-    """Interim images for the pieces the kit lacks; returns economy-sequences.yaml."""
-    out = ["# GENERATED by tools/standalone-kit-rules.py: interim images for the economy pieces the base kit has not\n"
-           "# drawn yet (heavy power plant, refinery upgrade). Each falls away when the kit ships its own.\n\n"]
+def kit_extra_sequences() -> str:
+    """kit-extra-sequences.yaml: the stock effect sequences the shared units' traits play (mind-control overlay,
+    muzzle flash, harvest dust, chrono-miner warps) linked into the kit unit images, plus interim images for the
+    economy pieces the kit has not drawn yet."""
+    out = ["# GENERATED by tools/standalone-kit-rules.py.\n"
+           "# 1. The kit unit images (standalone/units) inherit the stock images' effect sequences their traits play.\n"
+           "# 2. Interim images for the economy pieces the base kit has not drawn yet (heavy power plant, refinery\n"
+           "#    upgrade); each falls away when the kit ships its own.\n\n"]
+    for role, stock in UNIT_SEQUENCE_LINKS.items():
+        for f in FACTIONS:
+            if kit_has(f"{role}-{f}", units=True):
+                out.append(f"{role}-{f}:\n" + "".join(f"\tInherits@{s}: {s}\n" for s in stock) + "\n")
     for f in FACTIONS:
         if not kit_has(f"hpwr-{f}"):
             badge_icon(KIT / f"powr-{f}icon.png", ECON_ART / f"hpwr-{f}icon.png", "HEAVY", (255, 196, 64))
@@ -177,7 +240,9 @@ def build() -> str:
     out = ["# GENERATED by tools/standalone-kit-rules.py: the base kit in the standalone game's rules. Standalone only.\n\n"]
     out.append("^Palettes:\n\tPaletteFromFile@kitbase:\n\t\tName: kitbase\n\t\tFilename: ra2|standalone/base/kitbase.pal\n"
                "\t\tShadowIndex: 1\n\tPlayerColorPalette@kitbase:\n\t\tBasePalette: kitbase\n\t\tBaseName: kitplayer\n"
-               "\t\tRemapIndex: " + ", ".join(str(i) for i in range(16, 32)) + "\n\n")
+               "\t\tRemapIndex: " + ", ".join(str(i) for i in range(16, 32)) + "\n"
+               "\tColorPickerPalette@kitcolorpicker:\n\t\tName: kitcolorpicker\n\t\tBasePalette: kitbase\n"
+               "\t\tRemapIndex: " + ", ".join(str(i) for i in range(16, 32)) + "\n\t\tAllowModifiers: false\n\n")
     econ = economy_kit_blocks()
     for actor, role in ROLE.items():
         block = [f"{actor}:\n\tRenderSprites:\n\t\tImage: {role}-china\n\t\tPlayerPalette: kitplayer\n\t\tFactionImages:\n"]
@@ -190,6 +255,7 @@ def build() -> str:
             block.append(f"\t{tip}:\n\t\tName: standalone-{key}-name\n\tBuildable:\n\t\tDescription: standalone-{key}-description\n"
                          f"\t{power}:\n\t\tName: standalone-{key}-power-name\n\t\tDescription: standalone-{key}-power-description\n")
         out.append("".join(block) + "\n")
+    out.append(units())
     out.append(economy())
     out.append("# Not part of the kit: out of the modern rosters in the standalone game (classic keeps them).\n")
     for actor, role in CUT.items():
@@ -203,7 +269,7 @@ def build() -> str:
 
 def main():
     OUT.write_text(build(), encoding="utf-8", newline="\n")
-    ECON_SEQ.write_text(economy_interim(), encoding="utf-8", newline="\n")
+    EXTRA_SEQ.write_text(kit_extra_sequences(), encoding="utf-8", newline="\n")
     print(f"wrote {OUT.relative_to(ROOT)}: {len(ROLE)} buildings on the kit, {len(FOOTPRINT)} footprints moved, "
           f"{len(CUT)} cut; heavy plant on {'the kit hpwr' if kit_has('hpwr-china') else 'interim powr art'}, "
           f"refinery upgrade {'with' if kit_has('refn-china', 'idle-purifier') else 'without'} kit overlay")
