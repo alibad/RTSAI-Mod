@@ -524,6 +524,9 @@ def tileset_yaml(head: str, templates, extras, images, radar):
         b = re.sub(r"(?m)^\t\tImages: .*$", "\t\tImages: " + ", ".join(images[t.id]), b)
         b = re.sub(r"(?m)^\t\tDepthImages: .*\n", "", b)
         b = re.sub(r"(?m)^\t\tFrames: .*\n", "", b)
+        # The RA2 table's ZOffset (-15) pairs with TMP tiles that carry per-pixel depth. Our tiles are flat and
+        # depth-free (EnableDepth: false); that offset would hide the resource layer (ore, gems) behind them.
+        b = re.sub(r"(?m)^\t\t\t\tZOffset: -?\d+$", "\t\t\t\tZOffset: 0", b)
 
         def recolor(m):
             k = int(m[1])
@@ -540,12 +543,69 @@ def tileset_yaml(head: str, templates, extras, images, radar):
         r = radar[t.id][0]
         out.append(f"\tTemplate@{t.id}:\n\t\tCategories: {t.category}\n\t\tId: {t.id}\n\t\tImages: {', '.join(images[t.id])}\n"
                    f"\t\tSize: 1, 1\n\t\tTiles:\n\t\t\t0: {tile.type}\n\t\t\t\tMinColor: {hexc(r[0])}\n\t\t\t\tMaxColor: {hexc(r[1])}\n"
-                   f"\t\t\t\tZOffset: -15\n\t\t\t\tZRamp: 0\n")
+                   f"\t\t\t\tZOffset: 0\n\t\t\t\tZRamp: 0\n")
     return "".join(out)
+
+
+RES_SCRIPT = ROOT / "tools" / "terrain" / "blender_resources.py"
+ART_DIR = ROOT / "mods" / "rtsai" / "standalone" / "art"
+
+
+def render_resources(work: Path, threads: int):
+    """Ore (20 variants) and gems (12 variants), 12 densities each, as 60x60 RGBA frames with baked shadows.
+    Frame centre = cell centre + (0, -15): the stock resource sequences' Offset, so the piles sit on their cell."""
+    kinds = [("ore", 20), ("gem", 12)]
+    slots, cols, step = [], 24, 3
+    for kind, nv in kinds:
+        for v in range(nv):
+            for dens in range(1, 13):
+                i = len(slots)
+                gx, gy = (i % cols) * step, (i // cols) * step     # screen-grid slot -> cell offset below
+                ox, oy = gx + gy, gy - gx                          # (dx - dy) * 30 = gx*60, (dx + dy) * 15 = gy*30*.. spaced
+                slots.append({"kind": kind, "variant": v, "density": dens, "cx": ox, "cy": oy,
+                              "seed": hash((kind, v, dens)) & 0xFFFFFF})
+    pts = np.array([project(s["cx"] + 0.5, s["cy"] + 0.5, 0) for s in slots])
+    x0, y0 = pts[:, 0].min() - 80, pts[:, 1].min() - 120
+    W, H = int(pts[:, 0].max() - x0 + 80), int(pts[:, 1].max() - y0 + 80)
+    W, H = W + W % 2, H + H % 2
+    # world origin must land on an integer pixel: shift every slot so the image origin is at (x0, y0)
+    xc = np.array([0.70710678, 0.70710678, 0])
+    yc = np.array([-0.35355339, 0.35355339, 0.8660254])
+    target = ((W / 2 + x0) / PX) * xc + (-(H / 2 + y0) / PX) * yc
+    job = work / "resources.json"
+    png = work / "resources.png"
+    job.write_text(json.dumps({"size": [W, H], "target": target.tolist(), "slots": slots}), encoding="utf-8")
+    if not png.exists():
+        t0 = time.time()
+        r = subprocess.run([str(BLENDER), "-b", "--factory-startup", "-noaudio", "-P", str(RES_SCRIPT), "--", str(job), str(png),
+                            str(threads)], capture_output=True, text=True, timeout=3600)
+        if r.returncode or not png.exists():
+            print(r.stdout[-3000:], r.stderr[-3000:])
+            raise SystemExit("blender failed on resources")
+        print(f"  resources: {len(slots)} piles, {W}x{H}, {time.time() - t0:.0f}s", flush=True)
+    img = np.array(Image.open(png).convert("RGBA"))
+    frames = {"ore": [], "gem": []}
+    for s, (px, py) in zip(slots, pts):
+        cx, cy = int(round(px - x0)), int(round(py - y0))
+        frames[s["kind"]].append(img[cy - 45:cy + 15, cx - 30:cx + 30].copy())
+    ART_DIR.mkdir(parents=True, exist_ok=True)
+    for kind, fr in frames.items():
+        h, w = fr[0].shape[:2]
+        cols_ = 12
+        rows = math.ceil(len(fr) / cols_)
+        sheet = np.zeros((rows * h, cols_ * w, 4), np.uint8)
+        for i, f in enumerate(fr):
+            sheet[(i // cols_) * h:(i // cols_ + 1) * h, (i % cols_) * w:(i % cols_ + 1) * w] = f
+        meta = PngInfo()
+        meta.add_text("FrameSize", f"{w},{h}")
+        meta.add_text("FrameAmount", str(len(fr)))
+        Image.fromarray(sheet, "RGBA").save(ART_DIR / f"{kind}.png", pnginfo=meta, optimize=True)
+    print(f"resources: {ART_DIR / 'ore.png'} (20x12), {ART_DIR / 'gem.png'} (12x12)")
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--resources", action="store_true", help="render the ore and gem piles instead of the tileset")
     ap.add_argument("--only", help="comma-separated template ids (test renders; output goes to --work only)")
     ap.add_argument("--work", type=Path, default=Path(os.environ.get("TEMP", "/tmp")) / "rtsai-terrain")
     ap.add_argument("--threads", type=int, default=max(4, (os.cpu_count() or 8) - 4))
@@ -554,6 +614,9 @@ def main():
     ap.add_argument("--seed", type=int, default=7)
     a = ap.parse_args()
     a.work.mkdir(parents=True, exist_ok=True)
+    if a.resources:
+        render_resources(a.work, a.threads)
+        return
     head, templates = parse_tileset(SRC_TILESET.read_text(encoding="utf-8"))
     extras = transition_templates()
     alltpl = templates + extras

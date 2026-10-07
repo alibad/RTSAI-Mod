@@ -36,3 +36,136 @@ rallypoint:
 	circles:
 		Filename: ra2|standalone/art/rallypoint-circles.png
 		Start: 0
+
+resources:
+	Defaults:
+		ShadowStart: -1 # shadows are baked into our frames
+		ZRamp: 0 # our frames are 60px tall piles: a depth ramp would sink their tops behind the terrain
+	tib01:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 0
+	tib02:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 12
+	tib03:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 24
+	tib04:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 36
+	tib05:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 48
+	tib06:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 60
+	tib07:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 72
+	tib08:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 84
+	tib09:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 96
+	tib10:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 108
+	tib11:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 120
+	tib12:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 132
+	tib13:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 144
+	tib14:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 156
+	tib15:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 168
+	tib16:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 180
+	tib17:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 192
+	tib18:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 204
+	tib19:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 216
+	tib20:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/ore.png
+		Start: 228
+	gem01:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 0
+	gem02:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 12
+	gem03:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 24
+	gem04:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 36
+	gem05:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 48
+	gem06:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 60
+	gem07:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 72
+	gem08:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 84
+	gem09:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 96
+	gem10:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 108
+	gem11:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 120
+	gem12:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/gem.png
+		Start: 132

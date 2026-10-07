@@ -54,6 +54,7 @@ def main():
     ap.add_argument("--faction", help="the host plays this faction (leave Multi0 out of --bots)")
     ap.add_argument("--seconds", type=int, default=60)
     ap.add_argument("--grab-every", type=float, default=15)
+    ap.add_argument("--look", help="X,Y: hold the camera on this cell (look.lua)")
     ap.add_argument("--lua", help="like --observe, with another script from tools/standalone-smoke/ (e.g. deploy.lua)")
     ap.add_argument("--observe", action="store_true",
                     help="skirmish on a scratch copy of --map (in the run's support dir) with tools/standalone-smoke/"
@@ -77,14 +78,18 @@ def main():
             "Game.FetchNews=false", "Game.ViewportEdgeScroll=false", "Graphics.Mode=Windowed",
             "Graphics.WindowedSize=1280,800", "Graphics.UIScale=1", "Sound.Mute=true", *a.set]
     launch_map = a.map
-    script = a.lua or ("observe.lua" if a.observe else None)
+    script = a.lua or ("observe.lua" if a.observe else None) or ("look.lua" if a.look else None)
     if a.mode == "skirmish" and script:
         import re
         version = re.search(r"^\s*Version: (.+)$", (a.worktree / "mods/rtsai/mod.yaml").read_text(encoding="utf-8"), re.M)[1]
         dst = support / "maps" / "rtsai" / version.strip() / "sa-observe"
         src = next(d / a.map for d in (a.worktree / "mods/rtsai/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
         shutil.copytree(src, dst)   # a classic (Westwood) map only ever lands in this scratch support dir
-        shutil.copy2(ROOT / "tools/standalone-smoke" / script, dst / "observe.lua")
+        lua = (ROOT / "tools/standalone-smoke" / script).read_text(encoding="utf-8")
+        if a.look:
+            lx, ly = a.look.split(",")
+            lua = lua.replace("__LOOK_X__", lx.strip()).replace("__LOOK_Y__", ly.strip())
+        (dst / "observe.lua").write_text(lua, encoding="utf-8")
         y = (dst / "map.yaml").read_text(encoding="utf-8").replace("\r\n", "\n").rstrip("\n")
         y = re.sub(r"\nRules:.*\Z", "", y, flags=re.S)   # the shipped maps end with an empty Rules: block
         y += "\nRules:\n\tWorld:\n\t\tLuaScript:\n\t\t\tScripts: observe.lua\n"
