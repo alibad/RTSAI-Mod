@@ -6,7 +6,8 @@ buildings with the player's own RA2 files):
   - the kit palette (kitbase.pal) and its player-colour remap;
   - each of the 22 stock buildings the modern factions use renders its kit role, painted per faction;
   - render traits that name sequences the kit does not have are swapped or removed, as agreed with the art agent
-    (construction yard crane = full-body "build" animation, no air-factory roof, no airfield "idle-mid");
+    (construction yard crane = full-body "build" animation, no air-factory roof, no airfield "idle-mid", the EW array
+    plays its full-body "active" when its power fires);
   - the Soviet-side power plant, barracks, service depot and tech centre take the Allied footprints the kit is
     drawn for (Building, HitShape, exits and rally point copied from the Allied counterparts);
   - the 8 stock buildings the kit does not replace leave the modern rosters (owner decision, 7 October 2026);
@@ -39,6 +40,8 @@ EXTRA = {
     "gaairc": "\t-WithIdleOverlay@mid:\n",
     "nahand": "\tWithIdleOverlay@flag:\n\t\tSequence: idle-flag\n",
     "natech": "\tWithIdleOverlay@lights:\n\t\tSequence: idle-lights\n",
+    # the EW array turns and its panels light up when its power fires (full-body "active", then back to idle)
+    "nairon": "\tWithSupportPowerActivationAnimation:\n\t\tSequence: active\n",
 }
 
 # Soviet-side footprints -> the Allied ones the kit is drawn for (values from the resolved Allied rules).

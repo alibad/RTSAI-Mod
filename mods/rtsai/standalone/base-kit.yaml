@@ -342,6 +342,8 @@ nairon:
 			israel: sw2-israel
 			yemen: sw2-yemen
 			hezbollah: sw2-hezbollah
+	WithSupportPowerActivationAnimation:
+		Sequence: active
 	Tooltip:
 		Name: standalone-sw2-name
 	Buildable:
