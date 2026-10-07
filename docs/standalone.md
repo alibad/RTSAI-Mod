@@ -229,8 +229,9 @@ python tools/standalone-chrome.py                # UI atlases
 python tools/standalone-terrain.py               # Blender tileset (CPU, ~8 min); --resources for ore and gems
 python tools/standalone-maps.py                  # Twin Fords, Harbor Line
 python tools/build-classic-manifest.py           # after any manifest change (make test checks it)
-python tools/standalone-smoke.py skirmish --observe --map twin-fords --bots Multi0:normal:israel,Multi1:normal:yemen     --seconds 360 --out <scratch>/match       # --look X,Y holds the camera on a cell
+python tools/standalone-smoke.py skirmish --observe --map twin-fords --bots Multi0:normal:israel,Multi1:normal:yemen \
+    --seconds 360 --out <scratch>/match       # --look X,Y holds the camera on a cell
 ```
 
-The worktree's `engine` is a junction to the art-preview worktree's built engine (gitignored). The C# on this branch
-is unchanged, so no build is needed.
+This branch changes C# (`SurvivorReplacements`, `--check-standalone`), so build first: `./make.cmd all`, then
+`./make.cmd test`. The worktree uses its own copy of the engine at the pinned commit (gitignored).
