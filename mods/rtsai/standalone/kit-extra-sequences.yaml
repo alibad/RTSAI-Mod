@@ -115,79 +115,37 @@ lcrf-yemen:
 lcrf-hezbollah:
 	Inherits@lcrf: lcrf
 
-hpwr-china:
-	Inherits: powr-china
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-chinaicon.png
-		Offset: 0, 0
-
 purifier-china:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-chinaicon.png
-		Offset: 0, 0
-
-hpwr-iran:
-	Inherits: powr-iran
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-iranicon.png
+		Filename: purifier-chinaicon.png
 		Offset: 0, 0
 
 purifier-iran:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-iranicon.png
-		Offset: 0, 0
-
-hpwr-turkey:
-	Inherits: powr-turkey
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-turkeyicon.png
+		Filename: purifier-iranicon.png
 		Offset: 0, 0
 
 purifier-turkey:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-turkeyicon.png
-		Offset: 0, 0
-
-hpwr-saudi:
-	Inherits: powr-saudi
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-saudiicon.png
+		Filename: purifier-turkeyicon.png
 		Offset: 0, 0
 
 purifier-saudi:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-saudiicon.png
-		Offset: 0, 0
-
-hpwr-israel:
-	Inherits: powr-israel
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-israelicon.png
+		Filename: purifier-saudiicon.png
 		Offset: 0, 0
 
 purifier-israel:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-israelicon.png
-		Offset: 0, 0
-
-hpwr-yemen:
-	Inherits: powr-yemen
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-yemenicon.png
+		Filename: purifier-israelicon.png
 		Offset: 0, 0
 
 purifier-yemen:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-yemenicon.png
-		Offset: 0, 0
-
-hpwr-hezbollah:
-	Inherits: powr-hezbollah
-	icon:
-		Filename: ra2|standalone/art/econ/hpwr-hezbollahicon.png
+		Filename: purifier-yemenicon.png
 		Offset: 0, 0
 
 purifier-hezbollah:
 	icon:
-		Filename: ra2|standalone/art/econ/purifier-hezbollahicon.png
+		Filename: purifier-hezbollahicon.png
 		Offset: 0, 0

@@ -190,15 +190,27 @@ def kit_extra_sequences() -> str:
         for f in FACTIONS:
             if kit_has(f"{role}-{f}", units=True):
                 out.append(f"{role}-{f}:\n" + "".join(f"\tInherits@{s}: {s}\n" for s in stock) + "\n")
+    written = set()
     for f in FACTIONS:
         if not kit_has(f"hpwr-{f}"):
+            written.add(f"hpwr-{f}icon.png")
             badge_icon(KIT / f"powr-{f}icon.png", ECON_ART / f"hpwr-{f}icon.png", "HEAVY", (255, 196, 64))
             out.append(f"hpwr-{f}:\n\tInherits: powr-{f}\n\ticon:\n\t\tFilename: ra2|standalone/art/econ/hpwr-{f}icon.png\n"
                        "\t\tOffset: 0, 0\n\n")
-        if not kit_has(f"purifier-{f}"):
+        if kit_has(f"purifier-{f}"):
+            continue
+        if (KIT / f"purifier-{f}icon.png").exists():      # the kit's icon without an image entry: name it here
+            out.append(f"purifier-{f}:\n\ticon:\n\t\tFilename: purifier-{f}icon.png\n\t\tOffset: 0, 0\n\n")
+        else:
+            written.add(f"purifier-{f}icon.png")
             badge_icon(KIT / f"refn-{f}icon.png", ECON_ART / f"purifier-{f}icon.png", "+25%", (79, 195, 208))
             out.append(f"purifier-{f}:\n\ticon:\n\t\tFilename: ra2|standalone/art/econ/purifier-{f}icon.png\n"
                        "\t\tOffset: 0, 0\n\n")
+    if ECON_ART.exists():                               # interim icons the kit has since replaced
+        for stale in [p for p in ECON_ART.iterdir() if p.name not in written]:
+            stale.unlink()
+        if not any(ECON_ART.iterdir()):
+            ECON_ART.rmdir()
     return "".join(out).rstrip("\n") + "\n"
 
 

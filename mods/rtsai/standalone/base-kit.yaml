@@ -415,13 +415,13 @@ nanrct:
 	Tooltip:
 		Name: standalone-hpwr-name
 	Building:
-		Dimensions: 2,2
-		Footprint: xx xx
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
 	HitShape:
 		Type: Rectangle
 			LocalYaw: -128
-			TopLeft: -1024, -1024
-			BottomRight: 1024, 1024
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
 	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode

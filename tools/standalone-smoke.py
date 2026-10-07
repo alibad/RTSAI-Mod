@@ -55,6 +55,7 @@ def main():
     ap.add_argument("--seconds", type=int, default=60)
     ap.add_argument("--grab-every", type=float, default=15)
     ap.add_argument("--look", help="X,Y: hold the camera on this cell (look.lua)")
+    ap.add_argument("--map-rules", type=Path, help="a MiniYaml rules overlay for this run only (e.g. a showcase)")
     ap.add_argument("--lua", help="like --observe, with another script from tools/standalone-smoke/ (e.g. deploy.lua)")
     ap.add_argument("--observe", action="store_true",
                     help="skirmish on a scratch copy of --map (in the run's support dir) with tools/standalone-smoke/"
@@ -93,6 +94,9 @@ def main():
         y = (dst / "map.yaml").read_text(encoding="utf-8").replace("\r\n", "\n").rstrip("\n")
         y = re.sub(r"\nRules:.*\Z", "", y, flags=re.S)   # the shipped maps end with an empty Rules: block
         y += "\nRules:\n\tWorld:\n\t\tLuaScript:\n\t\t\tScripts: observe.lua\n"
+        if a.map_rules:
+            extra = a.map_rules.read_text(encoding="utf-8").replace("\r\n", "\n").strip("\n")
+            y += "".join(f"\t{line}\n" for line in extra.split("\n"))
         (dst / "map.yaml").write_text(y, encoding="utf-8")
         launch_map = "sa-observe"
     if a.mode == "skirmish":
