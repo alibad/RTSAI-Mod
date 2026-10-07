@@ -12,16 +12,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.53,
-    "input_lufs": -11.84,
+    "input_lufs": -11.82,
     "input_true_peak": -1.01,
-    "loop_bars": 96.02,
-    "loop_seconds": 169.45,
-    "normalization": "static gain -2.16 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.282,
+    "loop_bars": 94.01,
+    "loop_seconds": 165.91,
+    "normalization": "static gain -2.18 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.162,
     "output_lufs": -14.09,
-    "output_true_peak": -3.22,
-    "source_seconds": 175.0
+    "output_true_peak": -3.32,
+    "source_seconds": 175.0,
+    "wrap_flux_percentile_estimate": 53.9
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -60,7 +62,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "32b0a23136c7d48c0d935593a0d775c7da802ddb871046ade05a8905c8bf7801",
+   "sha256": "66c84c7c95e943a872a7b22bfb4c3264fade01796530032f681b56ee68ff2b35",
    "steps": 8,
    "theatre": "Anatolia",
    "title": "Anatolian Armor"
@@ -77,16 +79,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 4.8,
     "input_lufs": -13.35,
     "input_true_peak": -0.75,
     "loop_bars": 64.0,
-    "loop_seconds": 153.6,
+    "loop_seconds": 153.61,
     "normalization": "static gain -0.65 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.37,
+    "onset_alignment": 0.245,
     "output_lufs": -14.14,
     "output_true_peak": -1.83,
-    "source_seconds": 180.0
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 95.9
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -125,7 +129,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "632aa36b30e8469399b78d52d47d58222a5396910b2d1371cf6be420d5c276b0",
+   "sha256": "93048f5e3f16db423b02ab75bafa3019fc1296ae4da6ce24542c04bc4fbb4891",
    "steps": 8,
    "theatre": "all",
    "title": "Black Ore"
@@ -142,16 +146,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.93,
-    "input_lufs": -16.9,
+    "input_lufs": -16.82,
     "input_true_peak": -1.03,
-    "loop_bars": 84.0,
-    "loop_seconds": 165.25,
-    "normalization": "static gain +2.90 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.458,
+    "loop_bars": 77.0,
+    "loop_seconds": 151.47,
+    "normalization": "static gain +2.82 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.019,
     "output_lufs": -14.05,
     "output_true_peak": -1.2,
-    "source_seconds": 180.0
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 8.0
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -190,7 +196,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "9bb42d0f76d220f047a01651260a7a46a5ccb3c449400dbe47c653aa7e54ec0e",
+   "sha256": "a8e806ad7010a595414aa79d8bf28ded66dcb8d35df299b9e74b0317545d20b4",
    "steps": 8,
    "theatre": "Levant",
    "title": "Cedar Signal"
@@ -207,16 +213,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.69,
-    "input_lufs": -14.83,
+    "input_lufs": -14.84,
     "input_true_peak": -0.9,
-    "loop_bars": 89.99,
-    "loop_seconds": 166.14,
-    "normalization": "static gain +0.83 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.189,
+    "loop_bars": 84.98,
+    "loop_seconds": 156.9,
+    "normalization": "static gain +0.84 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.114,
     "output_lufs": -14.19,
     "output_true_peak": -1.33,
-    "source_seconds": 175.0
+    "source_seconds": 175.0,
+    "wrap_flux_percentile_estimate": 15.3
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -255,7 +263,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "9050f280775f90a2f275dc468399f9d392afa2e6cbdae182b73cf96d06484dfc",
+   "sha256": "a413c8aaba5ef6df39de6f9ff7c5279755e01ee2c14289be4b1d1685f556529a",
    "steps": 8,
    "theatre": "Levant coast",
    "title": "Coastline Watch"
@@ -272,16 +280,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.81,
-    "input_lufs": -12.58,
+    "input_lufs": -12.69,
     "input_true_peak": -0.99,
-    "loop_bars": 87.01,
-    "loop_seconds": 165.73,
-    "normalization": "static gain -1.42 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.289,
+    "loop_bars": 81.03,
+    "loop_seconds": 154.34,
+    "normalization": "static gain -1.31 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.252,
     "output_lufs": -14.05,
-    "output_true_peak": -2.07,
-    "source_seconds": 180.0
+    "output_true_peak": -2.08,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 23.0
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -320,7 +330,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "7b551714f8a2fc491f2c8ca390add3ae34e1a95d4d68de283b3d8c565b3814fb",
+   "sha256": "19e7ac50e98dbd1b3f76b7bace091d10ea11cfbbb0f3cdeee08af26aee1e3d05",
    "steps": 8,
    "theatre": "Arabian peninsula",
    "title": "Desert Convoy"
@@ -337,16 +347,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.31,
-    "input_lufs": -10.95,
-    "input_true_peak": -0.91,
-    "loop_bars": 93.0,
-    "loop_seconds": 153.93,
-    "normalization": "static gain -3.05 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.63,
-    "output_lufs": -14.05,
-    "output_true_peak": -3.86,
-    "source_seconds": 170.0
+    "input_lufs": -10.96,
+    "input_true_peak": -0.42,
+    "loop_bars": 88.0,
+    "loop_seconds": 145.66,
+    "normalization": "static gain -3.04 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.53,
+    "output_lufs": -14.06,
+    "output_true_peak": -3.82,
+    "source_seconds": 170.0,
+    "wrap_flux_percentile_estimate": 55.5
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -385,7 +397,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "df2e1ef2a233ba6da26006e8e7458e88123b6c45d451f064a1488187ee38e26b",
+   "sha256": "ad6f6b895df6d7798c7acebbeea329ed013a533e0cd216eb35535ec2d3393ce2",
    "steps": 8,
    "theatre": "all",
    "title": "Final Push"
@@ -402,16 +414,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 2.79,
-    "input_lufs": -13.16,
+    "input_lufs": -13.21,
     "input_true_peak": -0.57,
-    "loop_bars": 113.03,
-    "loop_seconds": 157.72,
-    "normalization": "static gain -0.84 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.622,
+    "loop_bars": 114.04,
+    "loop_seconds": 159.13,
+    "normalization": "static gain -0.79 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.047,
     "output_lufs": -14.11,
-    "output_true_peak": -1.63,
-    "source_seconds": 170.0
+    "output_true_peak": -1.88,
+    "source_seconds": 170.0,
+    "wrap_flux_percentile_estimate": 54.4
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -450,7 +464,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "f9cb9554bb0eb569ca7437e51f5978c036e630aed2956965bc96e2ef824b4f48",
+   "sha256": "33b62b2c4ca745ea412cd14219d3d54daddf5f75cae577559fcff158c3425c8a",
    "steps": 8,
    "theatre": "all",
    "title": "Grid Assault"
@@ -467,16 +481,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.43,
-    "input_lufs": -12.51,
-    "input_true_peak": -0.98,
-    "loop_bars": 102.0,
-    "loop_seconds": 174.86,
-    "normalization": "static gain -1.49 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.408,
+    "input_lufs": -12.55,
+    "input_true_peak": -1.16,
+    "loop_bars": 97.01,
+    "loop_seconds": 166.3,
+    "normalization": "static gain -1.45 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.291,
     "output_lufs": -14.04,
-    "output_true_peak": -2.78,
-    "source_seconds": 180.0
+    "output_true_peak": -2.81,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 89.3
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -515,7 +531,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "1412c6457b9ce092b3191dd1b20e65b2f525e77a57a180800c1029ca9bd3b5c8",
+   "sha256": "733853fbb95d80111e10bb8624d5334f2b977cb2ef0c9d4d230cb4dad3f93434",
    "steps": 8,
    "theatre": "all",
    "title": "Iron Foundry"
@@ -532,16 +548,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.87,
-    "input_lufs": -11.94,
+    "input_lufs": -11.96,
     "input_true_peak": -0.95,
-    "loop_bars": 89.03,
-    "loop_seconds": 172.32,
-    "normalization": "static gain -2.06 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.466,
+    "loop_bars": 85.02,
+    "loop_seconds": 164.56,
+    "normalization": "static gain -2.04 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.08,
     "output_lufs": -14.03,
-    "output_true_peak": -2.76,
-    "source_seconds": 180.0
+    "output_true_peak": -2.7,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 81.0
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -580,7 +598,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "877aa3f0cd8c63f137272c9cd617d20af1724edfffb6852c4f863c965172ba1f",
+   "sha256": "711637efbd839b6363be5ede200c49307614e69a5a1cb46bb65011f5362da211",
    "steps": 8,
    "theatre": "Persian plateau",
    "title": "Plateau Engines"
@@ -597,16 +615,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 5.0,
-    "input_lufs": -13.29,
+    "input_lufs": -13.3,
     "input_true_peak": -0.91,
-    "loop_bars": 65.02,
-    "loop_seconds": 162.54,
-    "normalization": "static gain -0.71 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.181,
+    "loop_bars": 64.02,
+    "loop_seconds": 160.06,
+    "normalization": "static gain -0.70 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.088,
     "output_lufs": -14.01,
-    "output_true_peak": -2.51,
-    "source_seconds": 180.0
+    "output_true_peak": -2.61,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 34.7
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -645,7 +665,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "9ce104cc3287bdebf87d59b0a8bc19d035bc767e8920a07f944c4754d9dee2c0",
+   "sha256": "fb62b509a463a0bcb061fb84ce32610a7d147d6b1c924e1e74307bc66586ecc7",
    "steps": 8,
    "theatre": "all",
    "title": "Pressure Front"
@@ -662,16 +682,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 4.07,
-    "input_lufs": -14.2,
+    "input_lufs": -14.22,
     "input_true_peak": -0.95,
-    "loop_bars": 85.0,
-    "loop_seconds": 172.89,
-    "normalization": "static gain +0.20 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.403,
-    "output_lufs": -14.06,
+    "loop_bars": 83.01,
+    "loop_seconds": 168.83,
+    "normalization": "static gain +0.22 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.294,
+    "output_lufs": -14.04,
     "output_true_peak": -1.92,
-    "source_seconds": 180.0
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 96.6
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -710,7 +732,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "12dee266f649be88cc0091c22ad03d51812db885240d6228219db4154228be9c",
+   "sha256": "6337a4959e1932bfa32039e50c9b94a36bfcf01edad8251742af46488b3201a2",
    "steps": 8,
    "theatre": "Red Sea",
    "title": "Red Sea Run"
@@ -727,16 +749,18 @@
    "lm": "acestep-5Hz-lm-1.7B",
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
     "crossfade_seconds": 3.75,
-    "input_lufs": -15.96,
+    "input_lufs": -15.9,
     "input_true_peak": -0.57,
-    "loop_bars": 88.0,
-    "loop_seconds": 165.0,
-    "normalization": "static gain +1.96 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.638,
-    "output_lufs": -14.18,
-    "output_true_peak": -1.33,
-    "source_seconds": 180.0
+    "loop_bars": 85.0,
+    "loop_seconds": 159.37,
+    "normalization": "static gain +1.90 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.064,
+    "output_lufs": -14.16,
+    "output_true_peak": -1.29,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 39.0
    },
    "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
    "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
@@ -775,7 +799,7 @@
     },
     "quantization": "int8_weight_only"
    },
-   "sha256": "db70763f6f425954a78e53614687f0ce423fb25cbb731b56309f647d9fabb3f6",
+   "sha256": "9df795cd7dbb37652ab971c9748d8d18ef0604df971b91cd346aa6aaa1399ee7",
    "steps": 8,
    "theatre": "East Asia",
    "title": "Yangtze Steel"
@@ -1639,11 +1663,11 @@
     "seconds": 0.83
    },
    "measured": {
-    "active_rms_dbfs": -16.2,
-    "decay20_ms": 180,
-    "high_share": 0.095,
-    "low_share": 0.103,
-    "max50_rms_dbfs": -12.4,
+    "active_rms_dbfs": -17.8,
+    "decay20_ms": 170,
+    "high_share": 0.078,
+    "low_share": 0.198,
+    "max50_rms_dbfs": -11.6,
     "peak_dbfs": -0.3,
     "seconds": 0.83
    },
@@ -1652,7 +1676,7 @@
    "recipe": "_idogatca",
    "role": "dog attack: growl rising into a bark and a bite",
    "seed": "sha256('rtsai-standalone-sfx-1/idogatca.wav')",
-   "sha256": "c63be83a26d2243037c32fd8a9d541205b763e409a8775d96976b4c0944d47d2"
+   "sha256": "43e9b6e3006ff5e2ea2e28348a3ee68eb47c6e44caeca06b63990ee5526750e8"
   },
   "sfx/idogatta.wav": {
    "category": "sfx",
@@ -1667,11 +1691,11 @@
     "seconds": 0.784
    },
    "measured": {
-    "active_rms_dbfs": -9.1,
+    "active_rms_dbfs": -7.5,
     "decay20_ms": 240,
-    "high_share": 0.129,
-    "low_share": 0.064,
-    "max50_rms_dbfs": -4.7,
+    "high_share": 0.08,
+    "low_share": 0.239,
+    "max50_rms_dbfs": -5.0,
     "peak_dbfs": -0.3,
     "seconds": 0.784
    },
@@ -1680,7 +1704,7 @@
    "recipe": "_idogatta",
    "role": "dog attack: two barks and a bite",
    "seed": "sha256('rtsai-standalone-sfx-1/idogatta.wav')",
-   "sha256": "51225259ea6f90f676b8abb2546aa6d652ff3499d40dcdc49beeefbebbe89519"
+   "sha256": "ec661f4276c1f98e701675331ca44ee4ae9e75429ad4b303ff6182923cb86b64"
   },
   "sfx/igensqua.wav": {
    "category": "sfx",
@@ -3515,12 +3539,12 @@
     "seconds": 0.323
    },
    "measured": {
-    "active_rms_dbfs": -11.8,
-    "decay20_ms": 90,
-    "high_share": 0.093,
-    "low_share": 0.049,
+    "active_rms_dbfs": -11.7,
+    "decay20_ms": 190,
+    "high_share": 0.082,
+    "low_share": 0.102,
     "max50_rms_dbfs": -6.9,
-    "peak_dbfs": -1.2,
+    "peak_dbfs": -0.9,
     "seconds": 0.323
    },
    "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
@@ -3528,7 +3552,7 @@
    "recipe": "idogdiea.wav",
    "role": "dog dies: sharp yelp",
    "seed": "sha256('rtsai-standalone-sfx-1/idogdiea.wav')",
-   "sha256": "0213811f64b40810d3353083b190e037c7262b0f44ce646c589ce7db40b6d209"
+   "sha256": "995ee8d6c702d1c17e0f9a5d2bfe8bb012b2a6a803a0784af25576c74bfdd9da"
   },
   "voices/idogfea.wav": {
    "category": "dog voice",
@@ -3543,12 +3567,12 @@
     "seconds": 0.784
    },
    "measured": {
-    "active_rms_dbfs": -14.0,
-    "decay20_ms": 70,
-    "high_share": 0.107,
-    "low_share": 0.077,
-    "max50_rms_dbfs": -8.2,
-    "peak_dbfs": -0.3,
+    "active_rms_dbfs": -14.3,
+    "decay20_ms": 130,
+    "high_share": 0.101,
+    "low_share": 0.139,
+    "max50_rms_dbfs": -7.4,
+    "peak_dbfs": -0.9,
     "seconds": 0.784
    },
    "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
@@ -3556,7 +3580,7 @@
    "recipe": "idogfea.wav",
    "role": "dog feedback: snarl and bark",
    "seed": "sha256('rtsai-standalone-sfx-1/idogfea.wav')",
-   "sha256": "048a3f988c95341a5830441ad0e7bd2e7a2a6bd964a5e6a49097f4cbd13d5ada"
+   "sha256": "3cebfb646a3316ac6809d72e17269b972e09590cd08158e23b4b5d5460f2aef0"
   },
   "voices/idogfeb.wav": {
    "category": "dog voice",
@@ -3571,10 +3595,10 @@
     "seconds": 0.876
    },
    "measured": {
-    "active_rms_dbfs": -10.8,
-    "decay20_ms": 440,
-    "high_share": 0.112,
-    "low_share": 0.035,
+    "active_rms_dbfs": -11.7,
+    "decay20_ms": 490,
+    "high_share": 0.114,
+    "low_share": 0.045,
     "max50_rms_dbfs": -5.7,
     "peak_dbfs": -0.3,
     "seconds": 0.876
@@ -3584,7 +3608,7 @@
    "recipe": "idogfeb.wav",
    "role": "dog feedback: whimper then a sharp bark",
    "seed": "sha256('rtsai-standalone-sfx-1/idogfeb.wav')",
-   "sha256": "6cbe87970905f16788bdeab18df1e78bc06258dcad684a218d98981ac45a3fd0"
+   "sha256": "6a1c1feca9cf26a7272afb008b79da4dcec6b446e37899fb4f9ed7a81cf7ce70"
   },
   "voices/idogfec.wav": {
    "category": "dog voice",
@@ -3599,11 +3623,11 @@
     "seconds": 0.876
    },
    "measured": {
-    "active_rms_dbfs": -12.3,
+    "active_rms_dbfs": -12.6,
     "decay20_ms": 610,
     "high_share": 0.104,
     "low_share": 0.038,
-    "max50_rms_dbfs": -5.5,
+    "max50_rms_dbfs": -5.7,
     "peak_dbfs": -0.3,
     "seconds": 0.876
    },
@@ -3612,7 +3636,7 @@
    "recipe": "idogfec.wav",
    "role": "dog feedback: whine",
    "seed": "sha256('rtsai-standalone-sfx-1/idogfec.wav')",
-   "sha256": "3a34cb35f2bd266e0ca6df99381eebf4f7387aec33eb7b2c860a4e899751198d"
+   "sha256": "9960a46290e3519cb90d3fac9fa129e4cce2ff03b56bd7617418da57ee477f3d"
   },
   "voices/idogmova.wav": {
    "category": "dog voice",
@@ -3627,10 +3651,10 @@
     "seconds": 1.153
    },
    "measured": {
-    "active_rms_dbfs": -16.0,
-    "decay20_ms": 750,
-    "high_share": 0.158,
-    "low_share": 0.039,
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 820,
+    "high_share": 0.138,
+    "low_share": 0.084,
     "max50_rms_dbfs": -10.8,
     "peak_dbfs": -0.3,
     "seconds": 1.153
@@ -3640,7 +3664,7 @@
    "recipe": "idogmova.wav",
    "role": "dog moving: panting and a short bark",
    "seed": "sha256('rtsai-standalone-sfx-1/idogmova.wav')",
-   "sha256": "cb645adbb75dc0f069069e9319c77c841039a253148f779f1b5712555c6a5113"
+   "sha256": "15f687b1a7ad1fa4a9d7019a956b7ccf509dc95a249aa2ae68d25c48995cb7b3"
   },
   "voices/idogsela.wav": {
    "category": "dog voice",
@@ -3655,12 +3679,12 @@
     "seconds": 0.323
    },
    "measured": {
-    "active_rms_dbfs": -12.1,
-    "decay20_ms": 70,
-    "high_share": 0.094,
-    "low_share": 0.073,
-    "max50_rms_dbfs": -7.9,
-    "peak_dbfs": -0.3,
+    "active_rms_dbfs": -12.4,
+    "decay20_ms": 150,
+    "high_share": 0.099,
+    "low_share": 0.157,
+    "max50_rms_dbfs": -8.0,
+    "peak_dbfs": -0.9,
     "seconds": 0.323
    },
    "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
@@ -3668,7 +3692,7 @@
    "recipe": "idogsela.wav",
    "role": "dog selected: one alert bark",
    "seed": "sha256('rtsai-standalone-sfx-1/idogsela.wav')",
-   "sha256": "d81786b255bc6d52ad81b7b41224cfa8e0e1789a050b256072fec3b744eb3eac"
+   "sha256": "4cd4b184ecf89ba81d54dee240d16a73c213f0ba234f692bdf36e5f8d6a5e31c"
   },
   "voices/ienaata.wav": {
    "category": "voice",
@@ -3804,11 +3828,12 @@
   },
   "voices/ienadia.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.66,
+   "duration_seconds": 0.73,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -3819,7 +3844,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "ARG.",
+    "asr_transcript": "Arrgh.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -3828,15 +3853,15 @@
    "role": "engineer (EngineerVoice, iena) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 6,
-   "sha256": "3d17fd800f653aca3de4c5d1e8fa18bb64fab9f7b6c2c54fef76380ba4371213",
+   "seed": 7,
+   "sha256": "7b205ebed8bfc8abb3b69a745137c6671d67df53c608bf37655509241d804d31",
    "shipped_check": {
-    "asr_transcript": "ARG!",
+    "asr_transcript": "Arrgh.",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaaargh!",
    "unit_set": "engineer (EngineerVoice, iena)",
@@ -3845,7 +3870,7 @@
      "am_adam",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -3860,11 +3885,12 @@
   },
   "voices/ienadib.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.52,
+   "duration_seconds": 0.51,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -3875,7 +3901,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Aww.",
+    "asr_transcript": "Ah.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -3884,15 +3910,15 @@
    "role": "engineer (EngineerVoice, iena) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 4,
-   "sha256": "4bdab12fa4e80bbc0111099de38b7e0a5e254931e6b71ed6c8295e11d37b5c9f",
+   "seed": 3,
+   "sha256": "0a6a98727a4a92194477db78995da3fe3886707bab853155b2b277808a2b9326",
    "shipped_check": {
-    "asr_transcript": "Aw.",
+    "asr_transcript": "Aww.",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Augh!",
    "unit_set": "engineer (EngineerVoice, iena)",
@@ -3901,7 +3927,7 @@
      "am_adam",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -3916,11 +3942,12 @@
   },
   "voices/ienadic.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.69,
+   "duration_seconds": 0.86,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -3931,7 +3958,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "No.",
+    "asr_transcript": "Noo!",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -3940,15 +3967,15 @@
    "role": "engineer (EngineerVoice, iena) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 4,
-   "sha256": "396f8eb8040c79d26edb98916fd87a436283eabe495d70e3e261104e8b6977ec",
+   "seed": 6,
+   "sha256": "46a55b89c1f7a7f8cc77265cf234a0ebeb7495c92afeda29cde410ee54bcd8c6",
    "shipped_check": {
-    "asr_transcript": "No.",
+    "asr_transcript": "Noo!",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Nooo!",
    "unit_set": "engineer (EngineerVoice, iena)",
@@ -3957,7 +3984,7 @@
      "am_adam",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -3972,11 +3999,12 @@
   },
   "voices/ienadid.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.6,
+   "duration_seconds": 0.5,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -3996,15 +4024,15 @@
    "role": "engineer (EngineerVoice, iena) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 9,
-   "sha256": "219c30580645b5f6ff3369231d6de6d7bedc86b24c1556b19a3ab8498482f0c0",
+   "seed": 4,
+   "sha256": "a2ad8545ce1b8fe39e4b2e92e30c63260f3e2557663e462e441c3aa21fb1672d",
    "shipped_check": {
-    "asr_transcript": "Ong.",
+    "asr_transcript": "Ung.",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Ungh!",
    "unit_set": "engineer (EngineerVoice, iena)",
@@ -4013,7 +4041,7 @@
      "am_adam",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -4600,11 +4628,12 @@
   },
   "voices/iensdia.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.63,
+   "duration_seconds": 0.61,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -4624,15 +4653,15 @@
    "role": "engineer (EngineerVoice, iens) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 4,
-   "sha256": "744a267d1ec3f9f3a71d17a2e2c9c0f425ccddd33d405d836e764a6c6d8efc03",
+   "seed": 11,
+   "sha256": "98a172da780f17bfd1aae652f340ee63ce390ffdc5196b848f841814dd3ca97b",
    "shipped_check": {
     "asr_transcript": "ARG",
     "cer": null
    },
    "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Arrgh!",
    "unit_set": "engineer (EngineerVoice, iens)",
@@ -4641,7 +4670,7 @@
      "bm_george",
      "am_michael"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -4656,11 +4685,12 @@
   },
   "voices/iensdib.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 1.24,
+   "duration_seconds": 1.32,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -4671,7 +4701,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "Ah, ah.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -4680,15 +4710,15 @@
    "role": "engineer (EngineerVoice, iens) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 3,
-   "sha256": "6a418005765e345f230d05d3c3872210544cbde9a6077810bdea41494d965d14",
+   "seed": 10,
+   "sha256": "45577275b75cb23d8312d188bc1305531b291a1c73ee701322a029c9bf923a48",
    "shipped_check": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "あ、ああ。",
     "cer": null
    },
    "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaah!",
    "unit_set": "engineer (EngineerVoice, iens)",
@@ -4697,7 +4727,7 @@
      "bm_george",
      "am_michael"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -4712,11 +4742,12 @@
   },
   "voices/iensdic.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.42,
+   "duration_seconds": 0.35,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -4727,7 +4758,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Oh.",
+    "asr_transcript": "Oh!",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -4736,15 +4767,15 @@
    "role": "engineer (EngineerVoice, iens) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 2,
-   "sha256": "b214e3beb45ba1a4c88f620157a0b5319a74c2088bfb9396cef497ff77336a35",
+   "seed": 1,
+   "sha256": "d3718e62fdd4fd4f33b942b8926506e2998906e6bba9e4184a88b6552ac836e3",
    "shipped_check": {
-    "asr_transcript": "Oh.",
+    "asr_transcript": "Oh!",
     "cer": null
    },
    "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Ohhh!",
    "unit_set": "engineer (EngineerVoice, iens)",
@@ -4753,7 +4784,7 @@
      "bm_george",
      "am_michael"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -4768,11 +4799,12 @@
   },
   "voices/iensdid.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.52,
+   "duration_seconds": 0.87,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -4783,7 +4815,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Ugh.",
+    "asr_transcript": "Oh. Oh.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -4793,14 +4825,14 @@
    "sample_rate": 44100,
    "sample_width_bits": 16,
    "seed": 4,
-   "sha256": "b84fe3c608a5dc168c9f592b2b1e6642a679a4d943483cc5cc134fecf8b7974b",
+   "sha256": "aa69c588f9694b8633eee28f0c6ba474fffb5ff5cc3d3316976aa2af7beda1e8",
    "shipped_check": {
-    "asr_transcript": "Ugh.",
+    "asr_transcript": "Oh. Boo.",
     "cer": null
    },
    "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Ugh!",
    "unit_set": "engineer (EngineerVoice, iens)",
@@ -4809,7 +4841,7 @@
      "bm_george",
      "am_michael"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5264,11 +5296,12 @@
   },
   "voices/igenexpa.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
    "duration_seconds": 1.32,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5279,7 +5312,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural crush layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenexpa.wav'))",
    "qa": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "Ugh.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5288,15 +5321,15 @@
    "role": "death by crushing force (PsyCrush)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 5,
-   "sha256": "5f5c8922b972ec975463280641aefdb37b9c7d7f4203f9cbec59de23e7c076a4",
+   "seed": 11,
+   "sha256": "b1b2af3cf57f70764952f65b7ec34786ab0b3219eb6e4e62e732be0265613ff3",
    "shipped_check": {
     "asr_transcript": "Ah.",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Ugh!",
    "unit_set": "generic infantry deaths",
@@ -5305,7 +5338,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5320,11 +5353,12 @@
   },
   "voices/igenmela.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 1.22,
+   "duration_seconds": 1.42,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5335,7 +5369,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural melt layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenmela.wav'))",
    "qa": {
-    "asr_transcript": "Uh-uh.",
+    "asr_transcript": "Ah...",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5344,15 +5378,15 @@
    "role": "death by acid or radiation (Melted)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 4,
-   "sha256": "b04425dbe2f04f2a59ed73d1e9de8c869c7a2ee4113a558a4be736732ebfe472",
+   "seed": 5,
+   "sha256": "ac5ed453233b705c0a2931a76f6e462be3a1e41c6a3c09109d0d1fd0de6877da",
    "shipped_check": {
-    "asr_transcript": "Uh-uh.",
+    "asr_transcript": "",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaaaah!",
    "unit_set": "generic infantry deaths",
@@ -5361,7 +5395,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5376,11 +5410,12 @@
   },
   "voices/igenmelb.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
    "duration_seconds": 1.2,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5400,15 +5435,15 @@
    "role": "death by acid or radiation (Melted)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 9,
-   "sha256": "ff488493041cfad0f812d8f03994f0c001a34b8bccff501f5f05cd6a9b5dd0d1",
+   "seed": 11,
+   "sha256": "b7f8274b486ff95ab89233ea1db72126519238fcca6198c3cb08aa26b80c6092",
    "shipped_check": {
     "asr_transcript": "Arrgh!",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Arrgh!",
    "unit_set": "generic infantry deaths",
@@ -5417,7 +5452,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5432,11 +5467,12 @@
   },
   "voices/igenmelc.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 1.55,
+   "duration_seconds": 1.63,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5447,7 +5483,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural melt layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenmelc.wav'))",
    "qa": {
-    "asr_transcript": "Ah. Ah!",
+    "asr_transcript": "Ah.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5456,15 +5492,15 @@
    "role": "death by acid or radiation (Melted)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 4,
-   "sha256": "fd48e1baf3f96fba0be44d9768db214909aeb167b4a0c0175344f6c8e5c083fe",
+   "seed": 12,
+   "sha256": "05d0a5e5fa29f2135910783658c55bafe46deee0a1b7df3095d90e4c5a359fad",
    "shipped_check": {
-    "asr_transcript": "Ah. Ah.",
+    "asr_transcript": "Ah.",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaah!",
    "unit_set": "generic infantry deaths",
@@ -5473,7 +5509,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5488,11 +5524,12 @@
   },
   "voices/igenzapa.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 1.19,
+   "duration_seconds": 1.23,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5503,7 +5540,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural zap layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenzapa.wav'))",
    "qa": {
-    "asr_transcript": "Arrgh.",
+    "asr_transcript": "Arrgh!",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5512,15 +5549,15 @@
    "role": "death by electric shock (Zapped)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 10,
-   "sha256": "b26cb95de1064227b169a12618c4bcba4797ab38c17ccb92164fb2f106f957a7",
+   "seed": 4,
+   "sha256": "83545ed38dbfaae81e90f46354aa50d043bc9b25770c50adbd5a78c4fbed3da1",
    "shipped_check": {
-    "asr_transcript": "Arrgh.",
+    "asr_transcript": "Arrgh!",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaargh!",
    "unit_set": "generic infantry deaths",
@@ -5529,7 +5566,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5544,11 +5581,12 @@
   },
   "voices/igidia.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.7,
+   "duration_seconds": 0.65,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5559,7 +5597,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Arrgh!",
+    "asr_transcript": "ARG",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5568,15 +5606,15 @@
    "role": "infantry death cry (all modern infantry Die)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 7,
-   "sha256": "64377138b2a00bf284a9743fe5168ebea8c01653f72f62576022bcdc3eacccf8",
+   "seed": 12,
+   "sha256": "592eff3a73813433508dc7079aa9dc1d0243d37b7f9f420e67625c12d5df562f",
    "shipped_check": {
     "asr_transcript": "Arrgh!",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaaargh!",
    "unit_set": "generic infantry deaths",
@@ -5585,7 +5623,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5600,11 +5638,12 @@
   },
   "voices/igidib.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.9,
+   "duration_seconds": 0.94,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5615,7 +5654,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Ah. AH!",
+    "asr_transcript": "Ah.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5624,15 +5663,15 @@
    "role": "infantry death cry (all modern infantry Die)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 10,
-   "sha256": "4911ac5644d09338a082d1572ed9c21391f60ce7857c0722d6310af661ebca20",
+   "seed": 8,
+   "sha256": "0e1983ce7949dad71d348bb17ef8998ca09597ef436d35eda19460b83a3a84eb",
    "shipped_check": {
-    "asr_transcript": "Ah. AH!",
+    "asr_transcript": "Ah.",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Augh!",
    "unit_set": "generic infantry deaths",
@@ -5641,7 +5680,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5656,11 +5695,12 @@
   },
   "voices/igidic.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.92,
+   "duration_seconds": 0.74,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5680,15 +5720,15 @@
    "role": "infantry death cry (all modern infantry Die)",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 4,
-   "sha256": "4af16f425db76751d45e19a641facc4f398bab6f67ca800d21ea5b652d34df91",
+   "seed": 10,
+   "sha256": "fa755d4e8c31f58b9a50e58348e911bc9a44ce0e86ed195b7491bdd59c6247b8",
    "shipped_check": {
-    "asr_transcript": "Ung.",
+    "asr_transcript": "Ang.",
     "cer": null
    },
    "side": "shared, all seven factions",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Ungh!",
    "unit_set": "generic infantry deaths",
@@ -5697,7 +5737,7 @@
      "am_fenrir",
      "am_puck"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5841,11 +5881,12 @@
   },
   "voices/ispydia.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.78,
+   "duration_seconds": 0.84,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5856,7 +5897,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "Oh.",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5865,15 +5906,15 @@
    "role": "spy (SpyVoice) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 10,
-   "sha256": "53fa6514dd0acc38eeca87f5f349bce8ccf1bce759e2babf86d0c8dbdbef7bcb",
+   "seed": 3,
+   "sha256": "3f31c5dfcf7d2fc4b2489b38e68fa412de8d28e5d0008bdde15fec701f5da212",
    "shipped_check": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "Aw.",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaargh!",
    "unit_set": "spy (SpyVoice)",
@@ -5881,7 +5922,7 @@
     "kokoro_voicepacks": [
      "bm_fable"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5895,11 +5936,12 @@
   },
   "voices/ispydib.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 0.6,
+   "duration_seconds": 0.68,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5919,15 +5961,15 @@
    "role": "spy (SpyVoice) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 6,
-   "sha256": "d667dfccf197d7ab8652b0679db5eb0c0d83cc3bd1c721a9d70cfa57286505a9",
+   "seed": 3,
+   "sha256": "1e467a1d599b0e5b8aa86cdbe042f6c03d5acf7849cbde0a053b21cb2df655e9",
    "shipped_check": {
-    "asr_transcript": "アング",
+    "asr_transcript": "Ung.",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Ungh!",
    "unit_set": "spy (SpyVoice)",
@@ -5935,7 +5977,7 @@
     "kokoro_voicepacks": [
      "bm_fable"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -5949,11 +5991,12 @@
   },
   "voices/ispydic.wav": {
    "category": "voice",
+   "cfg_weight": 0.3,
    "channels": 1,
-   "duration_seconds": 1.16,
+   "duration_seconds": 1.12,
    "engine": "Chatterbox Multilingual V2 (0.5B)",
    "engine_id": "chatterbox",
-   "exaggeration": 1.0,
+   "exaggeration": 1.3,
    "generated_at": "2026-10-07",
    "generator": "tools/standalone-voices.py",
    "generator_version": "rtsai-voices-1",
@@ -5964,7 +6007,7 @@
    "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
    "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
    "qa": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "Uh... AH!",
     "cer": null,
     "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
     "usable": true
@@ -5973,15 +6016,15 @@
    "role": "spy (SpyVoice) die",
    "sample_rate": 44100,
    "sample_width_bits": 16,
-   "seed": 8,
-   "sha256": "cfe242d460817ce024dfd43baba3a48a4523771e031860bdb1a9a12e0b5a05bc",
+   "seed": 11,
+   "sha256": "01a0fc412fef537f25a690fd889cb81c6c57bccdfd735ac3e268fd949ad29d6b",
    "shipped_check": {
-    "asr_transcript": "Ah.",
+    "asr_transcript": "Uh, ah!",
     "cer": null
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
-   "takes": 10,
+   "takes": 12,
    "tempo": 1.0,
    "text": "Aaah!",
    "unit_set": "spy (SpyVoice)",
@@ -5989,7 +6032,7 @@
     "kokoro_voicepacks": [
      "bm_fable"
     ],
-    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "method": "Chatterbox clone (exaggeration 1.3, cfg_weight 0.3) of the speaker's Kokoro English reference clip; no real person",
     "reference": {
      "engine": "kokoro",
      "kokoro_voicepacks": [
@@ -6786,7 +6829,7 @@
   "voices/vgramof.wav": {
    "category": "voice",
    "channels": 1,
-   "duration_seconds": 0.695,
+   "duration_seconds": 0.715,
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "generated_at": "2026-10-07",
@@ -6799,24 +6842,24 @@
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
    "qa": {
-    "asr_transcript": "Root Set",
-    "cer": 0.25
+    "asr_transcript": "On course.",
+    "cer": 0.0
    },
    "real_person_imitation": false,
    "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) move",
    "sample_rate": 44100,
    "sample_width_bits": 16,
    "seed": null,
-   "sha256": "4a193c600c43812297cc126dcc4799e563aea7256c822022b64878efd62db151",
+   "sha256": "5b64fcd55bb044129421ac9cc35e585059d9fcd13bc136ea22136e95635f78a6",
    "shipped_check": {
-    "asr_transcript": "Root set.",
-    "cer": 0.25
+    "asr_transcript": "On course.",
+    "cer": 0.0
    },
    "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
-   "text": "Route set.",
+   "text": "On course.",
    "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
    "voice": {
     "kokoro_voicepacks": [

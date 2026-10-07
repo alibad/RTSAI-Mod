@@ -492,19 +492,40 @@ def formant(src, formants, qs, gains):
     return sum(g * bp(src, f, q) for f, q, g in zip(formants, qs, gains))
 
 
+def glottal(R: Rand, f0_track, jitter=0.04, shimmer=0.25, subharm=0.0, harmonics=24, tilt=0.8):
+    """Pulse-like voiced source: harmonic stack with per-cycle jitter and shimmer and an optional subharmonic
+    (period doubling), the rough, irregular voicing of an animal call."""
+    k = len(f0_track)
+    jit = 1 + jitter * smooth_noise(R, k, 90)
+    f = f0_track * jit
+    src = additive(f, range(1, harmonics + 1), tilt=tilt)
+    src *= 1 + shimmer * smooth_noise(R, k, 120)
+    if subharm > 0:
+        src += subharm * additive(f / 2, (1, 3, 5), tilt=1.0)
+    return src
+
+
 def bark(R: Rand, n, f0=520.0, length=0.16, delay=0.0, rough=0.4, formants=(750, 1600, 2700), growl=0.0):
-    """Dog bark: glottal harmonic source with a rise-fall pitch contour through three formants, plus breath noise."""
+    """Dog bark: a noisy plosive onset, then a rough voiced burst whose pitch jumps up and falls, through a mouth
+    that opens and closes (first formant sweeping up and back), plus breath noise and period doubling."""
     k = n_of(length)
     t = tt(k)
-    contour = f0 * (1 + 0.35 * np.sin(np.pi * np.clip(t / length, 0, 1)) - 0.3 * t / length)
-    contour *= 1 + 0.03 * smooth_noise(R, k, 40)
-    src = additive(contour, range(1, 16), tilt=0.9) + rough * R.noise(k)
+    u = np.clip(t / length, 0, 1)
+    contour = f0 * (0.7 + 0.5 * np.sin(np.pi * np.minimum(1, u * 1.6)) - 0.3 * u)
+    src = glottal(R, contour, jitter=0.05, shimmer=0.35, subharm=0.35 * (1 + growl), tilt=0.75)
+    src = norm(src) + rough * norm(hp(R.noise(k), 600)) * (0.6 + 0.4 * (1 - u))
     if growl > 0:
         src *= 1 + growl * np.sin(2 * np.pi * R.u(22, 34) * t)
-    v = formant(src, [f * R.u(0.92, 1.08) for f in formants], (4, 6, 6), (1.0, 0.6, 0.3))
-    v *= env(k, 0.008, length * 0.9, shape=0.5)
+    open_ = np.sin(np.pi * np.minimum(1, u * 1.3)) ** 0.7          # mouth opening
+    f1 = formants[0] * (0.55 + 0.6 * open_)
+    v = (svf(src, f1, 3.0, "bp") + 0.6 * svf(src, formants[1] * (0.85 + 0.25 * open_), 5.0, "bp")
+         + 0.35 * svf(src, formants[2], 5.0, "bp"))
+    v = norm(v) + 0.9 * norm(lp(src, 280, order=4))   # chest resonance: the body of the bark
+    v *= env_pts(k, [(0, -40), (0.006, 0), (length * 0.35, -2), (length * 0.8, -14), (length, -60)])
+    onset = hp(R.noise(n_of(0.02)), 1500) * env(n_of(0.02), 0.0005, 0.012)   # the plosive "w/b" release
     out = np.zeros(n)
     place(out, norm(v), delay)
+    place(out, 0.35 * norm(onset), delay)
     return out
 
 

@@ -378,7 +378,7 @@ modern scope. Every file keeps the name the rules use; nothing in the rules chan
 |---|---|---|---|
 | Weapon, impact, explosion and superweapon effects | 81 (77, plus 4 names missing even in RA2: `chrono2.aud`, `expnew09.wav`, `expnew13.wav`, `vapoar2b.wav`) | procedural, `tools/standalone-sfx.py` | project code, GPL-3.0 |
 | UI sounds | 14 | procedural, same tool | project code, GPL-3.0 |
-| Dog (select, move, feedback, death) | 6 voices (its 2 attack sounds are among the effects) | procedural barks, growls and whines | project code, GPL-3.0 |
+| Dog (select, move, feedback, death) | 6 voices (its 2 attack sounds are among the effects) | procedural barks (jittery voiced source with period doubling, an opening-mouth formant sweep, chest resonance, a plosive onset), growls and whines | project code, GPL-3.0 |
 | Shared-unit voices and death cries | 104 (85 spoken lines, 19 cries) | Kokoro-82M (lines) and Chatterbox (cries) through OpenRA-AI `voice_engines.py`, `tools/standalone-voices.py` | Apache-2.0 (Kokoro), MIT (Chatterbox) |
 | Music | 12 looping tracks + `score` (victory/defeat) | ACE-Step 1.5, local, `tools/standalone-music.py` | MIT |
 
@@ -416,8 +416,12 @@ silent. Five project sounds with their own names fill these roles in both builds
 `mods/rtsai/audio/sfx/` with their own `PROVENANCE.json`, referenced by explicit path
 (`ra2|audio/sfx/<file>`): `rtsai-explode-small.wav`, `rtsai-explode-medium.wav`,
 `rtsai-explode-large.wav` (a fireball, a hull clang, debris and, for the larger two, ammunition
-cooking off), `rtsai-shift.wav` and `rtsai-aa-launch.wav`. The standalone set also ships the four
-old names, so the standalone build resolves them before the rules are rewired.
+cooking off), `rtsai-shift.wav` and `rtsai-aa-launch.wav`. RTSAI-Mod main wires them since
+5df5950 (which also fixes the `^InfantryDeath` `DisablePrefixes` indentation and drops the engineer
+variants RA2 has only for the Allied prefix); make test passes with 0 warnings, the engine audit
+with RA2 content finds 0 missing sounds for the modern factions, and in a scripted game 24
+destroyed vehicles produced no missing-sound or decode error. The standalone set also ships the
+four old names, so the standalone build resolves them until its rules are rewired the same way.
 
 ### Shared-unit voices
 
@@ -430,9 +434,10 @@ and 44.1 kHz mono 16-bit output. The speakers are new blends of the voicepacks t
 use (for example `am_adam`+`am_puck` for the Allied-side engineer and `bm_george`+`am_michael` for
 the Soviet-side one); no real person is imitated. The wording is original: short acknowledgements
 in the faction sets' register, not RA2's lines. The 19 death cries use the faction sets' second
-engine, Chatterbox (MIT), cloned from the speaker's Kokoro English reference at exaggeration 1.0,
-because Kokoro reads interjections as words ("I egg", "oh yeah"). Of ten seeds per cry, the take
-that Whisper hears as a bare interjection and that is closest to the expected length is kept.
+engine, Chatterbox (MIT), cloned from the speaker's Kokoro English reference at exaggeration 1.3
+and cfg_weight 0.3 (Chatterbox's own tip for expressive speech), because Kokoro reads interjections
+as words ("I egg", "oh yeah"). Of twelve seeds per cry, the take that Whisper hears as a bare
+interjection and that is closest to the expected length is kept.
 Melted, Zapped and PsyCrush add a procedural acid, electric or crush layer. Chatterbox output
 carries Resemble's inaudible Perth watermark, as the faction sets' cloned lines do. Every line has a row in
 [`voice-review.csv`](voice-review.csv) (file `standalone/voices/...`); `tools/voice-review.py
@@ -448,9 +453,12 @@ service's reply are in its record. The captions name styles and instruments only
 electronic and rock, and per theatre erhu and guzheng, santur and tombak, baglama and zurna, oud,
 darbuka, mizmar, qanun), never an artist, song or anthem.
 
-Mastering (`tools/standalone-music.py master`): the take's composed ending is dropped, the body is
-cut to whole bars where the onset envelopes of the head and of the bars after the cut match best,
-and those two bars are crossfaded into the head (equal power), so the file repeats without a seam.
+Mastering (`tools/standalone-music.py master`): the take's composed ending is dropped and the body
+is cut to a whole number of bars; the bars after the cut are crossfaded into the head (equal power),
+so the file repeats without a seam. Of the 12 cuts whose onset envelopes match the head best, each
+with a 2- and a 4-bar crossfade, the one whose wrap brings the smallest onset is kept (since
+7 October; this moved the three tracks that sat near the check's limit, Yangtze Steel, Desert
+Convoy and Plateau Engines, from the 98th-99th percentile to the 18th-78th).
 Then one static gain to -14 LUFS integrated (EBU R128) and a stereo look-ahead limiter, run
 circularly so the seam stays continuous; Ogg Vorbis q4, 44.1 kHz stereo, about 2.5 MB per track.
 `check` ranks the spectral flux across the wrap against every frame of the track (the wrap must not
@@ -618,10 +626,10 @@ Generator `tools/standalone-voices.py` with OpenRA-AI `scripts/voice_engines.py`
 | `standalone/audio/voices/ienaata.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | I'll take that building. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ienaatb.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Going in. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ienaatc.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Securing the site. | Kokoro | Apache-2.0 |
-| `standalone/audio/voices/ienadia.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Aaaargh! | Chatterbox, seed 6 | MIT |
-| `standalone/audio/voices/ienadib.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Augh! | Chatterbox, seed 4 | MIT |
-| `standalone/audio/voices/ienadic.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Nooo! | Chatterbox, seed 4 | MIT |
-| `standalone/audio/voices/ienadid.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Ungh! | Chatterbox, seed 9 | MIT |
+| `standalone/audio/voices/ienadia.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Aaaargh! | Chatterbox, seed 7 | MIT |
+| `standalone/audio/voices/ienadib.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Augh! | Chatterbox, seed 3 | MIT |
+| `standalone/audio/voices/ienadic.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Nooo! | Chatterbox, seed 6 | MIT |
+| `standalone/audio/voices/ienadid.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Ungh! | Chatterbox, seed 4 | MIT |
 | `standalone/audio/voices/ienafea.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Taking fire! | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ienafeb.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | I need cover! | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ienafec.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Get me out of here! | Kokoro | Apache-2.0 |
@@ -635,9 +643,9 @@ Generator `tools/standalone-voices.py` with OpenRA-AI `scripts/voice_engines.py`
 | `standalone/audio/voices/iensata.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Taking over the building. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/iensatb.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Wiring it up now. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/iensatc.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | I'm going inside. | Kokoro | Apache-2.0 |
-| `standalone/audio/voices/iensdia.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Arrgh! | Chatterbox, seed 4 | MIT |
-| `standalone/audio/voices/iensdib.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Aaah! | Chatterbox, seed 3 | MIT |
-| `standalone/audio/voices/iensdic.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ohhh! | Chatterbox, seed 2 | MIT |
+| `standalone/audio/voices/iensdia.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Arrgh! | Chatterbox, seed 11 | MIT |
+| `standalone/audio/voices/iensdib.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Aaah! | Chatterbox, seed 10 | MIT |
+| `standalone/audio/voices/iensdic.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ohhh! | Chatterbox, seed 1 | MIT |
 | `standalone/audio/voices/iensdid.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ugh! | Chatterbox, seed 4 | MIT |
 | `standalone/audio/voices/iensfea.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | They're shooting at me! | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/iensfeb.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Cover me! | Kokoro | Apache-2.0 |
@@ -649,20 +657,20 @@ Generator `tools/standalone-voices.py` with OpenRA-AI `scripts/voice_engines.py`
 | `standalone/audio/voices/iensseb.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ready to work. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ienssec.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Give me a job. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ienssed.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Field engineer here. | Kokoro | Apache-2.0 |
-| `standalone/audio/voices/igenexpa.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Ugh! | Chatterbox, seed 5 | MIT |
-| `standalone/audio/voices/igenmela.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaaaah! | Chatterbox, seed 4 | MIT |
-| `standalone/audio/voices/igenmelb.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Arrgh! | Chatterbox, seed 9 | MIT |
-| `standalone/audio/voices/igenmelc.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaah! | Chatterbox, seed 4 | MIT |
-| `standalone/audio/voices/igenzapa.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaargh! | Chatterbox, seed 10 | MIT |
-| `standalone/audio/voices/igidia.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaaargh! | Chatterbox, seed 7 | MIT |
-| `standalone/audio/voices/igidib.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Augh! | Chatterbox, seed 10 | MIT |
-| `standalone/audio/voices/igidic.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Ungh! | Chatterbox, seed 4 | MIT |
+| `standalone/audio/voices/igenexpa.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Ugh! | Chatterbox, seed 11 | MIT |
+| `standalone/audio/voices/igenmela.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaaaah! | Chatterbox, seed 5 | MIT |
+| `standalone/audio/voices/igenmelb.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Arrgh! | Chatterbox, seed 11 | MIT |
+| `standalone/audio/voices/igenmelc.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaah! | Chatterbox, seed 12 | MIT |
+| `standalone/audio/voices/igenzapa.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaargh! | Chatterbox, seed 4 | MIT |
+| `standalone/audio/voices/igidia.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaaargh! | Chatterbox, seed 12 | MIT |
+| `standalone/audio/voices/igidib.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Augh! | Chatterbox, seed 8 | MIT |
+| `standalone/audio/voices/igidic.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Ungh! | Chatterbox, seed 10 | MIT |
 | `standalone/audio/voices/ispyata.wav` | spy (SpyVoice) | shared-spy (bm_fable) | On my way. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ispyatb.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Getting inside. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ispyatd.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Let's see what they know. | Kokoro | Apache-2.0 |
-| `standalone/audio/voices/ispydia.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Aaargh! | Chatterbox, seed 10 | MIT |
-| `standalone/audio/voices/ispydib.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Ungh! | Chatterbox, seed 6 | MIT |
-| `standalone/audio/voices/ispydic.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Aaah! | Chatterbox, seed 8 | MIT |
+| `standalone/audio/voices/ispydia.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Aaargh! | Chatterbox, seed 3 | MIT |
+| `standalone/audio/voices/ispydib.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Ungh! | Chatterbox, seed 3 | MIT |
+| `standalone/audio/voices/ispydic.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Aaah! | Chatterbox, seed 11 | MIT |
 | `standalone/audio/voices/ispyfea.wav` | spy (SpyVoice) | shared-spy (bm_fable) | My cover is blown! | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ispyfeb.wav` | spy (SpyVoice) | shared-spy (bm_fable) | They're onto me. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/ispymob.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Blending in. | Kokoro | Apache-2.0 |
@@ -681,7 +689,7 @@ Generator `tools/standalone-voices.py` with OpenRA-AI `scripts/voice_engines.py`
 | `standalone/audio/voices/vgramob.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Rolling. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/vgramod.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Moving out. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/vgramoe.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | On the way. | Kokoro | Apache-2.0 |
-| `standalone/audio/voices/vgramof.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Route set. | Kokoro | Apache-2.0 |
+| `standalone/audio/voices/vgramof.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | On course. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/vgrasea.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Vehicle ready. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/vgraseb.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Driver here. | Kokoro | Apache-2.0 |
 | `standalone/audio/voices/vgrasec.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Systems green. | Kokoro | Apache-2.0 |

@@ -6,7 +6,7 @@ Every track is made by ACE-Step 1.5 running locally (the BeTenshi music service 
 for each track (caption, tempo, key, length, seed, steps) and the service's reply metadata, then masters the take:
 
   1. loop: the take is cut to a whole number of bars and its first bars are crossfaded with the bars that follow
-     the cut, at the offset where the onset envelopes line up best, so the file repeats without a seam;
+     the cut; of the cuts whose onset envelopes line up best, the one whose wrap brings the smallest onset wins;
   2. loudness: one static gain to -14 LUFS integrated (EBU R128, ffmpeg's meter) and a stereo look-ahead
      limiter for the peaks (run circularly on loops, so the seam stays continuous); true peak <= -1 dBTP;
   3. Ogg Vorbis (q4, 44.1 kHz stereo), which the engine's OggLoader plays.
@@ -160,45 +160,67 @@ def onset_env(x: np.ndarray, hop: int = 512) -> np.ndarray:
     return np.maximum(0, np.diff(e, prepend=e[0]))
 
 
-def make_loop(x: np.ndarray, bpm: float, xfade_bars: int = 2) -> tuple[np.ndarray, dict]:
+def make_loop(x: np.ndarray, bpm: float) -> tuple[np.ndarray, dict]:
     """Loop of L samples: y = x[0:L] with y[0:xf] = x[0:xf] faded in over x[L:L+xf] faded out (equal power).
 
-    y[-1] = x[L-1] is followed on repeat by y[0] ~ x[L], so the wrap is continuous; L is a whole number of bars,
-    nudged by up to 60 ms to where the onset envelopes of x[0:xf] and x[L:L+xf] correlate best.
+    y[-1] = x[L-1] is followed on repeat by y[0] ~ x[L], so the wrap is continuous. Candidates: L a whole number of
+    bars, nudged by up to 60 ms; the 12 whose onset envelopes of x[0:xf] and x[L:L+xf] correlate best are built with a
+    2- and a 4-bar crossfade, and the loop whose wrap brings the smallest onset (spectral flux ranked against the
+    whole take, as `check` measures it) wins.
     """
     bar = 4 * 60.0 / bpm * RATE
     hop = 512
     env = onset_env(x, hop)
-    xf = int(round(xfade_bars * bar))
     # stay inside the body of the take: the composed ending (fade or silence) is dropped, so both the cut and the
     # crossfade source lie before the last second that is within 20 dB of the loudest one
     sec = len(x) // RATE
     prof = 20 * np.log10(np.sqrt((x[: sec * RATE].mean(axis=1).reshape(sec, RATE) ** 2).mean(axis=1)) + 1e-9)
-    body_end = (int(np.nonzero(prof >= prof.max() - 20)[0][-1]) + 1) * RATE
-    nbars = int((min(len(x), body_end) - xf) // bar)
-    best = None
+    body_end = min(len(x), (int(np.nonzero(prof >= prof.max() - 20)[0][-1]) + 1) * RATE)
+    f_track = np.sort(flux(x[:body_end].mean(axis=1)))
+    xf4 = int(round(4 * bar))
+    nbars = int((body_end - xf4) // bar)
+    cands = []
     for bars in range(nbars, max(nbars - 8, 8), -1):
         L0 = int(round(bars * bar))
         for d in range(-int(0.06 * RATE), int(0.06 * RATE) + 1, hop // 4):
             L = L0 + d
-            if L + xf > min(len(x), body_end):
+            if L + xf4 > body_end:
                 continue
-            a_ = env[: xf // hop]
-            b_ = env[L // hop: L // hop + xf // hop]
+            a_ = env[: xf4 // hop]
+            b_ = env[L // hop: L // hop + xf4 // hop]
             if len(b_) < len(a_):
                 continue
             a0, b0 = a_ - a_.mean(), b_ - b_.mean()
             score = float(np.dot(a0, b0) / (np.linalg.norm(a0) * np.linalg.norm(b0) + 1e-9))
-            score -= 0.01 * (nbars - bars)   # prefer keeping most of the take
-            if best is None or score > best[0]:
-                best = (score, L)
-    score, L = best
+            cands.append((score - 0.01 * (nbars - bars), score, L))
+    cands.sort(reverse=True)
+    picked = []
+    for c in cands:   # 12 best, at least a quarter bar apart
+        if all(abs(c[2] - q[2]) > bar / 4 for q in picked):
+            picked.append(c)
+        if len(picked) == 12:
+            break
+    best = None
+    for _, score, L in picked:
+        for xbars in (2, 4):
+            xf = int(round(xbars * bar))
+            t = np.linspace(0, np.pi / 2, xf)[:, None]
+            head = x[:xf] * np.sin(t) + x[L:L + xf] * np.cos(t)
+            w = 4096
+            wrap = np.concatenate([x[L - w:L].mean(axis=1), head[:w].mean(axis=1)])
+            fw = flux(wrap)
+            mid = len(fw) // 2
+            pct = float(np.searchsorted(f_track, fw[max(0, mid - 3): mid + 3].max()) / len(f_track) * 100)
+            key = (round(pct), -score, -L)
+            if best is None or key < best[0]:
+                best = (key, pct, score, L, xf, xbars)
+    _, pct, score, L, xf, xbars = best
     t = np.linspace(0, np.pi / 2, xf)[:, None]
     y = x[:L].copy()
     y[:xf] = x[:xf] * np.sin(t) + x[L:L + xf] * np.cos(t)
     return y, {"loop_seconds": round(len(y) / RATE, 2), "crossfade_seconds": round(xf / RATE, 2),
-               "loop_bars": round(L / bar, 2), "onset_alignment": round(score + 0.01 * (nbars - round(L / bar)), 3),
-               "source_seconds": round(len(x) / RATE, 2)}
+               "crossfade_bars": xbars, "loop_bars": round(L / bar, 2), "onset_alignment": round(score, 3),
+               "wrap_flux_percentile_estimate": round(pct, 1), "source_seconds": round(len(x) / RATE, 2)}
 
 
 def last_json(text: str) -> dict:
