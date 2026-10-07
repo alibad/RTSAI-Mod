@@ -1,6 +1,6 @@
 {
  "note": "Art delivered to the standalone build by the art agent (Phase 3). Original work made by project tools from hand-authored Blender models and procedural code. No Electronic Arts / Westwood file, pixel or palette is an input; stock Red Alert 2 files were read only on the developer's machine (RTSAI-Art reference-local/, git-ignored) to measure sizes, value structure and edge density.",
- "written": "2026-10-07T14:43:35.068278+00:00",
+ "written": "2026-10-07T14:44:03.525825+00:00",
  "rtsaiArtHead": "b6b62a9a",
  "approvals": {
   "base kit v2": "coordinator, 2026-10-07",
@@ -3181,8 +3181,8 @@
   },
   {
    "file": "units/units-sequences.yaml",
-   "bytes": 29824,
-   "sha256": "227485039eedd5f5d42cbfbfc17d5d3330bdd9363e13669da5caca8952f79924",
+   "bytes": 29784,
+   "sha256": "cec6c381a1492431faf50ddfcd94e95a6c4f3816735f61661503d18edc38480f",
    "origin": "generated",
    "generator": "tools/base_kit.py install-units (sequence facts of every installed shared unit)"
   },
