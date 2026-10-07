@@ -38,6 +38,30 @@ Rebased onto RTSAI-Mod main `57df33c` (the promoted art); measurements below wer
 - Checks: `--check-yaml` passes for both mods (the add-on with owned content mounted, all 28 maps); boot to the main
   menu with the "RTS AI" title; a Türkiye vs Hezbollah bot skirmish ran 5 minutes with 0 exceptions.
 
+### Phase 2: done [ran]
+
+Everything below is drawn or rendered by code in this repository; nothing reads an RA2 file.
+
+| Item | What it is | Tool |
+|---|---|---|
+| Shroud and fog | 48 edge masks for ShroudRenderer's extended index, soft smoothstep edges, tiles that partition pixels exactly; fog is the same set at 55% | `tools/standalone-art.py shroud` |
+| Temperate tileset | All 511 templates of the RA2-compatible table (same ids, sizes, terrain types, heights, ramps), rebuilt as geometry: engine ramp planes, cliff walls, material blending that continues across template seams. Rendered in Blender (Cycles, CPU), cut per tile pixel-exactly, quantized to one 254-colour palette. Plus 60 corner-transition templates (ids 1000+) for generated maps. 763 indexed sheets, 3.1 MB | `tools/standalone-terrain.py`, `tools/terrain/blender_batch.py` |
+| Minimap | Radar colours (MinColor/MaxColor) measured from our rendered tiles; map previews drawn the way `Map.SavePreview` draws them | same, and `tools/standalone-maps.py` |
+| Ore and gems | 20 ore and 12 gem variants at 12 densities, rendered in Blender with baked shadows | `tools/standalone-terrain.py --resources` |
+| Cursors | 117 cursor sequences (556 frames) and the rally point marker, with the standalone's own `cursors.yaml` | `tools/standalone-art.py cursors` |
+| Palettes | A project general palette replaces cameo, palette, mousepal, citytem, libtem, temperat and the rest; the terrain palette comes from the tileset. Two RA2 palette names remain for the Phase 3 deliveries: `anim.pal` (effects) and `unittem.pal` (until the base kit's `kitbase.pal` is wired) | `tools/standalone-art.py palettes`, `standalone/rules.yaml` |
+| Chrome | chrome, dialog, buttons, strategic, music player and load screen atlases redrawn in place (every chrome.yaml rectangle), dark steel with a teal or amber accent; the Allied eagle and Soviet hammer-and-sickle are replaced by an RTS AI radar-scope emblem | `tools/standalone-chrome.py` |
+| Orphan bits | The 20 unrecorded upstream files are gone: pips, build clock, construction-yard cameos, markers, bomb, classic cursors and cameo chevron redrawn; isodepth re-derived from its formula (identical indices: a lookup table); four edited RA2 sprites removed (the classic add-on uses the player's originals) | `tools/standalone-art.py bits` |
+| Maps | **Twin Fords** (point-symmetric: river, two fords, home ore, gems by the fords) and **Harbor Line** (mirror-symmetric: north sea for naval play, central lake with gems). Author: RTS AI (generated). The 27 Westwood maps are classic-only | `tools/standalone-maps.py` |
+
+Checks: `--check-yaml` and `--check-missing-sprites` pass for both mods (the add-on with owned content mounted);
+`--check-standalone` passes with two warnings (712 sound names unresolved, 980 placeholder files: the Phase 3
+debt). Bot matches with no exceptions: Israel vs Yemen on Twin Fords (6 min), Türkiye vs Iran on Harbor Line
+(5 min). Placeholder debt went from 1,933 to 980 files.
+
+Found on the way: the RA2 table's tile `ZOffset: -15` assumes TMP tiles with per-pixel depth; on flat tiles it hid
+the whole resource layer, so the generated tileset sets 0. Diagonal generated roads show a one-cell staircase edge.
+
 ### Deliverables for Phase 3
 
 The exact file lists are in `docs/standalone-deliverables.json` (`tools/standalone-deliverables.py`, from an audit of
@@ -51,7 +75,6 @@ its stand-in as soon as it lands.
 | Art agent: shared units | `mods/rtsai/standalone/units/` | MCV (amcv, smcv), harvester (cmin, harv), engineer, dog, spy, AA track (htk), amphibious transport (sapc), landing craft (lcrf): 38 EA sprite files and 12 EA voxel models (24 VXL/HVA files) |
 | Art agent: effects | `mods/rtsai/standalone/effects/` | 22 shared effect images (95 EA files: explosions, pips, rank, parachute, wake, smoke, crate, beacon, rally point, flameguy...) + 8 stock files named in modern-unit sequences (`fire01-03`, `gunfire`, `lgrysmk1`, `sgrysmk1`, `vtmuzzle`, `yuricntl`); `anim.pal` |
 | Audio agent | `mods/rtsai/standalone/audio/{sfx,ui,voices,music}/` | 77 weapon/impact SFX (+4 names missing even in RA2), 14 UI sounds, 108 stock-unit voices (+3 missing), new `music.yaml` (Ogg) |
-| This branch (Phase 2) | — | shroud/fog, temperate tileset, minimap colours, cursors, the 16 other palettes, chrome reskin, the 20 orphan bits, 2 original maps |
 
 Rules decisions taken with the art agent, to apply when the kit lands: the Soviet-side power plant, barracks,
 service depot and tech centre take the Allied footprints; the ore purifier, gap generator, spy satellite, weather
@@ -201,6 +224,12 @@ python tools/standalone-smoke.py menu --out <scratch>/menu
 python tools/standalone-smoke.py skirmish --observe --map tournament-2B \
     --bots Multi0:normal:china,Multi1:normal:iran --seconds 420 --out <scratch>/skirmish
 python tools/standalone-smoke.py skirmish --lua deploy.lua --bots Multi1:normal:iran --faction china --out <scratch>/player
+python tools/standalone-art.py all              # shroud/fog, cursors, palettes, orphan bits
+python tools/standalone-chrome.py                # UI atlases
+python tools/standalone-terrain.py               # Blender tileset (CPU, ~8 min); --resources for ore and gems
+python tools/standalone-maps.py                  # Twin Fords, Harbor Line
+python tools/build-classic-manifest.py           # after any manifest change (make test checks it)
+python tools/standalone-smoke.py skirmish --observe --map twin-fords --bots Multi0:normal:israel,Multi1:normal:yemen     --seconds 360 --out <scratch>/match       # --look X,Y holds the camera on a cell
 ```
 
 The worktree's `engine` is a junction to the art-preview worktree's built engine (gitignored). The C# on this branch
