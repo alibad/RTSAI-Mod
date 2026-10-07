@@ -85,6 +85,18 @@ garefn:
 			israel: refn-israel
 			yemen: refn-yemen
 			hezbollah: refn-hezbollah
+	Pluggable@purifier:
+		Offset: 1,1
+		Conditions:
+			purifier: purified
+		Requirements:
+			purifier: !build-incomplete && !purified
+	ResourceValueMultiplier@purifier:
+		Modifier: 125
+		RequiresCondition: purified
+	Power@purifier:
+		Amount: -50
+		RequiresCondition: purified
 
 narefn:
 	RenderSprites:
@@ -378,8 +390,84 @@ nawall:
 			yemen: wall-yemen
 			hezbollah: wall-hezbollah
 
+nanrct:
+	RenderSprites:
+		Image: hpwr-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: hpwr-china
+			iran: hpwr-iran
+			turkey: hpwr-turkey
+			saudi: hpwr-saudi
+			israel: hpwr-israel
+			yemen: hpwr-yemen
+			hezbollah: hpwr-hezbollah
+	Buildable:
+		Description: standalone-hpwr-description
+	Tooltip:
+		Name: standalone-hpwr-name
+	Building:
+		Dimensions: 2,2
+		Footprint: xx xx
+	HitShape:
+		Type: Rectangle
+			LocalYaw: -128
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 1024
+	FireWarheadsOnDeath:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
+
+# Economy compensation (coordinator, 7 October 2026): the refinery upgrade that replaces the ore purifier.
+# The heavy power plant is nanrct above; the refinery's socket is in garefn above.
+gapurifier:
+	Interactable:
+	Building:
+	FootprintPlaceBuildingPreview:
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+		Image: purifier-china
+		FactionImages:
+			china: purifier-china
+			iran: purifier-iran
+			turkey: purifier-turkey
+			saudi: purifier-saudi
+			israel: purifier-israel
+			yemen: purifier-yemen
+			hezbollah: purifier-hezbollah
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: standalone-purifier-name
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Prerequisites: garefn, gatech, ~structures.allies
+		Description: standalone-purifier-description
+	Plug:
+		Type: purifier
+
+Player:
+	DoctrineBaseBuilderBotModule@normal:
+		BuildingFractions:
+			gapurifier: 4
+	DoctrineBaseBuilderBotModule@medium:
+		BuildingFractions:
+			gapurifier: 4
+	DoctrineBaseBuilderBotModule@rush:
+		BuildingFractions:
+			gapurifier: 4
+	DoctrineBaseBuilderBotModule@turtle:
+		BuildingFractions:
+			gapurifier: 4
+	DoctrineBaseBuilderBotModule@naval:
+		BuildingFractions:
+			gapurifier: 4
+
 # Not part of the kit: out of the modern rosters in the standalone game (classic keeps them).
-gaorep: # Ore Purifier: +25% ore income
+gaorep: # Ore Purifier: +25% ore income (the refinery upgrade gapurifier replaces it)
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -392,10 +480,6 @@ gaspysat: # Spy Satellite: reveals the whole map
 		Prerequisites: ~disabled
 
 gaweat: # Weather Control: Allied-side damage superweapon (lightning storm, 15000-tick charge)
-	Buildable:
-		Prerequisites: ~disabled
-
-nanrct: # Nuclear Reactor: +2000 power for 1000 credits (the Soviet side keeps the 150-power plant)
 	Buildable:
 		Prerequisites: ~disabled
 
