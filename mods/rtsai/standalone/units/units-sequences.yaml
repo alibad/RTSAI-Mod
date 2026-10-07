@@ -415,6 +415,7 @@ dog-hezbollah:
 		Offset: 0, 0
 
 
+
 engineer-china:
 	Defaults:
 		Filename: engineer-china.shp
@@ -1032,6 +1033,7 @@ engineer-hezbollah:
 		Offset: 0, 0
 
 
+
 harv-china:
 	Defaults:
 		Filename: harv-china.shp
@@ -1108,6 +1110,7 @@ harv-hezbollah:
 	icon:
 		Filename: harv-hezbollahicon.png
 		Offset: 0, 0
+
 
 
 
@@ -1218,6 +1221,7 @@ htk-hezbollah:
 
 
 
+
 lcrf-china:
 	Defaults:
 		Filename: lcrf-china.shp
@@ -1294,6 +1298,7 @@ lcrf-hezbollah:
 	icon:
 		Filename: lcrf-hezbollahicon.png
 		Offset: 0, 0
+
 
 
 
@@ -1376,6 +1381,7 @@ mcv-hezbollah:
 
 
 
+
 sapc-china:
 	Defaults:
 		Filename: sapc-china.shp
@@ -1452,6 +1458,7 @@ sapc-hezbollah:
 	icon:
 		Filename: sapc-hezbollahicon.png
 		Offset: 0, 0
+
 
 
 
@@ -2070,6 +2077,5 @@ spy-hezbollah:
 	icon:
 		Filename: spy-hezbollahicon.png
 		Offset: 0, 0
-
 
 
