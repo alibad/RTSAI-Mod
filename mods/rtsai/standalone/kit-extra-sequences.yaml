@@ -151,71 +151,78 @@ unit-lcrf-hezbollah:
 	Inherits@kit: lcrf-hezbollah
 
 unit-spy-china:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-china
 
 unit-spy-iran:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-iran
 
 unit-spy-turkey:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-turkey
 
 unit-spy-saudi:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-saudi
 
 unit-spy-israel:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-israel
 
 unit-spy-yemen:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-yemen
 
 unit-spy-hezbollah:
-	Inherits@spy: spy
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-hezbollah
 
 unit-dog-china:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-china
 	jump:
 		Filename: dog-china.shp
 
 unit-dog-iran:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-iran
 	jump:
 		Filename: dog-iran.shp
 
 unit-dog-turkey:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-turkey
 	jump:
 		Filename: dog-turkey.shp
 
 unit-dog-saudi:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-saudi
 	jump:
 		Filename: dog-saudi.shp
 
 unit-dog-israel:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-israel
 	jump:
 		Filename: dog-israel.shp
 
 unit-dog-yemen:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-yemen
 	jump:
 		Filename: dog-yemen.shp
 
 unit-dog-hezbollah:
-	Inherits@adog: adog
+	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@kit: dog-hezbollah
 	jump:
 		Filename: dog-hezbollah.shp

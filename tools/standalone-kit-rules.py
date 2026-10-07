@@ -126,7 +126,10 @@ UNIT_INHERITORS = {
 }
 # The stock images whose effect sequences each kit unit image inherits (all name their own files).
 UNIT_SEQUENCE_LINKS = {"mcv": ["amcv"], "harv": ["cmin", "harv"], "htk": ["htk"], "sapc": ["sapc"], "lcrf": ["lcrf"],
-                       "spy": ["spy"], "dog": ["adog"], "engineer": ["engineer"]}
+                       # infantry: the shared templates only (the stock images also carry frame lists, e.g. the prone
+                       # Frames, that would clash with the kit's own frame numbers)
+                       "spy": ["^BasicInfantry", "^MindControllable"], "dog": ["^BasicInfantry"],
+                       "engineer": ["^BasicInfantry", "^MindControllable"]}
 # Kit sequences that take their frames from the kit file although the stock sequence of the same name names its
 # own file (the stock dog's jump is a separate adogp.shp): restated with the kit file after the inherits.
 KIT_FILE_SEQUENCES = {"dog": ["jump"]}
@@ -242,7 +245,7 @@ def kit_extra_sequences() -> str:
         for f in FACTIONS:
             if kit_has(f"{role}-{f}", units=True):
                 # a new image: the stock effects first, the kit image last, so the kit's own sequences (icon) win
-                out.append(f"unit-{role}-{f}:\n" + "".join(f"\tInherits@{s}: {s}\n" for s in stock)
+                out.append(f"unit-{role}-{f}:\n" + "".join(f"\tInherits@{s.lstrip('^')}: {s}\n" for s in stock)
                            + f"\tInherits@kit: {role}-{f}\n"
                            + "".join(f"\t{s}:\n\t\tFilename: {role}-{f}.shp\n" for s in KIT_FILE_SEQUENCES.get(role, []))
                            + "\n")
