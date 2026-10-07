@@ -121,8 +121,11 @@ def check(a) -> int:
     naval_tool = ROOT / "tools" / "naval-sfx.py"
     naval = naval_tool.read_text(encoding="utf-8") if naval_tool.exists() else ""
 
-    for p in sorted(MOD.rglob("*")):
+    for p in sorted((ROOT / "mods").rglob("*")):   # every mod this repository ships (rtsai, rtsai-classic, ...)
         if not p.is_file() or p.suffix.lower() not in AUDIO_EXT:
+            continue
+        if MOD not in p.parents:
+            problems.append(f"{p.relative_to(ROOT).as_posix()}: audio in a mod without a provenance record format")
             continue
         rel = p.relative_to(MOD).as_posix()
         if rel.startswith("standalone/audio/"):
