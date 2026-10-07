@@ -81,12 +81,12 @@ r2hzat:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 20
 		Description: levant-r2hzat-description
-	# 300 -> 350 (round 4); Salvo and swarm: 550, 95 -> 120 HP, RPG 80 -> 90 at 5 cells, stationary concealment
-	# (template) and Veteran from the barracks: an ambush team bought in fewer numbers. Round 5: 450 traded 1.31
-	# destroyed per credit; without concealment (trims 1-2) Hezbollah fell to 21% against America, whose bots field
-	# almost no detectors, while the modern factions all do; so the concealment stays and the price carries the trim.
+	# 300 -> 350 (round 4); Salvo and swarm: 500, 95 -> 120 HP, RPG 90 at 5 cells (less against heavy armour since
+	# trim 4), stationary concealment (template) and Veteran from the barracks: an ambush team bought in fewer
+	# numbers. Round 5: without concealment (trims 1-2) Hezbollah fell to 21% against America, whose bots field almost
+	# no detectors while the modern factions all do, so the concealment stays.
 	Valued:
-		Cost: 550
+		Cost: 500
 	Health:
 		HP: 120
 	Mobile:
@@ -96,7 +96,7 @@ r2hzat:
 	RevealsShroud:
 		Range: 6c0
 	GainsExperience:
-		ExperienceModifier: 330
+		ExperienceModifier: 300
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair

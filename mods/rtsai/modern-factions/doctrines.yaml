@@ -115,7 +115,9 @@ Player:
 	BotDoctrine@hezbollah:
 		Factions: hezbollah
 		Doctrine: salvo-and-swarm
-		AirDefenseShare: 24
+		# Round 5 trim 4: America's rocketeers and jets made a fifth of Hezbollah's losses; its escort gun trucks
+		# traded 1.4 per credit there, so the anti-air response is larger (24 -> 40).
+		AirDefenseShare: 40
 		InitialBuildOrder: napowr, nahand, narefn, naweap, narefn, naradr, r2hzrelay
 		SquadSizeModifier: 100
 		RoleShareModifiers:

@@ -5,12 +5,14 @@ R2HZMountainRifle:
 	Burst: 2
 	BurstDelays: 5
 	Report: ra2|modern-factions/audio/redsea-mountain-rifle.wav
-	# Salvo and swarm: 13 -> 16 with the 275-credit Veteran rifleman; 14 after balance trim 3 (round 5: 1.78
-	# destroyed per credit against the modern factions, 0.83 against America and Russia).
+	# Salvo and swarm: 13 -> 16 with the 275-credit Veteran rifleman (trim 3 tried 14 and was reverted: the
+	# riflemen's core stats carry the "powerful soldiers" identity, and it moved nothing).
 	Warhead@1Dam: SpreadDamage
-		Damage: 14
+		Damage: 16
 
-# Basic shoulder-fired anti-armour rocket (Salvo and swarm: 80 -> 90 damage, 4.5 -> 5 cells).
+# Basic shoulder-fired anti-armour rocket (Salvo and swarm: 80 -> 90 damage, 4.5 -> 5 cells). Balance trim 4: a
+# basic unguided rocket does less against heavy and medium armour (95 -> 65, 100 -> 80): the modern factions lead
+# with main battle tanks, and the AT team traded about twice as well against them as against America and Russia.
 R2HZYemenRPG:
 	Inherits: Maverick
 	Range: 5c0
@@ -30,8 +32,8 @@ R2HZYemenRPG:
 			Flak: 20
 			Plate: 25
 			Light: 110
-			Medium: 100
-			Heavy: 95
+			Medium: 80
+			Heavy: 65
 			Wood: 55
 			Steel: 45
 			Concrete: 35
@@ -155,14 +157,15 @@ R2HZRocketVolley:
 		MaximumLaunchAngle: 128
 		CruiseAltitude: 2c0
 		Inaccuracy: 1c256
+	# Balance trim 4: volume rockets shred infantry masses (None/Flak/Plate 60/65/70 -> 100)
 	Warhead@1Dam: SpreadDamage
 		Damage: 30
 		Spread: 384
 		Falloff: 100, 50, 20, 0
 		Versus:
-			None: 60
-			Flak: 65
-			Plate: 70
+			None: 100
+			Flak: 100
+			Plate: 100
 			Light: 100
 			Medium: 85
 			Heavy: 70
@@ -195,9 +198,9 @@ R2HZRailRockets:
 		Spread: 320
 		Falloff: 100, 50, 20, 0
 		Versus:
-			None: 80
-			Flak: 80
-			Plate: 80
+			None: 100
+			Flak: 100
+			Plate: 100
 			Light: 100
 			Medium: 70
 			Heavy: 50
