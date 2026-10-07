@@ -1,7 +1,7 @@
 {
  "note": "Art delivered to the standalone build by the art agent (Phase 3). Original work made by project tools from hand-authored Blender models and procedural code. No Electronic Arts / Westwood file, pixel or palette is an input; stock Red Alert 2 files were read only on the developer's machine (RTSAI-Art reference-local/, git-ignored) to measure sizes, value structure and edge density.",
- "written": "2026-10-07T14:44:03.525825+00:00",
- "rtsaiArtHead": "b6b62a9a",
+ "written": "2026-10-07T15:42:05.113512+00:00",
+ "rtsaiArtHead": "076a4bca",
  "approvals": {
   "base kit v2": "coordinator, 2026-10-07",
   "hpwr and refinery purifier": "coordinator, 2026-10-07",
@@ -3658,11 +3658,11 @@
   },
   {
    "file": "effects/oregath.png",
-   "bytes": 63802,
-   "sha256": "31fe9ffdb800c2e3996eecdf3806dcccaf2187222cb1865f21409d325a538249",
+   "bytes": 9131,
+   "sha256": "ded3a6ad29fd5f4111d7bebf96273017837255157c93dfdf4282b4e6d9df9385",
    "origin": "project-generated",
    "candidate": "units/fx/candidates/fx-v2/oregath.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "076a4bca",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
