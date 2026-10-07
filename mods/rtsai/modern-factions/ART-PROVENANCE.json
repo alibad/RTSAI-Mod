@@ -5,7 +5,7 @@
  "sources": {
   "RTSAI-Art (local)": {
    "repo": "RTSAI-Art",
-   "head": "a0bc681c3eb91768aeed540cc9e71fdc5f944dcf"
+   "head": "497dc5747c4bfe572c6c488c6c5a0988da8cf89f"
   }
  },
  "generators": {
@@ -22,8 +22,8 @@
   },
   "procedural-flag": {
    "kind": "flag atlases drawn with PIL primitives (rectangles, lines, ellipses, polygons)",
-   "license": "GPL-3.0-or-later (project code); national flags are public symbols",
-   "inputs": "None. Every pixel is drawn by OpenRA-AI scripts/build-levant-flags.py; the EA chrome is never copied."
+   "license": "GPL-3.0-or-later (project code); national flags are public symbols; the Hezbollah region is non-free artwork shipped by owner decision (7 October 2026, docs/art-provenance.md)",
+   "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Hezbollah region: its real flag (tools/flag-sources/hezbollah.svg, from Wikipedia, the website's copy), rasterized by tools/faction-flag.py. The EA chrome is never copied."
   }
  },
  "commercialRa2Data": "None found. Every unit sprite and cameo is a render of the project's own 3D model (a GLB generated locally from the project's concept picture), installed from a committed RTSAI-Art candidate with the same bytes; original RA2 files were read only locally to measure target statistics, never as input pixels; the flags are drawn from code. See docs/art-provenance.md.",
@@ -7838,30 +7838,30 @@
    "runtime": "referenced by rules/sequences"
   },
   "ui/faction-flags-2x.png": {
-   "sha256": "b9f756130eeca48119f81b79a546c878b45c3e272f4e1a70b5334351313ffaa6",
+   "sha256": "fba64cdcad2f9e9b217f8ddf6f1b9bbd27d720f56e18ce2db48c4b3fb31f96ee",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525",
+   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "ui/faction-flags-3x.png": {
-   "sha256": "1313d4000a9cf5e9bc481af4be2fd1c06978c30535a39404cfb86280e43315b3",
+   "sha256": "86db7b85bf7d9fcc8a028b79a727933cf7820b6ef685f92b7ebd41371a2917b8",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525",
+   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "ui/faction-flags.png": {
-   "sha256": "cbbf8ed38ed3e3630b00df8073a5bd408a9f39e6f48fcb60cebe6a4cf830842e",
+   "sha256": "7482c9c86787dc8a4ff21097c57da45ae74b9a5a97a3d767d2991b2944541075",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525",
+   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "vehicles/china-prerender.pal": {

@@ -22,7 +22,7 @@ record itself are out of scope.
 | Infantry (`infantry/`) | 28 SHP + 28 palettes | 10.0 MB | `tools/infantry_blender.py`, `infantry_sprite_post.py` | `sprite-v3-glb` |
 | Buildings and defenses (`buildings/`) | 25 SHP + 25 palettes | 5.7 MB | `tools/building_sprites.py` | `sprite-v3-glb` |
 | Build-menu cameos (`icons/`) | 122 PNG, 60x48 | 0.6 MB | `tools/cameo_render.py` | `cameo-v3-render` |
-| Lobby flags (`ui/`) | 3 PNG atlases | 0.03 MB | OpenRA-AI `scripts/build-levant-flags.py` | (drawn from code) |
+| Lobby flags (`ui/`) | 3 PNG atlases | 0.03 MB | OpenRA-AI `scripts/build-levant-flags.py`; Hezbollah: `tools/faction-flag.py` | (drawn from code; Hezbollah: its real flag, see below) |
 
 The owner approved all of it on 2026-10-06 ("I approve all the changes"). RTSAI-Art `review.json` records a "use"
 decision for each of the 122 units' battlefield model and build icon (RTSAI-Art 88a31bf, authored "owner bulk approval
@@ -103,6 +103,23 @@ and is never baked in.
 - **Buildings.** The identity panel described above.
 - **Infantry.** The helmet accent and faction uniforms.
 - **Cameos.** Each cameo shows the same model, so the same accents.
+
+### Faction flags
+
+The lobby and tooltip flags (`ui/faction-flags*.png`, chrome collection `flags`) are drawn from code, except
+Hezbollah's.
+- **Owner decision, 7 October 2026:** Hezbollah shows its real flag everywhere, the game included, as the public
+  website already does.
+- **Source:** `tools/flag-sources/hezbollah.svg`, the website's copy, from
+  https://upload.wikimedia.org/wikipedia/en/0/08/Flag_of_Hezbollah.svg (downloaded 4 October 2026).
+- **How it is built:** `tools/faction-flag.py hezbollah` rasterizes it with headless Chrome. It fits the flag
+  undistorted into the 2:1 region, extends the yellow field to the sides, and writes the 1x, 2x and 3x atlases.
+- **Status: non-free artwork,** not covered by any licence the project holds. The website's `docs/faction-art.md`
+  records the known risks, which the owner accepted: Hezbollah's symbols are restricted in Germany, Austria, the UK
+  and other countries that list it as a terrorist organisation. This note records that the game now ships the
+  flag too; it is not legal advice.
+- **To withdraw it:** restore the three atlases from git history before this change and re-run
+  `tools/art-provenance.py`.
 
 ## How main's art is laid out
 
