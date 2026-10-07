@@ -71,6 +71,12 @@ at their announcer folders instead of the stock `ceva` and `csof`. Every line is
 acknowledgement or report, like the other factions': no slogans, no religious or political phrases,
 no real people or operations.
 
+Hezbollah's FPV Team (Salvo and swarm, 7 October) adds a seventh set, `R2HezbollahfpvVoice`: four Lebanese Arabic
+lines and their English counterparts (`hz-fpv-*`), same generator, speaker (`hezbollah-infantry`) and field-radio
+chain. They were rendered on the CPU because the GPU was claimed by another session, so the Lebanese reference
+was bootstrapped again (seed 5, CER 0.07); the machine review rows are in `docs/voice-review.csv` and the native
+check is pending, like the other Lebanese lines. The FPV drones themselves are not voiced (not selectable).
+
 ### Engine check (5 October 2026)
 
 Before the Hebrew and Lebanese lines were made, every licensed engine that might speak the language

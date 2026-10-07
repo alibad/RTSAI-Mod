@@ -1,6 +1,6 @@
 {
  "schema": "rtsai-audio-provenance/1",
- "updated": "2026-10-06",
+ "updated": "2026-10-07",
  "policy": "Every shipped voice and announcer line is generated locally by an engine whose code, weights and voice allow redistribution of the output in a GPL game, commercial use included. No real person's voice is cloned: non-English speakers are cloned from English clips spoken by Kokoro voicepacks.",
  "reproduce": "OpenRA-AI: python scripts/generate-rtsai-mod-audio.py --mod <RTSAI-Mod>",
  "engines": {
@@ -611,6 +611,342 @@
    "channels": 1,
    "sample_width_bits": 16,
    "duration_seconds": 0.775,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-action-ar.wav",
+   "language": "ar-LB",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (cfg_weight 0.5) of a synthetic ar reference clip, itself cloned from the speaker's Kokoro English reference; no real person",
+    "reference": {
+     "language": "ar-LB",
+     "text": "القيادة، هون الوحدة الأمامية. نحنا ماسكين خط التلال والطريق مفتوحة. ناطرين أوامركن وجاهزين نتحرك عإشارتكن.",
+     "engine": "chatterbox",
+     "cfg_weight": 0.0,
+     "cloned_from": "the speaker's English reference",
+     "seed": 5,
+     "asr_transcript": "القيادة هوان الوحدة الأمامية. نحن ماسكين خط التلال والطريق مفتوحة. ناطلين أوامرك وجاهزين نتحرك عشارتك.",
+     "cer": 0.068
+    }
+   },
+   "text": "الإشارة منيحة.",
+   "role": "FPV drone team",
+   "translation": "Signal's good.",
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "license": "MIT",
+   "tempo": 1.0,
+   "seed": 1,
+   "takes": 2,
+   "qa": {
+    "asr_transcript": "الإشارة منيحة.",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "exaggeration": 0.5,
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 1.295,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-action-en.wav",
+   "language": "en-US",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack"
+   },
+   "text": "Signal's good.",
+   "role": "FPV drone team",
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "license": "Apache-2.0",
+   "tempo": 1.0,
+   "seed": null,
+   "takes": 1,
+   "qa": {
+    "asr_transcript": "Signal's good.",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 0.875,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-attack-ar.wav",
+   "language": "ar-LB",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (cfg_weight 0.5) of a synthetic ar reference clip, itself cloned from the speaker's Kokoro English reference; no real person",
+    "reference": {
+     "language": "ar-LB",
+     "text": "القيادة، هون الوحدة الأمامية. نحنا ماسكين خط التلال والطريق مفتوحة. ناطرين أوامركن وجاهزين نتحرك عإشارتكن.",
+     "engine": "chatterbox",
+     "cfg_weight": 0.0,
+     "cloned_from": "the speaker's English reference",
+     "seed": 5,
+     "asr_transcript": "القيادة هوان الوحدة الأمامية. نحن ماسكين خط التلال والطريق مفتوحة. ناطلين أوامرك وجاهزين نتحرك عشارتك.",
+     "cer": 0.068
+    }
+   },
+   "text": "طلعنا المسيرات.",
+   "role": "FPV drone team",
+   "translation": "Drones away.",
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "license": "MIT",
+   "tempo": 1.0,
+   "seed": 2,
+   "takes": 3,
+   "qa": {
+    "asr_transcript": "طلعنا المسيرات",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "exaggeration": 0.5,
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 1.225,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-attack-en.wav",
+   "language": "en-US",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack"
+   },
+   "text": "Drones away.",
+   "role": "FPV drone team",
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "license": "Apache-2.0",
+   "tempo": 1.0,
+   "seed": null,
+   "takes": 1,
+   "qa": {
+    "asr_transcript": "Drones away.",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 0.775,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-move-ar.wav",
+   "language": "ar-LB",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (cfg_weight 0.5) of a synthetic ar reference clip, itself cloned from the speaker's Kokoro English reference; no real person",
+    "reference": {
+     "language": "ar-LB",
+     "text": "القيادة، هون الوحدة الأمامية. نحنا ماسكين خط التلال والطريق مفتوحة. ناطرين أوامركن وجاهزين نتحرك عإشارتكن.",
+     "engine": "chatterbox",
+     "cfg_weight": 0.0,
+     "cloned_from": "the speaker's English reference",
+     "seed": 5,
+     "asr_transcript": "القيادة هوان الوحدة الأمامية. نحن ماسكين خط التلال والطريق مفتوحة. ناطلين أوامرك وجاهزين نتحرك عشارتك.",
+     "cer": 0.068
+    }
+   },
+   "text": "رايحين عالموقع الجديد.",
+   "role": "FPV drone team",
+   "translation": "Moving to a new position.",
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "license": "MIT",
+   "tempo": 1.0,
+   "seed": 5,
+   "takes": 6,
+   "qa": {
+    "asr_transcript": "رايحين على موقع الجديد",
+    "cer": 0.105
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "exaggeration": 0.5,
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 2.245,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-move-en.wav",
+   "language": "en-US",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack"
+   },
+   "text": "Moving to a new position.",
+   "role": "FPV drone team",
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "license": "Apache-2.0",
+   "tempo": 1.0,
+   "seed": null,
+   "takes": 1,
+   "qa": {
+    "asr_transcript": "Moving to a new position.",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 1.255,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-select-ar.wav",
+   "language": "ar-LB",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (cfg_weight 0.5) of a synthetic ar reference clip, itself cloned from the speaker's Kokoro English reference; no real person",
+    "reference": {
+     "language": "ar-LB",
+     "text": "القيادة، هون الوحدة الأمامية. نحنا ماسكين خط التلال والطريق مفتوحة. ناطرين أوامركن وجاهزين نتحرك عإشارتكن.",
+     "engine": "chatterbox",
+     "cfg_weight": 0.0,
+     "cloned_from": "the speaker's English reference",
+     "seed": 5,
+     "asr_transcript": "القيادة هوان الوحدة الأمامية. نحن ماسكين خط التلال والطريق مفتوحة. ناطلين أوامرك وجاهزين نتحرك عشارتك.",
+     "cer": 0.068
+    }
+   },
+   "text": "فريق المسيرات جاهز.",
+   "role": "FPV drone team",
+   "translation": "Drone team ready.",
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "license": "MIT",
+   "tempo": 1.0,
+   "seed": 1,
+   "takes": 2,
+   "qa": {
+    "asr_transcript": "فريق المسيرات جاهز.",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "exaggeration": 0.5,
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 2.045,
+   "synthetic_voice_disclosed": true,
+   "real_person_imitation": false,
+   "generator": "OpenRA-AI scripts/generate-levant-voices.py"
+  },
+  {
+   "filename": "hz-fpv-select-en.wav",
+   "language": "en-US",
+   "voice": {
+    "speaker": "hezbollah-infantry",
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack"
+   },
+   "text": "Drone team ready.",
+   "role": "FPV drone team",
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "license": "Apache-2.0",
+   "tempo": 1.0,
+   "seed": null,
+   "takes": 1,
+   "qa": {
+    "asr_transcript": "Drone team ready.",
+    "cer": 0.0
+   },
+   "generated_at": "2026-10-07",
+   "generator_version": "rtsai-voices-1",
+   "processing": "ffmpeg highpass=f=260,lowpass=f=4800,acompressor=threshold=-22dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; handheld field radio: squelch tone, noise floor and fades",
+   "sample_rate": 44100,
+   "channels": 1,
+   "sample_width_bits": 16,
+   "duration_seconds": 0.995,
    "synthetic_voice_disclosed": true,
    "real_person_imitation": false,
    "generator": "OpenRA-AI scripts/generate-levant-voices.py"
