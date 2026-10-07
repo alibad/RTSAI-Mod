@@ -83,8 +83,24 @@ edge (fixed in Phase 3).
 - **No placeholder left for anything the factions can field.**
   - The 980-file placeholder pack still answers the sequences of actors they cannot field, so every sequence keeps
     loading.
-  - `make test` runs `--check-standalone --strict`: any placeholder or missing sound for a fieldable actor, or any
-    sequence whose frames do not resolve, fails the build.
+  - `make test` runs `--check-standalone --strict`. These fail the build: any placeholder or missing sound for a
+    fieldable actor, any sequence whose frames do not resolve, and any palette served by the placeholder pack.
+  - **"Fieldable" covers everything a game can draw.** The check reads every string of the traits of:
+    - the factions' reachable actors;
+    - the World and Player actors;
+    - the actors on the standalone maps;
+    - the actors the World spawns, such as crates.
+
+    That holds whatever the field is called, and it follows nested warheads and weapons. An actor's look is its
+    render image per faction.
+  - The wider check found 27 more placeholder files that the earlier field-name rule missed. They are replaced by
+    code-drawn art:
+    - the scorch marks and craters left by explosions (the "flat yellow disc");
+    - the bonus crate, on land and afloat;
+    - the move-order flash.
+  - "player" and "effect" now use the kit and effects palettes.
+  - The green blocks in the earlier screenshots were the starting dog and engineer before their kit art landed. A
+    census of every actor type in a staged battle confirms none is left.
 - **Audio wired**: the audio agent's SFX, UI sounds, stock-unit voices and music (plus its polish pass: loop seams,
   dog barks, death cries). 0 unresolved sounds for what the 7 factions can field.
 - **Branded main menu** (`chrome/rtsai-mainmenu.yaml`, replacing the stock layout; same widget ids and logic):
@@ -97,9 +113,14 @@ edge (fixed in Phase 3).
     the mod assembly was built from (an MSBuild stamp), instead of `{DEV_VERSION}`;
   - the forum-account box is now a single small link at the top right;
   - no news box and no content manager.
-- **Roads without staircases**: generated roads now run only along the cell axes (2:1 on screen) and the screen
-  horizontal and vertical. Along those directions, whole rows of corners switch together, so each edge is one
-  straight run. Each road is a Z of those legs and stays symmetric (`tools/standalone-maps.py`).
+- **Roads, rivers and coasts without staircases** (`tools/standalone-maps.py`):
+  - **Roads** run along the cell axes (2:1 on screen) and the screen horizontal and vertical. Each road is a Z of
+    those legs and stays symmetric.
+  - **Twin Fords' river** banks and **Harbor Line's coast** use the cell axes only. A boundary along an axis crosses
+    the corner-transition templates through two adjacent corners and draws one straight edge. A horizontal or
+    vertical boundary alternates one- and three-corner templates: fine under a wide road, but a sawtooth along a
+    thin shore.
+  - The fords are cut along an axis, and the central lake is an octagon with clean sides.
 - `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
   first draw). `--list-placeholders` prints every placeholder still in use.
 
@@ -138,6 +159,15 @@ both:
 
 Every bot profile builds both buildings. The base builder now builds a plug only while some own building still
 accepts one.
+
+The Israeli and Saudi precision strikes (`AirstrikePower@falcon`, on the r2ilrecon and r2falcon commandos) had no
+bot rule either. The stock support-power module now aims them at the most valuable known enemy structures or
+vehicles: at least 1000 worth within 3 cells, and never near own units. In 6 test matches with the commandos'
+20-minute bot delay lifted, the replays hold 11 strike orders. With the delay, strikes stay rare, because the
+commandos come late.
+
+**Hezbollah's flag.** The lobby and tooltip flag is the real flag, set on RTSAI-Mod main (owner decision,
+7 October 2026; see `docs/art-provenance.md` for its non-free status and the risks the owner accepted).
 
 **Ore mines (found while measuring).** In the first smoke, bots stalled. Twin Fords and Harbor Line had no ore spawn,
 so the fields ran dry by about minute 10. Both sides then sat at 0 credits for the rest of the game, nobody reached a
