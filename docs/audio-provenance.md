@@ -1,5 +1,10 @@
 # Audio provenance
 
+Status, 2026-10-06: everything below ships on `main`. It arrived with the promotion of the owner-approved art preview,
+which also brought Israel's Hebrew and Hezbollah's Lebanese Arabic voices, announcers and call signs. `make.cmd test`
+on `main` decodes every clip through `CheckFactionAudio`, with no warnings [ran]. Art has its own record:
+[art-provenance.md](art-provenance.md).
+
 Every voice line and announcer clip that the modern factions ship is made locally by an engine whose
 code, weights and voice allow the generated audio to be redistributed in a GPL game, commercial use
 included. Per-line records are in

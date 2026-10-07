@@ -10,6 +10,38 @@
 How each result was established: **[ran]** means a command was run and its output observed.
 **[inferred]** means it was reasoned from code or config and not run.
 
+# Round C: the art promotion (2026-10-06/07)
+
+The owner approved the art preview ("I approve all the changes"), so it moved into `main` as the canonical modern-faction
+art. Commits: `d5f2ae4` merge of `rtsai/art-preview`, `845f630` fold of the overlay into `modern-factions/art-*.yaml`,
+`d28f033` removal of the superseded placeholder art (archived in RTSAI-Art `history/`), `57df33c` engine repin to
+68c1e95557, `34f2480` the new `ART-PROVENANCE.json` and guards on the pre-promotion art tools. RTSAI-Art's installers
+now write `main`'s canonical files (RTSAI-Art `ca917eb`); docs: [art-provenance.md](docs/art-provenance.md),
+[release-notes.md](docs/release-notes.md).
+
+## Verification on main [ran, 34f2480]
+
+| Check | Result |
+|---|---|
+| `make.cmd all`, `make.cmd test` | exit 0, 0 warnings, 0 errors (Fluent references, sequences for all three tilesets, `CheckFactionAudio`) |
+| `tools/art-provenance.py --check` | 307 files covered, none flagged; RTSAI-Web `sync-mod-art.mjs --check`: 304 files, 0 errors |
+| RTSAI-Art `tools/hit_lab.py run` (headless) | 191/191 pass: every armament of all 7 modern factions hits its target class, every defence dies to 6 tanks, all 6 designate tests show a marked-target bonus |
+| One windowed (rendered) bot match per faction, 3 min wall, Dustbowl | 7/7 ran to the end with no exception: 9-14 game minutes each, 8-14 modern unit types built per match, captures kept privately in RTSAI-Art `.cache/promotion-ingame` |
+| Balance smoke: first 36 matches of `r4-final` (land) and 12 of `r4-final-naval` | 48/48 complete, 0 crashes, 0 exceptions, 0 Lua errors; 44 conquests, 4 tick-cap draws; median 25.6 (land) and 22.0 (naval) game minutes. A smoke, too small to rate factions; round 4's 630 games are the balance record and the rules are unchanged since |
+| Release build (`build-release.ps1 -Version 0.2.0-alpha.2`, scratch, not published) | portable zip 203.5 -> 222.4 MB, installer 148.2 -> 163.6 MB vs 0.2.0-alpha.1. All of it is `mods/rtsai` (zipped 28.4 -> 47.3 MB, 1291 -> 1638 files); the engine, runtime and companion are unchanged. The zip ships exactly the tracked `mods/rtsai` files and no `art-preview` |
+
+The build reused 0.2.0-alpha.1's companion payload and was not launched; first-launch acceptance is due on the real
+release build.
+
+## Remaining (round C)
+
+- Push order: `rtsai/engine` (68c1e95557) to `alibad/OpenRA` first, then this `main`. Not approved yet.
+- RTSAI-Web: the Studio ran `sync:art` on `rtsai/integration` (56f1bf5, ce9b33d); `sync:content` and `sync:game-media`
+  remain for its owner. The Levant game-media sync reads `israel-art/` and `hezbollah-art/source-art-review.png`,
+  which left the mod (archived in RTSAI-Art `history/_shared/`).
+- RTSAI-Art: 28 uncommitted `voxel-v5-glb/meta.json` muzzle edits and 73 untracked candidate folders from other
+  agents (2026-10-06) were left alone.
+
 # Round B: five complete factions (Phase 2)
 
 Date: 2026-10-02. The mod's `main` has 6 new commits on 8928ebd (5d352f6 … this document), local only. The engine

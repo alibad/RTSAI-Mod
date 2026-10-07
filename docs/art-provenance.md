@@ -1,219 +1,171 @@
-# Art provenance: the five modern factions
+# Art provenance: the modern factions
 
-## Local Qilin replacement, 4 October 2026
-
-[ran] Qilin alone now uses the Forge's `voxel-v4-ra2-jade`: the existing Sunburst reference and TRELLIS mesh,
-revoxelized in the Forge, then an authored jade palette, dark running gear and connected player-colour panels.
-Its complete source chain and installed SHA-256 values are in `docs/art-sources/qilin-forge.json`.
-The palette and voxel headers contain authored colours only. Original RA2 data remains local and is not imported.
-The owner approved the Qilin-first light/scale experiment; release art approval is still pending.
-
-[ran] The source is RTSAI-Art local commit `6ac68b6`; 15/15 tank-family quality checks pass. The public Art Lab's
-publication guard intentionally has not been expanded to accept the new `forge-voxel` generator yet. Its current
-interactive settings/snapshot and the real-game visual comparison still need verification before publication.
-
-Date: 2026-10-02. The per-file record is `mods/rtsai/modern-factions/ART-PROVENANCE.json`, written by
-`tools/art-provenance.py`. This page explains it and lists what needs the owner's attention.
+Date: 2026-10-06, when the owner-approved art preview was promoted into `main`. The per-file record is
+`mods/rtsai/modern-factions/ART-PROVENANCE.json`, written by `tools/art-provenance.py`. This page explains how the art
+is made and where each record comes from.
 
 **[ran]** means a command was run and its output observed. **[inferred]** means it was reasoned from code, commit
 messages or notes and not run.
 
-## Scope
+## Scope and summary
 
-The review covers 307 files [ran]:
+Every art file under `mods/rtsai/modern-factions` is covered: 307 files, none flagged [ran:
+`tools/art-provenance.py --check`]. Rules, Fluent text, audio (see [audio-provenance.md](audio-provenance.md)) and the
+record itself are out of scope.
 
-- 87 build-palette cameos (`modern-factions/icons`);
-- 42 files in the five `*-art` folders: 35 SHP sprites and 7 palettes;
-- 173 voxel files (`modern-factions/voxels`): 86 VXL/HVA model pairs and `modern.pal`;
-- the 5 modern-faction flag regions of `mods/rtsai/uibits/buttons.png`.
+| Art | Files | Size | Made by (RTSAI-Art) | Candidate |
+|---|---:|---:|---|---|
+| Vehicles, ships, aircraft (`vehicles/`) | 69 SHP + 7 faction palettes | 7.5 MB | `tools/glb_prerender.py` | `sprite-v6-prerender` |
+| Infantry (`infantry/`) | 28 SHP + 28 palettes | 10.0 MB | `tools/infantry_blender.py`, `infantry_sprite_post.py` | `sprite-v3-glb` |
+| Buildings and defenses (`buildings/`) | 25 SHP + 25 palettes | 5.7 MB | `tools/building_sprites.py` | `sprite-v3-glb` |
+| Build-menu cameos (`icons/`) | 122 PNG, 60x48 | 0.6 MB | `tools/cameo_render.py` | `cameo-v3-render` |
+| Lobby flags (`ui/`) | 3 PNG atlases | 0.03 MB | OpenRA-AI `scripts/build-levant-flags.py` | (drawn from code) |
 
-Rules, Fluent text and audio are out of scope (the voices have their own provenance). Every file in scope is
-referenced by the mod's rules, sequences or chrome [ran: `art-provenance.py --check`].
+The owner approved all of it on 2026-10-06 ("I approve all the changes"). RTSAI-Art `review.json` records a "use"
+decision for each of the 122 units' battlefield model and build icon (RTSAI-Art 88a31bf, authored "owner bulk approval
+in chat, 2026-10-06"). Every installed file matches its candidate byte for byte, and every candidate is committed in
+RTSAI-Art [ran].
 
-## Summary
+## One chain for every unit
 
-| Art | Files | Origin | Status |
-|---|---|---|---|
-| Cameos | 87 | Qwen-Image, text-to-image, run locally | Prompt, seed, model revision, runtime, crop and hashes recorded |
-| Infantry and defence SHP sprites | 35 | Rendered from meshes written in Python | Clean |
-| Palettes (`*-art/*.pal`, `voxels/modern.pal`) | 8 | Computed by the same builders | Clean |
-| Voxel models (VXL/HVA) | 172 | Exported from the same meshes | Clean |
-| Lobby flags | 5 | Drawn with PIL primitives | Clean; redrawn pixel-identical [ran] |
+All 122 units come through the same chain [ran: every chosen candidate's `meta.json`]:
 
-**No file was found to contain, embed or derive from Red Alert 2 game data** (method below). No file is flagged
-in the record [ran].
+1. **Concept picture.** One picture per unit, made by the coding agent's built-in image generation (no paid API; the
+   tool does not report its model ID). The prompt describes the role and the shared finish: pale lit armour, dark
+   mechanical recesses, a restrained faction hue. Candidate `units/<actor>/candidates/cameo-v1-role-rebuild/`.
+2. **3D model.** TRELLIS.2 image-to-3D, run locally (`trellis-cli`, seed 42, BiRefNet background removal), on that
+   picture: `units/<actor>/candidates/mesh-v1-role-rebuild/mesh.glb`. Its SHA-256 is in each record's `geometry`.
+3. **Route.** Blender (CPU) splits, scales and paints the GLB with the project's material classes and faction colours
+   and renders it for the game. The routes below differ only in what they render.
+4. **Install.** RTSAI-Art's installer copies the candidate's files into `modern-factions/` and writes that route's
+   `art-*.yaml` block. `tools/art-provenance.py` then records the file, its candidate, the RTSAI-Art commit that holds
+   the same bytes, and the GLB.
 
-## 1. Cameos (`icons/`, 60×48 RGB PNG)
+Original Red Alert 2 files were never an input to any of these steps. The routes read stock RA2 art only on this
+machine (RTSAI-Art `reference-local/`, ignored by git) to measure targets: value range, local contrast, silhouette rim
+and on-screen size [ran: `glb_prerender.py` and `cameo_render.py` gates]. At run time the vehicle effects layer names
+stock RA2 effect sprites (gun flash, launch puff, smoke, fire, explosions). They load from the player's own RA2
+install and are not shipped.
 
-The sidebar draws cameos at `IconSize: 60, 48` (`chrome/ingame-player.yaml`). Every one of the 87 buildable modern
-actors has its own cameo, and every cameo is used. The Saudi `strike` support power reuses `r2f15sa.png` [ran].
+### Vehicles, ships and aircraft: GLB to prerendered sprite
 
-### What they replaced
+`tools/glb_prerender.py` renders the GLB through OpenRA's own model camera in Blender Cycles as geometry passes and
+lights them in Python with OpenRA's voxel light formula. The stock RA2 light is ambient -0.5, diffuse 1.4, on the
+voxel light vector. Each faction's sprites therefore light like a voxel unit would. The result is supersampled down and
+quantized into one palette per faction (`<faction>-prerender.pal`, remap 16-31 for the player colour).
 
-All 87 were painted on 2026-10-02 with `tools/paint-cameos.py` [ran]. Each icon's `replaced` field in the JSON
-says what was there before.
+- **SHP layout.** 32 facings per sequence: body, turret, spinning rotors and radars as extra frames, still variants for
+  landed and undeployed states, empty-launcher bodies for the Yemen MLR and Hezbollah rocket truck while they reload,
+  and sun-shadow frames for ground units (aircraft use `WithShadow`).
+- **Size.** The on-screen area is matched to the unit's class size target, within about 2%.
+- **Muzzles.** Every armament's `LocalOffset` is measured on the renders (`tools/muzzle_fit.py`), so shots leave the
+  drawn barrel tip.
+- **Animation layer.** `tools/anim_fx.py`: damage smoke and fire by damage state, death explosions sized by class
+  (effect-only weapons, no damage), gun flashes and launch puffs.
+- **Haiwang carrier drones.** They share the Cloud drone's sprite.
 
-- **75 placeholders.** These were single renders of the same meshes as the battlefield sprites and voxels.
-  - 44 came from China, Iran and Türkiye (`scripts/ra2_{china,iran,turkey}_assets.py`, OpenRA-AI main).
-  - 31 were every Saudi and Yemeni cameo (`scripts/ra2_red_sea_assets.py`, codex/ra2-red-sea d96247a).
+### Infantry: rigged GLB
 
-  [ran: hash match, commit log]
-- **12 painted cameos.** Qilin, Lynx, Mantis, Cloud, Karrar, Raad, Fajr, Mohajer, Bozkır, Yıldırım, Sancak and Kuzgun
-  were cut from `OpenRA-AI/assets/ra2-modern-factions/{china,iran,turkey}-portraits-v1.png`.
-  - Those portraits were made on 2026-09-03 with Codex's built-in OpenAI image tool.
-  - Their model, seed and per-image prompts were never recorded. The prompt cited
-    `assets/china-faction/icon-sources/china-unit-cameo-atlas-v1.png`, which has no provenance note of its own.
-  - In the palette they were darker, smaller in frame and padded with side bars, so the China, Iran and Türkiye
-    tabs mixed two looks [ran: windowed captures].
-  - Repainting them makes every cameo traceable and the set uniform.
-- **Missing:** none [ran].
+The infantry route rigs each soldier's GLB, poses and animates it in Blender, and renders every action per facing:
+stand, run, fire, prone, idle and two deaths. Faction uniforms come from `tools/infantry_factions.json`: camouflage on
+arms and legs, gear colour, helmet or head wrap. A faction accent sits on every helmet. Launcher teams fire from the
+muzzle flash drawn in their sprites, prone too.
 
-### How they are painted
+### Buildings and defenses
 
-- **Prompt.** One shared style wraps a per-unit identity from `tools/cameo-subjects.json`.
-  - Each identity was written from the unit's rules, Fluent name and description, and its catalog entry where it
-    has one.
-  - For the 12 repaints, the identities also use the descriptions in `OpenRA-AI/assets/ra2-modern-factions/README.md`.
-  - Examples: the Bradley's 25 mm turret with its TOW box, CAESAR's truck-mounted 155 mm gun with rear spade, Fajr's
-    tilted grid rocket rack, Cloud as a tailless flying wing, and Sahaab as an uncrewed explosive boat.
-- **Style.** A painted three-quarter view under a warm key light and cool rim light, on a dark teal-charcoal studio
-  background. The prompt never names a game or a publisher.
-- **Negative prompt.** It excludes text, logos, insignia and flags.
-- **Generation.** 800×640 master, 28 steps, true CFG 4.0, seed `crc32(actor) mod 1e9 + variant − 1`.
-  - 27 masters came from the shared Qwen-Image server, with whole-model offload.
-  - Another job then filled most of the GPU, and the server slowed to minutes per step. The other 60 were made by
-    `paint-cameos.py --backend local`, which loads the same model, revision and fp8 quantization in-process with
-    block-level group offload.
-  - Each cameo records its `runtime`.
-- **Review [ran].** Every master and cameo was checked by eye for a correct unit type and for text or logos.
-- **Rerolls.** 14 first masters were rejected and rerolled with a new seed: 10 once and 4 twice. Some subjects were
-  reworded for the rerolls. The faults were:
-  - two submarines drawn with cloth sails;
-  - the Guard Tower drawn as a medieval castle;
-  - the Toufan drawn with an Apache's mast radar;
-  - the Yemeni coastal battery drawn as a tracked vehicle;
-  - the Mantis drawn with a tank gun;
-  - the Cloud drawn with tail fins;
-  - six masters framed as rounded "app icons", and one with a UI badge.
+`tools/building_sprites.py` renders each building's GLB isometrically on the stock cell grid. Every building gets
+damaged and critical states and a build-up animation. Armed buildings also get turret facings and firing frames, and
+bunkers fire from their slit. Each building carries the faction identity panel in its vehicle route's signature
+colours.
 
-  Rerolled cameos carry `variant` > 1 in the record.
-- **Post-processing, to 60×48.** A deterministic subject-aware 5:4 crop keeps 55–92% of the master width. It is
-  followed by a Lanczos downscale, then a light contrast and unsharp pass so the silhouette reads at native size.
-- **Records.** For each cameo, `tools/cameo-generation.json` and the JSON hold:
-  - the exact prompt and negative prompt;
-  - the seed, steps, CFG and master size;
-  - the model, its revision and the runtime;
-  - the master's SHA-256, the crop box and the cameo's SHA-256.
+### Cameos
 
-  The masters themselves are not in the repository.
+`tools/cameo_render.py` renders each unit's installed model (or its building job or infantry rig) in perspective,
+reduces it to 60x48 and adds a stock-style name bar.
 
-### Qwen-Image licence: Apache-2.0 [ran]
+- **Name bar text.** The unit's in-game English name: its Tooltip Fluent string, or the short labels in RTSAI-Art
+  `tools/cameo_names.json` for long names.
+- **Font: Kenney Pixel** (`kenpixel.ttf`) by Kenney (www.kenney.nl), **CC0 1.0** Universal Public Domain
+  Dedication. The licence notice is kept beside the font in RTSAI-Art `tools/fonts/kenney/LICENSE.txt`. Only the
+  rendered cameos ship; the font file does not. No EA font is used.
+- **Unlabelled variants.** Kept for localisation in each candidate folder (`cameo-nolabel.png`).
+- **Support powers.** Saudi Arabia's and Israel's strike powers reuse the F-15SA and Falcon cameos.
 
-- **Model.** `Qwen/Qwen-Image`, revision `75e0b4be04f60ec59a75f475837eced720f823b6`, recorded for every
-  generation: from the server's `/health`, or from the local snapshot for in-process runs.
-- **Model card.** The local snapshot's `README.md` (sha256 `c70f9851…`) has the front matter `license: apache-2.0`
-  and the section "License Agreement: Qwen-Image is licensed under Apache 2.0."
-- **LICENSE file.** The snapshot's `LICENSE` (sha256 `832dd9e0…`) is the Apache License 2.0 text.
-- **Hub.** The model card on huggingface.co/Qwen/Qwen-Image has the same front matter, read on 2026-10-02.
-- **Not the same as two other local models.** Qwen-Image-2512 is a different checkpoint. `qwen-image-2.1` on this
-  machine is non-commercial only. Neither was used.
-- **Runtime.** Both runtimes use diffusers with the transformer and text encoder quantized to fp8 weight-only
-  (torchao): the shared server `hq/quote-forge/server/qwen_image.py` and `paint-cameos.py --backend local`.
-- **Input.** Text only: no reference, init or control image was given to the model.
+### Faction accents
 
-## 2. Sprites, palettes and voxels
+A unit's faction is shown by restrained, fixed accents. The lobby/player colour is a separate remap (indices 16-31)
+and is never baked in.
 
-- **Sources.** Every file matches, byte for byte, a file in the product's `apps/installer/ra2/modern-factions` [ran].
-  - China, Iran and Türkiye match OpenRA-AI main at e1a43fa.
-  - Saudi Arabia and Yemen match codex/ra2-red-sea at b3b0ebd. Their art is committed there, in d96247a.
-- **Commits.** The JSON records the last commit that touched each file.
-- **How the builders work.** They build each unit from boxes, cylinders and polygons written in Python
-  (`scripts/*_directional_assets.py`, `red_sea_directional_vehicle.py` and the `ra2_*_assets.py` files). They then
-  render 48×48 infantry and 96×96 defence SHPs, or voxelize the same meshes into RA2 VXL/HVA.
-- **Palettes.** They are computed from the project's material colours. They reserve the RA2 remap ramp 16–31.
-- **External data.** The builders read no image, SHP, VXL, HVA, palette or MIX file [ran]. A grep of the ten
-  builder modules and the modules they import finds no such reads:
-  - `ra2_faction_voxels`, `ra2_{china,iran,turkey,red_sea}_assets`;
-  - `{china,iran,turkey}_directional_assets`, `red_sea_directional_vehicle` and `red_sea_infantry`.
+- **Vehicles.** Flat accent panels and bands from each faction's palette.
+- **Buildings.** The identity panel described above.
+- **Infantry.** The helmet accent and faction uniforms.
+- **Cameos.** Each cameo shows the same model, so the same accents.
 
-  The only external data is the RA2 voxel normal-vector table. It is parsed from OpenRA's own GPL source
-  `VoxelNormalsPalette.cs`; it is format data, not art.
-- **Font.** `FreeSansBold.ttf` is used only for the faction preview sheets, which are not in the mod.
-- **Manifests.** The build manifests (`*-art/manifest.json`, `voxel-manifest.json`, `red-sea-voxel-manifest.json`)
-  stay in the product checkouts; `art-provenance.py` reads the voxel manifests from there. Their SHA-256 values
-  matched the shipped files before the manifests were removed from the mod [ran].
-- **Re-running the builders.** This was not part of the review [inferred: deterministic code].
+## How main's art is laid out
 
-## 3. Lobby flags
+The art lives in its own canonical files, one block per actor per route. The faction rules (`<faction>-roster.yaml`
+and friends) hold gameplay and no art of their own:
 
-- **Builder.** `OpenRA-AI/scripts/build-red-sea-ui.py` draws the China, Iran, Türkiye, Saudi and Yemen flags with
-  rectangles, lines, ellipses and star polygons.
-- **How they reached the mod.** The script drew them into the fork's `glyphs-redsea.png`.
-  `tools/port-modern-factions.py` then copied them into the bottom row of `uibits/buttons.png`.
-- **Redraw check [ran].** A fresh draw of all five matches the mod's regions pixel for pixel. Every pixel of each
-  region is drawn by the script, so nothing underneath leaks through. The Saudi shahada is an abstract two-line
-  mark, not lettering.
+| File (in `modern-factions/`) | Contents | Written by (RTSAI-Art) |
+|---|---|---|
+| `art-vehicles.yaml`, `art-vehicles-sequences.yaml` | prerender palettes, render rules, measured muzzles, sequences | `tools/vehicle_install.py` |
+| `art-vehicles-fx*.yaml` | damage, death and muzzle effects, effect-only weapons | `tools/anim_fx.py` |
+| `art-infantry.yaml`, `art-infantry-sequences.yaml` | palettes, render rules, sequences | `tools/infantry_install.py` |
+| `art-buildings.yaml`, `art-buildings-sequences.yaml` | palettes, render rules, sequences | `tools/building_sprites.py install` |
+| `art-icons-sequences.yaml` | every modern cameo | `tools/cameo_render.py install` |
+| `art-voxels.yaml` (on first use) | model sequences for a unit installed on the bold voxel fallback | `tools/glb_route_install.py` |
 
-## 4. Commercial Red Alert 2 check
+RTSAI-Art `tools/mod_target.py` holds this layout. Reinstalling all 28 infantry, all 25 buildings, all 122 cameos and
+the Cloud (with the Haiwang drones) reproduced these files byte for byte, and the effects layer regenerated whole [ran].
 
-- **Cameos.** They are text-to-image, the prompts never name a game or a publisher, and the model received no image
-  input.
-- **Sprites and voxels.** They come from code-defined meshes, and their builders read no game files.
-- **Flags.** They redraw identically from code.
-- **Repository.** No `.mix` file is tracked [ran: `git ls-files`].
-- **Visual comparison.** A visual comparison against the owned RA2 cameos was not made, because nothing in the
-  pipeline could carry them in.
+## The record and the website guard
 
-## 5. Removed, kept and notes
+Each `ART-PROVENANCE.json` entry has:
 
-- **Removed from the mod.** 23 files that nothing referenced [ran]:
-  - 16 developer review sheets (`*-art/*-review.png`, 343 KB);
-  - the five `*-art/manifest.json`;
-  - `voxel-manifest.json` and `red-sea-voxel-manifest.json`.
+- `sha256`, `type`, `origin` (`rendered-from-project-geometry`, or `procedural` for palettes and flags) and
+  `generator` (`project-geometry`, `procedural-flag`);
+- the candidate id and route;
+- `source`: RTSAI-Art path and commit, verified to hold the same bytes;
+- `geometry`: the GLB path and SHA-256, the TRELLIS.2 run and the concept candidate;
+- for cameos, the name bar and font;
+- whether the game references the file.
 
-  A full re-port with `tools/port-modern-factions.py` would copy them back from the product. Delete them again,
-  or teach the port to skip them.
-- **Kept although the game does not load them.**
-  - The five `*-replacements.yaml` files are inputs that `port-modern-factions.py` merges into
-    `shared-replacements.yaml` on every run [ran: `combined_replacements` reads them from the mod].
-  - `ART-PROVENANCE.json` itself.
-- **Small marks in the masters.**
-  - Some infantry masters show a national-flag patch on a sleeve or launcher, despite the negative prompt.
-  - A few have a pseudo-signature scribble in a corner. The crop keeps at most 92% of the master, which drops most
-    corners.
-  - Neither is legible at 60×48, and neither is a real logo or text.
+The website's Art Lab (`RTSAI-Web npm run sync:art`) publishes only files recorded here with a matching SHA-256 [ran:
+304 files for 122 actors, `--check` exit 0].
 
-## 6. Acceptance [ran]
+After any install, re-run:
 
-- **Build and lint.** `make all` exits 0 with 0 warnings and 0 errors. `make test` exits 0 with no warnings.
-- **Provenance check.** `tools/art-provenance.py --check` reports that all 307 files are covered and none are
-  flagged.
-- **Windowed matches.**
-  - Setup: the dev build at 1280×800, with owned RA2 data copied into an isolated support dir and deleted
-    afterwards. Each match was a scratch copy of DEFCON 6 that gives the player a production base without a
-    construction yard.
-  - Each match ran 170 s with 0 exceptions.
-  - `CaptureCompanionFrame` recorded the build palette for all five factions with the 75 first cameos, and the
-    China Vehicle tab again after the 12 repaints. The frames contain RA2 UI, so they are not in the repository.
+```
+python tools/art-provenance.py           # rebuild the record (needs ../RTSAI-Art and ../OpenRA-AI)
+python tools/art-provenance.py --check   # non-zero exit: uncovered, unknown origin, unreferenced or stale files
+```
 
-## 7. Outside this scope (seen in passing, not reviewed)
+## What it replaced
 
-- The stock maps carry `Author: Westwood Studios` (converted RA2 maps inherited from the upstream OpenRA RA2 mod).
-- The rest of `uibits/buttons.png` is upstream RA2-mod chrome.
+The promotion removed the pre-promotion placeholder art from the mod:
+
+- 114 procedural voxel models (VXL/HVA) and their palettes;
+- 53 procedural infantry and defense SHPs with the faction palettes;
+- the Israel/Hezbollah animation sheets;
+- the 87 Qwen-Image cameos from 2026-10-02 and the 35 Israel/Hezbollah placeholder cameos;
+- the unused Levant preview pictures.
+
+The Qilin's jade voxel pilot (2b5218c) went too. RTSAI-Art `history/` archives every one of these files, plus every
+intermediate version the art preview installed, with a manifest per unit: what it was, which release used it
+(0.2.0-alpha.1 shipped 331 of them), what superseded it, and its generator and provenance record. 1640 entries in all.
+Every archived voxel version has its HVA and palette beside it, so it still renders. The previous record and this
+page's previous version are in RTSAI-Art `history/_records/` and in this repository's history (`efb197d`).
 
 ## Reproduce
 
 ```
-# needs Pillow, numpy and requests (e.g. ../OpenRA-AI/.venv) and the Qwen-Image server on :8021
-python tools/paint-cameos.py generate --work <dir>                     # masters, variant 1
-python tools/paint-cameos.py generate --work <dir> --only r2x --variant 2
-# or in-process (torch, diffusers, transformers, torchao; the model in the local HF cache):
-python tools/paint-cameos.py generate --backend local --work <dir>
-python tools/paint-cameos.py install  --work <dir> --pick r2x=2         # 60x48 icons + tools/cameo-generation.json
-python tools/art-provenance.py                                          # rebuild ART-PROVENANCE.json
-python tools/art-provenance.py --check                                  # covered, referenced, unflagged, current
-# art-provenance.py reads ../OpenRA-AI and ../OpenRA-AI-wt-ra2-red-sea (--product, --red-sea) to match sources
+# RTSAI-Art (OpenRA-AI venv; Blender 5.2 on PATH for the render steps; CPU only)
+python tools/glb_prerender.py <actor>                       # a vehicle candidate (sprite-v6-prerender)
+python tools/vehicle_install.py install <actor> --route sprite && python tools/anim_audit.py dump && python tools/anim_fx.py write
+python tools/infantry_install.py <actor> ...                 # sprite-v3-glb infantry
+python tools/building_sprites.py units/<actor>/candidates/sprite-v3-glb --stage install
+python tools/cameo_render.py install
+# RTSAI-Mod
+python tools/art-provenance.py && python tools/art-provenance.py --check
+./make.cmd test
 ```
-
-Seeded generation on the same model revision reproduces closely. It may not reproduce byte for byte across GPUs,
-drivers or library versions [inferred]. The recorded master hash is what the installed cameo was made from.

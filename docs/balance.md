@@ -1,6 +1,7 @@
 # Bot-vs-bot balance evidence
 
-Round 4: 2026-10-06, on the art preview. Branch `rtsai/art-preview` (local, not pushed), rules and bot code e2c07b0,
+Round 4: 2026-10-06, on the art preview, now promoted to `main` with identical rules, weapons and bot code (a 48-match smoke
+on `main`, 0 errors: MIGRATION.md round C). Branch `rtsai/art-preview` (local, not pushed), rules and bot code e2c07b0,
 engine `rtsai/engine` 68c1e95557 (local-only: missiles fired over raised ground or ramps hit, and the `WRot.SLerp`
 crash of round 3 is fixed). Round 3 (same day, rules a47654a) and the round-2 and round-1 records follow.
 
