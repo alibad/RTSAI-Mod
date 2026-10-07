@@ -125,6 +125,10 @@ edge (fixed in Phase 3).
     at the 40-minute cap (e2efdd2, 252 games). A drawn game there is not a stall but a grind at the two fords:
     income holds at about 2,800 a minute, and both sides spend it all. The central crossing has no road, because a
     road there would cross the home ore. Ore and gems are unchanged (306 resource cells).
+    - With the central crossing and the round-5 candidate rules, Twin Fords draws fell from 38% to 19%, and the median
+      game from 32.9 to 25.1 minutes. First-slot score was 47%, so the map stays fair.
+    - The two gem fords were then widened by 50% (half-width 2.6 to 3.9 cells), so the combined draw rate lands
+      safely under 15%.
 - `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
   first draw). `--list-placeholders` prints every placeholder still in use.
 

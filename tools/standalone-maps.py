@@ -279,9 +279,11 @@ def twin_fords():
     dist = poly_dist(P, river)
     X, Y = cell_xy(P)
     in_ford = np.zeros(dist.shape, bool)
-    for f in fords + [0.0]:                          # the two fords plus a central crossing at the symmetry centre
+    # the two gem fords (half-width 3.9 cells, widened 50% after the balance agent's draw measurements) and the
+    # central crossing (2.6), each cut along the y axis: straight ford edges
+    for f, half in [(f, 3.9) for f in fords] + [(0.0, 2.6)]:
         fx, fy = cell_xy(centre(f))
-        in_ford |= np.abs(X - fx) < 2.6            # a crossing cut along the y axis: straight ford edges
+        in_ford |= np.abs(X - fx) < half
     water = (dist < 3.4) & ~in_ford
     sand = (dist < 3.4) & in_ford
     noise = smooth_noise(P[..., 0], P[..., 1], 3, 9.0)
