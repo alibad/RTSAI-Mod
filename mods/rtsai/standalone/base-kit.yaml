@@ -563,6 +563,32 @@ lcrf:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
 
+spy:
+	RenderSprites:
+		Image: unit-spy-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: unit-spy-china
+			iran: unit-spy-iran
+			turkey: unit-spy-turkey
+			saudi: unit-spy-saudi
+			israel: unit-spy-israel
+			yemen: unit-spy-yemen
+			hezbollah: unit-spy-hezbollah
+
+dog:
+	RenderSprites:
+		Image: unit-dog-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: unit-dog-china
+			iran: unit-dog-iran
+			turkey: unit-dog-turkey
+			saudi: unit-dog-saudi
+			israel: unit-dog-israel
+			yemen: unit-dog-yemen
+			hezbollah: unit-dog-hezbollah
+
 r2kunlun:
 	RenderSprites:
 		Image: r2kunlun

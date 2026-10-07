@@ -111,6 +111,10 @@ UNITS = {
             "\tArmament@secondary:\n\t\tLocalOffset: 489,-244,212, 489,244,212\n"),
     "sapc": ("sapc", ["WithVoxelBody"], [], ""),
     "lcrf": ("lcrf", ["WithVoxelBody"], [], ""),
+    # infantry keep their stock body traits (WithInfantryBody, the spy's disguising body): only the image changes
+    "spy": ("spy", None, [], ""),
+    "dog": ("dog", None, [], ""),
+    "engineer": ("engineer", None, [], ""),
 }
 # Actors that inherit a converted unit but keep their own look.
 UNIT_INHERITORS = {
@@ -121,7 +125,11 @@ UNIT_INHERITORS = {
     "amcv.colorpicker": "\tRenderSprites:\n\t\tPalette: kitcolorpicker\n",
 }
 # The stock images whose effect sequences each kit unit image inherits (all name their own files).
-UNIT_SEQUENCE_LINKS = {"mcv": ["amcv"], "harv": ["cmin", "harv"], "htk": ["htk"], "sapc": ["sapc"], "lcrf": ["lcrf"]}
+UNIT_SEQUENCE_LINKS = {"mcv": ["amcv"], "harv": ["cmin", "harv"], "htk": ["htk"], "sapc": ["sapc"], "lcrf": ["lcrf"],
+                       "spy": ["spy"], "dog": ["adog"], "engineer": ["engineer"]}
+# Kit sequences that take their frames from the kit file although the stock sequence of the same name names its
+# own file (the stock dog's jump is a separate adogp.shp): restated with the kit file after the inherits.
+KIT_FILE_SEQUENCES = {"dog": ["jump"]}
 
 
 def units() -> str:
@@ -131,10 +139,13 @@ def units() -> str:
         if not kit_has(f"{role}-china", units=True):
             continue
         done.add(actor)
+        sprite = f"\tRenderSprites:\n\t\tImage: unit-{role}-china\n\t\tPlayerPalette: kitplayer\n\t\tFactionImages:\n" \
+                 + "".join(f"\t\t\t{f}: unit-{role}-{f}\n" for f in FACTIONS)
+        if off is None:                              # infantry: same body traits, kit image
+            out.append(f"{actor}:\n{sprite}{extra}\n")
+            continue
         out.append(f"{actor}:\n" + "".join(f"\t{t}:\n\t\tRequiresCondition: {VOXEL_OFF}\n" for t in off)
-                   + "".join(f"\t-{t}:\n" for t in drop)
-                   + f"\tRenderSprites:\n\t\tImage: unit-{role}-china\n\t\tPlayerPalette: kitplayer\n\t\tFactionImages:\n"
-                   + "".join(f"\t\t\t{f}: unit-{role}-{f}\n" for f in FACTIONS)
+                   + "".join(f"\t-{t}:\n" for t in drop) + sprite
                    + "\tBodyOrientation:\n\t\tQuantizedFacings: 32\n\tWithFacingSpriteBody:\n" + extra + "\n")
     parents = {"r2kunlun": "lcrf", "amcv.colorpicker": "amcv"}
     for actor, text in UNIT_INHERITORS.items():
@@ -232,7 +243,9 @@ def kit_extra_sequences() -> str:
             if kit_has(f"{role}-{f}", units=True):
                 # a new image: the stock effects first, the kit image last, so the kit's own sequences (icon) win
                 out.append(f"unit-{role}-{f}:\n" + "".join(f"\tInherits@{s}: {s}\n" for s in stock)
-                           + f"\tInherits@kit: {role}-{f}\n\n")
+                           + f"\tInherits@kit: {role}-{f}\n"
+                           + "".join(f"\t{s}:\n\t\tFilename: {role}-{f}.shp\n" for s in KIT_FILE_SEQUENCES.get(role, []))
+                           + "\n")
     written = set()
     for f in FACTIONS:
         if not kit_has(f"hpwr-{f}"):

@@ -366,7 +366,14 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					{
 						foreach (var field in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
 						{
-							if (field.Name.EndsWith("Image", StringComparison.Ordinal) || field.Name.EndsWith("Images", StringComparison.Ordinal))
+							// Faction image maps only count for the factions this game has (inherited entries for the
+							// original factions stay behind in the rules but can never be drawn).
+							if (field.GetValue(ti) is IReadOnlyDictionary<string, string> byFaction && field.Name == "FactionImages")
+							{
+								foreach (var kv in byFaction.Where(kv => factions.Contains(kv.Key)))
+									images.Add(kv.Value);
+							}
+							else if (field.Name.EndsWith("Image", StringComparison.Ordinal) || field.Name.EndsWith("Images", StringComparison.Ordinal))
 								foreach (var s in Strings(field.GetValue(ti)))
 									images.Add(s);
 							if (field.GetCustomAttribute<WeaponReferenceAttribute>() != null)
