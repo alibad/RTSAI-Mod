@@ -180,5 +180,140 @@
     ]
    }
   ]
+ },
+ "standalone-cuts": {
+  "description": "What the 8 cut buildings cost (run each suite into its own --output, with --standalone). 'now': the standalone game (cuts, heavy power plant, refinery upgrade). 'precut': the 8 buildings restored with their original rules (the reactor at its 4x4 footprint, nuclear death), no refinery upgrade. 'nocomp': the cuts without the compensation. Same bots (superweapon module), maps (ore mines) and pairings as standalone-smoke.",
+  "seed": 20261008,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "israel",
+     "yemen",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ],
+    "id": "now"
+   },
+   {
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "israel",
+     "yemen",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ],
+    "id": "precut",
+    "rules": [
+     "gaorep:",
+     "\tBuildable:",
+     "\t\tPrerequisites: garefn, gatech, ~structures.allies",
+     "gagap:",
+     "\tBuildable:",
+     "\t\tPrerequisites: gatech, ~structures.allies",
+     "gaspysat:",
+     "\tBuildable:",
+     "\t\tPrerequisites: gatech, ~structures.allies",
+     "gaweat:",
+     "\tBuildable:",
+     "\t\tPrerequisites: gatech, ~structures.allies, ~techlevel.unrestricted",
+     "napsis:",
+     "\tBuildable:",
+     "\t\tPrerequisites: natech, ~structures.soviets",
+     "naclon:",
+     "\tBuildable:",
+     "\t\tPrerequisites: natech, ~structures.soviets",
+     "namisl:",
+     "\tBuildable:",
+     "\t\tPrerequisites: natech, ~structures.soviets, ~techlevel.unrestricted",
+     "nanrct:",
+     "\tBuilding:",
+     "\t\tDimensions: 4,4",
+     "\t\tFootprint: xxxx xxxx xxxx xxxx",
+     "\tHitShape:",
+     "\t\tType: Rectangle",
+     "\t\t\tLocalYaw: -128",
+     "\t\t\tTopLeft: -2048, -2048",
+     "\t\t\tBottomRight: 2048, 2048",
+     "\tFireWarheadsOnDeath:",
+     "\t\tType: CenterPosition",
+     "\t\tWeapon: NukePayload",
+     "\t\tEmptyWeapon: NukePayload",
+     "gapurifier:",
+     "\tBuildable:",
+     "\t\tPrerequisites: ~disabled"
+    ]
+   },
+   {
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "israel",
+     "yemen",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ],
+    "id": "nocomp",
+    "rules": [
+     "nanrct:",
+     "\tBuildable:",
+     "\t\tPrerequisites: ~disabled",
+     "gapurifier:",
+     "\tBuildable:",
+     "\t\tPrerequisites: ~disabled"
+    ]
+   }
+  ]
  }
 }
