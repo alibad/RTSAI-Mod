@@ -20,11 +20,13 @@ EngineerVoice:
 		iraq: iens
 		russia: iens
 	Voices:
-		Select: sea, seb, sec, sed
+		# sed, atc and did exist only for the Allied prefix (iena); RA2 has no iensatc, iensdid or ienssed, and one
+		# list serves both prefixes, so those three variants are left out.
+		Select: sea, seb, sec
 		Move: moa, mob, moc
-		Action: ata, atb, atc
+		Action: ata, atb
 		Feedback: fea, feb, fec
-		Die: dia, dib, dic, did
+		Die: dia, dib, dic
 		# [EngAllPowerDown] Sounds = ienapow
 
 AlliedVehicleVoice:

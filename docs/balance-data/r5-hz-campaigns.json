@@ -1,0 +1,170 @@
+{
+ "hz-probe": {
+  "description": "Salvo and swarm screening probe: Hezbollah against all eight other factions, both orientations, Dustbowl and Tournament Map A, one replicate (32 games).",
+  "seed": 20261071,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "probe",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "hz-land": {
+  "description": "Salvo and swarm land run: Hezbollah against all eight other factions, both orientations, Dustbowl and Tournament Map A, 3 replicates (96 games); round-4 design.",
+  "seed": 20261072,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ]
+   }
+  ]
+ },
+ "hz-naval": {
+  "description": "Salvo and swarm naval run: Hezbollah against all eight other factions on Little Big Lake, both orientations, 3 replicates (48 games).",
+  "seed": 20261073,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ]
+   }
+  ]
+ },
+ "hz-probe-t1": {
+  "description": "Trim 1 probe (overlay): the as-designed rules were 79-83% against the modern factions. AT team loses stationary concealment and costs 500, rifleman 250, rough-ground cover 80 -> 90; promotion values follow the costs.",
+  "seed": 20261074,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "probe-t1",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "^R2HezbollahInfantry:",
+     "\tDamageMultiplier@rough:",
+     "\t\tModifier: 90",
+     "r2hzat:",
+     "\t-Cloak:",
+     "\tValued:",
+     "\t\tCost: 500",
+     "\tGainsExperience:",
+     "\t\tExperienceModifier: 300",
+     "r2hzrifle:",
+     "\tValued:",
+     "\t\tCost: 250",
+     "\tGainsExperience:",
+     "\t\tExperienceModifier: 150"
+    ]
+   }
+  ]
+ }
+}

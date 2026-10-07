@@ -1717,3 +1717,30 @@ r2marmara:
 		MuzzleSequence: muzzle-launch
 	WithMuzzleOverlay:
 # glb-fx:r2marmara end
+
+# glb-fx:r2hzrail begin
+r2hzrail:
+	GrantConditionOnDamageState@R2FXHEAVY:
+		Condition: r2fx-heavy
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@R2FXCRIT:
+		Condition: r2fx-critical
+		ValidDamageStates: Critical
+	WithIdleOverlay@R2FXSMOKE:
+		Image: r2fxsmoke-small
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,784
+		RequiresCondition: r2fx-heavy
+	WithIdleOverlay@R2FXFIRE:
+		Image: r2fxfire-small
+		Sequence: idle
+		Palette: effect
+		Offset: -161,0,515
+		RequiresCondition: r2fx-critical
+	FireWarheadsOnDeath:
+		Weapon: R2FXDeathSmall
+		EmptyWeapon: R2FXDeathSmall
+	Armament:
+		MuzzleSequence: muzzle-launch
+# glb-fx:r2hzrail end

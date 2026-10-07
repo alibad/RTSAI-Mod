@@ -1,6 +1,6 @@
-# Hezbollah: dispersed, concealed and inexpensive. Drone Spotters guide RPGs and
-# missile trucks; coastal forces need surveillance links; defenses hide until
-# they fire. Heavy armor and prepared detection punish long exposed trades.
+# Hezbollah, "Salvo and swarm" (docs/hezbollah-doctrine.md): few but veteran fighters, cheap unguided rocket
+# volume and FPV micro-drone teams. Spotters and signal posts guide missiles and extend the drone link; coastal
+# forces need surveillance links; defenses hide until they fire. Detection, splash and anti-air answer them.
 ^R2HezbollahInfantry:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -22,6 +22,24 @@
 		Weapon: R2HZMountainRifle
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
+	# Doctrine: every fighter leaves the barracks Veteran and earns Elite at the usual rate (balance trim 5: the
+	# 60% promotion thresholds made elite riflemen snowball where they killed most cheaply, the modern factions).
+	ProducibleWithLevel@doctrine:
+		InitialLevels: 1
+	# Hill fighters: rough ground is cover (80 -> 90 in balance trim 1, docs/balance.md round 5).
+	GrantConditionOnTerrain@rough:
+		Condition: hz-rough
+		TerrainTypes: Rough
+	DamageMultiplier@rough:
+		Modifier: 90
+		RequiresCondition: hz-rough
+	# Stationary concealment: moving, firing or taking damage reveals the fighter.
+	Cloak:
+		InitialDelay: 85
+		CloakDelay: 95
+		UncloakOn: Attack, Move, Damage
+		DetectionTypes: Cloak
+		IsPlayerPalette: true
 	RevealsShroud:
 		Range: 5c0
 
@@ -33,19 +51,14 @@ r2hzrifle:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 10
 		Description: levant-r2hzrifle-description
-	# 135 -> 150: the most cost-effective unit in the round-3 baseline (1.9 destroyed per credit).
+	# Salvo and swarm: 150 -> 275 and 100 -> 130 HP, rifle 13 -> 14 (16 in the design), Veteran from the barracks:
+	# fewer, stronger fighters. The design (225, 16) measured 2.07 destroyed per credit (round 5); trims 2-3.
 	Valued:
-		Cost: 150
+		Cost: 275
 	Health:
-		HP: 100
+		HP: 130
 	Mobile:
 		Speed: 66
-	Cloak:
-		InitialDelay: 85
-		CloakDelay: 95
-		UncloakOn: Attack, Move, Damage
-		DetectionTypes: Cloak
-		IsPlayerPalette: true
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
@@ -66,12 +79,14 @@ r2hzat:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 20
 		Description: levant-r2hzat-description
-	# 300 -> 350 (round 4): the most anti-armour damage per credit of any team, now level with the
-	# Saudi ATGM's at a shorter range.
+	# 300 -> 350 (round 4); Salvo and swarm: 500, 95 -> 120 HP, RPG 90 at 5 cells (less against heavy armour since
+	# trim 4), stationary concealment (template) and Veteran from the barracks: an ambush team bought in fewer
+	# numbers. Round 5: without concealment (trims 1-2) Hezbollah fell to 21% against America, whose bots field almost
+	# no detectors while the modern factions all do, so the concealment stays.
 	Valued:
-		Cost: 350
+		Cost: 500
 	Health:
-		HP: 95
+		HP: 120
 	Mobile:
 		Speed: 60
 	Armament:
@@ -94,10 +109,11 @@ r2hzspotter:
 		Prerequisites: ~faction.hezbollah, nahand, radar
 		BuildPaletteOrder: 60
 		Description: levant-r2hzspotter-description
+	# Salvo and swarm: 525 -> 450, 90 -> 115 HP; also relays the FPV drone link.
 	Valued:
-		Cost: 525
+		Cost: 450
 	Health:
-		HP: 90
+		HP: 115
 	Mobile:
 		Speed: 64
 	Armament:
@@ -110,6 +126,10 @@ r2hzspotter:
 	RenderDetectionCircle:
 	ProximityExternalCondition@guidance:
 		Condition: r2-hz-guidance
+		Range: 6c0
+		ValidRelationships: Ally
+	ProximityExternalCondition@fpvlink:
+		Condition: r2-hz-fpvlink
 		Range: 6c0
 		ValidRelationships: Ally
 	WithRangeCircle@guidance:
@@ -132,10 +152,12 @@ r2hzscout:
 		BuildPaletteOrder: 140
 		BuildLimit: 1
 		Description: levant-r2hzscout-description
+	# The faction's hero (every faction has one build-limit-1 commando): 1650 -> 1800, 170 -> 240 HP, carbine 30 -> 34;
+	# leaves the barracks Veteran like every fighter (balance trim 5; it started Elite before).
 	Valued:
-		Cost: 1650
+		Cost: 1800
 	Health:
-		HP: 170
+		HP: 240
 	Mobile:
 		Speed: 82
 	Armament:
@@ -162,7 +184,6 @@ r2hzscout:
 	VoiceAnnouncement:
 		Voice: Build
 
-# One-way loitering munition: removed on its terminal attack, no rearming.
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
 	ChangesHealth@field:
@@ -170,6 +191,119 @@ r2hzscout:
 		Delay: 25
 		StartIfBelow: 70
 		RequiresCondition: hezbollah-repair
+# FPV Team: an operator with a backpack rack of three FPV micro-drones (the stock carrier mechanism,
+# CarrierParent / CarrierChild, as the Aircraft Carrier's Hornets). Each launch reveals the concealed operator;
+# a drone is one-way (destroyed by its own charge) and the rack regrows one drone every 6 s. Killing the
+# operator downs its airborne drones.
+r2hzfpv:
+	Inherits: ^R2HezbollahInfantry
+	Inherits@guidance: ^R2HezbollahGuided
+	Tooltip:
+		Name: levant-r2hzfpv-name
+	Buildable:
+		Prerequisites: ~faction.hezbollah, nahand, radar
+		BuildPaletteOrder: 50
+		Description: levant-r2hzfpv-description
+	Valued:
+		Cost: 500
+	Health:
+		HP: 110
+	Mobile:
+		Speed: 60
+	Armament:
+		Weapon: R2HZSpotterCarbine
+	Armament@launcher:
+		Name: launcher
+		Weapon: R2HZFPVLink
+	AttackFrontal:
+		Armaments: primary, launcher
+	CarrierParent:
+		Actors: r2hzquad, r2hzquad, r2hzquad
+		RespawnTicks: 150
+		RearmTicks: 40
+		ArmamentNames: launcher
+		ChildDisposalOnKill: KillChildren
+		ChildDisposalOnOwnerChange: KillChildren
+	WithCarrierParentPipsDecoration:
+		Position: BottomLeft
+		Palette: pips
+		RequiresSelection: true
+	# The drone link: drones outside every link crash (r2hzquad KillsSelf@nolink).
+	ProximityExternalCondition@fpvlink:
+		Condition: r2-hz-fpvlink
+		Range: 8c0
+		ValidRelationships: Ally
+	WithRangeCircle@fpvlink:
+		Range: 8c0
+		Color: E0504080
+	RevealsShroud:
+		Range: 7c0
+
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 2
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+
+# FPV micro-drone, carried and launched by r2hzfpv; never built on its own. Small, fast and fragile: anti-air
+# and small arms (^MG weapons, MicroDrone target type) shoot it down; cannons, artillery and missiles cannot.
+r2hzquad:
+	Inherits: ^R2ModernDrone
+	-Buildable:
+	-Selectable:
+	-Repairable:
+	-ActorLostNotification:
+	-Voiced:
+	Interactable:
+		Bounds: 512, 512
+	RejectsOrders:
+	Tooltip:
+		Name: levant-r2hzquad-name
+	Valued:
+		Cost: 30
+	Health:
+		HP: 25
+	Armor:
+		Type: Light
+	Aircraft:
+		Speed: 250
+		CruiseAltitude: 640
+		TurnSpeed: 80
+		AltitudeVelocity: 160
+		IdleBehavior: None
+		Repulsable: false
+	AttackAircraft:
+		FacingTolerance: 512
+	RevealsShroud:
+		Range: 4c0
+	Armament:
+		Weapon: R2HZFPVCharge
+	CarrierChild:
+		LandingDistance: 1c0
+		DamageTypes: ExplosionDeath
+	Targetable@microdrone:
+		TargetTypes: MicroDrone
+		RequiresCondition: airborne
+	# One-way: the drone is destroyed by its own charge (killed, not removed, so the operator's rack regrows it).
+	GrantConditionOnAttack@expended:
+		Condition: expended
+	KillsSelf@expended:
+		RequiresCondition: expended
+		DamageTypes: ExplosionDeath
+	# Out of every FPV link (operator 8 cells, spotter 6, powered signal post 6) for 1.6 s: the drone crashes.
+	ExternalCondition@link:
+		Condition: r2-hz-fpvlink
+	KillsSelf@nolink:
+		RequiresCondition: !r2-hz-fpvlink
+		Delay: 40
+		DamageTypes: ExplosionDeath
+	FireWarheadsOnDeath:
+		Weapon: R2HZFPVBurst
+		EmptyWeapon: R2HZFPVBurst
+
+# One-way loitering munition: removed on its terminal attack, no rearming.
 r2hzdrone:
 	Inherits: ^R2ModernDrone
 	Tooltip:
@@ -178,12 +312,13 @@ r2hzdrone:
 		Prerequisites: ~faction.hezbollah, naweap, radar
 		BuildPaletteOrder: 85
 		Description: levant-r2hzdrone-description
+	# Salvo and swarm: scaled down, 700 -> 450, 90 -> 60 HP, faster (150 -> 190), warhead 220 -> 150.
 	Valued:
-		Cost: 700
+		Cost: 450
 	Health:
-		HP: 90
+		HP: 60
 	Aircraft:
-		Speed: 150
+		Speed: 190
 		CruiseAltitude: 1536
 	Armament:
 		Weapon: R2HZSamadWarhead
@@ -228,8 +363,9 @@ r2hzmissileboat:
 		Prerequisites: ~faction.hezbollah, nayard, radar
 		BuildPaletteOrder: 20
 		Description: levant-r2hzmissileboat-description
+	# Salvo and swarm: 1100 -> 1000; three smaller missiles a cycle (R2HZHodeidahMissile).
 	Valued:
-		Cost: 1100
+		Cost: 1000
 	Health:
 		HP: 300
 	Armor:
@@ -499,8 +635,9 @@ r2hzcoastal:
 		Prerequisites: ~faction.hezbollah, radar
 		BuildPaletteOrder: 40
 		Description: levant-r2hzcoastal-description
+	# Salvo and swarm: 1200 -> 1000; four smaller missiles a cycle (R2HZYemenCoastalMissile).
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Health:
 		HP: 600
 	Power:
@@ -548,6 +685,11 @@ r2hzrelay:
 		Range: 6c0
 		ValidRelationships: Ally
 		RequiresCondition: !lowpower && !build-incomplete
+	ProximityExternalCondition@fpvlink:
+		Condition: r2-hz-fpvlink
+		Range: 6c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
 	DetectCloaked:
 		Range: 5c0
 		RequiresCondition: !lowpower && !build-incomplete
@@ -568,6 +710,7 @@ r2hzworkshop:
 	Valued:
 		Cost: 900
 	-ProximityExternalCondition@link:
+	-ProximityExternalCondition@fpvlink:
 	-DetectCloaked:
 	ProximityExternalCondition@repair:
 		Condition: hezbollah-repair

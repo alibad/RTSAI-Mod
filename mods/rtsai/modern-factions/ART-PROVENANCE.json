@@ -5,7 +5,7 @@
  "sources": {
   "RTSAI-Art (local)": {
    "repo": "RTSAI-Art",
-   "head": "b873351d1653b5e226045748f0dca72fe8920cd9"
+   "head": "a0bc681c3eb91768aeed540cc9e71fdc5f944dcf"
   }
  },
  "generators": {
@@ -29,11 +29,11 @@
  "commercialRa2Data": "None found. Every unit sprite and cameo is a render of the project's own 3D model (a GLB generated locally from the project's concept picture), installed from a committed RTSAI-Art candidate with the same bytes; original RA2 files were read only locally to measure target statistics, never as input pixels; the flags are drawn from code. See docs/art-provenance.md.",
  "removed": "2026-10-06: the pre-promotion placeholder art left the mod (procedural voxels and infantry/defense SHPs, faction palettes, Qwen-Image cameos, Levant previews). RTSAI-Art history/ keeps every superseded file with a manifest (what it was, which release used it, its generator) and the old record (history/_records/ART-PROVENANCE.json).",
  "summary": {
-  "files": 307,
+  "files": 313,
   "byOrigin": {
    "procedural/procedural-flag": 3,
-   "procedural/project-geometry": 60,
-   "rendered-from-project-geometry/project-geometry": 244
+   "procedural/project-geometry": 61,
+   "rendered-from-project-geometry/project-geometry": 249
   },
   "flags": {}
  },
@@ -2772,6 +2772,38 @@
    },
    "runtime": "referenced by rules/sequences"
   },
+  "icons/r2hzfpv.png": {
+   "sha256": "c824b18d43f4191a5f18f991510484d47705f4c13fa6e87432514038f4e3e0d8",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzfpv/candidates/cameo-v3-render/cameo.png",
+    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
+    "date": "2026-10-07"
+   },
+   "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
+   "origin": "rendered-from-project-geometry",
+   "generator": "project-geometry",
+   "candidate": "cameo-v3-render",
+   "route": "3D model -> perspective cameo render -> 60x48",
+   "tool": "Blender 5.2 Cycles (CPU); tools/cameo_render.py",
+   "date": "2026-10-07",
+   "renderedFrom": null,
+   "nameBar": {
+    "text": "FPV TEAM",
+    "fluentKey": "levant-r2hzfpv-name",
+    "font": {
+     "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
+     "license": "CC0-1.0",
+     "file": "RTSAI-Art tools/fonts/kenney/kenpixel.ttf",
+     "notice": "RTSAI-Art tools/fonts/kenney/LICENSE.txt",
+     "sha256": "fd42226067fc44707d41ef9f43597574c6a0fd415249416b38cf93371a7a611a",
+     "shipped": false,
+     "note": "only the rendered cameos are in the mod"
+    },
+    "unlabelled": "units/r2hzfpv/candidates/cameo-v3-render/cameo-nolabel.png"
+   },
+   "runtime": "referenced by rules/sequences"
+  },
   "icons/r2hzmissileboat.png": {
    "sha256": "7168d2aa26924576d78f665a0900cd9cb6dcf6e86c071b5a42ac52294f8d9eb7",
    "source": {
@@ -2812,6 +2844,43 @@
      "model": "built-in image generation tool (model ID unavailable)",
      "costUsd": null
     }
+   },
+   "runtime": "referenced by rules/sequences"
+  },
+  "icons/r2hzrail.png": {
+   "sha256": "61b30fa64bbfedc4fb441506bedd3c9458a462a522c18ae9c64e877b4e8b5c12",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzrail/candidates/cameo-v3-render/cameo.png",
+    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
+    "date": "2026-10-07"
+   },
+   "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
+   "origin": "rendered-from-project-geometry",
+   "generator": "project-geometry",
+   "candidate": "cameo-v3-render",
+   "route": "3D model -> perspective cameo render -> 60x48",
+   "tool": "Blender 5.2 Cycles (CPU); tools/cameo_render.py",
+   "date": "2026-10-07",
+   "renderedFrom": "units/r2hzrail/candidates/sprite-v6-prerender",
+   "nameBar": {
+    "text": "RAIL TECH",
+    "fluentKey": "levant-r2hzrail-name",
+    "font": {
+     "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
+     "license": "CC0-1.0",
+     "file": "RTSAI-Art tools/fonts/kenney/kenpixel.ttf",
+     "notice": "RTSAI-Art tools/fonts/kenney/LICENSE.txt",
+     "sha256": "fd42226067fc44707d41ef9f43597574c6a0fd415249416b38cf93371a7a611a",
+     "shipped": false,
+     "note": "only the rendered cameos are in the mod"
+    },
+    "unlabelled": "units/r2hzrail/candidates/cameo-v3-render/cameo-nolabel.png"
+   },
+   "geometry": {
+    "mesh": "units/r2hzrail/candidates/mesh-v1-blender/mesh.glb",
+    "sha256": "b194be7f3a30cea822b004a3ff2392083747a5bfd94d4875513db60d0452ed42",
+    "madeBy": "Blender 5.2.2 LTS: hand-authored bmesh script (tools/hz_doctrine_models.py)"
    },
    "runtime": "referenced by rules/sequences"
   },
@@ -6583,6 +6652,51 @@
    },
    "runtime": "referenced by rules/sequences"
   },
+  "infantry/r2hzfpv.pal": {
+   "sha256": "061c3eff61241c52ae1faeb5f21fd4094924db3ee3a786e8b14bdc74183c3e19",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzfpv/candidates/sprite-v3-glb/r2hzfpv.pal",
+    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
+    "date": "2026-10-07"
+   },
+   "type": "palette (index 0 transparent, 1 shadow, 16-31 player remap)",
+   "origin": "procedural",
+   "generator": "project-geometry",
+   "candidate": "sprite-v3-glb",
+   "route": "Blender CPU rig + render of the generated GLB (tools/infantry_blender.py, infantry_sprite_post.py)",
+   "tool": "Blender CPU rig + render of the generated GLB (tools/infantry_blender.py, infantry_sprite_post.py)",
+   "date": "2026-10-07",
+   "script": "computed by the route from the project's material classes and faction colours",
+   "geometry": {
+    "mesh": "units/r2hzfpv/candidates/mesh-v1-blender/mesh.glb",
+    "sha256": "bfcb43494b0a5ad81e7f1326529a9625f071ce717bd6fb89f04d85aa155049b4",
+    "madeBy": "Blender 5.2.2 LTS: hand-authored bmesh script (tools/hz_doctrine_models.py)"
+   },
+   "runtime": "referenced by rules/sequences"
+  },
+  "infantry/r2hzfpv.shp": {
+   "sha256": "3fb62604a173055e4682b5db9b174ef7f9eb9d3461e42d4d4f8cabf95d440222",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzfpv/candidates/sprite-v3-glb/r2hzfpv.shp",
+    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
+    "date": "2026-10-07"
+   },
+   "type": "infantry sprite (TS/RA2 SHP: stand, run, fire, prone, idle and death, 8 facings, shadow frames)",
+   "origin": "rendered-from-project-geometry",
+   "generator": "project-geometry",
+   "candidate": "sprite-v3-glb",
+   "route": "Blender CPU rig + render of the generated GLB (tools/infantry_blender.py, infantry_sprite_post.py)",
+   "tool": "Blender CPU rig + render of the generated GLB (tools/infantry_blender.py, infantry_sprite_post.py)",
+   "date": "2026-10-07",
+   "geometry": {
+    "mesh": "units/r2hzfpv/candidates/mesh-v1-blender/mesh.glb",
+    "sha256": "bfcb43494b0a5ad81e7f1326529a9625f071ce717bd6fb89f04d85aa155049b4",
+    "madeBy": "Blender 5.2.2 LTS: hand-authored bmesh script (tools/hz_doctrine_models.py)"
+   },
+   "runtime": "referenced by rules/sequences"
+  },
   "infantry/r2hzrifle.pal": {
    "sha256": "bdd09b85e658da12b91f3e72ee438f9c4084dcc8ea48e530d2ee01baac58020c",
    "source": {
@@ -8451,6 +8565,50 @@
      "model": "built-in image generation tool (model ID unavailable)",
      "costUsd": null
     }
+   },
+   "runtime": "referenced by rules/sequences"
+  },
+  "vehicles/r2hzquad.shp": {
+   "sha256": "ac30b543e27a8163155bb8a864ef1bd9bd6d6cf3157fe355fddc360d3f94ecb2",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzquad/candidates/sprite-v6-prerender/r2hzquad.shp",
+    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
+    "date": "2026-10-07"
+   },
+   "type": "prerendered vehicle, ship or aircraft sprite (TS/RA2 SHP: 32 facings, turret, spin and reload variants, sun-shadow frames)",
+   "origin": "rendered-from-project-geometry",
+   "generator": "project-geometry",
+   "candidate": "sprite-v6-prerender",
+   "route": "glb-prerender-v2",
+   "tool": "tools/glb_prerender.py",
+   "date": "2026-10-07",
+   "geometry": {
+    "mesh": "units/r2hzquad/candidates/mesh-v1-blender/mesh.glb",
+    "sha256": "6e280b4371419583982e01d2ef15142f393462024f8dbc3b8db151d0de69d7cc",
+    "madeBy": "Blender 5.2.2 LTS: hand-authored bmesh script (tools/hz_doctrine_models.py)"
+   },
+   "runtime": "referenced by rules/sequences"
+  },
+  "vehicles/r2hzrail.shp": {
+   "sha256": "035901dfeaf866f3052d20b7e2af3dd3c4e164c71c37e8dce2430392622eb51c",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzrail/candidates/sprite-v6-prerender/r2hzrail.shp",
+    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
+    "date": "2026-10-07"
+   },
+   "type": "prerendered vehicle, ship or aircraft sprite (TS/RA2 SHP: 32 facings, turret, spin and reload variants, sun-shadow frames)",
+   "origin": "rendered-from-project-geometry",
+   "generator": "project-geometry",
+   "candidate": "sprite-v6-prerender",
+   "route": "glb-prerender-v2",
+   "tool": "tools/glb_prerender.py",
+   "date": "2026-10-07",
+   "geometry": {
+    "mesh": "units/r2hzrail/candidates/mesh-v1-blender/mesh.glb",
+    "sha256": "b194be7f3a30cea822b004a3ff2392083747a5bfd94d4875513db60d0452ed42",
+    "madeBy": "Blender 5.2.2 LTS: hand-authored bmesh script (tools/hz_doctrine_models.py)"
    },
    "runtime": "referenced by rules/sequences"
   },

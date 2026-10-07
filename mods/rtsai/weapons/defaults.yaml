@@ -123,9 +123,13 @@
 	ReloadDelay: 20
 	Range: 4c0
 	Report: igiat1a.wav, igiat1b.wav, igiat1c.wav
+	# Small arms can engage FPV micro-drones (target type MicroDrone, Hezbollah r2hzquad): they fly low.
+	# Weapons that set their own ValidTargets keep them.
+	ValidTargets: Ground, Water, MicroDrone
 	Projectile: InstantHit
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Water, MicroDrone
 		Spread: 64
 		Damage: 20
 		Versus:

@@ -171,9 +171,19 @@ r2hzescort:
 		Filename: ra2|modern-factions/icons/r2hzescort.png
 		Offset: 0, 0
 
+r2hzfpv:
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzfpv.png
+		Offset: 0, 0
+
 r2hzmissileboat:
 	icon:
 		Filename: ra2|modern-factions/icons/r2hzmissileboat.png
+		Offset: 0, 0
+
+r2hzrail:
+	icon:
+		Filename: ra2|modern-factions/icons/r2hzrail.png
 		Offset: 0, 0
 
 r2hzrecoilless:

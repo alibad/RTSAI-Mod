@@ -102,6 +102,18 @@ R2HezbollahscoutVoice:
 		Build: ra2|modern-factions/audio/hz-scout-select-ar, ra2|modern-factions/audio/hz-scout-select-en
 		Die: igidia, igidib, igidic
 
+R2HezbollahfpvVoice:
+	Inherits: ^InfantryDeath
+	DefaultVariant: .wav
+	Voices:
+		Select: ra2|modern-factions/audio/hz-fpv-select-ar, ra2|modern-factions/audio/hz-fpv-select-en
+		Move: ra2|modern-factions/audio/hz-fpv-move-ar, ra2|modern-factions/audio/hz-fpv-move-en
+		Attack: ra2|modern-factions/audio/hz-fpv-attack-ar, ra2|modern-factions/audio/hz-fpv-attack-en
+		Action: ra2|modern-factions/audio/hz-fpv-action-ar, ra2|modern-factions/audio/hz-fpv-action-en
+		Demolish: ra2|modern-factions/audio/hz-fpv-action-ar, ra2|modern-factions/audio/hz-fpv-action-en
+		Build: ra2|modern-factions/audio/hz-fpv-select-ar, ra2|modern-factions/audio/hz-fpv-select-en
+		Die: igidia, igidib, igidic
+
 R2HezbollahvehicleVoice:
 	Inherits: ^InfantryDeath
 	DefaultVariant: .wav

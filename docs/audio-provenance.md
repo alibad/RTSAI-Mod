@@ -76,6 +76,12 @@ at their announcer folders instead of the stock `ceva` and `csof`. Every line is
 acknowledgement or report, like the other factions': no slogans, no religious or political phrases,
 no real people or operations.
 
+Hezbollah's FPV Team (Salvo and swarm, 7 October) adds a seventh set, `R2HezbollahfpvVoice`: four Lebanese Arabic
+lines and their English counterparts (`hz-fpv-*`), same generator, speaker (`hezbollah-infantry`) and field-radio
+chain. They were rendered on the CPU because the GPU was claimed by another session, so the Lebanese reference
+was bootstrapped again (seed 5, CER 0.07); the machine review rows are in `docs/voice-review.csv` and the native
+check is pending, like the other Lebanese lines. The FPV drones themselves are not voiced (not selectable).
+
 ### Engine check (5 October 2026)
 
 Before the Hebrew and Lebanese lines were made, every licensed engine that might speak the language
@@ -339,6 +345,21 @@ transformers 4.57.6.
 The 23 weapon, naval and network sounds are procedural. None was regenerated, and speech recognition
 finds no speech in any of them. Nineteen come from procedural generators in OpenRA-AI
 (`generate-china-sfx.py`, `generate-red-sea-sfx.py`).
+
+### Death explosions and the other sounds RA2 itself lacks (7 October 2026)
+
+Four sound names in the rules are not in Red Alert 2's own files (they come from Yuri's Revenge or
+are engine defaults), so those sounds never played: `expnew13.wav` and `expnew09.wav` (every
+vehicle, ship, aircraft and building death: `UnitExplodeSmall`, `UnitExplode`, the R2FX deaths,
+`Demolish`), `vapoar2b.wav` (one of three AA-missile reports) and `chrono2.aud` (the
+`Chronoshiftable` default). Five original sounds replace them, referenced by explicit
+`ra2|audio/sfx/` paths: `rtsai-explode-small.wav`, `rtsai-explode-medium.wav`,
+`rtsai-explode-large.wav`, `rtsai-aa-launch.wav` and `rtsai-shift.wav`. They are procedural
+(sines, seeded noise, filters and synthetic reverb; no recordings or samples), made by
+`tools/standalone-sfx.py` on branch `rtsai/standalone-audio`, which rebuilds them byte for byte.
+Per-file records (role, seed, licence, measured length and level, SHA-256) are in
+[`mods/rtsai/audio/sfx/PROVENANCE.json`](../mods/rtsai/audio/sfx/PROVENANCE.json). Licence: the
+project's own code (GPL-3.0); the output carries no third-party rights.
 
 ### Naval sounds
 

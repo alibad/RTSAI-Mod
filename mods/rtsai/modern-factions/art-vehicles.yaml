@@ -1390,3 +1390,28 @@ r2marmara:
 		BaseName: r2prerender-hezbollahplayer
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 # glb-route:palette-prerender-hezbollah end
+
+# glb-route:r2hzquad begin
+r2hzquad:
+	-RenderVoxels:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithShadow:
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: -68,0,7
+# glb-route:r2hzquad end
+
+# glb-route:r2hzrail begin
+r2hzrail:
+	-RenderVoxels:
+	RenderSprites:
+		PlayerPalette: r2prerender-hezbollahplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	Armament:
+		LocalOffset: -14,0,885
+# glb-route:r2hzrail end
