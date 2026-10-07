@@ -23,6 +23,40 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 8c0
+			# The Israeli and Saudi precision strikes (one bomber; AirstrikePower@falcon on the r2ilrecon / r2falcon
+			# commandos): the most valuable known enemy structures or vehicles within 3 cells, never near own units.
+			precisionstrike-israel:
+				OrderName: R2IsraelPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
+			precisionstrike-saudi:
+				OrderName: R2FalconPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
 			nukepower:
 				OrderName: NukePowerInfoOrder
 				MinimumAttractiveness: 3000
@@ -180,6 +214,40 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 8c0
+			# The Israeli and Saudi precision strikes (one bomber; AirstrikePower@falcon on the r2ilrecon / r2falcon
+			# commandos): the most valuable known enemy structures or vehicles within 3 cells, never near own units.
+			precisionstrike-israel:
+				OrderName: R2IsraelPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
+			precisionstrike-saudi:
+				OrderName: R2FalconPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
 			nukepower:
 				OrderName: NukePowerInfoOrder
 				MinimumAttractiveness: 3000
@@ -337,6 +405,40 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 8c0
+			# The Israeli and Saudi precision strikes (one bomber; AirstrikePower@falcon on the r2ilrecon / r2falcon
+			# commandos): the most valuable known enemy structures or vehicles within 3 cells, never near own units.
+			precisionstrike-israel:
+				OrderName: R2IsraelPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
+			precisionstrike-saudi:
+				OrderName: R2FalconPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
 			nukepower:
 				OrderName: NukePowerInfoOrder
 				MinimumAttractiveness: 3000
@@ -494,6 +596,40 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 8c0
+			# The Israeli and Saudi precision strikes (one bomber; AirstrikePower@falcon on the r2ilrecon / r2falcon
+			# commandos): the most valuable known enemy structures or vehicles within 3 cells, never near own units.
+			precisionstrike-israel:
+				OrderName: R2IsraelPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
+			precisionstrike-saudi:
+				OrderName: R2FalconPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
 			nukepower:
 				OrderName: NukePowerInfoOrder
 				MinimumAttractiveness: 3000
@@ -651,6 +787,40 @@ Player:
 					Attractiveness: -5
 					TargetMetric: None
 					CheckRadius: 8c0
+			# The Israeli and Saudi precision strikes (one bomber; AirstrikePower@falcon on the r2ilrecon / r2falcon
+			# commandos): the most valuable known enemy structures or vehicles within 3 cells, never near own units.
+			precisionstrike-israel:
+				OrderName: R2IsraelPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
+			precisionstrike-saudi:
+				OrderName: R2FalconPrecisionStrike
+				MinimumAttractiveness: 1000
+				FineScanRadius: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure, Vehicle
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 3c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 4c0
 			nukepower:
 				OrderName: NukePowerInfoOrder
 				MinimumAttractiveness: 3000
