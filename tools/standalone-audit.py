@@ -87,7 +87,8 @@ def compile_command(engine: Path, cache: Path) -> Path:
     return dll
 
 
-def run_audit(worktree: Path, content: Path | None, out: Path, cache: Path, utility_args: list[str] | None = None):
+def run_audit(worktree: Path, content: Path | None, out: Path, cache: Path, utility_args: list[str] | None = None,
+              mod_yaml: Path | None = None, mod: str = "rtsai"):
     engine = worktree / "engine"
     dll = compile_command(engine, cache)
     sandbox = Path(tempfile.mkdtemp(prefix="sa-audit-", dir=cache))
@@ -107,24 +108,25 @@ def run_audit(worktree: Path, content: Path | None, out: Path, cache: Path, util
         for entry in (worktree / "mods").iterdir():
             if not entry.is_dir():
                 continue
-            if entry.name != "rtsai":
+            if entry.name != mod:
                 link_dir(mods / entry.name, entry)
                 continue
-            (mods / "rtsai").mkdir()
+            (mods / mod).mkdir()
             for item in entry.iterdir():
                 if item.is_dir():
-                    link_dir(mods / "rtsai" / item.name, item)
+                    link_dir(mods / mod / item.name, item)
                 elif item.name == "mod.yaml":
-                    text = item.read_text(encoding="utf-8").replace("\r\n", "\n")
+                    # --mod-yaml: measure with another manifest (e.g. main's, which mounts the RA2 content)
+                    text = (mod_yaml or item).read_text(encoding="utf-8").replace("\r\n", "\n")
                     text = re.sub(r"^(Assemblies: .+)$", lambda m: m[1] + ", " + str(dll), text, flags=re.M)
-                    (mods / "rtsai" / "mod.yaml").write_text(text, encoding="utf-8")
+                    (mods / mod / "mod.yaml").write_text(text, encoding="utf-8")
                 else:
-                    shutil.copy2(item, mods / "rtsai" / item.name)
+                    shutil.copy2(item, mods / mod / item.name)
         env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENRA_AI_", "RTSAI_"))}
         env.update(ENGINE_DIR=str(eng), MOD_SEARCH_PATHS=str(mods), OPENRA_AI_HOST="0", OPENRA_AI_COMPANION="0",
                    OPENRA_AI_DISABLE_AUTOSTART="1")
         args = utility_args or ["--standalone-audit", str(out)]
-        r = subprocess.run(["dotnet", str(engine / "bin" / "OpenRA.Utility.dll"), "rtsai", *args],
+        r = subprocess.run(["dotnet", str(engine / "bin" / "OpenRA.Utility.dll"), mod, *args],
                            cwd=engine / "bin", env=env, capture_output=True, text=True, timeout=1800)
         if utility_args:
             out.write_text(r.stdout + r.stderr, encoding="utf-8")
@@ -430,16 +432,20 @@ def main():
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--cache", type=Path, default=Path(tempfile.gettempdir()) / "rtsai-standalone-audit")
     ap.add_argument("--summary", action="store_true")
+    ap.add_argument("--mod-yaml", type=Path, help="use this manifest for mods/rtsai instead of the worktree's")
+    ap.add_argument("--mod", default="rtsai", help="mod id to audit (e.g. rtsai-classic)")
     ap.add_argument("--summary-only", action="store_true", help="summarize an existing --out without running")
     ap.add_argument("--utility", nargs=argparse.REMAINDER,
                     help="run another utility command in the same sandbox instead (e.g. --check-yaml); output to --out")
     a = ap.parse_args()
     a.cache.mkdir(parents=True, exist_ok=True)
     if a.utility:
-        run_audit(a.worktree.resolve(), a.content.resolve() if a.content else None, a.out.resolve(), a.cache, a.utility)
+        run_audit(a.worktree.resolve(), a.content.resolve() if a.content else None, a.out.resolve(), a.cache, a.utility,
+                  a.mod_yaml, a.mod)
         return
     if not a.summary_only:
-        run_audit(a.worktree.resolve(), a.content.resolve() if a.content else None, a.out.resolve(), a.cache)
+        run_audit(a.worktree.resolve(), a.content.resolve() if a.content else None, a.out.resolve(), a.cache,
+                  None, a.mod_yaml, a.mod)
     if a.summary or a.summary_only:
         data = json.loads(a.out.read_text(encoding="utf-8"))
         print_summary(data)

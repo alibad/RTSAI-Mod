@@ -81,7 +81,7 @@ namespace OpenRA.Mods.RTSAIAudit
 			if (p is Folder)
 			{
 				var path = Path.GetFullPath(p.Name).TrimEnd('\\', '/');
-				if (path.StartsWith(modDir, StringComparison.OrdinalIgnoreCase))
+				if (path.StartsWith(Path.GetDirectoryName(modDir), StringComparison.OrdinalIgnoreCase))   // any mod in the mods root (classic mounts $rtsai)
 					c = "mod";
 				else if (path.StartsWith(engineDir, StringComparison.OrdinalIgnoreCase) && !path.Contains("Support"))
 					c = "engine";
@@ -636,6 +636,13 @@ namespace OpenRA.Mods.RTSAIAudit
 						queues.Add(Get<string>(t, "Type"));
 				}
 
+				// SurvivorReplacements (Player): a destroyed building's survivors become the faction's own types
+				var survivorMap = new Dictionary<string, string>();
+				foreach (var t in player.TraitInfos<TraitInfo>().Where(t => t.GetType().Name == "SurvivorReplacementsInfo" && FactionOk(t)))
+					foreach (DictionaryEntry kv in (IDictionary)t.GetType().GetField("Replacements").GetValue(t))
+						survivorMap[(string)kv.Key] = (string)kv.Value;
+				string Survivor(string s) { return survivorMap.TryGetValue(s, out var r) ? r : s; }
+
 				var reach = new HashSet<string>();
 				var why = new Dictionary<string, string>();
 				void Add(string a, string reason)
@@ -672,13 +679,14 @@ namespace OpenRA.Mods.RTSAIAudit
 
 							// Follow references that bring an actor into the game (transform, spawn, free actor, cargo,
 							// support-power aircraft); skip ones that only name an actor someone else must own.
-							if (NonSpawningReferences.Contains(t.GetType().Name))
+							if (NonSpawningReferences.Contains(t.GetType().Name) || !FactionOk(t))
 								continue;
 
 							foreach (var f in t.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
 								if (f.GetCustomAttribute<ActorReferenceAttribute>() != null)
 									foreach (var s in Strings(f.GetValue(t)))
-										Add(s, $"{a}.{t.GetType().Name.Replace("Info", "")}.{f.Name}");
+										Add(t.GetType().Name == "SpawnSurvivorsInfo" ? Survivor(s) : s,
+											$"{a}.{t.GetType().Name.Replace("Info", "")}.{f.Name}");
 						}
 					}
 

@@ -1,12 +1,62 @@
 # Standalone RTS AI: playable without Red Alert 2
 
-Branch `rtsai/standalone` (off `rtsai/art-preview` at `cda3ced`). Measured on 6 October 2026.
+Branch `rtsai/standalone`, rebased onto RTSAI-Mod main (`57df33c`). First measured on 6 October 2026.
 
 The owner's goal: "you should not need red alert to play the ra2 mod". RA2 was never released as freeware, so its
 files cannot be shipped. A standalone build has to load only project-made or properly licensed files. This page is
 the first phase: what the game loads from EA today (measured), a plan, and a boot prototype.
 
 **[ran]** means a command was run and its output read. **[inferred]** means reasoning, not a run.
+
+## Status, 7 October 2026
+
+Rebased onto RTSAI-Mod main `57df33c` (the promoted art); measurements below were re-run there.
+
+### Phase 1: done [ran]
+
+- **Two mods.** `mods/rtsai` is the standalone game: the 7 modern factions, no content installer, no archive
+  formats, one theatre. `mods/rtsai-classic` is the optional add-on with the 9 original factions, the 27 Westwood
+  maps, the original tilesets, music and cursors; it needs the player's own RA2 files (`mods/rtsai-content` now
+  installs for `rtsai-classic`). Its manifest is generated from the standalone one by
+  `tools/build-classic-manifest.py`, so shared files are listed once.
+- **Modern-only rosters** (`modern-factions/modern-scope.yaml`, shared by both mods): the original heroes (Chrono
+  Commando, Yuri Prime) are no longer won by infiltrating a tech centre, and a destroyed building drops the owner's
+  own riflemen instead of a GI or conscript (new `SurvivorReplacements` player trait in `OpenRA.Mods.RA2`). The Flak
+  Track, amphibious transport and landing craft stay: they are the modern factions' only AA track and naval
+  transports, and Phase 3 reskins them.
+- **Provisional identity "RTS AI"** in one place: the `-product-name` term in `languages/identity.ftl`. Window title,
+  mod title and the menu note use it; bots are "Normal AI", "Rush AI", and so on. `ModTabTitle` and
+  `PACKAGING_DISPLAY_NAME` cannot use Fluent; the check below makes `ModTabTitle` match.
+- **The no-EA test.** `OpenRA.Utility rtsai --check-standalone` runs in `make test` (both `make.ps1` and `Makefile`).
+  It fails on a content installer, a mounted player-content path, a registered archive format, a mounted package
+  that is not a mod or engine folder, any archive/video file in the mod, any unresolved sprite, tile, model,
+  palette, cursor, chrome, font or load-screen reference, Red Alert/RA2/Westwood/C&C wording in shipped text, and a
+  classic manifest that lacks a shared file. Missing audio and placeholder stand-ins are warnings until Phase 3
+  lands (`--strict` makes them errors). Today: passed, 2 warnings (712 sound names unresolved, 1,933 placeholders).
+- Also fixed: an upstream indentation bug in `audio/voices.yaml` made `DisablePrefixes` a voice, so prefixed death
+  voices looked up nonexistent files. Ogg is a registered sound format (the audio agent's music).
+- Checks: `--check-yaml` passes for both mods (the add-on with owned content mounted, all 28 maps); boot to the main
+  menu with the "RTS AI" title; a Türkiye vs Hezbollah bot skirmish ran 5 minutes with 0 exceptions.
+
+### Deliverables for Phase 3
+
+The exact file lists are in `docs/standalone-deliverables.json` (`tools/standalone-deliverables.py`, from an audit of
+the add-on with owned content mounted). Keep the listed file names; for sprites, at least the listed frame counts.
+The standalone manifest already mounts the delivery folders after the placeholders, so a delivered file overrides
+its stand-in as soon as it lands.
+
+| For | Folder | What |
+|---|---|---|
+| Art agent: base kit | `mods/rtsai/standalone/base/` | 13 roles × 7 factions: `cnst`, `powr` 2x2, `refn`, `barr` 3x2, `weap`, `radr` (Soviet side), `airf` (Allied side), `yard`, `dept` 3x3, `tech` 3x2, `sw1` (Chronosphere art), `sw2` (Iron Curtain art), `wall`; `<kit>-<faction>.shp`, `kitbase.pal`, `<kit>-<faction>icon.png`, `kit-sequences.yaml`. Replaces 22 stock buildings (229 EA sprite files); the other 8 are cut |
+| Art agent: shared units | `mods/rtsai/standalone/units/` | MCV (amcv, smcv), harvester (cmin, harv), engineer, dog, spy, AA track (htk), amphibious transport (sapc), landing craft (lcrf): 38 EA sprite files and 12 EA voxel models (24 VXL/HVA files) |
+| Art agent: effects | `mods/rtsai/standalone/effects/` | 22 shared effect images (95 EA files: explosions, pips, rank, parachute, wake, smoke, crate, beacon, rally point, flameguy...) + 8 stock files named in modern-unit sequences (`fire01-03`, `gunfire`, `lgrysmk1`, `sgrysmk1`, `vtmuzzle`, `yuricntl`); `anim.pal` |
+| Audio agent | `mods/rtsai/standalone/audio/{sfx,ui,voices,music}/` | 77 weapon/impact SFX (+4 names missing even in RA2), 14 UI sounds, 108 stock-unit voices (+3 missing), new `music.yaml` (Ogg) |
+| This branch (Phase 2) | — | shroud/fog, temperate tileset, minimap colours, cursors, the 16 other palettes, chrome reskin, the 20 orphan bits, 2 original maps |
+
+Rules decisions taken with the art agent, to apply when the kit lands: the Soviet-side power plant, barracks,
+service depot and tech centre take the Allied footprints; the ore purifier, gap generator, spy satellite, weather
+control, nuclear reactor, psychic sensor, cloning vats and missile silo leave the modern rosters. **The cuts are a
+design decision for the owner to confirm.**
 
 ## How it was measured [ran]
 

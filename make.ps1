@@ -106,6 +106,9 @@ function Test-Command
 
 	Write-Host "Testing $modID mod MiniYAML..." -ForegroundColor Cyan
 	InvokeCommand "$utilityPath $modID --check-yaml"
+
+	Write-Host "Checking that $modID loads nothing from Red Alert 2 (docs/standalone.md)..." -ForegroundColor Cyan
+	InvokeCommand "$utilityPath $modID --check-standalone"
 }
 
 function Check-Command

@@ -195,3 +195,5 @@ endif
 test: all
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
 	@./utility.sh --check-yaml
+	@echo "Checking that $(MOD_ID) loads nothing from Red Alert 2 (docs/standalone.md)..."
+	@./utility.sh --check-standalone

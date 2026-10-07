@@ -58,6 +58,8 @@ def main():
     ap.add_argument("--observe", action="store_true",
                     help="skirmish on a scratch copy of --map (in the run's support dir) with tools/standalone-smoke/"
                          "observe.lua: camera pans between bot bases, lua.log gets a per-bot actor census")
+    ap.add_argument("--set", action="append", default=[], help="extra engine setting, e.g. Game.IntroductionPromptVersion=99")
+    ap.add_argument("--mod", default="rtsai", help="mod id to launch (rtsai-classic needs content: not run here)")
     ap.add_argument("--out", type=Path, required=True)
     a = ap.parse_args()
 
@@ -71,16 +73,17 @@ def main():
     assert not (support / "Content").exists()
 
     args = ["dotnet", str(engine / "bin" / "OpenRA.dll"), f"Engine.EngineDir={engine}",
-            f"Engine.ModSearchPaths={a.worktree / 'mods'}", f"Engine.SupportDir={support}", "Game.Mod=rtsai",
+            f"Engine.ModSearchPaths={a.worktree / 'mods'}", f"Engine.SupportDir={support}", f"Game.Mod={a.mod}",
             "Game.FetchNews=false", "Game.ViewportEdgeScroll=false", "Graphics.Mode=Windowed",
-            "Graphics.WindowedSize=1280,800", "Graphics.UIScale=1", "Sound.Mute=true"]
+            "Graphics.WindowedSize=1280,800", "Graphics.UIScale=1", "Sound.Mute=true", *a.set]
     launch_map = a.map
     script = a.lua or ("observe.lua" if a.observe else None)
     if a.mode == "skirmish" and script:
         import re
         version = re.search(r"^\s*Version: (.+)$", (a.worktree / "mods/rtsai/mod.yaml").read_text(encoding="utf-8"), re.M)[1]
         dst = support / "maps" / "rtsai" / version.strip() / "sa-observe"
-        shutil.copytree(a.worktree / "mods/rtsai/maps" / a.map, dst)
+        src = next(d / a.map for d in (a.worktree / "mods/rtsai/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
+        shutil.copytree(src, dst)   # a classic (Westwood) map only ever lands in this scratch support dir
         shutil.copy2(ROOT / "tools/standalone-smoke" / script, dst / "observe.lua")
         y = (dst / "map.yaml").read_text(encoding="utf-8").replace("\r\n", "\n").rstrip("\n")
         y = re.sub(r"\nRules:.*\Z", "", y, flags=re.S)   # the shipped maps end with an empty Rules: block

@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Activities;
@@ -32,6 +33,21 @@ namespace OpenRA.Mods.RA2.Traits
 
 		public override object Create(ActorInitializer actor) { return new SpawnSurvivors(this); }
 	}
+
+	[TraitLocation(SystemActors.Player)]
+	[Desc("Swaps the actor types that " + nameof(SpawnSurvivors) + " creates for players of the listed factions,",
+		"e.g. so a modern faction's destroyed building drops its own riflemen instead of a stock infantry type.")]
+	public class SurvivorReplacementsInfo : TraitInfo<SurvivorReplacements>
+	{
+		[Desc("Factions this applies to. Leave empty for all factions.")]
+		public readonly FrozenSet<string> Factions = FrozenSet<string>.Empty;
+
+		[ActorReference(dictionaryReference: LintDictionaryReference.Keys | LintDictionaryReference.Values)]
+		[Desc("Survivor actor type => the type spawned instead.")]
+		public readonly Dictionary<string, string> Replacements = [];
+	}
+
+	public class SurvivorReplacements { }
 
 	public class SpawnSurvivors : ConditionalTrait<SpawnSurvivorsInfo>, INotifyKilled
 	{
@@ -56,10 +72,20 @@ namespace OpenRA.Mods.RA2.Traits
 				? buildingInfo.Tiles(self.Location).ToList()
 				: new List<CPos>() { self.World.Map.CellContaining(self.CenterPosition) };
 
+			var faction = self.Owner.Faction.InternalName;
+			var replacements = self.Owner.PlayerActor.Info.TraitInfos<SurvivorReplacementsInfo>()
+				.Where(r => r.Factions.Count == 0 || r.Factions.Contains(faction))
+				.ToList();
+
 			self.World.AddFrameEndTask(w =>
 			{
-				foreach (var actorType in Info.Actors)
+				foreach (var survivor in Info.Actors)
 				{
+					var actorType = survivor;
+					foreach (var r in replacements)
+						if (r.Replacements.TryGetValue(survivor, out var replacement))
+							actorType = replacement;
+
 					var td = new TypeDictionary
 					{
 						new OwnerInit(self.Owner),

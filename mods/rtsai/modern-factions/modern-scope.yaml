@@ -1,0 +1,48 @@
+# Keeps the modern factions' rosters modern, in the standalone game and in the classic add-on alike.
+
+# The original game's heroes (Chrono Commando, Yuri Prime) are not won by infiltrating a tech centre.
+ccomand:
+	Buildable:
+		Prerequisites: ~gapile, ~allies.tech.infiltrated, ~!faction.china, ~!faction.turkey, ~!faction.saudi, ~!faction.israel, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+
+yuripr:
+	Buildable:
+		Prerequisites: ~nahand, ~soviets.tech.infiltrated, ~!faction.china, ~!faction.turkey, ~!faction.saudi, ~!faction.israel, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+
+# A destroyed building drops the owner's own riflemen, not the original GI or conscript.
+Player:
+	SurvivorReplacements@china:
+		Factions: china
+		Replacements:
+			e1: r2cnrifle
+			e2: r2cnrifle
+	SurvivorReplacements@iran:
+		Factions: iran
+		Replacements:
+			e1: r2basij
+			e2: r2basij
+	SurvivorReplacements@turkey:
+		Factions: turkey
+		Replacements:
+			e1: r2trrifle
+			e2: r2trrifle
+	SurvivorReplacements@saudi:
+		Factions: saudi
+		Replacements:
+			e1: r2sang
+			e2: r2sang
+	SurvivorReplacements@israel:
+		Factions: israel
+		Replacements:
+			e1: r2ilrifle
+			e2: r2ilrifle
+	SurvivorReplacements@yemen:
+		Factions: yemen
+		Replacements:
+			e1: r2ymr
+			e2: r2ymr
+	SurvivorReplacements@hezbollah:
+		Factions: hezbollah
+		Replacements:
+			e1: r2hzrifle
+			e2: r2hzrifle
