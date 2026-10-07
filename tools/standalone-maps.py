@@ -257,7 +257,9 @@ def write_map(name: str, title: str, mb: MapBuilder, spawns, resources, descript
 
 # ------------------------------------------------------------------------------------------------ the maps
 def twin_fords():
-    """Two bases split by a winding river with two fords; ore at home, gems by the fords. Point-symmetric."""
+    """Two bases split by a winding river with two fords and a central crossing; ore at home, gems by the two fords.
+    Point-symmetric. (The central crossing came in after a balance measurement: with two fords only, 37% of bot
+    games ended in a draw at the 40-minute cap, a grind at the two chokepoints.)"""
     mb = MapBuilder(64, 128)
     P = np.stack([mb.px, mb.py], -1)
     cxy = np.array([64.0, 32.0])
@@ -277,7 +279,7 @@ def twin_fords():
     dist = poly_dist(P, river)
     X, Y = cell_xy(P)
     in_ford = np.zeros(dist.shape, bool)
-    for f in fords:
+    for f in fords + [0.0]:                          # the two fords plus a central crossing at the symmetry centre
         fx, fy = cell_xy(centre(f))
         in_ford |= np.abs(X - fx) < 2.6            # a crossing cut along the y axis: straight ford edges
     water = (dist < 3.4) & ~in_ford
@@ -289,7 +291,7 @@ def twin_fords():
     ford_p = [centre(f) for f in fords]
     road = np.zeros(dist.shape, bool)
     for s in spawns_p:
-        for q in ford_p:
+        for q in ford_p:                             # the central crossing has no road: one would cross the home ore
             road |= road_mask(P, s, q)
     for s in spawns_p:
         rough &= np.hypot(P[..., 0] - s[0], P[..., 1] - s[1]) > 10
@@ -306,7 +308,8 @@ def twin_fords():
     for q, sign in zip(ford_p, (1, -1)):
         field(resources, mb, q + sign * np.array([0.0, 9.0]), 3.0, 2)
         field(resources, mb, q - sign * np.array([0.0, 9.0]), 3.0, 2)
-    write_map("twin-fords", "Twin Fords", mb, spawns, resources, "river with two fords, point-symmetric", mines)
+    write_map("twin-fords", "Twin Fords", mb, spawns, resources,
+              "river with two gem fords and a central crossing, point-symmetric", mines)
 
 
 def harbor_line():

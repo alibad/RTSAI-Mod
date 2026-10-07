@@ -121,6 +121,10 @@ edge (fixed in Phase 3).
     vertical boundary alternates one- and three-corner templates: fine under a wide road, but a sawtooth along a
     thin shore.
   - The fords are cut along an axis, and the central lake is an octagon with clean sides.
+  - **Twin Fords has a third crossing** at its symmetry centre. The balance agent measured 37% draws on Twin Fords
+    at the 40-minute cap (e2efdd2, 252 games). A drawn game there is not a stall but a grind at the two fords:
+    income holds at about 2,800 a minute, and both sides spend it all. The central crossing has no road, because a
+    road there would cross the home ore. Ore and gems are unchanged (306 resource cells).
 - `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
   first draw). `--list-placeholders` prints every placeholder still in use.
 
