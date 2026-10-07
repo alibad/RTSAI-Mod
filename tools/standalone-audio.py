@@ -106,11 +106,20 @@ def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
+def file_provenance() -> dict:
+    """Every PROVENANCE.json under mods/rtsai in the {"files": {path below its folder: record}} form, by folder."""
+    out = {}
+    for pj in sorted(MOD.rglob("PROVENANCE.json")):
+        data = json.loads(pj.read_text(encoding="utf-8"))
+        if isinstance(data, dict) and isinstance(data.get("files"), dict):
+            out[pj.parent.relative_to(MOD).as_posix()] = data["files"]
+    return dict(sorted(out.items(), key=lambda kv: -len(kv[0])))   # deepest folder first
+
+
 def check(a) -> int:
     """Every audio file under mods/rtsai needs a structured provenance record; nothing is matched by loose text."""
     problems, covered = [], {}
-    sa_prov_path = MOD / "standalone" / "audio" / "PROVENANCE.json"
-    sa_prov = json.loads(sa_prov_path.read_text(encoding="utf-8"))["files"] if sa_prov_path.exists() else {}
+    roots = file_provenance()   # dir (relative to mods/rtsai) -> {key: record}
     mf_prov_path = MOD / "modern-factions" / "audio" / "PROVENANCE.json"
     mf = json.loads(mf_prov_path.read_text(encoding="utf-8")) if mf_prov_path.exists() else {}
     mf_files = {}
@@ -128,17 +137,19 @@ def check(a) -> int:
             problems.append(f"{p.relative_to(ROOT).as_posix()}: audio in a mod without a provenance record format")
             continue
         rel = p.relative_to(MOD).as_posix()
-        if rel.startswith("standalone/audio/"):
-            key = rel[len("standalone/audio/"):]
-            rec = sa_prov.get(key)
+        root = next((r for r in roots if rel.startswith(r + "/")), None)
+        if root is not None:
+            key = rel[len(root) + 1:]
+            rec = roots[root].get(key)
+            src = f"{root}/PROVENANCE.json"
             if rec is None:
-                problems.append(f"{rel}: no entry in standalone/audio/PROVENANCE.json")
+                problems.append(f"{rel}: no entry in {src}")
             elif rec.get("sha256") != sha(p):
-                problems.append(f"{rel}: PROVENANCE.json sha256 does not match the file")
+                problems.append(f"{rel}: {src} sha256 does not match the file")
             elif not rec.get("license") or not rec.get("generator"):
                 problems.append(f"{rel}: entry lacks generator or license")
             else:
-                covered[rel] = "standalone/audio/PROVENANCE.json"
+                covered[rel] = src
         elif rel.startswith("modern-factions/audio/"):
             sub = rel[len("modern-factions/audio/"):]
             hit = mf_files.get(sub)
@@ -159,10 +170,12 @@ def check(a) -> int:
                 continue
             covered[rel] = f"modern-factions/audio/PROVENANCE.json ({section})"
         else:
-            problems.append(f"{rel}: audio outside the provenance-tracked folders (standalone/audio, modern-factions/audio)")
-    for k in sa_prov:
-        if not (MOD / "standalone" / "audio" / k).exists():
-            problems.append(f"standalone/audio/PROVENANCE.json: entry {k} has no file")
+            problems.append(f"{rel}: audio outside a provenance-tracked folder (a PROVENANCE.json with 'files', or "
+                            "modern-factions/audio)")
+    for root, files in roots.items():
+        for k in files:
+            if not (MOD / root / k).exists():
+                problems.append(f"{root}/PROVENANCE.json: entry {k} has no file")
     for k in mf_files:
         if not (MOD / "modern-factions" / "audio" / k).exists():
             problems.append(f"modern-factions/audio/PROVENANCE.json: record {k} has no file")
@@ -189,10 +202,13 @@ def md(text) -> str:
 
 
 def doc_tables() -> str:
-    prov = json.loads((MOD / "standalone" / "audio" / "PROVENANCE.json").read_text(encoding="utf-8"))["files"]
+    prov = {}
+    for root, files in file_provenance().items():
+        for k, r in files.items():
+            prov[f"{root}/{k}"] = r
     out = [BEGIN, ""]
-    music = {k: r for k, r in prov.items() if k.startswith("music/")}
-    voices = {k: r for k, r in prov.items() if k.startswith("voices/") and r.get("engine_id")}
+    music = {k: r for k, r in prov.items() if r.get("category") == "music"}
+    voices = {k: r for k, r in prov.items() if r.get("category") == "voice"}
     synth = {k: r for k, r in prov.items() if k not in music and k not in voices}
     out += ["#### Music", "", "Generator `tools/standalone-music.py`; ACE-Step 1.5, MIT. Request = caption below, "
             "instrumental, the bpm/key/length in the record, 8 turbo steps.", "",

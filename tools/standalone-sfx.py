@@ -188,6 +188,43 @@ def _expnew13(R, n):
     return reverb(x, R.sub("rev"), t60=1.0, wet=0.18)
 
 
+# ---- vehicle and aircraft death explosions with project names (mods/rtsai/audio/sfx, explicit ra2| paths), so the
+# main build (which mounts the player's RA2 content) and the standalone build use the same files. The RA2 names the
+# rules used, expnew13/expnew09, exist only in Yuri's Revenge, so every vehicle death was silent.
+def vehicle_death(R, n, size):
+    L = n / D.SR
+    big = size >= 2
+    x = explosion(R, n, size=0.8 + 0.4 * size, t60=0.8 + 0.35 * size, fc0=3600 + 400 * size, fc1=240 - 30 * size,
+                  sub=1.0 + 0.2 * size, crack=0.55, debris_amt=0.45 + 0.1 * size, rumble=0.4 + 0.2 * size,
+                  cluster=size, body_attack=0.01 + 0.02 * size, crackle=0.4, metallic=0.6,
+                  rumble_t60=1.2 + 0.8 * size, sub_f=(80 - 8 * size, 30))
+    hull = metal(R.sub("hull"), n, R.u(140, 220), t60=0.9 + 0.3 * size, delay=0.02, strike=0.6,
+                 partials=(1.0, 2.31, 3.9, 5.7, 8.2), amps=(1, .6, .4, .25, .15))
+    x = norm(x) + 0.22 * norm(hull)
+    for i in range(size):   # ammunition or fuel cooking off
+        at = R.u(0.25, 0.5) + 0.3 * i
+        if at < L - 0.3:
+            x = x + (0.55 - 0.1 * i) * explosion(R.sub(f"cook{i}"), n, delay=at, size=0.5, crack=0.7, body=0.7,
+                                                 sub=0.5, rumble=0.1, debris_amt=0.2, t60=0.45, fc0=4200, fc1=500)
+    return compress(reverb(norm(x), R.sub("rev"), t60=1.0 + 0.3 * size, wet=0.2, damp=2600), -20, 2.5)
+
+
+recipe("rtsai-explode-small.wav", "@audio/sfx", "vehicle death, small (UnitExplodeSmall and the R2FX small deaths)",
+       ref={"seconds": 1.3, "active_rms_dbfs": -15.0, "max50_rms_dbfs": -7.6})(lambda R, n: vehicle_death(R, n, 0))
+recipe("rtsai-explode-medium.wav", "@audio/sfx", "vehicle death, medium (UnitExplode)",
+       ref={"seconds": 1.6, "active_rms_dbfs": -14.5, "max50_rms_dbfs": -7.0})(lambda R, n: vehicle_death(R, n, 1))
+recipe("rtsai-explode-large.wav", "@audio/sfx",
+       "vehicle death, large: heavy vehicles, aircraft and demolition (R2FXDeathLarge, Kirov/Plane/Apoc, Demolish)",
+       ref={"seconds": 2.2, "active_rms_dbfs": -14.0, "max50_rms_dbfs": -6.5})(lambda R, n: vehicle_death(R, n, 2))
+# the two other names the rules use that RA2's own content lacks: the Chronoshiftable trait's default
+# ChronoshiftSound (chrono2.aud) and the second of the three AA-missile reports (vapoar2b.wav)
+recipe("rtsai-shift.wav", "@audio/sfx", "unit returns from a space shift (Chronoshiftable ChronoshiftSound)",
+       ref={"seconds": 2.0, "active_rms_dbfs": -13.0, "max50_rms_dbfs": -6.5})(lambda R, n: teleport(R, n, True))
+recipe("rtsai-aa-launch.wav", "@audio/sfx", "anti-aircraft missile launch (third variant beside vapoat2a/vapoat2c)",
+       ref={"seconds": 1.08, "active_rms_dbfs": -16.0, "max50_rms_dbfs": -9.0})(
+    lambda R, n: launch(R, n, delay=0.02, f0=950, f1=2300, t60=1.1, low=0.8))
+
+
 # ================================================================================================ guns and cannons
 RIFLE = dict(body_fc=2300, body_q=0.9, crack=1.0, thump_f=(170, 80), thump=0.25, t60=0.05, mech=0.12, bright=3500)
 
@@ -752,29 +789,41 @@ def render(name: str) -> tuple[bytes, dict]:
     return data, m
 
 
-def load_prov() -> dict:
-    return json.loads(PROV.read_text(encoding="utf-8")) if PROV.exists() else {"files": {}}
+MOD = ROOT / "mods" / "rtsai"
 
 
-def save_prov(prov: dict):
+def location(folder: str, name: str) -> tuple[Path, Path, str]:
+    """(file path, its PROVENANCE.json, key in that file). '@dir' folders are relative to mods/rtsai and carry their
+    own PROVENANCE.json; the others live under mods/rtsai/standalone/audio."""
+    if folder.startswith("@"):
+        d = MOD / folder[1:]
+        return d / name, d / "PROVENANCE.json", name
+    return AUDIO / folder / name, PROV, f"{folder}/{name}"
+
+
+def load_prov(path: Path = PROV) -> dict:
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"files": {}}
+
+
+def save_prov(prov: dict, path: Path = PROV):
     """Merge this run's records into the file as it is now (other generators write to it too)."""
-    current = load_prov()
+    current = load_prov(path)
     current["files"].update(prov["files"])
-    prov = current
-    PROV.write_text(json.dumps(prov, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8",
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(current, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8",
                     newline="\n")
 
 
 def build(names):
-    prov = {"files": {}}   # this run's records only; save_prov merges them into the file
+    runs = {}   # PROVENANCE.json -> this run's records only; save_prov merges them into the file
     for name in names:
         folder, role, fn, refname = RECIPES[name]
         data, m = render(name)
-        out = AUDIO / folder / name
+        out, prov_path, key = location(folder, name)
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_bytes(data)
         ref = ref_of(name)
-        prov["files"][f"{folder}/{name}"] = {
+        runs.setdefault(prov_path, {"files": {}})["files"][key] = {
             "category": "ui" if folder == "ui" else ("dog voice" if folder == "voices" else "sfx"),
             "role": role, "generator": GENERATOR, "recipe": fn.__name__ if not fn.__name__.startswith("<") else name,
             "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
@@ -782,23 +831,23 @@ def build(names):
             "format": "Westwood AUD IMA ADPCM 22.05 kHz mono" if name.endswith(".aud") else "WAV PCM 16-bit 22.05 kHz mono",
             "matched_to": {"seconds": ref["seconds"], "max50_rms_dbfs": ref.get("max50_rms_dbfs"),
                            "active_rms_dbfs": ref["active_rms_dbfs"],
-                           "reference": refname if isinstance(refname, str) else "none (name missing in RA2 too)"},
+                           "reference": refname if isinstance(refname, str) else "none (set from sibling sounds)"},
             "measured": {k: m[k] for k in ("seconds", "peak_dbfs", "max50_rms_dbfs", "active_rms_dbfs", "decay20_ms",
                                            "low_share", "high_share")},
             "numpy": np.__version__, "generated": dt.date.today().isoformat(),
             "sha256": hashlib.sha256(data).hexdigest(),
         }
-        print(f"{folder}/{name}: {m['seconds']} s, loudest 50 ms {m['max50_rms_dbfs']} dBFS "
+        print(f"{out.relative_to(MOD).as_posix()}: {m['seconds']} s, loudest 50 ms {m['max50_rms_dbfs']} dBFS "
               f"(target {ref.get('max50_rms_dbfs', ref['active_rms_dbfs'])}), peak {m['peak_dbfs']}", flush=True)
-    save_prov(prov)
+    for path, prov in runs.items():
+        save_prov(prov, path)
 
 
 def compare(names):
     keys = ["max50_rms_dbfs", "active_rms_dbfs", "attack_ms", "decay20_ms", "zcr_hz", "low_share", "high_share"]
     print(f"{'file':14s} " + " ".join(f"{k[:10]:>16s}" for k in keys))
     for name in names:
-        folder = RECIPES[name][0]
-        p = AUDIO / folder / name
+        p = location(RECIPES[name][0], name)[0]
         if not p.exists() or name.endswith(".aud"):
             continue
         with wave.open(str(p)) as w:
@@ -810,10 +859,9 @@ def compare(names):
 
 def verify() -> int:
     """Rebuild every recipe in memory and compare with the shipped file (bit-exact, or within 4 LSB per sample)."""
-    prov = load_prov()
     bad = 0
     for name, (folder, *_rest) in RECIPES.items():
-        p = AUDIO / folder / name
+        p, prov_path, key = location(folder, name)
         if not p.exists():
             continue
         data, _ = render(name)
@@ -826,10 +874,10 @@ def verify() -> int:
             a = np.frombuffer(data[44:], dtype="<i2").astype(int)
             b = np.frombuffer(shipped[44:], dtype="<i2").astype(int)
             state = "within 4 LSB" if np.max(np.abs(a - b)) <= 4 else "DIFFERS"
-        if prov["files"].get(f"{folder}/{name}", {}).get("sha256") != hashlib.sha256(shipped).hexdigest():
+        if load_prov(prov_path)["files"].get(key, {}).get("sha256") != hashlib.sha256(shipped).hexdigest():
             state += ", provenance hash stale"
         bad += state not in ("identical", "within 4 LSB")
-        print(f"{folder}/{name}: {state}")
+        print(f"{p.relative_to(MOD).as_posix()}: {state}")
     return 1 if bad else 0
 
 

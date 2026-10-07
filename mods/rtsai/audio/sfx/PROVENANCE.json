@@ -1,0 +1,144 @@
+{
+ "files": {
+  "rtsai-aa-launch.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.0,
+    "max50_rms_dbfs": -9.0,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 1.08
+   },
+   "measured": {
+    "active_rms_dbfs": -15.9,
+    "decay20_ms": 410,
+    "high_share": 0.145,
+    "low_share": 0.24,
+    "max50_rms_dbfs": -9.1,
+    "peak_dbfs": -0.3,
+    "seconds": 1.08
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "rtsai-aa-launch.wav",
+   "role": "anti-aircraft missile launch (third variant beside vapoat2a/vapoat2c)",
+   "seed": "sha256('rtsai-standalone-sfx-1/rtsai-aa-launch.wav')",
+   "sha256": "a4019ac87d5e374bfc8cad42d19fdffa847e2287c412926e54d6458a4c46560e"
+  },
+  "rtsai-explode-large.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.0,
+    "max50_rms_dbfs": -6.5,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 2.2
+   },
+   "measured": {
+    "active_rms_dbfs": -13.4,
+    "decay20_ms": 1380,
+    "high_share": 0.074,
+    "low_share": 0.55,
+    "max50_rms_dbfs": -6.7,
+    "peak_dbfs": -0.3,
+    "seconds": 2.2
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "rtsai-explode-large.wav",
+   "role": "vehicle death, large: heavy vehicles, aircraft and demolition (R2FXDeathLarge, Kirov/Plane/Apoc, Demolish)",
+   "seed": "sha256('rtsai-standalone-sfx-1/rtsai-explode-large.wav')",
+   "sha256": "cc853fd992a1ed3c49f905285d197dd441ad0768e22a6cac5382b90626beb5ff"
+  },
+  "rtsai-explode-medium.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.5,
+    "max50_rms_dbfs": -7.0,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 1.6
+   },
+   "measured": {
+    "active_rms_dbfs": -14.2,
+    "decay20_ms": 910,
+    "high_share": 0.077,
+    "low_share": 0.533,
+    "max50_rms_dbfs": -7.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.6
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "rtsai-explode-medium.wav",
+   "role": "vehicle death, medium (UnitExplode)",
+   "seed": "sha256('rtsai-standalone-sfx-1/rtsai-explode-medium.wav')",
+   "sha256": "618273c6bfde457492a84c9bd6424a88a88615f32eb235774b871157fbc93cf3"
+  },
+  "rtsai-explode-small.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.0,
+    "max50_rms_dbfs": -7.6,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 1.3
+   },
+   "measured": {
+    "active_rms_dbfs": -15.3,
+    "decay20_ms": 600,
+    "high_share": 0.076,
+    "low_share": 0.557,
+    "max50_rms_dbfs": -7.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.3
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "rtsai-explode-small.wav",
+   "role": "vehicle death, small (UnitExplodeSmall and the R2FX small deaths)",
+   "seed": "sha256('rtsai-standalone-sfx-1/rtsai-explode-small.wav')",
+   "sha256": "601182fffb352309739d70d8f14ec61b5335f45b939fc6a824ff2f85ba50a804"
+  },
+  "rtsai-shift.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.0,
+    "max50_rms_dbfs": -6.5,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 2.0
+   },
+   "measured": {
+    "active_rms_dbfs": -14.8,
+    "decay20_ms": 1130,
+    "high_share": 0.017,
+    "low_share": 0.589,
+    "max50_rms_dbfs": -6.8,
+    "peak_dbfs": -0.3,
+    "seconds": 2.0
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "rtsai-shift.wav",
+   "role": "unit returns from a space shift (Chronoshiftable ChronoshiftSound)",
+   "seed": "sha256('rtsai-standalone-sfx-1/rtsai-shift.wav')",
+   "sha256": "48290a27e0bc8445e1fac408631328f7a0001dfce5af7c2264582028871271d2"
+  }
+ }
+}
