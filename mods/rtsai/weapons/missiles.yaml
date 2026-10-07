@@ -8,7 +8,7 @@ MammothTusk:
 	Inherits: ^AAMissile
 	ReloadDelay: 80
 	Range: 8c0
-	Report: vapoat2a.wav, vapoar2b.wav, vapoat2c.wav
+	Report: vapoat2a.wav, ra2|audio/sfx/rtsai-aa-launch.wav, vapoat2c.wav
 	Burst: 2
 	Projectile: Missile
 		ContrailLength: 8

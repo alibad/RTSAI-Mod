@@ -657,6 +657,7 @@
 		Voice: Move
 	ChronoshiftableWithSpriteEffect:
 		ExplodeInstead: true
+		ChronoshiftSound: ra2|audio/sfx/rtsai-shift.wav
 	MapEditorData:
 		Categories: Infantry
 

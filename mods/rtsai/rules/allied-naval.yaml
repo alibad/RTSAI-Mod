@@ -236,6 +236,7 @@ dlph:
 		Sequence: stand
 	Chronoshiftable:
 		ExplodeInstead: true
+		ChronoshiftSound: ra2|audio/sfx/rtsai-shift.wav
 	RenderDetectionCircle:
 	RenderSprites:
 	WithInfantryBody:
