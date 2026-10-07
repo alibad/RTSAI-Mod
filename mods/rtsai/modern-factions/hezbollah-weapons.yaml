@@ -5,8 +5,10 @@ R2HZMountainRifle:
 	Burst: 2
 	BurstDelays: 5
 	Report: ra2|modern-factions/audio/redsea-mountain-rifle.wav
+	# Salvo and swarm: 13 -> 16 with the 275-credit Veteran rifleman; 14 after balance trim 3 (round 5: 1.78
+	# destroyed per credit against the modern factions, 0.83 against America and Russia).
 	Warhead@1Dam: SpreadDamage
-		Damage: 16
+		Damage: 14
 
 # Basic shoulder-fired anti-armour rocket (Salvo and swarm: 80 -> 90 damage, 4.5 -> 5 cells).
 R2HZYemenRPG:

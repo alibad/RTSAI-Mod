@@ -50,8 +50,8 @@ r2hzrifle:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 10
 		Description: levant-r2hzrifle-description
-	# Salvo and swarm: 150 -> 275 and 100 -> 130 HP, rifle 13 -> 16, Veteran from the barracks: fewer, stronger
-	# fighters. 225 in the design measured 2.07 destroyed per credit (round 5); 275 after balance trim 2.
+	# Salvo and swarm: 150 -> 275 and 100 -> 130 HP, rifle 13 -> 14 (16 in the design), Veteran from the barracks:
+	# fewer, stronger fighters. The design (225, 16) measured 2.07 destroyed per credit (round 5); trims 2-3.
 	Valued:
 		Cost: 275
 	Health:
@@ -81,12 +81,12 @@ r2hzat:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 20
 		Description: levant-r2hzat-description
-	# 300 -> 350 (round 4); Salvo and swarm: 500, 95 -> 120 HP, RPG 80 -> 90 at 5 cells and Veteran from the
-	# barracks, bought in fewer numbers. Balance trim 1: no stationary concealment (with it the team measured 1.31
-	# destroyed per credit against 0.79 in round 4) and 450 -> 500.
-	-Cloak:
+	# 300 -> 350 (round 4); Salvo and swarm: 550, 95 -> 120 HP, RPG 80 -> 90 at 5 cells, stationary concealment
+	# (template) and Veteran from the barracks: an ambush team bought in fewer numbers. Round 5: 450 traded 1.31
+	# destroyed per credit; without concealment (trims 1-2) Hezbollah fell to 21% against America, whose bots field
+	# almost no detectors, while the modern factions all do; so the concealment stays and the price carries the trim.
 	Valued:
-		Cost: 500
+		Cost: 550
 	Health:
 		HP: 120
 	Mobile:
@@ -96,7 +96,7 @@ r2hzat:
 	RevealsShroud:
 		Range: 6c0
 	GainsExperience:
-		ExperienceModifier: 300
+		ExperienceModifier: 330
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
