@@ -1,2 +1,45 @@
-# Standalone music: none yet. The audio agent delivers this file (licensed or generated tracks, with provenance).
-# The original Red Alert 2 soundtrack is only in the classic add-on (mods/rtsai-classic/audio/music.yaml).
+# Original RTS AI soundtrack for the standalone build, made locally with ACE-Step 1.5 (MIT).
+# Per-file provenance: PROVENANCE.json next to this file; generator: tools/standalone-music.py.
+# 'score' plays on the victory and defeat screens (MusicPlaylist in rules/world.yaml), so it is hidden.
+# The tracks are Ogg Vorbis: the manifest's SoundFormats must include Ogg.
+
+rtsai-iron-foundry: Iron Foundry
+	Filename: rtsai-iron-foundry
+	Extension: ogg
+rtsai-grid-assault: Grid Assault
+	Filename: rtsai-grid-assault
+	Extension: ogg
+rtsai-yangtze-steel: Yangtze Steel
+	Filename: rtsai-yangtze-steel
+	Extension: ogg
+rtsai-plateau-engines: Plateau Engines
+	Filename: rtsai-plateau-engines
+	Extension: ogg
+rtsai-anatolian-armor: Anatolian Armor
+	Filename: rtsai-anatolian-armor
+	Extension: ogg
+rtsai-desert-convoy: Desert Convoy
+	Filename: rtsai-desert-convoy
+	Extension: ogg
+rtsai-red-sea-run: Red Sea Run
+	Filename: rtsai-red-sea-run
+	Extension: ogg
+rtsai-cedar-signal: Cedar Signal
+	Filename: rtsai-cedar-signal
+	Extension: ogg
+rtsai-coastline-watch: Coastline Watch
+	Filename: rtsai-coastline-watch
+	Extension: ogg
+rtsai-black-ore: Black Ore
+	Filename: rtsai-black-ore
+	Extension: ogg
+rtsai-pressure-front: Pressure Front
+	Filename: rtsai-pressure-front
+	Extension: ogg
+rtsai-final-push: Final Push
+	Filename: rtsai-final-push
+	Extension: ogg
+score: Debrief
+	Filename: score
+	Extension: ogg
+	Hidden: true
