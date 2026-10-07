@@ -62,6 +62,36 @@ debt). Bot matches with no exceptions: Israel vs Yemen on Twin Fords (6 min), T�
 Found on the way: the RA2 table's tile `ZOffset: -15` assumes TMP tiles with per-pixel depth; on flat tiles it hid
 the whole resource layer, so the generated tileset sets 0. Diagonal generated roads show a one-cell staircase edge.
 
+### Phase 3: in progress [ran]
+
+- **Base kit v1 wired** (`tools/standalone-kit-rules.py` writes `standalone/base-kit.yaml`, standalone only). The 22
+  stock buildings the modern factions use render their kit role, painted per faction, in the kit palette with the
+  player-colour remap. The Soviet-side power plant, barracks, service depot and tech centre take the Allied
+  footprints the kit is drawn for. The two superweapon slots are the Strategic Uplink (Chronosphere function) and the
+  EW Array (Iron Curtain function). The classic add-on keeps the original buildings.
+- **Audio wired**: the audio agent's SFX, UI sounds, stock-unit voices and music (plus its polish pass: loop seams,
+  dog barks, death cries). `--check-standalone --strict-audio` finds 0 unresolved sounds for what the 7 factions
+  can field; `make test` runs it.
+- Placeholder debt: 116 of the 980 stand-in files are still reachable, all in shared units and effects (next
+  delivery).
+
+**Cut buildings: what the modern rosters lose** (owner decision, 7 October 2026). These eight leave the standalone
+rosters (`Buildable: Prerequisites: ~disabled`); the classic add-on keeps them. Numbers are from the resolved rules.
+
+| Cut building | Side | Cost / power | Role lost | For the balance pass |
+|---|---|---|---|---|
+| Ore Purifier `gaorep` | Allied (China, Türkiye, Saudi, Israel) | 2500 / −200 | +25% on every ore delivery | Allied-side late income is 20% lower than with it. Candidates: a refinery upgrade, cheaper harvesters, or more ore value |
+| Nuclear Reactor `nanrct` | Soviet (Iran, Yemen, Hezbollah) | 1000 / +2000 | Bulk power at 0.5 credits per power | Only the power plant is left: 150 power for 600 (4 credits per power, the Allied rate is 200 for 800). Replacing one reactor takes 13 plants and about 8 times the credits. It now uses the Allied 2×2 footprint and kit art, so it could also give 200 |
+| Cloning Vats `naclon` | Soviet | 2500 / −200 | A free copy of each infantry unit produced | Soviet-side late infantry output halves |
+| Missile Silo `namisl` | Soviet | 5000 / −200 | Damage superweapon (nuke, 15000-tick charge) | No faction keeps a damage superweapon. The two kit slots are utility powers; only Israel and Saudi Arabia have a strike power (`AirstrikePower@falcon`). Late sieges may stall |
+| Weather Control `gaweat` | Allied | 5000 / −200 | Damage superweapon (lightning storm, 15000-tick charge) | Same as above |
+| Spy Satellite `gaspysat` | Allied | 1500 / −100 | Reveals the whole map | Allied-side late scouting rests on units |
+| Gap Generator `gagap` | Allied | 1000 / −100 | Shroud over a 10-cell radius | Base concealment is gone. A defence role, but a minor one |
+| Psychic Sensor `napsis` | Soviet | 1000 / −100 | Detects cloaked units within 6 cells | Small loss: every faction keeps roster detectors (Iran: drone control, Ghadir, Peykaap; Yemen: Mokha, spotter; Hezbollah: relay, spotter, survey, workshop) and the dog |
+
+The bots need no change: `rules/ai.yaml` lists `nanrct`, `gagap`, `naclon` and `namisl` in its building fractions,
+and bots skip what they cannot build. Soviet-side bots still build power through `napowr`.
+
 ### Deliverables for Phase 3
 
 The exact file lists are in `docs/standalone-deliverables.json` (`tools/standalone-deliverables.py`, from an audit of
@@ -78,8 +108,8 @@ its stand-in as soon as it lands.
 
 Rules decisions taken with the art agent, to apply when the kit lands: the Soviet-side power plant, barracks,
 service depot and tech centre take the Allied footprints; the ore purifier, gap generator, spy satellite, weather
-control, nuclear reactor, psychic sensor, cloning vats and missile silo leave the modern rosters. **The cuts are a
-design decision for the owner to confirm.**
+control, nuclear reactor, psychic sensor, cloning vats and missile silo leave the modern rosters. The owner confirmed
+the cuts on 7 October 2026. Both decisions are applied (see Phase 3 above).
 
 ## How it was measured [ran]
 
