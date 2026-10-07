@@ -61,29 +61,78 @@ CLEAN = [np.array(d, float) / np.hypot(*d) for d in
          ((1, 0), (1, 0.5), (0, 1), (-1, 0.5), (-1, 0), (-1, -0.5), (0, -1), (1, -0.5))]
 
 
-def road_mask(P, a, b, half_width=1.1):
-    """A road from a to b drawn only along CLEAN directions: a short leg along the minor direction, the long run along
-    the dominant one, then the rest of the minor leg (a Z). The two neighbouring directions that bracket b - a span it
-    with non-negative lengths. Point reflection and mirroring map the Z onto itself, so symmetric maps stay fair."""
+# The cell axes only. A boundary along them crosses the transition templates through two adjacent corners, the
+# half-cell templates, so it draws one straight edge. Screen-horizontal and screen-vertical boundaries alternate
+# one-corner and three-corner templates: fine under a wide road, a sawtooth along a thin strip of shore.
+AXES = [CLEAN[1], CLEAN[3], CLEAN[5], CLEAN[7]]
+
+
+def clean_path(a, b, dirs=None):
+    """The Z from a to b along CLEAN directions: a short leg along the minor direction, the long run along the
+    dominant one, then the rest of the minor leg. The two neighbouring directions that bracket b - a span it with
+    non-negative lengths. Point reflection and mirroring map the Z onto itself, so symmetric maps stay fair.
+    Returns the vertices [a, p1, p2, b]."""
     a, b = np.asarray(a, float), np.asarray(b, float)
+    dirs = CLEAN if dirs is None else dirs
     v = b - a
-    ang = [math.atan2(d[1], d[0]) % (2 * math.pi) for d in CLEAN]
+    ang = [math.atan2(d[1], d[0]) % (2 * math.pi) for d in dirs]
     t = math.atan2(v[1], v[0]) % (2 * math.pi)
-    for i in range(len(CLEAN)):
-        lo, hi = ang[i], ang[(i + 1) % len(CLEAN)]
+    for i in range(len(dirs)):
+        lo, hi = ang[i], ang[(i + 1) % len(dirs)]
         span = (hi - lo) % (2 * math.pi)
         if (t - lo) % (2 * math.pi) <= span + 1e-9:
-            d1, d2 = CLEAN[i], CLEAN[(i + 1) % len(CLEAN)]
+            d1, d2 = dirs[i], dirs[(i + 1) % len(dirs)]
             break
     k1, k2 = np.linalg.solve(np.stack([d1, d2], 1), v)
     (major, kM), (minor, km) = ((d1, k1), (d2, k2)) if k1 >= k2 else ((d2, k2), (d1, k1))
     p1 = a + minor * km / 2
     p2 = p1 + major * kM
-    mask = np.zeros(P.shape[:2], bool)
-    for s, e in ((a, p1), (p1, p2), (p2, b)):
+    return [a, p1, p2, b]
+
+
+def clean_polyline(points, dirs=None):
+    """Waypoints joined by clean Zs: the vertex list of one path."""
+    out = [np.asarray(points[0], float)]
+    for a, b in zip(points, points[1:]):
+        out += clean_path(a, b, dirs)[1:]
+    return out
+
+
+def poly_dist(P, verts):
+    d = np.full(P.shape[:2], np.inf)
+    for s, e in zip(verts, verts[1:]):
         if np.hypot(*(e - s)) > 1e-6:
-            mask |= seg_dist(P, s, e) < half_width
-    return mask
+            d = np.minimum(d, seg_dist(P, s, e))
+    return d
+
+
+def road_mask(P, a, b, half_width=1.1):
+    """A road from a to b along a clean Z (see clean_path)."""
+    return poly_dist(P, clean_path(a, b)) < half_width
+
+
+def cell_xy(P):
+    """Plane coordinates (px = x - y, py = (x + y) / 2) -> cell coordinates (x, y); lines of constant x or y run
+    along the cell axes, which are clean directions."""
+    return P[..., 1] + P[..., 0] / 2, P[..., 1] - P[..., 0] / 2
+
+
+def coast_line(xs, ys):
+    """An x-monotonic coastline through waypoints (xs ascending) along the two cell axes only (slopes +-0.5 in the
+    plane): between waypoints a rising run then a falling one (or the reverse), sized so the pair spans the step.
+    Returns (vx, vy) vertices for np.interp. A step steeper than the axes is clamped to them."""
+    vx, vy = [xs[0]], [ys[0]]
+    for i, (x0, y0, x1, y1) in enumerate(zip(xs, ys, xs[1:], ys[1:])):
+        dx = x1 - x0
+        dy = float(np.clip(y1 - y0, -0.5 * dx, 0.5 * dx))
+        up = dx / 2 + dy             # run at slope +0.5; the rest (dx / 2 - dy) at -0.5
+        if i % 2:                    # alternate the order so the line zigzags instead of drifting
+            vx += [x0 + (dx - up), x1]
+            vy += [y0 - 0.5 * (dx - up), y0 + dy]
+        else:
+            vx += [x0 + up, x1]
+            vy += [y0 + 0.5 * up, y0 + dy]
+    return np.array(vx), np.array(vy)
 
 
 def smooth_noise(px, py, seed, scale):
@@ -216,23 +265,28 @@ def twin_fords():
     d_ab = b - a
     L = np.linalg.norm(d_ab)
     n = np.array([-d_ab[1], d_ab[0]]) / L
-    t = ((P - a) @ d_ab) / (L * L) - 0.5
-    off = 5.0 * np.sin(3 * np.pi * t)
-    dist = np.abs((P - a) @ n - off)
     fords = [0.21, -0.21]
+
+    def centre(tt):                                  # the meander the river follows (t in [-0.5, 0.5])
+        return a + (tt + 0.5) * d_ab + n * (5.0 * np.sin(3 * np.pi * tt))
+
+    # Waypoints on the meander (point-symmetric set, fords included), joined by clean Zs: the banks are straight
+    # runs along clean directions instead of a one-cell staircase.
+    ts = sorted({-0.5, -0.36, -0.21, -0.1, 0.0, 0.1, 0.21, 0.36, 0.5})
+    river = clean_polyline([centre(tt) for tt in ts], AXES)
+    dist = poly_dist(P, river)
+    X, Y = cell_xy(P)
     in_ford = np.zeros(dist.shape, bool)
     for f in fords:
-        in_ford |= np.abs(t - f) < 0.035
+        fx, fy = cell_xy(centre(f))
+        in_ford |= np.abs(X - fx) < 2.6            # a crossing cut along the y axis: straight ford edges
     water = (dist < 3.4) & ~in_ford
     sand = (dist < 3.4) & in_ford
     noise = smooth_noise(P[..., 0], P[..., 1], 3, 9.0)
     noise = (noise + smooth_noise(2 * cxy[0] - P[..., 0], 2 * cxy[1] - P[..., 1], 3, 9.0)) / 2
     rough = (noise > 0.45) & (dist > 6)
     spawns_p = [np.array([26.0, 47.0]), 2 * cxy - np.array([26.0, 47.0])]
-    ford_p = []
-    for f in fords:
-        q = a + (f + 0.5) * d_ab + n * (5.0 * np.sin(3 * np.pi * f))
-        ford_p.append(q)
+    ford_p = [centre(f) for f in fords]
     road = np.zeros(dist.shape, bool)
     for s in spawns_p:
         for q in ford_p:
@@ -261,9 +315,18 @@ def harbor_line():
     P = np.stack([mb.px, mb.py], -1)
     mx = 64.0
     ax = np.abs(P[..., 0] - mx)
-    coast = 11.0 + 3.0 * np.cos(2 * np.pi * ax / 44.0) + 1.5 * np.cos(2 * np.pi * ax / 17.0)
+
+    def coast_fn(x):
+        return 11.0 + 3.0 * np.cos(2 * np.pi * np.abs(x - mx) / 44.0) + 1.5 * np.cos(2 * np.pi * np.abs(x - mx) / 17.0)
+
+    # Coastline waypoints every 8 px, mirror-symmetric about mx, joined by flat runs and cell-axis slopes.
+    wx = np.concatenate([mx - np.arange(80, 0, -8), [mx], mx + np.arange(8, 88, 8)])
+    vx, vy = coast_line(wx, coast_fn(wx))
+    coast = np.interp(P[..., 0], vx, vy)
     sea = P[..., 1] < coast
-    lake = np.hypot((P[..., 0] - mx) / 1.6, P[..., 1] - 33.0) < 5.5
+    # The lake: an octagon with clean sides (screen horizontal and vertical, both cell axes) instead of an ellipse.
+    lx, ly = P[..., 0] - mx, P[..., 1] - 33.0
+    lake = (np.abs(lx) <= 8.6) & (np.abs(ly) <= 5.4) & (np.abs(ly + lx / 2) <= 7.2) & (np.abs(ly - lx / 2) <= 7.2)
     noise = smooth_noise(ax, P[..., 1], 11, 8.0)
     rough = (noise > 0.4) & (P[..., 1] > coast + 4) & ~lake
     spawns_p = [np.array([mx - 40.0, 46.0]), np.array([mx + 40.0, 46.0])]
@@ -273,7 +336,7 @@ def harbor_line():
         road |= road_mask(P, np.array([mx + sgn * 40.0, 46.0]), np.array([mx + sgn * 26.0, coast.min() + 2]))
     for s in spawns_p:
         rough &= np.hypot(P[..., 0] - s[0], P[..., 1] - s[1]) > 10
-    shore = (P[..., 1] < coast + 1.2) & ~sea
+    shore = (P[..., 1] < coast + 1.6) & ~sea
     mb.paint(rough, "rough")
     mb.paint(shore, "sand")
     mb.paint(road & ~sea, "dirt")
