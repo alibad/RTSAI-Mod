@@ -53,9 +53,6 @@ FileSystem: ContentInstallerFileSystem
 		# Mod-provided packages load after content so they can override it.
 		ra2|bits
 		ra2|bits/cameos
-		ra2|bits/structures
-		ra2|bits/animations
-		ra2|bits/projectiles
 	ContentInstallerMod: rtsai-content
 
 MapFolders:

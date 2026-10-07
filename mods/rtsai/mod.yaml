@@ -29,9 +29,6 @@ FileSystem: DefaultFileSystem
 		~ra2|standalone/audio/music
 		ra2|bits
 		ra2|bits/cameos
-		ra2|bits/structures
-		ra2|bits/animations
-		ra2|bits/projectiles
 
 MapFolders:
 	ra2|maps: System

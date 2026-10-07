@@ -282,11 +282,11 @@ Cursors:
 			Start: 392
 		joystick-tl-blocked:
 			Start: 393
-	undeploy.shp: mouse
+	undeploy-cursor.png: mouse
 		undeploy:
 			Start: 0
 			Length: 7
-	assaultmove.shp: mouse
+	assaultmove-cursor.png: mouse
 		assaultmove:
 			Start: 0
 			Length: 9

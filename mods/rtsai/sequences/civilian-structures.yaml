@@ -90,9 +90,8 @@ cawash06:
 	Inherits: ^CivStructure
 	Defaults:
 		Offset: 0, -60, 60
-	idle: # Custom artwork, original lacked shadow.
-		Filename: cgwash06_a.shp
-		ShadowStart: 1
+	idle: # the original sprite (the upstream mod's edited copy with a drawn shadow was removed: unknown provenance)
+		Filename: cuwash06.shp
 	damaged-idle:
 		Filename: cuwash06.shp
 	rubble:
@@ -1091,9 +1090,7 @@ cahse07:
 
 cawt01:
 	Defaults:
-		Filename: cgwt01.shp
-		TilesetFilenames:
-			SNOW: cawt01.shp
+		Filename: cawt01.shp # every theatre uses the original snow water tower (the upstream recolour was removed)
 		Offset: 0, -15, 15
 	idle:
 		ShadowStart: 2
@@ -1694,7 +1691,7 @@ caswst01:
 galite:
 	Defaults:
 		Filename: galite.shp
-		DepthSprite: isodepth.shp
+		DepthSprite: isodepth.png
 		Offset: 0, -12, 12
 	idle:
 		ShadowStart: 2

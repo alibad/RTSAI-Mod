@@ -1,7 +1,5 @@
 {
-"cursors": [
-"mouse.shp"
-],
+"cursors": [],
 "models": [
 "aegis.hva",
 "aegis.vxl",
@@ -179,22 +177,7 @@
 "note": "Names, frame counts and frame sizes of EA files the RA2-mode mod references, measured by tools/standalone-audit.py. No EA pixels, samples or palette values. Input to the placeholder build.",
 "palettes": [
 "anim.pal",
-"cameo.pal",
-"citysno.pal",
-"citytem.pal",
-"cityurb.pal",
-"isosno.pal",
-"isotem.pal",
-"isourb.pal",
-"libsno.pal",
-"libtem.pal",
-"liburb.pal",
-"mousepal.pal",
-"palette.pal",
-"temperat.pal",
-"unitsno.pal",
-"unittem.pal",
-"uniturb.pal"
+"unittem.pal"
 ],
 "sprites": {
 "120mm.shp": {
@@ -323,13 +306,6 @@
 "kind": "effect",
 "w": 55
 },
-"bridgb.sno": {
-"frames": 36,
-"h": 242,
-"image": "bridgb1",
-"kind": "scenery",
-"w": 253
-},
 "bridgb.tem": {
 "frames": 36,
 "h": 242,
@@ -337,28 +313,7 @@
 "kind": "scenery",
 "w": 253
 },
-"bridgb.urb": {
-"frames": 36,
-"h": 242,
-"image": "bridgb1",
-"kind": "scenery",
-"w": 253
-},
-"bridge.sno": {
-"frames": 36,
-"h": 180,
-"image": "bridge1",
-"kind": "scenery",
-"w": 180
-},
 "bridge.tem": {
-"frames": 36,
-"h": 180,
-"image": "bridge1",
-"kind": "scenery",
-"w": 180
-},
-"bridge.urb": {
 "frames": 36,
 "h": 180,
 "image": "bridge1",
@@ -386,28 +341,7 @@
 "kind": "effect",
 "w": 228
 },
-"burnt01.sno": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
 "burnt01.tem": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt01.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt02.sno": {
 "frames": 2,
 "h": 120,
 "image": "smallscorches",
@@ -421,35 +355,7 @@
 "kind": "effect",
 "w": 120
 },
-"burnt02.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt03.sno": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
 "burnt03.tem": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt03.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt04.sno": {
 "frames": 2,
 "h": 120,
 "image": "smallscorches",
@@ -463,35 +369,7 @@
 "kind": "effect",
 "w": 120
 },
-"burnt04.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt05.sno": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
 "burnt05.tem": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt05.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt06.sno": {
 "frames": 2,
 "h": 120,
 "image": "smallscorches",
@@ -505,35 +383,7 @@
 "kind": "effect",
 "w": 120
 },
-"burnt06.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt07.sno": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
 "burnt07.tem": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt07.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt08.sno": {
 "frames": 2,
 "h": 120,
 "image": "mediumscorches",
@@ -547,35 +397,7 @@
 "kind": "effect",
 "w": 120
 },
-"burnt08.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt09.sno": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
 "burnt09.tem": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt09.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt10.sno": {
 "frames": 2,
 "h": 120,
 "image": "mediumscorches",
@@ -589,35 +411,7 @@
 "kind": "effect",
 "w": 120
 },
-"burnt10.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumscorches",
-"kind": "effect",
-"w": 120
-},
-"burnt11.sno": {
-"frames": 2,
-"h": 120,
-"image": "largescorches",
-"kind": "effect",
-"w": 120
-},
 "burnt11.tem": {
-"frames": 2,
-"h": 120,
-"image": "largescorches",
-"kind": "effect",
-"w": 120
-},
-"burnt11.urb": {
-"frames": 2,
-"h": 120,
-"image": "largescorches",
-"kind": "effect",
-"w": 120
-},
-"burnt12.sno": {
 "frames": 2,
 "h": 120,
 "image": "largescorches",
@@ -631,117 +425,12 @@
 "kind": "effect",
 "w": 120
 },
-"burnt12.urb": {
-"frames": 2,
-"h": 120,
-"image": "largescorches",
-"kind": "effect",
-"w": 120
-},
-"caairp.shp": {
-"frames": 8,
-"h": 172,
-"image": "caairp",
-"kind": "structure",
-"w": 172
-},
-"caairp_a.shp": {
-"frames": 20,
-"h": 172,
-"image": "caairp",
-"kind": "structure",
-"w": 172
-},
-"caairp_f.shp": {
-"frames": 32,
-"h": 186,
-"image": "caairp",
-"kind": "structure",
-"w": 188
-},
-"caarmy01.shp": {
-"frames": 6,
-"h": 142,
-"image": "caarmy01",
-"kind": "structure",
-"w": 170
-},
-"caarmy02.shp": {
-"frames": 6,
-"h": 64,
-"image": "caarmy02",
-"kind": "structure",
-"w": 68
-},
-"caarmy03.shp": {
-"frames": 6,
-"h": 64,
-"image": "caarmy03",
-"kind": "structure",
-"w": 68
-},
-"caarmy04.shp": {
-"frames": 6,
-"h": 64,
-"image": "caarmy04",
-"kind": "structure",
-"w": 68
-},
-"cabarn02.shp": {
-"frames": 8,
-"h": 120,
-"image": "cabarn02",
-"kind": "structure",
-"w": 140
-},
 "cabhut.shp": {
 "frames": 6,
 "h": 64,
 "image": "cabhut",
 "kind": "scenery",
 "w": 90
-},
-"cabunk01.shp": {
-"frames": 8,
-"h": 120,
-"image": "cabunk01",
-"kind": "structure",
-"w": 208
-},
-"cabunk02.shp": {
-"frames": 8,
-"h": 120,
-"image": "cabunk02",
-"kind": "structure",
-"w": 130
-},
-"cachig01.shp": {
-"frames": 8,
-"h": 228,
-"image": "cachig01",
-"kind": "structure",
-"w": 350
-},
-"cachig02.shp": {
-"frames": 8,
-"h": 224,
-"image": "cachig02",
-"kind": "structure",
-"w": 308
-},
-"cachig03.shp": {
-"frames": 8,
-"h": 308,
-"image": "cachig03",
-"kind": "structure",
-"w": 418
-},
-"cachig05.shp": {
-"frames": 8,
-"h": 508,
-"image": "cachig05",
-"kind": "structure",
-"w": 780
 },
 "cacity01.shp": {
 "frames": 6,
@@ -771,852 +460,12 @@
 "kind": "structure",
 "w": 432
 },
-"cacolo01.shp": {
-"frames": 8,
-"h": 222,
-"image": "cacolo01",
-"kind": "structure",
-"w": 342
-},
-"cacufgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cacufgl",
-"kind": "structure",
-"w": 244
-},
-"cacufgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cacufgl",
-"kind": "structure",
-"w": 244
-},
-"caeur04.shp": {
-"frames": 8,
-"h": 172,
-"image": "caeur04",
-"kind": "structure",
-"w": 250
-},
-"caeur1.shp": {
-"frames": 8,
-"h": 108,
-"image": "caeur1",
-"kind": "structure",
-"w": 118
-},
-"caeur2.shp": {
-"frames": 8,
-"h": 104,
-"image": "caeur2",
-"kind": "structure",
-"w": 126
-},
-"caeuro05.shp": {
-"frames": 6,
-"h": 106,
-"image": "caeuro05",
-"kind": "scenery",
-"w": 124
-},
-"cafarm01.shp": {
-"frames": 6,
-"h": 118,
-"image": "cafarm01",
-"kind": "structure",
-"w": 154
-},
-"cafarm02.shp": {
-"frames": 8,
-"h": 118,
-"image": "cafarm02",
-"kind": "structure",
-"w": 144
-},
-"cafarm06.shp": {
-"frames": 8,
-"h": 254,
-"image": "cafarm06",
-"kind": "structure",
-"w": 262
-},
-"cafncb.shp": {
-"frames": 64,
-"h": 66,
-"image": "cafncb",
-"kind": "structure",
-"w": 68
-},
-"cafncp.shp": {
-"frames": 64,
-"h": 100,
-"image": "cafncp",
-"kind": "structure",
-"w": 130
-},
-"cafncw.shp": {
-"frames": 64,
-"h": 66,
-"image": "cafncw",
-"kind": "structure",
-"w": 68
-},
-"cafrfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cafrfgl",
-"kind": "structure",
-"w": 244
-},
-"cafrfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cafrfgl",
-"kind": "structure",
-"w": 244
-},
-"cafrma.shp": {
-"frames": 6,
-"h": 116,
-"image": "cafrma",
-"kind": "structure",
-"w": 146
-},
-"cafrmb.shp": {
-"frames": 6,
-"h": 58,
-"image": "cafrmb",
-"kind": "structure",
-"w": 66
-},
-"cagard01.shp": {
-"frames": 6,
-"h": 90,
-"image": "cagard01",
-"kind": "structure",
-"w": 116
-},
-"cagas01.shp": {
-"frames": 8,
-"h": 186,
-"image": "cagas01",
-"kind": "structure",
-"w": 218
-},
-"cagefgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cagefgl",
-"kind": "structure",
-"w": 244
-},
-"cagefgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cagefgl",
-"kind": "structure",
-"w": 244
-},
-"cagrd1_a.shp": {
-"frames": 18,
-"h": 90,
-"image": "cagard01",
-"kind": "structure",
-"w": 116
-},
-"cahosp.shp": {
-"frames": 8,
-"h": 298,
-"image": "cahosp",
-"kind": "structure",
-"w": 448
-},
-"cahosp_a.shp": {
-"frames": 8,
-"h": 298,
-"image": "cahosp",
-"kind": "structure",
-"w": 448
-},
-"cahosp_f.shp": {
-"frames": 32,
-"h": 298,
-"image": "cahosp",
-"kind": "structure",
-"w": 448
-},
-"cahse01.shp": {
-"frames": 8,
-"h": 138,
-"image": "cahse01",
-"kind": "structure",
-"w": 158
-},
-"cahse02.shp": {
-"frames": 8,
-"h": 130,
-"image": "cahse02",
-"kind": "structure",
-"w": 192
-},
-"cahse03.shp": {
-"frames": 8,
-"h": 176,
-"image": "cahse03",
-"kind": "structure",
-"w": 226
-},
-"cahse04.shp": {
-"frames": 8,
-"h": 142,
-"image": "cahse04",
-"kind": "structure",
-"w": 200
-},
-"cahse05.shp": {
-"frames": 8,
-"h": 84,
-"image": "cahse05",
-"kind": "structure",
-"w": 124
-},
-"cahse06.shp": {
-"frames": 8,
-"h": 90,
-"image": "cahse06",
-"kind": "structure",
-"w": 140
-},
-"cahse07.shp": {
-"frames": 8,
-"h": 154,
-"image": "cahse07",
-"kind": "structure",
-"w": 176
-},
-"caind01.shp": {
-"frames": 8,
-"h": 244,
-"image": "caind01",
-"kind": "structure",
-"w": 368
-},
-"cairfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cairfgl",
-"kind": "structure",
-"w": 244
-},
-"cairfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cairfgl",
-"kind": "structure",
-"w": 244
-},
-"cakrmw.shp": {
-"frames": 96,
-"h": 60,
-"image": "cakrmw",
-"kind": "structure",
-"w": 98
-},
-"calab.shp": {
-"frames": 8,
-"h": 174,
-"image": "calab",
-"kind": "structure",
-"w": 200
-},
-"calbfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "calbfgl",
-"kind": "structure",
-"w": 244
-},
-"calbfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "calbfgl",
-"kind": "structure",
-"w": 244
-},
-"camex01.shp": {
-"frames": 8,
-"h": 224,
-"image": "camex01",
-"kind": "structure",
-"w": 234
-},
-"camex02.shp": {
-"frames": 8,
-"h": 304,
-"image": "camex02",
-"kind": "structure",
-"w": 404
-},
-"camex03.shp": {
-"frames": 8,
-"h": 166,
-"image": "camex03",
-"kind": "structure",
-"w": 186
-},
-"camex04.shp": {
-"frames": 8,
-"h": 250,
-"image": "camex04",
-"kind": "structure",
-"w": 242
-},
-"camex05.shp": {
-"frames": 8,
-"h": 106,
-"image": "camex05",
-"kind": "structure",
-"w": 122
-},
-"camiam01.shp": {
-"frames": 8,
-"h": 332,
-"image": "camiam01",
-"kind": "structure",
-"w": 416
-},
-"camiam02.shp": {
-"frames": 8,
-"h": 306,
-"image": "camiam02",
-"kind": "structure",
-"w": 460
-},
-"camiam03.shp": {
-"frames": 8,
-"h": 308,
-"image": "camiam03",
-"kind": "structure",
-"w": 324
-},
-"camiam04.shp": {
-"frames": 6,
-"h": 64,
-"image": "camiam04",
-"kind": "structure",
-"w": 86
-},
-"camiam05.shp": {
-"frames": 8,
-"h": 190,
-"image": "camiam05",
-"kind": "structure",
-"w": 242
-},
-"camiam06.shp": {
-"frames": 8,
-"h": 238,
-"image": "camiam06",
-"kind": "structure",
-"w": 278
-},
-"camiam07.shp": {
-"frames": 8,
-"h": 226,
-"image": "camiam07",
-"kind": "structure",
-"w": 270
-},
-"camiam08.shp": {
-"frames": 8,
-"h": 126,
-"image": "camiam08",
-"kind": "structure",
-"w": 192
-},
-"camisc01.shp": {
-"frames": 6,
-"h": 118,
-"image": "camisc01",
-"kind": "scenery",
-"w": 144
-},
-"camisc02.shp": {
-"frames": 6,
-"h": 42,
-"image": "camisc02",
-"kind": "scenery",
-"w": 42
-},
-"camisc03.shp": {
-"frames": 6,
-"h": 42,
-"image": "camisc03",
-"kind": "scenery",
-"w": 66
-},
-"camisc04.shp": {
-"frames": 6,
-"h": 44,
-"image": "camisc04",
-"kind": "scenery",
-"w": 40
-},
-"camisc05.shp": {
-"frames": 4,
-"h": 62,
-"image": "camisc05",
-"kind": "scenery",
-"w": 74
-},
-"camisc06.shp": {
-"frames": 6,
-"h": 84,
-"image": "camisc06",
-"kind": "scenery",
-"w": 172
-},
-"camov01.shp": {
-"frames": 6,
-"h": 166,
-"image": "camov01",
-"kind": "structure",
-"w": 194
-},
-"camov01_a.shp": {
-"frames": 124,
-"h": 166,
-"image": "camov01",
-"kind": "structure",
-"w": 194
-},
-"camov02.shp": {
-"frames": 8,
-"h": 118,
-"image": "camov02",
-"kind": "structure",
-"w": 186
-},
-"camov02_a.shp": {
-"frames": 8,
-"h": 118,
-"image": "camov02",
-"kind": "structure",
-"w": 186
-},
-"camsc01.shp": {
-"frames": 6,
-"h": 52,
-"image": "camsc01",
-"kind": "scenery",
-"w": 66
-},
-"camsc02.shp": {
-"frames": 6,
-"h": 44,
-"image": "camsc02",
-"kind": "scenery",
-"w": 80
-},
-"camsc03.shp": {
-"frames": 6,
-"h": 52,
-"image": "camsc03",
-"kind": "scenery",
-"w": 66
-},
-"camsc04.shp": {
-"frames": 6,
-"h": 64,
-"image": "camsc04",
-"kind": "scenery",
-"w": 50
-},
-"camsc05.shp": {
-"frames": 6,
-"h": 64,
-"image": "camsc05",
-"kind": "scenery",
-"w": 50
-},
-"camsc06.shp": {
-"frames": 6,
-"h": 60,
-"image": "camsc06",
-"kind": "scenery",
-"w": 52
-},
-"camsc06a.shp": {
-"frames": 8,
-"h": 60,
-"image": "camsc06",
-"kind": "scenery",
-"w": 52
-},
-"camsc07.shp": {
-"frames": 6,
-"h": 118,
-"image": "camsc07",
-"kind": "structure",
-"w": 134
-},
-"camsc08.shp": {
-"frames": 6,
-"h": 66,
-"image": "camsc08",
-"kind": "structure",
-"w": 96
-},
-"camsc09.shp": {
-"frames": 6,
-"h": 68,
-"image": "camsc09",
-"kind": "structure",
-"w": 92
-},
-"camsc10.shp": {
-"frames": 8,
-"h": 226,
-"image": "camsc10",
-"kind": "structure",
-"w": 230
-},
-"camsc11.shp": {
-"frames": 6,
-"h": 60,
-"image": "camsc11",
-"kind": "scenery",
-"w": 54
-},
-"camsc12.shp": {
-"frames": 6,
-"h": 44,
-"image": "camsc12",
-"kind": "scenery",
-"w": 60
-},
-"camsc13.shp": {
-"frames": 6,
-"h": 82,
-"image": "camsc13",
-"kind": "scenery",
-"w": 96
-},
-"canewy01.shp": {
-"frames": 8,
-"h": 274,
-"image": "canewy01",
-"kind": "structure",
-"w": 412
-},
-"canewy05.shp": {
-"frames": 6,
-"h": 440,
-"image": "canewy05",
-"kind": "structure",
-"w": 540
-},
-"canewy06.shp": {
-"frames": 8,
-"h": 452,
-"image": "canewy06",
-"kind": "structure",
-"w": 508
-},
-"canewy07.shp": {
-"frames": 8,
-"h": 366,
-"image": "canewy07",
-"kind": "structure",
-"w": 394
-},
-"canewy08.shp": {
-"frames": 8,
-"h": 374,
-"image": "canewy08",
-"kind": "structure",
-"w": 408
-},
-"canewy10.shp": {
-"frames": 8,
-"h": 374,
-"image": "canewy10",
-"kind": "structure",
-"w": 466
-},
-"canewy11.shp": {
-"frames": 8,
-"h": 262,
-"image": "canewy11",
-"kind": "structure",
-"w": 372
-},
-"canewy12.shp": {
-"frames": 8,
-"h": 298,
-"image": "canewy12",
-"kind": "structure",
-"w": 292
-},
-"canewy13.shp": {
-"frames": 8,
-"h": 342,
-"image": "canewy13",
-"kind": "structure",
-"w": 416
-},
-"canewy14.shp": {
-"frames": 8,
-"h": 330,
-"image": "canewy14",
-"kind": "structure",
-"w": 416
-},
-"canewy15.shp": {
-"frames": 8,
-"h": 252,
-"image": "canewy15",
-"kind": "structure",
-"w": 354
-},
-"canewy16.shp": {
-"frames": 8,
-"h": 388,
-"image": "canewy16",
-"kind": "structure",
-"w": 420
-},
-"canewy17.shp": {
-"frames": 8,
-"h": 190,
-"image": "canewy17",
-"kind": "structure",
-"w": 264
-},
-"canewy18.shp": {
-"frames": 8,
-"h": 200,
-"image": "canewy18",
-"kind": "structure",
-"w": 276
-},
-"canewy20.shp": {
-"frames": 8,
-"h": 228,
-"image": "canewy20",
-"kind": "structure",
-"w": 260
-},
-"canewy21.shp": {
-"frames": 8,
-"h": 228,
-"image": "canewy21",
-"kind": "structure",
-"w": 302
-},
-"canwy05.shp": {
-"frames": 8,
-"h": 412,
-"image": "canwy05",
-"kind": "structure",
-"w": 564
-},
-"canwy09.shp": {
-"frames": 8,
-"h": 388,
-"image": "canwy09",
-"kind": "structure",
-"w": 402
-},
-"canwy22.shp": {
-"frames": 8,
-"h": 172,
-"image": "canwy22",
-"kind": "structure",
-"w": 250
-},
-"canwy23.shp": {
-"frames": 8,
-"h": 386,
-"image": "canwy23",
-"kind": "structure",
-"w": 440
-},
-"canwy24.shp": {
-"frames": 8,
-"h": 386,
-"image": "canwy24",
-"kind": "structure",
-"w": 440
-},
-"canwy25.shp": {
-"frames": 8,
-"h": 176,
-"image": "canwy25",
-"kind": "structure",
-"w": 300
-},
-"canwy26.shp": {
-"frames": 8,
-"h": 288,
-"image": "canwy26",
-"kind": "structure",
-"w": 488
-},
-"caoild.shp": {
-"frames": 8,
-"h": 122,
-"image": "caoild",
-"kind": "structure",
-"w": 166
-},
-"caoild_a.shp": {
-"frames": 128,
-"h": 122,
-"image": "caoild",
-"kind": "structure",
-"w": 166
-},
-"caoild_f.shp": {
-"frames": 32,
-"h": 122,
-"image": "caoild",
-"kind": "structure",
-"w": 166
-},
 "caoutp.shp": {
 "frames": 8,
 "h": 192,
 "image": "caoutp",
 "kind": "structure",
 "w": 290
-},
-"caoutp_a.shp": {
-"frames": 40,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"caoutp_d.shp": {
-"frames": 4,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"caoutp_f.shp": {
-"frames": 32,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"caoutpbb.shp": {
-"frames": 4,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"capark01.shp": {
-"frames": 6,
-"h": 46,
-"image": "capark01",
-"kind": "scenery",
-"w": 48
-},
-"capark02.shp": {
-"frames": 6,
-"h": 84,
-"image": "capark02",
-"kind": "scenery",
-"w": 122
-},
-"capark03.shp": {
-"frames": 6,
-"h": 102,
-"image": "capark03",
-"kind": "scenery",
-"w": 84
-},
-"capars02.shp": {
-"frames": 8,
-"h": 274,
-"image": "capars02",
-"kind": "structure",
-"w": 394
-},
-"capars04.shp": {
-"frames": 8,
-"h": 180,
-"image": "capars04",
-"kind": "structure",
-"w": 270
-},
-"capars05.shp": {
-"frames": 8,
-"h": 180,
-"image": "capars05",
-"kind": "structure",
-"w": 270
-},
-"capars06.shp": {
-"frames": 8,
-"h": 180,
-"image": "capars06",
-"kind": "structure",
-"w": 282
-},
-"capars07.shp": {
-"frames": 6,
-"h": 48,
-"image": "capars07",
-"kind": "structure",
-"w": 54
-},
-"capars08.shp": {
-"frames": 8,
-"h": 286,
-"image": "capars08",
-"kind": "structure",
-"w": 372
-},
-"capars09.shp": {
-"frames": 8,
-"h": 298,
-"image": "capars09",
-"kind": "structure",
-"w": 510
-},
-"capars10.shp": {
-"frames": 8,
-"h": 212,
-"image": "capars10",
-"kind": "structure",
-"w": 358
-},
-"capars12.shp": {
-"frames": 8,
-"h": 222,
-"image": "capars12",
-"kind": "structure",
-"w": 256
-},
-"capars13.shp": {
-"frames": 8,
-"h": 212,
-"image": "capars13",
-"kind": "structure",
-"w": 260
-},
-"capars14.shp": {
-"frames": 8,
-"h": 212,
-"image": "capars14",
-"kind": "structure",
-"w": 354
 },
 "capofgl.shp": {
 "frames": 6,
@@ -1632,33 +481,12 @@
 "kind": "structure",
 "w": 244
 },
-"caprs03.shp": {
-"frames": 8,
-"h": 308,
-"image": "caprs03",
-"kind": "structure",
-"w": 420
-},
 "carricon.shp": {
 "frames": 1,
 "h": 48,
 "image": "carrier",
 "kind": "icon",
 "w": 60
-},
-"carufgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "carufgl",
-"kind": "structure",
-"w": 244
-},
-"carufgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "carufgl",
-"kind": "structure",
-"w": 244
 },
 "carus02a.shp": {
 "frames": 8,
@@ -1673,195 +501,6 @@
 "image": "carus02b",
 "kind": "structure",
 "w": 336
-},
-"carus02c.shp": {
-"frames": 6,
-"h": 374,
-"image": "carus02c",
-"kind": "structure",
-"w": 336
-},
-"carus02d.shp": {
-"frames": 6,
-"h": 374,
-"image": "carus02d",
-"kind": "structure",
-"w": 336
-},
-"carus02e.shp": {
-"frames": 6,
-"h": 374,
-"image": "carus02e",
-"kind": "structure",
-"w": 336
-},
-"carus02f.shp": {
-"frames": 6,
-"h": 374,
-"image": "carus02f",
-"kind": "structure",
-"w": 336
-},
-"carus02g.shp": {
-"frames": 8,
-"h": 374,
-"image": "carus02g",
-"kind": "structure",
-"w": 336
-},
-"carus03.shp": {
-"frames": 8,
-"h": 224,
-"image": "carus03",
-"kind": "structure",
-"w": 300
-},
-"carus04.shp": {
-"frames": 8,
-"h": 238,
-"image": "carus04",
-"kind": "structure",
-"w": 320
-},
-"carus05.shp": {
-"frames": 8,
-"h": 242,
-"image": "carus05",
-"kind": "structure",
-"w": 326
-},
-"carus06.shp": {
-"frames": 8,
-"h": 242,
-"image": "carus06",
-"kind": "structure",
-"w": 284
-},
-"carus07.shp": {
-"frames": 8,
-"h": 60,
-"image": "carus07",
-"kind": "structure",
-"w": 70
-},
-"carus08.shp": {
-"frames": 8,
-"h": 144,
-"image": "carus08",
-"kind": "structure",
-"w": 154
-},
-"carus09.shp": {
-"frames": 8,
-"h": 188,
-"image": "carus09",
-"kind": "structure",
-"w": 240
-},
-"carus10.shp": {
-"frames": 8,
-"h": 106,
-"image": "carus10",
-"kind": "structure",
-"w": 148
-},
-"carus11.shp": {
-"frames": 8,
-"h": 106,
-"image": "carus11",
-"kind": "structure",
-"w": 206
-},
-"caskfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "caskfgl",
-"kind": "structure",
-"w": 244
-},
-"caskfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "caskfgl",
-"kind": "structure",
-"w": 244
-},
-"castl02.shp": {
-"frames": 8,
-"h": 224,
-"image": "castl02",
-"kind": "structure",
-"w": 296
-},
-"castl03.shp": {
-"frames": 8,
-"h": 216,
-"image": "castl03",
-"kind": "structure",
-"w": 272
-},
-"castl05a.shp": {
-"frames": 8,
-"h": 246,
-"image": "castl05a",
-"kind": "structure",
-"w": 294
-},
-"castl05b.shp": {
-"frames": 8,
-"h": 246,
-"image": "castl05b",
-"kind": "structure",
-"w": 292
-},
-"castl05c.shp": {
-"frames": 8,
-"h": 222,
-"image": "castl05c",
-"kind": "structure",
-"w": 244
-},
-"castl05d.shp": {
-"frames": 8,
-"h": 246,
-"image": "castl05d",
-"kind": "structure",
-"w": 258
-},
-"castl05e.shp": {
-"frames": 8,
-"h": 224,
-"image": "castl05e",
-"kind": "structure",
-"w": 294
-},
-"castl05f.shp": {
-"frames": 8,
-"h": 312,
-"image": "castl05f",
-"kind": "structure",
-"w": 260
-},
-"castl05g.shp": {
-"frames": 8,
-"h": 230,
-"image": "castl05g",
-"kind": "structure",
-"w": 256
-},
-"castl05h.shp": {
-"frames": 8,
-"h": 210,
-"image": "castl05h",
-"kind": "structure",
-"w": 292
-},
-"castrt01.shp": {
-"frames": 6,
-"h": 102,
-"image": "castrt01",
-"kind": "structure",
-"w": 124
 },
 "castrt02.shp": {
 "frames": 6,
@@ -1883,251 +522,6 @@
 "image": "castrt04",
 "kind": "structure",
 "w": 136
-},
-"castrt05.shp": {
-"frames": 6,
-"h": 112,
-"image": "castrt05",
-"kind": "structure",
-"w": 136
-},
-"caswst01.shp": {
-"frames": 8,
-"h": 370,
-"image": "caswst01",
-"kind": "structure",
-"w": 358
-},
-"catech01.shp": {
-"frames": 8,
-"h": 176,
-"image": "catech01",
-"kind": "structure",
-"w": 240
-},
-"catexs01.shp": {
-"frames": 8,
-"h": 260,
-"image": "catexs01",
-"kind": "structure",
-"w": 290
-},
-"catexs02.shp": {
-"frames": 8,
-"h": 236,
-"image": "catexs02",
-"kind": "structure",
-"w": 258
-},
-"catexs03.shp": {
-"frames": 8,
-"h": 282,
-"image": "catexs03",
-"kind": "structure",
-"w": 380
-},
-"catexs04.shp": {
-"frames": 8,
-"h": 282,
-"image": "catexs04",
-"kind": "structure",
-"w": 376
-},
-"catexs05.shp": {
-"frames": 8,
-"h": 282,
-"image": "catexs05",
-"kind": "structure",
-"w": 368
-},
-"catexs06.shp": {
-"frames": 8,
-"h": 196,
-"image": "catexs06",
-"kind": "structure",
-"w": 206
-},
-"catexs07.shp": {
-"frames": 8,
-"h": 196,
-"image": "catexs07",
-"kind": "structure",
-"w": 266
-},
-"catexs08.shp": {
-"frames": 8,
-"h": 146,
-"image": "catexs08",
-"kind": "structure",
-"w": 184
-},
-"cats01.shp": {
-"frames": 6,
-"h": 114,
-"image": "cats01",
-"kind": "structure",
-"w": 140
-},
-"caukfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "caukfgl",
-"kind": "structure",
-"w": 244
-},
-"caukfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "caukfgl",
-"kind": "structure",
-"w": 244
-},
-"causfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "causfgl",
-"kind": "structure",
-"w": 244
-},
-"causfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "causfgl",
-"kind": "structure",
-"w": 244
-},
-"cawa19_a.shp": {
-"frames": 96,
-"h": 218,
-"image": "cawash19",
-"kind": "structure",
-"w": 198
-},
-"cawa2a.shp": {
-"frames": 8,
-"h": 244,
-"image": "cawa2a",
-"kind": "structure",
-"w": 240
-},
-"cawa2b.shp": {
-"frames": 8,
-"h": 212,
-"image": "cawa2b",
-"kind": "structure",
-"w": 282
-},
-"cawa2c.shp": {
-"frames": 8,
-"h": 246,
-"image": "cawa2c",
-"kind": "structure",
-"w": 274
-},
-"cawa2d.shp": {
-"frames": 8,
-"h": 242,
-"image": "cawa2d",
-"kind": "structure",
-"w": 306
-},
-"cawash03.shp": {
-"frames": 8,
-"h": 208,
-"image": "cawash03",
-"kind": "structure",
-"w": 276
-},
-"cawash04.shp": {
-"frames": 8,
-"h": 240,
-"image": "cawash04",
-"kind": "structure",
-"w": 298
-},
-"cawash05.shp": {
-"frames": 8,
-"h": 184,
-"image": "cawash05",
-"kind": "structure",
-"w": 366
-},
-"cawash07.shp": {
-"frames": 8,
-"h": 188,
-"image": "cawash07",
-"kind": "structure",
-"w": 340
-},
-"cawash08.shp": {
-"frames": 8,
-"h": 214,
-"image": "cawash08",
-"kind": "structure",
-"w": 298
-},
-"cawash09.shp": {
-"frames": 8,
-"h": 182,
-"image": "cawash09",
-"kind": "structure",
-"w": 270
-},
-"cawash10.shp": {
-"frames": 8,
-"h": 238,
-"image": "cawash10",
-"kind": "structure",
-"w": 280
-},
-"cawash11.shp": {
-"frames": 8,
-"h": 214,
-"image": "cawash11",
-"kind": "structure",
-"w": 352
-},
-"cawash13.shp": {
-"frames": 8,
-"h": 202,
-"image": "cawash13",
-"kind": "structure",
-"w": 230
-},
-"cawash16.shp": {
-"frames": 8,
-"h": 222,
-"image": "cawash16",
-"kind": "structure",
-"w": 308
-},
-"cawash17.shp": {
-"frames": 8,
-"h": 300,
-"image": "cawash17",
-"kind": "structure",
-"w": 382
-},
-"cawash18.shp": {
-"frames": 6,
-"h": 92,
-"image": "cawash18",
-"kind": "structure",
-"w": 66
-},
-"cawash19.shp": {
-"frames": 8,
-"h": 218,
-"image": "cawash19",
-"kind": "structure",
-"w": 198
-},
-"cawsh18a.shp": {
-"frames": 20,
-"h": 96,
-"image": "cawash18",
-"kind": "structure",
-"w": 90
 },
 "cawt01.shp": {
 "frames": 4,
@@ -2416,13 +810,6 @@
 "kind": "infantry",
 "w": 86
 },
-"crate.sno": {
-"frames": 2,
-"h": 60,
-"image": "crate",
-"kind": "effect",
-"w": 60
-},
 "crate.tem": {
 "frames": 2,
 "h": 60,
@@ -2430,35 +817,7 @@
 "kind": "effect",
 "w": 60
 },
-"crate.urb": {
-"frames": 2,
-"h": 60,
-"image": "crate",
-"kind": "effect",
-"w": 60
-},
-"crater01.sno": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
 "crater01.tem": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater01.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater02.sno": {
 "frames": 2,
 "h": 120,
 "image": "smallcraters",
@@ -2472,35 +831,7 @@
 "kind": "effect",
 "w": 120
 },
-"crater02.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater03.sno": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
 "crater03.tem": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater03.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater04.sno": {
 "frames": 2,
 "h": 120,
 "image": "smallcraters",
@@ -2514,35 +845,7 @@
 "kind": "effect",
 "w": 120
 },
-"crater04.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater05.sno": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
 "crater05.tem": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater05.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater06.sno": {
 "frames": 2,
 "h": 120,
 "image": "smallcraters",
@@ -2556,35 +859,7 @@
 "kind": "effect",
 "w": 120
 },
-"crater06.urb": {
-"frames": 2,
-"h": 120,
-"image": "smallcraters",
-"kind": "effect",
-"w": 120
-},
-"crater07.sno": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
 "crater07.tem": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
-"crater07.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
-"crater08.sno": {
 "frames": 2,
 "h": 120,
 "image": "mediumcraters",
@@ -2598,35 +873,7 @@
 "kind": "effect",
 "w": 120
 },
-"crater08.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
-"crater09.sno": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
 "crater09.tem": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
-"crater09.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
-"crater10.sno": {
 "frames": 2,
 "h": 120,
 "image": "mediumcraters",
@@ -2640,20 +887,6 @@
 "kind": "effect",
 "w": 120
 },
-"crater10.urb": {
-"frames": 2,
-"h": 120,
-"image": "mediumcraters",
-"kind": "effect",
-"w": 120
-},
-"crater11.sno": {
-"frames": 2,
-"h": 120,
-"image": "largecraters",
-"kind": "effect",
-"w": 120
-},
 "crater11.tem": {
 "frames": 2,
 "h": 120,
@@ -2661,28 +894,7 @@
 "kind": "effect",
 "w": 120
 },
-"crater11.urb": {
-"frames": 2,
-"h": 120,
-"image": "largecraters",
-"kind": "effect",
-"w": 120
-},
-"crater12.sno": {
-"frames": 2,
-"h": 120,
-"image": "largecraters",
-"kind": "effect",
-"w": 120
-},
 "crater12.tem": {
-"frames": 2,
-"h": 120,
-"image": "largecraters",
-"kind": "effect",
-"w": 120
-},
-"crater12.urb": {
 "frames": 2,
 "h": 120,
 "image": "largecraters",
@@ -4117,1419 +2329,12 @@
 "kind": "structure",
 "w": 90
 },
-"cuairp.shp": {
-"frames": 8,
-"h": 172,
-"image": "caairp",
-"kind": "structure",
-"w": 172
-},
-"cuairp_a.shp": {
-"frames": 20,
-"h": 172,
-"image": "caairp",
-"kind": "structure",
-"w": 172
-},
-"cuairp_f.shp": {
-"frames": 32,
-"h": 186,
-"image": "caairp",
-"kind": "structure",
-"w": 188
-},
-"cuarmy01.shp": {
-"frames": 6,
-"h": 140,
-"image": "caarmy01",
-"kind": "structure",
-"w": 170
-},
-"cuarmy02.shp": {
-"frames": 6,
-"h": 64,
-"image": "caarmy02",
-"kind": "structure",
-"w": 68
-},
-"cuarmy03.shp": {
-"frames": 6,
-"h": 64,
-"image": "caarmy03",
-"kind": "structure",
-"w": 68
-},
-"cuarmy04.shp": {
-"frames": 6,
-"h": 64,
-"image": "caarmy04",
-"kind": "structure",
-"w": 68
-},
-"cubarn02.shp": {
-"frames": 8,
-"h": 120,
-"image": "cabarn02",
-"kind": "structure",
-"w": 140
-},
-"cubunk01.shp": {
-"frames": 8,
-"h": 120,
-"image": "cabunk01",
-"kind": "structure",
-"w": 208
-},
-"cubunk02.shp": {
-"frames": 8,
-"h": 120,
-"image": "cabunk02",
-"kind": "structure",
-"w": 130
-},
-"cuchig01.shp": {
-"frames": 8,
-"h": 228,
-"image": "cachig01",
-"kind": "structure",
-"w": 350
-},
-"cuchig02.shp": {
-"frames": 8,
-"h": 224,
-"image": "cachig02",
-"kind": "structure",
-"w": 308
-},
-"cuchig03.shp": {
-"frames": 8,
-"h": 308,
-"image": "cachig03",
-"kind": "structure",
-"w": 418
-},
-"cuchig05.shp": {
-"frames": 8,
-"h": 508,
-"image": "cachig05",
-"kind": "structure",
-"w": 780
-},
-"cucolo01.shp": {
-"frames": 8,
-"h": 222,
-"image": "cacolo01",
-"kind": "structure",
-"w": 342
-},
-"cucufgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cacufgl",
-"kind": "structure",
-"w": 244
-},
-"cucufgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cacufgl",
-"kind": "structure",
-"w": 244
-},
-"cueur04.shp": {
-"frames": 8,
-"h": 172,
-"image": "caeur04",
-"kind": "structure",
-"w": 250
-},
-"cueur1.shp": {
-"frames": 8,
-"h": 108,
-"image": "caeur1",
-"kind": "structure",
-"w": 118
-},
-"cueur2.shp": {
-"frames": 8,
-"h": 104,
-"image": "caeur2",
-"kind": "structure",
-"w": 126
-},
-"cueuro05.shp": {
-"frames": 6,
-"h": 106,
-"image": "caeuro05",
-"kind": "scenery",
-"w": 124
-},
-"cufarm01.shp": {
-"frames": 6,
-"h": 118,
-"image": "cafarm01",
-"kind": "structure",
-"w": 154
-},
-"cufarm02.shp": {
-"frames": 8,
-"h": 118,
-"image": "cafarm02",
-"kind": "structure",
-"w": 144
-},
-"cufarm06.shp": {
-"frames": 8,
-"h": 254,
-"image": "cafarm06",
-"kind": "structure",
-"w": 262
-},
-"cufncb.shp": {
-"frames": 64,
-"h": 66,
-"image": "cafncb",
-"kind": "structure",
-"w": 68
-},
-"cufncp.shp": {
-"frames": 64,
-"h": 100,
-"image": "cafncp",
-"kind": "structure",
-"w": 130
-},
-"cufncw.shp": {
-"frames": 64,
-"h": 66,
-"image": "cafncw",
-"kind": "structure",
-"w": 68
-},
-"cufrfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cafrfgl",
-"kind": "structure",
-"w": 244
-},
-"cufrfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cafrfgl",
-"kind": "structure",
-"w": 244
-},
-"cufrma.shp": {
-"frames": 6,
-"h": 116,
-"image": "cafrma",
-"kind": "structure",
-"w": 146
-},
-"cufrmb.shp": {
-"frames": 6,
-"h": 58,
-"image": "cafrmb",
-"kind": "structure",
-"w": 66
-},
-"cugard01.shp": {
-"frames": 6,
-"h": 90,
-"image": "cagard01",
-"kind": "structure",
-"w": 116
-},
-"cugas01.shp": {
-"frames": 8,
-"h": 186,
-"image": "cagas01",
-"kind": "structure",
-"w": 218
-},
-"cugefgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cagefgl",
-"kind": "structure",
-"w": 244
-},
-"cugefgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cagefgl",
-"kind": "structure",
-"w": 244
-},
-"cugrd1_a.shp": {
-"frames": 18,
-"h": 90,
-"image": "cagard01",
-"kind": "structure",
-"w": 116
-},
-"cuhosp.shp": {
-"frames": 8,
-"h": 298,
-"image": "cahosp",
-"kind": "structure",
-"w": 448
-},
-"cuhosp_a.shp": {
-"frames": 8,
-"h": 298,
-"image": "cahosp",
-"kind": "structure",
-"w": 448
-},
-"cuhosp_f.shp": {
-"frames": 32,
-"h": 298,
-"image": "cahosp",
-"kind": "structure",
-"w": 448
-},
-"cuhse01.shp": {
-"frames": 8,
-"h": 138,
-"image": "cahse01",
-"kind": "structure",
-"w": 160
-},
-"cuhse02.shp": {
-"frames": 8,
-"h": 130,
-"image": "cahse02",
-"kind": "structure",
-"w": 192
-},
-"cuhse03.shp": {
-"frames": 8,
-"h": 176,
-"image": "cahse03",
-"kind": "structure",
-"w": 226
-},
-"cuhse04.shp": {
-"frames": 8,
-"h": 142,
-"image": "cahse04",
-"kind": "structure",
-"w": 200
-},
-"cuhse05.shp": {
-"frames": 8,
-"h": 84,
-"image": "cahse05",
-"kind": "structure",
-"w": 124
-},
-"cuhse06.shp": {
-"frames": 8,
-"h": 90,
-"image": "cahse06",
-"kind": "structure",
-"w": 140
-},
-"cuhse07.shp": {
-"frames": 8,
-"h": 154,
-"image": "cahse07",
-"kind": "structure",
-"w": 176
-},
-"cuind01.shp": {
-"frames": 8,
-"h": 244,
-"image": "caind01",
-"kind": "structure",
-"w": 368
-},
-"cuirfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "cairfgl",
-"kind": "structure",
-"w": 244
-},
-"cuirfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "cairfgl",
-"kind": "structure",
-"w": 244
-},
-"cukrmw.shp": {
-"frames": 96,
-"h": 60,
-"image": "cakrmw",
-"kind": "structure",
-"w": 98
-},
-"culab.shp": {
-"frames": 8,
-"h": 174,
-"image": "calab",
-"kind": "structure",
-"w": 200
-},
-"culbfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "calbfgl",
-"kind": "structure",
-"w": 244
-},
-"culbfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "calbfgl",
-"kind": "structure",
-"w": 244
-},
-"cumex01.shp": {
-"frames": 8,
-"h": 224,
-"image": "camex01",
-"kind": "structure",
-"w": 234
-},
-"cumex02.shp": {
-"frames": 8,
-"h": 304,
-"image": "camex02",
-"kind": "structure",
-"w": 404
-},
-"cumex03.shp": {
-"frames": 8,
-"h": 166,
-"image": "camex03",
-"kind": "structure",
-"w": 186
-},
-"cumex04.shp": {
-"frames": 8,
-"h": 250,
-"image": "camex04",
-"kind": "structure",
-"w": 242
-},
-"cumex05.shp": {
-"frames": 8,
-"h": 106,
-"image": "camex05",
-"kind": "structure",
-"w": 122
-},
-"cumiam01.shp": {
-"frames": 8,
-"h": 332,
-"image": "camiam01",
-"kind": "structure",
-"w": 416
-},
-"cumiam02.shp": {
-"frames": 8,
-"h": 306,
-"image": "camiam02",
-"kind": "structure",
-"w": 460
-},
-"cumiam03.shp": {
-"frames": 8,
-"h": 308,
-"image": "camiam03",
-"kind": "structure",
-"w": 324
-},
-"cumiam04.shp": {
-"frames": 6,
-"h": 64,
-"image": "camiam04",
-"kind": "structure",
-"w": 86
-},
-"cumiam05.shp": {
-"frames": 8,
-"h": 190,
-"image": "camiam05",
-"kind": "structure",
-"w": 242
-},
-"cumiam06.shp": {
-"frames": 8,
-"h": 238,
-"image": "camiam06",
-"kind": "structure",
-"w": 278
-},
-"cumiam07.shp": {
-"frames": 8,
-"h": 226,
-"image": "camiam07",
-"kind": "structure",
-"w": 270
-},
-"cumiam08.shp": {
-"frames": 8,
-"h": 126,
-"image": "camiam08",
-"kind": "structure",
-"w": 192
-},
-"cumisc01.shp": {
-"frames": 6,
-"h": 42,
-"image": "camisc01",
-"kind": "scenery",
-"w": 42
-},
-"cumisc02.shp": {
-"frames": 6,
-"h": 42,
-"image": "camisc02",
-"kind": "scenery",
-"w": 42
-},
-"cumisc03.shp": {
-"frames": 6,
-"h": 42,
-"image": "camisc03",
-"kind": "scenery",
-"w": 66
-},
-"cumisc04.shp": {
-"frames": 6,
-"h": 44,
-"image": "camisc04",
-"kind": "scenery",
-"w": 40
-},
-"cumisc05.shp": {
-"frames": 4,
-"h": 62,
-"image": "camisc05",
-"kind": "scenery",
-"w": 74
-},
-"cumisc06.shp": {
-"frames": 6,
-"h": 84,
-"image": "camisc06",
-"kind": "scenery",
-"w": 172
-},
-"cumov01.shp": {
-"frames": 6,
-"h": 166,
-"image": "camov01",
-"kind": "structure",
-"w": 194
-},
-"cumov01_a.shp": {
-"frames": 124,
-"h": 166,
-"image": "camov01",
-"kind": "structure",
-"w": 194
-},
-"cumov02.shp": {
-"frames": 8,
-"h": 118,
-"image": "camov02",
-"kind": "structure",
-"w": 186
-},
-"cumov02_a.shp": {
-"frames": 8,
-"h": 118,
-"image": "camov02",
-"kind": "structure",
-"w": 186
-},
-"cumsc01.shp": {
-"frames": 6,
-"h": 52,
-"image": "camsc01",
-"kind": "scenery",
-"w": 66
-},
-"cumsc02.shp": {
-"frames": 6,
-"h": 44,
-"image": "camsc02",
-"kind": "scenery",
-"w": 80
-},
-"cumsc03.shp": {
-"frames": 6,
-"h": 52,
-"image": "camsc03",
-"kind": "scenery",
-"w": 66
-},
-"cumsc04.shp": {
-"frames": 6,
-"h": 64,
-"image": "camsc04",
-"kind": "scenery",
-"w": 50
-},
-"cumsc05.shp": {
-"frames": 6,
-"h": 64,
-"image": "camsc05",
-"kind": "scenery",
-"w": 50
-},
-"cumsc06.shp": {
-"frames": 6,
-"h": 60,
-"image": "camsc06",
-"kind": "scenery",
-"w": 52
-},
-"cumsc06a.shp": {
-"frames": 8,
-"h": 60,
-"image": "camsc06",
-"kind": "scenery",
-"w": 52
-},
-"cumsc07.shp": {
-"frames": 6,
-"h": 118,
-"image": "camsc07",
-"kind": "structure",
-"w": 134
-},
-"cumsc08.shp": {
-"frames": 6,
-"h": 66,
-"image": "camsc08",
-"kind": "structure",
-"w": 96
-},
-"cumsc09.shp": {
-"frames": 6,
-"h": 68,
-"image": "camsc09",
-"kind": "structure",
-"w": 92
-},
-"cumsc10.shp": {
-"frames": 8,
-"h": 232,
-"image": "camsc10",
-"kind": "structure",
-"w": 238
-},
-"cumsc11.shp": {
-"frames": 6,
-"h": 60,
-"image": "camsc11",
-"kind": "scenery",
-"w": 54
-},
-"cumsc12.shp": {
-"frames": 6,
-"h": 44,
-"image": "camsc12",
-"kind": "scenery",
-"w": 60
-},
-"cumsc13.shp": {
-"frames": 6,
-"h": 82,
-"image": "camsc13",
-"kind": "scenery",
-"w": 96
-},
-"cunewy01.shp": {
-"frames": 8,
-"h": 274,
-"image": "canewy01",
-"kind": "structure",
-"w": 412
-},
-"cunewy05.shp": {
-"frames": 6,
-"h": 440,
-"image": "canewy05",
-"kind": "structure",
-"w": 540
-},
-"cunewy06.shp": {
-"frames": 8,
-"h": 452,
-"image": "canewy06",
-"kind": "structure",
-"w": 508
-},
-"cunewy07.shp": {
-"frames": 8,
-"h": 366,
-"image": "canewy07",
-"kind": "structure",
-"w": 394
-},
-"cunewy08.shp": {
-"frames": 8,
-"h": 374,
-"image": "canewy08",
-"kind": "structure",
-"w": 408
-},
-"cunewy10.shp": {
-"frames": 8,
-"h": 374,
-"image": "canewy10",
-"kind": "structure",
-"w": 466
-},
-"cunewy11.shp": {
-"frames": 8,
-"h": 262,
-"image": "canewy11",
-"kind": "structure",
-"w": 372
-},
-"cunewy12.shp": {
-"frames": 8,
-"h": 298,
-"image": "canewy12",
-"kind": "structure",
-"w": 292
-},
-"cunewy13.shp": {
-"frames": 8,
-"h": 342,
-"image": "canewy13",
-"kind": "structure",
-"w": 416
-},
-"cunewy14.shp": {
-"frames": 8,
-"h": 330,
-"image": "canewy14",
-"kind": "structure",
-"w": 416
-},
-"cunewy15.shp": {
-"frames": 8,
-"h": 252,
-"image": "canewy15",
-"kind": "structure",
-"w": 354
-},
-"cunewy16.shp": {
-"frames": 8,
-"h": 388,
-"image": "canewy16",
-"kind": "structure",
-"w": 420
-},
-"cunewy17.shp": {
-"frames": 8,
-"h": 190,
-"image": "canewy17",
-"kind": "structure",
-"w": 264
-},
-"cunewy18.shp": {
-"frames": 8,
-"h": 200,
-"image": "canewy18",
-"kind": "structure",
-"w": 276
-},
-"cunewy20.shp": {
-"frames": 8,
-"h": 228,
-"image": "canewy20",
-"kind": "structure",
-"w": 260
-},
-"cunewy21.shp": {
-"frames": 8,
-"h": 228,
-"image": "canewy21",
-"kind": "structure",
-"w": 302
-},
-"cunwy05.shp": {
-"frames": 8,
-"h": 412,
-"image": "canwy05",
-"kind": "structure",
-"w": 564
-},
-"cunwy09.shp": {
-"frames": 8,
-"h": 388,
-"image": "canwy09",
-"kind": "structure",
-"w": 402
-},
-"cunwy22.shp": {
-"frames": 8,
-"h": 172,
-"image": "canwy22",
-"kind": "structure",
-"w": 250
-},
-"cunwy23.shp": {
-"frames": 8,
-"h": 386,
-"image": "canwy23",
-"kind": "structure",
-"w": 440
-},
-"cunwy24.shp": {
-"frames": 8,
-"h": 386,
-"image": "canwy24",
-"kind": "structure",
-"w": 440
-},
-"cunwy25.shp": {
-"frames": 8,
-"h": 176,
-"image": "canwy25",
-"kind": "structure",
-"w": 300
-},
-"cunwy26.shp": {
-"frames": 8,
-"h": 288,
-"image": "canwy26",
-"kind": "structure",
-"w": 488
-},
-"cuoild.shp": {
-"frames": 8,
-"h": 122,
-"image": "caoild",
-"kind": "structure",
-"w": 166
-},
-"cuoild_a.shp": {
-"frames": 128,
-"h": 122,
-"image": "caoild",
-"kind": "structure",
-"w": 166
-},
-"cuoild_f.shp": {
-"frames": 16,
-"h": 122,
-"image": "caoild",
-"kind": "structure",
-"w": 166
-},
-"cuoutp.shp": {
-"frames": 6,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"cuoutp_a.shp": {
-"frames": 40,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"cuoutp_d.shp": {
-"frames": 4,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"cuoutp_f.shp": {
-"frames": 16,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"cuoutpbb.shp": {
-"frames": 4,
-"h": 192,
-"image": "caoutp",
-"kind": "structure",
-"w": 290
-},
-"cupark01.shp": {
-"frames": 6,
-"h": 46,
-"image": "capark01",
-"kind": "scenery",
-"w": 48
-},
-"cupark02.shp": {
-"frames": 6,
-"h": 84,
-"image": "capark02",
-"kind": "scenery",
-"w": 122
-},
-"cupark03.shp": {
-"frames": 6,
-"h": 102,
-"image": "capark03",
-"kind": "scenery",
-"w": 84
-},
-"cupars02.shp": {
-"frames": 8,
-"h": 274,
-"image": "capars02",
-"kind": "structure",
-"w": 394
-},
-"cupars04.shp": {
-"frames": 8,
-"h": 180,
-"image": "capars04",
-"kind": "structure",
-"w": 270
-},
-"cupars05.shp": {
-"frames": 8,
-"h": 180,
-"image": "capars05",
-"kind": "structure",
-"w": 270
-},
-"cupars06.shp": {
-"frames": 8,
-"h": 180,
-"image": "capars06",
-"kind": "structure",
-"w": 282
-},
-"cupars07.shp": {
-"frames": 6,
-"h": 48,
-"image": "capars07",
-"kind": "structure",
-"w": 54
-},
-"cupars08.shp": {
-"frames": 8,
-"h": 286,
-"image": "capars08",
-"kind": "structure",
-"w": 372
-},
-"cupars09.shp": {
-"frames": 8,
-"h": 298,
-"image": "capars09",
-"kind": "structure",
-"w": 510
-},
-"cupars10.shp": {
-"frames": 8,
-"h": 212,
-"image": "capars10",
-"kind": "structure",
-"w": 358
-},
-"cupars12.shp": {
-"frames": 8,
-"h": 222,
-"image": "capars12",
-"kind": "structure",
-"w": 256
-},
-"cupars13.shp": {
-"frames": 8,
-"h": 212,
-"image": "capars13",
-"kind": "structure",
-"w": 260
-},
-"cupars14.shp": {
-"frames": 8,
-"h": 212,
-"image": "capars14",
-"kind": "structure",
-"w": 354
-},
-"cuprs03.shp": {
-"frames": 8,
-"h": 308,
-"image": "caprs03",
-"kind": "structure",
-"w": 420
-},
-"curufgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "carufgl",
-"kind": "structure",
-"w": 244
-},
-"curufgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "carufgl",
-"kind": "structure",
-"w": 244
-},
-"curus02c.shp": {
-"frames": 6,
-"h": 60,
-"image": "carus02c",
-"kind": "structure",
-"w": 98
-},
-"curus02d.shp": {
-"frames": 6,
-"h": 60,
-"image": "carus02d",
-"kind": "structure",
-"w": 98
-},
-"curus02e.shp": {
-"frames": 6,
-"h": 60,
-"image": "carus02e",
-"kind": "structure",
-"w": 98
-},
-"curus02f.shp": {
-"frames": 6,
-"h": 60,
-"image": "carus02f",
-"kind": "structure",
-"w": 98
-},
-"curus02g.shp": {
-"frames": 6,
-"h": 374,
-"image": "carus02g",
-"kind": "structure",
-"w": 336
-},
-"curus03.shp": {
-"frames": 8,
-"h": 214,
-"image": "carus03",
-"kind": "structure",
-"w": 300
-},
-"curus04.shp": {
-"frames": 8,
-"h": 234,
-"image": "carus04",
-"kind": "structure",
-"w": 326
-},
-"curus05.shp": {
-"frames": 8,
-"h": 242,
-"image": "carus05",
-"kind": "structure",
-"w": 326
-},
-"curus06.shp": {
-"frames": 8,
-"h": 242,
-"image": "carus06",
-"kind": "structure",
-"w": 284
-},
-"curus07.shp": {
-"frames": 8,
-"h": 60,
-"image": "carus07",
-"kind": "structure",
-"w": 70
-},
-"curus08.shp": {
-"frames": 8,
-"h": 144,
-"image": "carus08",
-"kind": "structure",
-"w": 154
-},
-"curus09.shp": {
-"frames": 8,
-"h": 188,
-"image": "carus09",
-"kind": "structure",
-"w": 240
-},
-"curus10.shp": {
-"frames": 8,
-"h": 106,
-"image": "carus10",
-"kind": "structure",
-"w": 148
-},
-"curus11.shp": {
-"frames": 8,
-"h": 106,
-"image": "carus11",
-"kind": "structure",
-"w": 206
-},
-"cuskfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "caskfgl",
-"kind": "structure",
-"w": 244
-},
-"cuskfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "caskfgl",
-"kind": "structure",
-"w": 244
-},
-"custl01.shp": {
-"frames": 8,
-"h": 228,
-"image": "castl01",
-"kind": "structure",
-"w": 294
-},
-"custl02.shp": {
-"frames": 8,
-"h": 224,
-"image": "castl02",
-"kind": "structure",
-"w": 296
-},
-"custl03.shp": {
-"frames": 8,
-"h": 216,
-"image": "castl03",
-"kind": "structure",
-"w": 272
-},
-"custl05a.shp": {
-"frames": 8,
-"h": 246,
-"image": "castl05a",
-"kind": "structure",
-"w": 294
-},
-"custl05b.shp": {
-"frames": 8,
-"h": 246,
-"image": "castl05b",
-"kind": "structure",
-"w": 292
-},
-"custl05c.shp": {
-"frames": 8,
-"h": 222,
-"image": "castl05c",
-"kind": "structure",
-"w": 244
-},
-"custl05d.shp": {
-"frames": 8,
-"h": 246,
-"image": "castl05d",
-"kind": "structure",
-"w": 258
-},
-"custl05e.shp": {
-"frames": 8,
-"h": 224,
-"image": "castl05e",
-"kind": "structure",
-"w": 294
-},
-"custl05f.shp": {
-"frames": 8,
-"h": 312,
-"image": "castl05f",
-"kind": "structure",
-"w": 260
-},
-"custl05g.shp": {
-"frames": 8,
-"h": 230,
-"image": "castl05g",
-"kind": "structure",
-"w": 256
-},
-"custl05h.shp": {
-"frames": 8,
-"h": 210,
-"image": "castl05h",
-"kind": "structure",
-"w": 292
-},
-"custrt01.shp": {
-"frames": 6,
-"h": 102,
-"image": "castrt01",
-"kind": "structure",
-"w": 124
-},
-"custrt05.shp": {
-"frames": 6,
-"h": 112,
-"image": "castrt05",
-"kind": "structure",
-"w": 136
-},
-"cuswst01.shp": {
-"frames": 8,
-"h": 370,
-"image": "caswst01",
-"kind": "structure",
-"w": 358
-},
-"cutech01.shp": {
-"frames": 8,
-"h": 176,
-"image": "catech01",
-"kind": "structure",
-"w": 240
-},
-"cutexs01.shp": {
-"frames": 8,
-"h": 260,
-"image": "catexs01",
-"kind": "structure",
-"w": 290
-},
-"cutexs02.shp": {
-"frames": 8,
-"h": 236,
-"image": "catexs02",
-"kind": "structure",
-"w": 258
-},
-"cutexs03.shp": {
-"frames": 8,
-"h": 282,
-"image": "catexs03",
-"kind": "structure",
-"w": 380
-},
-"cutexs04.shp": {
-"frames": 8,
-"h": 282,
-"image": "catexs04",
-"kind": "structure",
-"w": 376
-},
-"cutexs05.shp": {
-"frames": 8,
-"h": 282,
-"image": "catexs05",
-"kind": "structure",
-"w": 368
-},
-"cutexs06.shp": {
-"frames": 8,
-"h": 196,
-"image": "catexs06",
-"kind": "structure",
-"w": 206
-},
-"cutexs07.shp": {
-"frames": 8,
-"h": 196,
-"image": "catexs07",
-"kind": "structure",
-"w": 266
-},
-"cutexs08.shp": {
-"frames": 8,
-"h": 146,
-"image": "catexs08",
-"kind": "structure",
-"w": 184
-},
-"cuts01.shp": {
-"frames": 6,
-"h": 114,
-"image": "cats01",
-"kind": "structure",
-"w": 140
-},
-"cuukfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "caukfgl",
-"kind": "structure",
-"w": 244
-},
-"cuukfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "caukfgl",
-"kind": "structure",
-"w": 244
-},
-"cuusfgl.shp": {
-"frames": 6,
-"h": 208,
-"image": "causfgl",
-"kind": "structure",
-"w": 244
-},
-"cuusfgl_a.shp": {
-"frames": 32,
-"h": 208,
-"image": "causfgl",
-"kind": "structure",
-"w": 244
-},
-"cuwa19_a.shp": {
-"frames": 96,
-"h": 218,
-"image": "cawash19",
-"kind": "structure",
-"w": 198
-},
-"cuwa2a.shp": {
-"frames": 8,
-"h": 244,
-"image": "cawa2a",
-"kind": "structure",
-"w": 240
-},
-"cuwa2b.shp": {
-"frames": 8,
-"h": 212,
-"image": "cawa2b",
-"kind": "structure",
-"w": 282
-},
-"cuwa2c.shp": {
-"frames": 8,
-"h": 246,
-"image": "cawa2c",
-"kind": "structure",
-"w": 274
-},
-"cuwa2d.shp": {
-"frames": 8,
-"h": 242,
-"image": "cawa2d",
-"kind": "structure",
-"w": 306
-},
-"cuwash03.shp": {
-"frames": 8,
-"h": 208,
-"image": "cawash03",
-"kind": "structure",
-"w": 276
-},
-"cuwash04.shp": {
-"frames": 8,
-"h": 240,
-"image": "cawash04",
-"kind": "structure",
-"w": 298
-},
-"cuwash05.shp": {
-"frames": 8,
-"h": 184,
-"image": "cawash05",
-"kind": "structure",
-"w": 366
-},
 "cuwash06.shp": {
 "frames": 8,
 "h": 240,
 "image": "cawash06",
 "kind": "structure",
 "w": 236
-},
-"cuwash07.shp": {
-"frames": 8,
-"h": 188,
-"image": "cawash07",
-"kind": "structure",
-"w": 340
-},
-"cuwash08.shp": {
-"frames": 8,
-"h": 214,
-"image": "cawash08",
-"kind": "structure",
-"w": 298
-},
-"cuwash09.shp": {
-"frames": 8,
-"h": 182,
-"image": "cawash09",
-"kind": "structure",
-"w": 270
-},
-"cuwash10.shp": {
-"frames": 8,
-"h": 238,
-"image": "cawash10",
-"kind": "structure",
-"w": 280
-},
-"cuwash11.shp": {
-"frames": 8,
-"h": 214,
-"image": "cawash11",
-"kind": "structure",
-"w": 352
-},
-"cuwash13.shp": {
-"frames": 8,
-"h": 202,
-"image": "cawash13",
-"kind": "structure",
-"w": 230
-},
-"cuwash16.shp": {
-"frames": 8,
-"h": 222,
-"image": "cawash16",
-"kind": "structure",
-"w": 308
-},
-"cuwash17.shp": {
-"frames": 8,
-"h": 300,
-"image": "cawash17",
-"kind": "structure",
-"w": 382
-},
-"cuwash18.shp": {
-"frames": 6,
-"h": 92,
-"image": "cawash18",
-"kind": "structure",
-"w": 66
-},
-"cuwash19.shp": {
-"frames": 8,
-"h": 218,
-"image": "cawash19",
-"kind": "structure",
-"w": 198
-},
-"cuwsh18a.shp": {
-"frames": 20,
-"h": 96,
-"image": "cawash18",
-"kind": "structure",
-"w": 90
 },
 "demtexp.shp": {
 "frames": 25,
@@ -5762,194 +2567,12 @@
 "kind": "icon",
 "w": 60
 },
-"fog.shp": {
-"frames": 96,
-"h": 30,
-"image": "shroud",
-"kind": "effect",
-"w": 60
-},
 "fvicon.shp": {
 "frames": 1,
 "h": 48,
 "image": "fv",
 "kind": "icon",
 "w": 60
-},
-"gaairc.shp": {
-"frames": 6,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gaairc_a.shp": {
-"frames": 16,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gaairc_b.shp": {
-"frames": 24,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gaairc_c.shp": {
-"frames": 32,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gaaircbb.shp": {
-"frames": 4,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gaaircmk.shp": {
-"frames": 50,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gacnst.shp": {
-"frames": 6,
-"h": 226,
-"image": "gacnst",
-"kind": "structure",
-"w": 284
-},
-"gacnst_a.shp": {
-"frames": 12,
-"h": 226,
-"image": "gacnst",
-"kind": "structure",
-"w": 284
-},
-"gacnst_b.shp": {
-"frames": 80,
-"h": 226,
-"image": "gacnst",
-"kind": "structure",
-"w": 284
-},
-"gacnstdm.shp": {
-"frames": 60,
-"h": 226,
-"image": "gacnst",
-"kind": "structure",
-"w": 284
-},
-"gacnstmk.shp": {
-"frames": 58,
-"h": 226,
-"image": "gacnst",
-"kind": "structure",
-"w": 284
-},
-"gacsph.shp": {
-"frames": 6,
-"h": 194,
-"image": "gacsph",
-"kind": "structure",
-"w": 210
-},
-"gacsph_e.shp": {
-"frames": 4,
-"h": 194,
-"image": "gacsph",
-"kind": "structure",
-"w": 210
-},
-"gacsphdm.shp": {
-"frames": 50,
-"h": 214,
-"image": "gacsph",
-"kind": "structure",
-"w": 376
-},
-"gacsphmk.shp": {
-"frames": 50,
-"h": 194,
-"image": "gacsph",
-"kind": "structure",
-"w": 210
-},
-"gadept.shp": {
-"frames": 6,
-"h": 150,
-"image": "gadept",
-"kind": "structure",
-"w": 190
-},
-"gadept_c.shp": {
-"frames": 40,
-"h": 150,
-"image": "gadept",
-"kind": "structure",
-"w": 190
-},
-"gadept_d.shp": {
-"frames": 4,
-"h": 150,
-"image": "gadept",
-"kind": "structure",
-"w": 190
-},
-"gadeptbb.shp": {
-"frames": 4,
-"h": 150,
-"image": "gadept",
-"kind": "structure",
-"w": 190
-},
-"gadeptmk.shp": {
-"frames": 50,
-"h": 150,
-"image": "gadept",
-"kind": "structure",
-"w": 190
-},
-"gagap.shp": {
-"frames": 6,
-"h": 176,
-"image": "gagap",
-"kind": "structure",
-"w": 178
-},
-"gagapmk.shp": {
-"frames": 18,
-"h": 176,
-"image": "gagap",
-"kind": "structure",
-"w": 178
-},
-"gagate_a.shp": {
-"frames": 42,
-"h": 210,
-"image": "gagate_a",
-"kind": "scenery",
-"w": 246
-},
-"gagcan.shp": {
-"frames": 6,
-"h": 168,
-"image": "gtgcan",
-"kind": "structure",
-"w": 232
-},
-"gagcanmk.shp": {
-"frames": 24,
-"h": 168,
-"image": "gtgcan",
-"kind": "structure",
-"w": 232
 },
 "galite.shp": {
 "frames": 4,
@@ -5958,327 +2581,12 @@
 "kind": "structure",
 "w": 60
 },
-"gaorep.shp": {
-"frames": 6,
-"h": 168,
-"image": "gaorep",
-"kind": "structure",
-"w": 150
-},
-"gaorep_a.shp": {
-"frames": 32,
-"h": 168,
-"image": "gaorep",
-"kind": "structure",
-"w": 150
-},
-"gaorepmk.shp": {
-"frames": 50,
-"h": 168,
-"image": "gaorep",
-"kind": "structure",
-"w": 150
-},
 "gapicon.shp": {
 "frames": 1,
 "h": 48,
 "image": "gagap",
 "kind": "icon",
 "w": 60
-},
-"gapile.shp": {
-"frames": 6,
-"h": 148,
-"image": "gapile",
-"kind": "structure",
-"w": 250
-},
-"gapile_a.shp": {
-"frames": 64,
-"h": 148,
-"image": "gapile",
-"kind": "structure",
-"w": 250
-},
-"gapiledm.shp": {
-"frames": 50,
-"h": 204,
-"image": "gapile",
-"kind": "structure",
-"w": 380
-},
-"gapilemk.shp": {
-"frames": 50,
-"h": 148,
-"image": "gapile",
-"kind": "structure",
-"w": 250
-},
-"gapill.shp": {
-"frames": 6,
-"h": 64,
-"image": "gapill",
-"kind": "structure",
-"w": 68
-},
-"gapillmk.shp": {
-"frames": 16,
-"h": 64,
-"image": "gapill",
-"kind": "structure",
-"w": 68
-},
-"gapowr.shp": {
-"frames": 6,
-"h": 110,
-"image": "gapowr",
-"kind": "structure",
-"w": 142
-},
-"gapowr_a.shp": {
-"frames": 32,
-"h": 110,
-"image": "gapowr",
-"kind": "structure",
-"w": 142
-},
-"gapowrmk.shp": {
-"frames": 50,
-"h": 110,
-"image": "gapowr",
-"kind": "structure",
-"w": 142
-},
-"gapris.shp": {
-"frames": 6,
-"h": 160,
-"image": "atesla",
-"kind": "structure",
-"w": 172
-},
-"gapris_a.shp": {
-"frames": 40,
-"h": 160,
-"image": "atesla",
-"kind": "structure",
-"w": 172
-},
-"gapris_b.shp": {
-"frames": 36,
-"h": 160,
-"image": "atesla",
-"kind": "structure",
-"w": 172
-},
-"gaprisdm.shp": {
-"frames": 42,
-"h": 256,
-"image": "atesla",
-"kind": "structure",
-"w": 272
-},
-"gaprismk.shp": {
-"frames": 16,
-"h": 160,
-"image": "atesla",
-"kind": "structure",
-"w": 172
-},
-"garefn.shp": {
-"frames": 6,
-"h": 196,
-"image": "garefn",
-"kind": "structure",
-"w": 210
-},
-"garefnbb.shp": {
-"frames": 4,
-"h": 196,
-"image": "garefn",
-"kind": "structure",
-"w": 210
-},
-"garefnl1.shp": {
-"frames": 12,
-"h": 196,
-"image": "garefn",
-"kind": "structure",
-"w": 210
-},
-"garefnmk.shp": {
-"frames": 50,
-"h": 196,
-"image": "garefn",
-"kind": "structure",
-"w": 210
-},
-"garefnor.shp": {
-"frames": 40,
-"h": 196,
-"image": "garefn",
-"kind": "structure",
-"w": 210
-},
-"gasand.shp": {
-"frames": 96,
-"h": 66,
-"image": "gasand",
-"kind": "structure",
-"w": 68
-},
-"gaspst.shp": {
-"frames": 6,
-"h": 102,
-"image": "gaspysat",
-"kind": "structure",
-"w": 186
-},
-"gaspst_a.shp": {
-"frames": 64,
-"h": 102,
-"image": "gaspysat",
-"kind": "structure",
-"w": 186
-},
-"gaspstmk.shp": {
-"frames": 50,
-"h": 102,
-"image": "gaspysat",
-"kind": "structure",
-"w": 186
-},
-"gatech.shp": {
-"frames": 6,
-"h": 300,
-"image": "gatech",
-"kind": "structure",
-"w": 346
-},
-"gatech_a.shp": {
-"frames": 48,
-"h": 300,
-"image": "gatech",
-"kind": "structure",
-"w": 346
-},
-"gatechmk.shp": {
-"frames": 50,
-"h": 300,
-"image": "gatech",
-"kind": "structure",
-"w": 346
-},
-"gawall.shp": {
-"frames": 96,
-"h": 70,
-"image": "gawall",
-"kind": "structure",
-"w": 78
-},
-"gaweap.shp": {
-"frames": 6,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweap_1.shp": {
-"frames": 4,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweap_2.shp": {
-"frames": 4,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweap_3.shp": {
-"frames": 4,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweap_4.shp": {
-"frames": 4,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweap_a.shp": {
-"frames": 60,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweap_b.shp": {
-"frames": 12,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweapbb.shp": {
-"frames": 4,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gaweapmk.shp": {
-"frames": 50,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"gawethmk.shp": {
-"frames": 50,
-"h": 154,
-"image": "gaweat",
-"kind": "structure",
-"w": 154
-},
-"gayard.shp": {
-"frames": 6,
-"h": 304,
-"image": "gayard",
-"kind": "structure",
-"w": 432
-},
-"gayard_a.shp": {
-"frames": 60,
-"h": 304,
-"image": "gayard",
-"kind": "structure",
-"w": 432
-},
-"gayard_c.shp": {
-"frames": 60,
-"h": 304,
-"image": "gayard",
-"kind": "structure",
-"w": 432
-},
-"gayard_s.shp": {
-"frames": 72,
-"h": 304,
-"image": "gayard",
-"kind": "structure",
-"w": 432
-},
-"gayardmk.shp": {
-"frames": 50,
-"h": 304,
-"image": "gayard",
-"kind": "structure",
-"w": 432
 },
 "gcanicon.shp": {
 "frames": 1,
@@ -6294,28 +2602,7 @@
 "kind": "structure",
 "w": 72
 },
-"gem01.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem01.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem01.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem02.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -6329,35 +2616,7 @@
 "kind": "effect",
 "w": 60
 },
-"gem02.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem03.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem03.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem03.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem04.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -6371,35 +2630,7 @@
 "kind": "effect",
 "w": 60
 },
-"gem04.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem05.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem05.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem05.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem06.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -6413,35 +2644,7 @@
 "kind": "effect",
 "w": 60
 },
-"gem06.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem07.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem07.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem07.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem08.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -6455,35 +2658,7 @@
 "kind": "effect",
 "w": 60
 },
-"gem08.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem09.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem09.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem09.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem10.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -6497,20 +2672,6 @@
 "kind": "effect",
 "w": 60
 },
-"gem10.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem11.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem11.tem": {
 "frames": 24,
 "h": 60,
@@ -6518,28 +2679,7 @@
 "kind": "effect",
 "w": 60
 },
-"gem11.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem12.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "gem12.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"gem12.urb": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -7071,152 +3211,12 @@
 "kind": "structure",
 "w": 432
 },
-"guaircmk.shp": {
-"frames": 50,
-"h": 162,
-"image": "gaairc",
-"kind": "structure",
-"w": 188
-},
-"gucnstmk.shp": {
-"frames": 58,
-"h": 226,
-"image": "gacnst",
-"kind": "structure",
-"w": 284
-},
-"gucsphmk.shp": {
-"frames": 50,
-"h": 194,
-"image": "gacsph",
-"kind": "structure",
-"w": 210
-},
-"gudeptmk.shp": {
-"frames": 50,
-"h": 150,
-"image": "gadept",
-"kind": "structure",
-"w": 190
-},
-"gugapmk.shp": {
-"frames": 18,
-"h": 176,
-"image": "gagap",
-"kind": "structure",
-"w": 178
-},
-"gugate_a.shp": {
-"frames": 42,
-"h": 210,
-"image": "gagate_a",
-"kind": "scenery",
-"w": 246
-},
-"gugcanmk.shp": {
-"frames": 24,
-"h": 168,
-"image": "gtgcan",
-"kind": "structure",
-"w": 232
-},
 "gunfire.shp": {
 "frames": 4,
 "h": 26,
 "image": "cdest",
 "kind": "structure",
 "w": 28
-},
-"guorepmk.shp": {
-"frames": 50,
-"h": 168,
-"image": "gaorep",
-"kind": "structure",
-"w": 150
-},
-"gupilemk.shp": {
-"frames": 50,
-"h": 148,
-"image": "gapile",
-"kind": "structure",
-"w": 250
-},
-"gupillmk.shp": {
-"frames": 16,
-"h": 64,
-"image": "gapill",
-"kind": "structure",
-"w": 68
-},
-"gupowrmk.shp": {
-"frames": 50,
-"h": 110,
-"image": "gapowr",
-"kind": "structure",
-"w": 142
-},
-"guprismk.shp": {
-"frames": 16,
-"h": 160,
-"image": "atesla",
-"kind": "structure",
-"w": 172
-},
-"gurefnmk.shp": {
-"frames": 50,
-"h": 196,
-"image": "garefn",
-"kind": "structure",
-"w": 210
-},
-"gusand.shp": {
-"frames": 64,
-"h": 66,
-"image": "gasand",
-"kind": "structure",
-"w": 68
-},
-"guspstmk.shp": {
-"frames": 50,
-"h": 102,
-"image": "gaspysat",
-"kind": "structure",
-"w": 186
-},
-"gutechmk.shp": {
-"frames": 50,
-"h": 300,
-"image": "gatech",
-"kind": "structure",
-"w": 346
-},
-"guwall.shp": {
-"frames": 96,
-"h": 70,
-"image": "gawall",
-"kind": "structure",
-"w": 78
-},
-"guweapmk.shp": {
-"frames": 50,
-"h": 224,
-"image": "gaweap",
-"kind": "structure",
-"w": 266
-},
-"guwethmk.shp": {
-"frames": 50,
-"h": 154,
-"image": "gaweat",
-"kind": "structure",
-"w": 154
-},
-"guyardmk.shp": {
-"frames": 50,
-"h": 304,
-"image": "gayard",
-"kind": "structure",
-"w": 432
 },
 "gwepicon.shp": {
 "frames": 1,
@@ -7260,21 +3260,7 @@
 "kind": "icon",
 "w": 60
 },
-"hdstn01.sno": {
-"frames": 2,
-"h": 61,
-"image": "hdstn01",
-"kind": "scenery",
-"w": 61
-},
 "hdstn01.tem": {
-"frames": 2,
-"h": 61,
-"image": "hdstn01",
-"kind": "scenery",
-"w": 61
-},
-"hdstn01.urb": {
 "frames": 2,
 "h": 61,
 "image": "hdstn01",
@@ -7421,28 +3407,7 @@
 "kind": "icon",
 "w": 64
 },
-"lobrdb01.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb01.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb01.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb02.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_b",
@@ -7456,35 +3421,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb02.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb03.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb03.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb03.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb04.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_b",
@@ -7498,35 +3435,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb04.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb05.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb05.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb05.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb06.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_b",
@@ -7540,20 +3449,6 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb06.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb07.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb07.tem": {
 "frames": 6,
 "h": 120,
@@ -7561,35 +3456,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb07.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb08.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb08.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb08.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb09.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_b_d",
@@ -7603,35 +3470,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb09.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb10.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb10.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb10.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb11.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_a",
@@ -7645,35 +3484,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb11.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb12.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb12.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb12.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb13.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_a",
@@ -7687,35 +3498,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb13.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb14.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb14.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb14.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb15.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_a",
@@ -7729,20 +3512,6 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb15.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb16.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb16.tem": {
 "frames": 6,
 "h": 120,
@@ -7750,35 +3519,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb16.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb17.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a_d",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb17.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb17.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb18.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_a_d",
@@ -7792,35 +3533,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb18.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb19.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_se",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb19.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_se",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb19.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_se",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb20.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_r_se",
@@ -7834,35 +3547,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb20.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_se",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb21.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_nw",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb21.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_nw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb21.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_nw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb22.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_r_nw",
@@ -7876,35 +3561,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb22.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_nw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb23.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_ne",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb23.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_ne",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb23.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_ne",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb24.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_r_ne",
@@ -7918,35 +3575,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb24.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_ne",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb25.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_sw",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb25.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_sw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb25.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_sw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb26.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_r_sw",
@@ -7960,38 +3589,10 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb26.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_r_sw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb27.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
 "lobrdb27.tem": {
 "frames": 6,
 "h": 120,
 "image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb27.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdb28.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a_d",
 "kind": "scenery",
 "w": 180
 },
@@ -8002,35 +3603,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdb28.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdb_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg01.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg01.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg01.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg02.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_b",
@@ -8044,35 +3617,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg02.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg03.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg03.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg03.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg04.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_b",
@@ -8086,35 +3631,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg04.urb": {
-"frames": 8,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg05.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg05.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg05.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg06.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_b",
@@ -8128,20 +3645,6 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg06.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg07.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg07.tem": {
 "frames": 6,
 "h": 120,
@@ -8149,35 +3652,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg07.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg08.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg08.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg08.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg09.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_b_d",
@@ -8191,35 +3666,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg09.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg10.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg10.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg10.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg11.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_a",
@@ -8233,35 +3680,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg11.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg12.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg12.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg12.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg13.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_a",
@@ -8275,35 +3694,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg13.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg14.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg14.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg14.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg15.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_a",
@@ -8317,20 +3708,6 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg15.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg16.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg16.tem": {
 "frames": 6,
 "h": 120,
@@ -8338,35 +3715,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg16.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg17.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a_d",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg17.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg17.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg18.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_a_d",
@@ -8380,35 +3729,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg18.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg19.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_se",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg19.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_se",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg19.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_se",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg20.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_r_se",
@@ -8422,35 +3743,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg20.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_se",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg21.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_nw",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg21.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_nw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg21.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_nw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg22.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_r_nw",
@@ -8464,35 +3757,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg22.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_nw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg23.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_ne",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg23.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_ne",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg23.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_ne",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg24.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_r_ne",
@@ -8506,35 +3771,7 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg24.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_ne",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg25.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_sw",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg25.tem": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_sw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg25.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_sw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg26.sno": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_r_sw",
@@ -8548,38 +3785,10 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg26.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_r_sw",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg27.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
 "lobrdg27.tem": {
 "frames": 6,
 "h": 120,
 "image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg27.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_b_d",
-"kind": "scenery",
-"w": 180
-},
-"lobrdg28.sno": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a_d",
 "kind": "scenery",
 "w": 180
 },
@@ -8590,38 +3799,10 @@
 "kind": "scenery",
 "w": 180
 },
-"lobrdg28.urb": {
-"frames": 6,
-"h": 120,
-"image": "lobrdg_a_d",
-"kind": "scenery",
-"w": 180
-},
-"lt_eur01.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_eur01",
-"kind": "scenery",
-"w": 155
-},
 "lt_eur01.tem": {
 "frames": 2,
 "h": 155,
 "image": "lt_eur01",
-"kind": "scenery",
-"w": 155
-},
-"lt_eur01.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_eur01",
-"kind": "scenery",
-"w": 155
-},
-"lt_eur02.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_eur02",
 "kind": "scenery",
 "w": 155
 },
@@ -8632,38 +3813,10 @@
 "kind": "scenery",
 "w": 155
 },
-"lt_eur02.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_eur02",
-"kind": "scenery",
-"w": 155
-},
-"lt_gen01.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen01",
-"kind": "scenery",
-"w": 155
-},
 "lt_gen01.tem": {
 "frames": 2,
 "h": 155,
 "image": "lt_gen01",
-"kind": "scenery",
-"w": 155
-},
-"lt_gen01.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen01",
-"kind": "scenery",
-"w": 155
-},
-"lt_gen02.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen02",
 "kind": "scenery",
 "w": 155
 },
@@ -8674,38 +3827,10 @@
 "kind": "scenery",
 "w": 155
 },
-"lt_gen02.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen02",
-"kind": "scenery",
-"w": 155
-},
-"lt_gen03.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen03",
-"kind": "scenery",
-"w": 155
-},
 "lt_gen03.tem": {
 "frames": 2,
 "h": 155,
 "image": "lt_gen03",
-"kind": "scenery",
-"w": 155
-},
-"lt_gen03.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen03",
-"kind": "scenery",
-"w": 155
-},
-"lt_gen04.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen04",
 "kind": "scenery",
 "w": 155
 },
@@ -8716,38 +3841,10 @@
 "kind": "scenery",
 "w": 155
 },
-"lt_gen04.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_gen04",
-"kind": "scenery",
-"w": 155
-},
-"lt_sgn01.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn01",
-"kind": "scenery",
-"w": 155
-},
 "lt_sgn01.tem": {
 "frames": 2,
 "h": 155,
 "image": "lt_sgn01",
-"kind": "scenery",
-"w": 155
-},
-"lt_sgn01.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn01",
-"kind": "scenery",
-"w": 155
-},
-"lt_sgn02.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn02",
 "kind": "scenery",
 "w": 155
 },
@@ -8758,20 +3855,6 @@
 "kind": "scenery",
 "w": 155
 },
-"lt_sgn02.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn02",
-"kind": "scenery",
-"w": 155
-},
-"lt_sgn03.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn03",
-"kind": "scenery",
-"w": 155
-},
 "lt_sgn03.tem": {
 "frames": 2,
 "h": 155,
@@ -8779,28 +3862,7 @@
 "kind": "scenery",
 "w": 155
 },
-"lt_sgn03.urb": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn03",
-"kind": "scenery",
-"w": 155
-},
-"lt_sgn04.sno": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn04",
-"kind": "scenery",
-"w": 155
-},
 "lt_sgn04.tem": {
-"frames": 2,
-"h": 155,
-"image": "lt_sgn04",
-"kind": "scenery",
-"w": 155
-},
-"lt_sgn04.urb": {
 "frames": 2,
 "h": 155,
 "image": "lt_sgn04",
@@ -8898,13 +3960,6 @@
 "kind": "effect",
 "w": 37
 },
-"mouse.shp": {
-"frames": 450,
-"h": 43,
-"image": "rallypoint",
-"kind": "effect",
-"w": 55
-},
 "msslicon.shp": {
 "frames": 1,
 "h": 48,
@@ -8918,454 +3973,6 @@
 "image": "apoc",
 "kind": "icon",
 "w": 60
-},
-"naclon_a.shp": {
-"frames": 44,
-"h": 174,
-"image": "naclon",
-"kind": "structure",
-"w": 214
-},
-"naclonmk.shp": {
-"frames": 50,
-"h": 174,
-"image": "naclon",
-"kind": "structure",
-"w": 214
-},
-"nacnst.shp": {
-"frames": 6,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 286
-},
-"nacnst_a.shp": {
-"frames": 22,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 286
-},
-"nacnst_b.shp": {
-"frames": 84,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 286
-},
-"nacnst_c.shp": {
-"frames": 6,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 286
-},
-"nacnstdm.shp": {
-"frames": 50,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 338
-},
-"nacnstmk.shp": {
-"frames": 62,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 286
-},
-"nadept.shp": {
-"frames": 6,
-"h": 190,
-"image": "nadept",
-"kind": "structure",
-"w": 198
-},
-"nadept_b.shp": {
-"frames": 40,
-"h": 190,
-"image": "nadept",
-"kind": "structure",
-"w": 198
-},
-"nadept_c.shp": {
-"frames": 200,
-"h": 190,
-"image": "nadept",
-"kind": "structure",
-"w": 198
-},
-"nadeptbb.shp": {
-"frames": 4,
-"h": 190,
-"image": "nadept",
-"kind": "structure",
-"w": 198
-},
-"nadeptmk.shp": {
-"frames": 50,
-"h": 190,
-"image": "nadept",
-"kind": "structure",
-"w": 198
-},
-"naflak.shp": {
-"frames": 6,
-"h": 90,
-"image": "naflak",
-"kind": "structure",
-"w": 118
-},
-"naflakmk.shp": {
-"frames": 18,
-"h": 90,
-"image": "naflak",
-"kind": "structure",
-"w": 118
-},
-"nahand.shp": {
-"frames": 6,
-"h": 230,
-"image": "nahand",
-"kind": "structure",
-"w": 254
-},
-"nahandmk.shp": {
-"frames": 50,
-"h": 230,
-"image": "nahand",
-"kind": "structure",
-"w": 254
-},
-"nairon_a.shp": {
-"frames": 44,
-"h": 162,
-"image": "nairon",
-"kind": "structure",
-"w": 164
-},
-"nairon_h.shp": {
-"frames": 48,
-"h": 162,
-"image": "nairon",
-"kind": "structure",
-"w": 164
-},
-"naironmk.shp": {
-"frames": 50,
-"h": 162,
-"image": "nairon",
-"kind": "structure",
-"w": 164
-},
-"nalasr.shp": {
-"frames": 6,
-"h": 58,
-"image": "nalasr",
-"kind": "structure",
-"w": 74
-},
-"nalasrmk.shp": {
-"frames": 24,
-"h": 58,
-"image": "nalasr",
-"kind": "structure",
-"w": 74
-},
-"namislmk.shp": {
-"frames": 52,
-"h": 202,
-"image": "namisl",
-"kind": "structure",
-"w": 238
-},
-"nanrct.shp": {
-"frames": 6,
-"h": 188,
-"image": "nanrct",
-"kind": "structure",
-"w": 276
-},
-"nanrct_a.shp": {
-"frames": 44,
-"h": 188,
-"image": "nanrct",
-"kind": "structure",
-"w": 276
-},
-"nanrctmk.shp": {
-"frames": 50,
-"h": 188,
-"image": "nanrct",
-"kind": "structure",
-"w": 276
-},
-"napowr.shp": {
-"frames": 6,
-"h": 140,
-"image": "napowr",
-"kind": "structure",
-"w": 210
-},
-"napowr_a.shp": {
-"frames": 76,
-"h": 140,
-"image": "napowr",
-"kind": "structure",
-"w": 210
-},
-"napowrmk.shp": {
-"frames": 52,
-"h": 140,
-"image": "napowr",
-"kind": "structure",
-"w": 210
-},
-"napsis.shp": {
-"frames": 6,
-"h": 208,
-"image": "napsis",
-"kind": "structure",
-"w": 264
-},
-"napsis_a.shp": {
-"frames": 160,
-"h": 208,
-"image": "napsis",
-"kind": "structure",
-"w": 264
-},
-"napsismk.shp": {
-"frames": 48,
-"h": 208,
-"image": "napsis",
-"kind": "structure",
-"w": 264
-},
-"naradr.shp": {
-"frames": 6,
-"h": 154,
-"image": "naradr",
-"kind": "structure",
-"w": 226
-},
-"naradr_a.shp": {
-"frames": 184,
-"h": 154,
-"image": "naradr",
-"kind": "structure",
-"w": 226
-},
-"naradrmk.shp": {
-"frames": 60,
-"h": 154,
-"image": "naradr",
-"kind": "structure",
-"w": 226
-},
-"narefn.shp": {
-"frames": 6,
-"h": 184,
-"image": "narefn",
-"kind": "structure",
-"w": 210
-},
-"narefnbb.shp": {
-"frames": 6,
-"h": 184,
-"image": "narefn",
-"kind": "structure",
-"w": 210
-},
-"narefnl1.shp": {
-"frames": 12,
-"h": 184,
-"image": "narefn",
-"kind": "structure",
-"w": 210
-},
-"narefnmk.shp": {
-"frames": 52,
-"h": 184,
-"image": "narefn",
-"kind": "structure",
-"w": 210
-},
-"narefnor.shp": {
-"frames": 40,
-"h": 184,
-"image": "narefn",
-"kind": "structure",
-"w": 210
-},
-"nasam.shp": {
-"frames": 6,
-"h": 68,
-"image": "nasam",
-"kind": "structure",
-"w": 98
-},
-"nasammk.shp": {
-"frames": 16,
-"h": 68,
-"image": "nasam",
-"kind": "structure",
-"w": 98
-},
-"natech.shp": {
-"frames": 6,
-"h": 188,
-"image": "natech",
-"kind": "structure",
-"w": 276
-},
-"natechmk.shp": {
-"frames": 50,
-"h": 188,
-"image": "natech",
-"kind": "structure",
-"w": 276
-},
-"natsla.shp": {
-"frames": 6,
-"h": 126,
-"image": "tesla",
-"kind": "structure",
-"w": 160
-},
-"natsla_a.shp": {
-"frames": 40,
-"h": 126,
-"image": "tesla",
-"kind": "structure",
-"w": 160
-},
-"natsla_b.shp": {
-"frames": 40,
-"h": 126,
-"image": "tesla",
-"kind": "structure",
-"w": 160
-},
-"natsladm.shp": {
-"frames": 40,
-"h": 146,
-"image": "tesla",
-"kind": "structure",
-"w": 166
-},
-"natslamk.shp": {
-"frames": 50,
-"h": 126,
-"image": "tesla",
-"kind": "structure",
-"w": 160
-},
-"nawall.shp": {
-"frames": 96,
-"h": 64,
-"image": "nawall",
-"kind": "structure",
-"w": 80
-},
-"naweap.shp": {
-"frames": 6,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweap_1.shp": {
-"frames": 4,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweap_2.shp": {
-"frames": 4,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweap_3.shp": {
-"frames": 4,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweap_4.shp": {
-"frames": 4,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweap_a.shp": {
-"frames": 26,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweapbb.shp": {
-"frames": 4,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"naweapmk.shp": {
-"frames": 50,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"nayard.shp": {
-"frames": 6,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
-},
-"nayard_a.shp": {
-"frames": 60,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
-},
-"nayard_b.shp": {
-"frames": 60,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
-},
-"nayard_c.shp": {
-"frames": 60,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
-},
-"nayard_s.shp": {
-"frames": 72,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
-},
-"nayardmk.shp": {
-"frames": 50,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
 },
 "ngclon_a.shp": {
 "frames": 44,
@@ -9654,6 +4261,13 @@
 "kind": "structure",
 "w": 282
 },
+"ngweapbb.shp": {
+"frames": 6,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
 "ngyard.shp": {
 "frames": 6,
 "h": 246,
@@ -9871,48 +4485,6 @@
 "kind": "structure",
 "w": 400
 },
-"nuclonmk.shp": {
-"frames": 50,
-"h": 174,
-"image": "naclon",
-"kind": "structure",
-"w": 214
-},
-"nucnstmk.shp": {
-"frames": 62,
-"h": 224,
-"image": "nacnst",
-"kind": "structure",
-"w": 286
-},
-"nudeptmk.shp": {
-"frames": 50,
-"h": 190,
-"image": "nadept",
-"kind": "structure",
-"w": 198
-},
-"nuflakmk.shp": {
-"frames": 18,
-"h": 90,
-"image": "naflak",
-"kind": "structure",
-"w": 118
-},
-"nuhandmk.shp": {
-"frames": 50,
-"h": 230,
-"image": "nahand",
-"kind": "structure",
-"w": 254
-},
-"nuironmk.shp": {
-"frames": 50,
-"h": 162,
-"image": "nairon",
-"kind": "structure",
-"w": 164
-},
 "nukeanim.shp": {
 "frames": 39,
 "h": 370,
@@ -9948,103 +4520,12 @@
 "kind": "effect",
 "w": 56
 },
-"nulasrmk.shp": {
-"frames": 24,
-"h": 58,
-"image": "nalasr",
-"kind": "structure",
-"w": 74
-},
 "null.shp": {
 "frames": 2,
 "h": 0,
 "image": "mgtk",
 "kind": "vehicle",
 "w": 0
-},
-"numislmk.shp": {
-"frames": 52,
-"h": 202,
-"image": "namisl",
-"kind": "structure",
-"w": 238
-},
-"nunrctmk.shp": {
-"frames": 50,
-"h": 188,
-"image": "nanrct",
-"kind": "structure",
-"w": 276
-},
-"nupowrmk.shp": {
-"frames": 52,
-"h": 140,
-"image": "napowr",
-"kind": "structure",
-"w": 210
-},
-"nupsismk.shp": {
-"frames": 48,
-"h": 208,
-"image": "napsis",
-"kind": "structure",
-"w": 264
-},
-"nuradrmk.shp": {
-"frames": 60,
-"h": 154,
-"image": "naradr",
-"kind": "structure",
-"w": 226
-},
-"nurefnmk.shp": {
-"frames": 52,
-"h": 184,
-"image": "narefn",
-"kind": "structure",
-"w": 210
-},
-"nusammk.shp": {
-"frames": 16,
-"h": 68,
-"image": "nasam",
-"kind": "structure",
-"w": 98
-},
-"nutechmk.shp": {
-"frames": 50,
-"h": 178,
-"image": "natech",
-"kind": "structure",
-"w": 238
-},
-"nutslamk.shp": {
-"frames": 50,
-"h": 126,
-"image": "tesla",
-"kind": "structure",
-"w": 160
-},
-"nuwall.shp": {
-"frames": 96,
-"h": 64,
-"image": "nawall",
-"kind": "structure",
-"w": 80
-},
-"nuweapmk.shp": {
-"frames": 50,
-"h": 224,
-"image": "naweap",
-"kind": "structure",
-"w": 282
-},
-"nuyardmk.shp": {
-"frames": 50,
-"h": 246,
-"image": "nayard",
-"kind": "structure",
-"w": 400
 },
 "nwalicon.shp": {
 "frames": 1,
@@ -10123,13 +4604,6 @@
 "kind": "effect",
 "w": 10
 },
-"pips2.shp": {
-"frames": 18,
-"h": 15,
-"image": "pips",
-"kind": "effect",
-"w": 8
-},
 "place.shp": {
 "frames": 38,
 "h": 59,
@@ -10151,13 +4625,6 @@
 "kind": "infantry",
 "w": 94
 },
-"pole01.sno": {
-"frames": 2,
-"h": 74,
-"image": "pole01",
-"kind": "scenery",
-"w": 100
-},
 "pole01.tem": {
 "frames": 2,
 "h": 74,
@@ -10165,28 +4632,7 @@
 "kind": "scenery",
 "w": 100
 },
-"pole01.urb": {
-"frames": 2,
-"h": 74,
-"image": "pole01",
-"kind": "scenery",
-"w": 100
-},
-"pole02.sno": {
-"frames": 2,
-"h": 74,
-"image": "pole02",
-"kind": "scenery",
-"w": 100
-},
 "pole02.tem": {
-"frames": 2,
-"h": 74,
-"image": "pole02",
-"kind": "scenery",
-"w": 100
-},
-"pole02.urb": {
 "frames": 2,
 "h": 74,
 "image": "pole02",
@@ -10431,13 +4877,6 @@
 "kind": "infantry",
 "w": 118
 },
-"seala.shp": {
-"frames": 1238,
-"h": 72,
-"image": "ccomand",
-"kind": "infantry",
-"w": 118
-},
 "sealicon.shp": {
 "frames": 1,
 "h": 48,
@@ -10473,13 +4912,6 @@
 "kind": "icon",
 "w": 60
 },
-"shroud.shp": {
-"frames": 96,
-"h": 30,
-"image": "shroud",
-"kind": "effect",
-"w": 60
-},
 "shroudx.shp": {
 "frames": 46,
 "h": 28,
@@ -10487,31 +4919,10 @@
 "kind": "effect",
 "w": 28
 },
-"sign01.sno": {
-"frames": 2,
-"h": 155,
-"image": "sign01",
-"kind": "scenery",
-"w": 155
-},
 "sign01.tem": {
 "frames": 2,
 "h": 155,
 "image": "sign01",
-"kind": "scenery",
-"w": 155
-},
-"sign01.urb": {
-"frames": 2,
-"h": 155,
-"image": "sign01",
-"kind": "scenery",
-"w": 155
-},
-"sign02.sno": {
-"frames": 2,
-"h": 155,
-"image": "sign02",
 "kind": "scenery",
 "w": 155
 },
@@ -10522,38 +4933,10 @@
 "kind": "scenery",
 "w": 155
 },
-"sign02.urb": {
-"frames": 2,
-"h": 155,
-"image": "sign02",
-"kind": "scenery",
-"w": 155
-},
-"sign03.sno": {
-"frames": 2,
-"h": 155,
-"image": "sign03",
-"kind": "scenery",
-"w": 155
-},
 "sign03.tem": {
 "frames": 2,
 "h": 155,
 "image": "sign03",
-"kind": "scenery",
-"w": 155
-},
-"sign03.urb": {
-"frames": 2,
-"h": 155,
-"image": "sign03",
-"kind": "scenery",
-"w": 155
-},
-"sign04.sno": {
-"frames": 2,
-"h": 155,
-"image": "sign04",
 "kind": "scenery",
 "w": 155
 },
@@ -10564,20 +4947,6 @@
 "kind": "scenery",
 "w": 155
 },
-"sign04.urb": {
-"frames": 2,
-"h": 155,
-"image": "sign04",
-"kind": "scenery",
-"w": 155
-},
-"sign05.sno": {
-"frames": 2,
-"h": 155,
-"image": "sign05",
-"kind": "scenery",
-"w": 155
-},
 "sign05.tem": {
 "frames": 2,
 "h": 155,
@@ -10585,28 +4954,7 @@
 "kind": "scenery",
 "w": 155
 },
-"sign05.urb": {
-"frames": 2,
-"h": 155,
-"image": "sign05",
-"kind": "scenery",
-"w": 155
-},
-"sign06.sno": {
-"frames": 2,
-"h": 155,
-"image": "sign06",
-"kind": "scenery",
-"w": 155
-},
 "sign06.tem": {
-"frames": 2,
-"h": 155,
-"image": "sign06",
-"kind": "scenery",
-"w": 155
-},
-"sign06.urb": {
 "frames": 2,
 "h": 155,
 "image": "sign06",
@@ -10697,31 +5045,10 @@
 "kind": "icon",
 "w": 60
 },
-"srock01.sno": {
-"frames": 2,
-"h": 120,
-"image": "srock01",
-"kind": "effect",
-"w": 120
-},
 "srock01.tem": {
 "frames": 2,
 "h": 120,
 "image": "srock01",
-"kind": "effect",
-"w": 120
-},
-"srock01.urb": {
-"frames": 2,
-"h": 120,
-"image": "srock01",
-"kind": "effect",
-"w": 120
-},
-"srock02.sno": {
-"frames": 2,
-"h": 120,
-"image": "srock02",
 "kind": "effect",
 "w": 120
 },
@@ -10732,38 +5059,10 @@
 "kind": "effect",
 "w": 120
 },
-"srock02.urb": {
-"frames": 2,
-"h": 120,
-"image": "srock02",
-"kind": "effect",
-"w": 120
-},
-"srock03.sno": {
-"frames": 2,
-"h": 120,
-"image": "srock03",
-"kind": "effect",
-"w": 120
-},
 "srock03.tem": {
 "frames": 2,
 "h": 120,
 "image": "srock03",
-"kind": "effect",
-"w": 120
-},
-"srock03.urb": {
-"frames": 2,
-"h": 120,
-"image": "srock03",
-"kind": "effect",
-"w": 120
-},
-"srock04.sno": {
-"frames": 2,
-"h": 120,
-"image": "srock04",
 "kind": "effect",
 "w": 120
 },
@@ -10774,28 +5073,7 @@
 "kind": "effect",
 "w": 120
 },
-"srock04.urb": {
-"frames": 2,
-"h": 120,
-"image": "srock04",
-"kind": "effect",
-"w": 120
-},
-"srock05.sno": {
-"frames": 2,
-"h": 120,
-"image": "srock05",
-"kind": "effect",
-"w": 120
-},
 "srock05.tem": {
-"frames": 2,
-"h": 120,
-"image": "srock05",
-"kind": "effect",
-"w": 120
-},
-"srock05.urb": {
 "frames": 2,
 "h": 120,
 "image": "srock05",
@@ -10837,28 +5115,7 @@
 "kind": "icon",
 "w": 60
 },
-"tib01.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib01.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib01.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib02.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -10872,35 +5129,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib02.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib03.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib03.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib03.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib04.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -10914,35 +5143,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib04.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib05.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib05.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib05.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib06.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -10956,35 +5157,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib06.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib07.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib07.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib07.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib08.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -10998,35 +5171,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib08.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib09.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib09.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib09.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib10.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -11040,35 +5185,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib10.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib11.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib11.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib11.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib12.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -11082,35 +5199,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib12.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib13.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib13.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib13.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib14.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -11124,35 +5213,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib14.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib15.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib15.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib15.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib16.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -11166,35 +5227,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib16.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib17.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib17.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib17.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib18.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -11208,35 +5241,7 @@
 "kind": "effect",
 "w": 60
 },
-"tib18.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib19.sno": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
 "tib19.tem": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib19.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tib20.sno": {
 "frames": 24,
 "h": 60,
 "image": "resources",
@@ -11250,38 +5255,10 @@
 "kind": "effect",
 "w": 60
 },
-"tib20.urb": {
-"frames": 24,
-"h": 60,
-"image": "resources",
-"kind": "effect",
-"w": 60
-},
-"tibtre01.sno": {
-"frames": 22,
-"h": 56,
-"image": "tibtre01",
-"kind": "scenery",
-"w": 84
-},
 "tibtre01.tem": {
 "frames": 22,
 "h": 56,
 "image": "tibtre01",
-"kind": "scenery",
-"w": 84
-},
-"tibtre01.urb": {
-"frames": 22,
-"h": 56,
-"image": "tibtre01",
-"kind": "scenery",
-"w": 84
-},
-"tibtre02.sno": {
-"frames": 22,
-"h": 56,
-"image": "tibtre02",
 "kind": "scenery",
 "w": 84
 },
@@ -11292,28 +5269,7 @@
 "kind": "scenery",
 "w": 84
 },
-"tibtre02.urb": {
-"frames": 22,
-"h": 56,
-"image": "tibtre02",
-"kind": "scenery",
-"w": 84
-},
-"tibtre03.sno": {
-"frames": 22,
-"h": 56,
-"image": "tibtre03",
-"kind": "scenery",
-"w": 84
-},
 "tibtre03.tem": {
-"frames": 22,
-"h": 56,
-"image": "tibtre03",
-"kind": "scenery",
-"w": 84
-},
-"tibtre03.urb": {
 "frames": 22,
 "h": 56,
 "image": "tibtre03",
@@ -11327,33 +5283,12 @@
 "kind": "icon",
 "w": 60
 },
-"tree01.sno": {
-"frames": 2,
-"h": 155,
-"image": "tree01",
-"kind": "scenery",
-"w": 155
-},
 "tree01.tem": {
 "frames": 2,
 "h": 155,
 "image": "tree01",
 "kind": "scenery",
 "w": 155
-},
-"tree01.urb": {
-"frames": 2,
-"h": 155,
-"image": "tree01",
-"kind": "scenery",
-"w": 155
-},
-"tree02.sno": {
-"frames": 2,
-"h": 111,
-"image": "tree02",
-"kind": "scenery",
-"w": 139
 },
 "tree02.tem": {
 "frames": 2,
@@ -11362,40 +5297,12 @@
 "kind": "scenery",
 "w": 139
 },
-"tree02.urb": {
-"frames": 2,
-"h": 111,
-"image": "tree02",
-"kind": "scenery",
-"w": 139
-},
-"tree03.sno": {
-"frames": 2,
-"h": 135,
-"image": "tree03",
-"kind": "scenery",
-"w": 135
-},
 "tree03.tem": {
 "frames": 2,
 "h": 135,
 "image": "tree03",
 "kind": "scenery",
 "w": 135
-},
-"tree03.urb": {
-"frames": 2,
-"h": 135,
-"image": "tree03",
-"kind": "scenery",
-"w": 135
-},
-"tree04.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree04",
-"kind": "scenery",
-"w": 123
 },
 "tree04.tem": {
 "frames": 2,
@@ -11404,40 +5311,12 @@
 "kind": "scenery",
 "w": 123
 },
-"tree04.urb": {
-"frames": 2,
-"h": 103,
-"image": "tree04",
-"kind": "scenery",
-"w": 123
-},
-"tree05.sno": {
-"frames": 2,
-"h": 101,
-"image": "tree05",
-"kind": "scenery",
-"w": 115
-},
 "tree05.tem": {
 "frames": 2,
 "h": 101,
 "image": "tree05",
 "kind": "scenery",
 "w": 115
-},
-"tree05.urb": {
-"frames": 2,
-"h": 101,
-"image": "tree05",
-"kind": "scenery",
-"w": 115
-},
-"tree06.sno": {
-"frames": 2,
-"h": 109,
-"image": "tree06",
-"kind": "scenery",
-"w": 129
 },
 "tree06.tem": {
 "frames": 2,
@@ -11446,40 +5325,12 @@
 "kind": "scenery",
 "w": 129
 },
-"tree06.urb": {
-"frames": 2,
-"h": 109,
-"image": "tree06",
-"kind": "scenery",
-"w": 129
-},
-"tree07.sno": {
-"frames": 2,
-"h": 101,
-"image": "tree07",
-"kind": "scenery",
-"w": 115
-},
 "tree07.tem": {
 "frames": 2,
 "h": 101,
 "image": "tree07",
 "kind": "scenery",
 "w": 115
-},
-"tree07.urb": {
-"frames": 2,
-"h": 101,
-"image": "tree07",
-"kind": "scenery",
-"w": 115
-},
-"tree08.sno": {
-"frames": 2,
-"h": 117,
-"image": "tree08",
-"kind": "scenery",
-"w": 117
 },
 "tree08.tem": {
 "frames": 2,
@@ -11488,40 +5339,12 @@
 "kind": "scenery",
 "w": 117
 },
-"tree08.urb": {
-"frames": 2,
-"h": 117,
-"image": "tree08",
-"kind": "scenery",
-"w": 117
-},
-"tree09.sno": {
-"frames": 2,
-"h": 127,
-"image": "tree09",
-"kind": "scenery",
-"w": 129
-},
 "tree09.tem": {
 "frames": 2,
 "h": 127,
 "image": "tree09",
 "kind": "scenery",
 "w": 129
-},
-"tree09.urb": {
-"frames": 2,
-"h": 127,
-"image": "tree09",
-"kind": "scenery",
-"w": 129
-},
-"tree10.sno": {
-"frames": 2,
-"h": 101,
-"image": "tree10",
-"kind": "scenery",
-"w": 123
 },
 "tree10.tem": {
 "frames": 2,
@@ -11530,40 +5353,12 @@
 "kind": "scenery",
 "w": 123
 },
-"tree10.urb": {
-"frames": 2,
-"h": 101,
-"image": "tree10",
-"kind": "scenery",
-"w": 123
-},
-"tree11.sno": {
-"frames": 2,
-"h": 127,
-"image": "tree11",
-"kind": "scenery",
-"w": 149
-},
 "tree11.tem": {
 "frames": 2,
 "h": 127,
 "image": "tree11",
 "kind": "scenery",
 "w": 149
-},
-"tree11.urb": {
-"frames": 2,
-"h": 127,
-"image": "tree11",
-"kind": "scenery",
-"w": 149
-},
-"tree12.sno": {
-"frames": 2,
-"h": 101,
-"image": "tree12",
-"kind": "scenery",
-"w": 101
 },
 "tree12.tem": {
 "frames": 2,
@@ -11572,40 +5367,12 @@
 "kind": "scenery",
 "w": 101
 },
-"tree12.urb": {
-"frames": 2,
-"h": 101,
-"image": "tree12",
-"kind": "scenery",
-"w": 101
-},
-"tree13.sno": {
-"frames": 2,
-"h": 133,
-"image": "tree13",
-"kind": "scenery",
-"w": 161
-},
 "tree13.tem": {
 "frames": 2,
 "h": 133,
 "image": "tree13",
 "kind": "scenery",
 "w": 161
-},
-"tree13.urb": {
-"frames": 2,
-"h": 133,
-"image": "tree13",
-"kind": "scenery",
-"w": 161
-},
-"tree14.sno": {
-"frames": 2,
-"h": 113,
-"image": "tree14",
-"kind": "scenery",
-"w": 139
 },
 "tree14.tem": {
 "frames": 2,
@@ -11614,40 +5381,12 @@
 "kind": "scenery",
 "w": 139
 },
-"tree14.urb": {
-"frames": 2,
-"h": 113,
-"image": "tree14",
-"kind": "scenery",
-"w": 139
-},
-"tree15.sno": {
-"frames": 2,
-"h": 107,
-"image": "tree15",
-"kind": "scenery",
-"w": 107
-},
 "tree15.tem": {
 "frames": 2,
 "h": 107,
 "image": "tree15",
 "kind": "scenery",
 "w": 107
-},
-"tree15.urb": {
-"frames": 2,
-"h": 107,
-"image": "tree15",
-"kind": "scenery",
-"w": 107
-},
-"tree16.sno": {
-"frames": 2,
-"h": 55,
-"image": "tree16",
-"kind": "scenery",
-"w": 55
 },
 "tree16.tem": {
 "frames": 2,
@@ -11656,40 +5395,12 @@
 "kind": "scenery",
 "w": 55
 },
-"tree16.urb": {
-"frames": 2,
-"h": 55,
-"image": "tree16",
-"kind": "scenery",
-"w": 55
-},
-"tree17.sno": {
-"frames": 2,
-"h": 67,
-"image": "tree17",
-"kind": "scenery",
-"w": 67
-},
 "tree17.tem": {
 "frames": 2,
 "h": 67,
 "image": "tree17",
 "kind": "scenery",
 "w": 67
-},
-"tree17.urb": {
-"frames": 2,
-"h": 67,
-"image": "tree17",
-"kind": "scenery",
-"w": 67
-},
-"tree18.sno": {
-"frames": 2,
-"h": 57,
-"image": "tree18",
-"kind": "scenery",
-"w": 57
 },
 "tree18.tem": {
 "frames": 2,
@@ -11698,40 +5409,12 @@
 "kind": "scenery",
 "w": 57
 },
-"tree18.urb": {
-"frames": 2,
-"h": 57,
-"image": "tree18",
-"kind": "scenery",
-"w": 57
-},
-"tree19.sno": {
-"frames": 2,
-"h": 75,
-"image": "tree19",
-"kind": "scenery",
-"w": 85
-},
 "tree19.tem": {
 "frames": 2,
 "h": 75,
 "image": "tree19",
 "kind": "scenery",
 "w": 85
-},
-"tree19.urb": {
-"frames": 2,
-"h": 75,
-"image": "tree19",
-"kind": "scenery",
-"w": 85
-},
-"tree20.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree20",
-"kind": "scenery",
-"w": 103
 },
 "tree20.tem": {
 "frames": 2,
@@ -11740,40 +5423,12 @@
 "kind": "scenery",
 "w": 109
 },
-"tree20.urb": {
-"frames": 2,
-"h": 109,
-"image": "tree20",
-"kind": "scenery",
-"w": 109
-},
-"tree21.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree21",
-"kind": "scenery",
-"w": 103
-},
 "tree21.tem": {
 "frames": 2,
 "h": 115,
 "image": "tree21",
 "kind": "scenery",
 "w": 115
-},
-"tree21.urb": {
-"frames": 2,
-"h": 115,
-"image": "tree21",
-"kind": "scenery",
-"w": 115
-},
-"tree22.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree22",
-"kind": "scenery",
-"w": 103
 },
 "tree22.tem": {
 "frames": 2,
@@ -11782,40 +5437,12 @@
 "kind": "scenery",
 "w": 105
 },
-"tree22.urb": {
-"frames": 2,
-"h": 97,
-"image": "tree22",
-"kind": "scenery",
-"w": 105
-},
-"tree23.sno": {
-"frames": 2,
-"h": 107,
-"image": "tree23",
-"kind": "scenery",
-"w": 107
-},
 "tree23.tem": {
 "frames": 2,
 "h": 123,
 "image": "tree23",
 "kind": "scenery",
 "w": 123
-},
-"tree23.urb": {
-"frames": 2,
-"h": 123,
-"image": "tree23",
-"kind": "scenery",
-"w": 123
-},
-"tree24.sno": {
-"frames": 2,
-"h": 107,
-"image": "tree24",
-"kind": "scenery",
-"w": 107
 },
 "tree24.tem": {
 "frames": 2,
@@ -11824,40 +5451,12 @@
 "kind": "scenery",
 "w": 121
 },
-"tree24.urb": {
-"frames": 2,
-"h": 121,
-"image": "tree24",
-"kind": "scenery",
-"w": 121
-},
-"tree25.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree25",
-"kind": "scenery",
-"w": 103
-},
 "tree25.tem": {
 "frames": 2,
 "h": 103,
 "image": "tree25",
 "kind": "scenery",
 "w": 103
-},
-"tree25.urb": {
-"frames": 2,
-"h": 103,
-"image": "tree25",
-"kind": "scenery",
-"w": 103
-},
-"tree26.sno": {
-"frames": 2,
-"h": 107,
-"image": "tree26",
-"kind": "scenery",
-"w": 107
 },
 "tree26.tem": {
 "frames": 2,
@@ -11866,38 +5465,10 @@
 "kind": "scenery",
 "w": 107
 },
-"tree26.urb": {
-"frames": 2,
-"h": 107,
-"image": "tree26",
-"kind": "scenery",
-"w": 107
-},
-"tree27.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree27",
-"kind": "scenery",
-"w": 103
-},
 "tree27.tem": {
 "frames": 2,
 "h": 103,
 "image": "tree27",
-"kind": "scenery",
-"w": 103
-},
-"tree27.urb": {
-"frames": 2,
-"h": 103,
-"image": "tree27",
-"kind": "scenery",
-"w": 103
-},
-"tree28.sno": {
-"frames": 2,
-"h": 103,
-"image": "tree28",
 "kind": "scenery",
 "w": 103
 },
@@ -11908,38 +5479,10 @@
 "kind": "scenery",
 "w": 115
 },
-"tree28.urb": {
-"frames": 2,
-"h": 115,
-"image": "tree28",
-"kind": "scenery",
-"w": 115
-},
-"trff01.sno": {
-"frames": 2,
-"h": 155,
-"image": "trff01",
-"kind": "scenery",
-"w": 155
-},
 "trff01.tem": {
 "frames": 2,
 "h": 155,
 "image": "trff01",
-"kind": "scenery",
-"w": 155
-},
-"trff01.urb": {
-"frames": 2,
-"h": 155,
-"image": "trff01",
-"kind": "scenery",
-"w": 155
-},
-"trff02.sno": {
-"frames": 2,
-"h": 155,
-"image": "trff02",
 "kind": "scenery",
 "w": 155
 },
@@ -11950,20 +5493,6 @@
 "kind": "scenery",
 "w": 155
 },
-"trff02.urb": {
-"frames": 2,
-"h": 155,
-"image": "trff02",
-"kind": "scenery",
-"w": 155
-},
-"trff03.sno": {
-"frames": 2,
-"h": 155,
-"image": "trff03",
-"kind": "scenery",
-"w": 155
-},
 "trff03.tem": {
 "frames": 2,
 "h": 155,
@@ -11971,28 +5500,7 @@
 "kind": "scenery",
 "w": 155
 },
-"trff03.urb": {
-"frames": 2,
-"h": 155,
-"image": "trff03",
-"kind": "scenery",
-"w": 155
-},
-"trff04.sno": {
-"frames": 2,
-"h": 155,
-"image": "trff04",
-"kind": "scenery",
-"w": 155
-},
 "trff04.tem": {
-"frames": 2,
-"h": 155,
-"image": "trff04",
-"kind": "scenery",
-"w": 155
-},
-"trff04.urb": {
 "frames": 2,
 "h": 155,
 "image": "trff04",
@@ -12006,31 +5514,10 @@
 "kind": "icon",
 "w": 60
 },
-"trock01.sno": {
-"frames": 2,
-"h": 96,
-"image": "trock01",
-"kind": "effect",
-"w": 96
-},
 "trock01.tem": {
 "frames": 2,
 "h": 96,
 "image": "trock01",
-"kind": "effect",
-"w": 96
-},
-"trock01.urb": {
-"frames": 2,
-"h": 96,
-"image": "trock01",
-"kind": "effect",
-"w": 96
-},
-"trock02.sno": {
-"frames": 2,
-"h": 96,
-"image": "trock02",
 "kind": "effect",
 "w": 96
 },
@@ -12041,38 +5528,10 @@
 "kind": "effect",
 "w": 96
 },
-"trock02.urb": {
-"frames": 2,
-"h": 96,
-"image": "trock02",
-"kind": "effect",
-"w": 96
-},
-"trock03.sno": {
-"frames": 2,
-"h": 96,
-"image": "trock03",
-"kind": "effect",
-"w": 96
-},
 "trock03.tem": {
 "frames": 2,
 "h": 96,
 "image": "trock03",
-"kind": "effect",
-"w": 96
-},
-"trock03.urb": {
-"frames": 2,
-"h": 96,
-"image": "trock03",
-"kind": "effect",
-"w": 96
-},
-"trock04.sno": {
-"frames": 2,
-"h": 96,
-"image": "trock04",
 "kind": "effect",
 "w": 96
 },
@@ -12083,28 +5542,7 @@
 "kind": "effect",
 "w": 96
 },
-"trock04.urb": {
-"frames": 2,
-"h": 96,
-"image": "trock04",
-"kind": "effect",
-"w": 96
-},
-"trock05.sno": {
-"frames": 2,
-"h": 96,
-"image": "trock05",
-"kind": "effect",
-"w": 96
-},
 "trock05.tem": {
-"frames": 2,
-"h": 96,
-"image": "trock05",
-"kind": "effect",
-"w": 96
-},
-"trock05.urb": {
 "frames": 2,
 "h": 96,
 "image": "trock05",
@@ -12279,21 +5717,7 @@
 "kind": "effect",
 "w": 108
 },
-"wcrate.sno": {
-"frames": 2,
-"h": 60,
-"image": "crate",
-"kind": "effect",
-"w": 60
-},
 "wcrate.tem": {
-"frames": 2,
-"h": 60,
-"image": "crate",
-"kind": "effect",
-"w": 60
-},
-"wcrate.urb": {
 "frames": 2,
 "h": 60,
 "image": "crate",

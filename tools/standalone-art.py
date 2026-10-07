@@ -381,7 +381,198 @@ def build_palettes():
     print(f"palettes: {out / 'general.pal'}")
 
 
-TARGETS = {"shroud": build_shroud, "cursors": build_cursors, "palettes": build_palettes}
+# ------------------------------------------------------------------------------------------------ orphan bits
+# Replacements for the 20 files the mod inherited from the upstream OpenRA RA2 mod without a provenance record.
+# Shared by the standalone game and the classic add-on (both load these instead of the originals).
+BITS = MOD / "bits"
+
+
+def region_sheet(frames, path: Path, offsets=None, palette=None):
+    """Frames of any size -> one PNG with Frame[i] regions (and offsets). RGBA, or indexed with `palette`."""
+    width = max(64, sum(f.shape[1] for f in frames[:16]))
+    x = y = rowh = 0
+    pos = []
+    for f in frames:
+        h, w = f.shape[:2]
+        if x + w > width:
+            x, y, rowh = 0, y + rowh, 0
+        pos.append((x, y))
+        x, rowh = x + w, max(rowh, h)
+    H = y + rowh
+    meta = PngInfo()
+    if palette is None:
+        im = np.zeros((H, width, 4), np.uint8)
+    else:
+        im = np.zeros((H, width), np.uint8)
+    for i, (f, (px, py)) in enumerate(zip(frames, pos)):
+        h, w = f.shape[:2]
+        im[py:py + h, px:px + w] = f
+        ox, oy = offsets[i] if offsets else (0, 0)
+        meta.add_text(f"Frame[{i}]", f"{px},{py},{w},{h};{ox},{oy}")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if palette is None:
+        Image.fromarray(im, "RGBA").save(path, pnginfo=meta, optimize=True)
+    else:
+        p = Image.fromarray(im, "P")
+        p.putpalette(palette)
+        p.save(path, pnginfo=meta, optimize=True, transparency=0)
+
+
+def draw(size, fn, ss=4):
+    from PIL import ImageDraw
+    im = Image.new("RGBA", (size[0] * ss, size[1] * ss), (0, 0, 0, 0))
+    fn(ImageDraw.Draw(im), ss)
+    return np.array(im.resize(size, Image.LANCZOS))
+
+
+def pip(color, w=5, h=7, empty=False):
+    def f(d, s):
+        d.rectangle([0, 0, w * s - 1, h * s - 1], fill=(14, 18, 22, 255))
+        if not empty:
+            d.rectangle([s, s, (w - 1) * s - 1, (h - 1) * s - 1], fill=(*color, 255))
+    return draw((w, h), f)
+
+
+def digit(n):
+    from PIL import ImageFont
+    font = ImageFont.load_default()
+
+    def f(d, s):
+        d.rectangle([0, 0, 8 * s - 1, 9 * s - 1], fill=(14, 18, 22, 230))
+        d.text((1.5 * s, -0.5 * s), str(n), fill=(240, 240, 240, 255), font=font.font_variant(size=9 * s) if hasattr(font, "font_variant") else font)
+    return draw((8, 9), f)
+
+
+def build_bits():
+    pc = {"empty": None, "green": (90, 220, 90), "yellow": (240, 210, 70), "gray": (150, 150, 150), "red": (230, 70, 60),
+          "blue": (80, 150, 250)}
+    frames = []
+    for name, c in pc.items():                                  # 0-5 building pips
+        frames.append(pip(c or (0, 0, 0), 6, 8, empty=c is None))
+    frames.append(draw((9, 9), lambda d, s: (d.rectangle([3 * s, 0, 6 * s - 1, 9 * s - 1], fill=(235, 60, 60, 255)),
+                                              d.rectangle([0, 3 * s, 9 * s - 1, 6 * s - 1], fill=(235, 60, 60, 255)))))  # 6 medic
+    frames.append(pip((0, 0, 0), 2, 2, empty=True))             # 7 unused
+    frames += [digit(n) for n in range(10)]                     # 8-17 control group numbers
+    for name, c in pc.items():                                  # 18-23 small pips (pips2)
+        frames.append(pip(c or (0, 0, 0), 4, 6, empty=c is None))
+    frames.append(pip((240, 210, 70), 4, 9))                    # 24 ammo
+    frames.append(pip((0, 0, 0), 4, 9, empty=True))             # 25 ammo empty
+    for i in range(12):                                         # 26-37 disguise (a pulsing mask)
+        a = int(150 + 105 * math.sin(i / 12 * 2 * math.pi))
+
+        def mask(d, s, a=a):
+            d.ellipse([0, 0, 14 * s - 1, 9 * s - 1], fill=(30, 34, 40, 255))
+            d.ellipse([2 * s, 2 * s, 6 * s, 6 * s], fill=(220, 220, 230, a))
+            d.ellipse([8 * s, 2 * s, 12 * s, 6 * s], fill=(220, 220, 230, a))
+        frames.append(draw((14, 9), mask))
+    region_sheet(frames, BITS / "pips-rtsai.png")
+
+    # build clock: shaded sector shrinking clockwise from 12 o'clock; white = unchanged under Multiply
+    clock = []
+    ys, xs = np.mgrid[0:48, 0:60].astype(float)
+    ang = (np.degrees(np.arctan2(xs + 0.5 - 30, -(ys + 0.5 - 24))) + 360) % 360
+    for i in range(55):
+        f = np.full((48, 60, 4), 255, np.uint8)
+        shaded = ang >= 360 * i / 55
+        f[shaded, :3] = (96, 100, 110)
+        clock.append(f)
+    sheet_png(clock, BITS / "clock-rtsai.png", cols=11)
+
+    # construction yard cameos (classic factions; the modern factions get the base kit's icons)
+    for name, tint in (("acnsicon-rtsai", (70, 110, 170)), ("scnsicon-rtsai", (160, 70, 60))):
+        def cy(d, s, tint=tint):
+            d.rectangle([0, 0, 60 * s - 1, 48 * s - 1], fill=(26, 30, 36, 255))
+            for k in range(48):
+                c = tuple(int(v * (0.55 + 0.45 * k / 47)) for v in tint)
+                d.line([(0, k * s), (60 * s, k * s)], fill=(*c, 255), width=s)
+            d.polygon([(12 * s, 36 * s), (30 * s, 26 * s), (48 * s, 36 * s), (30 * s, 44 * s)], fill=(190, 196, 204, 255))
+            d.polygon([(12 * s, 36 * s), (30 * s, 44 * s), (30 * s, 47 * s), (12 * s, 39 * s)], fill=(120, 126, 134, 255))
+            d.polygon([(48 * s, 36 * s), (30 * s, 44 * s), (30 * s, 47 * s), (48 * s, 39 * s)], fill=(150, 156, 164, 255))
+            d.line([(36 * s, 33 * s), (36 * s, 8 * s)], fill=(240, 200, 60, 255), width=2 * s)
+            d.line([(36 * s, 8 * s), (16 * s, 14 * s)], fill=(240, 200, 60, 255), width=2 * s)
+            d.line([(18 * s, 14 * s), (18 * s, 24 * s)], fill=(220, 220, 220, 255), width=s)
+            d.rectangle([0, 0, 60 * s - 1, 48 * s - 1], outline=(10, 12, 16, 255), width=s)
+        sheet_png([draw((60, 48), cy)], BITS / "cameos" / f"{name}.png", cols=1)
+
+    # editor/lobby markers on the ground (diamond + glyph)
+    def marker(glyph, color):
+        def f(d, s):
+            d.polygon([(24 * s, 1 * s), (47 * s, 12 * s), (24 * s, 23 * s), (1 * s, 12 * s)], outline=(*color, 255), width=2 * s)
+            glyph(d, s, color)
+        return draw((48, 24), f)
+
+    def star(d, s, c):
+        pts = []
+        for k in range(10):
+            r = (7 if k % 2 == 0 else 3) * s
+            a = math.radians(-90 + k * 36)
+            pts.append((24 * s + r * math.cos(a) * 1.4, 12 * s + r * math.sin(a)))
+        d.polygon(pts, fill=(*c, 255))
+
+    def flag(d, s, c):
+        d.line([(20 * s, 19 * s), (20 * s, 4 * s)], fill=(*c, 255), width=2 * s)
+        d.polygon([(21 * s, 4 * s), (31 * s, 7 * s), (21 * s, 10 * s)], fill=(*c, 255))
+
+    def eye(d, s, c):
+        d.ellipse([16 * s, 8 * s, 32 * s, 16 * s], outline=(*c, 255), width=2 * s)
+        d.ellipse([22 * s, 10 * s, 26 * s, 14 * s], fill=(*c, 255))
+    sheet_png([marker(star, (250, 210, 70))], BITS / "spawn-marker.png", cols=1)
+    sheet_png([marker(flag, (90, 220, 120))], BITS / "waypoint-marker.png", cols=1)
+    sheet_png([marker(eye, (110, 170, 255))], BITS / "camera-marker.png", cols=1)
+
+    # air-dropped bomb, 32 facings (facing 0 = north, counter-clockwise like the engine's facings)
+    bomb = []
+    for i in range(32):
+        a = math.radians(-i * 360 / 32)
+
+        def f(d, s, a=a):
+            cx, cy = 8 * s, 8 * s
+            dx, dy = math.sin(a), -math.cos(a) * 0.5
+            L = 6 * s
+            p1 = (cx + dx * L, cy + dy * L)
+            p2 = (cx - dx * L, cy - dy * L)
+            d.line([p1, p2], fill=(60, 64, 58, 255), width=4 * s)
+            d.ellipse([p1[0] - 2 * s, p1[1] - 2 * s, p1[0] + 2 * s, p1[1] + 2 * s], fill=(60, 64, 58, 255))
+            d.line([p2, (p2[0] - dx * 2 * s, p2[1] - dy * 2 * s)], fill=(140, 140, 120, 255), width=3 * s)
+        bomb.append(draw((16, 16), f))
+    sheet_png(bomb, BITS / "bomb-rtsai.png", cols=8)
+
+    # classic cursors that were upstream sheets: attack-move and undeploy (55x43 frames like the RA2 sheet)
+    am = [np.pad(cur_crosshair(i / 9, COL["nuke"]), ((5, 6), (11, 12), (0, 0))) for i in range(9)]
+    am.append(np.pad(cur_crosshair(0.0, (150, 150, 150)), ((5, 6), (11, 12), (0, 0))))
+    sheet_png(am, BITS / "assaultmove-cursor.png", cols=10)
+    ud = [np.pad(cur_expand(1 - i / 7, COL["deploy"]), ((5, 6), (11, 12), (0, 0))) for i in range(7)]
+    sheet_png(ud, BITS / "undeploy-cursor.png", cols=7)
+
+    # veterancy chevron over build icons, and the palette it is drawn with (PaletteFromPng reads this file's palette)
+    pal = np.array(list(general_palette()), np.uint8).reshape(-1, 3).astype(int) * 4
+    pal = np.clip(pal + pal // 64, 0, 255).astype(np.uint8)
+    idx_gold = int(np.argmin(((pal[32:] - (240, 200, 70)) ** 2).sum(1))) + 32
+    idx_dark = 3
+    chev = np.zeros((10, 14), np.uint8)
+    for k in range(3):
+        for x in range(14):
+            y = 2 + k * 3 + abs(x - 6.5) * 0.45
+            yi = int(round(y))
+            if 0 <= yi < 10:
+                chev[yi, x] = idx_gold
+                if yi + 1 < 10:
+                    chev[yi + 1, x] = idx_dark
+    region_sheet([chev], BITS / "cameos" / "cameo-chevron.png", palette=pal.ravel().tolist())
+
+    # building depth ramp (DepthSprite): a formula, not art. 288x197, every row
+    # 0 | 71 71 70 70 ... 1 1 0 0 1 1 ... 70 70 71 71 | 0  (palette index = depth step)
+    row = np.zeros(288, np.uint8)
+    for x in range(1, 287):
+        k = (x - 1) // 2
+        row[x] = 71 - k if k <= 71 else k - 71
+    depth = np.tile(row, (197, 1))
+    grey = np.array([[i, i, i] for i in range(256)], np.uint8).ravel().tolist()
+    region_sheet([depth], BITS / "isodepth.png", palette=grey)
+    print("bits: pips, clock, construction-yard cameos, markers, bomb, classic cursors, cameo chevron, isodepth")
+
+
+TARGETS = {"shroud": build_shroud, "cursors": build_cursors, "palettes": build_palettes, "bits": build_bits}
 
 
 def main():

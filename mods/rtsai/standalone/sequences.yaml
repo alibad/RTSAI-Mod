@@ -6,3 +6,33 @@ shroud:
 		Filename: ra2|standalone/art/shroud.png
 	fog:
 		Filename: ra2|standalone/art/fog.png
+
+pips:
+	Defaults:
+		Filename: pips-rtsai.png
+	pip-empty:
+		Filename: pips-rtsai.png
+		Start: 18
+	pip-green:
+		Filename: pips-rtsai.png
+		Start: 19
+	pip-yellow:
+		Filename: pips-rtsai.png
+		Start: 20
+	pip-gray:
+		Filename: pips-rtsai.png
+		Start: 21
+	pip-red:
+		Filename: pips-rtsai.png
+		Start: 22
+	pip-blue:
+		Filename: pips-rtsai.png
+		Start: 23
+
+rallypoint:
+	flag:
+		Filename: ra2|standalone/art/rallypoint-flag.png
+		Start: 0
+	circles:
+		Filename: ra2|standalone/art/rallypoint-circles.png
+		Start: 0

@@ -69,7 +69,7 @@ nacnst:
 		ShadowStart: 25
 		Tick: 100
 	icon:
-		Filename: scnsicon.shp
+		Filename: scnsicon-rtsai.png
 
 napowr:
 	Inherits: ^Structure

@@ -66,7 +66,7 @@ def kind_of(image_groups: set[str], sequences: set[str]) -> str:
 
 
 # ------------------------------------------------------------------------------------------------ manifest
-def make_manifest(audit_path: Path):
+def make_manifest(audit_path: Path, needed_path: Path | None = None):
     a = json.loads(audit_path.read_text(encoding="utf-8"))
     files = a["sprites"]["files"]
     isrc = a["sprites"]["imageSources"]
@@ -89,8 +89,16 @@ def make_manifest(audit_path: Path):
                          "kind": kind_of(u["groups"], u["sequences"]), "image": sorted(u["images"])[0] if u["images"] else ""}
     models = sorted({r["file"] for seqs in a["models"]["images"].values() for pair in seqs.values() for r in pair
                      if r["by"] == "ea"})
+    if needed_path:
+        # only the EA names the standalone mod still references (from an audit of it with placeholders unmounted)
+        need = json.loads(needed_path.read_text(encoding="utf-8"))
+        sprites = {k: v for k, v in sprites.items() if k in set(need["sprites"])}
+        models = [m for m in models if m in set(need["models"])]
     palettes = sorted({p["resolve"]["file"] for p in a["palettes"] if p["resolve"]["by"] == "ea"})
     cursors = sorted({c["resolve"]["file"] for c in a["cursors"] if c["resolve"] and c["resolve"]["by"] == "ea"})
+    if needed_path:
+        palettes = [x for x in palettes if x in set(need["palettes"])]
+        cursors = []
     tile_files = sum(len(t["files"]) for t in a["terrain"].values())
     manifest = {
         "note": "Names, frame counts and frame sizes of EA files the RA2-mode mod references, measured by "
@@ -298,6 +306,9 @@ def cursor_frame() -> Image.Image:
 def build():
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
     ph = OUT / "placeholders"
+    if ph.exists():   # rebuilt from scratch: only files the manifest lists (generated files only, no links here)
+        for f in sorted(ph.rglob("*"), reverse=True):
+            f.unlink() if f.is_file() else f.rmdir()
     ph.mkdir(parents=True, exist_ok=True)
     for name, s in m["sprites"].items():
         frame = sprite_frame(s["kind"], s["w"], s["h"], s["image"] or name.split(".")[0])
@@ -323,11 +334,12 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("step", nargs="?", default="build", choices=["manifest", "build"])
     ap.add_argument("--from-audit", type=Path)
+    ap.add_argument("--needed", type=Path, help="JSON of the names the standalone mod misses without placeholders")
     a = ap.parse_args()
     if a.step == "manifest":
         if not a.from_audit:
             sys.exit("manifest needs --from-audit")
-        make_manifest(a.from_audit)
+        make_manifest(a.from_audit, a.needed)
     else:
         build()
 

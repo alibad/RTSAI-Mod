@@ -77,7 +77,7 @@
 		ShadowIndex: 242
 	PaletteFromFile@ts-chrome:
 		Name: ts-chrome
-		Filename: tscameo.pal
+		Filename: ra2|standalone/palettes/general.pal
 		AllowModifiers: false
 		ShadowIndex: 242
 	PaletteFromPng@cameo-chevron:
@@ -106,7 +106,7 @@
 		CursorPalette: true
 	PaletteFromFile@ts-mousepal:
 		Name: ts-mouse
-		Filename: ts-mousepal.pal
+		Filename: ra2|standalone/palettes/general.pal
 	ColorPickerPalette@colorpicker:
 		Name: colorpicker
 		BasePalette: player
