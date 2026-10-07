@@ -1862,6 +1862,12 @@ logos:
 	Regions:
 		logo: 0, 0, 256, 256
 
+# The main menu backdrop: one flagship per faction (tools/standalone-menu.py), drawn to cover the window.
+rtsai-menu:
+	Image: ra2|standalone/art/menu-backdrop.png
+	Regions:
+		backdrop: 0, 0, 1920, 1080
+
 mainmenu-border:
 	Image: dialog.png
 	PanelRegion: 648, 387, 40, 40, 40, 40, 40, 40

@@ -6,3 +6,10 @@
 mod-title = { -product-name }
 ra2-preview-window-title = { -product-name }
 ra2-preview-note = { -product-name } with the shared AI assistant.
+
+## Main menu (chrome/rtsai-mainmenu.yaml)
+label-rtsai-main-menu-title = { -product-name }
+label-rtsai-dev-build = development build { $build }
+button-rtsai-profile-link = Link a forum account
+label-rtsai-profile-checking = Checking forum profile...
+label-rtsai-profile-error = Forum profile unavailable

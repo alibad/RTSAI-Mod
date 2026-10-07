@@ -162,7 +162,7 @@ Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, Op
 ChromeLayout:
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
-	common|chrome/mainmenu.yaml
+	ra2|chrome/rtsai-mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	ra2|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/ingame-infoobjectives.yaml
@@ -324,6 +324,10 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size: 32
 		Ascender: 24
+	Hero:
+		Font: common|FreeSansBold.ttf
+		Size: 56
+		Ascender: 42
 	BigBold:
 		Font: common|FreeSansBold.ttf
 		Size: 24

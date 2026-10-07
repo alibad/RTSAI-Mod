@@ -186,11 +186,12 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			return reach;
 		}
 
-		[Desc("[--strict] [--strict-audio]", "Fail if the standalone mod can load any Red Alert 2 file (see docs/standalone.md).")]
+		[Desc("[--strict] [--strict-audio] [--list-placeholders]", "Fail if the standalone mod can load any Red Alert 2 file (see docs/standalone.md).")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			var strict = args.Contains("--strict");
 			var strictAudio = strict || args.Contains("--strict-audio");
+			var listPlaceholders = args.Contains("--list-placeholders");
 			var modData = Game.ModData = utility.ModData;
 			var manifest = modData.Manifest;
 			var fs = modData.ModFiles;
@@ -272,8 +273,27 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 
 			foreach (var c in MiniYaml.Load(fs, manifest.Chrome, null))
 				foreach (var key in new[] { "Image", "Image2x", "Image3x" })
-					if (c.Value.NodeWithKeyOrDefault(key) is MiniYamlNode n && !fs.Exists(n.Value.Value))
+				{
+					if (c.Value.NodeWithKeyOrDefault(key) is not MiniYamlNode n)
+						continue;
+
+					if (!fs.Exists(n.Value.Value))
+					{
 						Error($"Chrome {c.Key}.{key}: {n.Value.Value} not found");
+						continue;
+					}
+
+					// A chrome sheet becomes one texture, and the renderer refuses non-power-of-two sizes at first draw.
+					using var s = fs.Open(n.Value.Value);
+					var header = new byte[24];
+					if (s.Read(header, 0, 24) == 24 && header[1] == 'P' && header[2] == 'N' && header[3] == 'G')
+					{
+						var w = (header[16] << 24) | (header[17] << 16) | (header[18] << 8) | header[19];
+						var h = (header[20] << 24) | (header[21] << 16) | (header[22] << 8) | header[23];
+						if (!Exts.IsPowerOf2(w) || !Exts.IsPowerOf2(h))
+							Error($"Chrome {c.Key}.{key}: {n.Value.Value} is {w}x{h}; chrome sheets must be power-of-two sized");
+					}
+				}
 
 			if (manifest.LoadScreen != null)
 				foreach (var n in manifest.LoadScreen.Nodes.Where(n => n.Key.StartsWith("Image", StringComparison.Ordinal)))
@@ -363,7 +383,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 							images.Add(a);
 					}
 
-				var used = new HashSet<string>();
+				var used = new Dictionary<string, SortedSet<string>>();
 				foreach (var tileset in modData.DefaultTerrainInfo.Keys)
 				{
 					using var seqs = new SequenceSet(modData.DefaultFileSystem, modData, tileset, null);
@@ -380,12 +400,20 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 							foreach (var res in toLoad)
 								if (tokenFile.TryGetValue((int)res.GetType().GetField("Token").GetValue(res), out var f)
 									&& fs.TryGetPackageContaining(f, out var owner, out _) && owner == placeholders)
-									used.Add(f);
+								{
+									if (!used.TryGetValue(f, out var users))
+										used[f] = users = [];
+									users.Add(image);
+								}
 						}
 				}
 
-				Soft($"{used.Count} placeholder files still stand in for EA art the factions use, e.g. {string.Join(", ", used.Order().Take(6))} " +
-					$"({placeholders.Contents.Count(c => c.Contains('.'))} placeholder files in the pack)");
+				Soft($"{used.Count} placeholder files still stand in for EA art the factions use, e.g. {string.Join(", ", used.Keys.Order().Take(6))} " +
+					$"({placeholders.Contents.Count(c => c.Contains('.'))} placeholder files in the pack; --list-placeholders lists them all)");
+
+				if (listPlaceholders)
+					foreach (var (file, users) in used.OrderBy(kv => kv.Key, StringComparer.Ordinal))
+						Console.WriteLine($"placeholder {file}: {string.Join(", ", users)}");
 			}
 
 			// 8. Identity: no Red Alert branding in shipped text; ModTabTitle follows the product term.

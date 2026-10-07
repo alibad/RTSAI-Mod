@@ -42,6 +42,28 @@
 		<Protobuf Include="Companion/Protos/rl_bridge.proto" GrpcServices="Server" />
 	</ItemGroup>
 
+	<!--
+		Build stamp for the main menu's version line (RTSAIVersionLabelLogic): the git commit this assembly was compiled
+		from, "-dirty" with uncommitted changes. Packaged builds show the manifest version instead (make version).
+		Without git the stamp is empty and the menu says so.
+	-->
+	<Target Name="RTSAIBuildStamp" BeforeTargets="GetAssemblyAttributes">
+		<Exec Command="git describe --always --dirty --abbrev=7" ConsoleToMSBuild="true" IgnoreExitCode="true"
+			StandardOutputImportance="low" StandardErrorImportance="low" WorkingDirectory="$(MSBuildProjectDirectory)">
+			<Output TaskParameter="ConsoleOutput" PropertyName="RTSAIBuildRaw" />
+			<Output TaskParameter="ExitCode" PropertyName="RTSAIBuildExit" />
+		</Exec>
+		<PropertyGroup>
+			<RTSAIBuild Condition="'$(RTSAIBuildExit)' == '0'">$(RTSAIBuildRaw)</RTSAIBuild>
+		</PropertyGroup>
+		<ItemGroup>
+			<AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+				<_Parameter1>RTSAIBuild</_Parameter1>
+				<_Parameter2>$(RTSAIBuild)</_Parameter2>
+			</AssemblyAttribute>
+		</ItemGroup>
+	</Target>
+
 	<ItemGroup>
 		<None Include="$(EngineRootPath)/AUTHORS">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>

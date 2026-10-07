@@ -1,0 +1,312 @@
+# The RTS AI main menu (replaces common|chrome/mainmenu.yaml). Same widget ids and logic as the stock menu; the look
+# is ours: a full-window render of one flagship per faction (tools/standalone-menu.py), the product name, a single
+# column of buttons on a dark glass band, the build version, and a one-line forum-profile link at the top right.
+# No news box and no content-manager button: the standalone game has no external content to manage.
+
+Container@MAINMENU:
+	Logic: MainMenuLogic
+	Children:
+		LogicKeyListener@GLOBAL_KEYHANDLER:
+			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
+				StopMusicKey: StopMusic
+				PauseMusicKey: PauseMusic
+				PrevMusicKey: PrevMusic
+				NextMusicKey: NextMusic
+				TakeScreenshotKey: TakeScreenshot
+				MuteAudioKey: ToggleMute
+		CoverImage@BACKDROP:
+			Width: WINDOW_WIDTH
+			Height: WINDOW_HEIGHT
+			ImageCollection: rtsai-menu
+			ImageName: backdrop
+			FocusX: 0.7
+		ColorBlock@MENU_BAND:
+			Width: 340
+			Height: WINDOW_HEIGHT
+			Color: 070A0FB0
+		ColorBlock@MENU_BAND_EDGE:
+			X: 340
+			Width: 1
+			Height: WINDOW_HEIGHT
+			Color: 4FC3D055
+		Label@PRODUCT_TITLE:
+			X: 44
+			Y: 48
+			Width: 280
+			Height: 64
+			Text: label-rtsai-main-menu-title
+			Font: Hero
+			Shadow: true
+		ColorBlock@PRODUCT_RULE:
+			X: 46
+			Y: 118
+			Width: 56
+			Height: 3
+			Color: 4FC3D0
+		Container@MENUS:
+			X: 44
+			Y: 150
+			Width: 252
+			Height: 340
+			Children:
+				Container@MAIN_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Button@SINGLEPLAYER_BUTTON:
+							Y: 40
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: label-singleplayer-title
+							Font: MediumBold
+						Button@MULTIPLAYER_BUTTON:
+							Y: 88
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: label-multiplayer-title
+							Font: MediumBold
+						Button@SETTINGS_BUTTON:
+							Y: 136
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-settings-title
+							Font: MediumBold
+						Button@EXTRAS_BUTTON:
+							Y: 184
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-extras-title
+							Font: MediumBold
+						Button@QUIT_BUTTON:
+							Y: 280
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-quit
+							Font: MediumBold
+				Container@SINGLEPLAYER_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@SINGLEPLAYER_MENU_TITLE:
+							Width: PARENT_WIDTH
+							Height: 30
+							Text: label-singleplayer-title
+							Font: Bold
+							TextColor: 8FD8E2
+							Shadow: true
+						Button@SKIRMISH_BUTTON:
+							Y: 40
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-singleplayer-menu-skirmish
+							Font: MediumBold
+						Button@MISSIONS_BUTTON:
+							Y: 88
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: label-missions-title
+							Font: MediumBold
+						Button@LOAD_BUTTON:
+							Y: 136
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-singleplayer-menu-load
+							Font: MediumBold
+						Button@BACK_BUTTON:
+							Key: escape
+							Y: 280
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-back
+							Font: MediumBold
+				Container@EXTRAS_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@EXTRAS_MENU_TITLE:
+							Width: PARENT_WIDTH
+							Height: 30
+							Text: button-extras-title
+							Font: Bold
+							TextColor: 8FD8E2
+							Shadow: true
+						Button@REPLAYS_BUTTON:
+							Y: 40
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-extras-menu-replays
+							Font: MediumBold
+						Button@MUSIC_BUTTON:
+							Y: 88
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: label-music-title
+							Font: MediumBold
+						Button@MAP_EDITOR_BUTTON:
+							Y: 136
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: label-map-editor-title
+							Font: MediumBold
+						Button@ASSETBROWSER_BUTTON:
+							Y: 184
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-extras-menu-assetbrowser
+							Font: MediumBold
+						Button@CREDITS_BUTTON:
+							Y: 232
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: label-credits-title
+							Font: MediumBold
+						Button@BACK_BUTTON:
+							Key: escape
+							Y: 280
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-back
+							Font: MediumBold
+				Container@MAP_EDITOR_MENU:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@MAP_EDITOR_MENU_TITLE:
+							Width: PARENT_WIDTH
+							Height: 30
+							Text: label-map-editor-title
+							Font: Bold
+							TextColor: 8FD8E2
+							Shadow: true
+						Button@NEW_MAP_BUTTON:
+							Y: 40
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-map-editor-new-map
+							Font: MediumBold
+						Button@LOAD_MAP_BUTTON:
+							Y: 88
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-map-editor-load-map
+							Font: MediumBold
+						Button@BACK_BUTTON:
+							Key: escape
+							Y: 280
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: button-back
+							Font: MediumBold
+		Label@VERSION_LABEL:
+			Logic: RTSAIVersionLabelLogic
+			X: WINDOW_WIDTH - 424
+			Y: WINDOW_HEIGHT - 34
+			Width: 400
+			Height: 20
+			Align: Right
+			Font: Small
+			TextColor: AEB6BF
+			Shadow: true
+		Container@PLAYER_PROFILE_CONTAINER:
+			Logic: RTSAILocalProfileLogic
+			X: WINDOW_WIDTH - 384
+			Y: 16
+		Container@PERFORMANCE_INFO:
+			Logic: PerfDebugLogic
+			Children:
+				Label@PERF_TEXT:
+					X: 30
+					Y: WINDOW_HEIGHT - 70
+					Width: 170
+					Height: 40
+					Contrast: true
+				Background@GRAPH_BG:
+					ClickThrough: true
+					Background: dialog4
+					X: WINDOW_WIDTH - 240
+					Y: WINDOW_HEIGHT - 240
+					Width: 210
+					Height: 210
+					Children:
+						PerfGraph@GRAPH:
+							X: 5
+							Y: 5
+							Width: 200
+							Height: 200
+
+# The forum-profile link as one quiet line (the stock panel is a 270x100 box with three lines of text). Same ids, so
+# the stock LocalProfileLogic drives it; RTSAILocalProfileLogic loads it.
+Container@RTSAI_LOCAL_PROFILE_PANEL:
+	Logic: LocalProfileLogic
+	Width: 360
+	Height: 24
+	Children:
+		Container@PROFILE_HEADER:
+			Width: PARENT_WIDTH
+			Height: 24
+			Children:
+				Label@PROFILE_NAME:
+					Width: 220
+					Height: 22
+					Align: Right
+					Font: Bold
+					Shadow: true
+				Label@PROFILE_RANK:
+					X: 226
+					Width: 70
+					Height: 22
+					Font: TinyBold
+					TextColor: AEB6BF
+					Shadow: true
+				Button@DESTROY_KEY:
+					X: PARENT_WIDTH - 60
+					Width: 60
+					Height: 22
+					Font: TinyBold
+					Text: button-profile-unlink
+		Container@BADGES_CONTAINER:
+			Y: 28
+			Width: PARENT_WIDTH
+			Visible: false
+		Container@LINK_ACCOUNT:
+			Width: PARENT_WIDTH
+			Height: 24
+			Children:
+				Button@LINK_BUTTON:
+					Width: PARENT_WIDTH
+					Height: 22
+					Background:
+					Align: Right
+					Font: TinyBold
+					TextColor: 8FA7B0
+					Text: button-rtsai-profile-link
+		Container@CHECKING_FINGERPRINT:
+			Width: PARENT_WIDTH
+			Height: 24
+			Children:
+				Label@CHECKING:
+					Width: PARENT_WIDTH
+					Height: 22
+					Align: Right
+					Font: Tiny
+					TextColor: 8FA7B0
+					Shadow: true
+					Text: label-rtsai-profile-checking
+		Container@CONNECTION_ERROR:
+			Width: PARENT_WIDTH
+			Height: 24
+			Children:
+				Label@ERROR:
+					Width: PARENT_WIDTH - 66
+					Height: 22
+					Align: Right
+					Font: Tiny
+					TextColor: 8FA7B0
+					Shadow: true
+					Text: label-rtsai-profile-error
+				Button@RETRY_BUTTON:
+					X: PARENT_WIDTH - 60
+					Width: 60
+					Height: 22
+					Font: TinyBold
+					Text: button-retry
