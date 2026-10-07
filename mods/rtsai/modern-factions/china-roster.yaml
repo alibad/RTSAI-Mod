@@ -233,8 +233,10 @@ r2phl:
 		Description: ra2-r2phl-description
 	Valued:
 		Cost: 1500
+	# Round 5: HP 160 -> 220 with full rocket damage to infantry (R2ChinaLongbowRockets): the PHL traded
+	# 0.73 destroyed per credit and died to the infantry armies it was meant to break.
 	Health:
-		HP: 160
+		HP: 220
 	Armor:
 		Type: Light
 	Mobile:

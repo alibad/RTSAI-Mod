@@ -10,9 +10,11 @@ Player:
 			r2ilpatrol: 22
 			r2ilfrigate: 20
 			r2iltender: 5
-		# Bots field the r2ilrecon commando only after 20 minutes (balance-harness: it traded 0.5 per credit).
+		# Bots field the r2ilrecon commando only after 10 minutes (round 4: 20; it traded 0.5 per credit). Round 5:
+		# the precision strike it carries costs opponents under 350 a game, so the earlier commando is a visible
+		# strike, not a balance lever.
 		UnitDelays:
-			r2ilrecon: 30000
+			r2ilrecon: 15000
 		UnitLimits:
 			r2ilobserver: 3
 			r2ilrecon: 1
@@ -43,7 +45,7 @@ Player:
 			r2ilfrigate: 20
 			r2iltender: 5
 		UnitDelays:
-			r2ilrecon: 30000
+			r2ilrecon: 15000
 		UnitLimits:
 			r2ilobserver: 3
 			r2ilrecon: 1
@@ -74,7 +76,7 @@ Player:
 			r2ilfrigate: 20
 			r2iltender: 5
 		UnitDelays:
-			r2ilrecon: 30000
+			r2ilrecon: 15000
 		UnitLimits:
 			r2ilobserver: 3
 			r2ilrecon: 1
@@ -105,7 +107,7 @@ Player:
 			r2ilfrigate: 20
 			r2iltender: 5
 		UnitDelays:
-			r2ilrecon: 30000
+			r2ilrecon: 15000
 		UnitLimits:
 			r2ilobserver: 3
 			r2ilrecon: 1
@@ -136,7 +138,7 @@ Player:
 			r2ilfrigate: 20
 			r2iltender: 5
 		UnitDelays:
-			r2ilrecon: 30000
+			r2ilrecon: 15000
 		UnitLimits:
 			r2ilobserver: 3
 			r2ilrecon: 1

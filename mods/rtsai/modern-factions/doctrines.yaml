@@ -28,12 +28,13 @@ Player:
 		Factions: china
 		Doctrine: networked-combined-arms
 		AirDefenseShare: 24
-		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gaairc
+		# Round 5: no Air Force Command in the opening (1000 credits idle until aircraft); artillery 60 -> 100 (the PHL).
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn
 		RoleShareModifiers:
 			line-infantry: 140
 			transport: 150
 			main-battle-tank: 110
-			artillery: 60
+			artillery: 100
 			anti-air: 25
 			naval-screen: 120
 			anti-submarine: 120
@@ -56,11 +57,15 @@ Player:
 		Factions: turkey
 		Doctrine: mobile-defense
 		AirDefenseShare: 24
-		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept, gaairc
+		# Round 5: no Air Force Command in the opening; support, transport and strike aircraft halved (Sancak 0.24,
+		# Aras 0.36, Kuzgun 0.54 destroyed per credit), so the shares go to Bozkirs, riflemen and AT teams.
+		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept
 		RoleShareModifiers:
+			transport: 50
+			support: 50
 			line-infantry: 130
 			main-battle-tank: 110
-			strike-aircraft: 80
+			strike-aircraft: 50
 			anti-air: 20
 			artillery: 80
 	# Expeditionary: air power (Air Force Command, JTAC radar) right after the first armor; heavy

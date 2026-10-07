@@ -110,8 +110,9 @@ r2qilin:
 		BuildPaletteOrder: 21
 		Prerequisites: ~faction.china, gaweap
 		Description: ra2-r2qilin-description
+	# Round 5: 700 -> 750 with the coaxial machine gun (R2QilinCoax): the Qilin traded 0.80 per credit, 1.70 with it.
 	Valued:
-		Cost: 700
+		Cost: 750
 	Health:
 		HP: 350
 	Armor:
@@ -121,6 +122,10 @@ r2qilin:
 	Armament:
 		Weapon: R2QilinGun
 		MuzzleSequence: muzzle
+	Armament@coax:
+		Name: secondary
+		Weapon: R2QilinCoax
+		LocalOffset: 600,60,700
 
 r2lynx:
 	Inherits: ^R2ModernVehicle
