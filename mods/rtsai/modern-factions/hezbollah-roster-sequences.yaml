@@ -6,6 +6,8 @@ r2hzspotter:
 	Inherits@MC: ^MindControllable
 r2hzscout:
 	Inherits@MC: ^MindControllable
+r2hzfpv:
+	Inherits@MC: ^MindControllable
 r2hzbunker:
 	Inherits@MC: ^MindControllable
 r2hzaanest:

@@ -876,3 +876,18 @@ r2hztechnical:
 		Facings: 32
 		ShadowStart: 96
 # glb-route:r2hztechnical end
+
+# glb-route:r2hzquad begin
+r2hzquad:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzquad.shp
+		Facings: 32
+# glb-route:r2hzquad end
+
+# glb-route:r2hzrail begin
+r2hzrail:
+	idle:
+		Filename: ra2|modern-factions/vehicles/r2hzrail.shp
+		Facings: 32
+		ShadowStart: 32
+# glb-route:r2hzrail end

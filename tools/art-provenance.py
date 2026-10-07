@@ -140,6 +140,8 @@ class Art:
         if i3d:
             out["madeBy"] = f"{i3d.get('model', 'image-to-3D')} ({i3d.get('service', 'local')}), seed {i3d.get('seed')}"
             out["fromImage"] = i3d.get("source")
+        elif mm.get("model"):
+            out["madeBy"] = mm["model"]          # hand-authored meshes (e.g. tools/hz_doctrine_models.py)
         concept = mm.get("fromConcept") or meta.get("fromConcept")
         if concept:
             cm = self.meta(self.repo / "units" / actor / "candidates" / concept)

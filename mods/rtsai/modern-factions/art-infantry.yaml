@@ -66,6 +66,14 @@
 		BasePalette: r2hzat-glb
 		BaseName: r2hzat-glb-player
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@r2hzfpv-glb:
+		Name: r2hzfpv-glb
+		Filename: ra2|modern-factions/infantry/r2hzfpv.pal
+		ShadowIndex: 1
+	PlayerColorPalette@r2hzfpv-glb:
+		BasePalette: r2hzfpv-glb
+		BaseName: r2hzfpv-glb-player
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PaletteFromFile@r2hzrifle-glb:
 		Name: r2hzrifle-glb
 		Filename: ra2|modern-factions/infantry/r2hzrifle.pal
@@ -306,6 +314,15 @@ r2hzat:
 		DeathPaletteIsPlayerPalette: true
 	Armament:
 		LocalOffset: 421,41,1249
+
+r2hzfpv:
+	RenderSprites:
+		PlayerPalette: r2hzfpv-glb-player
+	TakeCover:
+		ProneSequencePrefix: prone-
+	WithDeathAnimation@normal:
+		DeathSequencePalette: r2hzfpv-glb-player
+		DeathPaletteIsPlayerPalette: true
 
 r2hzrifle:
 	RenderSprites:

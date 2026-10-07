@@ -238,3 +238,10 @@ r2fxfire-large:
 		Length: *
 		ZOffset: 1024
 # glb-fx:images end
+
+# glb-fx:r2hzrail begin
+r2hzrail:
+	muzzle-launch:
+		Filename: sgrysmk1.shp
+		Length: *
+# glb-fx:r2hzrail end
