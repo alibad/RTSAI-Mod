@@ -15,6 +15,11 @@ check and the generation date.
 The earlier lines came from `edge-tts`, an unofficial client for Microsoft Edge's Read Aloud
 service. Nothing grants redistribution of that output, so all of it has been replaced.
 
+The standalone build replaces every Red Alert 2 sound it still needed (weapon and impact effects, UI
+sounds, the shared units' voices and the music) with project-made audio. Those files and their
+records are in [`mods/rtsai/standalone/audio/`](../mods/rtsai/standalone/audio/PROVENANCE.json); see
+[Standalone build](#standalone-build-no-red-alert-2-audio). No EA audio is shipped.
+
 ## Engines
 
 | Language | Engine (pinned revision) | License | Evidence |
@@ -256,6 +261,13 @@ it, a modern engineer looks up unprefixed file names that do not exist.
   effects to confirm that none contains speech.
 - `tools/naval-sfx.py` regenerates the four naval sounds in memory and exits non-zero if a shipped
   file differs by a single byte.
+- `tools/standalone-audio.py check` fails if any audio file under `mods/rtsai` has no structured
+  provenance record (an entry in `standalone/audio/PROVENANCE.json` with a matching SHA-256, or a
+  `filename` record in `modern-factions/audio/PROVENANCE.json`), if a record's file is gone, or if the
+  per-file tables at the end of this page are stale.
+- `tools/standalone-sfx.py verify` rebuilds every procedural standalone sound in memory and fails if a
+  shipped file differs; `tools/standalone-music.py check` checks each track's loop seam, loudness and
+  record.
 
 ## Reproduce
 
@@ -353,3 +365,339 @@ The files, their names and their loudness are unchanged, so no rules changed.
 | `naval-missile-launch.wav` | `missile-launch` | 0.72 s | `9d926359fc598027274bc99ebeeeb7d97f927e0c245379d318aa4f6e4e67936a` |
 | `naval-naval-alarm.wav` | `naval-alarm` | 1.05 s | `4e93158c02fc87c9e99545e9028950f7f81cb165354e309109c1d235d27d9f68` |
 | `naval-radar-sweep.wav` | `radar-sweep` | 0.82 s | `275b2381ce7ab5aadba5adf9476bd2f1eb0d2b95fd377009cc6043e9c9ab217b` |
+
+## Standalone build (no Red Alert 2 audio)
+
+Added 7 October 2026 on `rtsai/standalone-audio`. The file list is the standalone agent's
+`docs/standalone-deliverables.json` ("audio"): the sounds the rules still name for what the seven
+modern factions can reach, after the original factions, Chrono Commando and Yuri Prime left the
+modern scope. Every file keeps the name the rules use; nothing in the rules changes.
+
+| Category | Files | How it is made | Licence |
+|---|---|---|---|
+| Weapon, impact, explosion and superweapon effects | 81 (77, plus 4 names missing even in RA2: `chrono2.aud`, `expnew09.wav`, `expnew13.wav`, `vapoar2b.wav`) | procedural, `tools/standalone-sfx.py` | project code, GPL-3.0 |
+| UI sounds | 14 | procedural, same tool | project code, GPL-3.0 |
+| Dog (select, move, feedback, death) | 6 voices (its 2 attack sounds are among the effects) | procedural barks, growls and whines | project code, GPL-3.0 |
+| Shared-unit voices and death cries | 104 (85 spoken lines, 19 cries) | Kokoro-82M (lines) and Chatterbox (cries) through OpenRA-AI `voice_engines.py`, `tools/standalone-voices.py` | Apache-2.0 (Kokoro), MIT (Chatterbox) |
+| Music | 12 looping tracks + `score` (victory/defeat) | ACE-Step 1.5, local, `tools/standalone-music.py` | MIT |
+
+### How the effects are made
+
+`tools/standalone_dsp.py` is a small numpy kit: sine and additive oscillators, seeded noise
+(PCG64, seeded from `sha256('rtsai-standalone-sfx-1/<file>')`), state-variable filters,
+envelopes, a soft clipper, a compressor, a look-ahead limiter and synthetic impulse-response
+reverb. `tools/standalone-sfx.py` builds each file from a recipe. An explosion is a crack, a noise
+blast with a falling cutoff and follow-up blasts, a pitch-dropping sub, a long rumble, crackle and
+debris; a rifle shot is a crack, a band-passed blast, a low thump and a mechanical click, plus slap
+echoes. No recording, sample library or EA audio is involved. `verify` rebuilds every file in
+memory and compares it with the shipped bytes.
+
+**Matching the expected role, length and loudness.** `tools/standalone-audio.py measure` runs
+`tools/standalone-audio/MeasureAudio.cs`, an engine utility command, against the player's own RA2
+content in a disposable sandbox (as `standalone-audit.py` does). It decodes each sound the rules
+name in memory and prints coarse numbers only: length, sample rate, peak, RMS, the loudest 50 ms,
+attack and decay times, zero-crossing rate and low/high energy shares. Those numbers are in
+[`tools/standalone-audio/reference-metrics.json`](../tools/standalone-audio/reference-metrics.json);
+no samples were written or kept. Each new file has the reference's length, and its loudest 50 ms
+is brought to the reference's level under a -0.3 dBFS look-ahead limiter, so a new explosion sits
+in the mix where the old one did. The four names missing even in RA2 got lengths and levels from
+their siblings. The sounds are 22.05 kHz mono 16-bit WAV; `chrono2.aud` is a Westwood AUD (IMA
+ADPCM), which the engine decodes with its own reader.
+
+### Shared-unit voices
+
+The engineer, spy, MCVs and ore trucks, the Soviet-side AA track and the two naval transports are
+shared by several factions, so their lines are English, like the English half of the faction sets.
+They are spoken by Kokoro-82M at the pinned revision with the faction sets' settings: the same
+engine code (`voice_engines.Synthesizer.render`), Whisper large-v3 QA, a radio chain like the
+faction chains (band-pass, compression, `loudnorm` to -18 LUFS, squelch tone, noise floor, fades)
+and 44.1 kHz mono 16-bit output. The speakers are new blends of the voicepacks the factions already
+use (for example `am_adam`+`am_puck` for the Allied-side engineer and `bm_george`+`am_michael` for
+the Soviet-side one); no real person is imitated. The wording is original: short acknowledgements
+in the faction sets' register, not RA2's lines. The 19 death cries use the faction sets' second
+engine, Chatterbox (MIT), cloned from the speaker's Kokoro English reference at exaggeration 1.0,
+because Kokoro reads interjections as words ("I egg", "oh yeah"). Of ten seeds per cry, the take
+that Whisper hears as a bare interjection and that is closest to the expected length is kept.
+Melted, Zapped and PsyCrush add a procedural acid, electric or crush layer. Chatterbox output
+carries Resemble's inaudible Perth watermark, as the faction sets' cloned lines do. Every line has a row in
+[`voice-review.csv`](voice-review.csv) (file `standalone/voices/...`); `tools/voice-review.py
+transcribe` keeps those rows.
+
+### Music
+
+ACE-Step 1.5 ran locally (BeTenshi music service: XL turbo DiT, 5Hz LM planner 1.7B, int8 weights
+as served). Code and weights are MIT, and the model card says generated music can be used
+commercially; it describes its training data as licensed, royalty-free or public-domain, and
+synthetic music. Each track's request (caption, bpm, key, length, seed, instrumental) and the
+service's reply are in its record. The captions name styles and instruments only (industrial,
+electronic and rock, and per theatre erhu and guzheng, santur and tombak, baglama and zurna, oud,
+darbuka, mizmar, qanun), never an artist, song or anthem.
+
+Mastering (`tools/standalone-music.py master`): the take's composed ending is dropped, the body is
+cut to whole bars where the onset envelopes of the head and of the bars after the cut match best,
+and those two bars are crossfaded into the head (equal power), so the file repeats without a seam.
+Then one static gain to -14 LUFS integrated (EBU R128) and a stereo look-ahead limiter, run
+circularly so the seam stays continuous; Ogg Vorbis q4, 44.1 kHz stereo, about 2.5 MB per track.
+`check` ranks the spectral flux across the wrap against every frame of the track (the wrap must not
+be a bigger onset than the music's own) and checks the sample step there. `music.yaml` lists the
+tracks; `score` keeps its key because `MusicPlaylist` plays it on the victory and defeat screens,
+and it is hidden from the playlist. The manifest's `SoundFormats` includes `Ogg`.
+
+A generated track can still resemble existing music by chance; the records say the tracks are
+AI-generated.
+
+### Reproduce
+
+```
+python tools/standalone-audio.py measure --content ../OpenRA/Support/Content --names <list> --out <scratch>/ref.json
+python tools/standalone-sfx.py build && python tools/standalone-sfx.py verify          # numpy only
+<voice env python> tools/standalone-voices.py build --openra-ai ../OpenRA-AI --device cuda
+python tools/standalone-music.py generate --cache <dir>     # music service on :8014; GPU claim/yield protocol
+python tools/standalone-music.py master --cache <dir> && python tools/standalone-music.py check
+python tools/standalone-audio.py doc && python tools/standalone-audio.py check
+```
+
+### Files
+
+<!-- standalone-audio-files: generated by tools/standalone-audio.py doc; do not edit by hand -->
+
+#### Music
+
+Generator `tools/standalone-music.py`; ACE-Step 1.5, MIT. Request = caption below, instrumental, the bpm/key/length in the record, 8 turbo steps.
+
+| File | Title | Seed | Prompt (caption) | Licence |
+|---|---|---|---|---|
+| `music/rtsai-anatolian-armor.ogg` | Anatolian Armor | 7340 | energetic rock and electronic fusion instrumental, baglama saz riffs, davul and darbuka percussion, zurna reed lead, distorted guitars, powerful drums, heroic and driving | MIT (ACE-Step 1.5) |
+| `music/rtsai-black-ore.ogg` | Black Ore | 7390 | heavy industrial metal groove instrumental, down-tuned guitars, machine-like drums, anvil hits, grinding synths, menacing and powerful | MIT (ACE-Step 1.5) |
+| `music/rtsai-cedar-signal.ogg` | Cedar Signal | 7370 | dark electronic instrumental, oud and ney melody, darbuka groove, pulsing analog synth bass, radio static textures, tense and brooding, steady build | MIT (ACE-Step 1.5) |
+| `music/rtsai-coastline-watch.ogg` | Coastline Watch | 7380 | synthwave industrial instrumental, qanun arpeggios, driving electronic drums, gated synth pads, punchy bass, vigilant and determined | MIT (ACE-Step 1.5) |
+| `music/rtsai-desert-convoy.ogg` | Desert Convoy | 7350 | big beat electronic instrumental, oud riffs, darbuka and riq percussion, cinematic brass stabs, synth bass, marching energy, wide desert atmosphere | MIT (ACE-Step 1.5) |
+| `music/rtsai-final-push.ogg` | Final Push | 7410 | fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant | MIT (ACE-Step 1.5) |
+| `music/rtsai-grid-assault.ogg` | Grid Assault | 7310 | electronic industrial drum and bass instrumental, fast breakbeats, heavy reese bass, sharp synth stabs, glitchy arpeggios, tense and relentless, futuristic military | MIT (ACE-Step 1.5) |
+| `music/rtsai-iron-foundry.ogg` | Iron Foundry | 7300 | industrial rock instrumental, chugging distorted guitar riffs, pounding live drums, gritty synth bass, metallic percussion hits, driving and aggressive, real-time strategy battle music | MIT (ACE-Step 1.5) |
+| `music/rtsai-plateau-engines.ogg` | Plateau Engines | 7330 | dark electronic industrial instrumental, santur arpeggios, tombak and daf hand drums, kamancheh melody, deep pulsing bass, metallic hits, tense and driving | MIT (ACE-Step 1.5) |
+| `music/rtsai-pressure-front.ogg` | Pressure Front | 7400 | tense cinematic industrial electronic instrumental, ticking percussion, low drones, slowly building synth arpeggio, distant war drums, suspenseful | MIT (ACE-Step 1.5) |
+| `music/rtsai-red-sea-run.ogg` | Red Sea Run | 7360 | tribal electronic instrumental, mizmar reed lead, frame drums and tasa drums, heavy sub bass, dusty textures, hypnotic and urgent | MIT (ACE-Step 1.5) |
+| `music/rtsai-yangtze-steel.ogg` | Yangtze Steel | 7320 | cinematic industrial electronic instrumental, erhu lead melody, guzheng ostinato, Chinese war drums, heavy synth bass, distorted guitar layer, epic and determined | MIT (ACE-Step 1.5) |
+| `music/score.ogg` | Debrief | 7420 | short cinematic electronic outro instrumental, steady military snare, warm synth pads, low brass, reflective and resolved | MIT (ACE-Step 1.5) |
+
+#### Sound effects, UI sounds and the dog
+
+Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed: the first 8 bytes of `sha256('rtsai-standalone-sfx-1/<file>')`. Licence: the project's own code (GPL-3.0); the output carries no third-party rights.
+
+| File | Role | Seed | Licence |
+|---|---|---|---|
+| `sfx/bgendiea.wav` | building destroyed: large explosion and collapse | sha256('rtsai-standalone-sfx-1/bgendiea.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bgendieb.wav` | building destroyed: large explosion and collapse | sha256('rtsai-standalone-sfx-1/bgendieb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bgendiec.wav` | building destroyed: large explosion and collapse | sha256('rtsai-standalone-sfx-1/bgendiec.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bgendied.wav` | building destroyed: large explosion and collapse | sha256('rtsai-standalone-sfx-1/bgendied.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bgendiee.wav` | building destroyed: large explosion and collapse | sha256('rtsai-standalone-sfx-1/bgendiee.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bgendief.wav` | building destroyed: large explosion and collapse | sha256('rtsai-standalone-sfx-1/bgendief.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bpowdiea.wav` | power plant destroyed: explosion, arcing and a dying transformer hum | sha256('rtsai-standalone-sfx-1/bpowdiea.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/bpowdieb.wav` | power plant destroyed: explosion, arcing and a dying transformer hum | sha256('rtsai-standalone-sfx-1/bpowdieb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/chrono2.aud` | shift device effect (Westwood AUD, the name the rules use) | sha256('rtsai-standalone-sfx-1/chrono2.aud') | GPL-3.0 code, no third-party rights |
+| `sfx/expnew09.wav` | large vehicle or missile explosion | sha256('rtsai-standalone-sfx-1/expnew09.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/expnew13.wav` | medium explosion with burning debris | sha256('rtsai-standalone-sfx-1/expnew13.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gdamag1a.wav` | building heavily damaged: smaller blast, metal stress and debris | sha256('rtsai-standalone-sfx-1/gdamag1a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gdamag1b.wav` | building heavily damaged: smaller blast, metal stress and debris | sha256('rtsai-standalone-sfx-1/gdamag1b.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gdamag1c.wav` | building heavily damaged: smaller blast, metal stress and debris | sha256('rtsai-standalone-sfx-1/gdamag1c.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gdamag1d.wav` | building heavily damaged: smaller blast, metal stress and debris | sha256('rtsai-standalone-sfx-1/gdamag1d.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gdamag1e.wav` | building heavily damaged: smaller blast, metal stress and debris | sha256('rtsai-standalone-sfx-1/gdamag1e.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexp10a.wav` | air-defence hit: two quick airbursts high up | sha256('rtsai-standalone-sfx-1/gexp10a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexp14a.wav` | general shell and rocket impact: medium explosion | sha256('rtsai-standalone-sfx-1/gexp14a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexpapoa.wav` | heavy bomb impact: deep double blast | sha256('rtsai-standalone-sfx-1/gexpapoa.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexpifva.wav` | light bomb impact: deep medium explosion | sha256('rtsai-standalone-sfx-1/gexpifva.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexpwala.wav` | large water impact: underwater blast and a tall splash | sha256('rtsai-standalone-sfx-1/gexpwala.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexpwasa.wav` | small water impact: splash | sha256('rtsai-standalone-sfx-1/gexpwasa.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/gexpwasb.wav` | torpedo or depth hit: muffled thump and splash | sha256('rtsai-standalone-sfx-1/gexpwasb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/iconatta.wav` | rifle: three-round burst | sha256('rtsai-standalone-sfx-1/iconatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/iconattb.wav` | rifle: double tap | sha256('rtsai-standalone-sfx-1/iconattb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/iconattc.wav` | rifle: five-round burst with echo | sha256('rtsai-standalone-sfx-1/iconattc.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/iconattd.wav` | rifle: single shot | sha256('rtsai-standalone-sfx-1/iconattd.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/iconatte.wav` | rifle: two quick shots | sha256('rtsai-standalone-sfx-1/iconatte.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/idogatca.wav` | dog attack: growl rising into a bark and a bite | sha256('rtsai-standalone-sfx-1/idogatca.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/idogatta.wav` | dog attack: two barks and a bite | sha256('rtsai-standalone-sfx-1/idogatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/igensqua.wav` | infantry run over: crunch and a wet squelch | sha256('rtsai-standalone-sfx-1/igensqua.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/igiat1a.wav` | machine gun: five-round burst | sha256('rtsai-standalone-sfx-1/igiat1a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/igiat1b.wav` | machine gun: six-round burst | sha256('rtsai-standalone-sfx-1/igiat1b.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/igiat1c.wav` | machine gun: three-round burst | sha256('rtsai-standalone-sfx-1/igiat1c.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/irocatta.wav` | infantry-carrier cannon and launcher: heavy round with a short whoosh | sha256('rtsai-standalone-sfx-1/irocatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/schrmov.wav` | unit shifted through space: low whomp, chorus sweep and arrival pop | sha256('rtsai-standalone-sfx-1/schrmov.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/schropen.wav` | space-shift device powering up: deep hum swelling into a charged shimmer | sha256('rtsai-standalone-sfx-1/schropen.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/siroon.wav` | protective field switched on: electric surge and metallic shimmer | sha256('rtsai-standalone-sfx-1/siroon.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/siroread.wav` | protective field ready: low swelling drone | sha256('rtsai-standalone-sfx-1/siroread.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/snukexpl.wav` | strategic missile detonation: enormous blast and a long rolling roar | sha256('rtsai-standalone-sfx-1/snukexpl.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/snukintr.wav` | strategic missile incoming: rising roar and a falling shriek | sha256('rtsai-standalone-sfx-1/snukintr.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/snuklaun.wav` | strategic missile launch: ignition and a deep rocket roar | sha256('rtsai-standalone-sfx-1/snuklaun.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/snukread.wav` | missile silo ready: hydraulic doors and a two-tone warning | sha256('rtsai-standalone-sfx-1/snukread.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/sweaintr.wav` | storm brewing: rising wind and distant thunder | sha256('rtsai-standalone-sfx-1/sweaintr.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/sweastra.wav` | lightning strike: rolling thunder | sha256('rtsai-standalone-sfx-1/sweastra.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/sweastrb.wav` | lightning strike: sharp crack | sha256('rtsai-standalone-sfx-1/sweastrb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/sweastrc.wav` | lightning strike: crack and roll | sha256('rtsai-standalone-sfx-1/sweastrc.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/sweastrd.wav` | lightning strike: rolling thunder | sha256('rtsai-standalone-sfx-1/sweastrd.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/uplace.wav` | structure placed: heavy thud, metal ring and settling debris | sha256('rtsai-standalone-sfx-1/uplace.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/uselbuil.wav` | structure sold or packed up: servo whine, ratchet and a closing clank | sha256('rtsai-standalone-sfx-1/uselbuil.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vapoar2b.wav` | anti-aircraft missile launch (the second of three variants) | sha256('rtsai-standalone-sfx-1/vapoar2b.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vapoat2a.wav` | anti-aircraft missile launch | sha256('rtsai-standalone-sfx-1/vapoat2a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vapoat2c.wav` | anti-aircraft missile launch | sha256('rtsai-standalone-sfx-1/vapoat2c.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vblhatta.wav` | helicopter rotary cannon: spin-up burst | sha256('rtsai-standalone-sfx-1/vblhatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vblhattb.wav` | helicopter rotary cannon: spin-up burst | sha256('rtsai-standalone-sfx-1/vblhattb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vchrtele.wav` | ore carrier teleports home: short whomp and shimmer | sha256('rtsai-standalone-sfx-1/vchrtele.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vdesatta.wav` | heavy gun and howitzer: deep boom | sha256('rtsai-standalone-sfx-1/vdesatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vdesattb.wav` | heavy gun and howitzer: deep boom | sha256('rtsai-standalone-sfx-1/vdesattb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vflaat1a.wav` | tracked autocannon: two heavy rounds | sha256('rtsai-standalone-sfx-1/vflaat1a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vflaat1b.wav` | tracked autocannon: two heavy rounds | sha256('rtsai-standalone-sfx-1/vflaat1b.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vflaat2a.wav` | twin anti-aircraft cannon: burst | sha256('rtsai-standalone-sfx-1/vflaat2a.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vflaat2b.wav` | twin anti-aircraft cannon: burst | sha256('rtsai-standalone-sfx-1/vflaat2b.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vflaat2c.wav` | twin anti-aircraft cannon: burst | sha256('rtsai-standalone-sfx-1/vflaat2c.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vflaat2d.wav` | twin anti-aircraft cannon: burst | sha256('rtsai-standalone-sfx-1/vflaat2d.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vgriatta.wav` | main battle tank gun | sha256('rtsai-standalone-sfx-1/vgriatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vgriattb.wav` | main battle tank gun | sha256('rtsai-standalone-sfx-1/vgriattb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vgriattc.wav` | main battle tank gun | sha256('rtsai-standalone-sfx-1/vgriattc.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vhorlana.wav` | drone landing | sha256('rtsai-standalone-sfx-1/vhorlana.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vhorlanb.wav` | drone landing | sha256('rtsai-standalone-sfx-1/vhorlanb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vhortaka.wav` | drone take-off | sha256('rtsai-standalone-sfx-1/vhortaka.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vhortakb.wav` | drone take-off | sha256('rtsai-standalone-sfx-1/vhortakb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vintatta.wav` | missile launch: ignition and hiss | sha256('rtsai-standalone-sfx-1/vintatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vnavupa.wav` | submarine diving or surfacing: venting air, bubbles, hull groan | sha256('rtsai-standalone-sfx-1/vnavupa.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vospatta.wav` | bomb release: latch clunk and a low thud | sha256('rtsai-standalone-sfx-1/vospatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vrhiatta.wav` | light cannon: tight report | sha256('rtsai-standalone-sfx-1/vrhiatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vrhiattb.wav` | light cannon: tight report | sha256('rtsai-standalone-sfx-1/vrhiattb.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vrhiattc.wav` | light cannon: report with echo | sha256('rtsai-standalone-sfx-1/vrhiattc.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vrhiattd.wav` | light cannon: tight report | sha256('rtsai-standalone-sfx-1/vrhiattd.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vsubatta.wav` | torpedo launch: compressed-air thunk, bubbles and a fading motor | sha256('rtsai-standalone-sfx-1/vsubatta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vwaratta.wav` | 20 mm cannon: burst | sha256('rtsai-standalone-sfx-1/vwaratta.wav') | GPL-3.0 code, no third-party rights |
+| `sfx/vwarattb.wav` | 20 mm cannon: burst | sha256('rtsai-standalone-sfx-1/vwarattb.wav') | GPL-3.0 code, no third-party rights |
+| `ui/gpowof.wav` | power lost: clunk and a generator winding down | sha256('rtsai-standalone-sfx-1/gpowof.wav') | GPL-3.0 code, no third-party rights |
+| `ui/gpowon.wav` | power restored: click, rising generator hum and electric buzz | sha256('rtsai-standalone-sfx-1/gpowon.wav') | GPL-3.0 code, no third-party rights |
+| `ui/gupgrad1.wav` | unit promoted: rising three-note chime | sha256('rtsai-standalone-sfx-1/gupgrad1.wav') | GPL-3.0 code, no third-party rights |
+| `ui/ubeacon.wav` | beacon placed: sonar-like ping with echoes | sha256('rtsai-standalone-sfx-1/ubeacon.wav') | GPL-3.0 code, no third-party rights |
+| `ui/ucreddn.wav` | credits counting down: tiny low tick | sha256('rtsai-standalone-sfx-1/ucreddn.wav') | GPL-3.0 code, no third-party rights |
+| `ui/ucredup.wav` | credits counting up: tiny bright tick | sha256('rtsai-standalone-sfx-1/ucredup.wav') | GPL-3.0 code, no third-party rights |
+| `ui/ugamclos.wav` | disabled click: dull knock | sha256('rtsai-standalone-sfx-1/ugamclos.wav') | GPL-3.0 code, no third-party rights |
+| `ui/umenucl1.wav` | menu click: crisp tick | sha256('rtsai-standalone-sfx-1/umenucl1.wav') | GPL-3.0 code, no third-party rights |
+| `ui/umessage.wav` | chat message: two-tone blip | sha256('rtsai-standalone-sfx-1/umessage.wav') | GPL-3.0 code, no third-party rights |
+| `ui/uradarof.wav` | radar offline: descending power-down and fading static | sha256('rtsai-standalone-sfx-1/uradarof.wav') | GPL-3.0 code, no third-party rights |
+| `ui/uradaron.wav` | radar online: power-up sweep, scanning tone and acknowledgement beeps | sha256('rtsai-standalone-sfx-1/uradaron.wav') | GPL-3.0 code, no third-party rights |
+| `ui/uslide1.wav` | build palette opens: mechanical slide and latch | sha256('rtsai-standalone-sfx-1/uslide1.wav') | GPL-3.0 code, no third-party rights |
+| `ui/uslide2.wav` | build palette closes: slide back and a thunk | sha256('rtsai-standalone-sfx-1/uslide2.wav') | GPL-3.0 code, no third-party rights |
+| `ui/utab.wav` | tab click: bright tick | sha256('rtsai-standalone-sfx-1/utab.wav') | GPL-3.0 code, no third-party rights |
+| `voices/idogdiea.wav` | dog dies: sharp yelp | sha256('rtsai-standalone-sfx-1/idogdiea.wav') | GPL-3.0 code, no third-party rights |
+| `voices/idogfea.wav` | dog feedback: snarl and bark | sha256('rtsai-standalone-sfx-1/idogfea.wav') | GPL-3.0 code, no third-party rights |
+| `voices/idogfeb.wav` | dog feedback: whimper then a sharp bark | sha256('rtsai-standalone-sfx-1/idogfeb.wav') | GPL-3.0 code, no third-party rights |
+| `voices/idogfec.wav` | dog feedback: whine | sha256('rtsai-standalone-sfx-1/idogfec.wav') | GPL-3.0 code, no third-party rights |
+| `voices/idogmova.wav` | dog moving: panting and a short bark | sha256('rtsai-standalone-sfx-1/idogmova.wav') | GPL-3.0 code, no third-party rights |
+| `voices/idogsela.wav` | dog selected: one alert bark | sha256('rtsai-standalone-sfx-1/idogsela.wav') | GPL-3.0 code, no third-party rights |
+
+#### Shared-unit voices
+
+Generator `tools/standalone-voices.py` with OpenRA-AI `scripts/voice_engines.py`. Spoken lines: Kokoro-82M `hexgrad/Kokoro-82M@f3ff357` (Apache-2.0), deterministic, so no seed. Death cries: Chatterbox `ResembleAI/chatterbox@5bb1f6e` (MIT), cloned from the speaker's Kokoro English reference, with the seed shown. The prompt is the text.
+
+| File | Unit set | Speaker (voicepacks) | Text | Engine, seed | Licence |
+|---|---|---|---|---|---|
+| `voices/ienaata.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | I'll take that building. | Kokoro | Apache-2.0 |
+| `voices/ienaatb.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Going in. | Kokoro | Apache-2.0 |
+| `voices/ienaatc.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Securing the site. | Kokoro | Apache-2.0 |
+| `voices/ienadia.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Aaaargh! | Chatterbox, seed 6 | MIT |
+| `voices/ienadib.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Augh! | Chatterbox, seed 4 | MIT |
+| `voices/ienadic.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Nooo! | Chatterbox, seed 4 | MIT |
+| `voices/ienadid.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Ungh! | Chatterbox, seed 9 | MIT |
+| `voices/ienafea.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Taking fire! | Kokoro | Apache-2.0 |
+| `voices/ienafeb.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | I need cover! | Kokoro | Apache-2.0 |
+| `voices/ienafec.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Get me out of here! | Kokoro | Apache-2.0 |
+| `voices/ienamoa.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Moving. | Kokoro | Apache-2.0 |
+| `voices/ienamob.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | On my way. | Kokoro | Apache-2.0 |
+| `voices/ienamoc.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Heading there now. | Kokoro | Apache-2.0 |
+| `voices/ienasea.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Engineer ready. | Kokoro | Apache-2.0 |
+| `voices/ienaseb.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Tools ready. What's the job? | Kokoro | Apache-2.0 |
+| `voices/ienasec.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | What needs fixing? | Kokoro | Apache-2.0 |
+| `voices/ienased.wav` | engineer (EngineerVoice, iena) | shared-engineer-allied (am_adam+am_puck) | Engineer on the net. | Kokoro | Apache-2.0 |
+| `voices/iensata.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Taking over the building. | Kokoro | Apache-2.0 |
+| `voices/iensatb.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Wiring it up now. | Kokoro | Apache-2.0 |
+| `voices/iensatc.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | I'm going inside. | Kokoro | Apache-2.0 |
+| `voices/iensdia.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Arrgh! | Chatterbox, seed 4 | MIT |
+| `voices/iensdib.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Aaah! | Chatterbox, seed 3 | MIT |
+| `voices/iensdic.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ohhh! | Chatterbox, seed 2 | MIT |
+| `voices/iensdid.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ugh! | Chatterbox, seed 4 | MIT |
+| `voices/iensfea.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | They're shooting at me! | Kokoro | Apache-2.0 |
+| `voices/iensfeb.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Cover me! | Kokoro | Apache-2.0 |
+| `voices/iensfec.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | I need support! | Kokoro | Apache-2.0 |
+| `voices/iensmoa.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Moving out. | Kokoro | Apache-2.0 |
+| `voices/iensmob.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Going. | Kokoro | Apache-2.0 |
+| `voices/iensmoc.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Right away. | Kokoro | Apache-2.0 |
+| `voices/ienssea.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Engineer standing by. | Kokoro | Apache-2.0 |
+| `voices/iensseb.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Ready to work. | Kokoro | Apache-2.0 |
+| `voices/ienssec.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Give me a job. | Kokoro | Apache-2.0 |
+| `voices/ienssed.wav` | engineer (EngineerVoice, iens) | shared-engineer-soviet (bm_george+am_michael) | Field engineer here. | Kokoro | Apache-2.0 |
+| `voices/igenexpa.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Ugh! | Chatterbox, seed 5 | MIT |
+| `voices/igenmela.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaaaah! | Chatterbox, seed 4 | MIT |
+| `voices/igenmelb.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Arrgh! | Chatterbox, seed 9 | MIT |
+| `voices/igenmelc.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaah! | Chatterbox, seed 4 | MIT |
+| `voices/igenzapa.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaargh! | Chatterbox, seed 10 | MIT |
+| `voices/igidia.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Aaaargh! | Chatterbox, seed 7 | MIT |
+| `voices/igidib.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Augh! | Chatterbox, seed 10 | MIT |
+| `voices/igidic.wav` | generic infantry deaths | shared-infantry (am_fenrir+am_puck) | Ungh! | Chatterbox, seed 4 | MIT |
+| `voices/ispyata.wav` | spy (SpyVoice) | shared-spy (bm_fable) | On my way. | Kokoro | Apache-2.0 |
+| `voices/ispyatb.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Getting inside. | Kokoro | Apache-2.0 |
+| `voices/ispyatd.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Let's see what they know. | Kokoro | Apache-2.0 |
+| `voices/ispydia.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Aaargh! | Chatterbox, seed 10 | MIT |
+| `voices/ispydib.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Ungh! | Chatterbox, seed 6 | MIT |
+| `voices/ispydic.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Aaah! | Chatterbox, seed 8 | MIT |
+| `voices/ispyfea.wav` | spy (SpyVoice) | shared-spy (bm_fable) | My cover is blown! | Kokoro | Apache-2.0 |
+| `voices/ispyfeb.wav` | spy (SpyVoice) | shared-spy (bm_fable) | They're onto me. | Kokoro | Apache-2.0 |
+| `voices/ispymob.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Blending in. | Kokoro | Apache-2.0 |
+| `voices/ispymoc.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Nobody will notice. | Kokoro | Apache-2.0 |
+| `voices/ispymod.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Moving discreetly. | Kokoro | Apache-2.0 |
+| `voices/ispymoe.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Consider it done. | Kokoro | Apache-2.0 |
+| `voices/ispysea.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Yes? | Kokoro | Apache-2.0 |
+| `voices/ispyseb.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Listening. | Kokoro | Apache-2.0 |
+| `voices/ispysec.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Quietly now. | Kokoro | Apache-2.0 |
+| `voices/ispysed.wav` | spy (SpyVoice) | shared-spy (bm_fable) | Agent ready. | Kokoro | Apache-2.0 |
+| `voices/vgraata.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Understood. | Kokoro | Apache-2.0 |
+| `voices/vgraatb.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Copy that. | Kokoro | Apache-2.0 |
+| `voices/vgraatc.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Will do. | Kokoro | Apache-2.0 |
+| `voices/vgraatd.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Acknowledged. | Kokoro | Apache-2.0 |
+| `voices/vgraate.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Right away. | Kokoro | Apache-2.0 |
+| `voices/vgramob.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Rolling. | Kokoro | Apache-2.0 |
+| `voices/vgramod.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Moving out. | Kokoro | Apache-2.0 |
+| `voices/vgramoe.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | On the way. | Kokoro | Apache-2.0 |
+| `voices/vgramof.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Route set. | Kokoro | Apache-2.0 |
+| `voices/vgrasea.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Vehicle ready. | Kokoro | Apache-2.0 |
+| `voices/vgraseb.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Driver here. | Kokoro | Apache-2.0 |
+| `voices/vgrasec.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Systems green. | Kokoro | Apache-2.0 |
+| `voices/vgrased.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Awaiting orders. | Kokoro | Apache-2.0 |
+| `voices/vgrasee.wav` | MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) | shared-crew-allied (am_michael+am_fenrir) | Standing by. | Kokoro | Apache-2.0 |
+| `voices/vgrsata.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Engaging. | Kokoro | Apache-2.0 |
+| `voices/vgrsatb.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Target acquired. | Kokoro | Apache-2.0 |
+| `voices/vgrsatc.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Opening fire. | Kokoro | Apache-2.0 |
+| `voices/vgrsatd.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Weapons free. | Kokoro | Apache-2.0 |
+| `voices/vgrsmoa.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Moving. | Kokoro | Apache-2.0 |
+| `voices/vgrsmob.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Heading out. | Kokoro | Apache-2.0 |
+| `voices/vgrsmoc.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Rolling forward. | Kokoro | Apache-2.0 |
+| `voices/vgrssea.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Crew here. | Kokoro | Apache-2.0 |
+| `voices/vgrsseb.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Engine running. | Kokoro | Apache-2.0 |
+| `voices/vgrssec.wav` | MCV, ore truck and AA track (SovietVehicleVoice) | shared-crew-soviet (bm_lewis+am_fenrir) | Ready to move. | Kokoro | Apache-2.0 |
+| `voices/vwaaata.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Engaging. | Kokoro | Apache-2.0 |
+| `voices/vwaaatb.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Target in sight. | Kokoro | Apache-2.0 |
+| `voices/vwaaatc.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Firing. | Kokoro | Apache-2.0 |
+| `voices/vwaamoa.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Underway. | Kokoro | Apache-2.0 |
+| `voices/vwaamob.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Setting course. | Kokoro | Apache-2.0 |
+| `voices/vwaamoc.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Heading for the beach. | Kokoro | Apache-2.0 |
+| `voices/vwaamod.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Full ahead. | Kokoro | Apache-2.0 |
+| `voices/vwaamoe.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Course laid in. | Kokoro | Apache-2.0 |
+| `voices/vwaasea.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Boat ready. | Kokoro | Apache-2.0 |
+| `voices/vwaaseb.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Helm here. | Kokoro | Apache-2.0 |
+| `voices/vwaasec.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Ready to load. | Kokoro | Apache-2.0 |
+| `voices/vwaased.wav` | landing craft (AlliedNavalVoice) | shared-naval-allied (am_puck+bm_fable) | Landing craft standing by. | Kokoro | Apache-2.0 |
+| `voices/vwasata.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Engaging. | Kokoro | Apache-2.0 |
+| `voices/vwasatb.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Target spotted. | Kokoro | Apache-2.0 |
+| `voices/vwasatc.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Opening fire. | Kokoro | Apache-2.0 |
+| `voices/vwasmoa.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Into the water. | Kokoro | Apache-2.0 |
+| `voices/vwasmob.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Moving. | Kokoro | Apache-2.0 |
+| `voices/vwasmoc.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Crossing now. | Kokoro | Apache-2.0 |
+| `voices/vwasmod.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Heading to shore. | Kokoro | Apache-2.0 |
+| `voices/vwassea.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Transport ready. | Kokoro | Apache-2.0 |
+| `voices/vwasseb.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Hatch is open. | Kokoro | Apache-2.0 |
+| `voices/vwassec.wav` | amphibious transport (SovietNavalVoice) | shared-naval-soviet (am_michael+bm_lewis) | Amphibious crew here. | Kokoro | Apache-2.0 |
+
+<!-- /standalone-audio-files -->

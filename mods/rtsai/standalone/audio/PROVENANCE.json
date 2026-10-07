@@ -3669,6 +3669,4791 @@
    "role": "dog selected: one alert bark",
    "seed": "sha256('rtsai-standalone-sfx-1/idogsela.wav')",
    "sha256": "d81786b255bc6d52ad81b7b41224cfa8e0e1789a050b256072fec3b744eb3eac"
+  },
+  "voices/ienaata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.115,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "I'll take that building.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a3e3c57e07de8d2f3c6dedb1338847f24b051874afee791df7ed63dd39f0faa1",
+   "shipped_check": {
+    "asr_transcript": "I'll take that building.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "I'll take that building.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienaatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.735,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Going in.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "ec4e1572b19f11c05e44980b57aeab0cbb768efa4b11b5c4750078961b277e7c",
+   "shipped_check": {
+    "asr_transcript": "Going in.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Going in.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienaatc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.985,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Securing the Site",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "52694749eda57b8661823bc9af7d44cf8401fda976ae21b7a297f06c5489bb08",
+   "shipped_check": {
+    "asr_transcript": "Securing the site",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Securing the site.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienadia.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.66,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "ARG.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 6,
+   "sha256": "3d17fd800f653aca3de4c5d1e8fa18bb64fab9f7b6c2c54fef76380ba4371213",
+   "shipped_check": {
+    "asr_transcript": "ARG!",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaaargh!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_adam",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienadib.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.52,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Aww.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "4bdab12fa4e80bbc0111099de38b7e0a5e254931e6b71ed6c8295e11d37b5c9f",
+   "shipped_check": {
+    "asr_transcript": "Aw.",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Augh!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_adam",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienadic.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.69,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "No.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "396f8eb8040c79d26edb98916fd87a436283eabe495d70e3e261104e8b6977ec",
+   "shipped_check": {
+    "asr_transcript": "No.",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Nooo!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_adam",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienadid.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.6,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ung.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 9,
+   "sha256": "219c30580645b5f6ff3369231d6de6d7bedc86b24c1556b19a3ab8498482f0c0",
+   "shipped_check": {
+    "asr_transcript": "Ong.",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Ungh!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_adam",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienafea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.835,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Taking Fire",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a95902e3364174c81757ff2d0c6b45f0fc751c2b6636586edf3a1a88e7dd2f43",
+   "shipped_check": {
+    "asr_transcript": "Taking fire.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Taking fire!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienafeb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.795,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "I need cover.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "f290d1c9c765fc37825548d8099213d799e023440d664abdc117326ea5449fa3",
+   "shipped_check": {
+    "asr_transcript": "I need cover.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "I need cover!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienafec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.915,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Get me out of here.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "20112b04de3ffcf26d24daec83433490b24aa2fcb49d304b63daaa363bdaa8bd",
+   "shipped_check": {
+    "asr_transcript": "Get me out of here.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Get me out of here!",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienamoa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.635,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Moving.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "57fb408eb3db3966fa534c35139f41478a4f0ba7377e8cda1d9ab3e43d8f7c4a",
+   "shipped_check": {
+    "asr_transcript": "Moving.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Moving.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienamob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.835,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "On my way.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "267308318d105292d58e6ee2ce98b1c75051489ba984a61d7123bb4fecd6c8d6",
+   "shipped_check": {
+    "asr_transcript": "On my way.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "On my way.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienamoc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.915,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Heading there now.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "c1d922174056a07b9214ecf53f8dce278d5137f25ea4b3617dd8041dfeefc9cc",
+   "shipped_check": {
+    "asr_transcript": "Heading there now.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Heading there now.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienasea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.975,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engineer Ready",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "34181fe4e83eeb8f079891237a2d1c0b835c79cd48727cb27e1aeffc8bf38115",
+   "shipped_check": {
+    "asr_transcript": "Engineer Ready",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engineer ready.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienaseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.535,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Tools ready, what's the job?",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "39c4e3be6934b3ed3ec86f8a8936ddd8bf362ae97689237882efa663afb21f11",
+   "shipped_check": {
+    "asr_transcript": "Tools ready, what's the job?",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Tools ready. What's the job?",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienasec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.105,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "What Needs Fixing",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "decefc7f33a912dbf2036aaf07c8cc1281544dd186a97cc5f1550d49cc738f6f",
+   "shipped_check": {
+    "asr_transcript": "What Needs Fixing",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "What needs fixing?",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/ienased.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.095,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engineer on the Net",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iena) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "ca8c056e961b6b34938817c7ececb66613d65ae9b986e3bb01b17dc020ba3fde",
+   "shipped_check": {
+    "asr_transcript": "Engineer on the net.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engineer on the net.",
+   "unit_set": "engineer (EngineerVoice, iena)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_adam",
+     "am_puck"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-allied"
+   }
+  },
+  "voices/iensata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.435,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Taking over the building.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "9a73b0c5afd182505c94faf94c4605809483babcb77b4941b4fc06c174927f24",
+   "shipped_check": {
+    "asr_transcript": "Taking over the building.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Taking over the building.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.175,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Wiring it up now.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "093fb71332086edc63fb929c24c16c0a8d5e38f681e7b0e6bf37ad81ff98d306",
+   "shipped_check": {
+    "asr_transcript": "Wiring it up now",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Wiring it up now.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensatc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.975,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "I'm going inside.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "b74a17cbbbbffd0dba8bb0ee7a19c869ef5654f2bf035ff09ef3e10e94f78db4",
+   "shipped_check": {
+    "asr_transcript": "I'm going inside.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "I'm going inside.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensdia.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.63,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "ARG",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "744a267d1ec3f9f3a71d17a2e2c9c0f425ccddd33d405d836e764a6c6d8efc03",
+   "shipped_check": {
+    "asr_transcript": "ARG",
+    "cer": null
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Arrgh!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_george",
+      "am_michael"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensdib.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.24,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ah.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 3,
+   "sha256": "6a418005765e345f230d05d3c3872210544cbde9a6077810bdea41494d965d14",
+   "shipped_check": {
+    "asr_transcript": "Ah.",
+    "cer": null
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaah!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_george",
+      "am_michael"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensdic.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.42,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Oh.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 2,
+   "sha256": "b214e3beb45ba1a4c88f620157a0b5319a74c2088bfb9396cef497ff77336a35",
+   "shipped_check": {
+    "asr_transcript": "Oh.",
+    "cer": null
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Ohhh!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_george",
+      "am_michael"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensdid.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.52,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ugh.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "b84fe3c608a5dc168c9f592b2b1e6642a679a4d943483cc5cc134fecf8b7974b",
+   "shipped_check": {
+    "asr_transcript": "Ugh.",
+    "cer": null
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Ugh!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_george",
+      "am_michael"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensfea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.235,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "They're shooting at me.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "104a129620c002c21cb405ea401b19ac49612072363bdd17a699547b04fd8bd2",
+   "shipped_check": {
+    "asr_transcript": "They're shooting at me.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "They're shooting at me!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensfeb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.715,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Cover me.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "24cc9159135b98ce80c9eb19441a433b28ae3718357b77058d83180d8ea6dd26",
+   "shipped_check": {
+    "asr_transcript": "Cover me.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Cover me!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensfec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.015,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "I need support.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "2a13cafbe04edf2a66fd10c723b2c7f6a2a3570f5166bbf63a6dbf71e5ea9f58",
+   "shipped_check": {
+    "asr_transcript": "I need support.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "I need support!",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensmoa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.895,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Moving out.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "978bd3ea0af66d0ddd6c24de0ed56f95894ef5de0fea72b17636e1ade3eeb053",
+   "shipped_check": {
+    "asr_transcript": "Moving out.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Moving out.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensmob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.755,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Going.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "5dc9cb74ce9bdfbaf2e2e0bc9fdb8f46aa600134bf1780696d51675cde10bb8d",
+   "shipped_check": {
+    "asr_transcript": "Going.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Going.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensmoc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.735,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "right away.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "7af0f7686da02eba500cf9f2c1c26f8b2a339bb3f60954390ac3c5cb47ab5c1a",
+   "shipped_check": {
+    "asr_transcript": "right away",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Right away.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/ienssea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.595,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engineer standing by.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "34e46ebe0a11f7ba80a7a47de773805a9d1d4c6f8f0e0b0352a53c138940a043",
+   "shipped_check": {
+    "asr_transcript": "Engineer standing by.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engineer standing by.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/iensseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.095,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Ready to work.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4a9fd9248649d4e8fc01652fd8d943ae5e249722e7f8dd2febec015af3c5b76a",
+   "shipped_check": {
+    "asr_transcript": "Ready to work.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Ready to work.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/ienssec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.035,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Give me a job.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "b96dcda31306a855a54e151d5240ce51b6d4fee4a1b4e76825399d8b6a079d77",
+   "shipped_check": {
+    "asr_transcript": "Give me a job.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Give me a job.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/ienssed.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.655,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Field Engineer here.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "engineer (EngineerVoice, iens) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "d9c88ffda56397cad96389f0989cbbe2bd826e455b332bf748b737af2be2f847",
+   "shipped_check": {
+    "asr_transcript": "Field Engineer here.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Field engineer here.",
+   "unit_set": "engineer (EngineerVoice, iens)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_george",
+     "am_michael"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-engineer-soviet"
+   }
+  },
+  "voices/igenexpa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.32,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural crush layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenexpa.wav'))",
+   "qa": {
+    "asr_transcript": "Ah.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "death by crushing force (PsyCrush)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 5,
+   "sha256": "5f5c8922b972ec975463280641aefdb37b9c7d7f4203f9cbec59de23e7c076a4",
+   "shipped_check": {
+    "asr_transcript": "Ah.",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Ugh!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igenmela.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.22,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural melt layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenmela.wav'))",
+   "qa": {
+    "asr_transcript": "Uh-uh.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "death by acid or radiation (Melted)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "b04425dbe2f04f2a59ed73d1e9de8c869c7a2ee4113a558a4be736732ebfe472",
+   "shipped_check": {
+    "asr_transcript": "Uh-uh.",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaaaah!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igenmelb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.2,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural melt layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenmelb.wav'))",
+   "qa": {
+    "asr_transcript": "Arrgh!",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "death by acid or radiation (Melted)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 9,
+   "sha256": "ff488493041cfad0f812d8f03994f0c001a34b8bccff501f5f05cd6a9b5dd0d1",
+   "shipped_check": {
+    "asr_transcript": "Arrgh!",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Arrgh!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igenmelc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.55,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural melt layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenmelc.wav'))",
+   "qa": {
+    "asr_transcript": "Ah. Ah!",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "death by acid or radiation (Melted)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "fd48e1baf3f96fba0be44d9768db214909aeb167b4a0c0175344f6c8e5c083fe",
+   "shipped_check": {
+    "asr_transcript": "Ah. Ah.",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaah!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igenzapa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.19,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio; procedural zap layer (tools/standalone_dsp.py, seed sha256('rtsai-standalone-voices-1/cry/igenzapa.wav'))",
+   "qa": {
+    "asr_transcript": "Arrgh.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "death by electric shock (Zapped)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 10,
+   "sha256": "b26cb95de1064227b169a12618c4bcba4797ab38c17ccb92164fb2f106f957a7",
+   "shipped_check": {
+    "asr_transcript": "Arrgh.",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaargh!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igidia.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.7,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Arrgh!",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "infantry death cry (all modern infantry Die)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 7,
+   "sha256": "64377138b2a00bf284a9743fe5168ebea8c01653f72f62576022bcdc3eacccf8",
+   "shipped_check": {
+    "asr_transcript": "Arrgh!",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaaargh!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igidib.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.9,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ah. AH!",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "infantry death cry (all modern infantry Die)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 10,
+   "sha256": "4911ac5644d09338a082d1572ed9c21391f60ce7857c0722d6310af661ebca20",
+   "shipped_check": {
+    "asr_transcript": "Ah. AH!",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Augh!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/igidic.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.92,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ung.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "infantry death cry (all modern infantry Die)",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 4,
+   "sha256": "4af16f425db76751d45e19a641facc4f398bab6f67ca800d21ea5b652d34df91",
+   "shipped_check": {
+    "asr_transcript": "Ung.",
+    "cer": null
+   },
+   "side": "shared, all seven factions",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Ungh!",
+   "unit_set": "generic infantry deaths",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_fenrir",
+     "am_puck"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "am_fenrir",
+      "am_puck"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-infantry"
+   }
+  },
+  "voices/ispyata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.995,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "On my way.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a1863c16cbe2d362599a1e28546d2155740db6a7471b061c54884ccac75922f1",
+   "shipped_check": {
+    "asr_transcript": "On my way.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "On my way.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispyatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.975,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Getting inside.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "5b92542968aee6fc15b51eeadcf42131660f67d68b26798c08133b161509f2b5",
+   "shipped_check": {
+    "asr_transcript": "Getting inside.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Getting inside.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispyatd.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.215,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Let's see what they know.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) action",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "5117072f6a0e75e34ef9472f8e8a6c7c55dffb4746252325b60718d2d56c67ad",
+   "shipped_check": {
+    "asr_transcript": "Let's see what they know.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Let's see what they know.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispydia.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.78,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ah.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 10,
+   "sha256": "53fa6514dd0acc38eeca87f5f349bce8ccf1bce759e2babf86d0c8dbdbef7bcb",
+   "shipped_check": {
+    "asr_transcript": "Ah.",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaargh!",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_fable"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispydib.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.6,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ung.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 6,
+   "sha256": "d667dfccf197d7ab8652b0679db5eb0c0d83cc3bd1c721a9d70cfa57286505a9",
+   "shipped_check": {
+    "asr_transcript": "アング",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Ungh!",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_fable"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispydic.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.16,
+   "engine": "Chatterbox Multilingual V2 (0.5B)",
+   "engine_id": "chatterbox",
+   "exaggeration": 1.0,
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "MIT",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "ResembleAI/chatterbox",
+   "model_revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "processing": "ffmpeg highpass=f=110,lowpass=f=7500,acompressor=threshold=-20dB:ratio=2.5:attack=3:release=60,loudnorm=I=-16:TP=-1.5:LRA=7; in-world cry, no radio",
+   "qa": {
+    "asr_transcript": "Ah.",
+    "cer": null,
+    "note": "non-verbal cry: picked by an interjection-only transcript and the expected length",
+    "usable": true
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) die",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": 8,
+   "sha256": "cfe242d460817ce024dfd43baba3a48a4523771e031860bdb1a9a12e0b5a05bc",
+   "shipped_check": {
+    "asr_transcript": "Ah.",
+    "cer": null
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 10,
+   "tempo": 1.0,
+   "text": "Aaah!",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Chatterbox clone (exaggeration 1.0) of the speaker's Kokoro English reference clip; no real person",
+    "reference": {
+     "engine": "kokoro",
+     "kokoro_voicepacks": [
+      "bm_fable"
+     ],
+     "language": "en",
+     "text": "Command, this is the forward element. We hold the ridge line and the road is clear. Awaiting your orders, ready to move on your signal."
+    },
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispyfea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.195,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "My cover is blown.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "9c2c0eeb0c0e0cf74716c32e1967ab6104de6094403e3ebb93e852042ecb867b",
+   "shipped_check": {
+    "asr_transcript": "My cover is blown.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "My cover is blown!",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispyfeb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.175,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "They're onto me.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) feedback",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "edf917a262479e688cf11bb9042a21a62fccae6858de9d230526560d26eeab1b",
+   "shipped_check": {
+    "asr_transcript": "They're onto me.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "They're onto me.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispymob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.995,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Blending in.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "3eec476326ecce9e057cdc46a7c9bd6c7eabfce8629a1d8e6439a4e98d534d1d",
+   "shipped_check": {
+    "asr_transcript": "Blending in",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Blending in.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispymoc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.335,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Nobody will notice.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "7228f5c523eb7f1d7576fafbaab0c0ebe4f7be7dfb98f2ba7fe902b1a28c0257",
+   "shipped_check": {
+    "asr_transcript": "Nobody will notice.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Nobody will notice.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispymod.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.535,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "moving discreetly.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "69a2319886587e98d83420ad9befb9bb524406f110a18d1483cd8aa9970b4b23",
+   "shipped_check": {
+    "asr_transcript": "moving discreetly",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Moving discreetly.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispymoe.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.255,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Consider it done.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a3d11fc25f210723be90e6055931d15df4823b57251df5cb421483a710f25391",
+   "shipped_check": {
+    "asr_transcript": "Consider it done.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Consider it done.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispysea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.715,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Yes.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "fbf6d636e524d9ded75c1f9084bf01b0b1c2e82ed01c5867328bc2fc1373920b",
+   "shipped_check": {
+    "asr_transcript": "Yes.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Yes?",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispyseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.795,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Listening.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "440498647d768160ab531b569978649d6734ba22e35658a5c67db340ea562938",
+   "shipped_check": {
+    "asr_transcript": "Listening.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Listening.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispysec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.055,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Quietly now.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "1ac7df8ebb5d9cf74ab0544da19cd920136dfb4b264cd5b4fd77de12669a01b1",
+   "shipped_check": {
+    "asr_transcript": "Quietly now.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Quietly now.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/ispysed.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.055,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=200,lowpass=f=5600,acompressor=threshold=-21dB:ratio=3:attack=5:release=80,loudnorm=I=-18:TP=-2:LRA=7; shared tactical radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Agent Ready",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "spy (SpyVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4e74e248e7a76517f040ae8ca9f1adb4c72e53b2c539b53f0446353c5c8a517b",
+   "shipped_check": {
+    "asr_transcript": "Agent ready.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 0.95,
+   "text": "Agent ready.",
+   "unit_set": "spy (SpyVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-spy"
+   }
+  },
+  "voices/vgraata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.695,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Understood.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "c3c6767e07b6e67d756eef72f1847c5c508b8476960e70c99900030ac29b4b74",
+   "shipped_check": {
+    "asr_transcript": "Understood.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Understood.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgraatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.775,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Copy that.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4c75bf5b0c584c1dca0c161ecf0ac6f4d61d8a73df49d0b75e8d961b8f87d5fb",
+   "shipped_check": {
+    "asr_transcript": "Copy that.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Copy that.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgraatc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.555,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "will do.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "89fbf9217f673514e935180aca79c5e4734e61b60f8e4e3ba71a37f45e21835b",
+   "shipped_check": {
+    "asr_transcript": "Will do.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Will do.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgraatd.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.885,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Acknowledged.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "9e1dca65159c02844f03d34ede1ca33c2227acf3018aea7e07a5b08fc2c69cba",
+   "shipped_check": {
+    "asr_transcript": "Acknowledged.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Acknowledged.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgraate.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.675,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "right away.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "e348511374b4fd04407a12ef70243d3245f6dd14f58c8a8346f6bd59ea1f5591",
+   "shipped_check": {
+    "asr_transcript": "Right away.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Right away.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgramob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.595,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Rolling.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "e23a932e5eae6ffe750b81d9516f8cc54a256a3d190111871f7e15e84fde719b",
+   "shipped_check": {
+    "asr_transcript": "Rolling.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Rolling.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgramod.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.795,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Moving out.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "7058ce5bc238011d07ec8b481e3de7812e530fccce561774537f5aad6c61b943",
+   "shipped_check": {
+    "asr_transcript": "Moving out.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Moving out.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgramoe.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.755,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "On the way.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "1bf9418bfc4f80008727567e93d179425838268d70c84636d6947421058d97a4",
+   "shipped_check": {
+    "asr_transcript": "On the way.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "On the way.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgramof.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.695,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Root Set",
+    "cer": 0.25
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4a193c600c43812297cc126dcc4799e563aea7256c822022b64878efd62db151",
+   "shipped_check": {
+    "asr_transcript": "Root set.",
+    "cer": 0.25
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Route set.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgrasea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.895,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Vehicle Ready",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "5cd10b99f2005e009db86d8e58a9bf9913b030bf6bdbd8e89d3f45d0b4cadf5b",
+   "shipped_check": {
+    "asr_transcript": "Vehicle ready.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Vehicle ready.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgraseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.835,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Driver here.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4755c357e5306b2654a0c660dfe3ac6f734a4e1a2bf6ad295298a94d50a386ed",
+   "shipped_check": {
+    "asr_transcript": "Driver here.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Driver here.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgrasec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.915,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Systems Green.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "3877322942e90118b8ad6c3da38eb5bb537fe8ea5831f10c2af36e952bc57b4d",
+   "shipped_check": {
+    "asr_transcript": "Systems Green.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Systems green.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgrased.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.095,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Awaiting Orders",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "3fd569b6590790685f04fc7213e3ba2e3a38ddb434a272fcc3cf768dbd07a720",
+   "shipped_check": {
+    "asr_transcript": "Awaiting orders.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Awaiting orders.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgrasee.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.815,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Standing by.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "31f5cc45d9df7ee37f4e0aac458f16335d1a8a4963286f27d567bd85c553fac2",
+   "shipped_check": {
+    "asr_transcript": "Standing by.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Standing by.",
+   "unit_set": "MCV and ore truck (AlliedConstructionVehicleVoice, ChronoMinerVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-allied"
+   }
+  },
+  "voices/vgrsata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.795,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engaging.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "79620edeec2c09bf2eba3b561b57659fdbe25120d61a28c13fa78a2af667a109",
+   "shipped_check": {
+    "asr_transcript": "Engaging",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engaging.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.835,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Target acquired.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a943574c009fa1639f2f3c8c452b56e8254f23a4f82a2f06c748c51c8bed9f99",
+   "shipped_check": {
+    "asr_transcript": "Target acquired.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Target acquired.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsatc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.895,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Opening fire.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "ee9cf17a032393bd4bb12d9ff689d3ca860982dc36c3ba3cba354e74e5dc3f2d",
+   "shipped_check": {
+    "asr_transcript": "Opening fire.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Opening fire.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsatd.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.935,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Weapons-free.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "3a23354494c8011137380627f9ad41f4df801932701fba77384be7c57a2452e0",
+   "shipped_check": {
+    "asr_transcript": "Weapons free.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Weapons free.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsmoa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.615,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Moving.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4de538ea3023913d305702cc5006cda899749326127ab1c98a00ab1696a7ac01",
+   "shipped_check": {
+    "asr_transcript": "Moving.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Moving.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsmob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.835,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Heading out.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "eca359478b0a9c2000cb543399e7cb3e3e350edecf5294c755039170f42e6c2d",
+   "shipped_check": {
+    "asr_transcript": "Heading out.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Heading out.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsmoc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.975,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Rolling forward.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "132fc278889e49c072e637f8a7cbb67d9429ceedccecb09e7b06caaa5b336d87",
+   "shipped_check": {
+    "asr_transcript": "Rolling forward.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Rolling forward.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrssea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.635,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Crew here.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "4dd45ffb638fe3cb4eba1a981705ff5c62585e113202cf84c3db99606a786abf",
+   "shipped_check": {
+    "asr_transcript": "Crew here.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Crew here.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrsseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.835,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engine running",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "80dde6f637623caeaccd8ba7a63827a72c455d4e19ed90b006c6ee16cd0c8063",
+   "shipped_check": {
+    "asr_transcript": "Engine running.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engine running.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vgrssec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.935,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Ready to move.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "MCV, ore truck and AA track (SovietVehicleVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a1770ab6e68c4494471330786661999d14fa5cff789765206f06b4ed75a6d4d1",
+   "shipped_check": {
+    "asr_transcript": "Ready to move.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Ready to move.",
+   "unit_set": "MCV, ore truck and AA track (SovietVehicleVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "bm_lewis",
+     "am_fenrir"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-crew-soviet"
+   }
+  },
+  "voices/vwaaata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.855,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engaging",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "7d60097f7f2c9e837e070664ff9cb2c204e7f7e9782cd7ae78bf94a8281e07f8",
+   "shipped_check": {
+    "asr_transcript": "Engaging",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engaging.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaaatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.055,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Target in sight.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "41720ead5af75f653f836dbb3e2d84a36df829cdcb576f5b9c8575480614c9d2",
+   "shipped_check": {
+    "asr_transcript": "Target in sight.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Target in sight.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaaatc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.675,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Firing",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "f4ca13db53b33608d083b68f04e9e9259f8467c73e363a889da7116c9e243b97",
+   "shipped_check": {
+    "asr_transcript": "Firing",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Firing.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaamoa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.735,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Underway.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "9a2950147da306f82b5cd1032c8b44869b70d38955f0fc5168c774d561f50131",
+   "shipped_check": {
+    "asr_transcript": "Underway",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Underway.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaamob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.855,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Setting course",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "b5972233537b3f38143377b0087184b6724bdaf6b85ac59fb7314cdfdc1c04ef",
+   "shipped_check": {
+    "asr_transcript": "Setting course",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Setting course.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaamoc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.015,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Heading for the beach.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "45d4d1ebb9b6df7d171f1351d1bf18d32730abb2da0814d0586a8cfc4effbf25",
+   "shipped_check": {
+    "asr_transcript": "Heading for the beach.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Heading for the beach.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaamod.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.635,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Fall ahead.",
+    "cer": 0.111
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "ad19b3c207dfea708f6fb2035d88d2502badeee0665827f62e6148de74afe837",
+   "shipped_check": {
+    "asr_transcript": "Full ahead.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Full ahead.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaamoe.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.995,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Course laden.",
+    "cer": 0.167
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "12f120466759a947cd0c66ea038f3012ed7a6d0c2194553e7e2e685d411925fe",
+   "shipped_check": {
+    "asr_transcript": "Course laid in.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Course laid in.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaasea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.755,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Boat ready.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "58305fe0e001817690247551dacaacc43d9c1a38a30e3f7f7ef82fa473083ecc",
+   "shipped_check": {
+    "asr_transcript": "Boat ready.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Boat ready.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaaseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.755,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Helm here.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "7c3ad7bc089f5b13022178d61289ada13022b448c58d7ead61ad31da7f2d32f8",
+   "shipped_check": {
+    "asr_transcript": "Helm here.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Helm here.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaasec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.935,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Ready to load.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "786ebdd2865490f7ff6ebf904913095d7346ffe84288bf6810a827c5ec948e1e",
+   "shipped_check": {
+    "asr_transcript": "Ready to load.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Ready to load.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwaased.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.575,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Landing craft standing by.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "landing craft (AlliedNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a375e5161bbdbdf4c4badd5027e4c8ef8085b288f5192a327f0bade2bd822dc9",
+   "shipped_check": {
+    "asr_transcript": "Landing craft standing by.",
+    "cer": 0.0
+   },
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Landing craft standing by.",
+   "unit_set": "landing craft (AlliedNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_puck",
+     "bm_fable"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-allied"
+   }
+  },
+  "voices/vwasata.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.915,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Engaging",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "a42c61a8652a42be80a9a7a245b095c57d4f55df78aa1b935df9138e4d624561",
+   "shipped_check": {
+    "asr_transcript": "Engaging",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Engaging.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasatb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.915,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Target spotted.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "6c8cd6d68b798b0432f88ba8e33d1f9d276f6d4fbf6c241d31d46f971acd4e43",
+   "shipped_check": {
+    "asr_transcript": "Target spotted.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Target spotted.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasatc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.955,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Opening fire.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) attack",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "af5c0630346c4f417dec5d6029d821d123dff60de851ab70402c2d5eaf3ea7db",
+   "shipped_check": {
+    "asr_transcript": "Opening fire.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Opening fire.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasmoa.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.055,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "into the water.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "bc964e0cfe92fa4a7bed687e8cbf613fcca0ab9774641d40d50974712718b774",
+   "shipped_check": {
+    "asr_transcript": "Into the water.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Into the water.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasmob.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.675,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "moving",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "39ac72d9bc53acafe99ac0675c20fe7c1b1213f25014e77a7d313bd3f14783ce",
+   "shipped_check": {
+    "asr_transcript": "moving",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Moving.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasmoc.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 0.915,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Crossing now.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "be77d059b755f7d81eddee26cbecc5bf89858913fe1b567202b1fd4b49440f33",
+   "shipped_check": {
+    "asr_transcript": "Crossing now.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Crossing now.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasmod.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.055,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Heading to shore.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) move",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "09bdd7654409d02aec69df58c52ab4ece1752df252f65504e4e13e69358cd958",
+   "shipped_check": {
+    "asr_transcript": "Heading to shore.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Heading to shore.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwassea.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.075,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Transport ready.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "ebf77a254796f569cfcbaa91882853eee1e1f04490d187182fcc0da558f4051c",
+   "shipped_check": {
+    "asr_transcript": "Transport ready.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Transport ready.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwasseb.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.095,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Hatch is open.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "df156d781cd87bf0ae209209763d3cef99cfa68129924b8703b0dbc26dad703f",
+   "shipped_check": {
+    "asr_transcript": "Hatch is open.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Hatch is open.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
+  },
+  "voices/vwassec.wav": {
+   "category": "voice",
+   "channels": 1,
+   "duration_seconds": 1.415,
+   "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
+   "engine_id": "kokoro",
+   "generated_at": "2026-10-07",
+   "generator": "tools/standalone-voices.py",
+   "generator_version": "rtsai-voices-1",
+   "language": "en-US",
+   "license": "Apache-2.0",
+   "license_evidence": "https://huggingface.co/hexgrad/Kokoro-82M (model card: license apache-2.0; voicepacks ship in the same repository under the same license; the card lists its training data as permissive/non-copyrighted audio, including synthetic audio from closed TTS providers)",
+   "model": "hexgrad/Kokoro-82M",
+   "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "processing": "ffmpeg highpass=f=220,lowpass=f=5000,acompressor=threshold=-21dB:ratio=3.5:attack=4:release=70,loudnorm=I=-18:TP=-2:LRA=7; vehicle intercom radio; squelch tone, noise floor and fades",
+   "qa": {
+    "asr_transcript": "Amphibious crew here.",
+    "cer": 0.0
+   },
+   "real_person_imitation": false,
+   "role": "amphibious transport (SovietNavalVoice) select",
+   "sample_rate": 44100,
+   "sample_width_bits": 16,
+   "seed": null,
+   "sha256": "7b0d82b3878457ccc8fd53daa8bc4faa7299939e20f230e8d893a6d685a0337b",
+   "shipped_check": {
+    "asr_transcript": "Amphibious crew here.",
+    "cer": 0.0
+   },
+   "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
+   "synthetic_voice_disclosed": true,
+   "takes": 1,
+   "tempo": 1.0,
+   "text": "Amphibious crew here.",
+   "unit_set": "amphibious transport (SovietNavalVoice)",
+   "voice": {
+    "kokoro_voicepacks": [
+     "am_michael",
+     "bm_lewis"
+    ],
+    "method": "Kokoro voicepack",
+    "speaker": "shared-naval-soviet"
+   }
   }
  }
 }
