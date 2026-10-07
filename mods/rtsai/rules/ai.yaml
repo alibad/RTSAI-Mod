@@ -38,6 +38,9 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+	SuperweaponBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		ExcludeTypes: cmin, harv, amcv, smcv
 	DoctrineBaseBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		DefenseQueues: Support
@@ -96,6 +99,8 @@ Player:
 			gtgcan: 1
 			gagap: 1
 			namisl: 1
+			gacsph: 1
+			nairon: 1
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
@@ -190,6 +195,9 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+	SuperweaponBotModule@medium:
+		RequiresCondition: enable-medium-ai
+		ExcludeTypes: cmin, harv, amcv, smcv
 	DoctrineBaseBuilderBotModule@medium:
 		RequiresCondition: enable-medium-ai
 		DefenseQueues: Support
@@ -248,6 +256,8 @@ Player:
 			gtgcan: 1
 			gagap: 1
 			namisl: 1
+			gacsph: 1
+			nairon: 1
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@medium:
 		RequiresCondition: enable-medium-ai
@@ -342,6 +352,9 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+	SuperweaponBotModule@rush:
+		RequiresCondition: enable-rush-ai
+		ExcludeTypes: cmin, harv, amcv, smcv
 	DoctrineBaseBuilderBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		DefenseQueues: Support
@@ -400,6 +413,8 @@ Player:
 			gtgcan: 1
 			gagap: 1
 			namisl: 1
+			gacsph: 1
+			nairon: 1
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@rush:
 		RequiresCondition: enable-rush-ai
@@ -494,6 +509,9 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+	SuperweaponBotModule@turtle:
+		RequiresCondition: enable-turtle-ai
+		ExcludeTypes: cmin, harv, amcv, smcv
 	DoctrineBaseBuilderBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		DefenseQueues: Support
@@ -552,6 +570,8 @@ Player:
 			gtgcan: 1
 			gagap: 1
 			namisl: 1
+			gacsph: 1
+			nairon: 1
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
@@ -646,6 +666,9 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+	SuperweaponBotModule@naval:
+		RequiresCondition: enable-naval-ai
+		ExcludeTypes: cmin, harv, amcv, smcv
 	DoctrineBaseBuilderBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		DefenseQueues: Support
@@ -704,6 +727,8 @@ Player:
 			gtgcan: 1
 			gagap: 1
 			namisl: 1
+			gacsph: 1
+			nairon: 1
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@naval:
 		RequiresCondition: enable-naval-ai
