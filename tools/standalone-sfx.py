@@ -577,16 +577,20 @@ def _idogatta(R, n):
     return x + 0.5 * norm(snap)
 
 
-recipe("idogsela.wav", "voices", "dog selected: one alert bark")(lambda R, n: bark(R, n, 700, length=0.2, rough=0.6, **DOG))
+def dogroom(R, x):
+    return reverb(x, R.sub("room"), t60=0.35, wet=0.12, damp=4500)
+
+
+recipe("idogsela.wav", "voices", "dog selected: one alert bark")(lambda R, n: dogroom(R, bark(R, n, 700, length=0.2, rough=0.6, **DOG)))
 recipe("idogmova.wav", "voices", "dog moving: panting and a short bark")(
-    lambda R, n: 0.7 * pant(R, n, 5, 6.0, 0.05) + bark(R.sub("b"), n, 650, length=0.15, delay=0.78, **DOG))
+    lambda R, n: dogroom(R, 0.7 * pant(R, n, 5, 6.0, 0.05) + bark(R.sub("b"), n, 650, length=0.15, delay=0.78, **DOG)))
 recipe("idogfea.wav", "voices", "dog feedback: snarl and bark")(
-    lambda R, n: 0.5 * growl(R, n, 110, 0.0, 0.3, formants=(800, 1700, 3000)) + bark(R.sub("b"), n, 720, length=0.17, delay=0.3, rough=0.7, **DOG))
+    lambda R, n: dogroom(R, 0.5 * growl(R, n, 110, 0.0, 0.3, formants=(800, 1700, 3000)) + bark(R.sub("b"), n, 720, length=0.17, delay=0.3, rough=0.7, **DOG)))
 recipe("idogfeb.wav", "voices", "dog feedback: whimper then a sharp bark")(
-    lambda R, n: 0.4 * whine(R, n, 1100, 1500, 0.0, 0.4) + bark(R.sub("2"), n, 760, length=0.12, delay=0.45, rough=0.7, **DOG))
-recipe("idogfec.wav", "voices", "dog feedback: whine")(lambda R, n: whine(R, n, 1000, 1500, 0.0, n / D.SR * 0.9))
+    lambda R, n: dogroom(R, 0.4 * whine(R, n, 1100, 1500, 0.0, 0.4) + bark(R.sub("2"), n, 760, length=0.12, delay=0.45, rough=0.7, **DOG)))
+recipe("idogfec.wav", "voices", "dog feedback: whine")(lambda R, n: dogroom(R, whine(R, n, 1000, 1500, 0.0, n / D.SR * 0.9)))
 recipe("idogdiea.wav", "voices", "dog dies: sharp yelp")(
-    lambda R, n: bark(R, n, 1000, length=0.25, rough=0.4, formants=(1100, 2400, 3500)))
+    lambda R, n: dogroom(R, bark(R, n, 1000, length=0.25, rough=0.4, formants=(1100, 2400, 3500))))
 
 
 # ================================================================================================ UI

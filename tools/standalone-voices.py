@@ -9,7 +9,7 @@ factions (the Allied-side or the Soviet-side voice set), so every line is Englis
 are. Speakers are new blends of the voicepacks the factions already use; no real person is imitated.
 
 The death cries come from Chatterbox (MIT), the faction sets' cloning engine, cloned from the speaker's Kokoro English
-reference at exaggeration 1.0: Kokoro reads interjections as words. Of ten seeds, the take Whisper hears as a bare
+reference at exaggeration 1.3 and cfg_weight 0.3: Kokoro reads interjections as words. Of twelve seeds, the take Whisper hears as a bare
 interjection and closest to the expected length is kept. Melted, Zapped and PsyCrush add a procedural layer from
 tools/standalone_dsp.py.
 
@@ -131,7 +131,7 @@ def lines() -> list[Line]:
         "crew", {
             "select": [("sea", "Vehicle ready."), ("seb", "Driver here."), ("sec", "Systems green."),
                        ("sed", "Awaiting orders."), ("see", "Standing by.")],
-            "move": [("mob", "Rolling."), ("mod", "Moving out."), ("moe", "On the way."), ("mof", "Route set.")],
+            "move": [("mob", "Rolling."), ("mod", "Moving out."), ("moe", "On the way."), ("mof", "On course.")],
             "attack": [("ata", "Understood."), ("atb", "Copy that."), ("atc", "Will do."), ("atd", "Acknowledged."),
                        ("ate", "Right away.")],
         })
@@ -237,8 +237,9 @@ def ffmpeg_chain(src: Path, dst: Path, filters: str, extra: str = ""):
                     str(RATE), "-ac", "1", "-c:a", "pcm_s16le", str(dst)], check=True)
 
 
-CRY_SEEDS = 10
-CRY_EXAGGERATION = 1.0
+CRY_SEEDS = 12
+CRY_EXAGGERATION = 1.3
+CRY_CFG = 0.3   # Chatterbox README tip for expressive or dramatic speech: cfg_weight ~0.3, higher exaggeration
 CRY_WORDS = re.compile(r"^(a+r*g*h*|ar+g+h*|ah+|aw+|ark|augh|ugh+|ung+h*|uh+|oh+|no+|ow+)$")
 
 
@@ -253,7 +254,7 @@ def cry_take(ve, synth, ln: Line, raw: Path):
     takes = []
     for seed in range(1, CRY_SEEDS + 1):
         try:
-            audio, rate = synth.chatterbox(ln.text, "en", ref.path, seed, exaggeration=CRY_EXAGGERATION)
+            audio, rate = synth.chatterbox(ln.text, "en", ref.path, seed, exaggeration=CRY_EXAGGERATION, cfg_weight=CRY_CFG)
         except RuntimeError as error:
             print(f"  seed {seed} failed: {error}", flush=True)
             continue
@@ -272,10 +273,10 @@ def cry_take(ve, synth, ln: Line, raw: Path):
     rec = {"engine": spec["engine"], "engine_id": "chatterbox", "model": spec["model"],
            "model_revision": spec["revision"], "license": spec["license"],
            "voice": {"speaker": ln.speaker, "kokoro_voicepacks": list(speaker.voicepacks),
-                     "method": f"Chatterbox clone (exaggeration {CRY_EXAGGERATION}) of the speaker's Kokoro English "
+                     "method": f"Chatterbox clone (exaggeration {CRY_EXAGGERATION}, cfg_weight {CRY_CFG}) of the speaker's Kokoro English "
                                "reference clip; no real person", "reference": ref.record},
            "language": "en-US", "text": ln.text, "tempo": 1.0, "seed": seed, "takes": len(takes),
-           "exaggeration": CRY_EXAGGERATION,
+           "exaggeration": CRY_EXAGGERATION, "cfg_weight": CRY_CFG,
            "qa": {"asr_transcript": heard, "cer": None, "usable": not bad,
                   "note": "non-verbal cry: picked by an interjection-only transcript and the expected length"},
            "generated_at": dt.date.today().isoformat(), "generator_version": ve.GENERATOR_VERSION}
