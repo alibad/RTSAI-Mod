@@ -108,13 +108,15 @@ the faction's own drone rules, scaled down:
 | Answer | Why it works |
 |---|---|
 | Any anti-air (flak, IFV, AA vehicles and sites, rocketeers) | Drones are air targets with 25 HP: one hit each |
+| Small arms (every rifle and machine gun built on the stock `^MG`) | Drones also carry a `MicroDrone` target type that `^MG` weapons and the ground auto-target lists include: 2-3 rifle hits each |
 | Kill or detect the operator | Launching reveals the concealed team; when it dies, its airborne drones die with it |
 | Push right after a salvo | 3 drones spent = 18 s to a full rack again |
 | Kite out of the link | Chasing drones crash 1.6 s after leaving the link |
 | Armor | Heavy armor takes 40% |
 
-Ground weapons cannot hit the drones (they are airborne, like Hornets): that is the "hard to hit" side, paid for by
-one-hit deaths to anti-air and the operator dependency.
+Cannons, artillery and missiles still cannot hit them: that is the "hard to hit" side, paid for by one-hit deaths to
+anti-air, small-arms fire and the operator dependency. The balance run reports the FPV trade per opponent, so a
+faction short on anti-air that collapses against them shows up (owner watch item, gate a).
 
 ### Loiter Drone (`r2hzdrone`), scaled down
 
