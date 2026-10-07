@@ -120,6 +120,8 @@ function Test-Command
 	else
 	{
 		InvokeCommand "& '$($python.Source)' tools/standalone-audio.py check"
+		Write-Host "Checking the standalone game's neutral names (tools/standalone-names.py)..." -ForegroundColor Cyan
+		InvokeCommand "& '$($python.Source)' tools/standalone-names.py --check"
 	}
 }
 

@@ -199,3 +199,5 @@ test: all
 	@./utility.sh --check-standalone --strict
 	@echo "Checking audio provenance (tools/standalone-audio.py)..."
 	@python3 tools/standalone-audio.py check
+	@echo "Checking the standalone game's neutral names (tools/standalone-names.py)..."
+	@python3 tools/standalone-names.py --check

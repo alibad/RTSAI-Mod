@@ -15,7 +15,7 @@ standalone-sw2-power-description =
 ## Economy pieces that replace the cut reactor and ore purifier.
 standalone-hpwr-name = Heavy Power Plant
 standalone-hpwr-description = Provides a large amount of power for other structures.
-standalone-purifier-name = Ore Purifier
+standalone-purifier-name = Refinery Purifier
 standalone-purifier-description =
     Refinery upgrade: place it on a refinery.
     That refinery earns 25% more from ore.

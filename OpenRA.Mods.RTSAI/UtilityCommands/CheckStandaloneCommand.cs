@@ -401,6 +401,38 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			var factions = rules.Actors[SystemActors.World].TraitInfos<FactionInfo>().Where(f => f.Selectable && f.RandomFactionMembers.Count == 0)
 				.Select(f => f.InternalName).ToList();
 			var reach = factions.ToDictionary(f => f, f => Reachable(rules, f));
+
+			// --list-names: every name a player can see for what the factions field (tooltips, power names), per actor
+			// with the factions that can field it. For reviewing on-screen text, e.g. for stock names.
+			if (args.Contains("--list-names"))
+			{
+				foreach (var a in reach.Values.SelectMany(r => r).Distinct().Order())
+				{
+					var who = string.Join(" ", factions.Where(f => reach[f].Contains(a)));
+					foreach (var ti in rules.Actors[a].TraitInfos<TraitInfo>())
+						foreach (var f in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
+							.Where(f => f.GetCustomAttribute<FluentReferenceAttribute>() != null && f.FieldType == typeof(string)))
+							if (f.GetValue(ti) is string key && !string.IsNullOrEmpty(key) && (f.Name == "Name" || f.Name == "GenericName"))
+								Console.WriteLine($"name {a} [{who}] {ti.GetType().Name.Replace("Info", "")}.{f.Name}: " +
+									(FluentProvider.TryGetMessage(key, out var text) ? text : $"<{key}>"));
+				}
+			}
+
+			// Stock names on screen: the text of everything the factions field (names, generic names, descriptions,
+			// support power names and texts) must not use Red Alert 2's coined unit, building and faction names.
+			var stockNames = new Regex(@"\b(Tesla|Chrono\w*|War Miner|Flak Track|Battle Lab|Airforce Command|Allied|Soviets?|" +
+				@"Terror Drones?|Yuri\w*|Iron Curtain|Prism|Kirov|Apocalypse|Rhino|Grizzly|Tanya|Psychic|Desolator|Conscripts?|" +
+				@"G\.I\.|Crazy Ivan|Weather Control|Gap Generator|Spy Satellite|Ore Purifier|Cloning Vats|Nuclear Reactor|" +
+				@"War Factory|Navy SEAL|Mirage|Harrier|Rocketeer|Dreadnought|Aegis|Typhoon|Giant Squid|Dolphin|Boomer|" +
+				@"Floating Disc|Magnetron|Lasher|Gattling|Initiate|Brute|Siege Chopper|Black Eagle|Nighthawk)\b", RegexOptions.IgnoreCase);
+			foreach (var a in reach.Values.SelectMany(r => r).Distinct().Order())
+				foreach (var ti in rules.Actors[a].TraitInfos<TraitInfo>())
+					foreach (var f in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
+						.Where(f => f.GetCustomAttribute<FluentReferenceAttribute>() != null && f.FieldType == typeof(string)))
+						if (f.GetValue(ti) is string key && !string.IsNullOrEmpty(key) && FluentProvider.TryGetMessage(key, out var text)
+							&& stockNames.Match(text) is { Success: true } m)
+							Error($"{a} {ti.GetType().Name.Replace("Info", "")}.{f.Name} shows the stock name \"{m.Value}\" ({key})");
+
 			var missingAudio = new SortedSet<string>();
 			void CheckSound(string name)
 			{
