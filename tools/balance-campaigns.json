@@ -146,5 +146,39 @@
     ]
    }
   ]
+ },
+ "standalone-smoke": {
+  "description": "Standalone smoke (no RA2 files: run with an empty --content folder): the 7 modern factions on the base kit, on the two generated maps, every pairing from both spawn orientations, normal bot, 40-minute cap. Checks that the cut buildings and kit footprints leave every faction able to build, fight and finish games; not the full balance pass.",
+  "seed": 20261007,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "israel",
+     "yemen",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   }
+  ]
  }
 }
