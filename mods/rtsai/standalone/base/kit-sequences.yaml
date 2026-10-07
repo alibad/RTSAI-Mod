@@ -374,7 +374,7 @@ cnst-hezbollah:
 powr-china:
 	Defaults:
 		Filename: powr-china.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -422,7 +422,7 @@ powr-china:
 powr-iran:
 	Defaults:
 		Filename: powr-iran.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -470,7 +470,7 @@ powr-iran:
 powr-turkey:
 	Defaults:
 		Filename: powr-turkey.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -518,7 +518,7 @@ powr-turkey:
 powr-saudi:
 	Defaults:
 		Filename: powr-saudi.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -566,7 +566,7 @@ powr-saudi:
 powr-israel:
 	Defaults:
 		Filename: powr-israel.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -614,7 +614,7 @@ powr-israel:
 powr-yemen:
 	Defaults:
 		Filename: powr-yemen.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -662,7 +662,7 @@ powr-yemen:
 powr-hezbollah:
 	Defaults:
 		Filename: powr-hezbollah.shp
-		Offset: 7, -26, 26
+		Offset: 17, -26, 26
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -709,7 +709,7 @@ powr-hezbollah:
 refn-china:
 	Defaults:
 		Filename: refn-china.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -720,9 +720,9 @@ refn-china:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -754,6 +754,16 @@ refn-china:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-chinaicon.png
 		Offset: 0, 0
@@ -761,7 +771,7 @@ refn-china:
 refn-iran:
 	Defaults:
 		Filename: refn-iran.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -772,9 +782,9 @@ refn-iran:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -806,6 +816,16 @@ refn-iran:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-iranicon.png
 		Offset: 0, 0
@@ -813,7 +833,7 @@ refn-iran:
 refn-turkey:
 	Defaults:
 		Filename: refn-turkey.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -824,9 +844,9 @@ refn-turkey:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -858,6 +878,16 @@ refn-turkey:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-turkeyicon.png
 		Offset: 0, 0
@@ -865,7 +895,7 @@ refn-turkey:
 refn-saudi:
 	Defaults:
 		Filename: refn-saudi.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -876,9 +906,9 @@ refn-saudi:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -910,6 +940,16 @@ refn-saudi:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-saudiicon.png
 		Offset: 0, 0
@@ -917,7 +957,7 @@ refn-saudi:
 refn-israel:
 	Defaults:
 		Filename: refn-israel.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -928,9 +968,9 @@ refn-israel:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -962,6 +1002,16 @@ refn-israel:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-israelicon.png
 		Offset: 0, 0
@@ -969,7 +1019,7 @@ refn-israel:
 refn-yemen:
 	Defaults:
 		Filename: refn-yemen.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -980,9 +1030,9 @@ refn-yemen:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -1014,6 +1064,16 @@ refn-yemen:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-yemenicon.png
 		Offset: 0, 0
@@ -1021,7 +1081,7 @@ refn-yemen:
 refn-hezbollah:
 	Defaults:
 		Filename: refn-hezbollah.shp
-		Offset: 1, -17, 17
+		Offset: 1, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1032,9 +1092,9 @@ refn-hezbollah:
 		Start: 2
 		ShadowStart: 5
 	make:
-		Start: 69
+		Start: 93
 		Length: 25
-		ShadowStart: 94
+		ShadowStart: 118
 		Tick: 50
 		ZOffset: 0
 	idle-drill:
@@ -1066,13 +1126,23 @@ refn-hezbollah:
 		Length: 8
 		ShadowStart: 61
 		Tick: 80
+	idle-purifier:
+		Start: 69
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
+	damaged-idle-purifier:
+		Start: 77
+		Length: 8
+		ShadowStart: 85
+		Tick: 100
 	icon:
 		Filename: refn-hezbollahicon.png
 		Offset: 0, 0
 barr-china:
 	Defaults:
 		Filename: barr-china.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1105,7 +1175,7 @@ barr-china:
 barr-iran:
 	Defaults:
 		Filename: barr-iran.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1138,7 +1208,7 @@ barr-iran:
 barr-turkey:
 	Defaults:
 		Filename: barr-turkey.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1171,7 +1241,7 @@ barr-turkey:
 barr-saudi:
 	Defaults:
 		Filename: barr-saudi.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1204,7 +1274,7 @@ barr-saudi:
 barr-israel:
 	Defaults:
 		Filename: barr-israel.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1237,7 +1307,7 @@ barr-israel:
 barr-yemen:
 	Defaults:
 		Filename: barr-yemen.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1270,7 +1340,7 @@ barr-yemen:
 barr-hezbollah:
 	Defaults:
 		Filename: barr-hezbollah.shp
-		Offset: 3, -24, 24
+		Offset: 3, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1302,7 +1372,7 @@ barr-hezbollah:
 weap-china:
 	Defaults:
 		Filename: weap-china.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1410,7 +1480,7 @@ weap-china:
 weap-iran:
 	Defaults:
 		Filename: weap-iran.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1518,7 +1588,7 @@ weap-iran:
 weap-turkey:
 	Defaults:
 		Filename: weap-turkey.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1626,7 +1696,7 @@ weap-turkey:
 weap-saudi:
 	Defaults:
 		Filename: weap-saudi.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1734,7 +1804,7 @@ weap-saudi:
 weap-israel:
 	Defaults:
 		Filename: weap-israel.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1842,7 +1912,7 @@ weap-israel:
 weap-yemen:
 	Defaults:
 		Filename: weap-yemen.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1950,7 +2020,7 @@ weap-yemen:
 weap-hezbollah:
 	Defaults:
 		Filename: weap-hezbollah.shp
-		Offset: 6, -31, 31
+		Offset: 19, -31, 31
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2287,7 +2357,7 @@ radr-hezbollah:
 airf-china:
 	Defaults:
 		Filename: airf-china.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2345,7 +2415,7 @@ airf-china:
 airf-iran:
 	Defaults:
 		Filename: airf-iran.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2403,7 +2473,7 @@ airf-iran:
 airf-turkey:
 	Defaults:
 		Filename: airf-turkey.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2461,7 +2531,7 @@ airf-turkey:
 airf-saudi:
 	Defaults:
 		Filename: airf-saudi.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2519,7 +2589,7 @@ airf-saudi:
 airf-israel:
 	Defaults:
 		Filename: airf-israel.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2577,7 +2647,7 @@ airf-israel:
 airf-yemen:
 	Defaults:
 		Filename: airf-yemen.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -2635,7 +2705,7 @@ airf-yemen:
 airf-hezbollah:
 	Defaults:
 		Filename: airf-hezbollah.shp
-		Offset: 1, -18, 18
+		Offset: 12, -18, 18
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3146,7 +3216,7 @@ yard-hezbollah:
 dept-china:
 	Defaults:
 		Filename: dept-china.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3213,7 +3283,7 @@ dept-china:
 dept-iran:
 	Defaults:
 		Filename: dept-iran.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3280,7 +3350,7 @@ dept-iran:
 dept-turkey:
 	Defaults:
 		Filename: dept-turkey.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3347,7 +3417,7 @@ dept-turkey:
 dept-saudi:
 	Defaults:
 		Filename: dept-saudi.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3414,7 +3484,7 @@ dept-saudi:
 dept-israel:
 	Defaults:
 		Filename: dept-israel.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3481,7 +3551,7 @@ dept-israel:
 dept-yemen:
 	Defaults:
 		Filename: dept-yemen.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3548,7 +3618,7 @@ dept-yemen:
 dept-hezbollah:
 	Defaults:
 		Filename: dept-hezbollah.shp
-		Offset: 6, -18, 18
+		Offset: 14, -27, 27
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3614,7 +3684,7 @@ dept-hezbollah:
 tech-china:
 	Defaults:
 		Filename: tech-china.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3652,7 +3722,7 @@ tech-china:
 tech-iran:
 	Defaults:
 		Filename: tech-iran.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3690,7 +3760,7 @@ tech-iran:
 tech-turkey:
 	Defaults:
 		Filename: tech-turkey.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3728,7 +3798,7 @@ tech-turkey:
 tech-saudi:
 	Defaults:
 		Filename: tech-saudi.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3766,7 +3836,7 @@ tech-saudi:
 tech-israel:
 	Defaults:
 		Filename: tech-israel.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3804,7 +3874,7 @@ tech-israel:
 tech-yemen:
 	Defaults:
 		Filename: tech-yemen.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3842,7 +3912,7 @@ tech-yemen:
 tech-hezbollah:
 	Defaults:
 		Filename: tech-hezbollah.shp
-		Offset: 3, -43, 43
+		Offset: 12, -43, 43
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3879,7 +3949,7 @@ tech-hezbollah:
 sw1-china:
 	Defaults:
 		Filename: sw1-china.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3912,7 +3982,7 @@ sw1-china:
 sw1-iran:
 	Defaults:
 		Filename: sw1-iran.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3945,7 +4015,7 @@ sw1-iran:
 sw1-turkey:
 	Defaults:
 		Filename: sw1-turkey.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -3978,7 +4048,7 @@ sw1-turkey:
 sw1-saudi:
 	Defaults:
 		Filename: sw1-saudi.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4011,7 +4081,7 @@ sw1-saudi:
 sw1-israel:
 	Defaults:
 		Filename: sw1-israel.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4044,7 +4114,7 @@ sw1-israel:
 sw1-yemen:
 	Defaults:
 		Filename: sw1-yemen.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4077,7 +4147,7 @@ sw1-yemen:
 sw1-hezbollah:
 	Defaults:
 		Filename: sw1-hezbollah.shp
-		Offset: 1, -16, 16
+		Offset: 1, -25, 25
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4109,7 +4179,7 @@ sw1-hezbollah:
 sw2-china:
 	Defaults:
 		Filename: sw2-china.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4142,7 +4212,7 @@ sw2-china:
 sw2-iran:
 	Defaults:
 		Filename: sw2-iran.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4175,7 +4245,7 @@ sw2-iran:
 sw2-turkey:
 	Defaults:
 		Filename: sw2-turkey.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4208,7 +4278,7 @@ sw2-turkey:
 sw2-saudi:
 	Defaults:
 		Filename: sw2-saudi.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4241,7 +4311,7 @@ sw2-saudi:
 sw2-israel:
 	Defaults:
 		Filename: sw2-israel.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4274,7 +4344,7 @@ sw2-israel:
 sw2-yemen:
 	Defaults:
 		Filename: sw2-yemen.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4307,7 +4377,7 @@ sw2-yemen:
 sw2-hezbollah:
 	Defaults:
 		Filename: sw2-hezbollah.shp
-		Offset: 1, -15, 15
+		Offset: 13, -15, 15
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -4339,7 +4409,7 @@ sw2-hezbollah:
 wall-china:
 	Defaults:
 		Filename: wall-china.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
@@ -4359,7 +4429,7 @@ wall-china:
 wall-iran:
 	Defaults:
 		Filename: wall-iran.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
@@ -4379,7 +4449,7 @@ wall-iran:
 wall-turkey:
 	Defaults:
 		Filename: wall-turkey.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
@@ -4399,7 +4469,7 @@ wall-turkey:
 wall-saudi:
 	Defaults:
 		Filename: wall-saudi.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
@@ -4419,7 +4489,7 @@ wall-saudi:
 wall-israel:
 	Defaults:
 		Filename: wall-israel.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
@@ -4439,7 +4509,7 @@ wall-israel:
 wall-yemen:
 	Defaults:
 		Filename: wall-yemen.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
@@ -4459,7 +4529,7 @@ wall-yemen:
 wall-hezbollah:
 	Defaults:
 		Filename: wall-hezbollah.shp
-		Offset: 7, -8, 8
+		Offset: 7, -9, 9
 	idle:
 		Start: 0
 		Length: 16
