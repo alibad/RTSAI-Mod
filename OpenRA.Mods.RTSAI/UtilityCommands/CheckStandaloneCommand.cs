@@ -423,6 +423,21 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 						Console.WriteLine($"placeholder {file}: {string.Join(", ", users)}");
 			}
 
+			// 7b. Every sequence resolves its frames, as a map load does (no renderer needed: sheets stay in memory).
+			// The lint passes stop at file names; a frame number past a sheet's end only fails when a game starts.
+			foreach (var tileset in modData.DefaultTerrainInfo.Keys)
+			{
+				try
+				{
+					using var seqs = new SequenceSet(modData.DefaultFileSystem, modData, tileset, null);
+					seqs.LoadSprites();
+				}
+				catch (Exception e)
+				{
+					Error($"Sequences for {tileset} do not load: {e.Message}");
+				}
+			}
+
 			// 8. Identity: no Red Alert branding in shipped text; ModTabTitle follows the product term.
 			string productName = null;
 			foreach (var file in manifest.FluentMessages)
