@@ -107,8 +107,9 @@ r2bozkir:
 		BuildPaletteOrder: 21
 		Prerequisites: ~faction.turkey, gaweap
 		Description: ra2-r2bozkir-description
+	# Round 5: 900 -> 950 with the coaxial machine gun (R2QilinCoax), 0.83 -> 1.67 destroyed per credit.
 	Valued:
-		Cost: 900
+		Cost: 950
 	Health:
 		HP: 400
 	Armor:
@@ -118,6 +119,10 @@ r2bozkir:
 	Armament:
 		Weapon: R2BozkirGun
 		MuzzleSequence: muzzle
+	Armament@coax:
+		Name: secondary
+		Weapon: R2QilinCoax
+		LocalOffset: 600,60,700
 
 r2yildirim:
 	Inherits: ^R2ModernVehicle

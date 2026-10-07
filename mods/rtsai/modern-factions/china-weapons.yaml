@@ -81,10 +81,11 @@ R2ChinaLongbowRockets:
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 34
-		Spread: 256
+		# Round 5: Spread 256 -> 341, None/Flak 70 -> 100/90: the PHL's salvo now breaks infantry blobs.
+		Spread: 341
 		Versus:
-			None: 70
-			Flak: 70
+			None: 100
+			Flak: 90
 			Plate: 70
 			Light: 100
 			Medium: 90

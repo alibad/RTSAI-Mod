@@ -53,8 +53,9 @@ r2hzrifle:
 		Description: levant-r2hzrifle-description
 	# Salvo and swarm: 150 -> 275 and 100 -> 130 HP, rifle 13 -> 14 (16 in the design), Veteran from the barracks:
 	# fewer, stronger fighters. The design (225, 16) measured 2.07 destroyed per credit (round 5); trims 2-3.
+	# Balance round 5: 275 -> 300 (2.88 destroyed per credit, 30% of Hezbollah's kills in the standalone baseline).
 	Valued:
-		Cost: 275
+		Cost: 300
 	Health:
 		HP: 130
 	Mobile:
