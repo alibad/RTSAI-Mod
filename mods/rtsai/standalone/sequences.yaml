@@ -169,3 +169,14 @@ resources:
 		-TilesetFilenames:
 		Filename: ra2|standalone/art/gem.png
 		Start: 132
+
+oremine:
+	Defaults:
+		Filename: ra2|standalone/art/oremine.png
+		Offset: 0, -15
+	idle:
+		Start: 0
+	active:
+		Start: 1
+		Length: 10
+		Tick: 80

@@ -603,9 +603,49 @@ def render_resources(work: Path, threads: int):
     print(f"resources: {ART_DIR / 'ore.png'} (20x12), {ART_DIR / 'gem.png'} (12x12)")
 
 
+MINE_SCRIPT = ROOT / "tools" / "terrain" / "blender_oremine.py"
+
+
+def render_mines(work: Path, threads: int):
+    """The ore mine: idle + 10 active frames, 90x90 RGBA with baked shadows. The cell centre sits 15 px below the
+    frame centre, like the ore piles (sequence Offset 0, -15)."""
+    slots = []
+    for f in range(11):
+        gx, gy = (f % 6) * 3, (f // 6) * 3
+        slots.append({"cx": gx + gy, "cy": gy - gx, "frame": f})
+    pts = np.array([project(s["cx"] + 0.5, s["cy"] + 0.5, 0) for s in slots])
+    x0, y0 = pts[:, 0].min() - 100, pts[:, 1].min() - 140
+    W, H = int(pts[:, 0].max() - x0 + 100), int(pts[:, 1].max() - y0 + 100)
+    W, H = W + W % 2, H + H % 2
+    xc = np.array([0.70710678, 0.70710678, 0])
+    yc = np.array([-0.35355339, 0.35355339, 0.8660254])
+    target = ((W / 2 + x0) / PX) * xc + (-(H / 2 + y0) / PX) * yc
+    job, png = work / "mines.json", work / "mines.png"
+    job.write_text(json.dumps({"size": [W, H], "target": target.tolist(), "slots": slots}), encoding="utf-8")
+    t0 = time.time()
+    r = subprocess.run([str(BLENDER), "-b", "--factory-startup", "-noaudio", "-P", str(MINE_SCRIPT), "--", str(job), str(png),
+                        str(threads)], capture_output=True, text=True, timeout=3600)
+    if r.returncode or not png.exists():
+        print(r.stdout[-3000:], r.stderr[-3000:])
+        raise SystemExit("blender failed on the ore mine")
+    img = np.array(Image.open(png).convert("RGBA"))
+    frames = []
+    for (px, py) in pts:
+        cx, cy = int(round(px - x0)), int(round(py - y0))
+        frames.append(img[cy - 60:cy + 30, cx - 45:cx + 45].copy())
+    sheet = np.concatenate(frames, axis=1)
+    meta = PngInfo()
+    meta.add_text("FrameSize", "90,90")
+    meta.add_text("FrameAmount", str(len(frames)))
+    ART_DIR.mkdir(parents=True, exist_ok=True)
+    Image.fromarray(sheet, "RGBA").save(ART_DIR / "oremine.png", pnginfo=meta, optimize=True)
+    print(f"ore mine: {ART_DIR / 'oremine.png'} (11 frames, {time.time() - t0:.0f}s)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--resources", action="store_true", help="render the ore and gem piles instead of the tileset")
+    ap.add_argument("--mines", action="store_true", help="render the ore mine (resource spawn) instead of the tileset")
     ap.add_argument("--only", help="comma-separated template ids (test renders; output goes to --work only)")
     ap.add_argument("--work", type=Path, default=Path(os.environ.get("TEMP", "/tmp")) / "rtsai-terrain")
     ap.add_argument("--threads", type=int, default=max(4, (os.cpu_count() or 8) - 4))
@@ -616,6 +656,9 @@ def main():
     a.work.mkdir(parents=True, exist_ok=True)
     if a.resources:
         render_resources(a.work, a.threads)
+        return
+    if a.mines:
+        render_mines(a.work, a.threads)
         return
     head, templates = parse_tileset(SRC_TILESET.read_text(encoding="utf-8"))
     extras = transition_templates()

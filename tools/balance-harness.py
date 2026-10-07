@@ -339,7 +339,9 @@ def run_match(match: Match, *, engine: Path, mods: Path, content: Path | None, o
         link_directory(support / "Content", content)
     fixture = "balance-" + slug(match.id)
     maps_rel = user_map_dir(mods / MOD)
-    write_fixture(match, mods / MOD / "maps", support / maps_rel / fixture)
+    maps_dir = next((d for d in (mods / MOD / "maps", mods / MOD / "standalone" / "maps") if (d / match.map).is_dir()),
+                    mods / MOD / "maps")
+    write_fixture(match, maps_dir, support / maps_rel / fixture)
     env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENRA_AI_", "RTSAI_"))}
     env["DOTNET_ROLL_FORWARD"] = env.get("DOTNET_ROLL_FORWARD", "Major")
     if bot_log:

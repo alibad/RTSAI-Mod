@@ -83,7 +83,7 @@ def main():
         import re
         version = re.search(r"^\s*Version: (.+)$", (a.worktree / "mods/rtsai/mod.yaml").read_text(encoding="utf-8"), re.M)[1]
         dst = support / "maps" / "rtsai" / version.strip() / "sa-observe"
-        src = next(d / a.map for d in (a.worktree / "mods/rtsai/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
+        src = next(d / a.map for d in (a.worktree / "mods/rtsai/maps", a.worktree / "mods/rtsai/standalone/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
         shutil.copytree(src, dst)   # a classic (Westwood) map only ever lands in this scratch support dir
         lua = (ROOT / "tools/standalone-smoke" / script).read_text(encoding="utf-8")
         if a.look:

@@ -33,3 +33,12 @@
 		Filename: ra2|standalone/palettes/general.pal
 	PaletteFromFile@resource:
 		Filename: ra2|standalone/palettes/general.pal
+
+# The ore mine: a resource spawn that regrows the ore around it (the Westwood maps use the stock ore drills, which
+# are EA art). Rendered by tools/standalone-terrain.py --mines; placed in the home ore fields of the generated maps.
+oremine:
+	Inherits: ^OreDrill
+	RenderSprites:
+		Image: oremine
+	WithIdleAnimation:
+		Interval: 125
