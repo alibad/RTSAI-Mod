@@ -51,6 +51,39 @@ def seg_dist(p, a, b):
     return np.hypot(p[..., 0] - (a[0] + t * ab[0]), p[..., 1] - (a[1] + t * ab[1]))
 
 
+# Road directions whose edges come out straight on the corner-transition templates, in the isotropic plane
+# (px, py): along a cell axis (2:1 on screen) or along x + y or x - y (screen horizontal or vertical). Corners at the
+# same distance from such a line share a row, so the road band switches whole rows of corners and its edge is a
+# straight run of half-cell or chamfer templates. Any other slope steps from row to row: the staircase edge.
+CLEAN = [np.array(d, float) / np.hypot(*d) for d in
+         ((1, 0), (1, 0.5), (0, 1), (-1, 0.5), (-1, 0), (-1, -0.5), (0, -1), (1, -0.5))]
+
+
+def road_mask(P, a, b, half_width=1.1):
+    """A road from a to b drawn only along CLEAN directions: a short leg along the minor direction, the long run along
+    the dominant one, then the rest of the minor leg (a Z). The two neighbouring directions that bracket b - a span it
+    with non-negative lengths. Point reflection and mirroring map the Z onto itself, so symmetric maps stay fair."""
+    a, b = np.asarray(a, float), np.asarray(b, float)
+    v = b - a
+    ang = [math.atan2(d[1], d[0]) % (2 * math.pi) for d in CLEAN]
+    t = math.atan2(v[1], v[0]) % (2 * math.pi)
+    for i in range(len(CLEAN)):
+        lo, hi = ang[i], ang[(i + 1) % len(CLEAN)]
+        span = (hi - lo) % (2 * math.pi)
+        if (t - lo) % (2 * math.pi) <= span + 1e-9:
+            d1, d2 = CLEAN[i], CLEAN[(i + 1) % len(CLEAN)]
+            break
+    k1, k2 = np.linalg.solve(np.stack([d1, d2], 1), v)
+    (major, kM), (minor, km) = ((d1, k1), (d2, k2)) if k1 >= k2 else ((d2, k2), (d1, k1))
+    p1 = a + minor * km / 2
+    p2 = p1 + major * kM
+    mask = np.zeros(P.shape[:2], bool)
+    for s, e in ((a, p1), (p1, p2), (p2, b)):
+        if np.hypot(*(e - s)) > 1e-6:
+            mask |= seg_dist(P, s, e) < half_width
+    return mask
+
+
 def smooth_noise(px, py, seed, scale):
     r = np.random.default_rng(seed)
     s = 0
@@ -198,7 +231,7 @@ def twin_fords():
     road = np.zeros(dist.shape, bool)
     for s in spawns_p:
         for q in ford_p:
-            road |= seg_dist(P, s, q) < 1.1
+            road |= road_mask(P, s, q)
     for s in spawns_p:
         rough &= np.hypot(P[..., 0] - s[0], P[..., 1] - s[1]) > 10
     mb.paint(rough, "rough")
@@ -228,10 +261,10 @@ def harbor_line():
     noise = smooth_noise(ax, P[..., 1], 11, 8.0)
     rough = (noise > 0.4) & (P[..., 1] > coast + 4) & ~lake
     spawns_p = [np.array([mx - 40.0, 46.0]), np.array([mx + 40.0, 46.0])]
-    road = seg_dist(P, spawns_p[0], np.array([mx, 52.0])) < 1.1
-    road |= seg_dist(P, spawns_p[1], np.array([mx, 52.0])) < 1.1
+    road = road_mask(P, spawns_p[0], np.array([mx, 52.0]))
+    road |= road_mask(P, spawns_p[1], np.array([mx, 52.0]))
     for sgn in (-1, 1):
-        road |= seg_dist(P, np.array([mx + sgn * 40.0, 46.0]), np.array([mx + sgn * 26.0, coast.min() + 2])) < 1.1
+        road |= road_mask(P, np.array([mx + sgn * 40.0, 46.0]), np.array([mx + sgn * 26.0, coast.min() + 2]))
     for s in spawns_p:
         rough &= np.hypot(P[..., 0] - s[0], P[..., 1] - s[1]) > 10
     shore = (P[..., 1] < coast + 1.2) & ~sea
