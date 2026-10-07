@@ -414,6 +414,624 @@ dog-hezbollah:
 		Filename: dog-hezbollahicon.png
 		Offset: 0, 0
 
+
+engineer-china:
+	Defaults:
+		Filename: engineer-china.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-chinaicon.png
+		Offset: 0, 0
+
+engineer-iran:
+	Defaults:
+		Filename: engineer-iran.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-iranicon.png
+		Offset: 0, 0
+
+engineer-turkey:
+	Defaults:
+		Filename: engineer-turkey.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-turkeyicon.png
+		Offset: 0, 0
+
+engineer-saudi:
+	Defaults:
+		Filename: engineer-saudi.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-saudiicon.png
+		Offset: 0, 0
+
+engineer-israel:
+	Defaults:
+		Filename: engineer-israel.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-israelicon.png
+		Offset: 0, 0
+
+engineer-yemen:
+	Defaults:
+		Filename: engineer-yemen.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-yemenicon.png
+		Offset: 0, 0
+
+engineer-hezbollah:
+	Defaults:
+		Filename: engineer-hezbollah.shp
+		Offset: 0, 0, 16
+	stand:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+		Tick: 160
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 516
+		Tick: 90
+	idle1:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	idle2:
+		Start: 168
+		Length: 12
+		Facings: 8
+		ShadowStart: 676
+		Tick: 120
+	prone-run:
+		Start: 264
+		Length: 6
+		Facings: 8
+		ShadowStart: 772
+		Tick: 110
+	prone-stand:
+		Start: 312
+		Facings: 8
+		ShadowStart: 820
+		Tick: 160
+	die1:
+		Start: 320
+		Length: 14
+		Facings: 1
+		ShadowStart: 828
+		Tick: 70
+	die2:
+		Start: 334
+		Length: 14
+		Facings: 1
+		ShadowStart: 842
+		Tick: 70
+	shoot:
+		Start: 348
+		Length: 6
+		Facings: 8
+		ShadowStart: 856
+		Tick: 80
+	prone-shoot:
+		Start: 396
+		Length: 6
+		Facings: 8
+		ShadowStart: 904
+		Tick: 80
+	liedown:
+		Start: 444
+		Length: 4
+		Facings: 8
+		ShadowStart: 952
+		Tick: 80
+	standup:
+		Start: 476
+		Length: 4
+		Facings: 8
+		ShadowStart: 984
+		Tick: 80
+	cheer:
+		Start: 72
+		Length: 12
+		Facings: 8
+		ShadowStart: 580
+		Tick: 120
+	paradrop:
+		Start: 0
+		Facings: 8
+		ShadowStart: 508
+	icon:
+		Filename: engineer-hezbollahicon.png
+		Offset: 0, 0
+
+
 harv-china:
 	Defaults:
 		Filename: harv-china.shp
@@ -490,6 +1108,7 @@ harv-hezbollah:
 	icon:
 		Filename: harv-hezbollahicon.png
 		Offset: 0, 0
+
 
 
 htk-china:
@@ -598,6 +1217,7 @@ htk-hezbollah:
 		Offset: 0, 0
 
 
+
 lcrf-china:
 	Defaults:
 		Filename: lcrf-china.shp
@@ -674,6 +1294,7 @@ lcrf-hezbollah:
 	icon:
 		Filename: lcrf-hezbollahicon.png
 		Offset: 0, 0
+
 
 
 mcv-china:
@@ -754,6 +1375,7 @@ mcv-hezbollah:
 		Offset: 0, 0
 
 
+
 sapc-china:
 	Defaults:
 		Filename: sapc-china.shp
@@ -830,6 +1452,7 @@ sapc-hezbollah:
 	icon:
 		Filename: sapc-hezbollahicon.png
 		Offset: 0, 0
+
 
 
 spy-china:
@@ -1447,5 +2070,6 @@ spy-hezbollah:
 	icon:
 		Filename: spy-hezbollahicon.png
 		Offset: 0, 0
+
 
 
