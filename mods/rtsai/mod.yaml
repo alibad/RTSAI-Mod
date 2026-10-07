@@ -110,6 +110,7 @@ Rules:
 	ra2|modern-factions/art-vehicles-fx.yaml
 	ra2|modern-factions/art-infantry.yaml
 	ra2|modern-factions/art-buildings.yaml
+	ra2|standalone/rules.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -152,7 +153,7 @@ ModelSequences:
 	ra2|sequences/voxels.yaml
 
 Cursors:
-	ra2|cursors.yaml
+	ra2|standalone/cursors.yaml
 
 Chrome:
 	ra2|chrome.yaml

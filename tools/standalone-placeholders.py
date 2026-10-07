@@ -313,12 +313,10 @@ def build():
     for name in m["cursors"]:
         im, meta = sheet(cursor_frame(), cursor_frames(name))
         write_png(ph / name, im, meta)
-    n = 0
-    for ts in ["temperat"]:   # the standalone game ships one theatre; snow and urban are classic-only
-        n += placeholder_tileset(ROOT / "mods" / "rtsai-classic" / "tilesets" / f"{ts}.yaml", OUT / "tilesets" / f"{ts}.yaml", f"standalone-{ts}.png")
+    n = 0   # terrain: the real tileset now comes from tools/standalone-terrain.py (Blender), not from placeholders
     size = sum(p.stat().st_size for p in ph.rglob("*") if p.is_file())
     print(f"{len(m['sprites'])} sprites, {len(m['models'])} model files, {len(m['palettes'])} palettes, "
-          f"{len(m['cursors'])} cursors, {n} templates; placeholders {size / 1e6:.1f} MB")
+          f"{len(m['cursors'])} cursors; placeholders {size / 1e6:.1f} MB")
 
 
 def main():

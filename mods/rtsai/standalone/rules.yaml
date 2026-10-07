@@ -1,0 +1,35 @@
+# Standalone-only rules: project palettes instead of RA2 palette files. The classic add-on does not load this file.
+# Two palettes are still supplied under their RA2 names by the Phase 3 deliveries: anim.pal (effects agent) and
+# unittem.pal (until the base kit lands, when "player" moves to the kit's kitbase.pal).
+
+^Palettes:
+	PaletteFromFile@terrain-temperate:
+		Filename: ra2|standalone/terrain/temperate.pal
+	-PaletteFromFile@terrain-snow:
+	-PaletteFromFile@terrain-urban:
+	-PaletteFromFile@playerurb:
+	-PaletteFromFile@playersno:
+	PaletteFromFile@temperatecity:
+		Filename: ra2|standalone/palettes/general.pal
+	-PaletteFromFile@snowcity:
+	-PaletteFromFile@urbancity:
+	PaletteFromFile@temperateliberty:
+		Filename: ra2|standalone/palettes/general.pal
+	-PaletteFromFile@snowliberty:
+	-PaletteFromFile@urbanliberty:
+	PaletteFromFile@outpost-rubble:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@chrome:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@ts-chrome:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@pips:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@ra:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@mousepal:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@ts-mousepal:
+		Filename: ra2|standalone/palettes/general.pal
+	PaletteFromFile@resource:
+		Filename: ra2|standalone/palettes/general.pal

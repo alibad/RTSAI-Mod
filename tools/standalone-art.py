@@ -92,7 +92,296 @@ def build_shroud():
     print(f"shroud: {len(shroud_index())} masks -> {ART / 'shroud.png'}, {ART / 'fog.png'}")
 
 
-TARGETS = {"shroud": build_shroud}
+# ------------------------------------------------------------------------------------------------ cursors
+CUR = 32            # frame size (px); drawn at 4x and downsampled
+SS = 4
+INK, WHITE = (18, 22, 28, 255), (244, 247, 250, 255)
+COL = {"move": (96, 226, 126), "attack": (244, 72, 60), "guard": (246, 196, 70), "deploy": (86, 206, 246),
+       "enter": (102, 156, 255), "sell": (250, 206, 74), "repair": (150, 230, 96), "power": (196, 120, 255),
+       "nuke": (255, 128, 48), "heal": (110, 236, 140), "blocked": (236, 56, 56), "neutral": (230, 236, 242)}
+
+
+def _canvas():
+    from PIL import ImageDraw
+    im = Image.new("RGBA", (CUR * SS, CUR * SS), (0, 0, 0, 0))
+    return im, ImageDraw.Draw(im)
+
+
+def _done(im):
+    return np.array(im.resize((CUR, CUR), Image.LANCZOS))
+
+
+def _poly(d, pts, fill, w=2.2):
+    s = SS
+    p = [(x * s, y * s) for x, y in pts]
+    d.polygon(p, fill=fill)
+    d.line(p + [p[0]], fill=INK, width=int(w * s), joint="curve")
+
+
+def _ring(d, cx, cy, r, color, w=2.0):
+    s = SS
+    d.ellipse([(cx - r) * s, (cy - r) * s, (cx + r) * s, (cy + r) * s], outline=INK, width=int((w + 1.6) * s))
+    d.ellipse([(cx - r) * s, (cy - r) * s, (cx + r) * s, (cy + r) * s], outline=color, width=int(w * s))
+
+
+def _line(d, a, b, color, w=2.0):
+    s = SS
+    d.line([(a[0] * s, a[1] * s), (b[0] * s, b[1] * s)], fill=INK, width=int((w + 1.6) * s))
+    d.line([(a[0] * s, a[1] * s), (b[0] * s, b[1] * s)], fill=color, width=int(w * s))
+
+
+def cur_arrow(phase=0.0, color=WHITE):
+    im, d = _canvas()
+    _poly(d, [(1.5, 1.5), (1.5, 21), (6.5, 16.5), (10, 24.5), (13.5, 23), (10.2, 15.2), (17, 15)], color)
+    return _done(im)
+
+
+def cur_scroll(angle, blocked=False):
+    im, d = _canvas()
+    a = math.radians(angle)
+    c, s_ = math.cos(a), math.sin(a)
+    tri = [(14, 0), (-2, -9), (2, 0), (-2, 9)]
+    pts = [(16 + x * c - y * s_, 16 + x * s_ + y * c) for x, y in tri]
+    _poly(d, pts, (*COL["blocked"], 255) if blocked else WHITE)
+    return _done(im)
+
+
+def cur_brackets(phase):
+    im, d = _canvas()
+    k = 3 + 2.5 * (0.5 + 0.5 * math.cos(phase * 2 * math.pi))
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            cx, cy = 16 + sx * (16 - k - 2), 16 + sy * (16 - k - 2)
+            _line(d, (cx, cy), (cx - sx * 7, cy), WHITE)
+            _line(d, (cx, cy), (cx, cy - sy * 7), WHITE)
+    return _done(im)
+
+
+def cur_chevrons(phase, color):
+    im, d = _canvas()
+    off = 3 * (1 - phase)
+    for ang in (0, 90, 180, 270):
+        a = math.radians(ang)
+        c, s_ = math.cos(a), math.sin(a)
+        pts = [(-12 - off, -5), (-6 - off, 0), (-12 - off, 5)]
+        pts = [(16 + x * c - y * s_, 16 + x * s_ + y * c) for x, y in pts]
+        _line(d, pts[0], pts[1], (*color, 255))
+        _line(d, pts[1], pts[2], (*color, 255))
+    _ring(d, 16, 16, 1.6, (*color, 255), 1.5)
+    return _done(im)
+
+
+def cur_crosshair(phase, color):
+    im, d = _canvas()
+    r = 9 + 1.5 * math.sin(phase * 2 * math.pi)
+    _ring(d, 16, 16, r, (*color, 255))
+    for ang in (0, 90, 180, 270):
+        a = math.radians(ang + 45 * phase)
+        _line(d, (16 + math.cos(a) * (r - 4), 16 + math.sin(a) * (r - 4)),
+              (16 + math.cos(a) * (r + 5), 16 + math.sin(a) * (r + 5)), (*color, 255))
+    return _done(im)
+
+
+def cur_shield(phase, color):
+    im, d = _canvas()
+    g = 1 + 0.08 * math.sin(phase * 2 * math.pi)
+    pts = [(16 + x * g, 16 + y * g) for x, y in [(0, -11), (9, -7), (8, 3), (0, 11), (-8, 3), (-9, -7)]]
+    _poly(d, pts, (*color, 255))
+    return _done(im)
+
+
+def cur_expand(phase, color):
+    im, d = _canvas()
+    k = 4 + 4 * phase
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            tip = (16 + sx * (6 + k), 16 + sy * (6 + k))
+            _line(d, (16 + sx * 3, 16 + sy * 3), tip, (*color, 255))
+            _line(d, tip, (tip[0] - sx * 5, tip[1]), (*color, 255))
+            _line(d, tip, (tip[0], tip[1] - sy * 5), (*color, 255))
+    return _done(im)
+
+
+def cur_enter(phase, color):
+    im, d = _canvas()
+    s = SS
+    d.rectangle([7 * s, 13 * s, 25 * s, 27 * s], outline=INK, width=int(3.4 * s))
+    d.rectangle([7 * s, 13 * s, 25 * s, 27 * s], outline=(*color, 255), width=int(2 * s))
+    y = 2 + 6 * phase
+    _poly(d, [(16, y + 10), (10, y + 3), (14, y + 3), (14, y - 2), (18, y - 2), (18, y + 3), (22, y + 3)], (*color, 255), 1.6)
+    return _done(im)
+
+
+def cur_coin(phase, color):
+    im, d = _canvas()
+    s = SS
+    wscale = abs(math.cos(phase * math.pi))
+    rx = max(1.5, 9 * wscale)
+    d.ellipse([(16 - rx) * s, 7 * s, (16 + rx) * s, 25 * s], fill=(*color, 255), outline=INK, width=int(1.8 * s))
+    if wscale > 0.45:
+        _line(d, (16, 10), (16, 22), INK, 1.6)
+        _line(d, (16 - rx * 0.4, 13), (16 + rx * 0.4, 13), INK, 1.6)
+        _line(d, (16 - rx * 0.4, 19), (16 + rx * 0.4, 19), INK, 1.6)
+    return _done(im)
+
+
+def cur_wrench(phase, color):
+    im, d = _canvas()
+    a = math.radians(-30 + 60 * math.sin(phase * 2 * math.pi))
+    c, s_ = math.cos(a), math.sin(a)
+
+    def rot(x, y):
+        return 16 + x * c - y * s_, 16 + x * s_ + y * c
+    _line(d, rot(-9, 9), rot(5, -5), (*color, 255), 3.2)
+    _ring(d, *rot(7, -7), 4.2, (*color, 255), 2.2)
+    return _done(im)
+
+
+def cur_flag(phase, color):
+    im, d = _canvas()
+    _line(d, (10, 27), (10, 4), WHITE, 1.8)
+    pts = [(10.5, 5)] + [(10.5 + i * 1.6, 5 + 1.6 * math.sin(phase * 2 * math.pi + i * 0.8)) for i in range(1, 9)]
+    pts += [(10.5 + i * 1.6, 13 + 1.6 * math.sin(phase * 2 * math.pi + i * 0.8)) for i in range(8, 0, -1)] + [(10.5, 13)]
+    _poly(d, pts, (*color, 255), 1.6)
+    return _done(im)
+
+
+def cur_power(phase, color, glyph="ring"):
+    im, d = _canvas()
+    for i in range(2):
+        r = 4 + ((phase + i * 0.5) % 1.0) * 10
+        _ring(d, 16, 16, r, (*color, int(255 * (1 - ((phase + i * 0.5) % 1.0) * 0.6))), 1.6)
+    s = SS
+    if glyph == "cross":
+        _line(d, (16, 11), (16, 21), WHITE, 2.4)
+        _line(d, (11, 16), (21, 16), WHITE, 2.4)
+    elif glyph == "bolt":
+        _poly(d, [(17, 8), (11, 17), (15.5, 17), (14, 24), (21, 14), (16.5, 14)], (*color, 255), 1.4)
+    elif glyph == "drop":
+        d.pieslice([10 * s, 9 * s, 22 * s, 21 * s], 180, 360, fill=WHITE, outline=INK, width=int(1.4 * s))
+        _line(d, (11, 15), (16, 23), WHITE, 1.2)
+        _line(d, (21, 15), (16, 23), WHITE, 1.2)
+    elif glyph == "bomb":
+        d.ellipse([11 * s, 12 * s, 21 * s, 22 * s], fill=INK)
+        _line(d, (19, 13), (23, 9), (*color, 255), 1.6)
+    else:
+        d.ellipse([14 * s, 14 * s, 18 * s, 18 * s], fill=(*color, 255), outline=INK, width=int(1 * s))
+    return _done(im)
+
+
+def cur_blocked():
+    im, d = _canvas()
+    _ring(d, 16, 16, 10, (*COL["blocked"], 255), 2.6)
+    _line(d, (9, 23), (23, 9), (*COL["blocked"], 255), 2.6)
+    return _done(im)
+
+
+SCROLL_DIRS = {"t": -90, "tr": -45, "r": 0, "br": 45, "b": 90, "bl": 135, "l": 180, "tl": -135}
+
+
+def cursor_frames(name: str, n: int):
+    """Our drawing for an engine cursor name, as n animation frames."""
+    ph = [i / max(1, n) for i in range(n)]
+    base = name.replace("-minimap", "").replace("2", "")
+    if name in ("default", "default-minimap"):
+        return [cur_arrow()]
+    if base.endswith("-blocked") or base in ("generic-blocked", "drop-blocked", "water-move-blocked", "attack-blocked"):
+        if base.startswith("scroll-") or base.startswith("joystick-"):
+            return [cur_scroll(SCROLL_DIRS[base.split("-")[1]], True)]
+        return [cur_blocked()] * n
+    if base.startswith("scroll-"):
+        return [cur_scroll(SCROLL_DIRS[base.split("-")[1]])]
+    if base.startswith("scrollclick") or base.startswith("joystick"):
+        parts = base.split("-")
+        return [cur_scroll(SCROLL_DIRS[parts[1]]) if len(parts) > 1 and parts[1] in SCROLL_DIRS else cur_power(0, COL["neutral"])]
+    table = {
+        "select": lambda p: cur_brackets(p),
+        "move": lambda p: cur_chevrons(p, COL["move"]), "move-rough": lambda p: cur_chevrons(p, COL["move"]),
+        "water-move": lambda p: cur_chevrons(p, COL["deploy"]), "ability": lambda p: cur_chevrons(p, COL["deploy"]),
+        "attack": lambda p: cur_crosshair(p, COL["attack"]), "attackoutsiderange": lambda p: cur_crosshair(p, COL["guard"]),
+        "harvest": lambda p: cur_crosshair(p, COL["sell"]), "c4": lambda p: cur_power(p, COL["attack"], "bomb"),
+        "attackmove": lambda p: cur_crosshair(p, COL["nuke"]), "assaultmove": lambda p: cur_crosshair(p, COL["nuke"]),
+        "guard": lambda p: cur_shield(p, COL["guard"]), "looped-patrol": lambda p: cur_shield(p, COL["move"]),
+        "deploy": lambda p: cur_expand(p, COL["deploy"]), "dsol-deploy": lambda p: cur_expand(p, COL["deploy"]),
+        "undeploy": lambda p: cur_expand(1 - p, COL["deploy"]), "undeploy-silver": lambda p: cur_expand(1 - p, COL["neutral"]),
+        "deploy-sandbags": lambda p: cur_expand(p, COL["guard"]),
+        "enter": lambda p: cur_enter(p, COL["enter"]), "capture": lambda p: cur_enter(p, COL["guard"]),
+        "sell": lambda p: cur_coin(p, COL["sell"]), "goldwrench": lambda p: cur_wrench(p, COL["sell"]),
+        "repair": lambda p: cur_wrench(p, COL["repair"]), "waypoint": lambda p: cur_flag(p, COL["move"]),
+        "rallypoint": lambda p: cur_flag(p, COL["guard"]), "beacon-mouseover": lambda p: cur_power(p, COL["guard"]),
+        "heal": lambda p: cur_power(p, COL["heal"], "cross"), "nuke": lambda p: cur_power(p, COL["nuke"], "bomb"),
+        "detonate": lambda p: cur_power(p, COL["attack"], "bomb"), "bomb": lambda p: cur_power(p, COL["attack"], "bomb"),
+        "remove-bomb": lambda p: cur_power(p, COL["move"], "bomb"), "weatherstorm": lambda p: cur_power(p, COL["deploy"], "bolt"),
+        "praradrop": lambda p: cur_power(p, COL["neutral"], "drop"), "powerdown": lambda p: cur_power(p, COL["guard"], "bolt"),
+    }
+    fn = table.get(base) or table.get(name) or (lambda p: cur_power(p, COL["power"]))
+    return [fn(p) for p in ph]
+
+
+def build_cursors():
+    """New cursor sheet + standalone cursors.yaml with the same sequence names as the stock one."""
+    src = (MOD / "cursors.yaml").read_text(encoding="utf-8").replace("\r\n", "\n")
+    names = []   # (name, length, has_xy)
+    for m in re.finditer(r"^\t\t(\S+):[^\n]*\n((?:\t\t\t.*\n?)*)", src, re.M):   # a name may carry a comment
+        body = m[2]
+        ln = re.search(r"Length: (\S+)", body)
+        names.append((m[1], int(ln[1]) if ln and ln[1] != "*" else 1, "X:" in body))
+    seen, frames, yaml = set(), [], ["# GENERATED by tools/standalone-art.py: the standalone cursor set, drawn in code.\n"
+                                     "# Same sequence names as the classic cursors.yaml; frame layout is our own.\n\n"
+                                     "Cursors:\n\tra2|standalone/art/cursors.png: mouse\n"]
+    for name, n, has_xy in names:
+        if name in seen:
+            continue
+        seen.add(name)
+        f = cursor_frames(name, n)
+        start = len(frames)
+        frames += f
+        yaml.append(f"\t\t{name}:\n\t\t\tStart: {start}\n" + (f"\t\t\tLength: {len(f)}\n" if len(f) > 1 else ""))
+        if name in ("default", "default-minimap"):
+            yaml.append(f"\t\t\tX: {-(CUR // 2) + 1}\n\t\t\tY: {-(CUR // 2) + 1}\n")
+    sheet_png(frames, ART / "cursors.png", cols=16)
+    (MOD / "standalone" / "cursors.yaml").write_text("".join(yaml), encoding="utf-8", newline="\n")
+    # The rally point marker: the flag and a pulsing ground ring (the stock ones were frames of the cursor sheet).
+    flag = [cur_flag(i / 10, COL["guard"]) for i in range(10)]
+    circles = []
+    for i in range(10):
+        im, d = _canvas()
+        s = SS
+        r = 5 + 9 * (i / 10)
+        d.ellipse([(16 - r) * s, (16 - r / 2) * s, (16 + r) * s, (16 + r / 2) * s], outline=(*COL["guard"], int(255 * (1 - i / 12))),
+                  width=int(1.6 * s))
+        circles.append(_done(im))
+    sheet_png(flag, ART / "rallypoint-flag.png", cols=10)
+    sheet_png(circles, ART / "rallypoint-circles.png", cols=10)
+    print(f"cursors: {len(seen)} sequences, {len(frames)} frames -> {ART / 'cursors.png'}")
+
+
+# ------------------------------------------------------------------------------------------------ palettes
+def general_palette() -> bytes:
+    """A project palette for the remaining indexed art: 0 transparent, 1 shadow, 2-15 greys, 16-31 the player-colour
+    remap ramp, 32-255 an HSV lattice (7 values x 4 saturations x 8 hues). 6-bit VGA values like every .pal."""
+    import colorsys
+    pal = [(0, 0, 0), (0, 0, 0)] + [(int(255 * i / 13),) * 3 for i in range(14)]
+    for i in range(16):
+        t = i / 15
+        pal.append((int(255 * (1 - 0.8 * t)), int(48 * (1 - t)), int(40 * (1 - t))))
+    for v in range(7):
+        for s_ in range(4):
+            for h in range(8):
+                r, g, b = colorsys.hsv_to_rgb(h / 8, 0.25 + 0.25 * s_, 0.3 + 0.7 * v / 6)
+                pal.append((int(r * 255), int(g * 255), int(b * 255)))
+    assert len(pal) == 256
+    return bytes(c >> 2 for rgb in pal for c in rgb)
+
+
+def build_palettes():
+    out = MOD / "standalone" / "palettes"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "general.pal").write_bytes(general_palette())
+    print(f"palettes: {out / 'general.pal'}")
+
+
+TARGETS = {"shroud": build_shroud, "cursors": build_cursors, "palettes": build_palettes}
 
 
 def main():
