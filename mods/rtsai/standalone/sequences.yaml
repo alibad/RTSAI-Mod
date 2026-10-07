@@ -180,3 +180,11 @@ oremine:
 		Start: 1
 		Length: 10
 		Tick: 80
+
+rank:
+	veteran:
+		Filename: pips-rtsai.png
+		Start: 38
+	elite:
+		Filename: pips-rtsai.png
+		Start: 39

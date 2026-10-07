@@ -133,8 +133,8 @@ def units() -> str:
         done.add(actor)
         out.append(f"{actor}:\n" + "".join(f"\t{t}:\n\t\tRequiresCondition: {VOXEL_OFF}\n" for t in off)
                    + "".join(f"\t-{t}:\n" for t in drop)
-                   + f"\tRenderSprites:\n\t\tImage: {role}-china\n\t\tPlayerPalette: kitplayer\n\t\tFactionImages:\n"
-                   + "".join(f"\t\t\t{f}: {role}-{f}\n" for f in FACTIONS)
+                   + f"\tRenderSprites:\n\t\tImage: unit-{role}-china\n\t\tPlayerPalette: kitplayer\n\t\tFactionImages:\n"
+                   + "".join(f"\t\t\t{f}: unit-{role}-{f}\n" for f in FACTIONS)
                    + "\tBodyOrientation:\n\t\tQuantizedFacings: 32\n\tWithFacingSpriteBody:\n" + extra + "\n")
     parents = {"r2kunlun": "lcrf", "amcv.colorpicker": "amcv"}
     for actor, text in UNIT_INHERITORS.items():
@@ -178,6 +178,47 @@ def badge_icon(src: Path, dst: Path, label: str, colour):
     im.save(dst, optimize=True)
 
 
+EFFECTS_DIR = ROOT / "mods" / "rtsai" / "standalone" / "effects"
+SEQUENCE_SOURCES = [ROOT / "mods" / "rtsai" / "sequences", ROOT / "mods" / "rtsai" / "modern-factions"]
+
+
+def effect_png_overrides() -> str:
+    """The effects batch delivers some images as palette-free PNG sheets under the stock stems (parach.png for
+    parach.shp...). Every sequence node that names <stem>.shp gets the same path with <stem>.png. SHPs delivered under
+    the stock names need nothing: the effects folder is mounted after the placeholders."""
+    if not EFFECTS_DIR.exists():
+        return ""
+    stems = {p.stem for p in EFFECTS_DIR.glob("*.png")}
+    tree = {}                                        # nested keys -> {..., "Filename": "x.png"}
+    files = [f for d in SEQUENCE_SOURCES for f in sorted(d.glob("*.yaml")) if "sequences" in f.name or d.name == "sequences"]
+    for f in files:
+        path = []                                    # (indent, key) stack
+        for line in f.read_text(encoding="utf-8").replace("\r\n", "\n").split("\n"):
+            body = line.split("#", 1)[0].rstrip()
+            if not body.strip():
+                continue
+            indent = len(body) - len(body.lstrip("\t"))
+            key, _, value = body.strip().partition(":")
+            while path and path[-1][0] >= indent:
+                path.pop()
+            path.append((indent, key))
+            m = re.fullmatch(r"(\S+)\.shp", value.strip())
+            if key == "Filename" and m and m[1] in stems:
+                node = tree
+                for _, k in path[:-1]:
+                    node = node.setdefault(k, {})
+                node["Filename"] = f"{m[1]}.png"
+    if not tree:
+        return ""
+
+    def emit(node, depth):
+        return "".join("\t" * depth + (f"{k}: {v}\n" if isinstance(v, str) else f"{k}:\n" + emit(v, depth + 1))
+                       for k, v in node.items())
+
+    return ("# 3. Effects delivered as PNG sheets under the stock stems (standalone/effects).\n"
+            + "".join(f"{k}:\n{emit(v, 1)}\n" for k, v in tree.items()))
+
+
 def kit_extra_sequences() -> str:
     """kit-extra-sequences.yaml: the stock effect sequences the shared units' traits play (mind-control overlay,
     muzzle flash, harvest dust, chrono-miner warps) linked into the kit unit images, plus interim images for the
@@ -189,7 +230,9 @@ def kit_extra_sequences() -> str:
     for role, stock in UNIT_SEQUENCE_LINKS.items():
         for f in FACTIONS:
             if kit_has(f"{role}-{f}", units=True):
-                out.append(f"{role}-{f}:\n" + "".join(f"\tInherits@{s}: {s}\n" for s in stock) + "\n")
+                # a new image: the stock effects first, the kit image last, so the kit's own sequences (icon) win
+                out.append(f"unit-{role}-{f}:\n" + "".join(f"\tInherits@{s}: {s}\n" for s in stock)
+                           + f"\tInherits@kit: {role}-{f}\n\n")
     written = set()
     for f in FACTIONS:
         if not kit_has(f"hpwr-{f}"):
@@ -211,6 +254,7 @@ def kit_extra_sequences() -> str:
             stale.unlink()
         if not any(ECON_ART.iterdir()):
             ECON_ART.rmdir()
+    out.append(effect_png_overrides())
     return "".join(out).rstrip("\n") + "\n"
 
 

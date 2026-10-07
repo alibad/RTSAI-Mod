@@ -432,16 +432,16 @@ amcv:
 	WithVoxelBody:
 		RequiresCondition: false
 	RenderSprites:
-		Image: mcv-china
+		Image: unit-mcv-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: mcv-china
-			iran: mcv-iran
-			turkey: mcv-turkey
-			saudi: mcv-saudi
-			israel: mcv-israel
-			yemen: mcv-yemen
-			hezbollah: mcv-hezbollah
+			china: unit-mcv-china
+			iran: unit-mcv-iran
+			turkey: unit-mcv-turkey
+			saudi: unit-mcv-saudi
+			israel: unit-mcv-israel
+			yemen: unit-mcv-yemen
+			hezbollah: unit-mcv-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -450,16 +450,16 @@ smcv:
 	WithVoxelBody:
 		RequiresCondition: false
 	RenderSprites:
-		Image: mcv-china
+		Image: unit-mcv-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: mcv-china
-			iran: mcv-iran
-			turkey: mcv-turkey
-			saudi: mcv-saudi
-			israel: mcv-israel
-			yemen: mcv-yemen
-			hezbollah: mcv-hezbollah
+			china: unit-mcv-china
+			iran: unit-mcv-iran
+			turkey: unit-mcv-turkey
+			saudi: unit-mcv-saudi
+			israel: unit-mcv-israel
+			yemen: unit-mcv-yemen
+			hezbollah: unit-mcv-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -467,16 +467,16 @@ smcv:
 cmin:
 	-WithVoxelUnloadBody:
 	RenderSprites:
-		Image: harv-china
+		Image: unit-harv-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: harv-china
-			iran: harv-iran
-			turkey: harv-turkey
-			saudi: harv-saudi
-			israel: harv-israel
-			yemen: harv-yemen
-			hezbollah: harv-hezbollah
+			china: unit-harv-china
+			iran: unit-harv-iran
+			turkey: unit-harv-turkey
+			saudi: unit-harv-saudi
+			israel: unit-harv-israel
+			yemen: unit-harv-yemen
+			hezbollah: unit-harv-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -486,16 +486,16 @@ harv:
 		RequiresCondition: false
 	-WithVoxelUnloadBody:
 	RenderSprites:
-		Image: harv-china
+		Image: unit-harv-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: harv-china
-			iran: harv-iran
-			turkey: harv-turkey
-			saudi: harv-saudi
-			israel: harv-israel
-			yemen: harv-yemen
-			hezbollah: harv-hezbollah
+			china: unit-harv-china
+			iran: unit-harv-iran
+			turkey: unit-harv-turkey
+			saudi: unit-harv-saudi
+			israel: unit-harv-israel
+			yemen: unit-harv-yemen
+			hezbollah: unit-harv-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -506,16 +506,16 @@ htk:
 	WithVoxelBody:
 		RequiresCondition: false
 	RenderSprites:
-		Image: htk-china
+		Image: unit-htk-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: htk-china
-			iran: htk-iran
-			turkey: htk-turkey
-			saudi: htk-saudi
-			israel: htk-israel
-			yemen: htk-yemen
-			hezbollah: htk-hezbollah
+			china: unit-htk-china
+			iran: unit-htk-iran
+			turkey: unit-htk-turkey
+			saudi: unit-htk-saudi
+			israel: unit-htk-israel
+			yemen: unit-htk-yemen
+			hezbollah: unit-htk-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -531,16 +531,16 @@ sapc:
 	WithVoxelBody:
 		RequiresCondition: false
 	RenderSprites:
-		Image: sapc-china
+		Image: unit-sapc-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: sapc-china
-			iran: sapc-iran
-			turkey: sapc-turkey
-			saudi: sapc-saudi
-			israel: sapc-israel
-			yemen: sapc-yemen
-			hezbollah: sapc-hezbollah
+			china: unit-sapc-china
+			iran: unit-sapc-iran
+			turkey: unit-sapc-turkey
+			saudi: unit-sapc-saudi
+			israel: unit-sapc-israel
+			yemen: unit-sapc-yemen
+			hezbollah: unit-sapc-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -549,16 +549,16 @@ lcrf:
 	WithVoxelBody:
 		RequiresCondition: false
 	RenderSprites:
-		Image: lcrf-china
+		Image: unit-lcrf-china
 		PlayerPalette: kitplayer
 		FactionImages:
-			china: lcrf-china
-			iran: lcrf-iran
-			turkey: lcrf-turkey
-			saudi: lcrf-saudi
-			israel: lcrf-israel
-			yemen: lcrf-yemen
-			hezbollah: lcrf-hezbollah
+			china: unit-lcrf-china
+			iran: unit-lcrf-iran
+			turkey: unit-lcrf-turkey
+			saudi: unit-lcrf-saudi
+			israel: unit-lcrf-israel
+			yemen: unit-lcrf-yemen
+			hezbollah: unit-lcrf-hezbollah
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:

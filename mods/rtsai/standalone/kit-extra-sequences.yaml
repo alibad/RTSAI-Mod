@@ -3,117 +3,152 @@
 # 2. Interim images for the economy pieces the base kit has not drawn yet (heavy power plant, refinery
 #    upgrade); each falls away when the kit ships its own.
 
-mcv-china:
+unit-mcv-china:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-china
 
-mcv-iran:
+unit-mcv-iran:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-iran
 
-mcv-turkey:
+unit-mcv-turkey:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-turkey
 
-mcv-saudi:
+unit-mcv-saudi:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-saudi
 
-mcv-israel:
+unit-mcv-israel:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-israel
 
-mcv-yemen:
+unit-mcv-yemen:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-yemen
 
-mcv-hezbollah:
+unit-mcv-hezbollah:
 	Inherits@amcv: amcv
+	Inherits@kit: mcv-hezbollah
 
-harv-china:
+unit-harv-china:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-china
 
-harv-iran:
+unit-harv-iran:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-iran
 
-harv-turkey:
+unit-harv-turkey:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-turkey
 
-harv-saudi:
+unit-harv-saudi:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-saudi
 
-harv-israel:
+unit-harv-israel:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-israel
 
-harv-yemen:
+unit-harv-yemen:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-yemen
 
-harv-hezbollah:
+unit-harv-hezbollah:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
+	Inherits@kit: harv-hezbollah
 
-htk-china:
+unit-htk-china:
 	Inherits@htk: htk
+	Inherits@kit: htk-china
 
-htk-iran:
+unit-htk-iran:
 	Inherits@htk: htk
+	Inherits@kit: htk-iran
 
-htk-turkey:
+unit-htk-turkey:
 	Inherits@htk: htk
+	Inherits@kit: htk-turkey
 
-htk-saudi:
+unit-htk-saudi:
 	Inherits@htk: htk
+	Inherits@kit: htk-saudi
 
-htk-israel:
+unit-htk-israel:
 	Inherits@htk: htk
+	Inherits@kit: htk-israel
 
-htk-yemen:
+unit-htk-yemen:
 	Inherits@htk: htk
+	Inherits@kit: htk-yemen
 
-htk-hezbollah:
+unit-htk-hezbollah:
 	Inherits@htk: htk
+	Inherits@kit: htk-hezbollah
 
-sapc-china:
+unit-sapc-china:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-china
 
-sapc-iran:
+unit-sapc-iran:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-iran
 
-sapc-turkey:
+unit-sapc-turkey:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-turkey
 
-sapc-saudi:
+unit-sapc-saudi:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-saudi
 
-sapc-israel:
+unit-sapc-israel:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-israel
 
-sapc-yemen:
+unit-sapc-yemen:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-yemen
 
-sapc-hezbollah:
+unit-sapc-hezbollah:
 	Inherits@sapc: sapc
+	Inherits@kit: sapc-hezbollah
 
-lcrf-china:
+unit-lcrf-china:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-china
 
-lcrf-iran:
+unit-lcrf-iran:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-iran
 
-lcrf-turkey:
+unit-lcrf-turkey:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-turkey
 
-lcrf-saudi:
+unit-lcrf-saudi:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-saudi
 
-lcrf-israel:
+unit-lcrf-israel:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-israel
 
-lcrf-yemen:
+unit-lcrf-yemen:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-yemen
 
-lcrf-hezbollah:
+unit-lcrf-hezbollah:
 	Inherits@lcrf: lcrf
+	Inherits@kit: lcrf-hezbollah
 
 purifier-china:
 	icon:
@@ -149,3 +184,94 @@ purifier-hezbollah:
 	icon:
 		Filename: purifier-hezbollahicon.png
 		Offset: 0, 0
+
+# 3. Effects delivered as PNG sheets under the stock stems (standalone/effects).
+jumpjet:
+	die4:
+		Filename: nukedie.png
+	die6:
+		Filename: electro.png
+
+gaspysat:
+	icon:
+		Filename: asaticon.png
+
+josh:
+	die4:
+		Filename: nukedie.png
+	die5:
+		Filename: yuridie.png
+	die6:
+		Filename: electro.png
+
+^BasicInfantry:
+	die4:
+		Filename: nukedie.png
+	die5:
+		Filename: yuridie.png
+	die6:
+		Filename: electro.png
+
+overlay:
+	Defaults:
+		Filename: place.png
+
+editor-overlay:
+	Defaults:
+		Filename: place.png
+
+allyrepair:
+	repair:
+		Filename: wrench.png
+
+beacon:
+	idle:
+		Filename: pbeacon.png
+	arrow:
+		Filename: pbeacon.png
+
+parach:
+	Defaults:
+		Filename: parach.png
+
+chrono:
+	warpin:
+		Filename: warpin.png
+	warpout:
+		Filename: warpout.png
+
+missile:
+	idle:
+		Filename: missile.png
+
+icon:
+	gps:
+		Filename: asaticon.png
+	invuln:
+		Filename: ircricon.png
+	chrono:
+		Filename: chroicon.png
+	abomb:
+		Filename: nukeicon.png
+	paradrop:
+		Filename: paraicon.png
+	airborne:
+		Filename: aparicon.png
+	lightningstorm:
+		Filename: bolticon.png
+
+flameguy:
+	Defaults:
+		Filename: flameguy.png
+
+cmin:
+	harvest:
+		Filename: oregath.png
+	warpin:
+		Filename: warpin.png
+	warpout:
+		Filename: warpout.png
+
+harv:
+	harvest:
+		Filename: oregath.png

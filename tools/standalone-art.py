@@ -465,6 +465,14 @@ def build_bits():
             d.ellipse([2 * s, 2 * s, 6 * s, 6 * s], fill=(220, 220, 230, a))
             d.ellipse([8 * s, 2 * s, 12 * s, 6 * s], fill=(220, 220, 230, a))
         frames.append(draw((14, 9), mask))
+    for n in (1, 2):                                            # 38 veteran, 39 elite: rank chevrons
+
+        def chevrons(d, s, n=n):
+            for k in range(n):
+                y = (1 + 4 * k) * s
+                d.polygon([(0, y), (5 * s, y + 3 * s), (10 * s, y), (10 * s, y + 2.5 * s), (5 * s, y + 5.5 * s),
+                           (0, y + 2.5 * s)], fill=(250, 210, 80, 255), outline=(40, 30, 10, 255))
+        frames.append(draw((10, 6 + 4 * n), chevrons))
     region_sheet(frames, BITS / "pips-rtsai.png")
 
     # build clock: shaded sector shrinking clockwise from 12 o'clock; white = unchanged under Multiply
