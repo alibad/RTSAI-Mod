@@ -5,8 +5,78 @@ on `main`, 0 errors: MIGRATION.md round C). Branch `rtsai/art-preview` (local, n
 engine `rtsai/engine` 68c1e95557 (local-only: missiles fired over raised ground or ramps hit, and the `WRot.SLerp`
 crash of round 3 is fixed). Round 3 (same day, rules a47654a) and the round-2 and round-1 records follow.
 
+Round 5 (2026-10-07) retunes Hezbollah alone ("Salvo and swarm") on branch `rtsai/hezbollah-doctrine`; it comes
+first below.
+
 How each result was established: **[ran]** means the matches or duels were played and the numbers come from their
 recorded results. **[inferred]** means it was reasoned from rules, code or those results and not tested directly.
+
+## Round 5: Hezbollah "Salvo and swarm" (2026-10-07)
+
+[ran] Branch `rtsai/hezbollah-doctrine` (local, from `main` 3db6883). Only Hezbollah changed. It now follows the
+owner's doctrine: basic missiles, very powerful soldiers, very mini drones. The design and the build are in
+`docs/hezbollah-doctrine.md`. The other eight factions keep the round-4 rules, so the round-4 tables below still hold
+for every pair without Hezbollah.
+
+The campaigns (`docs/balance-data/r5-hz-campaigns.json`, `focus: [hezbollah]`) pit Hezbollah against all eight other
+factions with normal bots and a 40-minute cap:
+- land: Dustbowl and Official Tournament Map A, both orientations, 3 replicates (96 games);
+- naval: Little Big Lake (48 games);
+- probes: 1 replicate (32 games).
+
+Every run had 0 errors.
+
+| Run | Rules | Games | vs modern (35-65%) | vs America+Russia (≥35%) |
+|---|---|---:|---:|---:|
+| Round 4 final (reference) | e2c07b0 | 420 | 57% (45-68) | 48% (30-67) |
+| Probe, as designed | 2ed217e | 32 | 71% | 25% |
+| Land, as designed (stopped) | 2ed217e | 42 | 84% (68-93) | 70% (40-89) |
+| Probe, trim 1 (rules overlay) | 2ed217e + overlay | 32 | 65% | 44% |
+| Trims 1-2 | b70d61e | 96 | 70% (59-79) | 38% (21-57) |
+| Trim 3 (stopped) | efe7750 | 47 | 69% (53-82) | 32% (12-61) |
+| Trim 4 | 85d07d4 | 96 | 72% (61-81) | 75% (55-88) |
+| **Trim 5 (built)** | **d646808** | **96** | **69% (57-78)** | **40% (23-59)** |
+| Naval, round 4 final (reference) | e2c07b0 | 210 | 54% (38-69) | 67% (39-86) |
+| Naval, trim 5 | d646808 | 48 | 46% (31-62) | 50% (25-75) |
+
+Trim 5, Hezbollah's wins-losses (draws) against each faction:
+
+| | china | iran | turkey | saudi | yemen | israel | america | russia |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **hezbollah**, land | 10-1 (1d) | 4-3 (5d) | 9-2 (1d) | 9-3 | 4-6 (2d) | 9-3 | 3-6 (3d) | 4-6 (2d) |
+| **hezbollah**, naval | 3-1 (2d) | 3-2 (1d) | 1-1 (4d) | 2-4 | 1-4 (1d) | 2-3 (1d) | 1-0 (5d) | 2-3 (1d) |
+
+The trims:
+1. Trims 1-2 (b70d61e):
+   - the AT team costs 500 and loses its stationary concealment;
+   - the Line Fighter costs 275 (it traded 2.07 destroyed per credit at 225);
+   - rough-ground cover goes from x0.80 to x0.90.
+2. Trim 3 (efe7750): the AT team gets its concealment back at 550, and the rifle drops from 16 to 14. Without
+   concealment, Hezbollah fell to 21% against America, whose bots field almost no detectors.
+3. Trim 4 (85d07d4), aimed at the trade gap:
+   - the AT rocket does 65% against heavy armour and 80% against medium armour (was 95% and 100%);
+   - the AT team costs 500, with its concealment;
+   - the Rocket Battery and the Rail Technical do full damage to infantry;
+   - the bot's anti-air share goes from 24 to 40;
+   - the rifle goes back to 16.
+4. Trim 5 (d646808): every fighter still leaves the barracks Veteran but earns Elite at the usual rate (the 60%
+   promotion thresholds are gone). The Cedar Scout, the hero, starts Veteran instead of Elite.
+
+**Verdict.** [ran] The trim cap was two rounds after trim 3. Trim 5 is the configuration closest to both bands.
+- America+Russia is met: 40% (23-59).
+- Naval is inside the band on both sides: 46% (31-62) and 50% (25-75).
+- The modern band is missed by 4 points, within noise: 69% (57-78).
+
+[inferred] Hezbollah-side levers cannot separate the two scores:
+- Across the four trimmed rule sets, the modern score stayed at 69-72% while America+Russia moved from 32% to 75%.
+- Most of the gap is China, the round-4 miss (33% against the modern factions). Hezbollah beat China 11-1 in round
+  4 and 10-1 (1 draw) here. Against the other five modern factions, Hezbollah scores 65%.
+- The rest is defence. America's and Russia's infantry and base defences (pillboxes, Tesla coils, Prism towers,
+  sentry guns) kill about 27,000 credits of Hezbollah per game. The modern factions' rifle infantry, militia,
+  bunkers and bastions kill about 12,000.
+
+Closing the gap needs an all-faction pass: China's strength and the modern factions' anti-infantry. The full
+analysis is in `docs/hezbollah-doctrine.md`, "As built".
 
 ## Current state (round 4)
 
@@ -844,6 +914,11 @@ value left.
 | `r4-p1` | Round 4: probe, one replicate (140) | + changes 18-21 |
 | `r4-final`, `r4-final-naval` | Round 4: final round robin (420) and naval (210) | e2c07b0 |
 | `r4-campaigns.json` | Round 4 campaign definitions | — |
+| `r5-hz-probe`, `r5-hz-designed` | Round 5: Hezbollah probe (32) and stopped land run (42), as designed | 2ed217e |
+| `r5-hz-probe-t1` | Round 5: probe with the trim-1 rules overlay (32) | 2ed217e + overlay |
+| `r5-hz-t2`, `r5-hz-t3`, `r5-hz-t4` | Round 5: land runs after trims 1-2 (96), 3 (47 of 96, stopped) and 4 (96) | b70d61e, efe7750, 85d07d4 |
+| `r5-hz-t5`, `r5-hz-t5-naval` | Round 5: land (96) and naval (48), as built | d646808 |
+| `r5-hz-campaigns.json` | Round 5 campaign definitions (Hezbollah focus) | — |
 | `r2-duels-before`, `r2-duels-after` | Duels, rank 0 and 2, 8 per pair | 414f8fa / 31912c4 |
 | `r2-start-probe` | Probe (84 games) with veterancy telemetry | 414f8fa |
 | `r2-pass1` | Round robin, replicate 0 (84 games) | eba846d |
@@ -872,6 +947,9 @@ python tools/balance-harness.py run --campaign r3-round-robin --campaigns-file d
     --content <content> --output <scratch>/r3 --parallel 3
 python tools/balance-harness.py run --campaign r3-naval --campaigns-file docs/balance-data/r3-campaigns.json \
     --content <content> --output <scratch>/r3-naval --parallel 3
+# Round 5 (Hezbollah only): 96 land games, 48 naval
+python tools/balance-harness.py run --campaign hz-land --campaigns-file docs/balance-data/r5-hz-campaigns.json \n    --content <content> --output <scratch>/r5-land --parallel 8
+python tools/balance-harness.py run --campaign hz-naval --campaigns-file docs/balance-data/r5-hz-campaigns.json \n    --content <content> --output <scratch>/r5-naval --parallel 8
 ```
 
 Options:

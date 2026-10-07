@@ -1,6 +1,8 @@
-# Hezbollah doctrine: Salvo and Swarm (design for review)
+# Hezbollah doctrine: Salvo and Swarm
 
-Status: **design, gate (a)**. Branch `rtsai/hezbollah-doctrine` (local), from `main` 3db6883. No rules changed yet.
+Status: **implemented** on branch `rtsai/hezbollah-doctrine` (local, from `main` 3db6883, main 5df5950 merged). Owner
+gates: (a) design approved, (b) art approved at 1x/3x, (c) balance table: see "As built" at the end. Sections 1-8
+are the approved design; where the build differs, "As built" says so.
 Owner brief (2026-10-07): "basic missiles, very powerful soldiers, very mini drones". Every existing unit stays;
 they are retuned, and the doctrine adds what it needs. The faction keeps its real flag.
 
@@ -9,7 +11,7 @@ they are retuned, and the doctrine adds what it needs. The faction keeps its rea
 ## The doctrine in one line
 
 Few fighters, many rockets, small drones: a small core of veteran infantry fights from cover, cheap rocket volleys
-do the heavy lifting, and FPV teams launch regenerating micro-drones that only anti-air can stop.
+do the heavy lifting, and FPV teams launch regenerating micro-drones that anti-air and small arms can shoot down.
 
 | Pillar | Existing units retuned | New | Signature mechanic |
 |---|---|---|---|
@@ -222,3 +224,79 @@ local commits, nothing pushed.
 2. The new cheap launcher is a **Rail Technical** pickup (mobile), not a static launch-rail defence.
 3. The Cedar Scout is the hero; no second hero.
 4. Doctrine name **Salvo and swarm** and the tagline above (the narrative agent's identity text may want to match).
+
+## As built
+
+Differences from the design above. Each one was decided at an owner gate or measured by the harness (balance trims
+1-5, round 5 in `docs/balance.md`):
+
+| Item | Design | Built | Why |
+|---|---|---|---|
+| FPV drones vs small arms | anti-air only | `MicroDrone` target type: every `^MG` rifle and machine gun can hit them, and the ground auto-target lists include them | Owner watch item, gate (a) |
+| Ridge Missile Team | 450; RPG 90 against every armour as before | **500**, stationary concealment kept; RPG against heavy / medium armour 95 / 100 -> **65 / 80** | Trims 1-4. At 450 it traded 1.31 per credit. Without concealment (trims 1-2), Hezbollah fell to 21% against America, whose bots field almost no detectors. The modern factions lead with tanks. |
+| Line Fighter | 225, rifle 16 | **275**, rifle 16 | Trims 1-2: it traded 2.07 per credit at 225. Trim 3 tried rifle 14; trim 4 reverted it, because the riflemen's core stats carry the doctrine. |
+| Fast promotion | Elite after 60% of the usual kills | **usual rate**; every fighter still leaves the barracks Veteran | Trim 5: elite riflemen snowballed where they killed most cheaply (2.19 per credit against the modern factions, 1.19 against America and Russia) |
+| Cedar Scout (hero) | leaves the barracks Elite | leaves the barracks **Veteran** | Trim 5 ("Veteran rather than more") |
+| Rough-ground cover | damage x0.80 | **x0.90** | Trim 1 (it stacks with the Veteran start) |
+| Rocket Battery / Rail Technical vs infantry | 60-70% / 80% | **100% / 100%** | Trim 4: rocket volume answers the infantry masses of America and Russia |
+| Bot anti-air share | 24 (unchanged) | **40** | Trim 4: America's jets and rocketeers caused a fifth of Hezbollah's losses |
+| FPV Drone art | spinning rotor frames | dark prop blur discs inside the ducts | Thin spinning blades speckled at 1x (art gate) |
+| FPV Team art | goggles, controller, small backpack quad | a large quad carried over the shoulders, a whip antenna, the controller held forward (operator pose) | Owner revision, gate (b) |
+| Rail Technical art | 6-rail rack, empty reload sprite | six square launch tubes on a dark core raised 22 degrees, dark mouths at both ends; no empty sprite | Owner revision, gate (b): it reads as a launcher at 1x |
+| Voices | design lines | `hz-fpv-move`: رايحين عالموقع الجديد. / Moving to a new position.; `hz-fpv-attack`: طلعنا المسيرات. / Drones away. | Clearer Lebanese phrasing (منغيّر can be heard as من غير) |
+
+### Balance (gate c)
+
+Harness: normal bots, 40-minute cap. Hezbollah played all eight other factions on Dustbowl and Official Tournament
+Map A, in both orientations with 3 replicates (96 games). 0 errors in every run. Score = wins plus half the draws,
+with the 95% Wilson interval.
+
+| Run | Rules | vs modern (target 35-65%) | vs America+Russia (target ≥35%) |
+|---|---|---:|---:|
+| Round 4 final | e2c07b0 | 57% (45-68) | 48% (30-67) |
+| As designed, 42 of 96 (stopped) | 2ed217e | 84% (68-93) | 70% (40-89) |
+| Trims 1-2 | b70d61e | 70% (59-79) | 38% (21-57) |
+| Trim 3, 47 of 96 (stopped) | efe7750 | 69% (53-82) | 32% (12-61) |
+| Trim 4 | 85d07d4 | 72% (61-81) | 75% (55-88) |
+| **Trim 5 (built)** | **d646808** | **69% (57-78)** | **40% (23-59)** |
+
+Trim 5 against each opponent: America 38%, Russia 42%, China 88%, Iran 54%, Israel 75%, Saudi Arabia 75%, Türkiye 79%,
+Yemen 42%. Naval (Little Big Lake, 48 games): 46% (31-62) against the modern factions,
+50% (25-75) against America and Russia, both inside the band (round 4: 54% and 67%).
+
+**Result.** The America+Russia target is met. The modern target is missed by 4 points, but its 95% interval
+(57-78) still reaches the band ("within noise", as `docs/balance.md` uses the term). Trim 5 is the configuration
+closest to both bands: it is 4 points out in total, against 5 for trims 1-2 and 7 for trims 3 and 4.
+The trim cap (two rounds after trim 3) is reached.
+
+**Why the modern band cannot be met from Hezbollah's side [inferred from the per-opponent data].** Over the four
+trimmed rule sets, Hezbollah's score against the modern factions stayed at 69-72%. Over the same rule sets, its score
+against America and Russia moved from 32% to 75%. Each trim after trims 1-2 moved the America+Russia score by 6 to 43
+points and the modern score by at most 3. A cut large enough to bring the modern score to 65% would take America+Russia back to about
+the 32% of trim 3. The gap sits with the opponents:
+- **China** was the weakest modern faction in round 4 (33% against the modern factions, the one target round 4
+  missed). Hezbollah beat it 11-1 in round 4 and goes 10-1 (1 draw) now. Against the other five modern factions,
+  Hezbollah scores **65%**, inside the band.
+- **Defences and infantry mass.** Against America and Russia, Hezbollah loses about 48,000 credits per game. GIs,
+  conscripts and flak troopers kill about 16,000 of it. Pillboxes, Tesla coils, Prism towers and sentry guns kill
+  about 10,700. Against the modern factions it loses about 35,000 per game. Their rifle infantry and militia kill
+  about 10,800 of it, and their bunkers and bastions about 1,500. So the veteran riflemen trade 1.89 destroyed per credit against the modern
+  factions and 1.23 against America and Russia. The AT team trades 1.02 against the modern factions and 0.57
+  against America and Russia.
+- The fix belongs in an all-faction pass, which this branch does not make: China's strength, and the modern
+  factions' anti-infantry answers.
+
+**FPV watch item (gate a).** Over the whole trim-5 run, the FPV Team and its drones destroyed 0.99 per credit.
+Against single opponents, the drones destroyed from 0.49 per credit (America) to 1.07 (Israel). No faction collapses
+against them.
+
+Art: `RTSAI-Art/tools/hz_doctrine_models.py` (Blender bmesh, no image-to-3D) -> `units/<actor>/candidates/
+mesh-v1-blender`; FPV Drone and Rail Technical through `glb_prerender.py` (Hornet and light-truck family gates
+pass), FPV Team through `infantry_route.py` with authored landmarks (gate vs GI/Conscript passes), cameos with name
+bars. Checks on the final rules:
+- `make test`: exit 0, 0 warnings.
+- Hezbollah hit lab: 27/27, including the FPV launch link and both rocket launchers.
+- `art-provenance.py --check`: 313 files, none flagged.
+- The catalog validates against this branch.
+- One windowed bot match, Hezbollah vs America (game-window lock, gpu-yield line, `OPENRA_AI_HOST=0`, rules of
+  2ed217e): 10.8 game minutes, no exception or Lua error. The FPV Team, Rail Technical and Loiter Drone were built.
