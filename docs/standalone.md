@@ -63,23 +63,30 @@ Found on the way: the RA2 table's tile `ZOffset: -15` assumes TMP tiles with per
 the whole resource layer, so the generated tileset sets 0. Diagonal generated roads showed a one-cell staircase
 edge (fixed in Phase 3).
 
-### Phase 3: in progress [ran]
+### Phase 3: art and audio complete [ran]
 
-- **Base kit v2 wired** (`tools/standalone-kit-rules.py` writes `standalone/base-kit.yaml`, standalone only). The 22
-  stock buildings the modern factions use render their kit role, painted per faction, in the kit palette with the
-  player-colour remap.
+- **Base kit v2 wired** (`tools/standalone-kit-rules.py` writes `standalone/base-kit.yaml`, standalone only).
+  - The 22 stock buildings the modern factions use render their kit role, painted per faction, in the kit palette
+    with the player-colour remap.
+  - The Soviet-side power plant, barracks, service depot and tech centre take the Allied footprints the kit is drawn
+    for.
+  - The two superweapon slots are the Strategic Uplink (Chronosphere function) and the EW Array (Iron Curtain
+    function).
+  - The classic add-on keeps the original buildings.
 - **Shared units and effects wired** (art agent, approved):
-  - Kit sprites for the MCVs, harvesters, AA track, amphibious APC, landing craft, operative and K9 dog. Each draws a
-    combined image `unit-<role>-<faction>`: the stock effect sequences its traits play, then the kit image.
+  - Kit sprites for the MCVs, harvesters, AA track, amphibious APC, landing craft, engineer, operative and K9 dog.
+    Each draws a combined image `unit-<role>-<faction>`: first the stock templates whose effects its traits play,
+    then the kit image.
   - The effects batch, with the 20 PNG-delivered effects repointed by stem.
   - Rank chevrons drawn by us.
-  - Placeholder debt: **2 files, both for the engineer**, which is being re-rendered. The kit art for it is
-    already wired in the generator. The Soviet-side power plant, barracks, service depot and tech centre take the Allied
-  footprints the kit is drawn for. The two superweapon slots are the Strategic Uplink (Chronosphere function) and the
-  EW Array (Iron Curtain function). The classic add-on keeps the original buildings.
+  - Art provenance: `standalone/ART-PROVENANCE-STANDALONE.json` (421 files), `docs/standalone-art-provenance.md`.
+- **No placeholder left for anything the factions can field.**
+  - The 980-file placeholder pack still answers the sequences of actors they cannot field, so every sequence keeps
+    loading.
+  - `make test` runs `--check-standalone --strict`: any placeholder or missing sound for a fieldable actor, or any
+    sequence whose frames do not resolve, fails the build.
 - **Audio wired**: the audio agent's SFX, UI sounds, stock-unit voices and music (plus its polish pass: loop seams,
-  dog barks, death cries). `--check-standalone --strict-audio` finds 0 unresolved sounds for what the 7 factions
-  can field; `make test` runs it.
+  dog barks, death cries). 0 unresolved sounds for what the 7 factions can field.
 - **Branded main menu** (`chrome/rtsai-mainmenu.yaml`, replacing the stock layout; same widget ids and logic):
   - a full-window backdrop of one flagship per faction (Qilin, Karrar, Bozkir, M1A2S, Merkava, the Yemeni launcher,
     Hezbollah rockets), rendered from the project's own GLB meshes in RTSAI-Art on a procedural desert at golden
