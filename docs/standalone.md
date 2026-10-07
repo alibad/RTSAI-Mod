@@ -65,9 +65,16 @@ edge (fixed in Phase 3).
 
 ### Phase 3: in progress [ran]
 
-- **Base kit v1 wired** (`tools/standalone-kit-rules.py` writes `standalone/base-kit.yaml`, standalone only). The 22
+- **Base kit v2 wired** (`tools/standalone-kit-rules.py` writes `standalone/base-kit.yaml`, standalone only). The 22
   stock buildings the modern factions use render their kit role, painted per faction, in the kit palette with the
-  player-colour remap. The Soviet-side power plant, barracks, service depot and tech centre take the Allied
+  player-colour remap.
+- **Shared units and effects wired** (art agent, approved):
+  - Kit sprites for the MCVs, harvesters, AA track, amphibious APC, landing craft, operative and K9 dog. Each draws a
+    combined image `unit-<role>-<faction>`: the stock effect sequences its traits play, then the kit image.
+  - The effects batch, with the 20 PNG-delivered effects repointed by stem.
+  - Rank chevrons drawn by us.
+  - Placeholder debt: **2 files, both for the engineer**, which is being re-rendered. The kit art for it is
+    already wired in the generator. The Soviet-side power plant, barracks, service depot and tech centre take the Allied
   footprints the kit is drawn for. The two superweapon slots are the Strategic Uplink (Chronosphere function) and the
   EW Array (Iron Curtain function). The classic add-on keeps the original buildings.
 - **Audio wired**: the audio agent's SFX, UI sounds, stock-unit voices and music (plus its polish pass: loop seams,
@@ -88,8 +95,6 @@ edge (fixed in Phase 3).
   straight run. Each road is a Z of those legs and stays symmetric (`tools/standalone-maps.py`).
 - `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
   first draw). `--list-placeholders` prints every placeholder still in use.
-- Placeholder debt: 116 of the 980 stand-in files are still reachable, all in shared units and effects (next
-  delivery).
 
 **Cut buildings: what the modern rosters lose** (owner decision, 7 October 2026). These eight leave the standalone
 rosters (`Buildable: Prerequisites: ~disabled`); the classic add-on keeps them. Numbers are from the resolved rules.
@@ -105,10 +110,38 @@ rosters (`Buildable: Prerequisites: ~disabled`); the classic add-on keeps them. 
 | Gap Generator `gagap` | Allied | 1000 / −100 | Shroud over a 10-cell radius | Base concealment is gone. A defence role, but a minor one |
 | Psychic Sensor `napsis` | Soviet | 1000 / −100 | Detects cloaked units within 6 cells | Small loss: every faction keeps roster detectors (Iran: drone control, Ghadir, Peykaap; Yemen: Mokha, spotter; Hezbollah: relay, spotter, survey, workshop) and the dog |
 
-The bots need no change: `rules/ai.yaml` lists `nanrct`, `gagap`, `naclon` and `namisl` in its building fractions,
-and bots skip what they cannot build. Soviet-side bots still build power through `napowr`.
+**What replaces them** (coordinator, 7 October 2026; `tools/standalone-kit-rules.py`):
 
-**Standalone balance smoke** [ran]: `tools/balance-harness.py run --campaign standalone-smoke --standalone`.
+| Piece | Side | Numbers | Notes |
+|---|---|---|---|
+| Heavy Power Plant (the reactor actor `nanrct`, kit role `hpwr`) | Soviet | 2000 power for 1000 credits, needs the tech centre | The reactor's economics come back: 0.5 credits per power. One plant replaces the 13 light plants the cut would have needed. It dies like any building (no nuclear blast). Bots already treat it as their best power type. Footprint 3x3 on the kit's `hpwr` art |
+| Ore Purifier refinery upgrade (`gapurifier`) | Allied | 1000 credits and 50 power per refinery, needs the tech centre | A plug placed onto a refinery (TS-style `Pluggable`). That refinery pays 125% for ore (`ResourceValueMultiplier`). The old purifier gave +25% on every refinery for 2500. Bots build it. The kit draws a purification tower on upgraded refineries |
+
+The other six roles get no direct replacement: their jobs are covered or minor (see the table above). The two
+superweapon slots stay the kit's utility powers.
+
+**Bots and superweapons.** The stock support-power module cannot aim a teleport (that needs a source and a
+destination), and it has no rule for a protection field. A new `SuperweaponBotModule` (OpenRA.Mods.RTSAI) handles
+both:
+- **Strategic Uplink:** moves the most valuable army group (worth at least 3000) beside the most valuable known enemy
+  building cluster that the group can take on. The cluster must be at least 24 cells away, and its defence must be
+  worth no more than 125% of the group. The group then attack-moves. The units return after 30 seconds.
+- **EW Array:** covers the most valuable army group (worth at least 1800) when enemy armed units worth 1000 or more
+  are within 7 cells.
+
+Every bot profile builds both buildings. The base builder now builds a plug only while some own building still
+accepts one.
+
+**Ore mines (found while measuring).** In the first smoke, bots stalled. Twin Fords and Harbor Line had no ore spawn,
+so the fields ran dry by about minute 10. Both sides then sat at 0 credits for the rest of the game, nobody reached a
+tech centre, and half the games hit the cap. The Westwood maps regrow ore from the stock ore drills, which are EA art.
+- The fix is our own ore mine (`oremine`, `tools/standalone-terrain.py --mines`): a rock mound with an ore vent and a
+  burst animation, rendered like the ore piles.
+- There is one at the centre of each home field, 4 per map.
+- The generated maps also moved to `mods/rtsai/standalone/maps`. Their corner-transition templates do not exist in
+  the classic tilesets, so the classic add-on, which mounts `ra2|maps`, failed to load them.
+
+**Standalone balance smoke** [ran], the first run before the fixes above: `tools/balance-harness.py run --campaign standalone-smoke --standalone`.
 - Setup: headless, no RA2 content linked anywhere, the 7 factions on the base kit, Twin Fords and Harbor Line.
   Every pairing was played from both spawn orientations with the normal bot and a 40-minute cap: 84 matches.
 - **Stability:** 84 of 84 complete. No crash, hang, exception or Lua error.
@@ -130,12 +163,57 @@ and bots skip what they cannot build. Soviet-side bots still build power through
   All 95% intervals overlap 50%. Nothing is broken; China and Türkiye are the ones to watch.
 - Every faction built power, refineries, production and tech on the kit: about 3 power plants and 15 structures
   per game.
+- What it showed:
+  - No bot built a superweapon: the bots had no rules for the two kit powers.
+  - Half the games reached the cap. The main cause turned out to be the dry ore fields, not the cuts.
+  - Both are fixed above, and the comparison below measures the cuts.
+
+**What the cuts cost: the comparison** [ran]. Campaign `standalone-cuts`, run from a frozen worktree at `300a377`
+(heavy plant still on its interim 2x2 art). Each arm is 84 headless bot matches: the 7 factions on Twin Fords and
+Harbor Line, every pairing from both spawn orientations, normal bot, 40-minute cap, no RA2 files. All three arms
+share the ore mines and the superweapon bot module.
+- **precut:** the 8 buildings restored with their original rules (reactor 4x4), no refinery upgrade.
+- **nocomp:** the cuts, with no heavy plant and no refinery upgrade.
+- **now:** the standalone game.
+
+| | precut | nocomp | now | first smoke (no mines, no superweapon bots) |
+|---|---|---|---|---|
+| Completed, no crash or hang | 84/84 | 84/84 | 84/84 | 84/84 |
+| Draws at the 40-min cap | 17 (20%) | 19 (23%) | **13 (15%)** | 40 (48%) |
+| Median length (min) | 20.8 | 24.0 | 19.8 | 22.5 |
+| Players who reached a tech centre | 61% | 67% | 57% | 48% |
+| Soviet side: credits per unit of power | 1.72 | 4.00 | **1.74** | 4.00 |
+| Soviet side: power built per game | 1876 | 673 | 1847 | 450 |
+| Soviet side's score against the Allied side (48 cross-side games) | 60% | 72% | 68% | 53% |
+| Strategic Uplink teleports / EW Shields fired | 26 / 2 | 31 / 1 | 19 / 11 | 0 / 0 |
+| Refinery upgrades placed | – | – | 105 | – |
+
+Faction scores (draw counts as half; 24 games each, 95% intervals about ±20 points):
+
+| Faction | precut | nocomp | now |
+|---|---|---|---|
+| China | 23% | 40% | 31% |
+| Iran | 52% | 62% | 73% |
+| Türkiye | 46% | 33% | 40% |
+| Saudi Arabia | 56% | 48% | 40% |
+| Israel | 54% | 35% | 54% |
+| Yemen | 62% | 62% | 48% |
+| Hezbollah | 56% | 69% | 65% |
+
+Reading:
+- **Power economy fixed.** The cuts quadrupled the Soviet side's power price, and the heavy plant brings it back to
+  the pre-cut figure (1.74 against 1.72 credits per power).
+- **Draws** come mostly from Twin Fords: 12 of the 13 in `now`. Its river with two fords makes for long sieges.
+- **In bot play the cuts did not weaken the Soviet side; they strengthened it** (60% → 72% against the Allied side,
+  68% with the compensation). Pre-cut Soviet bots put about 7,500 credits per game into cloning vats and missile
+  silos, which the cut frees for armies. The difference is within noise on 48 games, but it points the same way in
+  both arms.
 - **For the balance pass:**
-  - No bot builds a superweapon in the standalone game. Bot fractions only ever listed the missile silo, and the
-    bot support-power logic only knows paratroopers and the nuke; the Strategic Uplink and EW Array have no bot
-    decisions.
-  - With no damage superweapon and no reactor, half the games reach the cap. The full balance pass should compare
-    against a rules overlay that restores the 8 cut buildings, to measure how much of that the cuts cause.
+  - China trails in every arm (23–40%).
+  - Iran and Hezbollah lead.
+  - The Allied side as a whole is about 10–20 points behind against the Soviet side.
+  - The bots never fire the Israeli and Saudi strike powers (`AirstrikePower@falcon`): there is no bot rule for
+    them.
 
 ### Deliverables for Phase 3
 
@@ -309,6 +387,9 @@ python tools/standalone-smoke.py skirmish --observe --map twin-fords --bots Mult
 python tools/standalone-kit-rules.py             # base kit rules (after a kit delivery)
 python tools/standalone-menu.py                  # main-menu backdrop (Blender, CPU, ~2 min); --quick for a draft
 python tools/balance-harness.py run --campaign standalone-smoke --standalone --output <scratch>/smoke --parallel 10
+python tools/standalone-terrain.py --mines              # the ore mine (Blender, CPU, seconds)
+python tools/balance-harness.py run --campaign standalone-cuts --suite now --standalone --output <scratch>/now   # also precut, nocomp
+python tools/standalone-smoke.py skirmish --lua showcase.lua --look 50,36 --map-rules tools/standalone-smoke/showcase-rules.yaml \n    --map twin-fords --bots Multi0:normal:saudi,Multi1:normal:iran --seconds 20 --out <scratch>/showcase
 ```
 
 This branch changes C# (`SurvivorReplacements`, `--check-standalone`, the menu widgets), so build first: `./make.cmd all`, then
