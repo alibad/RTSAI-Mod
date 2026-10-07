@@ -706,6 +706,341 @@ powr-hezbollah:
 	icon:
 		Filename: powr-hezbollahicon.png
 		Offset: 0, 0
+hpwr-china:
+	Defaults:
+		Filename: hpwr-china.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-chinaicon.png
+		Offset: 0, 0
+
+hpwr-iran:
+	Defaults:
+		Filename: hpwr-iran.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-iranicon.png
+		Offset: 0, 0
+
+hpwr-turkey:
+	Defaults:
+		Filename: hpwr-turkey.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-turkeyicon.png
+		Offset: 0, 0
+
+hpwr-saudi:
+	Defaults:
+		Filename: hpwr-saudi.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-saudiicon.png
+		Offset: 0, 0
+
+hpwr-israel:
+	Defaults:
+		Filename: hpwr-israel.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-israelicon.png
+		Offset: 0, 0
+
+hpwr-yemen:
+	Defaults:
+		Filename: hpwr-yemen.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-yemenicon.png
+		Offset: 0, 0
+
+hpwr-hezbollah:
+	Defaults:
+		Filename: hpwr-hezbollah.shp
+		Offset: 14, -23, 23
+	idle:
+		Start: 0
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	critical-idle:
+		Start: 2
+		ShadowStart: 5
+	make:
+		Start: 30
+		Length: 25
+		ShadowStart: 55
+		Tick: 50
+		ZOffset: 0
+	idle-glow:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	idle-lights:
+		Start: 6
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-glow:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	damaged-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	critical-idle-lights:
+		Start: 14
+		Length: 8
+		ShadowStart: 22
+		Tick: 120
+	icon:
+		Filename: hpwr-hezbollahicon.png
+		Offset: 0, 0
 refn-china:
 	Defaults:
 		Filename: refn-china.shp
