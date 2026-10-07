@@ -1,0 +1,3674 @@
+{
+ "files": {
+  "music/rtsai-anatolian-armor.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.53,
+    "input_lufs": -11.84,
+    "input_true_peak": -1.01,
+    "loop_bars": 96.02,
+    "loop_seconds": 169.45,
+    "normalization": "static gain -2.16 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.282,
+    "output_lufs": -14.09,
+    "output_true_peak": -3.22,
+    "source_seconds": 175.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 136,
+    "caption": null,
+    "duration": 175,
+    "keyscale": "G minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "energetic rock and electronic fusion instrumental, baglama saz riffs, davul and darbuka percussion, zurna reed lead, distorted guitars, powerful drums, heroic and driving",
+   "raw_take_sha256": "7af3b6730f99c2684b5e75c5315b32fc23053c2cf9edda0e69141eb8a6e3e718",
+   "request": {
+    "bpm": "136",
+    "caption": "energetic rock and electronic fusion instrumental, baglama saz riffs, davul and darbuka percussion, zurna reed lead, distorted guitars, powerful drums, heroic and driving",
+    "duration": "175",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "G minor",
+    "rewrite_caption": "false",
+    "seed": "7340",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7340,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "32b0a23136c7d48c0d935593a0d775c7da802ddb871046ade05a8905c8bf7801",
+   "steps": 8,
+   "theatre": "Anatolia",
+   "title": "Anatolian Armor"
+  },
+  "music/rtsai-black-ore.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 4.8,
+    "input_lufs": -13.35,
+    "input_true_peak": -0.75,
+    "loop_bars": 64.0,
+    "loop_seconds": 153.6,
+    "normalization": "static gain -0.65 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.37,
+    "output_lufs": -14.14,
+    "output_true_peak": -1.83,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 100,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "D minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "heavy industrial metal groove instrumental, down-tuned guitars, machine-like drums, anvil hits, grinding synths, menacing and powerful",
+   "raw_take_sha256": "4ab3cf019ef88b23cc536c1a9d8ebb86ed7d89e988c382d6eba8076790f0797d",
+   "request": {
+    "bpm": "100",
+    "caption": "heavy industrial metal groove instrumental, down-tuned guitars, machine-like drums, anvil hits, grinding synths, menacing and powerful",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "D minor",
+    "rewrite_caption": "false",
+    "seed": "7390",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7390,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "632aa36b30e8469399b78d52d47d58222a5396910b2d1371cf6be420d5c276b0",
+   "steps": 8,
+   "theatre": "all",
+   "title": "Black Ore"
+  },
+  "music/rtsai-cedar-signal.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.93,
+    "input_lufs": -16.9,
+    "input_true_peak": -1.03,
+    "loop_bars": 84.0,
+    "loop_seconds": 165.25,
+    "normalization": "static gain +2.90 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.458,
+    "output_lufs": -14.05,
+    "output_true_peak": -1.2,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 122,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "E minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "dark electronic instrumental, oud and ney melody, darbuka groove, pulsing analog synth bass, radio static textures, tense and brooding, steady build",
+   "raw_take_sha256": "bd0b5c91bfcbad513dd7973bbc517e2ecd6d0b1caddaa4eb1a04dd5cf6cbff06",
+   "request": {
+    "bpm": "122",
+    "caption": "dark electronic instrumental, oud and ney melody, darbuka groove, pulsing analog synth bass, radio static textures, tense and brooding, steady build",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "E minor",
+    "rewrite_caption": "false",
+    "seed": "7370",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7370,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "9bb42d0f76d220f047a01651260a7a46a5ccb3c449400dbe47c653aa7e54ec0e",
+   "steps": 8,
+   "theatre": "Levant",
+   "title": "Cedar Signal"
+  },
+  "music/rtsai-coastline-watch.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.69,
+    "input_lufs": -14.83,
+    "input_true_peak": -0.9,
+    "loop_bars": 89.99,
+    "loop_seconds": 166.14,
+    "normalization": "static gain +0.83 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.189,
+    "output_lufs": -14.19,
+    "output_true_peak": -1.33,
+    "source_seconds": 175.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 130,
+    "caption": null,
+    "duration": 175,
+    "keyscale": "F# minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "synthwave industrial instrumental, qanun arpeggios, driving electronic drums, gated synth pads, punchy bass, vigilant and determined",
+   "raw_take_sha256": "da01b3755b4cca46c378d182df62dd44122273c2ece0db42015abdd83bac09b5",
+   "request": {
+    "bpm": "130",
+    "caption": "synthwave industrial instrumental, qanun arpeggios, driving electronic drums, gated synth pads, punchy bass, vigilant and determined",
+    "duration": "175",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "F# minor",
+    "rewrite_caption": "false",
+    "seed": "7380",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7380,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "9050f280775f90a2f275dc468399f9d392afa2e6cbdae182b73cf96d06484dfc",
+   "steps": 8,
+   "theatre": "Levant coast",
+   "title": "Coastline Watch"
+  },
+  "music/rtsai-desert-convoy.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.81,
+    "input_lufs": -12.58,
+    "input_true_peak": -0.99,
+    "loop_bars": 87.01,
+    "loop_seconds": 165.73,
+    "normalization": "static gain -1.42 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.289,
+    "output_lufs": -14.05,
+    "output_true_peak": -2.07,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 126,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "C minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "big beat electronic instrumental, oud riffs, darbuka and riq percussion, cinematic brass stabs, synth bass, marching energy, wide desert atmosphere",
+   "raw_take_sha256": "e2766815183d2969c0045422551f60dc0446baaca57fe314004426a1baaeab31",
+   "request": {
+    "bpm": "126",
+    "caption": "big beat electronic instrumental, oud riffs, darbuka and riq percussion, cinematic brass stabs, synth bass, marching energy, wide desert atmosphere",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "C minor",
+    "rewrite_caption": "false",
+    "seed": "7350",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7350,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "7b551714f8a2fc491f2c8ca390add3ae34e1a95d4d68de283b3d8c565b3814fb",
+   "steps": 8,
+   "theatre": "Arabian peninsula",
+   "title": "Desert Convoy"
+  },
+  "music/rtsai-final-push.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.31,
+    "input_lufs": -10.95,
+    "input_true_peak": -0.91,
+    "loop_bars": 93.0,
+    "loop_seconds": 153.93,
+    "normalization": "static gain -3.05 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.63,
+    "output_lufs": -14.05,
+    "output_true_peak": -3.86,
+    "source_seconds": 170.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 145,
+    "caption": null,
+    "duration": 170,
+    "keyscale": "A minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant",
+   "raw_take_sha256": "3d339c7813e08d1240627f739f4cd740177906a2dca6922faa931e9b9ee76b2b",
+   "request": {
+    "bpm": "145",
+    "caption": "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant",
+    "duration": "170",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "A minor",
+    "rewrite_caption": "false",
+    "seed": "7410",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7410,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "df2e1ef2a233ba6da26006e8e7458e88123b6c45d451f064a1488187ee38e26b",
+   "steps": 8,
+   "theatre": "all",
+   "title": "Final Push"
+  },
+  "music/rtsai-grid-assault.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 2.79,
+    "input_lufs": -13.16,
+    "input_true_peak": -0.57,
+    "loop_bars": 113.03,
+    "loop_seconds": 157.72,
+    "normalization": "static gain -0.84 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.622,
+    "output_lufs": -14.11,
+    "output_true_peak": -1.63,
+    "source_seconds": 170.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 172,
+    "caption": null,
+    "duration": 170,
+    "keyscale": "F minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "electronic industrial drum and bass instrumental, fast breakbeats, heavy reese bass, sharp synth stabs, glitchy arpeggios, tense and relentless, futuristic military",
+   "raw_take_sha256": "c3a9cc1533a582b84d890af803fa30e1d1147cf7bd45fc1cffaff973a3b1198f",
+   "request": {
+    "bpm": "172",
+    "caption": "electronic industrial drum and bass instrumental, fast breakbeats, heavy reese bass, sharp synth stabs, glitchy arpeggios, tense and relentless, futuristic military",
+    "duration": "170",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "F minor",
+    "rewrite_caption": "false",
+    "seed": "7310",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7310,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "f9cb9554bb0eb569ca7437e51f5978c036e630aed2956965bc96e2ef824b4f48",
+   "steps": 8,
+   "theatre": "all",
+   "title": "Grid Assault"
+  },
+  "music/rtsai-iron-foundry.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.43,
+    "input_lufs": -12.51,
+    "input_true_peak": -0.98,
+    "loop_bars": 102.0,
+    "loop_seconds": 174.86,
+    "normalization": "static gain -1.49 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.408,
+    "output_lufs": -14.04,
+    "output_true_peak": -2.78,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 140,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "E minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "industrial rock instrumental, chugging distorted guitar riffs, pounding live drums, gritty synth bass, metallic percussion hits, driving and aggressive, real-time strategy battle music",
+   "raw_take_sha256": "c412cfe9b4593973a8eb876b25defee54fcdc0013e29ff29b60ae74be2caba28",
+   "request": {
+    "bpm": "140",
+    "caption": "industrial rock instrumental, chugging distorted guitar riffs, pounding live drums, gritty synth bass, metallic percussion hits, driving and aggressive, real-time strategy battle music",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "E minor",
+    "rewrite_caption": "false",
+    "seed": "7300",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7300,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "1412c6457b9ce092b3191dd1b20e65b2f525e77a57a180800c1029ca9bd3b5c8",
+   "steps": 8,
+   "theatre": "all",
+   "title": "Iron Foundry"
+  },
+  "music/rtsai-plateau-engines.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.87,
+    "input_lufs": -11.94,
+    "input_true_peak": -0.95,
+    "loop_bars": 89.03,
+    "loop_seconds": 172.32,
+    "normalization": "static gain -2.06 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.466,
+    "output_lufs": -14.03,
+    "output_true_peak": -2.76,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 124,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "A minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "dark electronic industrial instrumental, santur arpeggios, tombak and daf hand drums, kamancheh melody, deep pulsing bass, metallic hits, tense and driving",
+   "raw_take_sha256": "4bda739bafd0f850a699700797f04d7cf518e44555566d7ab713260bc49541b6",
+   "request": {
+    "bpm": "124",
+    "caption": "dark electronic industrial instrumental, santur arpeggios, tombak and daf hand drums, kamancheh melody, deep pulsing bass, metallic hits, tense and driving",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "A minor",
+    "rewrite_caption": "false",
+    "seed": "7330",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7330,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "877aa3f0cd8c63f137272c9cd617d20af1724edfffb6852c4f863c965172ba1f",
+   "steps": 8,
+   "theatre": "Persian plateau",
+   "title": "Plateau Engines"
+  },
+  "music/rtsai-pressure-front.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 5.0,
+    "input_lufs": -13.29,
+    "input_true_peak": -0.91,
+    "loop_bars": 65.02,
+    "loop_seconds": 162.54,
+    "normalization": "static gain -0.71 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.181,
+    "output_lufs": -14.01,
+    "output_true_peak": -2.51,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 96,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "C# minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "tense cinematic industrial electronic instrumental, ticking percussion, low drones, slowly building synth arpeggio, distant war drums, suspenseful",
+   "raw_take_sha256": "f8c717e70bd595e773cf0a6e901348942f186a0f0e29446b6d8fce09727f755a",
+   "request": {
+    "bpm": "96",
+    "caption": "tense cinematic industrial electronic instrumental, ticking percussion, low drones, slowly building synth arpeggio, distant war drums, suspenseful",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "C# minor",
+    "rewrite_caption": "false",
+    "seed": "7400",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7400,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "9ce104cc3287bdebf87d59b0a8bc19d035bc767e8920a07f944c4754d9dee2c0",
+   "steps": 8,
+   "theatre": "all",
+   "title": "Pressure Front"
+  },
+  "music/rtsai-red-sea-run.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 4.07,
+    "input_lufs": -14.2,
+    "input_true_peak": -0.95,
+    "loop_bars": 85.0,
+    "loop_seconds": 172.89,
+    "normalization": "static gain +0.20 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.403,
+    "output_lufs": -14.06,
+    "output_true_peak": -1.92,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 118,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "B minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "tribal electronic instrumental, mizmar reed lead, frame drums and tasa drums, heavy sub bass, dusty textures, hypnotic and urgent",
+   "raw_take_sha256": "d599e6fb2fe0645824cfbe9cce365a235457bd2726eb6d3ab4cf8524a0de7fd1",
+   "request": {
+    "bpm": "118",
+    "caption": "tribal electronic instrumental, mizmar reed lead, frame drums and tasa drums, heavy sub bass, dusty textures, hypnotic and urgent",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "B minor",
+    "rewrite_caption": "false",
+    "seed": "7360",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7360,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "12dee266f649be88cc0091c22ad03d51812db885240d6228219db4154228be9c",
+   "steps": 8,
+   "theatre": "Red Sea",
+   "title": "Red Sea Run"
+  },
+  "music/rtsai-yangtze-steel.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_seconds": 3.75,
+    "input_lufs": -15.96,
+    "input_true_peak": -0.57,
+    "loop_bars": 88.0,
+    "loop_seconds": 165.0,
+    "normalization": "static gain +1.96 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.638,
+    "output_lufs": -14.18,
+    "output_true_peak": -1.33,
+    "source_seconds": 180.0
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 128,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "D minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "cinematic industrial electronic instrumental, erhu lead melody, guzheng ostinato, Chinese war drums, heavy synth bass, distorted guitar layer, epic and determined",
+   "raw_take_sha256": "21e05eef3b2ed2969db1e9d482a3e1349bece50eca345a651dbeae4266e1e6f7",
+   "request": {
+    "bpm": "128",
+    "caption": "cinematic industrial electronic instrumental, erhu lead melody, guzheng ostinato, Chinese war drums, heavy synth bass, distorted guitar layer, epic and determined",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "D minor",
+    "rewrite_caption": "false",
+    "seed": "7320",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7320,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "db70763f6f425954a78e53614687f0ce423fb25cbb731b56309f647d9fabb3f6",
+   "steps": 8,
+   "theatre": "East Asia",
+   "title": "Yangtze Steel"
+  },
+  "music/score.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "input_lufs": -13.99,
+    "input_true_peak": -0.97,
+    "loop_seconds": null,
+    "normalization": "static gain -0.01 dB, look-ahead limiter at -2.7 dBFS",
+    "note": "plays once on the victory/defeat screen; not looped",
+    "output_lufs": -14.02,
+    "output_true_peak": -2.59
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 90,
+    "caption": null,
+    "duration": 75,
+    "keyscale": "D major",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "short cinematic electronic outro instrumental, steady military snare, warm synth pads, low brass, reflective and resolved",
+   "raw_take_sha256": "b7d2160aca6c62d63ce27159f86fb049c90a3c6408dfd2d42fcd8ae87825f01d",
+   "request": {
+    "bpm": "90",
+    "caption": "short cinematic electronic outro instrumental, steady military snare, warm synth pads, low brass, reflective and resolved",
+    "duration": "75",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "D major",
+    "rewrite_caption": "false",
+    "seed": "7420",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7420,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "71bd5d2df9bde579ec071bee7c26671af4a2b13ac6c7aa0dae196d766f827a3c",
+   "steps": 8,
+   "theatre": "score screen",
+   "title": "Debrief"
+  },
+  "sfx/bgendiea.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -15.6,
+    "decay20_ms": 1690,
+    "high_share": 0.042,
+    "low_share": 0.669,
+    "max50_rms_dbfs": -7.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bgendiea.wav",
+   "role": "building destroyed: large explosion and collapse",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgendiea.wav')",
+   "sha256": "5d023dad4e14fd27804314b6c5bb49695566bc2cf38bf2834118d583025c815f"
+  },
+  "sfx/bgendieb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.3,
+    "max50_rms_dbfs": -6.8,
+    "reference": "bgendieb.wav",
+    "seconds": 1.937
+   },
+   "measured": {
+    "active_rms_dbfs": -15.1,
+    "decay20_ms": 1510,
+    "high_share": 0.024,
+    "low_share": 0.722,
+    "max50_rms_dbfs": -7.1,
+    "peak_dbfs": -0.3,
+    "seconds": 1.937
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bgendieb.wav",
+   "role": "building destroyed: large explosion and collapse",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgendieb.wav')",
+   "sha256": "6139e124ab8e3b1d19e1b3912e98d406b7c9f328249b301583e45ceb137ec7c7"
+  },
+  "sfx/bgendiec.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.3,
+    "max50_rms_dbfs": -8.3,
+    "reference": "bgendiec.wav",
+    "seconds": 1.937
+   },
+   "measured": {
+    "active_rms_dbfs": -16.2,
+    "decay20_ms": 1460,
+    "high_share": 0.04,
+    "low_share": 0.633,
+    "max50_rms_dbfs": -8.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.937
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bgendiec.wav",
+   "role": "building destroyed: large explosion and collapse",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgendiec.wav')",
+   "sha256": "8c1f0e12836e3f7ff87354f5b25b6fb54d5c7e34fe70e1cce8dad90a9faeadb7"
+  },
+  "sfx/bgendied.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16,
+    "max50_rms_dbfs": -6.4,
+    "reference": "bgendied.wav",
+    "seconds": 2.767
+   },
+   "measured": {
+    "active_rms_dbfs": -13.6,
+    "decay20_ms": 1820,
+    "high_share": 0.07,
+    "low_share": 0.625,
+    "max50_rms_dbfs": -6.8,
+    "peak_dbfs": -0.3,
+    "seconds": 2.767
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bgendied.wav",
+   "role": "building destroyed: large explosion and collapse",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgendied.wav')",
+   "sha256": "0d0ab0aa08f689290281025b5406128e60a4169501bc812df01ca2c6e4d00fcc"
+  },
+  "sfx/bgendiee.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.2,
+    "max50_rms_dbfs": -5.9,
+    "reference": "bgendiee.wav",
+    "seconds": 2.168
+   },
+   "measured": {
+    "active_rms_dbfs": -13.1,
+    "decay20_ms": 1790,
+    "high_share": 0.011,
+    "low_share": 0.813,
+    "max50_rms_dbfs": -5.9,
+    "peak_dbfs": -0.3,
+    "seconds": 2.168
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bgendiee.wav",
+   "role": "building destroyed: large explosion and collapse",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgendiee.wav')",
+   "sha256": "9d3741e725ae005563de945210864a7140e80ce13b4de3ccc9af474c1d0c715f"
+  },
+  "sfx/bgendief.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -11.4,
+    "max50_rms_dbfs": -4.9,
+    "reference": "bgendief.wav",
+    "seconds": 1.66
+   },
+   "measured": {
+    "active_rms_dbfs": -10.9,
+    "decay20_ms": 1610,
+    "high_share": 0.022,
+    "low_share": 0.721,
+    "max50_rms_dbfs": -5.1,
+    "peak_dbfs": -0.3,
+    "seconds": 1.66
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bgendief.wav",
+   "role": "building destroyed: large explosion and collapse",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgendief.wav')",
+   "sha256": "2420ed5f87162c7a5cb6c95475d182e9bddcfbe47e133c4b8e4d934308f0f31a"
+  },
+  "sfx/bpowdiea.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.6,
+    "max50_rms_dbfs": -5.1,
+    "reference": "bpowdiea.wav",
+    "seconds": 2.029
+   },
+   "measured": {
+    "active_rms_dbfs": -11.5,
+    "decay20_ms": 1650,
+    "high_share": 0.07,
+    "low_share": 0.567,
+    "max50_rms_dbfs": -6.2,
+    "peak_dbfs": -0.3,
+    "seconds": 2.029
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bpowdiea.wav",
+   "role": "power plant destroyed: explosion, arcing and a dying transformer hum",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpowdiea.wav')",
+   "sha256": "e9824db220d05c3b6ebd9beb34aca7dd3626b78265facb7499eb1d2c44f02498"
+  },
+  "sfx/bpowdieb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.1,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bpowdieb.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -13.0,
+    "decay20_ms": 1580,
+    "high_share": 0.06,
+    "low_share": 0.584,
+    "max50_rms_dbfs": -7.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "bpowdieb.wav",
+   "role": "power plant destroyed: explosion, arcing and a dying transformer hum",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpowdieb.wav')",
+   "sha256": "a3d42ec82d7c0f2025486d658b4e21933d42ba7846b48d73fd35a8ff43167f68"
+  },
+  "sfx/chrono2.aud": {
+   "category": "sfx",
+   "format": "Westwood AUD IMA ADPCM 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.0,
+    "max50_rms_dbfs": -6.5,
+    "reference": "none (name missing in RA2 too)",
+    "seconds": 2.0
+   },
+   "measured": {
+    "active_rms_dbfs": -14.2,
+    "decay20_ms": 1060,
+    "high_share": 0.018,
+    "low_share": 0.573,
+    "max50_rms_dbfs": -6.7,
+    "peak_dbfs": -0.3,
+    "seconds": 2.0
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "chrono2.aud",
+   "role": "shift device effect (Westwood AUD, the name the rules use)",
+   "seed": "sha256('rtsai-standalone-sfx-1/chrono2.aud')",
+   "sha256": "c42a7ebe2ed0c6cbca6506d5be431f122cf634fba78b359a562957ea48e49239"
+  },
+  "sfx/expnew09.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.0,
+    "max50_rms_dbfs": -7.5,
+    "reference": "none (name missing in RA2 too)",
+    "seconds": 1.4
+   },
+   "measured": {
+    "active_rms_dbfs": -16.0,
+    "decay20_ms": 620,
+    "high_share": 0.032,
+    "low_share": 0.65,
+    "max50_rms_dbfs": -7.5,
+    "peak_dbfs": -2.9,
+    "seconds": 1.4
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_expnew09",
+   "role": "large vehicle or missile explosion",
+   "seed": "sha256('rtsai-standalone-sfx-1/expnew09.wav')",
+   "sha256": "06dd1a4291fda0ad6b586af5ba8c559034e85b1b6acba15418cfaffebf4e1c8f"
+  },
+  "sfx/expnew13.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.0,
+    "max50_rms_dbfs": -7.8,
+    "reference": "none (name missing in RA2 too)",
+    "seconds": 1.25
+   },
+   "measured": {
+    "active_rms_dbfs": -17.1,
+    "decay20_ms": 450,
+    "high_share": 0.037,
+    "low_share": 0.665,
+    "max50_rms_dbfs": -7.8,
+    "peak_dbfs": -2.0,
+    "seconds": 1.25
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_expnew13",
+   "role": "medium explosion with burning debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/expnew13.wav')",
+   "sha256": "136eca2b42a444f9a34848d5d974a6dda936eac61c81b92f4a145d59bdb89d88"
+  },
+  "sfx/gdamag1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.6,
+    "max50_rms_dbfs": -7.9,
+    "reference": "gdamag1a.wav",
+    "seconds": 1.845
+   },
+   "measured": {
+    "active_rms_dbfs": -16.9,
+    "decay20_ms": 1380,
+    "high_share": 0.067,
+    "low_share": 0.568,
+    "max50_rms_dbfs": -8.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.845
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "gdamag1a.wav",
+   "role": "building heavily damaged: smaller blast, metal stress and debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/gdamag1a.wav')",
+   "sha256": "b2bc92784585268141d55fb92646141f66c4a79dd377fa1ae098efe1199c6edc"
+  },
+  "sfx/gdamag1b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12,
+    "max50_rms_dbfs": -4.4,
+    "reference": "gdamag1b.wav",
+    "seconds": 1.891
+   },
+   "measured": {
+    "active_rms_dbfs": -12.1,
+    "decay20_ms": 1450,
+    "high_share": 0.059,
+    "low_share": 0.539,
+    "max50_rms_dbfs": -5.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.891
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "gdamag1b.wav",
+   "role": "building heavily damaged: smaller blast, metal stress and debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/gdamag1b.wav')",
+   "sha256": "02ec8ac448109b3e412769effb6c062d5e49d3e7e2f8823e240464218628094b"
+  },
+  "sfx/gdamag1c.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.5,
+    "max50_rms_dbfs": -6.1,
+    "reference": "gdamag1c.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -11.9,
+    "decay20_ms": 830,
+    "high_share": 0.051,
+    "low_share": 0.48,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "gdamag1c.wav",
+   "role": "building heavily damaged: smaller blast, metal stress and debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/gdamag1c.wav')",
+   "sha256": "140b54c590455ba6c8e18ac8fe0d540664845f94dd7f7242f736bee6eb8b9578"
+  },
+  "sfx/gdamag1d.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.2,
+    "max50_rms_dbfs": -7.4,
+    "reference": "gdamag1d.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -13.9,
+    "decay20_ms": 740,
+    "high_share": 0.064,
+    "low_share": 0.47,
+    "max50_rms_dbfs": -7.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "gdamag1d.wav",
+   "role": "building heavily damaged: smaller blast, metal stress and debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/gdamag1d.wav')",
+   "sha256": "3d640578ebd52c094f2332e3f031f210e9554a10af41712dd1c8dee5be277980"
+  },
+  "sfx/gdamag1e.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14,
+    "max50_rms_dbfs": -6.3,
+    "reference": "gdamag1e.wav",
+    "seconds": 1.845
+   },
+   "measured": {
+    "active_rms_dbfs": -15.5,
+    "decay20_ms": 1250,
+    "high_share": 0.041,
+    "low_share": 0.598,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.845
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "gdamag1e.wav",
+   "role": "building heavily damaged: smaller blast, metal stress and debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/gdamag1e.wav')",
+   "sha256": "9ad7ee752ee4f62460ed097f07e7475a115e9127cba6a3605b2ab310cd7fa0fd"
+  },
+  "sfx/gexp10a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -11.8,
+    "max50_rms_dbfs": -5.1,
+    "reference": "gexp10a.wav",
+    "seconds": 1.291
+   },
+   "measured": {
+    "active_rms_dbfs": -12.2,
+    "decay20_ms": 590,
+    "high_share": 0.042,
+    "low_share": 0.673,
+    "max50_rms_dbfs": -6.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.291
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_flak",
+   "role": "air-defence hit: two quick airbursts high up",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexp10a.wav')",
+   "sha256": "fed192b1cd136d443b6d02d19231749d66d8021e01509eca3eafc09878ade25e"
+  },
+  "sfx/gexp14a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.2,
+    "max50_rms_dbfs": -7.6,
+    "reference": "gexp14a.wav",
+    "seconds": 1.061
+   },
+   "measured": {
+    "active_rms_dbfs": -16.8,
+    "decay20_ms": 680,
+    "high_share": 0.024,
+    "low_share": 0.667,
+    "max50_rms_dbfs": -7.6,
+    "peak_dbfs": -0.9,
+    "seconds": 1.061
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gexp14a",
+   "role": "general shell and rocket impact: medium explosion",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexp14a.wav')",
+   "sha256": "3283db930e7a3ccc978e1c93b9f99a782b9bf807a49559f05b07d9899a8ee3cf"
+  },
+  "sfx/gexpapoa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13,
+    "max50_rms_dbfs": -7.5,
+    "reference": "gexpapoa.wav",
+    "seconds": 1.384
+   },
+   "measured": {
+    "active_rms_dbfs": -16.8,
+    "decay20_ms": 820,
+    "high_share": 0.013,
+    "low_share": 0.799,
+    "max50_rms_dbfs": -7.5,
+    "peak_dbfs": -1.3,
+    "seconds": 1.384
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gexpapoa",
+   "role": "heavy bomb impact: deep double blast",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpapoa.wav')",
+   "sha256": "a1e0a8dba640d5a9d90532946a663104c9faf09784131dafd1ece1eb36c1a394"
+  },
+  "sfx/gexpifva.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.2,
+    "max50_rms_dbfs": -7.5,
+    "reference": "gexpifva.wav",
+    "seconds": 1.061
+   },
+   "measured": {
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 900,
+    "high_share": 0.008,
+    "low_share": 0.848,
+    "max50_rms_dbfs": -7.5,
+    "peak_dbfs": -0.7,
+    "seconds": 1.061
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gexpifva",
+   "role": "light bomb impact: deep medium explosion",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpifva.wav')",
+   "sha256": "4e58aa2deb80abb53253ee01109890e2624e3fbfcd75a18d0652a72a0fb293cf"
+  },
+  "sfx/gexpwala.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.7,
+    "max50_rms_dbfs": -8.8,
+    "reference": "gexpwala.wav",
+    "seconds": 1.707
+   },
+   "measured": {
+    "active_rms_dbfs": -17.4,
+    "decay20_ms": 1380,
+    "high_share": 0.178,
+    "low_share": 0.275,
+    "max50_rms_dbfs": -8.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.707
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gexpwala",
+   "role": "large water impact: underwater blast and a tall splash",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpwala.wav')",
+   "sha256": "e626570c5ba100fb3dc4f6e398006989e0430ef2b6d6460f011e6d07df1cdf03"
+  },
+  "sfx/gexpwasa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -20.1,
+    "max50_rms_dbfs": -11.2,
+    "reference": "gexpwasa.wav",
+    "seconds": 1.245
+   },
+   "measured": {
+    "active_rms_dbfs": -18.4,
+    "decay20_ms": 780,
+    "high_share": 0.239,
+    "low_share": 0.047,
+    "max50_rms_dbfs": -11.3,
+    "peak_dbfs": -0.3,
+    "seconds": 1.245
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gexpwasa",
+   "role": "small water impact: splash",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpwasa.wav')",
+   "sha256": "ea6ba6bebaa9fd3f3b052f9dcdc1f0106a49c290e48b4cba4bb57592672ff9ed"
+  },
+  "sfx/gexpwasb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -20.6,
+    "max50_rms_dbfs": -11.3,
+    "reference": "gexpwasb.wav",
+    "seconds": 1.338
+   },
+   "measured": {
+    "active_rms_dbfs": -19.5,
+    "decay20_ms": 870,
+    "high_share": 0.257,
+    "low_share": 0.083,
+    "max50_rms_dbfs": -11.3,
+    "peak_dbfs": -0.7,
+    "seconds": 1.338
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gexpwasb",
+   "role": "torpedo or depth hit: muffled thump and splash",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpwasb.wav')",
+   "sha256": "dcaa0c6c3b123c9ec030925aebe0db0b277fc38d6d716221b973356c252b29a0"
+  },
+  "sfx/iconatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.5,
+    "decay20_ms": 360,
+    "high_share": 0.242,
+    "low_share": 0.12,
+    "max50_rms_dbfs": -12.8,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "iconatta.wav",
+   "role": "rifle: three-round burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/iconatta.wav')",
+   "sha256": "a142aff8ae182dfa1afacdfdc2b2e211730727cea57f3234aacc6a4686764cde"
+  },
+  "sfx/iconattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -20,
+    "max50_rms_dbfs": -12,
+    "reference": "iconattb.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -18.1,
+    "decay20_ms": 280,
+    "high_share": 0.221,
+    "low_share": 0.147,
+    "max50_rms_dbfs": -12.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "iconattb.wav",
+   "role": "rifle: double tap",
+   "seed": "sha256('rtsai-standalone-sfx-1/iconattb.wav')",
+   "sha256": "2bee7002477a6befc9123594a0c47b550b20a475fe79f9039bb9853822076587"
+  },
+  "sfx/iconattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17.5,
+    "max50_rms_dbfs": -12,
+    "reference": "iconattc.wav",
+    "seconds": 1.153
+   },
+   "measured": {
+    "active_rms_dbfs": -17.4,
+    "decay20_ms": 350,
+    "high_share": 0.24,
+    "low_share": 0.118,
+    "max50_rms_dbfs": -12.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.153
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "iconattc.wav",
+   "role": "rifle: five-round burst with echo",
+   "seed": "sha256('rtsai-standalone-sfx-1/iconattc.wav')",
+   "sha256": "72b00e89b6242fa91e2fdae8baf325ff066d43ef2efb1ae9e7eaaa01f050f986"
+  },
+  "sfx/iconattd.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -18.8,
+    "max50_rms_dbfs": -13.6,
+    "reference": "iconattd.wav",
+    "seconds": 0.461
+   },
+   "measured": {
+    "active_rms_dbfs": -19.2,
+    "decay20_ms": 140,
+    "high_share": 0.208,
+    "low_share": 0.156,
+    "max50_rms_dbfs": -13.6,
+    "peak_dbfs": -1.0,
+    "seconds": 0.461
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "iconattd.wav",
+   "role": "rifle: single shot",
+   "seed": "sha256('rtsai-standalone-sfx-1/iconattd.wav')",
+   "sha256": "3055a1ffec008cc483d8ecbb634abe339fe0d37501b5cf8ba4cf27ecb6afea5e"
+  },
+  "sfx/iconatte.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -18,
+    "max50_rms_dbfs": -13.5,
+    "reference": "iconatte.wav",
+    "seconds": 0.646
+   },
+   "measured": {
+    "active_rms_dbfs": -18.5,
+    "decay20_ms": 190,
+    "high_share": 0.232,
+    "low_share": 0.114,
+    "max50_rms_dbfs": -13.5,
+    "peak_dbfs": -1.3,
+    "seconds": 0.646
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "iconatte.wav",
+   "role": "rifle: two quick shots",
+   "seed": "sha256('rtsai-standalone-sfx-1/iconatte.wav')",
+   "sha256": "5c33ff450e3b1486e3fc53c8b96f0923d8e310761edf86edbcc7dfe1fd586204"
+  },
+  "sfx/idogatca.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -11.5,
+    "reference": "idogatca.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -16.2,
+    "decay20_ms": 180,
+    "high_share": 0.095,
+    "low_share": 0.103,
+    "max50_rms_dbfs": -12.4,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_idogatca",
+   "role": "dog attack: growl rising into a bark and a bite",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogatca.wav')",
+   "sha256": "c63be83a26d2243037c32fd8a9d541205b763e409a8775d96976b4c0944d47d2"
+  },
+  "sfx/idogatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -10.8,
+    "max50_rms_dbfs": -4.2,
+    "reference": "idogatta.wav",
+    "seconds": 0.784
+   },
+   "measured": {
+    "active_rms_dbfs": -9.1,
+    "decay20_ms": 240,
+    "high_share": 0.129,
+    "low_share": 0.064,
+    "max50_rms_dbfs": -4.7,
+    "peak_dbfs": -0.3,
+    "seconds": 0.784
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_idogatta",
+   "role": "dog attack: two barks and a bite",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogatta.wav')",
+   "sha256": "51225259ea6f90f676b8abb2546aa6d652ff3499d40dcdc49beeefbebbe89519"
+  },
+  "sfx/igensqua.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -19.3,
+    "max50_rms_dbfs": -12.8,
+    "reference": "igensqua.wav",
+    "seconds": 0.507
+   },
+   "measured": {
+    "active_rms_dbfs": -18.6,
+    "decay20_ms": 300,
+    "high_share": 0.17,
+    "low_share": 0.154,
+    "max50_rms_dbfs": -13.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.507
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_igensqua",
+   "role": "infantry run over: crunch and a wet squelch",
+   "seed": "sha256('rtsai-standalone-sfx-1/igensqua.wav')",
+   "sha256": "5431d6b7d797fcb5f05d674ab8d8daa599ca10e6de34881a01d2252cc22d5da8"
+  },
+  "sfx/igiat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.7,
+    "max50_rms_dbfs": -11.5,
+    "reference": "igiat1a.wav",
+    "seconds": 0.553
+   },
+   "measured": {
+    "active_rms_dbfs": -15.1,
+    "decay20_ms": 480,
+    "high_share": 0.172,
+    "low_share": 0.267,
+    "max50_rms_dbfs": -11.4,
+    "peak_dbfs": -0.3,
+    "seconds": 0.553
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "igiat1a.wav",
+   "role": "machine gun: five-round burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat1a.wav')",
+   "sha256": "8351b955d1c84b401edd1408dfec0beb231901e0cc9cb5698ad79340b58749a8"
+  },
+  "sfx/igiat1b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.8,
+    "max50_rms_dbfs": -10.6,
+    "reference": "igiat1b.wav",
+    "seconds": 0.6
+   },
+   "measured": {
+    "active_rms_dbfs": -14.5,
+    "decay20_ms": 530,
+    "high_share": 0.159,
+    "low_share": 0.328,
+    "max50_rms_dbfs": -11.1,
+    "peak_dbfs": -0.3,
+    "seconds": 0.6
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "igiat1b.wav",
+   "role": "machine gun: six-round burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat1b.wav')",
+   "sha256": "465d6932d5ec05f83555dcf6cc02e324817e185cef3857137595abb1d724df65"
+  },
+  "sfx/igiat1c.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.1,
+    "max50_rms_dbfs": -11.6,
+    "reference": "igiat1c.wav",
+    "seconds": 0.369
+   },
+   "measured": {
+    "active_rms_dbfs": -16.1,
+    "decay20_ms": 300,
+    "high_share": 0.186,
+    "low_share": 0.191,
+    "max50_rms_dbfs": -11.6,
+    "peak_dbfs": -1.0,
+    "seconds": 0.369
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "igiat1c.wav",
+   "role": "machine gun: three-round burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat1c.wav')",
+   "sha256": "dcdf42536e3cd2b745eab6f55dd09640985da6da06105fbc0b37419dade4445f"
+  },
+  "sfx/irocatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.9,
+    "max50_rms_dbfs": -8,
+    "reference": "irocatta.wav",
+    "seconds": 0.738
+   },
+   "measured": {
+    "active_rms_dbfs": -15.6,
+    "decay20_ms": 240,
+    "high_share": 0.086,
+    "low_share": 0.567,
+    "max50_rms_dbfs": -8.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.738
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_irocatta",
+   "role": "infantry-carrier cannon and launcher: heavy round with a short whoosh",
+   "seed": "sha256('rtsai-standalone-sfx-1/irocatta.wav')",
+   "sha256": "0c0be60627456c5a06cf3bf413ff99fc41dc07d1eb1e252a5ac753ef29fd7b83"
+  },
+  "sfx/schrmov.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.1,
+    "max50_rms_dbfs": -5.6,
+    "reference": "schrmov.wav",
+    "seconds": 2.721
+   },
+   "measured": {
+    "active_rms_dbfs": -13.4,
+    "decay20_ms": 1610,
+    "high_share": 0.018,
+    "low_share": 0.56,
+    "max50_rms_dbfs": -5.6,
+    "peak_dbfs": -0.7,
+    "seconds": 2.721
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "schrmov.wav",
+   "role": "unit shifted through space: low whomp, chorus sweep and arrival pop",
+   "seed": "sha256('rtsai-standalone-sfx-1/schrmov.wav')",
+   "sha256": "82b2c41d3c8992de56c7326e4bf62a22b0fe5f6d11ab90096c4adb6eaff19135"
+  },
+  "sfx/schropen.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.8,
+    "max50_rms_dbfs": -5.8,
+    "reference": "schropen.wav",
+    "seconds": 4.889
+   },
+   "measured": {
+    "active_rms_dbfs": -9.5,
+    "decay20_ms": 3320,
+    "high_share": 0.006,
+    "low_share": 0.751,
+    "max50_rms_dbfs": -5.9,
+    "peak_dbfs": -0.3,
+    "seconds": 4.889
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_schropen",
+   "role": "space-shift device powering up: deep hum swelling into a charged shimmer",
+   "seed": "sha256('rtsai-standalone-sfx-1/schropen.wav')",
+   "sha256": "cdb1c499b08581ee576a99b897d68718463475343ec644d6cda5fa3c656ed92e"
+  },
+  "sfx/siroon.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14,
+    "max50_rms_dbfs": -10.1,
+    "reference": "siroon.wav",
+    "seconds": 1.66
+   },
+   "measured": {
+    "active_rms_dbfs": -17.3,
+    "decay20_ms": 670,
+    "high_share": 0.014,
+    "low_share": 0.683,
+    "max50_rms_dbfs": -10.1,
+    "peak_dbfs": -3.1,
+    "seconds": 1.66
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_siroon",
+   "role": "protective field switched on: electric surge and metallic shimmer",
+   "seed": "sha256('rtsai-standalone-sfx-1/siroon.wav')",
+   "sha256": "0d5f3dfbb08bfe64dbdf3e486572a547aa5e3778d0c59d60bb8e34f451fda52f"
+  },
+  "sfx/siroread.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -11.3,
+    "max50_rms_dbfs": -7.2,
+    "reference": "siroread.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -12.3,
+    "decay20_ms": 880,
+    "high_share": 0.001,
+    "low_share": 0.865,
+    "max50_rms_dbfs": -7.4,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_siroread",
+   "role": "protective field ready: low swelling drone",
+   "seed": "sha256('rtsai-standalone-sfx-1/siroread.wav')",
+   "sha256": "68bc02f774bbe55ff3fc81940d8e06a5b07d650db7058ea2cad028e9f75ddb4b"
+  },
+  "sfx/snukexpl.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -9.4,
+    "max50_rms_dbfs": -3.6,
+    "reference": "snukexpl.wav",
+    "seconds": 5.95
+   },
+   "measured": {
+    "active_rms_dbfs": -11.9,
+    "decay20_ms": 4790,
+    "high_share": 0.02,
+    "low_share": 0.794,
+    "max50_rms_dbfs": -3.9,
+    "peak_dbfs": -0.3,
+    "seconds": 5.95
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_snukexpl",
+   "role": "strategic missile detonation: enormous blast and a long rolling roar",
+   "seed": "sha256('rtsai-standalone-sfx-1/snukexpl.wav')",
+   "sha256": "be5afe49a3968dc85c907eea65e3b6d0b03400138f5300302e07a9a9f0e88ede"
+  },
+  "sfx/snukintr.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -9,
+    "max50_rms_dbfs": -5.2,
+    "reference": "snukintr.wav",
+    "seconds": 2.029
+   },
+   "measured": {
+    "active_rms_dbfs": -11.5,
+    "decay20_ms": 630,
+    "high_share": 0.015,
+    "low_share": 0.646,
+    "max50_rms_dbfs": -5.2,
+    "peak_dbfs": -0.3,
+    "seconds": 2.029
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_snukintr",
+   "role": "strategic missile incoming: rising roar and a falling shriek",
+   "seed": "sha256('rtsai-standalone-sfx-1/snukintr.wav')",
+   "sha256": "b302ab71b4635714e17301d19cb7258515d3ccd8c5f9a9384475ea3caa24e86e"
+  },
+  "sfx/snuklaun.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -11.3,
+    "max50_rms_dbfs": -4.8,
+    "reference": "snuklaun.wav",
+    "seconds": 3.505
+   },
+   "measured": {
+    "active_rms_dbfs": -11.6,
+    "decay20_ms": 2800,
+    "high_share": 0.006,
+    "low_share": 0.699,
+    "max50_rms_dbfs": -5.0,
+    "peak_dbfs": -0.3,
+    "seconds": 3.505
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_snuklaun",
+   "role": "strategic missile launch: ignition and a deep rocket roar",
+   "seed": "sha256('rtsai-standalone-sfx-1/snuklaun.wav')",
+   "sha256": "a10c8af9060b6e9f83ad37a2577293e286f3672ca01d80857637181cefc5ccff"
+  },
+  "sfx/snukread.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.8,
+    "reference": "snukread.wav",
+    "seconds": 4.382
+   },
+   "measured": {
+    "active_rms_dbfs": -10.8,
+    "decay20_ms": 1110,
+    "high_share": 0.018,
+    "low_share": 0.583,
+    "max50_rms_dbfs": -7.8,
+    "peak_dbfs": -0.3,
+    "seconds": 4.382
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_snukread",
+   "role": "missile silo ready: hydraulic doors and a two-tone warning",
+   "seed": "sha256('rtsai-standalone-sfx-1/snukread.wav')",
+   "sha256": "9a9a6b03eecac303d9e79237c7a6ff25d3ae1501d3f04114cb98ceac68a2aa97"
+  },
+  "sfx/sweaintr.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -12.5,
+    "max50_rms_dbfs": -7,
+    "reference": "sweaintr.wav",
+    "seconds": 6.688
+   },
+   "measured": {
+    "active_rms_dbfs": -15.4,
+    "decay20_ms": 3520,
+    "high_share": 0.01,
+    "low_share": 0.628,
+    "max50_rms_dbfs": -7.0,
+    "peak_dbfs": -0.8,
+    "seconds": 6.688
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_sweaintr",
+   "role": "storm brewing: rising wind and distant thunder",
+   "seed": "sha256('rtsai-standalone-sfx-1/sweaintr.wav')",
+   "sha256": "42767208c0d115dcbf97b43c576af3f3a9a61b8403ea916ced93f6628268ab66"
+  },
+  "sfx/sweastra.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.7,
+    "max50_rms_dbfs": -8.5,
+    "reference": "sweastra.wav",
+    "seconds": 2.26
+   },
+   "measured": {
+    "active_rms_dbfs": -16.7,
+    "decay20_ms": 1450,
+    "high_share": 0.006,
+    "low_share": 0.782,
+    "max50_rms_dbfs": -8.7,
+    "peak_dbfs": -0.3,
+    "seconds": 2.26
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "sweastra.wav",
+   "role": "lightning strike: rolling thunder",
+   "seed": "sha256('rtsai-standalone-sfx-1/sweastra.wav')",
+   "sha256": "93fbd9299788493ad5a3bc52111b7ff3ace9017abb72d80b122fc349154e4f42"
+  },
+  "sfx/sweastrb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17.7,
+    "max50_rms_dbfs": -9.2,
+    "reference": "sweastrb.wav",
+    "seconds": 1.614
+   },
+   "measured": {
+    "active_rms_dbfs": -13.5,
+    "decay20_ms": 880,
+    "high_share": 0.117,
+    "low_share": 0.446,
+    "max50_rms_dbfs": -9.1,
+    "peak_dbfs": -0.3,
+    "seconds": 1.614
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "sweastrb.wav",
+   "role": "lightning strike: sharp crack",
+   "seed": "sha256('rtsai-standalone-sfx-1/sweastrb.wav')",
+   "sha256": "9d3e836edda107752b3fb980264650308a10dfe4a38ad73e0c72a39e4a83a16c"
+  },
+  "sfx/sweastrc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.7,
+    "max50_rms_dbfs": -9.7,
+    "reference": "sweastrc.wav",
+    "seconds": 1.891
+   },
+   "measured": {
+    "active_rms_dbfs": -14.8,
+    "decay20_ms": 870,
+    "high_share": 0.103,
+    "low_share": 0.576,
+    "max50_rms_dbfs": -9.4,
+    "peak_dbfs": -0.3,
+    "seconds": 1.891
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "sweastrc.wav",
+   "role": "lightning strike: crack and roll",
+   "seed": "sha256('rtsai-standalone-sfx-1/sweastrc.wav')",
+   "sha256": "d6119f997d6d2f91a370799b436f72c27057f36f0f1a375f7221714c0f203add"
+  },
+  "sfx/sweastrd.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.3,
+    "max50_rms_dbfs": -8.2,
+    "reference": "sweastrd.wav",
+    "seconds": 1.799
+   },
+   "measured": {
+    "active_rms_dbfs": -16.9,
+    "decay20_ms": 1150,
+    "high_share": 0.005,
+    "low_share": 0.817,
+    "max50_rms_dbfs": -8.4,
+    "peak_dbfs": -0.3,
+    "seconds": 1.799
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "sweastrd.wav",
+   "role": "lightning strike: rolling thunder",
+   "seed": "sha256('rtsai-standalone-sfx-1/sweastrd.wav')",
+   "sha256": "26fa7341d1212d8c0e1f3a08799a10ee7b7bc52a37005bb79e3815d3f7270536"
+  },
+  "sfx/uplace.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.4,
+    "max50_rms_dbfs": -8,
+    "reference": "uplace.wav",
+    "seconds": 1.384
+   },
+   "measured": {
+    "active_rms_dbfs": -17.7,
+    "decay20_ms": 660,
+    "high_share": 0.021,
+    "low_share": 0.679,
+    "max50_rms_dbfs": -8.0,
+    "peak_dbfs": -2.4,
+    "seconds": 1.384
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_uplace",
+   "role": "structure placed: heavy thud, metal ring and settling debris",
+   "seed": "sha256('rtsai-standalone-sfx-1/uplace.wav')",
+   "sha256": "88aa157ca3c5ff87c63f6b7c36e3fc7305901b2e8e04cf356b9e77bddd3035b5"
+  },
+  "sfx/uselbuil.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16,
+    "max50_rms_dbfs": -9.1,
+    "reference": "uselbuil.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -11.8,
+    "decay20_ms": 1370,
+    "high_share": 0.037,
+    "low_share": 0.569,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_uselbuil",
+   "role": "structure sold or packed up: servo whine, ratchet and a closing clank",
+   "seed": "sha256('rtsai-standalone-sfx-1/uselbuil.wav')",
+   "sha256": "e66bb3cf555bc1d57ccd56eece8af57bf05a829775c40caa98331c81e7c6b9ec"
+  },
+  "sfx/vapoar2b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.0,
+    "max50_rms_dbfs": -9.0,
+    "reference": "none (name missing in RA2 too)",
+    "seconds": 1.08
+   },
+   "measured": {
+    "active_rms_dbfs": -17.6,
+    "decay20_ms": 340,
+    "high_share": 0.113,
+    "low_share": 0.289,
+    "max50_rms_dbfs": -9.0,
+    "peak_dbfs": -0.3,
+    "seconds": 1.08
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vapoar2b.wav",
+   "role": "anti-aircraft missile launch (the second of three variants)",
+   "seed": "sha256('rtsai-standalone-sfx-1/vapoar2b.wav')",
+   "sha256": "ccf9569986c704142cc37e7fe97cbd39e9bd4e38ff0dfee184c48de09f3ad03f"
+  },
+  "sfx/vapoat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17.5,
+    "max50_rms_dbfs": -9.5,
+    "reference": "vapoat2a.wav",
+    "seconds": 1.199
+   },
+   "measured": {
+    "active_rms_dbfs": -16.3,
+    "decay20_ms": 400,
+    "high_share": 0.145,
+    "low_share": 0.218,
+    "max50_rms_dbfs": -9.4,
+    "peak_dbfs": -0.3,
+    "seconds": 1.199
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vapoat2a.wav",
+   "role": "anti-aircraft missile launch",
+   "seed": "sha256('rtsai-standalone-sfx-1/vapoat2a.wav')",
+   "sha256": "82885aab911742d8dc573adc4cfd47f868be7294267d499ab60adfbf04a44224"
+  },
+  "sfx/vapoat2c.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.5,
+    "max50_rms_dbfs": -8.4,
+    "reference": "vapoat2c.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -15.1,
+    "decay20_ms": 470,
+    "high_share": 0.128,
+    "low_share": 0.258,
+    "max50_rms_dbfs": -8.7,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vapoat2c.wav",
+   "role": "anti-aircraft missile launch",
+   "seed": "sha256('rtsai-standalone-sfx-1/vapoat2c.wav')",
+   "sha256": "478c6ca7ec7896348d602f2d630ca3d55303d2a229dad17c424bdcddddfbe7ec"
+  },
+  "sfx/vblhatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -18.1,
+    "max50_rms_dbfs": -13.1,
+    "reference": "vblhatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -16.1,
+    "decay20_ms": 310,
+    "high_share": 0.184,
+    "low_share": 0.225,
+    "max50_rms_dbfs": -13.1,
+    "peak_dbfs": -3.1,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vblhatta.wav",
+   "role": "helicopter rotary cannon: spin-up burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vblhatta.wav')",
+   "sha256": "ed758dccd9760d26c6a19cab7381251ab90f7a2cc8f5e9e61b1b19b6cb18cb49"
+  },
+  "sfx/vblhattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -18.2,
+    "max50_rms_dbfs": -12,
+    "reference": "vblhattb.wav",
+    "seconds": 0.692
+   },
+   "measured": {
+    "active_rms_dbfs": -14.1,
+    "decay20_ms": 270,
+    "high_share": 0.175,
+    "low_share": 0.243,
+    "max50_rms_dbfs": -12.0,
+    "peak_dbfs": -1.3,
+    "seconds": 0.692
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vblhattb.wav",
+   "role": "helicopter rotary cannon: spin-up burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vblhattb.wav')",
+   "sha256": "feada054f96f783e4feba87301e563b963d44c6c51bd179dadaac423eb584ecb"
+  },
+  "sfx/vchrtele.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.3,
+    "max50_rms_dbfs": -9.1,
+    "reference": "vchrtele.wav",
+    "seconds": 1.061
+   },
+   "measured": {
+    "active_rms_dbfs": -16.3,
+    "decay20_ms": 460,
+    "high_share": 0.019,
+    "low_share": 0.535,
+    "max50_rms_dbfs": -9.0,
+    "peak_dbfs": -0.3,
+    "seconds": 1.061
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vchrtele.wav",
+   "role": "ore carrier teleports home: short whomp and shimmer",
+   "seed": "sha256('rtsai-standalone-sfx-1/vchrtele.wav')",
+   "sha256": "252cf4d0a28d927703d521962e496f0d7fde620626f17bcb38d46aae3610306b"
+  },
+  "sfx/vdesatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.7,
+    "max50_rms_dbfs": -8,
+    "reference": "vdesatta.wav",
+    "seconds": 1.061
+   },
+   "measured": {
+    "active_rms_dbfs": -17.1,
+    "decay20_ms": 470,
+    "high_share": 0.016,
+    "low_share": 0.791,
+    "max50_rms_dbfs": -8.0,
+    "peak_dbfs": -2.2,
+    "seconds": 1.061
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vdesatta.wav",
+   "role": "heavy gun and howitzer: deep boom",
+   "seed": "sha256('rtsai-standalone-sfx-1/vdesatta.wav')",
+   "sha256": "e4d96bbafd5ee4a7abcbe359faea15f4a04d0c30b5210caafb40cd0f64afc8fd"
+  },
+  "sfx/vdesattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.4,
+    "max50_rms_dbfs": -7.1,
+    "reference": "vdesattb.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -16.0,
+    "decay20_ms": 470,
+    "high_share": 0.017,
+    "low_share": 0.783,
+    "max50_rms_dbfs": -7.0,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vdesattb.wav",
+   "role": "heavy gun and howitzer: deep boom",
+   "seed": "sha256('rtsai-standalone-sfx-1/vdesattb.wav')",
+   "sha256": "105b310970f3a0b89265716ad6fc397971bd8bf498818070ef6079adbdd268aa"
+  },
+  "sfx/vflaat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17.5,
+    "max50_rms_dbfs": -6.8,
+    "reference": "vflaat1a.wav",
+    "seconds": 0.876
+   },
+   "measured": {
+    "active_rms_dbfs": -12.8,
+    "decay20_ms": 350,
+    "high_share": 0.045,
+    "low_share": 0.697,
+    "max50_rms_dbfs": -6.8,
+    "peak_dbfs": -0.3,
+    "seconds": 0.876
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vflaat1a.wav",
+   "role": "tracked autocannon: two heavy rounds",
+   "seed": "sha256('rtsai-standalone-sfx-1/vflaat1a.wav')",
+   "sha256": "8a27eace36d74ba0e3284c2ade6686685fbc1147e4c5587f572d872d7be1bc1a"
+  },
+  "sfx/vflaat1b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17,
+    "max50_rms_dbfs": -7.2,
+    "reference": "vflaat1b.wav",
+    "seconds": 0.738
+   },
+   "measured": {
+    "active_rms_dbfs": -13.1,
+    "decay20_ms": 340,
+    "high_share": 0.074,
+    "low_share": 0.532,
+    "max50_rms_dbfs": -7.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.738
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vflaat1b.wav",
+   "role": "tracked autocannon: two heavy rounds",
+   "seed": "sha256('rtsai-standalone-sfx-1/vflaat1b.wav')",
+   "sha256": "5af528bdefe4bf91c85b7d7fa7843352e39916df38609f79649312fdbf7e765a"
+  },
+  "sfx/vflaat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -18.1,
+    "max50_rms_dbfs": -8.8,
+    "reference": "vflaat2a.wav",
+    "seconds": 0.738
+   },
+   "measured": {
+    "active_rms_dbfs": -14.0,
+    "decay20_ms": 470,
+    "high_share": 0.047,
+    "low_share": 0.63,
+    "max50_rms_dbfs": -9.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.738
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vflaat2a.wav",
+   "role": "twin anti-aircraft cannon: burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vflaat2a.wav')",
+   "sha256": "0541998095bc6b8d984dc3f1b21c8bbe21fe1e796a9a6484f3d043ac1a67b1b0"
+  },
+  "sfx/vflaat2b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -20.8,
+    "max50_rms_dbfs": -10.8,
+    "reference": "vflaat2b.wav",
+    "seconds": 0.692
+   },
+   "measured": {
+    "active_rms_dbfs": -15.8,
+    "decay20_ms": 80,
+    "high_share": 0.051,
+    "low_share": 0.593,
+    "max50_rms_dbfs": -10.8,
+    "peak_dbfs": -1.3,
+    "seconds": 0.692
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vflaat2b.wav",
+   "role": "twin anti-aircraft cannon: burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vflaat2b.wav')",
+   "sha256": "ca8142cf3ffb16c4ecf3e9208d89bcc81bd571c8854f53f32f376fa5b0ae3851"
+  },
+  "sfx/vflaat2c.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17,
+    "max50_rms_dbfs": -8.3,
+    "reference": "vflaat2c.wav",
+    "seconds": 0.738
+   },
+   "measured": {
+    "active_rms_dbfs": -13.9,
+    "decay20_ms": 480,
+    "high_share": 0.056,
+    "low_share": 0.631,
+    "max50_rms_dbfs": -9.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.738
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vflaat2c.wav",
+   "role": "twin anti-aircraft cannon: burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vflaat2c.wav')",
+   "sha256": "4dbe93fc5475652a1fbf50ec9223c32f9d11554a808eece7b6a1d471d9ce2865"
+  },
+  "sfx/vflaat2d.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.6,
+    "max50_rms_dbfs": -5.9,
+    "reference": "vflaat2d.wav",
+    "seconds": 0.6
+   },
+   "measured": {
+    "active_rms_dbfs": -11.4,
+    "decay20_ms": 210,
+    "high_share": 0.043,
+    "low_share": 0.63,
+    "max50_rms_dbfs": -6.1,
+    "peak_dbfs": -0.3,
+    "seconds": 0.6
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vflaat2d.wav",
+   "role": "twin anti-aircraft cannon: burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vflaat2d.wav')",
+   "sha256": "6dce5da19d6f85358c4347888377ee62781d440356f11685cf8e83604aefc434"
+  },
+  "sfx/vgriatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.2,
+    "decay20_ms": 440,
+    "high_share": 0.021,
+    "low_share": 0.753,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vgriatta.wav",
+   "role": "main battle tank gun",
+   "seed": "sha256('rtsai-standalone-sfx-1/vgriatta.wav')",
+   "sha256": "f7a20ef669b5af3eb989647d7c72fbde2352b87206e0190956e02de1edfc0e3d"
+  },
+  "sfx/vgriattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.2,
+    "max50_rms_dbfs": -5.4,
+    "reference": "vgriattb.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -13.0,
+    "decay20_ms": 480,
+    "high_share": 0.021,
+    "low_share": 0.79,
+    "max50_rms_dbfs": -5.8,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vgriattb.wav",
+   "role": "main battle tank gun",
+   "seed": "sha256('rtsai-standalone-sfx-1/vgriattb.wav')",
+   "sha256": "6749d5c150f94833f0fef5b62b2d71e3aac7a217094acca2d3d2325d55d75510"
+  },
+  "sfx/vgriattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.2,
+    "max50_rms_dbfs": -4.6,
+    "reference": "vgriattc.wav",
+    "seconds": 0.922
+   },
+   "measured": {
+    "active_rms_dbfs": -12.2,
+    "decay20_ms": 500,
+    "high_share": 0.014,
+    "low_share": 0.807,
+    "max50_rms_dbfs": -5.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.922
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vgriattc.wav",
+   "role": "main battle tank gun",
+   "seed": "sha256('rtsai-standalone-sfx-1/vgriattc.wav')",
+   "sha256": "9679758f543f7fb1c24fd9e2103d88c06b4c97e1cc6c4d6b6c74d2e4b02d0cba"
+  },
+  "sfx/vhorlana.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -10.6,
+    "reference": "vhorlana.wav",
+    "seconds": 1.476
+   },
+   "measured": {
+    "active_rms_dbfs": -16.2,
+    "decay20_ms": 700,
+    "high_share": 0.165,
+    "low_share": 0.126,
+    "max50_rms_dbfs": -10.6,
+    "peak_dbfs": -0.7,
+    "seconds": 1.476
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vhorlana.wav",
+   "role": "drone landing",
+   "seed": "sha256('rtsai-standalone-sfx-1/vhorlana.wav')",
+   "sha256": "d781a31bad76f6d2e09b7db9e76e4fd2ec5a331f3d75a4780843e9f481cb144e"
+  },
+  "sfx/vhorlanb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.7,
+    "max50_rms_dbfs": -9.9,
+    "reference": "vhorlanb.wav",
+    "seconds": 1.384
+   },
+   "measured": {
+    "active_rms_dbfs": -15.2,
+    "decay20_ms": 630,
+    "high_share": 0.173,
+    "low_share": 0.098,
+    "max50_rms_dbfs": -9.7,
+    "peak_dbfs": -0.3,
+    "seconds": 1.384
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vhorlanb.wav",
+   "role": "drone landing",
+   "seed": "sha256('rtsai-standalone-sfx-1/vhorlanb.wav')",
+   "sha256": "106e8a82791e23ed84f23e51511739cd0d8f305495ff58b0767613c13f244f21"
+  },
+  "sfx/vhortaka.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.7,
+    "max50_rms_dbfs": -8.6,
+    "reference": "vhortaka.wav",
+    "seconds": 1.522
+   },
+   "measured": {
+    "active_rms_dbfs": -12.0,
+    "decay20_ms": 710,
+    "high_share": 0.161,
+    "low_share": 0.12,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.522
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vhortaka.wav",
+   "role": "drone take-off",
+   "seed": "sha256('rtsai-standalone-sfx-1/vhortaka.wav')",
+   "sha256": "1cba9bbca7fed040794e76e1f6947ac35500f69aa2e933183c190eb4a55a6fe7"
+  },
+  "sfx/vhortakb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.2,
+    "max50_rms_dbfs": -8.4,
+    "reference": "vhortakb.wav",
+    "seconds": 1.707
+   },
+   "measured": {
+    "active_rms_dbfs": -12.0,
+    "decay20_ms": 270,
+    "high_share": 0.158,
+    "low_share": 0.132,
+    "max50_rms_dbfs": -8.7,
+    "peak_dbfs": -0.3,
+    "seconds": 1.707
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vhortakb.wav",
+   "role": "drone take-off",
+   "seed": "sha256('rtsai-standalone-sfx-1/vhortakb.wav')",
+   "sha256": "2e2e5eea4a264755d66bd5eb72c95e3168cb128881d845bf4127f64b1198842c"
+  },
+  "sfx/vintatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -19.9,
+    "decay20_ms": 470,
+    "high_share": 0.167,
+    "low_share": 0.216,
+    "max50_rms_dbfs": -10.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vintatta.wav",
+   "role": "missile launch: ignition and hiss",
+   "seed": "sha256('rtsai-standalone-sfx-1/vintatta.wav')",
+   "sha256": "8f7dac26d2a82aefc5aa84631acf353242974c1018d033ed37d13c84c60db020"
+  },
+  "sfx/vnavupa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.9,
+    "max50_rms_dbfs": -10.1,
+    "reference": "vnavupa.wav",
+    "seconds": 1.476
+   },
+   "measured": {
+    "active_rms_dbfs": -15.8,
+    "decay20_ms": 860,
+    "high_share": 0.125,
+    "low_share": 0.151,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.476
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_vnavupa",
+   "role": "submarine diving or surfacing: venting air, bubbles, hull groan",
+   "seed": "sha256('rtsai-standalone-sfx-1/vnavupa.wav')",
+   "sha256": "d04a539ee4c903890a409e1667ac4b52405984d75c8fb0455a9c1e6b1e8e04d7"
+  },
+  "sfx/vospatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.6,
+    "max50_rms_dbfs": -6.1,
+    "reference": "vospatta.wav",
+    "seconds": 0.553
+   },
+   "measured": {
+    "active_rms_dbfs": -13.8,
+    "decay20_ms": 190,
+    "high_share": 0.002,
+    "low_share": 0.92,
+    "max50_rms_dbfs": -6.1,
+    "peak_dbfs": -1.0,
+    "seconds": 0.553
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_vospatta",
+   "role": "bomb release: latch clunk and a low thud",
+   "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
+   "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748"
+  },
+  "sfx/vrhiatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.1,
+    "max50_rms_dbfs": -6.7,
+    "reference": "vrhiatta.wav",
+    "seconds": 0.6
+   },
+   "measured": {
+    "active_rms_dbfs": -14.8,
+    "decay20_ms": 190,
+    "high_share": 0.035,
+    "low_share": 0.701,
+    "max50_rms_dbfs": -8.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.6
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vrhiatta.wav",
+   "role": "light cannon: tight report",
+   "seed": "sha256('rtsai-standalone-sfx-1/vrhiatta.wav')",
+   "sha256": "1dd489fdea5e027ed5c2cda940e60b289eb503afef646a1195e115d7cbc57646"
+  },
+  "sfx/vrhiattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.5,
+    "max50_rms_dbfs": -6.4,
+    "reference": "vrhiattb.wav",
+    "seconds": 0.646
+   },
+   "measured": {
+    "active_rms_dbfs": -12.8,
+    "decay20_ms": 110,
+    "high_share": 0.031,
+    "low_share": 0.702,
+    "max50_rms_dbfs": -7.1,
+    "peak_dbfs": -0.3,
+    "seconds": 0.646
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vrhiattb.wav",
+   "role": "light cannon: tight report",
+   "seed": "sha256('rtsai-standalone-sfx-1/vrhiattb.wav')",
+   "sha256": "b4327792307be82db4a16740dce1932ac8bfd74813b8b5bc3cb0c59ca10496ed"
+  },
+  "sfx/vrhiattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6,
+    "reference": "vrhiattc.wav",
+    "seconds": 0.646
+   },
+   "measured": {
+    "active_rms_dbfs": -15.3,
+    "decay20_ms": 390,
+    "high_share": 0.027,
+    "low_share": 0.741,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.646
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vrhiattc.wav",
+   "role": "light cannon: report with echo",
+   "seed": "sha256('rtsai-standalone-sfx-1/vrhiattc.wav')",
+   "sha256": "e0fdbcc598753296c9abeaf75241b335ebb96cd8936dd5b5891826b8d8b10e7d"
+  },
+  "sfx/vrhiattd.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.6,
+    "max50_rms_dbfs": -5.8,
+    "reference": "vrhiattd.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -13.0,
+    "decay20_ms": 170,
+    "high_share": 0.036,
+    "low_share": 0.705,
+    "max50_rms_dbfs": -6.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vrhiattd.wav",
+   "role": "light cannon: tight report",
+   "seed": "sha256('rtsai-standalone-sfx-1/vrhiattd.wav')",
+   "sha256": "05edaf9c1f1414b4eb7932a5a193a12fc0182930fe225f1422968cc445cfdc9c"
+  },
+  "sfx/vsubatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -8.8,
+    "reference": "vsubatta.wav",
+    "seconds": 2.214
+   },
+   "measured": {
+    "active_rms_dbfs": -19.8,
+    "decay20_ms": 1610,
+    "high_share": 0.067,
+    "low_share": 0.405,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -2.0,
+    "seconds": 2.214
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_vsubatta",
+   "role": "torpedo launch: compressed-air thunk, bubbles and a fading motor",
+   "seed": "sha256('rtsai-standalone-sfx-1/vsubatta.wav')",
+   "sha256": "e0c4565864bcda6cec262c28c9c01d2429d040d6a1fcb56867e5f2f4b537e559"
+  },
+  "sfx/vwaratta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.4,
+    "max50_rms_dbfs": -9.1,
+    "reference": "vwaratta.wav",
+    "seconds": 0.646
+   },
+   "measured": {
+    "active_rms_dbfs": -14.8,
+    "decay20_ms": 220,
+    "high_share": 0.09,
+    "low_share": 0.576,
+    "max50_rms_dbfs": -9.8,
+    "peak_dbfs": -0.3,
+    "seconds": 0.646
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vwaratta.wav",
+   "role": "20 mm cannon: burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vwaratta.wav')",
+   "sha256": "d32a659d7b8ee1e24345d2bf9d7bd006b9af00a29e84d6a1e54e5c6f1a99ec19"
+  },
+  "sfx/vwarattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.3,
+    "max50_rms_dbfs": -9.3,
+    "reference": "vwarattb.wav",
+    "seconds": 0.784
+   },
+   "measured": {
+    "active_rms_dbfs": -14.4,
+    "decay20_ms": 290,
+    "high_share": 0.093,
+    "low_share": 0.582,
+    "max50_rms_dbfs": -9.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.784
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "vwarattb.wav",
+   "role": "20 mm cannon: burst",
+   "seed": "sha256('rtsai-standalone-sfx-1/vwarattb.wav')",
+   "sha256": "76e8a7db6920c6f84be5f8e98396130a329ef8d04413e2a57bc9d380628cb00c"
+  },
+  "ui/gpowof.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.1,
+    "max50_rms_dbfs": -7.8,
+    "reference": "gpowof.wav",
+    "seconds": 2.029
+   },
+   "measured": {
+    "active_rms_dbfs": -11.4,
+    "decay20_ms": 1220,
+    "high_share": 0.023,
+    "low_share": 0.506,
+    "max50_rms_dbfs": -8.3,
+    "peak_dbfs": -0.3,
+    "seconds": 2.029
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gpowof",
+   "role": "power lost: clunk and a generator winding down",
+   "seed": "sha256('rtsai-standalone-sfx-1/gpowof.wav')",
+   "sha256": "2a71a1dda75144b44858521ea615355e5a91ef4df962ab92234649368d10f31a"
+  },
+  "ui/gpowon.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.3,
+    "max50_rms_dbfs": -9.5,
+    "reference": "gpowon.wav",
+    "seconds": 2.998
+   },
+   "measured": {
+    "active_rms_dbfs": -12.6,
+    "decay20_ms": 1760,
+    "high_share": 0.024,
+    "low_share": 0.524,
+    "max50_rms_dbfs": -9.4,
+    "peak_dbfs": -0.3,
+    "seconds": 2.998
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gpowon",
+   "role": "power restored: click, rising generator hum and electric buzz",
+   "seed": "sha256('rtsai-standalone-sfx-1/gpowon.wav')",
+   "sha256": "6cd098c137c5f31665477cc24f20eb411e828cec03686a037005874fb8beb1e3"
+  },
+  "ui/gupgrad1.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.6,
+    "max50_rms_dbfs": -10.2,
+    "reference": "gupgrad1.wav",
+    "seconds": 0.692
+   },
+   "measured": {
+    "active_rms_dbfs": -15.6,
+    "decay20_ms": 320,
+    "high_share": 0.141,
+    "low_share": 0.063,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -2.5,
+    "seconds": 0.692
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_gupgrad1",
+   "role": "unit promoted: rising three-note chime",
+   "seed": "sha256('rtsai-standalone-sfx-1/gupgrad1.wav')",
+   "sha256": "8eef28cd1082243b63a86d0319bde3339396e9c36bb3aaf2510e413ae8b142fb"
+  },
+  "ui/ubeacon.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.8,
+    "max50_rms_dbfs": -7.7,
+    "reference": "ubeacon.wav",
+    "seconds": 1.43
+   },
+   "measured": {
+    "active_rms_dbfs": -15.8,
+    "decay20_ms": 730,
+    "high_share": 0.166,
+    "low_share": 0.02,
+    "max50_rms_dbfs": -7.7,
+    "peak_dbfs": -2.8,
+    "seconds": 1.43
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_ubeacon",
+   "role": "beacon placed: sonar-like ping with echoes",
+   "seed": "sha256('rtsai-standalone-sfx-1/ubeacon.wav')",
+   "sha256": "02da6190a57163d94806d2a1608aee5e1226035e9b8806b111d7869c142af065"
+  },
+  "ui/ucreddn.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.9,
+    "max50_rms_dbfs": -16.2,
+    "reference": "ucreddn.wav",
+    "seconds": 0.024
+   },
+   "measured": {
+    "active_rms_dbfs": -14.0,
+    "decay20_ms": 20,
+    "high_share": 0.177,
+    "low_share": 0.022,
+    "max50_rms_dbfs": -16.2,
+    "peak_dbfs": -1.8,
+    "seconds": 0.024
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "ucreddn.wav",
+   "role": "credits counting down: tiny low tick",
+   "seed": "sha256('rtsai-standalone-sfx-1/ucreddn.wav')",
+   "sha256": "7e91eae3e44c1bae14460db3390e12b600b56d4c038d6e17bf515b77e5a9000c"
+  },
+  "ui/ucredup.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -8.8,
+    "max50_rms_dbfs": -9.7,
+    "reference": "ucredup.wav",
+    "seconds": 0.037
+   },
+   "measured": {
+    "active_rms_dbfs": -8.5,
+    "decay20_ms": 30,
+    "high_share": 0.332,
+    "low_share": 0.005,
+    "max50_rms_dbfs": -9.5,
+    "peak_dbfs": -0.3,
+    "seconds": 0.037
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "ucredup.wav",
+   "role": "credits counting up: tiny bright tick",
+   "seed": "sha256('rtsai-standalone-sfx-1/ucredup.wav')",
+   "sha256": "bfc25b0717289b9d7c2e0deb188ec4a545eea161e802e99e8ffd80e74cf9b7c1"
+  },
+  "ui/ugamclos.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -10.2,
+    "max50_rms_dbfs": -10.2,
+    "reference": "ugamclos.wav",
+    "seconds": 0.046
+   },
+   "measured": {
+    "active_rms_dbfs": -10.2,
+    "decay20_ms": 30,
+    "high_share": 0.055,
+    "low_share": 0.144,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -1.6,
+    "seconds": 0.046
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "ugamclos.wav",
+   "role": "disabled click: dull knock",
+   "seed": "sha256('rtsai-standalone-sfx-1/ugamclos.wav')",
+   "sha256": "47858afead375838abb38571933405933b88c60c09322752dfdb40477d70a5c0"
+  },
+  "ui/umenucl1.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -16.3,
+    "max50_rms_dbfs": -16.3,
+    "reference": "umenucl1.wav",
+    "seconds": 0.046
+   },
+   "measured": {
+    "active_rms_dbfs": -15.4,
+    "decay20_ms": 10,
+    "high_share": 0.28,
+    "low_share": 0.008,
+    "max50_rms_dbfs": -16.4,
+    "peak_dbfs": -0.3,
+    "seconds": 0.046
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "umenucl1.wav",
+   "role": "menu click: crisp tick",
+   "seed": "sha256('rtsai-standalone-sfx-1/umenucl1.wav')",
+   "sha256": "440238dc42bbc9ea64806b23429fef02f4756292f8a2b28e605e84a91a035e01"
+  },
+  "ui/umessage.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -10.5,
+    "max50_rms_dbfs": -7.2,
+    "reference": "umessage.wav",
+    "seconds": 0.323
+   },
+   "measured": {
+    "active_rms_dbfs": -11.5,
+    "decay20_ms": 220,
+    "high_share": 0.04,
+    "low_share": 0.133,
+    "max50_rms_dbfs": -7.4,
+    "peak_dbfs": -0.3,
+    "seconds": 0.323
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_umessage",
+   "role": "chat message: two-tone blip",
+   "seed": "sha256('rtsai-standalone-sfx-1/umessage.wav')",
+   "sha256": "e95401c4c426bda9649c6b03727816faffc1b449839e45ad33e5c43fd378b93d"
+  },
+  "ui/uradarof.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.9,
+    "max50_rms_dbfs": -8.4,
+    "reference": "uradarof.wav",
+    "seconds": 1.891
+   },
+   "measured": {
+    "active_rms_dbfs": -13.1,
+    "decay20_ms": 1340,
+    "high_share": 0.087,
+    "low_share": 0.07,
+    "max50_rms_dbfs": -8.4,
+    "peak_dbfs": -3.1,
+    "seconds": 1.891
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_uradarof",
+   "role": "radar offline: descending power-down and fading static",
+   "seed": "sha256('rtsai-standalone-sfx-1/uradarof.wav')",
+   "sha256": "0380b517f9461fd51c0b4499ef068ac64e93089618f1c245c8deadabed2991a8"
+  },
+  "ui/uradaron.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14,
+    "max50_rms_dbfs": -8.8,
+    "reference": "uradaron.wav",
+    "seconds": 3.044
+   },
+   "measured": {
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 2470,
+    "high_share": 0.055,
+    "low_share": 0.112,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -2.8,
+    "seconds": 3.044
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "_uradaron",
+   "role": "radar online: power-up sweep, scanning tone and acknowledgement beeps",
+   "seed": "sha256('rtsai-standalone-sfx-1/uradaron.wav')",
+   "sha256": "7cffc0b8ca62e0d3569b23217645c1f5dfa13379e5cf9f634a3b1ae5f191a4a3"
+  },
+  "ui/uslide1.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.1,
+    "max50_rms_dbfs": -8.9,
+    "reference": "uslide1.wav",
+    "seconds": 0.553
+   },
+   "measured": {
+    "active_rms_dbfs": -13.7,
+    "decay20_ms": 110,
+    "high_share": 0.023,
+    "low_share": 0.482,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -0.3,
+    "seconds": 0.553
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "uslide1.wav",
+   "role": "build palette opens: mechanical slide and latch",
+   "seed": "sha256('rtsai-standalone-sfx-1/uslide1.wav')",
+   "sha256": "f6e0bd6cb376cecf56f2a8923ed1782c51b95d6bfbee1472e4525370c21f9f0c"
+  },
+  "ui/uslide2.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.6,
+    "max50_rms_dbfs": -8.6,
+    "reference": "uslide2.wav",
+    "seconds": 0.922
+   },
+   "measured": {
+    "active_rms_dbfs": -13.4,
+    "decay20_ms": 210,
+    "high_share": 0.027,
+    "low_share": 0.455,
+    "max50_rms_dbfs": -8.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.922
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "uslide2.wav",
+   "role": "build palette closes: slide back and a thunk",
+   "seed": "sha256('rtsai-standalone-sfx-1/uslide2.wav')",
+   "sha256": "7a46f46df8872efa4b73e148075dd9c918b689f960604784da576ed5ad0cfcf5"
+  },
+  "ui/utab.wav": {
+   "category": "ui",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -11.9,
+    "max50_rms_dbfs": -12.9,
+    "reference": "utab.wav",
+    "seconds": 0.042
+   },
+   "measured": {
+    "active_rms_dbfs": -13.1,
+    "decay20_ms": 20,
+    "high_share": 0.322,
+    "low_share": 0.005,
+    "max50_rms_dbfs": -14.1,
+    "peak_dbfs": -0.3,
+    "seconds": 0.042
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "utab.wav",
+   "role": "tab click: bright tick",
+   "seed": "sha256('rtsai-standalone-sfx-1/utab.wav')",
+   "sha256": "c743a2bc03ef157fd84195d4818f3b5a26a00b0963f97a3480fe2c68cbf36ab8"
+  },
+  "voices/idogdiea.wav": {
+   "category": "dog voice",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -10.6,
+    "max50_rms_dbfs": -6.9,
+    "reference": "idogdiea.wav",
+    "seconds": 0.323
+   },
+   "measured": {
+    "active_rms_dbfs": -11.8,
+    "decay20_ms": 90,
+    "high_share": 0.093,
+    "low_share": 0.049,
+    "max50_rms_dbfs": -6.9,
+    "peak_dbfs": -1.2,
+    "seconds": 0.323
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "idogdiea.wav",
+   "role": "dog dies: sharp yelp",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogdiea.wav')",
+   "sha256": "0213811f64b40810d3353083b190e037c7262b0f44ce646c589ce7db40b6d209"
+  },
+  "voices/idogfea.wav": {
+   "category": "dog voice",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.4,
+    "max50_rms_dbfs": -7.4,
+    "reference": "idogfea.wav",
+    "seconds": 0.784
+   },
+   "measured": {
+    "active_rms_dbfs": -14.0,
+    "decay20_ms": 70,
+    "high_share": 0.107,
+    "low_share": 0.077,
+    "max50_rms_dbfs": -8.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.784
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "idogfea.wav",
+   "role": "dog feedback: snarl and bark",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogfea.wav')",
+   "sha256": "048a3f988c95341a5830441ad0e7bd2e7a2a6bd964a5e6a49097f4cbd13d5ada"
+  },
+  "voices/idogfeb.wav": {
+   "category": "dog voice",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13,
+    "max50_rms_dbfs": -5.6,
+    "reference": "idogfeb.wav",
+    "seconds": 0.876
+   },
+   "measured": {
+    "active_rms_dbfs": -10.8,
+    "decay20_ms": 440,
+    "high_share": 0.112,
+    "low_share": 0.035,
+    "max50_rms_dbfs": -5.7,
+    "peak_dbfs": -0.3,
+    "seconds": 0.876
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "idogfeb.wav",
+   "role": "dog feedback: whimper then a sharp bark",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogfeb.wav')",
+   "sha256": "6cbe87970905f16788bdeab18df1e78bc06258dcad684a218d98981ac45a3fd0"
+  },
+  "voices/idogfec.wav": {
+   "category": "dog voice",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -14.5,
+    "max50_rms_dbfs": -5.8,
+    "reference": "idogfec.wav",
+    "seconds": 0.876
+   },
+   "measured": {
+    "active_rms_dbfs": -12.3,
+    "decay20_ms": 610,
+    "high_share": 0.104,
+    "low_share": 0.038,
+    "max50_rms_dbfs": -5.5,
+    "peak_dbfs": -0.3,
+    "seconds": 0.876
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "idogfec.wav",
+   "role": "dog feedback: whine",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogfec.wav')",
+   "sha256": "3a34cb35f2bd266e0ca6df99381eebf4f7387aec33eb7b2c860a4e899751198d"
+  },
+  "voices/idogmova.wav": {
+   "category": "dog voice",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17.6,
+    "max50_rms_dbfs": -10.6,
+    "reference": "idogmova.wav",
+    "seconds": 1.153
+   },
+   "measured": {
+    "active_rms_dbfs": -16.0,
+    "decay20_ms": 750,
+    "high_share": 0.158,
+    "low_share": 0.039,
+    "max50_rms_dbfs": -10.8,
+    "peak_dbfs": -0.3,
+    "seconds": 1.153
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "idogmova.wav",
+   "role": "dog moving: panting and a short bark",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogmova.wav')",
+   "sha256": "cb645adbb75dc0f069069e9319c77c841039a253148f779f1b5712555c6a5113"
+  },
+  "voices/idogsela.wav": {
+   "category": "dog voice",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-07",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -8,
+    "reference": "idogsela.wav",
+    "seconds": 0.323
+   },
+   "measured": {
+    "active_rms_dbfs": -12.1,
+    "decay20_ms": 70,
+    "high_share": 0.094,
+    "low_share": 0.073,
+    "max50_rms_dbfs": -7.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.323
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.5.3",
+   "recipe": "idogsela.wav",
+   "role": "dog selected: one alert bark",
+   "seed": "sha256('rtsai-standalone-sfx-1/idogsela.wav')",
+   "sha256": "d81786b255bc6d52ad81b7b41224cfa8e0e1789a050b256072fec3b744eb3eac"
+  }
+ }
+}
