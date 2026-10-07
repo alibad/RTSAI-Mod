@@ -589,6 +589,19 @@ dog:
 			yemen: unit-dog-yemen
 			hezbollah: unit-dog-hezbollah
 
+engineer:
+	RenderSprites:
+		Image: unit-engineer-china
+		PlayerPalette: kitplayer
+		FactionImages:
+			china: unit-engineer-china
+			iran: unit-engineer-iran
+			turkey: unit-engineer-turkey
+			saudi: unit-engineer-saudi
+			israel: unit-engineer-israel
+			yemen: unit-engineer-yemen
+			hezbollah: unit-engineer-hezbollah
+
 r2kunlun:
 	RenderSprites:
 		Image: r2kunlun

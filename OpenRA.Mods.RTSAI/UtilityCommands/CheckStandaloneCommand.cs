@@ -28,8 +28,8 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 	/// The standalone guarantee, run by `make test`: the game must not be able to load anything from Red Alert 2.
 	/// No content installer, no archive formats, only mod and engine folders mounted, no archive files in the mod,
 	/// every sprite/tile/model/palette/cursor/chrome/font reference resolvable, and no "Red Alert" branding.
-	/// Missing audio and placeholder stand-ins are reported as warnings until the Phase 3 deliveries land
-	/// (pass --strict to make them errors too). See docs/standalone.md.
+	/// Missing audio and placeholder stand-ins are warnings without --strict; `make test` passes --strict since the
+	/// Phase 3 art and audio landed (no placeholder is left for anything the factions can field). See docs/standalone.md.
 	/// </summary>
 	sealed class CheckStandaloneCommand : IUtilityCommand
 	{
@@ -415,8 +415,11 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 						}
 				}
 
-				Soft($"{used.Count} placeholder files still stand in for EA art the factions use, e.g. {string.Join(", ", used.Keys.Order().Take(6))} " +
-					$"({placeholders.Contents.Count(c => c.Contains('.'))} placeholder files in the pack; --list-placeholders lists them all)");
+				if (used.Count > 0)
+					Soft($"{used.Count} placeholder files still stand in for EA art the factions use, e.g. {string.Join(", ", used.Keys.Order().Take(6))} " +
+						$"({placeholders.Contents.Count(c => c.Contains('.'))} placeholder files in the pack; --list-placeholders lists them all)");
+				else
+					Console.WriteLine("No placeholder stands in for art the factions can field (the pack still answers sequences of actors they cannot).");
 
 				if (listPlaceholders)
 					foreach (var (file, users) in used.OrderBy(kv => kv.Key, StringComparer.Ordinal))

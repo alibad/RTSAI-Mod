@@ -196,6 +196,6 @@ test: all
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
 	@./utility.sh --check-yaml
 	@echo "Checking that $(MOD_ID) loads nothing from Red Alert 2 (docs/standalone.md)..."
-	@./utility.sh --check-standalone --strict-audio
+	@./utility.sh --check-standalone --strict
 	@echo "Checking audio provenance (tools/standalone-audio.py)..."
 	@python3 tools/standalone-audio.py check

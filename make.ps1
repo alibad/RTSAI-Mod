@@ -108,7 +108,7 @@ function Test-Command
 	InvokeCommand "$utilityPath $modID --check-yaml"
 
 	Write-Host "Checking that $modID loads nothing from Red Alert 2 (docs/standalone.md)..." -ForegroundColor Cyan
-	InvokeCommand "$utilityPath $modID --check-standalone --strict-audio"
+	InvokeCommand "$utilityPath $modID --check-standalone --strict"
 
 	Write-Host "Checking audio provenance (tools/standalone-audio.py)..." -ForegroundColor Cyan
 	$python = Get-Command python -ErrorAction SilentlyContinue

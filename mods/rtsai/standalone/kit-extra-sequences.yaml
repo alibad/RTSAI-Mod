@@ -227,6 +227,41 @@ unit-dog-hezbollah:
 	jump:
 		Filename: dog-hezbollah.shp
 
+unit-engineer-china:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-china
+
+unit-engineer-iran:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-iran
+
+unit-engineer-turkey:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-turkey
+
+unit-engineer-saudi:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-saudi
+
+unit-engineer-israel:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-israel
+
+unit-engineer-yemen:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-yemen
+
+unit-engineer-hezbollah:
+	Inherits@BasicInfantry: ^BasicInfantry
+	Inherits@MindControllable: ^MindControllable
+	Inherits@kit: engineer-hezbollah
+
 purifier-china:
 	icon:
 		Filename: purifier-chinaicon.png
