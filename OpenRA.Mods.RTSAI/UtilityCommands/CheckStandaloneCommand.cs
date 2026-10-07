@@ -19,6 +19,7 @@ using OpenRA.FileSystem;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.RTSAI.UtilityCommands
@@ -38,10 +39,158 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 
 		static readonly string[] ArchiveExtensions = [".mix", ".bag", ".idx", ".big", ".vqa", ".cab", ".hdr"];
 
-		[Desc("[--strict]", "Fail if the standalone mod can load any Red Alert 2 file (see docs/standalone.md).")]
+		// Actor references that name an actor some other actor must own, rather than bring one into the game.
+		static readonly HashSet<string> NonSpawningReferences =
+		[
+			"RepairableInfo", "RepairableNearInfo", "RearmableInfo", "TransformsIntoRepairableInfo",
+			"GrantConditionOnProductionInfo", "ProductionCostMultiplierInfo", "ProductionTimeMultiplierInfo",
+			"AutoTargetPriorityInfo",
+		];
+
+		static bool IsA(object o, string typeName)
+		{
+			for (var t = o.GetType(); t != null; t = t.BaseType)
+				if (t.Name == typeName)
+					return true;
+			return false;
+		}
+
+		static IEnumerable<string> Strings(object v)
+		{
+			if (v == null)
+				yield break;
+			if (v is string s)
+			{
+				yield return s;
+				yield break;
+			}
+
+			if (v.GetType().GetProperty("IsDefault")?.GetValue(v) is true)
+				yield break;
+			if (v is System.Collections.IDictionary d)
+			{
+				foreach (System.Collections.DictionaryEntry e in d)
+				{
+					foreach (var x in Strings(e.Key))
+						yield return x;
+					foreach (var x in Strings(e.Value))
+						yield return x;
+				}
+
+				yield break;
+			}
+
+			if (v is System.Collections.IEnumerable en)
+				foreach (var x in en)
+					foreach (var y in Strings(x))
+						yield return y;
+		}
+
+		static FieldInfo FindField(Type t, string name)
+		{
+			for (; t != null; t = t.BaseType)
+			{
+				var f = t.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+				if (f != null)
+					return f;
+			}
+
+			return null;
+		}
+
+		/// <summary>Actors a faction can field in a skirmish: starting units, everything buildable from what it owns
+		/// (prerequisites, production queues), and actors those bring into the game (transforms, free actors,
+		/// spawns, cargo, support powers, survivors after SurvivorReplacements).</summary>
+		static HashSet<string> Reachable(Ruleset rules, string faction)
+		{
+			var world = rules.Actors[SystemActors.World];
+			var player = rules.Actors[SystemActors.Player];
+			bool FactionOk(object t)
+			{
+				var list = Strings(t.GetType().GetField("Factions")?.GetValue(t)).ToList();
+				return list.Count == 0 || list.Contains(faction);
+			}
+
+			var provided = new HashSet<string>();
+			var queues = new HashSet<string>();
+			var survivors = new Dictionary<string, string>();
+			foreach (var t in player.TraitInfos<TraitInfo>())
+			{
+				if (IsA(t, "ProvidesPrerequisiteInfo") && FactionOk(t))
+					provided.Add((string)t.GetType().GetField("Prerequisite").GetValue(t) ?? "player");
+				if (IsA(t, "ProvidesTechPrerequisiteInfo"))
+					provided.UnionWith(Strings(t.GetType().GetField("Prerequisites").GetValue(t)));
+				if (IsA(t, "ProductionQueueInfo") && FactionOk(t))
+					queues.Add((string)t.GetType().GetField("Type").GetValue(t));
+				if (IsA(t, "SurvivorReplacementsInfo") && FactionOk(t))
+					foreach (System.Collections.DictionaryEntry e in (System.Collections.IDictionary)t.GetType().GetField("Replacements").GetValue(t))
+						survivors[(string)e.Key] = (string)e.Value;
+			}
+
+			var reach = new HashSet<string>();
+			void Add(string a)
+			{
+				a = a?.ToLowerInvariant();
+				if (a != null && rules.Actors.ContainsKey(a))
+					reach.Add(a);
+			}
+
+			foreach (var su in world.TraitInfos<TraitInfo>().Where(t => IsA(t, "StartingUnitsInfo") && FactionOk(t)))
+			{
+				Add((string)su.GetType().GetField("BaseActor").GetValue(su));
+				foreach (var s in Strings(su.GetType().GetField("SupportActors").GetValue(su)))
+					Add(s);
+			}
+
+			var produced = new HashSet<string>();
+			var before = -1;
+			while (before != reach.Count + provided.Count + produced.Count)
+			{
+				before = reach.Count + provided.Count + produced.Count;
+				foreach (var a in reach.ToList())
+					foreach (var t in rules.Actors[a].TraitInfos<TraitInfo>())
+					{
+						if (IsA(t, "ProvidesPrerequisiteInfo") && FactionOk(t))
+							provided.Add((string)t.GetType().GetField("Prerequisite").GetValue(t) ?? a);
+						if (IsA(t, "ProductionInfo"))
+							produced.UnionWith(Strings(t.GetType().GetField("Produces").GetValue(t)));
+						if (IsA(t, "ProductionQueueInfo") && FactionOk(t))
+							queues.Add((string)t.GetType().GetField("Type").GetValue(t));
+						if (NonSpawningReferences.Contains(t.GetType().Name) || !FactionOk(t))
+							continue;
+						foreach (var field in t.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+							if (field.GetCustomAttribute<ActorReferenceAttribute>() != null)
+								foreach (var s in Strings(field.GetValue(t)))
+									Add(t.GetType().Name == "SpawnSurvivorsInfo" && survivors.TryGetValue(s, out var r) ? r : s);
+					}
+
+				foreach (var (name, actor) in rules.Actors)
+				{
+					if (reach.Contains(name) || name.StartsWith('^'))
+						continue;
+					var b = actor.TraitInfos<TraitInfo>().FirstOrDefault(t => IsA(t, "BuildableInfo"));
+					if (b == null || !Strings(b.GetType().GetField("Queue").GetValue(b)).Any(q => queues.Contains(q) && produced.Contains(q)))
+						continue;
+					var ok = true;
+					foreach (var p in Strings(b.GetType().GetField("Prerequisites").GetValue(b)))
+					{
+						var tok = p.TrimStart('~');
+						ok &= tok.StartsWith('!') ? !provided.Contains(tok[1..]) : provided.Contains(tok);
+					}
+
+					if (ok)
+						reach.Add(name);
+				}
+			}
+
+			return reach;
+		}
+
+		[Desc("[--strict] [--strict-audio]", "Fail if the standalone mod can load any Red Alert 2 file (see docs/standalone.md).")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			var strict = args.Contains("--strict");
+			var strictAudio = strict || args.Contains("--strict-audio");
 			var modData = Game.ModData = utility.ModData;
 			var manifest = modData.Manifest;
 			var fs = modData.ModFiles;
@@ -131,40 +280,112 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					if (!fs.Exists(n.Value.Value))
 						Error($"LoadScreen.{n.Key}: {n.Value.Value} not found");
 
-			// 6. Audio: warnings until the audio deliveries land.
+			// 6. Audio, for what the game's factions can actually field: their reachable actors' voices, those actors'
+			// weapons, and the faction notifications. Rules for actors nobody can reach (kept for the classic add-on)
+			// do not count. Warnings unless --strict.
 			var rules = modData.DefaultRules;
 			var factions = rules.Actors[SystemActors.World].TraitInfos<FactionInfo>().Where(f => f.Selectable && f.RandomFactionMembers.Count == 0)
 				.Select(f => f.InternalName).ToList();
+			var reach = factions.ToDictionary(f => f, f => Reachable(rules, f));
 			var missingAudio = new SortedSet<string>();
-			foreach (var (sets, voices) in new[] { (rules.Voices, true), (rules.Notifications, false) })
-				foreach (var info in sets.Values)
-					foreach (var (def, clips) in voices ? info.Voices : info.Notifications)
-						foreach (var faction in factions)
+			void CheckSound(string name)
+			{
+				if (!string.IsNullOrEmpty(name) && !fs.Exists(name))
+					missingAudio.Add(name);
+			}
+
+			foreach (var faction in factions)
+			{
+				var voiceSets = new HashSet<string>();
+				var weapons = new HashSet<string>();
+				foreach (var a in reach[faction])
+					foreach (var ti in rules.Actors[a].TraitInfos<TraitInfo>())
+						foreach (var field in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
 						{
-							var prefix = info.Prefixes.TryGetValue(faction, out var p) && !info.DisablePrefixes.Contains(def) ? p[0] : info.DefaultPrefix;
-							var suffix = info.Variants.TryGetValue(faction, out var vv) && !info.DisableVariants.Contains(def) ? vv[0] : info.DefaultVariant;
-							foreach (var clip in clips)
-								if (!fs.Exists(prefix + clip + suffix))
-									missingAudio.Add(prefix + clip + suffix);
+							if (field.Name == "VoiceSet" && field.GetValue(ti) is string vs && vs.Length > 0)
+								voiceSets.Add(vs.ToLowerInvariant());
+							if (field.GetCustomAttribute<WeaponReferenceAttribute>() != null)
+								foreach (var w in Strings(field.GetValue(ti)))
+									weapons.Add(w.ToLowerInvariant());
 						}
 
-			foreach (var w in rules.Weapons.Values.Where(w => !w.Report.IsDefaultOrEmpty))
-				foreach (var r in w.Report.Where(r => !fs.Exists(r)))
-					missingAudio.Add(r);
+				var sets = rules.Voices.Where(kv => voiceSets.Contains(kv.Key)).Select(kv => (kv.Value, true))
+					.Concat(rules.Notifications.Select(kv => (kv.Value, false)));
+				foreach (var (info, voices) in sets)
+					foreach (var (def, clips) in voices ? info.Voices : info.Notifications)
+					{
+						var prefix = info.Prefixes.TryGetValue(faction, out var p) && !info.DisablePrefixes.Contains(def) ? p[0] : info.DefaultPrefix;
+						var suffix = info.Variants.TryGetValue(faction, out var vv) && !info.DisableVariants.Contains(def) ? vv[0] : info.DefaultVariant;
+						foreach (var clip in clips)
+							CheckSound(prefix + clip + suffix);
+					}
+
+				foreach (var wn in weapons)
+					if (rules.Weapons.TryGetValue(wn, out var w))
+						foreach (var o in new object[] { w }.Concat(w.Warheads))
+							foreach (var field in o.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+								if (field.Name.Contains("Report", StringComparison.Ordinal) || field.Name.Contains("Sound", StringComparison.Ordinal))
+									foreach (var s in Strings(field.GetValue(o)))
+										CheckSound(s);
+			}
 
 			var missingMusic = rules.Music.Values.Count(m => !fs.Exists(m.Filename));
 			if (missingAudio.Count > 0)
-				Soft($"{missingAudio.Count} voice, notification or weapon sound files are missing (silent in game), e.g. {string.Join(", ", missingAudio.Take(6))}");
+				(strictAudio ? (Action<string>)Error : Soft)($"{missingAudio.Count} voice, notification or weapon sound files are missing (silent in game), e.g. {string.Join(", ", missingAudio.Take(6))}");
 			if (missingMusic > 0)
-				Soft($"{missingMusic} music tracks are missing");
+				(strictAudio ? (Action<string>)Error : Soft)($"{missingMusic} music tracks are missing");
 
-			// 7. Placeholder debt: code-drawn stand-ins named after EA files (Phase 3 replaces them).
+			// 7. Placeholder debt: code-drawn stand-ins named after EA files, counted for what the factions can field
+			// (their reachable actors' images and their weapons' projectile and effect images). Phase 3 replaces them.
 			var placeholders = fs.MountedPackages.FirstOrDefault(p => p.Name.Replace('\\', '/').EndsWith("standalone/placeholders", StringComparison.Ordinal));
 			if (placeholders != null && placeholders.Contents.Any())
 			{
-				var count = placeholders.Contents.Count(c => c.Contains('.'));
-				var shadowed = placeholders.Contents.Count(c => fs.TryGetPackageContaining(c, out var owner, out _) && owner != placeholders);
-				Soft($"{count} placeholder files still stand in for EA files ({shadowed} already overridden by deliveries)");
+				var images = new HashSet<string>();
+				foreach (var a in reach.Values.SelectMany(r => r).Distinct())
+					foreach (var ti in rules.Actors[a].TraitInfos<TraitInfo>())
+					{
+						foreach (var field in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+						{
+							if (field.Name.EndsWith("Image", StringComparison.Ordinal) || field.Name.EndsWith("Images", StringComparison.Ordinal))
+								foreach (var s in Strings(field.GetValue(ti)))
+									images.Add(s);
+							if (field.GetCustomAttribute<WeaponReferenceAttribute>() != null)
+								foreach (var wn in Strings(field.GetValue(ti)))
+									if (rules.Weapons.TryGetValue(wn.ToLowerInvariant(), out var w))
+										foreach (var o in new object[] { w.Projectile }.Concat(w.Warheads).Where(o => o != null))
+											foreach (var wf in o.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+												if (wf.Name.EndsWith("Image", StringComparison.Ordinal))
+													foreach (var s in Strings(wf.GetValue(o)))
+														images.Add(s);
+						}
+
+						if (ti is RenderSpritesInfo rs && rs.Image == null)
+							images.Add(a);
+					}
+
+				var used = new HashSet<string>();
+				foreach (var tileset in modData.DefaultTerrainInfo.Keys)
+				{
+					using var seqs = new SequenceSet(modData.DefaultFileSystem, modData, tileset, null);
+					var byFile = (Dictionary<string, List<int>>)typeof(SpriteCache)
+						.GetField("reservationsByFilename", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(seqs.SpriteCache);
+					var tokenFile = byFile.SelectMany(kv => kv.Value.Select(t => (t, kv.Key))).ToDictionary(x => x.t, x => x.Key);
+					foreach (var image in seqs.Images.Where(images.Contains))
+						foreach (var seqName in seqs.Sequences(image))
+						{
+							var seq = seqs.GetSequence(image, seqName);
+							var toLoad = FindField(seq.GetType(), "spritesToLoad")?.GetValue(seq) as System.Collections.IEnumerable;
+							if (toLoad == null)
+								continue;
+							foreach (var res in toLoad)
+								if (tokenFile.TryGetValue((int)res.GetType().GetField("Token").GetValue(res), out var f)
+									&& fs.TryGetPackageContaining(f, out var owner, out _) && owner == placeholders)
+									used.Add(f);
+						}
+				}
+
+				Soft($"{used.Count} placeholder files still stand in for EA art the factions use, e.g. {string.Join(", ", used.Order().Take(6))} " +
+					$"({placeholders.Contents.Count(c => c.Contains('.'))} placeholder files in the pack)");
 			}
 
 			// 8. Identity: no Red Alert branding in shipped text; ModTabTitle follows the product term.

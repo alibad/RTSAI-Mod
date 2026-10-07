@@ -655,6 +655,7 @@
 		RepairActors: cahosp
 		Voice: Move
 	ChronoshiftableWithSpriteEffect:
+		ChronoshiftSound: ra2|audio/sfx/rtsai-shift.wav
 		ExplodeInstead: true
 	MapEditorData:
 		Categories: Infantry

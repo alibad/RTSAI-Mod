@@ -108,6 +108,7 @@ Rules:
 	ra2|modern-factions/art-infantry.yaml
 	ra2|modern-factions/art-buildings.yaml
 	ra2|standalone/rules.yaml
+	ra2|standalone/base-kit.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -144,6 +145,7 @@ Sequences:
 	ra2|modern-factions/art-infantry-sequences.yaml
 	ra2|modern-factions/art-buildings-sequences.yaml
 	ra2|modern-factions/art-icons-sequences.yaml
+	ra2|standalone/base/kit-sequences.yaml
 	ra2|standalone/sequences.yaml
 
 ModelSequences:
@@ -270,6 +272,7 @@ FluentMessages:
 	ra2|languages/rules/en.ftl
 	ra2|languages/chrome/en.ftl
 	ra2|languages/identity.ftl
+	ra2|standalone/standalone.ftl
 	ra2|languages/native-preview.ftl
 	ra2|languages/ai.ftl
 	ra2|languages/ai-runtime.ftl

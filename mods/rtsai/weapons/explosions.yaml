@@ -43,14 +43,14 @@ DerrickExplode:
 UnitExplode:
 	Warhead@1Eff: CreateEffect
 		Explosions: large_twlt
-		ImpactSounds: expnew09.wav
+		ImpactSounds: ra2|audio/sfx/rtsai-explode-medium.wav
 		ValidTargets: Ground, Water, Air
 
 UnitExplodeSmall:
 	Inherits: UnitExplode
 	Warhead@1Eff: CreateEffect
 		Explosions: medium_brnl
-		ImpactSounds: expnew13.wav
+		ImpactSounds: ra2|audio/sfx/rtsai-explode-small.wav
 		ValidTargets: Ground, Water, Air
 
 V3AmmunitionExplode:
@@ -335,4 +335,4 @@ Demolish:
 		DamageTypes: DefaultDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
-		ImpactSounds: expnew09.wav
+		ImpactSounds: ra2|audio/sfx/rtsai-explode-large.wav
