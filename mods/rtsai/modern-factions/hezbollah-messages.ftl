@@ -7,7 +7,7 @@ levant-r2hzrifle-name = Line Fighter
 levant-r2hzrifle-description = Veteran rifle infantry, fewer and stronger: leaves the barracks Veteran, promotes quickly and takes less damage on rough ground. Conceals while stationary; moving, firing or taking damage reveals it. Detectors and splash defeat it.
 
 levant-r2hzat-name = Ridge Missile Team
-levant-r2hzat-description = Veteran ambush team with a basic shoulder-fired rocket. Conceals while stationary; a signal post or spotter improves range and reload. Vulnerable to infantry, detectors and air attacks.
+levant-r2hzat-description = Veteran anti-armor team with a basic shoulder-fired rocket. A signal post or spotter improves range and reload. Vulnerable to infantry and air attacks.
 
 levant-r2hzspotter-name = Field Spotter
 levant-r2hzspotter-description = Veteran reconnaissance specialist who detects cloaked units, guides nearby missile teams, rocket vehicles and FPV teams, and relays the FPV drone link. A weak weapon makes escorts essential.

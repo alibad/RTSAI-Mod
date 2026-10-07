@@ -111,5 +111,60 @@
     ]
    }
   ]
+ },
+ "hz-probe-t1": {
+  "description": "Trim 1 probe (overlay): the as-designed rules were 79-83% against the modern factions. AT team loses stationary concealment and costs 500, rifleman 250, rough-ground cover 80 -> 90; promotion values follow the costs.",
+  "seed": 20261074,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "probe-t1",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "focus": [
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "rules": [
+     "^R2HezbollahInfantry:",
+     "\tDamageMultiplier@rough:",
+     "\t\tModifier: 90",
+     "r2hzat:",
+     "\t-Cloak:",
+     "\tValued:",
+     "\t\tCost: 500",
+     "\tGainsExperience:",
+     "\t\tExperienceModifier: 300",
+     "r2hzrifle:",
+     "\tValued:",
+     "\t\tCost: 250",
+     "\tGainsExperience:",
+     "\t\tExperienceModifier: 150"
+    ]
+   }
+  ]
  }
 }

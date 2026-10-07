@@ -25,12 +25,12 @@
 	# Doctrine: every fighter leaves the barracks Veteran.
 	ProducibleWithLevel@doctrine:
 		InitialLevels: 1
-	# Hill fighters: rough ground is cover.
+	# Hill fighters: rough ground is cover (80 -> 90 in balance trim 1, docs/balance.md round 5).
 	GrantConditionOnTerrain@rough:
 		Condition: hz-rough
 		TerrainTypes: Rough
 	DamageMultiplier@rough:
-		Modifier: 80
+		Modifier: 90
 		RequiresCondition: hz-rough
 	# Stationary concealment: moving, firing or taking damage reveals the fighter.
 	Cloak:
@@ -50,17 +50,17 @@ r2hzrifle:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 10
 		Description: levant-r2hzrifle-description
-	# Salvo and swarm: 150 -> 225 and 100 -> 130 HP, rifle 13 -> 16, Veteran from the barracks: fewer fighters,
-	# the same damage and health per credit (round-4 1.78 destroyed per credit), concentrated.
+	# Salvo and swarm: 150 -> 275 and 100 -> 130 HP, rifle 13 -> 16, Veteran from the barracks: fewer, stronger
+	# fighters. 225 in the design measured 2.07 destroyed per credit (round 5); 275 after balance trim 2.
 	Valued:
-		Cost: 225
+		Cost: 275
 	Health:
 		HP: 130
 	Mobile:
 		Speed: 66
 	# Promotion at 60% of the usual kills (the thresholds are a share of this value, not of the cost).
 	GainsExperience:
-		ExperienceModifier: 135
+		ExperienceModifier: 165
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
@@ -81,10 +81,12 @@ r2hzat:
 		Prerequisites: ~faction.hezbollah, nahand
 		BuildPaletteOrder: 20
 		Description: levant-r2hzat-description
-	# 300 -> 350 (round 4); Salvo and swarm: 450, 95 -> 120 HP, RPG 80 -> 90 at 5 cells, stationary
-	# concealment (template) and Veteran from the barracks: an ambush team, bought in fewer numbers.
+	# 300 -> 350 (round 4); Salvo and swarm: 500, 95 -> 120 HP, RPG 80 -> 90 at 5 cells and Veteran from the
+	# barracks, bought in fewer numbers. Balance trim 1: no stationary concealment (with it the team measured 1.31
+	# destroyed per credit against 0.79 in round 4) and 450 -> 500.
+	-Cloak:
 	Valued:
-		Cost: 450
+		Cost: 500
 	Health:
 		HP: 120
 	Mobile:
@@ -94,7 +96,7 @@ r2hzat:
 	RevealsShroud:
 		Range: 6c0
 	GainsExperience:
-		ExperienceModifier: 270
+		ExperienceModifier: 300
 
 	ExternalCondition@repair:
 		Condition: hezbollah-repair
