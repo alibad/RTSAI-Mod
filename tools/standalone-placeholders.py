@@ -315,9 +315,8 @@ def build():
         im, meta = sheet(frame, s["frames"])
         # "conquer|wake1.shp": an explicit package prefix becomes a subfolder mounted under that name in mod.yaml
         write_png(ph / name.replace("|", "/"), im, meta)
-    pal = procedural_palette()
-    for name in m["palettes"]:
-        (ph / name).write_bytes(pal)
+    pal = procedural_palette()     # only colours the box models; no palette file goes into the pack any more (the
+    # standalone rules point "player" and "effect" at the kit's and the effects batch's palettes)
     vxl, hva = box_vxl(pal), box_hva()
     for name in m["models"]:
         (ph / name).write_bytes(vxl if name.endswith(".vxl") else hva)

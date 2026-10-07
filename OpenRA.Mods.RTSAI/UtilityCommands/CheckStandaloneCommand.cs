@@ -101,6 +101,100 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 		/// <summary>Actors a faction can field in a skirmish: starting units, everything buildable from what it owns
 		/// (prerequisites, production queues), and actors those bring into the game (transforms, free actors,
 		/// spawns, cargo, support powers, survivors after SurvivorReplacements).</summary>
+		/// <summary>
+		/// Every sequence image a standalone game can draw. Collects every string value (any field name, nested
+		/// warheads, projectiles, lists and dictionaries) of the traits of: the factions' reachable actors, the World and
+		/// Player actor, the actors placed on the standalone maps and the actors the World spawns (crates); follows
+		/// every weapon those strings name (and weapons named inside weapons). Catches images drawn by overlays,
+		/// decorations, rally flags, beacons, trails, death effects and world layers, whatever the field is called.
+		/// A string that names an actor (a prerequisite, a bot build list, a production type) is not an image use:
+		/// an actor's look is its render image, resolved per faction (FactionImages for the game's own factions,
+		/// else Image, else the actor's name), and only for actors that can exist.
+		/// </summary>
+		static HashSet<string> DrawableImages(ModData modData, Ruleset rules, HashSet<string> reachable, List<string> factions)
+		{
+			var actors = new HashSet<string>(reachable) { SystemActors.World.ToString().ToLowerInvariant(), SystemActors.Player.ToString().ToLowerInvariant() };
+			foreach (var map in modData.MapCache.EnumerateMapDirPackagesAndNames())
+			{
+				using var package = map.Package.OpenPackage(map.Map, modData.ModFiles);
+				if (package == null)
+					continue;
+				using var s = package.GetStream("map.yaml");
+				if (s == null)
+					continue;
+				var yaml = MiniYaml.FromStream(s, "map.yaml");
+				var actorsNode = yaml.FirstOrDefault(n => n.Key == "Actors");
+				if (actorsNode != null)
+					foreach (var n in actorsNode.Value.Nodes)
+						actors.Add(n.Value.Value.ToLowerInvariant());
+			}
+
+			// Actors the World spawns by itself (crates and the like): ActorReference fields of World traits.
+			foreach (var ti in rules.Actors[SystemActors.World].TraitInfos<TraitInfo>())
+				foreach (var f in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public)
+					.Where(f => f.GetCustomAttribute<ActorReferenceAttribute>() != null))
+					foreach (var s in Strings(f.GetValue(ti)))
+						actors.Add(s.ToLowerInvariant());
+
+			var strings = new HashSet<string>();
+			var weaponsSeen = new HashSet<string>();
+			void Collect(object o, int depth)
+			{
+				if (o == null || depth > 4)
+					return;
+				foreach (var f in o.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+				{
+					var v = f.GetValue(o);
+					if (v is IReadOnlyDictionary<string, string> byFaction && f.Name == "FactionImages")
+					{
+						foreach (var kv in byFaction.Where(kv => factions.Contains(kv.Key)))
+							strings.Add(kv.Value);
+						continue;
+					}
+
+					if (v != null && !(v is string) && !v.GetType().IsPrimitive && !v.GetType().IsEnum && v.GetType().Namespace?.StartsWith("OpenRA", StringComparison.Ordinal) == true
+						&& !(v is System.Collections.IEnumerable))
+					{
+						Collect(v, depth + 1);
+						continue;
+					}
+
+					foreach (var s in Strings(v))
+					{
+						strings.Add(s);
+						if (rules.Weapons.TryGetValue(s.ToLowerInvariant(), out var w) && weaponsSeen.Add(s.ToLowerInvariant()))
+						{
+							Collect(w, depth + 1);
+							foreach (var x in new object[] { w.Projectile }.Concat(w.Warheads).Where(x => x != null))
+								Collect(x, depth + 1);
+						}
+					}
+				}
+			}
+
+			var images = new HashSet<string>();
+			foreach (var a in actors)
+			{
+				if (!rules.Actors.TryGetValue(a, out var info))
+					continue;
+				foreach (var ti in info.TraitInfos<TraitInfo>())
+					Collect(ti, 0);
+				foreach (var rs in info.TraitInfos<RenderSpritesInfo>())
+				{
+					// owned by a game faction: its FactionImages entry, else Image, else the actor name; neutral and
+					// map-placed actors use Image / the name as well
+					images.Add(rs.Image ?? a);
+					foreach (var f in factions)
+						if (rs.FactionImages != null && rs.FactionImages.TryGetValue(f, out var fi))
+							images.Add(fi);
+				}
+			}
+
+			// Strings that name actors are references to them, not images (see above).
+			images.UnionWith(strings.Where(s => !rules.Actors.ContainsKey(s.ToLowerInvariant())));
+			return images;
+		}
+
 		static HashSet<string> Reachable(Ruleset rules, string faction)
 		{
 			var world = rules.Actors[SystemActors.World];
@@ -360,36 +454,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			var placeholders = fs.MountedPackages.FirstOrDefault(p => p.Name.Replace('\\', '/').EndsWith("standalone/placeholders", StringComparison.Ordinal));
 			if (placeholders != null && placeholders.Contents.Any())
 			{
-				var images = new HashSet<string>();
-				foreach (var a in reach.Values.SelectMany(r => r).Distinct())
-					foreach (var ti in rules.Actors[a].TraitInfos<TraitInfo>())
-					{
-						foreach (var field in ti.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
-						{
-							// Faction image maps only count for the factions this game has (inherited entries for the
-							// original factions stay behind in the rules but can never be drawn).
-							if (field.GetValue(ti) is IReadOnlyDictionary<string, string> byFaction && field.Name == "FactionImages")
-							{
-								foreach (var kv in byFaction.Where(kv => factions.Contains(kv.Key)))
-									images.Add(kv.Value);
-							}
-							else if (field.Name.EndsWith("Image", StringComparison.Ordinal) || field.Name.EndsWith("Images", StringComparison.Ordinal))
-								foreach (var s in Strings(field.GetValue(ti)))
-									images.Add(s);
-							if (field.GetCustomAttribute<WeaponReferenceAttribute>() != null)
-								foreach (var wn in Strings(field.GetValue(ti)))
-									if (rules.Weapons.TryGetValue(wn.ToLowerInvariant(), out var w))
-										foreach (var o in new object[] { w.Projectile }.Concat(w.Warheads).Where(o => o != null))
-											foreach (var wf in o.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
-												if (wf.Name.EndsWith("Image", StringComparison.Ordinal))
-													foreach (var s in Strings(wf.GetValue(o)))
-														images.Add(s);
-						}
-
-						if (ti is RenderSpritesInfo rs && rs.Image == null)
-							images.Add(a);
-					}
-
+				var images = DrawableImages(modData, rules, reach.Values.SelectMany(r => r).ToHashSet(), factions);
 				var used = new Dictionary<string, SortedSet<string>>();
 				foreach (var tileset in modData.DefaultTerrainInfo.Keys)
 				{
@@ -425,6 +490,19 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					foreach (var (file, users) in used.OrderBy(kv => kv.Key, StringComparer.Ordinal))
 						Console.WriteLine($"placeholder {file}: {string.Join(", ", users)}");
 			}
+
+			// 7a. No palette comes from the placeholder pack: a procedural stand-in palette recolours every indexed
+			// sprite drawn with it.
+			if (placeholders != null)
+				foreach (var actor in new[] { SystemActors.World, SystemActors.Player })
+					foreach (var pal in rules.Actors[actor].TraitInfos<TraitInfo>().Where(t => t.GetType().Name == "PaletteFromFileInfo"))
+					{
+						// PaletteFromFileInfo is internal to Mods.Common: read its public fields by reflection
+						var file = pal.GetType().GetField("Filename")?.GetValue(pal) as string;
+						var name = pal.GetType().GetField("Name")?.GetValue(pal) as string;
+						if (file != null && fs.TryGetPackageContaining(file, out var owner, out _) && owner == placeholders)
+							Error($"Palette {name} ({file}) is a placeholder");
+					}
 
 			// 7b. Every sequence resolves its frames, as a map load does (no renderer needed: sheets stay in memory).
 			// The lint passes stop at file names; a frame number past a sheet's end only fails when a game starts.

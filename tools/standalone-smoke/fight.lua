@@ -21,4 +21,14 @@ WorldLoaded = function()
     end
     put(b, "htk", 6, 3)
   end)
+  local function census()
+    local counts = {}
+    for _, x in ipairs(Map.ActorsInWorld) do counts[x.Type] = (counts[x.Type] or 0) + 1 end
+    local parts = {}
+    for t, n in pairs(counts) do parts[#parts + 1] = t .. ":" .. n end
+    table.sort(parts)
+    print("CENSUS-ALL|" .. DateTime.GameTime .. "|" .. table.concat(parts, ","))
+    Trigger.AfterDelay(DateTime.Seconds(1), census)
+  end
+  Trigger.AfterDelay(DateTime.Seconds(3), census)
 end

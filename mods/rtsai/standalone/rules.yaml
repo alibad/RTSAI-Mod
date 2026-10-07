@@ -1,8 +1,12 @@
 # Standalone-only rules: project palettes instead of RA2 palette files. The classic add-on does not load this file.
-# Two palettes are still supplied under their RA2 names by the Phase 3 deliveries: anim.pal (effects agent) and
-# unittem.pal (until the base kit lands, when "player" moves to the kit's kitbase.pal).
+# "player" (the default player-colour base of anything without its own palette) is the base kit's kitbase.pal and
+# "effect" is the effects batch's anim.pal; no palette comes from the placeholder pack (--check-standalone).
 
 ^Palettes:
+	PaletteFromFile@playertem:
+		Filename: ra2|standalone/base/kitbase.pal
+	PaletteFromFile@effect:
+		Filename: ra2|standalone/effects/anim.pal
 	PaletteFromFile@terrain-temperate:
 		Filename: ra2|standalone/terrain/temperate.pal
 	-PaletteFromFile@terrain-snow:

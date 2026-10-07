@@ -188,3 +188,22 @@ rank:
 	elite:
 		Filename: pips-rtsai.png
 		Start: 39
+
+# The bonus crate (tools/standalone-terrain.py --crates): baked shadow, so no shadow frames.
+crate:
+	Defaults:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/crate.png
+		ShadowStart: -1
+	idle:
+		Start: 0
+	land:
+		Start: 0
+	water:
+		-TilesetFilenames:
+		Start: 1
+
+# The move-order flash (tools/standalone-art.py moveflash).
+moveflsh:
+	idle:
+		Filename: ra2|standalone/art/moveflash.png

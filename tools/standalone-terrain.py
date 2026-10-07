@@ -642,8 +642,42 @@ def render_mines(work: Path, threads: int):
     print(f"ore mine: {ART_DIR / 'oremine.png'} (11 frames, {time.time() - t0:.0f}s)")
 
 
+CRATE_SCRIPT = ROOT / "tools" / "terrain" / "blender_crates.py"
+
+
+def render_crates(work: Path, threads: int):
+    """The bonus crate (land, afloat): 60x60 RGBA frames with baked shadow, cell centre 12 px below the frame centre
+    like the stock crate (sequence Offset 0, -12)."""
+    frames = []
+    for kind in ("land", "water"):
+        slots = [{"cx": 0, "cy": 0, "kind": kind}]
+        px, py = project(0.5, 0.5, 0)
+        x0, y0 = px - 60, py - 70
+        W, H = 120, 120
+        xc = np.array([0.70710678, 0.70710678, 0])
+        yc = np.array([-0.35355339, 0.35355339, 0.8660254])
+        target = ((W / 2 + x0) / PX) * xc + (-(H / 2 + y0) / PX) * yc
+        job, png = work / f"crate-{kind}.json", work / f"crate-{kind}.png"
+        job.write_text(json.dumps({"size": [W, H], "target": target.tolist(), "slots": slots}), encoding="utf-8")
+        r = subprocess.run([str(BLENDER), "-b", "--factory-startup", "-noaudio", "-P", str(CRATE_SCRIPT), "--", str(job),
+                            str(png), str(threads)], capture_output=True, text=True, timeout=1800)
+        if r.returncode or not png.exists():
+            print(r.stdout[-3000:], r.stderr[-3000:])
+            raise SystemExit("blender failed on the crate")
+        img = np.array(Image.open(png).convert("RGBA"))
+        cx, cy = int(round(px - x0)), int(round(py - y0))
+        frames.append(img[cy - 42:cy + 18, cx - 30:cx + 30].copy())     # frame centre 12 px above the cell centre
+    sheet = np.concatenate(frames, axis=1)
+    meta = PngInfo()
+    meta.add_text("FrameSize", "60,60")
+    meta.add_text("FrameAmount", "2")
+    Image.fromarray(sheet, "RGBA").save(ART_DIR / "crate.png", pnginfo=meta, optimize=True)
+    print(f"crate: {ART_DIR / 'crate.png'} (land, water)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--crates", action="store_true", help="render the bonus crate instead of the tileset")
     ap.add_argument("--resources", action="store_true", help="render the ore and gem piles instead of the tileset")
     ap.add_argument("--mines", action="store_true", help="render the ore mine (resource spawn) instead of the tileset")
     ap.add_argument("--only", help="comma-separated template ids (test renders; output goes to --work only)")
@@ -659,6 +693,9 @@ def main():
         return
     if a.mines:
         render_mines(a.work, a.threads)
+        return
+    if a.crates:
+        render_crates(a.work, a.threads)
         return
     head, templates = parse_tileset(SRC_TILESET.read_text(encoding="utf-8"))
     extras = transition_templates()
