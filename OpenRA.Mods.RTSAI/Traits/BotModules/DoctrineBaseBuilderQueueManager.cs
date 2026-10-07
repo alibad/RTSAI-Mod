@@ -200,6 +200,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 					{
 						orderString = "PlacePlug";
 						location = possibleBuilding.Actor.Location + possibleBuilding.Trait.Info.Offset;
+						DoctrineLog.Write(player, $"plug {currentBuilding.Item} onto {possibleBuilding.Actor.Info.Name} at {location}");
 					}
 				}
 				else
@@ -466,6 +467,13 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 				// Check the number of this structure and its variants
 				var actorInfo = world.Map.Rules.Actors[name];
+
+				// A plug (an upgrade placed onto an own building) is never counted as a building: build one
+				// only while some own host still accepts it, so a finished plug always has somewhere to go.
+				var plug = actorInfo.TraitInfoOrDefault<PlugInfo>();
+				if (plug != null && !world.ActorsWithTrait<Pluggable>().Any(p => p.Actor.Owner == player && p.Trait.AcceptsPlug(plug.Type)))
+					continue;
+
 				var buildingVariantInfo = actorInfo.TraitInfoOrDefault<PlaceBuildingVariantsInfo>();
 				var variants = buildingVariantInfo?.Actors ?? [];
 
