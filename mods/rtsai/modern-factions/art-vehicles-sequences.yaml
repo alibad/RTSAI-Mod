@@ -6,6 +6,7 @@ r2cloud:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2cloud.shp
 		Facings: 32
+		Offset: 0, 0, 11
 # glb-route:r2cloud end
 
 # glb-route:r2crane begin
@@ -16,14 +17,17 @@ r2crane:
 		Tick: 40
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 16
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2crane.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 16
 	idle-landed:
 		Filename: ra2|modern-factions/vehicles/r2crane.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 16
 # glb-route:r2crane end
 
 # glb-route:r2haiwang begin
@@ -32,6 +36,7 @@ r2haiwang:
 		Filename: ra2|modern-factions/vehicles/r2haiwang.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 26
 # glb-route:r2haiwang end
 
 # glb-route:r2haiying begin
@@ -40,11 +45,13 @@ r2haiying:
 		Filename: ra2|modern-factions/vehicles/r2haiying.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 19
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2haiying.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 19
 # glb-route:r2haiying end
 
 # glb-route:r2kunlun begin
@@ -53,6 +60,7 @@ r2kunlun:
 		Filename: ra2|modern-factions/vehicles/r2kunlun.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 23
 # glb-route:r2kunlun end
 
 # glb-route:r2luyang begin
@@ -61,11 +69,13 @@ r2luyang:
 		Filename: ra2|modern-factions/vehicles/r2luyang.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 27
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2luyang.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 27
 # glb-route:r2luyang end
 
 # glb-route:r2mantis begin
@@ -74,6 +84,7 @@ r2mantis:
 		Filename: ra2|modern-factions/vehicles/r2mantis.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2mantis.shp
 		Start: 64
@@ -82,12 +93,14 @@ r2mantis:
 		Stride: 8
 		Facings: 32
 		ShadowStart: 320
+		Offset: 0, 0, 13
 	turret-still:
 		Filename: ra2|modern-factions/vehicles/r2mantis.shp
 		Start: 64
 		Stride: 8
 		Facings: 32
 		ShadowStart: 320
+		Offset: 0, 0, 13
 # glb-route:r2mantis end
 
 # glb-route:r2phl begin
@@ -96,6 +109,7 @@ r2phl:
 		Filename: ra2|modern-factions/vehicles/r2phl.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 # glb-route:r2phl end
 
 # glb-route:r2qilin begin
@@ -104,11 +118,13 @@ r2qilin:
 		Filename: ra2|modern-factions/vehicles/r2qilin.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 17
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2qilin.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 17
 # glb-route:r2qilin end
 
 # glb-route:r2skyspear begin
@@ -116,6 +132,7 @@ r2skyspear:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2skyspear.shp
 		Facings: 32
+		Offset: 0, 0, 14
 # glb-route:r2skyspear end
 
 # glb-route:r2zbd begin
@@ -124,11 +141,13 @@ r2zbd:
 		Filename: ra2|modern-factions/vehicles/r2zbd.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 14
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2zbd.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 14
 # glb-route:r2zbd end
 
 # glb-route:r2jiaolong begin
@@ -137,6 +156,7 @@ r2jiaolong:
 		Filename: ra2|modern-factions/vehicles/r2jiaolong.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 25
 # glb-route:r2jiaolong end
 
 # glb-route:r2lynx begin
@@ -145,11 +165,13 @@ r2lynx:
 		Filename: ra2|modern-factions/vehicles/r2lynx.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2lynx.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 13
 # glb-route:r2lynx end
 
 # glb-route:r2azar begin
@@ -157,6 +179,7 @@ r2azar:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2azar.shp
 		Facings: 32
+		Offset: 0, 0, 11
 # glb-route:r2azar end
 
 # glb-route:r2coast begin
@@ -165,11 +188,13 @@ r2coast:
 		Filename: ra2|modern-factions/vehicles/r2coast.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 14
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2coast.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 14
 # glb-route:r2coast end
 
 # glb-route:r2fajr begin
@@ -178,11 +203,13 @@ r2fajr:
 		Filename: ra2|modern-factions/vehicles/r2fajr.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 15
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2fajr.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 15
 # glb-route:r2fajr end
 
 # glb-route:r2ghadir begin
@@ -191,6 +218,7 @@ r2ghadir:
 		Filename: ra2|modern-factions/vehicles/r2ghadir.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 22
 # glb-route:r2ghadir end
 
 # glb-route:r2karrar begin
@@ -199,11 +227,13 @@ r2karrar:
 		Filename: ra2|modern-factions/vehicles/r2karrar.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 16
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2karrar.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 16
 # glb-route:r2karrar end
 
 # glb-route:r2loiter begin
@@ -214,10 +244,12 @@ r2loiter:
 		Tick: 120
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 12
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2loiter.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 12
 # glb-route:r2loiter end
 
 # glb-route:r2mohajer begin
@@ -228,10 +260,12 @@ r2mohajer:
 		Tick: 120
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 9
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2mohajer.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 9
 # glb-route:r2mohajer end
 
 # glb-route:r2peykaap begin
@@ -240,11 +274,13 @@ r2peykaap:
 		Filename: ra2|modern-factions/vehicles/r2peykaap.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 19
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2peykaap.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 19
 # glb-route:r2peykaap end
 
 # glb-route:r2raad begin
@@ -256,16 +292,19 @@ r2raad:
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 14
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2raad.shp
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 14
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2raad.shp
 		Start: 512
 		Facings: 32
 		ShadowStart: 544
+		Offset: 0, 0, 14
 # glb-route:r2raad end
 
 # glb-route:r2toufan begin
@@ -276,14 +315,17 @@ r2toufan:
 		Tick: 40
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 22
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2toufan.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 22
 	idle-landed:
 		Filename: ra2|modern-factions/vehicles/r2toufan.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 22
 # glb-route:r2toufan end
 
 # glb-route:r2bozkir begin
@@ -292,11 +334,13 @@ r2bozkir:
 		Filename: ra2|modern-factions/vehicles/r2bozkir.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 18
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2bozkir.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 18
 # glb-route:r2bozkir end
 
 # glb-route:r2deniz begin
@@ -305,11 +349,13 @@ r2deniz:
 		Filename: ra2|modern-factions/vehicles/r2deniz.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 14
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2deniz.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 14
 # glb-route:r2deniz end
 
 # glb-route:r2kuzgun begin
@@ -320,10 +366,12 @@ r2kuzgun:
 		Tick: 120
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 7
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2kuzgun.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 7
 # glb-route:r2kuzgun end
 
 # glb-route:r2poyraz begin
@@ -332,11 +380,13 @@ r2poyraz:
 		Filename: ra2|modern-factions/vehicles/r2poyraz.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 17
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2poyraz.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 17
 # glb-route:r2poyraz end
 
 # glb-route:r2sancak begin
@@ -345,11 +395,13 @@ r2sancak:
 		Filename: ra2|modern-factions/vehicles/r2sancak.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2sancak.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 12
 # glb-route:r2sancak end
 
 # glb-route:r2yildirim begin
@@ -358,11 +410,13 @@ r2yildirim:
 		Filename: ra2|modern-factions/vehicles/r2yildirim.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 19
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2yildirim.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 19
 # glb-route:r2yildirim end
 
 # glb-route:r2caesar begin
@@ -371,6 +425,7 @@ r2caesar:
 		Filename: ra2|modern-factions/vehicles/r2caesar.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 18
 # glb-route:r2caesar end
 
 # glb-route:r2f15sa begin
@@ -378,6 +433,7 @@ r2f15sa:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2f15sa.shp
 		Facings: 32
+		Offset: 0, 0, 12
 # glb-route:r2f15sa end
 
 # glb-route:r2jubail begin
@@ -386,6 +442,7 @@ r2jubail:
 		Filename: ra2|modern-factions/vehicles/r2jubail.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 21
 # glb-route:r2jubail end
 
 # glb-route:r2m1a2s begin
@@ -394,11 +451,13 @@ r2m1a2s:
 		Filename: ra2|modern-factions/vehicles/r2m1a2s.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 19
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2m1a2s.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 19
 # glb-route:r2m1a2s end
 
 # glb-route:r2riyadh begin
@@ -407,11 +466,13 @@ r2riyadh:
 		Filename: ra2|modern-factions/vehicles/r2riyadh.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 25
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2riyadh.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 25
 # glb-route:r2riyadh end
 
 # glb-route:r2sadiq begin
@@ -420,11 +481,13 @@ r2sadiq:
 		Filename: ra2|modern-factions/vehicles/r2sadiq.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 19
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2sadiq.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 19
 # glb-route:r2sadiq end
 
 # glb-route:r2sads begin
@@ -436,16 +499,19 @@ r2sads:
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 13
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2sads.shp
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 13
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2sads.shp
 		Start: 512
 		Facings: 32
 		ShadowStart: 544
+		Offset: 0, 0, 13
 # glb-route:r2sads end
 
 # glb-route:r2aras begin
@@ -454,11 +520,13 @@ r2aras:
 		Filename: ra2|modern-factions/vehicles/r2aras.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2aras.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 13
 # glb-route:r2aras end
 
 # glb-route:r2ege begin
@@ -467,11 +535,13 @@ r2ege:
 		Filename: ra2|modern-factions/vehicles/r2ege.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 24
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2ege.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 24
 # glb-route:r2ege end
 
 # glb-route:r2gokkalkan begin
@@ -480,11 +550,13 @@ r2gokkalkan:
 		Filename: ra2|modern-factions/vehicles/r2gokkalkan.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2gokkalkan.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 13
 # glb-route:r2gokkalkan end
 
 # glb-route:r2marmara begin
@@ -493,11 +565,13 @@ r2marmara:
 		Filename: ra2|modern-factions/vehicles/r2marmara.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 28
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2marmara.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 28
 # glb-route:r2marmara end
 
 # glb-route:r2sahin begin
@@ -505,6 +579,7 @@ r2sahin:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2sahin.shp
 		Facings: 32
+		Offset: 0, 0, 12
 # glb-route:r2sahin end
 
 # glb-route:r2turna begin
@@ -515,14 +590,17 @@ r2turna:
 		Tick: 40
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 17
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2turna.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 17
 	idle-landed:
 		Filename: ra2|modern-factions/vehicles/r2turna.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 17
 # glb-route:r2turna end
 
 # glb-route:r2ah64sa begin
@@ -533,14 +611,17 @@ r2ah64sa:
 		Tick: 40
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 24
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2ah64sa.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 24
 	idle-landed:
 		Filename: ra2|modern-factions/vehicles/r2ah64sa.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 24
 # glb-route:r2ah64sa end
 
 # glb-route:r2bradley begin
@@ -549,11 +630,13 @@ r2bradley:
 		Filename: ra2|modern-factions/vehicles/r2bradley.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2bradley.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 12
 # glb-route:r2bradley end
 
 # glb-route:r2hodeidah begin
@@ -562,6 +645,7 @@ r2hodeidah:
 		Filename: ra2|modern-factions/vehicles/r2hodeidah.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 16
 # glb-route:r2hodeidah end
 
 # glb-route:r2mokha begin
@@ -570,11 +654,13 @@ r2mokha:
 		Filename: ra2|modern-factions/vehicles/r2mokha.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 16
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2mokha.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 16
 # glb-route:r2mokha end
 
 # glb-route:r2sahaab begin
@@ -583,6 +669,7 @@ r2sahaab:
 		Filename: ra2|modern-factions/vehicles/r2sahaab.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 17
 # glb-route:r2sahaab end
 
 # glb-route:r2samad begin
@@ -593,10 +680,12 @@ r2samad:
 		Tick: 120
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 15
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2samad.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 15
 # glb-route:r2samad end
 
 # glb-route:r2technical begin
@@ -605,11 +694,13 @@ r2technical:
 		Filename: ra2|modern-factions/vehicles/r2technical.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2technical.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 12
 # glb-route:r2technical end
 
 # glb-route:r2ymlr begin
@@ -618,11 +709,13 @@ r2ymlr:
 		Filename: ra2|modern-factions/vehicles/r2ymlr.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 	empty:
 		Filename: ra2|modern-factions/vehicles/r2ymlr.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 13
 # glb-route:r2ymlr end
 
 # glb-route:r2ytechrr begin
@@ -631,11 +724,13 @@ r2ytechrr:
 		Filename: ra2|modern-factions/vehicles/r2ytechrr.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2ytechrr.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 12
 # glb-route:r2ytechrr end
 
 # glb-route:r2yzu begin
@@ -644,11 +739,13 @@ r2yzu:
 		Filename: ra2|modern-factions/vehicles/r2yzu.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 11
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2yzu.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 11
 # glb-route:r2yzu end
 
 # glb-route:r2ilfalcon begin
@@ -656,6 +753,7 @@ r2ilfalcon:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2ilfalcon.shp
 		Facings: 32
+		Offset: 0, 0, 11
 # glb-route:r2ilfalcon end
 
 # glb-route:r2ilfrigate begin
@@ -667,16 +765,19 @@ r2ilfrigate:
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 24
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2ilfrigate.shp
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 24
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2ilfrigate.shp
 		Start: 512
 		Facings: 32
 		ShadowStart: 544
+		Offset: 0, 0, 24
 # glb-route:r2ilfrigate end
 
 # glb-route:r2ilgunship begin
@@ -687,14 +788,17 @@ r2ilgunship:
 		Tick: 40
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 21
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2ilgunship.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 21
 	idle-landed:
 		Filename: ra2|modern-factions/vehicles/r2ilgunship.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 21
 # glb-route:r2ilgunship end
 
 # glb-route:r2ilhowitzer begin
@@ -703,6 +807,7 @@ r2ilhowitzer:
 		Filename: ra2|modern-factions/vehicles/r2ilhowitzer.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 16
 # glb-route:r2ilhowitzer end
 
 # glb-route:r2ilpatrol begin
@@ -711,11 +816,13 @@ r2ilpatrol:
 		Filename: ra2|modern-factions/vehicles/r2ilpatrol.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 18
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2ilpatrol.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 18
 # glb-route:r2ilpatrol end
 
 # glb-route:r2ilshield begin
@@ -724,6 +831,7 @@ r2ilshield:
 		Filename: ra2|modern-factions/vehicles/r2ilshield.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2ilshield.shp
 		Start: 64
@@ -732,12 +840,14 @@ r2ilshield:
 		Stride: 8
 		Facings: 32
 		ShadowStart: 320
+		Offset: 0, 0, 12
 	turret-still:
 		Filename: ra2|modern-factions/vehicles/r2ilshield.shp
 		Start: 64
 		Stride: 8
 		Facings: 32
 		ShadowStart: 320
+		Offset: 0, 0, 12
 # glb-route:r2ilshield end
 
 # glb-route:r2iltender begin
@@ -746,6 +856,7 @@ r2iltender:
 		Filename: ra2|modern-factions/vehicles/r2iltender.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 21
 # glb-route:r2iltender end
 
 # glb-route:r2merkava begin
@@ -754,11 +865,13 @@ r2merkava:
 		Filename: ra2|modern-factions/vehicles/r2merkava.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 18
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2merkava.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 18
 # glb-route:r2merkava end
 
 # glb-route:r2namer begin
@@ -767,11 +880,13 @@ r2namer:
 		Filename: ra2|modern-factions/vehicles/r2namer.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 14
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2namer.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 14
 # glb-route:r2namer end
 
 # glb-route:r2hzdrone begin
@@ -782,10 +897,12 @@ r2hzdrone:
 		Tick: 120
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 9
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2hzdrone.shp
 		Stride: 4
 		Facings: 32
+		Offset: 0, 0, 9
 # glb-route:r2hzdrone end
 
 # glb-route:r2hzescort begin
@@ -794,11 +911,13 @@ r2hzescort:
 		Filename: ra2|modern-factions/vehicles/r2hzescort.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2hzescort.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 12
 # glb-route:r2hzescort end
 
 # glb-route:r2hzmissileboat begin
@@ -807,6 +926,7 @@ r2hzmissileboat:
 		Filename: ra2|modern-factions/vehicles/r2hzmissileboat.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 19
 # glb-route:r2hzmissileboat end
 
 # glb-route:r2hzrecoilless begin
@@ -815,11 +935,13 @@ r2hzrecoilless:
 		Filename: ra2|modern-factions/vehicles/r2hzrecoilless.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 13
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2hzrecoilless.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 13
 # glb-route:r2hzrecoilless end
 
 # glb-route:r2hzrockets begin
@@ -828,11 +950,13 @@ r2hzrockets:
 		Filename: ra2|modern-factions/vehicles/r2hzrockets.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 14
 	empty:
 		Filename: ra2|modern-factions/vehicles/r2hzrockets.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 14
 # glb-route:r2hzrockets end
 
 # glb-route:r2hzskiff begin
@@ -841,6 +965,7 @@ r2hzskiff:
 		Filename: ra2|modern-factions/vehicles/r2hzskiff.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 14
 # glb-route:r2hzskiff end
 
 # glb-route:r2hzsurvey begin
@@ -852,16 +977,19 @@ r2hzsurvey:
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 18
 	idle-still:
 		Filename: ra2|modern-factions/vehicles/r2hzsurvey.shp
 		Stride: 8
 		Facings: 32
 		ShadowStart: 256
+		Offset: 0, 0, 18
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2hzsurvey.shp
 		Start: 512
 		Facings: 32
 		ShadowStart: 544
+		Offset: 0, 0, 18
 # glb-route:r2hzsurvey end
 
 # glb-route:r2hztechnical begin
@@ -870,11 +998,13 @@ r2hztechnical:
 		Filename: ra2|modern-factions/vehicles/r2hztechnical.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 	turret:
 		Filename: ra2|modern-factions/vehicles/r2hztechnical.shp
 		Start: 64
 		Facings: 32
 		ShadowStart: 96
+		Offset: 0, 0, 12
 # glb-route:r2hztechnical end
 
 # glb-route:r2hzquad begin
@@ -882,6 +1012,7 @@ r2hzquad:
 	idle:
 		Filename: ra2|modern-factions/vehicles/r2hzquad.shp
 		Facings: 32
+		Offset: 0, 0, 5
 # glb-route:r2hzquad end
 
 # glb-route:r2hzrail begin
@@ -890,4 +1021,5 @@ r2hzrail:
 		Filename: ra2|modern-factions/vehicles/r2hzrail.shp
 		Facings: 32
 		ShadowStart: 32
+		Offset: 0, 0, 12
 # glb-route:r2hzrail end
