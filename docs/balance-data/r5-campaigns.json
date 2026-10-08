@@ -1,0 +1,512 @@
+{
+ "r5-main-base": {
+  "description": "Round 5 main land round robin (base): 7 modern factions plus America and Russia, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 3 replicate(s).",
+  "seed": 20261051,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-main-base-naval": {
+  "description": "Round 5 main naval round robin (base): Little Big Lake, 3 replicate(s).",
+  "seed": 20261052,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-sa-base": {
+  "description": "Round 5 standalone round robin (base): the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 3 replicate(s).",
+  "seed": 20261053,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   }
+  ]
+ },
+ "r5-main-probe": {
+  "description": "Round 5 main land round robin (probe): 7 modern factions plus America and Russia, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate(s).",
+  "seed": 20261061,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-main-probe-naval": {
+  "description": "Round 5 main naval round robin (probe): Little Big Lake, 1 replicate(s).",
+  "seed": 20261062,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-sa-probe": {
+  "description": "Round 5 standalone round robin (probe): the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate(s).",
+  "seed": 20261063,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   }
+  ]
+ },
+ "r5-main-probe2": {
+  "description": "Round 5 main land round robin (probe2): 7 modern factions plus America and Russia, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate(s).",
+  "seed": 20261071,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-main-probe2-naval": {
+  "description": "Round 5 main naval round robin (probe2): Little Big Lake, 1 replicate(s).",
+  "seed": 20261072,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-sa-probe2": {
+  "description": "Round 5 standalone round robin (probe2): the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate(s).",
+  "seed": 20261073,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   }
+  ]
+ },
+ "r5-main-final": {
+  "description": "Round 5 main land round robin (final): 7 modern factions plus America and Russia, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 3 replicate(s).",
+  "seed": 20261081,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-main-final-naval": {
+  "description": "Round 5 main naval round robin (final): Little Big Lake, 3 replicate(s).",
+  "seed": 20261082,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r5-sa-final": {
+  "description": "Round 5 standalone round robin (final): the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 3 replicate(s).",
+  "seed": 20261083,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   }
+  ]
+ },
+ "r5-sa-tf": {
+  "description": "Round 5: Twin Fords alone (the central crossing, standalone 68a7e75), 7 factions, both orientations, 2 replicates.",
+  "seed": 20261091,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "tf",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 2,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -58,7 +58,8 @@ Player:
 		Doctrine: mobile-defense
 		AirDefenseShare: 24
 		# Round 5: no Air Force Command in the opening; support, transport and strike aircraft halved (Sancak 0.24,
-		# Aras 0.36, Kuzgun 0.54 destroyed per credit), so the shares go to Bozkirs, riflemen and AT teams.
+		# Aras 0.36, Kuzgun 0.54 destroyed per credit). Integer rounding takes the base shares 3/3/6 to 1/1/3, so the
+		# bot builds almost no Sancaks or Aras and the money goes to Bozkirs, riflemen and AT teams.
 		InitialBuildOrder: gapowr, garefn, gapile, gaweap, garefn, gadept
 		RoleShareModifiers:
 			transport: 50

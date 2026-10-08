@@ -5,11 +5,328 @@ on `main`, 0 errors: MIGRATION.md round C). Branch `rtsai/art-preview` (local, n
 engine `rtsai/engine` 68c1e95557 (local-only: missiles fired over raised ground or ramps hit, and the `WRot.SLerp`
 crash of round 3 is fixed). Round 3 (same day, rules a47654a) and the round-2 and round-1 records follow.
 
-Round 5 (2026-10-07) retunes Hezbollah alone ("Salvo and swarm") on branch `rtsai/hezbollah-doctrine`; it comes
-first below.
+Round 5 (2026-10-07/08) is the current state. It balances both products, `main` and the standalone game, with the
+same faction rules. It comes first below. Before it, a Hezbollah-only pass retuned "Salvo and swarm" on branch
+`rtsai/hezbollah-doctrine`; it is the second section.
 
 How each result was established: **[ran]** means the matches or duels were played and the numbers come from their
 recorded results. **[inferred]** means it was reasoned from rules, code or those results and not tested directly.
+
+## Round 5: both products (2026-10-07/08)
+
+[ran] One balance pass over both products. They share the faction rules (`mods/rtsai/modern-factions`).
+
+**Main** (`main`):
+- 7 modern factions plus America and Russia.
+- Rules and bots:
+  - bce9648;
+  - the two bot commits ported from the standalone branch (9206146, 5b5faa9);
+  - the round-5 rules (7fd8f3f).
+
+**Standalone** (`rtsai/standalone`):
+- The 7 modern factions only, on the kit base.
+- The Heavy Power Plant, the Ore Purifier upgrade, ore mines and the superweapon bot.
+- Maps: Twin Fords and Harbor Line.
+- The final run used 841e844 with the round-5 rules. The standalone agent merged 7fd8f3f there as 9f765d2.
+
+**Both:**
+- Engine 68c1e95557.
+- Normal bots and a 40-minute cap.
+- 3 workers, with `OPENRA_AI_HOST=0`.
+
+Targets:
+- **Standalone:**
+  - each faction scores 40-60% against the others;
+  - draws are at most 15%;
+  - both maps are reported.
+- **Main:** the round-4 targets, with land and naval both reported:
+  - 35-65% against the modern factions;
+  - at least 35% against America+Russia;
+  - America and Russia at most 65% against the modern factions.
+
+There were three tuning rounds:
+1. probe 1;
+2. probe 2;
+3. the final rule set, measured once at full scale.
+
+### Standalone result
+
+[ran] Final round robin (`r5-sa-final`): 252 games, both maps, every pairing in both orientations, 3 replicates. 0
+errors, 40 draws (16%).
+
+| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | vs others |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **china** | — | 3-4 (5d) | 7-5 | 4-6 (2d) | 6-5 (1d) | 3-6 (3d) | 5-5 (2d) | 48% (37-59) |
+| **iran** | 4-3 (5d) | — | 4-7 (1d) | 6-5 (1d) | 4-4 (4d) | 2-10 | 5-3 (4d) | 45% (34-57) |
+| **turkey** | 5-7 | 7-4 (1d) | — | 5-6 (1d) | 3-6 (3d) | 4-5 (3d) | 4-6 (2d) | 46% (35-57) |
+| **saudi** | 6-4 (2d) | 5-6 (1d) | 6-5 (1d) | — | 7-5 | 7-3 (2d) | 5-7 | 54% (43-65) |
+| **yemen** | 5-6 (1d) | 4-4 (4d) | 6-3 (3d) | 5-7 | — | 0-8 (4d) | 4-6 (2d) | 43% (32-55) |
+| **israel** | 6-3 (3d) | 10-2 | 5-4 (3d) | 3-7 (2d) | 8-0 (4d) | — | 5-7 | 60% (48-70) |
+| **hezbollah** | 5-5 (2d) | 3-5 (4d) | 6-4 (2d) | 7-5 | 6-4 (2d) | 7-5 | — | 54% (43-65) |
+
+The runs compared below:
+- **Baseline:** e2efdd2, 252 games. It has the round-4 rules plus Hezbollah's new doctrine.
+- **Probes 1 and 2:** 84 games each, 1 replicate, shown without an interval.
+- **Final:** 841e844 plus the final rules, 252 games.
+
+| Faction | Target | Baseline | Probe 1 | Probe 2 | Final | Met |
+|---|---|---:|---:|---:|---:|---|
+| China | vs others 40-60% | 25% (16-36) | 50% | 40% | 48% (37-59) | yes |
+| Iran | vs others 40-60% | 61% (50-72) | 54% | 44% | 45% (34-57) | yes |
+| Türkiye | vs others 40-60% | 40% (29-51) | 40% | 44% | 46% (35-57) | yes |
+| Saudi Arabia | vs others 40-60% | 47% (35-58) | 52% | 60% | 54% (43-65) | yes |
+| Yemen | vs others 40-60% | 56% (44-66) | 54% | 65% | 43% (32-55) | yes |
+| Israel | vs others 40-60% | 50% (39-61) | 44% | 50% | 60% (48-70) | yes |
+| Hezbollah | vs others 40-60% | 72% (61-81) | 56% | 48% | 54% (43-65) | yes |
+
+Each map, baseline and final. The faction columns are each faction's score against the others on that map:
+
+| Map, run | Games | Draws | Median minutes | Allied side vs Soviet side | China | Iran | Türkiye | Saudi Arabia | Yemen | Israel | Hezbollah |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Harbor Line, baseline | 126 | 17 (13%) | 15.5 | 40% (29-51) | 24% | 61% | 43% | 56% | 43% | 57% | 67% |
+| Twin Fords, baseline | 126 | 47 (37%) | 31.8 | 22% (14-32) | 26% | 61% | 36% | 38% | 68% | 43% | 78% |
+| Harbor Line, final | 126 | 14 (11%) | 14.0 | 65% (54-75) | 61% | 43% | 43% | 67% | 33% | 60% | 43% |
+| Twin Fords, final | 126 | 26 (21%) | 25.5 | 42% (32-54) | 35% | 47% | 49% | 42% | 53% | 60% | 65% |
+
+**Verdict, standalone.** [ran] All seven factions are inside 40-60%. Israel is at the edge: 59.7%, rounded to 60%.
+
+Draws are 16% (40 of 252). That misses the 15% target by one point, within noise (12-21%).
+- Harbor Line: 11% draws.
+- Twin Fords: 21% draws, down from 37% at baseline.
+
+The standalone agent changed Twin Fords twice during this round:
+- 68a7e75 added a central crossing. In the Twin Fords probe (`r5-sa-tf`, probe-2 rules), draws fell to 19%.
+- 841e844 made the two gem fords 50% wider. It was first measured in the final, so its effect is not separated
+  from the final rule changes.
+
+Overall, the Allied side scores 54% (46-62) against the Soviet side; it was 31% at baseline. By map:
+- **Harbor Line:** 40% → 65%. Harbor Line now leans Allied, so China is 61% there and Yemen 33%.
+- **Twin Fords:** 22% → 42%. With the central crossing alone (the Twin Fords probe) it was still 23%. The wider
+  fords and the final rules came together.
+- The per-map scores have intervals of about ±15 points. The targets are set on both maps together, so neither map
+  is tuned separately here.
+
+### Why the Allied side lost in the standalone game
+
+[ran] At baseline (e2efdd2), the Allied side scored 31% (24-39) against the Soviet side, and 22% on Twin Fords:
+- Allied side: China, Türkiye, Saudi Arabia, Israel.
+- Soviet side: Iran, Yemen, Hezbollah.
+
+**Not economy.**
+- By minute 10 the Allied factions had earned 23.9-25.8k, against 22.0-24.4k for the Soviet side.
+- The Allied bots put more of it into buildings: 13.8-15.0k, against 11.7-13.0k. Part of that was an Air Force
+  Command in the opening, which then waited about ten minutes for aircraft.
+- Their armies at minute 10 were smaller: 3.0-4.9k against 5.3-6.5k.
+
+**Not superweapons.** 83 teleports and 25 shields in 252 games, about 0.2 per side per game. Ore Purifiers came late,
+about one per game.
+
+**The cause is doctrine against infantry.**
+- The Allied-side armies are tank-led. The MBT is 20-29% of their production, and its main gun does 25% damage to
+  infantry. These tanks traded 0.80-0.87 destroyed per credit.
+- The Soviet-side armies are infantry-led. Their cheap riflemen, Yemen's Mountain Rifleman and Hezbollah's Line
+  Fighter, trade 2.9 destroyed per credit.
+- China against the Soviet side:
+  - the Qilin was 20% of China's production and made 12% of its kills (0.72 per credit);
+  - the PHL rocket artillery traded 0.69 per credit;
+  - China's riflemen made 35% of its kills.
+
+**The map made it worse.** Twin Fords funnels both armies through two fords, which favours massed infantry.
+
+The fixes went to that cause: tanks that can kill infantry, artillery that breaks it, and openings that put the money
+into the army.
+
+### Round 5 changes
+
+All seven changes are in `mods/rtsai/modern-factions` (7fd8f3f), each with its reason in a comment next to it.
+Each change says which run first had it: probe 1, probe 2 or the final.
+
+1. **Coaxial machine gun on the Allied-side MBTs.**
+   - Costs: Qilin 700 → 750, Bozkir 900 → 950, M1A2S 1100 → 1150, Merkava 1250 → 1300.
+   - The new weapon, `R2QilinCoax`, does 16 damage every 20 ticks at range 5, about one rifleman's fire.
+   - Why: the tanks could not kill the infantry that beat them.
+   - Probe 1 gave the coax to the Qilin alone. Probe 2 gave it to the other three MBTs, because Türkiye, Saudi
+     Arabia and Israel had the same gap.
+   - Effect, standalone baseline → final, destroyed per credit:
+     - Qilin: 0.80 → 1.55
+     - Bozkir: 0.83 → 1.59
+     - M1A2S: 0.87 → 1.56
+     - Merkava: 0.82 → 1.40
+2. **China's PHL** (probe 1).
+   - HP 160 → 220.
+   - Rockets: Spread 256 → 341. Damage to None armour goes from 70% to 100%, and to Flak from 70% to 90%.
+   - Why: the PHL traded 0.69-0.73 per credit and died to the infantry armies it should break.
+   - Effect: 0.89 per credit in the final.
+3. **China's bot** (probe 1).
+   - Doctrine artillery share 60 → 100 (more PHL).
+   - Sky Shield AA sites 7 → 3: they made 1.5% of China's kills and cost 2.4k a game.
+   - Bastions 9 → 12: they made 8-9% of its kills.
+   - No Air Force Command in the opening.
+   - China stays armour-led. The Qilin was 20% of China's production and 13% of its kills; it is now 23% and 29%.
+4. **Türkiye's bot.**
+   - No Air Force Command in the opening (probe 1).
+   - Support, transport and strike-aircraft shares halved (final).
+     - Why: Sancak 0.24, Aras 0.36 and Kuzgun 0.54 destroyed per credit.
+     - The base shares are 3, 3 and 6. Integer rounding takes them to 1, 1 and 3.
+     - The bot now builds almost no Sancaks or Aras: 0-0.1% of production, down from 4-6%.
+     - The money goes to Bozkirs: 34% of production and 42% of kills.
+5. **Hezbollah Line Fighter 275 → 300** (probe 1).
+   - It traded 2.88 per credit and made 30% of Hezbollah's kills.
+   - At 300 it still trades 2.86 in the standalone final, and 1.44 on `main`.
+6. **Yemen Mountain Rifleman 150 → 165** (final). It traded 2.88 per credit and made 30% of Yemen's kills; now 2.59.
+7. **Commando bot delay 20 → 10 minutes** (probe 1). This covers Saudi `r2falcon` and Israeli `r2ilrecon`, in every
+   bot profile. See "The commando delay" below.
+
+### Main result
+
+[ran] Final round robin (`r5-main-final`): 420 games on Dustbowl and Official Tournament Map A. 0 errors, 81 draws
+(19%; 15% in round 4), median 23.8 game minutes. Draws by map: Dustbowl 62 (30%; round 4: 27%), Tournament Map A
+19 (9%; round 4: 4%).
+
+| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **china** | — | 6-4 (2d) | 6-4 (2d) | 5-5 (2d) | 7-5 | 5-4 (3d) | 4-2 (6d) | 4-6 (2d) | 9-3 | 56% (45-67) | 58% (39-76) |
+| **iran** | 4-6 (2d) | — | 5-6 (1d) | 2-7 (3d) | 4-7 (1d) | 4-7 (1d) | 5-6 (1d) | 3-5 (4d) | 4-4 (4d) | 40% (29-51) | 46% (28-65) |
+| **turkey** | 4-6 (2d) | 6-5 (1d) | — | 4-7 (1d) | 7-3 (2d) | 5-5 (2d) | 9-3 | 6-4 (2d) | 6-2 (4d) | 54% (43-65) | 62% (43-79) |
+| **saudi** | 5-5 (2d) | 7-2 (3d) | 7-4 (1d) | — | 9-0 (3d) | 6-2 (4d) | 7-5 | 7-4 (1d) | 6-2 (4d) | 66% (54-76) | 65% (45-80) |
+| **yemen** | 5-7 | 7-4 (1d) | 3-7 (2d) | 0-9 (3d) | — | 3-8 (1d) | 3-7 (2d) | 3-6 (3d) | 5-3 (4d) | 35% (25-47) | 48% (30-67) |
+| **israel** | 4-5 (3d) | 7-4 (1d) | 5-5 (2d) | 2-6 (4d) | 8-3 (1d) | — | 8-2 (2d) | 5-3 (4d) | 9-1 (2d) | 56% (45-67) | 71% (51-85) |
+| **hezbollah** | 2-4 (6d) | 6-5 (1d) | 3-9 | 5-7 | 7-3 (2d) | 2-8 (2d) | — | 4-5 (3d) | 3-4 (5d) | 42% (32-54) | 46% (28-65) |
+| **america** | 6-4 (2d) | 5-3 (4d) | 4-6 (2d) | 4-7 (1d) | 6-3 (3d) | 3-5 (4d) | 5-4 (3d) | — | — | 51% (40-61) | — |
+| **russia** | 3-9 | 4-4 (4d) | 2-6 (4d) | 2-6 (4d) | 3-5 (4d) | 1-9 (2d) | 4-3 (5d) | — | — | 36% (27-47) | — |
+
+The runs compared below:
+- **R5 baseline:** `main`'s rules before this round. The round-4 final (`r4-final`) has the same rules for every pair
+  without Hezbollah. Hezbollah's pairs come from its as-built run (`r5-hz-t5`, d646808, the rules `main` has since
+  8357c9b). Together: 420 games.
+- **Probe 2:** the port plus the probe-2 rules, 140 games, shown without an interval.
+- **Final:** 7fd8f3f, 420 games.
+
+| Faction | Target | R5 baseline | Probe 2 | Final | Met |
+|---|---|---:|---:|---:|---|
+| China | vs modern 35-65% | 33% (24-45) | 46% | 56% (45-67) | yes |
+| Iran | vs modern 35-65% | 58% (46-68) | 33% | 40% (29-51) | yes |
+| Türkiye | vs modern 35-65% | 40% (29-51) | 56% | 54% (43-65) | yes |
+| Saudi Arabia | vs modern 35-65% | 41% (30-53) | 56% | 66% (54-76) | **no**, within noise |
+| Yemen | vs modern 35-65% | 64% (52-74) | 46% | 35% (25-47) | yes |
+| Israel | vs modern 35-65% | 46% (35-57) | 71% | 56% (45-67) | yes |
+| Hezbollah | vs modern 35-65% | 69% (57-78) | 42% | 42% (32-54) | yes |
+| China | vs America+Russia ≥35% | 54% (35-72) | 75% | 58% (39-76) | yes |
+| Iran | vs America+Russia ≥35% | 44% (26-63) | 56% | 46% (28-65) | yes |
+| Türkiye | vs America+Russia ≥35% | 52% (33-70) | 25% | 62% (43-79) | yes |
+| Saudi Arabia | vs America+Russia ≥35% | 50% (31-69) | 62% | 65% (45-80) | yes |
+| Yemen | vs America+Russia ≥35% | 42% (24-61) | 75% | 48% (30-67) | yes |
+| Israel | vs America+Russia ≥35% | 48% (30-67) | 69% | 71% (51-85) | yes |
+| Hezbollah | vs America+Russia ≥35% | 40% (23-59) | 50% | 46% (28-65) | yes |
+| America | vs modern ≤65% | 54% (43-64) | 45% | 51% (40-61) | yes |
+| Russia | vs modern ≤65% | 52% (42-63) | 38% | 36% (27-47) | yes |
+
+Naval map, Little Big Lake [ran], reported and not tuned for. 210 games per run. The R5 baseline is built like the
+land one, from `r4-final-naval` and `r5-hz-t5-naval`. Final: 0 errors, 33 draws (16%).
+
+| Faction | R5 baseline: vs modern | R5 baseline: vs America+Russia | R5 final: vs modern | R5 final: vs America+Russia |
+|---|---:|---:|---:|---:|
+| China | 39% (25-55) | 54% (29-78) | 51% (36-67) | 71% (43-89) |
+| Iran | 57% (41-72) | 58% (32-81) | 44% (30-60) | 54% (29-78) |
+| Türkiye | 38% (24-54) | 58% (32-81) | 53% (37-68) | 50% (25-75) |
+| Saudi Arabia | 68% (52-81) | 67% (39-86) | 51% (36-67) | 58% (32-81) |
+| Yemen | 57% (41-72) | 46% (22-71) | 50% (34-66) | 17% (5-45) |
+| Israel | 46% (31-62) | 46% (22-71) | 65% (49-79) | 62% (35-84) |
+| Hezbollah | 46% (31-62) | 50% (25-75) | 35% (21-51) | 46% (22-71) |
+| America | 46% (32-61) | — | 49% (34-63) | — |
+| Russia | 45% (31-60) | — | 49% (34-63) | — |
+
+**Verdict, main.** [ran] 15 of 16 land targets are met.
+
+China is fixed and stays armoured:
+- 33% → 56% (45-67) against the modern factions, and 58% against America+Russia.
+- The Qilin is 23% of China's production and makes 29% of its kills, at 1.41 destroyed per credit.
+
+The one miss is Saudi Arabia: 66% (54-76) against the modern factions. It misses by one point, within noise.
+
+On `main` the balance swung from the Soviet side to the Allied side:
+- The Allied side scored 30% (23-38) against the Soviet side at baseline and 66% (58-74) in the final.
+- All three Soviet-side modern factions are now at 35-42% against the modern factions, as is Russia (36%).
+- Standalone, the same rules give 54%.
+- [inferred] `main`'s maps are open (Dustbowl, Tournament Map A), so the coax-armed tanks meet infantry in the open.
+  Twin Fords channels both armies through fords.
+- The Allied side's score by map:
+
+| Run | Map | Allied side vs Soviet side |
+|---|---|---:|
+| Main final | Dustbowl | 62% |
+| Main final | Tournament Map A | 71% |
+| Standalone final | Harbor Line | 65% |
+| Standalone final | Twin Fords | 42% |
+
+Naval (not tuned for):
+- **Yemen** is 17% (5-45) against America+Russia: 1-10 with 1 draw. Its interval still reaches 35%.
+- **Israel** is 65% against the modern factions.
+- **Hezbollah** is 35% against the modern factions.
+- Every other score is between 44% and 71%.
+
+### The commando delay (Israeli and Saudi precision strikes)
+
+[ran] The Saudi and Israeli commandos carry the precision strike: one bomber, ChargeInterval 1800. The bots fire it
+since 4fb8dfb, which is on `main` as 5b5faa9. Delay 20 minutes in the baseline, 10 in the final:
+
+| Run | Faction | Commando fielded in | Median first commando | Strike kills per game |
+|---|---|---:|---:|---:|
+| Standalone baseline (20 min) | Saudi Arabia | 31% of games | 23.0 min | 122 credits |
+| Standalone baseline (20 min) | Israel | 35% | 24.5 min | 51 credits |
+| Standalone final (10 min) | Saudi Arabia | 35% | 18.3 min | 111 credits |
+| Standalone final (10 min) | Israel | 39% | 18.0 min | 118 credits |
+| Main final (10 min) | Saudi Arabia | 48% | 17.0 min | 315 credits |
+| Main final (10 min) | Israel | 44% | 17.9 min | 270 credits |
+
+**Decision: keep 10 minutes.**
+- [ran] The strike destroys 50-430 credits a game in every run of this round. A side destroys 34-44k a game, so
+  that is at most about 1%. The delay is not a balance lever.
+- At 10 minutes, the median first commando comes about 5-7 game minutes earlier: 17-18 game minutes, from 23-25.
+  When the bot fields one, the strike lands mid-game instead of in the last minutes.
+- [inferred] Removing the delay is not advised. The commando traded 0.5 per credit in round 4. Fielded in the first
+  minutes, it would cost the bot its opening army.
+
+### Bot work ported to main
+
+[ran] The standalone agent and this pass agreed how to split the work:
+- The faction rules are tuned on `main` and merged into `rtsai/standalone`.
+- Standalone-only files stay on the standalone branch, owned by its generators. These are the kit rules, the Heavy
+  Power Plant, the Purifier and the maps.
+
+The two bot commits were cherry-picked to `main`:
+- **9206146** (from b6fc566): superweapons.
+  - `SuperweaponBotModule` teleports the most valuable army group (at least 3000) to an enemy building cluster it
+    can take on.
+  - It shields an army group under attack.
+  - Every profile builds `gacsph` / `nairon`. `main` has both buildings (the Chronosphere and the Iron Curtain), so
+    the module applies.
+  - Plugs are built only while a host accepts one.
+- **5b5faa9** (from 4fb8dfb): the bot decisions for the Israeli and Saudi precision strikes.
+
+Superweapon use in the finals:
+- `main`, 420 games: 202 teleports and 25 shields. America and the Allied-side modern factions teleport; Iran,
+  Russia, Yemen and Hezbollah shield.
+- Standalone, 252 games: 53 teleports and 21 shields.
+
+`make.cmd all` and `make.cmd test` on `main`: 0 warnings, 0 errors.
+
+### Round 5: what is left
+
+The round was capped at three tuning rounds, so these stay open.
+
+1. **`main` leans Allied: 66% Allied side against the Soviet side.** Every target but one is met. The levers that
+   would move it back without undoing the standalone balance:
+   - the coax damage, 16 → 12;
+   - or give the Soviet-side main tanks their own anti-infantry gun. The Toophan is 34% of Iran's production at
+     0.77 destroyed per credit.
+2. **Harbor Line leans Allied at 65%.** Twin Fords still leans Soviet at 42%. Both maps belong to the standalone
+   agent; the tools are its map generator and more replicates per map.
+3. **Draws.** [ran]
+   - Standalone: 16% (Twin Fords 21%).
+   - `main`: 19%, up from 15% in round 4. Dustbowl: 30%, from 27%. Tournament Map A: 9%, from 4%.
+4. **Türkiye's halved shares.** They fell to 1 by integer rounding, so the bot builds almost no support or transport
+   vehicles. That suited this pass. A doctrine that wants a small, non-zero share needs base shares above 3.
 
 ## Round 5: Hezbollah "Salvo and swarm" (2026-10-07)
 
@@ -78,7 +395,7 @@ The trims:
 Closing the gap needs an all-faction pass: China's strength and the modern factions' anti-infantry. The full
 analysis is in `docs/hezbollah-doctrine.md`, "As built".
 
-## Current state (round 4)
+## Round 4 result
 
 [ran] Final round robin on the round-4 rules and bots (e2c07b0, engine 68c1e95557): 420 games on Dustbowl and
 Official Tournament Map A: 0 errors, 65 tick-cap draws, median 24.8 game minutes.
@@ -919,6 +1236,14 @@ value left.
 | `r5-hz-t2`, `r5-hz-t3`, `r5-hz-t4` | Round 5: land runs after trims 1-2 (96), 3 (47 of 96, stopped) and 4 (96) | b70d61e, efe7750, 85d07d4 |
 | `r5-hz-t5`, `r5-hz-t5-naval` | Round 5: land (96) and naval (48), as built | d646808 |
 | `r5-hz-campaigns.json` | Round 5 campaign definitions (Hezbollah focus) | — |
+| `r5-sa-baseline` | Round 5, standalone: baseline round robin (252) | `rtsai/standalone` e2efdd2 |
+| `r5-sa-p1` | Round 5, standalone: probe 1, one replicate (84) | e2efdd2 + probe-1 changes |
+| `r5-sa-p2` | Round 5, standalone: probe 2, one replicate (84) | + the coax on the other three MBTs |
+| `r5-sa-tf` | Round 5, standalone: Twin Fords only, central crossing (84; 1 host-side socket error) | probe-2 rules + 68a7e75 map |
+| `r5-sa-final` | Round 5, standalone: final round robin (252) | 841e844 + the 7fd8f3f rules |
+| `r5-main-p2` | Round 5, `main`: probe 2, one replicate (140) | 8357c9b + the bot port + probe-2 rules |
+| `r5-main-final`, `r5-main-final-naval` | Round 5, `main`: final round robin (420) and naval (210) | 7fd8f3f |
+| `r5-campaigns.json` | Round 5 campaign definitions (`r5-main-*`; `r5-sa-*` run with `--standalone`) | — |
 | `r2-duels-before`, `r2-duels-after` | Duels, rank 0 and 2, 8 per pair | 414f8fa / 31912c4 |
 | `r2-start-probe` | Probe (84 games) with veterancy telemetry | 414f8fa |
 | `r2-pass1` | Round robin, replicate 0 (84 games) | eba846d |
@@ -948,8 +1273,17 @@ python tools/balance-harness.py run --campaign r3-round-robin --campaigns-file d
 python tools/balance-harness.py run --campaign r3-naval --campaigns-file docs/balance-data/r3-campaigns.json \
     --content <content> --output <scratch>/r3-naval --parallel 3
 # Round 5 (Hezbollah only): 96 land games, 48 naval
-python tools/balance-harness.py run --campaign hz-land --campaigns-file docs/balance-data/r5-hz-campaigns.json \n    --content <content> --output <scratch>/r5-land --parallel 8
-python tools/balance-harness.py run --campaign hz-naval --campaigns-file docs/balance-data/r5-hz-campaigns.json \n    --content <content> --output <scratch>/r5-naval --parallel 8
+python tools/balance-harness.py run --campaign hz-land --campaigns-file docs/balance-data/r5-hz-campaigns.json \
+    --content <content> --output <scratch>/r5-land --parallel 8
+python tools/balance-harness.py run --campaign hz-naval --campaigns-file docs/balance-data/r5-hz-campaigns.json \
+    --content <content> --output <scratch>/r5-naval --parallel 8
+# Round 5 (both products): main 420 land + 210 naval; standalone 252 (from an rtsai/standalone checkout)
+python tools/balance-harness.py run --campaign r5-main-final --campaigns-file docs/balance-data/r5-campaigns.json \
+    --content <content> --output <scratch>/r5-main --parallel 3
+python tools/balance-harness.py run --campaign r5-main-final-naval --campaigns-file docs/balance-data/r5-campaigns.json \
+    --content <content> --output <scratch>/r5-main-naval --parallel 3
+python tools/balance-harness.py run --campaign r5-sa-final --campaigns-file docs/balance-data/r5-campaigns.json \
+    --standalone --output <scratch>/r5-sa --parallel 3
 ```
 
 Options:

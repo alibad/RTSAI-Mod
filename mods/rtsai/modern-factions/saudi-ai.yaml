@@ -11,8 +11,8 @@ Player:
 			r2riyadh: 20
 			r2jubail: 5
 		# Bots field the r2falcon commando only after 10 minutes (round 4: 20; it traded 0.5 per credit). Round 5:
-		# the precision strike it carries costs opponents under 350 a game, so the earlier commando is a visible
-		# strike, not a balance lever.
+		# the precision strike it carries destroys 50-430 credits a game (at most about 1% of a side's kills), so
+		# the earlier commando is a visible strike, not a balance lever.
 		UnitDelays:
 			r2falcon: 15000
 		UnitLimits:
