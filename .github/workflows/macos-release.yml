@@ -1,0 +1,80 @@
+# Builds the macOS disk image (packaging/macos/build-release.sh) and smoke-tests it on both architectures
+# (packaging/macos/smoke-test.sh). It publishes nothing: the image is a workflow artifact that a maintainer checks
+# and attaches to the GitHub release by hand. Read-only token.
+#
+# The build runs on Intel because Grpc.Tools ships protoc and grpc_csharp_plugin for macOS x64 only; the second job
+# runs the same smoke test natively on Apple silicon.
+name: macOS release build
+
+on:
+  push:
+    tags: ["v*"]
+    branches: ["ci/macos-*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: macos-release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    timeout-minutes: 60
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Version
+        id: version
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            VERSION="${GITHUB_REF_NAME#v}"
+          else
+            VERSION="0.0.0-ci.${GITHUB_RUN_NUMBER}"
+          fi
+          echo "VERSION=${VERSION}" >> "${GITHUB_ENV}"
+          echo "version=${VERSION}" >> "${GITHUB_OUTPUT}"
+          echo "Version ${VERSION} from ${GITHUB_REF} at ${GITHUB_SHA}"
+
+      - name: Fetch the pinned engine
+        run: bash ./fetch-engine.sh
+
+      - name: Build
+        run: bash packaging/macos/build-release.sh "${VERSION}" "${RUNNER_TEMP}/out"
+
+      - name: Smoke test (Intel)
+        run: bash packaging/macos/smoke-test.sh "${RUNNER_TEMP}/out/RTSAI-${VERSION}-macos.dmg" "${VERSION}" 90
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RTSAI-${{ env.VERSION }}-macos
+          path: |
+            ${{ runner.temp }}/out/RTSAI-${{ env.VERSION }}-macos.dmg
+            ${{ runner.temp }}/out/RTSAI-${{ env.VERSION }}-macos.dmg.sha256
+          if-no-files-found: error
+          retention-days: 30
+
+  smoke-apple-silicon:
+    needs: build
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      VERSION: ${{ needs.build.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: RTSAI-${{ needs.build.outputs.version }}-macos
+          path: ${{ runner.temp }}/out
+
+      - name: Smoke test (Apple silicon)
+        run: bash packaging/macos/smoke-test.sh "${RUNNER_TEMP}/out/RTSAI-${VERSION}-macos.dmg" "${VERSION}" 90
