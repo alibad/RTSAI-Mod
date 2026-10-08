@@ -6,29 +6,39 @@ Build the RTS AI Windows release on a Windows host: portable zip, per-user NSIS 
 A Windows-native port of the Mod SDK's packaging/windows/buildpackage.sh (which needs Linux,
 wine64 and ImageMagick). It publishes the pinned engine and the mod self-contained for win-x64,
 builds the RTSAI.exe launcher with the RTS AI icon, stamps version resources with rcedit, adds
-the frozen AI companion (companion\, from OpenRA-AI scripts/package-rtsai-companion.ps1), signs
-every .exe when signing is configured (sign-windows.ps1) and writes:
+the frozen AI companion when -CompanionDirectory is given (companion\, from OpenRA-AI
+scripts/package-rtsai-companion.ps1), signs every .exe when signing is configured (sign-windows.ps1)
+and writes:
 
-    RTSAI-<version>-win-x64-setup.exe        per-user installer (no admin), AI options page
+    RTSAI-<version>-win-x64-setup.exe        per-user installer (no admin)
     RTSAI-<version>-win-x64-portable.zip     unzip and run RTSAI.exe
     RTSAI-VoicePack-<version>.zip            optional offline voice pack (copied from -VoicePack)
     *.sha256 and SHA256SUMS.txt
+
+The installer only offers the AI options this build can deliver:
+    no -CompanionDirectory           no AI page; the co-commander starts off (rtsai-install.json "none")
+    -CompanionDirectory              "Full local AI" and "No AI"
+    -CompanionDirectory -HostedAI    also "Hosted AI + local voice" (only once the hosted service is live)
+
+PACKAGING_STANDALONE="True" in mod.config (the rtsai/standalone game) ships only mods/<MOD_ID> and leaves
+out the engine's MIX filename database and every Red Alert 2 reference in the installer and version info.
 
 Requirements: .NET 10 SDK, NSIS 3 (winget install NSIS.NSIS), rcedit-x64.exe
 (https://github.com/electron/rcedit/releases) and tar.exe (built into Windows 10/11).
 Run `make.cmd all` once first so ./engine exists.
 
 .EXAMPLE
-packaging\windows\build-release.ps1 -OutputDirectory C:\release -CompanionDirectory C:\payload\companion `
-    -VoicePack C:\release-inputs\RTSAI-VoicePack-0.2.0-alpha.1.zip -RcEdit C:\tools\rcedit-x64.exe
+packaging\windows\build-release.ps1 -Version 0.3.0-alpha.1 -OutputDirectory D:\rtsai-release\out `
+    -WorkDirectory D:\rtsai-release\work -RcEdit C:\tools\rcedit-x64.exe
 #>
 [CmdletBinding()]
 param(
-    [string]$Version = "0.2.0-alpha.1",
+    [Parameter(Mandatory = $true)]
+    [string]$Version,
     [Parameter(Mandatory = $true)]
     [string]$OutputDirectory,
-    [Parameter(Mandatory = $true)]
     [string]$CompanionDirectory,
+    [switch]$HostedAI,
     [string]$VoicePack,
     [string]$WorkDirectory,
     [string]$RcEdit = $env:RCEDIT_PATH,
@@ -71,6 +81,7 @@ $modId = $config["MOD_ID"]
 $launcherName = $config["PACKAGING_WINDOWS_LAUNCHER_NAME"]
 $engine = [IO.Path]::GetFullPath((Join-Path $root $config["ENGINE_DIRECTORY"]))
 $installerName = $config["PACKAGING_INSTALLER_NAME"]
+$standalone = $config["PACKAGING_STANDALONE"] -eq "True"
 if (-not (Test-Path -LiteralPath (Join-Path $engine "OpenRA.Game\OpenRA.Game.csproj"))) {
     throw "The pinned engine is missing in $engine. Run make.cmd all (or fetch-local-engine.sh) first."
 }
@@ -78,9 +89,13 @@ if (-not (Test-Path -LiteralPath (Join-Path $engine "OpenRA.Game\OpenRA.Game.csp
 if ($Version -notmatch '^(\d+)\.(\d+)\.(\d+)(?:-[a-z]+\.?(\d+))?$') { throw "Version must look like 0.2.0-alpha.1" }
 $fileVersion = "$($Matches[1]).$($Matches[2]).$($Matches[3]).$(if ($Matches[4]) { $Matches[4] } else { 0 })"
 
-$CompanionDirectory = (Resolve-Path -LiteralPath $CompanionDirectory).Path
-if (-not (Test-Path -LiteralPath (Join-Path $CompanionDirectory "rtsai-companion.exe"))) {
-    throw "No rtsai-companion.exe in $CompanionDirectory (build it with OpenRA-AI scripts/package-rtsai-companion.ps1)."
+if ($CompanionDirectory) {
+    $CompanionDirectory = (Resolve-Path -LiteralPath $CompanionDirectory).Path
+    if (-not (Test-Path -LiteralPath (Join-Path $CompanionDirectory "rtsai-companion.exe"))) {
+        throw "No rtsai-companion.exe in $CompanionDirectory (build it with OpenRA-AI scripts/package-rtsai-companion.ps1)."
+    }
+} elseif ($HostedAI -or $VoicePack) {
+    throw "-HostedAI and -VoicePack need the AI companion (-CompanionDirectory)."
 }
 if (-not $RcEdit -or -not (Test-Path -LiteralPath $RcEdit)) {
     throw "rcedit-x64.exe is required: download it from https://github.com/electron/rcedit/releases and pass -RcEdit (or set RCEDIT_PATH)."
@@ -118,13 +133,18 @@ Invoke-Native dotnet @("publish", "-c", "Release", "-p:TargetPlatform=win-x64", 
     "-r", "win-x64", "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q", "-m:1") "Engine publish failed" $engine
 
 Write-Host "== Engine data"
-foreach ($file in @("VERSION", "AUTHORS", "COPYING", "IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP", "global mix database.dat")) {
+$engineFiles = @("VERSION", "AUTHORS", "COPYING", "IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP")
+# The MIX filename database only serves Westwood archives, which the standalone game never mounts.
+if (-not $standalone) { $engineFiles += "global mix database.dat" }
+foreach ($file in $engineFiles) {
     Copy-Item -LiteralPath (Join-Path $engine $file) -Destination $stage
 }
 Copy-Item -LiteralPath (Join-Path $engine "glsl") -Destination $stage -Recurse
 New-Item -ItemType Directory -Path (Join-Path $stage "mods") | Out-Null
 Copy-Item -LiteralPath (Join-Path $engine "mods\common") -Destination (Join-Path $stage "mods") -Recurse
-foreach ($extra in ($config["PACKAGING_COPY_ENGINE_FILES"] -split '\s+' | Where-Object { $_ })) {
+# mods/common-content is the content installer's chrome; the standalone game has no content installer.
+$engineExtras = if ($standalone) { @() } else { @($config["PACKAGING_COPY_ENGINE_FILES"] -split '\s+' | Where-Object { $_ }) }
+foreach ($extra in $engineExtras) {
     $relative = $extra -replace '^\./', '' -replace '/', '\'
     $target = Join-Path $stage $relative
     New-Item -ItemType Directory -Force -Path (Split-Path -Parent $target) | Out-Null
@@ -134,7 +154,11 @@ foreach ($extra in ($config["PACKAGING_COPY_ENGINE_FILES"] -split '\s+' | Where-
 Write-Host "== Mod assemblies and content"
 Invoke-Native dotnet @("publish", (Join-Path $root "RTSAI.sln"), "-c", "Release", "-p:TargetPlatform=win-x64", "-r", "win-x64",
     "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q") "Mod publish failed" $root
-foreach ($mod in Get-ChildItem -LiteralPath (Join-Path $root "mods") -Directory) {
+$mods = @(Get-ChildItem -LiteralPath (Join-Path $root "mods") -Directory)
+# Standalone: the game only. The classic add-on and its content installer need the player's own RA2 files.
+if ($standalone) { $mods = @($mods | Where-Object { $_.Name -eq $modId }) }
+if ($mods.Count -eq 0) { throw "No mods\$modId to package." }
+foreach ($mod in $mods) {
     Copy-Item -LiteralPath $mod.FullName -Destination (Join-Path $stage "mods") -Recurse
     $manifest = Join-Path $stage "mods\$($mod.Name)\mod.yaml"
     if (Test-Path -LiteralPath $manifest) {
@@ -161,16 +185,24 @@ foreach ($edit in @(
     @("--set-version-string", "ProductName", $config["PACKAGING_DISPLAY_NAME"]),
     @("--set-version-string", "CompanyName", $config["PACKAGING_AUTHORS"]),
     @("--set-version-string", "FileDescription", $config["PACKAGING_DISPLAY_NAME"]),
-    @("--set-version-string", "LegalCopyright", "GPLv3. Built on OpenRA. Red Alert 2 content is not included.")
+    @("--set-version-string", "LegalCopyright", $(if ($standalone) { "GPLv3. Built on OpenRA." } else { "GPLv3. Built on OpenRA. Red Alert 2 content is not included." }))
 )) {
     Invoke-Native $RcEdit (@($launcher) + $edit) "rcedit failed on $launcherName.exe"
 }
 
-Write-Host "== AI companion"
-Copy-Item -LiteralPath $CompanionDirectory -Destination (Join-Path $stage "companion") -Recurse
-foreach ($junk in @("ai\models", "ai\pack.json")) {
-    $path = Join-Path $stage "companion\$junk"
-    if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Recurse -Force }
+if ($CompanionDirectory) {
+    Write-Host "== AI companion"
+    Copy-Item -LiteralPath $CompanionDirectory -Destination (Join-Path $stage "companion") -Recurse
+    foreach ($junk in @("ai\models", "ai\pack.json")) {
+        $path = Join-Path $stage "companion\$junk"
+        if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Recurse -Force }
+    }
+} else {
+    # Without the companion the co-commander starts switched off (CompanionHost applies this once) instead of
+    # reporting missing files. The installer rewrites this file with the same choice.
+    Write-Host "== No AI companion: the co-commander starts off"
+    Set-Content -LiteralPath (Join-Path $stage "rtsai-install.json") -Encoding ASCII `
+        -Value "{`"ai_mode`": `"none`", `"version`": `"$Version`", `"stamp`": `"portable-$Version`"}"
 }
 
 Write-Host "== Signing"
@@ -206,6 +238,9 @@ if (-not $SkipInstaller) {
     $voicePackName = "RTSAI-VoicePack-$Version.zip"
     $nsisArguments = @("/V2", "/DVERSION=$Version", "/DVIVERSION=$fileVersion", "/DPAYLOAD=$stage", "/DOUTFILE=$setup",
         "/DICON=$icon", "/DLICENSE=$(Join-Path $root 'COPYING')", "/DVOICEPACK=$voicePackName", "/DUNINSTALLLIST=$uninstallList")
+    if ($standalone) { $nsisArguments += "/DSTANDALONE" }
+    if ($CompanionDirectory) { $nsisArguments += "/DCOMPANION" }
+    if ($HostedAI) { $nsisArguments += "/DHOSTEDAI" }
     if ($signing -ne "unsigned") {
         $signer = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$(Join-Path $packagingDirectory 'sign-windows.ps1')`" -RequireSignatures -Paths"
         $nsisArguments += "/DUNINSTALLSIGNER=$signer"
@@ -234,5 +269,6 @@ Set-Content -LiteralPath (Join-Path $OutputDirectory "SHA256SUMS.txt") -Value $s
     Version = $Version
     Stage = $stage
     Signing = $signing
+    AI = $(if (-not $CompanionDirectory) { "none" } elseif ($HostedAI) { "local, hosted" } else { "local" })
     Artifacts = $artifacts | ForEach-Object { "{0} ({1:N0} bytes)" -f [IO.Path]::GetFileName($_), (Get-Item -LiteralPath $_).Length }
 }

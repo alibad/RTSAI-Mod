@@ -74,8 +74,12 @@ namespace OpenRA.Mods.RTSAI.Companion
 		const string ExecutableName = "rtsai-companion.exe";
 		const string InstallChoiceFile = "rtsai-install.json";
 		const string HostSettingsFile = "host.json";
+		const string NotIncluded = "This build does not include the AI co-commander.";
+		const string NotIncludedHud = "AI CO-COMMANDER NOT INCLUDED IN THIS BUILD  •  GAME UNAFFECTED";
 
 		static readonly object Sync = new();
+		static readonly Lazy<bool> Bundled = new(() =>
+			ResolveSidecar() != null || Directory.Exists(Path.Combine(Platform.EngineDir, "companion")));
 		static Process process;
 		static CompanionProcessJob job;
 		static StreamWriter outputLog;
@@ -178,14 +182,20 @@ namespace OpenRA.Mods.RTSAI.Companion
 			}
 		}
 
+		/// <summary>
+		/// False for a build that ships without the companion (no companion folder next to the game and no
+		/// development override), so the HUD and settings do not suggest a reinstall or a mode that cannot start.
+		/// </summary>
+		static bool Included() => Bundled.Value;
+
 		/// <summary>One line for the AI settings panel.</summary>
 		public static string StatusLine()
 		{
 			return State switch
 			{
 				CompanionHostState.External => "Co-commander started by an external launcher.",
-				CompanionHostState.Off => "Co-commander is off. Choose a mode to start it.",
-				CompanionHostState.Missing => "Companion files are missing. Reinstall RTS AI to restore them.",
+				CompanionHostState.Off => Included() ? "Co-commander is off. Choose a mode to start it." : NotIncluded,
+				CompanionHostState.Missing => Included() ? "Companion files are missing. Reinstall RTS AI to restore them." : NotIncluded,
 				CompanionHostState.Starting => "Starting the co-commander…",
 				CompanionHostState.Restarting => "The co-commander stopped unexpectedly; restarting…",
 				CompanionHostState.Failed => "The co-commander keeps stopping. Details: Logs/ai-companion.err.log.",
@@ -217,7 +227,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 			{
 				case CompanionHostState.Missing:
 					state = "error";
-					message = "AI CO-COMMANDER UNAVAILABLE  •  COMPANION FILES MISSING  •  GAME UNAFFECTED";
+					message = Included() ? "AI CO-COMMANDER UNAVAILABLE  •  COMPANION FILES MISSING  •  GAME UNAFFECTED" : NotIncludedHud;
 					return true;
 				case CompanionHostState.Failed:
 					state = "error";
@@ -229,7 +239,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 					return true;
 				case CompanionHostState.Off:
 					state = "disabled";
-					message = "AI CO-COMMANDER OFF  •  TURN IT ON IN SETTINGS > AI";
+					message = Included() ? "AI CO-COMMANDER OFF  •  TURN IT ON IN SETTINGS > AI" : NotIncludedHud;
 					return true;
 				case CompanionHostState.Starting when !acknowledged:
 					state = "thinking";
