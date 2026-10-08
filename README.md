@@ -8,7 +8,9 @@ Status: **in development.** This is the canonical standalone game checkout. The 
 
 ## One product, two gameplay modes
 
-The product keeps Classic/top-down and RA2/isometric gameplay, without requiring commercial game data. The current default mod is the original-content isometric game. Bringing the retained Classic content into this mod and restoring the combined mode chooser remain integration work; we do not claim that selector is already available here.
+Launch `launch-game.cmd`, open **Game modes**, and choose **Classic** or **Isometric**. Both standalone profiles have 16 country choices, seven authored modern faction packs and six campaigns. Classic currently uses the shared modern army on an original rectangular terrain set; additional mechanics and maps from the historical Classic fork remain a porting task.
+
+The two delivery surfaces are **Downloadable RTS** (Windows EXE installer and portable ZIP; Mac later) and **Web RTS** (`RTSAI-WebGame`, static browser game with direct peer multiplayer, chat and optional calls). The browser Classic profile and complete parity between the two surfaces remain roadmap items. See [the delivery roadmap](../OpenRA-AI/docs/roadmap.md).
 
 The default launcher and standalone Windows package load only project and engine resources. The old owned-content importer and `rtsai-classic` manifest are retained for migration reference, excluded from the standalone package, and are not the dependency-free Classic/top-down mode.
 

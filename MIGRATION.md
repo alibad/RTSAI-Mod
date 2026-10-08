@@ -2,7 +2,8 @@
 
 > **Current direction, 9 October 2026:** the default game is standalone and needs no owned Red Alert/RA2 content.
 > Original-content work from `rtsai/standalone` is consolidated into the canonical mod. Classic/top-down and
-> isometric gameplay remain the two-mode product target; the Classic port/combined chooser are still in progress.
+> isometric profiles share the modern standalone army; the combined chooser is implemented and verified.
+> Additional historical Classic features and browser Classic presentation remain migration work.
 > Custom resources are preserved under `resources/`; see [product direction](docs/product-direction.md).
 >
 > **Engine pin:** `rtsai/engine` 68c1e95557 resolves on the public fork (verified 9 October). Future engine pins
