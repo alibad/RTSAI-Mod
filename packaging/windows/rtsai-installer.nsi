@@ -10,11 +10,14 @@
 ;   VOICEPACK    file name of the optional offline voice pack placed next to setup.exe
 ;   UNINSTALLLIST an .nsh with the Delete/RMDir lines for exactly the files in PAYLOAD
 ;   UNINSTALLSIGNER (optional) a command that signs the generated uninstaller
+;   STANDALONE   (optional) the standalone game: no Red Alert 2 wording anywhere
+;   COMPANION    (optional) the payload has the AI companion (companion\): offers "Full local AI"
+;   HOSTEDAI     (optional, needs COMPANION) the hosted service is live: offers "Hosted AI + local voice"
 ;
-; AI options (page, or /AI=hosted|local|none for silent installs):
-;   hosted  Hosted AI + local voice (default): downloads and SHA-verifies the ~270 MB voice pack.
-;   local   Full local AI: downloads and SHA-verifies the ~1.8 GB local model pack.
-;   none    No AI: the co-commander stays off until it is turned on in Settings > AI.
+; AI options (page, or /AI=hosted|local|none for silent installs), only those this build can deliver:
+;   hosted  Hosted AI + local voice (HOSTEDAI, default): downloads and SHA-verifies the ~270 MB voice pack.
+;   local   Full local AI (COMPANION): downloads and SHA-verifies the ~1.8 GB local model pack.
+;   none    No AI: the co-commander stays off. Without COMPANION this is the only mode and there is no page.
 ; The choice is written to $INSTDIR\rtsai-install.json and applied by the game on first launch.
 
 Unicode true
@@ -28,6 +31,11 @@ Unicode true
 !endif
 !ifndef PAYLOAD
   !error "PAYLOAD must be supplied"
+!endif
+!ifdef HOSTEDAI
+  !ifndef COMPANION
+    !error "HOSTEDAI needs COMPANION"
+  !endif
 !endif
 
 !define PRODUCT_NAME "RTS AI"
@@ -56,22 +64,30 @@ VIAddVersionKey "ProductVersion" "${VERSION}"
 VIAddVersionKey "FileVersion" "${VERSION}"
 VIAddVersionKey "CompanyName" "${PUBLISHER}"
 VIAddVersionKey "FileDescription" "${PRODUCT_NAME} installer"
-VIAddVersionKey "LegalCopyright" "GPLv3. Red Alert 2 content is not included."
+!ifdef STANDALONE
+  VIAddVersionKey "LegalCopyright" "GPLv3. Built on OpenRA."
+!else
+  VIAddVersionKey "LegalCopyright" "GPLv3. Red Alert 2 content is not included."
+!endif
 
 !ifdef UNINSTALLSIGNER
   !uninstfinalize '${UNINSTALLSIGNER} "%1"' = 0
 !endif
 
 Var AIMode
+!ifdef COMPANION
 Var AIPage
 Var RadioHosted
 Var RadioLocal
 Var RadioNone
+!endif
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "${LICENSE}"
 !insertmacro MUI_PAGE_DIRECTORY
+!ifdef COMPANION
 Page custom AIOptionsCreate AIOptionsLeave
+!endif
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_RUN "$INSTDIR\${LAUNCHER}"
@@ -84,7 +100,13 @@ Page custom AIOptionsCreate AIOptionsLeave
 !insertmacro MUI_LANGUAGE "English"
 
 Function .onInit
+  ; Default: hosted when it is live, otherwise no AI (the local pack is a 1.8 GB download the player opts into).
+!ifdef HOSTEDAI
   StrCpy $AIMode "hosted"
+!else
+  StrCpy $AIMode "none"
+!endif
+!ifdef COMPANION
   ${GetParameters} $0
   ClearErrors
   ${GetOptions} $0 "/AI=" $1
@@ -93,10 +115,16 @@ Function .onInit
       StrCpy $AIMode "local"
     ${ElseIf} $1 == "none"
       StrCpy $AIMode "none"
+!ifdef HOSTEDAI
+    ${ElseIf} $1 == "hosted"
+      StrCpy $AIMode "hosted"
+!endif
     ${EndIf}
   ${EndIf}
+!endif
 FunctionEnd
 
+!ifdef COMPANION
 Function AIOptionsCreate
   !insertmacro MUI_HEADER_TEXT "AI co-commander" "Choose how the co-commander thinks and speaks. You can change this later in Settings > AI."
   nsDialogs::Create 1018
@@ -105,10 +133,12 @@ Function AIOptionsCreate
     Abort
   ${EndIf}
 
+!ifdef HOSTEDAI
   ${NSD_CreateRadioButton} 0 0 100% 12u "Hosted AI + local voice (recommended)"
   Pop $RadioHosted
   ${NSD_CreateLabel} 12u 13u 95% 26u "Thinking runs on rtsai.net (free daily allowance, no account or key). Speech recognition and the voice stay on this PC: downloads about 270 MB now."
   Pop $0
+!endif
 
   ${NSD_CreateRadioButton} 0 44u 100% 12u "Full local AI (about 1.8 GB)"
   Pop $RadioLocal
@@ -120,15 +150,19 @@ Function AIOptionsCreate
   ${NSD_CreateLabel} 12u 101u 95% 18u "Play without the co-commander. Nothing is downloaded; turn it on later in Settings > AI."
   Pop $0
 
+!ifndef STANDALONE
   ${NSD_CreateLabel} 0 124u 100% 26u "Red Alert 2 is not included. On first launch the game imports the copy you own (Steam, EA app/Origin or disc)."
   Pop $0
+!endif
 
   ${If} $AIMode == "local"
     ${NSD_Check} $RadioLocal
-  ${ElseIf} $AIMode == "none"
-    ${NSD_Check} $RadioNone
-  ${Else}
+!ifdef HOSTEDAI
+  ${ElseIf} $AIMode == "hosted"
     ${NSD_Check} $RadioHosted
+!endif
+  ${Else}
+    ${NSD_Check} $RadioNone
   ${EndIf}
   nsDialogs::Show
 FunctionEnd
@@ -144,6 +178,7 @@ Function AIOptionsLeave
     StrCpy $AIMode "hosted"
   ${EndIf}
 FunctionEnd
+!endif
 
 Section "RTS AI" SEC_GAME
   SectionIn RO
@@ -157,6 +192,7 @@ Section "RTS AI" SEC_GAME
   FileWrite $9 '{"ai_mode": "$AIMode", "version": "${VERSION}", "stamp": "$2-$1-$0T$4:$5:$6"}$\r$\n'
   FileClose $9
 
+!ifdef COMPANION
   ${If} $AIMode == "hosted"
     DetailPrint "Downloading and verifying the local voice pack (about 270 MB)..."
     nsExec::ExecToLog '"$INSTDIR\companion\rtsai-companion.exe" pack install --profile voice-only --root "$INSTDIR\companion" --archive "$EXEDIR\${VOICEPACK}"'
@@ -176,6 +212,7 @@ Section "RTS AI" SEC_GAME
       MessageBox MB_ICONINFORMATION "The local AI pack could not be downloaded now. Retry later under Settings > AI > Models; nothing unverified was installed."
     ${EndIf}
   ${EndIf}
+!endif
 
   WriteUninstaller "$INSTDIR\${UNINSTALLER}"
   CreateDirectory "$SMPROGRAMS\RTS AI"
@@ -208,7 +245,11 @@ Section "Desktop shortcut" SEC_DESKTOP
   CreateShortcut "$DESKTOP\RTS AI.lnk" "$INSTDIR\${LAUNCHER}" "" "$INSTDIR\rtsai.ico" 0 SW_SHOWNORMAL "" "Play RTS AI"
 SectionEnd
 
-LangString DESC_GAME ${LANG_ENGLISH} "The RTS AI mod, the OpenRA engine and the AI co-commander."
+!ifdef COMPANION
+LangString DESC_GAME ${LANG_ENGLISH} "The RTS AI game, the OpenRA engine and the AI co-commander."
+!else
+LangString DESC_GAME ${LANG_ENGLISH} "The RTS AI game and the OpenRA engine."
+!endif
 LangString DESC_DESKTOP ${LANG_ENGLISH} "Place an RTS AI shortcut on the desktop."
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC_GAME} $(DESC_GAME)
@@ -219,8 +260,8 @@ Section "Uninstall"
   SetShellVarContext current
   ; Only what setup installed (or the game downloaded into the companion folder) is removed, so a
   ; custom install folder that holds other files is never wiped. Player data lives in the OpenRA
-  ; support folder (%APPDATA%\OpenRA by default) and is kept: imported RA2 content, settings,
-  ; replays, maps, logs and the co-commander's settings and install token (ai-companion).
+  ; support folder (%APPDATA%\OpenRA by default) and is kept: settings, replays, maps, logs, any
+  ; imported content and the co-commander's settings and install token (ai-companion).
   ; Generated by build-release.ps1: one Delete per top-level payload file, one recursive RMDir per
   ; payload folder (companion\ also holds the downloaded voice or local AI pack).
   !include "${UNINSTALLLIST}"
