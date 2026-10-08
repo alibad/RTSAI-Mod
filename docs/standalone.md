@@ -141,6 +141,16 @@ edge (fixed in Phase 3).
         there follows the rules. Twin Fords' 42% is within noise.
       - Biasing a symmetric map toward one side would only hide a roster question. The levers are in the rules
         (open-field tank fights; the naval units on Harbor Line). This is left for the next balance round.
+    - **Early starting-army raids (open, for the coordinator).**
+      - Round 6 had 2 of 252 games end in a conquest at about 3.5 minutes. A probe of the two pairings (40 games,
+        90f9f11) found 1 early construction-yard loss: the starting armies meet at 47–64 s, Israel's starting
+        Merkava (580 HP since round 6) wins the tank duel, then kills the undefended construction yard at 113 s.
+      - Spawn distances are 56.6 cells on Harbor Line and 68.5 on Twin Fords. The classic 2-player maps sit around
+        78–111 cells (median about 90).
+      - Options: (a) the starting Merkava or starting-army mix; (b) bots keep their starting units home for the
+        first minutes; (c) a wider Harbor Line with spawns about 85 cells apart (needs a re-measure).
+      - The balance agent recommends no change for now (it is rare); (b) is the least disruptive if a fix is
+        wanted. Whether a human can make the same rush is a kit-base design question. The maps are unchanged.
 - `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
   first draw). `--list-placeholders` prints every placeholder still in use.
 
