@@ -77,7 +77,9 @@ VIAddVersionKey "FileDescription" "${PRODUCT_NAME} installer"
 Var AIMode
 !ifdef COMPANION
 Var AIPage
+!ifdef HOSTEDAI
 Var RadioHosted
+!endif
 Var RadioLocal
 Var RadioNone
 !endif
@@ -172,10 +174,15 @@ Function AIOptionsLeave
   ${NSD_GetState} $RadioNone $1
   ${If} $0 == ${BST_CHECKED}
     StrCpy $AIMode "local"
+!ifdef HOSTEDAI
   ${ElseIf} $1 == ${BST_CHECKED}
     StrCpy $AIMode "none"
   ${Else}
     StrCpy $AIMode "hosted"
+!else
+  ${Else}
+    StrCpy $AIMode "none"
+!endif
   ${EndIf}
 FunctionEnd
 !endif
