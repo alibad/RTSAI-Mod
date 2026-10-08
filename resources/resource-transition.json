@@ -55788,8 +55788,8 @@
     },
     {
       "path": "mods/rtsai-topdown/mod.yaml",
-      "bytes": 12050,
-      "sha256": "194aca103e53ea5441802385ec0fceaae615d70023df85b523a7263beac6b51a"
+      "bytes": 12024,
+      "sha256": "1a3d6676ae41780825cadf605258d63782db456cfb14c40c3889916676dde195"
     },
     {
       "path": "mods/rtsai-topdown/mode.ftl",
@@ -130337,6 +130337,17 @@
           "path": "mods/rtsai/standalone/names.ftl",
           "bytes": 2316,
           "sha256": "63dc26c48e89ed974256791ed64b97606ae2aead5a4a2155f27200fe37bb1548"
+        }
+      ]
+    },
+    {
+      "snapshot": "dual-mode-before-stable-import-012cb12",
+      "gitCommit": "012cb125c9e31c5520bfb12de55d22d34d91c50d",
+      "resources": [
+        {
+          "path": "mods/rtsai-topdown/mod.yaml",
+          "bytes": 12050,
+          "sha256": "194aca103e53ea5441802385ec0fceaae615d70023df85b523a7263beac6b51a"
         }
       ]
     }

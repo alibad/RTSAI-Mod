@@ -1,27 +1,23 @@
 # RTS AI product direction — 9 October 2026
 
-RTS AI is a standalone OpenRA game. Players do not need to own, buy, install or import Red Alert or Red Alert 2.
+One standalone OpenRA game, two delivery surfaces: **Web RTS** and **Downloadable RTS**. Neither requires owning, buying, installing or importing Red Alert or Red Alert 2. Windows first; macOS follows on the owner's Mac.
 
-Keep both Classic/top-down and RA2/isometric gameplay, with a single product entry and an in-game mode choice. These names describe the gameplay families, not a promise to ship the original games' assets or campaigns.
+The canonical checkout is `RTSAI-Mod` main. Launch `launch-game.cmd`, open **Game modes**, and select **Classic** or **Isometric**. Windows packages expose the same choice in `RTSAI.exe`.
 
-## Current implementation
+- `rtsai`: RA2/isometric grid and presentation.
+- `rtsai-topdown`: Classic/rectangular grid, original square terrain and two skirmish maps.
+- Both share seven modern army packs, nine restored historical country rule sets, project-owned replacement assets, six campaign maps and native AI companion integration.
+- Campaign objectives use simulation ticks, the normal mission panel, civilian convoy orders, enemy waves and difficulty. Coordinates and terrain are converted for each grid.
+- All 16 choices pass strict standalone checks: no missing audio or placeholder art for fieldable units and no owned-content mounts. Some countries share reviewed art and voice families.
 
-The standalone isometric content has been consolidated into the canonical `RTSAI-Mod` checkout: seven modern factions, original terrain and maps, shared base/units, effects, sounds, cursors, palettes and UI. The default manifest mounts project and engine packages only. The strict standalone check rejects missing or placeholder art for fieldable actors and imported commercial content paths. Windows packaging ships only that mod.
+This Classic profile presents shared modern army rules on a rectangular grid. It does not reproduce every mechanic, map or visual from the earlier Classic fork. Those sources are preserved; additional ports remain roadmap work.
 
-The old dual-game build and its Classic/top-down custom resources are retained. The combined mode chooser is not yet ported into this Mod SDK project. This is remaining integration work, not an owned-content prerequisite for the playable standalone game.
+Windows `0.4.0-alpha.1` has an NSIS per-user EXE installer and portable ZIP, with the frozen local companion, catalog and inference runtimes. It is not an MSI. Models are optional downloads, not embedded; model-dependent speech/reasoning needs those downloads. Native bots and existing non-model fallbacks remain available. Local builds are unsigned.
 
-The historical `rtsai-classic` manifest means an optional owned-RA2 add-on. It is not the Classic/top-down mode. It and the content importer remain migration references and are not included in standalone packages. No player should be instructed to install them to play RTS AI.
+The historical `rtsai-classic` manifest is an owned-RA2 migration reference. It is not the shipped Classic mode and is excluded from packages alongside the importer.
 
-## Resource preservation
+`resources/resource-transition.json` indexes 5,104 legacy entries and 4,019 original-content resources. Earlier installed hashes are preserved when authored resources change. RTSAI-Art retains editable models, candidates, generators and review history on main. All-ref bundles and dirty-file snapshots are under `D:/rtsai-consolidation/20261009`.
 
-- Preserve installed custom faction assets and the original-content assets with their per-file provenance.
-- Preserve RTSAI-Art's models, candidates, review history and generation tools; it remains the editable art source library.
-- Inventory legacy Classic assets and WIP variants by source and SHA-256 in `resources/resource-transition.json`. Preserve unique legacy bytes in the local `resources/preserved/` archive, outside runtime mounts and release packaging. An added or modified legacy file is not automatically licensed for distribution; provenance review precedes activation.
-- Port compatible resources into the appropriate game mode; preserve earlier variants as sources/history. Never overwrite a reviewed current asset with an older sprite merely to flatten folders.
-- Preserve all original repositories/worktrees until unique files, source models, generators and review evidence have a verified destination. No cleanup is part of this transition.
+Never replace reviewed assets with older variants just to flatten folders. Activate archived resources after checking provenance, manifests, sequences, rules and gameplay. Preserve original worktrees until unique work has a verified destination.
 
-## Remaining Classic integration
-
-Port the Classic rules, faction definitions, missions, catalog UI and companion behavior into the canonical mod architecture. Resolve top-down art and terrain independently of the isometric renderer. Replace any original-game file dependency with project-made or appropriately licensed content. Reintroduce the mode chooser, then verify both modes with empty content folders. Do not call an archived resource runtime-integrated until its manifest, sequences, rules and gameplay are checked.
-
-Build and verification remain local. No hosted CI workflow is added, and no website deployment or release publishing is implied.
+The delivery plan is `OpenRA-AI/docs/roadmap.md`. Build and verification stay local; public distribution and production deployment are separate actions.

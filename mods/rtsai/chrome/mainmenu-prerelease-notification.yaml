@@ -1,5 +1,5 @@
 Background@MAINMENU_PRERELEASE_NOTIFICATION:
-	Logic: PreReleaseWarningPrompt
+	Logic: PreReleaseWarningPrompt, RTSAIPreviewAcceptanceLogic
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 520

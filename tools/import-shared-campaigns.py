@@ -160,7 +160,8 @@ def content():
         source = source.replace('\nTileSets:', '\n\tra2|campaigns/country-notifications.yaml\n\nTileSets:')
         source = source.replace('\nNotifications:', '\n\tra2|campaigns/country-voices.yaml\n\nNotifications:')
         source = source.replace('# The original factions and maps live in the separate classic add-on (mods/rtsai-classic, needs the player\'s RA2).', '# Both shipped modes use project-authored resources. Historical country mechanics are restored by campaigns/countries.yaml.')
-        write(path,source)
+        # Stable on repeated imports: removing/reinserting references must not grow blank lines.
+        write(path,re.sub(r'\n{3,}', '\n\n', source))
 
 
 if __name__ == '__main__':

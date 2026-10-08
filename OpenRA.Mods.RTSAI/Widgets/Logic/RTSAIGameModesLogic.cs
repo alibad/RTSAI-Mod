@@ -4,6 +4,18 @@ using OpenRA.Mods.Common.Widgets;
 
 namespace OpenRA.Mods.RTSAI.Widgets.Logic
 {
+	// Runs only under the explicit local acceptance harness. Use the real notice handler.
+	public sealed class RTSAIPreviewAcceptanceLogic : ChromeLogic
+	{
+		[ObjectCreator.UseCtor]
+		public RTSAIPreviewAcceptanceLogic(Widget widget)
+		{
+			var target = Environment.GetEnvironmentVariable("RTSAI_VERIFY_MODE_SWITCH");
+			if (target == "rtsai" || target == "rtsai-topdown")
+				Game.RunAfterTick(() => widget.Get<ButtonWidget>("CONTINUE_BUTTON").OnClick());
+		}
+	}
+
 	public sealed class RTSAIGameModesLogic : ChromeLogic
 	{
 		[ObjectCreator.UseCtor]

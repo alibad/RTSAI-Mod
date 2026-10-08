@@ -113,14 +113,6 @@ Rules:
 	classic|rules.yaml
 	ra2|standalone/base-kit.yaml
 
-
-
-
-
-
-
-
-
 	ra2|campaigns/countries.yaml
 
 Sequences:
@@ -163,14 +155,6 @@ Sequences:
 	ra2|standalone/kit-extra-sequences.yaml
 	ra2|standalone/smudge-sequences.yaml
 	ra2|standalone/sequences.yaml
-
-
-
-
-
-
-
-
 
 	ra2|campaigns/country-sequences.yaml
 
@@ -273,20 +257,11 @@ Voices:
 	ra2|modern-factions/yemen-voices.yaml
 	ra2|modern-factions/voice-prefixes.yaml
 
-
 	ra2|campaigns/country-voices.yaml
 
 Notifications:
 	ra2|audio/notifications.yaml
 	ra2|modern-factions/eva-notifications.yaml
-
-
-
-
-
-
-
-
 
 	ra2|campaigns/country-notifications.yaml
 
@@ -415,7 +390,6 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		URBAN: u
 	TilesetSuffixes:
 		SNOW: a
-
 
 AssetBrowser:
 	SpriteExtensions: .shp, .tem, .urb, .sno

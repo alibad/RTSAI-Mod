@@ -78,7 +78,7 @@ def manifest():
     source=(ROOT/'mods/rtsai/mod.yaml').read_text(encoding='utf-8')
     source=source.replace('\tTitle: mod-title','\tTitle: classic-mode-title').replace('\tWindowTitle: ra2-preview-window-title','\tWindowTitle: classic-mode-title')
     source=source.replace('\t\t$rtsai: ra2','\t\t$rtsai: ra2\n\t\t$rtsai-topdown: classic')
-    source=re.sub(r'MapFolders:\n.*?(?=\nRules:)', 'MapFolders:\n\tclassic|maps: System\n\t~^SupportDir|maps/rtsai-topdown/{DEV_VERSION}: User\n',source,flags=re.S)
+    source=re.sub(r'MapFolders:\n.*?(?=\nRules:)', 'MapFolders:\n\tclassic|campaigns/maps: System\n\tclassic|maps: System\n\t~^SupportDir|maps/rtsai-topdown/{DEV_VERSION}: User\n',source,flags=re.S)
     source=source.replace('\tra2|standalone/rules.yaml','\tra2|standalone/rules.yaml\n\tclassic|rules.yaml')
     source=source.replace('TileSets:\n\tra2|standalone/tilesets/temperat.yaml','TileSets:\n\tclassic|tileset.yaml')
     source=re.sub(r'MapGrid:\n.*?(?=\nMusic:)', 'MapGrid:\n\tType: Rectangular\n\tEnableDepthBuffer: false\n\tMaximumTerrainHeight: 0\n',source,flags=re.S)

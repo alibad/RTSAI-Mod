@@ -49,6 +49,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("mode", choices=["menu", "skirmish"])
     ap.add_argument("--worktree", type=Path, default=ROOT)
+    ap.add_argument("--packaged", action="store_true", help="launch RTSAI.exe from an extracted Windows package")
     ap.add_argument("--map", default="tournament-2B")
     ap.add_argument("--bots", default="Multi0:normal:china,Multi1:normal:iran")
     ap.add_argument("--faction", help="the host plays this faction (leave Multi0 out of --bots)")
@@ -66,11 +67,12 @@ def main():
     ap.add_argument("--out", type=Path, required=True)
     a = ap.parse_args()
 
-    engine = a.worktree / "engine"
+    engine = a.worktree if a.packaged else a.worktree / "engine"
     out = a.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
     support = out / "support"
     if support.exists():
+        assert not support.is_symlink() and support.resolve().parent == out
         shutil.rmtree(support)   # our own scratch: created below, never contains links
     support.mkdir()
     assert not (support / "Content").exists()
@@ -79,6 +81,9 @@ def main():
             f"Engine.ModSearchPaths={a.worktree / 'mods'}", f"Engine.SupportDir={support}", f"Game.Mod={a.mod}",
             "Game.FetchNews=false", "Game.ViewportEdgeScroll=false", "Graphics.Mode=Windowed",
             "Graphics.WindowedSize=1280,800", "Graphics.UIScale=1", "Sound.Mute=true", *a.set]
+    if a.packaged:
+        # Run the launcher's game path directly so the test owns its window/environment.
+        args = [str(engine / 'RTSAI.exe'), f'Engine.LaunchPath={engine / "RTSAI.exe"}', *args[2:]]
     launch_map = a.map
     script = a.lua or ("observe.lua" if a.observe else None) or ("look.lua" if a.look else None)
     if a.mode == "skirmish" and script:
@@ -117,7 +122,7 @@ def main():
                         f"OpenRA run, up to {max(1, round(a.seconds / 60))} min, display rendering only\n")
         t0 = time.time()
         with (out / "stdout.log").open("w", encoding="utf-8") as log:
-            p = subprocess.Popen(args, cwd=engine / "bin", env=env, stdout=log, stderr=subprocess.STDOUT)
+            p = subprocess.Popen(args, cwd=engine if a.packaged else engine / "bin", env=env, stdout=log, stderr=subprocess.STDOUT)
             k, nxt = 0, a.grab_every
             while p.poll() is None and time.time() - t0 < a.seconds:
                 time.sleep(0.5)
