@@ -126,10 +126,12 @@ Player:
 		AirDefenseShare: 40
 		InitialBuildOrder: napowr, nahand, narefn, naweap, narefn, naradr, r2hzrelay
 		SquadSizeModifier: 100
+		# Round 6 (owner: Hezbollah on top): artillery 175 -> 250, the salvo. More Rocket Batteries (1.8-2.3
+		# destroyed per credit, Hezbollah's best trade) and Rail Technicals.
 		RoleShareModifiers:
 			line-infantry: 100
 			anti-armor: 120
-			artillery: 175
+			artillery: 250
 			support: 100
 			anti-air: 40
 			strike-aircraft: 50
