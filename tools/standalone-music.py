@@ -79,9 +79,6 @@ TRACKS = [
     ("rtsai-desert-convoy", "Desert Convoy",
      "big beat electronic instrumental, oud riffs, darbuka and riq percussion, cinematic brass stabs, "
      "synth bass, marching energy, wide desert atmosphere", 126, "C minor", 180, "Arabian peninsula"),
-    ("rtsai-red-sea-run", "Red Sea Run",
-     "tribal electronic instrumental, mizmar reed lead, frame drums and tasa drums, heavy sub bass, "
-     "dusty textures, hypnotic and urgent", 118, "B minor", 180, "Red Sea"),
     ("rtsai-cedar-signal", "Cedar Signal",
      "dark electronic instrumental, oud and ney melody, darbuka groove, pulsing analog synth bass, "
      "radio static textures, tense and brooding, steady build", 122, "E minor", 180, "Levant"),

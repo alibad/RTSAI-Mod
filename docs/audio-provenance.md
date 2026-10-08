@@ -521,7 +521,6 @@ Generator `tools/standalone-music.py`; ACE-Step 1.5, MIT. Request = caption belo
 | `standalone/audio/music/rtsai-iron-foundry.ogg` | Iron Foundry | 7300 | industrial rock instrumental, chugging distorted guitar riffs, pounding live drums, gritty synth bass, metallic percussion hits, driving and aggressive, real-time strategy battle music | MIT (ACE-Step 1.5) |
 | `standalone/audio/music/rtsai-plateau-engines.ogg` | Plateau Engines | 7330 | dark electronic industrial instrumental, santur arpeggios, tombak and daf hand drums, kamancheh melody, deep pulsing bass, metallic hits, tense and driving | MIT (ACE-Step 1.5) |
 | `standalone/audio/music/rtsai-pressure-front.ogg` | Pressure Front | 7400 | tense cinematic industrial electronic instrumental, ticking percussion, low drones, slowly building synth arpeggio, distant war drums, suspenseful | MIT (ACE-Step 1.5) |
-| `standalone/audio/music/rtsai-red-sea-run.ogg` | Red Sea Run | 7360 | tribal electronic instrumental, mizmar reed lead, frame drums and tasa drums, heavy sub bass, dusty textures, hypnotic and urgent | MIT (ACE-Step 1.5) |
 | `standalone/audio/music/rtsai-yangtze-steel.ogg` | Yangtze Steel | 7320 | cinematic industrial electronic instrumental, erhu lead melody, guzheng ostinato, Chinese war drums, heavy synth bass, distorted guitar layer, epic and determined | MIT (ACE-Step 1.5) |
 | `standalone/audio/music/score.ogg` | Debrief | 7420 | short cinematic electronic outro instrumental, steady military snare, warm synth pads, low brass, reflective and resolved | MIT (ACE-Step 1.5) |
 
