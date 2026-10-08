@@ -111,6 +111,8 @@ for target in x86_64:osx-x64 arm64:osx-arm64; do
 done
 
 echo "== Engine data"
+# The engine archive has no GeoIP database; the engine's install_data fetches it the same way.
+bash "${ENGINE}/fetch-geoip.sh"
 for file in VERSION AUTHORS COPYING IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP; do
 	cp "${ENGINE}/${file}" "${RESOURCES}/"
 done
