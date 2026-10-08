@@ -1,0 +1,197 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: 01: Jizan Corridor
+Author: RTS AI — browser adaptation
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Saudi:
+		Name: Saudi Arabia
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: saudi
+		LockColor: True
+		Color: D6B566
+		LockSpawn: True
+		LockTeam: True
+		Allies: Civilians
+		Enemies: Yemen
+	PlayerReference@Yemen:
+		Name: Yemen
+		Faction: yemen
+		Color: 8F7A45
+		Enemies: Saudi Arabia, Civilians
+	PlayerReference@Civilians:
+		Name: Civilians
+		Faction: china
+		Color: 76AFC4
+		Allies: Saudi Arabia
+		Enemies: Yemen
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	SaudiConyard: gacnst
+		Location: 22,76
+		Owner: Saudi Arabia
+	SaudiRefinery: garefn
+		Location: 40,77
+		Owner: Saudi Arabia
+	RadarNode: gaairc
+		Location: 33,67
+		Owner: Neutral
+	PortDepot: caoutp
+		Location: 72,20
+		Owner: Saudi Arabia
+	Desalination: cahosp
+		Location: 77,23
+		Owner: Saudi Arabia
+	SaudiPower1: gapowr
+		Location: 28,75
+		Owner: Saudi Arabia
+	SaudiPower2: gapowr
+		Location: 31,75
+		Owner: Saudi Arabia
+	SaudiRepair: gadept
+		Location: 35,76
+		Owner: Saudi Arabia
+	SaudiBarracks: gapile
+		Location: 28,79
+		Owner: Saudi Arabia
+	SaudiTank1: r2m1a2s
+		Location: 33,72
+		Owner: Saudi Arabia
+		Facing: 128
+	SaudiTank2: r2m1a2s
+		Location: 35,72
+		Owner: Saudi Arabia
+		Facing: 128
+	SaudiAirDefense1: r2sads
+		Location: 30,70
+		Owner: Saudi Arabia
+		Facing: 128
+	SaudiAirDefense2: r2sads
+		Location: 37,70
+		Owner: Saudi Arabia
+		Facing: 128
+	SaudiEngineer: engineer
+		Location: 31,72
+		Owner: Saudi Arabia
+	SaudiRifle1: r2sang
+		Location: 32,73
+		Owner: Saudi Arabia
+	SaudiRifle2: r2sang
+		Location: 32,73
+		Owner: Saudi Arabia
+	SaudiRifle3: r2sang
+		Location: 36,73
+		Owner: Saudi Arabia
+	SaudiRifle4: r2sang
+		Location: 36,73
+		Owner: Saudi Arabia
+	LauncherWest: r2ymlr
+		Location: 18,41
+		Owner: Yemen
+		Facing: 256
+	LauncherEast: r2ymlr
+		Location: 76,58
+		Owner: Yemen
+		Facing: 768
+	WestGuard1: r2technical
+		Location: 20,42
+		Owner: Yemen
+		Facing: 256
+	WestGuard2: r2ymr
+		Location: 19,43
+		Owner: Yemen
+	EastGuard1: r2technical
+		Location: 74,59
+		Owner: Yemen
+		Facing: 768
+	EastGuard2: r2ymr
+		Location: 75,60
+		Owner: Yemen
+	SaudiEntry: waypoint
+		Location: 31,74
+		Owner: Neutral
+	RadarCamera: waypoint
+		Location: 34,67
+		Owner: Neutral
+	ConvoyEntry: waypoint
+		Location: 13,86
+		Owner: Neutral
+	ConvoyRally: waypoint
+		Location: 27,74
+		Owner: Neutral
+	CorridorOne: waypoint
+		Location: 40,61
+		Owner: Neutral
+	CorridorTwo: waypoint
+		Location: 52,49
+		Owner: Neutral
+	CorridorThree: waypoint
+		Location: 63,37
+		Owner: Neutral
+	PortGate: waypoint
+		Location: 72,25
+		Owner: Neutral
+	ConvoyExit: waypoint
+		Location: 84,12
+		Owner: Neutral
+	WestEntry: waypoint
+		Location: 2,48
+		Owner: Neutral
+	WestRally: waypoint
+		Location: 20,58
+		Owner: Neutral
+	EastEntry: waypoint
+		Location: 93,47
+		Owner: Neutral
+	EastRally: waypoint
+		Location: 72,48
+		Owner: Neutral
+	SouthEntry: waypoint
+		Location: 52,93
+		Owner: Neutral
+	SouthRally: waypoint
+		Location: 50,70
+		Owner: Neutral
+	DroneEntryNorth: waypoint
+		Location: 91,10
+		Owner: Neutral
+	DroneEntrySouth: waypoint
+		Location: 7,91
+		Owner: Neutral
+	LauncherWestCamera: waypoint
+		Location: 18,41
+		Owner: Neutral
+	LauncherEastCamera: waypoint
+		Location: 76,58
+		Owner: Neutral
+	PortCamera: waypoint
+		Location: 74,22
+		Owner: Neutral
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 22,76
+Rules:
+	World:
+		RTSAICampaign:
+			Mission: jizan-corridor
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: "Factual cutoff: 11 August 2026.\n\nA regional escalation has interrupted radar coverage along the Jizan coastal\ncorridor while mobile launch systems threaten civilian navigation and port\nlogistics. Capture Radar Node Seven, establish layered air defense, destroy\nboth launchers, and escort the relief convoy into the port perimeter.\n\nYour forward construction yard and refinery are operational. Expand the base,\nestablish a war factory, and replace losses as the corridor battle develops.\n\nThe background is source-dated. Force composition, routes, positions, timing,\nand outcomes are fictional gameplay abstractions."
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:

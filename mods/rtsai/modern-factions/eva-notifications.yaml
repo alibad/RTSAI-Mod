@@ -3,6 +3,8 @@
 # modern faction hears its own announcer for every Speech notification in audio/notifications.yaml.
 # Audio, voices and licenses: modern-factions/audio/PROVENANCE.json and docs/audio-provenance.md.
 Speech:
+	# Observers have no faction prefix; use a project-authored announcer instead of a missing stock clip.
+	DefaultPrefix: ra2|modern-factions/audio/eva/china/
 	Prefixes:
 		israel: ra2|modern-factions/audio/eva/israel/
 		hezbollah: ra2|modern-factions/audio/eva/hezbollah/

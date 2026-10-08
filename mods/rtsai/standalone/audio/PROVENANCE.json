@@ -1117,6 +1117,118 @@
    "theatre": "score screen",
    "title": "Debrief"
   },
+  "sfx/bflaatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -17.1,
+    "decay20_ms": 550,
+    "high_share": 0.197,
+    "low_share": 0.148,
+    "max50_rms_dbfs": -9.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bflaatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bflaatta.wav')",
+   "sha256": "fca1d518ae918110ff6bab59c46167717125f775560b28aa12c6064234c7ddf8"
+  },
+  "sfx/bflaattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.3,
+    "decay20_ms": 460,
+    "high_share": 0.197,
+    "low_share": 0.16,
+    "max50_rms_dbfs": -10.4,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bflaattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bflaattb.wav')",
+   "sha256": "02c4712caf583b54d46f9583c8c658d70c0ab1b5dfad128f3d2097b7820b3126"
+  },
+  "sfx/bflaattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.2,
+    "decay20_ms": 550,
+    "high_share": 0.181,
+    "low_share": 0.169,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bflaattc.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bflaattc.wav')",
+   "sha256": "176277cfd62d44cd1e7844fbde0156f8e0cae5d0e2e85ea1aac0f2084ae74f0a"
+  },
+  "sfx/bflaattd.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.6,
+    "decay20_ms": 530,
+    "high_share": 0.184,
+    "low_share": 0.185,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bflaattd.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bflaattd.wav')",
+   "sha256": "9a1246d90d9ab45adc90fcf68eb1e5e5ad4d5ee77f2f654c0b075b9e7354d1e4"
+  },
   "sfx/bgendiea.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -1285,6 +1397,174 @@
    "seed": "sha256('rtsai-standalone-sfx-1/bgendief.wav')",
    "sha256": "2420ed5f87162c7a5cb6c95475d182e9bddcfbe47e133c4b8e4d934308f0f31a"
   },
+  "sfx/bgraatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.4,
+    "decay20_ms": 420,
+    "high_share": 0.02,
+    "low_share": 0.787,
+    "max50_rms_dbfs": -6.5,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bgraatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bgraatta.wav')",
+   "sha256": "302d1c488c5c429e6c232b97c15c296d24e13ff0bb3da2808c75a3e9ce622699"
+  },
+  "sfx/bpatatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.5,
+    "decay20_ms": 580,
+    "high_share": 0.194,
+    "low_share": 0.161,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -1.1,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bpatatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpatatta.wav')",
+   "sha256": "007d8c3adc8ae2327febc0e74e6ab08f1ed1b5e6343d58a4d0f2bb80023d826c"
+  },
+  "sfx/bpilatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.2,
+    "decay20_ms": 80,
+    "high_share": 0.237,
+    "low_share": 0.109,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bpilatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpilatta.wav')",
+   "sha256": "cb416b1d7055e0ec0d4f8d2e3ddcfed17a718d5f34c0bd22b6c24bd74bdf4e25"
+  },
+  "sfx/bpilattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -18.4,
+    "decay20_ms": 210,
+    "high_share": 0.238,
+    "low_share": 0.132,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bpilattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpilattb.wav')",
+   "sha256": "69c5a90c20a69ff01f8c858497f75d8b8c60702e08be64f668416dba9e7c7db0"
+  },
+  "sfx/bpilattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -16.8,
+    "decay20_ms": 250,
+    "high_share": 0.226,
+    "low_share": 0.129,
+    "max50_rms_dbfs": -12.5,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bpilattc.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpilattc.wav')",
+   "sha256": "85654dd9a6eeb10be33a6f1af7f05ff5102f7d6a9df547a3ff6acd14bec8cba7"
+  },
+  "sfx/bpilattd.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.4,
+    "decay20_ms": 180,
+    "high_share": 0.224,
+    "low_share": 0.135,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bpilattd.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpilattd.wav')",
+   "sha256": "512ec43b427ed8c433044ff172dbac9a2d560056666576eb352bda51c8c71f51"
+  },
   "sfx/bpowdiea.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -1340,6 +1620,202 @@
    "role": "power plant destroyed: explosion, arcing and a dying transformer hum",
    "seed": "sha256('rtsai-standalone-sfx-1/bpowdieb.wav')",
    "sha256": "a3d42ec82d7c0f2025486d658b4e21933d42ba7846b48d73fd35a8ff43167f68"
+  },
+  "sfx/bpriat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.2,
+    "decay20_ms": 390,
+    "high_share": 0.022,
+    "low_share": 0.754,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bpriat1a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpriat1a.wav')",
+   "sha256": "dc3384e032599c7b1794bfbbfac375f469db07661a2ee12d0dda07b33c0aa0d4"
+  },
+  "sfx/bsenatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.3,
+    "decay20_ms": 260,
+    "high_share": 0.236,
+    "low_share": 0.11,
+    "max50_rms_dbfs": -12.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bsenatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bsenatta.wav')",
+   "sha256": "4c0dcc29e7f6b527356965417986c71d848222d689a6493200da642a2844486a"
+  },
+  "sfx/bsenattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -18.5,
+    "decay20_ms": 160,
+    "high_share": 0.223,
+    "low_share": 0.152,
+    "max50_rms_dbfs": -13.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bsenattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bsenattb.wav')",
+   "sha256": "976b19efbfe984ff926ffc3fd7ab6b9af66693cd375d26b65e8f3b3abd0aa9f2"
+  },
+  "sfx/bsenattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.6,
+    "decay20_ms": 160,
+    "high_share": 0.241,
+    "low_share": 0.135,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bsenattc.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bsenattc.wav')",
+   "sha256": "41c92086a16361d49754172b6ef03551d6ac6ec324b2d2f31112118044020dcb"
+  },
+  "sfx/bsenattd.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 280,
+    "high_share": 0.239,
+    "low_share": 0.105,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "bsenattd.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/bsenattd.wav')",
+   "sha256": "a821bb89690d77b8856d73ca0332ea45ea6fe7abaeae8c78992f390b68178204"
+  },
+  "sfx/btesat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.8,
+    "decay20_ms": 450,
+    "high_share": 0.028,
+    "low_share": 0.73,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "btesat1a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/btesat1a.wav')",
+   "sha256": "a55337a1b708ab5ad145ce64e95b88096b72218cb7238894f0c68e6e3fa328a7"
+  },
+  "sfx/btesat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.3,
+    "decay20_ms": 430,
+    "high_share": 0.024,
+    "low_share": 0.775,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -0.8,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "btesat2a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/btesat2a.wav')",
+   "sha256": "68207e11b905b3f31fed866ca015edef739c2c167b9b929eede131a0fa946429"
   },
   "sfx/chrono2.aud": {
    "category": "sfx",
@@ -1621,6 +2097,34 @@
    "seed": "sha256('rtsai-standalone-sfx-1/gexp14a.wav')",
    "sha256": "3283db930e7a3ccc978e1c93b9f99a782b9bf807a49559f05b07d9899a8ee3cf"
   },
+  "sfx/gexp15a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -13.0,
+    "decay20_ms": 1930,
+    "high_share": 0.044,
+    "low_share": 0.662,
+    "max50_rms_dbfs": -7.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "gexp15a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexp15a.wav')",
+   "sha256": "b3165564e9392833f980a57deceb965df137ccec75733eb7820f122bebf840d2"
+  },
   "sfx/gexpapoa.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -1648,6 +2152,118 @@
    "role": "heavy bomb impact: deep double blast",
    "seed": "sha256('rtsai-standalone-sfx-1/gexpapoa.wav')",
    "sha256": "a1e0a8dba640d5a9d90532946a663104c9faf09784131dafd1ece1eb36c1a394"
+  },
+  "sfx/gexpbara.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -14.0,
+    "decay20_ms": 1680,
+    "high_share": 0.039,
+    "low_share": 0.666,
+    "max50_rms_dbfs": -7.4,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "gexpbara.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpbara.wav')",
+   "sha256": "03d7f26db2957ad6d41614b2b658729b9b52735bf07f16db07ff9bf603d2ed4e"
+  },
+  "sfx/gexpbarb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -13.8,
+    "decay20_ms": 1620,
+    "high_share": 0.041,
+    "low_share": 0.672,
+    "max50_rms_dbfs": -7.7,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "gexpbarb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpbarb.wav')",
+   "sha256": "235aaaf1a44457996b0a77594d684dffd39ccdbaa3d114aa7429f8de7e6f24d6"
+  },
+  "sfx/gexpbarc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -14.6,
+    "decay20_ms": 1600,
+    "high_share": 0.04,
+    "low_share": 0.648,
+    "max50_rms_dbfs": -7.7,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "gexpbarc.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpbarc.wav')",
+   "sha256": "93c5fdb08fd8ed6cfccd40ea8968d888ac0f503aacd5f1020900281c98c8617b"
+  },
+  "sfx/gexpcraa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -13.7,
+    "decay20_ms": 1760,
+    "high_share": 0.047,
+    "low_share": 0.589,
+    "max50_rms_dbfs": -7.7,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "gexpcraa.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/gexpcraa.wav')",
+   "sha256": "76b9fa6a5adce7bc65e58ccfa58feb097d718fba3b4541c2c16de90190b26830"
   },
   "sfx/gexpifva.wav": {
    "category": "sfx",
@@ -1760,6 +2376,34 @@
    "role": "torpedo or depth hit: muffled thump and splash",
    "seed": "sha256('rtsai-standalone-sfx-1/gexpwasb.wav')",
    "sha256": "dcaa0c6c3b123c9ec030925aebe0db0b277fc38d6d716221b973356c252b29a0"
+  },
+  "sfx/ichratta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.4,
+    "decay20_ms": 400,
+    "high_share": 0.025,
+    "low_share": 0.751,
+    "max50_rms_dbfs": -6.5,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "ichratta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/ichratta.wav')",
+   "sha256": "a78af5fd753c60f038bcf89af0aa474f907703bc50268ce845854cb37df5a561"
   },
   "sfx/iconatta.wav": {
    "category": "sfx",
@@ -1900,6 +2544,90 @@
    "role": "rifle: two quick shots",
    "seed": "sha256('rtsai-standalone-sfx-1/iconatte.wav')",
    "sha256": "5c33ff450e3b1486e3fc53c8b96f0923d8e310761edf86edbcc7dfe1fd586204"
+  },
+  "sfx/icraatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.1,
+    "decay20_ms": 480,
+    "high_share": 0.022,
+    "low_share": 0.776,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "icraatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/icraatta.wav')",
+   "sha256": "3caf00b79508b1def995c6ffb6da874efcc2f6674a68aaaf54d21e31283416ba"
+  },
+  "sfx/idesat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.6,
+    "decay20_ms": 450,
+    "high_share": 0.026,
+    "low_share": 0.75,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "idesat1a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/idesat1a.wav')",
+   "sha256": "a2c39ecc18dc629c7eba3cf4d1d796ec59285a2487b9716dae9fb8d486575be9"
+  },
+  "sfx/idesat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.2,
+    "decay20_ms": 430,
+    "high_share": 0.021,
+    "low_share": 0.764,
+    "max50_rms_dbfs": -6.0,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "idesat2a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/idesat2a.wav')",
+   "sha256": "3687366a2046b7bd290ed0e75dd9e3210e9d303dbe6e6a8ab93015f901fa6807"
   },
   "sfx/idogatca.wav": {
    "category": "sfx",
@@ -2069,6 +2797,118 @@
    "seed": "sha256('rtsai-standalone-sfx-1/igiat1c.wav')",
    "sha256": "dcdf42536e3cd2b745eab6f55dd09640985da6da06105fbc0b37419dade4445f"
   },
+  "sfx/igiat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.7,
+    "decay20_ms": 140,
+    "high_share": 0.229,
+    "low_share": 0.13,
+    "max50_rms_dbfs": -12.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "igiat2a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat2a.wav')",
+   "sha256": "76fcc323143aeb594ef1b43d3cbd2c14ee875ffb918998ef673731512d6be251"
+  },
+  "sfx/igiat2b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.2,
+    "decay20_ms": 360,
+    "high_share": 0.236,
+    "low_share": 0.137,
+    "max50_rms_dbfs": -13.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "igiat2b.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat2b.wav')",
+   "sha256": "2604850866f0e09268e53774a959cfbd29b06062abc5087259496c12e9b4cdca"
+  },
+  "sfx/igiat2c.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 270,
+    "high_share": 0.235,
+    "low_share": 0.09,
+    "max50_rms_dbfs": -12.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "igiat2c.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat2c.wav')",
+   "sha256": "7215511566bd66a70348edb0defc2513a467454363f65877a881bd380c50147c"
+  },
+  "sfx/igiat2d.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.2,
+    "decay20_ms": 140,
+    "high_share": 0.227,
+    "low_share": 0.119,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "igiat2d.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/igiat2d.wav')",
+   "sha256": "b4628b49c8435ef34f8f207eb9706c1d0b1d144f78281a069884be13a61259e1"
+  },
   "sfx/irocatta.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -2096,6 +2936,286 @@
    "role": "infantry-carrier cannon and launcher: heavy round with a short whoosh",
    "seed": "sha256('rtsai-standalone-sfx-1/irocatta.wav')",
    "sha256": "0c0be60627456c5a06cf3bf413ff99fc41dc07d1eb1e252a5ac753ef29fd7b83"
+  },
+  "sfx/iseaatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 160,
+    "high_share": 0.241,
+    "low_share": 0.121,
+    "max50_rms_dbfs": -12.4,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "iseaatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/iseaatta.wav')",
+   "sha256": "f58b07c0f7f9910f435fb4f992eb47c6776793be60eb84e89ca63b2ee8dc604a"
+  },
+  "sfx/iseaattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.2,
+    "decay20_ms": 350,
+    "high_share": 0.238,
+    "low_share": 0.149,
+    "max50_rms_dbfs": -12.7,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "iseaattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/iseaattb.wav')",
+   "sha256": "ecd4fb6b4ea7a51eb5906acecab07a8171ce42d7b7fc2121b2f5fe938c0d40f2"
+  },
+  "sfx/isniatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.4,
+    "decay20_ms": 360,
+    "high_share": 0.232,
+    "low_share": 0.116,
+    "max50_rms_dbfs": -12.8,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "isniatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/isniatta.wav')",
+   "sha256": "71f154d326471a6b087181c268e3dd1ffc4317b287f9ab14d725ca2cab11506a"
+  },
+  "sfx/itanatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -16.9,
+    "decay20_ms": 270,
+    "high_share": 0.247,
+    "low_share": 0.097,
+    "max50_rms_dbfs": -12.5,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "itanatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/itanatta.wav')",
+   "sha256": "bac3b865814bce39f6cd5dd85679343500d8a2162b0e2439774a6b41e4a548ea"
+  },
+  "sfx/itanattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -23.1,
+    "max50_rms_dbfs": -12.3,
+    "reference": "iconatta.wav",
+    "seconds": 0.83
+   },
+   "measured": {
+    "active_rms_dbfs": -17.1,
+    "decay20_ms": 340,
+    "high_share": 0.216,
+    "low_share": 0.156,
+    "max50_rms_dbfs": -12.6,
+    "peak_dbfs": -0.3,
+    "seconds": 0.83
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "itanattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/itanattb.wav')",
+   "sha256": "f801c2f2ac7a2c4820625de63b2e0acb66def73d8941ec167651e1944f3b4c6b"
+  },
+  "sfx/itesat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -14.9,
+    "decay20_ms": 400,
+    "high_share": 0.027,
+    "low_share": 0.731,
+    "max50_rms_dbfs": -6.5,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "itesat2a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/itesat2a.wav')",
+   "sha256": "341dd5377e329f57447e13c61aa2f135eaa50e699bb64e8e7cc7ab6944cb3213"
+  },
+  "sfx/itesat2b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -14.8,
+    "decay20_ms": 470,
+    "high_share": 0.015,
+    "low_share": 0.837,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -1.7,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "itesat2b.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/itesat2b.wav')",
+   "sha256": "d965a0f5bd04e117cc90db70398c6fa34c19aca39930c77697836811d48cfda3"
+  },
+  "sfx/itesatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.1,
+    "decay20_ms": 410,
+    "high_share": 0.027,
+    "low_share": 0.73,
+    "max50_rms_dbfs": -6.1,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "itesatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/itesatta.wav')",
+   "sha256": "f32d3b94b808764847a717df9b19dea68e9e1aadedd45bece2a13d2df320554d"
+  },
+  "sfx/iteschaa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.7,
+    "decay20_ms": 430,
+    "high_share": 0.031,
+    "low_share": 0.68,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "iteschaa.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/iteschaa.wav')",
+   "sha256": "9c01ed593aff32f4ce62c0b4c3ecaad3d85c6dd22325f95dd58be5049fb23032"
+  },
+  "sfx/iyurat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.4,
+    "decay20_ms": 440,
+    "high_share": 0.019,
+    "low_share": 0.799,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "iyurat2a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/iyurat2a.wav')",
+   "sha256": "a689f409d1405b3eee3b84614e1db6cdaaf1a7d31b1d99fbc9bd821e47b9bef2"
   },
   "sfx/schrmov.wav": {
    "category": "sfx",
@@ -2517,6 +3637,62 @@
    "seed": "sha256('rtsai-standalone-sfx-1/uselbuil.wav')",
    "sha256": "e66bb3cf555bc1d57ccd56eece8af57bf05a829775c40caa98331c81e7c6b9ec"
   },
+  "sfx/vaegatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -17.1,
+    "decay20_ms": 510,
+    "high_share": 0.169,
+    "low_share": 0.243,
+    "max50_rms_dbfs": -9.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vaegatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vaegatta.wav')",
+   "sha256": "451cdc61372bc1174f66a7d9f73a15ecd06c1c570e0b76bd309d621bb4050f69"
+  },
+  "sfx/vaegattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.1,
+    "decay20_ms": 540,
+    "high_share": 0.191,
+    "low_share": 0.147,
+    "max50_rms_dbfs": -10.1,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vaegattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vaegattb.wav')",
+   "sha256": "35a289b4398df81dfb33908fbce7023ea39e3f68f8dc91955368eb0c755b23c4"
+  },
   "sfx/vapoar2b.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -2544,6 +3720,34 @@
    "role": "anti-aircraft missile launch (the second of three variants)",
    "seed": "sha256('rtsai-standalone-sfx-1/vapoar2b.wav')",
    "sha256": "ccf9569986c704142cc37e7fe97cbd39e9bd4e38ff0dfee184c48de09f3ad03f"
+  },
+  "sfx/vapoat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -16.0,
+    "decay20_ms": 480,
+    "high_share": 0.024,
+    "low_share": 0.754,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vapoat1a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vapoat1a.wav')",
+   "sha256": "b2ef9dd5ccaa84e5d0569e9e0bb9695c65d00746790ef912f9a82a9d33908a99"
   },
   "sfx/vapoat2a.wav": {
    "category": "sfx",
@@ -2600,6 +3804,62 @@
    "role": "anti-aircraft missile launch",
    "seed": "sha256('rtsai-standalone-sfx-1/vapoat2c.wav')",
    "sha256": "478c6ca7ec7896348d602f2d630ca3d55303d2a229dad17c424bdcddddfbe7ec"
+  },
+  "sfx/vbleatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.6,
+    "decay20_ms": 520,
+    "high_share": 0.185,
+    "low_share": 0.168,
+    "max50_rms_dbfs": -10.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vbleatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vbleatta.wav')",
+   "sha256": "81799e672adfdae94ba0d4cb625c89725de430090e96d88066f7c0f3107c7244"
+  },
+  "sfx/vbleattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -19.2,
+    "decay20_ms": 390,
+    "high_share": 0.182,
+    "low_share": 0.179,
+    "max50_rms_dbfs": -10.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vbleattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vbleattb.wav')",
+   "sha256": "a261c2699b5ed8b038b56adaf272d7edcfc30b07925972911dcfab4a2038f1c2"
   },
   "sfx/vblhatta.wav": {
    "category": "sfx",
@@ -2685,6 +3945,34 @@
    "seed": "sha256('rtsai-standalone-sfx-1/vchrtele.wav')",
    "sha256": "252cf4d0a28d927703d521962e496f0d7fde620626f17bcb38d46aae3610306b"
   },
+  "sfx/vdemdiea.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -13.7,
+    "max50_rms_dbfs": -7.5,
+    "reference": "bgendiea.wav",
+    "seconds": 1.983
+   },
+   "measured": {
+    "active_rms_dbfs": -15.9,
+    "decay20_ms": 1550,
+    "high_share": 0.03,
+    "low_share": 0.642,
+    "max50_rms_dbfs": -7.7,
+    "peak_dbfs": -0.3,
+    "seconds": 1.983
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vdemdiea.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vdemdiea.wav')",
+   "sha256": "e8271bc3bc07f55b48fd7f5cddda2dc0efa276f958d0ffdb4296ac4df002804e"
+  },
   "sfx/vdesatta.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -2740,6 +4028,34 @@
    "role": "heavy gun and howitzer: deep boom",
    "seed": "sha256('rtsai-standalone-sfx-1/vdesattb.wav')",
    "sha256": "105b310970f3a0b89265716ad6fc397971bd8bf498818070ef6079adbdd268aa"
+  },
+  "sfx/vdolatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -8.8,
+    "reference": "vsubatta.wav",
+    "seconds": 2.214
+   },
+   "measured": {
+    "active_rms_dbfs": -19.7,
+    "decay20_ms": 1550,
+    "high_share": 0.059,
+    "low_share": 0.428,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -2.2,
+    "seconds": 2.214
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "_vsubatta",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vdolatta.wav')",
+   "sha256": "9b840c8765c74951ab4ac5f9d96aa6392d61d0033cd7298aa200514821f0f888"
   },
   "sfx/vflaat1a.wav": {
    "category": "sfx",
@@ -2908,6 +4224,62 @@
    "role": "twin anti-aircraft cannon: burst",
    "seed": "sha256('rtsai-standalone-sfx-1/vflaat2d.wav')",
    "sha256": "6dce5da19d6f85358c4347888377ee62781d440356f11685cf8e83604aefc434"
+  },
+  "sfx/vgramoa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -14.7,
+    "decay20_ms": 400,
+    "high_share": 0.022,
+    "low_share": 0.766,
+    "max50_rms_dbfs": -6.5,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vgramoa.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vgramoa.wav')",
+   "sha256": "a606733fa2872e6b87cbd7932036d3b1e37cf5b5305f70b8f66de4f873615339"
+  },
+  "sfx/vgramoc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.2,
+    "decay20_ms": 460,
+    "high_share": 0.022,
+    "low_share": 0.786,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vgramoc.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vgramoc.wav')",
+   "sha256": "c858b69e6954a3ebfa00e6a74702f62d94347308d9d12a9f0ec596fc5c7da941"
   },
   "sfx/vgriatta.wav": {
    "category": "sfx",
@@ -3105,6 +4477,146 @@
    "seed": "sha256('rtsai-standalone-sfx-1/vhortakb.wav')",
    "sha256": "2e2e5eea4a264755d66bd5eb72c95e3168cb128881d845bf4127f64b1198842c"
   },
+  "sfx/vifvat2a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -17.7,
+    "decay20_ms": 630,
+    "high_share": 0.201,
+    "low_share": 0.149,
+    "max50_rms_dbfs": -10.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vifvat2a.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vifvat2a.wav')",
+   "sha256": "5897b7d7bdfc109169ef6a4e959222c9c387680c08f8f84d4d48f0a1420cd0ba"
+  },
+  "sfx/vifvat2b.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -19.4,
+    "decay20_ms": 480,
+    "high_share": 0.172,
+    "low_share": 0.205,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -0.8,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vifvat2b.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vifvat2b.wav')",
+   "sha256": "c69aa447c461fe9c90774b85a907f2005d82dba31245b06f129ae07eb6965d9e"
+  },
+  "sfx/vifvat2c.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -19.0,
+    "decay20_ms": 460,
+    "high_share": 0.166,
+    "low_share": 0.222,
+    "max50_rms_dbfs": -10.0,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vifvat2c.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vifvat2c.wav')",
+   "sha256": "2dc129fa927702f5dab2c0dfec718e412409365dfc3b6a37f03c4a91842a71ac"
+  },
+  "sfx/vifvatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -17.0,
+    "decay20_ms": 560,
+    "high_share": 0.189,
+    "low_share": 0.172,
+    "max50_rms_dbfs": -9.9,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vifvatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vifvatta.wav')",
+   "sha256": "3fcf7e5132918125fce76a38ee786a089e75af383fb5d587c801ba4258175010"
+  },
+  "sfx/vifvrepa.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -19.0,
+    "decay20_ms": 530,
+    "high_share": 0.169,
+    "low_share": 0.218,
+    "max50_rms_dbfs": -10.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vifvrepa.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vifvrepa.wav')",
+   "sha256": "5f39571d3a204462b195588f8cc805cbcd5e3bd56f1c05b37bd180df56627254"
+  },
   "sfx/vintatta.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -3132,6 +4644,62 @@
    "role": "missile launch: ignition and hiss",
    "seed": "sha256('rtsai-standalone-sfx-1/vintatta.wav')",
    "sha256": "8f7dac26d2a82aefc5aa84631acf353242974c1018d033ed37d13c84c60db020"
+  },
+  "sfx/vkiratta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.2,
+    "decay20_ms": 480,
+    "high_share": 0.184,
+    "low_share": 0.174,
+    "max50_rms_dbfs": -10.2,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vkiratta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vkiratta.wav')",
+   "sha256": "29cc5ba13c09aec5f6e345f0e77f8223e49c62b5dea99b0b10e8d957b4ecd492"
+  },
+  "sfx/vmiratta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.6,
+    "decay20_ms": 430,
+    "high_share": 0.016,
+    "low_share": 0.819,
+    "max50_rms_dbfs": -6.5,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vmiratta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vmiratta.wav')",
+   "sha256": "3411de38d6edf26d059344eb20fa16c5d1802e929e93b950b3eadf72f41036ee"
   },
   "sfx/vnavupa.wav": {
    "category": "sfx",
@@ -3188,6 +4756,34 @@
    "role": "bomb release: latch clunk and a low thud",
    "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
    "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748"
+  },
+  "sfx/vpriatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.5,
+    "decay20_ms": 470,
+    "high_share": 0.025,
+    "low_share": 0.765,
+    "max50_rms_dbfs": -6.5,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vpriatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vpriatta.wav')",
+   "sha256": "a3b6b317a2b1eb713fe5e3255f4561757a4c68c148b0b301763134a088ef32ed"
   },
   "sfx/vrhiatta.wav": {
    "category": "sfx",
@@ -3301,6 +4897,34 @@
    "seed": "sha256('rtsai-standalone-sfx-1/vrhiattd.wav')",
    "sha256": "05edaf9c1f1414b4eb7932a5a193a12fc0182930fe225f1422968cc445cfdc9c"
   },
+  "sfx/vsquat1a.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -8.8,
+    "reference": "vsubatta.wav",
+    "seconds": 2.214
+   },
+   "measured": {
+    "active_rms_dbfs": -20.1,
+    "decay20_ms": 1560,
+    "high_share": 0.058,
+    "low_share": 0.417,
+    "max50_rms_dbfs": -8.8,
+    "peak_dbfs": -2.2,
+    "seconds": 2.214
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "_vsubatta",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vsquat1a.wav')",
+   "sha256": "cc6fa4241a9850d8e4b800da78670dc97e11d3a19a22755191a2128ce3781f00"
+  },
   "sfx/vsubatta.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -3328,6 +4952,174 @@
    "role": "torpedo launch: compressed-air thunk, bubbles and a fading motor",
    "seed": "sha256('rtsai-standalone-sfx-1/vsubatta.wav')",
    "sha256": "e0c4565864bcda6cec262c28c9c01d2429d040d6a1fcb56867e5f2f4b537e559"
+  },
+  "sfx/vtadatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.1,
+    "decay20_ms": 390,
+    "high_share": 0.017,
+    "low_share": 0.794,
+    "max50_rms_dbfs": -6.3,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vtadatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vtadatta.wav')",
+   "sha256": "bcb97bf011bcc65826b049d7745d90f451375d09cbf727eb848295808f7d7d8f"
+  },
+  "sfx/vtadattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.5,
+    "decay20_ms": 430,
+    "high_share": 0.026,
+    "low_share": 0.767,
+    "max50_rms_dbfs": -6.6,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vtadattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vtadattb.wav')",
+   "sha256": "6f413e906e9b28d47b93ca1bbf3c59a8badc10511d27790620874c7558c763a3"
+  },
+  "sfx/vtadattc.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.4,
+    "decay20_ms": 440,
+    "high_share": 0.02,
+    "low_share": 0.768,
+    "max50_rms_dbfs": -6.2,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vtadattc.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vtadattc.wav')",
+   "sha256": "0b4657d982d8ba8a207329b3b04a77eaa52242e4a1c07af3b7c31867360e1c36"
+  },
+  "sfx/vteratta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15,
+    "max50_rms_dbfs": -10.2,
+    "reference": "vintatta.wav",
+    "seconds": 0.969
+   },
+   "measured": {
+    "active_rms_dbfs": -18.2,
+    "decay20_ms": 600,
+    "high_share": 0.185,
+    "low_share": 0.161,
+    "max50_rms_dbfs": -10.3,
+    "peak_dbfs": -0.3,
+    "seconds": 0.969
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vteratta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vteratta.wav')",
+   "sha256": "4bf8100f48255b1ceb11430a61c9e17904c461f32e5a419c77b889db47a950d6"
+  },
+  "sfx/vtesatta.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.6,
+    "decay20_ms": 470,
+    "high_share": 0.024,
+    "low_share": 0.749,
+    "max50_rms_dbfs": -6.4,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vtesatta.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vtesatta.wav')",
+   "sha256": "22a62142702b95e37b3da7c78146818d140944d5e8e494ab9ca72aa941c83b10"
+  },
+  "sfx/vtesattb.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-09",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -15.5,
+    "max50_rms_dbfs": -6.3,
+    "reference": "vgriatta.wav",
+    "seconds": 1.015
+   },
+   "measured": {
+    "active_rms_dbfs": -15.3,
+    "decay20_ms": 420,
+    "high_share": 0.025,
+    "low_share": 0.737,
+    "max50_rms_dbfs": -6.0,
+    "peak_dbfs": -0.3,
+    "seconds": 1.015
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.3.5",
+   "recipe": "vtesattb.wav",
+   "role": "restored-country weapon or impact",
+   "seed": "sha256('rtsai-standalone-sfx-1/vtesattb.wav')",
+   "sha256": "ffaf7d5e6a30952ae2b58ca259465bb9ae2b8ad5255c46d25b8b05848b72c29a"
   },
   "sfx/vwaratta.wav": {
    "category": "sfx",

@@ -1,0 +1,236 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: Red Sea 2026: Bab al-Mandab Passage
+Author: RTS AI — browser adaptation
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Saudi:
+		Name: Saudi Arabia
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: saudi
+		LockColor: True
+		Color: D6B566
+		LockSpawn: True
+		LockTeam: True
+		Allies: Civilian Shipping
+		Enemies: Yemen
+	PlayerReference@Yemen:
+		Name: Yemen
+		Faction: yemen
+		Color: 8F7A45
+		Enemies: Saudi Arabia, Civilian Shipping
+	PlayerReference@Civilians:
+		Name: Civilian Shipping
+		Faction: china
+		Color: 76AFC4
+		Allies: Saudi Arabia
+		Enemies: Yemen
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	SaudiConyard: gacnst
+		Location: 72,82
+		Owner: Saudi Arabia
+	SaudiRefinery: garefn
+		Location: 86,82
+		Owner: Saudi Arabia
+	SaudiPower: gapowr
+		Location: 78,84
+		Owner: Saudi Arabia
+	SaudiPowerTwo: gapowr
+		Location: 88,88
+		Owner: Saudi Arabia
+	SaudiBarracks: gapile
+		Location: 82,88
+		Owner: Saudi Arabia
+	SaudiWarFactory: gaweap
+		Location: 71,89
+		Owner: Saudi Arabia
+	SaudiRepair: gadept
+		Location: 81,79
+		Owner: Saudi Arabia
+	PassageControl: caoutp
+		Location: 69,69
+		Owner: Saudi Arabia
+	NavigationBeaconNorth: cahosp
+		Location: 69,27
+		Owner: Civilian Shipping
+	NavigationBeaconSouth: cahosp
+		Location: 69,57
+		Owner: Civilian Shipping
+	SaudiTank: r2m1a2s
+		Location: 74,76
+		Owner: Saudi Arabia
+		Facing: 0
+	SaudiAirDefense: r2sads
+		Location: 78,76
+		Owner: Saudi Arabia
+		Facing: 0
+	SaudiScoutOne: r2sang
+		Location: 72,74
+		Owner: Saudi Arabia
+	SaudiScoutTwo: r2sang
+		Location: 72,74
+		Owner: Saudi Arabia
+	SaudiEngineer: engineer
+		Location: 75,74
+		Owner: Saudi Arabia
+	ThreatNorth: r2ymlr
+		Location: 76,17
+		Owner: Yemen
+		Facing: 512
+	ThreatCenter: r2ymlr
+		Location: 73,42
+		Owner: Yemen
+		Facing: 512
+	ThreatSouth: r2ymlr
+		Location: 76,61
+		Owner: Yemen
+		Facing: 512
+	ThreatGuardNorth: r2technical
+		Location: 79,18
+		Owner: Yemen
+		Facing: 512
+	ThreatGuardCenter: r2technical
+		Location: 77,43
+		Owner: Yemen
+		Facing: 512
+	ThreatGuardSouth: r2technical
+		Location: 80,62
+		Owner: Yemen
+		Facing: 512
+	ReconNorth: waypoint
+		Location: 70,20
+		Owner: Neutral
+	ReconCenter: waypoint
+		Location: 70,43
+		Owner: Neutral
+	ReconSouth: waypoint
+		Location: 70,63
+		Owner: Neutral
+	ThreatNorthPatrol: waypoint
+		Location: 86,13
+		Owner: Neutral
+	ThreatCenterPatrol: waypoint
+		Location: 86,39
+		Owner: Neutral
+	ThreatSouthPatrol: waypoint
+		Location: 88,59
+		Owner: Neutral
+	NorthGroundEntry: waypoint
+		Location: 91,2
+		Owner: Neutral
+	SouthGroundEntry: waypoint
+		Location: 91,93
+		Owner: Neutral
+	BaseRally: waypoint
+		Location: 80,72
+		Owner: Neutral
+	DroneEntryWest: waypoint
+		Location: 30,47
+		Owner: Neutral
+	FleetCamera: waypoint
+		Location: 52,48
+		Owner: Neutral
+	BaseCamera: waypoint
+		Location: 78,79
+		Owner: Neutral
+	ShipEntryWest: waypoint
+		Location: 38,93
+		Owner: Neutral
+	ShipEntryInnerWest: waypoint
+		Location: 42,93
+		Owner: Neutral
+	ShipEntryInnerEast: waypoint
+		Location: 54,93
+		Owner: Neutral
+	ShipEntryEast: waypoint
+		Location: 59,93
+		Owner: Neutral
+	ShipWestOne: waypoint
+		Location: 38,76
+		Owner: Neutral
+	ShipWestTwo: waypoint
+		Location: 37,60
+		Owner: Neutral
+	ShipWestThree: waypoint
+		Location: 36,37
+		Owner: Neutral
+	ShipWestFour: waypoint
+		Location: 38,20
+		Owner: Neutral
+	ShipWestExit: waypoint
+		Location: 39,3
+		Owner: Neutral
+	ShipInnerWestOne: waypoint
+		Location: 42,76
+		Owner: Neutral
+	ShipInnerWestTwo: waypoint
+		Location: 40,60
+		Owner: Neutral
+	ShipInnerWestThree: waypoint
+		Location: 40,36
+		Owner: Neutral
+	ShipInnerWestFour: waypoint
+		Location: 42,20
+		Owner: Neutral
+	ShipInnerWestExit: waypoint
+		Location: 43,3
+		Owner: Neutral
+	ShipInnerEastOne: waypoint
+		Location: 54,76
+		Owner: Neutral
+	ShipInnerEastTwo: waypoint
+		Location: 55,60
+		Owner: Neutral
+	ShipInnerEastThree: waypoint
+		Location: 55,36
+		Owner: Neutral
+	ShipInnerEastFour: waypoint
+		Location: 54,20
+		Owner: Neutral
+	ShipInnerEastExit: waypoint
+		Location: 53,3
+		Owner: Neutral
+	ShipEastOne: waypoint
+		Location: 59,76
+		Owner: Neutral
+	ShipEastTwo: waypoint
+		Location: 59,60
+		Owner: Neutral
+	ShipEastThree: waypoint
+		Location: 59,36
+		Owner: Neutral
+	ShipEastFour: waypoint
+		Location: 59,20
+		Owner: Neutral
+	ShipEastExit: waypoint
+		Location: 58,3
+		Owner: Neutral
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 72,82
+Rules:
+	World:
+		RTSAICampaign:
+			Mission: bab-al-mandab-passage
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: "Factual cutoff: **11 August 2026**. Sources were last checked on that date.\n\nBab al-Mandab is a strait between the Arabian Peninsula and the Horn of Africa\nthat connects the Red Sea with the Gulf of Aden and Arabian Sea. The UK\nPermanent Committee on Geographical Names places Bab el Mandeb at approximately\n12\u00c2\u00b035\u00e2\u20ac\u00b2N, 43\u00c2\u00b021\u00e2\u20ac\u00b2E and identifies Jaz\u00c4\u00abrat Mayy\u00c5\u00abn (Perim Island) inside the strait.\nThe U.S. Energy Information Administration describes it as a strategic energy\nroute and estimated that 4.2 million barrels per day of crude oil and petroleum\nproducts transited it in the first half of 2025. UNCTAD reported that the strait\ncarried 8.7% of global seaborne trade volume in 2023, including substantial\ncontainer, vehicle, oil-product, and crude-oil shares. On 23 July 2026, the\nInternational Maritime Organization again called the Red Sea a critical\ninternational trade corridor and emphasized that seafarers are civilians.\n\nA Saudi maritime-security post must establish a coastal picture before a\ncivilian merchant group enters the strait. Build through the normal economy to\na Radar Dome and Tech Center, produce an additional M1A2S or SADS, reconnoiter\nthree coastal sectors, neutralize mobile launchers, protect four merchant\nvessels in separate lanes around the stylized Mayyun island, and keep Passage\nControl open during the final escalation.\n\nAll forces, weapons, threats, routes, incidents, positions, timings, dialogue,\nand outcomes are fictional gameplay abstractions. The mission does not depict\nor claim a real operation."
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:

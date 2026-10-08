@@ -133,7 +133,16 @@ Rules:
 	ra2|modern-factions/art-vehicles-fx.yaml
 	ra2|modern-factions/art-infantry.yaml
 	ra2|modern-factions/art-buildings.yaml
+	ra2|campaigns/countries.yaml
 	classic|rules/factions.yaml
+
+
+
+
+
+
+
+
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -171,6 +180,15 @@ Sequences:
 	ra2|modern-factions/art-buildings-sequences.yaml
 	ra2|modern-factions/art-icons-sequences.yaml
 
+
+
+
+
+
+
+
+	ra2|campaigns/country-sequences.yaml
+
 ModelSequences:
 	ra2|sequences/voxels.yaml
 
@@ -183,6 +201,7 @@ Chrome:
 Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
 
 ChromeLayout:
+	ra2|chrome/game-modes.yaml
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
 	ra2|chrome/rtsai-mainmenu.yaml
@@ -269,9 +288,20 @@ Voices:
 	ra2|modern-factions/yemen-voices.yaml
 	ra2|modern-factions/voice-prefixes.yaml
 
+	ra2|campaigns/country-voices.yaml
+
 Notifications:
 	ra2|audio/notifications.yaml
 	ra2|modern-factions/eva-notifications.yaml
+
+
+
+
+
+
+
+
+	ra2|campaigns/country-notifications.yaml
 
 TileSets:
 	classic|tilesets/temperat.yaml
@@ -289,6 +319,7 @@ Music:
 	classic|audio/music.yaml
 
 FluentMessages:
+	ra2|languages/game-modes.ftl
 	common|fluent/common.ftl
 	common|fluent/chrome.ftl
 	common|fluent/ingame-debug.ftl

@@ -1,0 +1,452 @@
+Metadata:
+	Title: classic-mode-title
+	WindowTitle: classic-mode-title
+	Version: {DEV_VERSION}
+
+ModCredits:
+	ModTabTitle: RTS AI # = -product-name in languages/identity.ftl (ModCredits cannot use Fluent)
+	ModCreditsFile: ra2|CREDITS # TODO rename to AUTHORS as stated in the .cs files when OpenRA#17460 is available
+
+# Standalone: no Red Alert 2 content is mounted, there is no content installer and no archive format (MIX/BAG)
+# is registered. Every file comes from this mod or the engine; tools/standalone-check (make test) enforces it.
+# Both shipped modes use project-authored resources. Historical country mechanics are restored by campaigns/countries.yaml.
+# standalone/placeholders: code-drawn stand-ins under the EA file names the rules still use; mounted first so the
+# deliveries below (Phase 3 art: base/units/effects; audio: sfx/ui/voices/music) override them as they land.
+FileSystem: DefaultFileSystem
+	Packages:
+		^EngineDir
+		$rtsai: ra2
+		$rtsai-topdown: classic
+		^EngineDir|mods/common: common
+		ra2|uibits
+		ra2|standalone/placeholders
+		ra2|standalone/placeholders/conquer: conquer
+		~ra2|standalone/effects
+		~ra2|standalone/units
+		~ra2|standalone/base
+		~ra2|standalone/audio/sfx
+		~ra2|standalone/audio/ui
+		~ra2|standalone/audio/voices
+		~ra2|standalone/audio/music
+		ra2|bits
+		ra2|bits/cameos
+
+MapFolders:
+	classic|campaigns/maps: System
+	classic|maps: System
+	~^SupportDir|maps/rtsai-topdown/{DEV_VERSION}: User
+
+Rules:
+	ra2|rules/companion.yaml
+	ra2|rules/proxy-actors.yaml
+	ra2|rules/misc.yaml
+	ra2|rules/ai.yaml
+	ra2|rules/player.yaml
+	ra2|rules/world.yaml
+	ra2|rules/palettes.yaml
+	ra2|rules/defaults.yaml
+	ra2|rules/allied-infantry.yaml
+	ra2|rules/soviet-infantry.yaml
+	ra2|rules/civilians.yaml
+	ra2|rules/bridges.yaml
+	ra2|rules/animals.yaml
+	ra2|rules/allied-structures.yaml
+	ra2|rules/soviet-structures.yaml
+	ra2|rules/civilian-structures.yaml
+	ra2|rules/tech-structures.yaml
+	ra2|rules/allied-vehicles.yaml
+	ra2|rules/soviet-vehicles.yaml
+	ra2|rules/civilian-vehicles.yaml
+	ra2|rules/allied-naval.yaml
+	ra2|rules/soviet-naval.yaml
+	ra2|rules/aircraft.yaml
+	ra2|rules/civilian-props.yaml
+	ra2|rules/trees.yaml
+	ra2|rules/civilian-naval.yaml
+	ra2|modern-factions/common.yaml
+	ra2|modern-factions/levant-common.yaml
+	ra2|modern-factions/aircraft-ai.yaml
+	ra2|modern-factions/shared-replacements.yaml
+	ra2|modern-factions/bot-types.yaml
+	ra2|modern-factions/china.yaml
+	ra2|modern-factions/china-roster.yaml
+	ra2|modern-factions/china-ai.yaml
+	ra2|modern-factions/china-audio.yaml
+	ra2|modern-factions/iran.yaml
+	ra2|modern-factions/iran-roster.yaml
+	ra2|modern-factions/iran-ai.yaml
+	ra2|modern-factions/iran-audio.yaml
+	ra2|modern-factions/iran-roles.yaml
+	ra2|modern-factions/turkey.yaml
+	ra2|modern-factions/turkey-roster.yaml
+	ra2|modern-factions/turkey-ai.yaml
+	ra2|modern-factions/turkey-audio.yaml
+	ra2|modern-factions/turkey-roles.yaml
+	ra2|modern-factions/saudi.yaml
+	ra2|modern-factions/israel.yaml
+	ra2|modern-factions/saudi-roster.yaml
+	ra2|modern-factions/israel-roster.yaml
+	ra2|modern-factions/saudi-ai.yaml
+	ra2|modern-factions/israel-ai.yaml
+	ra2|modern-factions/saudi-audio.yaml
+	ra2|modern-factions/israel-audio.yaml
+	ra2|modern-factions/saudi-roles.yaml
+	ra2|modern-factions/israel-roles.yaml
+	ra2|modern-factions/yemen.yaml
+	ra2|modern-factions/hezbollah.yaml
+	ra2|modern-factions/yemen-roster.yaml
+	ra2|modern-factions/hezbollah-roster.yaml
+	ra2|modern-factions/yemen-ai.yaml
+	ra2|modern-factions/hezbollah-ai.yaml
+	ra2|modern-factions/yemen-audio.yaml
+	ra2|modern-factions/hezbollah-audio.yaml
+	ra2|modern-factions/yemen-roles.yaml
+	ra2|modern-factions/hezbollah-roles.yaml
+	ra2|modern-factions/combined-arms-ai.yaml
+	ra2|modern-factions/doctrines.yaml
+	ra2|modern-factions/modern-scope.yaml
+	ra2|modern-factions/art-vehicles.yaml
+	ra2|modern-factions/art-vehicles-fx.yaml
+	ra2|modern-factions/art-infantry.yaml
+	ra2|modern-factions/art-buildings.yaml
+	ra2|standalone/rules.yaml
+	classic|rules.yaml
+	ra2|standalone/base-kit.yaml
+
+
+
+
+
+
+
+
+
+	ra2|campaigns/countries.yaml
+
+Sequences:
+	ra2|sequences/aircraft.yaml
+	ra2|sequences/allied-infantry.yaml
+	ra2|sequences/allied-structures.yaml
+	ra2|sequences/animals.yaml
+	ra2|sequences/bridges.yaml
+	ra2|sequences/civilians.yaml
+	ra2|sequences/civilian-props.yaml
+	ra2|sequences/civilian-structures.yaml
+	ra2|sequences/defaults.yaml
+	ra2|sequences/misc.yaml
+	ra2|sequences/soviet-infantry.yaml
+	ra2|sequences/soviet-structures.yaml
+	ra2|sequences/tech-structures.yaml
+	ra2|sequences/trees.yaml
+	ra2|sequences/vehicles.yaml
+	ra2|modern-factions/china-sequences.yaml
+	ra2|modern-factions/china-roster-sequences.yaml
+	ra2|modern-factions/iran-sequences.yaml
+	ra2|modern-factions/iran-roster-sequences.yaml
+	ra2|modern-factions/turkey-sequences.yaml
+	ra2|modern-factions/turkey-roster-sequences.yaml
+	ra2|modern-factions/saudi-sequences.yaml
+	ra2|modern-factions/israel-sequences.yaml
+	ra2|modern-factions/saudi-roster-sequences.yaml
+	ra2|modern-factions/israel-roster-sequences.yaml
+	ra2|modern-factions/yemen-sequences.yaml
+	ra2|modern-factions/hezbollah-sequences.yaml
+	ra2|modern-factions/yemen-roster-sequences.yaml
+	ra2|modern-factions/hezbollah-roster-sequences.yaml
+	ra2|modern-factions/art-vehicles-sequences.yaml
+	ra2|modern-factions/art-vehicles-fx-sequences.yaml
+	ra2|modern-factions/art-infantry-sequences.yaml
+	ra2|modern-factions/art-buildings-sequences.yaml
+	ra2|modern-factions/art-icons-sequences.yaml
+	ra2|standalone/base/kit-sequences.yaml
+	ra2|standalone/units/units-sequences.yaml
+	ra2|standalone/kit-extra-sequences.yaml
+	ra2|standalone/smudge-sequences.yaml
+	ra2|standalone/sequences.yaml
+
+
+
+
+
+
+
+
+
+	ra2|campaigns/country-sequences.yaml
+
+ModelSequences:
+	ra2|sequences/voxels.yaml
+
+Cursors:
+	ra2|standalone/cursors.yaml
+
+Chrome:
+	ra2|chrome.yaml
+
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
+
+ChromeLayout:
+	ra2|chrome/game-modes.yaml
+	common|chrome/assetbrowser.yaml
+	ra2|chrome/ingame-player.yaml
+	ra2|chrome/rtsai-mainmenu.yaml
+	common|chrome/mainmenu-prompts.yaml
+	ra2|chrome/mainmenu-prerelease-notification.yaml
+	common|chrome/ingame-infoobjectives.yaml
+	common|chrome/ingame-infostats.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/tooltips.yaml
+	ra2|chrome/ingame.yaml
+	ra2|chrome/ingame-observer.yaml
+	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-transients.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-menu.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-info-lobby-options.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infobriefing.yaml
+	ra2|chrome/ingame-debug.yaml
+	common|chrome/ingame-perf.yaml
+	common|chrome/ingame-infochat.yaml
+	ra2|chrome/settings.yaml
+	ra2|chrome/settings-ai.yaml
+	common|chrome/settings-gameplay.yaml
+	common|chrome/settings-display.yaml
+	common|chrome/settings-audio.yaml
+	common|chrome/settings-input.yaml
+	common|chrome/settings-hotkeys.yaml
+	common|chrome/settings-advanced.yaml
+	common|chrome/credits.yaml
+	common|chrome/lobby.yaml
+	common|chrome/lobby-players.yaml
+	common|chrome/lobby-options.yaml
+	common|chrome/lobby-music.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-servers.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-browserpanels.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/connection.yaml
+	common|chrome/replaybrowser.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/editor.yaml
+	common|chrome/playerprofile.yaml
+	common|chrome/gamesave-browser.yaml
+	common|chrome/gamesave-loading.yaml
+	common|chrome/ingame-debuginfo.yaml
+	common|chrome/text-notifications.yaml
+
+Weapons:
+	ra2|weapons/bullets.yaml
+	ra2|weapons/defaults.yaml
+	ra2|weapons/explosions.yaml
+	ra2|weapons/flaks.yaml
+	ra2|weapons/melee.yaml
+	ra2|weapons/mgs.yaml
+	ra2|weapons/misc.yaml
+	ra2|weapons/missiles.yaml
+	ra2|weapons/zaps.yaml
+	ra2|modern-factions/weapons.yaml
+	ra2|modern-factions/china-weapons.yaml
+	ra2|modern-factions/iran-weapons.yaml
+	ra2|modern-factions/turkey-weapons.yaml
+	ra2|modern-factions/saudi-weapons.yaml
+	ra2|modern-factions/israel-weapons.yaml
+	ra2|modern-factions/yemen-weapons.yaml
+	ra2|modern-factions/hezbollah-weapons.yaml
+	ra2|modern-factions/art-vehicles-fx-weapons.yaml
+
+Voices:
+	ra2|modern-factions/levant-voices.yaml
+	ra2|audio/voices.yaml
+	ra2|modern-factions/china-voices.yaml
+	ra2|modern-factions/iran-voices.yaml
+	ra2|modern-factions/turkey-voices.yaml
+	ra2|modern-factions/saudi-voices.yaml
+	ra2|modern-factions/yemen-voices.yaml
+	ra2|modern-factions/voice-prefixes.yaml
+
+
+	ra2|campaigns/country-voices.yaml
+
+Notifications:
+	ra2|audio/notifications.yaml
+	ra2|modern-factions/eva-notifications.yaml
+
+
+
+
+
+
+
+
+
+	ra2|campaigns/country-notifications.yaml
+
+TileSets:
+	classic|tileset.yaml
+
+MapGrid:
+	Type: Rectangular
+	EnableDepthBuffer: false
+	MaximumTerrainHeight: 0
+
+Music:
+	ra2|standalone/audio/music.yaml
+
+FluentMessages:
+	classic|mode.ftl
+	ra2|languages/game-modes.ftl
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/ingame-debug.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	ra2|languages/rules/en.ftl
+	ra2|languages/chrome/en.ftl
+	ra2|languages/identity.ftl
+	ra2|standalone/standalone.ftl
+	ra2|languages/native-preview.ftl
+	ra2|languages/ai.ftl
+	ra2|languages/ai-runtime.ftl
+	ra2|modern-factions/messages.ftl
+	ra2|modern-factions/china-messages.ftl
+	ra2|modern-factions/iran-messages.ftl
+	ra2|modern-factions/turkey-messages.ftl
+	ra2|modern-factions/saudi-messages.ftl
+	ra2|modern-factions/israel-messages.ftl
+	ra2|modern-factions/yemen-messages.ftl
+	ra2|modern-factions/hezbollah-messages.ftl
+	ra2|modern-factions/loading-tips.ftl
+	ra2|standalone/names.ftl
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/editor.yaml
+	common|hotkeys/control-groups.yaml
+	ra2|hotkeys.yaml
+	ra2|hotkeys-ai.yaml
+
+LoadScreen: RTSAILoadScreen
+	Image: ra2|uibits/loadscreen.png
+
+ServerTraits:
+	CompanionLobbyPolicy
+	LobbyCommands
+	SkirmishLogic
+	PlayerPinger
+	MasterServerPinger
+
+ChromeMetrics:
+	common|metrics.yaml
+	ra2|metrics.yaml
+
+Fonts:
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size: 32
+		Ascender: 24
+	Hero:
+		Font: common|FreeSansBold.ttf
+		Size: 56
+		Ascender: 42
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	Small:
+		Font: common|FreeSans.ttf
+		Size: 12
+		Ascender: 9
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+
+DefaultOrderGenerator: UnitOrderGenerator
+
+SupportsMapsFrom: ra2
+
+SoundFormats: Aud, Wav, Ogg
+
+SpriteFormats: ShpTS, TmpTS, ShpTD, PngSheet
+
+VideoFormats: Vqa
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERATE: .tem
+		SNOW: .sno
+		URBAN: .urb
+	TilesetCodes:
+		GENERIC: g
+		SNOW: a
+		TEMPERATE: t
+		URBAN: u
+	TilesetSuffixes:
+		SNOW: a
+
+
+AssetBrowser:
+	SpriteExtensions: .shp, .tem, .urb, .sno
+	ModelExtensions: .vxl
+	AudioExtensions: .aud, .wav
+	VideoExtensions: .vqa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: options-game-speed.slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: options-game-speed.slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: options-game-speed.normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: options-game-speed.fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: options-game-speed.faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: options-game-speed.fastest
+			Timestep: 20
+			OrderLatency: 6

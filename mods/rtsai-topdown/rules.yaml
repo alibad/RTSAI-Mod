@@ -1,0 +1,914 @@
+^Palettes:
+	PaletteFromFile@terrain-temperate:
+		Filename: classic|terrain/terrain.pal
+
+^SpriteActor:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: true
+
+^Building:
+	-IsometricSelectable:
+	Selectable:
+
+^Flag:
+	-IsometricSelectable:
+	Selectable:
+
+^R2ChineseDefense:
+	-IsometricSelectable:
+	Selectable:
+
+^R2HezbollahDefense:
+	-IsometricSelectable:
+	Selectable:
+
+^R2IranDefense:
+	-IsometricSelectable:
+	Selectable:
+
+^R2IsraelDefense:
+	-IsometricSelectable:
+	Selectable:
+
+^R2SaudiDefense:
+	-IsometricSelectable:
+	Selectable:
+
+^R2TurkishDefense:
+	-IsometricSelectable:
+	Selectable:
+
+^R2YemenDefense:
+	-IsometricSelectable:
+	Selectable:
+
+atesla:
+	-IsometricSelectable:
+	Selectable:
+
+caairp:
+	-IsometricSelectable:
+	Selectable:
+
+cabarn02:
+	-IsometricSelectable:
+	Selectable:
+
+cabunk01:
+	-IsometricSelectable:
+	Selectable:
+
+cabunk02:
+	-IsometricSelectable:
+	Selectable:
+
+cachig01:
+	-IsometricSelectable:
+	Selectable:
+
+cachig02:
+	-IsometricSelectable:
+	Selectable:
+
+cachig03:
+	-IsometricSelectable:
+	Selectable:
+
+cachig04:
+	-IsometricSelectable:
+	Selectable:
+
+cachig05:
+	-IsometricSelectable:
+	Selectable:
+
+cachig06:
+	-IsometricSelectable:
+	Selectable:
+
+cacity01:
+	-IsometricSelectable:
+	Selectable:
+
+cacity02:
+	-IsometricSelectable:
+	Selectable:
+
+cacity03:
+	-IsometricSelectable:
+	Selectable:
+
+cacity04:
+	-IsometricSelectable:
+	Selectable:
+
+cacolo01:
+	-IsometricSelectable:
+	Selectable:
+
+caeur04:
+	-IsometricSelectable:
+	Selectable:
+
+caeur1:
+	-IsometricSelectable:
+	Selectable:
+
+caeur2:
+	-IsometricSelectable:
+	Selectable:
+
+caeuro05:
+	-IsometricSelectable:
+	Selectable:
+
+cafarm01:
+	-IsometricSelectable:
+	Selectable:
+
+cafarm02:
+	-IsometricSelectable:
+	Selectable:
+
+cafarm06:
+	-IsometricSelectable:
+	Selectable:
+
+cafrma:
+	-IsometricSelectable:
+	Selectable:
+
+cagard01:
+	-IsometricSelectable:
+	Selectable:
+
+cagas01:
+	-IsometricSelectable:
+	Selectable:
+
+cahosp:
+	-IsometricSelectable:
+	Selectable:
+
+cahse01:
+	-IsometricSelectable:
+	Selectable:
+
+cahse02:
+	-IsometricSelectable:
+	Selectable:
+
+cahse03:
+	-IsometricSelectable:
+	Selectable:
+
+cahse04:
+	-IsometricSelectable:
+	Selectable:
+
+cahse07:
+	-IsometricSelectable:
+	Selectable:
+
+caind01:
+	-IsometricSelectable:
+	Selectable:
+
+calab:
+	-IsometricSelectable:
+	Selectable:
+
+camex01:
+	-IsometricSelectable:
+	Selectable:
+
+camex02:
+	-IsometricSelectable:
+	Selectable:
+
+camex03:
+	-IsometricSelectable:
+	Selectable:
+
+camex04:
+	-IsometricSelectable:
+	Selectable:
+
+camiam01:
+	-IsometricSelectable:
+	Selectable:
+
+camiam02:
+	-IsometricSelectable:
+	Selectable:
+
+camiam03:
+	-IsometricSelectable:
+	Selectable:
+
+camiam05:
+	-IsometricSelectable:
+	Selectable:
+
+camiam06:
+	-IsometricSelectable:
+	Selectable:
+
+camiam07:
+	-IsometricSelectable:
+	Selectable:
+
+camisc04:
+	-IsometricSelectable:
+	Selectable:
+
+camisc05:
+	-IsometricSelectable:
+	Selectable:
+
+camov01:
+	-IsometricSelectable:
+	Selectable:
+
+camov02:
+	-IsometricSelectable:
+	Selectable:
+
+camsc04:
+	-IsometricSelectable:
+	Selectable:
+
+camsc05:
+	-IsometricSelectable:
+	Selectable:
+
+camsc06:
+	-IsometricSelectable:
+	Selectable:
+
+camsc07:
+	-IsometricSelectable:
+	Selectable:
+
+camsc08:
+	-IsometricSelectable:
+	Selectable:
+
+camsc09:
+	-IsometricSelectable:
+	Selectable:
+
+camsc10:
+	-IsometricSelectable:
+	Selectable:
+
+camsc11:
+	-IsometricSelectable:
+	Selectable:
+
+canewy01:
+	-IsometricSelectable:
+	Selectable:
+
+canewy04:
+	-IsometricSelectable:
+	Selectable:
+
+canewy05:
+	-IsometricSelectable:
+	Selectable:
+
+canewy06:
+	-IsometricSelectable:
+	Selectable:
+
+canewy07:
+	-IsometricSelectable:
+	Selectable:
+
+canewy08:
+	-IsometricSelectable:
+	Selectable:
+
+canewy10:
+	-IsometricSelectable:
+	Selectable:
+
+canewy11:
+	-IsometricSelectable:
+	Selectable:
+
+canewy12:
+	-IsometricSelectable:
+	Selectable:
+
+canewy13:
+	-IsometricSelectable:
+	Selectable:
+
+canewy14:
+	-IsometricSelectable:
+	Selectable:
+
+canewy15:
+	-IsometricSelectable:
+	Selectable:
+
+canewy16:
+	-IsometricSelectable:
+	Selectable:
+
+canewy17:
+	-IsometricSelectable:
+	Selectable:
+
+canewy18:
+	-IsometricSelectable:
+	Selectable:
+
+canewy20:
+	-IsometricSelectable:
+	Selectable:
+
+canewy21:
+	-IsometricSelectable:
+	Selectable:
+
+canwy05:
+	-IsometricSelectable:
+	Selectable:
+
+canwy09:
+	-IsometricSelectable:
+	Selectable:
+
+canwy22:
+	-IsometricSelectable:
+	Selectable:
+
+canwy23:
+	-IsometricSelectable:
+	Selectable:
+
+canwy24:
+	-IsometricSelectable:
+	Selectable:
+
+canwy25:
+	-IsometricSelectable:
+	Selectable:
+
+canwy26:
+	-IsometricSelectable:
+	Selectable:
+
+caoild:
+	-IsometricSelectable:
+	Selectable:
+
+caoutp:
+	-IsometricSelectable:
+	Selectable:
+
+capark01:
+	-IsometricSelectable:
+	Selectable:
+
+capars01:
+	-IsometricSelectable:
+	Selectable:
+
+capars02:
+	-IsometricSelectable:
+	Selectable:
+
+capars04:
+	-IsometricSelectable:
+	Selectable:
+
+capars05:
+	-IsometricSelectable:
+	Selectable:
+
+capars06:
+	-IsometricSelectable:
+	Selectable:
+
+capars08:
+	-IsometricSelectable:
+	Selectable:
+
+capars09:
+	-IsometricSelectable:
+	Selectable:
+
+capars10:
+	-IsometricSelectable:
+	Selectable:
+
+capars11:
+	-IsometricSelectable:
+	Selectable:
+
+capars12:
+	-IsometricSelectable:
+	Selectable:
+
+capars13:
+	-IsometricSelectable:
+	Selectable:
+
+capars14:
+	-IsometricSelectable:
+	Selectable:
+
+caprs03:
+	-IsometricSelectable:
+	Selectable:
+
+carus01:
+	-IsometricSelectable:
+	Selectable:
+
+carus02a:
+	-IsometricSelectable:
+	Selectable:
+
+carus02b:
+	-IsometricSelectable:
+	Selectable:
+
+carus02c:
+	-IsometricSelectable:
+	Selectable:
+
+carus02g:
+	-IsometricSelectable:
+	Selectable:
+
+carus03:
+	-IsometricSelectable:
+	Selectable:
+
+carus04:
+	-IsometricSelectable:
+	Selectable:
+
+carus05:
+	-IsometricSelectable:
+	Selectable:
+
+carus06:
+	-IsometricSelectable:
+	Selectable:
+
+carus07:
+	-IsometricSelectable:
+	Selectable:
+
+carus08:
+	-IsometricSelectable:
+	Selectable:
+
+carus09:
+	-IsometricSelectable:
+	Selectable:
+
+carus10:
+	-IsometricSelectable:
+	Selectable:
+
+carus11:
+	-IsometricSelectable:
+	Selectable:
+
+castl01:
+	-IsometricSelectable:
+	Selectable:
+
+castl02:
+	-IsometricSelectable:
+	Selectable:
+
+castl03:
+	-IsometricSelectable:
+	Selectable:
+
+castl04:
+	-IsometricSelectable:
+	Selectable:
+
+castl05a:
+	-IsometricSelectable:
+	Selectable:
+
+castl05b:
+	-IsometricSelectable:
+	Selectable:
+
+castl05c:
+	-IsometricSelectable:
+	Selectable:
+
+castl05d:
+	-IsometricSelectable:
+	Selectable:
+
+castl05e:
+	-IsometricSelectable:
+	Selectable:
+
+castl05f:
+	-IsometricSelectable:
+	Selectable:
+
+castl05g:
+	-IsometricSelectable:
+	Selectable:
+
+castl05h:
+	-IsometricSelectable:
+	Selectable:
+
+castrt01:
+	-IsometricSelectable:
+	Selectable:
+
+castrt02:
+	-IsometricSelectable:
+	Selectable:
+
+castrt03:
+	-IsometricSelectable:
+	Selectable:
+
+castrt04:
+	-IsometricSelectable:
+	Selectable:
+
+caswst01:
+	-IsometricSelectable:
+	Selectable:
+
+catech01:
+	-IsometricSelectable:
+	Selectable:
+
+catexs01:
+	-IsometricSelectable:
+	Selectable:
+
+catexs02:
+	-IsometricSelectable:
+	Selectable:
+
+catexs03:
+	-IsometricSelectable:
+	Selectable:
+
+catexs04:
+	-IsometricSelectable:
+	Selectable:
+
+catexs05:
+	-IsometricSelectable:
+	Selectable:
+
+catexs06:
+	-IsometricSelectable:
+	Selectable:
+
+catexs07:
+	-IsometricSelectable:
+	Selectable:
+
+catexs08:
+	-IsometricSelectable:
+	Selectable:
+
+cats01:
+	-IsometricSelectable:
+	Selectable:
+
+cawash01:
+	-IsometricSelectable:
+	Selectable:
+
+cawash03:
+	-IsometricSelectable:
+	Selectable:
+
+cawash04:
+	-IsometricSelectable:
+	Selectable:
+
+cawash05:
+	-IsometricSelectable:
+	Selectable:
+
+cawash06:
+	-IsometricSelectable:
+	Selectable:
+
+cawash07:
+	-IsometricSelectable:
+	Selectable:
+
+cawash08:
+	-IsometricSelectable:
+	Selectable:
+
+cawash09:
+	-IsometricSelectable:
+	Selectable:
+
+cawash10:
+	-IsometricSelectable:
+	Selectable:
+
+cawash11:
+	-IsometricSelectable:
+	Selectable:
+
+cawash13:
+	-IsometricSelectable:
+	Selectable:
+
+cawash14:
+	-IsometricSelectable:
+	Selectable:
+
+cawash15:
+	-IsometricSelectable:
+	Selectable:
+
+cawash16:
+	-IsometricSelectable:
+	Selectable:
+
+cawash17:
+	-IsometricSelectable:
+	Selectable:
+
+cawash18:
+	-IsometricSelectable:
+	Selectable:
+
+cawash19:
+	-IsometricSelectable:
+	Selectable:
+
+cawsh12:
+	-IsometricSelectable:
+	Selectable:
+
+cawt01:
+	-IsometricSelectable:
+	Selectable:
+
+city05:
+	-IsometricSelectable:
+	Selectable:
+
+gaairc:
+	-IsometricSelectable:
+	Selectable:
+
+gacnst:
+	-IsometricSelectable:
+	Selectable:
+
+gacsph:
+	-IsometricSelectable:
+	Selectable:
+
+gadept:
+	-IsometricSelectable:
+	Selectable:
+
+gagap:
+	-IsometricSelectable:
+	Selectable:
+
+gaorep:
+	-IsometricSelectable:
+	Selectable:
+
+gapile:
+	-IsometricSelectable:
+	Selectable:
+
+gapill:
+	-IsometricSelectable:
+	Selectable:
+
+gapowr:
+	-IsometricSelectable:
+	Selectable:
+
+garefn:
+	-IsometricSelectable:
+	Selectable:
+
+gaspysat:
+	-IsometricSelectable:
+	Selectable:
+
+gatech:
+	-IsometricSelectable:
+	Selectable:
+
+gaweap:
+	-IsometricSelectable:
+	Selectable:
+
+gaweat:
+	-IsometricSelectable:
+	Selectable:
+
+gayard:
+	-IsometricSelectable:
+	Selectable:
+
+gtgcan:
+	-IsometricSelectable:
+	Selectable:
+
+naclon:
+	-IsometricSelectable:
+	Selectable:
+
+nacnst:
+	-IsometricSelectable:
+	Selectable:
+
+nadept:
+	-IsometricSelectable:
+	Selectable:
+
+naflak:
+	-IsometricSelectable:
+	Selectable:
+
+nahand:
+	-IsometricSelectable:
+	Selectable:
+
+nairon:
+	-IsometricSelectable:
+	Selectable:
+
+namisl:
+	-IsometricSelectable:
+	Selectable:
+
+nanrct:
+	-IsometricSelectable:
+	Selectable:
+
+napowr:
+	-IsometricSelectable:
+	Selectable:
+
+napsis:
+	-IsometricSelectable:
+	Selectable:
+
+naradr:
+	-IsometricSelectable:
+	Selectable:
+
+narefn:
+	-IsometricSelectable:
+	Selectable:
+
+nasam:
+	-IsometricSelectable:
+	Selectable:
+
+natech:
+	-IsometricSelectable:
+	Selectable:
+
+naweap:
+	-IsometricSelectable:
+	Selectable:
+
+nayard:
+	-IsometricSelectable:
+	Selectable:
+
+r2hzrelay:
+	-IsometricSelectable:
+	Selectable:
+
+r2ilrelay:
+	-IsometricSelectable:
+	Selectable:
+
+r2ilworkshop:
+	-IsometricSelectable:
+	Selectable:
+
+tesla:
+	-IsometricSelectable:
+	Selectable:
+
+^Building:
+	-IsometricSelectionDecorations:
+	SelectionDecorations:
+
+^1x1Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^1x2Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^1x4Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^2x1Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^2x2Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^2x3Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^2x5Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^2x6Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^3x1Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^3x2Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^3x3Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^3x4Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^3x5Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^4x2Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^4x3Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^4x4Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^5x3Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^5x4Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0
+
+^6x4Shape:
+	HitShape:
+		Type: Rectangle
+			LocalYaw: 0

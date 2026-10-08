@@ -1,0 +1,15 @@
+R2ChinainfantryVoice:
+	Voices:
+		SpecialAttack: ra2|modern-factions/audio/rcn-infantry-action-en
+		Build: ra2|modern-factions/audio/rcn-infantry-action-en
+		Deploy: ra2|modern-factions/audio/rcn-infantry-action-en
+R2ChinavehicleVoice:
+	Voices:
+		SpecialAttack: ra2|modern-factions/audio/rcn-vehicle-action-en
+		Build: ra2|modern-factions/audio/rcn-vehicle-action-en
+		Deploy: ra2|modern-factions/audio/rcn-vehicle-action-en
+R2ChinaairVoice:
+	Voices:
+		SpecialAttack: ra2|modern-factions/audio/rcn-air-action-en
+		Build: ra2|modern-factions/audio/rcn-air-action-en
+		Deploy: ra2|modern-factions/audio/rcn-air-action-en

@@ -1,0 +1,188 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: 02: Hodeidah Lifeline
+Author: RTS AI — browser adaptation
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Yemen:
+		Name: Yemen
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: yemen
+		LockColor: True
+		Color: 8F7A45
+		LockSpawn: True
+		LockTeam: True
+		Allies: Civilians
+		Enemies: Saudi Arabia
+	PlayerReference@Saudi:
+		Name: Saudi Arabia
+		Faction: saudi
+		Color: D6B566
+		Enemies: Yemen, Civilians
+	PlayerReference@Civilians:
+		Name: Civilians
+		Faction: china
+		Color: 76AFC4
+		Allies: Yemen
+		Enemies: Saudi Arabia
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	YemenConyard: nacnst
+		Location: 22,76
+		Owner: Yemen
+	YemenRefinery: narefn
+		Location: 40,77
+		Owner: Yemen
+	YemenPower1: napowr
+		Location: 28,75
+		Owner: Yemen
+	YemenPower2: napowr
+		Location: 31,75
+		Owner: Yemen
+	YemenBarracks: nahand
+		Location: 28,79
+		Owner: Yemen
+	YemenWarFactory: naweap
+		Location: 35,76
+		Owner: Yemen
+	YemenAirfield: naradr
+		Location: 42,73
+		Owner: Yemen
+	YemenRadar: naradr
+		Location: 33,67
+		Owner: Yemen
+	YemenTechCenter: natech
+		Location: 20,69
+		Owner: Yemen
+	PortControl: caoutp
+		Location: 15,82
+		Owner: Yemen
+	FisheriesDepot: cahosp
+		Location: 19,82
+		Owner: Yemen
+	CoastalClinic: cahosp
+		Location: 23,84
+		Owner: Civilians
+	InlandDistribution: caoutp
+		Location: 79,15
+		Owner: Civilians
+	LauncherOne: r2ymlr
+		Location: 27,70
+		Owner: Yemen
+		Facing: 128
+	LauncherTwo: r2ymlr
+		Location: 29,69
+		Owner: Yemen
+		Facing: 128
+	TechnicalOne: r2technical
+		Location: 31,70
+		Owner: Yemen
+		Facing: 128
+	TechnicalTwo: r2technical
+		Location: 33,69
+		Owner: Yemen
+		Facing: 128
+	DroneOne: r2samad
+		Location: 40,70
+		Owner: Yemen
+		Facing: 128
+	DroneTwo: r2samad
+		Location: 42,69
+		Owner: Yemen
+		Facing: 128
+	YemenRifle1: r2ymr
+		Location: 25,73
+		Owner: Yemen
+	YemenRifle2: r2ymr
+		Location: 25,73
+		Owner: Yemen
+	YemenRocket1: r2yrpg
+		Location: 27,73
+		Owner: Yemen
+	YemenDroneSpotter: r2yspot
+		Location: 26,72
+		Owner: Yemen
+	SaudiRadar: gaairc
+		Location: 76,20
+		Owner: Saudi Arabia
+	SaudiAirDefense: r2sads
+		Location: 73,22
+		Owner: Saudi Arabia
+		Facing: 640
+	SaudiTank: r2m1a2s
+		Location: 80,23
+		Owner: Saudi Arabia
+		Facing: 640
+	PortEntry: waypoint
+		Location: 13,86
+		Owner: Neutral
+	PortRally: waypoint
+		Location: 27,74
+		Owner: Neutral
+	ReliefOne: waypoint
+		Location: 40,61
+		Owner: Neutral
+	ReliefTwo: waypoint
+		Location: 52,49
+		Owner: Neutral
+	ReliefThree: waypoint
+		Location: 63,37
+		Owner: Neutral
+	DistributionGate: waypoint
+		Location: 72,25
+		Owner: Neutral
+	ReliefExit: waypoint
+		Location: 84,12
+		Owner: Neutral
+	EvacEntry: waypoint
+		Location: 84,12
+		Owner: Neutral
+	EvacExit: waypoint
+		Location: 13,86
+		Owner: Neutral
+	NorthEntry: waypoint
+		Location: 52,2
+		Owner: Neutral
+	EastEntry: waypoint
+		Location: 93,47
+		Owner: Neutral
+	WestEntry: waypoint
+		Location: 2,48
+		Owner: Neutral
+	SweepCameraOne: waypoint
+		Location: 27,68
+		Owner: Neutral
+	SweepCameraTwo: waypoint
+		Location: 36,74
+		Owner: Neutral
+	PortCamera: waypoint
+		Location: 23,76
+		Owner: Neutral
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 22,76
+Rules:
+	World:
+		RTSAICampaign:
+			Mission: hodeidah-lifeline
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: "Factual cutoff: 11 August 2026.\n\nKeep a coastal aid and fisheries corridor operational while fixed civilian\ninfrastructure and dispersed mobile forces face sustained pressure. Escort\nrelief supplies inland, move the mobile force out of the announced surveillance\nzone, and protect the return route for the final evacuation convoy.\n\nThe playable Yemen base begins with a complete economy, ground-production\nbranch, radar, and airfield so the technical, mobile launcher, and Samad drone\nall matter during the mission.\n\nThe background is source-dated. Force composition, routes, positions, timing,\nand outcomes are fictional gameplay abstractions."
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:

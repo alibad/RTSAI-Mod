@@ -9,7 +9,7 @@ ModCredits:
 
 # Standalone: no Red Alert 2 content is mounted, there is no content installer and no archive format (MIX/BAG)
 # is registered. Every file comes from this mod or the engine; tools/standalone-check (make test) enforces it.
-# The original factions and maps live in the separate classic add-on (mods/rtsai-classic, needs the player's RA2).
+# Both shipped modes use project-authored resources. Historical country mechanics are restored by campaigns/countries.yaml.
 # standalone/placeholders: code-drawn stand-ins under the EA file names the rules still use; mounted first so the
 # deliveries below (Phase 3 art: base/units/effects; audio: sfx/ui/voices/music) override them as they land.
 FileSystem: DefaultFileSystem
@@ -31,6 +31,7 @@ FileSystem: DefaultFileSystem
 		ra2|bits/cameos
 
 MapFolders:
+	ra2|campaigns/maps: System
 	ra2|maps: System
 	ra2|standalone/maps: System
 	~^SupportDir|maps/rtsai/{DEV_VERSION}: User
@@ -111,6 +112,16 @@ Rules:
 	ra2|standalone/rules.yaml
 	ra2|standalone/base-kit.yaml
 
+
+
+
+
+
+
+
+
+	ra2|campaigns/countries.yaml
+
 Sequences:
 	ra2|sequences/aircraft.yaml
 	ra2|sequences/allied-infantry.yaml
@@ -152,6 +163,16 @@ Sequences:
 	ra2|standalone/smudge-sequences.yaml
 	ra2|standalone/sequences.yaml
 
+
+
+
+
+
+
+
+
+	ra2|campaigns/country-sequences.yaml
+
 ModelSequences:
 	ra2|sequences/voxels.yaml
 
@@ -164,6 +185,7 @@ Chrome:
 Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
 
 ChromeLayout:
+	ra2|chrome/game-modes.yaml
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
 	ra2|chrome/rtsai-mainmenu.yaml
@@ -250,9 +272,22 @@ Voices:
 	ra2|modern-factions/yemen-voices.yaml
 	ra2|modern-factions/voice-prefixes.yaml
 
+
+	ra2|campaigns/country-voices.yaml
+
 Notifications:
 	ra2|audio/notifications.yaml
 	ra2|modern-factions/eva-notifications.yaml
+
+
+
+
+
+
+
+
+
+	ra2|campaigns/country-notifications.yaml
 
 TileSets:
 	ra2|standalone/tilesets/temperat.yaml
@@ -268,6 +303,7 @@ Music:
 	ra2|standalone/audio/music.yaml
 
 FluentMessages:
+	ra2|languages/game-modes.ftl
 	common|fluent/common.ftl
 	common|fluent/chrome.ftl
 	common|fluent/ingame-debug.ftl

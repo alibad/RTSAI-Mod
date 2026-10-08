@@ -155,8 +155,8 @@ Write-Host "== Mod assemblies and content"
 Invoke-Native dotnet @("publish", (Join-Path $root "RTSAI.sln"), "-c", "Release", "-p:TargetPlatform=win-x64", "-r", "win-x64",
     "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q") "Mod publish failed" $root
 $mods = @(Get-ChildItem -LiteralPath (Join-Path $root "mods") -Directory)
-# Standalone: the game only. The classic add-on and its content installer need the player's own RA2 files.
-if ($standalone) { $mods = @($mods | Where-Object { $_.Name -eq $modId }) }
+# Standalone: both gameplay profiles, sharing authored content. Exclude the historical owned-content add-on.
+if ($standalone) { $mods = @($mods | Where-Object { $_.Name -in @($modId, "rtsai-topdown") }) }
 if ($mods.Count -eq 0) { throw "No mods\$modId to package." }
 foreach ($mod in $mods) {
     Copy-Item -LiteralPath $mod.FullName -Destination (Join-Path $stage "mods") -Recurse

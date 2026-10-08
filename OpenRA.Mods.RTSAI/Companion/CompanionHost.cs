@@ -517,6 +517,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 				["OPENRA_AI_LOG_DIR"] = LogDirectory,
 				["OPENRA_AI_SUPPORT_DIR"] = Platform.SupportDir,
 				["OPENRA_AI_ENGINE_DIR"] = Platform.EngineDir,
+				["OPENRA_AI_CATALOG"] = Path.Combine(root, "catalog", "factions.json"),
 				["OPENRA_AI_VERSION"] = modVersion,
 				["OPENRA_AI_MODEL_ROOT"] = root,
 				["OPENRA_AI_PACK_LOCK"] = Path.Combine(root, "packaging", "ai-pack.lock.json"),

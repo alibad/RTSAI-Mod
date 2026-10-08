@@ -1,0 +1,85 @@
+General:
+	TileSize: 32,32
+	Name: tileset-temperate
+	Id: TEMPERATE
+	Extensions: .png
+	EnableDepth: false
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Road:
+		Type: Road
+		AcceptsSmudgeType: SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Bridge:
+		Type: Bridge
+		Color: 403C34
+		TargetTypes: Ground
+	TerrainType@Rail:
+		Type: Rail
+		AcceptsSmudgeType: SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Impassable:
+		Type: Impassable
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Water:
+		Type: Water
+		Color: 745537
+		TargetTypes: Water
+	TerrainType@DirtRoad:
+		Type: DirtRoad
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Rough:
+		Type: Rough
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Cliff:
+		Type: Cliff
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Ore:
+		Type: Ore
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 948060
+		TargetTypes: Ground
+	TerrainType@Gems:
+		Type: Gems
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 8470FF
+		TargetTypes: Ground
+
+Templates:
+	Template@0:
+		Id: 0
+		Images: classic|terrain/0.png
+		Size: 1,1
+		Tiles:
+			0: Clear
+	Template@1:
+		Id: 1
+		Images: classic|terrain/1.png
+		Size: 1,1
+		Tiles:
+			0: Water
+	Template@2:
+		Id: 2
+		Images: classic|terrain/2.png
+		Size: 1,1
+		Tiles:
+			0: Rough
+	Template@3:
+		Id: 3
+		Images: classic|terrain/3.png
+		Size: 1,1
+		Tiles:
+			0: DirtRoad

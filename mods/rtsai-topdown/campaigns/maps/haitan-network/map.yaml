@@ -1,0 +1,236 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: 03: Haitan Network
+Author: RTS AI — browser adaptation
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@China:
+		Name: China
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: china
+		LockColor: True
+		Color: C83A32
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Obsidian Directorate
+	PlayerReference@Obsidian:
+		Name: Obsidian Directorate
+		Faction: russia
+		Color: 505A67
+		Enemies: China
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	ChinaConyard: gacnst
+		Location: 18,34
+		Owner: China
+	ChinaRefinery: garefn
+		Location: 26,34
+		Owner: China
+	ChinaPower: gapowr
+		Location: 13,34
+		Owner: China
+	ChinaPowerTwo: gapowr
+		Location: 36,34
+		Owner: China
+	ChinaPowerThree: gapowr
+		Location: 40,34
+		Owner: China
+	ChinaBarracks: gapile
+		Location: 19,40
+		Owner: China
+	ChinaWarFactory: gaweap
+		Location: 25,40
+		Owner: China
+	ChinaRadar: gaairc
+		Location: 31,40
+		Owner: China
+	ChinaTech: gatech
+		Location: 31,34
+		Owner: China
+	ChinaRepair: gadept
+		Location: 9,39
+		Owner: China
+	ChinaHelipad: gaairc
+		Location: 9,34
+		Owner: China
+	NetworkRelay: caoutp
+		Location: 44,43
+		Owner: China
+	BastionDefense: r2bastion
+		Location: 17,43
+		Owner: China
+	SkyShieldDefense: r2skyshield
+		Location: 29,38
+		Owner: China
+	SpectrumDefense: r2spectrum
+		Location: 34,38
+		Owner: China
+	NetworkSpecialist: r2cnnetwork
+		Location: 35,43
+		Owner: China
+	RifleOne: r2cnrifle
+		Location: 32,44
+		Owner: China
+	RifleTwo: r2cnrifle
+		Location: 33,44
+		Owner: China
+	RifleThree: r2cnrifle
+		Location: 34,44
+		Owner: China
+	PortableOne: r2cnportable
+		Location: 32,42
+		Owner: China
+	PortableTwo: r2cnportable
+		Location: 33,42
+		Owner: China
+	RedSpear: r2redspear
+		Location: 34,42
+		Owner: China
+	QilinOne: r2qilin
+		Location: 24,43
+		Owner: China
+	QilinTwo: r2qilin
+		Location: 26,43
+		Owner: China
+	LynxOne: r2lynx
+		Location: 28,43
+		Owner: China
+	LongbowOne: r2phl
+		Location: 22,43
+		Owner: China
+	MantisOne: r2mantis
+		Location: 29,43
+		Owner: China
+	SeaDragonOne: r2zbd
+		Location: 21,30
+		Owner: China
+	SeaDragonTwo: r2zbd
+		Location: 23,30
+		Owner: China
+	SeaDragonThree: r2zbd
+		Location: 25,30
+		Owner: China
+	SkySpearOne: r2skyspear
+		Location: 16,39
+		Owner: China
+	CloudOne: r2cloud
+		Location: 14,40
+		Owner: China
+	CraneOne: r2crane
+		Location: 11,42
+		Owner: China
+	LuyangOne: r2luyang
+		Location: 50,24
+		Owner: China
+	HaiwangOne: r2haiwang
+		Location: 57,24
+		Owner: China
+	HaiyingOne: r2haiying
+		Location: 53,22
+		Owner: China
+	KunlunOne: r2kunlun
+		Location: 60,25
+		Owner: China
+	JiaolongOne: r2jiaolong
+		Location: 47,22
+		Owner: China
+	EnemyConyard: nacnst
+		Location: 77,53
+		Owner: Obsidian Directorate
+	EnemyPower: napowr
+		Location: 72,54
+		Owner: Obsidian Directorate
+	EnemyBarracks: nahand
+		Location: 72,59
+		Owner: Obsidian Directorate
+	EnemyWarFactory: naweap
+		Location: 78,59
+		Owner: Obsidian Directorate
+	EnemyRadar: naradr
+		Location: 84,53
+		Owner: Obsidian Directorate
+	EnemyCommand: caoutp
+		Location: 86,58
+		Owner: Obsidian Directorate
+	JammerOne: r2spectrum
+		Location: 64,53
+		Owner: Obsidian Directorate
+		Facing: 640
+	JammerTwo: r2spectrum
+		Location: 70,61
+		Owner: Obsidian Directorate
+		Facing: 640
+	JammerThree: r2spectrum
+		Location: 90,54
+		Owner: Obsidian Directorate
+		Facing: 640
+	EnemyTankOne: htnk
+		Location: 68,55
+		Owner: Obsidian Directorate
+		Facing: 640
+	EnemyTankTwo: htnk
+		Location: 68,58
+		Owner: Obsidian Directorate
+		Facing: 640
+	EnemyV2: r2ymlr
+		Location: 74,63
+		Owner: Obsidian Directorate
+		Facing: 640
+	NetworkNode: waypoint
+		Location: 44,44
+		Owner: Neutral
+	AmphibiousGate: waypoint
+		Location: 66,44
+		Owner: Neutral
+	EastBeach: waypoint
+		Location: 72,50
+		Owner: Neutral
+	GroundWaveEntry: waypoint
+		Location: 91,58
+		Owner: Neutral
+	GroundWaveRally: waypoint
+		Location: 63,54
+		Owner: Neutral
+	AirWaveEntry: waypoint
+		Location: 91,45
+		Owner: Neutral
+	NavalWaveEntry: waypoint
+		Location: 90,38
+		Owner: Neutral
+	NavalWaveRally: waypoint
+		Location: 68,44
+		Owner: Neutral
+	WestCamera: waypoint
+		Location: 27,39
+		Owner: Neutral
+	EastCamera: waypoint
+		Location: 76,55
+		Owner: Neutral
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 18,34
+Rules:
+	World:
+		RTSAICampaign:
+			Mission: haitan-network
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: "This is a fictional combined-arms exercise set on a native-generated island map.\nThe player restores a command network, moves amphibious IFVs through a verified\nwater gate, and coordinates land, air, missile, drone, and naval forces against\nthe fictional Obsidian Directorate.\n\nNo real attack, real operation, real leader, or real force disposition is\nrepresented. See `docs/china-faction-research.md` for the dated sources and the\ncapability-to-gameplay translation boundary.\n"
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:

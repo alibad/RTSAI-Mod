@@ -68,7 +68,8 @@ namespace OpenRA.Mods.RTSAI.Traits
 			{
 				Tick = tick,
 				EpisodeId = episodeId,
-				ModId = Game.ModData.Manifest.Id,
+				// The two standalone render profiles share the same actor and technology contract.
+				ModId = Game.ModData.Manifest.Id == "rtsai-topdown" ? "rtsai" : Game.ModData.Manifest.Id,
 				Economy = SerializeEconomy(),
 				Military = SerializeMilitary(),
 				MapInfo = SerializeMapInfo(),

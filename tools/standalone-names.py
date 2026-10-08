@@ -23,6 +23,17 @@ OUT = MOD / "standalone" / "names.ftl"
 
 # Stock phrase -> neutral phrase, longest first (applied in this order).
 REPLACE = [
+    ("Giant Squid", "Assault Submersible"), ("Black Eagle", "Strike Fighter"),
+    ("Terror Drone", "Attack Drone"), ("Navy SEAL", "Naval Commando"),
+    ("Crazy Ivan", "Demolition Specialist"), ("Apocalypse", "Heavy Assault Tank"),
+    ("Desolator", "Area Denial Trooper"), ("Conscript", "Rifleman"),
+    ("Rocketeer", "Airborne Trooper"), ("Grizzly", "Medium Tank"),
+    ("Mirage", "Camouflage"), ("Harrier", "Strike Aircraft"),
+    ("Dolphin", "Scout Submersible"), ("dolphin", "scout submersible"),
+    ("Typhoon", "Attack Submarine"), ("Kirov", "Heavy Airship"),
+    ("Aegis", "Air Defense Cruiser"), ("Rhino", "Main Battle Tank"),
+    ("Tanya", "Commando"), ("Yuri", "Control Specialist"),
+    ("Psychic", "Control"), ("psychic", "control"),
     ("Airforce Command Headquarters", "Airfield"),
     ("returns to Airforce Command", "returns to the Airfield"),
     ("Airforce Command", "Airfield"),
@@ -35,6 +46,8 @@ REPLACE = [
     ("War Factory", "Vehicle Factory"),
     ("Allied Wall", "Wall"),
     ("Soviet Wall", "Wall"),
+    ("Tesla", "Arc"), ("tesla", "arc"), ("Prism", "Spectrum"),
+    ("Chrono", "Phase"), ("Allied", "Coalition"), ("Soviet", "Union"),
 ]
 
 
@@ -76,10 +89,12 @@ def build() -> str:
            "# messages that use a Red Alert 2 coined name (the classic add-on keeps them). Do not edit by hand.\n\n"]
     n = 0
     for mid, (text, src) in latest.items():
-        new = text
+        prefix, value = text.split('=', 1)
+        new = value
         for old, rep in REPLACE:
             new = new.replace(old, rep)
-        if new != text:
+        if new != value:
+            new = prefix + '=' + new
             out.append(f"## from {src.relative_to(MOD).as_posix()}\n{new}\n\n")
             n += 1
     return "".join(out).rstrip("\n") + "\n", n

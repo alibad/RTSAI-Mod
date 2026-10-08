@@ -885,6 +885,10 @@ def verify() -> int:
     return 1 if bad else 0
 
 
+# Restored-country sounds use project synthesis recipes, seeded independently by output name.
+for _name, _template in json.loads((ROOT / 'tools/standalone-audio/restored-sfx.json').read_text(encoding='utf-8')).items():
+    RECIPES[_name] = ('sfx', 'restored-country weapon or impact', RECIPES[_template][2], _template)
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("cmd", choices=["build", "compare", "verify", "list"])

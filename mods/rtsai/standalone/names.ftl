@@ -2,6 +2,103 @@
 # messages that use a Red Alert 2 coined name (the classic add-on keeps them). Do not edit by hand.
 
 ## from languages/rules/en.ftl
+faction-random-allies-description =
+    Random Coalition Country
+    A random Coalition country will be chosen when the game starts.
+
+## from languages/rules/en.ftl
+faction-random-soviets-name = Unions
+
+## from languages/rules/en.ftl
+faction-random-soviets-description =
+    Random Union Country
+    A random Union country will be chosen when the game starts.
+
+## from languages/rules/en.ftl
+faction-korea-description =
+    Korea
+    Special Aircraft: Strike Fighter
+
+## from languages/rules/en.ftl
+faction-iraq-description =
+    Iraq
+    Special Infantry: Area Denial Trooper
+
+## from languages/rules/en.ftl
+faction-russia-description =
+    Russia
+    Special Vehicle: Arc Tank
+
+## from languages/rules/en.ftl
+actor-ghost-name = Naval Commando
+
+## from languages/rules/en.ftl
+actor-ccomand-name = Phase Commando
+
+## from languages/rules/en.ftl
+actor-ptroop-description =
+    Control infantry. Can mind control enemy units.
+      Strong vs Infantry, Vehicles, Buildings
+      Weak vs Dogs, Attack Drones, Aircraft
+    Special Ability: Destroy Building with C4
+
+## from languages/rules/en.ftl
+actor-tany-name = Commando
+
+## from languages/rules/en.ftl
+actor-jumpjet-name = Airborne Trooper
+
+## from languages/rules/en.ftl
+actor-jumpjet-husk-name = Airborne Trooper
+
+## from languages/rules/en.ftl
+actor-cleg-name = Phase Legionnaire
+
+## from languages/rules/en.ftl
+actor-e2-name = Rifleman
+
+## from languages/rules/en.ftl
+actor-shk-description =
+    Special armored unit using electricity.
+      Strong vs Infantry, Light armor
+      Weak vs Tanks, Aircraft
+    Special ability: Charge arc coils
+
+## from languages/rules/en.ftl
+actor-shk-name = Arc Trooper
+
+## from languages/rules/en.ftl
+actor-deso-name = Area Denial Trooper
+
+## from languages/rules/en.ftl
+actor-ivan-name = Demolition Specialist
+
+## from languages/rules/en.ftl
+actor-civan-name = Phase Ivan
+
+## from languages/rules/en.ftl
+actor-yuri-description =
+    Control infantry. Can mind control enemy units.
+    Can be deployed to unleash a powerful control wave.
+      Strong vs Infantry, Vehicles
+      Weak vs Attack Drones, Aircraft, Buildings
+
+## from languages/rules/en.ftl
+actor-yuri-name = Control Specialist
+
+## from languages/rules/en.ftl
+actor-yuripr-description =
+    Control infantry. Can mind control enemy units from a great range.
+    Can be deployed to unleash a powerful control wave.
+      Strong vs Infantry, Vehicles
+      Weak vs Attack Drones, Aircraft, Buildings
+
+    Maximum 1 can be trained.
+
+## from languages/rules/en.ftl
+actor-yuripr-name = Control Specialist Prime
+
+## from languages/rules/en.ftl
 actor-gaairc-name = Airfield
 
 ## from languages/rules/en.ftl
@@ -11,7 +108,7 @@ actor-amradr-name = American Airfield
 actor-gaweap-name = Vehicle Factory
 
 ## from languages/rules/en.ftl
-actor-gadept-description = Repairs vehicles (for a price).
+actor-gadept-description = Repairs vehicles and removes Attack Drones (for a price).
 
 ## from languages/rules/en.ftl
 actor-gatech-name = Tech Center
@@ -20,28 +117,148 @@ actor-gatech-name = Tech Center
 actor-gawall-name = Wall
 
 ## from languages/rules/en.ftl
+actor-gacsph-name = Phasesphere
+
+## from languages/rules/en.ftl
+actor-gacsph-chronoshift-name = Phasesphere
+
+## from languages/rules/en.ftl
+actor-atesla-name = Spectrum Tower
+
+## from languages/rules/en.ftl
 actor-napowr-name = Power Plant
 
 ## from languages/rules/en.ftl
 actor-naweap-name = Vehicle Factory
 
 ## from languages/rules/en.ftl
-actor-nadept-description = Repairs vehicles (for a price).
+actor-nadept-description = Repairs vehicles and removes Attack Drones (for a price).
 
 ## from languages/rules/en.ftl
 actor-natech-name = Tech Center
 
 ## from languages/rules/en.ftl
+actor-napsis-name = Control Sensor
+
+## from languages/rules/en.ftl
 actor-nawall-name = Wall
+
+## from languages/rules/en.ftl
+actor-tesla-name = Arc Coil
+
+## from languages/rules/en.ftl
+actor-caairp-allies-name = Coalition Paratroopers
+
+## from languages/rules/en.ftl
+actor-caairp-soviets-name = Union Paratroopers
 
 ## from languages/rules/en.ftl
 actor-cmin-name = Ore Harvester
 
 ## from languages/rules/en.ftl
+actor-mtnk-name = Medium Tank Battle Tank
+
+## from languages/rules/en.ftl
+actor-mtnk-description =
+    Coalition Main Battle Tank.
+      Strong vs Vehicles, Ships
+      Weak vs Infantry, Aircraft
+
+## from languages/rules/en.ftl
+actor-sref-name = Spectrum Tank
+
+## from languages/rules/en.ftl
+actor-mgtk-name = Camouflage Tank
+
+## from languages/rules/en.ftl
 actor-harv-name = Armed Harvester
 
 ## from languages/rules/en.ftl
+actor-dron-name = Attack Drone
+
+## from languages/rules/en.ftl
 actor-htk-name = AA Carrier
+
+## from languages/rules/en.ftl
+actor-htnk-name = Main Battle Tank Heavy Tank
+
+## from languages/rules/en.ftl
+actor-htnk-description =
+    Union Main Battle Tank.
+      Strong vs Vehicles
+      Weak vs Infantry, Aircraft
+
+## from languages/rules/en.ftl
+actor-apoc-name = Heavy Assault Tank Tank
+
+## from languages/rules/en.ftl
+actor-apoc-description =
+    Union Advanced Battle Tank with Double Barrel
+    and Anti-Aircraft Missile Launcher.
+      Strong vs Vehicles, Aircraft
+      Weak vs Infantry
+
+## from languages/rules/en.ftl
+actor-ttnk-name = Arc Tank
+
+## from languages/rules/en.ftl
+actor-ttnk-description =
+    Russian special tank armed with dual small Arc Coils.
+      Strong vs Vehicles, Infantry
+      Weak vs Aircraft
+
+## from languages/rules/en.ftl
+actor-dest-description =
+    Coalition Main Battle Ship armed with cannons and
+     an Osprey helicopter.
+    Can detect submarines and sea animals.
+      Strong vs Naval units
+      Weak vs Ground units, Aircraft
+
+## from languages/rules/en.ftl
+actor-aegis-name = Air Defense Cruiser Cruiser
+
+## from languages/rules/en.ftl
+actor-dlph-description =
+    Trained scout submersible
+    armed with sonic beams.
+      Strong vs Ships
+
+## from languages/rules/en.ftl
+actor-dlph-name = Scout Submersible
+
+## from languages/rules/en.ftl
+actor-sub-description =
+    Submerged anti-ship unit armed with
+    torpedoes.
+    Can detect other submarines and Assault Submersibles.
+      Strong vs Ships
+      Weak vs Ground units, Aircraft
+    Special Ability: Submerge
+
+## from languages/rules/en.ftl
+actor-sub-name = Attack Submarine Attack Sub
+
+## from languages/rules/en.ftl
+actor-sqd-name = Assault Submersible
+
+## from languages/rules/en.ftl
+actor-zep-name = Heavy Airship Airship
+
+## from languages/rules/en.ftl
+actor-zephusk-name = Heavy Airship Airship
+
+## from languages/rules/en.ftl
+actor-orca-name = Strike Aircraft
+
+## from languages/rules/en.ftl
+actor-orcahusk-name = Strike Aircraft
+
+## from languages/rules/en.ftl
+actor-beag-name = Strike Fighter
+
+## from languages/rules/en.ftl
+actor-beaghusk-name = Strike Fighter
 
 ## from modern-factions/iran-messages.ftl
 ra2-r2toufan-description = Rocket gunship vs infantry and light vehicles.

@@ -478,6 +478,9 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			var missingMusic = rules.Music.Values.Count(m => !fs.Exists(m.Filename));
 			if (missingAudio.Count > 0)
 				(strictAudio ? (Action<string>)Error : Soft)($"{missingAudio.Count} voice, notification or weapon sound files are missing (silent in game), e.g. {string.Join(", ", missingAudio.Take(6))}");
+			if (args.Contains("--list-missing-audio"))
+				foreach (var file in missingAudio)
+					Console.WriteLine($"missing-audio {file}");
 			if (missingMusic > 0)
 				(strictAudio ? (Action<string>)Error : Soft)($"{missingMusic} music tracks are missing");
 

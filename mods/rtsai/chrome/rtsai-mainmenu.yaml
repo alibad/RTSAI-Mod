@@ -4,7 +4,7 @@
 # No news box and no content-manager button: the standalone game has no external content to manage.
 
 Container@MAINMENU:
-	Logic: MainMenuLogic
+	Logic: MainMenuLogic, RTSAIGameModesLogic
 	Children:
 		LogicKeyListener@GLOBAL_KEYHANDLER:
 			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
@@ -78,6 +78,12 @@ Container@MAINMENU:
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-title
+							Font: MediumBold
+						Button@GAME_MODES_BUTTON:
+							Y: 232
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: rtsai-game-modes
 							Font: MediumBold
 						Button@QUIT_BUTTON:
 							Y: 280

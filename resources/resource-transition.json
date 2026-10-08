@@ -41383,8 +41383,8 @@
     },
     {
       "path": "mods/rtsai/modern-factions/eva-notifications.yaml",
-      "bytes": 700,
-      "sha256": "06f444aa471a5d12f7bd61c14e5a0b929a7a959c8f12f237c3d37f6c3e5fdd43"
+      "bytes": 856,
+      "sha256": "b64d8f678895049bd45d9188eb72928da0ab458561c4017e60e353977a4477a9"
     },
     {
       "path": "mods/rtsai/modern-factions/hezbollah-ai.yaml",
@@ -43208,8 +43208,28 @@
     },
     {
       "path": "mods/rtsai/standalone/audio/PROVENANCE.json",
-      "bytes": 330950,
-      "sha256": "f8d035b79780d8e81c1f5387e8b2a6068cd38bf5ed107a05a23923b0bdbf279c"
+      "bytes": 381554,
+      "sha256": "2f56efb91d5cc51babd5937b9debeb2fca3cde75e07220cc2d84eb2d4f275f08"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bflaatta.wav",
+      "bytes": 42776,
+      "sha256": "fca1d518ae918110ff6bab59c46167717125f775560b28aa12c6064234c7ddf8"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bflaattb.wav",
+      "bytes": 42776,
+      "sha256": "02c4712caf583b54d46f9583c8c658d70c0ab1b5dfad128f3d2097b7820b3126"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bflaattc.wav",
+      "bytes": 42776,
+      "sha256": "176277cfd62d44cd1e7844fbde0156f8e0cae5d0e2e85ea1aac0f2084ae74f0a"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bflaattd.wav",
+      "bytes": 42776,
+      "sha256": "9a1246d90d9ab45adc90fcf68eb1e5e5ad4d5ee77f2f654c0b075b9e7354d1e4"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/bgendiea.wav",
@@ -43242,6 +43262,36 @@
       "sha256": "2420ed5f87162c7a5cb6c95475d182e9bddcfbe47e133c4b8e4d934308f0f31a"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/bgraatta.wav",
+      "bytes": 44806,
+      "sha256": "302d1c488c5c429e6c232b97c15c296d24e13ff0bb3da2808c75a3e9ce622699"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bpatatta.wav",
+      "bytes": 42776,
+      "sha256": "007d8c3adc8ae2327febc0e74e6ab08f1ed1b5e6343d58a4d0f2bb80023d826c"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bpilatta.wav",
+      "bytes": 36648,
+      "sha256": "cb416b1d7055e0ec0d4f8d2e3ddcfed17a718d5f34c0bd22b6c24bd74bdf4e25"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bpilattb.wav",
+      "bytes": 36648,
+      "sha256": "69c5a90c20a69ff01f8c858497f75d8b8c60702e08be64f668416dba9e7c7db0"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bpilattc.wav",
+      "bytes": 36648,
+      "sha256": "85654dd9a6eeb10be33a6f1af7f05ff5102f7d6a9df547a3ff6acd14bec8cba7"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bpilattd.wav",
+      "bytes": 36648,
+      "sha256": "512ec43b427ed8c433044ff172dbac9a2d560056666576eb352bda51c8c71f51"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/bpowdiea.wav",
       "bytes": 89522,
       "sha256": "e9824db220d05c3b6ebd9beb34aca7dd3626b78265facb7499eb1d2c44f02498"
@@ -43250,6 +43300,41 @@
       "path": "mods/rtsai/standalone/audio/sfx/bpowdieb.wav",
       "bytes": 87494,
       "sha256": "a3d42ec82d7c0f2025486d658b4e21933d42ba7846b48d73fd35a8ff43167f68"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bpriat1a.wav",
+      "bytes": 44806,
+      "sha256": "dc3384e032599c7b1794bfbbfac375f469db07661a2ee12d0dda07b33c0aa0d4"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bsenatta.wav",
+      "bytes": 36648,
+      "sha256": "4c0dcc29e7f6b527356965417986c71d848222d689a6493200da642a2844486a"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bsenattb.wav",
+      "bytes": 36648,
+      "sha256": "976b19efbfe984ff926ffc3fd7ab6b9af66693cd375d26b65e8f3b3abd0aa9f2"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bsenattc.wav",
+      "bytes": 36648,
+      "sha256": "41c92086a16361d49754172b6ef03551d6ac6ec324b2d2f31112118044020dcb"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/bsenattd.wav",
+      "bytes": 36648,
+      "sha256": "a821bb89690d77b8856d73ca0332ea45ea6fe7abaeae8c78992f390b68178204"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/btesat1a.wav",
+      "bytes": 44806,
+      "sha256": "a55337a1b708ab5ad145ce64e95b88096b72218cb7238894f0c68e6e3fa328a7"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/btesat2a.wav",
+      "bytes": 44806,
+      "sha256": "68207e11b905b3f31fed866ca015edef739c2c167b9b929eede131a0fa946429"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/chrono2.aud",
@@ -43302,9 +43387,34 @@
       "sha256": "3283db930e7a3ccc978e1c93b9f99a782b9bf807a49559f05b07d9899a8ee3cf"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/gexp15a.wav",
+      "bytes": 87494,
+      "sha256": "b3165564e9392833f980a57deceb965df137ccec75733eb7820f122bebf840d2"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/gexpapoa.wav",
       "bytes": 61078,
       "sha256": "a1e0a8dba640d5a9d90532946a663104c9faf09784131dafd1ece1eb36c1a394"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/gexpbara.wav",
+      "bytes": 87494,
+      "sha256": "03d7f26db2957ad6d41614b2b658729b9b52735bf07f16db07ff9bf603d2ed4e"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/gexpbarb.wav",
+      "bytes": 87494,
+      "sha256": "235aaaf1a44457996b0a77594d684dffd39ccdbaa3d114aa7429f8de7e6f24d6"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/gexpbarc.wav",
+      "bytes": 87494,
+      "sha256": "93c5fdb08fd8ed6cfccd40ea8968d888ac0f503aacd5f1020900281c98c8617b"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/gexpcraa.wav",
+      "bytes": 87494,
+      "sha256": "76b9fa6a5adce7bc65e58ccfa58feb097d718fba3b4541c2c16de90190b26830"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/gexpifva.wav",
@@ -43325,6 +43435,11 @@
       "path": "mods/rtsai/standalone/audio/sfx/gexpwasb.wav",
       "bytes": 59050,
       "sha256": "dcaa0c6c3b123c9ec030925aebe0db0b277fc38d6d716221b973356c252b29a0"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/ichratta.wav",
+      "bytes": 44806,
+      "sha256": "a78af5fd753c60f038bcf89af0aa474f907703bc50268ce845854cb37df5a561"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/iconatta.wav",
@@ -43350,6 +43465,21 @@
       "path": "mods/rtsai/standalone/audio/sfx/iconatte.wav",
       "bytes": 28532,
       "sha256": "5c33ff450e3b1486e3fc53c8b96f0923d8e310761edf86edbcc7dfe1fd586204"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/icraatta.wav",
+      "bytes": 44806,
+      "sha256": "3caf00b79508b1def995c6ffb6da874efcc2f6674a68aaaf54d21e31283416ba"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/idesat1a.wav",
+      "bytes": 44806,
+      "sha256": "a2c39ecc18dc629c7eba3cf4d1d796ec59285a2487b9716dae9fb8d486575be9"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/idesat2a.wav",
+      "bytes": 44806,
+      "sha256": "3687366a2046b7bd290ed0e75dd9e3210e9d303dbe6e6a8ab93015f901fa6807"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/idogatca.wav",
@@ -43382,9 +43512,79 @@
       "sha256": "dcdf42536e3cd2b745eab6f55dd09640985da6da06105fbc0b37419dade4445f"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/igiat2a.wav",
+      "bytes": 36648,
+      "sha256": "76fcc323143aeb594ef1b43d3cbd2c14ee875ffb918998ef673731512d6be251"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/igiat2b.wav",
+      "bytes": 36648,
+      "sha256": "2604850866f0e09268e53774a959cfbd29b06062abc5087259496c12e9b4cdca"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/igiat2c.wav",
+      "bytes": 36648,
+      "sha256": "7215511566bd66a70348edb0defc2513a467454363f65877a881bd380c50147c"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/igiat2d.wav",
+      "bytes": 36648,
+      "sha256": "b4628b49c8435ef34f8f207eb9706c1d0b1d144f78281a069884be13a61259e1"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/irocatta.wav",
       "bytes": 32590,
       "sha256": "0c0be60627456c5a06cf3bf413ff99fc41dc07d1eb1e252a5ac753ef29fd7b83"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/iseaatta.wav",
+      "bytes": 36648,
+      "sha256": "f58b07c0f7f9910f435fb4f992eb47c6776793be60eb84e89ca63b2ee8dc604a"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/iseaattb.wav",
+      "bytes": 36648,
+      "sha256": "ecd4fb6b4ea7a51eb5906acecab07a8171ce42d7b7fc2121b2f5fe938c0d40f2"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/isniatta.wav",
+      "bytes": 36648,
+      "sha256": "71f154d326471a6b087181c268e3dd1ffc4317b287f9ab14d725ca2cab11506a"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/itanatta.wav",
+      "bytes": 36648,
+      "sha256": "bac3b865814bce39f6cd5dd85679343500d8a2162b0e2439774a6b41e4a548ea"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/itanattb.wav",
+      "bytes": 36648,
+      "sha256": "f801c2f2ac7a2c4820625de63b2e0acb66def73d8941ec167651e1944f3b4c6b"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/itesat2a.wav",
+      "bytes": 44806,
+      "sha256": "341dd5377e329f57447e13c61aa2f135eaa50e699bb64e8e7cc7ab6944cb3213"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/itesat2b.wav",
+      "bytes": 44806,
+      "sha256": "d965a0f5bd04e117cc90db70398c6fa34c19aca39930c77697836811d48cfda3"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/itesatta.wav",
+      "bytes": 44806,
+      "sha256": "f32d3b94b808764847a717df9b19dea68e9e1aadedd45bece2a13d2df320554d"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/iteschaa.wav",
+      "bytes": 44806,
+      "sha256": "9c01ed593aff32f4ce62c0b4c3ecaad3d85c6dd22325f95dd58be5049fb23032"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/iyurat2a.wav",
+      "bytes": 44806,
+      "sha256": "a689f409d1405b3eee3b84614e1db6cdaaf1a7d31b1d99fbc9bd821e47b9bef2"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/schrmov.wav",
@@ -43462,9 +43662,24 @@
       "sha256": "e66bb3cf555bc1d57ccd56eece8af57bf05a829775c40caa98331c81e7c6b9ec"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/vaegatta.wav",
+      "bytes": 42776,
+      "sha256": "451cdc61372bc1174f66a7d9f73a15ecd06c1c570e0b76bd309d621bb4050f69"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vaegattb.wav",
+      "bytes": 42776,
+      "sha256": "35a289b4398df81dfb33908fbce7023ea39e3f68f8dc91955368eb0c755b23c4"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/vapoar2b.wav",
       "bytes": 47672,
       "sha256": "ccf9569986c704142cc37e7fe97cbd39e9bd4e38ff0dfee184c48de09f3ad03f"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vapoat1a.wav",
+      "bytes": 44806,
+      "sha256": "b2ef9dd5ccaa84e5d0569e9e0bb9695c65d00746790ef912f9a82a9d33908a99"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vapoat2a.wav",
@@ -43475,6 +43690,16 @@
       "path": "mods/rtsai/standalone/audio/sfx/vapoat2c.wav",
       "bytes": 42776,
       "sha256": "478c6ca7ec7896348d602f2d630ca3d55303d2a229dad17c424bdcddddfbe7ec"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vbleatta.wav",
+      "bytes": 42776,
+      "sha256": "81799e672adfdae94ba0d4cb625c89725de430090e96d88066f7c0f3107c7244"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vbleattb.wav",
+      "bytes": 42776,
+      "sha256": "a261c2699b5ed8b038b56adaf272d7edcfc30b07925972911dcfab4a2038f1c2"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vblhatta.wav",
@@ -43492,6 +43717,11 @@
       "sha256": "252cf4d0a28d927703d521962e496f0d7fde620626f17bcb38d46aae3610306b"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/vdemdiea.wav",
+      "bytes": 87494,
+      "sha256": "e8271bc3bc07f55b48fd7f5cddda2dc0efa276f958d0ffdb4296ac4df002804e"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/vdesatta.wav",
       "bytes": 46834,
       "sha256": "e4d96bbafd5ee4a7abcbe359faea15f4a04d0c30b5210caafb40cd0f64afc8fd"
@@ -43500,6 +43730,11 @@
       "path": "mods/rtsai/standalone/audio/sfx/vdesattb.wav",
       "bytes": 44806,
       "sha256": "105b310970f3a0b89265716ad6fc397971bd8bf498818070ef6079adbdd268aa"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vdolatta.wav",
+      "bytes": 97682,
+      "sha256": "9b840c8765c74951ab4ac5f9d96aa6392d61d0033cd7298aa200514821f0f888"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vflaat1a.wav",
@@ -43530,6 +43765,16 @@
       "path": "mods/rtsai/standalone/audio/sfx/vflaat2d.wav",
       "bytes": 26504,
       "sha256": "6dce5da19d6f85358c4347888377ee62781d440356f11685cf8e83604aefc434"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vgramoa.wav",
+      "bytes": 44806,
+      "sha256": "a606733fa2872e6b87cbd7932036d3b1e37cf5b5305f70b8f66de4f873615339"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vgramoc.wav",
+      "bytes": 44806,
+      "sha256": "c858b69e6954a3ebfa00e6a74702f62d94347308d9d12a9f0ec596fc5c7da941"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vgriatta.wav",
@@ -43567,9 +43812,44 @@
       "sha256": "2e2e5eea4a264755d66bd5eb72c95e3168cb128881d845bf4127f64b1198842c"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/vifvat2a.wav",
+      "bytes": 42776,
+      "sha256": "5897b7d7bdfc109169ef6a4e959222c9c387680c08f8f84d4d48f0a1420cd0ba"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vifvat2b.wav",
+      "bytes": 42776,
+      "sha256": "c69aa447c461fe9c90774b85a907f2005d82dba31245b06f129ae07eb6965d9e"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vifvat2c.wav",
+      "bytes": 42776,
+      "sha256": "2dc129fa927702f5dab2c0dfec718e412409365dfc3b6a37f03c4a91842a71ac"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vifvatta.wav",
+      "bytes": 42776,
+      "sha256": "3fcf7e5132918125fce76a38ee786a089e75af383fb5d587c801ba4258175010"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vifvrepa.wav",
+      "bytes": 42776,
+      "sha256": "5f39571d3a204462b195588f8cc805cbcd5e3bd56f1c05b37bd180df56627254"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/vintatta.wav",
       "bytes": 42776,
       "sha256": "8f7dac26d2a82aefc5aa84631acf353242974c1018d033ed37d13c84c60db020"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vkiratta.wav",
+      "bytes": 42776,
+      "sha256": "29cc5ba13c09aec5f6e345f0e77f8223e49c62b5dea99b0b10e8d957b4ecd492"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vmiratta.wav",
+      "bytes": 44806,
+      "sha256": "3411de38d6edf26d059344eb20fa16c5d1802e929e93b950b3eadf72f41036ee"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vnavupa.wav",
@@ -43580,6 +43860,11 @@
       "path": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
       "bytes": 24432,
       "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vpriatta.wav",
+      "bytes": 44806,
+      "sha256": "a3b6b317a2b1eb713fe5e3255f4561757a4c68c148b0b301763134a088ef32ed"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vrhiatta.wav",
@@ -43602,9 +43887,44 @@
       "sha256": "05edaf9c1f1414b4eb7932a5a193a12fc0182930fe225f1422968cc445cfdc9c"
     },
     {
+      "path": "mods/rtsai/standalone/audio/sfx/vsquat1a.wav",
+      "bytes": 97682,
+      "sha256": "cc6fa4241a9850d8e4b800da78670dc97e11d3a19a22755191a2128ce3781f00"
+    },
+    {
       "path": "mods/rtsai/standalone/audio/sfx/vsubatta.wav",
       "bytes": 97682,
       "sha256": "e0c4565864bcda6cec262c28c9c01d2429d040d6a1fcb56867e5f2f4b537e559"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vtadatta.wav",
+      "bytes": 44806,
+      "sha256": "bcb97bf011bcc65826b049d7745d90f451375d09cbf727eb848295808f7d7d8f"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vtadattb.wav",
+      "bytes": 44806,
+      "sha256": "6f413e906e9b28d47b93ca1bbf3c59a8badc10511d27790620874c7558c763a3"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vtadattc.wav",
+      "bytes": 44806,
+      "sha256": "0b4657d982d8ba8a207329b3b04a77eaa52242e4a1c07af3b7c31867360e1c36"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vteratta.wav",
+      "bytes": 42776,
+      "sha256": "4bf8100f48255b1ceb11430a61c9e17904c461f32e5a419c77b889db47a950d6"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vtesatta.wav",
+      "bytes": 44806,
+      "sha256": "22a62142702b95e37b3da7c78146818d140944d5e8e494ab9ca72aa941c83b10"
+    },
+    {
+      "path": "mods/rtsai/standalone/audio/sfx/vtesattb.wav",
+      "bytes": 44806,
+      "sha256": "ffaf7d5e6a30952ae2b58ca259465bb9ae2b8ad5255c46d25b8b05848b72c29a"
     },
     {
       "path": "mods/rtsai/standalone/audio/sfx/vwaratta.wav",
@@ -45823,8 +46143,8 @@
     },
     {
       "path": "mods/rtsai/standalone/names.ftl",
-      "bytes": 2316,
-      "sha256": "63dc26c48e89ed974256791ed64b97606ae2aead5a4a2155f27200fe37bb1548"
+      "bytes": 7885,
+      "sha256": "d63754797f47c96818450697ea25b89b1d15ce744dfe6bbca0248fe49c0b80fc"
     },
     {
       "path": "mods/rtsai/standalone/palettes/general.pal",
@@ -55195,6 +55515,321 @@
       "path": "tools/terrain/blender_resources.py",
       "bytes": 5826,
       "sha256": "224d9a999877f1f01491744db5ae0907524443c9023e8efc5ff33f5c0269ce05"
+    },
+    {
+      "path": "mods/rtsai/campaigns/countries.yaml",
+      "bytes": 25321,
+      "sha256": "d3c36380639ff5f78478374695dbbbd6f5a75a49c6daf14deeda3d5e26418193"
+    },
+    {
+      "path": "mods/rtsai/campaigns/country-notifications.yaml",
+      "bytes": 443,
+      "sha256": "c8a2212cd74762d7691451a4b38e05c7f3837022b3d875df7214a104774b2814"
+    },
+    {
+      "path": "mods/rtsai/campaigns/country-sequences.yaml",
+      "bytes": 49271,
+      "sha256": "ef66772e14a7c2b41663f2388a55bc275db2a0fa04be9e0440c1f30144edd34b"
+    },
+    {
+      "path": "mods/rtsai/campaigns/country-voices.yaml",
+      "bytes": 618,
+      "sha256": "433b5cac19658bbfcc0e9a83a372d6052d73d5352e37e282e211d2bb81394f5a"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/bab-al-mandab-passage/map.bin",
+      "bytes": 55313,
+      "sha256": "5b4e1802615245664d4c6c60205395179118a9946db192f086eecb29f866260d"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/bab-al-mandab-passage/map.png",
+      "bytes": 760,
+      "sha256": "f2a65219c80cd50ed3b91012ed47f7ec062e04a9617b07de85e5d764d45a3337"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/bab-al-mandab-passage/map.yaml",
+      "bytes": 6491,
+      "sha256": "f450b37435ae728f22fc5f5a87bc59b86cfb35e9536a0446352e3e719a32d029"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/haitan-network/map.bin",
+      "bytes": 55313,
+      "sha256": "565f112f9d90d12b6d68992e96d78068bf3b3f671a4db398f1112bb343d384bc"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/haitan-network/map.png",
+      "bytes": 1114,
+      "sha256": "fda7dd58a9ba0ef2c672e4053da43a7acff604242cadcba028c17e8d12aeb427"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/haitan-network/map.yaml",
+      "bytes": 5133,
+      "sha256": "f1b602db7d8f696a65f6437cae7ef896c653a60eab81f65fb784ed6930d42549"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/hezbollah-relay/map.bin",
+      "bytes": 49169,
+      "sha256": "22e0086eac818074a195b8d7ec3d96720d95c9b68e4994e3a70425724788d7c5"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/hezbollah-relay/map.png",
+      "bytes": 4214,
+      "sha256": "acd8011139fa9f275f784ca6e83f41ea85bab1d1be653b76fb4e4364635f8537"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/hezbollah-relay/map.yaml",
+      "bytes": 2628,
+      "sha256": "c55236d174627ffae533d0e5d447ed5f3a9015414b13c3a5feb136af1f394b05"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/hodeidah-lifeline/map.bin",
+      "bytes": 55313,
+      "sha256": "29410f53f232411f64ecd0eef6b80fe4997e6c4038667285ddde47be50a35380"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/hodeidah-lifeline/map.png",
+      "bytes": 1419,
+      "sha256": "2906c930ea7ee1590ba7600a24fb838385fed054e92c25adc74aeb8a6e1dfd87"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/hodeidah-lifeline/map.yaml",
+      "bytes": 4214,
+      "sha256": "1958cb857875fa3419800849f7c810ac3e9318c31ff503b88ce77d4d1c92286e"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/jizan-corridor/map.bin",
+      "bytes": 55313,
+      "sha256": "29410f53f232411f64ecd0eef6b80fe4997e6c4038667285ddde47be50a35380"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/jizan-corridor/map.png",
+      "bytes": 1419,
+      "sha256": "2906c930ea7ee1590ba7600a24fb838385fed054e92c25adc74aeb8a6e1dfd87"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/jizan-corridor/map.yaml",
+      "bytes": 4450,
+      "sha256": "c6a0cc41da9157e7ed5d99ef3e92b855f07c0981eb3abf506e76626fa0f79ade"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/straits-shield/map.bin",
+      "bytes": 221201,
+      "sha256": "f3f55f7218fa2a19ef89260c0d4d5db2c044cea886f48e6c54395fdb68f8ffa9"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/straits-shield/map.png",
+      "bytes": 4288,
+      "sha256": "1463b6ed99997d2e6b1ca35c5e9d0b5399e2be4427729060299ba8a6a1bd2b47"
+    },
+    {
+      "path": "mods/rtsai/campaigns/maps/straits-shield/map.yaml",
+      "bytes": 4952,
+      "sha256": "3ddcc29a3d93f6880474ded32f336057fe459eb2dc9e8f22a9867d2acd958787"
+    },
+    {
+      "path": "mods/rtsai/campaigns/missions.json",
+      "bytes": 13371,
+      "sha256": "cbf3f5de2a16adc8620dd1b8f6105eb5327f5ceb8537b78f07e9e44e72e66eea"
+    },
+    {
+      "path": "mods/rtsai/campaigns/tree1.png",
+      "bytes": 618,
+      "sha256": "bb9c4407ce527b51c926f0668c2f80caec3b002ffbb638deeec2cd7902de70bd"
+    },
+    {
+      "path": "mods/rtsai/campaigns/tree2.png",
+      "bytes": 621,
+      "sha256": "327aeec589adcf65e4dd52369088403488be59e22b51b412ce649fac00c647e4"
+    },
+    {
+      "path": "mods/rtsai/campaigns/tree3.png",
+      "bytes": 622,
+      "sha256": "c9b4ea4fc9b0d74fc51522cee199dc8749607e558059b43bb09ead47c84c7ad6"
+    },
+    {
+      "path": "mods/rtsai/campaigns/tree4.png",
+      "bytes": 620,
+      "sha256": "c86c7a97fc6860ea5e5367f9e69cc13690cf39daac53025369e3b3f9ae4120b9"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/bab-al-mandab-passage/map.bin",
+      "bytes": 55313,
+      "sha256": "0e3aefb06096b2d5cb0a279707c8104f15321997233d544c84f01327d749e444"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/bab-al-mandab-passage/map.png",
+      "bytes": 760,
+      "sha256": "f2a65219c80cd50ed3b91012ed47f7ec062e04a9617b07de85e5d764d45a3337"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/bab-al-mandab-passage/map.yaml",
+      "bytes": 6422,
+      "sha256": "58abea5f2431bdcff62e375e59908a677c6c2ffd190dff34cee96c593e393d88"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/haitan-network/map.bin",
+      "bytes": 55313,
+      "sha256": "39185ad492943b59440f6cfc30ae21431f19cec2d6d1fc272cca09435430f30e"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/haitan-network/map.png",
+      "bytes": 1114,
+      "sha256": "fda7dd58a9ba0ef2c672e4053da43a7acff604242cadcba028c17e8d12aeb427"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/haitan-network/map.yaml",
+      "bytes": 5092,
+      "sha256": "4de92924ef818c631de5259eb813dff8e68e5e97e4ccaf03a638a57d2d01d05d"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/hezbollah-relay/map.bin",
+      "bytes": 49169,
+      "sha256": "e30991b06dc751ecba09d3e2cadbb89950ab602726c8e47965f064b3b6c2a6e7"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/hezbollah-relay/map.png",
+      "bytes": 4214,
+      "sha256": "acd8011139fa9f275f784ca6e83f41ea85bab1d1be653b76fb4e4364635f8537"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/hezbollah-relay/map.yaml",
+      "bytes": 2633,
+      "sha256": "d56dd0e365d8ff3e0894c1758f562ef2e4f80734859a8b43bd5f726ea4f18bf4"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/hodeidah-lifeline/map.bin",
+      "bytes": 55313,
+      "sha256": "2d4331b4c4dc106ce8bfd8c19876ba4fd58307f60430ffa2cb625c95134ff703"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/hodeidah-lifeline/map.png",
+      "bytes": 1419,
+      "sha256": "2906c930ea7ee1590ba7600a24fb838385fed054e92c25adc74aeb8a6e1dfd87"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/hodeidah-lifeline/map.yaml",
+      "bytes": 4218,
+      "sha256": "e8883630ecf7075b5ea902581817d861b080d683a873a74d4caf7e119f7317f1"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/jizan-corridor/map.bin",
+      "bytes": 55313,
+      "sha256": "2d4331b4c4dc106ce8bfd8c19876ba4fd58307f60430ffa2cb625c95134ff703"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/jizan-corridor/map.png",
+      "bytes": 1419,
+      "sha256": "2906c930ea7ee1590ba7600a24fb838385fed054e92c25adc74aeb8a6e1dfd87"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/jizan-corridor/map.yaml",
+      "bytes": 4453,
+      "sha256": "268c3ef81557fca5f93177a98e80c9896ae9bc9e8e8478c99d49a466867f3d0a"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/straits-shield/map.bin",
+      "bytes": 221201,
+      "sha256": "9a5923b10651851d8b550128c06bde00c4d91522610285b47d68d7e48507bcc9"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/straits-shield/map.png",
+      "bytes": 4288,
+      "sha256": "1463b6ed99997d2e6b1ca35c5e9d0b5399e2be4427729060299ba8a6a1bd2b47"
+    },
+    {
+      "path": "mods/rtsai-topdown/campaigns/maps/straits-shield/map.yaml",
+      "bytes": 4883,
+      "sha256": "6afa44e6029bcd4416b659c3067d39747bf6d6e2f0c3aa060071dc65e0174b7e"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/blank/map.bin",
+      "bytes": 38417,
+      "sha256": "0fe1056603348c369c3cc4aefabda59070dcfbc62b1542e801318ad7d0d10c1b"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/blank/map.png",
+      "bytes": 1556,
+      "sha256": "5c1c3b7a6860f8551c4cbc370d6ab53d791859a03782f2ca6d4f70812ef67e45"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/blank/map.yaml",
+      "bytes": 863,
+      "sha256": "dfd27c55cbf480b0ebd995f898726c0e44b02f34ceb19128c8ad060473843d39"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/classic-coast/map.bin",
+      "bytes": 38417,
+      "sha256": "a2f4b04daec6832359c6e89fcbf9c17ace8e88004fd6e7cd10b7ef39c4d95f40"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/classic-coast/map.png",
+      "bytes": 1250,
+      "sha256": "97df592cfc964ef0058e6f47c535cfccfc01a1e16979535d4d098c259ac79166"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/classic-coast/map.yaml",
+      "bytes": 855,
+      "sha256": "de8c3498be37fa0a47fe0b968859c3b0fd4438fe1a12cf290a28a19b67ad5362"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/classic-frontier/map.bin",
+      "bytes": 38417,
+      "sha256": "0fe1056603348c369c3cc4aefabda59070dcfbc62b1542e801318ad7d0d10c1b"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/classic-frontier/map.png",
+      "bytes": 1556,
+      "sha256": "5c1c3b7a6860f8551c4cbc370d6ab53d791859a03782f2ca6d4f70812ef67e45"
+    },
+    {
+      "path": "mods/rtsai-topdown/maps/classic-frontier/map.yaml",
+      "bytes": 858,
+      "sha256": "c993628c37d18c176c892750a7e3ff7e8d1a05018da435f94f926a2d4eee74cf"
+    },
+    {
+      "path": "mods/rtsai-topdown/mod.yaml",
+      "bytes": 12050,
+      "sha256": "194aca103e53ea5441802385ec0fceaae615d70023df85b523a7263beac6b51a"
+    },
+    {
+      "path": "mods/rtsai-topdown/mode.ftl",
+      "bytes": 40,
+      "sha256": "52cf946c391e31eca43ef41cb85b310b6064ba838ac716c9d2d0f61f1a643cca"
+    },
+    {
+      "path": "mods/rtsai-topdown/rules.yaml",
+      "bytes": 10705,
+      "sha256": "7739beb14e8a647474f27156ba91bebd0e49cfc8250f5779c4b45b4cffaea6e0"
+    },
+    {
+      "path": "mods/rtsai-topdown/terrain/0.png",
+      "bytes": 1419,
+      "sha256": "7bef005628279eacb98c786c9b205c064728b3c9bc2420fdf94df529d52ec6a6"
+    },
+    {
+      "path": "mods/rtsai-topdown/terrain/1.png",
+      "bytes": 1424,
+      "sha256": "9a382ad68fef0eabe67575f8b2fd2cee7f303763539ace48a100cbd1f9a33af9"
+    },
+    {
+      "path": "mods/rtsai-topdown/terrain/2.png",
+      "bytes": 1419,
+      "sha256": "6bde826a8f9e437648f47741e2c6ad2669de073c9946f45c3ed71acc9022373f"
+    },
+    {
+      "path": "mods/rtsai-topdown/terrain/3.png",
+      "bytes": 1426,
+      "sha256": "6e8b6232708d522a307a88c752e27908cf1e636a8d6b9920a339a4db2617f5e8"
+    },
+    {
+      "path": "mods/rtsai-topdown/terrain/terrain.pal",
+      "bytes": 768,
+      "sha256": "049b8babaa11bf7a678639416e4cd3aa6dd6b2c0739abd06cdf709a420c3c015"
+    },
+    {
+      "path": "mods/rtsai-topdown/tileset.yaml",
+      "bytes": 1892,
+      "sha256": "c5fb37fa0169133fc34c934a94db8063489a06905d5d57ec8fc8907859714ded"
     }
   ],
   "retainedArtSources": [
@@ -129680,8 +130315,30 @@
   "counts": {
     "preservedEntries": 5104,
     "uniquePreservedObjects": 1202,
-    "installedResources": 3892,
+    "installedResources": 4019,
     "retainedArtSources": 12413,
     "archiveBytes": 121151168
-  }
+  },
+  "installedHistory": [
+    {
+      "revision": "standalone-before-dual-mode-a2c6dfa",
+      "replaced": [
+        {
+          "path": "mods/rtsai/modern-factions/eva-notifications.yaml",
+          "bytes": 700,
+          "sha256": "06f444aa471a5d12f7bd61c14e5a0b929a7a959c8f12f237c3d37f6c3e5fdd43"
+        },
+        {
+          "path": "mods/rtsai/standalone/audio/PROVENANCE.json",
+          "bytes": 330950,
+          "sha256": "f8d035b79780d8e81c1f5387e8b2a6068cd38bf5ed107a05a23923b0bdbf279c"
+        },
+        {
+          "path": "mods/rtsai/standalone/names.ftl",
+          "bytes": 2316,
+          "sha256": "63dc26c48e89ed974256791ed64b97606ae2aead5a4a2155f27200fe37bb1548"
+        }
+      ]
+    }
+  ]
 }

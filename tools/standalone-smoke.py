@@ -62,6 +62,7 @@ def main():
                          "observe.lua: camera pans between bot bases, lua.log gets a per-bot actor census")
     ap.add_argument("--set", action="append", default=[], help="extra engine setting, e.g. Game.IntroductionPromptVersion=99")
     ap.add_argument("--mod", default="rtsai", help="mod id to launch (rtsai-classic needs content: not run here)")
+    ap.add_argument("--switch-mode", choices=["rtsai", "rtsai-topdown"], help="exercise the in-game mode dialog and reload")
     ap.add_argument("--out", type=Path, required=True)
     a = ap.parse_args()
 
@@ -105,6 +106,8 @@ def main():
             args.append(f"Launch.Faction={a.faction}")
     env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENRA_AI_", "RTSAI_"))}
     env.update(OPENRA_AI_HOST="0", OPENRA_AI_COMPANION="0", OPENRA_AI_DISABLE_AUTOSTART="1", OPENRA_DISPLAY_SCALE="1")
+    if a.switch_mode:
+        env["RTSAI_VERIFY_MODE_SWITCH"] = a.switch_mode
 
     report = {"mode": a.mode, "args": args[2:], "grabs": []}
     with game_lock():
