@@ -9,13 +9,15 @@ R2QilinGun:
 
 # Round 5: the coaxial machine gun of the Allied-side MBTs (Qilin, Bozkir, M1A2S, Merkava). Their tanks failed
 # to kill the infantry-led armies that beat them (the main guns do 25% to infantry); the coax gives each tank
-# about one rifleman's fire.
+# about one rifleman's fire. Round 6: damage 16 -> 12. At 16 the Allied side scored 66% against the Soviet side on
+# main and 65% on Harbor Line (round-5 finals); at 12 it was 52-54% on main in the round-6 probes. Iran's Karrar
+# has it too since round 6.
 R2QilinCoax:
 	Inherits: M60
 	Range: 5c0
 	ReloadDelay: 20
 	Warhead@1Dam: SpreadDamage
-		Damage: 16
+		Damage: 12
 
 R2KarrarGun:
 	Inherits: 120mm

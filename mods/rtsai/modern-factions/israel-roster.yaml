@@ -91,8 +91,10 @@ r2ilat:
 		Prerequisites: ~faction.israel, gapile
 		BuildPaletteOrder: 20
 		Description: levant-r2ilat-description
+	# Round 6 (owner: Israel below Hezbollah): 500 -> 550. Israel's second killer: 17-20% of its kills at
+	# 1.3-1.4 destroyed per credit.
 	Valued:
-		Cost: 500
+		Cost: 550
 	Health:
 		HP: 95
 	Mobile:

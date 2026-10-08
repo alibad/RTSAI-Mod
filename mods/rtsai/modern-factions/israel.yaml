@@ -107,11 +107,12 @@ r2merkava:
 		Prerequisites: ~faction.israel, gaweap
 		Description: levant-r2merkava-description
 	# Same gun as the M1A2S with 23% more HP: 1450 traded 0.63 per credit. Round 5: 1250 -> 1300 with the coaxial
-	# machine gun (R2QilinCoax), 0.82 -> 1.47 destroyed per credit.
+	# machine gun (R2QilinCoax), 0.82 -> 1.47 destroyed per credit. Round 6 (owner: Israel below Hezbollah):
+	# 1300 -> 1400 and HP 640 -> 580, still above the M1A2S's 520. It made a third of Israel's kills.
 	Valued:
-		Cost: 1300
+		Cost: 1400
 	Health:
-		HP: 640
+		HP: 580
 	Armor:
 		Type: Heavy
 	Mobile:
