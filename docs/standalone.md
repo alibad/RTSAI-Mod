@@ -129,6 +129,18 @@ edge (fixed in Phase 3).
       game from 32.9 to 25.1 minutes. First-slot score was 47%, so the map stays fair.
     - The two gem fords were then widened by 50% (half-width 2.6 to 3.9 cells), so the combined draw rate lands
       safely under 15%.
+    - **Result** (balance round 5 final: 841e844 with the round-5 rules, 252 games): draws are 16% overall, Harbor
+      Line 11% and Twin Fords 21%. Every faction scores 43–60%, and the Allied side scores 54% (46–62) against the
+      Soviet side. See `docs/balance.md`.
+    - **Per-map side lean.** The Allied side scores 65% (54–75) on Harbor Line and 42% (32–54) on Twin Fords.
+      - My call: no map change. Both maps are exactly symmetric, so their geometry gives neither start position an
+        edge. A side lean comes from how the rosters fit the terrain:
+        - Harbor Line is open ground with a sea;
+        - Twin Fords is crossings that favour massed infantry and rockets.
+      - Harbor Line was 40% before the round-5 rules (coaxial machine guns on the Allied-side tanks), so the lean
+        there follows the rules. Twin Fords' 42% is within noise.
+      - Biasing a symmetric map toward one side would only hide a roster question. The levers are in the rules
+        (open-field tank fights; the naval units on Harbor Line). This is left for the next balance round.
 - `--check-standalone` also fails on chrome sheets that are not power-of-two sized (the renderer refuses them at the
   first draw). `--list-placeholders` prints every placeholder still in use.
 
