@@ -1,0 +1,5834 @@
+{
+"cursors": [],
+"models": [
+"aegis.hva",
+"aegis.vxl",
+"asw.hva",
+"asw.vxl",
+"beag.hva",
+"beag.vxl",
+"bus.hva",
+"bus.vxl",
+"car.hva",
+"car.vxl",
+"carrier.hva",
+"carrier.vxl",
+"cdest.hva",
+"cdest.vxl",
+"cdestwo.hva",
+"cdestwo.vxl",
+"cmin.hva",
+"cmin.vxl",
+"cmon.hva",
+"cmon.vxl",
+"cona.hva",
+"cona.vxl",
+"cop.hva",
+"cop.vxl",
+"cplane.hva",
+"cplane.vxl",
+"cruise.hva",
+"cruise.vxl",
+"dest.hva",
+"dest.vxl",
+"destwo.hva",
+"destwo.vxl",
+"dred.hva",
+"dred.vxl",
+"euroc.hva",
+"euroc.vxl",
+"falc.hva",
+"falc.vxl",
+"flaktur.hva",
+"flaktur.vxl",
+"flata.hva",
+"flata.vxl",
+"fv.hva",
+"fv.vxl",
+"fvtur.hva",
+"fvtur.vxl",
+"fvtur1.hva",
+"fvtur1.vxl",
+"fvtur2.hva",
+"fvtur2.vxl",
+"fvtur3.hva",
+"fvtur3.vxl",
+"gtgcanbarl.hva",
+"gtgcanbarl.vxl",
+"gtgcantur.hva",
+"gtgcantur.vxl",
+"gtnk.hva",
+"gtnk.vxl",
+"gtnkbarl.hva",
+"gtnkbarl.vxl",
+"gtnktur.hva",
+"gtnktur.vxl",
+"harv.hva",
+"harv.vxl",
+"harvtur.hva",
+"harvtur.vxl",
+"hind.hva",
+"hind.vxl",
+"hornet.hva",
+"hornet.vxl",
+"horv.hva",
+"horv.vxl",
+"htk.hva",
+"htk.vxl",
+"htkbarl.hva",
+"htkbarl.vxl",
+"htktur.hva",
+"htktur.vxl",
+"htnk.hva",
+"htnk.vxl",
+"htnkbarl.hva",
+"htnkbarl.vxl",
+"htnktur.hva",
+"htnktur.vxl",
+"hwtz.hva",
+"hwtz.vxl",
+"hyd.hva",
+"hyd.vxl",
+"laser.hva",
+"laser.vxl",
+"lcrf.hva",
+"lcrf.vxl",
+"limo.hva",
+"limo.vxl",
+"ltnk.hva",
+"ltnk.vxl",
+"ltnkbarl.hva",
+"ltnkbarl.vxl",
+"ltnktur.hva",
+"ltnktur.vxl",
+"mcv.hva",
+"mcv.vxl",
+"mtnk.hva",
+"mtnk.vxl",
+"mtnkbarl.hva",
+"mtnkbarl.vxl",
+"mtnktur.hva",
+"mtnktur.vxl",
+"outp.hva",
+"outp.vxl",
+"pdplane.hva",
+"pdplane.vxl",
+"pick.hva",
+"pick.vxl",
+"propa.hva",
+"propa.vxl",
+"ptruck.hva",
+"ptruck.vxl",
+"rtnk.hva",
+"rtnk.vxl",
+"sam.hva",
+"sam.vxl",
+"shad.hva",
+"shad.vxl",
+"smcv.hva",
+"smcv.vxl",
+"sref.hva",
+"sref.vxl",
+"sreftur.hva",
+"sreftur.vxl",
+"sreftur1.hva",
+"sreftur1.vxl",
+"sreftur2.hva",
+"sreftur2.vxl",
+"sreftur3.hva",
+"sreftur3.vxl",
+"stang.hva",
+"stang.vxl",
+"sub.hva",
+"sub.vxl",
+"subt.hva",
+"subt.vxl",
+"suvb.hva",
+"suvb.vxl",
+"suvw.hva",
+"suvw.vxl",
+"taxi.hva",
+"taxi.vxl",
+"tnkd.hva",
+"tnkd.vxl",
+"tractor.hva",
+"tractor.vxl",
+"trs.hva",
+"trs.vxl",
+"trucka.hva",
+"trucka.vxl",
+"truckb.hva",
+"truckb.vxl",
+"ttnk.hva",
+"ttnk.vxl",
+"ttnktur.hva",
+"ttnktur.vxl",
+"tug.hva",
+"tug.vxl",
+"v3.hva",
+"v3.vxl",
+"vlad.hva",
+"vlad.vxl",
+"wini.hva",
+"wini.vxl",
+"zep.hva",
+"zep.vxl"
+],
+"note": "Names, frame counts and frame sizes of EA files the RA2-mode mod references, measured by tools/standalone-audit.py. No EA pixels, samples or palette values. Input to the placeholder build.",
+"palettes": [
+"anim.pal",
+"unittem.pal"
+],
+"sprites": {
+"120mm.shp": {
+"frames": 1,
+"h": 24,
+"image": "120mm",
+"kind": "effect",
+"w": 24
+},
+"adog.shp": {
+"frames": 344,
+"h": 72,
+"image": "adog",
+"kind": "infantry",
+"w": 74
+},
+"adogicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "adog",
+"kind": "icon",
+"w": 60
+},
+"adogp.shp": {
+"frames": 64,
+"h": 72,
+"image": "adog",
+"kind": "infantry",
+"w": 74
+},
+"agisicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "aegis",
+"kind": "icon",
+"w": 60
+},
+"ahrvicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "cmin",
+"kind": "icon",
+"w": 60
+},
+"all.shp": {
+"frames": 328,
+"h": 90,
+"image": "all",
+"kind": "infantry",
+"w": 138
+},
+"ammo01.shp": {
+"frames": 6,
+"h": 60,
+"image": "ammo01",
+"kind": "scenery",
+"w": 120
+},
+"aparicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "icon",
+"kind": "effect",
+"w": 60
+},
+"apmuzzle.shp": {
+"frames": 13,
+"h": 36,
+"image": "apoc",
+"kind": "vehicle",
+"w": 36
+},
+"apocexp.shp": {
+"frames": 16,
+"h": 114,
+"image": "explosion",
+"kind": "effect",
+"w": 84
+},
+"armor.shp": {
+"frames": 23,
+"h": 37,
+"image": "crate-effects",
+"kind": "effect",
+"w": 33
+},
+"asaticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gaspysat",
+"kind": "icon",
+"w": 60
+},
+"ayaricon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gayard",
+"kind": "icon",
+"w": 60
+},
+"bbblelrg.shp": {
+"frames": 15,
+"h": 34,
+"image": "bbblelrg",
+"kind": "effect",
+"w": 32
+},
+"beagicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "beag",
+"kind": "icon",
+"w": 60
+},
+"bolticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "icon",
+"kind": "effect",
+"w": 60
+},
+"bombcurs.shp": {
+"frames": 13,
+"h": 43,
+"image": "bombcurs",
+"kind": "effect",
+"w": 55
+},
+"bridgb.tem": {
+"frames": 36,
+"h": 242,
+"image": "bridgb1",
+"kind": "scenery",
+"w": 253
+},
+"bridge.tem": {
+"frames": 36,
+"h": 180,
+"image": "bridge1",
+"kind": "scenery",
+"w": 180
+},
+"brrkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gapile",
+"kind": "icon",
+"w": 60
+},
+"brrlexp1.shp": {
+"frames": 25,
+"h": 192,
+"image": "explosion",
+"kind": "effect",
+"w": 218
+},
+"brrlexp2.shp": {
+"frames": 31,
+"h": 216,
+"image": "explosion",
+"kind": "effect",
+"w": 228
+},
+"burnt01.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt02.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt03.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt04.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt05.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt06.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt07.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt08.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt09.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt10.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumscorches",
+"kind": "effect",
+"w": 120
+},
+"burnt11.tem": {
+"frames": 2,
+"h": 120,
+"image": "largescorches",
+"kind": "effect",
+"w": 120
+},
+"burnt12.tem": {
+"frames": 2,
+"h": 120,
+"image": "largescorches",
+"kind": "effect",
+"w": 120
+},
+"cabhut.shp": {
+"frames": 6,
+"h": 64,
+"image": "cabhut",
+"kind": "scenery",
+"w": 90
+},
+"cacity01.shp": {
+"frames": 6,
+"h": 240,
+"image": "cacity01",
+"kind": "structure",
+"w": 296
+},
+"cacity02.shp": {
+"frames": 6,
+"h": 268,
+"image": "cacity02",
+"kind": "structure",
+"w": 432
+},
+"cacity03.shp": {
+"frames": 6,
+"h": 268,
+"image": "cacity03",
+"kind": "structure",
+"w": 432
+},
+"cacity04.shp": {
+"frames": 6,
+"h": 268,
+"image": "cacity04",
+"kind": "structure",
+"w": 432
+},
+"caoutp.shp": {
+"frames": 8,
+"h": 192,
+"image": "caoutp",
+"kind": "structure",
+"w": 290
+},
+"capofgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "capofgl",
+"kind": "structure",
+"w": 244
+},
+"capofgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "capofgl",
+"kind": "structure",
+"w": 244
+},
+"carricon.shp": {
+"frames": 1,
+"h": 48,
+"image": "carrier",
+"kind": "icon",
+"w": 60
+},
+"carus02a.shp": {
+"frames": 8,
+"h": 374,
+"image": "carus02a",
+"kind": "structure",
+"w": 336
+},
+"carus02b.shp": {
+"frames": 8,
+"h": 374,
+"image": "carus02b",
+"kind": "structure",
+"w": 336
+},
+"castrt02.shp": {
+"frames": 6,
+"h": 112,
+"image": "castrt02",
+"kind": "structure",
+"w": 104
+},
+"castrt03.shp": {
+"frames": 6,
+"h": 112,
+"image": "castrt03",
+"kind": "structure",
+"w": 136
+},
+"castrt04.shp": {
+"frames": 6,
+"h": 112,
+"image": "castrt04",
+"kind": "structure",
+"w": 136
+},
+"cawt01.shp": {
+"frames": 4,
+"h": 104,
+"image": "cawt01",
+"kind": "structure",
+"w": 134
+},
+"ccomand.shp": {
+"frames": 696,
+"h": 72,
+"image": "ccomand",
+"kind": "infantry",
+"w": 118
+},
+"ccomicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "ccomand",
+"kind": "icon",
+"w": 60
+},
+"cgchig04.shp": {
+"frames": 8,
+"h": 376,
+"image": "cachig04",
+"kind": "structure",
+"w": 362
+},
+"cgchig06.shp": {
+"frames": 8,
+"h": 416,
+"image": "cachig06",
+"kind": "structure",
+"w": 380
+},
+"cgnewy04.shp": {
+"frames": 8,
+"h": 428,
+"image": "canewy04",
+"kind": "structure",
+"w": 358
+},
+"cgpars01.shp": {
+"frames": 8,
+"h": 492,
+"image": "capars01",
+"kind": "structure",
+"w": 462
+},
+"cgpars11.shp": {
+"frames": 8,
+"h": 308,
+"image": "capars11",
+"kind": "structure",
+"w": 404
+},
+"cgrus01.shp": {
+"frames": 8,
+"h": 298,
+"image": "carus01",
+"kind": "structure",
+"w": 404
+},
+"cgstl04.shp": {
+"frames": 8,
+"h": 372,
+"image": "castl04",
+"kind": "structure",
+"w": 362
+},
+"cgwash01.shp": {
+"frames": 8,
+"h": 268,
+"image": "cawash01",
+"kind": "structure",
+"w": 316
+},
+"cgwash14.shp": {
+"frames": 8,
+"h": 176,
+"image": "cawash14",
+"kind": "structure",
+"w": 142
+},
+"cgwash15.shp": {
+"frames": 8,
+"h": 210,
+"image": "cawash15",
+"kind": "structure",
+"w": 258
+},
+"cgwsh12.shp": {
+"frames": 8,
+"h": 296,
+"image": "cawsh12",
+"kind": "structure",
+"w": 310
+},
+"chroicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "icon",
+"kind": "effect",
+"w": 60
+},
+"chronosk.shp": {
+"frames": 13,
+"h": 92,
+"image": "explosion",
+"kind": "effect",
+"w": 48
+},
+"city01.shp": {
+"frames": 4,
+"h": 179,
+"image": "city01",
+"kind": "structure",
+"w": 237
+},
+"city02.shp": {
+"frames": 4,
+"h": 209,
+"image": "city02",
+"kind": "structure",
+"w": 341
+},
+"city03.shp": {
+"frames": 4,
+"h": 180,
+"image": "city03",
+"kind": "structure",
+"w": 232
+},
+"city04.shp": {
+"frames": 4,
+"h": 241,
+"image": "city04",
+"kind": "structure",
+"w": 241
+},
+"city05.shp": {
+"frames": 4,
+"h": 240,
+"image": "city05",
+"kind": "structure",
+"w": 285
+},
+"civ1.shp": {
+"frames": 476,
+"h": 70,
+"image": "civ1",
+"kind": "infantry",
+"w": 64
+},
+"civ2.shp": {
+"frames": 476,
+"h": 72,
+"image": "civ2",
+"kind": "infantry",
+"w": 66
+},
+"civ3.shp": {
+"frames": 474,
+"h": 72,
+"image": "civ3",
+"kind": "infantry",
+"w": 76
+},
+"civa.shp": {
+"frames": 476,
+"h": 74,
+"image": "civa",
+"kind": "infantry",
+"w": 60
+},
+"civan.shp": {
+"frames": 534,
+"h": 88,
+"image": "civan",
+"kind": "infantry",
+"w": 104
+},
+"civb.shp": {
+"frames": 476,
+"h": 70,
+"image": "civb",
+"kind": "infantry",
+"w": 62
+},
+"civbbp.shp": {
+"frames": 380,
+"h": 72,
+"image": "civbbp",
+"kind": "infantry",
+"w": 60
+},
+"civbf.shp": {
+"frames": 380,
+"h": 72,
+"image": "civbf",
+"kind": "infantry",
+"w": 70
+},
+"civbfm.shp": {
+"frames": 380,
+"h": 72,
+"image": "civbfm",
+"kind": "infantry",
+"w": 70
+},
+"civbtm.shp": {
+"frames": 380,
+"h": 72,
+"image": "civbtm",
+"kind": "infantry",
+"w": 70
+},
+"civc.shp": {
+"frames": 476,
+"h": 92,
+"image": "civc",
+"kind": "infantry",
+"w": 84
+},
+"civsf.shp": {
+"frames": 476,
+"h": 68,
+"image": "civsf",
+"kind": "infantry",
+"w": 102
+},
+"civsfm.shp": {
+"frames": 478,
+"h": 72,
+"image": "civsfm",
+"kind": "infantry",
+"w": 68
+},
+"civstm.shp": {
+"frames": 472,
+"h": 72,
+"image": "civstm",
+"kind": "infantry",
+"w": 76
+},
+"cleg.shp": {
+"frames": 346,
+"h": 88,
+"image": "cleg",
+"kind": "infantry",
+"w": 74
+},
+"clegicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "cleg",
+"kind": "icon",
+"w": 60
+},
+"clonicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "naclon",
+"kind": "icon",
+"w": 60
+},
+"conquer|wake1.shp": {
+"frames": 15,
+"h": 34,
+"image": "wake",
+"kind": "effect",
+"w": 56
+},
+"cons.shp": {
+"frames": 602,
+"h": 96,
+"image": "e2",
+"kind": "infantry",
+"w": 76
+},
+"cow.shp": {
+"frames": 232,
+"h": 70,
+"image": "cow",
+"kind": "infantry",
+"w": 86
+},
+"crate.tem": {
+"frames": 2,
+"h": 60,
+"image": "crate",
+"kind": "effect",
+"w": 60
+},
+"crater01.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallcraters",
+"kind": "effect",
+"w": 120
+},
+"crater02.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallcraters",
+"kind": "effect",
+"w": 120
+},
+"crater03.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallcraters",
+"kind": "effect",
+"w": 120
+},
+"crater04.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallcraters",
+"kind": "effect",
+"w": 120
+},
+"crater05.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallcraters",
+"kind": "effect",
+"w": 120
+},
+"crater06.tem": {
+"frames": 2,
+"h": 120,
+"image": "smallcraters",
+"kind": "effect",
+"w": 120
+},
+"crater07.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumcraters",
+"kind": "effect",
+"w": 120
+},
+"crater08.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumcraters",
+"kind": "effect",
+"w": 120
+},
+"crater09.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumcraters",
+"kind": "effect",
+"w": 120
+},
+"crater10.tem": {
+"frames": 2,
+"h": 120,
+"image": "mediumcraters",
+"kind": "effect",
+"w": 120
+},
+"crater11.tem": {
+"frames": 2,
+"h": 120,
+"image": "largecraters",
+"kind": "effect",
+"w": 120
+},
+"crater12.tem": {
+"frames": 2,
+"h": 120,
+"image": "largecraters",
+"kind": "effect",
+"w": 120
+},
+"crivexp.shp": {
+"frames": 23,
+"h": 156,
+"image": "explosion",
+"kind": "effect",
+"w": 132
+},
+"crivexp2.shp": {
+"frames": 26,
+"h": 296,
+"image": "explosion",
+"kind": "effect",
+"w": 226
+},
+"csphicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gacsph",
+"kind": "icon",
+"w": 60
+},
+"ctairp.shp": {
+"frames": 8,
+"h": 172,
+"image": "caairp",
+"kind": "structure",
+"w": 172
+},
+"ctairp_a.shp": {
+"frames": 20,
+"h": 172,
+"image": "caairp",
+"kind": "structure",
+"w": 172
+},
+"ctairp_f.shp": {
+"frames": 32,
+"h": 186,
+"image": "caairp",
+"kind": "structure",
+"w": 188
+},
+"ctarmy01.shp": {
+"frames": 6,
+"h": 140,
+"image": "caarmy01",
+"kind": "structure",
+"w": 170
+},
+"ctarmy02.shp": {
+"frames": 6,
+"h": 64,
+"image": "caarmy02",
+"kind": "structure",
+"w": 68
+},
+"ctarmy03.shp": {
+"frames": 6,
+"h": 64,
+"image": "caarmy03",
+"kind": "structure",
+"w": 68
+},
+"ctarmy04.shp": {
+"frames": 6,
+"h": 64,
+"image": "caarmy04",
+"kind": "structure",
+"w": 68
+},
+"ctbarn02.shp": {
+"frames": 8,
+"h": 120,
+"image": "cabarn02",
+"kind": "structure",
+"w": 140
+},
+"ctbunk01.shp": {
+"frames": 8,
+"h": 120,
+"image": "cabunk01",
+"kind": "structure",
+"w": 208
+},
+"ctbunk02.shp": {
+"frames": 8,
+"h": 120,
+"image": "cabunk02",
+"kind": "structure",
+"w": 130
+},
+"ctchig01.shp": {
+"frames": 8,
+"h": 228,
+"image": "cachig01",
+"kind": "structure",
+"w": 350
+},
+"ctchig02.shp": {
+"frames": 8,
+"h": 224,
+"image": "cachig02",
+"kind": "structure",
+"w": 308
+},
+"ctchig03.shp": {
+"frames": 8,
+"h": 308,
+"image": "cachig03",
+"kind": "structure",
+"w": 418
+},
+"ctchig05.shp": {
+"frames": 8,
+"h": 508,
+"image": "cachig05",
+"kind": "structure",
+"w": 780
+},
+"ctcolo01.shp": {
+"frames": 8,
+"h": 222,
+"image": "cacolo01",
+"kind": "structure",
+"w": 342
+},
+"ctcufgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "cacufgl",
+"kind": "structure",
+"w": 244
+},
+"ctcufgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "cacufgl",
+"kind": "structure",
+"w": 244
+},
+"cteur04.shp": {
+"frames": 8,
+"h": 172,
+"image": "caeur04",
+"kind": "structure",
+"w": 250
+},
+"cteur1.shp": {
+"frames": 8,
+"h": 108,
+"image": "caeur1",
+"kind": "structure",
+"w": 118
+},
+"cteur2.shp": {
+"frames": 8,
+"h": 104,
+"image": "caeur2",
+"kind": "structure",
+"w": 126
+},
+"cteuro05.shp": {
+"frames": 6,
+"h": 106,
+"image": "caeuro05",
+"kind": "scenery",
+"w": 124
+},
+"ctfarm01.shp": {
+"frames": 6,
+"h": 118,
+"image": "cafarm01",
+"kind": "structure",
+"w": 154
+},
+"ctfarm02.shp": {
+"frames": 8,
+"h": 118,
+"image": "cafarm02",
+"kind": "structure",
+"w": 144
+},
+"ctfarm06.shp": {
+"frames": 8,
+"h": 254,
+"image": "cafarm06",
+"kind": "structure",
+"w": 262
+},
+"ctfncb.shp": {
+"frames": 64,
+"h": 66,
+"image": "cafncb",
+"kind": "structure",
+"w": 68
+},
+"ctfncp.shp": {
+"frames": 64,
+"h": 100,
+"image": "cafncp",
+"kind": "structure",
+"w": 130
+},
+"ctfncw.shp": {
+"frames": 64,
+"h": 66,
+"image": "cafncw",
+"kind": "structure",
+"w": 68
+},
+"ctfrfgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "cafrfgl",
+"kind": "structure",
+"w": 244
+},
+"ctfrfgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "cafrfgl",
+"kind": "structure",
+"w": 244
+},
+"ctfrma.shp": {
+"frames": 6,
+"h": 116,
+"image": "cafrma",
+"kind": "structure",
+"w": 146
+},
+"ctfrmb.shp": {
+"frames": 6,
+"h": 58,
+"image": "cafrmb",
+"kind": "structure",
+"w": 66
+},
+"ctgard01.shp": {
+"frames": 6,
+"h": 90,
+"image": "cagard01",
+"kind": "structure",
+"w": 116
+},
+"ctgas01.shp": {
+"frames": 8,
+"h": 186,
+"image": "cagas01",
+"kind": "structure",
+"w": 218
+},
+"ctgefgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "cagefgl",
+"kind": "structure",
+"w": 244
+},
+"ctgefgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "cagefgl",
+"kind": "structure",
+"w": 244
+},
+"ctgrd1_a.shp": {
+"frames": 18,
+"h": 90,
+"image": "cagard01",
+"kind": "structure",
+"w": 116
+},
+"cthosp.shp": {
+"frames": 8,
+"h": 298,
+"image": "cahosp",
+"kind": "structure",
+"w": 448
+},
+"cthosp_a.shp": {
+"frames": 8,
+"h": 298,
+"image": "cahosp",
+"kind": "structure",
+"w": 448
+},
+"cthosp_f.shp": {
+"frames": 32,
+"h": 298,
+"image": "cahosp",
+"kind": "structure",
+"w": 448
+},
+"cthse01.shp": {
+"frames": 8,
+"h": 138,
+"image": "cahse01",
+"kind": "structure",
+"w": 160
+},
+"cthse02.shp": {
+"frames": 8,
+"h": 130,
+"image": "cahse02",
+"kind": "structure",
+"w": 192
+},
+"cthse03.shp": {
+"frames": 8,
+"h": 176,
+"image": "cahse03",
+"kind": "structure",
+"w": 226
+},
+"cthse04.shp": {
+"frames": 8,
+"h": 142,
+"image": "cahse04",
+"kind": "structure",
+"w": 200
+},
+"cthse05.shp": {
+"frames": 8,
+"h": 84,
+"image": "cahse05",
+"kind": "structure",
+"w": 124
+},
+"cthse06.shp": {
+"frames": 8,
+"h": 90,
+"image": "cahse06",
+"kind": "structure",
+"w": 140
+},
+"cthse07.shp": {
+"frames": 8,
+"h": 154,
+"image": "cahse07",
+"kind": "structure",
+"w": 176
+},
+"ctind01.shp": {
+"frames": 8,
+"h": 244,
+"image": "caind01",
+"kind": "structure",
+"w": 368
+},
+"ctirfgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "cairfgl",
+"kind": "structure",
+"w": 244
+},
+"ctirfgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "cairfgl",
+"kind": "structure",
+"w": 244
+},
+"ctkrmw.shp": {
+"frames": 96,
+"h": 60,
+"image": "cakrmw",
+"kind": "structure",
+"w": 98
+},
+"ctlab.shp": {
+"frames": 8,
+"h": 174,
+"image": "calab",
+"kind": "structure",
+"w": 200
+},
+"ctlbfgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "calbfgl",
+"kind": "structure",
+"w": 244
+},
+"ctlbfgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "calbfgl",
+"kind": "structure",
+"w": 244
+},
+"ctmex01.shp": {
+"frames": 8,
+"h": 224,
+"image": "camex01",
+"kind": "structure",
+"w": 234
+},
+"ctmex02.shp": {
+"frames": 8,
+"h": 304,
+"image": "camex02",
+"kind": "structure",
+"w": 404
+},
+"ctmex03.shp": {
+"frames": 8,
+"h": 166,
+"image": "camex03",
+"kind": "structure",
+"w": 186
+},
+"ctmex04.shp": {
+"frames": 8,
+"h": 250,
+"image": "camex04",
+"kind": "structure",
+"w": 242
+},
+"ctmex05.shp": {
+"frames": 8,
+"h": 106,
+"image": "camex05",
+"kind": "structure",
+"w": 122
+},
+"ctmiam01.shp": {
+"frames": 8,
+"h": 332,
+"image": "camiam01",
+"kind": "structure",
+"w": 416
+},
+"ctmiam02.shp": {
+"frames": 8,
+"h": 306,
+"image": "camiam02",
+"kind": "structure",
+"w": 460
+},
+"ctmiam03.shp": {
+"frames": 8,
+"h": 308,
+"image": "camiam03",
+"kind": "structure",
+"w": 324
+},
+"ctmiam04.shp": {
+"frames": 6,
+"h": 64,
+"image": "camiam04",
+"kind": "structure",
+"w": 86
+},
+"ctmiam05.shp": {
+"frames": 8,
+"h": 190,
+"image": "camiam05",
+"kind": "structure",
+"w": 242
+},
+"ctmiam06.shp": {
+"frames": 8,
+"h": 238,
+"image": "camiam06",
+"kind": "structure",
+"w": 278
+},
+"ctmiam07.shp": {
+"frames": 8,
+"h": 226,
+"image": "camiam07",
+"kind": "structure",
+"w": 270
+},
+"ctmiam08.shp": {
+"frames": 8,
+"h": 126,
+"image": "camiam08",
+"kind": "structure",
+"w": 192
+},
+"ctmisc01.shp": {
+"frames": 6,
+"h": 42,
+"image": "camisc01",
+"kind": "scenery",
+"w": 42
+},
+"ctmisc02.shp": {
+"frames": 6,
+"h": 42,
+"image": "camisc02",
+"kind": "scenery",
+"w": 42
+},
+"ctmisc03.shp": {
+"frames": 6,
+"h": 42,
+"image": "camisc03",
+"kind": "scenery",
+"w": 66
+},
+"ctmisc04.shp": {
+"frames": 6,
+"h": 44,
+"image": "camisc04",
+"kind": "scenery",
+"w": 40
+},
+"ctmisc05.shp": {
+"frames": 4,
+"h": 62,
+"image": "camisc05",
+"kind": "scenery",
+"w": 74
+},
+"ctmisc06.shp": {
+"frames": 6,
+"h": 84,
+"image": "camisc06",
+"kind": "scenery",
+"w": 172
+},
+"ctmov01.shp": {
+"frames": 6,
+"h": 166,
+"image": "camov01",
+"kind": "structure",
+"w": 194
+},
+"ctmov01_a.shp": {
+"frames": 124,
+"h": 166,
+"image": "camov01",
+"kind": "structure",
+"w": 194
+},
+"ctmov02.shp": {
+"frames": 8,
+"h": 118,
+"image": "camov02",
+"kind": "structure",
+"w": 186
+},
+"ctmov02_a.shp": {
+"frames": 8,
+"h": 118,
+"image": "camov02",
+"kind": "structure",
+"w": 186
+},
+"ctmsc01.shp": {
+"frames": 6,
+"h": 52,
+"image": "camsc01",
+"kind": "scenery",
+"w": 66
+},
+"ctmsc02.shp": {
+"frames": 6,
+"h": 44,
+"image": "camsc02",
+"kind": "scenery",
+"w": 80
+},
+"ctmsc03.shp": {
+"frames": 6,
+"h": 52,
+"image": "camsc03",
+"kind": "scenery",
+"w": 66
+},
+"ctmsc04.shp": {
+"frames": 6,
+"h": 64,
+"image": "camsc04",
+"kind": "scenery",
+"w": 50
+},
+"ctmsc05.shp": {
+"frames": 6,
+"h": 64,
+"image": "camsc05",
+"kind": "scenery",
+"w": 50
+},
+"ctmsc06.shp": {
+"frames": 6,
+"h": 60,
+"image": "camsc06",
+"kind": "scenery",
+"w": 52
+},
+"ctmsc06a.shp": {
+"frames": 8,
+"h": 60,
+"image": "camsc06",
+"kind": "scenery",
+"w": 52
+},
+"ctmsc07.shp": {
+"frames": 6,
+"h": 118,
+"image": "camsc07",
+"kind": "structure",
+"w": 134
+},
+"ctmsc08.shp": {
+"frames": 6,
+"h": 66,
+"image": "camsc08",
+"kind": "structure",
+"w": 96
+},
+"ctmsc09.shp": {
+"frames": 6,
+"h": 68,
+"image": "camsc09",
+"kind": "structure",
+"w": 92
+},
+"ctmsc10.shp": {
+"frames": 8,
+"h": 232,
+"image": "camsc10",
+"kind": "structure",
+"w": 238
+},
+"ctmsc11.shp": {
+"frames": 6,
+"h": 60,
+"image": "camsc11",
+"kind": "scenery",
+"w": 54
+},
+"ctmsc12.shp": {
+"frames": 6,
+"h": 44,
+"image": "camsc12",
+"kind": "scenery",
+"w": 60
+},
+"ctmsc13.shp": {
+"frames": 6,
+"h": 82,
+"image": "camsc13",
+"kind": "scenery",
+"w": 96
+},
+"ctnewy01.shp": {
+"frames": 8,
+"h": 274,
+"image": "canewy01",
+"kind": "structure",
+"w": 412
+},
+"ctnewy05.shp": {
+"frames": 6,
+"h": 440,
+"image": "canewy05",
+"kind": "structure",
+"w": 540
+},
+"ctnewy06.shp": {
+"frames": 8,
+"h": 452,
+"image": "canewy06",
+"kind": "structure",
+"w": 508
+},
+"ctnewy07.shp": {
+"frames": 8,
+"h": 366,
+"image": "canewy07",
+"kind": "structure",
+"w": 394
+},
+"ctnewy08.shp": {
+"frames": 8,
+"h": 374,
+"image": "canewy08",
+"kind": "structure",
+"w": 408
+},
+"ctnewy10.shp": {
+"frames": 8,
+"h": 374,
+"image": "canewy10",
+"kind": "structure",
+"w": 466
+},
+"ctnewy11.shp": {
+"frames": 8,
+"h": 262,
+"image": "canewy11",
+"kind": "structure",
+"w": 372
+},
+"ctnewy12.shp": {
+"frames": 8,
+"h": 298,
+"image": "canewy12",
+"kind": "structure",
+"w": 292
+},
+"ctnewy13.shp": {
+"frames": 8,
+"h": 342,
+"image": "canewy13",
+"kind": "structure",
+"w": 416
+},
+"ctnewy14.shp": {
+"frames": 8,
+"h": 330,
+"image": "canewy14",
+"kind": "structure",
+"w": 416
+},
+"ctnewy15.shp": {
+"frames": 8,
+"h": 252,
+"image": "canewy15",
+"kind": "structure",
+"w": 354
+},
+"ctnewy16.shp": {
+"frames": 8,
+"h": 388,
+"image": "canewy16",
+"kind": "structure",
+"w": 420
+},
+"ctnewy17.shp": {
+"frames": 8,
+"h": 190,
+"image": "canewy17",
+"kind": "structure",
+"w": 264
+},
+"ctnewy18.shp": {
+"frames": 8,
+"h": 200,
+"image": "canewy18",
+"kind": "structure",
+"w": 276
+},
+"ctnewy20.shp": {
+"frames": 8,
+"h": 228,
+"image": "canewy20",
+"kind": "structure",
+"w": 260
+},
+"ctnewy21.shp": {
+"frames": 8,
+"h": 228,
+"image": "canewy21",
+"kind": "structure",
+"w": 302
+},
+"ctnwy05.shp": {
+"frames": 8,
+"h": 412,
+"image": "canwy05",
+"kind": "structure",
+"w": 564
+},
+"ctnwy09.shp": {
+"frames": 8,
+"h": 388,
+"image": "canwy09",
+"kind": "structure",
+"w": 402
+},
+"ctnwy22.shp": {
+"frames": 8,
+"h": 172,
+"image": "canwy22",
+"kind": "structure",
+"w": 250
+},
+"ctnwy23.shp": {
+"frames": 8,
+"h": 386,
+"image": "canwy23",
+"kind": "structure",
+"w": 440
+},
+"ctnwy24.shp": {
+"frames": 8,
+"h": 386,
+"image": "canwy24",
+"kind": "structure",
+"w": 440
+},
+"ctnwy25.shp": {
+"frames": 8,
+"h": 176,
+"image": "canwy25",
+"kind": "structure",
+"w": 300
+},
+"ctnwy26.shp": {
+"frames": 8,
+"h": 288,
+"image": "canwy26",
+"kind": "structure",
+"w": 488
+},
+"ctoild.shp": {
+"frames": 8,
+"h": 122,
+"image": "caoild",
+"kind": "structure",
+"w": 166
+},
+"ctoild_a.shp": {
+"frames": 128,
+"h": 122,
+"image": "caoild",
+"kind": "structure",
+"w": 166
+},
+"ctoild_f.shp": {
+"frames": 16,
+"h": 122,
+"image": "caoild",
+"kind": "structure",
+"w": 166
+},
+"ctoutp.shp": {
+"frames": 6,
+"h": 192,
+"image": "caoutp",
+"kind": "structure",
+"w": 290
+},
+"ctoutp_a.shp": {
+"frames": 40,
+"h": 192,
+"image": "caoutp",
+"kind": "structure",
+"w": 290
+},
+"ctoutp_d.shp": {
+"frames": 4,
+"h": 192,
+"image": "caoutp",
+"kind": "structure",
+"w": 290
+},
+"ctoutp_f.shp": {
+"frames": 16,
+"h": 192,
+"image": "caoutp",
+"kind": "structure",
+"w": 290
+},
+"ctoutpbb.shp": {
+"frames": 4,
+"h": 192,
+"image": "caoutp",
+"kind": "structure",
+"w": 290
+},
+"ctpark01.shp": {
+"frames": 6,
+"h": 46,
+"image": "capark01",
+"kind": "scenery",
+"w": 48
+},
+"ctpark02.shp": {
+"frames": 6,
+"h": 84,
+"image": "capark02",
+"kind": "scenery",
+"w": 122
+},
+"ctpark03.shp": {
+"frames": 6,
+"h": 102,
+"image": "capark03",
+"kind": "scenery",
+"w": 84
+},
+"ctpars02.shp": {
+"frames": 8,
+"h": 274,
+"image": "capars02",
+"kind": "structure",
+"w": 394
+},
+"ctpars04.shp": {
+"frames": 8,
+"h": 180,
+"image": "capars04",
+"kind": "structure",
+"w": 270
+},
+"ctpars05.shp": {
+"frames": 8,
+"h": 180,
+"image": "capars05",
+"kind": "structure",
+"w": 270
+},
+"ctpars06.shp": {
+"frames": 8,
+"h": 180,
+"image": "capars06",
+"kind": "structure",
+"w": 282
+},
+"ctpars07.shp": {
+"frames": 6,
+"h": 48,
+"image": "capars07",
+"kind": "structure",
+"w": 54
+},
+"ctpars08.shp": {
+"frames": 8,
+"h": 286,
+"image": "capars08",
+"kind": "structure",
+"w": 372
+},
+"ctpars09.shp": {
+"frames": 8,
+"h": 298,
+"image": "capars09",
+"kind": "structure",
+"w": 510
+},
+"ctpars10.shp": {
+"frames": 8,
+"h": 212,
+"image": "capars10",
+"kind": "structure",
+"w": 358
+},
+"ctpars12.shp": {
+"frames": 8,
+"h": 222,
+"image": "capars12",
+"kind": "structure",
+"w": 256
+},
+"ctpars13.shp": {
+"frames": 8,
+"h": 212,
+"image": "capars13",
+"kind": "structure",
+"w": 260
+},
+"ctpars14.shp": {
+"frames": 8,
+"h": 212,
+"image": "capars14",
+"kind": "structure",
+"w": 354
+},
+"ctprs03.shp": {
+"frames": 8,
+"h": 308,
+"image": "caprs03",
+"kind": "structure",
+"w": 420
+},
+"ctrufgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "carufgl",
+"kind": "structure",
+"w": 244
+},
+"ctrufgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "carufgl",
+"kind": "structure",
+"w": 244
+},
+"ctrus02c.shp": {
+"frames": 6,
+"h": 60,
+"image": "carus02c",
+"kind": "structure",
+"w": 98
+},
+"ctrus02d.shp": {
+"frames": 6,
+"h": 60,
+"image": "carus02d",
+"kind": "structure",
+"w": 98
+},
+"ctrus02e.shp": {
+"frames": 6,
+"h": 60,
+"image": "carus02e",
+"kind": "structure",
+"w": 98
+},
+"ctrus02f.shp": {
+"frames": 6,
+"h": 60,
+"image": "carus02f",
+"kind": "structure",
+"w": 98
+},
+"ctrus02g.shp": {
+"frames": 6,
+"h": 374,
+"image": "carus02g",
+"kind": "structure",
+"w": 336
+},
+"ctrus03.shp": {
+"frames": 8,
+"h": 214,
+"image": "carus03",
+"kind": "structure",
+"w": 300
+},
+"ctrus04.shp": {
+"frames": 8,
+"h": 234,
+"image": "carus04",
+"kind": "structure",
+"w": 326
+},
+"ctrus05.shp": {
+"frames": 8,
+"h": 242,
+"image": "carus05",
+"kind": "structure",
+"w": 326
+},
+"ctrus06.shp": {
+"frames": 8,
+"h": 242,
+"image": "carus06",
+"kind": "structure",
+"w": 284
+},
+"ctrus07.shp": {
+"frames": 8,
+"h": 60,
+"image": "carus07",
+"kind": "structure",
+"w": 70
+},
+"ctrus08.shp": {
+"frames": 8,
+"h": 144,
+"image": "carus08",
+"kind": "structure",
+"w": 154
+},
+"ctrus09.shp": {
+"frames": 8,
+"h": 188,
+"image": "carus09",
+"kind": "structure",
+"w": 240
+},
+"ctrus10.shp": {
+"frames": 8,
+"h": 106,
+"image": "carus10",
+"kind": "structure",
+"w": 148
+},
+"ctrus11.shp": {
+"frames": 8,
+"h": 106,
+"image": "carus11",
+"kind": "structure",
+"w": 206
+},
+"ctskfgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "caskfgl",
+"kind": "structure",
+"w": 244
+},
+"ctskfgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "caskfgl",
+"kind": "structure",
+"w": 244
+},
+"ctstl01.shp": {
+"frames": 8,
+"h": 228,
+"image": "castl01",
+"kind": "structure",
+"w": 294
+},
+"ctstl02.shp": {
+"frames": 8,
+"h": 224,
+"image": "castl02",
+"kind": "structure",
+"w": 296
+},
+"ctstl03.shp": {
+"frames": 8,
+"h": 216,
+"image": "castl03",
+"kind": "structure",
+"w": 272
+},
+"ctstl05a.shp": {
+"frames": 8,
+"h": 246,
+"image": "castl05a",
+"kind": "structure",
+"w": 294
+},
+"ctstl05b.shp": {
+"frames": 8,
+"h": 246,
+"image": "castl05b",
+"kind": "structure",
+"w": 292
+},
+"ctstl05c.shp": {
+"frames": 8,
+"h": 222,
+"image": "castl05c",
+"kind": "structure",
+"w": 244
+},
+"ctstl05d.shp": {
+"frames": 8,
+"h": 246,
+"image": "castl05d",
+"kind": "structure",
+"w": 258
+},
+"ctstl05e.shp": {
+"frames": 8,
+"h": 224,
+"image": "castl05e",
+"kind": "structure",
+"w": 294
+},
+"ctstl05f.shp": {
+"frames": 8,
+"h": 312,
+"image": "castl05f",
+"kind": "structure",
+"w": 260
+},
+"ctstl05g.shp": {
+"frames": 8,
+"h": 230,
+"image": "castl05g",
+"kind": "structure",
+"w": 256
+},
+"ctstl05h.shp": {
+"frames": 8,
+"h": 210,
+"image": "castl05h",
+"kind": "structure",
+"w": 292
+},
+"ctstrt01.shp": {
+"frames": 6,
+"h": 102,
+"image": "castrt01",
+"kind": "structure",
+"w": 124
+},
+"ctstrt05.shp": {
+"frames": 6,
+"h": 112,
+"image": "castrt05",
+"kind": "structure",
+"w": 136
+},
+"ctswst01.shp": {
+"frames": 8,
+"h": 370,
+"image": "caswst01",
+"kind": "structure",
+"w": 358
+},
+"cttech01.shp": {
+"frames": 8,
+"h": 176,
+"image": "catech01",
+"kind": "structure",
+"w": 240
+},
+"cttexs01.shp": {
+"frames": 8,
+"h": 260,
+"image": "catexs01",
+"kind": "structure",
+"w": 290
+},
+"cttexs02.shp": {
+"frames": 8,
+"h": 236,
+"image": "catexs02",
+"kind": "structure",
+"w": 258
+},
+"cttexs03.shp": {
+"frames": 8,
+"h": 282,
+"image": "catexs03",
+"kind": "structure",
+"w": 380
+},
+"cttexs04.shp": {
+"frames": 8,
+"h": 282,
+"image": "catexs04",
+"kind": "structure",
+"w": 376
+},
+"cttexs05.shp": {
+"frames": 8,
+"h": 282,
+"image": "catexs05",
+"kind": "structure",
+"w": 368
+},
+"cttexs06.shp": {
+"frames": 8,
+"h": 196,
+"image": "catexs06",
+"kind": "structure",
+"w": 206
+},
+"cttexs07.shp": {
+"frames": 8,
+"h": 196,
+"image": "catexs07",
+"kind": "structure",
+"w": 266
+},
+"cttexs08.shp": {
+"frames": 8,
+"h": 146,
+"image": "catexs08",
+"kind": "structure",
+"w": 184
+},
+"ctts01.shp": {
+"frames": 6,
+"h": 114,
+"image": "cats01",
+"kind": "structure",
+"w": 140
+},
+"ctukfgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "caukfgl",
+"kind": "structure",
+"w": 244
+},
+"ctukfgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "caukfgl",
+"kind": "structure",
+"w": 244
+},
+"ctusfgl.shp": {
+"frames": 6,
+"h": 208,
+"image": "causfgl",
+"kind": "structure",
+"w": 244
+},
+"ctusfgl_a.shp": {
+"frames": 32,
+"h": 208,
+"image": "causfgl",
+"kind": "structure",
+"w": 244
+},
+"ctwa19_a.shp": {
+"frames": 96,
+"h": 218,
+"image": "cawash19",
+"kind": "structure",
+"w": 198
+},
+"ctwa2a.shp": {
+"frames": 8,
+"h": 244,
+"image": "cawa2a",
+"kind": "structure",
+"w": 240
+},
+"ctwa2b.shp": {
+"frames": 8,
+"h": 212,
+"image": "cawa2b",
+"kind": "structure",
+"w": 282
+},
+"ctwa2c.shp": {
+"frames": 8,
+"h": 246,
+"image": "cawa2c",
+"kind": "structure",
+"w": 274
+},
+"ctwa2d.shp": {
+"frames": 8,
+"h": 242,
+"image": "cawa2d",
+"kind": "structure",
+"w": 306
+},
+"ctwash03.shp": {
+"frames": 8,
+"h": 208,
+"image": "cawash03",
+"kind": "structure",
+"w": 276
+},
+"ctwash04.shp": {
+"frames": 8,
+"h": 240,
+"image": "cawash04",
+"kind": "structure",
+"w": 298
+},
+"ctwash05.shp": {
+"frames": 8,
+"h": 184,
+"image": "cawash05",
+"kind": "structure",
+"w": 366
+},
+"ctwash07.shp": {
+"frames": 8,
+"h": 188,
+"image": "cawash07",
+"kind": "structure",
+"w": 340
+},
+"ctwash08.shp": {
+"frames": 8,
+"h": 214,
+"image": "cawash08",
+"kind": "structure",
+"w": 298
+},
+"ctwash09.shp": {
+"frames": 8,
+"h": 182,
+"image": "cawash09",
+"kind": "structure",
+"w": 270
+},
+"ctwash10.shp": {
+"frames": 8,
+"h": 238,
+"image": "cawash10",
+"kind": "structure",
+"w": 280
+},
+"ctwash11.shp": {
+"frames": 8,
+"h": 214,
+"image": "cawash11",
+"kind": "structure",
+"w": 352
+},
+"ctwash13.shp": {
+"frames": 8,
+"h": 202,
+"image": "cawash13",
+"kind": "structure",
+"w": 230
+},
+"ctwash16.shp": {
+"frames": 8,
+"h": 222,
+"image": "cawash16",
+"kind": "structure",
+"w": 308
+},
+"ctwash17.shp": {
+"frames": 8,
+"h": 300,
+"image": "cawash17",
+"kind": "structure",
+"w": 382
+},
+"ctwash18.shp": {
+"frames": 6,
+"h": 92,
+"image": "cawash18",
+"kind": "structure",
+"w": 66
+},
+"ctwash19.shp": {
+"frames": 8,
+"h": 218,
+"image": "cawash19",
+"kind": "structure",
+"w": 198
+},
+"ctwsh18a.shp": {
+"frames": 20,
+"h": 96,
+"image": "cawash18",
+"kind": "structure",
+"w": 90
+},
+"cuwash06.shp": {
+"frames": 8,
+"h": 240,
+"image": "cawash06",
+"kind": "structure",
+"w": 236
+},
+"demtexp.shp": {
+"frames": 25,
+"h": 128,
+"image": "explosion",
+"kind": "effect",
+"w": 194
+},
+"deso.shp": {
+"frames": 644,
+"h": 88,
+"image": "deso",
+"kind": "infantry",
+"w": 126
+},
+"desoicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "deso",
+"kind": "icon",
+"w": 60
+},
+"desticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "dest",
+"kind": "icon",
+"w": 60
+},
+"discus.shp": {
+"frames": 14,
+"h": 5,
+"image": "discus",
+"kind": "effect",
+"w": 8
+},
+"dlph.shp": {
+"frames": 232,
+"h": 158,
+"image": "dlph",
+"kind": "infantry",
+"w": 74
+},
+"dlphicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "dlph",
+"kind": "icon",
+"w": 60
+},
+"dog.shp": {
+"frames": 344,
+"h": 72,
+"image": "dog",
+"kind": "infantry",
+"w": 74
+},
+"dogicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "dog",
+"kind": "icon",
+"w": 60
+},
+"dogp.shp": {
+"frames": 64,
+"h": 72,
+"image": "dog",
+"kind": "infantry",
+"w": 74
+},
+"dragon.shp": {
+"frames": 32,
+"h": 16,
+"image": "dragon",
+"kind": "effect",
+"w": 24
+},
+"dredicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "dred",
+"kind": "icon",
+"w": 60
+},
+"dron.shp": {
+"frames": 176,
+"h": 77,
+"image": "dron",
+"kind": "vehicle",
+"w": 77
+},
+"dronicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "dron",
+"kind": "icon",
+"w": 60
+},
+"dronp.shp": {
+"frames": 64,
+"h": 77,
+"image": "dron",
+"kind": "vehicle",
+"w": 77
+},
+"e2icon.shp": {
+"frames": 1,
+"h": 48,
+"image": "e2",
+"kind": "icon",
+"w": 60
+},
+"electro.shp": {
+"frames": 15,
+"h": 56,
+"image": "ccomand",
+"kind": "infantry",
+"w": 60
+},
+"engineer.shp": {
+"frames": 506,
+"h": 80,
+"image": "engineer",
+"kind": "infantry",
+"w": 76
+},
+"engnicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "engineer",
+"kind": "icon",
+"w": 60
+},
+"explolb.shp": {
+"frames": 31,
+"h": 144,
+"image": "explosion",
+"kind": "effect",
+"w": 152
+},
+"explolrg.shp": {
+"frames": 21,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 182
+},
+"explomed.shp": {
+"frames": 15,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"explosml.shp": {
+"frames": 14,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"falcicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "falc",
+"kind": "icon",
+"w": 60
+},
+"fire01.shp": {
+"frames": 30,
+"h": 80,
+"image": "largefire",
+"kind": "vehicle",
+"w": 42
+},
+"fire02.shp": {
+"frames": 64,
+"h": 70,
+"image": "mediumfire",
+"kind": "vehicle",
+"w": 42
+},
+"fire03.shp": {
+"frames": 30,
+"h": 58,
+"image": "r2fxfire-small",
+"kind": "vehicle",
+"w": 30
+},
+"firepowr.shp": {
+"frames": 23,
+"h": 22,
+"image": "crate-effects",
+"kind": "effect",
+"w": 34
+},
+"fixicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gadept",
+"kind": "icon",
+"w": 60
+},
+"flakicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "naflak",
+"kind": "icon",
+"w": 60
+},
+"flakt.shp": {
+"frames": 602,
+"h": 94,
+"image": "flakt",
+"kind": "infantry",
+"w": 98
+},
+"flameguy.shp": {
+"frames": 216,
+"h": 102,
+"image": "flameguy",
+"kind": "effect",
+"w": 52
+},
+"flkticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "flakt",
+"kind": "icon",
+"w": 60
+},
+"fvicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "fv",
+"kind": "icon",
+"w": 60
+},
+"galite.shp": {
+"frames": 4,
+"h": 60,
+"image": "galite",
+"kind": "structure",
+"w": 60
+},
+"gapicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gagap",
+"kind": "icon",
+"w": 60
+},
+"gcanicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gtgcan",
+"kind": "icon",
+"w": 60
+},
+"gcmuzzle.shp": {
+"frames": 17,
+"h": 62,
+"image": "gtgcan",
+"kind": "structure",
+"w": 72
+},
+"gem01.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem02.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem03.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem04.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem05.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem06.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem07.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem08.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem09.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem10.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem11.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"gem12.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"ggairc.shp": {
+"frames": 6,
+"h": 162,
+"image": "gaairc",
+"kind": "structure",
+"w": 188
+},
+"ggairc_a.shp": {
+"frames": 16,
+"h": 162,
+"image": "gaairc",
+"kind": "structure",
+"w": 188
+},
+"ggairc_b.shp": {
+"frames": 24,
+"h": 162,
+"image": "gaairc",
+"kind": "structure",
+"w": 188
+},
+"ggairc_c.shp": {
+"frames": 32,
+"h": 162,
+"image": "gaairc",
+"kind": "structure",
+"w": 188
+},
+"ggaircbb.shp": {
+"frames": 4,
+"h": 162,
+"image": "gaairc",
+"kind": "structure",
+"w": 188
+},
+"ggcnst.shp": {
+"frames": 6,
+"h": 226,
+"image": "gacnst",
+"kind": "structure",
+"w": 284
+},
+"ggcnst_a.shp": {
+"frames": 12,
+"h": 226,
+"image": "gacnst",
+"kind": "structure",
+"w": 284
+},
+"ggcnst_b.shp": {
+"frames": 80,
+"h": 226,
+"image": "gacnst",
+"kind": "structure",
+"w": 284
+},
+"ggcnstdm.shp": {
+"frames": 60,
+"h": 226,
+"image": "gacnst",
+"kind": "structure",
+"w": 284
+},
+"ggcsph.shp": {
+"frames": 6,
+"h": 194,
+"image": "gacsph",
+"kind": "structure",
+"w": 210
+},
+"ggcsph_e.shp": {
+"frames": 4,
+"h": 194,
+"image": "gacsph",
+"kind": "structure",
+"w": 210
+},
+"ggcsphdm.shp": {
+"frames": 50,
+"h": 214,
+"image": "gacsph",
+"kind": "structure",
+"w": 376
+},
+"ggdept.shp": {
+"frames": 6,
+"h": 150,
+"image": "gadept",
+"kind": "structure",
+"w": 190
+},
+"ggdept_c.shp": {
+"frames": 40,
+"h": 150,
+"image": "gadept",
+"kind": "structure",
+"w": 190
+},
+"ggdept_d.shp": {
+"frames": 4,
+"h": 150,
+"image": "gadept",
+"kind": "structure",
+"w": 190
+},
+"ggdeptbb.shp": {
+"frames": 4,
+"h": 150,
+"image": "gadept",
+"kind": "structure",
+"w": 190
+},
+"gggap.shp": {
+"frames": 6,
+"h": 176,
+"image": "gagap",
+"kind": "structure",
+"w": 178
+},
+"gggcan.shp": {
+"frames": 6,
+"h": 168,
+"image": "gtgcan",
+"kind": "structure",
+"w": 232
+},
+"ggorep.shp": {
+"frames": 6,
+"h": 168,
+"image": "gaorep",
+"kind": "structure",
+"w": 150
+},
+"ggorep_a.shp": {
+"frames": 32,
+"h": 168,
+"image": "gaorep",
+"kind": "structure",
+"w": 150
+},
+"ggpile.shp": {
+"frames": 6,
+"h": 148,
+"image": "gapile",
+"kind": "structure",
+"w": 250
+},
+"ggpile_a.shp": {
+"frames": 64,
+"h": 148,
+"image": "gapile",
+"kind": "structure",
+"w": 250
+},
+"ggpiledm.shp": {
+"frames": 50,
+"h": 204,
+"image": "gapile",
+"kind": "structure",
+"w": 380
+},
+"ggpill.shp": {
+"frames": 6,
+"h": 64,
+"image": "gapill",
+"kind": "structure",
+"w": 68
+},
+"ggpowr.shp": {
+"frames": 6,
+"h": 110,
+"image": "gapowr",
+"kind": "structure",
+"w": 142
+},
+"ggpowr_a.shp": {
+"frames": 32,
+"h": 110,
+"image": "gapowr",
+"kind": "structure",
+"w": 142
+},
+"ggpris.shp": {
+"frames": 6,
+"h": 160,
+"image": "atesla",
+"kind": "structure",
+"w": 172
+},
+"ggpris_a.shp": {
+"frames": 40,
+"h": 160,
+"image": "atesla",
+"kind": "structure",
+"w": 172
+},
+"ggpris_b.shp": {
+"frames": 36,
+"h": 160,
+"image": "atesla",
+"kind": "structure",
+"w": 172
+},
+"ggprisdm.shp": {
+"frames": 42,
+"h": 256,
+"image": "atesla",
+"kind": "structure",
+"w": 272
+},
+"ggrefn.shp": {
+"frames": 6,
+"h": 196,
+"image": "garefn",
+"kind": "structure",
+"w": 210
+},
+"ggrefnbb.shp": {
+"frames": 4,
+"h": 196,
+"image": "garefn",
+"kind": "structure",
+"w": 210
+},
+"ggrefnl1.shp": {
+"frames": 12,
+"h": 196,
+"image": "garefn",
+"kind": "structure",
+"w": 210
+},
+"ggrefnor.shp": {
+"frames": 40,
+"h": 196,
+"image": "garefn",
+"kind": "structure",
+"w": 210
+},
+"ggspst.shp": {
+"frames": 6,
+"h": 102,
+"image": "gaspysat",
+"kind": "structure",
+"w": 186
+},
+"ggspst_a.shp": {
+"frames": 64,
+"h": 102,
+"image": "gaspysat",
+"kind": "structure",
+"w": 186
+},
+"ggtech.shp": {
+"frames": 6,
+"h": 300,
+"image": "gatech",
+"kind": "structure",
+"w": 346
+},
+"ggtech_a.shp": {
+"frames": 48,
+"h": 300,
+"image": "gatech",
+"kind": "structure",
+"w": 346
+},
+"ggweap.shp": {
+"frames": 6,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweap_1.shp": {
+"frames": 4,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweap_2.shp": {
+"frames": 4,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweap_3.shp": {
+"frames": 4,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweap_4.shp": {
+"frames": 4,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweap_a.shp": {
+"frames": 60,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweap_b.shp": {
+"frames": 12,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweapbb.shp": {
+"frames": 4,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"ggweth.shp": {
+"frames": 6,
+"h": 154,
+"image": "gaweat",
+"kind": "structure",
+"w": 154
+},
+"ggyard.shp": {
+"frames": 6,
+"h": 304,
+"image": "gayard",
+"kind": "structure",
+"w": 432
+},
+"ggyard_a.shp": {
+"frames": 60,
+"h": 304,
+"image": "gayard",
+"kind": "structure",
+"w": 432
+},
+"ggyard_c.shp": {
+"frames": 60,
+"h": 304,
+"image": "gayard",
+"kind": "structure",
+"w": 432
+},
+"ggyard_s.shp": {
+"frames": 72,
+"h": 304,
+"image": "gayard",
+"kind": "structure",
+"w": 432
+},
+"gi.shp": {
+"frames": 744,
+"h": 66,
+"image": "e1",
+"kind": "infantry",
+"w": 78
+},
+"giicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "e1",
+"kind": "icon",
+"w": 60
+},
+"gorep.shp": {
+"frames": 1,
+"h": 48,
+"image": "gaorep",
+"kind": "icon",
+"w": 60
+},
+"gtaircmk.shp": {
+"frames": 50,
+"h": 162,
+"image": "gaairc",
+"kind": "structure",
+"w": 188
+},
+"gtcnstmk.shp": {
+"frames": 58,
+"h": 226,
+"image": "gacnst",
+"kind": "structure",
+"w": 284
+},
+"gtcsphmk.shp": {
+"frames": 50,
+"h": 194,
+"image": "gacsph",
+"kind": "structure",
+"w": 210
+},
+"gtdeptmk.shp": {
+"frames": 50,
+"h": 150,
+"image": "gadept",
+"kind": "structure",
+"w": 190
+},
+"gtgapmk.shp": {
+"frames": 18,
+"h": 176,
+"image": "gagap",
+"kind": "structure",
+"w": 178
+},
+"gtgate_a.shp": {
+"frames": 42,
+"h": 210,
+"image": "gagate_a",
+"kind": "scenery",
+"w": 246
+},
+"gtgcanmk.shp": {
+"frames": 24,
+"h": 168,
+"image": "gtgcan",
+"kind": "structure",
+"w": 232
+},
+"gtnkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "mtnk",
+"kind": "icon",
+"w": 60
+},
+"gtorepmk.shp": {
+"frames": 50,
+"h": 168,
+"image": "gaorep",
+"kind": "structure",
+"w": 150
+},
+"gtpilemk.shp": {
+"frames": 50,
+"h": 148,
+"image": "gapile",
+"kind": "structure",
+"w": 250
+},
+"gtpillmk.shp": {
+"frames": 16,
+"h": 64,
+"image": "gapill",
+"kind": "structure",
+"w": 68
+},
+"gtpowrmk.shp": {
+"frames": 50,
+"h": 110,
+"image": "gapowr",
+"kind": "structure",
+"w": 142
+},
+"gtprismk.shp": {
+"frames": 16,
+"h": 160,
+"image": "atesla",
+"kind": "structure",
+"w": 172
+},
+"gtrefnmk.shp": {
+"frames": 50,
+"h": 196,
+"image": "garefn",
+"kind": "structure",
+"w": 210
+},
+"gtsand.shp": {
+"frames": 64,
+"h": 66,
+"image": "gasand",
+"kind": "structure",
+"w": 68
+},
+"gtspstmk.shp": {
+"frames": 50,
+"h": 102,
+"image": "gaspysat",
+"kind": "structure",
+"w": 186
+},
+"gttechmk.shp": {
+"frames": 50,
+"h": 300,
+"image": "gatech",
+"kind": "structure",
+"w": 346
+},
+"gtwall.shp": {
+"frames": 96,
+"h": 70,
+"image": "gawall",
+"kind": "structure",
+"w": 78
+},
+"gtweapmk.shp": {
+"frames": 50,
+"h": 224,
+"image": "gaweap",
+"kind": "structure",
+"w": 266
+},
+"gtwethmk.shp": {
+"frames": 50,
+"h": 154,
+"image": "gaweat",
+"kind": "structure",
+"w": 154
+},
+"gtyardmk.shp": {
+"frames": 50,
+"h": 304,
+"image": "gayard",
+"kind": "structure",
+"w": 432
+},
+"gunfire.shp": {
+"frames": 4,
+"h": 26,
+"image": "cdest",
+"kind": "structure",
+"w": 28
+},
+"gwepicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gaweap",
+"kind": "icon",
+"w": 60
+},
+"h2o_exp1.shp": {
+"frames": 16,
+"h": 150,
+"image": "explosion",
+"kind": "effect",
+"w": 112
+},
+"h2o_exp2.shp": {
+"frames": 16,
+"h": 150,
+"image": "explosion",
+"kind": "effect",
+"w": 112
+},
+"h2o_exp3.shp": {
+"frames": 16,
+"h": 150,
+"image": "explosion",
+"kind": "effect",
+"w": 112
+},
+"handicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nahand",
+"kind": "icon",
+"w": 60
+},
+"harvicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "harv",
+"kind": "icon",
+"w": 60
+},
+"hdstn01.tem": {
+"frames": 2,
+"h": 61,
+"image": "hdstn01",
+"kind": "scenery",
+"w": 61
+},
+"healall.shp": {
+"frames": 23,
+"h": 26,
+"image": "crate-effects",
+"kind": "effect",
+"w": 26
+},
+"heliicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gaairc",
+"kind": "icon",
+"w": 60
+},
+"hindicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "hind",
+"kind": "icon",
+"w": 60
+},
+"hovricon.shp": {
+"frames": 1,
+"h": 48,
+"image": "hyd",
+"kind": "icon",
+"w": 60
+},
+"htkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "htk",
+"kind": "icon",
+"w": 60
+},
+"htnkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "htnk",
+"kind": "icon",
+"w": 60
+},
+"htrkpuff.shp": {
+"frames": 15,
+"h": 62,
+"image": "explosion",
+"kind": "effect",
+"w": 56
+},
+"infshdw.shp": {
+"frames": 2,
+"h": 5,
+"image": "jumpjet",
+"kind": "infantry",
+"w": 9
+},
+"ircricon.shp": {
+"frames": 1,
+"h": 48,
+"image": "icon",
+"kind": "effect",
+"w": 60
+},
+"ironfx.shp": {
+"frames": 10,
+"h": 46,
+"image": "explosion",
+"kind": "effect",
+"w": 48
+},
+"ironicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nairon",
+"kind": "icon",
+"w": 60
+},
+"ivan.shp": {
+"frames": 534,
+"h": 88,
+"image": "ivan",
+"kind": "infantry",
+"w": 100
+},
+"ivanicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "ivan",
+"kind": "icon",
+"w": 60
+},
+"ivncicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "civan",
+"kind": "icon",
+"w": 60
+},
+"jjeticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "jumpjet",
+"kind": "icon",
+"w": 60
+},
+"josh.shp": {
+"frames": 328,
+"h": 70,
+"image": "josh",
+"kind": "infantry",
+"w": 88
+},
+"ktstlexp.shp": {
+"frames": 20,
+"h": 166,
+"image": "explosion",
+"kind": "effect",
+"w": 108
+},
+"landicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "lcrf",
+"kind": "icon",
+"w": 60
+},
+"lgrysmk1.shp": {
+"frames": 20,
+"h": 42,
+"image": "largesmoke",
+"kind": "vehicle",
+"w": 48
+},
+"liteicon.shp": {
+"frames": 2,
+"h": 48,
+"image": "galite",
+"kind": "icon",
+"w": 64
+},
+"lobrdb01.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb02.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb03.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb04.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb05.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb06.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb07.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb08.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb09.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb10.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb11.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb12.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb13.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb14.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb15.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb16.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb17.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb18.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb19.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_se",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb20.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_se",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb21.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_nw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb22.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_nw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb23.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_ne",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb24.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_ne",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb25.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_sw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb26.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_r_sw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb27.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_b_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdb28.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdb_a_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg01.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg02.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg03.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg04.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg05.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg06.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg07.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg08.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg09.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg10.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg11.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg12.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg13.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg14.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg15.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg16.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg17.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg18.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg19.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_se",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg20.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_se",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg21.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_nw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg22.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_nw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg23.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_ne",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg24.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_ne",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg25.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_sw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg26.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_r_sw",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg27.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_b_d",
+"kind": "scenery",
+"w": 180
+},
+"lobrdg28.tem": {
+"frames": 6,
+"h": 120,
+"image": "lobrdg_a_d",
+"kind": "scenery",
+"w": 180
+},
+"lt_eur01.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_eur01",
+"kind": "scenery",
+"w": 155
+},
+"lt_eur02.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_eur02",
+"kind": "scenery",
+"w": 155
+},
+"lt_gen01.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_gen01",
+"kind": "scenery",
+"w": 155
+},
+"lt_gen02.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_gen02",
+"kind": "scenery",
+"w": 155
+},
+"lt_gen03.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_gen03",
+"kind": "scenery",
+"w": 155
+},
+"lt_gen04.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_gen04",
+"kind": "scenery",
+"w": 155
+},
+"lt_sgn01.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_sgn01",
+"kind": "scenery",
+"w": 155
+},
+"lt_sgn02.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_sgn02",
+"kind": "scenery",
+"w": 155
+},
+"lt_sgn03.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_sgn03",
+"kind": "scenery",
+"w": 155
+},
+"lt_sgn04.tem": {
+"frames": 2,
+"h": 155,
+"image": "lt_sgn04",
+"kind": "scenery",
+"w": 155
+},
+"mcvicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "amcv",
+"kind": "icon",
+"w": 60
+},
+"mgun-e.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-n.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-ne.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-nw.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-s.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-se.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-sw.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mgun-w.shp": {
+"frames": 6,
+"h": 17,
+"image": "gapill",
+"kind": "structure",
+"w": 18
+},
+"mininuke.shp": {
+"frames": 39,
+"h": 148,
+"image": "explosion",
+"kind": "effect",
+"w": 126
+},
+"missile.shp": {
+"frames": 64,
+"h": 19,
+"image": "missile",
+"kind": "effect",
+"w": 19
+},
+"mltimisl.shp": {
+"frames": 46,
+"h": 31,
+"image": "crate-effects",
+"kind": "effect",
+"w": 30
+},
+"money.shp": {
+"frames": 23,
+"h": 31,
+"image": "crate-effects",
+"kind": "effect",
+"w": 37
+},
+"msslicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "namisl",
+"kind": "icon",
+"w": 60
+},
+"mtnkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "apoc",
+"kind": "icon",
+"w": 60
+},
+"ngclon_a.shp": {
+"frames": 44,
+"h": 174,
+"image": "naclon",
+"kind": "structure",
+"w": 214
+},
+"ngcnst.shp": {
+"frames": 6,
+"h": 224,
+"image": "nacnst",
+"kind": "structure",
+"w": 286
+},
+"ngcnst_a.shp": {
+"frames": 44,
+"h": 224,
+"image": "nacnst",
+"kind": "structure",
+"w": 286
+},
+"ngcnst_b.shp": {
+"frames": 84,
+"h": 224,
+"image": "nacnst",
+"kind": "structure",
+"w": 286
+},
+"ngcnst_c.shp": {
+"frames": 6,
+"h": 224,
+"image": "nacnst",
+"kind": "structure",
+"w": 286
+},
+"ngcnstdm.shp": {
+"frames": 50,
+"h": 224,
+"image": "nacnst",
+"kind": "structure",
+"w": 338
+},
+"ngdept.shp": {
+"frames": 6,
+"h": 190,
+"image": "nadept",
+"kind": "structure",
+"w": 198
+},
+"ngdept_b.shp": {
+"frames": 40,
+"h": 190,
+"image": "nadept",
+"kind": "structure",
+"w": 198
+},
+"ngdept_c.shp": {
+"frames": 200,
+"h": 190,
+"image": "nadept",
+"kind": "structure",
+"w": 198
+},
+"ngdeptbb.shp": {
+"frames": 4,
+"h": 190,
+"image": "nadept",
+"kind": "structure",
+"w": 198
+},
+"ngflak.shp": {
+"frames": 6,
+"h": 90,
+"image": "naflak",
+"kind": "structure",
+"w": 118
+},
+"nghand.shp": {
+"frames": 6,
+"h": 230,
+"image": "nahand",
+"kind": "structure",
+"w": 254
+},
+"ngiron_a.shp": {
+"frames": 44,
+"h": 162,
+"image": "nairon",
+"kind": "structure",
+"w": 164
+},
+"ngiron_h.shp": {
+"frames": 48,
+"h": 162,
+"image": "nairon",
+"kind": "structure",
+"w": 164
+},
+"nglasr.shp": {
+"frames": 6,
+"h": 58,
+"image": "nalasr",
+"kind": "structure",
+"w": 74
+},
+"ngmisl_e.shp": {
+"frames": 4,
+"h": 202,
+"image": "namisl",
+"kind": "structure",
+"w": 238
+},
+"ngmisl_f.shp": {
+"frames": 64,
+"h": 202,
+"image": "namisl",
+"kind": "structure",
+"w": 238
+},
+"ngnrct.shp": {
+"frames": 6,
+"h": 188,
+"image": "nanrct",
+"kind": "structure",
+"w": 276
+},
+"ngnrct_a.shp": {
+"frames": 44,
+"h": 188,
+"image": "nanrct",
+"kind": "structure",
+"w": 276
+},
+"ngpowr.shp": {
+"frames": 6,
+"h": 140,
+"image": "napowr",
+"kind": "structure",
+"w": 210
+},
+"ngpowr_a.shp": {
+"frames": 76,
+"h": 140,
+"image": "napowr",
+"kind": "structure",
+"w": 210
+},
+"ngpsis.shp": {
+"frames": 6,
+"h": 208,
+"image": "napsis",
+"kind": "structure",
+"w": 264
+},
+"ngpsis_a.shp": {
+"frames": 160,
+"h": 208,
+"image": "napsis",
+"kind": "structure",
+"w": 264
+},
+"ngradr.shp": {
+"frames": 6,
+"h": 154,
+"image": "naradr",
+"kind": "structure",
+"w": 226
+},
+"ngradr_a.shp": {
+"frames": 184,
+"h": 154,
+"image": "naradr",
+"kind": "structure",
+"w": 226
+},
+"ngrefn.shp": {
+"frames": 6,
+"h": 184,
+"image": "narefn",
+"kind": "structure",
+"w": 210
+},
+"ngrefnbb.shp": {
+"frames": 6,
+"h": 184,
+"image": "narefn",
+"kind": "structure",
+"w": 210
+},
+"ngrefnl1.shp": {
+"frames": 12,
+"h": 184,
+"image": "narefn",
+"kind": "structure",
+"w": 210
+},
+"ngrefnor.shp": {
+"frames": 40,
+"h": 184,
+"image": "narefn",
+"kind": "structure",
+"w": 210
+},
+"ngsam.shp": {
+"frames": 6,
+"h": 68,
+"image": "nasam",
+"kind": "structure",
+"w": 98
+},
+"ngtech.shp": {
+"frames": 6,
+"h": 178,
+"image": "natech",
+"kind": "structure",
+"w": 238
+},
+"ngtsla.shp": {
+"frames": 6,
+"h": 126,
+"image": "tesla",
+"kind": "structure",
+"w": 160
+},
+"ngtsla_a.shp": {
+"frames": 40,
+"h": 126,
+"image": "tesla",
+"kind": "structure",
+"w": 160
+},
+"ngtsla_b.shp": {
+"frames": 40,
+"h": 126,
+"image": "tesla",
+"kind": "structure",
+"w": 160
+},
+"ngtsladm.shp": {
+"frames": 40,
+"h": 146,
+"image": "tesla",
+"kind": "structure",
+"w": 166
+},
+"ngweap.shp": {
+"frames": 6,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngweap_1.shp": {
+"frames": 4,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngweap_2.shp": {
+"frames": 4,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngweap_3.shp": {
+"frames": 4,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngweap_4.shp": {
+"frames": 4,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngweap_a.shp": {
+"frames": 26,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngweapbb.shp": {
+"frames": 6,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ngyard.shp": {
+"frames": 6,
+"h": 246,
+"image": "nayard",
+"kind": "structure",
+"w": 400
+},
+"ngyard_a.shp": {
+"frames": 60,
+"h": 246,
+"image": "nayard",
+"kind": "structure",
+"w": 400
+},
+"ngyard_b.shp": {
+"frames": 60,
+"h": 246,
+"image": "nayard",
+"kind": "structure",
+"w": 400
+},
+"ngyard_c.shp": {
+"frames": 60,
+"h": 246,
+"image": "nayard",
+"kind": "structure",
+"w": 400
+},
+"ngyard_s.shp": {
+"frames": 72,
+"h": 246,
+"image": "nayard",
+"kind": "structure",
+"w": 400
+},
+"nkmsldn.shp": {
+"frames": 1,
+"h": 318,
+"image": "atomic",
+"kind": "effect",
+"w": 68
+},
+"nkmslup.shp": {
+"frames": 2,
+"h": 288,
+"image": "atomic",
+"kind": "effect",
+"w": 68
+},
+"npwricon.shp": {
+"frames": 1,
+"h": 48,
+"image": "napowr",
+"kind": "icon",
+"w": 60
+},
+"nradicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "naradr",
+"kind": "icon",
+"w": 60
+},
+"nrcticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nanrct",
+"kind": "icon",
+"w": 60
+},
+"nreficon.shp": {
+"frames": 1,
+"h": 48,
+"image": "narefn",
+"kind": "icon",
+"w": 60
+},
+"ntchicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "natech",
+"kind": "icon",
+"w": 60
+},
+"ntclonmk.shp": {
+"frames": 50,
+"h": 174,
+"image": "naclon",
+"kind": "structure",
+"w": 214
+},
+"ntcnstmk.shp": {
+"frames": 62,
+"h": 224,
+"image": "nacnst",
+"kind": "structure",
+"w": 286
+},
+"ntdeptmk.shp": {
+"frames": 50,
+"h": 190,
+"image": "nadept",
+"kind": "structure",
+"w": 198
+},
+"ntflakmk.shp": {
+"frames": 18,
+"h": 90,
+"image": "naflak",
+"kind": "structure",
+"w": 118
+},
+"nthandmk.shp": {
+"frames": 50,
+"h": 230,
+"image": "nahand",
+"kind": "structure",
+"w": 254
+},
+"ntironmk.shp": {
+"frames": 50,
+"h": 162,
+"image": "nairon",
+"kind": "structure",
+"w": 164
+},
+"ntlasrmk.shp": {
+"frames": 24,
+"h": 58,
+"image": "nalasr",
+"kind": "structure",
+"w": 74
+},
+"ntmislmk.shp": {
+"frames": 52,
+"h": 202,
+"image": "namisl",
+"kind": "structure",
+"w": 238
+},
+"ntnrctmk.shp": {
+"frames": 50,
+"h": 188,
+"image": "nanrct",
+"kind": "structure",
+"w": 276
+},
+"ntpowrmk.shp": {
+"frames": 52,
+"h": 140,
+"image": "napowr",
+"kind": "structure",
+"w": 210
+},
+"ntpsismk.shp": {
+"frames": 48,
+"h": 208,
+"image": "napsis",
+"kind": "structure",
+"w": 264
+},
+"ntradrmk.shp": {
+"frames": 60,
+"h": 154,
+"image": "naradr",
+"kind": "structure",
+"w": 226
+},
+"ntrefnmk.shp": {
+"frames": 52,
+"h": 184,
+"image": "narefn",
+"kind": "structure",
+"w": 210
+},
+"ntsammk.shp": {
+"frames": 16,
+"h": 68,
+"image": "nasam",
+"kind": "structure",
+"w": 98
+},
+"nttechmk.shp": {
+"frames": 50,
+"h": 178,
+"image": "natech",
+"kind": "structure",
+"w": 238
+},
+"nttslamk.shp": {
+"frames": 50,
+"h": 126,
+"image": "tesla",
+"kind": "structure",
+"w": 160
+},
+"ntwall.shp": {
+"frames": 96,
+"h": 64,
+"image": "nawall",
+"kind": "structure",
+"w": 80
+},
+"ntweapmk.shp": {
+"frames": 50,
+"h": 224,
+"image": "naweap",
+"kind": "structure",
+"w": 282
+},
+"ntyardmk.shp": {
+"frames": 50,
+"h": 246,
+"image": "nayard",
+"kind": "structure",
+"w": 400
+},
+"nukeanim.shp": {
+"frames": 39,
+"h": 370,
+"image": "explosion",
+"kind": "effect",
+"w": 310
+},
+"nukeball.shp": {
+"frames": 20,
+"h": 94,
+"image": "explosion",
+"kind": "effect",
+"w": 90
+},
+"nukedie.shp": {
+"frames": 60,
+"h": 60,
+"image": "ccomand",
+"kind": "infantry",
+"w": 60
+},
+"nukeicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "icon",
+"kind": "effect",
+"w": 60
+},
+"nukepuff.shp": {
+"frames": 20,
+"h": 54,
+"image": "nukesmoke",
+"kind": "effect",
+"w": 56
+},
+"null.shp": {
+"frames": 2,
+"h": 0,
+"image": "mgtk",
+"kind": "vehicle",
+"w": 0
+},
+"nwalicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nawall",
+"kind": "icon",
+"w": 60
+},
+"nwepicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "naweap",
+"kind": "icon",
+"w": 60
+},
+"oregath.shp": {
+"frames": 120,
+"h": 80,
+"image": "cmin",
+"kind": "vehicle",
+"w": 144
+},
+"parach.shp": {
+"frames": 140,
+"h": 186,
+"image": "parach",
+"kind": "effect",
+"w": 102
+},
+"paraicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "icon",
+"kind": "effect",
+"w": 60
+},
+"pbeacon.shp": {
+"frames": 20,
+"h": 122,
+"image": "beacon",
+"kind": "effect",
+"w": 66
+},
+"pentgen.shp": {
+"frames": 524,
+"h": 72,
+"image": "pentgen",
+"kind": "infantry",
+"w": 72
+},
+"piff.shp": {
+"frames": 7,
+"h": 28,
+"image": "explosion",
+"kind": "effect",
+"w": 28
+},
+"piffpiff.shp": {
+"frames": 12,
+"h": 28,
+"image": "explosion",
+"kind": "effect",
+"w": 28
+},
+"pillicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gapill",
+"kind": "icon",
+"w": 60
+},
+"pips.shp": {
+"frames": 19,
+"h": 15,
+"image": "pips",
+"kind": "effect",
+"w": 10
+},
+"place.shp": {
+"frames": 38,
+"h": 59,
+"image": "editor-overlay",
+"kind": "effect",
+"w": 60
+},
+"plticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nalasr",
+"kind": "icon",
+"w": 60
+},
+"polarb.shp": {
+"frames": 328,
+"h": 122,
+"image": "polarb",
+"kind": "infantry",
+"w": 94
+},
+"pole01.tem": {
+"frames": 2,
+"h": 74,
+"image": "pole01",
+"kind": "scenery",
+"w": 100
+},
+"pole02.tem": {
+"frames": 2,
+"h": 74,
+"image": "pole02",
+"kind": "scenery",
+"w": 100
+},
+"poweroff.shp": {
+"frames": 7,
+"h": 43,
+"image": "poweroff",
+"kind": "effect",
+"w": 55
+},
+"powricon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gapowr",
+"kind": "icon",
+"w": 60
+},
+"pres.shp": {
+"frames": 364,
+"h": 68,
+"image": "pres",
+"kind": "infantry",
+"w": 102
+},
+"prisicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "atesla",
+"kind": "icon",
+"w": 60
+},
+"psicicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "ptroop",
+"kind": "icon",
+"w": 60
+},
+"psisicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "napsis",
+"kind": "icon",
+"w": 60
+},
+"ptroop.shp": {
+"frames": 630,
+"h": 70,
+"image": "ptroop",
+"kind": "infantry",
+"w": 56
+},
+"reficon.shp": {
+"frames": 1,
+"h": 48,
+"image": "garefn",
+"kind": "icon",
+"w": 60
+},
+"reveal.shp": {
+"frames": 23,
+"h": 27,
+"image": "crate-effects",
+"kind": "effect",
+"w": 27
+},
+"rfixicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nadept",
+"kind": "icon",
+"w": 60
+},
+"ring.shp": {
+"frames": 15,
+"h": 46,
+"image": "moveflsh",
+"kind": "effect",
+"w": 82
+},
+"ring1.shp": {
+"frames": 21,
+"h": 140,
+"image": "explosion",
+"kind": "effect",
+"w": 264
+},
+"rock.shp": {
+"frames": 854,
+"h": 120,
+"image": "jumpjet",
+"kind": "infantry",
+"w": 94
+},
+"rtnkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "mgtk",
+"kind": "icon",
+"w": 60
+},
+"s_bang16.shp": {
+"frames": 8,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_bang24.shp": {
+"frames": 8,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_bang34.shp": {
+"frames": 13,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_bang48.shp": {
+"frames": 23,
+"h": 200,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_brnl20.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_brnl30.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_brnl40.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_brnl58.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_clsn16.shp": {
+"frames": 13,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_clsn22.shp": {
+"frames": 13,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_clsn30.shp": {
+"frames": 18,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_clsn42.shp": {
+"frames": 18,
+"h": 144,
+"image": "explosion",
+"kind": "effect",
+"w": 74
+},
+"s_clsn58.shp": {
+"frames": 21,
+"h": 156,
+"image": "explosion",
+"kind": "effect",
+"w": 182
+},
+"s_tumu22.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_tumu30.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_tumu42.shp": {
+"frames": 10,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"s_tumu60.shp": {
+"frames": 21,
+"h": 156,
+"image": "explosion",
+"kind": "effect",
+"w": 182
+},
+"samicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nasam",
+"kind": "icon",
+"w": 60
+},
+"sapcicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "sapc",
+"kind": "icon",
+"w": 60
+},
+"seal.shp": {
+"frames": 1238,
+"h": 72,
+"image": "seal",
+"kind": "infantry",
+"w": 118
+},
+"sealicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "seal",
+"kind": "icon",
+"w": 60
+},
+"sgrysmk1.shp": {
+"frames": 20,
+"h": 42,
+"image": "r2ah64sa",
+"kind": "vehicle",
+"w": 48
+},
+"shadicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "shad",
+"kind": "icon",
+"w": 60
+},
+"shk.shp": {
+"frames": 602,
+"h": 76,
+"image": "shk",
+"kind": "infantry",
+"w": 66
+},
+"shkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "shk",
+"kind": "icon",
+"w": 60
+},
+"shroudx.shp": {
+"frames": 46,
+"h": 28,
+"image": "crate-effects",
+"kind": "effect",
+"w": 28
+},
+"sign01.tem": {
+"frames": 2,
+"h": 155,
+"image": "sign01",
+"kind": "scenery",
+"w": 155
+},
+"sign02.tem": {
+"frames": 2,
+"h": 155,
+"image": "sign02",
+"kind": "scenery",
+"w": 155
+},
+"sign03.tem": {
+"frames": 2,
+"h": 155,
+"image": "sign03",
+"kind": "scenery",
+"w": 155
+},
+"sign04.tem": {
+"frames": 2,
+"h": 155,
+"image": "sign04",
+"kind": "scenery",
+"w": 155
+},
+"sign05.tem": {
+"frames": 2,
+"h": 155,
+"image": "sign05",
+"kind": "scenery",
+"w": 155
+},
+"sign06.tem": {
+"frames": 2,
+"h": 155,
+"image": "sign06",
+"kind": "scenery",
+"w": 155
+},
+"smcvicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "smcv",
+"kind": "icon",
+"w": 60
+},
+"smkpuff.shp": {
+"frames": 20,
+"h": 80,
+"image": "explosion",
+"kind": "effect",
+"w": 78
+},
+"smokey2.shp": {
+"frames": 20,
+"h": 22,
+"image": "smokey2",
+"kind": "effect",
+"w": 22
+},
+"snipe.shp": {
+"frames": 602,
+"h": 82,
+"image": "snipe",
+"kind": "infantry",
+"w": 112
+},
+"snipicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "snipe",
+"kind": "icon",
+"w": 60
+},
+"speed.shp": {
+"frames": 23,
+"h": 22,
+"image": "crate-effects",
+"kind": "effect",
+"w": 27
+},
+"spkr01.urb": {
+"frames": 2,
+"h": 22,
+"image": "spkr01",
+"kind": "scenery",
+"w": 52
+},
+"spy.shp": {
+"frames": 408,
+"h": 86,
+"image": "spy",
+"kind": "infantry",
+"w": 86
+},
+"spyicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "spy",
+"kind": "icon",
+"w": 60
+},
+"sqd.shp": {
+"frames": 296,
+"h": 198,
+"image": "sqd",
+"kind": "infantry",
+"w": 198
+},
+"sqdicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "sqd",
+"kind": "icon",
+"w": 60
+},
+"sreficon.shp": {
+"frames": 1,
+"h": 48,
+"image": "sref",
+"kind": "icon",
+"w": 60
+},
+"srock01.tem": {
+"frames": 2,
+"h": 120,
+"image": "srock01",
+"kind": "effect",
+"w": 120
+},
+"srock02.tem": {
+"frames": 2,
+"h": 120,
+"image": "srock02",
+"kind": "effect",
+"w": 120
+},
+"srock03.tem": {
+"frames": 2,
+"h": 120,
+"image": "srock03",
+"kind": "effect",
+"w": 120
+},
+"srock04.tem": {
+"frames": 2,
+"h": 120,
+"image": "srock04",
+"kind": "effect",
+"w": 120
+},
+"srock05.tem": {
+"frames": 2,
+"h": 120,
+"image": "srock05",
+"kind": "effect",
+"w": 120
+},
+"ssrv.shp": {
+"frames": 460,
+"h": 84,
+"image": "ssrv",
+"kind": "infantry",
+"w": 110
+},
+"subicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "sub",
+"kind": "icon",
+"w": 60
+},
+"tany.shp": {
+"frames": 1238,
+"h": 110,
+"image": "tany",
+"kind": "infantry",
+"w": 130
+},
+"tanyicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "tany",
+"kind": "icon",
+"w": 60
+},
+"techicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gatech",
+"kind": "icon",
+"w": 60
+},
+"tib01.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib02.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib03.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib04.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib05.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib06.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib07.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib08.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib09.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib10.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib11.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib12.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib13.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib14.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib15.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib16.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib17.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib18.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib19.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tib20.tem": {
+"frames": 24,
+"h": 60,
+"image": "resources",
+"kind": "effect",
+"w": 60
+},
+"tibtre01.tem": {
+"frames": 22,
+"h": 56,
+"image": "tibtre01",
+"kind": "scenery",
+"w": 84
+},
+"tibtre02.tem": {
+"frames": 22,
+"h": 56,
+"image": "tibtre02",
+"kind": "scenery",
+"w": 84
+},
+"tibtre03.tem": {
+"frames": 22,
+"h": 56,
+"image": "tibtre03",
+"kind": "scenery",
+"w": 84
+},
+"tnkdicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "tnkd",
+"kind": "icon",
+"w": 60
+},
+"tree01.tem": {
+"frames": 2,
+"h": 155,
+"image": "tree01",
+"kind": "scenery",
+"w": 155
+},
+"tree02.tem": {
+"frames": 2,
+"h": 111,
+"image": "tree02",
+"kind": "scenery",
+"w": 139
+},
+"tree03.tem": {
+"frames": 2,
+"h": 135,
+"image": "tree03",
+"kind": "scenery",
+"w": 135
+},
+"tree04.tem": {
+"frames": 2,
+"h": 103,
+"image": "tree04",
+"kind": "scenery",
+"w": 123
+},
+"tree05.tem": {
+"frames": 2,
+"h": 101,
+"image": "tree05",
+"kind": "scenery",
+"w": 115
+},
+"tree06.tem": {
+"frames": 2,
+"h": 109,
+"image": "tree06",
+"kind": "scenery",
+"w": 129
+},
+"tree07.tem": {
+"frames": 2,
+"h": 101,
+"image": "tree07",
+"kind": "scenery",
+"w": 115
+},
+"tree08.tem": {
+"frames": 2,
+"h": 117,
+"image": "tree08",
+"kind": "scenery",
+"w": 117
+},
+"tree09.tem": {
+"frames": 2,
+"h": 127,
+"image": "tree09",
+"kind": "scenery",
+"w": 129
+},
+"tree10.tem": {
+"frames": 2,
+"h": 101,
+"image": "tree10",
+"kind": "scenery",
+"w": 123
+},
+"tree11.tem": {
+"frames": 2,
+"h": 127,
+"image": "tree11",
+"kind": "scenery",
+"w": 149
+},
+"tree12.tem": {
+"frames": 2,
+"h": 101,
+"image": "tree12",
+"kind": "scenery",
+"w": 101
+},
+"tree13.tem": {
+"frames": 2,
+"h": 133,
+"image": "tree13",
+"kind": "scenery",
+"w": 161
+},
+"tree14.tem": {
+"frames": 2,
+"h": 113,
+"image": "tree14",
+"kind": "scenery",
+"w": 139
+},
+"tree15.tem": {
+"frames": 2,
+"h": 107,
+"image": "tree15",
+"kind": "scenery",
+"w": 107
+},
+"tree16.tem": {
+"frames": 2,
+"h": 55,
+"image": "tree16",
+"kind": "scenery",
+"w": 55
+},
+"tree17.tem": {
+"frames": 2,
+"h": 67,
+"image": "tree17",
+"kind": "scenery",
+"w": 67
+},
+"tree18.tem": {
+"frames": 2,
+"h": 57,
+"image": "tree18",
+"kind": "scenery",
+"w": 57
+},
+"tree19.tem": {
+"frames": 2,
+"h": 75,
+"image": "tree19",
+"kind": "scenery",
+"w": 85
+},
+"tree20.tem": {
+"frames": 2,
+"h": 109,
+"image": "tree20",
+"kind": "scenery",
+"w": 109
+},
+"tree21.tem": {
+"frames": 2,
+"h": 115,
+"image": "tree21",
+"kind": "scenery",
+"w": 115
+},
+"tree22.tem": {
+"frames": 2,
+"h": 97,
+"image": "tree22",
+"kind": "scenery",
+"w": 105
+},
+"tree23.tem": {
+"frames": 2,
+"h": 123,
+"image": "tree23",
+"kind": "scenery",
+"w": 123
+},
+"tree24.tem": {
+"frames": 2,
+"h": 121,
+"image": "tree24",
+"kind": "scenery",
+"w": 121
+},
+"tree25.tem": {
+"frames": 2,
+"h": 103,
+"image": "tree25",
+"kind": "scenery",
+"w": 103
+},
+"tree26.tem": {
+"frames": 2,
+"h": 107,
+"image": "tree26",
+"kind": "scenery",
+"w": 107
+},
+"tree27.tem": {
+"frames": 2,
+"h": 103,
+"image": "tree27",
+"kind": "scenery",
+"w": 103
+},
+"tree28.tem": {
+"frames": 2,
+"h": 115,
+"image": "tree28",
+"kind": "scenery",
+"w": 115
+},
+"trff01.tem": {
+"frames": 2,
+"h": 155,
+"image": "trff01",
+"kind": "scenery",
+"w": 155
+},
+"trff02.tem": {
+"frames": 2,
+"h": 155,
+"image": "trff02",
+"kind": "scenery",
+"w": 155
+},
+"trff03.tem": {
+"frames": 2,
+"h": 155,
+"image": "trff03",
+"kind": "scenery",
+"w": 155
+},
+"trff04.tem": {
+"frames": 2,
+"h": 155,
+"image": "trff04",
+"kind": "scenery",
+"w": 155
+},
+"trkaicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "dtruck",
+"kind": "icon",
+"w": 60
+},
+"trock01.tem": {
+"frames": 2,
+"h": 96,
+"image": "trock01",
+"kind": "effect",
+"w": 96
+},
+"trock02.tem": {
+"frames": 2,
+"h": 96,
+"image": "trock02",
+"kind": "effect",
+"w": 96
+},
+"trock03.tem": {
+"frames": 2,
+"h": 96,
+"image": "trock03",
+"kind": "effect",
+"w": 96
+},
+"trock04.tem": {
+"frames": 2,
+"h": 96,
+"image": "trock04",
+"kind": "effect",
+"w": 96
+},
+"trock05.tem": {
+"frames": 2,
+"h": 96,
+"image": "trock05",
+"kind": "effect",
+"w": 96
+},
+"trst.shp": {
+"frames": 376,
+"h": 76,
+"image": "terror",
+"kind": "infantry",
+"w": 78
+},
+"trsticon.shp": {
+"frames": 1,
+"h": 48,
+"image": "terror",
+"kind": "icon",
+"w": 60
+},
+"tslaicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "tesla",
+"kind": "icon",
+"w": 60
+},
+"tstimpct.shp": {
+"frames": 14,
+"h": 44,
+"image": "explosion",
+"kind": "effect",
+"w": 38
+},
+"ttnkicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "ttnk",
+"kind": "icon",
+"w": 60
+},
+"twlt026.shp": {
+"frames": 17,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"twlt036.shp": {
+"frames": 17,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"twlt050.shp": {
+"frames": 17,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"twlt070.shp": {
+"frames": 26,
+"h": 196,
+"image": "explosion",
+"kind": "effect",
+"w": 186
+},
+"twlt100.shp": {
+"frames": 21,
+"h": 156,
+"image": "explosion",
+"kind": "effect",
+"w": 182
+},
+"v3icon.shp": {
+"frames": 1,
+"h": 48,
+"image": "v3",
+"kind": "icon",
+"w": 60
+},
+"veteran.shp": {
+"frames": 23,
+"h": 30,
+"image": "crate-effects",
+"kind": "effect",
+"w": 31
+},
+"vladimir.shp": {
+"frames": 584,
+"h": 68,
+"image": "vladimir",
+"kind": "infantry",
+"w": 102
+},
+"vtexplod.shp": {
+"frames": 26,
+"h": 110,
+"image": "explosion",
+"kind": "effect",
+"w": 80
+},
+"vtmuzzle.shp": {
+"frames": 11,
+"h": 58,
+"image": "apoc",
+"kind": "vehicle",
+"w": 38
+},
+"wallicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "cafncb",
+"kind": "icon",
+"w": 60
+},
+"warpin.shp": {
+"frames": 10,
+"h": 26,
+"image": "chrono",
+"kind": "vehicle",
+"w": 54
+},
+"warpout.shp": {
+"frames": 21,
+"h": 52,
+"image": "chrono",
+"kind": "vehicle",
+"w": 68
+},
+"wccloud1.shp": {
+"frames": 59,
+"h": 132,
+"image": "explosion",
+"kind": "effect",
+"w": 190
+},
+"wccloud2.shp": {
+"frames": 60,
+"h": 172,
+"image": "explosion",
+"kind": "effect",
+"w": 204
+},
+"wccloud3.shp": {
+"frames": 60,
+"h": 172,
+"image": "explosion",
+"kind": "effect",
+"w": 204
+},
+"wclbolt1.shp": {
+"frames": 3,
+"h": 370,
+"image": "explosion",
+"kind": "effect",
+"w": 108
+},
+"wclbolt2.shp": {
+"frames": 3,
+"h": 370,
+"image": "explosion",
+"kind": "effect",
+"w": 108
+},
+"wclbolt3.shp": {
+"frames": 3,
+"h": 370,
+"image": "explosion",
+"kind": "effect",
+"w": 108
+},
+"wcrate.tem": {
+"frames": 2,
+"h": 60,
+"image": "crate",
+"kind": "effect",
+"w": 60
+},
+"wethicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "gaweat",
+"kind": "icon",
+"w": 60
+},
+"wrench.shp": {
+"frames": 7,
+"h": 43,
+"image": "allyrepair",
+"kind": "effect",
+"w": 55
+},
+"xgrymed1.shp": {
+"frames": 15,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"xgrymed2.shp": {
+"frames": 14,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"xgrysml1.shp": {
+"frames": 15,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"xgrysml2.shp": {
+"frames": 13,
+"h": 158,
+"image": "explosion",
+"kind": "effect",
+"w": 148
+},
+"xxicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "all",
+"kind": "icon",
+"w": 60
+},
+"yardicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "nayard",
+"kind": "icon",
+"w": 60
+},
+"yuri.shp": {
+"frames": 632,
+"h": 68,
+"image": "yuri",
+"kind": "infantry",
+"w": 46
+},
+"yuricntl.shp": {
+"frames": 21,
+"h": 28,
+"image": "aegis",
+"kind": "infantry",
+"w": 38
+},
+"yuridie.shp": {
+"frames": 30,
+"h": 150,
+"image": "adog",
+"kind": "infantry",
+"w": 230
+},
+"yuriicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "yuri",
+"kind": "icon",
+"w": 60
+},
+"yuripr.shp": {
+"frames": 630,
+"h": 86,
+"image": "yuripr",
+"kind": "infantry",
+"w": 82
+},
+"yurpicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "yuripr",
+"kind": "icon",
+"w": 60
+},
+"zepicon.shp": {
+"frames": 1,
+"h": 48,
+"image": "zep",
+"kind": "icon",
+"w": 60
+}
+},
+"terrain_tile_files_replaced": 2269
+}

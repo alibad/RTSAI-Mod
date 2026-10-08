@@ -1,11 +1,16 @@
 # RTS AI → OpenRA Mod SDK migration
 
-> **Push order (since 2026-10-06): push the engine branch before this one.** `ENGINE_VERSION` in `mod.config` is
-> `rtsai/engine` 68c1e95557, which exists only in the local engine checkout (`OpenRA-wt-rtsai-engine`; published
-> `alibad/OpenRA rtsai/engine` is still 5523a9907f). Push `rtsai/engine` to `alibad/OpenRA` first, then this `main`;
-> otherwise `AUTOMATIC_ENGINE_SOURCE` points at an archive GitHub cannot serve and fresh checkouts cannot build.
-> Until then: `./fetch-local-engine.sh ../OpenRA-wt-rtsai-engine && ./make.cmd all` (the export stamps
-> `engine/VERSION`, so automatic engine management stays on and skips the download). Neither push is approved yet.
+> **Current direction, 9 October 2026:** the default game is standalone and needs no owned Red Alert/RA2 content.
+> Original-content work from `rtsai/standalone` is consolidated into the canonical mod. Classic/top-down and
+> isometric gameplay remain the two-mode product target; the Classic port/combined chooser are still in progress.
+> Custom resources are preserved under `resources/`; see [product direction](docs/product-direction.md).
+>
+> **Engine pin:** `rtsai/engine` 68c1e95557 resolves on the public fork (verified 9 October). Future engine pins
+> must be published before the mod that references them. A local export is also supported:
+> `./fetch-local-engine.sh ../OpenRA-wt-rtsai-engine && ./make.cmd all`.
+>
+> The rounds below are historical evidence. Their owned-content setup and old "local-only engine" notes are not
+> the current player prerequisites or publication state. This transition does not publish or deploy anything.
 
 How each result was established: **[ran]** means a command was run and its output observed.
 **[inferred]** means it was reasoned from code or config and not run.

@@ -106,6 +106,23 @@ function Test-Command
 
 	Write-Host "Testing $modID mod MiniYAML..." -ForegroundColor Cyan
 	InvokeCommand "$utilityPath $modID --check-yaml"
+
+	Write-Host "Checking that $modID loads nothing from Red Alert 2 (docs/standalone.md)..." -ForegroundColor Cyan
+	InvokeCommand "$utilityPath $modID --check-standalone --strict"
+
+	Write-Host "Checking audio provenance (tools/standalone-audio.py)..." -ForegroundColor Cyan
+	$python = Get-Command python -ErrorAction SilentlyContinue
+	if ($python -eq $null) { $python = Get-Command py -ErrorAction SilentlyContinue }
+	if ($python -eq $null)
+	{
+		Write-Host "Python not found: skipping the audio provenance check." -ForegroundColor Yellow
+	}
+	else
+	{
+		InvokeCommand "& '$($python.Source)' tools/standalone-audio.py check"
+		Write-Host "Checking the standalone game's neutral names (tools/standalone-names.py)..." -ForegroundColor Cyan
+		InvokeCommand "& '$($python.Source)' tools/standalone-names.py --check"
+	}
 }
 
 function Check-Command

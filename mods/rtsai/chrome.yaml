@@ -1360,7 +1360,6 @@ sidebar-bits:
 		production-tooltip-power: 326, 300, 19, 19
 		production-tooltip-cost: 326, 281, 19, 19
 		production-iconoverlay: 250, 20, 64, 48
-		commandbar-background: 0, 123, 434, 44
 
 order-icons:
 	Image: chrome.png
@@ -1862,6 +1861,12 @@ logos:
 	Image: loadscreen.png
 	Regions:
 		logo: 0, 0, 256, 256
+
+# The main menu backdrop: one flagship per faction (tools/standalone-menu.py), drawn to cover the window.
+rtsai-menu:
+	Image: ra2|standalone/art/menu-backdrop.png
+	Regions:
+		backdrop: 0, 0, 1920, 1080
 
 mainmenu-border:
 	Image: dialog.png

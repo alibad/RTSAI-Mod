@@ -52,7 +52,7 @@ gacnst:
 		ShadowStart: 30
 		Tick: 100
 	icon:
-		Filename: acnsicon.shp
+		Filename: acnsicon-rtsai.png
 
 gapowr:
 	Inherits: ^Structure

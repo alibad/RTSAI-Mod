@@ -667,4 +667,3 @@ actor-cdest-name = Coast Guard Boat
 tileset-temperate = Temperate
 tileset-snow = Snow
 tileset-urban = Urban
-mod-title = RTS AI

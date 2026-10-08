@@ -1,24 +1,22 @@
 # RTS AI
 
-**A Red Alert 2 mod for [OpenRA](https://www.openra.net): five modern nations and an AI co-commander.**
+**A standalone modern RTS built on [OpenRA](https://www.openra.net), with seven factions and project-made art, sound and maps. No Red Alert or Red Alert 2 installation is required.**
 
 The co-commander watches your match, speaks up when it matters, answers spoken questions, and takes command only when you switch AUTO on. It sees only what you can see.
 
-Status: **in development.** The current public release is the OpenRA AI Classic alpha at [rtsai.net](https://rtsai.net). This repository is where the Red Alert 2 mod is being built. See `MIGRATION.md` for progress.
+Status: **in development.** This is the canonical standalone game checkout. The earlier OpenRA AI Classic alpha remains a historical release; it is not the current standalone build. See [the product direction](docs/product-direction.md) and `MIGRATION.md` for integration status.
 
-## You need your own Red Alert 2
+## One product, two gameplay modes
 
-This mod does not include any Command & Conquer: Red Alert 2 game data, and never will. On first launch, the content installer imports the copy you own from any of these:
+The product keeps Classic/top-down and RA2/isometric gameplay, without requiring commercial game data. The current default mod is the original-content isometric game. Bringing the retained Classic content into this mod and restoring the combined mode chooser remain integration work; we do not claim that selector is already available here.
 
-- Steam (Command & Conquer: The Ultimate Collection)
-- the EA app or Origin
-- the original disc or The First Decade
+The default launcher and standalone Windows package load only project and engine resources. The old owned-content importer and `rtsai-classic` manifest are retained for migration reference, excluded from the standalone package, and are not the dependency-free Classic/top-down mode.
 
 Independent project. EA has not endorsed and does not support this mod.
 
 ## Factions
 
-The original RA2 countries plus modern nations, each with its own doctrine, signature units and voice lines:
+Seven modern factions, each with its own doctrine, signature units and voice lines:
 
 | Nation | Status in this mod |
 |---|---|
@@ -52,8 +50,7 @@ Requirements: the .NET 10 SDK.
 .\launch-game.cmd       # start the game
 ```
 
-Until the pinned engine commit is published (see the push-order note at the top of `MIGRATION.md`), export it from a
-local engine checkout first: `sh ./fetch-local-engine.sh ../OpenRA-wt-rtsai-engine`, then `.\make.cmd all`.
+For a local engine export: `sh ./fetch-local-engine.sh ../OpenRA-wt-rtsai-engine`, then `.\make.cmd all`. `mod.config` pins the exact engine commit.
 
 A Windows release (per-user installer, portable zip, voice pack) is built on Windows with
 `packaging\windows\build-release.ps1`; the first-launch flow, installer options, code signing and the AI
@@ -66,7 +63,9 @@ The engine is the slim `rtsai/engine` branch of [alibad/OpenRA](https://github.c
 | Path | Contents |
 |---|---|
 | `mods/rtsai` | Game rules, maps, chrome and the modern factions (their art: `modern-factions/art-*.yaml` and the `vehicles`, `infantry`, `buildings` and `icons` folders, installed by RTSAI-Art's tools) |
-| `mods/rtsai-content` | The content installer that imports owned RA2 data |
+| `mods/rtsai/standalone` | Original terrain, maps, shared buildings/units, effects, sounds, UI and their provenance |
+| `resources/` | Preserved legacy source resources and migration inventory; not mounted or shipped as game content |
+| `mods/rtsai-content`, `mods/rtsai-classic` | Legacy owned-content references, excluded from standalone distribution |
 | `OpenRA.Mods.RA2` | RA2 game logic |
 | `OpenRA.Mods.RTSAI` | The AI companion bridge (loopback gRPC), its in-game HUD, and the faction bot doctrines |
 | `tools/` | Porting and validation scripts |

@@ -4,55 +4,35 @@ Metadata:
 	Version: {DEV_VERSION}
 
 ModCredits:
-	ModTabTitle: Red Alert 2
+	ModTabTitle: RTS AI # = -product-name in languages/identity.ftl (ModCredits cannot use Fluent)
 	ModCreditsFile: ra2|CREDITS # TODO rename to AUTHORS as stated in the .cs files when OpenRA#17460 is available
 
-PackageFormats: Mix, AudioBag
-
-FileSystem: ContentInstallerFileSystem
-	SystemPackages:
+# Standalone: no Red Alert 2 content is mounted, there is no content installer and no archive format (MIX/BAG)
+# is registered. Every file comes from this mod or the engine; tools/standalone-check (make test) enforces it.
+# The original factions and maps live in the separate classic add-on (mods/rtsai-classic, needs the player's RA2).
+# standalone/placeholders: code-drawn stand-ins under the EA file names the rules still use; mounted first so the
+# deliveries below (Phase 3 art: base/units/effects; audio: sfx/ui/voices/music) override them as they land.
+FileSystem: DefaultFileSystem
+	Packages:
 		^EngineDir
 		$rtsai: ra2
 		^EngineDir|mods/common: common
-		~^SupportDir|Content/ra2: content
 		ra2|uibits
-	ContentPackages:
-		# Red Alert 2 (original game files installed by rtsai-content)
-		content|language.mix: lang
-		content|ra2.mix: ra2mix
-		~content|theme.mix
-		lang|cameo.mix: cameo
-		~lang|audio.mix: audio
-		~audio|audio.bag
-		~lang|audio.bag
-		ra2mix|cache.mix: cache
-		ra2mix|conquer.mix: conquer
-		ra2mix|generic.mix
-		ra2mix|isogen.mix
-		ra2mix|isosnow.mix
-		ra2mix|isotemp.mix
-		ra2mix|isourb.mix
-		ra2mix|load.mix
-		ra2mix|local.mix: local
-		ra2mix|neutral.mix
-		ra2mix|sidec01.mix
-		ra2mix|sidec02.mix
-		ra2mix|sno.mix
-		ra2mix|snow.mix
-		ra2mix|tem.mix
-		ra2mix|temperat.mix
-		ra2mix|urb.mix
-		ra2mix|urban.mix
-		# Mod-provided packages load after content so they can override it.
+		ra2|standalone/placeholders
+		ra2|standalone/placeholders/conquer: conquer
+		~ra2|standalone/effects
+		~ra2|standalone/units
+		~ra2|standalone/base
+		~ra2|standalone/audio/sfx
+		~ra2|standalone/audio/ui
+		~ra2|standalone/audio/voices
+		~ra2|standalone/audio/music
 		ra2|bits
 		ra2|bits/cameos
-		ra2|bits/structures
-		ra2|bits/animations
-		ra2|bits/projectiles
-	ContentInstallerMod: rtsai-content
 
 MapFolders:
 	ra2|maps: System
+	ra2|standalone/maps: System
 	~^SupportDir|maps/rtsai/{DEV_VERSION}: User
 
 Rules:
@@ -123,10 +103,13 @@ Rules:
 	ra2|modern-factions/hezbollah-roles.yaml
 	ra2|modern-factions/combined-arms-ai.yaml
 	ra2|modern-factions/doctrines.yaml
+	ra2|modern-factions/modern-scope.yaml
 	ra2|modern-factions/art-vehicles.yaml
 	ra2|modern-factions/art-vehicles-fx.yaml
 	ra2|modern-factions/art-infantry.yaml
 	ra2|modern-factions/art-buildings.yaml
+	ra2|standalone/rules.yaml
+	ra2|standalone/base-kit.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -163,12 +146,17 @@ Sequences:
 	ra2|modern-factions/art-infantry-sequences.yaml
 	ra2|modern-factions/art-buildings-sequences.yaml
 	ra2|modern-factions/art-icons-sequences.yaml
+	ra2|standalone/base/kit-sequences.yaml
+	ra2|standalone/units/units-sequences.yaml
+	ra2|standalone/kit-extra-sequences.yaml
+	ra2|standalone/smudge-sequences.yaml
+	ra2|standalone/sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
 
 Cursors:
-	ra2|cursors.yaml
+	ra2|standalone/cursors.yaml
 
 Chrome:
 	ra2|chrome.yaml
@@ -178,7 +166,7 @@ Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, Op
 ChromeLayout:
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
-	common|chrome/mainmenu.yaml
+	ra2|chrome/rtsai-mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	ra2|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/ingame-infoobjectives.yaml
@@ -267,9 +255,7 @@ Notifications:
 	ra2|modern-factions/eva-notifications.yaml
 
 TileSets:
-	ra2|tilesets/temperat.yaml
-	ra2|tilesets/snow.yaml
-	ra2|tilesets/urban.yaml
+	ra2|standalone/tilesets/temperat.yaml
 
 MapGrid:
 	Type: RectangularIsometric
@@ -279,7 +265,7 @@ MapGrid:
 	MaximumTerrainHeight: 16
 
 Music:
-	ra2|audio/music.yaml
+	ra2|standalone/audio/music.yaml
 
 FluentMessages:
 	common|fluent/common.ftl
@@ -289,6 +275,8 @@ FluentMessages:
 	common|fluent/rules.ftl
 	ra2|languages/rules/en.ftl
 	ra2|languages/chrome/en.ftl
+	ra2|languages/identity.ftl
+	ra2|standalone/standalone.ftl
 	ra2|languages/native-preview.ftl
 	ra2|languages/ai.ftl
 	ra2|languages/ai-runtime.ftl
@@ -301,6 +289,7 @@ FluentMessages:
 	ra2|modern-factions/yemen-messages.ftl
 	ra2|modern-factions/hezbollah-messages.ftl
 	ra2|modern-factions/loading-tips.ftl
+	ra2|standalone/names.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -341,6 +330,10 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size: 32
 		Ascender: 24
+	Hero:
+		Font: common|FreeSansBold.ttf
+		Size: 56
+		Ascender: 42
 	BigBold:
 		Font: common|FreeSansBold.ttf
 		Size: 24
@@ -366,7 +359,7 @@ DefaultOrderGenerator: UnitOrderGenerator
 
 SupportsMapsFrom: ra2
 
-SoundFormats: Aud, Wav
+SoundFormats: Aud, Wav, Ogg
 
 SpriteFormats: ShpTS, TmpTS, ShpTD, PngSheet
 

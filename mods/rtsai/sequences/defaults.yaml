@@ -135,7 +135,7 @@
 
 ^Structure:
 	Defaults:
-		DepthSprite: isodepth.shp
+		DepthSprite: isodepth.png
 	idle:
 		ShadowStart: 3
 	make:
@@ -149,7 +149,7 @@
 
 ^TechStructure:
 	Defaults:
-		DepthSprite: isodepth.shp
+		DepthSprite: isodepth.png
 	idle:
 		ShadowStart: 4
 	damaged-idle:
@@ -164,7 +164,7 @@
 
 ^CivStructure:
 	Defaults:
-		DepthSprite: isodepth.shp
+		DepthSprite: isodepth.png
 	idle:
 		ShadowStart: 4
 	damaged-idle:
@@ -194,7 +194,7 @@
 ^Fence:
 	Defaults:
 		Offset: 0, -15, 15
-		DepthSprite: isodepth.shp
+		DepthSprite: isodepth.png
 	idle:
 		Length: 16
 		ShadowStart: 32
@@ -209,7 +209,7 @@
 	Inherits: ^Fence
 	Defaults:
 		Offset: 0, -12, 12
-		DepthSprite: isodepth.shp
+		DepthSprite: isodepth.png
 	idle:
 		ShadowStart: 48
 	damaged-idle:

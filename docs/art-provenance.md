@@ -4,6 +4,9 @@ Date: 2026-10-06, when the owner-approved art preview was promoted into `main`. 
 `mods/rtsai/modern-factions/ART-PROVENANCE.json`, written by `tools/art-provenance.py`. This page explains how the art
 is made and where each record comes from.
 
+The standalone build's own art (the shared base kit, shared units and effects that replace Red Alert 2 content) is
+covered in [standalone-art-provenance.md](standalone-art-provenance.md).
+
 **[ran]** means a command was run and its output observed. **[inferred]** means it was reasoned from code, commit
 messages or notes and not run.
 

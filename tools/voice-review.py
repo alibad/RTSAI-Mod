@@ -101,6 +101,8 @@ def transcribe(args) -> int:
         rows.append(row)
         print(f"{record['filename']}: {text} (CER {cer:.3f}; {row['detected_language']})", flush=True)
 
+    # rows this command does not own (the standalone shared-unit voices, tools/standalone-voices.py) are kept as they are
+    rows += [row for name, row in kept.items() if name.startswith("standalone/")]
     sheet.parent.mkdir(parents=True, exist_ok=True)
     with sheet.open("w", encoding="utf-8-sig", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=MACHINE + HUMAN)

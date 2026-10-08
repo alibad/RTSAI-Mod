@@ -114,19 +114,19 @@ rank:
 
 mpspawn:
 	idle:
-		Filename: mpspawn.shp
+		Filename: spawn-marker.png
 		Length: *
 		ZRamp: 1
 
 waypoint:
 	idle:
-		Filename: waypoint.shp
+		Filename: waypoint-marker.png
 		Length: *
 		ZRamp: 1
 
 clock:
 	idle:
-		Filename: clock.shp
+		Filename: clock-rtsai.png
 		Length: *
 		BlendMode: Multiply
 
@@ -151,8 +151,8 @@ pips:
 		Filename: pips.shp
 	medic:
 		Start: 6
-	groups: #TODO: backfall to RA asset
-		Filename: pipsra.shp
+	groups:
+		Filename: pips-rtsai.png
 		Start: 8
 		Length: 10
 	pip-empty:
@@ -173,10 +173,11 @@ pips:
 		Filename: pips2.shp
 		Start: 5
 	pip-ammo:
-		Filename: ammopips.shp
+		Filename: pips-rtsai.png
+		Start: 24
 	pip-ammoempty:
-		Filename: ammopips.shp
-		Start: 1
+		Filename: pips-rtsai.png
+		Start: 25
 	# TODO:
 	pip-empty-building:
 	pip-green-building:
@@ -190,8 +191,9 @@ pips:
 	pip-blue-building:
 		Start: 5
 	pip-disguise:
-		Filename: pip-disguise.shp
-		Length: *
+		Filename: pips-rtsai.png
+		Start: 26
+		Length: 12
 		Tick: 300
 		Offset: 6, -2
 
@@ -385,7 +387,7 @@ missile:
 
 zbomb:
 	idle:
-		Filename: zbomb.shp
+		Filename: bomb-rtsai.png
 		Facings: 32
 
 largesmoke:
@@ -876,7 +878,7 @@ srock05:
 
 camera:
 	idle:
-		Filename: camera.shp
+		Filename: camera-marker.png
 		Length: *
 
 flameguy:

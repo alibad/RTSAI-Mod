@@ -23,7 +23,7 @@ ticks changes, so matches run as fast as the host allows. Durations are reported
 normal-speed game time (25 ticks per second). Replays keep the ``default`` speed id.
 
 Each match runs in its own support directory, with the owned RA2 content linked in (never
-copied), no companion bridge and no network port. Both slots are bots of the same type; the
+copied; ``--standalone`` links nothing), no companion bridge and no network port. Both slots are bots of the same type; the
 local client spectates. The engine seeds its RNG from the clock, so replicates are independent
 samples, not reruns. Every match records the winner, the end reason (conquest, tick-cap draw,
 mutual defeat, crash, hang), the duration and per-side production.
@@ -328,17 +328,20 @@ def engine_seed(replay: Path) -> int | None:
     return int(found.group(1)) if found else None
 
 
-def run_match(match: Match, *, engine: Path, mods: Path, content: Path, output: Path, guard: float,
+def run_match(match: Match, *, engine: Path, mods: Path, content: Path | None, output: Path, guard: float,
               keep_support: bool = False, bot_log: bool = False, dotnet: str = "dotnet") -> dict:
     match_dir = output / "matches" / match.id
     if match_dir.exists():
         clear_tree(match_dir)
     support = match_dir / "support"
     support.mkdir(parents=True)
-    link_directory(support / "Content", content)
+    if content is not None:
+        link_directory(support / "Content", content)
     fixture = "balance-" + slug(match.id)
     maps_rel = user_map_dir(mods / MOD)
-    write_fixture(match, mods / MOD / "maps", support / maps_rel / fixture)
+    maps_dir = next((d for d in (mods / MOD / "maps", mods / MOD / "standalone" / "maps") if (d / match.map).is_dir()),
+                    mods / MOD / "maps")
+    write_fixture(match, maps_dir, support / maps_rel / fixture)
     env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENRA_AI_", "RTSAI_"))}
     env["DOTNET_ROLL_FORWARD"] = env.get("DOTNET_ROLL_FORWARD", "Major")
     if bot_log:
@@ -721,7 +724,9 @@ def main(argv: list[str] | None = None) -> int:
         if name == "run":
             p.add_argument("--engine", type=Path, default=ROOT / "engine")
             p.add_argument("--mods", type=Path, default=ROOT / "mods", help="Mod source directory (holds rtsai/)")
-            p.add_argument("--content", type=Path, required=True, help="Directory holding ra2/ra2.mix and ra2/language.mix")
+            p.add_argument("--content", type=Path, help="Directory holding ra2/ra2.mix and ra2/language.mix")
+            p.add_argument("--standalone", action="store_true",
+                           help="The standalone game (docs/standalone.md): no RA2 content, nothing linked as Content")
             p.add_argument("--parallel", type=int, default=4)
             p.add_argument("--rerun", action="store_true", help="Rerun matches that already have results")
             p.add_argument("--keep-support", action="store_true")
@@ -743,11 +748,12 @@ def main(argv: list[str] | None = None) -> int:
         summary = write_summary(output, campaign, matches, seed)
         print(json.dumps({k: summary[k] for k in ("matches", "complete", "errors")}))
         return 0
-    engine, content = absolute_path(args.engine), absolute_path(args.content)
+    engine = absolute_path(args.engine)
+    content = None if args.standalone else absolute_path(args.content) if args.content else None
     if not (engine / "bin" / "OpenRA.dll").is_file():
         raise SystemExit(f"No engine build at {engine}: run ./fetch-local-engine.sh and make all first")
-    if not (content / "ra2" / "ra2.mix").is_file():
-        raise SystemExit(f"{content} has no ra2/ra2.mix (owned Red Alert 2 content)")
+    if not args.standalone and (content is None or not (content / "ra2" / "ra2.mix").is_file()):
+        raise SystemExit(f"{content} has no ra2/ra2.mix (owned Red Alert 2 content); --standalone runs without it")
     mods = prepare_resources(output, absolute_path(args.mods))
     (output / "campaign.json").write_text(json.dumps({"campaign": campaign, "seed": seed, "planned": [
         m.to_dict() for m in matches]}, indent=1) + "\n", encoding="utf-8")
