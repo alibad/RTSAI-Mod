@@ -1,0 +1,998 @@
+{
+ "schema": "rtsai.balance-harness/v1",
+ "matches": 128,
+ "complete": 128,
+ "errors": 0,
+ "error_matches": [],
+ "draws": {
+  "tick-cap": 27,
+  "mutual-defeat": 0
+ },
+ "length_minutes": {
+  "median": 21.2,
+  "mean": 23.4,
+  "p10": 9.8,
+  "p90": 40.0,
+  "max": 40.0
+ },
+ "duplicate_engine_seeds": 0,
+ "by_map": {
+  "Harbor Line": {
+   "games": 64,
+   "draws": 7,
+   "length_minutes": {
+    "median": 15.5,
+    "mean": 18.7,
+    "p10": 7.9,
+    "p90": 35.3,
+    "max": 40.0
+   },
+   "first_slot_score": 0.508
+  },
+  "Twin Fords": {
+   "games": 64,
+   "draws": 20,
+   "length_minutes": {
+    "median": 29.3,
+    "mean": 28.0,
+    "p10": 13.3,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "first_slot_score": 0.453
+  }
+ },
+ "factions": {
+  "saudi": {
+   "games": 32,
+   "wins": 16,
+   "draws": 6,
+   "losses": 10,
+   "value_destroyed": 1606995,
+   "value_lost": 1559520,
+   "unit_trade": {
+    "r2m1a2s": [
+     305900,
+     234600,
+     403505
+    ],
+    "r2saat": [
+     196500,
+     163000,
+     246590
+    ],
+    "r2sang": [
+     122100,
+     102520,
+     224560
+    ],
+    "r2caesar": [
+     112500,
+     92500,
+     97105
+    ],
+    "r2f15sa": [
+     77000,
+     52800,
+     36970
+    ],
+    "r2falcon": [
+     76000,
+     57000,
+     49245
+    ],
+    "r2ah64sa": [
+     59500,
+     40800,
+     80460
+    ],
+    "r2sads": [
+     46200,
+     33600,
+     8200
+    ],
+    "r2bradley": [
+     40800,
+     31450,
+     50655
+    ],
+    "dog": [
+     7600,
+     3400,
+     500
+    ]
+   },
+   "win_rate": 0.5,
+   "win_rate_ci95": [
+    0.336,
+    0.664
+   ],
+   "score": 0.594,
+   "score_ci95": [
+    0.423,
+    0.745
+   ],
+   "cost_efficiency": 1.03,
+   "length_minutes": {
+    "median": 25.7,
+    "mean": 24.6,
+    "p10": 10.1,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 48.3,
+   "mean_unit_value": 32665.6,
+   "mean_structures": 24.8,
+   "top_units": {
+    "r2sang": 555,
+    "r2saat": 393,
+    "r2m1a2s": 266,
+    "r2caesar": 90,
+    "r2bradley": 48,
+    "r2sads": 44,
+    "r2falcon": 40,
+    "dog": 38
+   }
+  },
+  "iran": {
+   "games": 32,
+   "wins": 12,
+   "draws": 11,
+   "losses": 9,
+   "value_destroyed": 1735070,
+   "value_lost": 1676930,
+   "unit_trade": {
+    "r2toophan": [
+     368550,
+     323100,
+     346300
+    ],
+    "r2karrar": [
+     277100,
+     238000,
+     227960
+    ],
+    "r2basij": [
+     193320,
+     174870,
+     420195
+    ],
+    "r2fajr": [
+     158600,
+     126100,
+     163920
+    ],
+    "r2coast": [
+     67500,
+     55500,
+     10650
+    ],
+    "r2raad": [
+     65000,
+     62000,
+     15220
+    ],
+    "htk": [
+     35500,
+     32000,
+     43575
+    ],
+    "r2mohajer": [
+     22800,
+     19000,
+     9750
+    ],
+    "r2azar": [
+     22550,
+     18450,
+     1370
+    ],
+    "r2toufan": [
+     21750,
+     17400,
+     11590
+    ]
+   },
+   "win_rate": 0.375,
+   "win_rate_ci95": [
+    0.229,
+    0.547
+   ],
+   "score": 0.547,
+   "score_ci95": [
+    0.379,
+    0.705
+   ],
+   "cost_efficiency": 1.03,
+   "length_minutes": {
+    "median": 25.5,
+    "mean": 26.4,
+    "p10": 10.0,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 115.7,
+   "mean_unit_value": 39174.1,
+   "mean_structures": 28.0,
+   "top_units": {
+    "r2basij": 2148,
+    "r2toophan": 819,
+    "r2karrar": 326,
+    "r2fajr": 122,
+    "htk": 71,
+    "r2raad": 65,
+    "r2coast": 45,
+    "dog": 27
+   }
+  },
+  "hezbollah": {
+   "games": 48,
+   "wins": 20,
+   "draws": 10,
+   "losses": 18,
+   "value_destroyed": 2554930,
+   "value_lost": 2193040,
+   "unit_trade": {
+    "r2hzat": [
+     309000,
+     269500,
+     302920
+    ],
+    "r2hzrifle": [
+     220800,
+     189600,
+     679775
+    ],
+    "r2hztechnical": [
+     184000,
+     157200,
+     198445
+    ],
+    "r2hzrecoilless": [
+     170525,
+     149625,
+     108300
+    ],
+    "r2hzfpv": [
+     148000,
+     128500,
+     27390
+    ],
+    "r2hzrail": [
+     121500,
+     101700,
+     198210
+    ],
+    "r2hzrockets": [
+     116800,
+     87200,
+     216500
+    ],
+    "r2hzscout": [
+     93600,
+     77400,
+     50725
+    ],
+    "r2hzescort": [
+     48600,
+     40800,
+     9200
+    ],
+    "htk": [
+     40000,
+     33000,
+     44115
+    ]
+   },
+   "win_rate": 0.417,
+   "win_rate_ci95": [
+    0.288,
+    0.557
+   ],
+   "score": 0.521,
+   "score_ci95": [
+    0.383,
+    0.655
+   ],
+   "cost_efficiency": 1.17,
+   "length_minutes": {
+    "median": 22.4,
+    "mean": 24.8,
+    "p10": 10.4,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 65.5,
+   "mean_unit_value": 30662.0,
+   "mean_structures": 22.9,
+   "top_units": {
+    "r2hzrifle": 736,
+    "r2hzat": 618,
+    "r2hztechnical": 460,
+    "r2hzrecoilless": 359,
+    "r2hzfpv": 296,
+    "r2hzrail": 270,
+    "r2hzrockets": 146,
+    "r2hzescort": 81
+   }
+  },
+  "israel": {
+   "games": 48,
+   "wins": 21,
+   "draws": 6,
+   "losses": 21,
+   "value_destroyed": 1706365,
+   "value_lost": 1960120,
+   "unit_trade": {
+    "r2merkava": [
+     357000,
+     271600,
+     465555
+    ],
+    "r2ilat": [
+     234850,
+     195800,
+     299155
+    ],
+    "r2ilrifle": [
+     139700,
+     116600,
+     308255
+    ],
+    "r2ilhowitzer": [
+     133750,
+     103750,
+     87630
+    ],
+    "r2ilfalcon": [
+     81400,
+     57200,
+     24440
+    ],
+    "r2namer": [
+     71400,
+     57750,
+     104415
+    ],
+    "r2ilrecon": [
+     55100,
+     43700,
+     22830
+    ],
+    "r2ilgunship": [
+     52700,
+     39100,
+     20835
+    ],
+    "r2ilshield": [
+     45150,
+     32550,
+     11690
+    ],
+    "dog": [
+     11800,
+     6400,
+     3070
+    ]
+   },
+   "win_rate": 0.438,
+   "win_rate_ci95": [
+    0.307,
+    0.577
+   ],
+   "score": 0.5,
+   "score_ci95": [
+    0.364,
+    0.636
+   ],
+   "cost_efficiency": 0.87,
+   "length_minutes": {
+    "median": 17.8,
+    "mean": 20.7,
+    "p10": 8.4,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 35.3,
+   "mean_unit_value": 24680.2,
+   "mean_structures": 19.6,
+   "top_units": {
+    "r2ilrifle": 635,
+    "r2ilat": 427,
+    "r2merkava": 255,
+    "r2ilhowitzer": 107,
+    "r2namer": 68,
+    "dog": 59,
+    "r2ilshield": 43,
+    "r2ilfalcon": 37
+   }
+  },
+  "yemen": {
+   "games": 32,
+   "wins": 12,
+   "draws": 8,
+   "losses": 12,
+   "value_destroyed": 1379810,
+   "value_lost": 1329890,
+   "unit_trade": {
+    "r2yrpg": [
+     244650,
+     217700,
+     194620
+    ],
+    "r2ytechrr": [
+     141350,
+     124850,
+     85720
+    ],
+    "r2technical": [
+     132800,
+     116800,
+     168830
+    ],
+    "r2ymr": [
+     123915,
+     107910,
+     340960
+    ],
+    "r2ymlr": [
+     95400,
+     73800,
+     153905
+    ],
+    "r2wadighost": [
+     66000,
+     62700,
+     32285
+    ],
+    "r2yzu": [
+     42000,
+     37800,
+     6150
+    ],
+    "htk": [
+     27000,
+     25000,
+     27855
+    ],
+    "r2samad": [
+     16100,
+     1400,
+     500
+    ],
+    "dog": [
+     1200,
+     800,
+     3870
+    ]
+   },
+   "win_rate": 0.375,
+   "win_rate_ci95": [
+    0.229,
+    0.547
+   ],
+   "score": 0.5,
+   "score_ci95": [
+    0.336,
+    0.664
+   ],
+   "cost_efficiency": 1.04,
+   "length_minutes": {
+    "median": 18.3,
+    "mean": 22.0,
+    "p10": 7.9,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 73.1,
+   "mean_unit_value": 27841.9,
+   "mean_structures": 21.4,
+   "top_units": {
+    "r2ymr": 751,
+    "r2yrpg": 699,
+    "r2technical": 332,
+    "r2ytechrr": 257,
+    "r2ymlr": 106,
+    "r2yzu": 70,
+    "htk": 54,
+    "r2wadighost": 40
+   }
+  },
+  "china": {
+   "games": 32,
+   "wins": 10,
+   "draws": 7,
+   "losses": 15,
+   "value_destroyed": 1503980,
+   "value_lost": 1694970,
+   "unit_trade": {
+    "r2qilin": [
+     237750,
+     210000,
+     344025
+    ],
+    "r2cnportable": [
+     172800,
+     158800,
+     214220
+    ],
+    "r2cnrifle": [
+     168130,
+     156400,
+     284740
+    ],
+    "r2phl": [
+     142500,
+     121500,
+     103160
+    ],
+    "r2zbd": [
+     79900,
+     75650,
+     64300
+    ],
+    "r2redspear": [
+     74100,
+     64600,
+     46995
+    ],
+    "r2cloud": [
+     73000,
+     63000,
+     55855
+    ],
+    "r2mantis": [
+     51300,
+     46550,
+     19270
+    ],
+    "r2skyspear": [
+     42500,
+     28900,
+     16650
+    ],
+    "r2crane": [
+     19200,
+     14400,
+     23350
+    ]
+   },
+   "win_rate": 0.312,
+   "win_rate_ci95": [
+    0.18,
+    0.486
+   ],
+   "score": 0.422,
+   "score_ci95": [
+    0.268,
+    0.592
+   ],
+   "cost_efficiency": 0.89,
+   "length_minutes": {
+    "median": 21.4,
+    "mean": 24.5,
+    "p10": 9.9,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 67.9,
+   "mean_unit_value": 33757.2,
+   "mean_structures": 22.2,
+   "top_units": {
+    "r2cnrifle": 989,
+    "r2cnportable": 432,
+    "r2qilin": 317,
+    "r2phl": 95,
+    "r2zbd": 94,
+    "r2cloud": 73,
+    "r2mantis": 54,
+    "r2redspear": 39
+   }
+  },
+  "turkey": {
+   "games": 32,
+   "wins": 10,
+   "draws": 6,
+   "losses": 16,
+   "value_destroyed": 1286930,
+   "value_lost": 1421320,
+   "unit_trade": {
+    "r2bozkir": [
+     321100,
+     273600,
+     438450
+    ],
+    "r2trat": [
+     152000,
+     134000,
+     194200
+    ],
+    "r2trrifle": [
+     130045,
+     115475,
+     217825
+    ],
+    "r2yildirim": [
+     93600,
+     81600,
+     79295
+    ],
+    "r2gokkalkan": [
+     91200,
+     82650,
+     15745
+    ],
+    "r2greywolf": [
+     66600,
+     61200,
+     34460
+    ],
+    "r2kuzgun": [
+     24000,
+     18000,
+     9315
+    ],
+    "r2sahin": [
+     23400,
+     18000,
+     9400
+    ],
+    "r2turna": [
+     11200,
+     11200,
+     3150
+    ],
+    "dog": [
+     6800,
+     4800,
+     2205
+    ]
+   },
+   "win_rate": 0.312,
+   "win_rate_ci95": [
+    0.18,
+    0.486
+   ],
+   "score": 0.406,
+   "score_ci95": [
+    0.255,
+    0.577
+   ],
+   "cost_efficiency": 0.91,
+   "length_minutes": {
+    "median": 17.4,
+    "mean": 21.2,
+    "p10": 9.9,
+    "p90": 40.0,
+    "max": 40.0
+   },
+   "mean_unit_count": 57.7,
+   "mean_unit_value": 28842.0,
+   "mean_structures": 20.9,
+   "top_units": {
+    "r2trrifle": 839,
+    "r2trat": 380,
+    "r2bozkir": 338,
+    "r2gokkalkan": 96,
+    "r2yildirim": 78,
+    "r2greywolf": 37,
+    "dog": 34,
+    "r2kuzgun": 24
+   }
+  }
+ },
+ "matrix": {
+  "china": {
+   "hezbollah": {
+    "games": 8,
+    "wins": 4,
+    "draws": 1,
+    "losses": 3,
+    "score": 0.562
+   },
+   "israel": {
+    "games": 8,
+    "wins": 3,
+    "draws": 2,
+    "losses": 3,
+    "score": 0.5
+   },
+   "iran": {
+    "games": 4,
+    "wins": 1,
+    "draws": 1,
+    "losses": 2,
+    "score": 0.375
+   },
+   "saudi": {
+    "games": 4,
+    "wins": 1,
+    "draws": 0,
+    "losses": 3,
+    "score": 0.25
+   },
+   "turkey": {
+    "games": 4,
+    "wins": 1,
+    "draws": 2,
+    "losses": 1,
+    "score": 0.5
+   },
+   "yemen": {
+    "games": 4,
+    "wins": 0,
+    "draws": 1,
+    "losses": 3,
+    "score": 0.125
+   }
+  },
+  "hezbollah": {
+   "china": {
+    "games": 8,
+    "wins": 3,
+    "draws": 1,
+    "losses": 4,
+    "score": 0.438
+   },
+   "iran": {
+    "games": 8,
+    "wins": 2,
+    "draws": 5,
+    "losses": 1,
+    "score": 0.562
+   },
+   "israel": {
+    "games": 8,
+    "wins": 3,
+    "draws": 0,
+    "losses": 5,
+    "score": 0.375
+   },
+   "saudi": {
+    "games": 8,
+    "wins": 4,
+    "draws": 1,
+    "losses": 3,
+    "score": 0.562
+   },
+   "turkey": {
+    "games": 8,
+    "wins": 4,
+    "draws": 0,
+    "losses": 4,
+    "score": 0.5
+   },
+   "yemen": {
+    "games": 8,
+    "wins": 4,
+    "draws": 3,
+    "losses": 1,
+    "score": 0.688
+   }
+  },
+  "israel": {
+   "china": {
+    "games": 8,
+    "wins": 3,
+    "draws": 2,
+    "losses": 3,
+    "score": 0.5
+   },
+   "hezbollah": {
+    "games": 8,
+    "wins": 5,
+    "draws": 0,
+    "losses": 3,
+    "score": 0.625
+   },
+   "iran": {
+    "games": 8,
+    "wins": 0,
+    "draws": 1,
+    "losses": 7,
+    "score": 0.062
+   },
+   "saudi": {
+    "games": 8,
+    "wins": 2,
+    "draws": 2,
+    "losses": 4,
+    "score": 0.375
+   },
+   "turkey": {
+    "games": 8,
+    "wins": 6,
+    "draws": 1,
+    "losses": 1,
+    "score": 0.812
+   },
+   "yemen": {
+    "games": 8,
+    "wins": 5,
+    "draws": 0,
+    "losses": 3,
+    "score": 0.625
+   }
+  },
+  "iran": {
+   "hezbollah": {
+    "games": 8,
+    "wins": 1,
+    "draws": 5,
+    "losses": 2,
+    "score": 0.438
+   },
+   "israel": {
+    "games": 8,
+    "wins": 7,
+    "draws": 1,
+    "losses": 0,
+    "score": 0.938
+   },
+   "china": {
+    "games": 4,
+    "wins": 2,
+    "draws": 1,
+    "losses": 1,
+    "score": 0.625
+   },
+   "saudi": {
+    "games": 4,
+    "wins": 0,
+    "draws": 2,
+    "losses": 2,
+    "score": 0.25
+   },
+   "turkey": {
+    "games": 4,
+    "wins": 1,
+    "draws": 1,
+    "losses": 2,
+    "score": 0.375
+   },
+   "yemen": {
+    "games": 4,
+    "wins": 1,
+    "draws": 1,
+    "losses": 2,
+    "score": 0.375
+   }
+  },
+  "saudi": {
+   "hezbollah": {
+    "games": 8,
+    "wins": 3,
+    "draws": 1,
+    "losses": 4,
+    "score": 0.438
+   },
+   "israel": {
+    "games": 8,
+    "wins": 4,
+    "draws": 2,
+    "losses": 2,
+    "score": 0.625
+   },
+   "china": {
+    "games": 4,
+    "wins": 3,
+    "draws": 0,
+    "losses": 1,
+    "score": 0.75
+   },
+   "iran": {
+    "games": 4,
+    "wins": 2,
+    "draws": 2,
+    "losses": 0,
+    "score": 0.75
+   },
+   "turkey": {
+    "games": 4,
+    "wins": 3,
+    "draws": 0,
+    "losses": 1,
+    "score": 0.75
+   },
+   "yemen": {
+    "games": 4,
+    "wins": 1,
+    "draws": 1,
+    "losses": 2,
+    "score": 0.375
+   }
+  },
+  "turkey": {
+   "hezbollah": {
+    "games": 8,
+    "wins": 4,
+    "draws": 0,
+    "losses": 4,
+    "score": 0.5
+   },
+   "israel": {
+    "games": 8,
+    "wins": 1,
+    "draws": 1,
+    "losses": 6,
+    "score": 0.188
+   },
+   "china": {
+    "games": 4,
+    "wins": 1,
+    "draws": 2,
+    "losses": 1,
+    "score": 0.5
+   },
+   "iran": {
+    "games": 4,
+    "wins": 2,
+    "draws": 1,
+    "losses": 1,
+    "score": 0.625
+   },
+   "saudi": {
+    "games": 4,
+    "wins": 1,
+    "draws": 0,
+    "losses": 3,
+    "score": 0.25
+   },
+   "yemen": {
+    "games": 4,
+    "wins": 1,
+    "draws": 2,
+    "losses": 1,
+    "score": 0.5
+   }
+  },
+  "yemen": {
+   "hezbollah": {
+    "games": 8,
+    "wins": 1,
+    "draws": 3,
+    "losses": 4,
+    "score": 0.312
+   },
+   "israel": {
+    "games": 8,
+    "wins": 3,
+    "draws": 0,
+    "losses": 5,
+    "score": 0.375
+   },
+   "china": {
+    "games": 4,
+    "wins": 3,
+    "draws": 1,
+    "losses": 0,
+    "score": 0.875
+   },
+   "iran": {
+    "games": 4,
+    "wins": 2,
+    "draws": 1,
+    "losses": 1,
+    "score": 0.625
+   },
+   "saudi": {
+    "games": 4,
+    "wins": 2,
+    "draws": 1,
+    "losses": 1,
+    "score": 0.625
+   },
+   "turkey": {
+    "games": 4,
+    "wins": 1,
+    "draws": 2,
+    "losses": 1,
+    "score": 0.5
+   }
+  }
+ },
+ "wall_seconds": 6993.5,
+ "campaign": "r6-sa-p1",
+ "seed": 20261103,
+ "planned": 128
+}

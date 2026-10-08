@@ -1,0 +1,408 @@
+{
+ "r6-main-p1": {
+  "description": "Round 6 main land probe 1: 9 factions, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "seed": 20261101,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   },
+   {
+    "id": "rr-hzil",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "hezbollah",
+     "israel"
+    ]
+   }
+  ]
+ },
+ "r6-sa-p1": {
+  "description": "Round 6 standalone probe 1: the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "seed": 20261103,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   },
+   {
+    "id": "sa-hzil",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ],
+    "focus": [
+     "hezbollah",
+     "israel"
+    ]
+   }
+  ]
+ },
+ "r6-main-p2": {
+  "description": "Round 6 main land probe 2: 9 factions, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "seed": 20261111,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   },
+   {
+    "id": "rr-hzil",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "hezbollah",
+     "israel"
+    ]
+   }
+  ]
+ },
+ "r6-sa-p2": {
+  "description": "Round 6 standalone probe 2: the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "seed": 20261113,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   },
+   {
+    "id": "sa-hzil",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 1,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ],
+    "focus": [
+     "hezbollah",
+     "israel"
+    ]
+   }
+  ]
+ },
+ "r6-main-final": {
+  "description": "Round 6 main land round robin (final): 7 modern factions plus America and Russia, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 3 replicates.",
+  "seed": 20261121,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "rr",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "dustbowl",
+      "title": "Dustbowl"
+     },
+     {
+      "map": "tournament-2A",
+      "title": "Official Tournament Map A"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r6-main-final-naval": {
+  "description": "Round 6 main naval round robin (final): Little Big Lake, 3 replicates.",
+  "seed": 20261122,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "naval",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah",
+     "america",
+     "russia"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "little-big-lake",
+      "title": "Little Big Lake"
+     }
+    ],
+    "focus": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ]
+   }
+  ]
+ },
+ "r6-sa-final": {
+  "description": "Round 6 standalone round robin (final): the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 3 replicates.",
+  "seed": 20261123,
+  "wall_guard_seconds": 1500,
+  "suites": [
+   {
+    "id": "sa",
+    "factions": [
+     "china",
+     "iran",
+     "turkey",
+     "saudi",
+     "yemen",
+     "israel",
+     "hezbollah"
+    ],
+    "bots": [
+     "normal"
+    ],
+    "replicates": 3,
+    "tick_cap": 60000,
+    "maps": [
+     {
+      "map": "twin-fords",
+      "title": "Twin Fords"
+     },
+     {
+      "map": "harbor-line",
+      "title": "Harbor Line"
+     }
+    ]
+   }
+  ]
+ }
+}
