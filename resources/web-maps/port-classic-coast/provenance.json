@@ -1,0 +1,6 @@
+{
+  "source": "mods\\rtsai-topdown\\maps\\classic-coast",
+  "generator": "tools/build-classic-mode.py",
+  "adaptation": "Original rectangular layout translated to project isometric terrain. Original retained.",
+  "license": "Project-authored; see repository license"
+}

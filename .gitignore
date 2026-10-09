@@ -52,3 +52,7 @@ _ReSharper.*/
 
 # Local legacy resource preservation; review provenance before distribution.
 /resources/preserved/
+
+# Local Earth workshop output includes cached OSM evidence and attribution.
+# Preserved here, indexed by the local map adapter; explicit review before distribution.
+/resources/earth-maps/
