@@ -35,6 +35,14 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Installed game smoke command failed.' }
     $log = Get-Content -LiteralPath (Join-Path $TestRoot 'installed-mode-switch/stdout.log') -Raw
     if ($log -notmatch 'Loading mod: rtsai-topdown' -or $log -match 'Exception|Fatal') { throw 'Installed mode switch failed.' }
+    foreach ($mode in @('rtsai', 'rtsai-topdown')) {
+        $map = if ($mode -eq 'rtsai') { 'twin-fords' } else { 'classic-frontier' }
+        $out = Join-Path $TestRoot "installed-skirmish-$mode"
+        & python (Join-Path $workspace 'tools/standalone-smoke.py') skirmish --packaged --worktree $install --mod $mode --map $map --observe --seconds 55 --out $out --set Game.IntroductionPromptVersion=99 --set Debug.SystemInformationVersionPrompt=99
+        if ($LASTEXITCODE -ne 0) { throw "Installed $mode skirmish command failed." }
+        $result = Get-Content -LiteralPath (Join-Path $out 'report.json') -Raw | ConvertFrom-Json
+        if ($result.exited_early -or $result.'exception.log' -or $result.missing_sounds.Count -gt 0 -or $result.replays.Count -eq 0 -or -not ($result.lua -match 'CENSUS\|')) { throw "Installed $mode skirmish acceptance failed." }
+    }
     Set-Content -LiteralPath (Join-Path $install 'keep-this-test-file.txt') -Value 'Uninstaller must preserve unrelated user files.'
     # The absolute install target above has been checked; the generated uninstaller removes only its payload.
     $u = Start-Process -FilePath (Join-Path $install 'Uninstall RTS AI.exe') -ArgumentList '/S' -WindowStyle Hidden -PassThru
@@ -43,7 +51,7 @@ try {
     if (Test-Path -LiteralPath (Join-Path $install 'RTSAI.exe')) { throw 'Uninstaller left the game payload behind.' }
     if (-not (Test-Path -LiteralPath (Join-Path $install 'keep-this-test-file.txt'))) { throw 'Uninstaller removed an unrelated file.' }
     $uninstalled = $true
-    @{ downloadedHashVerified=$true; installer='passed'; modeSwitch='passed'; uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
+    @{ downloadedHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
     Write-Output 'Downloaded installer: install, configuration, shortcut, rendered mode switch and uninstall passed.'
 } finally {
     # Restore the specific pre-existing registration and shortcut files touched by this installer.

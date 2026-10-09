@@ -10,7 +10,7 @@ engine logs land in --out. The support dir is a fresh scratch folder with no Con
 be resolved even by accident.
 
 usage: python tools/standalone-smoke.py menu --out <scratch>/menu
-       python tools/standalone-smoke.py skirmish --map tournament-2B --bots Multi0:normal:china,Multi1:normal:iran \
+       python tools/standalone-smoke.py skirmish --map twin-fords --bots Multi0:normal:china,Multi1:normal:iran \
            --seconds 300 --out <scratch>/skirmish
 """
 from __future__ import annotations
@@ -50,7 +50,7 @@ def main():
     ap.add_argument("mode", choices=["menu", "skirmish"])
     ap.add_argument("--worktree", type=Path, default=ROOT)
     ap.add_argument("--packaged", action="store_true", help="launch RTSAI.exe from an extracted Windows package")
-    ap.add_argument("--map", default="tournament-2B")
+    ap.add_argument("--map", default="twin-fords")
     ap.add_argument("--bots", default="Multi0:normal:china,Multi1:normal:iran")
     ap.add_argument("--faction", help="the host plays this faction (leave Multi0 out of --bots)")
     ap.add_argument("--seconds", type=int, default=60)
@@ -88,9 +88,9 @@ def main():
     script = a.lua or ("observe.lua" if a.observe else None) or ("look.lua" if a.look else None)
     if a.mode == "skirmish" and script:
         import re
-        version = re.search(r"^\s*Version: (.+)$", (a.worktree / "mods/rtsai/mod.yaml").read_text(encoding="utf-8"), re.M)[1]
-        dst = support / "maps" / "rtsai" / version.strip() / "sa-observe"
-        src = next(d / a.map for d in (a.worktree / "mods/rtsai/maps", a.worktree / "mods/rtsai/standalone/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
+        version = re.search(r"^\s*Version: (.+)$", (a.worktree / "mods" / a.mod / "mod.yaml").read_text(encoding="utf-8"), re.M)[1]
+        dst = support / "maps" / a.mod / version.strip() / "sa-observe"
+        src = next(d / a.map for d in (a.worktree / "mods" / a.mod / "maps", a.worktree / "mods/rtsai/standalone/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
         shutil.copytree(src, dst)   # a classic (Westwood) map only ever lands in this scratch support dir
         lua = (ROOT / "tools/standalone-smoke" / script).read_text(encoding="utf-8")
         if a.look:
