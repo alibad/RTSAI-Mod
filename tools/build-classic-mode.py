@@ -83,6 +83,7 @@ def manifest():
     source=source.replace('TileSets:\n\tra2|standalone/tilesets/temperat.yaml','TileSets:\n\tclassic|tileset.yaml')
     source=re.sub(r'MapGrid:\n.*?(?=\nMusic:)', 'MapGrid:\n\tType: Rectangular\n\tEnableDepthBuffer: false\n\tMaximumTerrainHeight: 0\n',source,flags=re.S)
     source=source.replace('FluentMessages:\n','FluentMessages:\n\tclassic|mode.ftl\n')
+    source=source.replace('\nModelSequences:', '\n\tclassic|sequences.yaml\n\nModelSequences:')
     text(MODE/'mod.yaml',source)
     text(MODE/'mode.ftl','classic-mode-title = RTS AI — Classic\n')
     rules='^Palettes:\n\tPaletteFromFile@terrain-temperate:\n\t\tFilename: classic|terrain/terrain.pal\n\n^SpriteActor:\n\tBodyOrientation:\n\t\tUseClassicPerspectiveFudge: true\n'

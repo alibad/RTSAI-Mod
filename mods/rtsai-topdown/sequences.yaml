@@ -1,0 +1,6 @@
+# Project-generated square masks for Classic's 32x32 cell grid.
+shroud:
+	Defaults:
+		Filename: classic|art/shroud.png
+	fog:
+		Filename: classic|art/fog.png

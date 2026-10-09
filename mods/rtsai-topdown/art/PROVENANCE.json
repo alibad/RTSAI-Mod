@@ -1,0 +1,28 @@
+{
+  "assets": [
+    {
+      "file": "shroud.png",
+      "sha256": "9c0b141ea0773a01fe8c88c7c04fce134aa0dda126bf4a776ee457c004d71c9a",
+      "origin": "Project-generated square-grid alpha masks; no external source artwork.",
+      "generator": "python tools/standalone-art.py shroud-classic",
+      "license": "GPL-3.0-or-later",
+      "frame_size": [
+        32,
+        32
+      ],
+      "frames": 48
+    },
+    {
+      "file": "fog.png",
+      "sha256": "42dcf0ab984731c8b0fca933994494d38f2c5df534fa6d7748804e7702f274bd",
+      "origin": "Project-generated square-grid alpha masks; no external source artwork.",
+      "generator": "python tools/standalone-art.py shroud-classic",
+      "license": "GPL-3.0-or-later",
+      "frame_size": [
+        32,
+        32
+      ],
+      "frames": 48
+    }
+  ]
+}

@@ -58,8 +58,17 @@ def controller():
 				campaignWorld = world;
 				Start(info.Mission);
 			}''')
+    source = source.replace('if (states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete"))', 'if (won)')
+    source = source.replace('\n\t\t\t\tforeach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active")) s.Status = "complete";', '')
     source = source.replace('\n\t\t\tif (states.Any', '''
-			for (var i = 0; i < states.Count; i++)
+			var won = !states.Any(s => !s.Spec.Secondary && s.Status == "failed")
+				&& states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete");
+			if (won)
+				foreach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active"))
+					s.Status = "complete";
+			// Publish secondary statuses first: completing the last primary can
+			// award victory immediately and stops further campaign ticks.
+			foreach (var i in Enumerable.Range(0, states.Count).OrderByDescending(i => states[i].Spec.Secondary))
 			{
 				if (states[i].Status == "complete") objectives.MarkCompleted(human, objectiveIds[i]);
 				else if (states[i].Status == "failed") objectives.MarkFailed(human, objectiveIds[i]);
@@ -132,7 +141,8 @@ def content():
             shutil.copytree(WEB/'content/maps'/mission['id'], dst, dirs_exist_ok=True)
             source = (dst/'map.yaml').read_text(encoding='utf-8')
             source = source.replace('RequiresMod: rtsai', 'RequiresMod: '+mode)
-            source = source.replace('\tWorld:\n', '\tWorld:\n\t\tRTSAICampaign:\n\t\t\tMission: '+mission['id']+'\n\t\tObjectivesPanel:\n\t\t\tPanelName: MISSION_OBJECTIVES\n\t\tMissionData:\n\t\t\tBriefing: '+json.dumps(mission['briefing'])+'\n')
+            difficulty = '\t\tScriptLobbyDropdown@difficulty:\n\t\t\tID: difficulty\n\t\t\tLabel: dropdown-missionbrowser-difficulty.label\n\t\t\tDescription: dropdown-missionbrowser-difficulty.description\n\t\t\tDefault: normal\n\t\t\tValues:\n\t\t\t\teasy: campaign-difficulty-easy\n\t\t\t\tnormal: label-missionbrowser-normal-difficulty\n\t\t\t\thard: campaign-difficulty-hard\n'
+            source = source.replace('\tWorld:\n', '\tWorld:\n'+difficulty+'\t\tRTSAICampaign:\n\t\t\tMission: '+mission['id']+'\n\t\tObjectivesPanel:\n\t\t\tPanelName: MISSION_OBJECTIVES\n\t\tMissionData:\n\t\t\tBriefing: '+json.dumps(mission['briefing'])+'\n')
             if mode == 'rtsai-topdown':
                 # Inverse of rectangular-isometric MPos -> CPos; map.bin is already MPos-indexed.
                 def location(match):

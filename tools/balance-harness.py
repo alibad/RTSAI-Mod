@@ -710,11 +710,13 @@ def write_summary(output: Path, campaign: dict, planned: list[Match], seed: int)
 
 
 def main(argv: list[str] | None = None) -> int:
+    global MOD
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
     for name in ("plan", "run", "report"):
         p = sub.add_parser(name)
         p.add_argument("--campaign", default="round-robin")
+        p.add_argument("--mod-id", choices=["rtsai", "rtsai-topdown"], default="rtsai")
         p.add_argument("--campaigns-file", type=Path, default=CAMPAIGNS)
         p.add_argument("--seed", type=int)
         p.add_argument("--suite", action="append", help="Limit to these suite ids")
@@ -732,6 +734,7 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("--keep-support", action="store_true")
             p.add_argument("--bot-log", action="store_true", help="Set RTSAI_BOT_LOG=1 (doctrine decision log per match)")
     args = parser.parse_args(argv)
+    MOD = args.mod_id
     campaign = load_campaign(args.campaign, args.campaigns_file)
     seed = campaign.get("seed", 0) if args.seed is None else args.seed
     matches = plan(campaign, seed, set(args.suite) if args.suite else None)

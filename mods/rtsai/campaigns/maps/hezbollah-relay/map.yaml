@@ -103,6 +103,15 @@ Actors:
 		Location: 67,-25
 Rules:
 	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: dropdown-missionbrowser-difficulty.label
+			Description: dropdown-missionbrowser-difficulty.description
+			Default: normal
+			Values:
+				easy: campaign-difficulty-easy
+				normal: label-missionbrowser-normal-difficulty
+				hard: campaign-difficulty-hard
 		RTSAICampaign:
 			Mission: hezbollah-relay
 		ObjectivesPanel:

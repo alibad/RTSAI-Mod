@@ -157,6 +157,7 @@ Sequences:
 	ra2|standalone/sequences.yaml
 
 	ra2|campaigns/country-sequences.yaml
+	classic|sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml

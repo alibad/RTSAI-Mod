@@ -1,0 +1,664 @@
+{
+  "roster-20261009": {
+    "description": "All sixteen factions: a mixed modern/historical ring, mirrored spawns, land/coastal maps, two replicates. Screening, not a competitive balance certification.",
+    "seed": 20261009,
+    "wall_guard_seconds": 240,
+    "suites": [
+      {
+        "id": "pair-1",
+        "factions": [
+          "america",
+          "china"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-2",
+        "factions": [
+          "china",
+          "germany"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-3",
+        "factions": [
+          "germany",
+          "iran"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-4",
+        "factions": [
+          "iran",
+          "england"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-5",
+        "factions": [
+          "england",
+          "turkey"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-6",
+        "factions": [
+          "turkey",
+          "france"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-7",
+        "factions": [
+          "france",
+          "saudi"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-8",
+        "factions": [
+          "saudi",
+          "korea"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-9",
+        "factions": [
+          "korea",
+          "israel"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-10",
+        "factions": [
+          "israel",
+          "cuba"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-11",
+        "factions": [
+          "cuba",
+          "yemen"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-12",
+        "factions": [
+          "yemen",
+          "libya"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-13",
+        "factions": [
+          "libya",
+          "hezbollah"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-14",
+        "factions": [
+          "hezbollah",
+          "iraq"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-15",
+        "factions": [
+          "iraq",
+          "russia"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      },
+      {
+        "id": "pair-16",
+        "factions": [
+          "russia",
+          "america"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 2,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          },
+          {
+            "map": "harbor-line",
+            "title": "Harbor Line"
+          }
+        ]
+      }
+    ]
+  },
+  "pilot": {
+    "seed": 7,
+    "wall_guard_seconds": 120,
+    "suites": [
+      {
+        "id": "pilot",
+        "factions": [
+          "china",
+          "russia"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 1500,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          }
+        ]
+      }
+    ]
+  },
+  "classic-roster-20261009": {
+    "description": "Classic mode: sixteen factions in a mirrored ring on Classic Frontier. One replicate; compatibility/balance screening.",
+    "seed": 20261009,
+    "wall_guard_seconds": 240,
+    "suites": [
+      {
+        "id": "pair-1",
+        "factions": [
+          "america",
+          "china"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-2",
+        "factions": [
+          "china",
+          "germany"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-3",
+        "factions": [
+          "germany",
+          "iran"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-4",
+        "factions": [
+          "iran",
+          "england"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-5",
+        "factions": [
+          "england",
+          "turkey"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-6",
+        "factions": [
+          "turkey",
+          "france"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-7",
+        "factions": [
+          "france",
+          "saudi"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-8",
+        "factions": [
+          "saudi",
+          "korea"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-9",
+        "factions": [
+          "korea",
+          "israel"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-10",
+        "factions": [
+          "israel",
+          "cuba"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-11",
+        "factions": [
+          "cuba",
+          "yemen"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-12",
+        "factions": [
+          "yemen",
+          "libya"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-13",
+        "factions": [
+          "libya",
+          "hezbollah"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-14",
+        "factions": [
+          "hezbollah",
+          "iraq"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-15",
+        "factions": [
+          "iraq",
+          "russia"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      },
+      {
+        "id": "pair-16",
+        "factions": [
+          "russia",
+          "america"
+        ],
+        "bots": [
+          "normal"
+        ],
+        "replicates": 1,
+        "tick_cap": 15000,
+        "maps": [
+          {
+            "map": "classic-frontier"
+          }
+        ]
+      }
+    ]
+  }
+}

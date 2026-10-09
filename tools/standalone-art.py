@@ -4,9 +4,8 @@
   shroud     shroud + fog edge sheets for ShroudRenderer (UseExtendedIndex, 48 masks)
   all        every target below
 
-Outputs go to mods/rtsai/standalone/art/ and are referenced with explicit `ra2|standalone/art/...` paths from the
-standalone-only overlay files (standalone/sequences.yaml, standalone/rules.yaml), so the classic add-on keeps the
-original look with the player's own files.
+Both standalone modes use project-made art. RA2 outputs go to mods/rtsai/standalone/art/;
+Classic square-grid masks go to mods/rtsai-topdown/art/, with independent explicit sequence paths.
 
 usage: python tools/standalone-art.py shroud
 """
@@ -48,17 +47,17 @@ def shroud_index() -> list[int]:
     return [int(x) for x in m[1].split(",")]
 
 
-def shroud_frames(max_alpha: float, falloff: float = 0.9) -> list[np.ndarray]:
+def shroud_frames(max_alpha: float, falloff: float = 0.9, rectangular: bool = False) -> list[np.ndarray]:
     """One frame per Index entry. A cell is a 60x30 diamond; s runs along cell +x (screen down-right), t along cell
     +y (screen down-left). Edge bits: 0x10 top (t=0), 0x20 right (s=1), 0x40 bottom (t=1), 0x80 left (s=0);
     corner bits (only when neither adjacent side is set): 0x01 TL (0,0), 0x02 TR (1,0), 0x04 BR (1,1), 0x08 BL (0,1).
     Darkness eases from the hidden side across `falloff` of the cell; a fully hidden cell (240) is solid."""
-    W, H = 60, 30   # one cell; pixel centres are never on a diamond edge, so neighbours partition pixels exactly
+    W, H = (32, 32) if rectangular else (60, 30)
     ys, xs = np.mgrid[0:H, 0:W].astype(np.float64)
     px = xs + 0.5 - W / 2
     py = ys + 0.5 - H / 2
-    s = (px / 30 + py / 15 + 1) / 2
-    t = (py / 15 + 1 - px / 30) / 2
+    s = (xs + 0.5) / W if rectangular else (px / 30 + py / 15 + 1) / 2
+    t = (ys + 0.5) / H if rectangular else (py / 15 + 1 - px / 30) / 2
     inside = (s >= 0) & (s < 1) & (t >= 0) & (t < 1)
 
     def ease(d):
@@ -90,6 +89,23 @@ def build_shroud():
     sheet_png(shroud_frames(1.0), ART / "shroud.png")
     sheet_png(shroud_frames(0.55), ART / "fog.png")
     print(f"shroud: {len(shroud_index())} masks -> {ART / 'shroud.png'}, {ART / 'fog.png'}")
+
+
+def build_classic_shroud():
+    """Square-grid masks; preserve the independent RA2 diamond masks."""
+    import hashlib
+    import json
+    output = ROOT / "mods/rtsai-topdown/art"
+    records = []
+    for name, alpha in (("shroud.png", 1.0), ("fog.png", 0.55)):
+        path = output / name
+        sheet_png(shroud_frames(alpha, rectangular=True), path)
+        records.append({"file": name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                        "origin": "Project-generated square-grid alpha masks; no external source artwork.",
+                        "generator": "python tools/standalone-art.py shroud-classic", "license": "GPL-3.0-or-later",
+                        "frame_size": [32, 32], "frames": len(shroud_index())})
+    (output / "PROVENANCE.json").write_text(json.dumps({"assets": records}, indent=2) + "\n", encoding="utf-8")
+    print("Classic square shroud and fog masks generated with provenance.")
 
 
 # ------------------------------------------------------------------------------------------------ cursors
@@ -705,7 +721,7 @@ def build_moveflash():
     print(f"move flash: {ART / 'moveflash.png'}")
 
 
-TARGETS = {"shroud": build_shroud, "cursors": build_cursors, "palettes": build_palettes, "bits": build_bits,
+TARGETS = {"shroud": build_shroud, "shroud-classic": build_classic_shroud, "cursors": build_cursors, "palettes": build_palettes, "bits": build_bits,
            "smudges": build_smudges, "moveflash": build_moveflash}
 
 

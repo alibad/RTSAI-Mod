@@ -187,15 +187,21 @@ namespace OpenRA.Mods.RTSAI.Traits
 						break;
 				}
 			}
-			for (var i = 0; i < states.Count; i++)
+			var won = !states.Any(s => !s.Spec.Secondary && s.Status == "failed")
+				&& states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete");
+			if (won)
+				foreach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active"))
+					s.Status = "complete";
+			// Publish secondary statuses first: completing the last primary can
+			// award victory immediately and stops further campaign ticks.
+			foreach (var i in Enumerable.Range(0, states.Count).OrderByDescending(i => states[i].Spec.Secondary))
 			{
 				if (states[i].Status == "complete") objectives.MarkCompleted(human, objectiveIds[i]);
 				else if (states[i].Status == "failed") objectives.MarkFailed(human, objectiveIds[i]);
 			}
 			if (states.Any(s => !s.Spec.Secondary && s.Status == "failed")) { Finish(world, false); return; }
-			if (states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete"))
+			if (won)
 			{
-				foreach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active")) s.Status = "complete";
 				Finish(world, true); return;
 			}
 			if (world.WorldTick >= nextWave) { Wave(world); nextWave += difficulty == "easy" ? 2000 : difficulty == "hard" ? 850 : 1400; }

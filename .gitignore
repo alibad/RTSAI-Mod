@@ -48,6 +48,7 @@ _ReSharper.*/
 
 # Windows release staging (packaging/windows/build-release.ps1)
 /packaging/windows/build/
+/tools/__pycache__/
 
 # Local legacy resource preservation; review provenance before distribution.
 /resources/preserved/

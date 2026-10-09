@@ -62,7 +62,7 @@ def main():
                     help="skirmish on a scratch copy of --map (in the run's support dir) with tools/standalone-smoke/"
                          "observe.lua: camera pans between bot bases, lua.log gets a per-bot actor census")
     ap.add_argument("--set", action="append", default=[], help="extra engine setting, e.g. Game.IntroductionPromptVersion=99")
-    ap.add_argument("--mod", default="rtsai", help="mod id to launch (rtsai-classic needs content: not run here)")
+    ap.add_argument("--mod", choices=["rtsai", "rtsai-topdown"], default="rtsai", help="Standalone RA2 or Classic mode")
     ap.add_argument("--switch-mode", choices=["rtsai", "rtsai-topdown"], help="exercise the in-game mode dialog and reload")
     ap.add_argument("--out", type=Path, required=True)
     a = ap.parse_args()
@@ -90,7 +90,7 @@ def main():
         import re
         version = re.search(r"^\s*Version: (.+)$", (a.worktree / "mods" / a.mod / "mod.yaml").read_text(encoding="utf-8"), re.M)[1]
         dst = support / "maps" / a.mod / version.strip() / "sa-observe"
-        src = next(d / a.map for d in (a.worktree / "mods" / a.mod / "maps", a.worktree / "mods/rtsai/standalone/maps", a.worktree / "mods/rtsai-classic/maps") if (d / a.map).exists())
+        src = next(d / a.map for d in (a.worktree / "mods" / a.mod / "maps", a.worktree / "mods" / a.mod / "campaigns/maps", a.worktree / "mods/rtsai/standalone/maps") if (d / a.map).exists())
         shutil.copytree(src, dst)   # a classic (Westwood) map only ever lands in this scratch support dir
         lua = (ROOT / "tools/standalone-smoke" / script).read_text(encoding="utf-8")
         if a.look:
@@ -98,11 +98,21 @@ def main():
             lua = lua.replace("__LOOK_X__", lx.strip()).replace("__LOOK_Y__", ly.strip())
         (dst / "observe.lua").write_text(lua, encoding="utf-8")
         y = (dst / "map.yaml").read_text(encoding="utf-8").replace("\r\n", "\n").rstrip("\n")
-        y = re.sub(r"\nRules:.*\Z", "", y, flags=re.S)   # the shipped maps end with an empty Rules: block
-        y += "\nRules:\n\tWorld:\n\t\tLuaScript:\n\t\t\tScripts: observe.lua\n"
+        if "LuaScript:" in y:
+            raise ValueError("Map already has Lua scripting; merge scripts explicitly instead of replacing them")
+        # Keep inline campaign rules and any existing external rules. Erasing
+        # Rules used to turn a campaign smoke into a map-only smoke silently.
+        rules = re.search(r"^Rules:([^\n]*)(?:\n|$)", y, re.M)
+        if rules:
+            files = [f.strip() for f in rules[1].split(",") if f.strip()] + ["observe-rules.yaml"]
+            y = y[:rules.start()] + "Rules: " + ", ".join(files) + "\n" + y[rules.end():]
+        else:
+            y += "\nRules: observe-rules.yaml\n"
+        overlay = "World:\n\tScriptTriggers:\n\tLuaScript:\n\t\tScripts: observe.lua\n"
         if a.map_rules:
             extra = a.map_rules.read_text(encoding="utf-8").replace("\r\n", "\n").strip("\n")
-            y += "".join(f"\t{line}\n" for line in extra.split("\n"))
+            overlay += "\n" + extra + "\n"
+        (dst / "observe-rules.yaml").write_text(overlay, encoding="utf-8")
         (dst / "map.yaml").write_text(y, encoding="utf-8")
         launch_map = "sa-observe"
     if a.mode == "skirmish":
