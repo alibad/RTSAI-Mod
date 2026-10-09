@@ -1,9 +1,11 @@
 param(
     [Parameter(Mandatory=$true)][string]$Installer,
     [Parameter(Mandatory=$true)][string]$ExpectedSha256,
-    [Parameter(Mandatory=$true)][string]$TestRoot
+    [Parameter(Mandatory=$true)][string]$TestRoot,
+    [string]$Version = '0.4.0-alpha.1'
 )
 $ErrorActionPreference = 'Stop'
+if ($Version -notmatch '^\d+\.\d+\.\d+(?:-[a-z]+\.\d+)?$') { throw 'Invalid release version.' }
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
 $TestRoot = [IO.Path]::GetFullPath($TestRoot)
 if (-not $TestRoot.StartsWith('D:\rtsai-release\online-e2e-', [StringComparison]::OrdinalIgnoreCase)) { throw 'TestRoot must be in the explicitly designated online acceptance directory.' }
@@ -12,7 +14,7 @@ $install = Join-Path $TestRoot 'installed-game'
 if (Test-Path -LiteralPath $install) { throw 'Acceptance install directory already exists; preserve the previous run.' }
 $backup = Join-Path $TestRoot 'previous-registration'
 New-Item -ItemType Directory -Path $backup -Force | Out-Null
-$keys = @('HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\RTSAI', 'HKCU\Software\Classes\openra-rtsai-0.4.0-alpha.1')
+$keys = @('HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\RTSAI', "HKCU\Software\Classes\openra-rtsai-$Version")
 $saved = @()
 for ($i=0; $i -lt $keys.Count; $i++) {
     $file = Join-Path $backup "registry-$i.reg"
@@ -28,7 +30,7 @@ try {
     $p.WaitForExit()
     if ($p.ExitCode -ne 0 -or -not (Test-Path -LiteralPath (Join-Path $install 'RTSAI.exe'))) { throw 'Silent installer failed.' }
     $config = Get-Content -LiteralPath (Join-Path $install 'rtsai-install.json') -Raw | ConvertFrom-Json
-    if ($config.ai_mode -ne 'none' -or $config.version -ne '0.4.0-alpha.1') { throw 'Installer selection was not recorded correctly.' }
+    if ($config.ai_mode -ne 'none' -or $config.version -ne $Version) { throw 'Installer selection was not recorded correctly.' }
     $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($links[0])
     if ($shortcut.TargetPath -ne (Join-Path $install 'RTSAI.exe')) { throw 'Start menu shortcut targets the wrong game.' }
     & python (Join-Path $workspace 'tools/standalone-smoke.py') menu --packaged --worktree $install --switch-mode rtsai-topdown --seconds 24 --out (Join-Path $TestRoot 'installed-mode-switch') --set Game.IntroductionPromptVersion=99 --set Debug.SystemInformationVersionPrompt=99
@@ -51,7 +53,7 @@ try {
     if (Test-Path -LiteralPath (Join-Path $install 'RTSAI.exe')) { throw 'Uninstaller left the game payload behind.' }
     if (-not (Test-Path -LiteralPath (Join-Path $install 'keep-this-test-file.txt'))) { throw 'Uninstaller removed an unrelated file.' }
     $uninstalled = $true
-    @{ downloadedHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
+    @{ version=$Version; scope='Fresh support directory on this Windows host; not a fresh OS'; downloadedHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
     Write-Output 'Downloaded installer: install, configuration, shortcut, rendered mode switch and uninstall passed.'
 } finally {
     # Restore the specific pre-existing registration and shortcut files touched by this installer.
