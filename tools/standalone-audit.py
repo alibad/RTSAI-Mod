@@ -37,8 +37,11 @@ MODERN = ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]
 
 
 def link_dir(link: Path, target: Path):
-    import _winapi
-    _winapi.CreateJunction(str(target.resolve()), str(link)) if os.name == "nt" else link.symlink_to(target.resolve())
+    if os.name == "nt":
+        import _winapi
+        _winapi.CreateJunction(str(target.resolve()), str(link))
+    else:
+        link.symlink_to(target.resolve())
 
 
 def is_link(p: Path) -> bool:
@@ -131,6 +134,7 @@ def run_audit(worktree: Path, content: Path | None, out: Path, cache: Path, util
         if utility_args:
             out.write_text(r.stdout + r.stderr, encoding="utf-8")
             print(f"exit {r.returncode}; output in {out}")
+            if r.returncode: raise SystemExit(r.returncode)
             return
         if r.returncode or not out.exists():
             log = eng / "Support" / "Logs" / "utility.log"

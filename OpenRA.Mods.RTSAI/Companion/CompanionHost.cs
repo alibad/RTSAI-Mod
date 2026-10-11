@@ -16,6 +16,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -38,6 +39,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 
 		/// <summary>The companion files are not installed next to the game.</summary>
 		Missing,
+		Unsupported,
 		Starting,
 		Running,
 		Restarting,
@@ -71,7 +73,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 		public static readonly IReadOnlyList<string> Modes = [ModeHosted, ModeLocal, ModeExternal, ModeOff];
 
 		const int MaxRestarts = 3;
-		const string ExecutableName = "rtsai-companion.exe";
+		static string ExecutableName => OperatingSystem.IsWindows() ? "rtsai-companion.exe" : "rtsai-companion";
 		const string InstallChoiceFile = "rtsai-install.json";
 		const string HostSettingsFile = "host.json";
 		const string NotIncluded = "This build does not include the AI co-commander.";
@@ -93,7 +95,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 		static Ports ports;
 
 		public static CompanionHostState State { get; private set; } = CompanionHostState.NotStarted;
-		public static string Mode { get; private set; } = ModeHosted;
+		public static string Mode { get; private set; } = ModeLocal;
 		public static string Detail { get; private set; } = "";
 
 		/// <summary>Percent of the voice pack downloaded so far, or -1 when no download is running.</summary>
@@ -195,12 +197,14 @@ namespace OpenRA.Mods.RTSAI.Companion
 			{
 				CompanionHostState.External => "Co-commander started by an external launcher.",
 				CompanionHostState.Off => Included() ? "Co-commander is off. Choose a mode to start it." : NotIncluded,
+				CompanionHostState.Unsupported => "This package includes an Apple silicon companion. Intel companion packaging remains pending.",
 				CompanionHostState.Missing => Included() ? "Companion files are missing. Reinstall RTS AI to restore them." : NotIncluded,
 				CompanionHostState.Starting => "Starting the co-commander…",
 				CompanionHostState.Restarting => "The co-commander stopped unexpectedly; restarting…",
 				CompanionHostState.Failed => "The co-commander keeps stopping. Details: Logs/ai-companion.err.log.",
 				CompanionHostState.Running => VoicePackProgress >= 0
 					? $"Co-commander running ({ModeLabel(Mode)}). Downloading local voice: {VoicePackProgress}%."
+					: Mode == ModeLocal ? "Local alerts and grounded strategy. Model and voice features require a compatible runtime."
 					: $"Co-commander running ({ModeLabel(Mode)}).",
 				_ => ""
 			};
@@ -210,8 +214,8 @@ namespace OpenRA.Mods.RTSAI.Companion
 		{
 			return mode switch
 			{
-				ModeHosted => "hosted AI + local voice",
-				ModeLocal => "full local AI",
+				ModeHosted => Environment.GetEnvironmentVariable("OPENRA_AI_HOSTED_ENABLED") == "1" ? "hosted AI + local voice" : "hosted AI (disabled)",
+				ModeLocal => "local companion",
 				ModeExternal => "external endpoint",
 				_ => "off"
 			};
@@ -225,6 +229,10 @@ namespace OpenRA.Mods.RTSAI.Companion
 		{
 			switch (State)
 			{
+				case CompanionHostState.Unsupported:
+					state = "disabled";
+					message = "APPLE SILICON COMPANION ONLY  •  INTEL GAMEPLAY AVAILABLE  •  GAME UNAFFECTED";
+					return true;
 				case CompanionHostState.Missing:
 					state = "error";
 					message = Included() ? "AI CO-COMMANDER UNAVAILABLE  •  COMPANION FILES MISSING  •  GAME UNAFFECTED" : NotIncludedHud;
@@ -313,7 +321,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 		static void LoadMode()
 		{
 			var settings = ReadHostSettings();
-			var mode = settings["mode"]?.GetValue<string>() ?? ModeHosted;
+			var mode = settings["mode"]?.GetValue<string>() ?? ModeLocal;
 
 			// The installer records the player's AI choice next to the game. Apply it once per install.
 			var choicePath = Path.Combine(Platform.EngineDir, InstallChoiceFile);
@@ -342,7 +350,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 				}
 			}
 
-			Mode = Modes.Contains(mode) ? mode : ModeHosted;
+			Mode = Modes.Contains(mode) ? mode : ModeLocal;
 		}
 
 		static JsonObject ReadHostSettings()
@@ -369,6 +377,22 @@ namespace OpenRA.Mods.RTSAI.Companion
 			File.Move(path + ".tmp", path, true);
 		}
 
+		public static bool ArchitectureSupported(string bundled, Architecture host) => bundled != "arm64" || host == Architecture.Arm64;
+
+		static bool BundledArchitectureSupported()
+		{
+			var choicePath = Path.Combine(Platform.EngineDir, InstallChoiceFile);
+			try
+			{
+				var bundled = File.Exists(choicePath) ? JsonNode.Parse(File.ReadAllText(choicePath))?["companion_arch"]?.GetValue<string>() : null;
+				return ArchitectureSupported(bundled, RuntimeInformation.OSArchitecture);
+			}
+			catch (Exception e) when (e is IOException or JsonException or InvalidOperationException)
+			{
+				return false;
+			}
+		}
+
 		static Sidecar ResolveSidecar()
 		{
 			var directories = new List<string>();
@@ -379,7 +403,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 			foreach (var directory in directories)
 			{
 				var program = Path.Combine(directory, ExecutableName);
-				if (File.Exists(program))
+				if (File.Exists(program) && BundledArchitectureSupported())
 					return new Sidecar { Program = program, Root = Path.GetFullPath(directory) };
 			}
 
@@ -387,7 +411,8 @@ namespace OpenRA.Mods.RTSAI.Companion
 			var root = Environment.GetEnvironmentVariable("OPENRA_AI_ROOT");
 			if (!string.IsNullOrWhiteSpace(root))
 			{
-				var python = Path.Combine(root, ".venv", "Scripts", "python.exe");
+				var python = Environment.GetEnvironmentVariable("OPENRA_AI_PYTHON") ?? Path.Combine(root, ".venv",
+					OperatingSystem.IsWindows() ? "Scripts" : "bin", OperatingSystem.IsWindows() ? "python.exe" : "python3");
 				var entry = Path.Combine(root, "apps", "launcher", "companion_entry.py");
 				if (File.Exists(python) && File.Exists(entry))
 					return new Sidecar
@@ -446,7 +471,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 
 			if (sidecar == null)
 			{
-				State = CompanionHostState.Missing;
+				State = BundledArchitectureSupported() ? CompanionHostState.Missing : CompanionHostState.Unsupported;
 				Detail = $"{ExecutableName} was not found in {Path.Combine(Platform.EngineDir, "companion")}.";
 				Log.Write(CompanionLog.Channel, "Companion host: " + Detail);
 				return;
@@ -516,7 +541,8 @@ namespace OpenRA.Mods.RTSAI.Companion
 				["OPENRA_AI_DATA_DIR"] = DataDirectory,
 				["OPENRA_AI_LOG_DIR"] = LogDirectory,
 				["OPENRA_AI_SUPPORT_DIR"] = Platform.SupportDir,
-				["OPENRA_AI_ENGINE_DIR"] = Platform.EngineDir,
+				["OPENRA_AI_ENGINE_DIR"] = Directory.Exists(Path.Combine(root, "engine-vocabulary"))
+					? Path.Combine(root, "engine-vocabulary") : Platform.EngineDir,
 				["OPENRA_AI_CATALOG"] = Path.Combine(root, "catalog", "factions.json"),
 				["OPENRA_AI_VERSION"] = modVersion,
 				["OPENRA_AI_MODEL_ROOT"] = root,
@@ -528,7 +554,8 @@ namespace OpenRA.Mods.RTSAI.Companion
 				["OPENRA_AI_AGENT_ROUTER_URL"] = gateway,
 				["OPENRA_AI_LOCAL_CHAT_PORT"] = ports.Chat.ToString(NumberFormatInfo()),
 				["OPENRA_AI_LOCAL_TRANSCRIBE_PORT"] = ports.Transcribe.ToString(NumberFormatInfo()),
-				["OPENRA_AI_AUTO_INSTALL_VOICE"] = Mode == ModeHosted ? "1" : "0",
+				["OPENRA_AI_AUTO_INSTALL_VOICE"] = "0",
+				["OPENRA_AI_HOSTED_ENABLED"] = Environment.GetEnvironmentVariable("OPENRA_AI_HOSTED_ENABLED") == "1" ? "1" : "0",
 				["OPENRA_AI_DISABLE_AUTOSTART"] = "1",
 				["PYTHONUNBUFFERED"] = "1",
 				["PYTHONUTF8"] = "1",

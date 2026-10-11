@@ -24,7 +24,8 @@ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 STANDALONE="${PACKAGING_STANDALONE:-False}"
 APP_NAME="${PACKAGING_DISPLAY_NAME}.app"
 
-WORK="$(mktemp -d)"
+WORK="${RTSAI_MAC_SMOKE_ROOT:-$(mktemp -d)}"
+mkdir -p "${WORK}"
 MOUNT="${WORK}/mount"
 cleanup() {
 	hdiutil detach "${MOUNT}" -quiet 2>/dev/null || true
@@ -66,7 +67,7 @@ echo "== Payload"
 mods="$(cd "${RESOURCES}/mods" && ls | tr '\n' ' ')"
 echo "mods: ${mods}"
 if [ "${STANDALONE}" = "True" ]; then
-	[ "${mods}" = "common ${MOD_ID} " ] || fail "the standalone build ships only common and ${MOD_ID}"
+	[ "${mods}" = "common rtsai rtsai-topdown " ] || fail "the standalone build must ship common and both product modes"
 	[ ! -e "${RESOURCES}/global mix database.dat" ] || fail "MIX filename database in the standalone build"
 fi
 archives="$(find "${APP}" -type f \( -iname '*.mix' -o -iname '*.bag' -o -iname '*.idx' -o -iname '*.vqa' -o -iname '*.big' -o -iname '*.wsa' -o -iname '*.bik' \) | head -5)"
@@ -74,25 +75,29 @@ archives="$(find "${APP}" -type f \( -iname '*.mix' -o -iname '*.bag' -o -iname 
 du -sh "${APP}"
 
 run_checks() {
-	local arch="$1" prefix=()
+	local arch="$1" mode="$2" prefix=()
 	[ "${arch}" = "x86_64" ] && prefix=(arch -x86_64)
 	echo "== Utility (${arch}): --check-yaml"
-	"${prefix[@]}" "${CONTENTS}/MacOS/Utility" --check-yaml | tail -n 3
+	ENGINE_DIR="${WORK}/utility-engine" "${prefix[@]}" "${CONTENTS}/MacOS/apphost-${arch}" "${CONTENTS}/MacOS/${arch}/libhostfxr.dylib" "${CONTENTS}/MacOS/${arch}/OpenRA.Utility.dll" "${mode}" --check-yaml | tee "${WORK}/yaml-${arch}-${mode}.log"
 	if [ "${STANDALONE}" = "True" ]; then
 		echo "== Utility (${arch}): --check-standalone --strict"
-		"${prefix[@]}" "${CONTENTS}/MacOS/Utility" --check-standalone --strict | tail -n 2
+		ENGINE_DIR="${WORK}/utility-engine" "${prefix[@]}" "${CONTENTS}/MacOS/apphost-${arch}" "${CONTENTS}/MacOS/${arch}/libhostfxr.dylib" "${CONTENTS}/MacOS/${arch}/OpenRA.Utility.dll" "${mode}" --check-standalone --strict | tee "${WORK}/standalone-${arch}-${mode}.log"
 	fi
 
+	ENGINE_DIR="${WORK}/utility-engine" "${prefix[@]}" "${CONTENTS}/MacOS/apphost-${arch}" "${CONTENTS}/MacOS/${arch}/libhostfxr.dylib" "${CONTENTS}/MacOS/${arch}/OpenRA.Utility.dll" "${mode}" --check-voice-language | tee "${WORK}/voice-${arch}-${mode}.log"
+
 	echo "== Headless skirmish (${arch}), ${SECONDS_TO_RUN}s"
-	local support="${WORK}/support-${arch}"
+	local map=twin-fords
+	[ "${mode}" != "rtsai-topdown" ] || map=classic-frontier
+	local support="${WORK}/support-${arch}-${mode}"
 	rm -rf "${support}"
 	mkdir -p "${support}"
 	# What Contents/MacOS/Launcher runs, with the no-op platform instead of a window.
 	(cd "${RESOURCES}" && exec "${CONTENTS}/MacOS/apphost-${arch}" "${CONTENTS}/MacOS/${arch}/libhostfxr.dylib" \
 		"${CONTENTS}/MacOS/${arch}/OpenRA.dll" "Engine.LaunchPath=${CONTENTS}/MacOS/Launcher" \
-		"Engine.EngineDir=${RESOURCES}" "Game.Mod=${MOD_ID}" "Engine.SupportDir=${support}" \
+		"Engine.EngineDir=${RESOURCES}" "Game.Mod=${mode}" "Engine.SupportDir=${support}" \
 		Game.Platform=Null Game.FetchNews=false Sound.Mute=true \
-		Launch.Map=twin-fords Launch.Bots=Multi0:normal:china,Multi1:normal:iran) > "${WORK}/game-${arch}.log" 2>&1 &
+		Launch.Map="${map}" Launch.Bots=Multi0:normal:china,Multi1:normal:iran) > "${WORK}/game-${arch}-${mode}.log" 2>&1 &
 	local pid=$!
 	local waited=0
 	while kill -0 "${pid}" 2>/dev/null && [ "${waited}" -lt "${SECONDS_TO_RUN}" ]; do
@@ -104,10 +109,10 @@ run_checks() {
 		wait "${pid}" 2>/dev/null || true
 	else
 		wait "${pid}" || true
-		tail -n 20 "${WORK}/game-${arch}.log"
+		tail -n 20 "${WORK}/game-${arch}-${mode}.log"
 		fail "the game (${arch}) exited after ${waited}s"
 	fi
-	head -n 6 "${WORK}/game-${arch}.log"
+	head -n 6 "${WORK}/game-${arch}-${mode}.log"
 	ls "${support}/Logs" || fail "no logs (${arch})"
 	if [ -s "${support}/Logs/exception.log" ]; then
 		tail -n 30 "${support}/Logs/exception.log"
@@ -124,11 +129,13 @@ run_checks() {
 	echo "skirmish ran ${waited}s (${arch}), replay $(basename "${replay}") $(stat -f %z "${replay}") bytes"
 }
 
+ditto "${RESOURCES}" "${WORK}/utility-engine"
+mkdir -p "${WORK}/utility-engine/Support"
 native="$(uname -m)"
-run_checks "${native}"
+for mode in rtsai rtsai-topdown; do run_checks "${native}" "${mode}"; done
 if [ "${native}" = "arm64" ]; then
 	if arch -x86_64 /usr/bin/true 2>/dev/null; then
-		run_checks x86_64
+		for mode in rtsai rtsai-topdown; do run_checks x86_64 "${mode}"; done
 	else
 		echo "== Rosetta 2 is not installed on this host: the Intel slice was built but not run here"
 	fi

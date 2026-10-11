@@ -1,63 +1,63 @@
 r2ilrifle:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelinfantryVoice
 
 r2ilat:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelinfantryVoice
 
 r2ilobserver:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelobserverVoice
 
 r2ilrecon:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelreconVoice
 
 r2merkava:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice
 
 r2ilshield:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice
 
 r2ilhowitzer:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice
 
 r2namer:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice
 
 r2ilfalcon:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelairVoice
 
 r2ilgunship:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelairVoice
 
 r2ilpatrol:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelnavalVoice
 
 r2ilfrigate:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelnavalVoice
 
 r2iltender:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelnavalVoice
 
 r2ilsentry:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice
 
 r2ilbattery:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice
 
 r2ilatpost:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2IsraelvehicleVoice

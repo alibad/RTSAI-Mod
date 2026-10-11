@@ -84,7 +84,7 @@ Player:
 	Repairable:
 		Voice: Move
 		RepairActors: gadept, nadept, caoutp
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: NighthawkVoice
 	Armor:
 		Type: Light

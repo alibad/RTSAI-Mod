@@ -1,5 +1,6 @@
 using System;
 using OpenRA.Widgets;
+using OpenRA.Mods.RTSAI.Traits;
 using OpenRA.Mods.Common.Widgets;
 
 namespace OpenRA.Mods.RTSAI.Widgets.Logic
@@ -45,6 +46,15 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		{
 			widget.Get<ButtonWidget>("CLASSIC_MODE").OnClick = () => Switch("rtsai-topdown");
 			widget.Get<ButtonWidget>("ISOMETRIC_MODE").OnClick = () => Switch("rtsai");
+			var settings = Game.Settings.GetOrCreate<RTSAISettings>(null);
+			var language = widget.Get<ButtonWidget>("VOICE_LANGUAGE");
+			language.GetText = () => RTSAISettings.Normalize(settings.VoiceLanguage) == "en"
+				? "Unit voices: English" : "Unit voices: Faction language";
+			language.OnClick = () =>
+			{
+				settings.VoiceLanguage = RTSAISettings.Normalize(settings.VoiceLanguage) == "en" ? "faction" : "en";
+				Game.Settings.Save();
+			};
 			widget.Get<ButtonWidget>("CANCEL").OnClick = Ui.CloseWindow;
 		}
 

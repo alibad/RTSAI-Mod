@@ -224,6 +224,7 @@ ChromeLayout:
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	common|chrome/gamesave-browser.yaml
+	common|chrome/load-game-browser.yaml
 	common|chrome/gamesave-loading.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/text-notifications.yaml
@@ -257,6 +258,7 @@ Voices:
 	ra2|modern-factions/saudi-voices.yaml
 	ra2|modern-factions/yemen-voices.yaml
 	ra2|modern-factions/voice-prefixes.yaml
+	ra2|modern-factions/voice-language.yaml
 
 	ra2|campaigns/country-voices.yaml
 

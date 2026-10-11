@@ -20,7 +20,7 @@ tug:
 	RenderVoxels:
 		NormalsPalette: ts-normals
 	WithVoxelBody:
-	-Voiced:
+	-RTSAIVoiced:
 	HitShape:
 
 cruise:
@@ -43,7 +43,7 @@ cruise:
 	Selectable:
 		Bounds: 1544, 2509, 0, -289
 	WithVoxelBody:
-	-Voiced:
+	-RTSAIVoiced:
 	HitShape:
 
 cdest:
@@ -53,4 +53,4 @@ cdest:
 		Name: actor-cdest-name
 	Armor:
 		Type: Light
-	-Voiced:
+	-RTSAIVoiced:

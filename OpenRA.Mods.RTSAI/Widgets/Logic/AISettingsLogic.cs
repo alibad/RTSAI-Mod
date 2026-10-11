@@ -53,8 +53,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 		static readonly Dictionary<string, string> AIModeLabels = new()
 		{
-			{ CompanionHost.ModeHosted, "Hosted AI + local voice (recommended)" },
-			{ CompanionHost.ModeLocal, "Full local AI on this PC (about 1.8 GB download)" },
+			{ CompanionHost.ModeHosted, "Hosted AI (disabled unless explicitly enabled)" },
+			{ CompanionHost.ModeLocal, "Local alerts / strategy (model runtime optional)" },
 			{ CompanionHost.ModeExternal, "External OpenAI-compatible endpoint (your API key)" },
 			{ CompanionHost.ModeOff, "Off" }
 		};
@@ -353,7 +353,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		{
 			return () =>
 			{
-				aiMode = CompanionHost.ModeHosted;
+				aiMode = CompanionHost.ModeLocal;
 				companionEnabled = true;
 				voiceEnabled = true;
 				selectedTab = "assistant";

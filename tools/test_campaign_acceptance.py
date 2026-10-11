@@ -9,15 +9,12 @@ spec.loader.exec_module(acceptance)
 
 
 class CampaignAcceptanceTests(unittest.TestCase):
-    def test_importer_preserves_the_validated_controller(self):
+    def test_importer_rejects_implicit_live_sibling_input(self):
         spec = importlib.util.spec_from_file_location("importer", Path(__file__).with_name("import-shared-campaigns.py"))
         importer = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(importer)
-        outputs = {}
-        importer.write = lambda path, text: outputs.update({path: text})
-        importer.controller()
-        path = acceptance.ROOT / "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs"
-        self.assertEqual(outputs[path].replace("\r\n", "\n"), path.read_text(encoding="utf-8").replace("\r\n", "\n"))
+        with self.assertRaisesRegex(ValueError, "explicit frozen"):
+            importer.controller()
 
     def test_preserves_production_rules_and_adds_observer(self):
         text = "Rules:\n\tWorld:\n\t\tRTSAICampaign:\n\t\t\tMission: test\n\tPlayer:\n\t\t-ConquestVictoryConditions:\n"

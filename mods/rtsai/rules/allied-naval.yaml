@@ -37,7 +37,7 @@ lcrf:
 		EmptyWeapon: UnitExplode
 	WithVoxelBody:
 	RenderSprites:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedNavalVoice
 	HitShape:
 	WithCargoPipsDecoration:
@@ -124,7 +124,7 @@ dest:
 		Sequence: empty
 		RequiresCondition: !loaded
 	RenderSprites:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedNavalVoice
 	HitShape:
 
@@ -165,7 +165,7 @@ aegis:
 		EmptyWeapon: UnitExplode
 	WithVoxelBody:
 	RenderSprites:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedNavalVoice
 	HitShape:
 
@@ -198,7 +198,7 @@ dlph:
 	SelectionDecorations:
 	Selectable:
 		Bounds: 965, 1930
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: DolphinVoice
 	Armament:
 		Weapon: SonicZap
@@ -289,7 +289,7 @@ carrier:
 		EmptyWeapon: UnitExplode
 	WithVoxelBody:
 	RenderSprites:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedNavalVoice
 	HitShape:
 	CarrierParent:

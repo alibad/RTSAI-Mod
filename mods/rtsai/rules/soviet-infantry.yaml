@@ -37,7 +37,7 @@ e2:
 		RequiresCondition: rank-elite
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: ConscriptVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -98,7 +98,7 @@ flakt:
 	WithMuzzleOverlay:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: FlakTrooperVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -163,7 +163,7 @@ shk:
 	ProximityExternalCondition:
 		Condition: charged
 		Range: 1c256
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: TeslaTrooperVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -219,7 +219,7 @@ terror:
 	KillsSelf:
 		RequiresCondition: triggered
 	WithInfantryBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: TerroristVoice
 	-TakeCover:
 	QuantizeFacingsFromSequence:
@@ -290,7 +290,7 @@ deso:
 	WithMakeAnimation:
 		Sequence: deploy
 		BodyNames: deployed
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: DesolatorVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -318,7 +318,7 @@ ivan:
 		Name: actor-ivan-name
 	Selectable:
 		Bounds: 482, 1448, 0, -530
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CrazyIvanVoice
 	Health:
 		HP: 125
@@ -397,7 +397,7 @@ yuri:
 		Name: actor-yuri-name
 	Selectable:
 		Bounds: 482, 1448, 0, -530
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: YuriVoice
 	Health:
 		HP: 100

@@ -97,7 +97,7 @@ def run_one(mod, mission, case, resources, output, guard, difficulty):
     script = (ROOT / "tools/campaign-acceptance.lua").read_text(encoding="utf-8")
     script = "Mission = " + lua(mission) + "\nCase = " + lua(case) + "\n" + script
     (target / "acceptance.lua").write_text(script, encoding="utf-8")
-    engine = ROOT / "engine"
+    engine = Path(os.environ.get("RTSAI_CAMPAIGN_ENGINE", str(ROOT / "engine"))).resolve()
     command = ["dotnet", str(engine / "bin/OpenRA.dll"), f"Engine.EngineDir={engine}",
                f"Engine.ModSearchPaths={resources},{engine / 'mods'}", f"Engine.SupportDir={support}",
                f"Game.Mod={mod}", "Game.Platform=Null", "Game.FetchNews=false", "Launch.Map=acceptance", "Launch.Benchmark=benchmark-"]

@@ -5,7 +5,7 @@
 		The retail map conversion command stays excluded; packaged maps are already converted.
 	-->
 	<PropertyGroup>
-		<EngineRootPath>../engine</EngineRootPath>
+		<EngineRootPath Condition="'$(EngineRootPath)' == ''">../engine</EngineRootPath>
 	</PropertyGroup>
 
 	<Import Project="$(EngineRootPath)/Directory.Build.props" />

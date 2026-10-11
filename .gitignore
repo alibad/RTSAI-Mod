@@ -56,3 +56,7 @@ _ReSharper.*/
 # Local Earth workshop output includes cached OSM evidence and attribution.
 # Preserved here, indexed by the local map adapter; explicit review before distribution.
 /resources/earth-maps/
+
+# Immutable verified source archives and isolated local build dependencies.
+.inputs/
+.build-deps/

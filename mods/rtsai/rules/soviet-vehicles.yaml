@@ -38,7 +38,7 @@ smcv:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	HitShape:
 
@@ -101,7 +101,7 @@ harv:
 	RenderVoxels:
 	WithVoxelTurret:
 	WithVoxelUnloadBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	HitShape:
 	WithStoresResourcesPipsDecoration:
@@ -161,7 +161,7 @@ dron:
 		InitialStance: AttackAnything
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: TerrorDroneVoice
 	HitShape:
 
@@ -219,7 +219,7 @@ htk:
 	RenderVoxels:
 	WithVoxelTurret:
 	WithVoxelBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -283,7 +283,7 @@ htnk:
 	WithVoxelBody:
 	WithVoxelTurret:
 	WithVoxelBarrel:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -343,7 +343,7 @@ apoc:
 	FireWarheadsOnDeath:
 		Weapon: ApocExplode
 		EmptyWeapon: ApocExplode
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -392,7 +392,7 @@ ttnk:
 	RenderVoxels:
 	WithVoxelBody:
 	WithVoxelTurret:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -446,6 +446,6 @@ dtruck:
 	WithVoxelBody:
 	VoiceAnnouncement:
 		Voice: Build
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: DemolitionTruckVoice
 	HitShape:

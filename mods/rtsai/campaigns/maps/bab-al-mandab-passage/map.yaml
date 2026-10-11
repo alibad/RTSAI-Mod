@@ -237,9 +237,11 @@ Rules:
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:
-			Briefing: "Factual cutoff: **11 August 2026**. Sources were last checked on that date.\n\nBab al-Mandab is a strait between the Arabian Peninsula and the Horn of Africa\nthat connects the Red Sea with the Gulf of Aden and Arabian Sea. The UK\nPermanent Committee on Geographical Names places Bab el Mandeb at approximately\n12\u00c2\u00b035\u00e2\u20ac\u00b2N, 43\u00c2\u00b021\u00e2\u20ac\u00b2E and identifies Jaz\u00c4\u00abrat Mayy\u00c5\u00abn (Perim Island) inside the strait.\nThe U.S. Energy Information Administration describes it as a strategic energy\nroute and estimated that 4.2 million barrels per day of crude oil and petroleum\nproducts transited it in the first half of 2025. UNCTAD reported that the strait\ncarried 8.7% of global seaborne trade volume in 2023, including substantial\ncontainer, vehicle, oil-product, and crude-oil shares. On 23 July 2026, the\nInternational Maritime Organization again called the Red Sea a critical\ninternational trade corridor and emphasized that seafarers are civilians.\n\nA Saudi maritime-security post must establish a coastal picture before a\ncivilian merchant group enters the strait. Build through the normal economy to\na Radar Dome and Tech Center, produce an additional M1A2S or SADS, reconnoiter\nthree coastal sectors, neutralize mobile launchers, protect four merchant\nvessels in separate lanes around the stylized Mayyun island, and keep Passage\nControl open during the final escalation.\n\nAll forces, weapons, threats, routes, incidents, positions, timings, dialogue,\nand outcomes are fictional gameplay abstractions. The mission does not depict\nor claim a real operation."
+			Briefing: briefing
 		-SpawnStartingUnits:
 		-CrateSpawner:
 		-StartGameNotification:
 	Player:
 		-ConquestVictoryConditions:
+
+FluentMessages: briefing.ftl

@@ -9,3 +9,7 @@ label-ai-mode = AI mode
 label-ai-external-endpoint = OpenAI-compatible endpoint
 label-ai-external-model = Model
 label-ai-external-key = API key (stored encrypted for this Windows user)
+
+dialog-ai-proposal-title = Review AI order
+dialog-ai-proposal-review = { $summary }
+dialog-ai-proposal-confirm = Apply this order

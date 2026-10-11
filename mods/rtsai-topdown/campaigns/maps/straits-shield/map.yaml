@@ -234,9 +234,11 @@ Rules:
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:
-			Briefing: "This polished fictional construction mission demonstrates the complete Turkey\nfaction progression on an island strait. The player builds the land, air,\ntechnology, repair, and naval branches, then combines drone designation,\nmechanized infantry, amphibious assault, and sea-control combat.\n\nThe Orion Group, route, locations, force composition, and outcome are invented.\nNo real political leader or recent real attack is represented.\n"
+			Briefing: briefing
 		-SpawnStartingUnits:
 		-CrateSpawner:
 		-StartGameNotification:
 	Player:
 		-ConquestVictoryConditions:
+
+FluentMessages: briefing.ftl

@@ -1,0 +1,349 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "file": "igidepa.wav",
+      "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
+      "source": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
+      "sourceSha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-07",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -15.6,
+          "max50_rms_dbfs": -6.1,
+          "reference": "vospatta.wav",
+          "seconds": 0.553
+        },
+        "measured": {
+          "active_rms_dbfs": -13.8,
+          "decay20_ms": 190,
+          "high_share": 0.002,
+          "low_share": 0.92,
+          "max50_rms_dbfs": -6.1,
+          "peak_dbfs": -1.0,
+          "seconds": 0.553
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.5.3",
+        "recipe": "_vospatta",
+        "role": "bomb release: latch clunk and a low thud",
+        "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
+        "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748"
+      },
+      "event": "e1 deploy: mechanical latch",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 0.553016,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -1.001,
+        "rmsDbfs": -14.815,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/igidepa.wav; add full provenance record and regenerate audio tables."
+    },
+    {
+      "file": "igidepb.wav",
+      "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
+      "source": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
+      "sourceSha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-07",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -15.6,
+          "max50_rms_dbfs": -6.1,
+          "reference": "vospatta.wav",
+          "seconds": 0.553
+        },
+        "measured": {
+          "active_rms_dbfs": -13.8,
+          "decay20_ms": 190,
+          "high_share": 0.002,
+          "low_share": 0.92,
+          "max50_rms_dbfs": -6.1,
+          "peak_dbfs": -1.0,
+          "seconds": 0.553
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.5.3",
+        "recipe": "_vospatta",
+        "role": "bomb release: latch clunk and a low thud",
+        "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
+        "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748"
+      },
+      "event": "e1 undeploy: mechanical latch",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 0.553016,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -1.001,
+        "rmsDbfs": -14.815,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/igidepb.wav; add full provenance record and regenerate audio tables."
+    },
+    {
+      "file": "ichrmova.wav",
+      "sha256": "82b2c41d3c8992de56c7326e4bf62a22b0fe5f6d11ab90096c4adb6eaff19135",
+      "source": "mods/rtsai/standalone/audio/sfx/schrmov.wav",
+      "sourceSha256": "82b2c41d3c8992de56c7326e4bf62a22b0fe5f6d11ab90096c4adb6eaff19135",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-07",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -12.1,
+          "max50_rms_dbfs": -5.6,
+          "reference": "schrmov.wav",
+          "seconds": 2.721
+        },
+        "measured": {
+          "active_rms_dbfs": -13.4,
+          "decay20_ms": 1610,
+          "high_share": 0.018,
+          "low_share": 0.56,
+          "max50_rms_dbfs": -5.6,
+          "peak_dbfs": -0.7,
+          "seconds": 2.721
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.5.3",
+        "recipe": "schrmov.wav",
+        "role": "unit shifted through space: low whomp, chorus sweep and arrival pop",
+        "seed": "sha256('rtsai-standalone-sfx-1/schrmov.wav')",
+        "sha256": "82b2c41d3c8992de56c7326e4bf62a22b0fe5f6d11ab90096c4adb6eaff19135"
+      },
+      "event": "ccomand/cleg: spatial shift",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 2.720998,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -0.701,
+        "rmsDbfs": -14.374,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/ichrmova.wav; add full provenance record and regenerate audio tables."
+    },
+    {
+      "file": "iyurat1a.wav",
+      "sha256": "a689f409d1405b3eee3b84614e1db6cdaaf1a7d31b1d99fbc9bd821e47b9bef2",
+      "source": "mods/rtsai/standalone/audio/sfx/iyurat2a.wav",
+      "sourceSha256": "a689f409d1405b3eee3b84614e1db6cdaaf1a7d31b1d99fbc9bd821e47b9bef2",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-09",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -15.5,
+          "max50_rms_dbfs": -6.3,
+          "reference": "vgriatta.wav",
+          "seconds": 1.015
+        },
+        "measured": {
+          "active_rms_dbfs": -15.4,
+          "decay20_ms": 440,
+          "high_share": 0.019,
+          "low_share": 0.799,
+          "max50_rms_dbfs": -6.6,
+          "peak_dbfs": -0.3,
+          "seconds": 1.015
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.3.5",
+        "recipe": "iyurat2a.wav",
+        "role": "restored-country weapon or impact",
+        "seed": "sha256('rtsai-standalone-sfx-1/iyurat2a.wav')",
+        "sha256": "a689f409d1405b3eee3b84614e1db6cdaaf1a7d31b1d99fbc9bd821e47b9bef2"
+      },
+      "event": "yuri/yuripr: control activation",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 1.015011,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -0.301,
+        "rmsDbfs": -17.691,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/iyurat1a.wav; add full provenance record and regenerate audio tables."
+    },
+    {
+      "file": "sparadra.wav",
+      "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
+      "source": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
+      "sourceSha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-07",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -15.6,
+          "max50_rms_dbfs": -6.1,
+          "reference": "vospatta.wav",
+          "seconds": 0.553
+        },
+        "measured": {
+          "active_rms_dbfs": -13.8,
+          "decay20_ms": 190,
+          "high_share": 0.002,
+          "low_share": 0.92,
+          "max50_rms_dbfs": -6.1,
+          "peak_dbfs": -1.0,
+          "seconds": 0.553
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.5.3",
+        "recipe": "_vospatta",
+        "role": "bomb release: latch clunk and a low thud",
+        "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
+        "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748"
+      },
+      "event": "pdplane: canopy release latch",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 0.553016,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -1.001,
+        "rmsDbfs": -14.815,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/sparadra.wav; add full provenance record and regenerate audio tables."
+    },
+    {
+      "file": "vospstaa.wav",
+      "sha256": "1cba9bbca7fed040794e76e1f6947ac35500f69aa2e933183c190eb4a55a6fe7",
+      "source": "mods/rtsai/standalone/audio/sfx/vhortaka.wav",
+      "sourceSha256": "1cba9bbca7fed040794e76e1f6947ac35500f69aa2e933183c190eb4a55a6fe7",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-07",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -14.7,
+          "max50_rms_dbfs": -8.6,
+          "reference": "vhortaka.wav",
+          "seconds": 1.522
+        },
+        "measured": {
+          "active_rms_dbfs": -12.0,
+          "decay20_ms": 710,
+          "high_share": 0.161,
+          "low_share": 0.12,
+          "max50_rms_dbfs": -8.8,
+          "peak_dbfs": -0.3,
+          "seconds": 1.522
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.5.3",
+        "recipe": "vhortaka.wav",
+        "role": "drone take-off",
+        "seed": "sha256('rtsai-standalone-sfx-1/vhortaka.wav')",
+        "sha256": "1cba9bbca7fed040794e76e1f6947ac35500f69aa2e933183c190eb4a55a6fe7"
+      },
+      "event": "asw: aircraft takeoff",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 1.521995,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -0.301,
+        "rmsDbfs": -12.014,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/vospstaa.wav; add full provenance record and regenerate audio tables."
+    },
+    {
+      "file": "vosplana.wav",
+      "sha256": "d781a31bad76f6d2e09b7db9e76e4fd2ec5a331f3d75a4780843e9f481cb144e",
+      "source": "mods/rtsai/standalone/audio/sfx/vhorlana.wav",
+      "sourceSha256": "d781a31bad76f6d2e09b7db9e76e4fd2ec5a331f3d75a4780843e9f481cb144e",
+      "sourceProvenance": {
+        "category": "sfx",
+        "format": "WAV PCM 16-bit 22.05 kHz mono",
+        "generated": "2026-10-07",
+        "generator": "tools/standalone-sfx.py",
+        "license": "GPL-3.0 (project code); output has no third-party rights",
+        "matched_to": {
+          "active_rms_dbfs": -15.5,
+          "max50_rms_dbfs": -10.6,
+          "reference": "vhorlana.wav",
+          "seconds": 1.476
+        },
+        "measured": {
+          "active_rms_dbfs": -16.2,
+          "decay20_ms": 700,
+          "high_share": 0.165,
+          "low_share": 0.126,
+          "max50_rms_dbfs": -10.6,
+          "peak_dbfs": -0.7,
+          "seconds": 1.476
+        },
+        "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+        "numpy": "2.5.3",
+        "recipe": "vhorlana.wav",
+        "role": "drone landing",
+        "seed": "sha256('rtsai-standalone-sfx-1/vhorlana.wav')",
+        "sha256": "d781a31bad76f6d2e09b7db9e76e4fd2ec5a331f3d75a4780843e9f481cb144e"
+      },
+      "event": "asw: aircraft landing",
+      "transform": "Byte-exact alias, original mastering unchanged.",
+      "levels": {
+        "seconds": 1.476009,
+        "sampleRate": 22050,
+        "channels": 1,
+        "sampleBits": 16,
+        "peakDbfs": -0.701,
+        "rmsDbfs": -16.398,
+        "clippedSamples": 0,
+        "finite": true
+      },
+      "status": "integration-ready-project-resource",
+      "listening": "Event mix/playback acceptance remains part of native/browser smoke.",
+      "integration": "Add as standalone/audio/sfx/vosplana.wav; add full provenance record and regenerate audio tables."
+    }
+  ],
+  "scope": "Seven actual fieldable rule sound gaps. No faction voice files are missing."
+}

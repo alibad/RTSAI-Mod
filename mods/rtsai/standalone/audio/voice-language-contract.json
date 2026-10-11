@@ -1,0 +1,5561 @@
+{
+  "schema": 1,
+  "version": "rtsai-voice-language-1",
+  "sourceIdentity": "ed7fd8c860292e895de8167621d12dbeb2057f0287c2fad4c8fdde11addbf183",
+  "setting": {
+    "values": [
+      "faction",
+      "en"
+    ],
+    "default": "faction",
+    "native": "RTSAI.VoiceLanguage",
+    "browser": "rtsai.voiceLanguage.v1",
+    "scope": "Local audio preference only; never a simulation order or lobby option.",
+    "invalidValue": "faction",
+    "labels": {
+      "faction": "Faction language",
+      "en": "English"
+    }
+  },
+  "policy": {
+    "selection": "Filter the existing voice event before random selection; never randomly mix languages.",
+    "missingRequestedLanguage": "Use the same voice family English line; never another faction or real speaker.",
+    "unlistedEvent": "Return to unchanged inherited death/shared-unit/animal behavior.",
+    "announcers": "Existing faction announcers remain English, retaining current faction timbre.",
+    "sharedUnits": "Existing shared English voices remain unchanged.",
+    "review": "Machine integrity and ASR are screening; fluent approval remains pending.",
+    "modes": [
+      "rtsai",
+      "rtsai-topdown"
+    ],
+    "narration": "Existing walkthrough Kokoro am_michael remains unchanged; no system voices.",
+    "generation": "No new speech synthesis required for language selection."
+  },
+  "speakers": {
+    "china-infantry": {
+      "kokoro_voicepacks": [
+        "am_puck"
+      ],
+      "accent": "a"
+    },
+    "china-crew": {
+      "kokoro_voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "accent": "a"
+    },
+    "iran-infantry": {
+      "kokoro_voicepacks": [
+        "am_michael"
+      ],
+      "accent": "a"
+    },
+    "iran-crew": {
+      "kokoro_voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "accent": "a"
+    },
+    "turkey-infantry": {
+      "kokoro_voicepacks": [
+        "am_fenrir"
+      ],
+      "accent": "a"
+    },
+    "turkey-crew": {
+      "kokoro_voicepacks": [
+        "bm_lewis"
+      ],
+      "accent": "b"
+    },
+    "saudi-infantry": {
+      "kokoro_voicepacks": [
+        "bm_george"
+      ],
+      "accent": "b"
+    },
+    "saudi-crew": {
+      "kokoro_voicepacks": [
+        "bm_fable"
+      ],
+      "accent": "b"
+    },
+    "yemen-infantry": {
+      "kokoro_voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "accent": "a"
+    },
+    "yemen-crew": {
+      "kokoro_voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "accent": "b"
+    },
+    "israel-infantry": {
+      "kokoro_voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "accent": "a"
+    },
+    "israel-crew": {
+      "kokoro_voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "accent": "a"
+    },
+    "hezbollah-infantry": {
+      "kokoro_voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "accent": "a"
+    },
+    "hezbollah-crew": {
+      "kokoro_voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "accent": "b"
+    },
+    "china-control": {
+      "kokoro_voicepacks": [
+        "am_michael",
+        "am_puck"
+      ],
+      "accent": "a"
+    },
+    "turkey-control": {
+      "kokoro_voicepacks": [
+        "bm_george",
+        "am_fenrir"
+      ],
+      "accent": "b"
+    },
+    "redsea-control": {
+      "kokoro_voicepacks": [
+        "am_michael",
+        "bm_fable"
+      ],
+      "accent": "a"
+    },
+    "china-eva": {
+      "kokoro_voicepacks": [
+        "af_bella"
+      ],
+      "accent": "a"
+    },
+    "iran-eva": {
+      "kokoro_voicepacks": [
+        "af_sarah"
+      ],
+      "accent": "a"
+    },
+    "turkey-eva": {
+      "kokoro_voicepacks": [
+        "af_heart"
+      ],
+      "accent": "a"
+    },
+    "saudi-eva": {
+      "kokoro_voicepacks": [
+        "af_kore"
+      ],
+      "accent": "a"
+    },
+    "yemen-eva": {
+      "kokoro_voicepacks": [
+        "af_aoede"
+      ],
+      "accent": "a"
+    },
+    "israel-eva": {
+      "kokoro_voicepacks": [
+        "bf_emma",
+        "af_heart"
+      ],
+      "accent": "a"
+    },
+    "hezbollah-eva": {
+      "kokoro_voicepacks": [
+        "bf_isabella"
+      ],
+      "accent": "b"
+    }
+  },
+  "voiceSets": {
+    "R2ChinainfantryVoice": {
+      "source": "china-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-infantry-select-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-infantry-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-infantry-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-infantry-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-infantry-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-infantry-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-infantry-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-infantry-action-en"
+          ]
+        }
+      }
+    },
+    "R2ChinaredspearVoice": {
+      "source": "china-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-redspear-select-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-redspear-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-redspear-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-redspear-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-redspear-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-redspear-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-redspear-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-redspear-action-en"
+          ]
+        }
+      }
+    },
+    "R2ChinavehicleVoice": {
+      "source": "china-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-vehicle-select-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-vehicle-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-vehicle-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-vehicle-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-vehicle-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-vehicle-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-vehicle-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-vehicle-action-en"
+          ]
+        }
+      }
+    },
+    "R2ChinaairVoice": {
+      "source": "china-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-air-select-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-air-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-air-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-air-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-air-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-air-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-air-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-air-action-en"
+          ]
+        }
+      }
+    },
+    "R2ChinanavalVoice": {
+      "source": "china-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-naval-select-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-naval-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-naval-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-naval-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-naval-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rcn-naval-action-zh"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rcn-naval-action-en"
+          ]
+        }
+      }
+    },
+    "R2IraninfantryVoice": {
+      "source": "iran-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-inf-select-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-inf-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-inf-move-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-inf-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-inf-attack-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-inf-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-inf-action-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-inf-action-en"
+          ]
+        }
+      }
+    },
+    "R2IrandroneVoice": {
+      "source": "iran-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-drone-select-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-drone-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-drone-move-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-drone-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-drone-attack-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-drone-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-drone-action-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-drone-action-en"
+          ]
+        }
+      }
+    },
+    "R2IranshadowVoice": {
+      "source": "iran-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/shadow-select-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/shadow-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/shadow-move-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/shadow-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/shadow-attack-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/shadow-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/shadow-action-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/shadow-action-en"
+          ]
+        }
+      }
+    },
+    "R2IranvehicleVoice": {
+      "source": "iran-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-veh-select-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-veh-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-veh-move-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-veh-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-veh-attack-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-veh-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-veh-action-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-veh-action-en"
+          ]
+        }
+      }
+    },
+    "R2IranairVoice": {
+      "source": "iran-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-air-select-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-air-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-air-move-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-air-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-air-attack-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-air-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-air-action-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-air-action-en"
+          ]
+        }
+      }
+    },
+    "R2IrannavalVoice": {
+      "source": "iran-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-naval-select-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-naval-move-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-naval-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-naval-attack-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-naval-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/iran-naval-action-fa"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/iran-naval-action-en"
+          ]
+        }
+      }
+    },
+    "R2IsraelinfantryVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/il-inf-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-inf-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/il-inf-move-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-inf-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/il-inf-attack-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-inf-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/il-inf-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-inf-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/il-inf-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-inf-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/il-inf-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-inf-select-en"
+          ]
+        }
+      }
+    },
+    "R2IsraelobserverVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/il-observer-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-observer-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/il-observer-move-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-observer-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/il-observer-attack-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-observer-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/il-observer-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-observer-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/il-observer-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-observer-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/il-observer-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-observer-select-en"
+          ]
+        }
+      }
+    },
+    "R2IsraelreconVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/il-recon-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-recon-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/il-recon-move-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-recon-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/il-recon-attack-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-recon-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/il-recon-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-recon-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/il-recon-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-recon-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/il-recon-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-recon-select-en"
+          ]
+        }
+      }
+    },
+    "R2IsraelvehicleVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/il-veh-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-veh-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/il-veh-move-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-veh-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/il-veh-attack-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-veh-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/il-veh-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-veh-action-en"
+          ]
+        }
+      }
+    },
+    "R2IsraelairVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/il-air-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-air-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/il-air-move-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-air-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/il-air-attack-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-air-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/il-air-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-air-action-en"
+          ]
+        }
+      }
+    },
+    "R2IsraelnavalVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/il-naval-select-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/il-naval-move-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-naval-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/il-naval-attack-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-naval-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/il-naval-action-he"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/il-naval-action-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahinfantryVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-inf-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-inf-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-inf-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-inf-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-inf-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-inf-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-inf-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-inf-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-inf-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-inf-select-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahspotterVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-spotter-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-spotter-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-spotter-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-spotter-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-spotter-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-spotter-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-spotter-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-spotter-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-spotter-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-spotter-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-spotter-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-spotter-select-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahscoutVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-scout-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-scout-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-scout-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-scout-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-scout-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-scout-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-scout-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-scout-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-scout-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-scout-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-scout-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-scout-select-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahfpvVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-fpv-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-fpv-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-fpv-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-fpv-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-fpv-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-fpv-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-fpv-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-fpv-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-fpv-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-fpv-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-fpv-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-fpv-select-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahvehicleVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-veh-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-veh-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-veh-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-veh-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-veh-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-veh-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-veh-action-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahdroneVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-drone-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-drone-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-drone-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-drone-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-drone-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-drone-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-drone-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-drone-action-en"
+          ]
+        }
+      }
+    },
+    "R2HezbollahnavalVoice": {
+      "source": "levant-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-naval-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-naval-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-naval-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-naval-attack-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-naval-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/hz-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/hz-naval-action-en"
+          ]
+        }
+      }
+    },
+    "R2SaudiinfantryVoice": {
+      "source": "saudi-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-inf-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-inf-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-inf-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-inf-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-inf-action-en"
+          ]
+        }
+      }
+    },
+    "R2SaudijtacVoice": {
+      "source": "saudi-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-jtac-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-jtac-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-inf-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-jtac-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-jtac-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-jtac-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-jtac-action-en"
+          ]
+        }
+      }
+    },
+    "R2SaudifalconVoice": {
+      "source": "saudi-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-falcon-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-falcon-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-falcon-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-falcon-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-falcon-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-falcon-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-falcon-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-falcon-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-falcon-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-falcon-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-falcon-build-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-falcon-build-en"
+          ]
+        }
+      }
+    },
+    "R2SaudivehicleVoice": {
+      "source": "saudi-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-veh-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-veh-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-veh-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-veh-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-veh-action-en"
+          ]
+        }
+      }
+    },
+    "R2SaudiairVoice": {
+      "source": "saudi-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-air-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-air-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-air-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-air-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-air-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-air-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-air-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-air-action-en"
+          ]
+        }
+      }
+    },
+    "R2SaudinavalVoice": {
+      "source": "saudi-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-naval-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-naval-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-naval-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rsa-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rsa-naval-action-en"
+          ]
+        }
+      }
+    },
+    "R2TurkeyinfantryVoice": {
+      "source": "turkey-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-infantry-select-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-infantry-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-infantry-move-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-infantry-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-infantry-attack-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-infantry-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-infantry-attack-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-infantry-attack-en"
+          ]
+        }
+      }
+    },
+    "R2TurkeygreywolfVoice": {
+      "source": "turkey-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-greywolf-select-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-greywolf-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-greywolf-move-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-greywolf-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-greywolf-attack-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-greywolf-attack-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-greywolf-attack-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-greywolf-attack-en"
+          ]
+        }
+      }
+    },
+    "R2TurkeyvehicleVoice": {
+      "source": "turkey-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-vehicle-select-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-vehicle-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-vehicle-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-vehicle-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-vehicle-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-vehicle-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-vehicle-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-vehicle-action-en"
+          ]
+        }
+      }
+    },
+    "R2TurkeyairVoice": {
+      "source": "turkey-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-air-select-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-air-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-air-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-air-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-air-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-air-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-air-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-air-action-en"
+          ]
+        }
+      }
+    },
+    "R2TurkeynavalVoice": {
+      "source": "turkey-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-naval-select-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-naval-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-naval-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-naval-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-naval-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/tr-naval-action-tr"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/tr-naval-action-en"
+          ]
+        }
+      }
+    },
+    "R2YemeninfantryVoice": {
+      "source": "yemen-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-inf-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-inf-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-inf-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-inf-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-inf-action-en"
+          ]
+        }
+      }
+    },
+    "R2YemenspotterVoice": {
+      "source": "yemen-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-spot-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-spot-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-inf-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-inf-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-spot-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-spot-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-spot-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-spot-action-en"
+          ]
+        }
+      }
+    },
+    "R2YemenghostVoice": {
+      "source": "yemen-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-ghost-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-ghost-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-ghost-move-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-ghost-move-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-ghost-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-ghost-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-ghost-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-ghost-action-en"
+          ]
+        },
+        "Demolish": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-ghost-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-ghost-action-en"
+          ]
+        },
+        "Build": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-ghost-build-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-ghost-build-en"
+          ]
+        }
+      }
+    },
+    "R2YemenvehicleVoice": {
+      "source": "yemen-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-veh-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-veh-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-veh-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-veh-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-veh-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-veh-action-en"
+          ]
+        }
+      }
+    },
+    "R2YemendroneVoice": {
+      "source": "yemen-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-drone-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-drone-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-drone-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-drone-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-drone-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-drone-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-drone-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-drone-action-en"
+          ]
+        }
+      }
+    },
+    "R2YemennavalVoice": {
+      "source": "yemen-voices.yaml",
+      "events": {
+        "Select": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-naval-select-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-naval-select-en"
+          ]
+        },
+        "Move": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-naval-action-en"
+          ]
+        },
+        "Attack": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-naval-action-en"
+          ]
+        },
+        "Action": {
+          "faction": [
+            "ra2|modern-factions/audio/rye-naval-action-ar"
+          ],
+          "english": [
+            "ra2|modern-factions/audio/rye-naval-action-en"
+          ]
+        }
+      }
+    }
+  },
+  "clips": [
+    {
+      "file": "hz-drone-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "dff771d4911e7f30bb10988e5acb8532d33831a7ddcce9765dc900ce5233e711",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الصورة واضحة.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "415f2de64e212d34b9a785b2e1acb53c9fcc9cadd19cc6c8cf604c3650b0a564",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Picture is clear.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "0a084d4c5f185ebb249ecb7556ffa3d6f2282332cdeed9c6749f181781df1a68",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الهدف عالشاشة.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "2dd67bfe6025016f7e1e2fd9699552429db186c9f6c5b72cdf37719c42a5f9ad",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target on screen.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "1b2381160f796a78661620ccee19632fdc085f7e55195ec392776ed40b20a00b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "المسيرة رايحة عالنقطة.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "dafe2a5085dd20a2aa2344114ae6c7c19db1a9b4fcaffa84e9defd232e53d551",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Drone heading to the waypoint.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "5c776ac971b8534a780a1110b7cbe25b476bfb74a06c938d52d29465836d3a7d",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "المسيرة جاهزة.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-drone-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "44a85aaf6ac687f60cf3e6ca2ef939831cc0648d1337fac8ed36a0fe237fe496",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Drone ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "5602b81a21062636fbe2b3b9ddcecaaf45864552b763eb04a0ddf4eb5819d348",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الإشارة منيحة.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "c4e8778c8e19d9f6b430d4fd3494b00bcfd171a5dfb42f9e11d7a6b2abc79368",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Signal's good.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "9c35f9018208555adedd6522598ae3dd7b5dc78ee0457e78488bf58e3d4d859f",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "طلعنا المسيرات.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "ebbe29b3eee54fc3e8c16a74fca55e1e7a38fe81b3955f4107ce6a2ce650f17e",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Drones away.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "b0735d1772120aa2080ef037d9863ef362bfff8f3f48c739c97905550af5e358",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "رايحين عالموقع الجديد.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "dcb3a11b753602bc4e99fc7ca5e42662175441a688171eda8a1dd14112857514",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving to a new position.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "ae342b4eeb6f35c0eced5b9f790ecb5d16cb4bd851c4fbdbf09cfb184b551d69",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "فريق المسيرات جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-fpv-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "a4cba7f3e773ecbcb5704235f09390237a7ff23ef799eb4e20016b13d8ecfc19",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Drone team ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "438c22f40c02900c5b36243f5d57155a1fed2935a0a5ce7074df763e7053386a",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تمام، وصلت.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "e4e778658b45e7457fa60c83cc52a3f58dce0e53f5b471de204e76338c2c266f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy that.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "05c2917fbd28dbd10456ab9c7b69b1f1f31102957abc1177858b9798dee8a450",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "عم نشتبك.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "3693bccc59eb446c0f90f2cdb15a04ab0bb0b977b2d00f6eb21fc8cd1dd1eb4e",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Engaging.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "af7e4a7df34f0cab37b29b645fa740a9362811de1272207be32afeba1f049cc0",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "ماشيين هلق.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "c11b2e02f50ab15387725b6dc3296309696d3abf52c5c59d145ba40bf24a79c4",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving now.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "490440de46a7edf6d26cfe9f121537b552aaffcdd299f60ef8759fb527d6a8a0",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "نحنا جاهزين.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-inf-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "2da43128889e602255fc1429624301a397d10a23bb56149a23f411d3a5a32990",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "We're ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "3274ca57494bc57130b5754b1b1cb8323a32727262c446dbf9acf5e724531725",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "وصلت، منغير الاتجاه.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "d2878cdc93bbbf0f765f6feaa9a3828a7c7f6fb76470c56f892652bf67d61270",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy, changing course.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "80e4fcf73b3666c077fcee5083ae05cef5d0f9e928cb15fc76951de646ca0ab9",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الهدف قدامنا.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "be43c5d5c6c11f69e39f03fb046475ce8c86fb271e81a2110d483190189692ad",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target dead ahead.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "d93f8b9b93ea5c0c7e230a0cff5ac5fd743220ac84d59946758444ea410fe995",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "رايحين عالساحل.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "c6e89c1f2e0030c1f98809b78df61905856d81e4c856c4d1ffd4c6586bc079df",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Heading along the coast.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "bdcf8de8e9bb0ae315f30f89ff559ef5a9135f8b14cc54c73b4eadaacbbc6bfe",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الزورق جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "04a1b3030598d440839255cfffa1061450c33127c5bf35d38cc86516b4377814",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Boat ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "4da2216d1a028c2f3e2ed36450e7c97f8a0ab744610bc3738d5b4d480a3782e8",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الطريق مفتوح.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "193489cd88aaa7e97bc9ae5d0e78c774cb965ab444eb8e3390cca8849981886f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Path is clear.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "5c577caacdb0eed008db582d82eda33286743cecbab772e52ebbb1354648b28e",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "شايف الهدف.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "1df4296b986359ced53e0be8379d2dafbd7de2ba3f7793c0efefef1e8a734285",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Eyes on target.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "7e70c9c80e18fb6654b561dcdfc97ba73c87f3fbde74594476338bdf3ffa4bea",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "ماشي بهدوء.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "13133939a8ba1921e2f9f49ad17a26063bc6ae8464fe96311c7bb52ece6cca79",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving quietly.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "21b348acbc75ea0bbb799777cbf5de76a8eedf465737f118d88614867eccb35d",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "جاهز، شو المهمة؟",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-scout-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "475f4211704165d5f20ba93e266e8e74bb29f487afd2c7732bd40d7a907812ba",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Ready. What's the task?",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "685d60d0d9857dda2108fff0cb4f1339dd0dea8d5e0a5e1185fed9afd9da35e3",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "عم ببعت الإحداثيات.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "531ae159151ffeaa94ef92e384db9a3bb788deabe184ae2a2faa41fe49a3a357",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Sending coordinates.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "07dd305a8fb6ffb550b73ba05b4835baac2c0aa584f43f556503a683f68711af",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الهدف محدد.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "f6e81fcc0d840def2c9c7bab94f95eba5301bdf3e62751241b37b6125a459ee4",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target marked.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "7d7d6d2e18f6370171ce047414fac2f800b67ec1df887029655e411402b882a7",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "رايح عالتلة.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "4bc018d130a31ad0ae24caf5b52a6c330f152fe3be4611956a21f8fa19d52b96",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Heading for high ground.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "ae22d43eab23151e88707124777827b037e7f3806c04afac8fddebccda05632c",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "المراقب جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-spotter-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "am_michael"
+      ],
+      "sha256": "f68de93e0fff050c6535f778e2e2112b8082ebd3a08aa214d2f1eedf48c75428",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Spotter ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-action-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "0a63264ddee13f88e963a27728a2ebc86479602ff674b682d4a1f7f10436c921",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تمام، منفذين.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-action-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "1ff1725a2eaa428f42d74976af8dd2f0dd1fd8c2f39040594e84de7bb2fcb54f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy, executing.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-attack-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "24c3f258b85c3cb0cfdfb191a0a6cd89c1905fc538998fa92d3e5f24766bb2e2",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الهدف بالمرمى، عم نضرب.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-attack-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "889da1fb744eb0b052e62dc05afa2a5453e6cccf151c64ae295352b601c104cb",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target in range. Firing.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-move-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "1c08a48bdfe4ea61cf4749869f079fc7662e4b0353c1afe95feae2fb3a6e4a86",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "منتحرك هلق.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-move-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "fe1819c43ecfa9de34a9d613173632aab75f7a0b843a5d630f64ce1e8dece92e",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving out.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-select-ar.wav",
+      "language": "ar-LB",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "f9451ae3b854c437a1057551157818c6736dfdb54f5682c861047bcb40adf51d",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الطاقم جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "hz-veh-select-en.wav",
+      "language": "en-US",
+      "speaker": "hezbollah-crew",
+      "voicepacks": [
+        "bm_george",
+        "am_puck"
+      ],
+      "sha256": "a3b06d9ec117782286bfd6249bbf4132f08026a68d3098b5b32989f43ea4506a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Crew ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-action-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "f3eb50c57b9bce672d14e044773ee0c5eacc27d071e67111d7d860f826efedcb",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy, control.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-action-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "49c42ccc01c09938fd2e87a512fa87d9cfee01e3f3ebff90f704bff0f9ca89f1",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "קיבלתי, בקרה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-attack-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "2e9bd5a5bce3ef1cd9ec906d5b6f35f0b99fce6d5302f0a25154b66f3b6a39e4",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Locking on.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-attack-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "87fb4ed1ec79edfa5211ce1182e11a888d4ca85a73aa0252701e69537a13d7cc",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "ננעלים על המטרה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-move-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "93cce3e28549c5b612e7920beae43c8c23cbc2df9a89a5ec00dfe89592ad9792",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "En route to the waypoint.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-move-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "8bd20d13b37f2a9ec679cd631b6dbbfef3c5eac6bee093ef3e001446e4550e83",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "בדרך לנקודה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-select-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "a2695231362c234a7c0a3bba3230ba270f5eb6bd94e9982591ba6deddf762fd2",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Aircrew ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-air-select-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "ededf5cab36163d60a1b1028293f3bfbd7f9e3d4eaef994614a11ed4a46a6c27",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "צוות האוויר מוכן.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-action-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "f280ec0d44c460108a0e0bc8c1b0d46e29ae0d470a5ecd5ea831bd422ff40289",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy, on it.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-action-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "877505401bfd4f4bfc5b59a2f72adf779715290dc21972853dde2f5964334cb5",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "קיבלתי, מבצעים.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-attack-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "ea8142eada537bc9fc9b02e232f41d56f56f76fbf5e8a42390af1795740cd710",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Opening fire.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-attack-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "f3f40e9e26872e6ac58b5d9c658951dc3f8241424f79760c4501d732754c6870",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "פותחים באש.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-move-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "c009fa0d283554e80a4528144682fb8861a4b7c55818b85b92a91d5739957d1c",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving now.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-move-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "87de1d093d73468741a07689ab61b6bfd325f5d217a51353ca68022bf55e3703",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "זזים עכשיו.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-select-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "17eaef82f64b16aca0547d18af1a60b28dda1675041d94b26552d2ad729bbb97",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Rifle team ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-inf-select-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "b5b881a5ef2a5cc485f1a604be21591a4faa99334e04d825bb19b211c4db9863",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "הצוות מוכן.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "3ac8855219a94ca47270596bd25cb576c6aae27a18fe3640a9c1d6096d2c6085",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Order received.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-action-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "7cb8a00d06c886ada76b8ad00f4923a015ea6a88f7c57ef248e92f597e9c8395",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "הפקודה התקבלה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-attack-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "f6e7c96c5361bef66758d5ee9ec450798195f41ac2b0a1f64f6b5bddb8711729",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Surface target locked.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-attack-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "64f8e8e3639414fc14a3fd7bcdb56468a9f5bd1ed2d9f782e2686e7c5e00e7eb",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "מטרה ימית ננעלה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-move-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "cef20a9382b3d73e3223532657fe3971ba6589ebb67c439e2995b6d0539a44ec",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Changing heading.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-move-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "23fe5aa2815d5f1a01c206d8836ee022f72e0941e0958e41c97972d5a768933f",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "משנים כיוון.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "91244728fd0579cbfce502a5e50d9e8307125bbc260f6d18fa9973e9c3da7bb8",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Ship ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-naval-select-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "745050f706d876e2b105c726c83346be1bce64876faabc3b1a25f31361e1e912",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "הספינה מוכנה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-action-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "56907a2328376d30b05429aa8ce2cf34585e19ce2f6eb2476768191e1d93492f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Sending coordinates.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-action-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "6dabe54c7e986764ab49e2d88fd0c9d99599f9b5a3feb057196872892b837ee3",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "מעביר נקודות ציון.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-attack-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "4992a6ae325221fefca7de14a5c2c5a2004d41df1c17953e7d388c16f8346dd1",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target marked.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-attack-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "e4be8d229a11db1f56655c15d9cc5e4ac02b46bd18a8afaec13ac09fef505eee",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "המטרה מסומנת.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-move-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "2c72ff2bfb89933f130945ee63e3b257679fd215f62029cb36fe04ebeb762a3b",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving to a new vantage point.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-move-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "6546dee9aa7a2fabb961bc1232f52c57a4ef10c37f573600cd4ff37450fbc1cf",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "עובר לנקודת תצפית.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-select-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "126e3975811621cb74035c65a0ce431175eb9d3b8fefdc7974710c336dbd15cb",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Observer in position.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-observer-select-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "0287090f2a535082f7aede81da283d61303c19c7c2086da358abccd1c31754f1",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "תצפית בעמדה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-action-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "0d5f9890bfe4843b50d8bebad17b3dbda7ed978be7012f6d86c8527f4e260637",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Path is clear.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-action-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "bf0be7adf165bba9c8c083d3d6ab9fc095e04156532ecacadeee69f97c0315b7",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "הדרך פנויה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-attack-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "3d8dc47bc877dcf4e18bc8e0ce94a400ec1d9752c9082d85b7ccc3b141a1dac9",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Eyes on target.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-attack-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "e2a63f3dbe2527555582a998f737313ba7a39933c56a8d063b8ed2a5368a8cce",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "יש קשר עין עם המטרה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-move-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "9a72a06481d0ca924547e6764cd10810e18e5e4007a244ee836c03117159beea",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving quietly.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-move-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "2d2167c95b114fecd502749fdd12e6bd3dc4ac352461192db8ec8f9ad4dd5abb",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "נע בשקט.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-select-en.wav",
+      "language": "en-US",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "08bdb67dbb79efdd2d719b9f0fe981fe159da329ad0ca11d1bce1b17f044996f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Recon ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-recon-select-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-infantry",
+      "voicepacks": [
+        "am_puck",
+        "bm_lewis"
+      ],
+      "sha256": "68ac6bfc41afdcf370b4efeffff557a1a819744f0bf52b3f72d70834b7ceceb4",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "הסייר מוכן.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-action-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "946eb01c81d866621d95254ec052ef8de35a681dc0fd71dee14f23820edf78eb",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy that.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-action-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "872e9d52189a7db0ceefc542c559b7c9bd62c050eac27660a6f60b1a5bdaafc4",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "קיבלתי, מבצע.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-attack-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "b175097d0cd7841a984c3fc8c178ec99138f7d74c5f614d01da93d82a1a026c6",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target in range. Firing.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-attack-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "c69abeed4dd56f363089ad6bfb169b78a1e5f4806d04dfb03f9864f08a498ded",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "מטרה בטווח, יורים.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-move-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "7e81bb980eb9841e34bb356a79c8f9c6d4a76afc3eba4cc080f27d6b0455bb79",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving to position.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-move-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "4bdf8172747a493c8eba5945a39d4711e50b1a3ba875d29ce7ed71299b060c5f",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "נעים לעמדה.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-select-en.wav",
+      "language": "en-US",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "2a8617c7aa8c903f23d5ec3879bc0c6fc9331c5ed32b3ab1766b874a3fbbfa2b",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Crew ready to roll.",
+      "humanApproved": false
+    },
+    {
+      "file": "il-veh-select-he.wav",
+      "language": "he-IL",
+      "speaker": "israel-crew",
+      "voicepacks": [
+        "am_michael",
+        "am_adam"
+      ],
+      "sha256": "c6da7b855a92bf59125f9fabf4cb6f20928b1ed964bf7b13f41b4df850bc414b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "הצוות מוכן לתנועה.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-action-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "6f1e586345e4624c335f143fac6c83ae3d5bf29f7c0a9d23880876b2d66eb9ef",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy, control.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-action-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "1438b4927520f3276d51517c6e0db0ba894cc2a458b618e2eaa5e6b5b133e0dc",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "دریافت شد، کنترل.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-attack-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "57dcda54d04dd8bf47e6ebd70993e461f23e553451d9db98413e87169bdbd330",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target in sight.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-attack-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "6e2a588f9ca4ffa13fc2c58c5ec3ef173d4c4fcec442604401cf28dcbf670b55",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "هدف در دید است.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-move-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "956aeba1a62bb1cddc407ae0cdb1506030124ebdc189c1c348d785e76c5a9645",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Proceeding to waypoint.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-move-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "6049fca7dd5a0484a934000efffeed15bdb601e3eabac7bb148f001887c269d9",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "به سمت نقطه مسیر.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-select-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "dfdc47faf2fb2a5ec11103d3e2f567c92d19fb473d4d1ad0eab21bce18a4de28",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Flight ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-air-select-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "53114d6292b1f6deeb609ba3336caf6377e7e139e3505a3010863521f229a5c6",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "پرواز آماده است.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-action-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "9a851f5e0f47cf0713104924a8280e9e9901827814c9c7210c61dc51c9c24a0a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Picture is clear.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-action-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "3308350e08ee3374dbffe1732de4b74c961927aa4ffb7fec0dd425798683c2cb",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "تصویر روشن است.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-attack-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "ae9f8d9117fffd431aeb01192330d411716c79a4b0c5d1db7e76c7301b83c8c1",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Designation complete.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-attack-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "734222105c5071021ee6a5421f9fa0b1048c949453159096b6538bc822b267c3",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "نشانه‌گذاری کامل شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-move-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "5a8fe0c99d6968e266a1d3e8dd1a6844c6e796709b8accde68a8d4a6d6061c35",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Flight path updated.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-move-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "cb76d6d4de5aed29b475b4a6979f0b7332b1441320da7021dd44e7100c79ddc4",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "مسیر پرواز به‌روز شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-select-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "9c76d0c2a79bbf16bbc283174a9b4d91ad87ba343fb7db6a8a910f6957e396ec",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Data link established.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-drone-select-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "1566dc02c05696be59170e09ea9b3716004794dcff485cd285072a8dde4a5344",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "پیوند داده برقرار است.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-action-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "e029a48448db885020e25faaadd7590af6ab03ea84963df5b3b6f748257c6ecd",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Order received.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-action-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "e8822cf0d18dfdb142564dfa1fc89b872862545db9dc6fb78771834b2422fbc2",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "دستور دریافت شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-attack-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "a69003963e965e6511b2f3689d748b61ffdc52e740ce2745accdb565dea1eb6c",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Engaging.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-attack-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "2598bc05c46ca8bc7abf6088f04c13dc796f9e1b911a428f3b61b530159d12d2",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "درگیر می‌شویم.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-move-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "84106984da40adaee7c681cc7019afd550bc6e57124a4182e38bfd50e4353a42",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving now.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-move-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "d08f98d68b9e6986a545ac1b67f8a48d3b5b3221440e2021078927bc2c133e9e",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "در حال حرکت.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-select-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "8be2e30116348d38e4fa0145fb43cfd249799230e4ee3b131617abf343392b9a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Section ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-inf-select-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "a30f065962f64812efc415fb8ade7de385666658b0b632a19b78491b17051809",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "آماده‌ایم.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "9afd0f2b7ffb68cdcc3d649f3f71213bb9642e189e3bc9cf69bc0f250f780675",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Command received.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-action-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "9cc13245a724538db81f1de6d6da775c1b49edf101ede43992ee70d71d1d03f9",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "فرمان دریافت شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-attack-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "305ea9feed6f6a1a3e8813af9c54499d1f957de3dab7a42bf1e43ab874da15ba",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Track is steady.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-attack-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "bdca64d04d616394bacb11a7038fedf3fad93422a03bb1d38c1165e2da5e02d4",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "ردیابی تثبیت شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-move-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "1a469d0da080b035e56e7936f033dacb79c6b33fd3c5d7a307e67abccad2b7a8",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Taking the coastal route.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-move-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "d0e5b811d804f34c0029d3d72f48adc76e90a4eb1648b83cff0c8ca54b937457",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "به سوی مسیر ساحلی.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "30d77c05f0dbbe5ff740ea413f7dde09f23539e140f593042d5e3fd053ab4413",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Naval crew ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-naval-select-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "99c9aadc3bed030d2b0251fc9b254b1297b42c26f5ccd183e942bca4c54dc621",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "خدمه دریایی آماده است.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-action-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "958c76705cca8dda5678e883951701adc9c27ef0f4549f3bc7a39795b96a1640",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Route confirmed.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-action-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "2678a45f6258069a271f6150ac28dad5e17d592b25150bb1648152f715934165",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "مسیر تأیید شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-attack-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "80d405452a1553fe52b433bb47dc1406a2e7ad2e28126348131c4c7d7ea04987",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "System on target.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-attack-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "379dcbacde71ed58f157cd8eb615b6a3e6da2d368bc89993b73dc31f81a6457e",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "سامانه روی هدف است.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-move-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "729d77c77bd603bf19e88deaf8b6fb1327d4648180b6ef12d1f0c3e16cc95e5f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Column moving.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-move-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "06c88c143ec7913d51bc24a14abc63dac085689e1466944397b43077e636d655",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "ستون حرکت می‌کند.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-select-en.wav",
+      "language": "en-US",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "d03c82533fcf02002e2913d87af861bcd71d752e579657a94b8f82623589b978",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Crew standing by.",
+      "humanApproved": false
+    },
+    {
+      "file": "iran-veh-select-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-crew",
+      "voicepacks": [
+        "am_michael",
+        "bm_george"
+      ],
+      "sha256": "10046bb2e08ed62016bf3ad50d68ee9aedbff449b66292cc24273d8e1e0f4c3a",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "خدمه آماده است.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-air-action-en.wav",
+      "language": "en-US",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "bcc56ad43af376606ce3b709e70307cdccf0a5e04d2e1610d47c763486e6ca29",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target synchronized. Approaching.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-air-action-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "5228005a84b1774e6803c4e6ae1821806eac538ac31050cd3fc2ddb11cccf3c6",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "目标已同步，正在接近。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-air-select-en.wav",
+      "language": "en-US",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "f60a76b50133189181ed4ff962a1523f0f149cfad7631db2ab8e5ac2df9fa126",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Air element awaiting tasking.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-air-select-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "65c972b0f0e6157cd6b4fce5d81c5bfafffbf3ddc314f6659ac5c5e6547597f3",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "空中编队等待指令。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-infantry-action-en.wav",
+      "language": "en-US",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "46141b0de2d81a0e4172564f4215ac3654ded658a8cee974aa2e97a5b7f53bd8",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy. Advancing in coordination.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-infantry-action-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "e5774a85bc39d131904e0fac0325ddf5fc3c0acb815ebe79c32c47e66247528a",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "收到，协同前进。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-infantry-select-en.wav",
+      "language": "en-US",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "43c38b8ef820ed8dd4b52025e87f007883932b5ed25299671d9e0f55c0dd31fc",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Infantry team, network check complete.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-infantry-select-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "eb1eb0d399eb76afa28a26059f57066b51b098a092000273b803f48dbbbb8376",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "步兵小组，通信正常。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "9aa5162503e36415513e22f62f72dff2512b97d38e98a753aad5f7e4f6a9b77e",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Course confirmed. Fleet underway.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-naval-action-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "cfe2d721437eb7e4c54e3d7b545c7a4438b6b35bc3edcfae6f94adbdf7e8399a",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "航向确认，舰队前进。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "c3584ccdc09e9114ece2d58608e5e49fbd364f606bbbdad4fad1dad6192f2608",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Maritime group, communications clear.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-naval-select-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "7655d00aca9c1b6fa9035ce6c7f85e00129edd6e25804d18be061ece6087b7a1",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "海上编队通信畅通。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-redspear-action-en.wav",
+      "language": "en-US",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "1f1bd046cf3c707ac549ce328446d066acccddf349fcd53dbd7416f0351e3239",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Precision coordinates received.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-redspear-action-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "263aeae87cf0b695ed236f4d4b8882400d1d0bafd42d6619f796a9bc7b674327",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "精确坐标已接收。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-redspear-select-en.wav",
+      "language": "en-US",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "547ff7923d740d7fd23ccd757553ff052fcae1b0bea38b96dcc83c0cfc2a9d0c",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Red Spear linked to the command network.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-redspear-select-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-infantry",
+      "voicepacks": [
+        "am_puck"
+      ],
+      "sha256": "61272e5f01e10f2ce90515478bc209931a41bcdd242597e4f9bb37df5825681b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "赤矛接入指挥网络。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-vehicle-action-en.wav",
+      "language": "en-US",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "42533f94cbe10a21202e3de1ce38b27a4508f0ec16f2aa299e534ce0df601bc0",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Route confirmed. Moving now.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-vehicle-action-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "1988ccf9745469ff619ad0f082ea9930590b471a828bf67d120a54e4a2ece470",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "路线确认，开始机动。",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-vehicle-select-en.wav",
+      "language": "en-US",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "22e6b64db9eeab24859a6f519a284b5cae35cfd8bcceb6694983792d5ef8f2a1",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Armored platform online.",
+      "humanApproved": false
+    },
+    {
+      "file": "rcn-vehicle-select-zh.wav",
+      "language": "zh-CN",
+      "speaker": "china-crew",
+      "voicepacks": [
+        "am_fenrir",
+        "am_puck"
+      ],
+      "sha256": "9f32fc416c99c31251bda9db1f484b7db0a5bf5f0d54c65280714ee034582816",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "装甲平台在线。",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-air-action-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "2391964c80e9bc430ec9475162c26a35b3039046882460e731667b1553e9e81e",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تم الاستلام، نتجه إلى الهدف.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-air-action-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "54548ecc1d9c481c69216f452a17bcb1032235402ad27514e8e53f5872c41f7e",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy. Moving to intercept.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-air-select-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "4bae3bb83ca631b50ab838ac0f757761dbd591a2f09f82eed689579551cff42f",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "جاهزون للدورية الجوية.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-air-select-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "807a118c0b3d43d0af2850ec21d845e682ada4eaf927ea7c72ff79f0ce86fe57",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Air patrol standing by.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-action-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "3ff53a1c2d7b9f589cc952f5389b9bf9e777a9c7b6927f94742af2fbef83af4c",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الضربة الدقيقة جاهزة.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-action-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "810e9a653c5c141e20bfd7c6e0f6afd122d6a6cdb01eebeea617956e8579b69a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Precision strike designated.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-build-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "63e26453633b78c1ccd184812697006fabdb92a92308dd4256588d9326a0d62e",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الصقر في الميدان.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-build-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "375a852547b3ef03088b14acd5f05a0ce77494e3676680af75552111117e0553",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Falcon is in the field.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-move-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "55913fa29e720cfae380e12fb8bcd981c1398ee2e96828dc0b69e43ffcb94c50",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "سأصل بصمت.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-move-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "c79cf3dd099765c11193f8e01e1b19d5f4f6a61dfb8a31d66bf5fd0d7a61e18f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving quiet.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-select-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "1b5e82f26cadf72edd0ab1daa854f4522d06075ef2d136d9f568bb61d61a7e7c",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الصقر واحد جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-falcon-select-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "26d34df942ad40c5c528b8ee78189777e20e88e352d1d4d2a2c18628f7f44dbd",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Falcon One, standing by.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-inf-action-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "6511bda1dfad55b7ce123d81dc0fbea1e2766aa5cb425c86b2bef108ef7ebbd3",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "نتحرك الآن.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-inf-action-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "8c4bd6358f494b1b99f9a680225eb4449e4d6d33f6397d86a37375ad9245f3d9",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving to position.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-inf-select-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "eb93f2b3742275812c86b9012ff62b570f712fe6bd3415c69afbbc8e385414ee",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الحرس جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-inf-select-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "c0216f7a6347d6eab20abcb2ff5c3d467efd5fb55b532addf39487be80b72141",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Guard unit ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-jtac-action-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "ee8027021f6ef600bb40564195f716d464cd0acf2ab93a445612bcaf039693e3",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تم تحديد الهدف.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-jtac-action-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "c90297c173193d51f937205a6803af81f3a75acedd7f716c8a41a66af2f544f1",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target marked for guided fire.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-jtac-select-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "8ca970dbc8f4d493e5a1f4daf8c715e0d37443a0a3dda272c44c533157d85a47",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "المراقب الجوي متصل.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-jtac-select-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-infantry",
+      "voicepacks": [
+        "bm_george"
+      ],
+      "sha256": "6d64dad5731a4f8088a94c5862833265711f03f0c2f565e39d12bddb3cc06729",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "JTAC network online.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-naval-action-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "8c01947617a7452b066fed5cda2c55c5c63dcf0770039b1c6c03a51b5fe7f249",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تغيير المسار الآن.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "a59b8962cfdf23b85537d5dc17045717ccf143eb11873c9813d2f59351207e00",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Coming about. Steady.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-naval-select-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "465d8c321d41a8a5d2f04be40b1c8166dfc9532ed2273894a95d8c287656d21e",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "السفينة جاهزة، الحساسات تعمل.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "1d6d94d7fcf57dd896a2a8ccac959dcfe25bf38696c40cd70e509c54b960df03",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Bridge here. Sensors up.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-veh-action-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "b90035406399573685402870d0589aa8b75e9445f077fc71754d5add0f52f371",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تم الاستلام، نتحرك.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-veh-action-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "5d2da95f5e9640803d1530f5f0e4c961a9c898235362578df8c308a619357dd8",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Copy. Moving out.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-veh-select-ar.wav",
+      "language": "ar-SA",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "da3fbc379a40acd0f8b2b53a92ba72eafb81fb62872d0656641012a7ee208e42",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "طاقم المدرعة جاهز.",
+      "humanApproved": false
+    },
+    {
+      "file": "rsa-veh-select-en.wav",
+      "language": "en-US",
+      "speaker": "saudi-crew",
+      "voicepacks": [
+        "bm_fable"
+      ],
+      "sha256": "6629e82b1656db51afed0e0b1b2ce931411b73d806673e1d03699f958176b55c",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Armor crew ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-drone-action-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "c56b7b1ef24eccf15db5e3994b5bafe2872e66ee3321851d8817ec10c00509db",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "تم تثبيت الهدف.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-drone-action-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "7bacfbf136701fc48c379aa209ce6827f61eebf644ab8f3b4251ab0cd6ab97d7",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target set. Committing.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-drone-select-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "5485aeca8e27ed8c6cdd8922266f58a9ae4cd83f6b15c40d3493a3e4165d0f77",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الطائرة المسيّرة جاهزة.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-drone-select-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "71773c5457c611aa2400bf84dd98f880c2db771015f8272005441f7a4f670cc3",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Drone link established.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-action-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "06edc4e188850eb6ce8c3c685dd7694c71a6cc9f24bf70d95a8e8608b83a5099",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الشحنة مزروعة.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-action-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "38d189c57cb8daa3600510e262d10154943247534577c8fc7a64f271faa6239f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Remote charge planted.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-build-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "2b8fb55f2fab7365f11d0fb7308e76027397201f8c5795c3268ceb0abe1b4e0d",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الشبح بينكم.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-build-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "d8e940973e6cf79cc59142093d68f048c336287ffc09fd05d294fdd4243eee52",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "The Ghost walks among you.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-move-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "38070b5b0d3500bd69ea748d8c3257e83ac1210986ba5734db2dc11ff5bcd754",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "لن يروني.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-move-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "f18f96f5b9243ec5efd36e27d4412af1a135093d7783970d3abc227a60c39c9c",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "They will not see me.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-select-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "5d992f66b8f603ec15405f0e7b70e4c597bc0d692721ca8549ec273da22d635c",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الشبح يستمع.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-ghost-select-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "98ef5bf9a5a1d2d9d7017af57735af834a8423e2a7371a70345d755c7d43358f",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "The Ghost is listening.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-inf-action-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "7bbc3a31bf7398e72d089e73b59c2b8d838e0b6536a94635cb143bad08961b4b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "نعرف هذا الطريق.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-inf-action-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "5e526480a3596553a9252de8db0fe74768233f30ab4d677604ff629af5d44efd",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "We know this ground.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-inf-select-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "113091bf1f8e99e72301569c7f1ecb8386048144a2f23a384cded8d878e14bab",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "رجال الجبل جاهزون.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-inf-select-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "d844389f9edafbb6293c6f4f5947e1ff1fbfa66f6e987a62417746757130b7bf",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Mountain unit ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-naval-action-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "ebae6f8222dc95d81cc04a674a1a69562e02263ca43a0d7f1e0a0110a50de3e2",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "نقترب من الساحل.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "2489654d7baa833498a8c1a801684e3bad1b118d2f016107e17bb1398a6dfe19",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Closing on the coast.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-naval-select-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "b56f55d7d5b327644c7e291b0824f097b2894d7fe88e6e0c826975972e3958d3",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الزورق جاهز، الرابط متصل.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "b3520d9ecb27ab3960570e1c4a3a30b586a4670533660e2f1ae89bffbb04a63a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Boat ready. Link is up.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-spot-action-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "6f72abd09e8394d5c9c612695a2d1fc5ff4ef6b24625b515fd29cd8cfbf1ab28",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "بيانات الإطلاق جاهزة.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-spot-action-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "19d72a280c3878daf4b308398cc77cdd707ff58ef98bb4b643da6bcd79b993af",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Launcher guidance updated.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-spot-select-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "b7ab6193d76a4aa59662ed8858a1d418170f91d7b3d2488a35601f8a65a64b31",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الطائرة المسيرة في الجو.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-spot-select-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-infantry",
+      "voicepacks": [
+        "am_fenrir",
+        "bm_fable"
+      ],
+      "sha256": "e40dec452aad103e51ef786e2e209472f4eb645b1e45865ba2860ed3e4352878",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Drone feed is live.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-veh-action-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "39023f4c42d9607514a744e28be05a19be40c38dd1865f77fc3aaaa36a0dc8df",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "نتحرك بسرعة.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-veh-action-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "01ae80ee7ec857bcd9d6838a46943220b021a92c869360b92211863ee73ba912",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving fast. Stay low.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-veh-select-ar.wav",
+      "language": "ar-YE",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "d4f1aebbdea9c3198d2ebde69fccbaf20c7aad0ddae073a3c797e82eafae1c04",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "الطاقم جاهز على الطريق.",
+      "humanApproved": false
+    },
+    {
+      "file": "rye-veh-select-en.wav",
+      "language": "en-US",
+      "speaker": "yemen-crew",
+      "voicepacks": [
+        "bm_lewis",
+        "am_michael"
+      ],
+      "sha256": "9c00199e5010ee5dde1168aee5f40d45eaa4997aa38fd3a31e4706d111c1fddb",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Crew ready. Engine running.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-action-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "916a1c4ed24cb751634025cfec105bb0b9e0a6aaffec6eaff3eb16c2294ed4a2",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Entry point marked.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-action-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "ad93a0f3f40b33ff38ea455ca00fc17acf05a044b77088882391cce4ed0923b3",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "نقطه ورود مشخص شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-attack-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "afe15f1d16d16fd81e334ff7378d492789ff67ec79146391d1e7f50adb91013b",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target isolated.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-attack-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "2fa6b646a69a9e41619c7d0011197fef918adb7baab4de03a15a1f6bcd8f2f76",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "هدف جدا شد.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-move-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "2a207fe7cb4c11d00222621409d529d3928a0994e41dbe0d622ffbfc2ebcbe10",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving quietly.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-move-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "1a2ea0c96d5e76ccf7eb2904b1dafe7101d14c4eae0e1de938d34bb5cf125540",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "بی‌صدا حرکت می‌کنم.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-select-en.wav",
+      "language": "en-US",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "ea5972868b9fa5677b10280dc731133a86cc53005a446fc528d14205cdf0278a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Shadow is on the net.",
+      "humanApproved": false
+    },
+    {
+      "file": "shadow-select-fa.wav",
+      "language": "fa-IR",
+      "speaker": "iran-infantry",
+      "voicepacks": [
+        "am_michael"
+      ],
+      "sha256": "c61183f4b2a8efead7453046a216fa12d664d76d8b948949f04a9e95e13f0e9e",
+      "engine": "moss-fa",
+      "modelRevision": "dcfd7f2baab4bb69434895f51eae6a0c0059c59f",
+      "license": "Apache-2.0",
+      "text": "سایه در شبکه است.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-air-action-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "9a162e1b1c76472d581877b0f0472c671767b534944accbad75612d5678cbbf5",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Course confirmed.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-air-action-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "a8636938833371f9d24baef5303b14faf4984a0160f3c6ec5aa1e499ba3c830e",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Rota onaylandı.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-air-select-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "2c44aee889c90804603909810dfa9e0716a2a2ff69b749bd0e806c4cd3cf7801",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Air element ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-air-select-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "1c3d38c769af3a02c708dcc33b9f8424c6c89cdf25ad7ca66dbfec2d964ad47c",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Hava unsuru hazır.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-greywolf-attack-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "16379875c6d350ff8268e6b22d9f073e5c944c595426dd4ccc4d1a6bde4c7313",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Team, on my mark.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-greywolf-attack-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "e23d50cd5e730e4adc309a402d9c20f42ca1b415a048f1cdc712b419a8f43340",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Takım, işaretime göre.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-greywolf-move-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "c51b49ad00d272aaeef50562630657db2ca293bb3e955cebd6d05c2ec7ae207b",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving under cover.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-greywolf-move-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "9d92dcbde7a0510c29d0c96ab1fc918218abfefcdbc986e87ab4980dab23942b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Sessizce ilerliyorum.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-greywolf-select-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "e1c0969546492bf915fb11a7e987e179f7ce9d42f0599f79bcf3b3f247a48601",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Mission is clear.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-greywolf-select-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "2efea1794d053c8757da8cb41717b22852a911e2646aaae10cfa3e064714c80b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Görev net.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-infantry-attack-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "9ed813aba5da729930bd826fe64b36ae399ec8454b7c8cb3319ed0383223e699",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Target marked.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-infantry-attack-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "bfc3f24237c2e90e33c7b0c9e5e2e2d6705f51301546e7222b62554295385231",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Hedef belirlendi.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-infantry-move-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "f0472553c837b939062c2ba398b4c8fb97653dc2e4cdb4c595afa1c3f3651b03",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Moving out.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-infantry-move-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "5e92db0331bc894794b6210f8bb1e924cfe60322e058cabb7f4c94dcc85b9f6a",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "İlerliyoruz.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-infantry-select-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "55b3ca9880d870c7e2ff6455620196617477fed4b5ecd9f99f55df733b83171a",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Squad ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-infantry-select-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-infantry",
+      "voicepacks": [
+        "am_fenrir"
+      ],
+      "sha256": "82e54383283bda5dbfd5980286734df1522f5d5ec2b165af53f3f18e1a7d8b1b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Hazırız.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-naval-action-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "e103d8ad13511da1478a65596ca5e0a90aba8a7be1d729f3f5d10ffa9dbff3e6",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Taking sea-control station.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-naval-action-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "da17b52e390ba6ed3b14aa5918f1e3a273ba0a9cf1a334f3e87a9dc3230fe176",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Seyir düzenine geçiyoruz.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-naval-select-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "401b6598e64dda179526ed06ed5052c809a6c3197124a6280ae5157078beb5fa",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Surface group ready.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-naval-select-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "1383aec75ccdc11cd1fcb73e4fea07bf39dd799f731b8d6d4217e1a3b293a54a",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Deniz unsuru hazır.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-vehicle-action-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "833f5043235eff69b15a9d55d916f4fa233cf4e55546d72cbffea67c4c36a4da",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Formation moving.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-vehicle-action-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "5259e2a174175d50609f222696f0873b3a6fa48f7c71de88fecb4ddd33ed622b",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Harekete geçiyoruz.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-vehicle-select-en.wav",
+      "language": "en-US",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "8e33f2c2cad4f4e5a7850b453152c604257be6b5c616ef316d5f9eb7f42331bf",
+      "engine": "kokoro",
+      "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "license": "Apache-2.0",
+      "text": "Crew standing by.",
+      "humanApproved": false
+    },
+    {
+      "file": "tr-vehicle-select-tr.wav",
+      "language": "tr-TR",
+      "speaker": "turkey-crew",
+      "voicepacks": [
+        "bm_lewis"
+      ],
+      "sha256": "faf85a5f1e49189e32a9bad51ba022c6af1320503f2f52d2a8606dd118c83b35",
+      "engine": "chatterbox",
+      "modelRevision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+      "license": "MIT",
+      "text": "Mürettebat hazır.",
+      "humanApproved": false
+    }
+  ]
+}

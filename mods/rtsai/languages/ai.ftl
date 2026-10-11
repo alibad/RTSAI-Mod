@@ -1,8 +1,8 @@
 ## AI companion strings, moved from the alibad/OpenRA fork's mods/common/fluent with the HUD logic
 
 button-ai-apply = Apply Now
-button-ai-companion-voice-off = VOICE: OFF
-button-ai-companion-voice-on = VOICE: ON
+button-ai-companion-voice-off = VOICE: MUTED
+button-ai-companion-voice-on = VOICE: UNMUTED
 button-ai-companion-voice-pending = VOICE: ...
 button-ai-companion-voice-toggle =
     .tooltip = Toggle AI Voice

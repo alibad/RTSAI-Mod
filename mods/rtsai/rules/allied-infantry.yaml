@@ -29,7 +29,7 @@ engineer:
 		CaptureTypes: building, husk
 	RevealsShroud:
 		Range: 4c0
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: EngineerVoice
 	Guard:
 		Voice: Action
@@ -102,7 +102,7 @@ dog:
 	IgnoresDisguise:
 	DetectCloaked:
 		Range: 5c0
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: DogVoice
 	-TakeCover:
 	QuantizeFacingsFromSequence:
@@ -206,7 +206,7 @@ e1:
 	RejectsOrders@deployment:
 		Reject: Move, EnterTransport, EnterTransports
 		RequiresCondition: deployed
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: GIVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -257,7 +257,7 @@ snipe:
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 0
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SniperVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -307,7 +307,7 @@ spy:
 		Palette: pips
 		Position: TopRight
 		RequiresCondition: disguise
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SpyVoice
 	Guard:
 		Voice: Action
@@ -363,7 +363,7 @@ ghost:
 		FacingTolerance: 0
 	RenderSprites:
 		Image: seal
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SealVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -460,7 +460,7 @@ ptroop:
 		ValidTargets: MindControl
 		RequiresCondition: !controlling
 	-AutoTargetPriority@ATTACKANYTHING:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: YuriVoice
 	RenderSprites:
 		Image: ptroop
@@ -512,7 +512,7 @@ tany:
 		FacingTolerance: 0
 	VoiceAnnouncement:
 		Voice: Build
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: TanyaVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -593,7 +593,7 @@ jumpjet:
 		Name: shadow
 		Sequence: shadow
 		ForceToGround: true
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: RocketeerVoice
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
@@ -664,7 +664,7 @@ cleg:
 		Voice: Move
 		ChargeDelay: 300
 		TargetCursor: chronosphere
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: ChronoLegionnaireVoice
 	Armament@Temporal:
 		Weapon: NeutronRifle

@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "inputSourceSha256": "ecc67e7b3ccb254df72c5d61aa661b3c3e2186c7a949d52ed5dba0cdb2b0aec4",
+  "missions": [
+    {
+      "id": "jizan-corridor",
+      "geometry_input": "maps/jizan-corridor",
+      "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
+      "native_objective_rule_sha256": "d83475fcc410e51d721dd74946f0912fb0a0c04c8c567ece03a00e723d1d0101",
+      "output": {
+        "map.yaml": "40271648fdf6fa3757d2618070f90a7f5d5b2be2a7c3ddc67e42e2d3863958df",
+        "map.bin": "2d4331b4c4dc106ce8bfd8c19876ba4fd58307f60430ffa2cb625c95134ff703",
+        "map.png": "10f07a327c96917041f3b052dfb231c157f303560852338bd76f889f874527ad",
+        "briefing.ftl": "4cf578e2faf2b8790770c85c6e22e2ea59cad42a29018c6741f731b83510a3a1"
+      }
+    },
+    {
+      "id": "hodeidah-lifeline",
+      "geometry_input": "maps/hodeidah-lifeline",
+      "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
+      "native_objective_rule_sha256": "c5e64d7b8323811a9af8dcd500238b7f3f04ef19a3b3aa34f1f53aa43449e656",
+      "output": {
+        "map.yaml": "d0b288faec84748b4027c522d2cbb0e7f49450f596e048c117f44aa0f175e449",
+        "map.bin": "2d4331b4c4dc106ce8bfd8c19876ba4fd58307f60430ffa2cb625c95134ff703",
+        "map.png": "10f07a327c96917041f3b052dfb231c157f303560852338bd76f889f874527ad",
+        "briefing.ftl": "6d370faf9e4436999d020ff764a02172d2a2ab4a86fb9c36420ef10b2aa2bb90"
+      }
+    },
+    {
+      "id": "straits-shield",
+      "geometry_input": "maps/straits-shield",
+      "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
+      "native_objective_rule_sha256": "0f221fd467a69e595413949572d1c038daac7d89b839fc4cb4eae95c4f50596f",
+      "output": {
+        "map.yaml": "d872924172625503a790e75e54c917c052878c6b35822789a8fdbf669bb818f5",
+        "map.bin": "9a5923b10651851d8b550128c06bde00c4d91522610285b47d68d7e48507bcc9",
+        "map.png": "b7b474a96019138abf052eebcd31b6b3e387b64b0eee0ec166920dff4f0a7d76",
+        "briefing.ftl": "98c776dffa977b5ce188eff7ed601ab2bba534c938dbd8f4a20cf2e364b23efe"
+      }
+    },
+    {
+      "id": "haitan-network",
+      "geometry_input": "maps/haitan-network",
+      "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
+      "native_objective_rule_sha256": "fc1e167c17c6b70a0b51fecf0c2e12f261e7e9de4e06a860411995ffdc9d6241",
+      "output": {
+        "map.yaml": "a6937ee90405733c8b3acd169e8ab417727c8d0e4e3e6d4f920038d65c0f5a1a",
+        "map.bin": "39185ad492943b59440f6cfc30ae21431f19cec2d6d1fc272cca09435430f30e",
+        "map.png": "9c42e6817412fa6fc78ca98628710422aec811c51c3214fe4dcadaf511485348",
+        "briefing.ftl": "6c10e606d792a22ab1cdba2ad571ec67cd43fd55ebc1a59cbf11ff417d4d73f4"
+      }
+    },
+    {
+      "id": "bab-al-mandab-passage",
+      "geometry_input": "maps/bab-al-mandab-passage",
+      "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
+      "native_objective_rule_sha256": "030cd61c27dfc02f0c98267e683a0a7093745d8d38d06d4962898c6e8f87f098",
+      "output": {
+        "map.yaml": "e107f79f7ea0499394c71465221be532386ec79103a2d0a8391a663ef18b6a79",
+        "map.bin": "0e3aefb06096b2d5cb0a279707c8104f15321997233d544c84f01327d749e444",
+        "map.png": "7ab4e57634dc1ac48545ce781a485516796993dde9f3e00f5779ac206e5f9ad9",
+        "briefing.ftl": "06cc644d3bb8f023e2f1c0ae3abf2baca9e01c689840059d6ff7e67ad572a944"
+      }
+    },
+    {
+      "id": "hezbollah-relay",
+      "geometry_input": "maps/hezbollah-relay",
+      "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
+      "native_objective_rule_sha256": "47ef0cc4c2571ad062965703d27565dd2c0681dbf5aa8e1af89b1e2f03545194",
+      "output": {
+        "map.yaml": "0c0174c608d35a2769c79735c8b608b7e7cd15cf7823ad6430e6a62e697ede4b",
+        "map.bin": "e30991b06dc751ecba09d3e2cadbb89950ab602726c8e47965f064b3b6c2a6e7",
+        "map.png": "16a1290782cb5543448247e1855c5ef7f7ef5b52ccc34b053e77deed0fa8c4ad",
+        "briefing.ftl": "c5c9474b97b8ce18702624b1d7decf2be4ec78edd49e5cdd12bcfefaf529f138"
+      }
+    }
+  ],
+  "transforms": [
+    "preserve native mission rules, difficulty and briefings",
+    "use square-mode source coordinates and tile vocabulary",
+    "omit browser-only inline weapon dependencies",
+    "publish briefings through native Fluent map resources"
+  ]
+}

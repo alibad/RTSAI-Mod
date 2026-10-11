@@ -1,67 +1,67 @@
 r2hzrifle:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahinfantryVoice
 
 r2hzat:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahinfantryVoice
 
 r2hzspotter:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahspotterVoice
 
 r2hzscout:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahscoutVoice
 
 r2hzfpv:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahfpvVoice
 
 r2hztechnical:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzrecoilless:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzescort:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzrockets:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzrail:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzdrone:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahdroneVoice
 
 r2hzmissileboat:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahnavalVoice
 
 r2hzskiff:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahnavalVoice
 
 r2hzsurvey:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahnavalVoice
 
 r2hzbunker:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzaanest:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice
 
 r2hzcoastal:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2HezbollahvehicleVoice

@@ -198,9 +198,11 @@ Rules:
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:
-			Briefing: "Factual cutoff: 11 August 2026.\n\nA regional escalation has interrupted radar coverage along the Jizan coastal\ncorridor while mobile launch systems threaten civilian navigation and port\nlogistics. Capture Radar Node Seven, establish layered air defense, destroy\nboth launchers, and escort the relief convoy into the port perimeter.\n\nYour forward construction yard and refinery are operational. Expand the base,\nestablish a war factory, and replace losses as the corridor battle develops.\n\nThe background is source-dated. Force composition, routes, positions, timing,\nand outcomes are fictional gameplay abstractions."
+			Briefing: briefing
 		-SpawnStartingUnits:
 		-CrateSpawner:
 		-StartGameNotification:
 	Player:
 		-ConquestVictoryConditions:
+
+FluentMessages: briefing.ftl

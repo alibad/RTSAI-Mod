@@ -6,7 +6,7 @@ cow:
 		HP: 150
 	RevealsShroud:
 		Range: 4c0
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CowVoice
 	AmbientSound:
 		SoundFiles: gcowsela.wav, gcowselb.wav, gcowselc.wav
@@ -21,7 +21,7 @@ all:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: actor-all-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlligatorVoice
 	Armament:
 		Weapon: AlligatorBite
@@ -31,7 +31,7 @@ polarb:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: actor-polarb-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: BearVoice
 	Armament:
 		Weapon: BearBite
@@ -41,7 +41,7 @@ josh:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Tooltip:
 		Name: actor-josh-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: ChimpanzeeVoice
 	Armament:
 		Weapon: ChimpBite

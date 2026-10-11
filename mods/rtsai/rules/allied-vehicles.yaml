@@ -36,7 +36,7 @@ amcv:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedConstructionVehicleVoice
 	HitShape:
 
@@ -86,7 +86,7 @@ cmin:
 	RenderSprites: # TODO: WithHarvestOverlay relies on this, but it should actually be removed
 	RenderVoxels:
 	WithVoxelUnloadBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: ChronoMinerVoice
 	HitShape:
 	WithStoresResourcesPipsDecoration:
@@ -151,7 +151,7 @@ mtnk:
 	WithVoxelBody:
 	WithVoxelTurret:
 	WithVoxelBarrel:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -203,7 +203,7 @@ tnkd:
 	RenderVoxels:
 		NormalsPalette: ts-normals
 	WithVoxelBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -346,7 +346,7 @@ fv:
 	WithVoxelTurret@hitech:
 		Sequence: turret-hitech
 		RequiresCondition: ifv-tesla || ifv-deso || ifv-demo || ifv-chrono
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -428,7 +428,7 @@ sref:
 		RequiresCondition: turretcharge == 3
 		Sequence: turret-stage3
 	WithVoxelBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
@@ -498,7 +498,7 @@ mgtk:
 	RenderVoxels:
 	WithVoxelBody:
 		RequiresCondition: !tree
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated

@@ -5,12 +5,14 @@ Run after build-classic-mode.py. No commercial game content is copied.
 The browser campaign controller is adapted into a per-world native trait.
 """
 from pathlib import Path
+import argparse
+import hashlib
 import json
 import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-WEB = ROOT.parent / 'RTSAI-WebGame'
+WEB = None
 
 
 def write(path, text):
@@ -18,7 +20,22 @@ def write(path, text):
     path.write_text(text, encoding='utf-8', newline='\n')
 
 
+def briefings(catalog):
+    for mission in catalog:
+        for mode in ['rtsai', 'rtsai-topdown']:
+            dst = ROOT / 'mods' / mode / 'campaigns/maps' / mission['id']
+            source = (dst / 'map.yaml').read_text(encoding='utf-8')
+            source = re.sub(r'^\t\t\tBriefing: .*$', '\t\t\tBriefing: briefing', source, flags=re.M)
+            if not re.search(r'^FluentMessages:', source, flags=re.M):
+                source = source.rstrip() + '\n\nFluentMessages: briefing.ftl\n'
+            write(dst / 'map.yaml', source)
+            lines = ['briefing ='] + ['    ' + line for line in mission['briefing'].splitlines()]
+            write(dst / 'briefing.ftl', '\n'.join(lines) + '\n')
+
+
 def controller():
+    if WEB is None:
+        raise ValueError("Pass an explicit frozen --web-source; live sibling inputs are not implicit")
     source = (WEB/'sim/OpenRA.WebSim/Missions.cs').read_text(encoding='utf-8')
     source = source.replace('namespace OpenRA.WebSim', 'namespace OpenRA.Mods.RTSAI.Traits')
     source = source.replace('public static class Missions', '''[TraitLocation(SystemActors.World)]
@@ -101,7 +118,7 @@ def content():
     naval = 'dest aegis dlph carrier sub hyd sqd'.split()
     for actors, voice in [(infantry,'R2ChinainfantryVoice'),(vehicles,'R2ChinavehicleVoice'),(aircraft,'R2ChinaairVoice'),(naval,'R2ChinanavalVoice')]:
         for actor in actors:
-            countries += f'\n{actor}:\n\tVoiced:\n\t\tVoiceSet: {voice}\n'
+            countries += f'\n{actor}:\n\tRTSAIVoiced:\n\t\tVoiceSet: {voice}\n'
     # These capturable structures reuse our authored base kit rather than legacy scenery.
     for actor, image in [('caoild','campaign-oil'),('cahosp','campaign-hospital'),('caoutp','campaign-outpost')]:
         countries += f'\n{actor}:\n\tRenderSprites:\n\t\tImage: {image}\n\t\tPlayerPalette: kitplayer\n'
@@ -157,6 +174,7 @@ def content():
                     struct.pack_into('<HB', data, tiles+i*3, {1015:1,1047:2,1031:3}.get(tile,0),0)
                 (dst/'map.bin').write_bytes(data)
             write(dst/'map.yaml', source)
+    briefings(catalog)
     for mode in ['rtsai','rtsai-topdown']:
         path = ROOT/'mods'/mode/'mod.yaml'
         source = path.read_text(encoding='utf-8')
@@ -174,9 +192,70 @@ def content():
         write(path,re.sub(r'\n{3,}', '\n\n', source))
 
 
+def classic_candidate(candidate):
+    spec = json.loads((candidate / 'INPUTS.json').read_text())
+    entries = []
+    for item in sorted(candidate.rglob('*')):
+        if item.is_file() and item not in (candidate / 'INPUTS.json', candidate / 'BUILD-INPUTS.json'):
+            entries.append({'path': item.relative_to(candidate).as_posix(), 'size': item.stat().st_size,
+                            'sha256': hashlib.sha256(item.read_bytes()).hexdigest(),
+                            'executable': bool(item.stat().st_mode & 0o111)})
+    identity = hashlib.sha256(json.dumps(entries, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+    if entries != spec['files'] or identity != spec['sourceSha256']:
+        raise ValueError('Frozen campaign candidate identity changed')
+    catalog = json.loads((ROOT / 'mods/rtsai/campaigns/missions.json').read_text())
+    incoming = {m['id']: m for m in json.loads((candidate / 'missions.json').read_text())}
+    receipts = []
+    for mission in catalog:
+        original = {k: v for k, v in mission.items() if k != 'briefing'}
+        source = {k: v for k, v in incoming[mission['id']].items() if k != 'briefing'}
+        if original != source:
+            raise ValueError('Objective/catalog mismatch: ' + mission['id'])
+        src = candidate / 'maps' / mission['id']
+        dst = ROOT / 'mods/rtsai-topdown/campaigns/maps' / mission['id']
+        native = (dst / 'map.yaml').read_text(encoding='utf-8')
+        geometry = (src / 'map.yaml').read_text(encoding='utf-8')
+        if 'RequiresMod: rtsai-topdown' not in geometry:
+            raise ValueError('Wrong Classic profile')
+        output = geometry.split('Rules:', 1)[0] + 'Rules:' + native.split('Rules:', 1)[1]
+        for filename in ['map.bin', 'map.png']:
+            shutil.copyfile(src / filename, dst / filename)
+        write(dst / 'map.yaml', output)
+        receipts.append({'id': mission['id'], 'geometry_input': 'maps/' + mission['id'],
+                         'native_objectives': 'OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs',
+                         'native_objective_rule_sha256': hashlib.sha256(re.sub(r'^\t\t\tBriefing: .*$', '', native.split('Rules:', 1)[1].split('\nFluentMessages:', 1)[0], flags=re.M).strip().encode()).hexdigest(),
+                         'output': {}})
+    for mission in catalog:
+        mission['briefing'] = incoming[mission['id']]['briefing']
+    briefings(catalog)
+    write(ROOT / 'mods/rtsai/campaigns/missions.json', json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
+    for receipt in receipts:
+        dst = ROOT / 'mods/rtsai-topdown/campaigns/maps' / receipt['id']
+        receipt['output'] = {f: hashlib.sha256((dst / f).read_bytes()).hexdigest()
+                             for f in ['map.yaml', 'map.bin', 'map.png', 'briefing.ftl']}
+    write(ROOT / 'mods/rtsai-topdown/campaigns/geometry-provenance.json',
+          json.dumps({'schema': 1, 'inputSourceSha256': identity, 'missions': receipts,
+                      'transforms': ['preserve native mission rules, difficulty and briefings',
+                                     'use square-mode source coordinates and tile vocabulary',
+                                     'omit browser-only inline weapon dependencies',
+                                     'publish briefings through native Fluent map resources']}, indent=2) + '\n')
+
+
 if __name__ == '__main__':
-    controller()
-    content()
-    print('Imported 16-country overlay and six campaigns into both standalone native modes.')
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--web-source', type=Path)
+    ap.add_argument('--classic-candidate', type=Path)
+    ap.add_argument('--output', type=Path, required=True)
+    args = ap.parse_args()
+    ROOT = args.output.resolve()
+    if args.classic_candidate:
+        classic_candidate(args.classic_candidate.resolve())
+    elif args.web_source:
+        WEB = args.web_source.resolve()
+        controller()
+        content()
+    else:
+        ap.error('an explicit frozen input is required')
+    print('Imported explicit campaign inputs into native output: ' + str(ROOT))
 
 

@@ -263,11 +263,23 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 					if (!Uri.TryCreate(baseUrl, UriKind.Absolute, out var uri) || !uri.IsLoopback)
 						throw new InvalidOperationException("The companion control URL must be local.");
 
-					using var client = HttpClientFactory.Create();
-					client.Timeout = TimeSpan.FromSeconds(6);
-					using var content = new StringContent("{}", Encoding.UTF8, "application/json");
-					using var response = await client.PostAsync(new Uri(uri, $"v1/actions/{operation}"), content);
-					response.EnsureSuccessStatusCode();
+					using var state = await OpenRAAILocalClient.GetAsync(uri, "v1/state");
+					if (!state.RootElement.TryGetProperty("pending_action", out var pending)
+						|| pending.ValueKind != JsonValueKind.Object)
+						return;
+					var proposalId = pending.GetProperty("proposal_id").GetString();
+					var summary = pending.GetProperty("summary").GetString();
+					if (operation == "confirm")
+					{
+						var review = new TaskCompletionSource<bool>();
+						Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(modData,
+							title: "dialog-ai-proposal-title", text: "dialog-ai-proposal-review",
+							textArguments: ["summary", summary], onConfirm: () => review.TrySetResult(true),
+							confirmText: "dialog-ai-proposal-confirm", onCancel: () => review.TrySetResult(false), cancelText: "button-back"));
+						if (!await review.Task)
+							return;
+					}
+					await OpenRAAIProposalClient.ApplyAsync(uri, proposalId, operation);
 				}
 				catch (Exception e)
 				{

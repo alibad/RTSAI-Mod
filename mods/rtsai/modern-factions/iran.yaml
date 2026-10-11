@@ -119,7 +119,7 @@ r2karrar:
 		Name: secondary
 		Weapon: R2QilinCoax
 		LocalOffset: 600,60,700
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 
 r2raad:
@@ -141,7 +141,7 @@ r2raad:
 		Speed: 100
 	Armament:
 		Weapon: R2AirDefense
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	AutoTarget:
 		ScanRadius: 10
@@ -168,7 +168,7 @@ r2fajr:
 		Speed: 85
 	Armament:
 		Weapon: R2RocketSalvo
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 	GrantConditionOnMovement@moving:
 		Condition: moving

@@ -1,0 +1,692 @@
+R2ChinainfantryVoice__faction:
+	Inherits: R2ChinainfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-infantry-select-zh
+		Move: ra2|modern-factions/audio/rcn-infantry-action-zh
+		Attack: ra2|modern-factions/audio/rcn-infantry-action-zh
+		Action: ra2|modern-factions/audio/rcn-infantry-action-zh
+
+R2ChinainfantryVoice__en:
+	Inherits: R2ChinainfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-infantry-select-en
+		Move: ra2|modern-factions/audio/rcn-infantry-action-en
+		Attack: ra2|modern-factions/audio/rcn-infantry-action-en
+		Action: ra2|modern-factions/audio/rcn-infantry-action-en
+
+R2ChinaredspearVoice__faction:
+	Inherits: R2ChinaredspearVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-redspear-select-zh
+		Move: ra2|modern-factions/audio/rcn-redspear-action-zh
+		Attack: ra2|modern-factions/audio/rcn-redspear-action-zh
+		Action: ra2|modern-factions/audio/rcn-redspear-action-zh
+
+R2ChinaredspearVoice__en:
+	Inherits: R2ChinaredspearVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-redspear-select-en
+		Move: ra2|modern-factions/audio/rcn-redspear-action-en
+		Attack: ra2|modern-factions/audio/rcn-redspear-action-en
+		Action: ra2|modern-factions/audio/rcn-redspear-action-en
+
+R2ChinavehicleVoice__faction:
+	Inherits: R2ChinavehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-vehicle-select-zh
+		Move: ra2|modern-factions/audio/rcn-vehicle-action-zh
+		Attack: ra2|modern-factions/audio/rcn-vehicle-action-zh
+		Action: ra2|modern-factions/audio/rcn-vehicle-action-zh
+
+R2ChinavehicleVoice__en:
+	Inherits: R2ChinavehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-vehicle-select-en
+		Move: ra2|modern-factions/audio/rcn-vehicle-action-en
+		Attack: ra2|modern-factions/audio/rcn-vehicle-action-en
+		Action: ra2|modern-factions/audio/rcn-vehicle-action-en
+
+R2ChinaairVoice__faction:
+	Inherits: R2ChinaairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-air-select-zh
+		Move: ra2|modern-factions/audio/rcn-air-action-zh
+		Attack: ra2|modern-factions/audio/rcn-air-action-zh
+		Action: ra2|modern-factions/audio/rcn-air-action-zh
+
+R2ChinaairVoice__en:
+	Inherits: R2ChinaairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-air-select-en
+		Move: ra2|modern-factions/audio/rcn-air-action-en
+		Attack: ra2|modern-factions/audio/rcn-air-action-en
+		Action: ra2|modern-factions/audio/rcn-air-action-en
+
+R2ChinanavalVoice__faction:
+	Inherits: R2ChinanavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-naval-select-zh
+		Move: ra2|modern-factions/audio/rcn-naval-action-zh
+		Attack: ra2|modern-factions/audio/rcn-naval-action-zh
+		Action: ra2|modern-factions/audio/rcn-naval-action-zh
+
+R2ChinanavalVoice__en:
+	Inherits: R2ChinanavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rcn-naval-select-en
+		Move: ra2|modern-factions/audio/rcn-naval-action-en
+		Attack: ra2|modern-factions/audio/rcn-naval-action-en
+		Action: ra2|modern-factions/audio/rcn-naval-action-en
+
+R2IraninfantryVoice__faction:
+	Inherits: R2IraninfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-inf-select-fa
+		Move: ra2|modern-factions/audio/iran-inf-move-fa
+		Attack: ra2|modern-factions/audio/iran-inf-attack-fa
+		Action: ra2|modern-factions/audio/iran-inf-action-fa
+
+R2IraninfantryVoice__en:
+	Inherits: R2IraninfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-inf-select-en
+		Move: ra2|modern-factions/audio/iran-inf-move-en
+		Attack: ra2|modern-factions/audio/iran-inf-attack-en
+		Action: ra2|modern-factions/audio/iran-inf-action-en
+
+R2IrandroneVoice__faction:
+	Inherits: R2IrandroneVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-drone-select-fa
+		Move: ra2|modern-factions/audio/iran-drone-move-fa
+		Attack: ra2|modern-factions/audio/iran-drone-attack-fa
+		Action: ra2|modern-factions/audio/iran-drone-action-fa
+
+R2IrandroneVoice__en:
+	Inherits: R2IrandroneVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-drone-select-en
+		Move: ra2|modern-factions/audio/iran-drone-move-en
+		Attack: ra2|modern-factions/audio/iran-drone-attack-en
+		Action: ra2|modern-factions/audio/iran-drone-action-en
+
+R2IranshadowVoice__faction:
+	Inherits: R2IranshadowVoice
+	Voices:
+		Select: ra2|modern-factions/audio/shadow-select-fa
+		Move: ra2|modern-factions/audio/shadow-move-fa
+		Attack: ra2|modern-factions/audio/shadow-attack-fa
+		Action: ra2|modern-factions/audio/shadow-action-fa
+
+R2IranshadowVoice__en:
+	Inherits: R2IranshadowVoice
+	Voices:
+		Select: ra2|modern-factions/audio/shadow-select-en
+		Move: ra2|modern-factions/audio/shadow-move-en
+		Attack: ra2|modern-factions/audio/shadow-attack-en
+		Action: ra2|modern-factions/audio/shadow-action-en
+
+R2IranvehicleVoice__faction:
+	Inherits: R2IranvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-veh-select-fa
+		Move: ra2|modern-factions/audio/iran-veh-move-fa
+		Attack: ra2|modern-factions/audio/iran-veh-attack-fa
+		Action: ra2|modern-factions/audio/iran-veh-action-fa
+
+R2IranvehicleVoice__en:
+	Inherits: R2IranvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-veh-select-en
+		Move: ra2|modern-factions/audio/iran-veh-move-en
+		Attack: ra2|modern-factions/audio/iran-veh-attack-en
+		Action: ra2|modern-factions/audio/iran-veh-action-en
+
+R2IranairVoice__faction:
+	Inherits: R2IranairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-air-select-fa
+		Move: ra2|modern-factions/audio/iran-air-move-fa
+		Attack: ra2|modern-factions/audio/iran-air-attack-fa
+		Action: ra2|modern-factions/audio/iran-air-action-fa
+
+R2IranairVoice__en:
+	Inherits: R2IranairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-air-select-en
+		Move: ra2|modern-factions/audio/iran-air-move-en
+		Attack: ra2|modern-factions/audio/iran-air-attack-en
+		Action: ra2|modern-factions/audio/iran-air-action-en
+
+R2IrannavalVoice__faction:
+	Inherits: R2IrannavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-naval-select-fa
+		Move: ra2|modern-factions/audio/iran-naval-move-fa
+		Attack: ra2|modern-factions/audio/iran-naval-attack-fa
+		Action: ra2|modern-factions/audio/iran-naval-action-fa
+
+R2IrannavalVoice__en:
+	Inherits: R2IrannavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/iran-naval-select-en
+		Move: ra2|modern-factions/audio/iran-naval-move-en
+		Attack: ra2|modern-factions/audio/iran-naval-attack-en
+		Action: ra2|modern-factions/audio/iran-naval-action-en
+
+R2IsraelinfantryVoice__faction:
+	Inherits: R2IsraelinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-inf-select-he
+		Move: ra2|modern-factions/audio/il-inf-move-he
+		Attack: ra2|modern-factions/audio/il-inf-attack-he
+		Action: ra2|modern-factions/audio/il-inf-action-he
+		Demolish: ra2|modern-factions/audio/il-inf-action-he
+		Build: ra2|modern-factions/audio/il-inf-select-he
+
+R2IsraelinfantryVoice__en:
+	Inherits: R2IsraelinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-inf-select-en
+		Move: ra2|modern-factions/audio/il-inf-move-en
+		Attack: ra2|modern-factions/audio/il-inf-attack-en
+		Action: ra2|modern-factions/audio/il-inf-action-en
+		Demolish: ra2|modern-factions/audio/il-inf-action-en
+		Build: ra2|modern-factions/audio/il-inf-select-en
+
+R2IsraelobserverVoice__faction:
+	Inherits: R2IsraelobserverVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-observer-select-he
+		Move: ra2|modern-factions/audio/il-observer-move-he
+		Attack: ra2|modern-factions/audio/il-observer-attack-he
+		Action: ra2|modern-factions/audio/il-observer-action-he
+		Demolish: ra2|modern-factions/audio/il-observer-action-he
+		Build: ra2|modern-factions/audio/il-observer-select-he
+
+R2IsraelobserverVoice__en:
+	Inherits: R2IsraelobserverVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-observer-select-en
+		Move: ra2|modern-factions/audio/il-observer-move-en
+		Attack: ra2|modern-factions/audio/il-observer-attack-en
+		Action: ra2|modern-factions/audio/il-observer-action-en
+		Demolish: ra2|modern-factions/audio/il-observer-action-en
+		Build: ra2|modern-factions/audio/il-observer-select-en
+
+R2IsraelreconVoice__faction:
+	Inherits: R2IsraelreconVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-recon-select-he
+		Move: ra2|modern-factions/audio/il-recon-move-he
+		Attack: ra2|modern-factions/audio/il-recon-attack-he
+		Action: ra2|modern-factions/audio/il-recon-action-he
+		Demolish: ra2|modern-factions/audio/il-recon-action-he
+		Build: ra2|modern-factions/audio/il-recon-select-he
+
+R2IsraelreconVoice__en:
+	Inherits: R2IsraelreconVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-recon-select-en
+		Move: ra2|modern-factions/audio/il-recon-move-en
+		Attack: ra2|modern-factions/audio/il-recon-attack-en
+		Action: ra2|modern-factions/audio/il-recon-action-en
+		Demolish: ra2|modern-factions/audio/il-recon-action-en
+		Build: ra2|modern-factions/audio/il-recon-select-en
+
+R2IsraelvehicleVoice__faction:
+	Inherits: R2IsraelvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-veh-select-he
+		Move: ra2|modern-factions/audio/il-veh-move-he
+		Attack: ra2|modern-factions/audio/il-veh-attack-he
+		Action: ra2|modern-factions/audio/il-veh-action-he
+
+R2IsraelvehicleVoice__en:
+	Inherits: R2IsraelvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-veh-select-en
+		Move: ra2|modern-factions/audio/il-veh-move-en
+		Attack: ra2|modern-factions/audio/il-veh-attack-en
+		Action: ra2|modern-factions/audio/il-veh-action-en
+
+R2IsraelairVoice__faction:
+	Inherits: R2IsraelairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-air-select-he
+		Move: ra2|modern-factions/audio/il-air-move-he
+		Attack: ra2|modern-factions/audio/il-air-attack-he
+		Action: ra2|modern-factions/audio/il-air-action-he
+
+R2IsraelairVoice__en:
+	Inherits: R2IsraelairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-air-select-en
+		Move: ra2|modern-factions/audio/il-air-move-en
+		Attack: ra2|modern-factions/audio/il-air-attack-en
+		Action: ra2|modern-factions/audio/il-air-action-en
+
+R2IsraelnavalVoice__faction:
+	Inherits: R2IsraelnavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-naval-select-he
+		Move: ra2|modern-factions/audio/il-naval-move-he
+		Attack: ra2|modern-factions/audio/il-naval-attack-he
+		Action: ra2|modern-factions/audio/il-naval-action-he
+
+R2IsraelnavalVoice__en:
+	Inherits: R2IsraelnavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/il-naval-select-en
+		Move: ra2|modern-factions/audio/il-naval-move-en
+		Attack: ra2|modern-factions/audio/il-naval-attack-en
+		Action: ra2|modern-factions/audio/il-naval-action-en
+
+R2HezbollahinfantryVoice__faction:
+	Inherits: R2HezbollahinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-inf-select-ar
+		Move: ra2|modern-factions/audio/hz-inf-move-ar
+		Attack: ra2|modern-factions/audio/hz-inf-attack-ar
+		Action: ra2|modern-factions/audio/hz-inf-action-ar
+		Demolish: ra2|modern-factions/audio/hz-inf-action-ar
+		Build: ra2|modern-factions/audio/hz-inf-select-ar
+
+R2HezbollahinfantryVoice__en:
+	Inherits: R2HezbollahinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-inf-select-en
+		Move: ra2|modern-factions/audio/hz-inf-move-en
+		Attack: ra2|modern-factions/audio/hz-inf-attack-en
+		Action: ra2|modern-factions/audio/hz-inf-action-en
+		Demolish: ra2|modern-factions/audio/hz-inf-action-en
+		Build: ra2|modern-factions/audio/hz-inf-select-en
+
+R2HezbollahspotterVoice__faction:
+	Inherits: R2HezbollahspotterVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-spotter-select-ar
+		Move: ra2|modern-factions/audio/hz-spotter-move-ar
+		Attack: ra2|modern-factions/audio/hz-spotter-attack-ar
+		Action: ra2|modern-factions/audio/hz-spotter-action-ar
+		Demolish: ra2|modern-factions/audio/hz-spotter-action-ar
+		Build: ra2|modern-factions/audio/hz-spotter-select-ar
+
+R2HezbollahspotterVoice__en:
+	Inherits: R2HezbollahspotterVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-spotter-select-en
+		Move: ra2|modern-factions/audio/hz-spotter-move-en
+		Attack: ra2|modern-factions/audio/hz-spotter-attack-en
+		Action: ra2|modern-factions/audio/hz-spotter-action-en
+		Demolish: ra2|modern-factions/audio/hz-spotter-action-en
+		Build: ra2|modern-factions/audio/hz-spotter-select-en
+
+R2HezbollahscoutVoice__faction:
+	Inherits: R2HezbollahscoutVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-scout-select-ar
+		Move: ra2|modern-factions/audio/hz-scout-move-ar
+		Attack: ra2|modern-factions/audio/hz-scout-attack-ar
+		Action: ra2|modern-factions/audio/hz-scout-action-ar
+		Demolish: ra2|modern-factions/audio/hz-scout-action-ar
+		Build: ra2|modern-factions/audio/hz-scout-select-ar
+
+R2HezbollahscoutVoice__en:
+	Inherits: R2HezbollahscoutVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-scout-select-en
+		Move: ra2|modern-factions/audio/hz-scout-move-en
+		Attack: ra2|modern-factions/audio/hz-scout-attack-en
+		Action: ra2|modern-factions/audio/hz-scout-action-en
+		Demolish: ra2|modern-factions/audio/hz-scout-action-en
+		Build: ra2|modern-factions/audio/hz-scout-select-en
+
+R2HezbollahfpvVoice__faction:
+	Inherits: R2HezbollahfpvVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-fpv-select-ar
+		Move: ra2|modern-factions/audio/hz-fpv-move-ar
+		Attack: ra2|modern-factions/audio/hz-fpv-attack-ar
+		Action: ra2|modern-factions/audio/hz-fpv-action-ar
+		Demolish: ra2|modern-factions/audio/hz-fpv-action-ar
+		Build: ra2|modern-factions/audio/hz-fpv-select-ar
+
+R2HezbollahfpvVoice__en:
+	Inherits: R2HezbollahfpvVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-fpv-select-en
+		Move: ra2|modern-factions/audio/hz-fpv-move-en
+		Attack: ra2|modern-factions/audio/hz-fpv-attack-en
+		Action: ra2|modern-factions/audio/hz-fpv-action-en
+		Demolish: ra2|modern-factions/audio/hz-fpv-action-en
+		Build: ra2|modern-factions/audio/hz-fpv-select-en
+
+R2HezbollahvehicleVoice__faction:
+	Inherits: R2HezbollahvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-veh-select-ar
+		Move: ra2|modern-factions/audio/hz-veh-move-ar
+		Attack: ra2|modern-factions/audio/hz-veh-attack-ar
+		Action: ra2|modern-factions/audio/hz-veh-action-ar
+
+R2HezbollahvehicleVoice__en:
+	Inherits: R2HezbollahvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-veh-select-en
+		Move: ra2|modern-factions/audio/hz-veh-move-en
+		Attack: ra2|modern-factions/audio/hz-veh-attack-en
+		Action: ra2|modern-factions/audio/hz-veh-action-en
+
+R2HezbollahdroneVoice__faction:
+	Inherits: R2HezbollahdroneVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-drone-select-ar
+		Move: ra2|modern-factions/audio/hz-drone-move-ar
+		Attack: ra2|modern-factions/audio/hz-drone-attack-ar
+		Action: ra2|modern-factions/audio/hz-drone-action-ar
+
+R2HezbollahdroneVoice__en:
+	Inherits: R2HezbollahdroneVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-drone-select-en
+		Move: ra2|modern-factions/audio/hz-drone-move-en
+		Attack: ra2|modern-factions/audio/hz-drone-attack-en
+		Action: ra2|modern-factions/audio/hz-drone-action-en
+
+R2HezbollahnavalVoice__faction:
+	Inherits: R2HezbollahnavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-naval-select-ar
+		Move: ra2|modern-factions/audio/hz-naval-move-ar
+		Attack: ra2|modern-factions/audio/hz-naval-attack-ar
+		Action: ra2|modern-factions/audio/hz-naval-action-ar
+
+R2HezbollahnavalVoice__en:
+	Inherits: R2HezbollahnavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/hz-naval-select-en
+		Move: ra2|modern-factions/audio/hz-naval-move-en
+		Attack: ra2|modern-factions/audio/hz-naval-attack-en
+		Action: ra2|modern-factions/audio/hz-naval-action-en
+
+R2SaudiinfantryVoice__faction:
+	Inherits: R2SaudiinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-inf-select-ar
+		Move: ra2|modern-factions/audio/rsa-inf-action-ar
+		Attack: ra2|modern-factions/audio/rsa-inf-action-ar
+		Action: ra2|modern-factions/audio/rsa-inf-action-ar
+
+R2SaudiinfantryVoice__en:
+	Inherits: R2SaudiinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-inf-select-en
+		Move: ra2|modern-factions/audio/rsa-inf-action-en
+		Attack: ra2|modern-factions/audio/rsa-inf-action-en
+		Action: ra2|modern-factions/audio/rsa-inf-action-en
+
+R2SaudijtacVoice__faction:
+	Inherits: R2SaudijtacVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-jtac-select-ar
+		Move: ra2|modern-factions/audio/rsa-inf-action-ar
+		Attack: ra2|modern-factions/audio/rsa-jtac-action-ar
+		Action: ra2|modern-factions/audio/rsa-jtac-action-ar
+
+R2SaudijtacVoice__en:
+	Inherits: R2SaudijtacVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-jtac-select-en
+		Move: ra2|modern-factions/audio/rsa-inf-action-en
+		Attack: ra2|modern-factions/audio/rsa-jtac-action-en
+		Action: ra2|modern-factions/audio/rsa-jtac-action-en
+
+R2SaudifalconVoice__faction:
+	Inherits: R2SaudifalconVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-falcon-select-ar
+		Move: ra2|modern-factions/audio/rsa-falcon-move-ar
+		Attack: ra2|modern-factions/audio/rsa-falcon-action-ar
+		Action: ra2|modern-factions/audio/rsa-falcon-action-ar
+		Demolish: ra2|modern-factions/audio/rsa-falcon-action-ar
+		Build: ra2|modern-factions/audio/rsa-falcon-build-ar
+
+R2SaudifalconVoice__en:
+	Inherits: R2SaudifalconVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-falcon-select-en
+		Move: ra2|modern-factions/audio/rsa-falcon-move-en
+		Attack: ra2|modern-factions/audio/rsa-falcon-action-en
+		Action: ra2|modern-factions/audio/rsa-falcon-action-en
+		Demolish: ra2|modern-factions/audio/rsa-falcon-action-en
+		Build: ra2|modern-factions/audio/rsa-falcon-build-en
+
+R2SaudivehicleVoice__faction:
+	Inherits: R2SaudivehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-veh-select-ar
+		Move: ra2|modern-factions/audio/rsa-veh-action-ar
+		Attack: ra2|modern-factions/audio/rsa-veh-action-ar
+		Action: ra2|modern-factions/audio/rsa-veh-action-ar
+
+R2SaudivehicleVoice__en:
+	Inherits: R2SaudivehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-veh-select-en
+		Move: ra2|modern-factions/audio/rsa-veh-action-en
+		Attack: ra2|modern-factions/audio/rsa-veh-action-en
+		Action: ra2|modern-factions/audio/rsa-veh-action-en
+
+R2SaudiairVoice__faction:
+	Inherits: R2SaudiairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-air-select-ar
+		Move: ra2|modern-factions/audio/rsa-air-action-ar
+		Attack: ra2|modern-factions/audio/rsa-air-action-ar
+		Action: ra2|modern-factions/audio/rsa-air-action-ar
+
+R2SaudiairVoice__en:
+	Inherits: R2SaudiairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-air-select-en
+		Move: ra2|modern-factions/audio/rsa-air-action-en
+		Attack: ra2|modern-factions/audio/rsa-air-action-en
+		Action: ra2|modern-factions/audio/rsa-air-action-en
+
+R2SaudinavalVoice__faction:
+	Inherits: R2SaudinavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-naval-select-ar
+		Move: ra2|modern-factions/audio/rsa-naval-action-ar
+		Attack: ra2|modern-factions/audio/rsa-naval-action-ar
+		Action: ra2|modern-factions/audio/rsa-naval-action-ar
+
+R2SaudinavalVoice__en:
+	Inherits: R2SaudinavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rsa-naval-select-en
+		Move: ra2|modern-factions/audio/rsa-naval-action-en
+		Attack: ra2|modern-factions/audio/rsa-naval-action-en
+		Action: ra2|modern-factions/audio/rsa-naval-action-en
+
+R2TurkeyinfantryVoice__faction:
+	Inherits: R2TurkeyinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-infantry-select-tr
+		Move: ra2|modern-factions/audio/tr-infantry-move-tr
+		Attack: ra2|modern-factions/audio/tr-infantry-attack-tr
+		Action: ra2|modern-factions/audio/tr-infantry-attack-tr
+
+R2TurkeyinfantryVoice__en:
+	Inherits: R2TurkeyinfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-infantry-select-en
+		Move: ra2|modern-factions/audio/tr-infantry-move-en
+		Attack: ra2|modern-factions/audio/tr-infantry-attack-en
+		Action: ra2|modern-factions/audio/tr-infantry-attack-en
+
+R2TurkeygreywolfVoice__faction:
+	Inherits: R2TurkeygreywolfVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-greywolf-select-tr
+		Move: ra2|modern-factions/audio/tr-greywolf-move-tr
+		Attack: ra2|modern-factions/audio/tr-greywolf-attack-tr
+		Action: ra2|modern-factions/audio/tr-greywolf-attack-tr
+
+R2TurkeygreywolfVoice__en:
+	Inherits: R2TurkeygreywolfVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-greywolf-select-en
+		Move: ra2|modern-factions/audio/tr-greywolf-move-en
+		Attack: ra2|modern-factions/audio/tr-greywolf-attack-en
+		Action: ra2|modern-factions/audio/tr-greywolf-attack-en
+
+R2TurkeyvehicleVoice__faction:
+	Inherits: R2TurkeyvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-vehicle-select-tr
+		Move: ra2|modern-factions/audio/tr-vehicle-action-tr
+		Attack: ra2|modern-factions/audio/tr-vehicle-action-tr
+		Action: ra2|modern-factions/audio/tr-vehicle-action-tr
+
+R2TurkeyvehicleVoice__en:
+	Inherits: R2TurkeyvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-vehicle-select-en
+		Move: ra2|modern-factions/audio/tr-vehicle-action-en
+		Attack: ra2|modern-factions/audio/tr-vehicle-action-en
+		Action: ra2|modern-factions/audio/tr-vehicle-action-en
+
+R2TurkeyairVoice__faction:
+	Inherits: R2TurkeyairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-air-select-tr
+		Move: ra2|modern-factions/audio/tr-air-action-tr
+		Attack: ra2|modern-factions/audio/tr-air-action-tr
+		Action: ra2|modern-factions/audio/tr-air-action-tr
+
+R2TurkeyairVoice__en:
+	Inherits: R2TurkeyairVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-air-select-en
+		Move: ra2|modern-factions/audio/tr-air-action-en
+		Attack: ra2|modern-factions/audio/tr-air-action-en
+		Action: ra2|modern-factions/audio/tr-air-action-en
+
+R2TurkeynavalVoice__faction:
+	Inherits: R2TurkeynavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-naval-select-tr
+		Move: ra2|modern-factions/audio/tr-naval-action-tr
+		Attack: ra2|modern-factions/audio/tr-naval-action-tr
+		Action: ra2|modern-factions/audio/tr-naval-action-tr
+
+R2TurkeynavalVoice__en:
+	Inherits: R2TurkeynavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/tr-naval-select-en
+		Move: ra2|modern-factions/audio/tr-naval-action-en
+		Attack: ra2|modern-factions/audio/tr-naval-action-en
+		Action: ra2|modern-factions/audio/tr-naval-action-en
+
+R2YemeninfantryVoice__faction:
+	Inherits: R2YemeninfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-inf-select-ar
+		Move: ra2|modern-factions/audio/rye-inf-action-ar
+		Attack: ra2|modern-factions/audio/rye-inf-action-ar
+		Action: ra2|modern-factions/audio/rye-inf-action-ar
+
+R2YemeninfantryVoice__en:
+	Inherits: R2YemeninfantryVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-inf-select-en
+		Move: ra2|modern-factions/audio/rye-inf-action-en
+		Attack: ra2|modern-factions/audio/rye-inf-action-en
+		Action: ra2|modern-factions/audio/rye-inf-action-en
+
+R2YemenspotterVoice__faction:
+	Inherits: R2YemenspotterVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-spot-select-ar
+		Move: ra2|modern-factions/audio/rye-inf-action-ar
+		Attack: ra2|modern-factions/audio/rye-spot-action-ar
+		Action: ra2|modern-factions/audio/rye-spot-action-ar
+
+R2YemenspotterVoice__en:
+	Inherits: R2YemenspotterVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-spot-select-en
+		Move: ra2|modern-factions/audio/rye-inf-action-en
+		Attack: ra2|modern-factions/audio/rye-spot-action-en
+		Action: ra2|modern-factions/audio/rye-spot-action-en
+
+R2YemenghostVoice__faction:
+	Inherits: R2YemenghostVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-ghost-select-ar
+		Move: ra2|modern-factions/audio/rye-ghost-move-ar
+		Attack: ra2|modern-factions/audio/rye-ghost-action-ar
+		Action: ra2|modern-factions/audio/rye-ghost-action-ar
+		Demolish: ra2|modern-factions/audio/rye-ghost-action-ar
+		Build: ra2|modern-factions/audio/rye-ghost-build-ar
+
+R2YemenghostVoice__en:
+	Inherits: R2YemenghostVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-ghost-select-en
+		Move: ra2|modern-factions/audio/rye-ghost-move-en
+		Attack: ra2|modern-factions/audio/rye-ghost-action-en
+		Action: ra2|modern-factions/audio/rye-ghost-action-en
+		Demolish: ra2|modern-factions/audio/rye-ghost-action-en
+		Build: ra2|modern-factions/audio/rye-ghost-build-en
+
+R2YemenvehicleVoice__faction:
+	Inherits: R2YemenvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-veh-select-ar
+		Move: ra2|modern-factions/audio/rye-veh-action-ar
+		Attack: ra2|modern-factions/audio/rye-veh-action-ar
+		Action: ra2|modern-factions/audio/rye-veh-action-ar
+
+R2YemenvehicleVoice__en:
+	Inherits: R2YemenvehicleVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-veh-select-en
+		Move: ra2|modern-factions/audio/rye-veh-action-en
+		Attack: ra2|modern-factions/audio/rye-veh-action-en
+		Action: ra2|modern-factions/audio/rye-veh-action-en
+
+R2YemendroneVoice__faction:
+	Inherits: R2YemendroneVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-drone-select-ar
+		Move: ra2|modern-factions/audio/rye-drone-action-ar
+		Attack: ra2|modern-factions/audio/rye-drone-action-ar
+		Action: ra2|modern-factions/audio/rye-drone-action-ar
+
+R2YemendroneVoice__en:
+	Inherits: R2YemendroneVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-drone-select-en
+		Move: ra2|modern-factions/audio/rye-drone-action-en
+		Attack: ra2|modern-factions/audio/rye-drone-action-en
+		Action: ra2|modern-factions/audio/rye-drone-action-en
+
+R2YemennavalVoice__faction:
+	Inherits: R2YemennavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-naval-select-ar
+		Move: ra2|modern-factions/audio/rye-naval-action-ar
+		Attack: ra2|modern-factions/audio/rye-naval-action-ar
+		Action: ra2|modern-factions/audio/rye-naval-action-ar
+
+R2YemennavalVoice__en:
+	Inherits: R2YemennavalVoice
+	Voices:
+		Select: ra2|modern-factions/audio/rye-naval-select-en
+		Move: ra2|modern-factions/audio/rye-naval-action-en
+		Attack: ra2|modern-factions/audio/rye-naval-action-en
+		Action: ra2|modern-factions/audio/rye-naval-action-en
+

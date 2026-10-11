@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<EngineRootPath>../engine</EngineRootPath>
+		<EngineRootPath Condition="'$(EngineRootPath)' == ''">../engine</EngineRootPath>
 	</PropertyGroup>
 
 	<Import Project="$(EngineRootPath)/Directory.Build.props" />

@@ -15,7 +15,7 @@ shad:
 		LocalOffset: 928,0,128
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: NighthawkVoice
 	Buildable:
 		Queue: Vehicle
@@ -135,7 +135,7 @@ zep:
 		Chance: 75
 	VoiceAnnouncement:
 		Voice: Build
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: KirovVoice
 	SpawnActorOnDeath:
 		Actor: zephusk
@@ -190,7 +190,7 @@ orca:
 	AttackAircraft:
 		FacingTolerance: 80
 		Voice: Attack
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: HarrierVoice
 	AmmoPool:
 		Ammo: 1
@@ -235,7 +235,7 @@ beag:
 		Weapon: Maverick2
 	Health:
 		HP: 200
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: BlackEagleVoice
 	RenderSprites:
 		Image: beag

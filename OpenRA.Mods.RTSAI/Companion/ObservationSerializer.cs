@@ -366,10 +366,10 @@ namespace OpenRA.Mods.RTSAI.Traits
 			bldg.CellY = bldgCell.V;
 
 			// Power
-			var powerTrait = actor.TraitOrDefault<Power>();
-			bldg.IsPowered = powerTrait == null || !powerTrait.IsTraitDisabled;
-			if (powerTrait != null)
-				bldg.PowerAmount = powerTrait.GetEnabledPower();
+			var powerTraits = actor.TraitsImplementing<Power>().ToArray();
+			var enabledPower = powerTraits.Where(t => !t.IsTraitDisabled).ToArray();
+			bldg.IsPowered = powerTraits.Length == 0 || enabledPower.Length > 0;
+			bldg.PowerAmount = enabledPower.Sum(t => t.GetEnabledPower());
 
 			// Repair status
 			var repair = actor.TraitOrDefault<RepairableBuilding>();

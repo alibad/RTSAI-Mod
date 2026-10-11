@@ -237,9 +237,11 @@ Rules:
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:
-			Briefing: "This is a fictional combined-arms exercise set on a native-generated island map.\nThe player restores a command network, moves amphibious IFVs through a verified\nwater gate, and coordinates land, air, missile, drone, and naval forces against\nthe fictional Obsidian Directorate.\n\nNo real attack, real operation, real leader, or real force disposition is\nrepresented. See `docs/china-faction-research.md` for the dated sources and the\ncapability-to-gameplay translation boundary.\n"
+			Briefing: briefing
 		-SpawnStartingUnits:
 		-CrateSpawner:
 		-StartGameNotification:
 	Player:
 		-ConquestVictoryConditions:
+
+FluentMessages: briefing.ftl

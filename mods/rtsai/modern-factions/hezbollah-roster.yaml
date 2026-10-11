@@ -258,7 +258,7 @@ r2hzquad:
 	-Selectable:
 	-Repairable:
 	-ActorLostNotification:
-	-Voiced:
+	-RTSAIVoiced:
 	Interactable:
 		Bounds: 512, 512
 	RejectsOrders:

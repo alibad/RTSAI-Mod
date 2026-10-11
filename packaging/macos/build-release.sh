@@ -10,8 +10,7 @@
 #     <outputdir>/RTSAI-<version>-macos.dmg.sha256
 #
 # The payload matches the Windows build (packaging/windows/build-release.ps1): with PACKAGING_STANDALONE="True"
-# only mods/<MOD_ID> ships, without the MIX filename database or the content installer's chrome. The AI companion
-# is Windows-only today, so the co-commander starts off (rtsai-install.json "none").
+# rtsai and rtsai-topdown ship without Westwood archives. An optional frozen companion is local by default.
 #
 # Signing: with MACOS_DEVELOPER_IDENTITY (a Developer ID Application identity in the keychain) the app is signed
 # with the hardened runtime; otherwise it is ad-hoc signed (codesign -s -), which Gatekeeper treats as an
@@ -51,7 +50,7 @@ if [ -f "${ROOT}/user.config" ]; then
 	. "${ROOT}/user.config"
 fi
 
-ENGINE="${ROOT}/${ENGINE_DIRECTORY#./}"
+ENGINE="${RTSAI_MAC_ENGINE:-${ROOT}/${ENGINE_DIRECTORY#./}}"
 ENGINE_MACOS="${ENGINE}/packaging/macos"
 if [ ! -f "${ENGINE}/OpenRA.Game/OpenRA.Game.csproj" ] || [ ! -f "${ENGINE_MACOS}/launcher.m" ]; then
 	echo >&2 "The pinned engine is missing in ${ENGINE}. Run ./fetch-engine.sh first."
@@ -61,7 +60,7 @@ fi
 STANDALONE="${PACKAGING_STANDALONE:-False}"
 APP_NAME="${PACKAGING_DISPLAY_NAME}.app"
 DMG="${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${VERSION}-macos.dmg"
-BUILT="${PACKAGING_DIR}/build"
+BUILT="${RTSAI_MAC_BUILD_ROOT:-${PACKAGING_DIR}/build}"
 APP="${BUILT}/${APP_NAME}"
 CONTENTS="${APP}/Contents"
 RESOURCES="${CONTENTS}/Resources"
@@ -79,8 +78,8 @@ PLIST="${CONTENTS}/Info.plist"
 cp "${ENGINE_MACOS}/Info.plist.in" "${PLIST}"
 modify_plist "{DEV_VERSION}" "${VERSION}" "${PLIST}"
 modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${PLIST}"
-# Lets older macOS try to start; Microsoft supports .NET 10 on macOS 15 and later.
-modify_plist "{MINIMUM_SYSTEM_VERSION}" "12.0" "${PLIST}"
+# .NET 10 requires macOS 15 and later.
+modify_plist "{MINIMUM_SYSTEM_VERSION}" "15.0" "${PLIST}"
 modify_plist "{MOD_ID}" "${MOD_ID}" "${PLIST}"
 modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${PLIST}"
 modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${VERSION}" "${PLIST}"
@@ -103,8 +102,10 @@ for target in x86_64:osx-x64 arm64:osx-arm64; do
 	(cd "${ENGINE}" && dotnet publish -c Release -p:TargetPlatform="${RID}" -p:CopyGenericLauncher=True \
 		-p:CopyCncDll="${PACKAGING_COPY_CNC_DLL}" -p:CopyD2kDll="${PACKAGING_COPY_D2K_DLL}" -r "${RID}" \
 		-p:PublishDir="${CONTENTS}/MacOS/${ARCH}/" -p:Deterministic=true --self-contained true --nologo -v q)
-	(cd "${ROOT}" && dotnet publish RTSAI.sln -c Release -p:TargetPlatform="${RID}" -r "${RID}" \
-		-p:PublishDir="${CONTENTS}/MacOS/${ARCH}/" --self-contained true --nologo -v q)
+	for project in OpenRA.Mods.RA2 OpenRA.Mods.RTSAI; do
+		(cd "${ROOT}" && dotnet publish "${project}/${project}.csproj" -p:EngineRootPath="${ENGINE}/" -c Release -p:TargetPlatform="${RID}" -r "${RID}" \
+			-p:PublishDir="${CONTENTS}/MacOS/${ARCH}/" --self-contained true --nologo -v q)
+	done
 	for required in OpenRA.dll OpenRA.Utility.dll libhostfxr.dylib OpenRA.Mods.RTSAI.dll; do
 		[ -f "${CONTENTS}/MacOS/${ARCH}/${required}" ] || { echo >&2 "Missing ${ARCH}/${required}"; exit 1; }
 	done
@@ -132,7 +133,7 @@ echo "${ENGINE_VERSION}" > "${RESOURCES}/VERSION"
 echo "== Mod content"
 for mod in "${ROOT}/mods/"*/; do
 	mod="$(basename "${mod}")"
-	if [ "${STANDALONE}" = "True" ] && [ "${mod}" != "${MOD_ID}" ]; then
+	if [ "${STANDALONE}" = "True" ] && [ "${mod}" != "rtsai" ] && [ "${mod}" != "rtsai-topdown" ]; then
 		continue
 	fi
 	cp -LR "${ROOT}/mods/${mod}" "${RESOURCES}/mods/"
@@ -143,9 +144,13 @@ for mod in "${ROOT}/mods/"*/; do
 done
 [ -f "${RESOURCES}/mods/${MOD_ID}/mod.yaml" ] || { echo >&2 "No mods/${MOD_ID} to package."; exit 1; }
 
-# No AI companion on macOS yet: the co-commander starts off (CompanionHost applies this once) and the game says the
-# build does not include it, instead of reporting missing files.
-printf '{"ai_mode": "none", "version": "%s", "stamp": "macos-%s"}\n' "${VERSION}" "${VERSION}" > "${RESOURCES}/rtsai-install.json"
+AI_MODE="none"
+if [ -n "${RTSAI_MAC_COMPANION}" ]; then
+	[ -x "${RTSAI_MAC_COMPANION}/rtsai-companion" ] || { echo >&2 "Missing frozen companion executable"; exit 1; }
+	cp -R "${RTSAI_MAC_COMPANION}" "${RESOURCES}/companion"
+	AI_MODE="local"
+fi
+printf '{"ai_mode": "%s", "version": "%s", "stamp": "macos-%s", "hosted_enabled": false, "companion_arch": "%s"}\n' "${AI_MODE}" "${VERSION}" "${VERSION}" "${RTSAI_MAC_COMPANION_ARCH:-none}" > "${RESOURCES}/rtsai-install.json"
 
 echo "== Icon"
 ICONSET="${BUILT}/${MOD_ID}.iconset"
@@ -188,6 +193,6 @@ ln -s /Applications "${BUILT}/Applications"
 rm -f "${DMG}"
 hdiutil create "${DMG}" -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -format UDZO -imagekey zlib-level=9 -srcfolder "${BUILT}"
 (cd "${OUTPUTDIR}" && shasum -a 256 "$(basename "${DMG}")" > "$(basename "${DMG}").sha256")
-rm -rf "${BUILT}"
+[ "${RTSAI_MAC_KEEP_BUILD:-0}" = "1" ] || rm -rf "${BUILT}"
 
 echo "Built ${DMG} ($(stat -f %z "${DMG}") bytes, ${SIGNING} signature)"

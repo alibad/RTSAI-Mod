@@ -189,9 +189,11 @@ Rules:
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:
-			Briefing: "Factual cutoff: 11 August 2026.\n\nKeep a coastal aid and fisheries corridor operational while fixed civilian\ninfrastructure and dispersed mobile forces face sustained pressure. Escort\nrelief supplies inland, move the mobile force out of the announced surveillance\nzone, and protect the return route for the final evacuation convoy.\n\nThe playable Yemen base begins with a complete economy, ground-production\nbranch, radar, and airfield so the technical, mobile launcher, and Samad drone\nall matter during the mission.\n\nThe background is source-dated. Force composition, routes, positions, timing,\nand outcomes are fictional gameplay abstractions."
+			Briefing: briefing
 		-SpawnStartingUnits:
 		-CrateSpawner:
 		-StartGameNotification:
 	Player:
 		-ConquestVictoryConditions:
+
+FluentMessages: briefing.ftl

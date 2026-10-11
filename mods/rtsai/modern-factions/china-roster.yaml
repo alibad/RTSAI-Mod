@@ -21,7 +21,7 @@
 		Weapon: R2ChinaRifle
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 r2cnrifle:
@@ -174,7 +174,7 @@ r2redspear:
 	WithRangeCircle:
 		Range: 4c0
 		Color: 4ED8FF90
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaredspearVoice
 
 r2zbd:
@@ -339,7 +339,7 @@ r2cranehusk:
 		DetectionTypes: Underwater
 		Range: 6c0
 	RenderDetectionCircle:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 	HitShape:
 

@@ -308,7 +308,7 @@ r2sahinhusk:
 		DetectionTypes: Underwater
 		Range: 6c0
 	RenderDetectionCircle:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedNavalVoice
 	HitShape:
 

@@ -195,7 +195,7 @@ sqd:
 	SelectionDecorations:
 	Selectable:
 		Bounds: 1930, 1448
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: GiantSquidVoice
 	Armament:
 		Weapon: SquidPunch

@@ -994,163 +994,163 @@ sref:
 	-GrantConditionOnAttack@turretcharge3:
 
 e1:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 e2:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 snipe:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 ghost:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 ccomand:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 ptroop:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 tany:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 jumpjet:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 cleg:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 flakt:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 shk:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 terror:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 deso:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 ivan:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 civan:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 yuri:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 yuripr:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinainfantryVoice
 
 mtnk:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 fv:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 mgtk:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 htnk:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 apoc:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 ttnk:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 sref:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 dtruck:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 dron:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinavehicleVoice
 
 shad:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 zep:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 orca:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 beag:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 pdplane:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 hornet:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 asw:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinaairVoice
 
 dest:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 aegis:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 dlph:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 carrier:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 sub:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 hyd:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 sqd:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: R2ChinanavalVoice
 
 caoild:

@@ -126,9 +126,9 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				return false;
 
 			if (acceptKey.IsActivatedBy(e))
-				return StartOperation(() => PostAsync("v1/actions/confirm"));
+				return StartOperation(() => ProposalAsync("confirm"));
 			if (rejectKey.IsActivatedBy(e))
-				return StartOperation(() => PostAsync("v1/actions/cancel"));
+				return StartOperation(() => ProposalAsync("cancel"));
 			if (toggleAutoKey.IsActivatedBy(e))
 				return StartOperation(() => ToggleAsync("auto_act_enabled", "auto_act"));
 			if (toggleVoiceKey.IsActivatedBy(e))
@@ -296,6 +296,30 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			{
 				operationBusy = false;
 			}
+		}
+
+		async Task ProposalAsync(string action)
+		{
+			var baseUri = OpenRAAILocalClient.GetBaseUri("OPENRA_AI_CONSOLE_URL", "http://127.0.0.1:8787/");
+			using var state = await OpenRAAILocalClient.GetAsync(baseUri, "v1/state");
+			if (!state.RootElement.TryGetProperty("pending_action", out var pending)
+				|| pending.ValueKind != System.Text.Json.JsonValueKind.Object
+				|| !pending.TryGetProperty("proposal_id", out var id))
+				return;
+			var proposalId = id.GetString();
+			if (string.IsNullOrEmpty(proposalId))
+				return;
+			var summary = pending.GetProperty("summary").GetString();
+			if (action == "cancel")
+			{
+				await OpenRAAIProposalClient.ApplyAsync(baseUri, proposalId, action);
+				return;
+			}
+			Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(modData,
+				title: "dialog-ai-proposal-title", text: "dialog-ai-proposal-review",
+				textArguments: ["summary", summary],
+				onConfirm: () => StartOperation(() => OpenRAAIProposalClient.ApplyAsync(baseUri, proposalId, "confirm")),
+				confirmText: "dialog-ai-proposal-confirm", onCancel: () => { }, cancelText: "button-back"));
 		}
 
 		static async Task PostAsync(string path)

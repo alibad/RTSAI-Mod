@@ -1,6 +1,6 @@
 civ1:
 	Inherits: ^CivilianInfantry
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianAlliedFemaleVoice
 
 civ2:
@@ -13,21 +13,21 @@ civa:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: actor-civa-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianTexanVoice
 
 civb:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: actor-civb-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianTexanVoice
 
 civc:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: actor-civc-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianTexanVoice
 
 civbbp:
@@ -46,7 +46,7 @@ civbfm:
 
 civbf:
 	Inherits: ^CivilianInfantry
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianAlliedFemaleVoice
 	Tooltip:
 		Name: actor-civbf-name
@@ -68,21 +68,21 @@ civsfm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: actor-civsfm-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianSovietMaleVoice
 
 civsf:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: actor-civsf-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianSovietFemaleVoice
 
 civstm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: actor-civstm-name
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianSovietMaleVoice
 
 vladimir:
@@ -98,7 +98,7 @@ pentgen:
 	Tooltip:
 		Name: actor-pentgen-name
 		GenericVisibility: None
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: GIVoice
 
 ssrv:
@@ -106,7 +106,7 @@ ssrv:
 	Tooltip:
 		Name: actor-ssrv-name
 		GenericVisibility: None
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SecretServiceVoice
 
 pres:

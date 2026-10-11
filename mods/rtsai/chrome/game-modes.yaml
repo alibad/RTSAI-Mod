@@ -3,7 +3,7 @@ Background@RTSAI_GAME_MODES:
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 500
-	Height: 260
+	Height: 320
 	Background: panel-black
 	Children:
 		Label@TITLE:
@@ -25,9 +25,14 @@ Background@RTSAI_GAME_MODES:
 			Width: 450
 			Height: 42
 			Text: rtsai-isometric-mode
+		Button@VOICE_LANGUAGE:
+			X: 25
+			Y: 185
+			Width: 450
+			Height: 42
 		Button@CANCEL:
 			X: 325
-			Y: 205
+			Y: 265
 			Width: 150
 			Height: 35
 			Text: button-back

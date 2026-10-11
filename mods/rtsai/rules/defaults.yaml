@@ -648,7 +648,7 @@
 	MustBeDestroyed:
 	Cloneable:
 		Types: infantry
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: GIVoice
 	QuantizeFacingsFromSequence:
 		Sequence: stand
@@ -779,7 +779,7 @@
 		PanicSequencePrefix:
 	-MustBeDestroyed:
 	-TakeCover:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CivilianAlliedMaleVoice
 	WithInfantryBody:
 		IdleSequences: idle1
@@ -888,7 +888,7 @@
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	MustBeDestroyed:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: AlliedVehicleVoice
 	ChronoshiftableWithSpriteEffect:
 		Image: chrono
@@ -921,7 +921,7 @@
 	Selectable:
 		Bounds: 1544, 2509, 0, -289
 	WithVoxelBody:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: CarVoice
 	MapEditorData:
 		Categories: Civilian vehicle
@@ -1102,7 +1102,7 @@
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	MustBeDestroyed:
-	Voiced:
+	RTSAIVoiced:
 		VoiceSet: SovietNavalVoice
 	ChronoshiftableWithSpriteEffect:
 		Image: chrono
