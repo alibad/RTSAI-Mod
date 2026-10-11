@@ -2,7 +2,7 @@
 
 **A standalone modern RTS built on [OpenRA](https://www.openra.net), with seven factions and project-made art, sound and maps. No Red Alert or Red Alert 2 installation is required.**
 
-The co-commander watches your match, speaks up when it matters, answers spoken questions, and takes command only when you switch AUTO on. It sees only what you can see.
+The optional local co-commander offers advice and explicitly reviewed orders when its required runtime is configured. The Mac alpha includes an ARM64 companion but no neural inference, speech runtime or model; it does not demonstrate spoken questions. Hosted AI remains disabled by default.
 
 Status: **in development.** This is the canonical standalone game checkout. The earlier OpenRA AI Classic alpha remains a historical release; it is not the current standalone build. See [the product direction](docs/product-direction.md) and `MIGRATION.md` for integration status.
 
@@ -10,7 +10,7 @@ Status: **in development.** This is the canonical standalone game checkout. The 
 
 Launch `launch-game.cmd`, open **Game modes**, and choose **Classic** or **Isometric**. Both standalone profiles have 16 country choices, seven authored modern faction packs and six campaigns. Classic currently uses the shared modern army on an original rectangular terrain set; additional mechanics and maps from the historical Classic fork remain a porting task.
 
-The two delivery surfaces are **Downloadable RTS** (Windows EXE installer and portable ZIP; Mac later) and **Web RTS** (`RTSAI-WebGame`, static browser game with direct peer multiplayer, chat and optional calls). The browser Classic profile and complete parity between the two surfaces remain roadmap items. See [the delivery roadmap](../OpenRA-AI/docs/roadmap.md).
+The two delivery surfaces are **Downloadable RTS** (Windows EXE installer and portable ZIP, plus a separate macOS 15+ alpha DMG) and **Web RTS** (`RTSAI-WebGame`, static browser game with direct peer multiplayer, chat and optional calls). Classic/top-down and isometric profiles are now available in the browser. Complete parity between the two surfaces remains a roadmap item. See [Mac alpha requirements and checksums](docs/release-macos-20261011.md); it is ad-hoc signed, not notarized, and Intel/another-Mac acceptance remain pending. See [the delivery roadmap](../OpenRA-AI/docs/roadmap.md).
 
 The default launcher and standalone Windows package load only project and engine resources. The old owned-content importer and `rtsai-classic` manifest are retained for migration reference, excluded from the standalone package, and are not the dependency-free Classic/top-down mode.
 
