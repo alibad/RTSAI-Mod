@@ -91,6 +91,10 @@ APPEND = {
     "Rules": ["classic|rules/factions.yaml"],
     "FluentMessages": ["classic|languages/en.ftl"],
 }
+# Standalone entries the add-on leaves out. campaigns/countr* dress the original countries in modern-faction art,
+# voices and EVA so the standalone game can offer them without EA files; the add-on plays them with the player's
+# own originals, and classic|rules/factions.yaml already gives it their lobby entries and starting units.
+DROP = re.compile(r"^\t~?ra2\|(standalone/|campaigns/countr(y|ies)[-.])")
 
 
 def sections(text: str) -> list[tuple[str, str]]:
@@ -122,7 +126,7 @@ def build() -> str:
             tail = "\n" * (len(body) - len(body.rstrip("\n")) - 1)
             parts.append(CLASSIC[key] + tail)
             continue
-        lines = [ln for ln in body.splitlines(keepends=True) if not re.match(r"^\t~?ra2\|standalone/", ln)]
+        lines = [ln for ln in body.splitlines(keepends=True) if not DROP.match(ln)]
         if key == "ModCredits":
             lines = [re.sub(r"ModTabTitle: ([^#\n]*?)\s*(#.*)?$", r"ModTabTitle: \1 Classic", ln) for ln in lines]
         if key in APPEND:

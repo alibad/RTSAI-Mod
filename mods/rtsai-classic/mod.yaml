@@ -133,15 +133,7 @@ Rules:
 	ra2|modern-factions/art-vehicles-fx.yaml
 	ra2|modern-factions/art-infantry.yaml
 	ra2|modern-factions/art-buildings.yaml
-	ra2|campaigns/countries.yaml
 	classic|rules/factions.yaml
-
-
-
-
-
-
-
 
 
 Sequences:
@@ -180,14 +172,6 @@ Sequences:
 	ra2|modern-factions/art-buildings-sequences.yaml
 	ra2|modern-factions/art-icons-sequences.yaml
 
-
-
-
-
-
-
-
-	ra2|campaigns/country-sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
@@ -254,6 +238,7 @@ ChromeLayout:
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	common|chrome/gamesave-browser.yaml
+	common|chrome/load-game-browser.yaml
 	common|chrome/gamesave-loading.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/text-notifications.yaml
@@ -287,21 +272,13 @@ Voices:
 	ra2|modern-factions/saudi-voices.yaml
 	ra2|modern-factions/yemen-voices.yaml
 	ra2|modern-factions/voice-prefixes.yaml
+	ra2|modern-factions/voice-language.yaml
 
-	ra2|campaigns/country-voices.yaml
 
 Notifications:
 	ra2|audio/notifications.yaml
 	ra2|modern-factions/eva-notifications.yaml
 
-
-
-
-
-
-
-
-	ra2|campaigns/country-notifications.yaml
 
 TileSets:
 	classic|tilesets/temperat.yaml
@@ -430,7 +407,6 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		URBAN: u
 	TilesetSuffixes:
 		SNOW: a
-
 
 AssetBrowser:
 	SpriteExtensions: .shp, .tem, .urb, .sno
