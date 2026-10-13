@@ -83,6 +83,20 @@ The Directorate's own hardware, in fictional places.
 
 Five chapters built on classic mission patterns, all in fictional places, each against the Directorate or Orion Group. Objective kinds in **bold** already exist in the browser host (`capture`, `destroy`, `escort`, `protect`, `build`, `reach`, `scout`, `survive`, `disperse`, `shipping`); the rest are Phase 2 features.
 
+### Source missions
+
+The six built chapters were adapted from original Red Alert missions, and Act III works the same way. Each chapter borrows the layout, pacing and objectives of a preserved original mission (OpenRA's ports under `OpenRA/mods/ra/maps`, indexed in `resources/map-library.json`) and replaces the plot, names and dialogue. Characters, briefings and cinematics from the original games never ship; the standalone rules in `standalone.md` already drop names such as Tanya, Yuri and the Chronosphere.
+
+| Chapter | Original mission | What carries over |
+| --- | --- | --- |
+| III-1 · Lights in the Water | Evacuation; Allies 01 "In the Thick of It" | Stranded survivors behind enemy lines, a small force fighting them out to an extraction point |
+| III-2 · Hold the Ferry Line | Exodus; Survival 01 | Evacuate while flanked; hold until the timer runs out |
+| III-3 · Glass Island | Infiltration; Allies 09a "Evacuate Kosygin" | Reconnaissance without engaging; slip in, make contact, extract |
+| III-4 · Black Platform | Allies 13 "Focused Blast" | Place charges on every generator, then get out |
+| III-5 · Every Light On | Soviet 13a "Capture the Chronosphere"; Intervention | Cut the radar link first, then take the core; protect civilians before the strike |
+
+The rest of the preserved originals (86 in all: 53 Red Alert, including the expansion missions, and 33 Tiberian Dawn) are the bank for later chapters. Red Alert 2 has no OpenRA campaign to adapt; an RA2-inspired chapter would be laid out from scratch.
+
 ### III-1 · Lights in the Water (rescue)
 - **Commander:** Nabil. **Setting:** a fictional reef coast and fishing town, night into dawn.
 - **Premise:** Spoofed navigation signals have walked a fishing fleet and a relief boat onto a reef line. With a small mobile force and no base, find the three stranded groups before the tide turns and bring them to the town clinic.
