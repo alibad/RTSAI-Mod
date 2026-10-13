@@ -1,0 +1,250 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: Lights in the Water
+Author: RTS AI — Lines of Hope
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Yemen:
+		Name: Yemen
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: yemen
+		LockColor: True
+		Color: 8F7A45
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Orion Group
+	PlayerReference@Orion:
+		Name: Orion Group
+		Faction: russia
+		Color: 545D66
+		Enemies: Yemen
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	OrionWaveEntry: waypoint
+		Owner: Neutral
+		Location: 52,3
+	WatchPost: caoutp
+		Owner: Yemen
+		Location: 30,44
+	WatchMissiles: r2ycoastal
+		Owner: Yemen
+		Location: 27,42
+	WatchBunker: r2ybunker
+		Owner: Yemen
+		Location: 35,50
+	TownBunkerNorth: r2ybunker
+		Owner: Yemen
+		Location: 22,56
+	TownMissilesNorth: r2ycoastal
+		Owner: Yemen
+		Location: 28,58
+	TownBunkerEast: r2ybunker
+		Owner: Yemen
+		Location: 34,66
+	TownMissilesEast: r2ycoastal
+		Owner: Yemen
+		Location: 32,72
+	TownClinic: cahosp
+		Owner: Yemen
+		Location: 16,64
+	TownPowerOne: napowr
+		Owner: Yemen
+		Location: 10,58
+	TownPowerTwo: napowr
+		Owner: Yemen
+		Location: 8,66
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 26,76
+	Haidar0: r2technical
+		Owner: Yemen
+		Location: 22,72
+	Haidar1: r2technical
+		Owner: Yemen
+		Location: 24,73
+	Haidar2: r2technical
+		Owner: Yemen
+		Location: 26,72
+	Haidar3: r2ytechrr
+		Owner: Yemen
+		Location: 28,73
+	Haidar4: r2ytechrr
+		Owner: Yemen
+		Location: 30,72
+	Haidar5: r2ymlr
+		Owner: Yemen
+		Location: 32,73
+	Haidar6: r2ymr
+		Owner: Yemen
+		Location: 22,74
+	Haidar7: r2ymr
+		Owner: Yemen
+		Location: 24,75
+	Haidar8: r2ymr
+		Owner: Yemen
+		Location: 26,74
+	Haidar9: r2ymr
+		Owner: Yemen
+		Location: 28,75
+	Haidar10: r2ymr
+		Owner: Yemen
+		Location: 30,74
+	Haidar11: r2yrpg
+		Owner: Yemen
+		Location: 32,75
+	Haidar12: r2yrpg
+		Owner: Yemen
+		Location: 22,76
+	Haidar13: r2yrpg
+		Owner: Yemen
+		Location: 24,77
+	Haidar14: r2yrpg
+		Owner: Yemen
+		Location: 26,76
+	Haidar15: r2yspot
+		Owner: Yemen
+		Location: 28,77
+	SurvivorsCove: waypoint
+		Owner: Neutral
+		Location: 44,83
+	SurvivorsCoveCivilian0: civ1
+		Owner: Neutral
+		Location: 42,82
+	SurvivorsCoveCivilian1: civa
+		Owner: Neutral
+		Location: 44,82
+	SurvivorsCoveCivilian2: civ2
+		Owner: Neutral
+		Location: 46,82
+	SurvivorsJetty: waypoint
+		Owner: Neutral
+		Location: 64,81
+	SurvivorsJettyCivilian0: civ1
+		Owner: Neutral
+		Location: 62,80
+	SurvivorsJettyCivilian1: civa
+		Owner: Neutral
+		Location: 64,80
+	SurvivorsJettyCivilian2: civ2
+		Owner: Neutral
+		Location: 66,80
+	StrangerSite: waypoint
+		Owner: Neutral
+		Location: 86,80
+	StrangerSiteCivilian0: civb
+		Owner: Neutral
+		Location: 84,79
+	StrangerSiteCivilian1: civ3
+		Owner: Neutral
+		Location: 86,79
+	Stranger: tany
+		Owner: Neutral
+		Location: 87,78
+	SurvivorsCovePatrol0: e2
+		Owner: Orion Group
+		Location: 47,74
+	SurvivorsCovePatrol1: e2
+		Owner: Orion Group
+		Location: 49,75
+	SurvivorsCovePatrol2: htnk
+		Owner: Orion Group
+		Location: 50,70
+	SurvivorsJettyPatrol0: e2
+		Owner: Orion Group
+		Location: 61,72
+	SurvivorsJettyPatrol1: e2
+		Owner: Orion Group
+		Location: 67,73
+	SurvivorsJettyPatrol2: e2
+		Owner: Orion Group
+		Location: 64,70
+	SurvivorsJettyPatrol3: htnk
+		Owner: Orion Group
+		Location: 68,68
+	StrangerSitePatrol0: e2
+		Owner: Orion Group
+		Location: 82,74
+	StrangerSitePatrol1: e2
+		Owner: Orion Group
+		Location: 84,72
+	StrangerSitePatrol2: e2
+		Owner: Orion Group
+		Location: 89,73
+	StrangerSitePatrol3: e2
+		Owner: Orion Group
+		Location: 91,75
+	StrangerSitePatrol4: htnk
+		Owner: Orion Group
+		Location: 85,68
+	StrangerSitePatrol5: htnk
+		Owner: Orion Group
+		Location: 90,69
+	RoadblockTank: htnk
+		Owner: Orion Group
+		Location: 56,60
+	RoadblockRifles: e2
+		Owner: Orion Group
+		Location: 58,62
+	ReefLanding: waypoint
+		Owner: Neutral
+		Location: 84,78
+	ReefRoadEast: waypoint
+		Owner: Neutral
+		Location: 72,77
+	ReefRoadMid: waypoint
+		Owner: Neutral
+		Location: 58,77
+	ReefRoadWest: waypoint
+		Owner: Neutral
+		Location: 44,76
+	TownGate: waypoint
+		Owner: Neutral
+		Location: 32,78
+	ClinicDoor: waypoint
+		Owner: Neutral
+		Location: 22,79
+Rules:
+	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: dropdown-missionbrowser-difficulty.label
+			Description: dropdown-missionbrowser-difficulty.description
+			Default: normal
+			Values:
+				easy: campaign-difficulty-easy
+				normal: label-missionbrowser-normal-difficulty
+				hard: campaign-difficulty-hard
+		RTSAICampaign:
+			Mission: lights-in-the-water
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: briefing
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:
+	r2ycoastal:
+		-MustBeDestroyed:
+	r2ybunker:
+		-MustBeDestroyed:
+	napowr:
+		-MustBeDestroyed:
+	htnk:
+		Health:
+			HP: 260
+
+FluentMessages: briefing.ftl
