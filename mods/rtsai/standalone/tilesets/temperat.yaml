@@ -17439,3 +17439,20 @@ Templates:
 				MaxColor: E7CF99
 				ZOffset: 0
 				ZRamp: 0
+
+MultiBrushCollections:
+	Segmented:
+		MultiBrush@Cliff_49:
+			Template: 49
+			Segment:
+				Start: Cliff.L
+				End: Cliff.U
+				Points: 2,2, 1,2, 1,1, 0,1, 0,0
+	Trees:
+		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08,tree09,tree10,tree11,tree12,tree13,tree14,tree15,tree16,tree17,tree18,tree19,tree20,tree21,tree22,tree23,tree24,tree25,tree26,tree27,tree28
+	Obstructions:
+		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08
+	CivilianBuildings:
+		FromActors: cahse01,cahse02,cahse03,cahse04,cahse05,cahse06,cahse07,cabarn02
+	Water:
+		FromTemplates: 323, 324, 325, 326, 327

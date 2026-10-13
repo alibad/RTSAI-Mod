@@ -509,6 +509,28 @@ def write_pal(path: Path, pal):
     path.write_bytes(bytes(int(c) >> 2 for c in pal.ravel()))
 
 
+# Brush collections for the engine's map generator (mods/rtsai/rules/map-generators.yaml). No segment brushes
+# for coastlines and only one cliff (the generator reads the cliff height even without mountains), so it makes
+# land maps only.
+MULTIBRUSH_COLLECTIONS = """MultiBrushCollections:
+	Segmented:
+		MultiBrush@Cliff_49:
+			Template: 49
+			Segment:
+				Start: Cliff.L
+				End: Cliff.U
+				Points: 2,2, 1,2, 1,1, 0,1, 0,0
+	Trees:
+		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08,tree09,tree10,tree11,tree12,tree13,tree14,tree15,tree16,tree17,tree18,tree19,tree20,tree21,tree22,tree23,tree24,tree25,tree26,tree27,tree28
+	Obstructions:
+		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08
+	CivilianBuildings:
+		FromActors: cahse01,cahse02,cahse03,cahse04,cahse05,cahse06,cahse07,cabarn02
+	Water:
+		FromTemplates: 323, 324, 325, 326, 327
+"""
+
+
 def tileset_yaml(head: str, templates, extras, images, radar):
     def hexc(c):
         return "".join(f"{int(v):02X}" for v in c)
@@ -544,6 +566,7 @@ def tileset_yaml(head: str, templates, extras, images, radar):
         out.append(f"\tTemplate@{t.id}:\n\t\tCategories: {t.category}\n\t\tId: {t.id}\n\t\tImages: {', '.join(images[t.id])}\n"
                    f"\t\tSize: 1, 1\n\t\tTiles:\n\t\t\t0: {tile.type}\n\t\t\t\tMinColor: {hexc(r[0])}\n\t\t\t\tMaxColor: {hexc(r[1])}\n"
                    f"\t\t\t\tZOffset: 0\n\t\t\t\tZRamp: 0\n")
+    out.append("\n" + MULTIBRUSH_COLLECTIONS)
     return "".join(out)
 
 

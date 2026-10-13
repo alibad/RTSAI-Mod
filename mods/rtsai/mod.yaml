@@ -40,6 +40,7 @@ Rules:
 	ra2|rules/companion.yaml
 	ra2|rules/proxy-actors.yaml
 	ra2|rules/misc.yaml
+	ra2|rules/map-generators.yaml
 	ra2|rules/ai.yaml
 	ra2|rules/player.yaml
 	ra2|rules/world.yaml
@@ -288,6 +289,7 @@ FluentMessages:
 	common|fluent/rules.ftl
 	ra2|languages/rules/en.ftl
 	ra2|languages/chrome/en.ftl
+	ra2|languages/map-generator.ftl
 	ra2|languages/identity.ftl
 	ra2|standalone/standalone.ftl
 	ra2|languages/native-preview.ftl

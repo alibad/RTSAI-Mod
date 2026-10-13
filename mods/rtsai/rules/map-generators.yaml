@@ -1,0 +1,241 @@
+# The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset.
+# Land maps only for now: no water, cliffs or ramps (our tileset has no segment brushes for coastlines and cliffs
+# yet). Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
+# cell's corner shows the patch only where both edges that meet at that corner border the same patch.
+^MapGenerators:
+	TSMapGenerator@rtsai:
+		Type: rtsai
+		Name: map-generator-rtsai
+		Tilesets: TEMPERATE
+		Options:
+			MultiChoiceOption@hidden_defaults:
+				Choice@hidden_defaults:
+					Parameters:
+						Rotations: 1
+						Mirror: None
+						TerrainFeatureSize: 20480
+						RampFeatureSize: 16384
+						ForestFeatureSize: 20480
+						ResourceFeatureSize: 20480
+						CivilianBuildingsFeatureSize: 10240
+						Water: 0
+						Mountains: 0
+						Forests: 100
+						ForestCutout: 2
+						MaximumCutoutSpacing: 12
+						TerrainSmoothing: 4
+						SmoothingThreshold: 833
+						MinimumCoastStraight: 2
+						MinimumCliffStraight: 2
+						MinimumLandSeaThickness: 4
+						MinimumMountainThickness: 4
+						MaximumAltitude: 8
+						RoughnessRadius: 5
+						Roughness: 250
+						WaterCliffs: False
+						WaterRoughness: 300
+						MinimumTerrainContourSpacing: 7
+						MinimumBeachLength: 10
+						MinimumWaterCliffLength: 10
+						MinimumCliffLength: 10
+						MinimumClearLength: 4
+						BeachSpreadWhenWaterCliffing: 8
+						RampSoften: 16
+						ForestClumpiness: 1
+						DenyWalledAreas: True
+						EnforceSymmetry: 0
+						CreateEntities: True
+						CentralSpawnReservationFraction: 250
+						ResourceSpawnReservation: 8
+						SpawnRegionSize: 12
+						SpawnBuildSize: 8
+						MinimumSpawnRadius: 5
+						SpawnResourceSpawns: 3
+						SpawnReservation: 16
+						SpawnResourceBias: 500
+						OreUniformity: 250
+						OreClumpiness: 2
+						MinimumExpansionSize: 2
+						MaximumExpansionSize: 12
+						ExpansionInner: 2
+						ExpansionBorder: 1
+						CivilianBuildings: 60
+						CivilianBuildingDensity: 500
+						MinimumCivilianBuildingDensity: 90
+						CivilianBuildingDensityRadius: 3
+						DefaultResource: Ore
+						ResourceSpawnSeeds:
+							tibtre01: Ore
+							tibtre02: Ore
+							tibtre03: Ore
+						ClearTerrain: Clear
+						PlayableTerrain: Bridge,Clear,DirtRoad,Gems,Ore,Rail,Road,Rough
+						DominantTerrain: Cliff,Impassable,Water
+						ZoneableTerrain: Clear,Road
+						ClearSegmentTypes: Clear
+						BeachSegmentTypes: Shore
+						CliffSegmentTypes: Cliff
+						WaterCliffSegmentTypes: WaterCliff
+						ForestObstacles: Trees
+						UnplayableObstacles: Obstructions
+						CivilianBuildingsObstacles: CivilianBuildings
+						LandTile: 0
+						WaterTile: 323
+						ForestFloor: 125
+						RampTiles: 0, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46
+						UseIceLatTiler: False
+			MultiChoiceOption@hidden_tileset_overrides:
+				Choice@temperat:
+					Tileset: TEMPERATE
+					Parameters:
+						ForestFloorTile: 0
+						OtherGround:
+							1047: 250
+							1063: 120
+						LatTiler:
+							Rule@Rough:
+								Main: 1047
+								Low: 1047
+								____: 1047
+								___x: 1044
+								__x_: 1041
+								__xx: 1040
+								_x__: 1035
+								_x_x: 0
+								_xx_: 1033
+								_xxx: 0
+								x___: 1038
+								x__x: 1036
+								x_x_: 0
+								x_xx: 0
+								xx__: 1034
+								xx_x: 0
+								xxx_: 0
+								xxxx: 0
+							Rule@Sand:
+								Main: 1063
+								Low: 1063
+								____: 1063
+								___x: 1060
+								__x_: 1057
+								__xx: 1056
+								_x__: 1051
+								_x_x: 0
+								_xx_: 1049
+								_xxx: 0
+								x___: 1054
+								x__x: 1052
+								x_x_: 0
+								x_xx: 0
+								xx__: 1050
+								xx_x: 0
+								xxx_: 0
+								xxxx: 0
+			IntegerOption@Seed:
+				Label: label-ts-map-generator-option-seed
+				Parameter: Seed
+				Default: 0
+			MultiChoiceOption@TerrainType:
+				Label: label-ts-map-generator-option-terrain-type
+				Priority: 2
+				Default: Parks
+				Choice@Plains:
+					Label: label-ts-map-generator-choice-terrain-type-plains
+					Parameters:
+						Forests: 30
+				Choice@Parks:
+					Label: label-ts-map-generator-choice-terrain-type-parks
+					Parameters:
+						Forests: 100
+				Choice@Woodlands:
+					Label: label-ts-map-generator-choice-terrain-type-woodlands
+					Parameters:
+						Forests: 400
+						ForestCutout: 3
+						EnforceSymmetry: 2
+			MultiIntegerChoiceOption@Players:
+				Label: label-ts-map-generator-option-players
+				Parameter: Players
+				Choices: 1, 2, 3, 4, 5, 6, 7, 8
+				Default: 2
+				Priority: 1
+			MultiChoiceOption@Symmetry:
+				Label: label-ts-map-generator-option-symmetry
+				Default: 2Rotations
+				Priority: 1
+				Choice@None:
+					Label: label-ts-map-generator-choice-mirror-none
+					Parameters:
+						Mirror: None
+				Choice@LeftMatchesRight:
+					Label: label-ts-map-generator-choice-symmetry-mirror-horizontal
+					Players: 2, 4, 6, 8
+					Parameters:
+						Mirror: LeftMatchesRight
+				Choice@2Rotations:
+					Label: label-ts-map-generator-choice-symmetry-mirror-2-rotations
+					Players: 2, 4, 6, 8
+					Parameters:
+						Rotations: 2
+				Choice@4Rotations:
+					Label: label-ts-map-generator-choice-symmetry-mirror-4-rotations
+					Players: 4, 8
+					Parameters:
+						Rotations: 4
+			MultiChoiceOption@Resources:
+				Label: label-ts-map-generator-option-resources
+				Default: Medium
+				Choice@Low:
+					Label: label-ts-map-generator-choice-resources-low
+					Parameters:
+						SpawnResourceSpawns: 2
+						ResourcesPerPlayer: 50000
+						ResourceSpawnWeights:
+							tibtre01: 1
+							tibtre02: 1
+							tibtre03: 1
+						MaximumExpansionResourceSpawns: 3
+						MaximumResourceSpawnsPerExpansion: 1
+				Choice@Medium:
+					Label: label-ts-map-generator-choice-resources-medium
+					Parameters:
+						SpawnResourceSpawns: 3
+						ResourcesPerPlayer: 75000
+						ResourceSpawnWeights:
+							tibtre01: 2
+							tibtre02: 2
+							tibtre03: 2
+						MaximumExpansionResourceSpawns: 5
+						MaximumResourceSpawnsPerExpansion: 2
+				Choice@High:
+					Label: label-ts-map-generator-choice-resources-high
+					Parameters:
+						SpawnResourceSpawns: 3
+						ResourcesPerPlayer: 100000
+						ResourceSpawnWeights:
+							tibtre01: 2
+							tibtre02: 2
+							tibtre03: 2
+						MaximumExpansionResourceSpawns: 8
+						MaximumResourceSpawnsPerExpansion: 3
+			MultiChoiceOption@Buildings:
+				Label: label-ts-map-generator-option-buildings
+				Default: None
+				Choice@None:
+					Label: label-ts-map-generator-choice-buildings-none
+					Parameters:
+						MinimumBuildings: 0
+						MaximumBuildings: 0
+						BuildingWeights:
+			MultiChoiceOption@Density:
+				Label: label-ts-map-generator-option-density
+				Default: Players
+				Priority: 1
+				Choice@Players:
+					Label: label-ts-map-generator-choice-density-players
+					Parameters:
+						AreaEntityBonus: 0
+						PlayerCountEntityBonus: 1000000
+
+EditorWorld:
+	Inherits@MapGenerators: ^MapGenerators
