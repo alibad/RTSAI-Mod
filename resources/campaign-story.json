@@ -218,262 +218,304 @@
       {
         "when": "start",
         "speaker": "badr",
-        "line": "Engineers forward. We take the radar back first, then we deal with the launchers."
+        "line": "Engineers forward. We take the radar back first, then we deal with the launchers.",
+        "audio": "jizan-corridor/radio-1.mp3"
       },
       {
         "when": {
           "time": 45
         },
         "speaker": "lantern",
-        "line": "Colonel, this is Lantern at the coordination desk. Your radar isn't dark. It's showing an empty sea, and the clock on it is wrong."
+        "line": "Colonel, this is Lantern at the coordination desk. Your radar isn't dark. It's showing an empty sea, and the clock on it is wrong.",
+        "audio": "jizan-corridor/radio-2.mp3"
       },
       {
         "when": {
           "objective": 0
         },
         "speaker": "badr",
-        "line": "Radar Node Seven is ours. Now find me those launchers."
+        "line": "Radar Node Seven is ours. Now find me those launchers.",
+        "audio": "jizan-corridor/radio-3.mp3"
       },
       {
         "when": {
           "objective": 1
         },
         "speaker": "badr",
-        "line": "Both launchers are down. Bring the convoy through."
+        "line": "Both launchers are down. Bring the convoy through.",
+        "audio": "jizan-corridor/radio-4.mp3"
       },
       {
         "when": "victory",
         "speaker": "lantern",
-        "line": "The trucks are in. Colonel, the node's log says it went quiet in 1953. I'll find out why."
+        "line": "The trucks are in. Colonel, the node's log says it went quiet in 1953. I'll find out why.",
+        "audio": "jizan-corridor/radio-5.mp3"
       },
       {
         "when": "defeat",
         "speaker": "badr",
-        "line": "Pull back to the yard. We go again."
+        "line": "Pull back to the yard. We go again.",
+        "audio": "jizan-corridor/radio-6.mp3"
       }
     ],
     "hodeidah-lifeline": [
       {
         "when": "start",
         "speaker": "nabil",
-        "line": "Supplies inland first. Keep the mobile force light and ready to move."
+        "line": "Supplies inland first. Keep the mobile force light and ready to move.",
+        "audio": "hodeidah-lifeline/radio-1.mp3"
       },
       {
         "when": {
           "time": 30
         },
         "speaker": "lantern",
-        "line": "Captain, the sweep is coming. Get out of the marked zone early."
+        "line": "Captain, the sweep is coming. Get out of the marked zone early.",
+        "audio": "hodeidah-lifeline/radio-2.mp3"
       },
       {
         "when": {
           "objective": 1
         },
         "speaker": "nabil",
-        "line": "We're clear of the zone. Strange. The sweep turned before anything flew."
+        "line": "We're clear of the zone. Strange. The sweep turned before anything flew.",
+        "audio": "hodeidah-lifeline/radio-3.mp3"
       },
       {
         "when": {
           "objective": 2
         },
         "speaker": "nabil",
-        "line": "The last bus is home."
+        "line": "The last bus is home.",
+        "audio": "hodeidah-lifeline/radio-4.mp3"
       },
       {
         "when": "victory",
         "speaker": "lantern",
-        "line": "Every vehicle came back. Captain, that sweep moved four minutes early. Someone is reading the picture before it happens."
+        "line": "Every vehicle came back. Captain, that sweep moved four minutes early. Someone is reading the picture before it happens.",
+        "audio": "hodeidah-lifeline/radio-5.mp3"
       },
       {
         "when": "defeat",
         "speaker": "nabil",
-        "line": "The road is closed. We'll open it again."
+        "line": "The road is closed. We'll open it again.",
+        "audio": "hodeidah-lifeline/radio-6.mp3"
       }
     ],
     "bab-al-mandab-passage": [
       {
         "when": "start",
         "speaker": "turki",
-        "line": "Four ships at first light. Radar and technology first, then we see what is hiding on the shore."
+        "line": "Four ships at first light. Radar and technology first, then we see what is hiding on the shore.",
+        "audio": "bab-al-mandab-passage/radio-1.mp3"
       },
       {
         "when": {
           "objective": 1
         },
         "speaker": "lantern",
-        "line": "Commander, the blind sectors aren't random. They follow one maintenance contract."
+        "line": "Commander, the blind sectors aren't random. They follow one maintenance contract.",
+        "audio": "bab-al-mandab-passage/radio-2.mp3"
       },
       {
         "when": {
           "objective": 2
         },
         "speaker": "turki",
-        "line": "Launchers neutralised. The lanes are open."
+        "line": "Launchers neutralised. The lanes are open.",
+        "audio": "bab-al-mandab-passage/radio-3.mp3"
       },
       {
         "when": "victory",
         "speaker": "lantern",
-        "line": "The ships are through. The contract belongs to the Obsidian Directorate, and its oldest file is a photograph from 1953 with one man cut out."
+        "line": "The ships are through. The contract belongs to the Obsidian Directorate, and its oldest file is a photograph from 1953 with one man cut out.",
+        "audio": "bab-al-mandab-passage/radio-4.mp3"
       },
       {
         "when": "defeat",
         "speaker": "turki",
-        "line": "Hold Passage Control. We try again at first light."
+        "line": "Hold Passage Control. We try again at first light.",
+        "audio": "bab-al-mandab-passage/radio-5.mp3"
       }
     ],
     "straits-shield": [
       {
         "when": "start",
         "speaker": "kemal",
-        "line": "Recon above, armour ashore, ships along the crossing. Build all of it."
+        "line": "Recon above, armour ashore, ships along the crossing. Build all of it.",
+        "audio": "straits-shield/radio-1.mp3"
       },
       {
         "when": {
           "time": 120
         },
         "speaker": "lantern",
-        "line": "Colonel, the uplinks on the far shore don't answer to any country. They answer to the Directorate."
+        "line": "Colonel, the uplinks on the far shore don't answer to any country. They answer to the Directorate.",
+        "audio": "straits-shield/radio-2.mp3"
       },
       {
         "when": {
           "objective": 1
         },
         "speaker": "kemal",
-        "line": "Three uplinks down. Now the relay."
+        "line": "Three uplinks down. Now the relay.",
+        "audio": "straits-shield/radio-3.mp3"
       },
       {
         "when": "victory",
         "speaker": "kemal",
-        "line": "The far shore is ours. Lantern, my engineers pulled a coil out of an uplink. It's older than my father, and it's still warm."
+        "line": "The far shore is ours. Lantern, my engineers pulled a coil out of an uplink. It's older than my father, and it's still warm.",
+        "audio": "straits-shield/radio-4.mp3"
       },
       {
         "when": "defeat",
         "speaker": "kemal",
-        "line": "Fall back and rebuild. Repair and ships before we cross again."
+        "line": "Fall back and rebuild. Repair and ships before we cross again.",
+        "audio": "straits-shield/radio-5.mp3"
       }
     ],
     "haitan-network": [
       {
         "when": "start",
         "speaker": "lin",
-        "line": "Restore the network first. Every link makes the next move possible."
+        "line": "Restore the network first. Every link makes the next move possible.",
+        "audio": "haitan-network/radio-1.mp3"
       },
       {
         "when": {
           "objective": 0
         },
         "speaker": "lin",
-        "line": "Command node online. Send the amphibious vehicles to the gate."
+        "line": "Command node online. Send the amphibious vehicles to the gate.",
+        "audio": "haitan-network/radio-2.mp3"
       },
       {
         "when": {
           "objective": 2
         },
         "speaker": "lantern",
-        "line": "Commander, with their node down I can see where the traffic goes. One island. It isn't on any chart."
+        "line": "Commander, with their node down I can see where the traffic goes. One island. It isn't on any chart.",
+        "audio": "haitan-network/radio-3.mp3"
       },
       {
         "when": "victory",
         "speaker": "lin",
-        "line": "The islands are online. Lantern, that island's signal carries a time code. Nineteen fifty-three."
+        "line": "The islands are online. Lantern, that island's signal carries a time code. Nineteen fifty-three.",
+        "audio": "haitan-network/radio-4.mp3"
       },
       {
         "when": "defeat",
         "speaker": "lin",
-        "line": "The network is down. Restore the node, then try the gate again."
+        "line": "The network is down. Restore the node, then try the gate again.",
+        "audio": "haitan-network/radio-5.mp3"
       }
     ],
     "hezbollah-relay": [
       {
         "when": "start",
         "speaker": "signals-chief",
-        "line": "Exercise begins. Economy first, then the workshop. Keep the signal alive."
+        "line": "Exercise begins. Economy first, then the workshop. Keep the signal alive.",
+        "audio": "hezbollah-relay/radio-1.mp3"
       },
       {
         "when": {
           "objective": 1
         },
         "speaker": "signals-chief",
-        "line": "The relay held. Turn the defence into an assault."
+        "line": "The relay held. Turn the defence into an assault.",
+        "audio": "hezbollah-relay/radio-2.mp3"
       },
       {
         "when": "victory",
         "speaker": "signals-chief",
-        "line": "Exercise complete."
+        "line": "Exercise complete.",
+        "audio": "hezbollah-relay/radio-3.mp3"
       },
       {
         "when": "defeat",
         "speaker": "signals-chief",
-        "line": "Exercise failed. Reset and go again."
+        "line": "Exercise failed. Reset and go again.",
+        "audio": "hezbollah-relay/radio-4.mp3"
       }
     ],
     "lights-in-the-water": [
       {
         "when": "start",
         "speaker": "lantern",
-        "line": "Captain, a whole fishing fleet lost its navigation at once. Three crews are on the reef, and Orion patrols are out."
+        "line": "Captain, a whole fishing fleet lost its navigation at once. Three crews are on the reef, and Orion patrols are out.",
+        "audio": "lights-in-the-water/radio-1.mp3"
       },
       {
         "when": {
           "time": 8
         },
         "speaker": "nabil",
-        "line": "Lights off. Move in pairs. We bring everyone home."
+        "line": "Lights off. Move in pairs. We bring everyone home.",
+        "audio": "lights-in-the-water/radio-2.mp3"
       },
       {
         "when": {
           "time": 240
         },
         "speaker": "lantern",
-        "line": "The patrol boats are sweeping the reef in a grid. They're looking for someone in particular."
+        "line": "The patrol boats are sweeping the reef in a grid. They're looking for someone in particular.",
+        "audio": "lights-in-the-water/radio-3.mp3"
       },
       {
         "when": "victory",
         "speaker": "tanya",
-        "line": "Name's Tanya. Last thing I remember, I had hold of a man's coat in 1953. Tell me you've seen him."
+        "line": "Name's Tanya. Last thing I remember, I had hold of a man's coat in 1953. Tell me you've seen him.",
+        "audio": "lights-in-the-water/radio-4.mp3"
       },
       {
         "when": "defeat",
         "speaker": "nabil",
-        "line": "Pull back. We'll find them again."
+        "line": "Pull back. We'll find them again.",
+        "audio": "lights-in-the-water/radio-5.mp3"
       }
     ],
     "hold-the-ferry-line": [
       {
         "when": "start",
         "speaker": "kemal",
-        "line": "Twelve minutes. The ferries load, we hold. Nothing crosses that line but the ferries."
+        "line": "Twelve minutes. The ferries load, we hold. Nothing crosses that line but the ferries.",
+        "audio": "hold-the-ferry-line/radio-1.mp3"
       },
       {
         "when": {
           "time": 60
         },
         "speaker": "lantern",
-        "line": "Orion Group is coming down all three roads."
+        "line": "Orion Group is coming down all three roads.",
+        "audio": "hold-the-ferry-line/radio-2.mp3"
       },
       {
         "when": {
           "time": 300
         },
         "speaker": "orlov",
-        "line": "Colonel. You could have a much clearer picture of the strait. All you have to do is ask."
+        "line": "Colonel. You could have a much clearer picture of the strait. All you have to do is ask.",
+        "audio": "hold-the-ferry-line/radio-3.mp3"
       },
       {
         "when": {
           "time": 312
         },
         "speaker": "tanya",
-        "line": "That voice. I chased it through a machine. That's Orlov."
+        "line": "That voice. I chased it through a machine. That's Orlov.",
+        "audio": "hold-the-ferry-line/radio-4.mp3"
       },
       {
         "when": "victory",
         "speaker": "kemal",
-        "line": "Every ferry crossed. Lantern, a prisoner had orders for a place called Glass Island."
+        "line": "Every ferry crossed. Lantern, a prisoner had orders for a place called Glass Island.",
+        "audio": "hold-the-ferry-line/radio-5.mp3"
       },
       {
         "when": "defeat",
         "speaker": "kemal",
-        "line": "The line broke. Spread out across all three roads."
+        "line": "The line broke. Spread out across all three roads.",
+        "audio": "hold-the-ferry-line/radio-6.mp3"
       }
     ]
   }
