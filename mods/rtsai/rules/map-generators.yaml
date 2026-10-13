@@ -1,7 +1,7 @@
-# The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset.
-# Land maps only for now: no water or cliffs (our tileset has no segment brushes for coastlines and cliffs yet), and
-# no forests or villages: trees and civilian houses are still placeholders in the standalone art. Ore comes from the
-# project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
+# The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset. Cliffs, beaches, water
+# cliffs and water use Tiberian Sun's brushes and risers mapped onto our templates (tools/port-mapgen-brushes.py; our
+# RA2-compatible template table has TS's shapes in TS's order). No forests or villages: trees and civilian houses are
+# still placeholders in the standalone art. Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
 	TSMapGenerator@rtsai:
@@ -19,8 +19,8 @@
 						ForestFeatureSize: 20480
 						ResourceFeatureSize: 20480
 						CivilianBuildingsFeatureSize: 10240
-						Water: 0
-						Mountains: 0
+						Water: 200
+						Mountains: 300
 						Forests: 0
 						ForestCutout: 2
 						MaximumCutoutSpacing: 12
@@ -79,8 +79,10 @@
 						UnplayableObstacles: Obstructions
 						CivilianBuildingsObstacles: CivilianBuildings
 						LandTile: 0
-						WaterTile: 323
+						WaterTile: 322
 						ForestFloor: 125
+						RepaintTiles:
+							322: Water
 						RampTiles: 0, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46
 						UseIceLatTiler: False
 			MultiChoiceOption@hidden_tileset_overrides:
@@ -130,6 +132,82 @@
 								xx_x: 0
 								xxx_: 0
 								xxxx: 0
+							Rule@RampEdge29:
+								AutoMain:
+								Low: 29, 510, 511, 512
+								____: 29
+								___x: 29
+								__x_: 511
+								__xx: 511
+								_x__: 29
+								_x_x: 29
+								_xx_: 511
+								_xxx: 511
+								x___: 510
+								x__x: 510
+								x_x_: 512
+								x_xx: 512
+								xx__: 510
+								xx_x: 510
+								xxx_: 512
+								xxxx: 512
+							Rule@RampEdge30:
+								AutoMain:
+								Low: 30, 513, 514, 515
+								____: 30
+								___x: 513
+								__x_: 30
+								__xx: 513
+								_x__: 514
+								_x_x: 515
+								_xx_: 514
+								_xxx: 515
+								x___: 30
+								x__x: 513
+								x_x_: 30
+								x_xx: 513
+								xx__: 514
+								xx_x: 515
+								xxx_: 514
+								xxxx: 515
+							Rule@RampEdge31:
+								AutoMain:
+								Low: 31, 516, 517, 518
+								____: 31
+								___x: 31
+								__x_: 516
+								__xx: 516
+								_x__: 31
+								_x_x: 31
+								_xx_: 516
+								_xxx: 516
+								x___: 517
+								x__x: 517
+								x_x_: 518
+								x_xx: 518
+								xx__: 517
+								xx_x: 517
+								xxx_: 518
+								xxxx: 518
+							Rule@RampEdge32:
+								AutoMain:
+								Low: 32, 519, 520, 521
+								____: 32
+								___x: 520
+								__x_: 32
+								__xx: 520
+								_x__: 519
+								_x_x: 521
+								_xx_: 519
+								_xxx: 521
+								x___: 32
+								x__x: 520
+								x_x_: 32
+								x_xx: 520
+								xx__: 519
+								xx_x: 521
+								xxx_: 519
+								xxxx: 521
 			IntegerOption@Seed:
 				Label: label-ts-map-generator-option-seed
 				Parameter: Seed
@@ -137,10 +215,43 @@
 			MultiChoiceOption@TerrainType:
 				Label: label-ts-map-generator-option-terrain-type
 				Priority: 2
-				Default: Plains
+				Default: Lakes
+				Choice@Lakes:
+					Label: label-ts-map-generator-choice-terrain-type-lakes
+					Parameters:
+				Choice@Puddles:
+					Label: label-ts-map-generator-choice-terrain-type-puddles
+					Parameters:
+						Water: 100
 				Choice@Plains:
 					Label: label-ts-map-generator-choice-terrain-type-plains
 					Parameters:
+						Water: 0
+						Mountains: 100
+				Choice@Flat:
+					Label: label-rtsai-map-generator-choice-terrain-type-flat
+					Parameters:
+						Water: 0
+						Mountains: 0
+				Choice@Rocky:
+					Label: label-ts-map-generator-choice-terrain-type-rocky
+					Parameters:
+						Water: 0
+						EnforceSymmetry: 2
+						Mountains: 500
+						Roughness: 250
+				Choice@Mountains:
+					Label: label-ts-map-generator-choice-terrain-type-mountains
+					Parameters:
+						Water: 0
+						Mountains: 900
+						Roughness: 600
+				Choice@MountainLakes:
+					Label: label-ts-map-generator-choice-terrain-type-mountain-lakes
+					Parameters:
+						Water: 200
+						Mountains: 900
+						Roughness: 850
 			MultiIntegerChoiceOption@Players:
 				Label: label-ts-map-generator-option-players
 				Parameter: Players
@@ -218,6 +329,28 @@
 					Parameters:
 						AreaEntityBonus: 0
 						PlayerCountEntityBonus: 1000000
+			MultiChoiceOption@Coastlines:
+				Label: label-ts-map-generator-option-coastlines
+				Default: Beaches
+				Priority: 3
+				Choice@Beaches:
+					Label: label-ts-map-generator-choice-coastlines-beaches
+					Parameters:
+						WaterCliffs: False
+				Choice@SunkenBeaches:
+					Label: label-ts-map-generator-choice-coastlines-sunken-beaches
+					Parameters:
+						WaterCliffs: True
+						WaterRoughness: 0
+				Choice@Cliffs:
+					Label: label-ts-map-generator-choice-coastlines-cliffs
+					Parameters:
+						WaterCliffs: True
+						WaterRoughness: 1000
+				Choice@Mixed:
+					Label: label-ts-map-generator-choice-coastlines-mixed
+					Parameters:
+						WaterCliffs: True
 
 EditorWorld:
 	Inherits@MapGenerators: ^MapGenerators

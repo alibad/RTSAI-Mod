@@ -333,23 +333,27 @@ Templates:
 		Size: 2, 3
 		Tiles:
 			0: Cliff
+				Riser: LD=0
 				Height: 4
 				MinColor: 413C35
 				MaxColor: 798146
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: RU=4
 				MinColor: 494037
 				MaxColor: 8E765A
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3E3933
 				MaxColor: 6C6E44
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: U=4
 				MinColor: 806A52
 				MaxColor: 92795C
 				ZOffset: 0
@@ -361,12 +365,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3D3832
 				MaxColor: 687143
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=4
 				MinColor: 816B52
 				MaxColor: 937B5F
 				ZOffset: 0
@@ -378,23 +384,27 @@ Templates:
 		Size: 2, 3
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 413B35
 				MaxColor: 768345
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: RU=4
 				MinColor: 484037
 				MaxColor: 8E7658
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3D3832
 				MaxColor: 667142
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: U=4
 				MinColor: 816B51
 				MaxColor: 937A5D
 				ZOffset: 0
@@ -406,23 +416,27 @@ Templates:
 		Size: 2, 3
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 413B35
 				MaxColor: 758445
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: RU=4
 				MinColor: 473F36
 				MaxColor: 8F775A
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3D3832
 				MaxColor: 697043
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: U=4
 				MinColor: 806A51
 				MaxColor: 917A5D
 				ZOffset: 0
@@ -434,23 +448,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 473E36
 				MaxColor: 748145
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3E3832
 				MaxColor: 656F41
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=4
 				MinColor: 826C52
 				MaxColor: 917A5F
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: U=4
 				MinColor: 806A51
 				MaxColor: 917A5E
 				ZOffset: 0
@@ -462,23 +480,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 473E36
 				MaxColor: 748045
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3E3832
 				MaxColor: 696F43
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=4
 				MinColor: 826C53
 				MaxColor: 927A5E
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: U=4
 				MinColor: 7E6A53
 				MaxColor: 91785A
 				ZOffset: 0
@@ -490,23 +512,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 473E35
 				MaxColor: 728244
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3F3933
 				MaxColor: 687043
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=4
 				MinColor: 816B53
 				MaxColor: 927A5E
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: U=4
 				MinColor: 816B52
 				MaxColor: 91795D
 				ZOffset: 0
@@ -518,12 +544,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3E3833
 				MaxColor: 6D6F45
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=4
 				MinColor: 816C54
 				MaxColor: 937A5D
 				ZOffset: 0
@@ -535,17 +563,20 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: RD=0
 				Height: 4
 				MinColor: 38332E
 				MaxColor: 666B43
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: LU=4
 				MinColor: 3A3329
 				MaxColor: 645542
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: LU=4
 				MinColor: 816B52
 				MaxColor: 927A5E
 				ZOffset: 0
@@ -557,17 +588,20 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: RD=0
 				Height: 4
 				MinColor: 39332E
 				MaxColor: 656C42
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: LU=4
 				MinColor: 3B3329
 				MaxColor: 645543
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: LU=4
 				MinColor: 816C53
 				MaxColor: 927A5D
 				ZOffset: 0
@@ -579,17 +613,20 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: RD=0
 				Height: 4
 				MinColor: 39342E
 				MaxColor: 676A43
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: LU=4
 				MinColor: 3A3229
 				MaxColor: 635442
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: LU=4
 				MinColor: 816B52
 				MaxColor: 937B5F
 				ZOffset: 0
@@ -601,6 +638,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: LU=4
 				MinColor: 857057
 				MaxColor: 957C5E
 				ZOffset: 0
@@ -612,6 +650,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: LU=4
 				MinColor: 857057
 				MaxColor: 957E61
 				ZOffset: 0
@@ -623,6 +662,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: LU=4
 				MinColor: 877156
 				MaxColor: 967F63
 				ZOffset: 0
@@ -634,23 +674,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 35302B
 				MaxColor: 707F43
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3B3329
 				MaxColor: 483E32
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 39342F
 				MaxColor: 6C7045
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: L=4
 				MinColor: 3A3228
 				MaxColor: 635442
 				ZOffset: 0
@@ -662,23 +706,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 34302B
 				MaxColor: 787F46
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3A3228
 				MaxColor: 483F33
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 38332E
 				MaxColor: 6C7045
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: L=4
 				MinColor: 3A3228
 				MaxColor: 625441
 				ZOffset: 0
@@ -690,23 +738,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 34302B
 				MaxColor: 777E46
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3B3329
 				MaxColor: 473E33
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 39332E
 				MaxColor: 6D6E45
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: L=4
 				MinColor: 3A3228
 				MaxColor: 625341
 				ZOffset: 0
@@ -718,12 +770,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 39342F
 				MaxColor: 6B7045
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3C342A
 				MaxColor: 645543
 				ZOffset: 0
@@ -735,23 +789,27 @@ Templates:
 		Size: 3, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 3D3833
 				MaxColor: 798246
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: DL=4
 				MinColor: 35302A
 				MaxColor: 483F34
 				ZOffset: 0
 				ZRamp: 0
 			4: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 39342E
 				MaxColor: 667042
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: L=4
 				MinColor: 393128
 				MaxColor: 655643
 				ZOffset: 0
@@ -763,23 +821,27 @@ Templates:
 		Size: 3, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 3D3833
 				MaxColor: 768445
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: DL=4
 				MinColor: 36302A
 				MaxColor: 494136
 				ZOffset: 0
 				ZRamp: 0
 			4: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 39342F
 				MaxColor: 6B7145
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: L=4
 				MinColor: 3A3228
 				MaxColor: 645644
 				ZOffset: 0
@@ -791,23 +853,27 @@ Templates:
 		Size: 3, 2
 		Tiles:
 			0: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 3E3833
 				MaxColor: 788346
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: DL=4
 				MinColor: 37312B
 				MaxColor: 4A4136
 				ZOffset: 0
 				ZRamp: 0
 			4: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 3A352F
 				MaxColor: 6B7045
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: RU=0
 				MinColor: 3A3228
 				MaxColor: 645643
 				ZOffset: 0
@@ -819,12 +885,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 39342F
 				MaxColor: 687144
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3C342A
 				MaxColor: 635443
 				ZOffset: 0
@@ -836,12 +904,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 816D56
 				MaxColor: 957C5D
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 806C56
 				MaxColor: 967E60
@@ -854,12 +924,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 846F56
 				MaxColor: 967E61
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 826D55
 				MaxColor: 957C5F
@@ -872,12 +944,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 826D55
 				MaxColor: 967D5E
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 836E56
 				MaxColor: 967E61
@@ -890,6 +964,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 7F6C55
 				MaxColor: 957D61
@@ -902,18 +977,21 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: UL=0
 				Height: 4
 				MinColor: 816D56
 				MaxColor: 967E60
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 806D57
 				MaxColor: 957F63
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 816D56
 				MaxColor: 957E62
@@ -926,12 +1004,14 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			1: Cliff
+				Riser: UL=0
 				Height: 4
 				MinColor: 7F6B54
 				MaxColor: 957D5F
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: UL=0
 				Height: 4
 				MinColor: 836D55
 				MaxColor: 967D5D
@@ -950,6 +1030,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: UL=0
 				Height: 4
 				MinColor: 806D56
 				MaxColor: 947D61
@@ -962,6 +1043,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: UL=0
 				Height: 4
 				MinColor: 826E57
 				MaxColor: 957C5E
@@ -974,6 +1056,7 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: UL=0
 				Height: 4
 				MinColor: 7F6B55
 				MaxColor: 967E61
@@ -998,12 +1081,14 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			1: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 806D57
 				MaxColor: 947D60
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=0
 				Height: 4
 				MinColor: 816D55
 				MaxColor: 967E60
@@ -1046,12 +1131,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 846F57
 				MaxColor: 967E61
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 846F57
 				MaxColor: 967D5E
@@ -1064,12 +1151,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 846F56
 				MaxColor: 967E62
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 806C56
 				MaxColor: 957D60
@@ -1082,12 +1171,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 7E6B56
 				MaxColor: 947E62
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 7C6A56
 				MaxColor: 947D60
@@ -1100,6 +1191,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: L=0
 				Height: 4
 				MinColor: 7F6B56
 				MaxColor: 957D61
@@ -2670,23 +2762,27 @@ Templates:
 		Size: 2, 3
 		Tiles:
 			0: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 413C35
 				MaxColor: 748444
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: RU=4
 				MinColor: 4A4138
 				MaxColor: 8E765A
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3E3933
 				MaxColor: 677142
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: U=4
 				MinColor: 816C53
 				MaxColor: 917B60
 				ZOffset: 0
@@ -2698,12 +2794,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3C3732
 				MaxColor: 6D6E45
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=4
 				MinColor: 816C53
 				MaxColor: 937C60
 				ZOffset: 0
@@ -2715,23 +2813,27 @@ Templates:
 		Size: 2, 3
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 403B34
 				MaxColor: 7E8149
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: RU=4
 				MinColor: 4A4137
 				MaxColor: 8C7458
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3D3832
 				MaxColor: 706E46
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: U=4
 				MinColor: 816C53
 				MaxColor: 927B5F
 				ZOffset: 0
@@ -2743,23 +2845,27 @@ Templates:
 		Size: 2, 3
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 403A34
 				MaxColor: 758245
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: RU=4
 				MinColor: 484036
 				MaxColor: 8D7559
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: DL=0
 				Height: 4
 				MinColor: 3D3732
 				MaxColor: 676F42
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: U=4
 				MinColor: 826C52
 				MaxColor: 927B5F
 				ZOffset: 0
@@ -2771,23 +2877,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 463E35
 				MaxColor: 778046
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3D3832
 				MaxColor: 677142
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=4
 				MinColor: 806B53
 				MaxColor: 91795C
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: U=4
 				MinColor: 816C53
 				MaxColor: 927A5D
 				ZOffset: 0
@@ -2799,23 +2909,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 473E35
 				MaxColor: 747F45
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3C3731
 				MaxColor: 6C6F44
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=4
 				MinColor: 806B52
 				MaxColor: 91795C
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: U=4
 				MinColor: 816B52
 				MaxColor: 927A5D
 				ZOffset: 0
@@ -2827,23 +2941,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 463D35
 				MaxColor: 728044
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3D3731
 				MaxColor: 677242
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: U=4
 				MinColor: 816B53
 				MaxColor: 917A5D
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: U=4
 				MinColor: 806B53
 				MaxColor: 91795C
 				ZOffset: 0
@@ -2855,12 +2973,14 @@ Templates:
 		Size: 1, 2
 		Tiles:
 			0: Cliff
+				Riser: D=0
 				Height: 4
 				MinColor: 3E3833
 				MaxColor: 6A6F44
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: U=4
 				MinColor: 806B53
 				MaxColor: 927A5C
 				ZOffset: 0
@@ -2872,17 +2992,20 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: RD=0
 				Height: 4
 				MinColor: 3A342F
 				MaxColor: 686B44
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: LU=4
 				MinColor: 3C342A
 				MaxColor: 655645
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: LU=4
 				MinColor: 826B51
 				MaxColor: 927A5D
 				ZOffset: 0
@@ -2894,17 +3017,20 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: RD=0
 				Height: 4
 				MinColor: 39332E
 				MaxColor: 686A44
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: LU=4
 				MinColor: 3D352B
 				MaxColor: 655644
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: LU=4
 				MinColor: 7E6A53
 				MaxColor: 91795D
 				ZOffset: 0
@@ -2921,17 +3047,20 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: RD=0
 				Height: 4
 				MinColor: 39332E
 				MaxColor: 676C43
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: LU=4
 				MinColor: 3B3329
 				MaxColor: 645644
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: LU=4
 				MinColor: 826C52
 				MaxColor: 927B5F
 				ZOffset: 0
@@ -2943,6 +3072,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: LU=4
 				MinColor: 857057
 				MaxColor: 957D5F
 				ZOffset: 0
@@ -2954,6 +3084,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: LU=4
 				MinColor: 867057
 				MaxColor: 967E60
 				ZOffset: 0
@@ -2965,6 +3096,7 @@ Templates:
 		Size: 1, 1
 		Tiles:
 			0: Cliff
+				Riser: LU=4
 				MinColor: 867058
 				MaxColor: 967E60
 				ZOffset: 0
@@ -2976,23 +3108,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 342F2A
 				MaxColor: 738044
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3B3329
 				MaxColor: 473E32
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 38332E
 				MaxColor: 697244
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: L=4
 				MinColor: 3A3228
 				MaxColor: 645542
 				ZOffset: 0
@@ -3004,23 +3140,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 34302B
 				MaxColor: 6F8242
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3B332A
 				MaxColor: 473E33
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 38332D
 				MaxColor: 697144
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: L=4
 				MinColor: 3B3228
 				MaxColor: 625442
 				ZOffset: 0
@@ -3032,23 +3172,27 @@ Templates:
 		Size: 2, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 35302C
 				MaxColor: 6F7F42
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3B332A
 				MaxColor: 473E33
 				ZOffset: 0
 				ZRamp: 0
 			2: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 39342E
 				MaxColor: 6E6E46
 				ZOffset: 0
 				ZRamp: 0
 			3: Cliff
+				Riser: L=4
 				MinColor: 3A3229
 				MaxColor: 635543
 				ZOffset: 0
@@ -3060,12 +3204,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 39342E
 				MaxColor: 6F6F46
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3D342B
 				MaxColor: 625443
 				ZOffset: 0
@@ -3077,23 +3223,27 @@ Templates:
 		Size: 3, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 3D3833
 				MaxColor: 7A8347
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: DL=4
 				MinColor: 36302B
 				MaxColor: 494035
 				ZOffset: 0
 				ZRamp: 0
 			4: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 38332E
 				MaxColor: 6A7044
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: L=4
 				MinColor: 393128
 				MaxColor: 635543
 				ZOffset: 0
@@ -3105,23 +3255,27 @@ Templates:
 		Size: 3, 2
 		Tiles:
 			0: Cliff
+				Riser: R=0
 				Height: 4
 				MinColor: 3D3832
 				MaxColor: 748444
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: DL=4
 				MinColor: 36312B
 				MaxColor: 494035
 				ZOffset: 0
 				ZRamp: 0
 			4: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 39342E
 				MaxColor: 657142
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: L=4
 				MinColor: 393128
 				MaxColor: 645544
 				ZOffset: 0
@@ -3133,23 +3287,27 @@ Templates:
 		Size: 3, 2
 		Tiles:
 			0: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 3E3933
 				MaxColor: 788446
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: DL=4
 				MinColor: 37312B
 				MaxColor: 4B4136
 				ZOffset: 0
 				ZRamp: 0
 			4: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 3A342F
 				MaxColor: 687143
 				ZOffset: 0
 				ZRamp: 0
 			5: Cliff
+				Riser: L=0
 				MinColor: 3A3229
 				MaxColor: 655643
 				ZOffset: 0
@@ -3161,12 +3319,14 @@ Templates:
 		Size: 2, 1
 		Tiles:
 			0: Cliff
+				Riser: RU=0
 				Height: 4
 				MinColor: 39342F
 				MaxColor: 6C6F45
 				ZOffset: 0
 				ZRamp: 0
 			1: Cliff
+				Riser: L=4
 				MinColor: 3D342A
 				MaxColor: 645644
 				ZOffset: 0
@@ -17448,11 +17608,938 @@ MultiBrushCollections:
 				Start: Cliff.L
 				End: Cliff.U
 				Points: 2,2, 1,2, 1,1, 0,1, 0,0
+		MultiBrush@Cliff_50:
+			Template: 50
+			Segment:
+				Start: Cliff.L
+				End: Cliff.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@Cliff_51:
+			Template: 51
+			Segment:
+				Start: Cliff.L
+				End: Cliff.L
+				Points: 2,2, 1,2, 1,1, 0,1
+		MultiBrush@Cliff_52:
+			Template: 52
+			Segment:
+				Start: Cliff.L
+				End: Cliff.L
+				Points: 2,2, 1,2, 1,1, 0,1
+		MultiBrush@Cliff_53:
+			Template: 53
+			Segment:
+				Start: Cliff.L
+				End: Cliff.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@Cliff_54:
+			Template: 54
+			Segment:
+				Start: Cliff.L
+				End: Cliff.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@Cliff_55:
+			Template: 55
+			Segment:
+				Start: Cliff.L
+				End: Cliff.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@Cliff_56:
+			Template: 56
+			Segment:
+				Start: Cliff.L
+				End: Cliff.L
+				Points: 1,1, 0,1
+		MultiBrush@Cliff_57:
+			Template: 57
+			Segment:
+				Start: Cliff.MaybeCorner.D
+				End: Cliff.MaybeCorner.L
+				Inner: Cliff
+				Points: 2,0, 1,0, 1,1, 0,1, 0,2
+		MultiBrush@Cliff_58:
+			Template: 58
+			Segment:
+				Start: Cliff.MaybeCorner.D
+				End: Cliff.MaybeCorner.L
+				Inner: Cliff
+				Points: 2,0, 1,0, 1,1, 0,1, 0,2
+		MultiBrush@Cliff_59:
+			Template: 59
+			Segment:
+				Start: Cliff.MaybeCorner.D
+				End: Cliff.MaybeCorner.L
+				Inner: Cliff
+				Points: 2,0, 1,0, 1,1, 0,1, 0,2
+		MultiBrush@Cliff_60:
+			Template: 60
+			Segment:
+				Start: Cliff.MaybeCorner.D
+				End: Cliff.MaybeCorner.L
+				Inner: Cliff
+				Points: 1,0, 0,0, 0,1
+		MultiBrush@Cliff_61:
+			Template: 61
+			Segment:
+				Start: Cliff.MaybeCorner.D
+				End: Cliff.MaybeCorner.L
+				Inner: Cliff
+				Points: 1,0, 0,0, 0,1
+		MultiBrush@Cliff_62:
+			Template: 62
+			Segment:
+				Start: Cliff.MaybeCorner.D
+				End: Cliff.MaybeCorner.L
+				Inner: Cliff
+				Points: 1,0, 0,0, 0,1
+		MultiBrush@Cliff_63:
+			Template: 63
+			Segment:
+				Start: Cliff.D
+				End: Cliff.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@Cliff_64:
+			Template: 64
+			Segment:
+				Start: Cliff.D
+				End: Cliff.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@Cliff_65:
+			Template: 65
+			Segment:
+				Start: Cliff.D
+				End: Cliff.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@Cliff_66:
+			Template: 66
+			Segment:
+				Start: Cliff.D
+				End: Cliff.D
+				Points: 1,0, 1,1
+		MultiBrush@Cliff_67:
+			Template: 67
+			Segment:
+				Start: Cliff.D
+				End: Cliff.D
+				Points: 1,0, 1,1, 2,1, 2,2
+		MultiBrush@Cliff_68:
+			Template: 68
+			Segment:
+				Start: Cliff.D
+				End: Cliff.D
+				Points: 1,0, 1,1, 2,1, 2,2
+		MultiBrush@Cliff_69:
+			Template: 69
+			Segment:
+				Start: Cliff.R
+				End: Cliff.D
+				Points: 0,0, 1,0, 1,1, 2,1, 2,2
+		MultiBrush@Cliff_70:
+			Template: 70
+			Segment:
+				Start: Cliff.R
+				End: Cliff.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@Cliff_71:
+			Template: 71
+			Segment:
+				Start: Cliff.R
+				End: Cliff.R
+				Points: 0,0, 1,0, 2,0
+		MultiBrush@Cliff_72:
+			Template: 72
+			Segment:
+				Start: Cliff.R
+				End: Cliff.R
+				Points: 0,0, 1,0, 2,0
+		MultiBrush@Cliff_73:
+			Template: 73
+			Segment:
+				Start: Cliff.R
+				End: Cliff.R
+				Points: 0,0, 1,0, 2,0
+		MultiBrush@Cliff_74:
+			Template: 74
+			Segment:
+				Start: Cliff.R
+				End: Cliff.R
+				Points: 0,0, 1,0
+		MultiBrush@Cliff_75:
+			Template: 75
+			Segment:
+				Start: Cliff.U
+				End: Cliff.R
+				Points: 0,2, 0,1, 0,0, 1,0, 2,0
+		MultiBrush@Cliff_76:
+			Template: 76
+			Segment:
+				Start: Cliff.U
+				End: Cliff.R
+				Points: 0,2, 0,1, 1,1, 1,0, 2,0
+		MultiBrush@Cliff_77:
+			Template: 77
+			Segment:
+				Start: Cliff.U
+				End: Cliff.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@Cliff_78:
+			Template: 78
+			Segment:
+				Start: Cliff.U
+				End: Cliff.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@Cliff_79:
+			Template: 79
+			Segment:
+				Start: Cliff.R
+				End: Cliff.U
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@Cliff_80:
+			Template: 80
+			Segment:
+				Start: Cliff.R
+				End: Cliff.U
+				Points: 0,1, 1,1, 1,0
+		MultiBrush@Cliff_81:
+			Template: 81
+			Segment:
+				Start: Cliff.R
+				End: Cliff.U
+				Points: 0,0
+		MultiBrush@Cliff_CornerLD_82:
+			Template: 82
+			Segment:
+				Start: Cliff.MaybeCorner.L
+				End: Cliff.MaybeCorner.D
+				Inner: Cliff
+				Points: 1,1
+		MultiBrush@Cliff_CornerL_82:
+			Template: 82
+			Segment:
+				Start: Cliff.MaybeCorner.L
+				End: Cliff.D
+				Inner: Cliff
+				Points: 1,1
+		MultiBrush@Cliff_CornerD_82:
+			Template: 82
+			Segment:
+				Start: Cliff.L
+				End: Cliff.MaybeCorner.D
+				Inner: Cliff
+				Points: 1,1
+		MultiBrush@Cliff_83:
+			Template: 83
+			Segment:
+				Start: Cliff.U
+				End: Cliff.U
+				Points: 0,2, 0,1, 0,0
+		MultiBrush@Cliff_84:
+			Template: 84
+			Segment:
+				Start: Cliff.U
+				End: Cliff.U
+				Points: 0,2, 0,1, 0,0
+		MultiBrush@Cliff_85:
+			Template: 85
+			Segment:
+				Start: Cliff.U
+				End: Cliff.U
+				Points: 0,2, 0,1, 0,0
+		MultiBrush@Cliff_86:
+			Template: 86
+			Segment:
+				Start: Cliff.U
+				End: Cliff.U
+				Points: 0,1, 0,0
+		MultiBrush@Cliff_87:
+			Template: 87
+			Segment:
+				Start: Cliff.U
+				End: Cliff.L
+				Points: 0,1
+		MultiBrush@Cliff_88:
+			Template: 88
+			Segment:
+				Start: Cliff.D
+				End: Cliff.R
+				Points: 1,0
+		MultiBrush@Cliff_Interface_FromCornerD:
+			Segment:
+				Start: Cliff.D
+				End: Cliff.MaybeCorner.D
+				Inner: Cliff
+				Points: 0,0
+		MultiBrush@Cliff_Interface_ToCornerL:
+			Segment:
+				Start: Cliff.MaybeCorner.L
+				End: Cliff.L
+				Inner: Cliff
+				Points: 0,0
+		MultiBrush@Shore_89:
+			Template: 89
+			Segment:
+				Start: Shore.L
+				End: Shore.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@Shore_90:
+			Template: 90
+			Segment:
+				Start: Shore.L
+				End: Shore.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@Shore_91:
+			Template: 91
+			Segment:
+				Start: Shore.L
+				End: Shore.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@Shore_92:
+			Template: 92
+			Segment:
+				Start: Shore.L
+				End: Shore.L
+				Points: 1,1, 0,1
+		MultiBrush@Shore_93:
+			Template: 93
+			Segment:
+				Start: Shore.L
+				End: Shore.L
+				Points: 2,2, 1,2, 1,1, 0,1
+		MultiBrush@Shore_94:
+			Template: 94
+			Segment:
+				Start: Shore.L
+				End: Shore.L
+				Points: 2,1, 1,1, 1,2, 0,2
+		MultiBrush@Shore_95:
+			Template: 95
+			Segment:
+				Start: Shore.D
+				End: Shore.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@Shore_96:
+			Template: 96
+			Segment:
+				Start: Shore.D
+				End: Shore.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@Shore_97:
+			Template: 97
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@Shore_98:
+			Template: 98
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@Shore_99:
+			Template: 99
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@Shore_100:
+			Template: 100
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 1,0, 1,1
+		MultiBrush@Shore_101:
+			Template: 101
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 2,0, 2,1, 1,1, 1,2
+		MultiBrush@Shore_102:
+			Template: 102
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 1,0, 1,1, 1,2, 2,2
+		MultiBrush@Shore_103:
+			Template: 103
+			Segment:
+				Start: Shore.R
+				End: Shore.D
+				Points: 0,1, 1,1, 1,2
+		MultiBrush@Shore_104:
+			Template: 104
+			Segment:
+				Start: Shore.R
+				End: Shore.D
+				Points: 0,1, 1,1, 1,2
+		MultiBrush@Shore_105:
+			Template: 105
+			Segment:
+				Start: Shore.R
+				End: Shore.R
+				Points: 0,1, 1,1, 2,1
+		MultiBrush@Shore_106:
+			Template: 106
+			Segment:
+				Start: Shore.R
+				End: Shore.R
+				Points: 0,1, 1,1, 2,1
+		MultiBrush@Shore_107:
+			Template: 107
+			Segment:
+				Start: Shore.R
+				End: Shore.R
+				Points: 0,1, 1,1, 2,1
+		MultiBrush@Shore_108:
+			Template: 108
+			Segment:
+				Start: Shore.R
+				End: Shore.R
+				Points: 0,1, 1,1
+		MultiBrush@Shore_109:
+			Template: 109
+			Segment:
+				Start: Shore.R
+				End: Shore.R
+				Points: 0,2, 1,2, 1,1, 2,1
+		MultiBrush@Shore_110:
+			Template: 110
+			Segment:
+				Start: Shore.R
+				End: Shore.R
+				Points: 0,1, 1,1, 1,2, 2,2
+		MultiBrush@Shore_111:
+			Template: 111
+			Segment:
+				Start: Shore.U
+				End: Shore.R
+				Points: 1,2, 1,1, 2,1
+		MultiBrush@Shore_112:
+			Template: 112
+			Segment:
+				Start: Shore.U
+				End: Shore.R
+				Points: 1,2, 1,1, 2,1
+		MultiBrush@Shore_113:
+			Template: 113
+			Segment:
+				Start: Shore.U
+				End: Shore.U
+				Points: 1,2, 1,1, 1,0
+		MultiBrush@Shore_114:
+			Template: 114
+			Segment:
+				Start: Shore.U
+				End: Shore.U
+				Points: 1,2, 1,1, 1,0
+		MultiBrush@Shore_115:
+			Template: 115
+			Segment:
+				Start: Shore.U
+				End: Shore.U
+				Points: 1,2, 1,1, 1,0
+		MultiBrush@Shore_116:
+			Template: 116
+			Segment:
+				Start: Shore.U
+				End: Shore.U
+				Points: 1,1, 1,0
+		MultiBrush@Shore_117:
+			Template: 117
+			Segment:
+				Start: Shore.U
+				End: Shore.U
+				Points: 2,2, 2,1, 1,1, 1,0
+		MultiBrush@Shore_118:
+			Template: 118
+			Segment:
+				Start: Shore.U
+				End: Shore.U
+				Points: 1,2, 1,1, 2,1, 2,0
+		MultiBrush@Shore_119:
+			Template: 119
+			Segment:
+				Start: Shore.L
+				End: Shore.U
+				Points: 2,1, 1,1, 1,0
+		MultiBrush@Shore_120:
+			Template: 120
+			Segment:
+				Start: Shore.L
+				End: Shore.U
+				Points: 2,1, 1,1, 1,0
+		MultiBrush@Shore_121:
+			Template: 121
+			Segment:
+				Start: Shore.L
+				End: Shore.D
+				Points: 2,1, 1,1, 1,2
+		MultiBrush@Shore_122:
+			Template: 122
+			Segment:
+				Start: Shore.L
+				End: Shore.D
+				Points: 2,1, 1,1, 1,2
+		MultiBrush@Shore_123:
+			Template: 123
+			Segment:
+				Start: Shore.D
+				End: Shore.R
+				Points: 1,0, 1,1, 2,1
+		MultiBrush@Shore_124:
+			Template: 124
+			Segment:
+				Start: Shore.D
+				End: Shore.R
+				Points: 1,0, 1,1, 2,1
+		MultiBrush@Shore_125:
+			Template: 125
+			Segment:
+				Start: Shore.R
+				End: Shore.U
+				Points: 0,1, 1,1, 1,0
+		MultiBrush@Shore_126:
+			Template: 126
+			Segment:
+				Start: Shore.R
+				End: Shore.U
+				Points: 0,1, 1,1, 1,0
+		MultiBrush@Shore_127:
+			Template: 127
+			Segment:
+				Start: Shore.U
+				End: Shore.L
+				Points: 1,2, 1,1, 0,1
+		MultiBrush@Shore_128:
+			Template: 128
+			Segment:
+				Start: Shore.U
+				End: Shore.L
+				Points: 1,2, 1,1, 0,1
+		MultiBrush@Shore_129:
+			Template: 129
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 5,1, 5,2, 4,2, 3,2, 2,2, 1,2, 1,3, 1,4
+		MultiBrush@Shore_130:
+			Template: 130
+			Segment:
+				Start: Shore.D
+				End: Shore.D
+				Points: 8,2, 8,3, 8,4, 7,4, 6,4, 5,4, 4,4, 4,3, 3,3, 3,4, 3,5
+		MultiBrush@WaterCliff_148:
+			Template: 148
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.U
+				Points: 2,2, 1,2, 1,1, 0,1, 0,0
+		MultiBrush@WaterCliff_149:
+			Template: 149
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@WaterCliff_150:
+			Template: 150
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.L
+				Points: 2,2, 1,2, 1,1, 0,1
+		MultiBrush@WaterCliff_151:
+			Template: 151
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.L
+				Points: 2,2, 1,2, 1,1, 0,1
+		MultiBrush@WaterCliff_152:
+			Template: 152
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@WaterCliff_153:
+			Template: 153
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@WaterCliff_154:
+			Template: 154
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.L
+				Points: 2,1, 1,1, 0,1
+		MultiBrush@WaterCliff_155:
+			Template: 155
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.L
+				Points: 1,1, 0,1
+		MultiBrush@WaterCliff_156:
+			Template: 156
+			Segment:
+				Start: WaterCliff.MaybeCorner.D
+				End: WaterCliff.MaybeCorner.L
+				Inner: WaterCliff
+				Points: 2,0, 1,0, 1,1, 0,1, 0,2
+		MultiBrush@WaterCliff_157:
+			Template: 157
+			Segment:
+				Start: WaterCliff.MaybeCorner.D
+				End: WaterCliff.MaybeCorner.L
+				Inner: WaterCliff
+				Points: 2,0, 1,0, 1,1, 0,1, 0,2
+		MultiBrush@WaterCliff_158:
+			Template: 158
+			Segment:
+				Start: WaterCliff.MaybeCorner.D
+				End: WaterCliff.MaybeCorner.L
+				Inner: WaterCliff
+				Points: 2,0, 1,0, 1,1, 0,1, 0,2
+		MultiBrush@WaterCliff_159:
+			Template: 159
+			Segment:
+				Start: WaterCliff.MaybeCorner.D
+				End: WaterCliff.MaybeCorner.L
+				Inner: WaterCliff
+				Points: 1,0, 0,0, 0,1
+		MultiBrush@WaterCliff_160:
+			Template: 160
+			Segment:
+				Start: WaterCliff.MaybeCorner.D
+				End: WaterCliff.MaybeCorner.L
+				Inner: WaterCliff
+				Points: 1,0, 0,0, 0,1
+		MultiBrush@WaterCliff_161:
+			Template: 161
+			Segment:
+				Start: WaterCliff.MaybeCorner.D
+				End: WaterCliff.MaybeCorner.L
+				Inner: WaterCliff
+				Points: 1,0, 0,0, 0,1
+		MultiBrush@WaterCliff_162:
+			Template: 162
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@WaterCliff_163:
+			Template: 163
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@WaterCliff_164:
+			Template: 164
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.D
+				Points: 1,0, 1,1, 1,2
+		MultiBrush@WaterCliff_165:
+			Template: 165
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.D
+				Points: 1,0, 1,1
+		MultiBrush@WaterCliff_166:
+			Template: 166
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.D
+				Points: 1,0, 1,1, 2,1, 2,2
+		MultiBrush@WaterCliff_167:
+			Template: 167
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.D
+				Points: 1,0, 1,1, 2,1, 2,2
+		MultiBrush@WaterCliff_168:
+			Template: 168
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.D
+				Points: 0,0, 1,0, 1,1, 2,1, 2,2
+		MultiBrush@WaterCliff_169:
+			Template: 169
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@WaterCliff_71:
+			Template: 71
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.R
+				Points: 0,0, 1,0, 2,0
+		MultiBrush@WaterCliff_72:
+			Template: 72
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.R
+				Points: 0,0, 1,0, 2,0
+		MultiBrush@WaterCliff_73:
+			Template: 73
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.R
+				Points: 0,0, 1,0, 2,0
+		MultiBrush@WaterCliff_74:
+			Template: 74
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.R
+				Points: 0,0, 1,0
+		MultiBrush@WaterCliff_75:
+			Template: 75
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.R
+				Points: 0,2, 0,1, 0,0, 1,0, 2,0
+		MultiBrush@WaterCliff_76:
+			Template: 76
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.R
+				Points: 0,2, 0,1, 1,1, 1,0, 2,0
+		MultiBrush@WaterCliff_77:
+			Template: 77
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@WaterCliff_78:
+			Template: 78
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@WaterCliff_79:
+			Template: 79
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.U
+				Points: 0,2, 0,1, 0,0, 1,0
+		MultiBrush@WaterCliff_80:
+			Template: 80
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.U
+				Points: 0,1, 1,1, 1,0
+		MultiBrush@WaterCliff_81:
+			Template: 81
+			Segment:
+				Start: WaterCliff.R
+				End: WaterCliff.U
+				Points: 0,0
+		MultiBrush@WaterCliff_CornerLD_82:
+			Template: 82
+			Segment:
+				Start: WaterCliff.MaybeCorner.L
+				End: WaterCliff.MaybeCorner.D
+				Inner: WaterCliff
+				Points: 1,1
+		MultiBrush@WaterCliff_CornerL_82:
+			Template: 82
+			Segment:
+				Start: WaterCliff.MaybeCorner.L
+				End: WaterCliff.D
+				Inner: WaterCliff
+				Points: 1,1
+		MultiBrush@WaterCliff_CornerD_82:
+			Template: 82
+			Segment:
+				Start: WaterCliff.L
+				End: WaterCliff.MaybeCorner.D
+				Inner: WaterCliff
+				Points: 1,1
+		MultiBrush@WaterCliff_83:
+			Template: 83
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.U
+				Points: 0,2, 0,1, 0,0
+		MultiBrush@WaterCliff_84:
+			Template: 84
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.U
+				Points: 0,2, 0,1, 0,0
+		MultiBrush@WaterCliff_85:
+			Template: 85
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.U
+				Points: 0,2, 0,1, 0,0
+		MultiBrush@WaterCliff_86:
+			Template: 86
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.U
+				Points: 0,1, 0,0
+		MultiBrush@WaterCliff_87:
+			Template: 87
+			Segment:
+				Start: WaterCliff.U
+				End: WaterCliff.L
+				Points: 0,1
+		MultiBrush@WaterCliff_88:
+			Template: 88
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.R
+				Points: 1,0
+		MultiBrush@WaterCliff_Interface_FromCornerD:
+			Segment:
+				Start: WaterCliff.D
+				End: WaterCliff.MaybeCorner.D
+				Inner: WaterCliff
+				Points: 0,0
+		MultiBrush@WaterCliff_Interface_ToCornerL:
+			Segment:
+				Start: WaterCliff.MaybeCorner.L
+				End: WaterCliff.L
+				Inner: WaterCliff
+				Points: 0,0
+		MultiBrush@Cliff_384:
+			Template: 384
+			Segment:
+				Start: Clear.L
+				Inner: Cliff
+				End: Cliff.L
+				Points: 3,2, 2,2, 1,2, 0,2
+		MultiBrush@Cliff_385:
+			Template: 385
+			Segment:
+				Start: Cliff.L
+				Inner: Cliff
+				End: Clear.L
+				Points: 3,2, 2,2, 1,2, 0,2
+		MultiBrush@Cliff_386:
+			Template: 386
+			Segment:
+				Start: Clear.D
+				Inner: Cliff
+				End: Cliff.D
+				Points: 2,0, 2,1, 2,2, 2,3
+		MultiBrush@Cliff_387:
+			Template: 387
+			Segment:
+				Start: Cliff.D
+				Inner: Cliff
+				End: Clear.D
+				Points: 2,0, 2,1, 2,2, 2,3
+		MultiBrush@Cliff_388:
+			Template: 388
+			Segment:
+				Start: Cliff.R
+				Inner: Cliff
+				End: Clear.R
+				Points: 0,2, 1,2, 2,2, 3,2
+		MultiBrush@Cliff_389_390:
+			Template: 389
+			Template: 390
+				Offset: 1,2
+			Segment:
+				Start: Clear.R
+				Inner: Cliff
+				End: Cliff.R
+				Points: 0,2, 1,2, 2,2, 3,2
+		MultiBrush@Cliff_391:
+			Template: 391
+			Segment:
+				Start: Clear.U
+				Inner: Cliff
+				End: Cliff.U
+				Points: 2,3, 2,2, 2,1, 2,0
+		MultiBrush@Cliff_392_393:
+			Template: 392
+			Template: 393
+				Offset: 2,1
+			Segment:
+				Start: Cliff.U
+				Inner: Cliff
+				End: Clear.U
+				Points: 2,3, 2,2, 2,1, 2,0
+		MultiBrush@Shore_WaterCliff_50_86_113_116_384:
+			Template: 50
+				Offset: 2,1
+			Template: 86
+				Offset: 2,0
+			Template: 113
+				Offset: 0,1
+			Template: 116
+			Template: 384
+				Offset: 3,0
+			Segment:
+				Start: Shore.U
+				End: WaterCliff.U
+				Points: 1,3, 1,2, 2,2, 2,1, 2,0
+		MultiBrush@Shore_WaterCliff_100_169_389_390:
+			Template: 100
+				Offset: 3,1
+			Template: 169
+				Offset: 3,2
+			Template: 389
+			Template: 390
+				Offset: 1,2
+			Segment:
+				Start: Shore.D
+				End: WaterCliff.D
+				Points: 4,1, 4,2, 4,3
+		MultiBrush@Shore_WaterCliff_77_108_391:
+			Template: 77
+				Offset: 2,0
+			Template: 108
+			Template: 391
+				Offset: 0,1
+			Segment:
+				Start: Shore.R
+				End: WaterCliff.R
+				Points: 0,1, 1,1, 2,1, 2,0, 3,0
+		MultiBrush@Shore_WaterCliff_70_74_105_108_387:
+			Template: 70
+				Offset: 1,2
+			Template: 74
+				Offset: 0,2
+			Template: 105
+				Offset: 1,0
+			Template: 108
+			Template: 387
+				Offset: 0,3
+			Segment:
+				Start: WaterCliff.R
+				End: Shore.R
+				Points: 0,2, 1,2, 2,2, 2,1, 3,1
+		MultiBrush@Shore_WaterCliff_77_116_388:
+			Template: 77
+				Offset: 0,2
+			Template: 116
+			Template: 388
+				Offset: 1,0
+			Segment:
+				Start: WaterCliff.U
+				End: Shore.U
+				Points: 0,3, 0,2, 1,2, 1,1, 1,0
+		MultiBrush@Shore_WaterCliff_92_149_392_393:
+			Template: 92
+				Offset: 1,3
+			Template: 149
+				Offset: 2,3
+			Template: 392
+			Template: 393
+				Offset: 2,1
+			Segment:
+				Start: WaterCliff.L
+				End: Shore.L
+				Points: 3,4, 2,4, 1,4
+	Water:
+		FromTemplates: 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326
+		MultiBrush@Water_327:
+			Template: 327
+			Weight: 100
 	Trees:
 		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08,tree09,tree10,tree11,tree12,tree13,tree14,tree15,tree16,tree17,tree18,tree19,tree20,tree21,tree22,tree23,tree24,tree25,tree26,tree27,tree28
 	Obstructions:
 		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08
 	CivilianBuildings:
 		FromActors: cahse01,cahse02,cahse03,cahse04,cahse05,cahse06,cahse07,cabarn02
-	Water:
-		FromTemplates: 323, 324, 325, 326, 327
