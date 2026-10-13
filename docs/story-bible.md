@@ -1,178 +1,173 @@
 # Lines of Hope: story bible
 
-Draft 1, 14 October 2026. The playable text still comes from `resources/campaign-story.json`; this bible decides what new chapters, briefing films, radio lines and debriefs may say. When the two disagree, update the JSON to match the bible (`RTSAI-WebGame/tools/build-campaign-story.py --text-only`), never the other way round.
+Draft 2, 14 October 2026. The playable text comes from `resources/campaign-story.json`; this bible decides what chapters, briefing films, radio calls and debriefs may say. When the two disagree, update the JSON to match the bible (`RTSAI-WebGame/tools/build-campaign-story.py --text-only`), never the other way round.
+
+Draft 2 replaces draft 1's anthology with an alternate-history sequel to the original Red Alert (1996), at the owner's request ("invent a story as creative or even more creative … feel free to use the Red Alert 1 classic stories").
 
 ## In one breath
 
-Someone is switching off the region's eyes and ears. Radar goes quiet, pictures loop, navigation lies, and every side buys a "clearer picture" from the same broker. Six commanders who never share a battlefield learn the same lesson from different shores: the only thing worth defending is the line that gets people home, whether that line is a road, a sea lane or a signal.
+In 1953, at the end of the Red Alert war, Einstein goes to switch off the Chronosphere for good. Arkady Orlov gets there first. He was Stalin's quiet adviser, the man missing from every photograph of the court. He steps through the machine, and the Allied commando Tanya, with a fist in his coat, is pulled through with him. The Chronosphere falls silent, but its echo travels forward seventy-three years and leaks into every radar and radio on a crisis coast in 2026. Pictures loop and clocks read 1953; sweeps move before anything flies. Six commanders on different shores keep their roads, sea lanes and signals open while a civilian coordinator called Lantern follows the echo to its source. That source is Orlov. He now runs the Obsidian Directorate, a sensor broker that sells every army its picture of the world and edits that picture when it pays. He means to edit the whole region into a war.
 
-## What the campaign is about
+## The idea underneath
 
-- **A lifeline matters because of who is at the end of it.** Victory is counted in convoys that arrive, ferries that cross and people who come home, not in bases destroyed. Jizan already says it: "A destroyed enemy base is not the measure of success."
-- **A network turns isolated forces into a team.** This is the lesson of Broken Signals, and the enemy is the one who sells the network and cuts it.
-- **Three kinds of line, three acts:** roads and sea lanes (Act I), signals (Act II), people (Act III).
+- **Red Alert began when one man was removed from history.** Einstein believed he could fix the century by erasing a single person, and it made everything worse. Orlov's whole craft is erasing people: from photographs in 1953, from radar pictures in 2026. The heroes never win by erasing anyone. They win by keeping lines open so that people get home.
+- **Lines of Hope means three kinds of line:** the lifelines (roads, ports, sea lanes), the signal lines (radar, radio, networks) and the timelines. Each act opens a different one.
+- **A destroyed base is never the measure of success.** Victory is counted in convoys that arrive, ferries that cross and survivors at the clinic.
 
 ## Rules
 
-1. **Real nations are never the villain of new content.** New chapters pit one playable nation against the fictional Obsidian Directorate or its contractor arm, Orion Group, in fictional places.
-2. **The three source-dated chapters stay as built** (Jizan, Hodeidah, Bab al-Mandab): same objectives, same factual-cutoff note. The story adds no blame and no new facts about the real crisis. The Directorate exploits the crisis; it did not cause it.
-3. **No real leaders, operations, attacks or force dispositions.** Generated art carries no flags, insignia, logos or lettering (the shot-list style string enforces this).
-4. **Civilians are protected, never targeted, never spectacle.** No civilian casualties on screen; civilians appear as the people the player gets home.
-5. **Two real nations never share a battlefield in new content,** as allies or as enemies. When several commanders contribute to one operation, each holds a separate front and they meet only on the radio.
-6. **Relay Under Siege stays a labelled fictional training exercise.** Its commander has no name, rank badge or organisation insignia, and the exercise does not lead into new operations.
-7. **EA conditions hold:** no Command & Conquer music; every score is an original ACE-Step piece, and the EA notice stays where the release requires it.
+1. **Red Alert 1 classic material may be used** (owner decision, 14 October 2026): Einstein, the Chronosphere, the Iron Curtain, Tanya and the Allied–Soviet war of the late 1940s and early 1950s. Write every line new: no original dialogue, catchphrases, briefing text or cinematics. Nothing from Red Alert 2 or Yuri's Revenge (RA2 is not freeware); the villain is our own. The EA notice appears wherever this material appears, and no Command & Conquer music is used.
+2. **Real modern nations are never the villain of new content.** New chapters pit one playable force against the Obsidian Directorate or Orion Group, in fictional places.
+3. **Two real modern nations never share a battlefield in new content,** as allies or as enemies. Tanya, a 1953 Allied soldier with no nation in 2026, may fight beside any commander. When several commanders serve one operation, each holds a separate front and they meet only on the radio.
+4. **The three source-dated chapters stay as built** (Jizan, Hodeidah, Bab al-Mandab): same objectives, same factual-cutoff note. The story adds no blame and no new facts about the real crisis. The echo and the Directorate exploit the crisis; they did not cause it.
+5. **History stays in 1953.** Historical figures appear only in the 1953 layer. Stalin is never shown speaking; he is a portrait on a wall and an empty chair. The man Einstein removed in the original story is never named or shown. No real living leader appears anywhere.
+6. **Civilians are protected, never targeted and never spectacle.** No civilian casualties on screen.
+7. **Relay Under Siege stays a labelled fictional training exercise.** Its commander has no name, rank badge or organisation insignia, and it leads to no new operations.
+8. **Generated art carries no flags, insignia, logos or lettering** (the shot-list style string enforces this). Einstein is painted in an archival style and is never photoreal. Orlov's face is never shown: he is always cut out, in shadow or reflected in black glass.
 
-## Shape: three acts, eleven chapters
+## Shape
 
-| Act | Line | Chapters | State |
+| Part | Line | Chapters | State (14 Oct) |
 | --- | --- | --- | --- |
-| I · The Lifeline | Roads and sea lanes | Jizan Corridor, Hodeidah Lifeline, Bab al-Mandab Passage | Playable; films: Jizan done, rest rendering 14 Oct |
-| II · Broken Signals | Signals | Straits Shield, Haitan Network, Relay Under Siege | Playable; films rendering 14 Oct |
-| III · Lines of Hope | People | Lights in the Water, Hold the Ferry Line, Glass Island, Black Platform, Every Light On | Not built; needs the Phase 2 mission engine |
+| Prologue · 1953 | Timeline | A film, not a mission | Film commissioned tonight |
+| Act I · The Lifeline | Roads and sea lanes | Jizan Corridor, Hodeidah Lifeline, Bab al-Mandab Passage | Playable; briefing films finishing tonight |
+| Act II · Broken Signals | Signals | Straits Shield, Haitan Network, Relay Under Siege | Playable; briefing films finishing tonight |
+| Act III · The Missing Man | People | Lights in the Water, Hold the Ferry Line, Glass Island, Black Platform, Every Light On | First two being built tonight; three need new mission features |
+| Epilogue | Timeline | A film after the finale | Later |
 
-The acts run in order, but every chapter stays playable on its own, as today.
+## Backstory: the 1953 layer
+
+- **1946.** Einstein's first jump removes one man from history. The world that follows is the Red Alert war. (Original Red Alert; we only refer to it.)
+- **1953.** The war is over, and Einstein knows the Chronosphere must never run again. On the night he goes to shut it down, Arkady Orlov is already in the chamber. Orlov served at Stalin's side for twenty years and appears in no photograph: the court's retouchers took him out of every picture, on his own orders. Tanya has been hunting him since the war ended. She reaches him on the platform as the machine fires, and both vanish. Einstein shuts the Chronosphere down, but the jump leaves an echo in the signal itself. Before he dies, he puts what he understands on a film reel and hides it where the echo will one day surface.
+- **1953 to 2026, for Orlov.** He arrives decades early, in the 1990s, and builds the Obsidian Directorate around the one thing the new century runs on: pictures. Radar maintenance, drone uplinks, "clean pictures" sold to anyone, often to both sides of one coast. Inside each uplink is a hand-wound coil copied from the Chronosphere: the Directorate's network is a Chronosphere antenna spread across a whole region. **For Tanya**, the jump lasts an instant. She surfaces off a reef in 2026, the night Act III begins.
 
 ## The antagonist
 
-**Obsidian Directorate.** A stateless sensor broker. It sells radar maintenance, drone uplinks and "clean pictures" to anyone who pays, often to both sides of the same coast, and it creates demand by blinding and spoofing the very systems it maintains. It wins whenever nobody can see clearly. It is never a state, an ethnicity or a religion, and it has no flag.
+**Arkady Orlov, "the Broker".** He is calm, courteous and patient, and always opens with an offer: "You could have a clearer picture." He believes the world is run by whoever controls what it sees, and that a war seen on every screen is the most valuable picture of all. He never raises his voice and never appears. On radio he is a slightly processed voice; on screen he is a gap in a photograph, a silhouette, a reflection in black glass. Only Tanya knows his face.
 
-**Orion Group.** The Directorate's contractor fleet and security force: frigates, corvettes, uncrewed surface vessels and guard units without national markings. It is the force the player fights in Straits Shield.
+**The Obsidian Directorate.** A stateless sensor broker. It blinds and spoofs the systems it maintains to create demand, and it serves every side at once. It is never a state, an ethnicity or a religion, and it has no flag.
 
-**The Broker.** The Directorate's only voice. Calm, polite and commercial, it always opens with an offer ("You could have a clearer picture"). It is never shown; its image is a matte black glass surface reflecting screen light. It first speaks in Act III.
+**Orion Group.** The Directorate's contractor force: frigates, corvettes, uncrewed surface vessels and guard units with no national markings.
 
-**Visual signature.** Matte black glass masts, domes and housings with a single cold white strobe, against the amber of the lifelines.
+**What he wants.** He wants to run the rebuilt Chronosphere once through the whole regional network, edit the picture every army sees, and stage an attack that never happened. That would put a red alert on every screen at once.
+
+**Visual signature.** Matte black glass masts, domes and housings, each with a single cold white strobe, set against the amber of the lifelines. Hand-wound copper coils glow inside 2026 hardware.
 
 ## Cast
 
-The player commands as a different commander in each chapter. Act III brings five of them back. Portrait anchors repeat the original shot-list prompts so a face stays the same; later portraits should be Qwen-Image edits of the first one (see Production).
+The player commands as a different commander in each chapter. Portrait anchors repeat the original shot-list prompts so a face stays the same; later portraits are Qwen-Image edits of the first.
 
-| Name | Role | Faction | Chapters | Portrait anchor |
-| --- | --- | --- | --- | --- |
-| Colonel Badr Al-Shammari | Army colonel who first sees the radar go silent | Saudi Arabia | I-1, III-5 | Fifties, short grey beard, desert camouflage, radio headset, dim forward command post |
-| Captain Nabil Haidar | Army captain on the relief corridor | Yemen | I-2, III-1 | Thirties, short black beard, olive field uniform, scarf, radio handset, beside a dusty pickup |
-| Commander Turki Al-Zahrani | Naval commander at Passage Control | Saudi Arabia | I-3, III-4 | Forties, neat black beard, navy uniform, headset, harbour control room with radar screens |
-| Colonel Kemal Aydın | Army colonel at the strait crossing | Türkiye | II-1, III-2 | Fifties, short grey hair and moustache, green camouflage, headset, coastal command post |
-| Commander Lin Haoran | Marine commander of the island network | China | II-2, III-3 | Forties, short black hair, blue digital camouflage, headset, ship deck at night |
-| The signals chief | Exercise commander, unnamed by rule 6 | Hezbollah | II-3 | Forties, short dark beard, plain olive fatigues without badges, bunker radio room |
-| Dr. Amina Farah, call sign **Lantern** | Civilian deconfliction coordinator from the far shore of the strait; shares traffic pictures so aid and shipping can move | none | Clues from I-3; opens every Act III briefing | Forties, plain shirt and cardigan, glasses pushed up, small operations room lit by one amber desk lamp |
-| The Broker | Voice of the Obsidian Directorate | Obsidian Directorate | III-2 to III-5 | Never shown |
+| Name | Who | Chapters | Portrait anchor |
+| --- | --- | --- | --- |
+| Colonel Badr Al-Shammari (Saudi Arabia) | Sees the radar go silent first, and closes the story | I-1, III-5 | Fifties, short grey beard, desert camouflage, radio headset, dim forward command post |
+| Captain Nabil Haidar (Yemen) | Brings everyone home; finds Tanya | I-2, III-1 | Thirties, short black beard, olive field uniform, scarf, radio handset, beside a dusty pickup |
+| Commander Turki Al-Zahrani (Saudi Arabia) | Passage Control; boards the platform | I-3, III-4 | Forties, neat black beard, navy uniform, headset, harbour control room |
+| Colonel Kemal Aydın (Türkiye) | Takes the strait, then holds it | II-1, III-2 | Fifties, short grey hair and moustache, green camouflage, headset, coastal command post |
+| Commander Lin Haoran (China) | Restores the island network; goes to Glass Island | II-2, III-3 | Forties, short black hair, blue digital camouflage, headset, ship deck at night |
+| The signals chief | Exercise commander, unnamed by rule 7 | II-3 | Forties, short dark beard, plain olive fatigues without badges, bunker radio room |
+| **Lantern**, Dr. Amina Farah | Civilian deconfliction coordinator from the far shore of the strait; a physicist by training. She shares traffic pictures so aid and shipping can move, notices that every side's blind spots match, and follows the echo to 1953. The story's conscience. | Every act, on the radio | Forties, plain shirt and cardigan, glasses pushed up, small operations room lit by one amber desk lamp |
+| **Tanya** | Allied commando from 1953, displaced to 2026. Fearless, dry and fast; rarely surprised by danger, but often surprised by the future ("They fight wars from a screen now?"). The only person alive who knows Orlov's face. | Prologue, III-1 to III-5 | Late twenties, dark hair tied back, 1950s commando fatigues and webbing, rolled sleeves, pistol holster, sea-soaked when found |
+| **Albert Einstein** | The scientist who started it, trying to end it; speaks from his 1953 film reel | Prologue, III-3, III-5 | Elderly physicist with white hair and moustache, in painted archival style, lit by Chronosphere blue |
+| **Arkady Orlov**, the Broker | See the antagonist | Prologue, voice from III-2 | Never shown: a figure cut out of a photograph, a silhouette, a reflection |
 
-Lantern is the thread through all three acts. She works with everyone and belongs to no one, which is exactly why she notices that every side's blind spots match.
+## Prologue · 1953 (film)
+
+Archival look: film grain, silver and tungsten light, Chronosphere blue arcs. Six shots:
+
+1. The vast Chronosphere chamber under a mountain, 1953; Einstein alone at the control desk. "Nineteen fifty-three. The war is over, and Albert Einstein has one task left: switch off the machine that started it."
+2. A formal 1950s photograph of a state room: officials in a row, one gap where a man was cut out. "In every photograph of Stalin's court, one place is empty. His name was Arkady Orlov."
+3. A woman commando running through a concrete corridor lit by red alarm lamps, pistol drawn. "The Allies sent their best to bring him in."
+4. The platform firing: a silhouette in a long coat in the white core, a woman leaping to grab him. "He reached the machine first. She reached him."
+5. The empty chamber, the arcs dying, a radio needle still swinging. "The Chronosphere fell silent. Its echo did not."
+6. 2026, dawn over a Red Sea coast: a radar dish on a hill stops turning. "Seventy-three years later, on a coast at dawn, a radar goes quiet." Title card: *Lines of Hope*.
 
 ## Act I · The Lifeline (built)
 
-Three views of one coast in crisis. The gameplay and the real-world framing stay as built (rule 2). The story adds only what the player notices.
+Three views of one coast in crisis, 2026. The echo surfaces in the picture.
 
-| Chapter | Commander | What happens | What the player notices |
+| Chapter | Commander | Mission | What the player learns (debrief and radio) |
 | --- | --- | --- | --- |
-| 1 · A Road Through the Silence | Badr | Retake Radar Node Seven, destroy two launchers, bring the relief convoy to the port | The radar was never destroyed: for six hours it showed an empty, looping sea |
-| 2 · The Return Journey | Nabil | Deliver supplies inland, clear the surveillance zone before the sweep, bring the evacuation convoy home | The sweep moved before anything was airborne, as if someone was reading the same picture first |
-| 3 · Four Ships at First Light | Turki | Build the radar network, survey three sectors, remove the launchers, see four merchant ships through | Lantern reports that every gap in the coastal picture matches one maintenance contract, held by the Obsidian Directorate |
+| 1 · A Road Through the Silence | Badr | Retake Radar Node Seven, destroy two launchers, bring the convoy to the port | The radar was never destroyed: it showed an empty sea, and its clock read 1953 |
+| 2 · The Return Journey | Nabil | Deliver supplies inland, clear the surveillance zone, bring the evacuation convoy home | The sweep moved four minutes before anything flew: someone reads the picture before it happens |
+| 3 · Four Ships at First Light | Turki | Radar network, three sectors, launchers, four ships through | Every blind spot traces to one contract, held by the Obsidian Directorate; its oldest file is a 1953 photograph with one man cut out |
 
 ## Act II · Broken Signals (built)
 
-The Directorate's own hardware, in fictional places.
+The Directorate's hardware, in fictional places.
 
-| Chapter | Commander | What happens | What it adds |
+| Chapter | Commander | Mission | What it adds |
 | --- | --- | --- | --- |
-| 1 · Across the Divide | Kemal | Build all branches, destroy three drone uplinks, capture the harbour relay, sink the five-ship group | First fight against Orion Group; the uplinks carry no flag, only Directorate serials |
-| 2 · Bring the Islands Online | Lin | Restore the command network, run the water gate, destroy the control node | The restored links show the region's traffic routed to one island no chart names |
-| 3 · Keep the Signal Alive | Signals chief | A training exercise: build a relay and workshop, survive four minutes, destroy the opposing post | Stays an exercise (rule 6); its theme, keeping your own signal alive when it is cut, sets up Act III |
+| 1 · Across the Divide | Kemal | Destroy three uplinks, capture the harbour relay, sink the five-ship group | Orion Group answers to no country; inside every uplink is a hand-wound coil dated 1953 |
+| 2 · Bring the Islands Online | Lin | Restore the network, run the water gate, destroy the control node | The traffic leads to one island no chart names, sending a time code seventy-three years old |
+| 3 · Keep the Signal Alive | Signals chief | A training exercise: relay and workshop, survive, take the command post | Stays an exercise (rule 7) |
 
-## Act III · Lines of Hope (new)
+## Act III · The Missing Man (new)
 
-Five chapters built on classic mission patterns, all in fictional places, each against the Directorate or Orion Group. Objective kinds in **bold** already exist in the browser host (`capture`, `destroy`, `escort`, `protect`, `build`, `reach`, `scout`, `survive`, `disperse`, `shipping`); the rest are Phase 2 features.
-
-### Source missions
-
-The six built chapters were adapted from original Red Alert missions, and Act III works the same way. Each chapter borrows the layout, pacing and objectives of a preserved original mission (OpenRA's ports under `OpenRA/mods/ra/maps`, indexed in `resources/map-library.json`) and replaces the plot, names and dialogue. Characters, briefings and cinematics from the original games never ship; the standalone rules in `standalone.md` already drop names such as Tanya, Yuri and the Chronosphere.
-
-| Chapter | Original mission | What carries over |
-| --- | --- | --- |
-| III-1 · Lights in the Water | Evacuation; Allies 01 "In the Thick of It" | Stranded survivors behind enemy lines, a small force fighting them out to an extraction point |
-| III-2 · Hold the Ferry Line | Exodus; Survival 01 | Evacuate while flanked; hold until the timer runs out |
-| III-3 · Glass Island | Infiltration; Allies 09a "Evacuate Kosygin" | Reconnaissance without engaging; slip in, make contact, extract |
-| III-4 · Black Platform | Allies 13 "Focused Blast" | Place charges on every generator, then get out |
-| III-5 · Every Light On | Soviet 13a "Capture the Chronosphere"; Intervention | Cut the radar link first, then take the core; protect civilians before the strike |
-
-The rest of the preserved originals (86 in all: 53 Red Alert, including the expansion missions, and 33 Tiberian Dawn) are the bank for later chapters. Red Alert 2 has no OpenRA campaign to adapt; an RA2-inspired chapter would be laid out from scratch.
+Five chapters on classic mission patterns, in fictional places. Tanya joins from chapter 1. Each chapter borrows the layout, pacing and objectives of a preserved original Red Alert mission (OpenRA's ports under `OpenRA/mods/ra/maps`, indexed in `resources/map-library.json`) and replaces everything else.
 
 ### III-1 · Lights in the Water (rescue)
-- **Commander:** Nabil. **Setting:** a fictional reef coast and fishing town, night into dawn.
-- **Premise:** Spoofed navigation signals have walked a fishing fleet and a relief boat onto a reef line. With a small mobile force and no base, find the three stranded groups before the tide turns and bring them to the town clinic.
-- **Objectives:** **scout**/**reach** each group, **escort** survivors to the clinic, **protect** the clinic, all under a tide timer (Phase 2).
-- **Plot beat:** a survivor's chart plotter recorded the false signal. It came from offshore, from a platform no chart lists.
-- **Title line:** "Bring them in."
+- **Commander:** Nabil. **Setting:** a fictional reef coast and fishing town, at night. **Source missions:** Evacuation; Allies 01 "In the Thick of It".
+- **Mission:** Spoofed navigation walked a fishing fleet onto the reef, and Orion patrols are searching the water for someone. With a small force and no base, find three stranded crews and bring every survivor to the clinic.
+- **Beat:** the third crew has pulled a stranger out of the sea, a woman in a soaked 1950s uniform. "Took you long enough. Who's in charge here, and what year is it?" At the clinic she gives her name: Tanya.
 
 ### III-2 · Hold the Ferry Line (timed defence)
-- **Commander:** Kemal. **Setting:** a fictional strait port town on the shore taken in Straits Shield.
-- **Premise:** Orion Group wants the strait back. A town has to cross on evacuation ferries before the counterattack arrives in force. Hold three approaches while the ferries load and sail.
-- **Objectives:** **survive** twelve minutes, **protect** the piers, at least four ferries across (**shipping**).
-- **Plot beat:** a captured contractor carries a Directorate tasking order with a platform call sign. The Broker speaks for the first time, on an intercepted channel, offering Kemal "a clearer picture of the strait".
-- **Title line:** "Twelve minutes. Every ferry."
+- **Commander:** Kemal, with Tanya. **Setting:** the strait port town on the shore taken in Straits Shield. **Source missions:** Exodus; Survival 01.
+- **Mission:** Orion Group wants the strait back. Hold three approaches for twelve minutes while four ferries carry the town across.
+- **Beat:** the Broker speaks for the first time, offering Kemal "a much clearer picture of the strait". Tanya knows the voice: Orlov. A prisoner's orders name Glass Island.
 
-### III-3 · Glass Island (infiltration and extraction)
-- **Commander:** Lin. **Setting:** the uncharted island found in Haitan Network.
-- **Premise:** A three-unit team (network specialist, engineer, scout drone) lands at night, stays out of the sensor masts' cones, copies the routing logs at the core node and leaves by boat.
-- **Objectives:** **reach** the node unseen (detection zones and alarm waves, Phase 2), **capture** the node, **reach** the extraction point.
-- **Plot beat:** the logs give Lantern the whole map: the Directorate's hub, and the offshore jammer platform that hides it.
-- **Title line:** "Seen by no one."
+### III-3 · Glass Island (infiltration)
+- **Commander:** Lin, with Tanya. **Setting:** the uncharted island from Haitan. **Source missions:** Infiltration; Allies 09a "Evacuate Kosygin".
+- **Mission:** A three-unit team lands at night, stays out of the sensor masts' sight, copies the routing logs and leaves by boat. Needs detection zones (Phase 2).
+- **Beat:** beside the logs is a film reel in Einstein's hand. His 1953 message: the Chronosphere was never truly switched off; its echo can only be folded shut by running the machine once, the right way, and only from the place it is now anchored. That place is the Directorate's hub, hidden behind a jammer platform.
 
 ### III-4 · Black Platform (commando)
-- **Commander:** Turki. **Setting:** a Directorate jamming platform in open sea.
-- **Premise:** While the platform jams, no one can see the hub. A boarding team with no reinforcements disables four jammer arrays, then holds the control room until the picture comes back.
-- **Objectives:** **destroy** four arrays, **capture** the control room, **survive** three minutes; a fixed squad with no base, and losing it fails the chapter (Phase 2).
-- **Plot beat:** every screen on the coast lights up at once. The hub is exposed, and the Broker makes his offer to everyone at the same time. Nobody answers.
-- **Title line:** "Lights on."
+- **Commander:** Turki, with Tanya. **Setting:** a Directorate jamming platform in open sea. **Source mission:** Allies 13 "Focused Blast".
+- **Mission:** The jammers run on an Iron Curtain prototype that makes the platform untouchable from outside. A boarding team with no reinforcements places charges on every generator, then holds the control room. Needs fixed-squad starts and squad-loss failure (Phase 2).
+- **Beat:** every screen on the coast lights up at once. The hub is exposed, and the Broker makes his offer to everyone at the same moment. Nobody answers.
 
 ### III-5 · Every Light On (finale)
-- **Commander:** Badr, closing the story that began with his silent radar. **Setting:** the Directorate hub, a fortified fictional archipelago.
-- **Premise:** Build, push across three islands and destroy the hub core. Four other commanders hold their own fronts and are heard only on the radio (rule 5):
-  - Lin keeps the picture alive; if the relay node falls, the fog returns.
+- **Commander:** Badr, closing the story that began with his silent radar. **Setting:** the Directorate hub on a fortified fictional island chain, with the rebuilt Chronosphere at its heart. **Source missions:** Soviet 13a "Capture the Chronosphere"; Intervention.
+- **Mission:** Take the radar domes to sever the link, then capture the Chronosphere. Four fronts are heard only on the radio (rule 3):
+  - Lin keeps the picture alive; if the relay falls, the fog returns.
   - Turki holds the platform, and the jamming stays off.
-  - Kemal's ships close the northern lane, so enemy naval waves stop at a set minute.
-  - Nabil reports the mainland towns clear. The final strike unlocks only then.
-- **Objectives:** **build**, **protect** the relay node, **destroy** the hub core; radio events gate the final objective (Phase 2).
-- **Ending:** one line from each commander, then Lantern: "Every light on." The last image is a night map of the coast as the lights of convoys, ferries and ships reconnect.
+  - Kemal closes the northern lane, so naval waves stop at a set minute.
+  - Nabil reports the mainland towns clear, and the final strike unlocks only then.
+- **Ending:** as the machine falls, Orlov steps into it and is gone. Lantern runs Einstein's sequence once, the right way, and the echo folds shut; across the coast, convoys, ferries and ships light up one by one. The captured Chronosphere could send Tanya home to 1953. She stays: "He's out there somewhere in time. Somebody who knows his face should be waiting."
+
+### Epilogue (film)
+Lantern pins a print to her wall: the 1946 photograph of the Chronosphere's first test, Einstein beside the machine. In the background stands a man who was not in the picture yesterday. Fade to amber.
+
+## Radio calls
+
+Every mission has calls in `campaign-story.json` under `radio`: a speaker from the cast, one line, and a trigger (`start`, a game-time second, an objective index, `victory`, `defeat`). House style:
+- one or two short sentences, spoken by the person who would say them;
+- the commander gives orders, Lantern brings what the coordination desk sees, and Tanya speaks only from III-1;
+- the Broker always makes an offer and never threatens;
+- calls carry the clue thread (1953, the loop, the contract, the coil, the island) so a player who skips films still follows the story.
 
 ## Look and sound
 
-- **Colour language.** Amber and gold for lifelines and people (convoy routes, Lantern's lamp, the title cards); red for immediate threats; cold white strobes on matte black glass for the Directorate.
-- **Recurring images.** The holographic briefing table built from the mission's own map; the commander's portrait; Directorate masts; a final shot of the line that matters (port, road, open sea, ferry, lights).
-- **Voices.** The six built films keep their single narrator. From Act III, Lantern opens each briefing, the commander gives the orders, and both reach the mission itself as radio calls with portraits (Phase 2). The Broker's voice is calm and slightly processed.
-- **Music.** Act I: oud, frame drum and low strings. Act II: synth pulses and taiko. Act III joins both under one amber brass theme, the Lines of Hope theme, which the finale states in full.
-
-## Continuity patches for the built chapters
-
-These are text only. They plant the clues in the existing debriefs; tonight's films stay as they are. Apply them to the `victory` text in `resources/campaign-story.json` once the bible is approved.
-
-| Chapter | Add to the victory text |
-| --- | --- |
-| Jizan Corridor | "One thing does not fit. Radar Node Seven was never destroyed. For six hours it showed an empty, looping sea." |
-| Hodeidah Lifeline | "The sweep moved before anything was airborne. Someone was reading the same picture as everyone else, and reading it first." |
-| Bab al-Mandab Passage | "Lantern's report is short: every gap in the coastal picture matches one maintenance contract. The contractor calls itself the Obsidian Directorate." |
-| Straits Shield | "The uplinks carried no flag, only a serial prefix the harbour relay knew: OD." |
-| Haitan Network | "The restored links show where the region's traffic was going: to one island no chart names." |
-| Relay Under Siege | No change (rule 6). |
+- **Two worlds.** 1953 is archival: grain, silver, tungsten and Chronosphere blue. 2026 is painted key art: amber lifelines, red threats and the cold white of the Directorate. When the echo surfaces, a 1953 image bleeds into a 2026 screen.
+- **Recurring images.** The holographic briefing table built from the mission's own map; the commander's portrait; the gap in the photograph; the copper coil inside black glass; the last shot of each film on the line that matters.
+- **Voices.** One narrator for the films. From Act III, Lantern opens each briefing and the commanders give orders on the radio. The Broker's voice is calm and slightly processed, and Einstein's is an old recording.
+- **Music.** The 1953 theme is a slow brass waltz under film crackle. Act I uses oud, frame drum and low strings; Act II synth pulses and taiko; Act III joins them under one amber brass theme, which the finale states in full. All scores are ACE-Step originals.
 
 ## What Act III needs from the game (Phase 2)
 
-- Timed events, and scripted radio calls with a portrait and captions.
-- No-base starts with a fixed squad and a "squad lost" failure.
-- Detection zones: a unit seen by a sensor mast raises an alarm and triggers waves.
-- Event-gated objectives and reinforcements, plus map-wide reveal events (the "lights on" moments).
-- Lazy-loaded mission maps, so the campaign screen never holds more than the chapter being played.
+- Radio calls with portraits and captions (being built 14 Oct).
+- Timed events; event-gated objectives and reinforcements; map-wide reveal events (the "lights on" moments).
+- Fixed-squad starts with a squad-loss failure, and a Tanya hero unit (an original 1953 commando model; not the original game's sprite).
+- Detection zones: a unit seen by a sensor mast raises the alarm.
+- Lazy-loaded mission maps.
 
 ## Production
 
-1. Approve this bible, then apply the continuity patches.
-2. Build the Phase 2 mission features in the browser host and the desktop mod together.
-3. For each Act III chapter: map, mission JSON, a playtest of every success and failure path, then the film. The film pipeline is unchanged: shot list in `RTSAI-WebGame/tools/briefings/`, stills with `art.mjs`, clips through the forge commission, cut in Montage, published with `from-montage.mjs`.
-4. Returning commanders: extend `art.mjs` with a portrait reference (today it supports only `"reference": "map"`) so a later portrait is an edit of the first and the face stays the same.
-5. A short epilogue film after III-5: the five returning commanders and Lantern over the reconnected night map.
+1. Shot lists live in `RTSAI-WebGame/tools/briefings/<id>.json`; stills come from `art.mjs` (Qwen-Image 2.1), clips from the forge commission, and the cut from Montage; `from-montage.mjs` publishes them. Cast portraits go to the CDN under `campaign/cast/<id>.webp`.
+2. Returning faces: extend `art.mjs` with a portrait reference so a later portrait is an edit of the first.
+3. For each new chapter: map, mission, a playtest of every success and failure path, radio calls, then the film.
 
 ## Open decisions
 
-- **Iran and Israel have no chapters.** Either keep them skirmish-only, or give each one fictional-theatre chapter against the Directorate under rules 1 and 5.
-- **Lantern's voice:** pick one of the local Chatterbox voices.
-- **Re-cutting the built films:** whether the six Act I and II films later get Lantern's opening line, or stay with the single narrator.
+- Iran and Israel have no chapters. Either keep them skirmish-only, or give each a fictional-theatre chapter against the Directorate under rules 2 and 3.
+- Voices for Lantern, Tanya, the Broker and Einstein's recording (local Chatterbox voices; never a clone of a real person's voice).
+- Whether the six built films are later re-cut with the prologue's look and Lantern's opening line.
