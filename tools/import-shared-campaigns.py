@@ -133,17 +133,7 @@ def content():
         for name in ['idle','damaged-idle','critical-idle','idle-pump','damaged-idle-pump','critical-idle-pump','idle-overlay','damaged-idle-overlay','critical-idle-overlay','flag','idle-tower','idle-tower-shadow','bib','active-crane','rubble']:
             sequences += f'\t{name}:\n\t\tStart: {1 if name.startswith("damaged") else 2 if name.startswith("critical") or name=="rubble" else 0}\n'
     sequences += '\nfalc:\n\ticon:\n\t\tFilename: ra2|modern-factions/icons/r2kunlun.png\ngaairc:\n\ticon:\n\t\tFilename: ra2|standalone/base/airf-chinaicon.png\njumpjet.husk:\n\tidle:\n\t\tFilename: ra2|modern-factions/infantry/r2falcon.shp\n\t\tStart: 0\n\t\tLength: 1\n\t\tFacings: 1\n'
-    # Fresh vector-drawn trees for camouflage visuals; these are independent project pixels.
-    from PIL import Image, ImageDraw
-    from PIL.PngImagePlugin import PngInfo
-    for i in range(1,5):
-        img=Image.new('RGBA',(64,96)); draw=ImageDraw.Draw(img)
-        draw.ellipse((5,72,59,90),fill=(0,0,0,60)); draw.rectangle((29,50,35,82),fill=(89,65,43))
-        for x,y,r in [(31,27,21),(20,43,17),(43,47,17),(31,57,20)]:
-            draw.ellipse((x-r,y-r,x+r,y+r),fill=(43+i*4,78+i*5,40+i*3,255))
-        meta=PngInfo();meta.add_text('FrameSize','64,96');meta.add_text('FrameAmount','1')
-        img.save(directory/f'tree{i}.png',pnginfo=meta)
-        sequences += f'\ntree0{i}:\n\tidle:\n\t\t-TilesetFilenames:\n\t\tFilename: ra2|campaigns/tree{i}.png\n\t\tStart: 0\n\t\tShadowStart: -1\n'
+    # Trees: the standalone's own (standalone/sequences.yaml, tools/standalone-terrain.py --trees).
     write(directory/'country-sequences.yaml',sequences)
     voices = ''
     for voice, prefix in [('R2ChinainfantryVoice','rcn-infantry'),('R2ChinavehicleVoice','rcn-vehicle'),('R2ChinaairVoice','rcn-air')]:

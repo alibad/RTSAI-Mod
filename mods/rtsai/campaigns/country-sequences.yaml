@@ -3253,31 +3253,3 @@ jumpjet.husk:
 		Start: 0
 		Length: 1
 		Facings: 1
-
-tree01:
-	idle:
-		-TilesetFilenames:
-		Filename: ra2|campaigns/tree1.png
-		Start: 0
-		ShadowStart: -1
-
-tree02:
-	idle:
-		-TilesetFilenames:
-		Filename: ra2|campaigns/tree2.png
-		Start: 0
-		ShadowStart: -1
-
-tree03:
-	idle:
-		-TilesetFilenames:
-		Filename: ra2|campaigns/tree3.png
-		Start: 0
-		ShadowStart: -1
-
-tree04:
-	idle:
-		-TilesetFilenames:
-		Filename: ra2|campaigns/tree4.png
-		Start: 0
-		ShadowStart: -1

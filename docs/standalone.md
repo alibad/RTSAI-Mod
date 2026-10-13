@@ -231,6 +231,13 @@ tech centre, and half the games hit the cap. The Westwood maps regrow ore from t
 - The generated maps also moved to `mods/rtsai/standalone/maps`. Their corner-transition templates do not exist in
   the classic tilesets, so the classic add-on, which mounts `ra2|maps`, failed to load them.
 
+**Trees and the map generator (14 October 2026).** The trees were placeholder sprites (four campaign maps drew flat
+circles). `tools/standalone-terrain.py --trees` renders ten variants in Blender (CPU), lit and shadowed like the ore
+mine: broadleaf, wide, birch, pine and bush. tree01-tree28 share them (`standalone/sequences.yaml`). The engine's map
+generator (`rules/map-generators.yaml`, the editor's and the browser game's random maps) uses them for forests and for
+walled-off pockets. Its cliffs, beaches, water cliffs and water use Tiberian Sun's brushes and riser heights mapped onto
+our templates by `tools/port-mapgen-brushes.py`: our RA2-compatible template table has TS's shapes in TS's order.
+
 **Standalone balance smoke** [ran], the first run before the fixes above: `tools/balance-harness.py run --campaign standalone-smoke --standalone`.
 - Setup: headless, no RA2 content linked anywhere, the 7 factions on the base kit, Twin Fords and Harbor Line.
   Every pairing was played from both spawn orientations with the normal bot and a 40-minute cap: 84 matches.
@@ -478,6 +485,8 @@ python tools/standalone-kit-rules.py             # base kit rules (after a kit d
 python tools/standalone-menu.py                  # main-menu backdrop (Blender, CPU, ~2 min); --quick for a draft
 python tools/balance-harness.py run --campaign standalone-smoke --standalone --output <scratch>/smoke --parallel 10
 python tools/standalone-terrain.py --mines              # the ore mine (Blender, CPU, seconds)
+python tools/standalone-terrain.py --trees              # the trees, tree01-tree28 (Blender, CPU, seconds)
+python tools/port-mapgen-brushes.py --ts <engine>/mods/ts/tilesets/temperate.yaml --apply   # map generator cliff/shore data
 python tools/balance-harness.py run --campaign standalone-cuts --suite now --standalone --output <scratch>/now   # also precut, nocomp
 python tools/standalone-smoke.py skirmish --lua showcase.lua --look 50,36 --map-rules tools/standalone-smoke/showcase-rules.yaml \n    --map twin-fords --bots Multi0:normal:saudi,Multi1:normal:iran --seconds 20 --out <scratch>/showcase
 ```

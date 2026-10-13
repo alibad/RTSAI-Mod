@@ -207,3 +207,202 @@ crate:
 moveflsh:
 	idle:
 		Filename: ra2|standalone/art/moveflash.png
+
+# The trees (tools/standalone-terrain.py --trees): ten Blender-rendered variants with baked shadows, shared by
+# tree01-tree28 (broadleaf trees most often). They replace the placeholder sprites.
+tree01:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 0
+		ShadowStart: -1
+		Offset: 10, -50
+tree02:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 1
+		ShadowStart: -1
+		Offset: 10, -50
+tree03:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 2
+		ShadowStart: -1
+		Offset: 10, -50
+tree04:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 3
+		ShadowStart: -1
+		Offset: 10, -50
+tree05:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 4
+		ShadowStart: -1
+		Offset: 10, -50
+tree06:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 5
+		ShadowStart: -1
+		Offset: 10, -50
+tree07:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 6
+		ShadowStart: -1
+		Offset: 10, -50
+tree08:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 7
+		ShadowStart: -1
+		Offset: 10, -50
+tree09:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 8
+		ShadowStart: -1
+		Offset: 10, -50
+tree10:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 9
+		ShadowStart: -1
+		Offset: 10, -50
+tree11:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 1
+		ShadowStart: -1
+		Offset: 10, -50
+tree12:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 0
+		ShadowStart: -1
+		Offset: 10, -50
+tree13:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 3
+		ShadowStart: -1
+		Offset: 10, -50
+tree14:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 2
+		ShadowStart: -1
+		Offset: 10, -50
+tree15:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 5
+		ShadowStart: -1
+		Offset: 10, -50
+tree16:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 4
+		ShadowStart: -1
+		Offset: 10, -50
+tree17:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 8
+		ShadowStart: -1
+		Offset: 10, -50
+tree18:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 1
+		ShadowStart: -1
+		Offset: 10, -50
+tree19:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 0
+		ShadowStart: -1
+		Offset: 10, -50
+tree20:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 3
+		ShadowStart: -1
+		Offset: 10, -50
+tree21:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 9
+		ShadowStart: -1
+		Offset: 10, -50
+tree22:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 6
+		ShadowStart: -1
+		Offset: 10, -50
+tree23:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 2
+		ShadowStart: -1
+		Offset: 10, -50
+tree24:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 1
+		ShadowStart: -1
+		Offset: 10, -50
+tree25:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 0
+		ShadowStart: -1
+		Offset: 10, -50
+tree26:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 4
+		ShadowStart: -1
+		Offset: 10, -50
+tree27:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 3
+		ShadowStart: -1
+		Offset: 10, -50
+tree28:
+	idle:
+		-TilesetFilenames:
+		Filename: ra2|standalone/art/trees.png
+		Start: 8
+		ShadowStart: -1
+		Offset: 10, -50

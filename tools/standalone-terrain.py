@@ -654,6 +654,53 @@ def render_mines(work: Path, threads: int):
     print(f"ore mine: {ART_DIR / 'oremine.png'} (11 frames, {time.time() - t0:.0f}s)")
 
 
+TREE_SCRIPT = ROOT / "tools" / "terrain" / "blender_trees.py"
+# The tree variants (kind, scale, seed). tree01-tree28 share them (standalone/sequences.yaml): broadleaf trees most often.
+TREES = [("broadleaf", 1.75, 11), ("broadleaf", 1.45, 12), ("wide", 1.55, 13), ("broadleaf", 1.2, 14), ("pine", 1.7, 15),
+         ("pine", 1.4, 16), ("pine", 1.1, 17), ("bush", 1.7, 18), ("birch", 1.45, 19), ("birch", 1.2, 20)]
+TREE_FRAME = (150, 170)          # w, h; the cell centre is TREE_ANCHOR px from the frame's top-left
+TREE_ANCHOR = (65, 135)
+
+
+def render_trees(work: Path, threads: int, samples: int = 128):
+    """The trees: one frame per variant, 150x170 RGBA with baked shadows (sequence Offset 10, -50 puts the cell centre
+    under the trunk)."""
+    slots = []
+    for k, (kind, scale, seed) in enumerate(TREES):
+        # 240 px apart across and down the screen, so no frame catches a neighbour's crown, trunk or shadow
+        gx, gy = (k % 5) * 4, (k // 5) * 8
+        slots.append({"cx": gx + gy, "cy": gy - gx, "kind": kind, "scale": scale, "seed": seed})
+    pts = np.array([project(s["cx"] + 0.5, s["cy"] + 0.5, 0) for s in slots])
+    x0, y0 = pts[:, 0].min() - 120, pts[:, 1].min() - 200
+    W, H = int(pts[:, 0].max() - x0 + 140), int(pts[:, 1].max() - y0 + 80)
+    W, H = W + W % 2, H + H % 2
+    xc = np.array([0.70710678, 0.70710678, 0])
+    yc = np.array([-0.35355339, 0.35355339, 0.8660254])
+    target = ((W / 2 + x0) / PX) * xc + (-(H / 2 + y0) / PX) * yc
+    job, png = work / "trees.json", work / "trees.png"
+    work.mkdir(parents=True, exist_ok=True)
+    job.write_text(json.dumps({"size": [W, H], "target": target.tolist(), "samples": samples, "slots": slots}), encoding="utf-8")
+    t0 = time.time()
+    r = subprocess.run([str(BLENDER), "-b", "--factory-startup", "-noaudio", "-P", str(TREE_SCRIPT), "--", str(job), str(png),
+                        str(threads)], capture_output=True, text=True, timeout=3600)
+    if r.returncode or not png.exists():
+        print(r.stdout[-3000:], r.stderr[-3000:])
+        raise SystemExit("blender failed on the trees")
+    img = np.array(Image.open(png).convert("RGBA"))
+    (fw, fh), (ax, ay) = TREE_FRAME, TREE_ANCHOR
+    frames = []
+    for (px, py) in pts:
+        cx, cy = int(round(px - x0)), int(round(py - y0))
+        frames.append(img[cy - ay:cy - ay + fh, cx - ax:cx - ax + fw].copy())
+    sheet = np.concatenate(frames, axis=1)
+    meta = PngInfo()
+    meta.add_text("FrameSize", f"{fw},{fh}")
+    meta.add_text("FrameAmount", str(len(frames)))
+    ART_DIR.mkdir(parents=True, exist_ok=True)
+    Image.fromarray(sheet, "RGBA").save(ART_DIR / "trees.png", pnginfo=meta, optimize=True)
+    print(f"trees: {ART_DIR / 'trees.png'} ({len(frames)} frames, {time.time() - t0:.0f}s)")
+
+
 CRATE_SCRIPT = ROOT / "tools" / "terrain" / "blender_crates.py"
 
 
@@ -692,6 +739,7 @@ def main():
     ap.add_argument("--crates", action="store_true", help="render the bonus crate instead of the tileset")
     ap.add_argument("--resources", action="store_true", help="render the ore and gem piles instead of the tileset")
     ap.add_argument("--mines", action="store_true", help="render the ore mine (resource spawn) instead of the tileset")
+    ap.add_argument("--trees", action="store_true", help="render the trees (tree01-tree28) instead of the tileset")
     ap.add_argument("--only", help="comma-separated template ids (test renders; output goes to --work only)")
     ap.add_argument("--work", type=Path, default=Path(os.environ.get("TEMP", "/tmp")) / "rtsai-terrain")
     ap.add_argument("--threads", type=int, default=max(4, (os.cpu_count() or 8) - 4))
@@ -708,6 +756,9 @@ def main():
         return
     if a.crates:
         render_crates(a.work, a.threads)
+        return
+    if a.trees:
+        render_trees(a.work, a.threads, max(a.samples, 128))
         return
     head, templates = parse_tileset(SRC_TILESET.read_text(encoding="utf-8"))
     extras = transition_templates()

@@ -1,9 +1,8 @@
 # The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset. Cliffs, beaches, water
 # cliffs and water use Tiberian Sun's brushes and risers mapped onto our templates (tools/port-mapgen-brushes.py; our
-# RA2-compatible template table has TS's shapes in TS's order). No forests or villages: trees and civilian houses are
-# still placeholders in the standalone art, so nothing paints actors from the Trees or Obstructions collections:
-# Forests 0, no symmetry fixes (EnforceSymmetry paints trees), and walled-off pockets stay bare (DenyWalledAreas
-# paints obstructions). Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
+# RA2-compatible template table has TS's shapes in TS's order). Forests use the project trees (tree01-tree28,
+# tools/standalone-terrain.py --trees). No villages: civilian houses are still placeholders in the standalone art.
+# Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
 	TSMapGenerator@rtsai:
@@ -23,7 +22,7 @@
 						CivilianBuildingsFeatureSize: 10240
 						Water: 200
 						Mountains: 300
-						Forests: 0
+						Forests: 25
 						ForestCutout: 2
 						MaximumCutoutSpacing: 12
 						TerrainSmoothing: 4
@@ -45,7 +44,7 @@
 						BeachSpreadWhenWaterCliffing: 8
 						RampSoften: 16
 						ForestClumpiness: 1
-						DenyWalledAreas: False
+						DenyWalledAreas: True
 						EnforceSymmetry: 0
 						CreateEntities: True
 						CentralSpawnReservationFraction: 250
@@ -230,15 +229,32 @@
 					Parameters:
 						Water: 0
 						Mountains: 100
+				Choice@Parks:
+					Label: label-ts-map-generator-choice-terrain-type-parks
+					Parameters:
+						Water: 0
+						Forests: 100
+						Mountains: 100
+				Choice@Woodlands:
+					Label: label-ts-map-generator-choice-terrain-type-woodlands
+					Parameters:
+						Water: 0
+						Forests: 400
+						ForestCutout: 3
+						EnforceSymmetry: 2
 				Choice@Flat:
 					Label: label-rtsai-map-generator-choice-terrain-type-flat
 					Parameters:
 						Water: 0
+						Forests: 0
 						Mountains: 0
 				Choice@Rocky:
 					Label: label-ts-map-generator-choice-terrain-type-rocky
 					Parameters:
 						Water: 0
+						Forests: 300
+						ForestCutout: 3
+						EnforceSymmetry: 2
 						Mountains: 500
 						Roughness: 250
 				Choice@Mountains:
