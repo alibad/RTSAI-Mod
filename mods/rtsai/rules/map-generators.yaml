@@ -1,7 +1,9 @@
 # The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset. Cliffs, beaches, water
 # cliffs and water use Tiberian Sun's brushes and risers mapped onto our templates (tools/port-mapgen-brushes.py; our
 # RA2-compatible template table has TS's shapes in TS's order). No forests or villages: trees and civilian houses are
-# still placeholders in the standalone art. Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
+# still placeholders in the standalone art, so nothing paints actors from the Trees or Obstructions collections:
+# Forests 0, no symmetry fixes (EnforceSymmetry paints trees), and walled-off pockets stay bare (DenyWalledAreas
+# paints obstructions). Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
 	TSMapGenerator@rtsai:
@@ -43,7 +45,7 @@
 						BeachSpreadWhenWaterCliffing: 8
 						RampSoften: 16
 						ForestClumpiness: 1
-						DenyWalledAreas: True
+						DenyWalledAreas: False
 						EnforceSymmetry: 0
 						CreateEntities: True
 						CentralSpawnReservationFraction: 250
@@ -237,7 +239,6 @@
 					Label: label-ts-map-generator-choice-terrain-type-rocky
 					Parameters:
 						Water: 0
-						EnforceSymmetry: 2
 						Mountains: 500
 						Roughness: 250
 				Choice@Mountains:
