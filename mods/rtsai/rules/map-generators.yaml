@@ -1,6 +1,7 @@
 # The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset.
-# Land maps only for now: no water, cliffs or ramps (our tileset has no segment brushes for coastlines and cliffs
-# yet). Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
+# Land maps only for now: no water or cliffs (our tileset has no segment brushes for coastlines and cliffs yet), and
+# no forests or villages: trees and civilian houses are still placeholders in the standalone art. Ore comes from the
+# project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
 	TSMapGenerator@rtsai:
@@ -20,7 +21,7 @@
 						CivilianBuildingsFeatureSize: 10240
 						Water: 0
 						Mountains: 0
-						Forests: 100
+						Forests: 0
 						ForestCutout: 2
 						MaximumCutoutSpacing: 12
 						TerrainSmoothing: 4
@@ -59,15 +60,13 @@
 						MaximumExpansionSize: 12
 						ExpansionInner: 2
 						ExpansionBorder: 1
-						CivilianBuildings: 60
+						CivilianBuildings: 0
 						CivilianBuildingDensity: 500
 						MinimumCivilianBuildingDensity: 90
 						CivilianBuildingDensityRadius: 3
 						DefaultResource: Ore
 						ResourceSpawnSeeds:
-							tibtre01: Ore
-							tibtre02: Ore
-							tibtre03: Ore
+							oremine: Ore
 						ClearTerrain: Clear
 						PlayableTerrain: Bridge,Clear,DirtRoad,Gems,Ore,Rail,Road,Rough
 						DominantTerrain: Cliff,Impassable,Water
@@ -138,21 +137,10 @@
 			MultiChoiceOption@TerrainType:
 				Label: label-ts-map-generator-option-terrain-type
 				Priority: 2
-				Default: Parks
+				Default: Plains
 				Choice@Plains:
 					Label: label-ts-map-generator-choice-terrain-type-plains
 					Parameters:
-						Forests: 30
-				Choice@Parks:
-					Label: label-ts-map-generator-choice-terrain-type-parks
-					Parameters:
-						Forests: 100
-				Choice@Woodlands:
-					Label: label-ts-map-generator-choice-terrain-type-woodlands
-					Parameters:
-						Forests: 400
-						ForestCutout: 3
-						EnforceSymmetry: 2
 			MultiIntegerChoiceOption@Players:
 				Label: label-ts-map-generator-option-players
 				Parameter: Players
@@ -191,9 +179,7 @@
 						SpawnResourceSpawns: 2
 						ResourcesPerPlayer: 50000
 						ResourceSpawnWeights:
-							tibtre01: 1
-							tibtre02: 1
-							tibtre03: 1
+							oremine: 1
 						MaximumExpansionResourceSpawns: 3
 						MaximumResourceSpawnsPerExpansion: 1
 				Choice@Medium:
@@ -202,9 +188,7 @@
 						SpawnResourceSpawns: 3
 						ResourcesPerPlayer: 75000
 						ResourceSpawnWeights:
-							tibtre01: 2
-							tibtre02: 2
-							tibtre03: 2
+							oremine: 2
 						MaximumExpansionResourceSpawns: 5
 						MaximumResourceSpawnsPerExpansion: 2
 				Choice@High:
@@ -213,9 +197,7 @@
 						SpawnResourceSpawns: 3
 						ResourcesPerPlayer: 100000
 						ResourceSpawnWeights:
-							tibtre01: 2
-							tibtre02: 2
-							tibtre03: 2
+							oremine: 2
 						MaximumExpansionResourceSpawns: 8
 						MaximumResourceSpawnsPerExpansion: 3
 			MultiChoiceOption@Buildings:
