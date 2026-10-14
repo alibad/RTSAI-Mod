@@ -101,6 +101,9 @@ Actors:
 	TurkeyHarvester: harv
 		Owner: Turkey
 		Location: 76,82
+	Tanya: tany
+		Owner: Turkey
+		Location: 78,84
 	Aydin0: r2trrifle
 		Owner: Turkey
 		Location: 86,99
@@ -206,18 +209,6 @@ Actors:
 	Ferry3Shore: waypoint
 		Owner: Neutral
 		Location: 38,85
-	Ferry4Start: waypoint
-		Owner: Neutral
-		Location: 63,82
-	Ferry4Way1: waypoint
-		Owner: Neutral
-		Location: 56,83
-	Ferry4Way2: waypoint
-		Owner: Neutral
-		Location: 48,83
-	Ferry4Shore: waypoint
-		Owner: Neutral
-		Location: 41,83
 	OrionPicket0: dest
 		Owner: Orion Group
 		Location: 46,87

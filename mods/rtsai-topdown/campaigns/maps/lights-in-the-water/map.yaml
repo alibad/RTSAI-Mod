@@ -31,6 +31,11 @@ Players:
 		OwnsWorld: True
 		NonCombatant: True
 		Faction: china
+	PlayerReference@Survivors:
+		Name: Survivors
+		NonCombatant: True
+		Faction: america
+		Color: D8D2C4
 Actors:
 	OrionWaveEntry: waypoint
 		Owner: Neutral
@@ -114,37 +119,37 @@ Actors:
 		Owner: Neutral
 		Location: 44,83
 	SurvivorsCoveCivilian0: civ1
-		Owner: Neutral
+		Owner: Survivors
 		Location: 42,82
 	SurvivorsCoveCivilian1: civa
-		Owner: Neutral
+		Owner: Survivors
 		Location: 44,82
 	SurvivorsCoveCivilian2: civ2
-		Owner: Neutral
+		Owner: Survivors
 		Location: 46,82
 	SurvivorsJetty: waypoint
 		Owner: Neutral
 		Location: 64,81
 	SurvivorsJettyCivilian0: civ1
-		Owner: Neutral
+		Owner: Survivors
 		Location: 62,80
 	SurvivorsJettyCivilian1: civa
-		Owner: Neutral
+		Owner: Survivors
 		Location: 64,80
 	SurvivorsJettyCivilian2: civ2
-		Owner: Neutral
+		Owner: Survivors
 		Location: 66,80
 	StrangerSite: waypoint
 		Owner: Neutral
 		Location: 86,80
 	StrangerSiteCivilian0: civb
-		Owner: Neutral
+		Owner: Survivors
 		Location: 84,79
 	StrangerSiteCivilian1: civ3
-		Owner: Neutral
+		Owner: Survivors
 		Location: 86,79
 	Stranger: tany
-		Owner: Neutral
+		Owner: Survivors
 		Location: 87,78
 	SurvivorsCovePatrol0: e2
 		Owner: Orion Group
