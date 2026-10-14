@@ -346,8 +346,5 @@ Rules:
 			Condition: sealed
 		Capturable:
 			RequiresCondition: !sealed
-	tesla:
-		AttackTesla:
-			ChargeAudio: iteschaa.wav
 
 FluentMessages: briefing.ftl
