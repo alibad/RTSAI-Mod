@@ -38,15 +38,12 @@ Actors:
 	NorthCheckpoint: caoutp
 		Owner: Turkey
 		Location: 88,66
-	NorthCheckpointGun0: r2boran
-		Owner: Turkey
-		Location: 85,64
-	NorthCheckpointGun1: r2hisar
+	NorthCheckpointGun0: r2hisar
 		Owner: Turkey
 		Location: 93,67
-	NorthCheckpointGun2: r2hisar
+	NorthCheckpointGun1: r2hisar
 		Owner: Turkey
-		Location: 86,72
+		Location: 85,64
 	EastCheckpoint: caoutp
 		Owner: Turkey
 		Location: 104,76
@@ -56,21 +53,27 @@ Actors:
 	EastCheckpointGun1: r2hisar
 		Owner: Turkey
 		Location: 108,80
-	EastCheckpointGun2: r2hisar
-		Owner: Turkey
-		Location: 101,82
 	SouthCheckpoint: caoutp
 		Owner: Turkey
 		Location: 90,110
-	SouthCheckpointGun0: r2boran
-		Owner: Turkey
-		Location: 88,107
-	SouthCheckpointGun1: r2hisar
+	SouthCheckpointGun0: r2hisar
 		Owner: Turkey
 		Location: 95,112
-	SouthCheckpointGun2: r2hisar
+	SouthCheckpointGun1: r2hisar
 		Owner: Turkey
-		Location: 87,115
+		Location: 88,107
+	FerryPierNorth: caoutp
+		Owner: Turkey
+		Location: 77,59
+	FerryPierSouth: caoutp
+		Owner: Turkey
+		Location: 67,86
+	PierNorthGun: r2boran
+		Owner: Turkey
+		Location: 82,62
+	PierSouthGun: r2hisar
+		Owner: Turkey
+		Location: 71,84
 	TurkeyConyard: gacnst
 		Owner: Turkey
 		Location: 73,88
@@ -85,19 +88,13 @@ Actors:
 		Location: 79,92
 	TurkeyBarracks: gapile
 		Owner: Turkey
-		Location: 54,92
+		Location: 82,95
 	TurkeyFactory: gaweap
 		Owner: Turkey
 		Location: 61,91
 	TurkeyRefinery: garefn
 		Owner: Turkey
 		Location: 84,78
-	FerryPierNorth: caoutp
-		Owner: Turkey
-		Location: 77,59
-	FerryPierSouth: caoutp
-		Owner: Turkey
-		Location: 67,86
 	MissionSpawn: mpspawn
 		Owner: Neutral
 		Location: 80,83
@@ -106,49 +103,49 @@ Actors:
 		Location: 76,82
 	Aydin0: r2trrifle
 		Owner: Turkey
-		Location: 88,94
+		Location: 86,99
 	Aydin1: r2trrifle
 		Owner: Turkey
-		Location: 90,95
+		Location: 88,100
 	Aydin2: r2trrifle
 		Owner: Turkey
-		Location: 92,94
+		Location: 90,99
 	Aydin3: r2trrifle
 		Owner: Turkey
-		Location: 94,95
+		Location: 92,100
 	Aydin4: r2trrifle
 		Owner: Turkey
-		Location: 96,94
+		Location: 94,99
 	Aydin5: r2trrifle
 		Owner: Turkey
-		Location: 88,97
+		Location: 86,102
 	Aydin6: r2trat
 		Owner: Turkey
-		Location: 90,96
+		Location: 88,101
 	Aydin7: r2trat
 		Owner: Turkey
-		Location: 92,97
+		Location: 90,102
 	Aydin8: r2trat
 		Owner: Turkey
-		Location: 94,96
+		Location: 92,101
 	Aydin9: r2trat
 		Owner: Turkey
-		Location: 96,97
+		Location: 94,102
 	Aydin10: r2bozkir
 		Owner: Turkey
-		Location: 88,98
+		Location: 86,103
 	Aydin11: r2bozkir
 		Owner: Turkey
-		Location: 90,99
+		Location: 88,104
 	Aydin12: r2aras
 		Owner: Turkey
-		Location: 92,98
+		Location: 90,103
 	Aydin13: r2aras
 		Owner: Turkey
-		Location: 94,99
+		Location: 92,104
 	Aydin14: r2gokkalkan
 		Owner: Turkey
-		Location: 96,98
+		Location: 94,103
 	Ferry0Start: waypoint
 		Owner: Neutral
 		Location: 68,63
@@ -221,15 +218,18 @@ Actors:
 	Ferry4Shore: waypoint
 		Owner: Neutral
 		Location: 41,83
-	OrionBoatOne: hyd
+	OrionPicket0: dest
 		Owner: Orion Group
-		Location: 50,86
-	OrionBoatTwo: hyd
+		Location: 46,87
+	OrionPicket1: dest
 		Owner: Orion Group
-		Location: 44,88
-	OrionSpotters: e2
+		Location: 48,89
+	OrionPicket2: dest
 		Owner: Orion Group
-		Location: 47,92
+		Location: 42,88
+	OrionPicket3: dest
+		Owner: Orion Group
+		Location: 39,86
 Rules:
 	World:
 		ScriptLobbyDropdown@difficulty:
@@ -252,5 +252,10 @@ Rules:
 		-StartGameNotification:
 	Player:
 		-ConquestVictoryConditions:
+	lcrf:
+		Mobile:
+			Speed: 50
+		Health:
+			HP: 150
 
 FluentMessages: briefing.ftl
