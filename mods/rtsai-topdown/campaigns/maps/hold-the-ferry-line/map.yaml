@@ -1,0 +1,226 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: Hold the Ferry Line
+Author: RTS AI — Lines of Hope
+Tileset: TEMPERATE
+MapSize: 192,192
+Bounds: 16,16,160,160
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Turkey:
+		Name: Turkey
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: turkey
+		LockColor: True
+		Color: A73731
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Orion Group
+	PlayerReference@Orion:
+		Name: Orion Group
+		Faction: russia
+		Color: 545D66
+		Enemies: Turkey
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	OrionWaveEntry: waypoint
+		Owner: Neutral
+		Location: 136,94
+	NorthCheckpoint: caoutp
+		Owner: Turkey
+		Location: 88,66
+	NorthCheckpointGun0: r2hisar
+		Owner: Turkey
+		Location: 93,67
+	EastCheckpoint: caoutp
+		Owner: Turkey
+		Location: 104,76
+	EastCheckpointGun0: r2boran
+		Owner: Turkey
+		Location: 101,74
+	SouthCheckpoint: caoutp
+		Owner: Turkey
+		Location: 90,110
+	SouthCheckpointGun0: r2hisar
+		Owner: Turkey
+		Location: 95,112
+	FerryPierNorth: caoutp
+		Owner: Turkey
+		Location: 77,59
+	FerryPierSouth: caoutp
+		Owner: Turkey
+		Location: 67,86
+	TurkeyConyard: gacnst
+		Owner: Turkey
+		Location: 73,88
+	TurkeyPowerOne: gapowr
+		Owner: Turkey
+		Location: 79,86
+	TurkeyPowerTwo: gapowr
+		Owner: Turkey
+		Location: 82,89
+	TurkeyPowerThree: gapowr
+		Owner: Turkey
+		Location: 79,92
+	TurkeyBarracks: gapile
+		Owner: Turkey
+		Location: 82,95
+	TurkeyFactory: gaweap
+		Owner: Turkey
+		Location: 61,91
+	TurkeyRefinery: garefn
+		Owner: Turkey
+		Location: 84,78
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 80,83
+	Tanya: tany
+		Owner: Turkey
+		Location: 78,84
+	Aydin0: r2trrifle
+		Owner: Turkey
+		Location: 86,99
+	Aydin1: r2trrifle
+		Owner: Turkey
+		Location: 88,100
+	Aydin2: r2trrifle
+		Owner: Turkey
+		Location: 90,99
+	Aydin3: r2trrifle
+		Owner: Turkey
+		Location: 92,100
+	Aydin4: r2trrifle
+		Owner: Turkey
+		Location: 94,99
+	Aydin5: r2trrifle
+		Owner: Turkey
+		Location: 86,102
+	Aydin6: r2trat
+		Owner: Turkey
+		Location: 88,101
+	Aydin7: r2trat
+		Owner: Turkey
+		Location: 90,102
+	Aydin8: r2trat
+		Owner: Turkey
+		Location: 92,101
+	Aydin9: r2trat
+		Owner: Turkey
+		Location: 94,102
+	Aydin10: r2bozkir
+		Owner: Turkey
+		Location: 86,103
+	Aydin11: r2bozkir
+		Owner: Turkey
+		Location: 88,104
+	Aydin12: r2aras
+		Owner: Turkey
+		Location: 90,103
+	Aydin13: r2aras
+		Owner: Turkey
+		Location: 92,104
+	Aydin14: r2gokkalkan
+		Owner: Turkey
+		Location: 94,103
+	Ferry0Start: waypoint
+		Owner: Neutral
+		Location: 68,63
+	Ferry0Way1: waypoint
+		Owner: Neutral
+		Location: 66,70
+	Ferry0Way2: waypoint
+		Owner: Neutral
+		Location: 63,77
+	Ferry0Way3: waypoint
+		Owner: Neutral
+		Location: 57,82
+	Ferry0Way4: waypoint
+		Owner: Neutral
+		Location: 49,84
+	Ferry0Shore: waypoint
+		Owner: Neutral
+		Location: 42,83
+	Ferry1Start: waypoint
+		Owner: Neutral
+		Location: 69,66
+	Ferry1Way1: waypoint
+		Owner: Neutral
+		Location: 67,73
+	Ferry1Way2: waypoint
+		Owner: Neutral
+		Location: 62,79
+	Ferry1Way3: waypoint
+		Owner: Neutral
+		Location: 54,83
+	Ferry1Way4: waypoint
+		Owner: Neutral
+		Location: 46,84
+	Ferry1Shore: waypoint
+		Owner: Neutral
+		Location: 44,82
+	Ferry2Start: waypoint
+		Owner: Neutral
+		Location: 62,84
+	Ferry2Way1: waypoint
+		Owner: Neutral
+		Location: 55,85
+	Ferry2Way2: waypoint
+		Owner: Neutral
+		Location: 48,85
+	Ferry2Shore: waypoint
+		Owner: Neutral
+		Location: 40,84
+	Ferry3Start: waypoint
+		Owner: Neutral
+		Location: 60,86
+	Ferry3Way1: waypoint
+		Owner: Neutral
+		Location: 53,86
+	Ferry3Way2: waypoint
+		Owner: Neutral
+		Location: 45,86
+	Ferry3Shore: waypoint
+		Owner: Neutral
+		Location: 38,85
+	OrionPicket0: dest
+		Owner: Orion Group
+		Location: 46,87
+	OrionPicket1: dest
+		Owner: Orion Group
+		Location: 48,89
+Rules:
+	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: dropdown-missionbrowser-difficulty.label
+			Description: dropdown-missionbrowser-difficulty.description
+			Default: normal
+			Values:
+				easy: campaign-difficulty-easy
+				normal: label-missionbrowser-normal-difficulty
+				hard: campaign-difficulty-hard
+		RTSAICampaign:
+			Mission: hold-the-ferry-line
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: briefing
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:
+	lcrf:
+		Mobile:
+			Speed: 50
+
+FluentMessages: briefing.ftl
