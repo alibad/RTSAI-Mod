@@ -5,7 +5,7 @@
  "sources": {
   "RTSAI-Art (local)": {
    "repo": "RTSAI-Art",
-   "head": "497dc5747c4bfe572c6c488c6c5a0988da8cf89f"
+   "head": "ddba372f2591d152b93f972078a0b5909df90060"
   }
  },
  "generators": {
@@ -1483,6 +1483,7 @@
    "nameBar": {
     "text": "AH-64E",
     "fluentKey": "ra2-r2ah64sa-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1508,12 +1509,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2aras.png": {
-   "sha256": "d8e44564a252121e1811f762097db18acd0feac8ffde4d620f7954a854a58f75",
+   "sha256": "b4d3fc44ce71e4fbfe201f419d966b62775b2a42c5559f4857dabb47140d05a2",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2aras/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1526,6 +1527,7 @@
    "nameBar": {
     "text": "ARAS-8 APC",
     "fluentKey": "ra2-r2aras-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1551,12 +1553,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2azar.png": {
-   "sha256": "ab7e5bedc0a2f3e1e8a02d82c0a97c5ba77bcbbc403901f0cbbfdf2ce2294912",
+   "sha256": "fc6433d7416d16bc48d2607e2f09230304db1e0d6b5debd471506b13ca7e3a6f",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2azar/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1569,6 +1571,7 @@
    "nameBar": {
     "text": "AZAR",
     "fluentKey": "ra2-r2azar-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1612,6 +1615,7 @@
    "nameBar": {
     "text": "BASIJ",
     "fluentKey": "ra2-r2basij-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1644,6 +1648,7 @@
    "nameBar": {
     "text": "BASTION",
     "fluentKey": "ra2-r2bastion-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1658,12 +1663,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2boran.png": {
-   "sha256": "2239a2c9aaa7c394df83b3298736b79065af7704c6616837163ab392c8c2fbe3",
+   "sha256": "a3d18a4281dc177b77fdd9709704fcb84d4c21b8c6226dc7042def55cecf21f3",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2boran/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1676,6 +1681,7 @@
    "nameBar": {
     "text": "BORAN AT",
     "fluentKey": "ra2-r2boran-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1690,12 +1696,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2bozkir.png": {
-   "sha256": "bd95668ec0b82ed6c6cf66ca0cf55f9cbf32b27a18ed96826148b4f52ee3f3e7",
+   "sha256": "cf1919656033956657ed1fb033b5e5cd71f01ebe6464a59186373ca5e13bab31",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2bozkir/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1708,6 +1714,7 @@
    "nameBar": {
     "text": "BOZKIR MBT",
     "fluentKey": "ra2-r2bozkir-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1733,12 +1740,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2bradley.png": {
-   "sha256": "98785c172b3915179b177a2d635cd5bfcdc50200869975ededfede3dd47b74cf",
+   "sha256": "f845d3a1a41e58fcc5d226433c985ce84ed93ab59ba2812e49f72fa509c81459",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2bradley/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1751,6 +1758,7 @@
    "nameBar": {
     "text": "BRADLEY",
     "fluentKey": "ra2-r2bradley-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1776,12 +1784,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2caesar.png": {
-   "sha256": "b2f22620d322a539a4b8508849637f8c23e691898391d6f5690a790484b92c8a",
+   "sha256": "fe906480f82761a9d802dffbbdc153c5f93acea8b18a1685b38b2070b42b7447",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2caesar/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1794,6 +1802,7 @@
    "nameBar": {
     "text": "CAESAR",
     "fluentKey": "ra2-r2caesar-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1837,6 +1846,7 @@
    "nameBar": {
     "text": "CLOUD UAV",
     "fluentKey": "ra2-r2cloud-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1880,6 +1890,7 @@
    "nameBar": {
     "text": "TECHNICIAN",
     "fluentKey": "ra2-r2cnnetwork-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1912,6 +1923,7 @@
    "nameBar": {
     "text": "MISSILE TM",
     "fluentKey": "ra2-r2cnportable-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1926,12 +1938,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2cnrifle.png": {
-   "sha256": "7a6d1052e653b3974c94a16716ced4122f5be72260edc480ce84ffbca2607930",
+   "sha256": "f4cb7c34adcce9bdcfb5dee23462f8293edf681a00d254469c5a80896c24e708",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2cnrifle/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1944,6 +1956,7 @@
    "nameBar": {
     "text": "RIFLEMAN",
     "fluentKey": "ra2-r2cnrifle-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -1958,12 +1971,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2coast.png": {
-   "sha256": "402f854a43482815320c3e7ecfb5f14bc7d4c471b9d5bb93451731a412aefc4d",
+   "sha256": "8d38880d983e84f08f9d16aa7adabb3532c5993aba2fc8886aa65741247c9d04",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2coast/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -1976,6 +1989,7 @@
    "nameBar": {
     "text": "SHORE SSM",
     "fluentKey": "ra2-r2coast-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2001,12 +2015,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2crane.png": {
-   "sha256": "0bd0f452fb1e0f3f48a3a80aeb0dc94c83ab6f4bc06434d044a9def967f610f4",
+   "sha256": "6f7251b910b1a67e9be9f01176153d5092705d759324a9836c870face11705e0",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2crane/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2019,6 +2033,7 @@
    "nameBar": {
     "text": "CRANE",
     "fluentKey": "ra2-r2crane-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2062,6 +2077,7 @@
    "nameBar": {
     "text": "DENIZ",
     "fluentKey": "ra2-r2deniz-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2087,12 +2103,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2dronecontrol.png": {
-   "sha256": "e52942c9acce7659caa050e59b055e9912e1b5c9413e2cea67c20aa633cf9da3",
+   "sha256": "c48c660b3e7a4668765fa50cdf6239f454ae76680bd383276bb61a91eeac74b2",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2dronecontrol/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2105,6 +2121,7 @@
    "nameBar": {
     "text": "DRONE CMD",
     "fluentKey": "ra2-r2dronecontrol-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2137,6 +2154,7 @@
    "nameBar": {
     "text": "EGE",
     "fluentKey": "ra2-r2ege-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2180,6 +2198,7 @@
    "nameBar": {
     "text": "F-15SA",
     "fluentKey": "ra2-r2f15sa-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2205,12 +2224,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2fajr.png": {
-   "sha256": "3aec19503d6bec49f1ad948088d0242d247cf0868b52e3a78d08acb99af19218",
+   "sha256": "085a337049454a46d1de0948bcb7759951868154ff21da1e820a0aaeae4fe563",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2fajr/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2223,6 +2242,7 @@
    "nameBar": {
     "text": "FAJR MLRS",
     "fluentKey": "ra2-r2fajr-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2266,6 +2286,7 @@
    "nameBar": {
     "text": "FALCON ONE",
     "fluentKey": "ra2-r2falcon-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2280,12 +2301,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ghadir.png": {
-   "sha256": "711fdedda3604fbed44204355d09cb20d147f0219e60e183b76aee02dfa8b17a",
+   "sha256": "e80fd60b3f453c179b5d43fabbec9c090a38a5583bf7d4db29f8e75ba9a09ced",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ghadir/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2298,6 +2319,7 @@
    "nameBar": {
     "text": "GHADIR SUB",
     "fluentKey": "ra2-r2ghadir-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2341,6 +2363,7 @@
    "nameBar": {
     "text": "GOKKALKAN",
     "fluentKey": "ra2-r2gokkalkan-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2366,12 +2389,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2greywolf.png": {
-   "sha256": "c95dcc81d8702681e7f06702733ce86bbd4c2b2f9e6cd22f969e0d638f4165e4",
+   "sha256": "c007f56226db4215e95999ede89616897817df0dc673ae8a1f4fa7a0f85d25d4",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2greywolf/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2384,6 +2407,7 @@
    "nameBar": {
     "text": "GREY WOLF",
     "fluentKey": "ra2-r2greywolf-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2416,6 +2440,7 @@
    "nameBar": {
     "text": "HAIWANG",
     "fluentKey": "ra2-r2haiwang-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2459,6 +2484,7 @@
    "nameBar": {
     "text": "HAIYING",
     "fluentKey": "ra2-r2haiying-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2484,12 +2510,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hisar.png": {
-   "sha256": "c860d9dcdc2e5683d1d50d98a10d3fa4a7dcd861cafe5dc1a6c1e11c0fde0a66",
+   "sha256": "e8e40c4ba33364cb3b9c6cddd31a63b7ab5a5084358af55fc033f67d178daecf",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hisar/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2502,6 +2528,7 @@
    "nameBar": {
     "text": "HISAR",
     "fluentKey": "ra2-r2hisar-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2534,6 +2561,7 @@
    "nameBar": {
     "text": "HODEIDAH",
     "fluentKey": "ra2-r2hodeidah-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2577,6 +2605,7 @@
    "nameBar": {
     "text": "AA NEST",
     "fluentKey": "levant-r2hzaanest-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2609,6 +2638,7 @@
    "nameBar": {
     "text": "MISSILE TM",
     "fluentKey": "levant-r2hzat-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2623,12 +2653,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzbunker.png": {
-   "sha256": "bd59d8cf41afc0fbba1aa909616d8fb0e83bee33ce2d50b88338790dc3f40dbe",
+   "sha256": "b65f127519d510307626ffdc059b94f0d58689ca366a59782c59bb74d5be8ef6",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzbunker/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2641,6 +2671,7 @@
    "nameBar": {
     "text": "BUNKER",
     "fluentKey": "levant-r2hzbunker-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2655,12 +2686,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzcoastal.png": {
-   "sha256": "6a842aaf1cb9033408871bf8af8b8e8ff34d226465b470bc3b4d1b70c5eeefbd",
+   "sha256": "fb8c78acbeb9fa15a1c0827bdebf68d07ce890215a7e59dc040f2e089fb18601",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzcoastal/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2673,6 +2704,7 @@
    "nameBar": {
     "text": "SHORE SSM",
     "fluentKey": "levant-r2hzcoastal-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2687,12 +2719,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzdrone.png": {
-   "sha256": "d0af972405cd40caed5a7b10f1fa0a542ea838ef863f7e61bccc50592397d9b2",
+   "sha256": "75f7799ea56ad2cd63223c1ac98e4c2c5803073e380e8b6eb84997b1d60602bb",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzdrone/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2705,6 +2737,7 @@
    "nameBar": {
     "text": "LOITER UAV",
     "fluentKey": "levant-r2hzdrone-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2730,12 +2763,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzescort.png": {
-   "sha256": "63d80fb90e13d4a4b153473ba83a6df28e6ff8f558bcf326e944d4fad664a908",
+   "sha256": "e839fd276088e49bc036fbe1c5bcdd1195f09f14ca743c57aafc7b6300dc8451",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzescort/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2748,6 +2781,7 @@
    "nameBar": {
     "text": "GUN TRUCK",
     "fluentKey": "levant-r2hzescort-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2791,6 +2825,7 @@
    "nameBar": {
     "text": "FPV TEAM",
     "fluentKey": "levant-r2hzfpv-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2823,6 +2858,7 @@
    "nameBar": {
     "text": "MSL BOAT",
     "fluentKey": "levant-r2hzmissileboat-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2848,12 +2884,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzrail.png": {
-   "sha256": "61b30fa64bbfedc4fb441506bedd3c9458a462a522c18ae9c64e877b4e8b5c12",
+   "sha256": "c86d228e2cc58c680227fd3918951454ef73ebb70dda514d8eeddf2a355d9d14",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzrail/candidates/cameo-v3-render/cameo.png",
-    "commit": "c08a25f8cc14d5cf0ca18ca8198524a8521c72ec",
-    "date": "2026-10-07"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2866,6 +2902,7 @@
    "nameBar": {
     "text": "RAIL TECH",
     "fluentKey": "levant-r2hzrail-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2885,12 +2922,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzrecoilless.png": {
-   "sha256": "59974f97256f3bfad2f4b93789893417783c14f28602df1f4eb59a1f48a824f8",
+   "sha256": "dc474006cba2099cecb7b8fec2fdf78d698df14deeac4eeda8ce3b3fab78c968",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzrecoilless/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2903,6 +2940,7 @@
    "nameBar": {
     "text": "RECOILLESS",
     "fluentKey": "levant-r2hzrecoilless-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2946,6 +2984,7 @@
    "nameBar": {
     "text": "SIGNALS",
     "fluentKey": "levant-r2hzrelay-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2960,12 +2999,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzrifle.png": {
-   "sha256": "76cfbf145457a7912eb86dc96cdefb6d650aa274fe6c82a5562fee9b1a562ed8",
+   "sha256": "0d230170823f4bdcbff7085672764916ad285ce82b2dfbf39486f82e3a055d10",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzrifle/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -2978,6 +3017,7 @@
    "nameBar": {
     "text": "FIGHTER",
     "fluentKey": "levant-r2hzrifle-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -2992,12 +3032,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzrockets.png": {
-   "sha256": "3cebada3128b969722778e3439ee4cf85f5eb219a461786affc7e547a0123179",
+   "sha256": "9a4abb119145aa4ecce24ece1bf3067026c51d757fcc844380bf0307c0f50bd9",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzrockets/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3010,6 +3050,7 @@
    "nameBar": {
     "text": "ROCKETS",
     "fluentKey": "levant-r2hzrockets-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3053,6 +3094,7 @@
    "nameBar": {
     "text": "SCOUT",
     "fluentKey": "levant-r2hzscout-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3085,6 +3127,7 @@
    "nameBar": {
     "text": "SKIFF",
     "fluentKey": "levant-r2hzskiff-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3110,12 +3153,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzspotter.png": {
-   "sha256": "e6b55917c3c8164d6c7033ed6284a1c364a007aba67dd17b037b26fcc6b4a6ce",
+   "sha256": "0aa3b47f04a2ded71110af4969e0e5f58af8e1e9ccdbe3407e9e9573f31c14d5",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzspotter/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3128,6 +3171,7 @@
    "nameBar": {
     "text": "SPOTTER",
     "fluentKey": "levant-r2hzspotter-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3142,12 +3186,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzsurvey.png": {
-   "sha256": "e5d46da602840a06decad5e6f3781cb9e02487b500b36fcccb8aa7082f4079aa",
+   "sha256": "d2cd1aea5017324e1693ab58d84d3c3c58ad354879e7296ff24e3d3dd52e6be0",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzsurvey/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3160,6 +3204,7 @@
    "nameBar": {
     "text": "SURVEY",
     "fluentKey": "levant-r2hzsurvey-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3203,6 +3248,7 @@
    "nameBar": {
     "text": "TECHNICAL",
     "fluentKey": "levant-r2hztechnical-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3228,12 +3274,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2hzworkshop.png": {
-   "sha256": "759fea0bfa1dcb99347e0f1d9c953827361ee4e20341fa687a85db2e819d9ab1",
+   "sha256": "60e0e0387fe0f78e0fc438cdbfd8e47717619f9e65f28726e4e58b794d40cf06",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2hzworkshop/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3246,6 +3292,7 @@
    "nameBar": {
     "text": "WORKSHOP",
     "fluentKey": "levant-r2hzworkshop-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3278,6 +3325,7 @@
    "nameBar": {
     "text": "AT TEAM",
     "fluentKey": "levant-r2ilat-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3310,6 +3358,7 @@
    "nameBar": {
     "text": "AT POST",
     "fluentKey": "levant-r2ilatpost-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3324,12 +3373,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilbattery.png": {
-   "sha256": "6a352fa93292e104b64f45e09e4bb470ca05d237a15c91064f2d6bdc921a41b6",
+   "sha256": "e7b3e796e65e29e73bde53717ce272694a8f67465549df67c20026006a533832",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilbattery/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3342,6 +3391,7 @@
    "nameBar": {
     "text": "BATTERY",
     "fluentKey": "levant-r2ilbattery-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3374,6 +3424,7 @@
    "nameBar": {
     "text": "FALCON JET",
     "fluentKey": "levant-r2ilfalcon-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3399,12 +3450,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilfrigate.png": {
-   "sha256": "19ee70964ee0962db4f8e06c6daf0912e45f2d33d4eacea0944704e9e6e95370",
+   "sha256": "dc584883ea64c2c01d53a010cc5e4203fc5f0fc199ff0624f807661f846300cd",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilfrigate/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3417,6 +3468,7 @@
    "nameBar": {
     "text": "FRIGATE",
     "fluentKey": "levant-r2ilfrigate-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3460,6 +3512,7 @@
    "nameBar": {
     "text": "GUNSHIP",
     "fluentKey": "levant-r2ilgunship-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3485,12 +3538,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilhowitzer.png": {
-   "sha256": "07c66a2cac4761a13d089fa2c0eaa72f8800e60a1fd4e6b850bc7e8e700363ff",
+   "sha256": "319e9d4650aaadeba37b745d572185f0fe92aee45b17b4689de964cbba908eed",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilhowitzer/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3503,6 +3556,7 @@
    "nameBar": {
     "text": "HOWITZER",
     "fluentKey": "levant-r2ilhowitzer-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3528,12 +3582,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilobserver.png": {
-   "sha256": "eb05e19e650a831c8dffe63b89244cc614b40c74e29f5a21d6c3b8aa636a1bcc",
+   "sha256": "cc1d48295f259b0f73768fb3822377c23c55506696b70332236afb8d71e3ee80",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilobserver/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3546,6 +3600,7 @@
    "nameBar": {
     "text": "OBSERVER",
     "fluentKey": "levant-r2ilobserver-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3560,12 +3615,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilpatrol.png": {
-   "sha256": "fb3a35f0d6fab4f82ad3a8139b8c5ba6c90009701e3a05ae2bcffa1952401936",
+   "sha256": "20fc8bd4f5270eaa1c3cae89beafc4d3d132f8fd5d450908286e1730748a94c4",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilpatrol/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3578,6 +3633,7 @@
    "nameBar": {
     "text": "PATROL",
     "fluentKey": "levant-r2ilpatrol-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3603,12 +3659,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilrecon.png": {
-   "sha256": "e5a5f207405ffda9a6ecff3348122d28f322fb643d4a816b1444da99ddbd4c86",
+   "sha256": "9708e1f99ee562eaddd1630df988b470cb00768033a291d68b5f8deac186e316",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilrecon/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3621,6 +3677,7 @@
    "nameBar": {
     "text": "RECON",
     "fluentKey": "levant-r2ilrecon-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3635,12 +3692,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilrelay.png": {
-   "sha256": "18b234be82aa9de46ade64701ff1e686e1ab5928fed3a31a2798f5cd8c73513c",
+   "sha256": "c6d5127cca7848b69445ecc3e4044fcce365d52520299e3e6a2e80ea38d35f02",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilrelay/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3653,6 +3710,7 @@
    "nameBar": {
     "text": "RELAY",
     "fluentKey": "levant-r2ilrelay-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3667,12 +3725,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilrifle.png": {
-   "sha256": "6206ca2f66238c2bc1f126ea734b43d4004ad98d4d6ca2c228f67c8055b9d2f1",
+   "sha256": "7725fd524b5c13ccc7e0f1271e7c72f006263f08af7a7fa01489a3a7329e1447",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilrifle/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3685,6 +3743,7 @@
    "nameBar": {
     "text": "RIFLE TEAM",
     "fluentKey": "levant-r2ilrifle-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3699,12 +3758,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilsentry.png": {
-   "sha256": "088ede12c80bbbbe4cf5e279d8815e736dd41723ab52e881d642b0542e6d2a27",
+   "sha256": "5d3a44a77b28b27c048460797b170cb17051dc5c08c6f2baac5b91a8c7797563",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilsentry/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3717,6 +3776,7 @@
    "nameBar": {
     "text": "SENTRY",
     "fluentKey": "levant-r2ilsentry-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3731,12 +3791,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilshield.png": {
-   "sha256": "3741e21e0477e11126bbc3b3e08aba5bb40a5903ea3e34c4a8507ea968cffb2f",
+   "sha256": "4f2e090507615d7362122aea5ebd8527e2d6fae8b79ec0195fdc24b099e18ae0",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilshield/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3749,6 +3809,7 @@
    "nameBar": {
     "text": "AIR SHIELD",
     "fluentKey": "levant-r2ilshield-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3774,12 +3835,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2iltender.png": {
-   "sha256": "8446fa0f74280fe945be0001fc0bfbaa7402d79048f4a95a84804cd7e3ffc56e",
+   "sha256": "c97faf0311e0d1e3eb9c00f917ebc8f1b3e51c9369e84ccf576f8d0ab6c0626e",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2iltender/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3792,6 +3853,7 @@
    "nameBar": {
     "text": "TENDER",
     "fluentKey": "levant-r2iltender-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3817,12 +3879,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ilworkshop.png": {
-   "sha256": "525478dd396a31cbba19318cf1ee257c92f68cccdd9fe27bc1524722215ebaa8",
+   "sha256": "53d3bf4d299accc258d4d4e4b0358db6d07dc132d1d21d6e65382258ae580a89",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ilworkshop/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3835,6 +3897,7 @@
    "nameBar": {
     "text": "SERVICE",
     "fluentKey": "levant-r2ilworkshop-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3849,12 +3912,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2iraasite.png": {
-   "sha256": "914f59494286a57aab02518e0cd96082a8d5a917ab8c3a07b2739e85af1f0e64",
+   "sha256": "5b6f8b8ee8061e91dabf7a17ed034d8f712f61e4c10719837b138c9f24e24156",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2iraasite/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3867,6 +3930,7 @@
    "nameBar": {
     "text": "RAAD SITE",
     "fluentKey": "ra2-r2iraasite-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3881,12 +3945,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2irbunker.png": {
-   "sha256": "f131a6ad22a22f5ec4b056eeb06eabbf301c7f6c68819c5b9d1ba70b24bc3c1d",
+   "sha256": "86043b11b5f7602027795e7fe39b76e1ee23ed45273566d02b81f9e55746337b",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2irbunker/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -3899,6 +3963,7 @@
    "nameBar": {
     "text": "GUN BUNKER",
     "fluentKey": "ra2-r2irbunker-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3931,6 +3996,7 @@
    "nameBar": {
     "text": "DENIAL SSM",
     "fluentKey": "ra2-r2ircoast-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -3963,6 +4029,7 @@
    "nameBar": {
     "text": "JIAOLONG",
     "fluentKey": "ra2-r2jiaolong-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4006,6 +4073,7 @@
    "nameBar": {
     "text": "AL JUBAIL",
     "fluentKey": "ra2-r2jubail-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4031,12 +4099,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2karrar.png": {
-   "sha256": "147855b1410323c7c996786fbfa596b9af0287931471d59becc0ced7449894b0",
+   "sha256": "b4b001f405a5a518947ef725ed90a03fd865e964dd1730fa47797e0fb8f65ecb",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2karrar/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4049,6 +4117,7 @@
    "nameBar": {
     "text": "KARRAR MBT",
     "fluentKey": "ra2-r2karrar-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4092,6 +4161,7 @@
    "nameBar": {
     "text": "KUNLUN",
     "fluentKey": "ra2-r2kunlun-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4135,6 +4205,7 @@
    "nameBar": {
     "text": "KUZGUN UAV",
     "fluentKey": "ra2-r2kuzgun-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4160,12 +4231,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2loiter.png": {
-   "sha256": "4a2a9dcb03a9fd9753ac1238b1e251e2282d3e32bd0553ca42b2da0e2fa7d3c2",
+   "sha256": "2e92f1415b6c0bc3a301e85ff513a32bd576e5fd548b6b2a5932d1bf290a432b",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2loiter/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4178,6 +4249,7 @@
    "nameBar": {
     "text": "LOITER UAV",
     "fluentKey": "ra2-r2loiter-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4221,6 +4293,7 @@
    "nameBar": {
     "text": "LUYANG",
     "fluentKey": "ra2-r2luyang-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4264,6 +4337,7 @@
    "nameBar": {
     "text": "LYNX SCOUT",
     "fluentKey": "ra2-r2lynx-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4307,6 +4381,7 @@
    "nameBar": {
     "text": "M1A2S MBT",
     "fluentKey": "ra2-r2m1a2s-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4350,6 +4425,7 @@
    "nameBar": {
     "text": "MANTIS AA",
     "fluentKey": "ra2-r2mantis-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4375,12 +4451,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2marmara.png": {
-   "sha256": "c29db7f099f6bdbc6578ed96566a7e6687cf480073b5ea11ad3e57ea3005a455",
+   "sha256": "b26c57df90805af053e3193e853b0801fa19abdf31e1643f3acd5721f92d9333",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2marmara/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4393,6 +4469,7 @@
    "nameBar": {
     "text": "MARMARA",
     "fluentKey": "ra2-r2marmara-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4418,12 +4495,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2merkava.png": {
-   "sha256": "2a7de43382279df4604205bf92f5b87c34b5638252d628eedea5358117d1b7a8",
+   "sha256": "8cd589728198e935754eb9028e0c6af185f5c7899a48a3b70bdc2eedc3879be9",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2merkava/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4436,6 +4513,7 @@
    "nameBar": {
     "text": "MERKAVA",
     "fluentKey": "levant-r2merkava-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4461,12 +4539,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2mohajer.png": {
-   "sha256": "6c28da3c7058827aa2d51add62adc27a2c3c17a57273331932c32bc906c172cc",
+   "sha256": "4f1d4af3ae427ff5ff5f5ef22b3c96638e16ebbec7c7b99d5c7937909fced2ae",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2mohajer/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4479,6 +4557,7 @@
    "nameBar": {
     "text": "MOHAJER",
     "fluentKey": "ra2-r2mohajer-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4522,6 +4601,7 @@
    "nameBar": {
     "text": "MOKHA",
     "fluentKey": "ra2-r2mokha-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4547,12 +4627,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2namer.png": {
-   "sha256": "ef8e6046aa0d694941fdee2b3b8698f93ae85bc14e0b68426c701406b57e13ff",
+   "sha256": "502e1cf5d9edc713a694f02668019ae2f23c3fc20994686f98cbf439199a9337",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2namer/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4565,6 +4645,7 @@
    "nameBar": {
     "text": "NAMER APC",
     "fluentKey": "levant-r2namer-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4608,6 +4689,7 @@
    "nameBar": {
     "text": "PEYKAAP",
     "fluentKey": "ra2-r2peykaap-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4651,6 +4733,7 @@
    "nameBar": {
     "text": "LONGBOW",
     "fluentKey": "ra2-r2phl-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4676,12 +4759,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2poyraz.png": {
-   "sha256": "df94aed30468f1f94bff7d092ac041da33616443e102795441d5242e7a567de6",
+   "sha256": "7f7fb670d28997753f3557e880a3618a6f9841e072d655db8cf1adfdbebf1df9",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2poyraz/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4694,6 +4777,7 @@
    "nameBar": {
     "text": "POYRAZ",
     "fluentKey": "ra2-r2poyraz-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4737,6 +4821,7 @@
    "nameBar": {
     "text": "QILIN MBT",
     "fluentKey": "ra2-r2qilin-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4762,12 +4847,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2raad.png": {
-   "sha256": "e14d4c7e1f19d3fb73b713c507b7bd71668622bfcf9c844726140557d721aa5f",
+   "sha256": "3060622eeef484ac70d74b36d582c6b020f40c4c706e3446216964c116eec8c1",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2raad/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4780,6 +4865,7 @@
    "nameBar": {
     "text": "RAAD AA",
     "fluentKey": "ra2-r2raad-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4805,12 +4891,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2redspear.png": {
-   "sha256": "2f98efcc2ab2ab92dbd0ef530a5e84b5b06680cee10ef8fd7748d8dd28f4de23",
+   "sha256": "18af9661e7c035a65337bf9574a12aa4641eae49bfa253d9c31d916df444e7f7",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2redspear/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4823,6 +4909,7 @@
    "nameBar": {
     "text": "RED SPEAR",
     "fluentKey": "ra2-r2redspear-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4837,12 +4924,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2riyadh.png": {
-   "sha256": "4a482f317471b879940f11ada4fed0be76498731fc5fcee7ac6803afcea7b5e0",
+   "sha256": "1987a51bfbb8d9117ccb98d2ab7ba2dd0447fbde477b90c6a90b50fba5fd65d7",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2riyadh/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -4855,6 +4942,7 @@
    "nameBar": {
     "text": "AL RIYADH",
     "fluentKey": "ra2-r2riyadh-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4898,6 +4986,7 @@
    "nameBar": {
     "text": "ATGM TEAM",
     "fluentKey": "ra2-r2saat-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4930,6 +5019,7 @@
    "nameBar": {
     "text": "AL SADIQ",
     "fluentKey": "ra2-r2sadiq-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4973,6 +5063,7 @@
    "nameBar": {
     "text": "MOBILE SAM",
     "fluentKey": "ra2-r2sads-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -4998,12 +5089,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2saguard.png": {
-   "sha256": "a747f4cb0d4d7cac15b11d62e26ee81612993027bf8cc54038e3bff8bf4f622a",
+   "sha256": "385dc73f4ab050c46fd6283e90e68eb05371cf664e9643fa5ce61b67e5c54cc5",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2saguard/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5016,6 +5107,7 @@
    "nameBar": {
     "text": "GUARD POST",
     "fluentKey": "ra2-r2saguard-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5048,6 +5140,7 @@
    "nameBar": {
     "text": "SAHAAB USV",
     "fluentKey": "ra2-r2sahaab-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5091,6 +5184,7 @@
    "nameBar": {
     "text": "SAHIN-X",
     "fluentKey": "ra2-r2sahin-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5134,6 +5228,7 @@
    "nameBar": {
     "text": "SAUDI JTAC",
     "fluentKey": "ra2-r2sajtac-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5166,6 +5261,7 @@
    "nameBar": {
     "text": "SAMAD UAV",
     "fluentKey": "ra2-r2samad-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5209,6 +5305,7 @@
    "nameBar": {
     "text": "SANCAK",
     "fluentKey": "ra2-r2sancak-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5234,12 +5331,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sang.png": {
-   "sha256": "23a83c53523a191dfa46f8143548e4003cee24ff3cadaeab730f4a30c87fbfbf",
+   "sha256": "99e5a677fae7e111a265258400d59ff4d92772ad9b72105d4dc36969caa4dfd6",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2sang/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5252,6 +5349,7 @@
    "nameBar": {
     "text": "NATL GUARD",
     "fluentKey": "ra2-r2sang-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5266,12 +5364,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2sapatriot.png": {
-   "sha256": "48d70e0816a5050a6a264055773d351e95de7c489ca19a238f55abce3aaf1e8b",
+   "sha256": "84533506367572909e29ebefa4b39b010cc2a4b7706e93209c461008f56d7652",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2sapatriot/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5284,6 +5382,7 @@
    "nameBar": {
     "text": "PATRIOT",
     "fluentKey": "ra2-r2sapatriot-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5316,6 +5415,7 @@
    "nameBar": {
     "text": "TOW POST",
     "fluentKey": "ra2-r2satow-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5348,6 +5448,7 @@
    "nameBar": {
     "text": "SHADOW ONE",
     "fluentKey": "ra2-r2shadowone-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5362,12 +5463,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2siper.png": {
-   "sha256": "a9ee33a4595c9f05260b0ee15de9a810c10d00912be5702314ece8b267714a20",
+   "sha256": "3959a3ef28434c2eb3f762bf9d2b1288e0c4b299fc08c284c33de6059645b6ad",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2siper/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5380,6 +5481,7 @@
    "nameBar": {
     "text": "SIPER SAM",
     "fluentKey": "ra2-r2siper-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5412,6 +5514,7 @@
    "nameBar": {
     "text": "SKYSHIELD",
     "fluentKey": "ra2-r2skyshield-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5426,12 +5529,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2skyspear.png": {
-   "sha256": "6d1f4b66d48063f6cfee48c01e3580f26a9a4e66cf2dd399b026368127e5ba6d",
+   "sha256": "897481e65de92082ee209a012a903530fd2a3f3b1ddaca09a40793576efb831a",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2skyspear/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5444,6 +5547,7 @@
    "nameBar": {
     "text": "SKYSPEAR",
     "fluentKey": "ra2-r2skyspear-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5469,12 +5573,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2spectrum.png": {
-   "sha256": "19b73a8cffa1ff206b43a9cd45a8c7f3a132fa4c93594313009c188fc33ad2b8",
+   "sha256": "95a4cdf025d4d16597b1441564f841f209903af97570d78670bca79a0772af58",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2spectrum/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5487,6 +5591,7 @@
    "nameBar": {
     "text": "SPECTRUM",
     "fluentKey": "ra2-r2spectrum-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5519,6 +5624,7 @@
    "nameBar": {
     "text": "TECHNICAL",
     "fluentKey": "ra2-r2technical-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5562,6 +5668,7 @@
    "nameBar": {
     "text": "TOOPHAN AT",
     "fluentKey": "ra2-r2toophan-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5594,6 +5701,7 @@
    "nameBar": {
     "text": "TOUFAN",
     "fluentKey": "ra2-r2toufan-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5637,6 +5745,7 @@
    "nameBar": {
     "text": "AT TEAM",
     "fluentKey": "ra2-r2trat-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5651,12 +5760,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2trdroneop.png": {
-   "sha256": "7cfff0ecb3f0914fa787bb4f369a6c4d5da73867d93003d3ac0fdcec86d2d36e",
+   "sha256": "329162921fd1fcb373ed89054437ab3af65756ed92a84bc4fa53d22ea36956d3",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2trdroneop/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5669,6 +5778,7 @@
    "nameBar": {
     "text": "DRONE OP",
     "fluentKey": "ra2-r2trdroneop-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5683,12 +5793,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2trrifle.png": {
-   "sha256": "4dc13b119fbf3519c724bae11c7a4334f9051d2739eb23fae1550500666c8ce3",
+   "sha256": "9fdbe4b56cb4d7be740c45615c54455a45d1f26fe086ab3ee5e619d796a8befd",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2trrifle/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5701,6 +5811,7 @@
    "nameBar": {
     "text": "RIFLEMAN",
     "fluentKey": "ra2-r2trrifle-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5715,12 +5826,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2turna.png": {
-   "sha256": "0ef554abe6bde59625931f4f04cb149f689fcfc6ea109e45ebe27e8da31cdd5d",
+   "sha256": "a80e198e1f9d2614176700be42a84b5ca3243387c6dc2a6bf07fb389073bf9ed",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2turna/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5733,6 +5844,7 @@
    "nameBar": {
     "text": "TURNA-AH",
     "fluentKey": "ra2-r2turna-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5776,6 +5888,7 @@
    "nameBar": {
     "text": "WADI GHOST",
     "fluentKey": "ra2-r2wadighost-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5790,12 +5903,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ybunker.png": {
-   "sha256": "15d053e683162343f10f2514af35f29e10968c6d1d15be059e9637a878e25ee0",
+   "sha256": "f431ef2790c8a1c7729d45e2222945093ae0461d3ed83c7062158e67317b1873",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ybunker/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5808,6 +5921,7 @@
    "nameBar": {
     "text": "MTN BUNKER",
     "fluentKey": "ra2-r2ybunker-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5822,12 +5936,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ycoastal.png": {
-   "sha256": "6908e1bef04d511b8293d92ab5d7864a2945e6850072b702354d7ed933025df2",
+   "sha256": "4bcf58669f5c7abe301dc1153f8d4193edd2c128a28b48c5871540ba43846998",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ycoastal/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5840,6 +5954,7 @@
    "nameBar": {
     "text": "SHORE SSM",
     "fluentKey": "ra2-r2ycoastal-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5854,12 +5969,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yildirim.png": {
-   "sha256": "211634e4259bdd6736091cd7bcb0317829dcdf3e6503ba5cc265a4c7f2195dc0",
+   "sha256": "3f19bc1e4dcebc77328273d7cc075a9e1332289fee1cf8988af7ccff85b6dae3",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2yildirim/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5872,6 +5987,7 @@
    "nameBar": {
     "text": "YILDIRIM",
     "fluentKey": "ra2-r2yildirim-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5897,12 +6013,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ymlr.png": {
-   "sha256": "383e6639bef699e8cc7496103fbc2daf871fb39d71c143703a97042d54190c8e",
+   "sha256": "518ac875b54f132ba9b4a2ce8ea7d6db61c8d3439352fd2fa2f91a67f7057b9e",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ymlr/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5915,6 +6031,7 @@
    "nameBar": {
     "text": "SSM TRUCK",
     "fluentKey": "ra2-r2ymlr-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5940,12 +6057,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ymr.png": {
-   "sha256": "cedb166906dbcd7cf3f847a6b98a3256cc6cfa6e4978bd3c251c2cb3447e0751",
+   "sha256": "ceca6c624dacc5b68374ab51332ac5cae75cb72be97ac078e8ee92c43130c469",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ymr/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5958,6 +6075,7 @@
    "nameBar": {
     "text": "RIFLEMAN",
     "fluentKey": "ra2-r2ymr-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -5972,12 +6090,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yrpg.png": {
-   "sha256": "edaad2f96afef5dc96fb0b47d4a6f7d7b1364137c644dcb815504784501ed6a0",
+   "sha256": "032665d3cf559dfc8bcda2ef24f7a346971684562679a98b80bd06b63b94d07a",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2yrpg/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -5990,6 +6108,7 @@
    "nameBar": {
     "text": "RPG HUNTER",
     "fluentKey": "ra2-r2yrpg-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -6004,12 +6123,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2yspot.png": {
-   "sha256": "1b775d0bf4c24592f4e22925265fdbb54fb5d23f6961963bb1fccfaf5d28fa02",
+   "sha256": "b423621c1cdc94a34d61d2b6fe7884b9115c67006baf59d68896f005dac8907e",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2yspot/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -6022,6 +6141,7 @@
    "nameBar": {
     "text": "SPOTTER",
     "fluentKey": "ra2-r2yspot-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -6036,12 +6156,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2ytechrr.png": {
-   "sha256": "b7849ff73ae89483d0ceeeef2a8709df105d18d1a44fa7a122d73ab5cb342902",
+   "sha256": "b37bc28083ebc14e401c3baff1301006e1e1310ef0114cd4ba4b007f18c23710",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2ytechrr/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -6054,6 +6174,7 @@
    "nameBar": {
     "text": "RECOILLESS",
     "fluentKey": "ra2-r2ytechrr-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -6097,6 +6218,7 @@
    "nameBar": {
     "text": "ZU-23 TECH",
     "fluentKey": "ra2-r2yzu-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -6140,6 +6262,7 @@
    "nameBar": {
     "text": "ZU-23 NEST",
     "fluentKey": "ra2-r2yzunest-name",
+    "glyphOverride": null,
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",
@@ -6154,12 +6277,12 @@
    "runtime": "referenced by rules/sequences"
   },
   "icons/r2zbd.png": {
-   "sha256": "acb80cd73eb9489e8a6aa7642df3944a7b0a0f61dac3c340cb9d3da3be5ca7d9",
+   "sha256": "f42814c135bb4f0c3cbf67b329212caa799a2bfaca7d7a0a13c27a476d3d9693",
    "source": {
     "repo": "RTSAI-Art (local)",
     "path": "units/r2zbd/candidates/cameo-v3-render/cameo.png",
-    "commit": "e5e0e8d155d72465c0e0f7c0591143a09404c40b",
-    "date": "2026-10-06"
+    "commit": "ddba372f2591d152b93f972078a0b5909df90060",
+    "date": "2026-10-15"
    },
    "type": "build-palette cameo, 60x48 RGB PNG with a name bar",
    "origin": "rendered-from-project-geometry",
@@ -6172,6 +6295,7 @@
    "nameBar": {
     "text": "SEA DRAGON",
     "fluentKey": "ra2-r2zbd-name",
+    "glyphOverride": "Project-drawn diagonal R, 5x7; Kenney metrics unchanged",
     "font": {
      "name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl",
      "license": "CC0-1.0",

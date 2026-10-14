@@ -192,6 +192,7 @@ def route_entry(rel: str, digest: str, art: Art) -> dict:
         label = meta.get("label") or {}
         font = art.repo / FONT
         entry["nameBar"] = {"text": label.get("text"), "fluentKey": label.get("fluentKey"),
+                            "glyphOverride": label.get("glyphOverride"),
                             "font": {"name": "Kenney Pixel (kenpixel.ttf) by Kenney, www.kenney.nl", "license": "CC0-1.0",
                                      "file": f"RTSAI-Art {FONT}", "notice": f"RTSAI-Art {FONT_LICENSE}",
                                      "sha256": sha256(font.read_bytes()) if font.exists() else None,

@@ -1,7 +1,7 @@
 {
  "note": "Art delivered to the standalone build by the art agent (Phase 3). Original work made by project tools from hand-authored Blender models and procedural code. No Electronic Arts / Westwood file, pixel or palette is an input; stock Red Alert 2 files were read only on the developer's machine (RTSAI-Art reference-local/, git-ignored) to measure sizes, value structure and edge density.",
  "written": "2026-10-07T15:42:05.113512+00:00",
- "rtsaiArtHead": "076a4bca",
+ "rtsaiArtHead": "ddba372f2591d152b93f972078a0b5909df90060",
  "approvals": {
   "base kit v2": "coordinator, 2026-10-07",
   "hpwr and refinery purifier": "coordinator, 2026-10-07",
@@ -24,13 +24,28 @@
   },
   {
    "file": "base/airf-chinaicon.png",
-   "bytes": 5156,
-   "sha256": "8ccb5f78d0ae27bb43b4c7fd6f53bb9deec92a9a21a1f6cc983b8846d575daae",
+   "bytes": 5154,
+   "sha256": "ff2e07e1f696ace882711c81e8ad68661233abcbe90f7a558dc966a14819baed",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "8ccb5f78d0ae27bb43b4c7fd6f53bb9deec92a9a21a1f6cc983b8846d575daae",
+     "bytes": 5156,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/airf-hezbollah.shp",
@@ -44,13 +59,28 @@
   },
   {
    "file": "base/airf-hezbollahicon.png",
-   "bytes": 5158,
-   "sha256": "2108e666fc72c4e87cbf3f6ab4078bc35a4386559c3bb01f36e50a778a0c25f8",
+   "bytes": 5153,
+   "sha256": "8ce6b2710580f386543ce1ae83d8ed4afa3fe274bc1148ac0c06b0b77cbe5ca6",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "2108e666fc72c4e87cbf3f6ab4078bc35a4386559c3bb01f36e50a778a0c25f8",
+     "bytes": 5158,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/airf-iran.shp",
@@ -64,13 +94,28 @@
   },
   {
    "file": "base/airf-iranicon.png",
-   "bytes": 5158,
-   "sha256": "860395ecb0c9a17149a271293467e995516f19fdc7e9c29be926b6c3b19bf88d",
+   "bytes": 5153,
+   "sha256": "eaa691b7b70fe85714e3e1739c4ab74995fd9c406d6e366fab2927073e6e27cb",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "860395ecb0c9a17149a271293467e995516f19fdc7e9c29be926b6c3b19bf88d",
+     "bytes": 5158,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/airf-israel.shp",
@@ -84,13 +129,28 @@
   },
   {
    "file": "base/airf-israelicon.png",
-   "bytes": 5188,
-   "sha256": "7dc8f964d5ffda3b4f00df19db84db003eef14749fa5b8925edb9c3af715c902",
+   "bytes": 5182,
+   "sha256": "17f3cbe3e27287a70de0caf0c8afa8896747c13b8c593741caeb11b23430f7df",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "7dc8f964d5ffda3b4f00df19db84db003eef14749fa5b8925edb9c3af715c902",
+     "bytes": 5188,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/airf-saudi.shp",
@@ -104,13 +164,28 @@
   },
   {
    "file": "base/airf-saudiicon.png",
-   "bytes": 5152,
-   "sha256": "d06dbdd18c550af2e34f459a7e52fa8c83aff35a0bb606b137912c08188b43fe",
+   "bytes": 5140,
+   "sha256": "1feeee39e48669f04ffbb736f3ec66761e1668295cbb51381b05ab07bb29398a",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "d06dbdd18c550af2e34f459a7e52fa8c83aff35a0bb606b137912c08188b43fe",
+     "bytes": 5152,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/airf-turkey.shp",
@@ -124,13 +199,28 @@
   },
   {
    "file": "base/airf-turkeyicon.png",
-   "bytes": 5142,
-   "sha256": "6da582bc0c53dbda3067de29edb922f9584f39ec717268efc2f0bf92b185116c",
+   "bytes": 5134,
+   "sha256": "4bf4e19140f0170cb8d65b9fba7923d5ffd9fb57bd20deb323dca9d65152fb7d",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "6da582bc0c53dbda3067de29edb922f9584f39ec717268efc2f0bf92b185116c",
+     "bytes": 5142,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/airf-yemen.shp",
@@ -144,13 +234,28 @@
   },
   {
    "file": "base/airf-yemenicon.png",
-   "bytes": 5126,
-   "sha256": "7a0e43018be72a0e633ddd37b0b93c88a4834bcd4db8a66a05961e82af2041d8",
+   "bytes": 5119,
+   "sha256": "5f4982908ae8439ff3fe92a7e21851b8f542119fb58b1fb145672f4a47eb2542",
    "origin": "project-generated",
    "candidate": "units/kit-airf/candidates/kit-v2/airf-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "7a0e43018be72a0e633ddd37b0b93c88a4834bcd4db8a66a05961e82af2041d8",
+     "bytes": 5126,
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-china.shp",
@@ -164,13 +269,28 @@
   },
   {
    "file": "base/barr-chinaicon.png",
-   "bytes": 4815,
-   "sha256": "fe852a95cee30172926dff01d96fa996b692d6544cf63d086ec112899ff68b9d",
+   "bytes": 4826,
+   "sha256": "5885618162110d430de9a6ec8d5401b6fc2d76c2d1390c22b1560479ee793cb5",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "fe852a95cee30172926dff01d96fa996b692d6544cf63d086ec112899ff68b9d",
+     "bytes": 4815,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-hezbollah.shp",
@@ -184,13 +304,28 @@
   },
   {
    "file": "base/barr-hezbollahicon.png",
-   "bytes": 4788,
-   "sha256": "c83200051cd7213a0171064add42738597029191a6c1d435e54ae27f7fed81dc",
+   "bytes": 4799,
+   "sha256": "e8b65959e95fbd4da5017c0e479c1dc3ecd4f9d93f2252f5d57790c118a7b57a",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c83200051cd7213a0171064add42738597029191a6c1d435e54ae27f7fed81dc",
+     "bytes": 4788,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-iran.shp",
@@ -204,13 +339,28 @@
   },
   {
    "file": "base/barr-iranicon.png",
-   "bytes": 4712,
-   "sha256": "245fb44c77b427b8c27100850152edf3ecf9b65f297cb7a7c93f773b466815e4",
+   "bytes": 4723,
+   "sha256": "fb3ae3275f1694e9dd073c3ab58232258638ed7c8a81386afc22c60161020d01",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "245fb44c77b427b8c27100850152edf3ecf9b65f297cb7a7c93f773b466815e4",
+     "bytes": 4712,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-israel.shp",
@@ -224,13 +374,28 @@
   },
   {
    "file": "base/barr-israelicon.png",
-   "bytes": 4781,
-   "sha256": "c58bc962a636fd5f4f560405ac028f147526d8117796ddfd3ddf4325b4f5594a",
+   "bytes": 4790,
+   "sha256": "09d01537807627fbb4c7c3729c1c4c074f79b12c12850878b8b27af6b2201a7f",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c58bc962a636fd5f4f560405ac028f147526d8117796ddfd3ddf4325b4f5594a",
+     "bytes": 4781,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-saudi.shp",
@@ -244,13 +409,28 @@
   },
   {
    "file": "base/barr-saudiicon.png",
-   "bytes": 4707,
-   "sha256": "40725d11591cd64c52b2669e7fb9aa0104db5f4cb60b3740458d5007ba6901cd",
+   "bytes": 4718,
+   "sha256": "995acfaf715877403d51e5fa542d9d6ef698f85867f84f2a40f1a102d409bc66",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "40725d11591cd64c52b2669e7fb9aa0104db5f4cb60b3740458d5007ba6901cd",
+     "bytes": 4707,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-turkey.shp",
@@ -264,13 +444,28 @@
   },
   {
    "file": "base/barr-turkeyicon.png",
-   "bytes": 4776,
-   "sha256": "6d6692a032340f7647a9812e647e3d0111ac5308f8d38960b33d4ebbcfcfe5f2",
+   "bytes": 4787,
+   "sha256": "615c2a0f2eece161f19c37074b1a12c9a4840a53c250769df0d0e5cdfe09bb44",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "6d6692a032340f7647a9812e647e3d0111ac5308f8d38960b33d4ebbcfcfe5f2",
+     "bytes": 4776,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/barr-yemen.shp",
@@ -284,13 +479,28 @@
   },
   {
    "file": "base/barr-yemenicon.png",
-   "bytes": 4761,
-   "sha256": "bd5353b580c6ea61987dd2916188fb35544b307241e94e6ec92854283712d346",
+   "bytes": 4774,
+   "sha256": "cac750503ecbc0b24822d180a524e6b41e951f12c410df0253f76d30dc74c4f4",
    "origin": "project-generated",
    "candidate": "units/kit-barr/candidates/kit-v2/barr-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "bd5353b580c6ea61987dd2916188fb35544b307241e94e6ec92854283712d346",
+     "bytes": 4761,
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-china.shp",
@@ -304,13 +514,28 @@
   },
   {
    "file": "base/cnst-chinaicon.png",
-   "bytes": 5243,
-   "sha256": "b7f70d8b97bbb3bb773aedad80aedc8bd1c2c3611ce5398e45e11c08f903a38c",
+   "bytes": 5253,
+   "sha256": "99f3d6e75647745ca1982bb125ba9e3e40877c714df620bf3b2f7c5d7e8210aa",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "b7f70d8b97bbb3bb773aedad80aedc8bd1c2c3611ce5398e45e11c08f903a38c",
+     "bytes": 5243,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-hezbollah.shp",
@@ -324,13 +549,28 @@
   },
   {
    "file": "base/cnst-hezbollahicon.png",
-   "bytes": 5319,
-   "sha256": "bdeb0b97eb2104577bc5c5f9403760edfa441ccfb702b9ee7ab992ead1d161eb",
+   "bytes": 5311,
+   "sha256": "2640f7e8be0e9505a530984b7411a58002a0e1822dfc495bf1f908d791d08b59",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "bdeb0b97eb2104577bc5c5f9403760edfa441ccfb702b9ee7ab992ead1d161eb",
+     "bytes": 5319,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-iran.shp",
@@ -345,12 +585,27 @@
   {
    "file": "base/cnst-iranicon.png",
    "bytes": 5307,
-   "sha256": "4745791d8b2c74db7f2b7d4d3e8f9f1faa2829df374828e3da28bed4e22d44ef",
+   "sha256": "4b59c5be57f399770f6aee8bc5be327615bc2881449c2ba3e044eb861ddc4ef7",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "4745791d8b2c74db7f2b7d4d3e8f9f1faa2829df374828e3da28bed4e22d44ef",
+     "bytes": 5307,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-israel.shp",
@@ -364,13 +619,28 @@
   },
   {
    "file": "base/cnst-israelicon.png",
-   "bytes": 5238,
-   "sha256": "fd37ab61272a806ead8f572aee22f41a2be63ae95a1ff0c8532961b7ec85c273",
+   "bytes": 5245,
+   "sha256": "6a61c7d77faa59540983fac890a17b962cc0448ea62611788454e4c7431862b8",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "fd37ab61272a806ead8f572aee22f41a2be63ae95a1ff0c8532961b7ec85c273",
+     "bytes": 5238,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-saudi.shp",
@@ -384,13 +654,28 @@
   },
   {
    "file": "base/cnst-saudiicon.png",
-   "bytes": 5244,
-   "sha256": "719c6ab0843e049d8bc4b21b503e5ea6e3f96b283da4feda9506125d353b1d69",
+   "bytes": 5246,
+   "sha256": "976117f2251195fab418eb6f9f9ba701a377eeb30fd49f7483fb97e7c568aa46",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "719c6ab0843e049d8bc4b21b503e5ea6e3f96b283da4feda9506125d353b1d69",
+     "bytes": 5244,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-turkey.shp",
@@ -404,13 +689,28 @@
   },
   {
    "file": "base/cnst-turkeyicon.png",
-   "bytes": 5276,
-   "sha256": "6db4c22eeb53203b362587d0476e1118bc8cca95ab7ee8d8550c2fd7e6b4b797",
+   "bytes": 5277,
+   "sha256": "ab2d0290fc3fca3657ff6a9f2d4bd524a79d17c147373ff4de7872f17d39a633",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "6db4c22eeb53203b362587d0476e1118bc8cca95ab7ee8d8550c2fd7e6b4b797",
+     "bytes": 5276,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/cnst-yemen.shp",
@@ -424,13 +724,28 @@
   },
   {
    "file": "base/cnst-yemenicon.png",
-   "bytes": 5303,
-   "sha256": "16ac5dd4231a6f080c86f84b56b3aa627b7a444b337c1e89c6adaadbbdcaf052",
+   "bytes": 5307,
+   "sha256": "e684cf72a12ad43bbfd37b651bfa4e3025ac9b77affbf624a9db177e4fc89969",
    "origin": "project-generated",
    "candidate": "units/kit-cnst/candidates/kit-v2/cnst-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "16ac5dd4231a6f080c86f84b56b3aa627b7a444b337c1e89c6adaadbbdcaf052",
+     "bytes": 5303,
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-china.shp",
@@ -444,13 +759,28 @@
   },
   {
    "file": "base/dept-chinaicon.png",
-   "bytes": 5010,
-   "sha256": "71138552ce07a674198019ddfa1886a2ee5469e4f434994d0fa9c54d9d72b80a",
+   "bytes": 5009,
+   "sha256": "58bff9479d67cba40f0c9f9b6fa5fc9332e7ce71f3ca4d936e28f713c50194df",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "71138552ce07a674198019ddfa1886a2ee5469e4f434994d0fa9c54d9d72b80a",
+     "bytes": 5010,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-hezbollah.shp",
@@ -464,13 +794,28 @@
   },
   {
    "file": "base/dept-hezbollahicon.png",
-   "bytes": 5067,
-   "sha256": "c8f1321302945cad2977267d5d583d2a183169f0be5f3b4db2b4b8dbbfdaf5f7",
+   "bytes": 5069,
+   "sha256": "f2ae643b8969b75ac1466666cfbeed969234d728e1be5a7f1033dcdd66e0283d",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c8f1321302945cad2977267d5d583d2a183169f0be5f3b4db2b4b8dbbfdaf5f7",
+     "bytes": 5067,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-iran.shp",
@@ -484,13 +829,28 @@
   },
   {
    "file": "base/dept-iranicon.png",
-   "bytes": 5045,
-   "sha256": "f346859d640b8e5cc52feb2b9be0011dd23575aa885df398101844ed259dd17c",
+   "bytes": 5047,
+   "sha256": "8b585451d8ff2ccd6c9922a2c56cc1639d90eb9cb1f16265998420237946302c",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f346859d640b8e5cc52feb2b9be0011dd23575aa885df398101844ed259dd17c",
+     "bytes": 5045,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-israel.shp",
@@ -504,13 +864,28 @@
   },
   {
    "file": "base/dept-israelicon.png",
-   "bytes": 5128,
-   "sha256": "fe97431639644c347484dd434650b6f0d9cfdaa8e12dea6ca2f2fa834a7d404d",
+   "bytes": 5127,
+   "sha256": "e61dc2944919441957f0b8a1724f190652220c7775237a723d6adf429264d8a7",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "fe97431639644c347484dd434650b6f0d9cfdaa8e12dea6ca2f2fa834a7d404d",
+     "bytes": 5128,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-saudi.shp",
@@ -524,13 +899,28 @@
   },
   {
    "file": "base/dept-saudiicon.png",
-   "bytes": 5041,
-   "sha256": "f2a9bc7b9887e535e81573418f50f539b192935de783cb7d0aaa4cb82ec3c409",
+   "bytes": 5040,
+   "sha256": "aaf67380ee923e7139184d3972f139e36a03df3b4f999c16d6c66030c9806c21",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f2a9bc7b9887e535e81573418f50f539b192935de783cb7d0aaa4cb82ec3c409",
+     "bytes": 5041,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-turkey.shp",
@@ -544,13 +934,28 @@
   },
   {
    "file": "base/dept-turkeyicon.png",
-   "bytes": 5047,
-   "sha256": "026078a7c1f7c4bfbb934d7243e7fbe5a7601d0480a578edf9824bc36bc9868f",
+   "bytes": 5049,
+   "sha256": "9bfe8ddaeff70bcc01867182b077db83500095d32d5f49f1cd66f8d1e98870e9",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "026078a7c1f7c4bfbb934d7243e7fbe5a7601d0480a578edf9824bc36bc9868f",
+     "bytes": 5047,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/dept-yemen.shp",
@@ -564,13 +969,28 @@
   },
   {
    "file": "base/dept-yemenicon.png",
-   "bytes": 5085,
-   "sha256": "a87dcffbe15d6f75c524fc5114bfbf007ab32c5c483cb52446bd84555e78b19e",
+   "bytes": 5080,
+   "sha256": "4b3e67eae7811cd8fe4fbd3a451e40cfb4cf208e5dcf4968fb6e53c8fafd2632",
    "origin": "project-generated",
    "candidate": "units/kit-dept/candidates/kit-v2/dept-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "a87dcffbe15d6f75c524fc5114bfbf007ab32c5c483cb52446bd84555e78b19e",
+     "bytes": 5085,
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-china.shp",
@@ -584,13 +1004,28 @@
   },
   {
    "file": "base/hpwr-chinaicon.png",
-   "bytes": 5509,
-   "sha256": "d5798f361231d41fe0173346b04a9665e4d4d1ecfb0300e98441ebeea592294e",
+   "bytes": 5514,
+   "sha256": "88340f204dc9b29e6d8669bd398fbfb45e0f59c89db839d970722e496abbdd63",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-chinaicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "d5798f361231d41fe0173346b04a9665e4d4d1ecfb0300e98441ebeea592294e",
+     "bytes": 5509,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-chinaicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-hezbollah.shp",
@@ -604,13 +1039,28 @@
   },
   {
    "file": "base/hpwr-hezbollahicon.png",
-   "bytes": 5457,
-   "sha256": "4afbd11ac448b30157bbe5593cebc0d4cbcf4b166a9aa37a5cf9e79fcd7a225c",
+   "bytes": 5464,
+   "sha256": "4ed212e01ea49929a07b12eb5658ce4c3af1c3803028eaffcd53304e49f83a7d",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-hezbollahicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "4afbd11ac448b30157bbe5593cebc0d4cbcf4b166a9aa37a5cf9e79fcd7a225c",
+     "bytes": 5457,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-hezbollahicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-iran.shp",
@@ -624,13 +1074,28 @@
   },
   {
    "file": "base/hpwr-iranicon.png",
-   "bytes": 5458,
-   "sha256": "49ae4d6542fa3aba92c37ac8ab12fb9228f3692f03d66df7c1c8b14ea736f945",
+   "bytes": 5457,
+   "sha256": "fdeea25476d407196cde5b61fecbf6960ee12220d430cbb6a51e4c82027e75ab",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-iranicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "49ae4d6542fa3aba92c37ac8ab12fb9228f3692f03d66df7c1c8b14ea736f945",
+     "bytes": 5458,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-iranicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-israel.shp",
@@ -644,13 +1109,28 @@
   },
   {
    "file": "base/hpwr-israelicon.png",
-   "bytes": 5488,
-   "sha256": "0001212d10bb255f9b9cc4b75141c2986fe75d569b60292ead1a6f723317c3b1",
+   "bytes": 5489,
+   "sha256": "7f800efbc7da4da86f7d71615078951f5cc717d0f52d28a814ffe80e7879d72c",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-israelicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "0001212d10bb255f9b9cc4b75141c2986fe75d569b60292ead1a6f723317c3b1",
+     "bytes": 5488,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-israelicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-saudi.shp",
@@ -664,13 +1144,28 @@
   },
   {
    "file": "base/hpwr-saudiicon.png",
-   "bytes": 5451,
-   "sha256": "554362cae51b84ad3bae1ec46742717d028baeea7e64aeeded94aabecc21334e",
+   "bytes": 5454,
+   "sha256": "56a701e14871e9d3a18929e6e3db942a834c1153da613b6593473f0695560d69",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-saudiicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "554362cae51b84ad3bae1ec46742717d028baeea7e64aeeded94aabecc21334e",
+     "bytes": 5451,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-saudiicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-turkey.shp",
@@ -684,13 +1179,28 @@
   },
   {
    "file": "base/hpwr-turkeyicon.png",
-   "bytes": 5514,
-   "sha256": "a45b7ea09ae700aefd179c4f845702b33ab068a79e455b23400dd021a053ea64",
+   "bytes": 5518,
+   "sha256": "08b83c884f5023f40fb71d331f935985d478c15dcdca24a59e1c7b147cf94817",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-turkeyicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "a45b7ea09ae700aefd179c4f845702b33ab068a79e455b23400dd021a053ea64",
+     "bytes": 5514,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-turkeyicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/hpwr-yemen.shp",
@@ -704,13 +1214,28 @@
   },
   {
    "file": "base/hpwr-yemenicon.png",
-   "bytes": 5474,
-   "sha256": "f710a5588661357a2727767570165257aceff6dbe7d26f242ddebf8e4fdbce5c",
+   "bytes": 5479,
+   "sha256": "0d80f463b43cecbb2f3d1bd477a0e6b6852fff5080504b200ae83969e7dffa71",
    "origin": "project-generated",
    "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-yemenicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f710a5588661357a2727767570165257aceff6dbe7d26f242ddebf8e4fdbce5c",
+     "bytes": 5474,
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-yemenicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/kit-sequences.yaml",
@@ -741,13 +1266,28 @@
   },
   {
    "file": "base/powr-chinaicon.png",
-   "bytes": 4891,
-   "sha256": "904bcbef7ba03a7cf96fb32ceac68878342073440074ce9b4c2c871001929173",
+   "bytes": 4902,
+   "sha256": "3fb54e5fed59df2b85f0b2385382510eaf5e14d23c33cc3845f293a1717cdd11",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "904bcbef7ba03a7cf96fb32ceac68878342073440074ce9b4c2c871001929173",
+     "bytes": 4891,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/powr-hezbollah.shp",
@@ -761,13 +1301,28 @@
   },
   {
    "file": "base/powr-hezbollahicon.png",
-   "bytes": 4854,
-   "sha256": "20bed9692b51bf5b55a9d48f7542beefb14f744dd57339e81ddcb487772f38e5",
+   "bytes": 4867,
+   "sha256": "6e8d812745f53e350512790ca94147fdff2a394c68bbaffc4846df720d58d898",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "20bed9692b51bf5b55a9d48f7542beefb14f744dd57339e81ddcb487772f38e5",
+     "bytes": 4854,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/powr-iran.shp",
@@ -781,13 +1336,28 @@
   },
   {
    "file": "base/powr-iranicon.png",
-   "bytes": 4887,
-   "sha256": "82dd90ffc263d0f92e5ea630b3c6428567efd7a44ebc983a691ab50c55a934a7",
+   "bytes": 4894,
+   "sha256": "2b4949d8e1b78f36747c3ad3a7cd87fb3ac1c77c0100a6092608ccd3df8462a5",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "82dd90ffc263d0f92e5ea630b3c6428567efd7a44ebc983a691ab50c55a934a7",
+     "bytes": 4887,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/powr-israel.shp",
@@ -801,13 +1371,28 @@
   },
   {
    "file": "base/powr-israelicon.png",
-   "bytes": 4897,
-   "sha256": "dcfec258525f1d4aa8c21e27abb9ef37ae199c7b6ef7f671dc9dc5f6639cf4e2",
+   "bytes": 4908,
+   "sha256": "17ec3fcb0c516d6b82320d400381c78f63b675ceecf848ef8e0868846f8886e3",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "dcfec258525f1d4aa8c21e27abb9ef37ae199c7b6ef7f671dc9dc5f6639cf4e2",
+     "bytes": 4897,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/powr-saudi.shp",
@@ -821,13 +1406,28 @@
   },
   {
    "file": "base/powr-saudiicon.png",
-   "bytes": 4845,
-   "sha256": "2fffcec9a15bd55d3a4fd65ac85f5fef9f63dcf051690739620c8cb8b76e0feb",
+   "bytes": 4850,
+   "sha256": "cfb49abf74b31269b2dc68878ef2768e492d54b942f72746edddc2c09513ea88",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "2fffcec9a15bd55d3a4fd65ac85f5fef9f63dcf051690739620c8cb8b76e0feb",
+     "bytes": 4845,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/powr-turkey.shp",
@@ -841,13 +1441,28 @@
   },
   {
    "file": "base/powr-turkeyicon.png",
-   "bytes": 4895,
-   "sha256": "91fde1aafac47e1af29743aeedf2b311fd42c2a3def30f79d86cf720c5a18de3",
+   "bytes": 4898,
+   "sha256": "b76f4c6a5872ea29f0aeee4248ce19c78b1528e5e8702701f6b8de2a2c6a3ecb",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "91fde1aafac47e1af29743aeedf2b311fd42c2a3def30f79d86cf720c5a18de3",
+     "bytes": 4895,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/powr-yemen.shp",
@@ -861,83 +1476,203 @@
   },
   {
    "file": "base/powr-yemenicon.png",
-   "bytes": 4869,
-   "sha256": "bdf098d98e037fe45d4acbfcb86b6d1e4276c65fd34e67dba180cff429665c76",
+   "bytes": 4880,
+   "sha256": "3f2fb9e17d8266f679c9ada96e9268df7a7f4c9f98bb072cd1f7f639a5eb6b4a",
    "origin": "project-generated",
    "candidate": "units/kit-powr/candidates/kit-v2/powr-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "bdf098d98e037fe45d4acbfcb86b6d1e4276c65fd34e67dba180cff429665c76",
+     "bytes": 4869,
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-chinaicon.png",
-   "bytes": 5028,
-   "sha256": "5b75a1b998fbed736d1d7b4499b0f132c0a2aa2a746fd2f4fbd2282c5f902dc4",
+   "bytes": 5033,
+   "sha256": "1cdc9b2ee3203d88cc9937e059b2c03979ddf9255c89e5b051d4e41ed662ce8a",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-chinaicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "5b75a1b998fbed736d1d7b4499b0f132c0a2aa2a746fd2f4fbd2282c5f902dc4",
+     "bytes": 5028,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-chinaicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-hezbollahicon.png",
-   "bytes": 5025,
-   "sha256": "200a93ca5cc8d5c44ecf371842a5bd60ae412e2dfe9cbdf4623133dfbf75fdab",
+   "bytes": 5036,
+   "sha256": "7290e3c529e39f4c316616e22bd8b8a394dc3ae7a184af6ff471c6f961c78f23",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-hezbollahicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "200a93ca5cc8d5c44ecf371842a5bd60ae412e2dfe9cbdf4623133dfbf75fdab",
+     "bytes": 5025,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-hezbollahicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-iranicon.png",
-   "bytes": 5073,
-   "sha256": "ba3a69bd90b7a5af54dd1535f99831792c5328f2467fd4806d0acb013649954b",
+   "bytes": 5083,
+   "sha256": "f6131aa398b0901bb8bf2457d23c3e9ba8e8a4a2a76992a669e52941a21a3af3",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-iranicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "ba3a69bd90b7a5af54dd1535f99831792c5328f2467fd4806d0acb013649954b",
+     "bytes": 5073,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-iranicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-israelicon.png",
-   "bytes": 4967,
-   "sha256": "dbcf7622fd2ea593693f09192ac4bb16db72f77527f6cf8927f3c9f173d1cb71",
+   "bytes": 4970,
+   "sha256": "70a26fbfb6f3d848b8a8577604bd61ffee397485205b686607b1907cede8d417",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-israelicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "dbcf7622fd2ea593693f09192ac4bb16db72f77527f6cf8927f3c9f173d1cb71",
+     "bytes": 4967,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-israelicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-saudiicon.png",
-   "bytes": 5021,
-   "sha256": "a9542f21d0e525bdd6e4c65a661a85d8d4aef311f83ddad6f9897c5b739540a2",
+   "bytes": 5033,
+   "sha256": "7c0a005e0f8b09d9c7a115b0436b5c881bb9ad1dd75f135ad8a135ab5a42962c",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-saudiicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "a9542f21d0e525bdd6e4c65a661a85d8d4aef311f83ddad6f9897c5b739540a2",
+     "bytes": 5021,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-saudiicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-turkeyicon.png",
-   "bytes": 4994,
-   "sha256": "1f29605a980780f237b0ddd73ae7436853bc123491d6fff4d42f99431fb237fa",
+   "bytes": 5002,
+   "sha256": "8623a31bbfd0a4154d71fa3ffb3445ed43584dc5df4f1408fc7363abe19b4274",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-turkeyicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "1f29605a980780f237b0ddd73ae7436853bc123491d6fff4d42f99431fb237fa",
+     "bytes": 4994,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-turkeyicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/purifier-yemenicon.png",
-   "bytes": 5073,
-   "sha256": "a74635a3b1c46b83aa68b130771d96407b6f070fa1c2b1b15ffcc0911b9fddc1",
+   "bytes": 5080,
+   "sha256": "b50437cb3e15b91253124e4f67b06df4cb4cfddc5aac01eaba8de7c440ace07c",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/purifier-yemenicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "a74635a3b1c46b83aa68b130771d96407b6f070fa1c2b1b15ffcc0911b9fddc1",
+     "bytes": 5073,
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-yemenicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-china.shp",
@@ -951,13 +1686,28 @@
   },
   {
    "file": "base/radr-chinaicon.png",
-   "bytes": 4669,
-   "sha256": "51710bdc2c160f7aa64366f6aa5dce2be86f23a196566ad069412a98732154c8",
+   "bytes": 4672,
+   "sha256": "96798b12beaa020848aa2d1e6bb78995423f9801af19578907932b909c1e5b60",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "51710bdc2c160f7aa64366f6aa5dce2be86f23a196566ad069412a98732154c8",
+     "bytes": 4669,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-hezbollah.shp",
@@ -971,13 +1721,28 @@
   },
   {
    "file": "base/radr-hezbollahicon.png",
-   "bytes": 4607,
-   "sha256": "4e4a04acfecc5704e1c0d333f735f6525addb827936efeaf5da1f3bb0a0a2d17",
+   "bytes": 4609,
+   "sha256": "9a143cc9ba32ef7a4a9e63ab40148815a76e94b1851b4841c48691a04a673319",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "4e4a04acfecc5704e1c0d333f735f6525addb827936efeaf5da1f3bb0a0a2d17",
+     "bytes": 4607,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-iran.shp",
@@ -991,13 +1756,28 @@
   },
   {
    "file": "base/radr-iranicon.png",
-   "bytes": 4606,
-   "sha256": "7f43c71f141a30a3dbf4b24a419ffead90c256915a93c754f5c8f3276fdeb6ee",
+   "bytes": 4609,
+   "sha256": "fe85a8cdfbed3a9cb672aaea0b8dc5954ed43c9a011623ec4e6b47d51d4dfb90",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "7f43c71f141a30a3dbf4b24a419ffead90c256915a93c754f5c8f3276fdeb6ee",
+     "bytes": 4606,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-israel.shp",
@@ -1011,13 +1791,28 @@
   },
   {
    "file": "base/radr-israelicon.png",
-   "bytes": 4619,
-   "sha256": "d1084fcf3ffe61d826b4c438dbe6a1018c7409f1c37fb99f769c486fc5eec936",
+   "bytes": 4624,
+   "sha256": "ef9402792224a4f11e66c3a1044853450d94f5a284020843b707e1499f1c92fd",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "d1084fcf3ffe61d826b4c438dbe6a1018c7409f1c37fb99f769c486fc5eec936",
+     "bytes": 4619,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-saudi.shp",
@@ -1031,13 +1826,28 @@
   },
   {
    "file": "base/radr-saudiicon.png",
-   "bytes": 4441,
-   "sha256": "13d224794b0705928b9d6559fc6eb84af20cb34692b305470f9dfad6af912527",
+   "bytes": 4450,
+   "sha256": "8e15ee5ae5f0c93d19ba7a250f8e491f83f31540ea88856f1ac9c7b1eaf51e5a",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "13d224794b0705928b9d6559fc6eb84af20cb34692b305470f9dfad6af912527",
+     "bytes": 4441,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-turkey.shp",
@@ -1051,13 +1861,28 @@
   },
   {
    "file": "base/radr-turkeyicon.png",
-   "bytes": 4583,
-   "sha256": "ab6c4ab86d2aa88d2ad0430f49dfabb35eef16c3219e2b4e7632a535bc7f9451",
+   "bytes": 4589,
+   "sha256": "352bdfb45498b15bd03b80649b89f671afed4f15c9e4c0682fd74b213d2657ca",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "ab6c4ab86d2aa88d2ad0430f49dfabb35eef16c3219e2b4e7632a535bc7f9451",
+     "bytes": 4583,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/radr-yemen.shp",
@@ -1071,13 +1896,28 @@
   },
   {
    "file": "base/radr-yemenicon.png",
-   "bytes": 4478,
-   "sha256": "71f31061ed71ae8b5088330e77ed1ad69f4cb4ed9a65ba6e9384dd1c5979da0b",
+   "bytes": 4479,
+   "sha256": "052dfb856c8067a89e18f25b1d42ef7980e61259c7d159e36a7ebd42f6e732f0",
    "origin": "project-generated",
    "candidate": "units/kit-radr/candidates/kit-v2/radr-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "71f31061ed71ae8b5088330e77ed1ad69f4cb4ed9a65ba6e9384dd1c5979da0b",
+     "bytes": 4478,
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-china.shp",
@@ -1091,13 +1931,28 @@
   },
   {
    "file": "base/refn-chinaicon.png",
-   "bytes": 5334,
-   "sha256": "4f96169ee6770ec49ccdba44d8c58e1970d906d1691d168b08419ff3d2a0f3e8",
+   "bytes": 5332,
+   "sha256": "106e5169e0178ab36ff654f794f71793e06fba30681253e1b8969adffbeb9a9c",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-chinaicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "4f96169ee6770ec49ccdba44d8c58e1970d906d1691d168b08419ff3d2a0f3e8",
+     "bytes": 5334,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-chinaicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-hezbollah.shp",
@@ -1111,13 +1966,28 @@
   },
   {
    "file": "base/refn-hezbollahicon.png",
-   "bytes": 5320,
-   "sha256": "49cb28196b38c9e0394b732c603033ea820ee862fde8105b4a382f5374623013",
+   "bytes": 5328,
+   "sha256": "d97664db889ed43ea4e025274b194f7be7fe80bb659087951c23189d8e92dba8",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-hezbollahicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "49cb28196b38c9e0394b732c603033ea820ee862fde8105b4a382f5374623013",
+     "bytes": 5320,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-hezbollahicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-iran.shp",
@@ -1131,13 +2001,28 @@
   },
   {
    "file": "base/refn-iranicon.png",
-   "bytes": 5279,
-   "sha256": "a1dd53e6d3306a9910a0d4f946ca2bb039f717ce60c0e641db885348f15176e7",
+   "bytes": 5290,
+   "sha256": "778e6da340e110aa599056210a54b7ae9498a8c467b736512145c8b3376f28d6",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-iranicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "a1dd53e6d3306a9910a0d4f946ca2bb039f717ce60c0e641db885348f15176e7",
+     "bytes": 5279,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-iranicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-israel.shp",
@@ -1151,13 +2036,28 @@
   },
   {
    "file": "base/refn-israelicon.png",
-   "bytes": 5211,
-   "sha256": "2a23e85086e6c8fb9f16a0fe8b7deae2b2a1d87e56dccb3e459ecbe0446aedb8",
+   "bytes": 5216,
+   "sha256": "85945f7028b8d1fa52a89b106092e56ef2240d112a97e1a43f7369a9cab58002",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-israelicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "2a23e85086e6c8fb9f16a0fe8b7deae2b2a1d87e56dccb3e459ecbe0446aedb8",
+     "bytes": 5211,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-israelicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-saudi.shp",
@@ -1171,13 +2071,28 @@
   },
   {
    "file": "base/refn-saudiicon.png",
-   "bytes": 5329,
-   "sha256": "917783e22bd11d61757f6e60ff9d1f957c0b522dbb79102d2fcf2812195ea797",
+   "bytes": 5334,
+   "sha256": "fd9d5e5975c84c8078ea7b49f7f9ab6583f597741772493865ac8625527f36f7",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-saudiicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "917783e22bd11d61757f6e60ff9d1f957c0b522dbb79102d2fcf2812195ea797",
+     "bytes": 5329,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-saudiicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-turkey.shp",
@@ -1191,13 +2106,28 @@
   },
   {
    "file": "base/refn-turkeyicon.png",
-   "bytes": 5248,
-   "sha256": "3de00a0740ae5aa33c2f4d6a4f46df176bdb4182c32334c9ac2b29d72341f825",
+   "bytes": 5250,
+   "sha256": "ccbd71c33cd6549565eb43d672ccee7876f987b5f1dea5addd00c098ac0cb3dd",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-turkeyicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "3de00a0740ae5aa33c2f4d6a4f46df176bdb4182c32334c9ac2b29d72341f825",
+     "bytes": 5248,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-turkeyicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/refn-yemen.shp",
@@ -1211,13 +2141,28 @@
   },
   {
    "file": "base/refn-yemenicon.png",
-   "bytes": 5326,
-   "sha256": "87d794830437f52278b2530fd4bfd8fd1d285190fe5b4b8df416f816c072127d",
+   "bytes": 5334,
+   "sha256": "5c193ce14dbda6718066808fd1373e5962fbe76806cd69d20ef850c3db6dd26c",
    "origin": "project-generated",
    "candidate": "units/kit-refn/candidates/kit-v2/refn-yemenicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "87d794830437f52278b2530fd4bfd8fd1d285190fe5b4b8df416f816c072127d",
+     "bytes": 5326,
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-yemenicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw1-china.shp",
@@ -1371,13 +2316,28 @@
   },
   {
    "file": "base/sw2-chinaicon.png",
-   "bytes": 5168,
-   "sha256": "47f6eca2baf58df92c7aa2d6e837bc6cf86d8701c77843b82d8413a1b7374491",
+   "bytes": 5160,
+   "sha256": "0697edbe793397a7e5f15438ebfbdc414ffca6a353a33f0b95af295d38b4fe15",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "47f6eca2baf58df92c7aa2d6e837bc6cf86d8701c77843b82d8413a1b7374491",
+     "bytes": 5168,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw2-hezbollah.shp",
@@ -1391,13 +2351,28 @@
   },
   {
    "file": "base/sw2-hezbollahicon.png",
-   "bytes": 5121,
-   "sha256": "98657d329e1fa178bda4eb58d2f2358e04cbe3e7c471e1210dc7ce758d5ac76e",
+   "bytes": 5115,
+   "sha256": "19a3bf9fc347a52606b0540956ba50d298b572ade68535967b57ae83972c5154",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "98657d329e1fa178bda4eb58d2f2358e04cbe3e7c471e1210dc7ce758d5ac76e",
+     "bytes": 5121,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw2-iran.shp",
@@ -1411,13 +2386,28 @@
   },
   {
    "file": "base/sw2-iranicon.png",
-   "bytes": 5192,
-   "sha256": "8e52d469ca5469b86f4feaf4ba96e2b7011b79e4e614ace99c038695154936d5",
+   "bytes": 5185,
+   "sha256": "61091fbff36e7e6368ccb79bdd75866c3741337c620ea9866514dc8c9fe8e29b",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "8e52d469ca5469b86f4feaf4ba96e2b7011b79e4e614ace99c038695154936d5",
+     "bytes": 5192,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw2-israel.shp",
@@ -1431,13 +2421,28 @@
   },
   {
    "file": "base/sw2-israelicon.png",
-   "bytes": 5087,
-   "sha256": "80bda5d55aefece58900137d387ece50ad92d00c37ed2c4fa2268ac0f240bda0",
+   "bytes": 5080,
+   "sha256": "94ec00ef5654576fe61a8e847dd8db928c181b33f8d15392f7086688d619852b",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "80bda5d55aefece58900137d387ece50ad92d00c37ed2c4fa2268ac0f240bda0",
+     "bytes": 5087,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw2-saudi.shp",
@@ -1451,13 +2456,28 @@
   },
   {
    "file": "base/sw2-saudiicon.png",
-   "bytes": 5131,
-   "sha256": "c85d51f7ee7bc4283c9267003761ac522e2c10eca3807285ca2b69f263b8d2cc",
+   "bytes": 5127,
+   "sha256": "d5719e4da2bc9698882fbf22b5290908ca64973443d377b8bf74b1e94df0bb4d",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c85d51f7ee7bc4283c9267003761ac522e2c10eca3807285ca2b69f263b8d2cc",
+     "bytes": 5131,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw2-turkey.shp",
@@ -1471,13 +2491,28 @@
   },
   {
    "file": "base/sw2-turkeyicon.png",
-   "bytes": 5103,
-   "sha256": "754895f81c0faae3e42a8e33b5fc0a74fc6475ea61e767b5d67652334d4c6ac8",
+   "bytes": 5099,
+   "sha256": "3e39dc2c2f07cc9b843c5753687d8ef89b7659c950998e6560677153ed9538ac",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "754895f81c0faae3e42a8e33b5fc0a74fc6475ea61e767b5d67652334d4c6ac8",
+     "bytes": 5103,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/sw2-yemen.shp",
@@ -1491,13 +2526,28 @@
   },
   {
    "file": "base/sw2-yemenicon.png",
-   "bytes": 5133,
-   "sha256": "4a2c29cf7157415df030b15088064ffaede9919c7b3325ed5c792560a18b0278",
+   "bytes": 5126,
+   "sha256": "5db5d7dbebd70b94c22cd77056ff8f8986e6b5a783fdae26bd7a51cc06170e8b",
    "origin": "project-generated",
    "candidate": "units/kit-sw2/candidates/kit-v2/sw2-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "4a2c29cf7157415df030b15088064ffaede9919c7b3325ed5c792560a18b0278",
+     "bytes": 5133,
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/tech-china.shp",
@@ -1791,13 +2841,28 @@
   },
   {
    "file": "base/weap-chinaicon.png",
-   "bytes": 5181,
-   "sha256": "7a97d7dd8f9be0a0fcc84499c98a2b3decb4edc7bad8dd665ea4b3a76c6f2283",
+   "bytes": 5183,
+   "sha256": "9a720b587ce40c4a2f7f50646f83edcf28c68dcdcca7b07f263d4d3918cad550",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-chinaicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "7a97d7dd8f9be0a0fcc84499c98a2b3decb4edc7bad8dd665ea4b3a76c6f2283",
+     "bytes": 5181,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-chinaicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/weap-hezbollah.shp",
@@ -1811,13 +2876,28 @@
   },
   {
    "file": "base/weap-hezbollahicon.png",
-   "bytes": 5308,
-   "sha256": "8d44788bd18f00c8e7920ca1e9f18a5c7f20a11b4da476c5da26d88521a4ef4f",
+   "bytes": 5323,
+   "sha256": "ed61ba9628ed21e5740f843e8a5432fc1390999b1c897d8afc707d48e2afeace",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-hezbollahicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "8d44788bd18f00c8e7920ca1e9f18a5c7f20a11b4da476c5da26d88521a4ef4f",
+     "bytes": 5308,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-hezbollahicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/weap-iran.shp",
@@ -1831,13 +2911,28 @@
   },
   {
    "file": "base/weap-iranicon.png",
-   "bytes": 5270,
-   "sha256": "c99120e80185591d0a06b5430b9bd4389a7d0c6cf12e778d5a484d9a5645aca2",
+   "bytes": 5288,
+   "sha256": "f2a2dbca2f904b12c18f36b099c8601d771aedb819d6aee39692d1c1c8815d8d",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-iranicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c99120e80185591d0a06b5430b9bd4389a7d0c6cf12e778d5a484d9a5645aca2",
+     "bytes": 5270,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-iranicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/weap-israel.shp",
@@ -1851,13 +2946,28 @@
   },
   {
    "file": "base/weap-israelicon.png",
-   "bytes": 5237,
-   "sha256": "5e8e419305fcc3f406afe5529aa747d53d4f9b0f860ff3137bdc1764e2621072",
+   "bytes": 5253,
+   "sha256": "e9d70563970f33a5b058287e07232c82e53782d3ed50b99af9d9534d6088be05",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-israelicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "5e8e419305fcc3f406afe5529aa747d53d4f9b0f860ff3137bdc1764e2621072",
+     "bytes": 5237,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-israelicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/weap-saudi.shp",
@@ -1871,13 +2981,28 @@
   },
   {
    "file": "base/weap-saudiicon.png",
-   "bytes": 5239,
-   "sha256": "59eb27316756f00ab996bb512e599c4e28bd6baf65a90d5dd90aa87aec271811",
+   "bytes": 5255,
+   "sha256": "37e9287d24e4667a7689c2872449260a4e4975abb64a566f5b7f0df8cdcc69bc",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-saudiicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "59eb27316756f00ab996bb512e599c4e28bd6baf65a90d5dd90aa87aec271811",
+     "bytes": 5239,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-saudiicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/weap-turkey.shp",
@@ -1891,13 +3016,28 @@
   },
   {
    "file": "base/weap-turkeyicon.png",
-   "bytes": 5203,
-   "sha256": "b679e72a644f0fd3f606fdedbdf16de6337d094baa136210d5fd2783f5faf42e",
+   "bytes": 5217,
+   "sha256": "34da1287704c13009d485d00b8c89dd303cb10e36a7062892e53528bc8055781",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-turkeyicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "b679e72a644f0fd3f606fdedbdf16de6337d094baa136210d5fd2783f5faf42e",
+     "bytes": 5203,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-turkeyicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/weap-yemen.shp",
@@ -1911,13 +3051,28 @@
   },
   {
    "file": "base/weap-yemenicon.png",
-   "bytes": 5216,
-   "sha256": "104da2654232b41f364dfeacc9a2f10f42b6cf6ff448ff629141aaf73a2250a8",
+   "bytes": 5230,
+   "sha256": "9deeeadb97f9fbbbf91ece2c656379188fe6307789048ad69e2ad13d9492e7d9",
    "origin": "project-generated",
    "candidate": "units/kit-weap/candidates/kit-v2/weap-yemenicon.png",
-   "rtsaiArtCommit": "860f6c56",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "104da2654232b41f364dfeacc9a2f10f42b6cf6ff448ff629141aaf73a2250a8",
+     "bytes": 5216,
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-yemenicon.png",
+     "rtsaiArtCommit": "860f6c56"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-china.shp",
@@ -1931,13 +3086,28 @@
   },
   {
    "file": "base/yard-chinaicon.png",
-   "bytes": 5323,
-   "sha256": "ce8a4452a5cfa73ae6fa18c4e6308a6489f854c446ed7bc0dd7a69fcd2416ab1",
+   "bytes": 5324,
+   "sha256": "06e443d1edc10450074ad8c337c02ee84291aee1f8fbb12166b91cc789d4c930",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-chinaicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "ce8a4452a5cfa73ae6fa18c4e6308a6489f854c446ed7bc0dd7a69fcd2416ab1",
+     "bytes": 5323,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-chinaicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-hezbollah.shp",
@@ -1952,12 +3122,27 @@
   {
    "file": "base/yard-hezbollahicon.png",
    "bytes": 5370,
-   "sha256": "7cb092e7984e7146c779ae436eda69992522170b7dba2cc73899624b8c4cc523",
+   "sha256": "c263c3fc9a465766db8666240709a0ca51d846710abd2f8211a83ea6c29f5450",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-hezbollahicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "7cb092e7984e7146c779ae436eda69992522170b7dba2cc73899624b8c4cc523",
+     "bytes": 5370,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-hezbollahicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-iran.shp",
@@ -1972,12 +3157,27 @@
   {
    "file": "base/yard-iranicon.png",
    "bytes": 5319,
-   "sha256": "3c32c974fdebb0851532cc5fd6f4b1462841babd96369ed844b37bc9662a63f8",
+   "sha256": "b225221175da336d25183633e5a64ec39e450f6059fab2918650ba008482264f",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-iranicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "3c32c974fdebb0851532cc5fd6f4b1462841babd96369ed844b37bc9662a63f8",
+     "bytes": 5319,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-iranicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-israel.shp",
@@ -1991,13 +3191,28 @@
   },
   {
    "file": "base/yard-israelicon.png",
-   "bytes": 5359,
-   "sha256": "a668eeaa839681c0bd9cccb04a8cf3d834be07677c4d28757fe4a30bc62c79c8",
+   "bytes": 5355,
+   "sha256": "22491e1b504bf352d7a07d1d0cfadcfc39b2476701988d39c3ef92aa62e4cd07",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-israelicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "a668eeaa839681c0bd9cccb04a8cf3d834be07677c4d28757fe4a30bc62c79c8",
+     "bytes": 5359,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-israelicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-saudi.shp",
@@ -2011,13 +3226,28 @@
   },
   {
    "file": "base/yard-saudiicon.png",
-   "bytes": 5194,
-   "sha256": "7d4c45f23cef04e9c56c733e984a56660cd5ee769c952a843ac43ef1f2ec576c",
+   "bytes": 5197,
+   "sha256": "0e53400043e6f45c05e4278812881ca918ecf767b9b6b946eae6029bfefa375a",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-saudiicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "7d4c45f23cef04e9c56c733e984a56660cd5ee769c952a843ac43ef1f2ec576c",
+     "bytes": 5194,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-saudiicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-turkey.shp",
@@ -2031,13 +3261,28 @@
   },
   {
    "file": "base/yard-turkeyicon.png",
-   "bytes": 5326,
-   "sha256": "81fcf72c0a12280871fffe921fd92c751ff854a01ad20e1d3334d1797c361be6",
+   "bytes": 5320,
+   "sha256": "1429a5376023b3482cd1a8a8f5c4fa9cf25a89d4a27adec16830e636a131e879",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-turkeyicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "81fcf72c0a12280871fffe921fd92c751ff854a01ad20e1d3334d1797c361be6",
+     "bytes": 5326,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-turkeyicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "base/yard-yemen.shp",
@@ -2051,13 +3296,28 @@
   },
   {
    "file": "base/yard-yemenicon.png",
-   "bytes": 5256,
-   "sha256": "acfb5db9a739f866bbb4865f30dc2a45555d58e1f7bad7e380f181d95a61173d",
+   "bytes": 5252,
+   "sha256": "dd752d39ec67dd97962478927890d2b7b53ab1ffc68459ecaee94f3c378da12d",
    "origin": "project-generated",
    "candidate": "units/kit-yard/candidates/kit-v2/yard-yemenicon.png",
-   "rtsaiArtCommit": "7e1e206e",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "acfb5db9a739f866bbb4865f30dc2a45555d58e1f7bad7e380f181d95a61173d",
+     "bytes": 5256,
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-yemenicon.png",
+     "rtsaiArtCommit": "7e1e206e"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/dog-china.shp",
@@ -2211,13 +3471,28 @@
   },
   {
    "file": "units/engineer-chinaicon.png",
-   "bytes": 4522,
-   "sha256": "e432082655a55bfcee5c379e259936835a44f3d7e95af5f55e32e000e216bf40",
+   "bytes": 4520,
+   "sha256": "c7b7b3c385e29f17ccc4a840568faaebfa238c0e0fb6a2cfe71c3b6699f32f5d",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-chinaicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "e432082655a55bfcee5c379e259936835a44f3d7e95af5f55e32e000e216bf40",
+     "bytes": 4522,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-chinaicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/engineer-hezbollah.shp",
@@ -2231,13 +3506,28 @@
   },
   {
    "file": "units/engineer-hezbollahicon.png",
-   "bytes": 4472,
-   "sha256": "6ebc542166b1d90b521d69700bad2a3a7b73b57b31ae4cc1279d73a8c75537b0",
+   "bytes": 4475,
+   "sha256": "aa9c31ba840472019a009624e74cc0b9df4f07d36c594c1628fb30be40f0a764",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-hezbollahicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "6ebc542166b1d90b521d69700bad2a3a7b73b57b31ae4cc1279d73a8c75537b0",
+     "bytes": 4472,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-hezbollahicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/engineer-iran.shp",
@@ -2251,13 +3541,28 @@
   },
   {
    "file": "units/engineer-iranicon.png",
-   "bytes": 4456,
-   "sha256": "d7946d9ff3c94a1d5781ae0ccf42c8b5e3387a04b98414b64eba00494d579f66",
+   "bytes": 4459,
+   "sha256": "64aea6ca5b193b24f62f9782fa9aa055a694b366d50a4db6ea56f1d00e8c8717",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-iranicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "d7946d9ff3c94a1d5781ae0ccf42c8b5e3387a04b98414b64eba00494d579f66",
+     "bytes": 4456,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-iranicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/engineer-israel.shp",
@@ -2271,13 +3576,28 @@
   },
   {
    "file": "units/engineer-israelicon.png",
-   "bytes": 4436,
-   "sha256": "5166bf84c9ce0c623bf9d7f03fa78ca2adbb34aa5d29608df797e3db5f8198ad",
+   "bytes": 4440,
+   "sha256": "7b9dcc695066b446931604906e8c254d3c1414d97b505c2bdd38940a11739824",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-israelicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "5166bf84c9ce0c623bf9d7f03fa78ca2adbb34aa5d29608df797e3db5f8198ad",
+     "bytes": 4436,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-israelicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/engineer-saudi.shp",
@@ -2291,13 +3611,28 @@
   },
   {
    "file": "units/engineer-saudiicon.png",
-   "bytes": 4398,
-   "sha256": "dd2993c36cc4b95611c24fdc5c9428d83c5c0dd588163575da4d76d1cea1aacc",
+   "bytes": 4405,
+   "sha256": "ccae89c389914d8bf795a452e5a28ec310e0fa1ad9278af941482c78be2191a7",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-saudiicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "dd2993c36cc4b95611c24fdc5c9428d83c5c0dd588163575da4d76d1cea1aacc",
+     "bytes": 4398,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-saudiicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/engineer-turkey.shp",
@@ -2311,13 +3646,28 @@
   },
   {
    "file": "units/engineer-turkeyicon.png",
-   "bytes": 4353,
-   "sha256": "ddc8495fdb293b178d280ff32265c3ac64e3323efa9a043e171ea08cb4a60364",
+   "bytes": 4355,
+   "sha256": "8f93f9d516a6802efe38be338a2b05daac7c710b1ba3364bac727c81168fd8ef",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-turkeyicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "ddc8495fdb293b178d280ff32265c3ac64e3323efa9a043e171ea08cb4a60364",
+     "bytes": 4353,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-turkeyicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/engineer-yemen.shp",
@@ -2331,13 +3681,28 @@
   },
   {
    "file": "units/engineer-yemenicon.png",
-   "bytes": 4430,
-   "sha256": "45d02b695e4653207bf270546afe6cbdc518f07901cb44654d9237cf19355249",
+   "bytes": 4435,
+   "sha256": "5cbad324aceaad7c5d8d1eae1bdee659f689e024e1c551980382ecd2ca1412f1",
    "origin": "project-generated",
    "candidate": "units/kit-engineer/candidates/kit-v2/engineer-yemenicon.png",
-   "rtsaiArtCommit": "10c8e45b",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "45d02b695e4653207bf270546afe6cbdc518f07901cb44654d9237cf19355249",
+     "bytes": 4430,
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-yemenicon.png",
+     "rtsaiArtCommit": "10c8e45b"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-china.shp",
@@ -2351,13 +3716,28 @@
   },
   {
    "file": "units/harv-chinaicon.png",
-   "bytes": 5240,
-   "sha256": "4fdb5960570af26bf5a50438e4f498d14bc8127923a45fc334f41d7566eb6a8d",
+   "bytes": 5236,
+   "sha256": "fae447950120e6c4e6dbc4763c9c12da76c2383f795b1a5b58b01dd90a38439b",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-chinaicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "4fdb5960570af26bf5a50438e4f498d14bc8127923a45fc334f41d7566eb6a8d",
+     "bytes": 5240,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-chinaicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-hezbollah.shp",
@@ -2371,13 +3751,28 @@
   },
   {
    "file": "units/harv-hezbollahicon.png",
-   "bytes": 5332,
-   "sha256": "d7fca7020972089bb88ca2b7c6538a6ada9873d34f62a700aa3d14f5e2a252f5",
+   "bytes": 5333,
+   "sha256": "68fc48e2e4b138c40ec2e9a88b387fca723a7974450de8e8bf68716f4df67cfb",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-hezbollahicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "d7fca7020972089bb88ca2b7c6538a6ada9873d34f62a700aa3d14f5e2a252f5",
+     "bytes": 5332,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-hezbollahicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-iran.shp",
@@ -2392,12 +3787,27 @@
   {
    "file": "units/harv-iranicon.png",
    "bytes": 5289,
-   "sha256": "507ce11426e7af352f51da4f045382249f211f6b4edc94a6c26e1711420a3ad0",
+   "sha256": "6cadd170f4aac1fcc186e2f8c4c95f4b4b12e67e19e5c7e5c8e103b70395aefe",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-iranicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "507ce11426e7af352f51da4f045382249f211f6b4edc94a6c26e1711420a3ad0",
+     "bytes": 5289,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-iranicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-israel.shp",
@@ -2411,13 +3821,28 @@
   },
   {
    "file": "units/harv-israelicon.png",
-   "bytes": 5293,
-   "sha256": "f21a5e3fb53d256c2e68e70953c211f0fba6ae7e228a1a215856ad29efd336e0",
+   "bytes": 5285,
+   "sha256": "a55428903ccec962f685e4490af3c8334e5654bbbde3eeba53e2614d367b9cee",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-israelicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f21a5e3fb53d256c2e68e70953c211f0fba6ae7e228a1a215856ad29efd336e0",
+     "bytes": 5293,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-israelicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-saudi.shp",
@@ -2431,13 +3856,28 @@
   },
   {
    "file": "units/harv-saudiicon.png",
-   "bytes": 5327,
-   "sha256": "19c783f714805d5c88d0d985bb99040fa997db0cce2f785107f80a46c30ecbbb",
+   "bytes": 5324,
+   "sha256": "615a1ca67fa6d41140d690b0d0a418247892aed5ef128f5c88b684be00546eeb",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-saudiicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "19c783f714805d5c88d0d985bb99040fa997db0cce2f785107f80a46c30ecbbb",
+     "bytes": 5327,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-saudiicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-turkey.shp",
@@ -2451,13 +3891,28 @@
   },
   {
    "file": "units/harv-turkeyicon.png",
-   "bytes": 5267,
-   "sha256": "c1ea30d24acd58f97d7cfdec8342d27e91d4b6d1782253acdefd0f42c6d7241b",
+   "bytes": 5270,
+   "sha256": "ebb5cbd94f524641db316b8f288e847ba5ed4f06d3e7c29b0f25aacbe36ec119",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-turkeyicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c1ea30d24acd58f97d7cfdec8342d27e91d4b6d1782253acdefd0f42c6d7241b",
+     "bytes": 5267,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-turkeyicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/harv-yemen.shp",
@@ -2471,13 +3926,28 @@
   },
   {
    "file": "units/harv-yemenicon.png",
-   "bytes": 5352,
-   "sha256": "9c3a7733fed7ee0b734149e32de98d8cabcd7bb4c2999e2e010cfeb9cd352414",
+   "bytes": 5353,
+   "sha256": "aaa17c46efdbc1aaad078a61bd25b284888a3dcc68dbb2cc6bcbbbe6f60bcfec",
    "origin": "project-generated",
    "candidate": "units/kit-harv/candidates/kit-v2/harv-yemenicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "9c3a7733fed7ee0b734149e32de98d8cabcd7bb4c2999e2e010cfeb9cd352414",
+     "bytes": 5352,
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-yemenicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-china.shp",
@@ -2491,13 +3961,28 @@
   },
   {
    "file": "units/htk-chinaicon.png",
-   "bytes": 4794,
-   "sha256": "ee14a76cdb47f37326fd8f261b2060db7b6de024a9d1c75210329f79dc1ad846",
+   "bytes": 4790,
+   "sha256": "fa31599e68963899e03c9ffd4941f1f4aacf95479c7ce7fe7930427c9ffe3e17",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-chinaicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "ee14a76cdb47f37326fd8f261b2060db7b6de024a9d1c75210329f79dc1ad846",
+     "bytes": 4794,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-chinaicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-hezbollah.shp",
@@ -2512,12 +3997,27 @@
   {
    "file": "units/htk-hezbollahicon.png",
    "bytes": 4816,
-   "sha256": "f46cc9e6934027fa7bd73a9e33a7b3b3f4e0a08f97a64a3cb761215b44e21659",
+   "sha256": "b092a915e3cf2e83e72630ccf6a4cf99dbb937e6f3db8adee8e847db30896669",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-hezbollahicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f46cc9e6934027fa7bd73a9e33a7b3b3f4e0a08f97a64a3cb761215b44e21659",
+     "bytes": 4816,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-hezbollahicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-iran.shp",
@@ -2531,13 +4031,28 @@
   },
   {
    "file": "units/htk-iranicon.png",
-   "bytes": 4886,
-   "sha256": "1f4c2ebd212930b171629eeb20cf310aaabc0719aa400820c7b4f21652ec776b",
+   "bytes": 4883,
+   "sha256": "885d473baced7a6ad631d4c9c94bcc64398113b503e4360ac16a065721244b46",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-iranicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "1f4c2ebd212930b171629eeb20cf310aaabc0719aa400820c7b4f21652ec776b",
+     "bytes": 4886,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-iranicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-israel.shp",
@@ -2551,13 +4066,28 @@
   },
   {
    "file": "units/htk-israelicon.png",
-   "bytes": 4877,
-   "sha256": "6ba57b173128e944bdb704381bf8b816700b4e380e2d4590925a7bd1e71aa7f9",
+   "bytes": 4879,
+   "sha256": "05eed4fc3d5d02288fecfb6ee453dcd12fdf36c86ff6f0a6e0e364e0e8fd0960",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-israelicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "6ba57b173128e944bdb704381bf8b816700b4e380e2d4590925a7bd1e71aa7f9",
+     "bytes": 4877,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-israelicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-saudi.shp",
@@ -2571,13 +4101,28 @@
   },
   {
    "file": "units/htk-saudiicon.png",
-   "bytes": 4814,
-   "sha256": "2c5c5722ead009db9912cb65e1aef9636a2b0197a65d1499cfd755850d13964f",
+   "bytes": 4812,
+   "sha256": "8246db90351967aa551009ded672ad1e1defae66e2476dd0ccc4cb060d18dc61",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-saudiicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "2c5c5722ead009db9912cb65e1aef9636a2b0197a65d1499cfd755850d13964f",
+     "bytes": 4814,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-saudiicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-turkey.shp",
@@ -2591,13 +4136,28 @@
   },
   {
    "file": "units/htk-turkeyicon.png",
-   "bytes": 4930,
-   "sha256": "3f4ad35b0ab9e7ba4ae66a97a127523e804e0e5878ba19c00b04d7fc1ba1fd1b",
+   "bytes": 4926,
+   "sha256": "7cdb37d509a6063438b3ec9ff95f719e124c8faa6de35af5c05cb09a9dc41594",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-turkeyicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "3f4ad35b0ab9e7ba4ae66a97a127523e804e0e5878ba19c00b04d7fc1ba1fd1b",
+     "bytes": 4930,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-turkeyicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/htk-yemen.shp",
@@ -2611,13 +4171,28 @@
   },
   {
    "file": "units/htk-yemenicon.png",
-   "bytes": 4893,
-   "sha256": "839ee8129fa0cd3afd542ff5898620c5a100dd5c96f980e079aa876f5d8063fa",
+   "bytes": 4888,
+   "sha256": "b4ba66261c1294b1fc6b0659abf1f0cbec017a812e958ff85af65c6137f2f9dc",
    "origin": "project-generated",
    "candidate": "units/kit-htk/candidates/kit-v2/htk-yemenicon.png",
-   "rtsaiArtCommit": "59ea031d",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
-   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
+   "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "839ee8129fa0cd3afd542ff5898620c5a100dd5c96f980e079aa876f5d8063fa",
+     "bytes": 4893,
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-yemenicon.png",
+     "rtsaiArtCommit": "59ea031d"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/lcrf-china.shp",
@@ -3051,13 +4626,28 @@
   },
   {
    "file": "units/spy-chinaicon.png",
-   "bytes": 4721,
-   "sha256": "f8dd1d23806c7a8ab78098c80de80cb98e9f56cd3d08e0305678deb5273474bf",
+   "bytes": 4711,
+   "sha256": "d70ea5d0da915ddb007a8aed9acea48780d0c9359ee0e9a74bfd61ce4d9a7033",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-chinaicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f8dd1d23806c7a8ab78098c80de80cb98e9f56cd3d08e0305678deb5273474bf",
+     "bytes": 4721,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-chinaicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/spy-hezbollah.shp",
@@ -3071,13 +4661,28 @@
   },
   {
    "file": "units/spy-hezbollahicon.png",
-   "bytes": 4743,
-   "sha256": "6c7d9218670ed5ba0abd531586dbe37f4d431f6539a302fe03eb38c73d4ba49f",
+   "bytes": 4736,
+   "sha256": "bd7f5c13ab3315884dd7f18199d35f61833660755fbaa747876a91b789951f7e",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-hezbollahicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "6c7d9218670ed5ba0abd531586dbe37f4d431f6539a302fe03eb38c73d4ba49f",
+     "bytes": 4743,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-hezbollahicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/spy-iran.shp",
@@ -3091,13 +4696,28 @@
   },
   {
    "file": "units/spy-iranicon.png",
-   "bytes": 4729,
-   "sha256": "c476d4d2e9949c21211560b4108bdae498532fda838ba50e55cb745626598bb8",
+   "bytes": 4722,
+   "sha256": "13f949c1224bcaa8e6ef80c904df253880d2a7ab7fc9b976c8f4fc765fa24749",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-iranicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "c476d4d2e9949c21211560b4108bdae498532fda838ba50e55cb745626598bb8",
+     "bytes": 4729,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-iranicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/spy-israel.shp",
@@ -3111,13 +4731,28 @@
   },
   {
    "file": "units/spy-israelicon.png",
-   "bytes": 4653,
-   "sha256": "f61fecdb574454e36b6e008538493d8bacf6bfd1b7b1691bc6b3f9b206b95a04",
+   "bytes": 4644,
+   "sha256": "f81a84b890f917c3a2371397a17b73e976fe7ce56bbf42442fb9cf35fb5beaea",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-israelicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "f61fecdb574454e36b6e008538493d8bacf6bfd1b7b1691bc6b3f9b206b95a04",
+     "bytes": 4653,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-israelicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/spy-saudi.shp",
@@ -3131,13 +4766,28 @@
   },
   {
    "file": "units/spy-saudiicon.png",
-   "bytes": 4695,
-   "sha256": "eb48a68e807ea958131d46f060cea54533c6b9dc2226623698d52f6f031dda97",
+   "bytes": 4694,
+   "sha256": "a8e543ff5f0daac4b3f70dde9cea3443f9192a9ea1e70f6caa2b1c812cb70ff5",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-saudiicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "eb48a68e807ea958131d46f060cea54533c6b9dc2226623698d52f6f031dda97",
+     "bytes": 4695,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-saudiicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/spy-turkey.shp",
@@ -3151,13 +4801,28 @@
   },
   {
    "file": "units/spy-turkeyicon.png",
-   "bytes": 4729,
-   "sha256": "8d5ec15a4a9f001339cca1a0a08f013aa6090a1a1e1b5db4bebcf861dd79f3c8",
+   "bytes": 4721,
+   "sha256": "cc4b4039853a8b4c3f860787bbcae592305ed33495bd4dc3f4379aca40617369",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-turkeyicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "8d5ec15a4a9f001339cca1a0a08f013aa6090a1a1e1b5db4bebcf861dd79f3c8",
+     "bytes": 4729,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-turkeyicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/spy-yemen.shp",
@@ -3171,13 +4836,28 @@
   },
   {
    "file": "units/spy-yemenicon.png",
-   "bytes": 4715,
-   "sha256": "3817ae7509e02b4e374d33943c289ad4401cd1bd9fb1bbce4bd9f499444ac828",
+   "bytes": 4710,
+   "sha256": "9cb22474058686a66e5cb1d5fd296665bdc1990dfe71e664c77875dca936c2a1",
    "origin": "project-generated",
    "candidate": "units/kit-spy/candidates/kit-v2/spy-yemenicon.png",
-   "rtsaiArtCommit": "b6b62a9a",
+   "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
-   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
+   "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
+   "previousSources": [
+    {
+     "sha256": "3817ae7509e02b4e374d33943c289ad4401cd1bd9fb1bbce4bd9f499444ac828",
+     "bytes": 4715,
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-yemenicon.png",
+     "rtsaiArtCommit": "b6b62a9a"
+    }
+   ],
+   "nameBarOverride": {
+    "glyph": "R",
+    "method": "Project-drawn 5x7 diagonal leg, Kenney spacing unchanged",
+    "generator": "tools/relabel_cameos.py and tools/cameo_render.py",
+    "license": "GPL-3.0-or-later (project code)",
+    "artCommit": "ddba372f2591d152b93f972078a0b5909df90060"
+   }
   },
   {
    "file": "units/units-sequences.yaml",
