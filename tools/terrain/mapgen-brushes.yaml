@@ -940,4 +940,103 @@ MultiBrushCollections:
 	Obstructions:
 		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08
 	CivilianBuildings:
-		FromActors: cahse01,cahse02,cahse03,cahse04,cahse05,cahse06,cahse07,cabarn02
+		MultiBrush@VillageCourtyard:
+			Weight: 3
+			Actor@0: cahse01
+				Offset: 0, 0, 0
+			Actor@1: cafarm02
+				Offset: 1448, 2896, 0
+			Actor@2: civ2
+				Offset: -724, 2172, 0
+			Actor@3: civ1
+				Offset: 724, 3620, 0
+		MultiBrush@VillageTallHouse:
+			Weight: 3
+			Actor@0: cahse07
+				Offset: 0, 0, 0
+			Actor@1: cahse06
+				Offset: 1448, 1448, 0
+			Actor@2: civ3
+				Offset: 0, 2896, 0
+			Actor@3: civsf
+				Offset: -2172, 2172, 0
+		MultiBrush@VillageFamilyHouse:
+			Weight: 2
+			Actor@0: cahse03
+				Offset: 0, 0, 0
+			Actor@1: civa
+				Offset: 0, 4344, 0
+			Actor@2: civbf
+				Offset: -2172, 3620, 0
+		MultiBrush@VillageMarket:
+			Weight: 3
+			Actor@0: camsc07
+				Offset: 0, 0, 0
+			Actor@1: cahse06
+				Offset: 1448, 1448, 0
+			Actor@2: civb
+				Offset: -1448, 1448, 0
+			Actor@3: civbf
+				Offset: -724, 2172, 0
+			Actor@4: civ1
+				Offset: 1448, 2896, 0
+		MultiBrush@VillageGarden:
+			Weight: 2
+			Actor@0: cafarm01
+				Offset: 0, 0, 0
+			Actor@1: civbtm
+				Offset: 724, 2172, 0
+		MultiBrush@VillageWaterTower:
+			Weight: 2
+			Actor@0: cawt01
+				Offset: 0, 0, 0
+			Actor@1: cafarm02
+				Offset: 0, 1448, 0
+			Actor@2: civstm
+				Offset: -724, 724, 0
+		MultiBrush@VillageWalledHouse:
+			Weight: 2
+			Actor@0: cafncw
+				Offset: 0, 0, 0
+			Actor@1: cafncw
+				Offset: 724, 724, 0
+			Actor@2: cafncw
+				Offset: 1448, 1448, 0
+			Actor@3: cafncw
+				Offset: 724, 2172, 0
+			Actor@4: cahse06
+				Offset: -724, 724, 0
+			Actor@5: civc
+				Offset: -1448, 1448, 0
+		MultiBrush@VillageLane:
+			Weight: 2
+			Actor@0: cahse01
+				Offset: 0, 0, 0
+			Actor@1: cahse06
+				Offset: -2172, 2172, 0
+			Actor@2: civbbp
+				Offset: -724, 2172, 0
+			Actor@3: civsfm
+				Offset: -1448, 4344, 0
+		MultiBrush@VillageFishers:
+			Weight: 1
+			Actor@0: cahse06
+				Offset: 0, 0, 0
+			Actor@1: cahse06
+				Offset: -1448, 1448, 0
+			Actor@2: civbfm
+				Offset: 724, 2172, 0
+			Actor@3: civ3
+				Offset: 0, 1448, 0
+		MultiBrush@VillageShop:
+			Weight: 1
+			Actor@0: camsc07
+				Offset: 0, 0, 0
+			Actor@1: civc
+				Offset: 724, 2172, 0
+		MultiBrush@VillageElders:
+			Weight: 1
+			Actor@0: cahse07
+				Offset: 0, 0, 0
+			Actor@1: civa
+				Offset: 0, 2896, 0

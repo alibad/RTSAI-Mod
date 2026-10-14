@@ -1,7 +1,11 @@
 # The engine's isometric map generator (TSMapGenerator) for the RTS AI temperate tileset. Cliffs, beaches, water
 # cliffs and water use Tiberian Sun's brushes and risers mapped onto our templates (tools/port-mapgen-brushes.py; our
 # RA2-compatible template table has TS's shapes in TS's order). Forests use the project trees (tree01-tree28,
-# tools/standalone-terrain.py --trees). No villages: civilian houses are still placeholders in the standalone art.
+# tools/standalone-terrain.py --trees). Villages: the generator's civilian-building pass fills clumps of open land away
+# from the spawns, the ore and the main passages with the tileset's CivilianBuildings brushes, small groups of village
+# houses, shops, wells, gardens and walls with their people (tools/port-mapgen-brushes.py VILLAGE_BRUSHES; art from
+# RTSAI-Art tools/village.py and tools/civilians.py). Landscapes set how many: CivilianBuildings, in thousandths of
+# the open land that may hold them.
 # Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
@@ -61,7 +65,7 @@
 						MaximumExpansionSize: 12
 						ExpansionInner: 2
 						ExpansionBorder: 1
-						CivilianBuildings: 0
+						CivilianBuildings: 60
 						CivilianBuildingDensity: 500
 						MinimumCivilianBuildingDensity: 90
 						CivilianBuildingDensityRadius: 3

@@ -39,9 +39,43 @@ OWN_COLLECTIONS = """	Trees:
 		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08,tree09,tree10,tree11,tree12,tree13,tree14,tree15,tree16,tree17,tree18,tree19,tree20,tree21,tree22,tree23,tree24,tree25,tree26,tree27,tree28
 	Obstructions:
 		FromActors: tree01,tree02,tree03,tree04,tree05,tree06,tree07,tree08
-	CivilianBuildings:
-		FromActors: cahse01,cahse02,cahse03,cahse04,cahse05,cahse06,cahse07,cabarn02
 """
+
+# Villages (rules/map-generators.yaml CivilianBuildings): the generator marks clumps of open, zoneable land away from
+# the spawns, ore and the main passages, and fills them with these brushes, the largest first. Each brush is a small
+# group of the village buildings (RTSAI-Art tools/village.py) with the people who live there (civ* actors,
+# tools/civilians.py), laid out on the cell grid: (actor, x, y) is the actor's top-left footprint cell. A house's door
+# faces +y (screen lower left), so yards and people stand on that side. No brush is a single cell: the generator would
+# fill every leftover marked cell with 1x1 brushes, and the gaps are the village lanes.
+VILLAGE_BRUSHES = [
+    # (name, weight, [(actor, x, y), ...])
+    ("Courtyard", 3, [("cahse01", 0, 0), ("cafarm02", 3, 1), ("civ2", 1, 2), ("civ1", 3, 2)]),
+    ("TallHouse", 3, [("cahse07", 0, 0), ("cahse06", 2, 0), ("civ3", 2, 2), ("civsf", 0, 3)]),
+    ("FamilyHouse", 2, [("cahse03", 0, 0), ("civa", 3, 3), ("civbf", 1, 4)]),
+    ("Market", 3, [("camsc07", 0, 0), ("cahse06", 2, 0), ("civb", 0, 2), ("civbf", 1, 2), ("civ1", 3, 1)]),
+    ("Garden", 2, [("cafarm01", 0, 0), ("civbtm", 2, 1)]),
+    ("WaterTower", 2, [("cawt01", 0, 0), ("cafarm02", 1, 1), ("civstm", 0, 1)]),
+    ("WalledHouse", 2, [("cafncw", 0, 0), ("cafncw", 1, 0), ("cafncw", 2, 0), ("cafncw", 2, 1), ("cahse06", 0, 1),
+                        ("civc", 0, 2)]),
+    ("Lane", 2, [("cahse01", 0, 0), ("cahse06", 0, 3), ("civbbp", 1, 2), ("civsfm", 2, 4)]),
+    ("Fishers", 1, [("cahse06", 0, 0), ("cahse06", 0, 2), ("civbfm", 2, 1), ("civ3", 1, 1)]),
+    ("Shop", 1, [("camsc07", 0, 0), ("civc", 2, 1)]),
+    ("Elders", 1, [("cahse07", 0, 0), ("civa", 2, 2)]),
+]
+
+
+def village_brushes():
+    """The CivilianBuildings collection: one MultiBrush per village group. Isometric cell (x, y) is the world offset
+    (724 * (x - y), 724 * (x + y)) (CellLayerUtils.CPosToWPos for RectangularIsometric)."""
+    out = ["\tCivilianBuildings:\n"]
+    for name, weight, actors in VILLAGE_BRUSHES:
+        out.append(f"\t\tMultiBrush@Village{name}:\n\t\t\tWeight: {weight}\n")
+        for k, (actor, x, y) in enumerate(actors):
+            out.append(f"\t\t\tActor@{k}: {actor}\n\t\t\t\tOffset: {724 * (x - y)}, {724 * (x + y)}, 0\n")
+    return "".join(out)
+
+
+OWN_COLLECTIONS += village_brushes()
 
 
 def templates(text):
