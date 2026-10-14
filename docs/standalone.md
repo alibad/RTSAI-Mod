@@ -212,9 +212,19 @@ commandos come late.
   | Battle Lab | Tech Center |
   | War Factory | Vehicle Factory |
   | Allied Wall, Soviet Wall | Wall |
+  | Grizzly Battle Tank | Battle Tank |
+  | Rhino Heavy Tank | Heavy Tank |
+  | Apocalypse Tank | Heavy Assault Tank |
+  | Aegis Cruiser | Air Defense Cruiser |
+  | Typhoon Attack Sub | Attack Submarine |
+  | Kirov Airship | Heavy Airship |
+  | Allies, Soviets (random sides) | Coalition, Union |
 
   The service depot's mention of Terror Drones is gone, the refinery upgrade is the Refinery Purifier, and unit
   descriptions follow the new building names.
+- Whole stock names are mapped before their coined words: a stock name carries its own class word, so swapping only
+  "Grizzly" showed "Medium Tank Battle Tank". The generator stops on a name that uses a word twice or any text with a
+  word right after itself, so a new stock name that would read that way has to be mapped whole.
 - `--check-standalone` fails on any such name, or any other stock unit, building or faction name, in the text of
   anything the factions can field. `--list-names` prints every name a player can see. `make test` also fails when
   `names.ftl` is stale.

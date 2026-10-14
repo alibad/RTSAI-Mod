@@ -2,12 +2,15 @@
 # messages that use a Red Alert 2 coined name (the classic add-on keeps them). Do not edit by hand.
 
 ## from languages/rules/en.ftl
+faction-random-allies-name = Coalition
+
+## from languages/rules/en.ftl
 faction-random-allies-description =
     Random Coalition Country
     A random Coalition country will be chosen when the game starts.
 
 ## from languages/rules/en.ftl
-faction-random-soviets-name = Unions
+faction-random-soviets-name = Union
 
 ## from languages/rules/en.ftl
 faction-random-soviets-description =
@@ -156,7 +159,7 @@ actor-caairp-soviets-name = Union Paratroopers
 actor-cmin-name = Ore Harvester
 
 ## from languages/rules/en.ftl
-actor-mtnk-name = Medium Tank Battle Tank
+actor-mtnk-name = Battle Tank
 
 ## from languages/rules/en.ftl
 actor-mtnk-description =
@@ -180,7 +183,7 @@ actor-dron-name = Attack Drone
 actor-htk-name = AA Carrier
 
 ## from languages/rules/en.ftl
-actor-htnk-name = Main Battle Tank Heavy Tank
+actor-htnk-name = Heavy Tank
 
 ## from languages/rules/en.ftl
 actor-htnk-description =
@@ -189,7 +192,7 @@ actor-htnk-description =
       Weak vs Infantry, Aircraft
 
 ## from languages/rules/en.ftl
-actor-apoc-name = Heavy Assault Tank Tank
+actor-apoc-name = Heavy Assault Tank
 
 ## from languages/rules/en.ftl
 actor-apoc-description =
@@ -216,7 +219,7 @@ actor-dest-description =
       Weak vs Ground units, Aircraft
 
 ## from languages/rules/en.ftl
-actor-aegis-name = Air Defense Cruiser Cruiser
+actor-aegis-name = Air Defense Cruiser
 
 ## from languages/rules/en.ftl
 actor-dlph-description =
@@ -237,16 +240,16 @@ actor-sub-description =
     Special Ability: Submerge
 
 ## from languages/rules/en.ftl
-actor-sub-name = Attack Submarine Attack Sub
+actor-sub-name = Attack Submarine
 
 ## from languages/rules/en.ftl
 actor-sqd-name = Assault Submersible
 
 ## from languages/rules/en.ftl
-actor-zep-name = Heavy Airship Airship
+actor-zep-name = Heavy Airship
 
 ## from languages/rules/en.ftl
-actor-zephusk-name = Heavy Airship Airship
+actor-zephusk-name = Heavy Airship
 
 ## from languages/rules/en.ftl
 actor-orca-name = Strike Aircraft
