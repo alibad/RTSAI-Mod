@@ -121,34 +121,34 @@ Actors:
 	SurvivorsCove: waypoint
 		Owner: Neutral
 		Location: 44,83
-	SurvivorsCoveCivilian0: civ1
+	SurvivorsCoveCivilian0: engineer
 		Owner: Survivors
 		Location: 42,82
-	SurvivorsCoveCivilian1: civa
+	SurvivorsCoveCivilian1: engineer
 		Owner: Survivors
 		Location: 44,82
-	SurvivorsCoveCivilian2: civ2
+	SurvivorsCoveCivilian2: engineer
 		Owner: Survivors
 		Location: 46,82
 	SurvivorsJetty: waypoint
 		Owner: Neutral
 		Location: 64,81
-	SurvivorsJettyCivilian0: civ1
+	SurvivorsJettyCivilian0: engineer
 		Owner: Survivors
 		Location: 62,80
-	SurvivorsJettyCivilian1: civa
+	SurvivorsJettyCivilian1: engineer
 		Owner: Survivors
 		Location: 64,80
-	SurvivorsJettyCivilian2: civ2
+	SurvivorsJettyCivilian2: engineer
 		Owner: Survivors
 		Location: 66,80
 	StrangerSite: waypoint
 		Owner: Neutral
 		Location: 86,80
-	StrangerSiteCivilian0: civb
+	StrangerSiteCivilian0: engineer
 		Owner: Survivors
 		Location: 84,79
-	StrangerSiteCivilian1: civ3
+	StrangerSiteCivilian1: engineer
 		Owner: Survivors
 		Location: 86,79
 	Stranger: tany
