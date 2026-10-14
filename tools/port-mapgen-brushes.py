@@ -44,34 +44,74 @@ OWN_COLLECTIONS = """	Trees:
 # Villages (rules/map-generators.yaml CivilianBuildings): the generator marks clumps of open, zoneable land away from
 # the spawns, ore and the main passages, and fills them with these brushes, the largest first. Each brush is a small
 # group of the village buildings (RTSAI-Art tools/village.py) with the people who live there (civ* actors,
-# tools/civilians.py), laid out on the cell grid: (actor, x, y) is the actor's top-left footprint cell. A house's door
-# faces +y (screen lower left), so yards and people stand on that side. No brush is a single cell: the generator would
-# fill every leftover marked cell with 1x1 brushes, and the gaps are the village lanes.
+# tools/civilians.py), laid out on the cell grid: (actor, x, y) is the actor's top-left footprint cell. A house shows
+# its door and windows on +y (screen lower left) and +x (screen lower right), so each house keeps a yard: the row in
+# front of it, the column beside it and the corner between. People may stand there; no other piece may, in the brush
+# (checked below) or from a neighbouring brush (the yard's free cells are part of the brush's shape: the generator
+# reserves them, and under its Actor contract it paints no tile there). Water towers and wells stand behind a house
+# or in a garden. Every brush covers at least six cells: the generator fills the leftover marked cells with the
+# smallest brushes, and a small filler (a lone tower, a well) would crowd the village; the gaps are its lanes.
 VILLAGE_BRUSHES = [
     # (name, weight, [(actor, x, y), ...])
-    ("Courtyard", 3, [("cahse01", 0, 0), ("cafarm02", 3, 1), ("civ2", 1, 2), ("civ1", 3, 2)]),
-    ("TallHouse", 3, [("cahse07", 0, 0), ("cahse06", 2, 0), ("civ3", 2, 2), ("civsf", 0, 3)]),
+    ("Courtyard", 3, [("cahse01", 0, 0), ("cafarm02", 4, 1), ("civ2", 1, 2), ("civ1", 3, 2)]),
+    ("TallHouse", 3, [("cahse07", 0, 0), ("cahse06", 3, 0), ("civ3", 2, 2), ("civsf", 0, 3)]),
     ("FamilyHouse", 2, [("cahse03", 0, 0), ("civa", 3, 3), ("civbf", 1, 4)]),
-    ("Market", 3, [("camsc07", 0, 0), ("cahse06", 2, 0), ("civb", 0, 2), ("civbf", 1, 2), ("civ1", 3, 1)]),
-    ("Garden", 2, [("cafarm01", 0, 0), ("civbtm", 2, 1)]),
-    ("WaterTower", 2, [("cawt01", 0, 0), ("cafarm02", 1, 1), ("civstm", 0, 1)]),
-    ("WalledHouse", 2, [("cafncw", 0, 0), ("cafncw", 1, 0), ("cafncw", 2, 0), ("cafncw", 2, 1), ("cahse06", 0, 1),
-                        ("civc", 0, 2)]),
+    ("Market", 3, [("camsc07", 0, 0), ("cahse06", 3, 0), ("civb", 0, 2), ("civbf", 1, 2), ("civ1", 2, 1)]),
+    ("Garden", 1, [("cafarm01", 0, 0), ("cafarm02", 2, 1), ("civbtm", 2, 0)]),
+    ("WaterTower", 2, [("cawt01", 0, 0), ("cafarm02", 1, 0), ("cahse06", 0, 1), ("civstm", 2, 1)]),
+    ("TowerGarden", 1, [("cawt01", 0, 0), ("cafarm01", 1, 0), ("cafarm02", 0, 1), ("civstm", 0, 2)]),
+    ("Hut", 3, [("cahse06", 0, 0), ("civbfm", 1, 1)]),
+    ("WalledHouse", 2, [("cafncw", 0, 0), ("cafncw", 1, 0), ("cafncw", 2, 0), ("cafncw", 3, 0), ("cafncw", 3, 1),
+                        ("cafncw", 3, 2), ("cahse06", 0, 1), ("civc", 1, 2)]),
     ("Lane", 2, [("cahse01", 0, 0), ("cahse06", 0, 3), ("civbbp", 1, 2), ("civsfm", 2, 4)]),
     ("Fishers", 1, [("cahse06", 0, 0), ("cahse06", 0, 2), ("civbfm", 2, 1), ("civ3", 1, 1)]),
     ("Shop", 1, [("camsc07", 0, 0), ("civc", 2, 1)]),
     ("Elders", 1, [("cahse07", 0, 0), ("civa", 2, 2)]),
 ]
+# footprints (cells x, y) of the village actors (rules/civilian-structures.yaml Building Dimensions); people take one
+FOOTPRINT = {"cahse01": (3, 2), "cahse03": (3, 4), "cahse06": (2, 1), "cahse07": (2, 3), "camsc07": (2, 2),
+             "cafarm01": (2, 2), "cawt01": (1, 1), "cafarm02": (1, 1), "cafncw": (1, 1)}
+HOUSES = {"cahse01", "cahse03", "cahse06", "cahse07", "camsc07"}
+
+
+def village_layout(name, actors):
+    """(cells each actor covers, the yard cells left free) for one brush; fails when a piece other than a person
+    stands in a house's yard or two pieces overlap."""
+    covers, taken = [], {}
+    for actor, x, y in actors:
+        w, h = FOOTPRINT.get(actor, (1, 1))
+        cells = {(x + i, y + j) for i in range(w) for j in range(h)}
+        for c in cells:
+            if c in taken:
+                raise SystemExit(f"village {name}: {actor} overlaps {taken[c]} at {c}")
+            taken[c] = actor
+        covers.append((actor, cells))
+    yard = set()
+    for actor, x, y in actors:
+        if actor in HOUSES:
+            w, h = FOOTPRINT[actor]
+            yard |= {(x + i, y + h) for i in range(w + 1)} | {(x + w, y + j) for j in range(h)}
+    for actor, cells in covers:
+        if not actor.startswith("civ") and cells & yard:
+            raise SystemExit(f"village {name}: {actor} stands in a house's yard at {sorted(cells & yard)}")
+    if len(yard | set(taken)) < 6:
+        raise SystemExit(f"village {name}: covers fewer than six cells")
+    return covers, sorted(yard - set(taken))
 
 
 def village_brushes():
     """The CivilianBuildings collection: one MultiBrush per village group. Isometric cell (x, y) is the world offset
-    (724 * (x - y), 724 * (x + y)) (CellLayerUtils.CPosToWPos for RectangularIsometric)."""
+    (724 * (x - y), 724 * (x + y)) (CellLayerUtils.CPosToWPos for RectangularIsometric), which the brush reads back as
+    cell (x - 1, y); the yard's free cells are tiles at that same cell offset (never painted under the Actor contract
+    the civilian-building pass uses, so they only reserve the cells)."""
     out = ["\tCivilianBuildings:\n"]
     for name, weight, actors in VILLAGE_BRUSHES:
+        _, yard = village_layout(name, actors)
         out.append(f"\t\tMultiBrush@Village{name}:\n\t\t\tWeight: {weight}\n")
         for k, (actor, x, y) in enumerate(actors):
             out.append(f"\t\t\tActor@{k}: {actor}\n\t\t\t\tOffset: {724 * (x - y)}, {724 * (x + y)}, 0\n")
+        for k, (x, y) in enumerate(yard):
+            out.append(f"\t\t\tTile@yard{k}: 0,0\n\t\t\t\tOffset: {x - 1},{y}\n")
     return "".join(out)
 
 

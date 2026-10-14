@@ -6,8 +6,11 @@
 # houses, shops, wells, gardens and walls with their people (tools/port-mapgen-brushes.py VILLAGE_BRUSHES; art from
 # RTSAI-Art tools/village.py and tools/civilians.py). CivilianBuildings is the share (in thousandths) of the open land
 # marked for villages; CivilianBuildingDensity 1000 keeps the marked clumps solid, so the multi-cell village groups fit
-# (at TS's 500 the clumps are speckled and almost no group fits). Measured on 8 seeds at 96x96 (websim mapgentest):
-# 7 to 22 village buildings and 4 to 13 people a map, in 2 to 7 villages, none nearer than 18 cells to a spawn.
+# (at TS's 500 the clumps are speckled and almost no group fits). Every house keeps a clear yard in front of it and
+# beside it (part of its brush), so the groups need room: CivilianBuildings 400 and CivilianBuildingsFeatureSize 20480
+# (bigger clumps) give the houses space instead of filling small clumps with lone water towers and wells. Measured on
+# 8 seeds at 96x96 (websim mapgentest): 9 to 22 village buildings and 6 to 18 people a map, 59 houses and shops in all
+# (12 before the yards), none nearer than 18 cells to a spawn, no house with anything but people in its yard.
 # Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
@@ -25,7 +28,7 @@
 						RampFeatureSize: 16384
 						ForestFeatureSize: 20480
 						ResourceFeatureSize: 20480
-						CivilianBuildingsFeatureSize: 10240
+						CivilianBuildingsFeatureSize: 20480
 						Water: 200
 						Mountains: 300
 						Forests: 25
@@ -67,7 +70,7 @@
 						MaximumExpansionSize: 12
 						ExpansionInner: 2
 						ExpansionBorder: 1
-						CivilianBuildings: 150
+						CivilianBuildings: 400
 						CivilianBuildingDensity: 1000
 						MinimumCivilianBuildingDensity: 90
 						CivilianBuildingDensityRadius: 3
