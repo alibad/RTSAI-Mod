@@ -238,6 +238,28 @@ generator (`rules/map-generators.yaml`, the editor's and the browser game's rand
 walled-off pockets. Its cliffs, beaches, water cliffs and water use Tiberian Sun's brushes and riser heights mapped onto
 our templates by `tools/port-mapgen-brushes.py`: our RA2-compatible template table has TS's shapes in TS's order.
 
+**Civilians and villages (14 October 2026).** The civilians and the civilian houses were code-drawn stand-ins (green
+boxes), so survivors in missions were drawn as engineers and the map generator placed no villages.
+- **Civilians.** Six hand-authored looks of the Gulf, Red Sea and Levant coasts (a man in a thobe and ghutra, a woman in
+  an abaya, a woman in a coat-dress and headscarf, a fisherman, an elder with a cane, a young man in a T-shirt), modelled
+  in Blender by RTSAI-Art `tools/civilian_models.py` and rendered through the infantry route with a civilian sequence
+  set: stand, run, two idles, panic-run, panic-stand, cheer and two deaths, 8 facings (deaths at one). The 13 `civ*`
+  actors wear them (`standalone/civilian/civilian-rules.yaml`), each with its look's own palette and no player colour.
+  Civilians now use their panic sequences (`ScaredyCat` prefix `panic-`) and, when idle, wander a step or two now and
+  then (`Wanders`). Tooltips name them plainly (Villager, Fisherman, Elder) instead of RA2's "Texan" and "Beach Fat Male".
+- **Village buildings.** Nine procedural designs (RTSAI-Art `tools/village_designs.py`, rendered by the base kit's
+  renderer, `tools/village.py`) replace the civilian structures the generator places: houses of four sizes (`cahse06`,
+  `cahse01`, `cahse07`, `cahse03`), a shop (`camsc07`), a water tower (`cawt01`), a well (`cafarm02`), a walled palm
+  garden (`cafarm01`) and a garden wall (`cafncw`), each with damaged and critical states, and a ruin for the houses and
+  the well. They are drawn with one fixed palette (`village.pal`).
+- **Villages in random maps.** `rules/map-generators.yaml` turns on the generator's civilian-building pass
+  (`CivilianBuildings`). It marks clumps of open land that are zoneable (outside the spawn reservations, the ore mines
+  and the ore fields) and off the main passages, and fills them with the tileset's `CivilianBuildings` brushes: small
+  village groups of houses, a shop, wells, gardens and walls with their people, authored as cell layouts in
+  `tools/port-mapgen-brushes.py` (`VILLAGE_BRUSHES`). No engine change.
+- `--check-standalone` now counts every actor of the tilesets' brush collections as drawable, so a placeholder on a
+  village building or civilian fails the check.
+
 **Standalone balance smoke** [ran], the first run before the fixes above: `tools/balance-harness.py run --campaign standalone-smoke --standalone`.
 - Setup: headless, no RA2 content linked anywhere, the 7 factions on the base kit, Twin Fords and Harbor Line.
   Every pairing was played from both spawn orientations with the normal bot and a 40-minute cap: 84 matches.
