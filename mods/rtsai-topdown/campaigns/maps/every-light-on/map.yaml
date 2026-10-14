@@ -68,7 +68,7 @@ Actors:
 	SaudiTow: r2satow
 		Owner: Saudi Arabia
 		Location: 92,118
-	SaudiHarvester: harv
+	SaudiHarvester: cmin
 		Owner: Saudi Arabia
 		Location: 89,110
 	Badr0: r2m1a2s

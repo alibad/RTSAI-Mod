@@ -35,7 +35,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			public string[] Targets = [], Types = [], Route = [], After = [];
 			public string[][] Lanes = [];
 			public int[] Requires = [], Area = [];
-			public int Radius = 3, Count = 1, Seconds = 120, Allowed = 1, Until = -1;
+			public int Radius = 3, Count = 1, Seconds = 120, Allowed = 1, Until = -1, Limit;
 			public bool Secondary, Deploy;
 		}
 
@@ -218,6 +218,10 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		/// <summary>Sensor trips an undetected objective tolerates: one more on easy, one fewer on hard.</summary>
 		int Allowance(Objective o) => Math.Max(0, o.Allowed + (difficulty == "easy" ? 1 : difficulty == "hard" ? -1 : 0));
+
+		/// <summary>An objective with a Limit fails if it is not complete by then (game seconds from the start, whether or not
+		/// its gates have opened): half as long again on easy, a fifth shorter on hard.</summary>
+		int Deadline(Objective o) => difficulty == "easy" ? o.Limit * 3 / 2 : difficulty == "hard" ? o.Limit * 4 / 5 : o.Limit;
 		int Seen(Objective o) => sensors.Count(x => x.Tripped && (o.Targets.Length == 0 || o.Targets.Contains(x.Spec.Actor)));
 
 		void ITick.Tick(Actor self)
@@ -238,6 +242,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			{
 				var s = states[i]; var o = s.Spec;
 				if (s.Status != "active") continue;
+				if (o.Limit > 0 && world.WorldTick >= Deadline(o) * 25) { s.Status = "failed"; continue; }
 				if (!Open(o)) continue;
 				if (s.Opened < 0) s.Opened = world.WorldTick;
 				switch (o.Kind)
