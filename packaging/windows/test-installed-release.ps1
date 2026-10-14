@@ -2,7 +2,8 @@ param(
     [Parameter(Mandatory=$true)][string]$Installer,
     [Parameter(Mandatory=$true)][string]$ExpectedSha256,
     [Parameter(Mandatory=$true)][string]$TestRoot,
-    [string]$Version = '0.4.0-alpha.1'
+    [string]$Version = '0.4.0-alpha.1',
+    [string]$LocalAIModelSource
 )
 $ErrorActionPreference = 'Stop'
 if ($Version -notmatch '^\d+\.\d+\.\d+(?:-[a-z]+\.\d+)?$') { throw 'Invalid release version.' }
@@ -57,6 +58,20 @@ try {
         $result = Get-Content -LiteralPath (Join-Path $out 'report.json') -Raw | ConvertFrom-Json
         if ($result.exited_early -or $result.'exception.log' -or $result.missing_sounds.Count -gt 0 -or $result.replays.Count -eq 0 -or -not ($result.lua -match 'CENSUS\|')) { throw "Installed $mode skirmish acceptance failed." }
     }
+    if ($LocalAIModelSource) {
+        $modelSource = [IO.Path]::GetFullPath($LocalAIModelSource)
+        $companion = Join-Path $install 'companion'
+        if (-not (Test-Path -LiteralPath (Join-Path $companion 'rtsai-companion.exe'))) { throw 'Local AI acceptance requires a bundled companion.' }
+        Copy-Item -LiteralPath (Join-Path $modelSource 'models') -Destination (Join-Path $companion 'ai') -Recurse
+        Copy-Item -LiteralPath (Join-Path $modelSource 'pack.json') -Destination (Join-Path $companion 'ai/pack.json')
+        & (Join-Path $companion 'rtsai-companion.exe') pack status --root $companion --profile recommended
+        if ($LASTEXITCODE -ne 0) { throw 'Seeded local AI model verification failed.' }
+        $config.ai_mode = 'local'
+        $config.stamp = 'acceptance-local-' + [guid]::NewGuid().ToString('N')
+        $config | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $install 'rtsai-install.json')
+        & python (Join-Path $workspace 'tools/packaged-companion-smoke.py') --install $install --out (Join-Path $TestRoot 'installed-local-companion')
+        if ($LASTEXITCODE -ne 0) { throw 'Installed local companion acceptance failed.' }
+    }
     Set-Content -LiteralPath (Join-Path $install 'keep-this-test-file.txt') -Value 'Uninstaller must preserve unrelated user files.'
     # The absolute install target above has been checked; the generated uninstaller removes only its payload.
     $u = Start-Process -FilePath (Join-Path $install 'Uninstall RTS AI.exe') -ArgumentList '/S' -WindowStyle Hidden -PassThru
@@ -67,8 +82,8 @@ try {
     if (Test-Path -LiteralPath $links[2]) { throw 'Uninstaller left the Windows desktop shortcut behind.' }
     if (-not (Test-Path -LiteralPath (Join-Path $install 'keep-this-test-file.txt'))) { throw 'Uninstaller removed an unrelated file.' }
     $uninstalled = $true
-    @{ version=$Version; scope='Fresh support directory on this Windows host; not a fresh OS'; downloadedHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
-    Write-Output 'Downloaded installer: install, configuration, shortcut, rendered mode switch and uninstall passed.'
+    @{ version=$Version; scope='Fresh support directory on this Windows host; not a fresh OS'; installerHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; localCompanion=$(if ($LocalAIModelSource) { 'passed' } else { 'not-run' }); uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
+    Write-Output 'Packaged installer: install, configuration, shortcuts, gameplay and uninstall passed.'
 } finally {
     # Restore the specific pre-existing registration and shortcut files touched by this installer.
     # An older installer under test can still damage the shared name before the assertion fails.
