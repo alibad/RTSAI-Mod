@@ -22,17 +22,27 @@ for ($i=0; $i -lt $keys.Count; $i++) {
 }
 $programs = [Environment]::GetFolderPath('Programs')
 $desktop = [Environment]::GetFolderPath('Desktop')
-$links = @((Join-Path $programs 'RTS AI/RTS AI.lnk'), (Join-Path $programs 'RTS AI/Uninstall RTS AI.lnk'), (Join-Path $desktop 'RTS AI.lnk'))
+$browserLink = Join-Path $desktop 'RTS AI.lnk'
+$browserLinkHash = if (Test-Path -LiteralPath $browserLink) { (Get-FileHash -LiteralPath $browserLink -Algorithm SHA256).Hash } else { $null }
+function Assert-BrowserShortcutPreserved {
+    $hash = if (Test-Path -LiteralPath $browserLink) { (Get-FileHash -LiteralPath $browserLink -Algorithm SHA256).Hash } else { $null }
+    if ($hash -ne $browserLinkHash) { throw 'Installer or uninstaller changed the browser app desktop shortcut.' }
+}
+$links = @((Join-Path $programs 'RTS AI/RTS AI.lnk'), (Join-Path $programs 'RTS AI/Uninstall RTS AI.lnk'), (Join-Path $desktop 'RTS AI (Windows).lnk'))
 for ($i=0; $i -lt $links.Count; $i++) { if (Test-Path -LiteralPath $links[$i]) { Copy-Item -LiteralPath $links[$i] -Destination (Join-Path $backup "shortcut-$i.lnk") } }
 $uninstalled = $false
 try {
     $p = Start-Process -FilePath $Installer -ArgumentList "/AI=none /S /D=$install" -WindowStyle Hidden -PassThru
     $p.WaitForExit()
     if ($p.ExitCode -ne 0 -or -not (Test-Path -LiteralPath (Join-Path $install 'RTSAI.exe'))) { throw 'Silent installer failed.' }
+    Assert-BrowserShortcutPreserved
     $config = Get-Content -LiteralPath (Join-Path $install 'rtsai-install.json') -Raw | ConvertFrom-Json
     if ($config.ai_mode -ne 'none' -or $config.version -ne $Version) { throw 'Installer selection was not recorded correctly.' }
     $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($links[0])
     if ($shortcut.TargetPath -ne (Join-Path $install 'RTSAI.exe')) { throw 'Start menu shortcut targets the wrong game.' }
+    if (-not (Test-Path -LiteralPath $links[2])) { throw 'Windows desktop shortcut is missing.' }
+    $desktopShortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($links[2])
+    if ($desktopShortcut.TargetPath -ne (Join-Path $install 'RTSAI.exe')) { throw 'Windows desktop shortcut targets the wrong game.' }
     & python (Join-Path $workspace 'tools/standalone-smoke.py') menu --packaged --worktree $install --switch-mode rtsai-topdown --seconds 24 --out (Join-Path $TestRoot 'installed-mode-switch') --set Game.IntroductionPromptVersion=99 --set Debug.SystemInformationVersionPrompt=99
     if ($LASTEXITCODE -ne 0) { throw 'Installed game smoke command failed.' }
     $log = Get-Content -LiteralPath (Join-Path $TestRoot 'installed-mode-switch/stdout.log') -Raw
@@ -51,6 +61,8 @@ try {
     $u.WaitForExit()
     for ($i=0; $i -lt 30 -and (Test-Path -LiteralPath (Join-Path $install 'RTSAI.exe')); $i++) { Start-Sleep -Seconds 1 }
     if (Test-Path -LiteralPath (Join-Path $install 'RTSAI.exe')) { throw 'Uninstaller left the game payload behind.' }
+    Assert-BrowserShortcutPreserved
+    if (Test-Path -LiteralPath $links[2]) { throw 'Uninstaller left the Windows desktop shortcut behind.' }
     if (-not (Test-Path -LiteralPath (Join-Path $install 'keep-this-test-file.txt'))) { throw 'Uninstaller removed an unrelated file.' }
     $uninstalled = $true
     @{ version=$Version; scope='Fresh support directory on this Windows host; not a fresh OS'; downloadedHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')

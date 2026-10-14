@@ -39,6 +39,8 @@ Unicode true
 !endif
 
 !define PRODUCT_NAME "RTS AI"
+; Keep the native game separate from the owner's browser-app shortcut.
+!define DESKTOP_SHORTCUT "RTS AI (Windows).lnk"
 !define PUBLISHER "The RTS AI authors"
 !define REGKEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\RTSAI"
 !define LAUNCHER "RTSAI.exe"
@@ -249,7 +251,7 @@ SectionEnd
 
 Section "Desktop shortcut" SEC_DESKTOP
   SetShellVarContext current
-  CreateShortcut "$DESKTOP\RTS AI.lnk" "$INSTDIR\${LAUNCHER}" "" "$INSTDIR\rtsai.ico" 0 SW_SHOWNORMAL "" "Play RTS AI"
+  CreateShortcut "$DESKTOP\${DESKTOP_SHORTCUT}" "$INSTDIR\${LAUNCHER}" "" "$INSTDIR\rtsai.ico" 0 SW_SHOWNORMAL "" "Play RTS AI"
 SectionEnd
 
 !ifdef COMPANION
@@ -257,7 +259,7 @@ LangString DESC_GAME ${LANG_ENGLISH} "The RTS AI game, the OpenRA engine and the
 !else
 LangString DESC_GAME ${LANG_ENGLISH} "The RTS AI game and the OpenRA engine."
 !endif
-LangString DESC_DESKTOP ${LANG_ENGLISH} "Place an RTS AI shortcut on the desktop."
+LangString DESC_DESKTOP ${LANG_ENGLISH} "Place an RTS AI (Windows) shortcut on the desktop."
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC_GAME} $(DESC_GAME)
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC_DESKTOP} $(DESC_DESKTOP)
@@ -276,7 +278,8 @@ Section "Uninstall"
   Delete "$INSTDIR\${UNINSTALLER}"
   RMDir "$INSTDIR"
 
-  Delete "$DESKTOP\RTS AI.lnk"
+  ; Do not remove the old shared name: it may belong to the Chrome app.
+  Delete "$DESKTOP\${DESKTOP_SHORTCUT}"
   Delete "$SMPROGRAMS\RTS AI\RTS AI.lnk"
   Delete "$SMPROGRAMS\RTS AI\Uninstall RTS AI.lnk"
   RMDir "$SMPROGRAMS\RTS AI"
