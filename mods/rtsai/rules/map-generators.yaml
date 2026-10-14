@@ -4,8 +4,10 @@
 # tools/standalone-terrain.py --trees). Villages: the generator's civilian-building pass fills clumps of open land away
 # from the spawns, the ore and the main passages with the tileset's CivilianBuildings brushes, small groups of village
 # houses, shops, wells, gardens and walls with their people (tools/port-mapgen-brushes.py VILLAGE_BRUSHES; art from
-# RTSAI-Art tools/village.py and tools/civilians.py). Landscapes set how many: CivilianBuildings, in thousandths of
-# the open land that may hold them.
+# RTSAI-Art tools/village.py and tools/civilians.py). CivilianBuildings is the share (in thousandths) of the open land
+# marked for villages; CivilianBuildingDensity 1000 keeps the marked clumps solid, so the multi-cell village groups fit
+# (at TS's 500 the clumps are speckled and almost no group fits). Measured on 8 seeds at 96x96 (websim mapgentest):
+# 7 to 22 village buildings and 4 to 13 people a map, in 2 to 7 villages, none nearer than 18 cells to a spawn.
 # Ore comes from the project-made ore mine. Rough and sand patches blend into grass through the RTS AI corner templates (ids 1032+, 1048+): a patch
 # cell's corner shows the patch only where both edges that meet at that corner border the same patch.
 ^MapGenerators:
@@ -65,8 +67,8 @@
 						MaximumExpansionSize: 12
 						ExpansionInner: 2
 						ExpansionBorder: 1
-						CivilianBuildings: 60
-						CivilianBuildingDensity: 500
+						CivilianBuildings: 150
+						CivilianBuildingDensity: 1000
 						MinimumCivilianBuildingDensity: 90
 						CivilianBuildingDensityRadius: 3
 						DefaultResource: Ore
