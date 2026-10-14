@@ -583,7 +583,7 @@ Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed
 | `standalone/audio/sfx/gexpwasa.wav` | small water impact: splash | sha256('rtsai-standalone-sfx-1/gexpwasa.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/gexpwasb.wav` | torpedo or depth hit: muffled thump and splash | sha256('rtsai-standalone-sfx-1/gexpwasb.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/ichratta.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/ichratta.wav') | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/ichrmova.wav` |  |  | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/ichrmova.wav` | ccomand/cleg: spatial shift (byte-exact copy of schrmov.wav) | sha256('rtsai-standalone-sfx-1/schrmov.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iconatta.wav` | rifle: three-round burst | sha256('rtsai-standalone-sfx-1/iconatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iconattb.wav` | rifle: double tap | sha256('rtsai-standalone-sfx-1/iconattb.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iconattc.wav` | rifle: five-round burst with echo | sha256('rtsai-standalone-sfx-1/iconattc.wav') | GPL-3.0 code, no third-party rights |
@@ -602,8 +602,8 @@ Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed
 | `standalone/audio/sfx/igiat2b.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/igiat2b.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/igiat2c.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/igiat2c.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/igiat2d.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/igiat2d.wav') | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/igidepa.wav` |  |  | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/igidepb.wav` |  |  | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/igidepa.wav` | e1 deploy: mechanical latch (byte-exact copy of vospatta.wav) | sha256('rtsai-standalone-sfx-1/vospatta.wav') | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/igidepb.wav` | e1 undeploy: mechanical latch (byte-exact copy of vospatta.wav) | sha256('rtsai-standalone-sfx-1/vospatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/irocatta.wav` | infantry-carrier cannon and launcher: heavy round with a short whoosh | sha256('rtsai-standalone-sfx-1/irocatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iseaatta.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/iseaatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iseaattb.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/iseaattb.wav') | GPL-3.0 code, no third-party rights |
@@ -614,7 +614,7 @@ Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed
 | `standalone/audio/sfx/itesat2b.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/itesat2b.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/itesatta.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/itesatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iteschaa.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/iteschaa.wav') | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/iyurat1a.wav` |  |  | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/iyurat1a.wav` | yuri/yuripr: control activation (byte-exact copy of iyurat2a.wav) | sha256('rtsai-standalone-sfx-1/iyurat2a.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/iyurat2a.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/iyurat2a.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/schrmov.wav` | unit shifted through space: low whomp, chorus sweep and arrival pop | sha256('rtsai-standalone-sfx-1/schrmov.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/schropen.wav` | space-shift device powering up: deep hum swelling into a charged shimmer | sha256('rtsai-standalone-sfx-1/schropen.wav') | GPL-3.0 code, no third-party rights |
@@ -624,7 +624,7 @@ Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed
 | `standalone/audio/sfx/snukintr.wav` | strategic missile incoming: rising roar and a falling shriek | sha256('rtsai-standalone-sfx-1/snukintr.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/snuklaun.wav` | strategic missile launch: ignition and a deep rocket roar | sha256('rtsai-standalone-sfx-1/snuklaun.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/snukread.wav` | missile silo ready: hydraulic doors and a two-tone warning | sha256('rtsai-standalone-sfx-1/snukread.wav') | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/sparadra.wav` |  |  | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/sparadra.wav` | pdplane: canopy release latch (byte-exact copy of vospatta.wav) | sha256('rtsai-standalone-sfx-1/vospatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/sweaintr.wav` | storm brewing: rising wind and distant thunder | sha256('rtsai-standalone-sfx-1/sweaintr.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/sweastra.wav` | lightning strike: rolling thunder | sha256('rtsai-standalone-sfx-1/sweastra.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/sweastrb.wav` | lightning strike: sharp crack | sha256('rtsai-standalone-sfx-1/sweastrb.wav') | GPL-3.0 code, no third-party rights |
@@ -672,8 +672,8 @@ Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed
 | `standalone/audio/sfx/vmiratta.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/vmiratta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/vnavupa.wav` | submarine diving or surfacing: venting air, bubbles, hull groan | sha256('rtsai-standalone-sfx-1/vnavupa.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/vospatta.wav` | bomb release: latch clunk and a low thud | sha256('rtsai-standalone-sfx-1/vospatta.wav') | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/vosplana.wav` |  |  | GPL-3.0 code, no third-party rights |
-| `standalone/audio/sfx/vospstaa.wav` |  |  | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/vosplana.wav` | asw: aircraft landing (byte-exact copy of vhorlana.wav) | sha256('rtsai-standalone-sfx-1/vhorlana.wav') | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/vospstaa.wav` | asw: aircraft takeoff (byte-exact copy of vhortaka.wav) | sha256('rtsai-standalone-sfx-1/vhortaka.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/vpriatta.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/vpriatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/vrhiatta.wav` | light cannon: tight report | sha256('rtsai-standalone-sfx-1/vrhiatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/vrhiattb.wav` | light cannon: tight report | sha256('rtsai-standalone-sfx-1/vrhiattb.wav') | GPL-3.0 code, no third-party rights |
