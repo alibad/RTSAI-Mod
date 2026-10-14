@@ -24,6 +24,8 @@ $programs = [Environment]::GetFolderPath('Programs')
 $desktop = [Environment]::GetFolderPath('Desktop')
 $browserLink = Join-Path $desktop 'RTS AI.lnk'
 $browserLinkHash = if (Test-Path -LiteralPath $browserLink) { (Get-FileHash -LiteralPath $browserLink -Algorithm SHA256).Hash } else { $null }
+$browserLinkBackup = Join-Path $backup 'browser-shortcut.lnk'
+if ($browserLinkHash) { Copy-Item -LiteralPath $browserLink -Destination $browserLinkBackup }
 function Assert-BrowserShortcutPreserved {
     $hash = if (Test-Path -LiteralPath $browserLink) { (Get-FileHash -LiteralPath $browserLink -Algorithm SHA256).Hash } else { $null }
     if ($hash -ne $browserLinkHash) { throw 'Installer or uninstaller changed the browser app desktop shortcut.' }
@@ -69,6 +71,9 @@ try {
     Write-Output 'Downloaded installer: install, configuration, shortcut, rendered mode switch and uninstall passed.'
 } finally {
     # Restore the specific pre-existing registration and shortcut files touched by this installer.
+    # An older installer under test can still damage the shared name before the assertion fails.
+    if ($browserLinkHash) { Copy-Item -LiteralPath $browserLinkBackup -Destination $browserLink -Force }
+    elseif (Test-Path -LiteralPath $browserLink) { Remove-Item -LiteralPath $browserLink }
     foreach ($key in $keys) { if (Test-Path -LiteralPath ($key -replace '^HKCU\\','HKCU:\')) { & reg.exe delete $key /f *> $null } }
     foreach ($file in $saved) { & reg.exe import $file *> $null; if ($LASTEXITCODE -ne 0) { Write-Warning "Restore failed: $file" } }
     for ($i=0; $i -lt $links.Count; $i++) {
