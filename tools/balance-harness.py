@@ -328,6 +328,14 @@ def engine_seed(replay: Path) -> int | None:
     return int(found.group(1)) if found else None
 
 
+def game_binary(engine: Path) -> Path:
+    """SDK builds use bin/; Windows packages run the product launcher directly."""
+    for binary in (engine / "bin" / "OpenRA.dll", engine / "OpenRA.dll", engine / "RTSAI.exe"):
+        if binary.is_file():
+            return binary
+    raise FileNotFoundError(f"No game host in {engine}: expected bin/OpenRA.dll, OpenRA.dll or RTSAI.exe")
+
+
 def run_match(match: Match, *, engine: Path, mods: Path, content: Path | None, output: Path, guard: float,
               keep_support: bool = False, bot_log: bool = False, dotnet: str = "dotnet") -> dict:
     match_dir = output / "matches" / match.id
@@ -343,12 +351,17 @@ def run_match(match: Match, *, engine: Path, mods: Path, content: Path | None, o
                     mods / MOD / "maps")
     write_fixture(match, maps_dir, support / maps_rel / fixture)
     env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENRA_AI_", "RTSAI_"))}
+    env.update(OPENRA_AI_HOST="0", OPENRA_AI_COMPANION="0", OPENRA_AI_DISABLE_AUTOSTART="1")
     env["DOTNET_ROLL_FORWARD"] = env.get("DOTNET_ROLL_FORWARD", "Major")
     if bot_log:
         env["RTSAI_BOT_LOG"] = "1"
-    command = [dotnet, str(engine / "bin" / "OpenRA.dll"), f"Engine.EngineDir={engine}",
-               f"Engine.ModSearchPaths={mods},{engine / 'mods'}", f"Engine.SupportDir={support}", f"Game.Mod={MOD}",
-               "Game.Platform=Null", "Game.FetchNews=false", f"Launch.Map={fixture}",
+    binary = game_binary(engine)
+    launch = [str(binary), f"Engine.LaunchPath={binary}"] if binary.suffix.lower() == ".exe" else [dotnet, str(binary)]
+    command = [*launch, f"Engine.EngineDir={engine}",
+               # Search paths merge left to right. The fixture must override a packaged copy of rtsai.
+               f"Engine.ModSearchPaths={engine / 'mods'},{mods}", f"Engine.SupportDir={support}", f"Game.Mod={MOD}",
+               "Game.Platform=Null", "Game.FetchNews=false", "Graphics.CapFramerateToGameFps=true",
+               "Graphics.CapFramerate=false", f"Launch.Map={fixture}",
                f"Launch.Bots=Multi0:{match.bots[0]},Multi1:{match.bots[1]}", "Launch.Benchmark=benchmark-"]
     with _launch_lock:  # Simultaneous starts were seen to share the server's RandomSeed.
         time.sleep(max(0.0, _last_launch[0] + LAUNCH_SPACING - time.monotonic()))
@@ -356,7 +369,7 @@ def run_match(match: Match, *, engine: Path, mods: Path, content: Path | None, o
     started = time.monotonic()
     status = "complete"
     with (match_dir / "game.log").open("w", encoding="utf-8", errors="replace") as log:
-        process = subprocess.Popen(command, cwd=engine / "bin", env=env, stdout=log, stderr=subprocess.STDOUT)
+        process = subprocess.Popen(command, cwd=binary.parent, env=env, stdout=log, stderr=subprocess.STDOUT)
         try:
             exit_code = process.wait(timeout=guard)
         except subprocess.TimeoutExpired:
@@ -753,8 +766,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     engine = absolute_path(args.engine)
     content = None if args.standalone else absolute_path(args.content) if args.content else None
-    if not (engine / "bin" / "OpenRA.dll").is_file():
-        raise SystemExit(f"No engine build at {engine}: run ./fetch-local-engine.sh and make all first")
+    try:
+        game_binary(engine)
+    except FileNotFoundError as error:
+        raise SystemExit(str(error)) from error
     if not args.standalone and (content is None or not (content / "ra2" / "ra2.mix").is_file()):
         raise SystemExit(f"{content} has no ra2/ra2.mix (owned Red Alert 2 content); --standalone runs without it")
     mods = prepare_resources(output, absolute_path(args.mods))
