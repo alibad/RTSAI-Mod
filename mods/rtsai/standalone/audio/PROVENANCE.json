@@ -2413,6 +2413,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "ccomand/cleg: spatial shift (byte-exact copy of schrmov.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/schrmov.wav')",
    "sha256": "82b2c41d3c8992de56c7326e4bf62a22b0fe5f6d11ab90096c4adb6eaff19135",
    "source": "mods/rtsai/standalone/audio/sfx/schrmov.wav",
    "sourceProvenance": {
@@ -2957,6 +2959,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "e1 deploy: mechanical latch (byte-exact copy of vospatta.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
    "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
    "source": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
    "sourceProvenance": {
@@ -2997,6 +3001,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "e1 undeploy: mechanical latch (byte-exact copy of vospatta.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
    "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
    "source": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
    "sourceProvenance": {
@@ -3317,6 +3323,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "yuri/yuripr: control activation (byte-exact copy of iyurat2a.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/iyurat2a.wav')",
    "sha256": "a689f409d1405b3eee3b84614e1db6cdaaf1a7d31b1d99fbc9bd821e47b9bef2",
    "source": "mods/rtsai/standalone/audio/sfx/iyurat2a.wav",
    "sourceProvenance": {
@@ -3609,6 +3617,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "pdplane: canopy release latch (byte-exact copy of vospatta.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/vospatta.wav')",
    "sha256": "c94485dd95b2056477bc45a4ef055133598edbe4bb3aa9e9a27ace9a01953748",
    "source": "mods/rtsai/standalone/audio/sfx/vospatta.wav",
    "sourceProvenance": {
@@ -4965,6 +4975,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "asw: aircraft landing (byte-exact copy of vhorlana.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/vhorlana.wav')",
    "sha256": "d781a31bad76f6d2e09b7db9e76e4fd2ec5a331f3d75a4780843e9f481cb144e",
    "source": "mods/rtsai/standalone/audio/sfx/vhorlana.wav",
    "sourceProvenance": {
@@ -5005,6 +5017,8 @@
    "humanPlaybackAccepted": false,
    "license": "GPL-3.0 (project code); output has no third-party rights",
    "method": "byte-exact project cue alias; not independently seeded for the target name",
+   "role": "asw: aircraft takeoff (byte-exact copy of vhortaka.wav)",
+   "seed": "sha256('rtsai-standalone-sfx-1/vhortaka.wav')",
    "sha256": "1cba9bbca7fed040794e76e1f6947ac35500f69aa2e933183c190eb4a55a6fe7",
    "source": "mods/rtsai/standalone/audio/sfx/vhortaka.wav",
    "sourceProvenance": {
