@@ -475,6 +475,35 @@ def _siroon(R, n):
     return reverb(norm(surge) + 0.6 * norm(sh) + 0.5 * norm(z), R.sub("rev"), t60=1.4, wet=0.25)
 
 
+# Tower charge sounds (AttackTesla.ChargeAudio), played each time a powered tower winds up before it fires: short, and
+# quieter than the shot that follows. No reference metrics exist (the audit that measured the others did not read
+# *Audio fields), so length and level are set from the towers' own shots and the electric effects above.
+@recipe("btespow.wav", "sfx", "tesla coil charging: transformer hum rising into crackling arcs",
+        ref={"seconds": 0.95, "active_rms_dbfs": -17.0, "max50_rms_dbfs": -9.5})
+def _btespow(R, n):
+    L = n / D.SR
+    rise = [(0, -40), (L * 0.6, -6), (L * 0.85, 0), (L, -30)]
+    hum = additive(sweep(n, 50, 150, kind="log"), (1, 2, 3, 4, 6, 9, 13), tilt=0.7) * env_pts(n, rise)
+    whine = np.sin(phase(sweep(n, 700, 2600, kind="log"))) * env_pts(n, [(0, -60), (L * 0.5, -18), (L * 0.85, -8), (L, -50)])
+    z = arcs(R.sub("a"), n, 0.15, L * 0.6, rate=14) + arcs(R.sub("b"), n, L * 0.55, L * 0.92, rate=45)
+    snap = hp(R.noise(n), 2500) * env(n, 0.001, 0.06, delay=L * 0.85)
+    x = norm(hum) + 0.35 * whine + 0.55 * norm(z) * env_pts(n, [(0, -12), (L * 0.6, -3), (L * 0.9, 0), (L, -30)]) + 0.4 * norm(snap)
+    return reverb(norm(x), R.sub("rev"), t60=0.9, wet=0.18)
+
+
+@recipe("bpripow.wav", "sfx", "prism tower charging: rising crystalline shimmer gathering into a bright tone",
+        ref={"seconds": 0.8, "active_rms_dbfs": -18.0, "max50_rms_dbfs": -10.5})
+def _bpripow(R, n):
+    L = n / D.SR
+    rise = [(0, -45), (L * 0.7, -4), (L * 0.88, 0), (L, -30)]
+    shimmer = scifi(R, n, 900, 2800, voices=6, spread=0.012, fm=0.15, fm_ratio=2.01, kind="log") * env_pts(n, rise)
+    glass = metal(R.sub("g"), n, 1650, t60=0.9, delay=0.05, strike=0.15, partials=(1, 1.5, 2.0, 3.01, 4.2)) \
+        * (1 + 0.4 * np.sin(phase(sweep(n, 6, 22, kind="log"))))
+    hum = additive(sweep(n, 110, 220, kind="log"), (1, 2, 3, 5), tilt=0.9) * env_pts(n, rise)
+    x = norm(shimmer) + 0.45 * norm(glass) * env_pts(n, rise) + 0.35 * norm(hum)
+    return reverb(norm(x), R.sub("rev"), t60=1.2, wet=0.28, damp=6000)
+
+
 @recipe("siroread.wav", "sfx", "protective field ready: low swelling drone")
 def _siroread(R, n):
     L = n / D.SR
