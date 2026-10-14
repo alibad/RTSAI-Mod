@@ -1,0 +1,330 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: Every Light On
+Author: RTS AI — Lines of Hope
+Tileset: TEMPERATE
+MapSize: 192,192
+Bounds: 16,16,160,160
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Saudi Arabia:
+		Name: Saudi Arabia
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: saudi
+		LockColor: True
+		Color: 2E8B57
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Orion Group
+	PlayerReference@Orion:
+		Name: Orion Group
+		Faction: russia
+		Color: 545D66
+		Enemies: Saudi Arabia
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 84,113
+	SaudiConyard: gacnst
+		Owner: Saudi Arabia
+		Location: 80,110
+	SaudiPowerOne: gapowr
+		Owner: Saudi Arabia
+		Location: 76,116
+	SaudiPowerTwo: gapowr
+		Owner: Saudi Arabia
+		Location: 79,118
+	SaudiPowerThree: gapowr
+		Owner: Saudi Arabia
+		Location: 82,120
+	SaudiRefinery: garefn
+		Owner: Saudi Arabia
+		Location: 86,106
+	SaudiBarracks: gapile
+		Owner: Saudi Arabia
+		Location: 72,109
+	SaudiFactory: gaweap
+		Owner: Saudi Arabia
+		Location: 86,116
+	PictureRelay: gaairc
+		Owner: Saudi Arabia
+		Location: 71,112
+	SaudiGuardNorth: r2saguard
+		Owner: Saudi Arabia
+		Location: 93,106
+	SaudiGuardEast: r2saguard
+		Owner: Saudi Arabia
+		Location: 95,113
+	SaudiTow: r2satow
+		Owner: Saudi Arabia
+		Location: 92,118
+	SaudiHarvester: harv
+		Owner: Saudi Arabia
+		Location: 89,110
+	Badr0: r2m1a2s
+		Owner: Saudi Arabia
+		Location: 88,98
+	Badr1: r2m1a2s
+		Owner: Saudi Arabia
+		Location: 90,99
+	Badr2: r2m1a2s
+		Owner: Saudi Arabia
+		Location: 92,98
+	Badr3: r2bradley
+		Owner: Saudi Arabia
+		Location: 94,99
+	Badr4: r2bradley
+		Owner: Saudi Arabia
+		Location: 96,98
+	Badr5: r2sads
+		Owner: Saudi Arabia
+		Location: 98,99
+	Badr6: r2sang
+		Owner: Saudi Arabia
+		Location: 88,100
+	Badr7: r2sang
+		Owner: Saudi Arabia
+		Location: 90,101
+	Badr8: r2sang
+		Owner: Saudi Arabia
+		Location: 92,100
+	Badr9: r2sang
+		Owner: Saudi Arabia
+		Location: 94,101
+	Badr10: r2saat
+		Owner: Saudi Arabia
+		Location: 96,100
+	Badr11: r2saat
+		Owner: Saudi Arabia
+		Location: 98,101
+	Badr12: r2saat
+		Owner: Saudi Arabia
+		Location: 88,102
+	Badr13: engineer
+		Owner: Saudi Arabia
+		Location: 90,103
+	Badr14: engineer
+		Owner: Saudi Arabia
+		Location: 92,102
+	DomeWest: amradr
+		Owner: Orion Group
+		Location: 50,93
+	DomeNorth: amradr
+		Owner: Orion Group
+		Location: 79,64
+	DomeEast: amradr
+		Owner: Orion Group
+		Location: 116,62
+	DomeWestGuard0: tesla
+		Owner: Orion Group
+		Location: 54,96
+	DomeWestGuard1: nalasr
+		Owner: Orion Group
+		Location: 46,94
+	DomeWestGuard2: e2
+		Owner: Orion Group
+		Location: 54,97
+	DomeWestGuard3: e2
+		Owner: Orion Group
+		Location: 56,92
+	DomeWestGuard4: htnk
+		Owner: Orion Group
+		Location: 57,96
+	DomeWestGuard5: tesla
+		Owner: Orion Group
+		Location: 48,95
+	DomeWestGuard6: flakt
+		Owner: Orion Group
+		Location: 52,90
+	DomeWestGuard7: htnk
+		Owner: Orion Group
+		Location: 58,93
+	DomeWestGuard8: deso
+		Owner: Orion Group
+		Location: 52,95
+	DomeNorthGuard0: tesla
+		Owner: Orion Group
+		Location: 82,69
+	DomeNorthGuard1: nalasr
+		Owner: Orion Group
+		Location: 75,71
+	DomeNorthGuard2: e2
+		Owner: Orion Group
+		Location: 80,72
+	DomeNorthGuard3: flakt
+		Owner: Orion Group
+		Location: 84,66
+	DomeNorthGuard4: htnk
+		Owner: Orion Group
+		Location: 78,74
+	DomeNorthGuard5: tesla
+		Owner: Orion Group
+		Location: 75,64
+	DomeNorthGuard6: ttnk
+		Owner: Orion Group
+		Location: 83,73
+	DomeNorthGuard7: e2
+		Owner: Orion Group
+		Location: 81,75
+	DomeNorthGuard8: deso
+		Owner: Orion Group
+		Location: 79,70
+	DomeEastGuard0: tesla
+		Owner: Orion Group
+		Location: 113,67
+	DomeEastGuard1: nalasr
+		Owner: Orion Group
+		Location: 119,68
+	DomeEastGuard2: e2
+		Owner: Orion Group
+		Location: 115,70
+	DomeEastGuard3: flakt
+		Owner: Orion Group
+		Location: 112,64
+	DomeEastGuard4: ttnk
+		Owner: Orion Group
+		Location: 117,73
+	DomeEastGuard5: tesla
+		Owner: Orion Group
+		Location: 119,64
+	DomeEastGuard6: htnk
+		Owner: Orion Group
+		Location: 114,74
+	DomeEastGuard7: e2
+		Owner: Orion Group
+		Location: 118,71
+	DomeEastGuard8: deso
+		Owner: Orion Group
+		Location: 116,68
+	Chronosphere: gacsph
+		Owner: Orion Group
+		Location: 129,95
+	Hub0: tesla
+		Owner: Orion Group
+		Location: 126,88
+	Hub1: tesla
+		Owner: Orion Group
+		Location: 126,96
+	Hub2: tesla
+		Owner: Orion Group
+		Location: 135,90
+	Hub3: tesla
+		Owner: Orion Group
+		Location: 138,98
+	Hub4: nalasr
+		Owner: Orion Group
+		Location: 128,96
+	Hub5: nalasr
+		Owner: Orion Group
+		Location: 124,92
+	Hub6: naflak
+		Owner: Orion Group
+		Location: 135,91
+	Hub7: naflak
+		Owner: Orion Group
+		Location: 136,96
+	Hub8: apoc
+		Owner: Orion Group
+		Location: 127,92
+	Hub9: htnk
+		Owner: Orion Group
+		Location: 129,101
+	Hub10: ttnk
+		Owner: Orion Group
+		Location: 135,100
+	Hub11: e2
+		Owner: Orion Group
+		Location: 129,94
+	Hub12: e2
+		Owner: Orion Group
+		Location: 133,95
+	Hub13: flakt
+		Owner: Orion Group
+		Location: 128,86
+	Hub14: deso
+		Owner: Orion Group
+		Location: 135,92
+	Hub15: e2
+		Owner: Orion Group
+		Location: 136,91
+	Hub16: tesla
+		Owner: Orion Group
+		Location: 122,99
+	Hub17: tesla
+		Owner: Orion Group
+		Location: 129,86
+	Hub18: apoc
+		Owner: Orion Group
+		Location: 132,99
+	Hub19: htnk
+		Owner: Orion Group
+		Location: 124,86
+	Hub20: ttnk
+		Owner: Orion Group
+		Location: 138,93
+	Hub21: e2
+		Owner: Orion Group
+		Location: 126,101
+	Hub22: e2
+		Owner: Orion Group
+		Location: 133,88
+	Hub23: flakt
+		Owner: Orion Group
+		Location: 135,92
+	Hub24: deso
+		Owner: Orion Group
+		Location: 130,92
+	HubGate: waypoint
+		Owner: Neutral
+		Location: 120,96
+	NorthLane: waypoint
+		Owner: Neutral
+		Location: 65,38
+	BaseShore: waypoint
+		Owner: Neutral
+		Location: 64,112
+	StrikeLanding: waypoint
+		Owner: Neutral
+		Location: 112,100
+Rules:
+	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: dropdown-missionbrowser-difficulty.label
+			Description: dropdown-missionbrowser-difficulty.description
+			Default: normal
+			Values:
+				easy: campaign-difficulty-easy
+				normal: label-missionbrowser-normal-difficulty
+				hard: campaign-difficulty-hard
+		RTSAICampaign:
+			Mission: every-light-on
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: briefing
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:
+	gacsph:
+		ExternalCondition@sealed:
+			Condition: sealed
+		Capturable:
+			RequiresCondition: !sealed
+	amradr:
+		Health:
+			HP: 1800
+
+FluentMessages: briefing.ftl

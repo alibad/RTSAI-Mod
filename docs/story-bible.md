@@ -32,7 +32,7 @@ In 1953, at the end of the Red Alert war, Einstein goes to switch off the Chrono
 | Prologue · 1953 | Timeline | A film, not a mission | Film commissioned tonight |
 | Act I · The Lifeline | Roads and sea lanes | Jizan Corridor, Hodeidah Lifeline, Bab al-Mandab Passage | Playable; briefing films finishing tonight |
 | Act II · Broken Signals | Signals | Straits Shield, Haitan Network, Relay Under Siege | Playable; briefing films finishing tonight |
-| Act III · The Missing Man | People | Lights in the Water, Hold the Ferry Line, Glass Island, Black Platform, Every Light On | First two being built tonight; three need new mission features |
+| Act III · The Missing Man | People | Lights in the Water, Hold the Ferry Line, Glass Island, Black Platform, Every Light On | All five playable: the last three on the Phase 2 mission features (14 Oct) |
 | Epilogue | Timeline | A film after the finale | Later |
 
 ## Backstory: the 1953 layer
@@ -117,12 +117,12 @@ Five chapters on classic mission patterns, in fictional places. Tanya joins from
 
 ### III-3 · Glass Island (infiltration)
 - **Commander:** Lin, with Tanya. **Setting:** the uncharted island from Haitan. **Source missions:** Infiltration; Allies 09a "Evacuate Kosygin".
-- **Mission:** A three-unit team lands at night, stays out of the sensor masts' sight, copies the routing logs and leaves by boat. Needs detection zones (Phase 2).
+- **Mission:** A three-unit team lands at night, stays out of the sensor masts' sight, copies the routing logs and leaves by boat. Sensor masts show their zones as rings; most sweep on a cycle, so the team crosses while a ring is dark. Every mast that sees the team, or goes dark, sends the garrison; the island tolerates one alarm on normal.
 - **Beat:** beside the logs is a film reel in Einstein's hand. His 1953 message: the Chronosphere was never truly switched off; its echo can only be folded shut by running the machine once, the right way, and only from the place it is now anchored. That place is the Directorate's hub, hidden behind a jammer platform.
 
 ### III-4 · Black Platform (commando)
 - **Commander:** Turki, with Tanya. **Setting:** a Directorate jamming platform in open sea. **Source mission:** Allies 13 "Focused Blast".
-- **Mission:** The jammers run on an Iron Curtain prototype that makes the platform untouchable from outside. A boarding team with no reinforcements places charges on every generator, then holds the control room. Needs fixed-squad starts and squad-loss failure (Phase 2).
+- **Mission:** The jammers run on an Iron Curtain prototype that makes the platform untouchable from outside. A boarding team with no reinforcements takes the curtain control room with an engineer (the curtain drops), places charges on every generator, then holds the room against the counterattack from the docks and the sea. Losing Tanya, the room, or both engineers before the capture fails the mission.
 - **Beat:** every screen on the coast lights up at once. The hub is exposed, and the Broker makes his offer to everyone at the same moment. Nobody answers.
 
 ### III-5 · Every Light On (finale)
@@ -154,10 +154,10 @@ Every mission has calls in `campaign-story.json` under `radio`: a speaker from t
 
 ## What Act III needs from the game (Phase 2)
 
-- Radio calls with portraits and captions (being built 14 Oct).
-- Timed events; event-gated objectives and reinforcements; map-wide reveal events (the "lights on" moments).
-- Fixed-squad starts with a squad-loss failure, and a Tanya hero unit (an original 1953 commando model; not the original game's sprite).
-- Detection zones: a unit seen by a sensor mast raises the alarm.
+- Radio calls with portraits and captions (built 14 Oct; calls can also key off mission events).
+- Timed events; event-gated objectives and reinforcements; map-wide reveal events (the "lights on" moments). Built 14 Oct (RTSAI-WebGame `Missions.cs`, desktop `RTSAICampaign.cs`).
+- Fixed-squad starts with a squad-loss failure, and a Tanya hero unit. Built 14 Oct; Tanya is the `tany` actor drawn with the original commando art (america faction) until an original 1953 commando model is made.
+- Detection zones: a unit seen by a sensor mast raises the alarm. Built 14 Oct.
 - Lazy-loaded mission maps.
 
 ## Production

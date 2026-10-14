@@ -1,0 +1,178 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: Glass Island
+Author: RTS AI — Lines of Hope
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@China:
+		Name: China
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: china
+		LockColor: True
+		Color: 3B7DD8
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Orion Group
+	PlayerReference@Orion:
+		Name: Orion Group
+		Faction: russia
+		Color: 545D66
+		Enemies: China
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 3,39
+	LandingBeach: waypoint
+		Owner: Neutral
+		Location: 3,39
+	Tanya: tany
+		Owner: China
+		Location: 4,38
+		Faction: america
+	Specialist: r2cnnetwork
+		Owner: China
+		Location: 3,40
+	RedSpear: r2redspear
+		Owner: China
+		Location: 4,41
+	MastBluff: naradr
+		Owner: Orion Group
+		Location: 14,40
+	MastRidge: naradr
+		Owner: Orion Group
+		Location: 32,33
+	MastCauseway: naradr
+		Owner: Orion Group
+		Location: 48,41
+	MastGate: naradr
+		Owner: Orion Group
+		Location: 64,57
+	MastVaultNorth: naradr
+		Owner: Orion Group
+		Location: 80,50
+	MastVaultSouth: naradr
+		Owner: Orion Group
+		Location: 79,59
+	CoreNode: gatech
+		Owner: Orion Group
+		Location: 87,55
+	Guard0: e2
+		Owner: Orion Group
+		Location: 52,57
+	Guard1: e2
+		Owner: Orion Group
+		Location: 56,55
+	Guard2: dog
+		Owner: Orion Group
+		Location: 53,60
+	Guard3: e2
+		Owner: Orion Group
+		Location: 22,44
+	Guard4: flakt
+		Owner: Orion Group
+		Location: 23,45
+	Guard5: e2
+		Owner: Orion Group
+		Location: 70,51
+	Guard6: flakt
+		Owner: Orion Group
+		Location: 71,58
+	Guard7: deso
+		Owner: Orion Group
+		Location: 85,52
+	Guard8: e2
+		Owner: Orion Group
+		Location: 90,53
+	Guard9: e2
+		Owner: Orion Group
+		Location: 89,59
+	Guard10: dog
+		Owner: Orion Group
+		Location: 84,58
+	Guard11: shk
+		Owner: Orion Group
+		Location: 92,56
+	GarrisonWest: waypoint
+		Owner: Neutral
+		Location: 24,31
+	GarrisonEast: waypoint
+		Owner: Neutral
+		Location: 74,60
+	ExtractionCove: waypoint
+		Owner: Neutral
+		Location: 80,47
+	BoatLanding: waypoint
+		Owner: Neutral
+		Location: 78,40
+	BoatEntry: waypoint
+		Owner: Neutral
+		Location: 93,36
+Rules:
+	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: dropdown-missionbrowser-difficulty.label
+			Description: dropdown-missionbrowser-difficulty.description
+			Default: normal
+			Values:
+				easy: campaign-difficulty-easy
+				normal: label-missionbrowser-normal-difficulty
+				hard: campaign-difficulty-hard
+		RTSAICampaign:
+			Mission: glass-island
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: briefing
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:
+	naradr:
+		ExternalCondition@sensor-on:
+			Condition: sensor-on
+		ExternalCondition@sensor-tripped:
+			Condition: sensor-tripped
+		WithRangeCircle@sensor-on:
+			Range: 6c0
+			Visible: Always
+			ValidRelationships: Ally, Neutral, Enemy
+			Color: FFB53CF0
+			Width: 2
+			BorderColor: 00000080
+			BorderWidth: 4
+			RequiresCondition: sensor-on && !sensor-tripped
+		WithRangeCircle@sensor-off:
+			Range: 6c0
+			Visible: Always
+			ValidRelationships: Ally, Neutral, Enemy
+			Color: 8FB4C878
+			Width: 1
+			BorderColor: 00000080
+			BorderWidth: 3
+			RequiresCondition: !sensor-on && !sensor-tripped
+		WithRangeCircle@sensor-tripped:
+			Range: 6c0
+			Visible: Always
+			ValidRelationships: Ally, Neutral, Enemy
+			Color: FF3A2AF0
+			Width: 3
+			BorderColor: 00000080
+			BorderWidth: 5
+			RequiresCondition: sensor-tripped
+
+FluentMessages: briefing.ftl

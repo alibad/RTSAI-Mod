@@ -1,0 +1,229 @@
+MapFormat: 12
+RequiresMod: rtsai-topdown
+Title: Black Platform
+Author: RTS AI — Lines of Hope
+Tileset: TEMPERATE
+MapSize: 96,96
+Bounds: 1,1,94,94
+Visibility: MissionSelector
+Categories: Campaign
+LockPreview: True
+Players:
+	PlayerReference@Saudi Arabia:
+		Name: Saudi Arabia
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: saudi
+		LockColor: True
+		Color: 2E8B57
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Orion Group
+	PlayerReference@Orion:
+		Name: Orion Group
+		Faction: russia
+		Color: 545D66
+		Enemies: Saudi Arabia
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: china
+Actors:
+	MissionSpawn: mpspawn
+		Owner: Neutral
+		Location: 48,73
+	LandingPad: waypoint
+		Owner: Neutral
+		Location: 48,73
+	Tanya: tany
+		Owner: Saudi Arabia
+		Location: 47,70
+		Faction: america
+	Falcon1: r2falcon
+		Owner: Saudi Arabia
+		Location: 45,71
+	Falcon2: r2falcon
+		Owner: Saudi Arabia
+		Location: 51,71
+	Rifle1: r2sang
+		Owner: Saudi Arabia
+		Location: 45,74
+	Rifle2: r2sang
+		Owner: Saudi Arabia
+		Location: 48,75
+	Rifle3: r2sang
+		Owner: Saudi Arabia
+		Location: 51,74
+	Lancer: r2saat
+		Owner: Saudi Arabia
+		Location: 49,72
+	Engineer1: engineer
+		Owner: Saudi Arabia
+		Location: 46,76
+	Engineer2: engineer
+		Owner: Saudi Arabia
+		Location: 50,76
+	CurtainControl: nairon
+		Owner: Orion Group
+		Location: 47,47
+	GenNW: gapowr
+		Owner: Orion Group
+		Location: 34,28
+	GenNE: gapowr
+		Owner: Orion Group
+		Location: 60,28
+	GenSW: gapowr
+		Owner: Orion Group
+		Location: 34,64
+	GenSE: gapowr
+		Owner: Orion Group
+		Location: 60,64
+	ScannerWest: naradr
+		Owner: Orion Group
+		Location: 43,45
+	ScannerEast: naradr
+		Owner: Orion Group
+		Location: 52,45
+	Guard0: e2
+		Owner: Orion Group
+		Location: 45,57
+	Guard1: flakt
+		Owner: Orion Group
+		Location: 51,57
+	Guard2: e2
+		Owner: Orion Group
+		Location: 44,53
+	Guard3: e2
+		Owner: Orion Group
+		Location: 52,53
+	Guard4: dog
+		Owner: Orion Group
+		Location: 48,55
+	Guard5: deso
+		Owner: Orion Group
+		Location: 45,41
+	Guard6: e2
+		Owner: Orion Group
+		Location: 51,41
+	Guard7: flakt
+		Owner: Orion Group
+		Location: 48,39
+	Guard8: e2
+		Owner: Orion Group
+		Location: 35,40
+	Guard9: e2
+		Owner: Orion Group
+		Location: 35,56
+	Guard10: flakt
+		Owner: Orion Group
+		Location: 36,33
+	Guard11: dog
+		Owner: Orion Group
+		Location: 35,60
+	Guard12: e2
+		Owner: Orion Group
+		Location: 61,40
+	Guard13: e2
+		Owner: Orion Group
+		Location: 61,56
+	Guard14: flakt
+		Owner: Orion Group
+		Location: 60,33
+	Guard15: e2
+		Owner: Orion Group
+		Location: 61,60
+	Guard16: shk
+		Owner: Orion Group
+		Location: 48,26
+	Guard17: e2
+		Owner: Orion Group
+		Location: 44,28
+	Guard18: e2
+		Owner: Orion Group
+		Location: 52,28
+	CrewQuarters: waypoint
+		Owner: Neutral
+		Location: 48,30
+	NorthDock: waypoint
+		Owner: Neutral
+		Location: 48,24
+	WestDock: waypoint
+		Owner: Neutral
+		Location: 34,48
+	EastDock: waypoint
+		Owner: Neutral
+		Location: 62,48
+	SeaWest: waypoint
+		Owner: Neutral
+		Location: 10,48
+	SeaEast: waypoint
+		Owner: Neutral
+		Location: 86,48
+	SeaWestStation: waypoint
+		Owner: Neutral
+		Location: 28,48
+	SeaEastStation: waypoint
+		Owner: Neutral
+		Location: 68,48
+Rules:
+	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: dropdown-missionbrowser-difficulty.label
+			Description: dropdown-missionbrowser-difficulty.description
+			Default: normal
+			Values:
+				easy: campaign-difficulty-easy
+				normal: label-missionbrowser-normal-difficulty
+				hard: campaign-difficulty-hard
+		RTSAICampaign:
+			Mission: black-platform
+		ObjectivesPanel:
+			PanelName: MISSION_OBJECTIVES
+		MissionData:
+			Briefing: briefing
+		-SpawnStartingUnits:
+		-CrateSpawner:
+		-StartGameNotification:
+	Player:
+		-ConquestVictoryConditions:
+	naradr:
+		ExternalCondition@sensor-on:
+			Condition: sensor-on
+		ExternalCondition@sensor-tripped:
+			Condition: sensor-tripped
+		WithRangeCircle@sensor-on:
+			Range: 4c0
+			Visible: Always
+			ValidRelationships: Ally, Neutral, Enemy
+			Color: FFB53CF0
+			Width: 2
+			BorderColor: 00000080
+			BorderWidth: 4
+			RequiresCondition: sensor-on && !sensor-tripped
+		WithRangeCircle@sensor-off:
+			Range: 4c0
+			Visible: Always
+			ValidRelationships: Ally, Neutral, Enemy
+			Color: 8FB4C878
+			Width: 1
+			BorderColor: 00000080
+			BorderWidth: 3
+			RequiresCondition: !sensor-on && !sensor-tripped
+		WithRangeCircle@sensor-tripped:
+			Range: 4c0
+			Visible: Always
+			ValidRelationships: Ally, Neutral, Enemy
+			Color: FF3A2AF0
+			Width: 3
+			BorderColor: 00000080
+			BorderWidth: 5
+			RequiresCondition: sensor-tripped
+	nairon:
+		Health:
+			HP: 2000
+
+FluentMessages: briefing.ftl
