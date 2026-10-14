@@ -25,16 +25,70 @@ namespace OpenRA.Mods.RTSAI.Traits
 			public string Id, Title, Faction, Campaign, Briefing, Adaptation, Slot, Enemy;
 			public string[] Protect = [];
 			public Objective[] Objectives = [];
+			public Sensor[] Sensors = [];
+			public Event[] Events = [];
 		}
 
 		public sealed class Objective
 		{
 			public string Text, Kind, Target, Via, Entry;
-			public string[] Targets = [], Types = [], Route = [];
+			public string[] Targets = [], Types = [], Route = [], After = [];
 			public string[][] Lanes = [];
 			public int[] Requires = [], Area = [];
-			public int Radius = 3, Count = 1, Seconds = 120, Allowed = 1;
+			public int Radius = 3, Count = 1, Seconds = 120, Allowed = 1, Until = -1;
 			public bool Secondary, Deploy;
+		}
+
+		/// <summary>A detection zone around a named actor. While the actor stands and its sweep is on (Sweep: [on, off]
+		/// seconds, shifted by Offset; always on without one), a player unit within Radius cells trips it, once.
+		/// The actor's rules show it: conditions "sensor-on" and "sensor-tripped" (ExternalCondition), range circles.</summary>
+		public sealed class Sensor
+		{
+			public string Actor;
+			public int Radius = 5, Offset;
+			public int[] Sweep = [];
+		}
+
+		/// <summary>What fires an event, the first field set: game seconds, objective n complete or failed, a sensor
+		/// tripping ("*": any), a named actor lost, or another event.</summary>
+		public sealed class Trigger
+		{
+			public int Time = -1, Objective = -1, Failed = -1;
+			public string Detected, Killed, Event;
+		}
+
+		/// <summary>An event fires once (or every Repeat seconds until the Until event) Delay seconds after its trigger.</summary>
+		public sealed class Event
+		{
+			public string Id, Until;
+			public Trigger When = new();
+			public int Delay, Repeat;
+			public Spawn[] Spawn = [];
+			public Reveal[] Reveal = [];
+			public Grant[] Grant = [], Revoke = [];
+			public string[] Conceal = [];
+		}
+
+		/// <summary>Units for a player (default: the enemy) at a named actor. The player's move to To; others attack-move
+		/// to To, else to the trigger's site (the sensor or the lost actor), else to the nearest player unit.</summary>
+		public sealed class Spawn
+		{
+			public string Owner, At, To;
+			public string[] Types = [];
+		}
+
+		/// <summary>The player sees around a named actor (the whole map without one) for Seconds (0: until concealed).</summary>
+		public sealed class Reveal
+		{
+			public string At;
+			public int Radius = 8, Seconds;
+		}
+
+		/// <summary>An external condition (e.g. "invulnerability", the Iron Curtain's) on named actors.</summary>
+		public sealed class Grant
+		{
+			public string Condition;
+			public string[] Actors = [];
 		}
 
 		sealed class State
@@ -46,6 +100,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			public readonly HashSet<string> Scouted = [];
 			public readonly List<Convoy> Convoys = [];
 			public int Delivered;
+			public int Opened = -1;
 			public bool Started;
 		}
 
@@ -55,6 +110,22 @@ namespace OpenRA.Mods.RTSAI.Traits
 			public string[] Route;
 			public int Next;
 			public bool Delivered;
+		}
+
+		sealed class SensorState
+		{
+			public Sensor Spec;
+			public Actor Actor;
+			public bool On, Tripped;
+		}
+
+		sealed class EventState
+		{
+			public Event Spec;
+			public Actor Site;
+			public int Due = -1;
+			public bool Done;
+			public readonly List<object> Reveals = [];
 		}
 
 		readonly JsonSerializerOptions JsonOptions = new()
@@ -70,6 +141,13 @@ namespace OpenRA.Mods.RTSAI.Traits
 		Definition[] catalog;
 		Definition current;
 		List<State> states = [];
+		List<SensorState> sensors = [];
+		List<EventState> events = [];
+		readonly List<string> fired = [];
+		readonly List<(int Tick, object Key)> expiring = [];
+		readonly HashSet<object> reveals = [];
+		readonly Dictionary<(uint Actor, string Condition), int> granted = [];
+		readonly object ConditionSource = new();
 		Dictionary<string, Actor> named;
 		Player human;
 		string difficulty;
@@ -87,7 +165,11 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 		public string CatalogJson() => JsonSerializer.Serialize(Catalog, JsonOptions);
 		public bool Active => current != null;
-		public void Reset() { current = null; states.Clear(); named = null; human = null; }
+		public void Reset()
+		{
+			current = null; states.Clear(); named = null; human = null;
+			sensors.Clear(); events.Clear(); fired.Clear(); expiring.Clear(); reveals.Clear(); granted.Clear();
+		}
 
 		public void Start(string id)
 		{
@@ -100,18 +182,43 @@ namespace OpenRA.Mods.RTSAI.Traits
 			states = current.Objectives.Select(o => new State { Spec = o }).ToList();
 			objectives = human.PlayerActor.Trait<MissionObjectives>();
 			objectiveIds = current.Objectives.Select(o => objectives.Add(human, o.Text, o.Secondary ? "Secondary" : "Primary", !o.Secondary, true)).ToArray();
+			sensors = current.Sensors.Select(x => new SensorState { Spec = x, Actor = Named(x.Actor) }).ToList();
+			events = current.Events.Select(e => new EventState { Spec = e }).ToList();
 			difficulty = campaignWorld.LobbyInfo.GlobalSettings.LobbyOptions.TryGetValue("difficulty", out var option) ? option.Value : "normal";
 			nextWave = difficulty == "easy" ? 2250 : difficulty == "hard" ? 1000 : 1500;
 			foreach (var s in states)
 				foreach (var target in s.Spec.Targets.Concat(s.Spec.Route).Concat(s.Spec.Lanes.SelectMany(l => l))
 					.Concat(new[] { s.Spec.Target, s.Spec.Via, s.Spec.Entry }).Where(t => !string.IsNullOrEmpty(t)))
 					if (!named.ContainsKey(target)) throw new InvalidDataException("Mission target missing: " + target);
+			// Events name actors and other events: a typo must not leave a mission without its reinforcements.
+			var ids = current.Events.Select(e => e.Id).ToHashSet();
+			var refs = current.Sensors.Select(x => x.Actor).Concat(current.Events.SelectMany(e => e.Spawn.SelectMany(sp => new[] { sp.At, sp.To })
+				.Concat(e.Reveal.Select(r => r.At)).Concat(e.Grant.Concat(e.Revoke).SelectMany(g => g.Actors)).Append(e.When.Killed)
+				.Append(e.When.Detected == "*" ? null : e.When.Detected)));
+			foreach (var target in refs.Where(t => !string.IsNullOrEmpty(t)))
+				if (!named.ContainsKey(target)) throw new InvalidDataException("Mission event actor missing: " + target);
+			foreach (var e in current.Events.SelectMany(e => e.Conceal.Append(e.Until).Append(e.When.Event)).Concat(current.Objectives.SelectMany(o => o.After)))
+				if (e != null && !ids.Contains(e)) throw new InvalidDataException("Mission event missing: " + e);
 		}
 
 		bool Alive(Actor a) => a != null && a.IsInWorld && !a.IsDead;
-		Actor Named(string name) => named.GetValueOrDefault(name);
+		Actor Named(string name) => name == null ? null : named.GetValueOrDefault(name);
 		bool Near(Actor a, Actor b, int radius) => Alive(a) && b != null && (a.CenterPosition - b.CenterPosition).HorizontalLengthSquared <= (long)radius * radius * 1024 * 1024;
 		IEnumerable<Actor> Own(World world) => world.Actors.Where(a => a.Owner == human && Alive(a));
+		IEnumerable<Actor> Units(World world) => Own(world).Where(a => a.OccupiesSpace != null && a.TraitOrDefault<Building>() == null);
+
+		/// <summary>Protect, squad and stay-undetected objectives hold until the end: they complete with the mission.</summary>
+		bool Passive(string kind) => kind is "protect" or "squad" or "undetected";
+
+		/// <summary>An objective counts only once the objectives it requires are complete and the events it waits for fired.</summary>
+		bool Open(Objective o) => o.Requires.All(r => states[r].Status == "complete") && o.After.All(fired.Contains);
+
+		/// <summary>Timed objectives behind a gate count from the tick it opened; the others from the start.</summary>
+		int Since(State s) => s.Spec.Requires.Length > 0 || s.Spec.After.Length > 0 ? Math.Max(0, s.Opened) : 0;
+
+		/// <summary>Sensor trips an undetected objective tolerates: one more on easy, one fewer on hard.</summary>
+		int Allowance(Objective o) => Math.Max(0, o.Allowed + (difficulty == "easy" ? 1 : difficulty == "hard" ? -1 : 0));
+		int Seen(Objective o) => sensors.Count(x => x.Tripped && (o.Targets.Length == 0 || o.Targets.Contains(x.Spec.Actor)));
 
 		void ITick.Tick(Actor self)
 		{
@@ -126,11 +233,13 @@ namespace OpenRA.Mods.RTSAI.Traits
 			if (!Own(world).Any(a => a.TraitOrDefault<MustBeDestroyed>() != null)) { Finish(world, false); return; }
 			foreach (var target in current.Protect)
 				if (!Alive(Named(target))) { Finish(world, false); return; }
+			var tripped = Sense(world);
 			for (var i = 0; i < states.Count; i++)
 			{
 				var s = states[i]; var o = s.Spec;
 				if (s.Status != "active") continue;
-				if (o.Requires.Any(r => states[r].Status != "complete")) continue;
+				if (!Open(o)) continue;
+				if (s.Opened < 0) s.Opened = world.WorldTick;
 				switch (o.Kind)
 				{
 					case "destroy":
@@ -154,21 +263,27 @@ namespace OpenRA.Mods.RTSAI.Traits
 						break;
 					case "scout":
 						foreach (var t in o.Targets)
-							if (Own(world).Any(a => a.OccupiesSpace != null && a.TraitOrDefault<Building>() == null && Near(a, Named(t), o.Radius))) s.Scouted.Add(t);
+							if (Units(world).Any(a => Near(a, Named(t), o.Radius))) s.Scouted.Add(t);
 						if (s.Scouted.Count == o.Targets.Length) s.Status = "complete";
 						break;
 					case "disperse":
-						if (world.WorldTick >= o.Seconds * 25)
+						if (world.WorldTick - Since(s) >= o.Seconds * 25)
 						{
-							var exposed = Own(world).Count(a => a.OccupiesSpace != null && a.TraitOrDefault<Building>() == null && InArea(world, a, o.Area));
+							var exposed = Units(world).Count(a => InArea(world, a, o.Area));
 							s.Status = exposed <= o.Allowed ? "complete" : "failed";
 						}
 						break;
 					case "protect":
 						if (o.Targets.Any(t => !Alive(Named(t)))) s.Status = "failed";
 						break;
+					case "squad":
+						if (o.Targets.Count(t => Alive(Named(t))) < o.Count) s.Status = "failed";
+						break;
+					case "undetected":
+						if (Seen(o) > Allowance(o)) s.Status = "failed";
+						break;
 					case "survive":
-						if (world.WorldTick >= o.Seconds * 25) s.Status = "complete";
+						if (world.WorldTick - Since(s) >= o.Seconds * 25) s.Status = "complete";
 						break;
 					case "escort": case "shipping":
 						if (!s.Started) StartConvoy(world, s);
@@ -186,11 +301,14 @@ namespace OpenRA.Mods.RTSAI.Traits
 						else if (s.Delivered + s.Convoys.Count(c => !c.Delivered && Alive(c.Actor)) < need) s.Status = "failed";
 						break;
 				}
+				// A passive objective can last only until another completes (keep an engineer alive until the capture).
+				if (s.Status == "active" && o.Until >= 0 && states[o.Until].Status == "complete") s.Status = "complete";
 			}
+			RunEvents(world, tripped);
 			var won = !states.Any(s => !s.Spec.Secondary && s.Status == "failed")
-				&& states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete");
+				&& states.Where(s => !s.Spec.Secondary && !Passive(s.Spec.Kind)).All(s => s.Status == "complete");
 			if (won)
-				foreach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active"))
+				foreach (var s in states.Where(s => Passive(s.Spec.Kind) && s.Status == "active"))
 					s.Status = "complete";
 			// Publish secondary statuses first: completing the last primary can
 			// award victory immediately and stops further campaign ticks.
@@ -214,6 +332,121 @@ namespace OpenRA.Mods.RTSAI.Traits
 		}
 
 		void Move(World world, Actor actor, CPos cell) => actor.QueueActivity(actor.Trait<IMove>().MoveTo(cell, 2, evaluateNearestMovableCell: true));
+
+		/// <summary>Sweeps the sensors (their "sensor-on" condition follows) and trips those that see a player unit.</summary>
+		List<SensorState> Sense(World world)
+		{
+			var tripped = new List<SensorState>();
+			if (sensors.Count == 0) return tripped;
+			var units = Units(world).ToList();
+			foreach (var x in sensors)
+			{
+				if (x.Tripped || !Alive(x.Actor)) continue;
+				var sweep = x.Spec.Sweep;
+				var on = sweep.Length < 2 || (world.WorldTick + x.Spec.Offset * 25) % ((sweep[0] + sweep[1]) * 25) < sweep[0] * 25;
+				if (on != x.On) { x.On = on; SetCondition(x.Actor, "sensor-on", on); }
+				if (!on || !units.Any(a => Near(a, x.Actor, x.Spec.Radius))) continue;
+				x.Tripped = true;
+				SetCondition(x.Actor, "sensor-tripped", true);
+				tripped.Add(x);
+			}
+			return tripped;
+		}
+
+		void SetCondition(Actor a, string condition, bool on)
+		{
+			var key = (a.ActorID, condition);
+			var trait = a.TraitsImplementing<ExternalCondition>().FirstOrDefault(t => t.Info.Condition == condition);
+			if (trait == null) return;
+			if (on && !granted.ContainsKey(key) && trait.CanGrantCondition(ConditionSource)) granted[key] = trait.GrantCondition(a, ConditionSource);
+			else if (!on && granted.Remove(key, out var token)) trait.TryRevokeCondition(a, ConditionSource, token);
+		}
+
+		void RunEvents(World world, List<SensorState> tripped)
+		{
+			foreach (var e in events)
+			{
+				var w = e.Spec.When;
+				if (e.Due < 0 && !e.Done)
+				{
+					Actor site = null;
+					var met = w.Time >= 0 ? world.WorldTick >= w.Time * 25
+						: w.Objective >= 0 ? states[w.Objective].Status == "complete"
+						: w.Failed >= 0 ? states[w.Failed].Status == "failed"
+						: w.Detected != null ? (site = tripped.FirstOrDefault(x => w.Detected == "*" || x.Spec.Actor == w.Detected)?.Actor) != null
+						: w.Killed != null ? !Alive(site = Named(w.Killed))
+						: w.Event != null && fired.Contains(w.Event);
+					if (met) { e.Due = world.WorldTick + e.Spec.Delay * 25; e.Site = site; }
+				}
+				if (e.Due < 0 || world.WorldTick < e.Due) continue;
+				if (e.Spec.Until != null && fired.Contains(e.Spec.Until)) { e.Due = -1; e.Done = true; continue; }
+				Fire(world, e);
+				if (e.Spec.Repeat > 0) e.Due += e.Spec.Repeat * 25;
+				else { e.Due = -1; e.Done = true; }
+			}
+			foreach (var (_, key) in expiring.Where(x => world.WorldTick >= x.Tick).ToList())
+			{
+				expiring.RemoveAll(x => x.Key == key);
+				Conceal(key);
+			}
+		}
+
+		void Fire(World world, EventState e)
+		{
+			foreach (var sp in e.Spec.Spawn) SpawnGroup(world, sp, e.Site);
+			foreach (var r in e.Spec.Reveal)
+			{
+				var cells = string.IsNullOrEmpty(r.At) ? world.Map.ProjectedCells
+					: Shroud.ProjectedCellsInRange(world.Map, Named(r.At).CenterPosition, WDist.Zero, WDist.FromCells(r.Radius)).ToArray();
+				var key = new object();
+				human.Shroud.AddSource(key, Shroud.SourceType.Visibility, cells);
+				reveals.Add(key); e.Reveals.Add(key);
+				if (r.Seconds > 0) expiring.Add((world.WorldTick + r.Seconds * 25, key));
+			}
+			foreach (var other in events.Where(x => e.Spec.Conceal.Contains(x.Spec.Id)))
+				foreach (var key in other.Reveals) Conceal(key);
+			foreach (var g in e.Spec.Grant)
+				foreach (var a in g.Actors.Select(Named).Where(Alive)) SetCondition(a, g.Condition, true);
+			foreach (var g in e.Spec.Revoke)
+				foreach (var a in g.Actors.Select(Named).Where(Alive)) SetCondition(a, g.Condition, false);
+			if (!fired.Contains(e.Spec.Id)) fired.Add(e.Spec.Id);
+		}
+
+		void Conceal(object key)
+		{
+			if (reveals.Remove(key)) human.Shroud.RemoveSource(key);
+		}
+
+		void SpawnGroup(World world, Spawn sp, Actor site)
+		{
+			var owner = world.Players.FirstOrDefault(p => p.InternalName == (sp.Owner ?? current.Enemy));
+			var at = Named(sp.At);
+			if (owner == null || at == null) return;
+			var enemy = owner != human;
+			// Enemy groups follow the difficulty: easy fields every other unit, hard half as many again.
+			var types = !enemy ? sp.Types : difficulty == "easy" ? sp.Types.Where((_, i) => i % 2 == 0).ToArray()
+				: difficulty == "hard" ? sp.Types.Concat(sp.Types.Take(sp.Types.Length / 2)).ToArray() : sp.Types;
+			var used = new HashSet<CPos>();
+			foreach (var type in types)
+			{
+				var mobile = world.Map.Rules.Actors[type].TraitInfoOrDefault<MobileInfo>();
+				var cell = at.Location;
+				foreach (var c in world.Map.FindTilesInCircle(at.Location, 8))
+				{
+					if (used.Contains(c) || world.ActorMap.GetActorsAt(c).Any()) continue;
+					if (mobile != null && !mobile.CanEnterCell(world, null, c, check: BlockedByActor.None)) continue;
+					cell = c;
+					break;
+				}
+				used.Add(cell);
+				var actor = world.CreateActor(true, type, new TypeDictionary { new OwnerInit(owner), new LocationInit(cell), new FactionInit(owner.Faction.InternalName) });
+				var to = Named(sp.To) ?? (enemy ? site ?? Units(world).MinByOrDefault(a => (a.CenterPosition - actor.CenterPosition).HorizontalLengthSquared) : null);
+				if (to == null || actor.TraitOrDefault<IMove>() == null) continue;
+				var destination = to.Location;
+				if (enemy) actor.QueueActivity(new OpenRA.Mods.Common.Activities.AttackMoveActivity(actor, () => actor.Trait<IMove>().MoveTo(destination, 2, evaluateNearestMovableCell: true)));
+				else Move(world, actor, destination);
+			}
+		}
 
 		void StartConvoy(World world, State s)
 		{

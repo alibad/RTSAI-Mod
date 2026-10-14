@@ -75,13 +75,19 @@ def controller():
 				campaignWorld = world;
 				Start(info.Mission);
 			}''')
-    source = source.replace('if (states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete"))', 'if (won)')
-    source = source.replace('\n\t\t\t\tforeach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active")) s.Status = "complete";', '')
-    source = source.replace('\n\t\t\tif (states.Any', '''
+    def swap(old, new):
+        # The victory anchors must exist: a silent miss would ship a desktop controller that never wins.
+        nonlocal source
+        if old not in source:
+            raise ValueError('Missions.cs no longer contains: ' + old.strip()[:80])
+        source = source.replace(old, new)
+    swap('if (states.Where(s => !s.Spec.Secondary && !Passive(s.Spec.Kind)).All(s => s.Status == "complete"))', 'if (won)')
+    swap('\n\t\t\t\tforeach (var s in states.Where(s => Passive(s.Spec.Kind) && s.Status == "active")) s.Status = "complete";', '')
+    swap('\n\t\t\tif (states.Any', '''
 			var won = !states.Any(s => !s.Spec.Secondary && s.Status == "failed")
-				&& states.Where(s => !s.Spec.Secondary && s.Spec.Kind != "protect").All(s => s.Status == "complete");
+				&& states.Where(s => !s.Spec.Secondary && !Passive(s.Spec.Kind)).All(s => s.Status == "complete");
 			if (won)
-				foreach (var s in states.Where(s => s.Spec.Kind == "protect" && s.Status == "active"))
+				foreach (var s in states.Where(s => Passive(s.Spec.Kind) && s.Status == "active"))
 					s.Status = "complete";
 			// Publish secondary statuses first: completing the last primary can
 			// award victory immediately and stops further campaign ticks.

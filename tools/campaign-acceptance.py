@@ -55,8 +55,10 @@ def cases(mission, difficulty="normal"):
                "convoy": first_convoy + 1, "keep_one": True}
     if any(o["kind"] == "reach" for o in mission["objectives"]):
         yield {"id": "boundary-undeployed", "expected": "lost", "undeployed": True, "fail_at": 1000}
-        yield {"id": "boundary-one-amphibian", "expected": "won" if difficulty == "easy" else "lost",
-               "reach_limit": 1, "fail_at": 1000}
+        # One unit short only matters where a reach needs more than one.
+        if any(o["kind"] == "reach" and o.get("count", 1) > 1 for o in mission["objectives"]):
+            yield {"id": "boundary-one-amphibian", "expected": "won" if difficulty == "easy" else "lost",
+                   "reach_limit": 1, "fail_at": 1000}
 
 
 def fixture_yaml(text):

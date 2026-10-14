@@ -36,7 +36,14 @@ function Tick()
         elseif Case.kill then Kill(Named(Case.kill)) end
     end
     if tick < 20 then return end
-    if Case.fail_at and tick == Case.fail_at then Kill(Named(Mission.protect[1])) end
+    if Case.fail_at and tick == Case.fail_at then
+        -- The mission's protected actor, else the first actor a primary protect objective names.
+        local name = Mission.protect[1]
+        for _, obj in ipairs(Mission.objectives) do
+            if not name and obj.kind == "protect" and not obj.secondary then name = obj.targets[1] end
+        end
+        Kill(Named(name))
+    end
     -- Remove combat pressure, retaining named objective and protection actors.
     if tick % 100 == 20 then
         local enemy = Player.GetPlayer(Mission.enemy)
@@ -57,7 +64,7 @@ function Tick()
             if obj.kind == "capture" then
                 for _, name in ipairs(obj.targets) do
                     local actor = Named(name)
-                    if not actor.IsDead then actor.Owner = Human end
+                    if actor and not actor.IsDead then actor.Owner = Human end
                 end
             elseif obj.kind == "destroy" then
                 for _, name in ipairs(obj.targets) do Kill(Named(name)) end
