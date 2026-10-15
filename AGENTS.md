@@ -18,12 +18,9 @@ fix that was already on main.
 
 ## The engine
 
-- The engine is `alibad/OpenRA` branch `rtsai/engine`; for the engine, that branch is main. Keep engine changes
-  minimal, and make them on the latest `rtsai/engine`.
-- Push `rtsai/engine` first. Then repin `ENGINE_VERSION` in `mod.config` with a commit on main here, so the pin always
-  resolves.
-- The browser release (`RTSAI-WebGame/tools/release-play.mjs`) builds new runtimes with exactly this pin, and only
-  once it is pushed.
+- The engine is now canonical `../OpenRA` on `main` (owner fork remote `fork/main`). The former `rtsai/engine` and local engine feature work were consolidated there on 15 October 2026. Do not resume development in the old worktree or branch.
+- Keep engine changes minimal. Published `ENGINE_VERSION` pins must continue to resolve; only update a public pin after an explicitly authorized engine push. A local consolidation does not authorize publishing.
+- Local desktop builds use canonical OpenRA main and record its exact SHA. Browser releases remain subject to the existing release script and owner approval.
 
 ## The browser game
 

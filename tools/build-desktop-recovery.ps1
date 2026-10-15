@@ -1,4 +1,4 @@
-param([string]$EngineSource = (Join-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) 'OpenRA-wt-rtsai-engine'))
+param([string]$EngineSource = (Join-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) 'OpenRA'))
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 $EngineSource = (Resolve-Path -LiteralPath $EngineSource).Path
@@ -8,8 +8,8 @@ function Run-Git([string]$root, [string[]]$gitArguments) {
 }
 Run-Git $projectRoot @('fetch','origin','main')
 Run-Git $projectRoot @('merge','--ff-only','origin/main')
-Run-Git $EngineSource @('fetch','fork','rtsai/engine')
-Run-Git $EngineSource @('merge','--ff-only','fork/rtsai/engine')
+Run-Git $EngineSource @('fetch','fork','main')
+Run-Git $EngineSource @('merge','--ff-only','fork/main')
 foreach ($root in @($projectRoot,$EngineSource)) {
  if (& git -C $root status --porcelain) { throw "Commit source changes before building: $root" }
 }
