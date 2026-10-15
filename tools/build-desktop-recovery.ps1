@@ -39,6 +39,12 @@ foreach ($relative in @('bin','glsl','mods/common','mods/common-content','global
  } else { Copy-Item -LiteralPath $sourcePath -Destination $destinationPath -Force }
 }
 $supportRoot = Join-Path $projectRoot '.recovery/support'
+# Snapshot game data as well as assemblies so later source edits cannot change this build.
+foreach ($pack in Get-ChildItem -LiteralPath (Join-Path $projectRoot 'mods') -Directory) {
+ $destinationPack = Join-Path $runtimeRoot "mods/$($pack.Name)"
+ New-Item -ItemType Directory -Path $destinationPack -Force | Out-Null
+ Get-ChildItem -LiteralPath $pack.FullName -Force | Copy-Item -Destination $destinationPack -Recurse -Force
+}
 # The existing World Studio protocol calls the native utility as `ra`. Give that
 # tool a hidden alias of the recovered Classic pack, using the same engine.
 $generatorPack = Join-Path $runtimeRoot 'mods/ra'

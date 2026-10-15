@@ -4,7 +4,7 @@ $projectRoot = Split-Path $PSScriptRoot -Parent
 if (!$EngineSource) { $EngineSource = (Get-Content -LiteralPath (Join-Path $projectRoot 'recovery.local.json') -Raw | ConvertFrom-Json).engineDirectory }
 $utility = Join-Path $EngineSource 'bin/OpenRA.Utility.exe'
 $env:ENGINE_DIR = $EngineSource
-$env:MOD_SEARCH_PATHS = "$projectRoot/mods,$EngineSource/mods"
+$env:MOD_SEARCH_PATHS = if (Test-Path -LiteralPath (Join-Path $EngineSource 'recovery-build.json')) { "$EngineSource/mods" } else { "$projectRoot/mods,$EngineSource/mods" }
 function Check([string]$mode, [string[]]$arguments) {
  & $utility $mode @arguments
  if ($LASTEXITCODE -ne 0) { throw "Native verification failed: $mode $arguments" }
