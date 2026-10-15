@@ -581,7 +581,8 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					var eq = line.IndexOf('=');
 					var value = eq >= 0 ? line[(eq + 1)..] : line;
 					// The owner's desktop mode names are intentional; no original game assets are implied.
-					var modeLabel = file == "ra2|languages/desktop.ftl" && line.StartsWith("desktop-", StringComparison.Ordinal);
+					var modeLabel = (file == "ra2|languages/desktop.ftl" && line.StartsWith("desktop-", StringComparison.Ordinal))
+						|| (file == "common|fluent/chrome.ftl" && line == "button-base-game-ra2 = RA2");
 					if (!modeLabel && Regex.IsMatch(value, @"red alert|\bRA2\b|westwood|command\s*&\s*conquer", RegexOptions.IgnoreCase))
 						Error($"{file}:{i + 1}: branding in shipped text: {line}");
 				}
