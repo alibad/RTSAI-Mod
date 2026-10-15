@@ -79,6 +79,9 @@ civ-thobe:
 		Filename: electro.png
 		Length: *
 		Tick: 80
+	icon:
+		Filename: civ-thobeicon.png
+		Offset: 0, 0
 
 civ-abaya:
 	Inherits@MC: ^MindControllable
@@ -158,6 +161,9 @@ civ-abaya:
 		Filename: electro.png
 		Length: *
 		Tick: 80
+	icon:
+		Filename: civ-abayaicon.png
+		Offset: 0, 0
 
 civ-scarf:
 	Inherits@MC: ^MindControllable
@@ -237,6 +243,9 @@ civ-scarf:
 		Filename: electro.png
 		Length: *
 		Tick: 80
+	icon:
+		Filename: civ-scarficon.png
+		Offset: 0, 0
 
 civ-fisher:
 	Inherits@MC: ^MindControllable
@@ -316,6 +325,9 @@ civ-fisher:
 		Filename: electro.png
 		Length: *
 		Tick: 80
+	icon:
+		Filename: civ-fishericon.png
+		Offset: 0, 0
 
 civ-elder:
 	Inherits@MC: ^MindControllable
@@ -395,6 +407,9 @@ civ-elder:
 		Filename: electro.png
 		Length: *
 		Tick: 80
+	icon:
+		Filename: civ-eldericon.png
+		Offset: 0, 0
 
 civ-youth:
 	Inherits@MC: ^MindControllable
@@ -474,3 +489,6 @@ civ-youth:
 		Filename: electro.png
 		Length: *
 		Tick: 80
+	icon:
+		Filename: civ-youthicon.png
+		Offset: 0, 0

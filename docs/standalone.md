@@ -257,6 +257,12 @@ boxes), so survivors in missions were drawn as engineers and the map generator p
   actors wear them (`standalone/civilian/civilian-rules.yaml`), each with its look's own palette and no player colour.
   Civilians now use their panic sequences (`ScaredyCat` prefix `panic-`) and, when idle, wander a step or two now and
   then (`Wanders`). Tooltips name them plainly (Villager, Fisherman, Elder) instead of RA2's "Texan" and "Beach Fat Male".
+- **Portraits (15 October).** Each look has a selection-panel cameo, `civ-<look>icon.png` (60x48), made the way the
+  shared engineer's and operative's are (RTSAI-Art `tools/civilians.py cameos`: the route's rig framed head and
+  shoulders and rendered by `tools/cameo_render.py` in the person's own colours, with the stock name bar: VILLAGER,
+  FISHERMAN, ELDER).
+  No flags or insignia. Each look's image has an `icon` sequence, which the selection panel uses for actors without a
+  Buildable, so a selected civilian no longer shows an empty panel.
 - **Village buildings.** Nine procedural designs (RTSAI-Art `tools/village_designs.py`, rendered by the base kit's
   renderer, `tools/village.py`) replace the civilian structures the generator places: houses of four sizes (`cahse06`,
   `cahse01`, `cahse07`, `cahse03`), a shop (`camsc07`), a water tower (`cawt01`), a well (`cafarm02`), a walled palm
