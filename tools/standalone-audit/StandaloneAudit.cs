@@ -451,7 +451,7 @@ namespace OpenRA.Mods.RTSAIAudit
 				["key"] = m.Key, ["title"] = m.Value.Title, ["hidden"] = m.Value.Hidden, ["r"] = Resolve(m.Value.Filename),
 			}).ToList();
 
-			// Sound filenames written directly in rules and weapons (Report, ImpactSounds, *Sound*, ...)
+			// Sound filenames written directly in rules and weapons (any field: Report, ImpactSounds, ChargeAudio, ...)
 			var ruleSounds = new Dictionary<string, object>();
 			foreach (var actor in rules.Actors.Values)
 				foreach (var ti in actor.TraitInfos<TraitInfo>())
@@ -482,13 +482,13 @@ namespace OpenRA.Mods.RTSAIAudit
 			};
 		}
 
+		// Every public field whose value names a .wav/.aud file, whatever the field is called: a name filter (*Sound*,
+		// *Report*) missed AttackTesla.ChargeAudio, so the tesla coil's and prism tower's charge sounds never got a
+		// standalone file.
 		static IEnumerable<string> SoundStrings(object o)
 		{
 			foreach (var f in o.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
 			{
-				if (!(f.Name.Contains("Sound", StringComparison.Ordinal) || f.Name.Contains("Report", StringComparison.Ordinal)))
-					continue;
-
 				foreach (var s in Strings(f.GetValue(o)))
 					if (s.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || s.EndsWith(".aud", StringComparison.OrdinalIgnoreCase))
 						yield return s;

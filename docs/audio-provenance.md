@@ -554,12 +554,14 @@ Generator `tools/standalone-sfx.py` (procedural; no recordings or samples). Seed
 | `standalone/audio/sfx/bpowdiea.wav` | power plant destroyed: explosion, arcing and a dying transformer hum | sha256('rtsai-standalone-sfx-1/bpowdiea.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/bpowdieb.wav` | power plant destroyed: explosion, arcing and a dying transformer hum | sha256('rtsai-standalone-sfx-1/bpowdieb.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/bpriat1a.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/bpriat1a.wav') | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/bpripow.wav` | prism tower charging: rising crystalline shimmer gathering into a bright tone | sha256('rtsai-standalone-sfx-1/bpripow.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/bsenatta.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/bsenatta.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/bsenattb.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/bsenattb.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/bsenattc.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/bsenattc.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/bsenattd.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/bsenattd.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/btesat1a.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/btesat1a.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/btesat2a.wav` | restored-country weapon or impact | sha256('rtsai-standalone-sfx-1/btesat2a.wav') | GPL-3.0 code, no third-party rights |
+| `standalone/audio/sfx/btespow.wav` | tesla coil charging: transformer hum rising into crackling arcs | sha256('rtsai-standalone-sfx-1/btespow.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/chrono2.aud` | shift device effect (Westwood AUD, the name the rules use) | sha256('rtsai-standalone-sfx-1/chrono2.aud') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/expnew09.wav` | large vehicle or missile explosion | sha256('rtsai-standalone-sfx-1/expnew09.wav') | GPL-3.0 code, no third-party rights |
 | `standalone/audio/sfx/expnew13.wav` | medium explosion with burning debris | sha256('rtsai-standalone-sfx-1/expnew13.wav') | GPL-3.0 code, no third-party rights |
