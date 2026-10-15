@@ -1,8 +1,4 @@
-# The RTS AI main menu (replaces common|chrome/mainmenu.yaml). Same widget ids and logic as the stock menu; the look
-# is ours: a full-window render of one flagship per faction (tools/standalone-menu.py), the product name, a single
-# column of buttons on a dark glass band, the build version, and a one-line forum-profile link at the top right.
-# No news box and no content-manager button: the standalone game has no external content to manage.
-
+# Frontline native shell. Existing OpenRA action ids preserve every game/tool workflow.
 Container@MAINMENU:
 	Logic: RTSAIFrontlineMainMenuLogic, RTSAIGameModesLogic
 	Children:

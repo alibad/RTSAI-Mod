@@ -43,7 +43,7 @@ FrontlineCanvas@RTSAI_DESKTOP_HOME:
 			Width: 450
 			Height: 96
 			Text: frontline-play
-			DesignFontSize: 56
+			DesignFontSize: 72
 			Primary: true
 			Key: return
 		FrontlineButton@CAMPAIGN:

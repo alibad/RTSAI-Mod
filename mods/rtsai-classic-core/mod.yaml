@@ -279,6 +279,36 @@ ChromeMetrics:
 	ra|metrics.yaml
 
 Fonts:
+	FrontlineMenu72:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 72
+		Ascender: 56
+	FrontlineMenu80:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 80
+		Ascender: 62
+	FrontlineMenu96:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 96
+		Ascender: 75
+	FrontlinePlay72:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 72
+		Ascender: 56
+	FrontlinePlay80:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 80
+		Ascender: 62
+	FrontlinePlay96:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 96
+		Ascender: 75
 	FrontlineMenu12:
 		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
 		FallbackFonts: common|NotoSansArabic-Bold.ttf

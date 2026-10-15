@@ -73,6 +73,15 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				Environment.SetEnvironmentVariable("RTSAI_RECOVERY_SCREEN", null);
 				Game.RunAfterTick(() => widget.Get<ButtonWidget>(screen == "switch-classic" ? "CLASSIC" : "RA2").OnClick());
 			}
+			else if (screen == "settings-return" || screen == "campaign-return" || screen == "packs-return")
+				Game.RunAfterTick(() =>
+				{
+					widget.Get<ButtonWidget>(screen == "settings-return" ? "SETTINGS" : screen == "campaign-return" ? "CAMPAIGN" : "PACKS").OnClick();
+					Ui.CurrentWindow().Get<ButtonWidget>(screen == "packs-return" ? "CLOSE" : "BACK_BUTTON").OnClick();
+					if (!widget.IsVisible())
+						throw new InvalidOperationException("Frontline home was not restored after " + screen);
+					Console.WriteLine("RTSAI_NATIVE_RETURN|" + screen + "|" + Game.ModData.Manifest.Id);
+				});
 			else if (screen == "studio")
 				Game.RunAfterTick(studio.OnClick);
 			else if (screen == "settings" || screen == "display" || screen == "packs" || screen == "composer" || screen == "composer-popup"

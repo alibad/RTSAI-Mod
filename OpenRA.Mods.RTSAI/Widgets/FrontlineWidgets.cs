@@ -58,7 +58,7 @@ namespace OpenRA.Mods.RTSAI.Widgets
 		public readonly bool Compact;
 		public readonly int DesignFontSize = 28;
 		public float LayoutScale = 1;
-		static readonly int[] FontSizes = { 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40, 48, 56, 64 };
+		static readonly int[] FontSizes = { 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96 };
 
 		[ObjectCreator.UseCtor]
 		public FrontlineButtonWidget(ModData modData) : base(modData) { }
