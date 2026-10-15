@@ -1,7 +1,7 @@
 {
  "note": "Art delivered to the standalone build by the art agent (Phase 3). Original work made by project tools from hand-authored Blender models and procedural code. No Electronic Arts / Westwood file, pixel or palette is an input; stock Red Alert 2 files were read only on the developer's machine (RTSAI-Art reference-local/, git-ignored) to measure sizes, value structure and edge density.",
- "written": "2026-10-14T23:59:01.083943+00:00",
- "rtsaiArtHead": "f2e91b21",
+ "written": "2026-10-15T00:04:11.829667+00:00",
+ "rtsaiArtHead": "211a15a3",
  "approvals": {
   "base kit v2": "coordinator, 2026-10-07",
   "hpwr and refinery purifier": "coordinator, 2026-10-07",
@@ -4243,7 +4243,7 @@
    "sha256": "133fa25210ce9cfc249d21b541aa432631bf79fc5e2d620eb5589880aa18bc46",
    "origin": "project-generated",
    "candidate": "units/civ-abaya/candidates/sprite-v3-glb/civ-abayaicon.png",
-   "rtsaiArtCommit": "f2e91b21",
+   "rtsaiArtCommit": "211a15a3",
    "generator": "tools/civilians.py cameos",
    "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
   },
@@ -4273,7 +4273,7 @@
    "sha256": "a7f01c6091237778926045be93d36ff76c9d5624665e996b61787b745302383b",
    "origin": "project-generated",
    "candidate": "units/civ-elder/candidates/sprite-v3-glb/civ-eldericon.png",
-   "rtsaiArtCommit": "f2e91b21",
+   "rtsaiArtCommit": "211a15a3",
    "generator": "tools/civilians.py cameos",
    "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
   },
@@ -4303,7 +4303,7 @@
    "sha256": "d08229feb3e4045cf41c4128a937c5b352b7ef459eb1a738f1cf23491e24ce5c",
    "origin": "project-generated",
    "candidate": "units/civ-fisher/candidates/sprite-v3-glb/civ-fishericon.png",
-   "rtsaiArtCommit": "f2e91b21",
+   "rtsaiArtCommit": "211a15a3",
    "generator": "tools/civilians.py cameos",
    "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
   },
@@ -4333,7 +4333,7 @@
    "sha256": "caf3f0851dd0d28214da3150341da802bd79ab97b4256bebb760e5491b28774f",
    "origin": "project-generated",
    "candidate": "units/civ-scarf/candidates/sprite-v3-glb/civ-scarficon.png",
-   "rtsaiArtCommit": "f2e91b21",
+   "rtsaiArtCommit": "211a15a3",
    "generator": "tools/civilians.py cameos",
    "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
   },
@@ -4363,7 +4363,7 @@
    "sha256": "256c57e8a909d4ef6caee7ce9be2f82dd2056c18213b70f0d3149e224d33a1a8",
    "origin": "project-generated",
    "candidate": "units/civ-thobe/candidates/sprite-v3-glb/civ-thobeicon.png",
-   "rtsaiArtCommit": "f2e91b21",
+   "rtsaiArtCommit": "211a15a3",
    "generator": "tools/civilians.py cameos",
    "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
   },
@@ -4393,7 +4393,7 @@
    "sha256": "dab77c2bf6df186d88be5038218cf68d084ef1f8ef195bffe1764dcdb237926c",
    "origin": "project-generated",
    "candidate": "units/civ-youth/candidates/sprite-v3-glb/civ-youthicon.png",
-   "rtsaiArtCommit": "f2e91b21",
+   "rtsaiArtCommit": "211a15a3",
    "generator": "tools/civilians.py cameos",
    "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
   },
