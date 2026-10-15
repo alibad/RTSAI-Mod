@@ -248,6 +248,48 @@ generator (`rules/map-generators.yaml`, the editor's and the browser game's rand
 walled-off pockets. Its cliffs, beaches, water cliffs and water use Tiberian Sun's brushes and riser heights mapped onto
 our templates by `tools/port-mapgen-brushes.py`: our RA2-compatible template table has TS's shapes in TS's order.
 
+**Civilians and villages (14 October 2026).** The civilians and the civilian houses were code-drawn stand-ins (green
+boxes), so survivors in missions were drawn as engineers and the map generator placed no villages.
+- **Civilians.** Six hand-authored looks of the Gulf, Red Sea and Levant coasts (a man in a thobe and ghutra, a woman in
+  an abaya, a woman in a coat-dress and headscarf, a fisherman, an elder with a cane, a young man in a T-shirt), modelled
+  in Blender by RTSAI-Art `tools/civilian_models.py` and rendered through the infantry route with a civilian sequence
+  set: stand, run, two idles, panic-run, panic-stand, cheer and two deaths, 8 facings (deaths at one). The 13 `civ*`
+  actors wear them (`standalone/civilian/civilian-rules.yaml`), each with its look's own palette and no player colour.
+  Civilians now use their panic sequences (`ScaredyCat` prefix `panic-`) and, when idle, wander a step or two now and
+  then (`Wanders`). Tooltips name them plainly (Villager, Fisherman, Elder) instead of RA2's "Texan" and "Beach Fat Male".
+- **Portraits (15 October).** Each look has a selection-panel cameo, `civ-<look>icon.png` (60x48), made the way the
+  shared engineer's and operative's are (RTSAI-Art `tools/civilians.py cameos`: the route's rig framed head and
+  shoulders and rendered by `tools/cameo_render.py` in the person's own colours, with the stock name bar: VILLAGER,
+  FISHERMAN, ELDER).
+  No flags or insignia. Each look's image has an `icon` sequence, which the selection panel uses for actors without a
+  Buildable, so a selected civilian no longer shows an empty panel.
+- **Village buildings.** Nine procedural designs (RTSAI-Art `tools/village_designs.py`, rendered by the base kit's
+  renderer, `tools/village.py`) replace the civilian structures the generator places: houses of four sizes (`cahse06`,
+  `cahse01`, `cahse07`, `cahse03`), a shop (`camsc07`), a water tower (`cawt01`), a well (`cafarm02`), a walled palm
+  garden (`cafarm01`) and a garden wall (`cafncw`), each with damaged and critical states, and a ruin for the houses and
+  the well. They are drawn with one fixed palette (`village.pal`).
+- **Villages in random maps.** `rules/map-generators.yaml` turns on the generator's civilian-building pass
+  (`CivilianBuildings`). It marks clumps of open land that are zoneable (outside the spawn reservations, the ore mines
+  and the ore fields) and off the main passages, and fills them with the tileset's `CivilianBuildings` brushes: small
+  village groups of houses, a shop, wells, gardens and walls with their people, authored as cell layouts in
+  `tools/port-mapgen-brushes.py` (`VILLAGE_BRUSHES`). No engine change. TS's own clump density (500) left no room for
+  the multi-cell groups, so the clumps are solid (1000).
+- **House yards (15 October).** A house shows its door and windows on its two front sides (screen lower left and lower
+  right), so each house keeps a yard: the row of cells in front of it, the column beside it and the corner between.
+  People may stand there, nothing else: the brush tool rejects a group that puts a building, tower, well, garden or
+  wall in a yard, and the yard's free cells are part of the brush's shape as tiles (`Tile@yard<n>`), which the
+  generator reserves but, under its actor-only contract for this pass, never paints, so no neighbouring group or
+  earlier obstacle can sit there. Water towers and wells now stand behind a house or with a garden, every group covers
+  at least six cells (a lone tower or well filled every small gap before), and the pass marks more land in bigger
+  clumps (`CivilianBuildings` 400, `CivilianBuildingsFeatureSize` 20480) so the larger groups fit.
+  [ran: RTSAI-WebGame `websim mapgentest` and a yard check of the generated maps] 8 seeds at 96x96 for 2 players:
+  9 to 22 village buildings and 6 to 18 people a map, 59 houses and shops in all (12 before, when lone water towers
+  and wells made up most villages), no house with anything but people in its yard (6 of 12 before), none nearer than
+  18 cells to a spawn, the same ore cells and mines as without villages, every map playable (the bot builds and
+  earns). Two 4-player 128x128 maps: 42 and 53 buildings, 24 and 37 people, no blocked yard, both playable.
+- `--check-standalone` now counts every actor of the tilesets' brush collections as drawable, so a placeholder on a
+  village building or civilian fails the check.
+
 **Standalone balance smoke** [ran], the first run before the fixes above: `tools/balance-harness.py run --campaign standalone-smoke --standalone`.
 - Setup: headless, no RA2 content linked anywhere, the 7 factions on the base kit, Twin Fords and Harbor Line.
   Every pairing was played from both spawn orientations with the normal bot and a 40-minute cap: 84 matches.

@@ -104,7 +104,8 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 		/// <summary>
 		/// Every sequence image a standalone game can draw. Collects every string value (any field name, nested
 		/// warheads, projectiles, lists and dictionaries) of the traits of: the factions' reachable actors, the World and
-		/// Player actor, the actors placed on the standalone maps and the actors the World spawns (crates); follows
+		/// Player actor, the actors placed on the standalone maps, the actors the map generator places (the tilesets'
+		/// brush collections: trees, villages, civilians) and the actors the World spawns (crates); follows
 		/// every weapon those strings name (and weapons named inside weapons). Catches images drawn by overlays,
 		/// decorations, rally flags, beacons, trails, death effects and world layers, whatever the field is called.
 		/// A string that names an actor (a prerequisite, a bot build list, a production type) is not an image use:
@@ -128,6 +129,15 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					foreach (var n in actorsNode.Value.Nodes)
 						actors.Add(n.Value.Value.ToLowerInvariant());
 			}
+
+			// Actors the map generator places: every actor of the tilesets' brush collections (forests, villages and their
+			// people, rules/map-generators.yaml).
+			foreach (var ti in modData.DefaultTerrainInfo.Values.OfType<ITemplatedTerrainInfo>())
+				if (ti.MultiBrushCollections != null)
+					foreach (var collection in ti.MultiBrushCollections.Values)
+						foreach (var brush in collection)
+							foreach (var a in brush.Actors)
+								actors.Add(a.Type.ToLowerInvariant());
 
 			// Actors the World spawns by itself (crates and the like): ActorReference fields of World traits.
 			foreach (var ti in rules.Actors[SystemActors.World].TraitInfos<TraitInfo>())

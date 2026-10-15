@@ -19,3 +19,20 @@ standalone-purifier-name = Refinery Purifier
 standalone-purifier-description =
     Refinery upgrade: place it on a refinery.
     That refinery earns 25% more from ore.
+
+## Civilians and village buildings (standalone/civilian: RTSAI-Art tools/civilians.py and tools/village.py).
+standalone-civilian-thobe-name = Villager
+standalone-civilian-abaya-name = Villager
+standalone-civilian-scarf-name = Villager
+standalone-civilian-fisher-name = Fisherman
+standalone-civilian-elder-name = Elder
+standalone-civilian-youth-name = Villager
+standalone-village-house-name = House
+standalone-village-courtyard-house-name = Courtyard House
+standalone-village-tall-house-name = Town House
+standalone-village-large-house-name = Family House
+standalone-village-shop-name = Shop
+standalone-village-water-tower-name = Water Tower
+standalone-village-well-name = Well
+standalone-village-garden-name = Palm Garden
+standalone-village-wall-name = Garden Wall
