@@ -28,7 +28,7 @@ try {
 finally { Pop-Location }
 $runtimeRoot = Join-Path $projectRoot ".recovery/native-$($modCommit.Substring(0,7))-$($engineCommit.Substring(0,7))"
 New-Item -ItemType Directory -Path $runtimeRoot -Force | Out-Null
-foreach ($relative in @('bin','glsl','mods/common','mods/common-content','AUTHORS','COPYING','VERSION')) {
+foreach ($relative in @('bin','glsl','mods/common','mods/common-content','global mix database.dat','AUTHORS','COPYING','VERSION')) {
  $sourcePath = Join-Path $EngineSource $relative
  if (!(Test-Path -LiteralPath $sourcePath)) { continue }
  $destinationPath = Join-Path $runtimeRoot $relative
@@ -45,7 +45,7 @@ $generatorPack = Join-Path $runtimeRoot 'mods/ra'
 New-Item -ItemType Directory -Path $generatorPack -Force | Out-Null
 Get-ChildItem -LiteralPath (Join-Path $projectRoot 'mods/rtsai-classic-core') -Force | Copy-Item -Destination $generatorPack -Recurse -Force
 $aliasManifest = Join-Path $generatorPack 'mod.yaml'
-$aliasYaml = Get-Content -LiteralPath $aliasManifest -Raw
+$aliasYaml = Get-Content -LiteralPath $aliasManifest -Raw -Encoding utf8
 $aliasYaml = $aliasYaml.Replace("Metadata:`n", "Metadata:`n`tHidden: true`n")
 $aliasYaml | Set-Content -LiteralPath $aliasManifest -Encoding utf8
 & python (Join-Path $PSScriptRoot 'migrate-desktop-support.py') --destination $supportRoot
