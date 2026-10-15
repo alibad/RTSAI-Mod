@@ -125,6 +125,17 @@ All new tools live in `tools/sound/` and run on D: (C: is full).
 6. **Ship**: into the mod, the browser game's audio pack, the desktop release and the website's published clips;
    provenance in `PROVENANCE.json` for every file.
 
+**The Sound desk (14 October 2026).** Steps 5 and 6 for single sounds already work: RTSAI-Web's local admin viewer
+(`npm run sound-desk`) auditions every modern unit's and faction's sound slots, A/B against bake-off, project or CC0
+candidates (weapons fire in the Attack demo), says announcer and unit lines again with the faction's own voice, and
+records Use / Keep / Reject in `RTSAI-Art/sound-review.json`. On a branch here,
+`python tools/apply-sound-decisions.py --decisions ../RTSAI-Art/sound-review.json --dry-run` prints the plan and the
+diff; without `--dry-run` it copies the chosen files (normalised to the classes above) into
+`modern-factions/audio/` (new files in `sd/`), records them in `PROVENANCE.json`, rewires weapons, deaths, voice sets
+and notification mappings through `modern-factions/sound-desk-{rules,weapons,voices}.yaml` (sounds only; a balance
+check compares every resolved weapon before and after) and runs the audio checks. It refuses EA files and anything
+without a redistributable licence. Tests: `python tools/test_apply_sound_decisions.py`.
+
 ## 7. Phases
 
 | Phase | What | Size | Owner time |
