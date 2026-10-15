@@ -11,6 +11,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 	// by MainMenuLogic, including their exit and match-start callbacks.
 	public sealed class RTSAIFrontlineMainMenuLogic : MainMenuLogic
 	{
+		public static void PrepareModeChange() => lastGameState = MenuPanel.None;
+
 		[ObjectCreator.UseCtor]
 		public RTSAIFrontlineMainMenuLogic(Widget widget, World world, ModData modData)
 			: base(widget, world, modData)
@@ -111,7 +113,12 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		static void Select(string mod)
 		{
 			if (Game.ModData.Manifest.Id != mod)
+			{
+				// Returning from a previous match must not reopen its lobby in
+				// the newly selected foundation when the shellmap loads.
+				RTSAIFrontlineMainMenuLogic.PrepareModeChange();
 				Game.RunAfterTick(() => Game.InitializeMod(Game.Mods[mod], new Arguments()));
+			}
 		}
 	}
 

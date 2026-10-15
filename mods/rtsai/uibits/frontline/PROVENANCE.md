@@ -13,3 +13,11 @@ baked into the backdrop. Existing gameplay content and both mode profiles remain
 Generation prompts and reference remain under docs/frontline-menu-assets/.
 Bundled fonts are Black Ops One and Chakra Petch, from google/fonts, with their
 respective SIL Open Font Licenses in ../fonts/. Those files are local runtime resources.
+
+Font sources (downloaded 15 October 2026):
+- https://github.com/google/fonts/tree/main/ofl/blackopsone
+- https://github.com/google/fonts/tree/main/ofl/chakrapetch
+
+`tools/frontline-textures.py` adds transparent padding to meet the engine's
+power-of-two texture requirement. It leaves all generated content pixels and
+chrome coordinates unchanged. Original unpadded PNGs remain in the asset sources.

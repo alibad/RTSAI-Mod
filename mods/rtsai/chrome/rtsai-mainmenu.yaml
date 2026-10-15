@@ -15,7 +15,7 @@ Container@MAINMENU:
 			Height: WINDOW_HEIGHT
 			ImageCollection: frontline
 			ImageName: backdrop
-			FocusX: 0.62
+			FocusX: 0
 		FrontlineCanvas@FRONTLINE_BRAND:
 			Width: WINDOW_WIDTH
 			Height: WINDOW_HEIGHT
