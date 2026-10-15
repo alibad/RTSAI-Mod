@@ -188,7 +188,7 @@ Chrome:
 	ra2|desktop-theme.yaml
 	ra2|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
+Assemblies: OpenRA.Mods.RTSAI.dll, OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll
 
 ChromeLayout:
 	common|chrome/faction-catalog.yaml

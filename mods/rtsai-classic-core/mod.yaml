@@ -144,7 +144,7 @@ Chrome:
 	ra|desktop-shell-chrome.yaml
 	ra|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
+Assemblies: OpenRA.Mods.RTSAI.dll, OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll
 
 ChromeLayout:
 	ra2|chrome/earth-mission-studio.yaml

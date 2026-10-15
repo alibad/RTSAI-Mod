@@ -22,6 +22,7 @@ using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Common.Widgets.Logic;
 using OpenRA.Mods.RTSAI.Traits;
+using CompanionBridge = OpenRA.Mods.RTSAI.Traits.CompanionBridge;
 using OpenRA.Primitives;
 using OpenRA.Support;
 using OpenRA.Widgets;
