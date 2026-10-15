@@ -59,8 +59,8 @@ def new_destination(dest, source):
     dest.parent.mkdir(parents=True, exist_ok=True)
     return dest
 
-def export_engine(repo, dest):
-    pin = re.search(r'^ENGINE_VERSION="([a-f0-9]{40})"', (ROOT / "mod.config").read_text(), re.M).group(1)
+def export_engine(repo, dest, override=None):
+    pin = override or re.search(r'^ENGINE_VERSION="([a-f0-9]{40})"', (ROOT / "mod.config").read_text(), re.M).group(1)
     commit = git(repo, "rev-parse", pin + "^{commit}").decode().strip()
     if commit != pin: raise ValueError("Engine pin resolution differs")
     with tempfile.TemporaryDirectory(dir=dest.parent) as work:
@@ -160,7 +160,7 @@ def build_copy(source, dest):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     subs = ap.add_subparsers(dest="command", required=True)
-    engine = subs.add_parser("engine"); engine.add_argument("--repo", type=Path, default=ROOT.parent / "OpenRA"); engine.add_argument("--out", type=Path, required=True)
+    engine = subs.add_parser("engine"); engine.add_argument("--repo", type=Path, default=ROOT.parent / "OpenRA"); engine.add_argument("--out", type=Path, required=True); engine.add_argument("--commit", help="Exact engine commit for a local build; never changes mod.config")
     snap = subs.add_parser("snapshot"); snap.add_argument("--repo", type=Path, required=True); snap.add_argument("--out", type=Path, required=True); snap.add_argument("--include", action="append", default=[]); snap.add_argument("--committed", action="store_true", help="Export HEAD only, preserving concurrent uncommitted work outside the build")
     cp = subs.add_parser("copy"); cp.add_argument("--input", type=Path, required=True); cp.add_argument("--out", type=Path, required=True)
     verify = subs.add_parser("verify"); verify.add_argument("path", type=Path)
@@ -170,7 +170,7 @@ def main():
         source = args.input.resolve(); dest = new_destination(args.out, source); value = build_copy(source, dest)
     else:
         repo = args.repo.resolve(); dest = new_destination(args.out, repo)
-        value = export_engine(repo, dest) if args.command == "engine" else (snapshot_committed if args.committed else snapshot)(repo, dest, args.include)
+        value = export_engine(repo, dest, args.commit) if args.command == "engine" else (snapshot_committed if args.committed else snapshot)(repo, dest, args.include)
         check(dest)
     print(json.dumps({k: v for k, v in value.items() if k != "files"}, indent=2))
 
