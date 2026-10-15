@@ -214,6 +214,7 @@ FluentMessages:
 	ra2|modern-factions/loading-tips.ftl
 	ra|fluent/war-room.ftl
 	ra2|languages/desktop.ftl
+	ra2|languages/ai-runtime.ftl
 	ra|fluent/experience.ftl
 	ra2|languages/identity.ftl
 	ra2|languages/game-modes.ftl
