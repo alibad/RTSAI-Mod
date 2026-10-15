@@ -56,18 +56,20 @@ namespace OpenRA.Mods.RTSAI.Widgets
 		public readonly bool Primary;
 		public readonly bool Mode;
 		public readonly bool Compact;
+		public readonly string Icon;
 		public readonly int DesignFontSize = 28;
 		public float LayoutScale = 1;
 		static readonly int[] FontSizes = { 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96 };
 
 		[ObjectCreator.UseCtor]
-		public FrontlineButtonWidget(ModData modData) : base(modData) { }
+		public FrontlineButtonWidget(ModData modData) : base(modData) { LeftMargin = 0; }
 
 		FrontlineButtonWidget(FrontlineButtonWidget other) : base(other)
 		{
 			Primary = other.Primary;
 			Mode = other.Mode;
 			Compact = other.Compact;
+			Icon = other.Icon;
 			DesignFontSize = other.DesignFontSize;
 			LayoutScale = other.LayoutScale;
 		}
@@ -100,9 +102,12 @@ namespace OpenRA.Mods.RTSAI.Widgets
 					Game.Renderer.RgbaColorRenderer.FillRect(new Vector3(r.Left + 12 * LayoutScale, r.Bottom - 5 * LayoutScale, 0),
 						new Vector3(r.Right - 12 * LayoutScale, r.Bottom - 2 * LayoutScale, 0), Color.FromArgb(242, 168, 46));
 			}
+			else if (Icon != null)
+				WidgetUtils.DrawSprite(OpenRA.Graphics.ChromeProvider.GetImage("frontline-icons", Icon),
+					new Vector2(r.Left, r.Top + 8 * LayoutScale), new Vector2(33, 32) * LayoutScale);
 
 			var width = text.Sum(c => font.Measure(c.ToString()).X) + Math.Max(0, text.Length - 1) * tracking;
-			var pos = new Vector2(Mode ? r.Left + (r.Width - width) / 2 : r.Left + (Primary ? 36 : 0) * LayoutScale,
+			var pos = new Vector2(Mode ? r.Left + (r.Width - width) / 2 : r.Left + (Primary ? 36 : LeftMargin) * LayoutScale,
 				r.Top + (r.Height - font.Measure(text).Y - font.TopOffset) / 2 + (Depressed ? 2 : 0));
 			foreach (var c in text)
 			{

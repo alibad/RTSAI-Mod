@@ -82,10 +82,12 @@ FrontlineCanvas@RTSAI_DESKTOP_HOME:
 			Text: frontline-quit
 			DesignFontSize: 30
 		FrontlineButton@PACKS:
-			X: 1486
+			X: 1438
 			Y: 839
-			Width: 152
+			Width: 200
 			Height: 45
+			LeftMargin: 48
+			Icon: puzzle
 			Text: frontline-packs
 			DesignFontSize: 16
 			Compact: true
@@ -105,14 +107,6 @@ FrontlineCanvas@RTSAI_DESKTOP_HOME:
 			Text: frontline-experience
 			DesignFontSize: 15
 			Compact: true
-		FrontlineImage@PACK_ICON:
-			X: 1438
-			Y: 847
-			Width: 33
-			Height: 32
-			ImageCollection: frontline-icons
-			ImageName: puzzle
-			IgnoreMouseOver: true
 
 RTSAIPanel@RTSAI_PACK_LIBRARY:
 	Logic: RTSAIPackLibraryLogic
