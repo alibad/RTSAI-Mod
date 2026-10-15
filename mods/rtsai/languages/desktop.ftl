@@ -31,3 +31,18 @@ desktop-configure-this-experience = Configure this experience
 desktop-back = Back
 desktop-mission-studio = Mission Studio
 desktop-game-library = Game library
+
+frontline-classic = CLASSIC
+frontline-ra2 = RA2
+frontline-play = PLAY
+frontline-campaign = CAMPAIGN
+frontline-skirmish = SKIRMISH
+frontline-multiplayer = MULTIPLAYER
+frontline-settings = SETTINGS
+frontline-quit = QUIT
+frontline-packs = GAME PACKS
+frontline-tools = TOOLS
+frontline-experience = EXPERIENCE
+
+frontline-load-game = LOAD GAME
+frontline-studio = MISSION STUDIO

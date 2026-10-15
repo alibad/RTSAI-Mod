@@ -22,3 +22,19 @@ desktop-button-disabled:
 	Image: ra2|uibits/desktop-panels.png
 	PanelRegion: 64, 0, 1, 1, 14, 14, 1, 1
 
+
+frontline:
+	Image: ra2|uibits/frontline/backdrop.png
+	Regions:
+		backdrop: 0, 0, 1672, 941
+frontline-assets:
+	Image: ra2|uibits/frontline/controls.png
+	Regions:
+		logo: 100, 144, 1250, 418
+		play: 56, 731, 1338, 266
+
+frontline-icons:
+	Image: ra2|uibits/frontline/icons.png
+	Regions:
+		chevron: 300, 190, 320, 505
+		puzzle: 1098, 177, 556, 533

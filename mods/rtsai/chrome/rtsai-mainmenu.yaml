@@ -4,7 +4,7 @@
 # No news box and no content-manager button: the standalone game has no external content to manage.
 
 Container@MAINMENU:
-	Logic: MainMenuLogic, RTSAIGameModesLogic, RTSAIDesktopEntryLogic
+	Logic: RTSAIFrontlineMainMenuLogic, RTSAIGameModesLogic
 	Children:
 		LogicKeyListener@GLOBAL_KEYHANDLER:
 			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
@@ -17,91 +17,70 @@ Container@MAINMENU:
 		CoverImage@BACKDROP:
 			Width: WINDOW_WIDTH
 			Height: WINDOW_HEIGHT
-			ImageCollection: rtsai-menu
+			ImageCollection: frontline
 			ImageName: backdrop
-			SafeLeft: 580
-			SafeRight: 1810
-			InsetLeft: 341
-		RTSAIButton@DESKTOP_HOME_BUTTON:
-			X: WINDOW_WIDTH - 270
-			Y: 85
-			Width: 230
-			Height: 38
-			Text: desktop-game-library
-			Font: Bold
-		ColorBlock@MENU_BAND:
-			Width: 340
+			FocusX: 0.62
+		FrontlineCanvas@FRONTLINE_BRAND:
+			Width: WINDOW_WIDTH
 			Height: WINDOW_HEIGHT
-			Color: 070A0FB0
-		ColorBlock@MENU_BAND_EDGE:
-			X: 340
-			Width: 1
-			Height: WINDOW_HEIGHT
-			Color: 4FC3D055
-		Label@PRODUCT_TITLE:
-			X: 44
-			Y: 48
-			Width: 280
-			Height: 64
-			Text: label-rtsai-main-menu-title
-			Font: Hero
-			Shadow: true
-		ColorBlock@PRODUCT_RULE:
-			X: 46
-			Y: 118
-			Width: 56
-			Height: 3
-			Color: 4FC3D0
+			Children:
+				FrontlineImage@FRONTLINE_LOGO:
+					X: 92
+					Y: 94
+					Width: 450
+					Height: 149
+					ImageCollection: frontline-assets
+					ImageName: logo
 		Container@MENUS:
-			X: 44
-			Y: 150
-			Width: 252
+			X: WINDOW_WIDTH * 66 / 1000
+			Y: WINDOW_HEIGHT * 39 / 100
+			Width: 310
 			Height: 340
 			Children:
 				Container@MAIN_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
 					Children:
-						RTSAIButton@EARTH_STUDIO_BUTTON:
+						FrontlineButton@EARTH_STUDIO_BUTTON:
 							Visible: false
 							Width: 1
 							Height: 1
-						RTSAIButton@SINGLEPLAYER_BUTTON:
+						FrontlineButton@SINGLEPLAYER_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-singleplayer-title
-							Font: MediumBold
-						RTSAIButton@MULTIPLAYER_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@MULTIPLAYER_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-multiplayer-title
-							Font: MediumBold
-						RTSAIButton@SETTINGS_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@SETTINGS_BUTTON:
 							Y: 136
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-settings-title
-							Font: MediumBold
-						RTSAIButton@EXTRAS_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@EXTRAS_BUTTON:
 							Y: 184
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-title
-							Font: MediumBold
-						RTSAIButton@GAME_MODES_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@GAME_MODES_BUTTON:
 							Y: 232
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: rtsai-game-modes
-							Font: MediumBold
-						RTSAIButton@QUIT_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@QUIT_BUTTON:
 							Y: 280
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-quit
-							Font: MediumBold
+							DesignFontSize: 24
 				Container@SINGLEPLAYER_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
@@ -111,33 +90,33 @@ Container@MAINMENU:
 							Height: 30
 							Text: label-singleplayer-title
 							Font: Bold
-							TextColor: 8FD8E2
+							TextColor: E9DECB
 							Shadow: true
-						RTSAIButton@SKIRMISH_BUTTON:
+						FrontlineButton@SKIRMISH_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-singleplayer-menu-skirmish
-							Font: MediumBold
-						RTSAIButton@MISSIONS_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@MISSIONS_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-missions-title
-							Font: MediumBold
-						RTSAIButton@LOAD_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@LOAD_BUTTON:
 							Y: 136
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-singleplayer-menu-load
-							Font: MediumBold
-						RTSAIButton@BACK_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@BACK_BUTTON:
 							Key: escape
 							Y: 280
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-back
-							Font: MediumBold
+							DesignFontSize: 24
 				Container@EXTRAS_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
@@ -147,45 +126,57 @@ Container@MAINMENU:
 							Height: 30
 							Text: button-extras-title
 							Font: Bold
-							TextColor: 8FD8E2
+							TextColor: E9DECB
 							Shadow: true
-						RTSAIButton@REPLAYS_BUTTON:
-							Y: 40
+						FrontlineButton@REPLAYS_BUTTON:
+							Y: 32
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-menu-replays
-							Font: MediumBold
-						RTSAIButton@MUSIC_BUTTON:
-							Y: 88
+							DesignFontSize: 24
+						FrontlineButton@MUSIC_BUTTON:
+							Y: 70
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-music-title
-							Font: MediumBold
-						RTSAIButton@MAP_EDITOR_BUTTON:
-							Y: 136
+							DesignFontSize: 24
+						FrontlineButton@MAP_EDITOR_BUTTON:
+							Y: 108
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-map-editor-title
-							Font: MediumBold
-						RTSAIButton@ASSETBROWSER_BUTTON:
-							Y: 184
+							DesignFontSize: 24
+						FrontlineButton@ASSETBROWSER_BUTTON:
+							Y: 146
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-menu-assetbrowser
-							Font: MediumBold
-						RTSAIButton@CREDITS_BUTTON:
-							Y: 232
+							DesignFontSize: 24
+						FrontlineButton@CREDITS_BUTTON:
+							Y: 184
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-credits-title
-							Font: MediumBold
-						RTSAIButton@BACK_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@SAVED_GAMES_TOOLS:
+							Y: 222
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: frontline-load-game
+							DesignFontSize: 24
+						FrontlineButton@STUDIO_TOOLS:
+							Y: 260
+							Width: PARENT_WIDTH
+							Height: 38
+							Text: frontline-studio
+							DesignFontSize: 24
+						FrontlineButton@BACK_BUTTON:
 							Key: escape
-							Y: 280
+							Y: 298
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-back
-							Font: MediumBold
+							DesignFontSize: 24
 				Container@MAP_EDITOR_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
@@ -195,28 +186,29 @@ Container@MAINMENU:
 							Height: 30
 							Text: label-map-editor-title
 							Font: Bold
-							TextColor: 8FD8E2
+							TextColor: E9DECB
 							Shadow: true
-						RTSAIButton@NEW_MAP_BUTTON:
+						FrontlineButton@NEW_MAP_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-map-editor-new-map
-							Font: MediumBold
-						RTSAIButton@LOAD_MAP_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@LOAD_MAP_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-map-editor-load-map
-							Font: MediumBold
-						RTSAIButton@BACK_BUTTON:
+							DesignFontSize: 24
+						FrontlineButton@BACK_BUTTON:
 							Key: escape
 							Y: 280
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-back
-							Font: MediumBold
+							DesignFontSize: 24
 		Label@VERSION_LABEL:
+			Visible: false
 			Logic: RTSAIVersionLabelLogic
 			X: WINDOW_WIDTH - 424
 			Y: WINDOW_HEIGHT - 34
@@ -227,6 +219,7 @@ Container@MAINMENU:
 			TextColor: AEB6BF
 			Shadow: true
 		Container@PLAYER_PROFILE_CONTAINER:
+			Visible: false
 			Logic: RTSAILocalProfileLogic
 			X: WINDOW_WIDTH - 384
 			Y: 16
@@ -277,7 +270,7 @@ Container@RTSAI_LOCAL_PROFILE_PANEL:
 					Font: TinyBold
 					TextColor: AEB6BF
 					Shadow: true
-				RTSAIButton@DESTROY_KEY:
+				FrontlineButton@DESTROY_KEY:
 					X: PARENT_WIDTH - 60
 					Width: 60
 					Height: 22
@@ -291,7 +284,7 @@ Container@RTSAI_LOCAL_PROFILE_PANEL:
 			Width: PARENT_WIDTH
 			Height: 24
 			Children:
-				RTSAIButton@LINK_BUTTON:
+				FrontlineButton@LINK_BUTTON:
 					Width: PARENT_WIDTH
 					Height: 22
 					Background:
@@ -323,7 +316,7 @@ Container@RTSAI_LOCAL_PROFILE_PANEL:
 					TextColor: 8FA7B0
 					Shadow: true
 					Text: label-rtsai-profile-error
-				RTSAIButton@RETRY_BUTTON:
+				FrontlineButton@RETRY_BUTTON:
 					X: PARENT_WIDTH - 60
 					Width: 60
 					Height: 22

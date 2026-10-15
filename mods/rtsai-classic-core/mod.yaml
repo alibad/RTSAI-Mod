@@ -279,6 +279,146 @@ ChromeMetrics:
 	ra|metrics.yaml
 
 Fonts:
+	FrontlineMenu12:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 12
+		Ascender: 9
+	FrontlineMenu14:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 14
+		Ascender: 11
+	FrontlineMenu16:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 16
+		Ascender: 12
+	FrontlineMenu18:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 18
+		Ascender: 14
+	FrontlineMenu20:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 20
+		Ascender: 16
+	FrontlineMenu22:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 22
+		Ascender: 17
+	FrontlineMenu24:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 24
+		Ascender: 19
+	FrontlineMenu28:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 28
+		Ascender: 22
+	FrontlineMenu32:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 32
+		Ascender: 25
+	FrontlineMenu36:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 36
+		Ascender: 28
+	FrontlineMenu40:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 40
+		Ascender: 31
+	FrontlineMenu48:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 48
+		Ascender: 37
+	FrontlineMenu56:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 56
+		Ascender: 44
+	FrontlineMenu64:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 64
+		Ascender: 50
+	FrontlinePlay12:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 12
+		Ascender: 9
+	FrontlinePlay14:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 14
+		Ascender: 11
+	FrontlinePlay16:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 16
+		Ascender: 12
+	FrontlinePlay18:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 18
+		Ascender: 14
+	FrontlinePlay20:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 20
+		Ascender: 16
+	FrontlinePlay22:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 22
+		Ascender: 17
+	FrontlinePlay24:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 24
+		Ascender: 19
+	FrontlinePlay28:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 28
+		Ascender: 22
+	FrontlinePlay32:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 32
+		Ascender: 25
+	FrontlinePlay36:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 36
+		Ascender: 28
+	FrontlinePlay40:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 40
+		Ascender: 31
+	FrontlinePlay48:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 48
+		Ascender: 37
+	FrontlinePlay56:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 56
+		Ascender: 44
+	FrontlinePlay64:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 64
+		Ascender: 50
 	Hero:
 		Font: common|FreeSansBold.ttf
 		Size: 40

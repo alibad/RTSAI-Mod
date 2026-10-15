@@ -1,0 +1,7 @@
+Use case: background-extraction.
+Asset type: native RTS video-game menu production sprite atlas.
+Input image 1 is the selected menu mockup. Reproduce its upper-left RTS AI wordmark and its cream PLAY button surface as TWO separate production UI assets on a genuinely TRANSPARENT canvas. Nothing else from the screenshot.
+Canvas: 1200 x 900 pixels, transparent RGBA.
+Upper object: place from x=100 to1100, y=80 to420 approximately; a wide distressed ivory "RTS AI" military stencil block wordmark with original angular cutouts matching the reference exactly. The I has a small rusty red top tip, all other letters warm ivory, black distressed paint holes are transparent (no black background). Preserve the strong original silhouette and spacing.
+Lower object: place from x=100 to1100, y=570 to790 approximately; long warm ivory/cream worn sand rectangular button plate matching reference, clipped industrial corner details, very thin dark inset double-edge line, rugged scratched paper/painted metal texture. Absolutely NO PLAY TEXT, NO ARROW, NO LETTERS on button. Main agent adds native text.
+Only these two isolated objects. Large clear transparent gap between objects. Straight frontal flat orthographic UI art. No perspective, no lighting scene, no external shadow, no outer glow, no panel background, no checkerboard background, no extra symbols or labels. Preserve the mockup's distressed material language and sharply readable edges. True alpha transparency.

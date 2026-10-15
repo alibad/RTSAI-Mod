@@ -1,214 +1,118 @@
-Container@RTSAI_DESKTOP_HOME:
+FrontlineCanvas@RTSAI_DESKTOP_HOME:
 	Logic: RTSAIDesktopHomeLogic
 	Width: WINDOW_WIDTH
 	Height: WINDOW_HEIGHT
 	Children:
-		ColorBlock@BG:
-			X: 0
-			Y: 0
-			Width: WINDOW_WIDTH
-			Height: WINDOW_HEIGHT
-			Color: 0D1318
-		ColorBlock@SIDE:
-			X: 0
-			Y: 0
-			Width: 210
-			Height: WINDOW_HEIGHT
-			Color: 121C24
-		Label@TITLE:
-			X: 32
-			Y: 30
-			Width: 350
-			Height: 48
-			Text: desktop-rts-ai
-			Font: BigBold
-			TextColor: E9EFF2
-		ColorBlock@RULE:
-			X: 32
-			Y: 93
-			Width: 54
-			Height: 3
-			Color: 64D1D4
-		Label@EDITION:
-			X: WINDOW_WIDTH - 300
-			Y: 45
-			Width: 250
-			Height: 25
-			Text: desktop-desktop-edition
-			Font: Small
-			TextColor: 91A6B1
-		Label@HEADLINE:
-			X: 250
-			Y: 125
-			Width: WINDOW_WIDTH - 280
-			Height: 40
-			Text: desktop-choose-your-experience
-			Font: BigBold
-			TextColor: E9EFF2
-		Label@SUBTITLE:
-			X: 250
-			Y: 172
-			Width: WINDOW_WIDTH - 280
-			Height: 30
-			Text: desktop-distinct-foundations-our-factions-and-modules-remain-yours
-			Font: Regular
-			TextColor: 9BB0BC
-		Label@CURRENT:
-			X: 250
-			Y: WINDOW_HEIGHT - 85
-			Width: WINDOW_WIDTH - 290
-			Height: 25
-			Text: desktop-current-experience
-			Font: Regular
-			TextColor: 9BB0BC
-		RTSAIButton@CONTINUE:
-			X: 25
-			Y: 145
-			Width: 160
-			Height: 40
-			Text: desktop-continue
-			Font: Bold
-		RTSAIButton@PACKS:
-			X: 25
-			Y: 197
-			Width: 160
-			Height: 40
-			Text: desktop-game-packs
-			Font: Bold
-		RTSAIButton@EXPANSIONS:
-			X: 25
-			Y: 249
-			Width: 160
-			Height: 40
-			Text: desktop-expansions
-			Font: Bold
-		RTSAIButton@SETTINGS:
-			X: 25
-			Y: 301
-			Width: 160
-			Height: 40
-			Text: desktop-settings
-			Font: Bold
-		RTSAIButton@QUIT:
-			X: 25
-			Y: WINDOW_HEIGHT - 65
-			Width: 160
-			Height: 40
-			Text: desktop-quit
-			Font: Bold
-		RTSAIButton@STUDIO:
-			X: 25
-			Y: 353
-			Width: 160
-			Height: 40
-			Text: desktop-mission-studio
-			Font: Bold
-		Label@POWERED:
-			X: 25
-			Y: WINDOW_HEIGHT - 113
-			Width: 160
-			Height: 22
-			Text: desktop-powered-by-openra
-			Font: Small
-			TextColor: 91A6B1
-		ColorBlock@CLASSIC_PANEL:
-			X: 250
-			Y: 235
-			Width: (WINDOW_WIDTH - 310) / 2
-			Height: 290
-			Color: 17242D
-		Label@CLASSIC_TAG:
-			X: 250 + 24
-			Y: 257
-			Width: (WINDOW_WIDTH - 370) / 2
-			Height: 22
-			Text: desktop-top-down
-			Font: Small
-			TextColor: 64D1D4
-		Label@CLASSIC_TITLE:
-			X: 250 + 24
-			Y: 300
-			Width: (WINDOW_WIDTH - 370) / 2
-			Height: 38
-			Text: desktop-classic
-			Font: BigBold
-			TextColor: E9EFF2
-		Label@CLASSIC_DESC:
-			X: 250 + 24
-			Y: 353
-			Width: (WINDOW_WIDTH - 370) / 2
-			Height: 25
-			Text: desktop-original-rules-maps-and-custom-systems
-			Font: Small
-			TextColor: AFBFC8
-		RTSAIButton@CLASSIC:
-			Accent: true
-			TextColor: 0D2024
-			Shadow: false
-			Contrast: false
-			X: 250 + 24
-			Y: 443
-			Width: (WINDOW_WIDTH - 410) / 2
-			Height: 46
-			Text: desktop-choose-classic
-			Font: Bold
-		ColorBlock@RA2_PANEL:
-			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20
-			Y: 235
-			Width: (WINDOW_WIDTH - 310) / 2
-			Height: 290
-			Color: 17242D
-		Label@RA2_TAG:
-			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
-			Y: 257
-			Width: (WINDOW_WIDTH - 370) / 2
-			Height: 22
-			Text: desktop-isometric
-			Font: Small
-			TextColor: 64D1D4
-		Label@RA2_TITLE:
-			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
-			Y: 300
-			Width: (WINDOW_WIDTH - 370) / 2
-			Height: 38
-			Text: desktop-ra2
-			Font: BigBold
-			TextColor: E9EFF2
-		Label@RA2_DESC:
-			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
-			Y: 353
-			Width: (WINDOW_WIDTH - 370) / 2
-			Height: 25
-			Text: desktop-established-ra2-rules-and-our-authored-content
-			Font: Small
-			TextColor: AFBFC8
-		RTSAIButton@RA2:
-			Accent: true
-			TextColor: 0D2024
-			Shadow: false
-			Contrast: false
-			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
-			Y: 443
-			Width: (WINDOW_WIDTH - 410) / 2
-			Height: 46
-			Text: desktop-choose-ra2
-			Font: Bold
-		Label@OUR_WORK:
-			X: 250
-			Y: 568
-			Width: WINDOW_WIDTH - 310
-			Height: 28
-			Text: desktop-world-war-iii-factions-custom-campaigns-ai-co-commander
-			Font: MediumBold
-			TextColor: E9EFF2
-		Label@CONTENT_NOTE:
-			X: 250
-			Y: 604
-			Width: WINDOW_WIDTH - 310
+		ColorBlock@MODE_RULE:
+			X: 94
+			Y: 264
+			Width: 310
+			Height: 1
+			Color: BCB4A477
+		ColorBlock@MODE_DIVIDER:
+			X: 264
+			Y: 285
+			Width: 1
 			Height: 26
-			Text: desktop-classic-reference-uses-openra-freeware-data-ra2-standalone-uses-our-authored-content
-			Font: Small
-			TextColor: 9BB0BC
+			Color: BCB4A477
+		ColorBlock@MENU_RULE:
+			X: 98
+			Y: 694
+			Width: 210
+			Height: 1
+			Color: BCB4A477
+		FrontlineButton@CLASSIC:
+			X: 100
+			Y: 272
+			Width: 150
+			Height: 52
+			Text: frontline-classic
+			DesignFontSize: 25
+			Mode: true
+		FrontlineButton@RA2:
+			X: 287
+			Y: 272
+			Width: 112
+			Height: 52
+			Text: frontline-ra2
+			DesignFontSize: 25
+			Mode: true
+		FrontlineButton@CONTINUE:
+			X: 72
+			Y: 370
+			Width: 450
+			Height: 96
+			Text: frontline-play
+			DesignFontSize: 56
+			Primary: true
+			Key: return
+		FrontlineButton@CAMPAIGN:
+			X: 110
+			Y: 484
+			Width: 390
+			Height: 52
+			Text: frontline-campaign
+			DesignFontSize: 30
+		FrontlineButton@SKIRMISH:
+			X: 110
+			Y: 550
+			Width: 390
+			Height: 52
+			Text: frontline-skirmish
+			DesignFontSize: 30
+		FrontlineButton@MULTIPLAYER:
+			X: 110
+			Y: 615
+			Width: 390
+			Height: 52
+			Text: frontline-multiplayer
+			DesignFontSize: 30
+		FrontlineButton@SETTINGS:
+			X: 110
+			Y: 722
+			Width: 390
+			Height: 52
+			Text: frontline-settings
+			DesignFontSize: 30
+		FrontlineButton@QUIT:
+			X: 110
+			Y: 785
+			Width: 390
+			Height: 52
+			Text: frontline-quit
+			DesignFontSize: 30
+		FrontlineButton@PACKS:
+			X: 1486
+			Y: 839
+			Width: 152
+			Height: 45
+			Text: frontline-packs
+			DesignFontSize: 16
+			Compact: true
+		FrontlineButton@TOOLS:
+			X: 110
+			Y: 864
+			Width: 100
+			Height: 35
+			Text: frontline-tools
+			DesignFontSize: 15
+			Compact: true
+		FrontlineButton@EXPANSIONS:
+			X: 245
+			Y: 864
+			Width: 235
+			Height: 35
+			Text: frontline-experience
+			DesignFontSize: 15
+			Compact: true
+		FrontlineImage@PACK_ICON:
+			X: 1438
+			Y: 847
+			Width: 33
+			Height: 32
+			ImageCollection: frontline-icons
+			ImageName: puzzle
+			IgnoreMouseOver: true
 
 RTSAIPanel@RTSAI_PACK_LIBRARY:
 	Logic: RTSAIPackLibraryLogic
