@@ -1649,6 +1649,34 @@
    "seed": "sha256('rtsai-standalone-sfx-1/bpriat1a.wav')",
    "sha256": "dc3384e032599c7b1794bfbbfac375f469db07661a2ee12d0dda07b33c0aa0d4"
   },
+  "sfx/bpripow.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-15",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -18.0,
+    "max50_rms_dbfs": -10.5,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 0.8
+   },
+   "measured": {
+    "active_rms_dbfs": -17.1,
+    "decay20_ms": 110,
+    "high_share": 0.174,
+    "low_share": 0.081,
+    "max50_rms_dbfs": -10.5,
+    "peak_dbfs": -1.9,
+    "seconds": 0.8
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.4.6",
+   "recipe": "_bpripow",
+   "role": "prism tower charging: rising crystalline shimmer gathering into a bright tone",
+   "seed": "sha256('rtsai-standalone-sfx-1/bpripow.wav')",
+   "sha256": "e60455e6ba34a49356d5dd0b01102da79c30df601e21a4bf2daf2f7994beea9a"
+  },
   "sfx/bsenatta.wav": {
    "category": "sfx",
    "format": "WAV PCM 16-bit 22.05 kHz mono",
@@ -1816,6 +1844,34 @@
    "role": "restored-country weapon or impact",
    "seed": "sha256('rtsai-standalone-sfx-1/btesat2a.wav')",
    "sha256": "68207e11b905b3f31fed866ca015edef739c2c167b9b929eede131a0fa946429"
+  },
+  "sfx/btespow.wav": {
+   "category": "sfx",
+   "format": "WAV PCM 16-bit 22.05 kHz mono",
+   "generated": "2026-10-15",
+   "generator": "tools/standalone-sfx.py",
+   "license": "GPL-3.0 (project code); output has no third-party rights",
+   "matched_to": {
+    "active_rms_dbfs": -17.0,
+    "max50_rms_dbfs": -9.5,
+    "reference": "none (set from sibling sounds)",
+    "seconds": 0.95
+   },
+   "measured": {
+    "active_rms_dbfs": -16.5,
+    "decay20_ms": 100,
+    "high_share": 0.017,
+    "low_share": 0.6,
+    "max50_rms_dbfs": -9.7,
+    "peak_dbfs": -0.3,
+    "seconds": 0.95
+   },
+   "method": "procedural synthesis (sines, seeded noise, filters, synthetic reverb); no recordings or samples",
+   "numpy": "2.4.6",
+   "recipe": "_btespow",
+   "role": "tesla coil charging: transformer hum rising into crackling arcs",
+   "seed": "sha256('rtsai-standalone-sfx-1/btespow.wav')",
+   "sha256": "e9a9ad8eed817438d6bf4d2ed9c47e3bb319f11961ec427bc3c4232f7b6f8fa2"
   },
   "sfx/chrono2.aud": {
    "category": "sfx",

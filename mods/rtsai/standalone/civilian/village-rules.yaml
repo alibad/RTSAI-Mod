@@ -1,0 +1,96 @@
+
+# Village buildings (RTSAI-Art tools/village.py): the civilian-structure actors the map generator and the maps
+# place, drawn with the fixed village palette (no player colour).
+^Palettes:
+	PaletteFromFile@village:
+		Name: village
+		Filename: ra2|standalone/civilian/village.pal
+		ShadowIndex: 1
+
+cahse06:
+	RenderSprites:
+		Image: village-house1
+		Palette: village
+	Tooltip:
+		Name: standalone-village-house-name
+
+cahse06.rubble:
+	RenderSprites:
+		Image: village-house1
+		Palette: village
+
+cahse01:
+	RenderSprites:
+		Image: village-house2
+		Palette: village
+	Tooltip:
+		Name: standalone-village-courtyard-house-name
+
+cahse01.rubble:
+	RenderSprites:
+		Image: village-house2
+		Palette: village
+
+cahse07:
+	RenderSprites:
+		Image: village-house3
+		Palette: village
+	Tooltip:
+		Name: standalone-village-tall-house-name
+
+cahse07.rubble:
+	RenderSprites:
+		Image: village-house3
+		Palette: village
+
+cahse03:
+	RenderSprites:
+		Image: village-house4
+		Palette: village
+	Tooltip:
+		Name: standalone-village-large-house-name
+
+cahse03.rubble:
+	RenderSprites:
+		Image: village-house4
+		Palette: village
+
+camsc07:
+	RenderSprites:
+		Image: village-shop
+		Palette: village
+	Tooltip:
+		Name: standalone-village-shop-name
+
+cawt01:
+	RenderSprites:
+		Image: village-tower
+		Palette: village
+	Tooltip:
+		Name: standalone-village-water-tower-name
+
+cafarm02:
+	RenderSprites:
+		Image: village-well
+		Palette: village
+	Tooltip:
+		Name: standalone-village-well-name
+
+cafarm02.rubble:
+	RenderSprites:
+		Image: village-well
+		Palette: village
+
+cafarm01:
+	RenderSprites:
+		Image: village-garden
+		Palette: village
+	Tooltip:
+		Name: standalone-village-garden-name
+
+cafncw:
+	RenderSprites:
+		Image: village-wall
+		Palette: village
+	Tooltip:
+		Name: standalone-village-wall-name

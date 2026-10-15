@@ -1,15 +1,16 @@
 {
  "note": "Art delivered to the standalone build by the art agent (Phase 3). Original work made by project tools from hand-authored Blender models and procedural code. No Electronic Arts / Westwood file, pixel or palette is an input; stock Red Alert 2 files were read only on the developer's machine (RTSAI-Art reference-local/, git-ignored) to measure sizes, value structure and edge density.",
- "written": "2026-10-07T15:42:05.113512+00:00",
- "rtsaiArtHead": "ddba372f2591d152b93f972078a0b5909df90060",
+ "written": "2026-10-15T00:04:11.829667+00:00",
+ "rtsaiArtHead": "211a15a3",
  "approvals": {
   "base kit v2": "coordinator, 2026-10-07",
   "hpwr and refinery purifier": "coordinator, 2026-10-07",
   "shared vehicles": "coordinator, 2026-10-07 (batch 2)",
   "engineer, operative, dog": "coordinator, 2026-10-07 (rework)",
-  "effects": "coordinator, 2026-10-07 (fx-v1), soft-smoke fx-v2 approved the same day"
+  "effects": "coordinator, 2026-10-07 (fx-v1), soft-smoke fx-v2 approved the same day",
+  "civilians and village buildings": "not yet reviewed (art/civilians, 2026-10-14)"
  },
- "files": 421,
+ "files": 453,
  "problems": [],
  "records": [
   {
@@ -1239,8 +1240,8 @@
   },
   {
    "file": "base/kit-sequences.yaml",
-   "bytes": 74250,
-   "sha256": "c1c92a4d5739703bf4496c4af0856eca67ea35042a8e69d03f63ad170b4e9fcb",
+   "bytes": 69368,
+   "sha256": "715e057afc919dd56e2e730745439f7ce60e69d646d6c8fa3a3c12c3dc183312",
    "origin": "generated",
    "generator": "tools/base_kit.py install (sequence facts of every installed kit role)"
   },
@@ -4861,8 +4862,8 @@
   },
   {
    "file": "units/units-sequences.yaml",
-   "bytes": 29784,
-   "sha256": "cec6c381a1492431faf50ddfcd94e95a6c4f3816735f61661503d18edc38480f",
+   "bytes": 27722,
+   "sha256": "3a7b61879819838b0a1e9913cc403b45f9443a2ab43345b20973cbc4b8a2c81e",
    "origin": "generated",
    "generator": "tools/base_kit.py install-units (sequence facts of every installed shared unit)"
   },
@@ -5895,6 +5896,314 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "civilian/civ-abaya.pal",
+   "bytes": 768,
+   "sha256": "6d56bbd0972a0cd297de4d647c40b98d8c6465eacfc4b5c7eadbd648e5e18dd9",
+   "origin": "project-generated",
+   "candidate": "units/civ-abaya/candidates/sprite-v3-glb/civ-abaya.pal",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-abaya.shp",
+   "bytes": 235546,
+   "sha256": "177c0e2185d715fa866a6d3c0455c7befe3377df5c0066eda9dd7f1c923fb360",
+   "origin": "project-generated",
+   "candidate": "units/civ-abaya/candidates/sprite-v3-glb/civ-abaya.shp",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-abayaicon.png",
+   "bytes": 4541,
+   "sha256": "133fa25210ce9cfc249d21b541aa432631bf79fc5e2d620eb5589880aa18bc46",
+   "origin": "project-generated",
+   "candidate": "units/civ-abaya/candidates/sprite-v3-glb/civ-abayaicon.png",
+   "rtsaiArtCommit": "211a15a3",
+   "generator": "tools/civilians.py cameos",
+   "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-elder.pal",
+   "bytes": 768,
+   "sha256": "62930c237a7098d8024ba6151481d6ec4f06c7f23c97fe9c8cd2550b7b27db40",
+   "origin": "project-generated",
+   "candidate": "units/civ-elder/candidates/sprite-v3-glb/civ-elder.pal",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-elder.shp",
+   "bytes": 243911,
+   "sha256": "2f3108ab38edb1ef87c247a502bb9dea3b1e984b3b56a9db89540f883fdcc9d6",
+   "origin": "project-generated",
+   "candidate": "units/civ-elder/candidates/sprite-v3-glb/civ-elder.shp",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-eldericon.png",
+   "bytes": 4465,
+   "sha256": "a7f01c6091237778926045be93d36ff76c9d5624665e996b61787b745302383b",
+   "origin": "project-generated",
+   "candidate": "units/civ-elder/candidates/sprite-v3-glb/civ-eldericon.png",
+   "rtsaiArtCommit": "211a15a3",
+   "generator": "tools/civilians.py cameos",
+   "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-fisher.pal",
+   "bytes": 768,
+   "sha256": "40068032077b87ea3dead540d2aca8a7f1c4cf4db08c023e759ce00955f26ed5",
+   "origin": "project-generated",
+   "candidate": "units/civ-fisher/candidates/sprite-v3-glb/civ-fisher.pal",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-fisher.shp",
+   "bytes": 228626,
+   "sha256": "c40218c51e4da2737b2688491c5f101395452139a203882bd6b6ee4f18c2f512",
+   "origin": "project-generated",
+   "candidate": "units/civ-fisher/candidates/sprite-v3-glb/civ-fisher.shp",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-fishericon.png",
+   "bytes": 4366,
+   "sha256": "d08229feb3e4045cf41c4128a937c5b352b7ef459eb1a738f1cf23491e24ce5c",
+   "origin": "project-generated",
+   "candidate": "units/civ-fisher/candidates/sprite-v3-glb/civ-fishericon.png",
+   "rtsaiArtCommit": "211a15a3",
+   "generator": "tools/civilians.py cameos",
+   "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-scarf.pal",
+   "bytes": 768,
+   "sha256": "8065613e50c50f6c3139b9efe45d73d3016392c6d1e2f54e3622b03e8e05ee35",
+   "origin": "project-generated",
+   "candidate": "units/civ-scarf/candidates/sprite-v3-glb/civ-scarf.pal",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-scarf.shp",
+   "bytes": 237424,
+   "sha256": "85a26aea921bf9f3ef3585c12f9e3a39dafa69bd9f5e49ce7529a6c3f46ee659",
+   "origin": "project-generated",
+   "candidate": "units/civ-scarf/candidates/sprite-v3-glb/civ-scarf.shp",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-scarficon.png",
+   "bytes": 4337,
+   "sha256": "caf3f0851dd0d28214da3150341da802bd79ab97b4256bebb760e5491b28774f",
+   "origin": "project-generated",
+   "candidate": "units/civ-scarf/candidates/sprite-v3-glb/civ-scarficon.png",
+   "rtsaiArtCommit": "211a15a3",
+   "generator": "tools/civilians.py cameos",
+   "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-thobe.pal",
+   "bytes": 768,
+   "sha256": "609d66a77eca723e9c8f3e24e3b83643c1cc29ed90abd1d95e55c4318c4754ad",
+   "origin": "project-generated",
+   "candidate": "units/civ-thobe/candidates/sprite-v3-glb/civ-thobe.pal",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-thobe.shp",
+   "bytes": 234648,
+   "sha256": "b26e90dab06abfae3226698db0c15330fe086b6319041a355832b68ec2ee0c82",
+   "origin": "project-generated",
+   "candidate": "units/civ-thobe/candidates/sprite-v3-glb/civ-thobe.shp",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-thobeicon.png",
+   "bytes": 4337,
+   "sha256": "256c57e8a909d4ef6caee7ce9be2f82dd2056c18213b70f0d3149e224d33a1a8",
+   "origin": "project-generated",
+   "candidate": "units/civ-thobe/candidates/sprite-v3-glb/civ-thobeicon.png",
+   "rtsaiArtCommit": "211a15a3",
+   "generator": "tools/civilians.py cameos",
+   "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-youth.pal",
+   "bytes": 768,
+   "sha256": "d95503f696b01151714a4769669125f33dc8eb041b679dee274fc1eb2f13f7ea",
+   "origin": "project-generated",
+   "candidate": "units/civ-youth/candidates/sprite-v3-glb/civ-youth.pal",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-youth.shp",
+   "bytes": 225544,
+   "sha256": "ddbce560918ab8f8d29e383d3588bb47f703abeef3626424c19cf4af6f6c6563",
+   "origin": "project-generated",
+   "candidate": "units/civ-youth/candidates/sprite-v3-glb/civ-youth.shp",
+   "rtsaiArtCommit": "72d9249c",
+   "generator": "tools/civilians.py",
+   "method": "Hand-authored Blender model of an everyday civilian (tools/civilian_models.py: bmesh parts on the riflemen's joints, long garments lofted and cloth-skinned), rendered by the infantry route (tools/infantry_blender.py, Cycles CPU) with the civilian sequence set (tools/infantry_anim.py CIVILIAN_LAYOUT) and post-processed into an SHP and its own palette by tools/infantry_sprite_post.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civ-youthicon.png",
+   "bytes": 4249,
+   "sha256": "dab77c2bf6df186d88be5038218cf68d084ef1f8ef195bffe1764dcdb237926c",
+   "origin": "project-generated",
+   "candidate": "units/civ-youth/candidates/sprite-v3-glb/civ-youthicon.png",
+   "rtsaiArtCommit": "211a15a3",
+   "generator": "tools/civilians.py cameos",
+   "method": "Selection-panel portrait of the civilian's hand-authored Blender model (tools/civilian_models.py), posed on the route's rig and rendered by tools/cameo_render.py render_infantry (Cycles CPU, authored colours, no faction paint), with the stock-layout name bar in Kenney Pixel (CC0); no flags or insignia, no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/civilian-rules.yaml",
+   "bytes": 4034,
+   "sha256": "7425e63aec4fb9d58cd4a03b01789a5f7811718c3ea9c6e61a42c2b310a3d5eb",
+   "origin": "generated",
+   "generator": "tools/civilians.py install (palettes and the civ* actors' looks)"
+  },
+  {
+   "file": "civilian/civilian-sequences.yaml",
+   "bytes": 6825,
+   "sha256": "16003fab894de85eb42f104accd16f7d23ad9bf099770eb535a1dc6baa42039b",
+   "origin": "generated",
+   "generator": "tools/civilians.py install (sequence facts of every civilian look)"
+  },
+  {
+   "file": "civilian/village-garden.shp",
+   "bytes": 28720,
+   "sha256": "a60168c404dcba314664c4723970e0b72f23a6523a020f9d06b546036c71f127",
+   "origin": "project-generated",
+   "candidate": "units/village-garden/candidates/village-v1/village-garden.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-house1.shp",
+   "bytes": 18738,
+   "sha256": "9204aa6829253e2407cb04a7e1ab11ed66dda6aaf99f9c09184126f6ca776831",
+   "origin": "project-generated",
+   "candidate": "units/village-house1/candidates/village-v1/village-house1.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-house2.shp",
+   "bytes": 42760,
+   "sha256": "74ca453545a8c1363c428cf58c4d6f36aa20a1f81d75523f4aed4177057e1f23",
+   "origin": "project-generated",
+   "candidate": "units/village-house2/candidates/village-v1/village-house2.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-house3.shp",
+   "bytes": 68514,
+   "sha256": "0c94ff521184096f6c78e25118715353ecd43b88bb142a5718577bbfab0d485e",
+   "origin": "project-generated",
+   "candidate": "units/village-house3/candidates/village-v1/village-house3.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-house4.shp",
+   "bytes": 97540,
+   "sha256": "392816e66d76d8062bd4227533ed4046f06c8ae2fa09239753afc6985f2aac40",
+   "origin": "project-generated",
+   "candidate": "units/village-house4/candidates/village-v1/village-house4.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-rules.yaml",
+   "bytes": 1746,
+   "sha256": "764fd1287a85820097a1645029c698d5057828c179e840663202f575f3001dab",
+   "origin": "generated",
+   "generator": "tools/village.py install (village palette and the civilian-structure actors' looks)"
+  },
+  {
+   "file": "civilian/village-sequences.yaml",
+   "bytes": 2331,
+   "sha256": "9a5057cccd5133f38b1ad2ebf088012c77c5dcccbffd96e868422400c042285e",
+   "origin": "generated",
+   "generator": "tools/village.py install (sequence facts of every village building)"
+  },
+  {
+   "file": "civilian/village-shop.shp",
+   "bytes": 25117,
+   "sha256": "eaa0193b2ad49a3c1440bf535aedd2fc1a7f48d8d36e64dffdb5e43948c1c4d3",
+   "origin": "project-generated",
+   "candidate": "units/village-shop/candidates/village-v1/village-shop.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-tower.shp",
+   "bytes": 16430,
+   "sha256": "6c5873e280893756ac38790aa6be546670567330d122a108f280681067414e4e",
+   "origin": "project-generated",
+   "candidate": "units/village-tower/candidates/village-v1/village-tower.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-wall.shp",
+   "bytes": 62638,
+   "sha256": "2a42bb540e064f8d4944586f53b2effb0fb8e5747f2f82126ef7733e2264d7bc",
+   "origin": "project-generated",
+   "candidate": "units/village-wall/candidates/village-v1/village-wall.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village-well.shp",
+   "bytes": 6249,
+   "sha256": "788f6973eb28602d3d470821a5c8aa05f61ae1fc173cb5039b5d6ef00badc20c",
+   "origin": "project-generated",
+   "candidate": "units/village-well/candidates/village-v1/village-well.shp",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
+  },
+  {
+   "file": "civilian/village.pal",
+   "bytes": 768,
+   "sha256": "f20a1fa9c6e2c483db708b625e1004c04b95cc7723d3a574ba1275b29612f08f",
+   "origin": "project-generated",
+   "candidate": "units/village-house1/candidates/village-v1/village.pal",
+   "rtsaiArtCommit": "03fe41f6",
+   "generator": "tools/village.py",
+   "method": "Hand-authored procedural Blender model of a village building (tools/village_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers, damage states and a ruin) and quantised into the shared village.pal by tools/village.py; no image-to-3D, no EA files"
   }
  ]
 }

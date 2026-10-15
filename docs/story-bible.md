@@ -1,6 +1,6 @@
 # Lines of Hope: story bible
 
-Draft 2, 14 October 2026. The playable text comes from `resources/campaign-story.json`; this bible decides what chapters, briefing films, radio calls and debriefs may say. When the two disagree, update the JSON to match the bible (`RTSAI-WebGame/tools/build-campaign-story.py --text-only`), never the other way round.
+Draft 2, 14 October 2026; Act IV, the epilogue and the Part II hook added the same night. The playable text comes from `resources/campaign-story.json`; this bible decides what chapters, briefing films, radio calls and debriefs may say. When the two disagree, update the JSON to match the bible (`RTSAI-WebGame/tools/build-campaign-story.py --text-only`), never the other way round.
 
 Draft 2 replaces draft 1's anthology with an alternate-history sequel to the original Red Alert (1996), at the owner's request ("invent a story as creative or even more creative … feel free to use the Red Alert 1 classic stories").
 
@@ -11,7 +11,7 @@ In 1953, at the end of the Red Alert war, Einstein goes to switch off the Chrono
 ## The idea underneath
 
 - **Red Alert began when one man was removed from history.** Einstein believed he could fix the century by erasing a single person, and it made everything worse. Orlov's whole craft is erasing people: from photographs in 1953, from radar pictures in 2026. The heroes never win by erasing anyone. They win by keeping lines open so that people get home.
-- **Lines of Hope means three kinds of line:** the lifelines (roads, ports, sea lanes), the signal lines (radar, radio, networks) and the timelines. Each act opens a different one.
+- **Lines of Hope means three kinds of line:** the lifelines (roads, ports, sea lanes), the signal lines (radar, radio, networks) and the timelines. Each act opens a different one. Act IV comes back to the first two after the third has closed (water on one coast, the picture on another), and the epilogue opens the timeline again.
 - **A destroyed base is never the measure of success.** Victory is counted in convoys that arrive, ferries that cross and survivors at the clinic.
 
 ## Rules
@@ -33,7 +33,9 @@ In 1953, at the end of the Red Alert war, Einstein goes to switch off the Chrono
 | Act I · The Lifeline | Roads and sea lanes | Jizan Corridor, Hodeidah Lifeline, Bab al-Mandab Passage | Playable; briefing films finishing tonight |
 | Act II · Broken Signals | Signals | Straits Shield, Haitan Network, Relay Under Siege | Playable; briefing films finishing tonight |
 | Act III · The Missing Man | People | Lights in the Water, Hold the Ferry Line, Glass Island, Black Platform, Every Light On | All five playable: the last three on the Phase 2 mission features (14 Oct) |
-| Epilogue | Timeline | A film after the finale | Later |
+| Act IV · Aftershocks | Lifelines and signals, once more | Sweet Water (Iran), Ghosts on the Glass (Israel) | Both playable (14 Oct, branch `campaign/act4`); portraits and films to make |
+| Epilogue · 1946 | Timeline | A film after Act IV | Shot list written (`tools/briefings/epilogue.json`); film to make |
+| Part II · The Retoucher | Timeline | The sequel, teased | A locked "Coming" card after the epilogue |
 
 ## Backstory: the 1953 layer
 
@@ -65,10 +67,12 @@ The player commands as a different commander in each chapter. Portrait anchors r
 | Colonel Kemal Aydın (Türkiye) | Takes the strait, then holds it | II-1, III-2 | Fifties, short grey hair and moustache, green camouflage, headset, coastal command post |
 | Commander Lin Haoran (China) | Restores the island network; goes to Glass Island | II-2, III-3 | Forties, short black hair, blue digital camouflage, headset, ship deck at night |
 | The signals chief | Exercise commander, unnamed by rule 7 | II-3 | Forties, short dark beard, plain olive fatigues without badges, bunker radio room |
-| **Lantern**, Dr. Amina Farah | Civilian deconfliction coordinator from the far shore of the strait; a physicist by training. She shares traffic pictures so aid and shipping can move, notices that every side's blind spots match, and follows the echo to 1953. The story's conscience. | Every act, on the radio | Forties, plain shirt and cardigan, glasses pushed up, small operations room lit by one amber desk lamp |
-| **Tanya** | Allied commando from 1953, displaced to 2026. Fearless, dry and fast; rarely surprised by danger, but often surprised by the future ("They fight wars from a screen now?"). The only person alive who knows Orlov's face. | Prologue, III-1 to III-5 | Late twenties, dark hair tied back, 1950s commando fatigues and webbing, rolled sleeves, pistol holster, sea-soaked when found |
-| **Albert Einstein** | The scientist who started it, trying to end it; speaks from his 1953 film reel | Prologue, III-3, III-5 | Elderly physicist with white hair and moustache, in painted archival style, lit by Chronosphere blue |
-| **Arkady Orlov**, the Broker | See the antagonist | Prologue, voice from III-2 | Never shown: a figure cut out of a photograph, a silhouette, a reflection |
+| Colonel Arash Tavakoli (Iran) | An army engineer who has laid water lines across three deserts; he counts every truck twice and never raises his voice | IV-1 | Fifties, close-cropped greying beard, sand-coloured field uniform with rolled sleeves, a dusty scarf, reading glasses in his breast pocket, beside a water tanker on a salt flat at dusk |
+| Lieutenant Colonel Maya Ronen (Israel) | Keeps a harbour city's air and sea picture; trusts nothing she has not seen twice, and says so | IV-2 | Forties, dark hair in a low knot, olive field uniform, headset around her neck, binoculars on a strap, a harbour command room at night lit by green screens |
+| **Lantern**, Dr. Amina Farah | Civilian deconfliction coordinator from the far shore of the strait; a physicist by training. She shares traffic pictures so aid and shipping can move, notices that every side's blind spots match, and follows the echo to 1953. The story's conscience. | Every act, on the radio; the epilogue | Forties, plain shirt and cardigan, glasses pushed up, small operations room lit by one amber desk lamp |
+| **Tanya** | Allied commando from 1953, displaced to 2026. Fearless, dry and fast; rarely surprised by danger, but often surprised by the future ("They fight wars from a screen now?"). The only person alive who knows Orlov's face. After the finale she works from Lantern's desk. | Prologue, III-1 to III-5; IV on the radio | Late twenties, dark hair tied back, 1950s commando fatigues and webbing, rolled sleeves, pistol holster, sea-soaked when found |
+| **Albert Einstein** | The scientist who started it, trying to end it; speaks from his 1953 film reel | Prologue, III-3, III-5; the 1946 photograph in the epilogue | Elderly physicist with white hair and moustache, in painted archival style, lit by Chronosphere blue |
+| **Arkady Orlov**, the Broker | See the antagonist | Prologue, voice from III-2, IV on the radio; the background of the 1946 photograph in the epilogue | Never shown: a figure cut out of a photograph, a silhouette, a reflection, a face lost in shadow |
 
 ## Prologue · 1953 (film)
 
@@ -134,16 +138,55 @@ Five chapters on classic mission patterns, in fictional places. Tanya joins from
   - Nabil reports the mainland towns clear, and the final strike unlocks only then.
 - **Ending:** as the machine falls, Orlov steps into it and is gone. Lantern runs Einstein's sequence once, the right way, and the echo folds shut; across the coast, convoys, ferries and ships light up one by one. The captured Chronosphere could send Tanya home to 1953. She stays: "He's out there somewhere in time. Somebody who knows his face should be waiting."
 
-### Epilogue (film)
-Lantern pins a print to her wall: the 1946 photograph of the Chronosphere's first test, Einstein beside the machine. In the background stands a man who was not in the picture yesterday. Fade to amber.
+## Act IV · Aftershocks (new)
+
+Days after every light came back on. The echo is folded shut, but Orlov stepped into the captured Chronosphere and is gone, and the Directorate's last cells are racing for the coil caches the hub's manifest lists: crates of hand-wound Chronosphere coils from 1953, any one of which could open the echo again. Two operations, on separate coasts and separate days, against two separate cells. They never meet (rule 3): Lantern's desk, where Tanya now works beside her, connects them only on the radio. Each chapter borrows a preserved original Red Alert mission's pattern, as Act III does, and replaces everything else. Neither needs anything new from the game: they run on Act III's mission features (sensors, events, conditions, deadlines) and their own map rules.
+
+| Chapter | Commander | Mission | What the player learns (debrief and radio) |
+| --- | --- | --- | --- |
+| 1 · Sweet Water | Arash | Clear the salt road, bring the water trucks in, retake the plant, take the coil cache whole | The cache under the plant is a crate of coils dated 1953, wound like the one Kemal found; its manifest lists one more cache, on another coast |
+| 2 · Ghosts on the Glass | Maya | Verify every contact before anything fires, destroy the relays that paint the phantoms, hold the harbour | The last relay holds the last cache on the manifest. Every cache is accounted for; Orlov is not |
+
+### IV-1 · Sweet Water (convoy and recapture)
+- **Commander:** Colonel Arash Tavakoli (Iran). **Setting:** a fictional salt-desert trade road and a port town on a fictional coast (the terrain of Jizan Corridor, repainted with a salt flat, the road, a coast and a dock). **Source missions:** Allies 02 "Five to One" (a road blocked in several places, cleared before the convoy is due) and Soviet 07 "Core of the Matter" (retake a plant that someone else has seized).
+- **Mission:** a cell has seized the town's desalination and power plant, where a coil cache is hidden, and cut the water. From a road camp with a small column: destroy the guns of three roadblocks on the salt road before the army water trucks are due (10:00 on normal), bring at least two of the three trucks to the town cistern, capture the plant's pumps and its power station with engineers (the power station feeds the cell's tesla coils: take it and they go dark), then, once the vault's lock is cut, capture the coil cache with an engineer while the cell's recovery parties land at the dock. Raiders from the northern hills strike the road camp until the plant is retaken. Nothing on the plant can be destroyed: the town needs it, and the coils hold a charge.
+- **Beat:** the Broker offers to turn the taps back on himself, for the plant's basement. The engineers open the crate in the vault, and Tanya reads their report at Lantern's desk: coils dated 1953, wound by hand like the one Kemal's engineers pulled from an uplink (II-1). Lantern reads the manifest: one more cache, on another coast.
+- **Civilians:** the town's people are never on screen and never in the line of fire; the trucks are army water tankers.
+
+### IV-2 · Ghosts on the Glass (verification)
+- **Commander:** Lieutenant Colonel Maya Ronen (Israel). **Setting:** a fictional harbour city on a fictional bay; the cell's relay towers stand on the cape across it (the frame of the Bab al-Mandab map, repainted as a bay with a land bridge at its head). **Source missions:** Soviet 03 "Covert Cleanup" (find the one real threat hidden among people) and Negotiations (a town full of civilians, where nothing may fire carelessly).
+- **Mission:** the city's picture shows nine contacts closing on the harbour. Six are phantoms the cell paints from its relays, to provoke a strike on nothing and sell the picture of a city that fired first. Every contact is a ring on the map: a unit of the player's coming within it verifies it, and a phantom then fades (its ring turns pale) while a real contact's ring turns red. Destroying a phantom before it is verified (a strike on nothing) fails the mission; a phantom takes a tenth of the damage while unverified, so a unit that opens fire on one can still be called off. Forward observers go first, and approaching units go on Return fire. Then the column takes the road round the head of the bay, destroys the three relay towers before first light (16:00 on normal; every phantom vanishes when they fall), and the harbour holds for three minutes against the strike group the lie was covering. The families wait in three public shelters; losing one fails the mission. Bonus: verify all nine contacts.
+- **Beat:** Lantern on the first phantom: "Nothing there. Empty water." The Broker offers to say which contacts are real, for the city's first shot. The last relay holds the last coil cache on the manifest. Tanya: every cache is accounted for, so why can she still feel him in the room?
+- **Civilians:** the families are never targeted: the shelters belong to a side nobody fires on, and Orion's landings go for the harbour command. Two phantoms are painted beside shelters, which is why striking an unverified contact is the one thing the city must never do.
+
+## Epilogue · 1946 (film)
+
+After Act IV, like the prologue before Act I: one film, no mission. The 2026 room is painted key art in Lantern's amber. The photograph is the story's only image of 1946 and belongs to the archival layer with the 1953 material (rule 5): Einstein is in it only as the prologue paints him, never photoreal, and the man in its background keeps his face in shadow (rule 8). The man Einstein removed is not in it. The shot list is `RTSAI-WebGame/tools/briefings/epilogue.json`. Six shots:
+
+1. Lantern's small operations room at night, the crisis over: quiet screens, one amber desk lamp, a cork wall of pinned prints, maps and red string, a cold mug of tea. "When every light was back on, Lantern went back to her wall."
+2. Her hands pin an old black-and-white print to the cork: a huge machine of brass rings in a laboratory hall, an elderly white-haired scientist beside it. "One print was missing from it: the first test of the Chronosphere, nineteen forty-six."
+3. The print itself, filling the frame: the hall, the machine, the scientist at the control desk, technicians in a row. "She knew every face in it. She had counted them a hundred times."
+4. A magnifying loupe over the print: far behind the machine, a tall man in a long dark coat, his face lost in shadow, one gloved hand on a brass rail. "Tonight there is one more. A man who was not in the picture yesterday."
+5. Lantern at her desk, frozen, the print in her hand, the screens' glow behind her. "For seventy-three years he was missing from every photograph."
+6. The old radio on her desk, its needle swinging again by itself; the pinned print out of focus behind it; a pale blue flicker like an old film frame. "Tonight he is in the first one." Title card: *Lines of Hope · Part II · The Retoucher*.
+
+The last line is the hook: Orlov, who spent his life cutting himself out of pictures, has put himself into the one that made the century.
+
+## Part II · The Retoucher (sequel hook)
+
+**Premise.** Orlov spent his life taking himself out of pictures; now he is putting himself back in. The coil caches were never his way home: they were the map of every place the echo touched, and he has followed it back to the first jump, the 1946 test that made the Red Alert century. If he can stand in that photograph, he can stand at the switch, and whoever stands at the switch decides which world the next seventy years become. On the coasts of 2026 his last loyalists fight with a weapon nobody has faced, a battlefield that edits itself behind them: a bridge that was never built, a port that moves, a radar that remembers a different morning. Lantern can read the echo, Tanya knows his face, and the commanders who kept the lines open must hold one line more: the timeline itself.
+
+**Rules that hold.** The man Einstein removed in 1946 is never named or shown, in Part II as in Part I (rule 5); the first test is seen only as the archival photograph and its echo. Orlov's face is never shown (rule 8). Real modern nations are never the villain, and two never share a battlefield (rules 2 and 3): the edited battlefields are the Directorate's weapon, not any nation's.
+
+**On the campaign screen.** The story data's `sequel` entry: a locked "Coming" card after the epilogue, with its title and this premise's first sentence.
 
 ## Radio calls
 
 Every mission has calls in `campaign-story.json` under `radio`: a speaker from the cast, one line, and a trigger (`start`, a game-time second, an objective index, `victory`, `defeat`). House style:
 - one or two short sentences, spoken by the person who would say them;
-- the commander gives orders, Lantern brings what the coordination desk sees, and Tanya speaks only from III-1;
+- the commander gives orders, Lantern brings what the coordination desk sees, and Tanya speaks only from III-1 (in Act IV, from Lantern's desk);
 - the Broker always makes an offer and never threatens;
-- calls carry the clue thread (1953, the loop, the contract, the coil, the island) so a player who skips films still follows the story.
+- calls carry the clue thread (1953, the loop, the contract, the coil, the island; in Act IV the caches and their manifest) so a player who skips films still follows the story.
 
 ## Look and sound
 
@@ -168,6 +211,7 @@ Every mission has calls in `campaign-story.json` under `radio`: a speaker from t
 
 ## Open decisions
 
-- Iran and Israel have no chapters. Either keep them skirmish-only, or give each a fictional-theatre chapter against the Directorate under rules 2 and 3.
+- Iran and Israel each have one fictional-theatre chapter against the Directorate (Act IV, under rules 2 and 3): decided 14 October. Their commanders' portraits (`cast/arash.webp`, `cast/maya.webp`), their radio voices and the two chapter films are still to make.
 - Voices for Lantern, Tanya, the Broker and Einstein's recording (local Chatterbox voices; never a clone of a real person's voice).
+- Part II: whether *The Retoucher* is a second campaign on the same screen or its own; what the edited battlefields need from the game (terrain and actors that change mid-match).
 - Whether the six built films are later re-cut with the prologue's look and Lantern's opening line.
