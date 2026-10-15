@@ -3,13 +3,13 @@ from pathlib import Path
 import argparse,subprocess,os,time,json,sys,contextlib,shutil
 ROOT=Path(__file__).resolve().parents[1]
 def main():
- p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--mod',default='rtsai');p.add_argument('--screen',default='home');p.add_argument('--seconds',type=int,default=25);p.add_argument('--map');p.add_argument('--bots',default='Multi0:normal:china,Multi1:normal:iran');p.add_argument('--content',type=Path);p.add_argument('--out',type=Path,required=True);p.add_argument('--art-tools',type=Path,required=True);p.add_argument('--leave-open',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--mod',default='rtsai');p.add_argument('--screen',default='home');p.add_argument('--seconds',type=int,default=25);p.add_argument('--map');p.add_argument('--bots',default='Multi0:normal:china,Multi1:normal:iran');p.add_argument('--content',type=Path);p.add_argument('--out',type=Path,required=True);p.add_argument('--art-tools',type=Path,required=True);p.add_argument('--leave-open',action='store_true');p.add_argument('--size',default='1440,900');p.add_argument('--ui-scale',default='1');a=p.parse_args();a.engine=a.engine.resolve();a.out=a.out.resolve();a.art_tools=a.art_tools.resolve()
  data_root=a.engine if (a.engine/'recovery-build.json').exists() else ROOT
  a.out.mkdir(parents=True,exist_ok=True);support=a.out/'support';support.mkdir(exist_ok=True)
  if a.content and not (support/'Content').exists():shutil.copytree(a.content,support/'Content')
  sys.path.insert(0,str(a.art_tools));import route_lock
  env=dict(os.environ);env.update(OPENRA_AI_HOST='0',OPENRA_AI_COMPANION='0',OPENRA_AI_DISABLE_AUTOSTART='1',RTSAI_RECOVERY_SCREEN=a.screen)
- args=[str(a.engine/'bin/OpenRA.exe'),f'Engine.EngineDir={a.engine}',f'Engine.ModSearchPaths={data_root / "mods"},{a.engine / "mods"}',f'Engine.SupportDir={support}',f'Game.Mod={a.mod}','Game.FetchNews=false','Game.IntroductionPromptVersion=99','Debug.SystemInformationVersionPrompt=99','Graphics.Mode=Windowed','Graphics.WindowedSize=1440,900','Graphics.UIScale=1','Game.ViewportEdgeScroll=false','Sound.Mute=true']
+ args=[str(a.engine/'bin/OpenRA.exe'),f'Engine.EngineDir={a.engine}',f'Engine.ModSearchPaths={data_root / "mods"},{a.engine / "mods"}',f'Engine.SupportDir={support}',f'Game.Mod={a.mod}','Game.FetchNews=false','Game.IntroductionPromptVersion=99','Debug.SystemInformationVersionPrompt=99','Graphics.Mode=Windowed',f'Graphics.WindowedSize={a.size}',f'Graphics.UIScale={a.ui_scale}','Game.ViewportEdgeScroll=false','Sound.Mute=true']
  if a.map:
   source=next((p/a.map for p in [data_root/'mods'/a.mod/'maps',data_root/'mods'/a.mod/'standalone/maps',data_root/'mods'/a.mod/'campaigns/maps'] if (p/a.map).exists()),None)
   if source is None:raise ValueError('Map not found: '+a.map)

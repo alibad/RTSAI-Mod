@@ -34,7 +34,7 @@ FrontlineCanvas@RTSAI_DESKTOP_HOME:
 			Y: 272
 			Width: 112
 			Height: 52
-			Text: frontline-ra2
+			Text: desktop-ra2
 			DesignFontSize: 25
 			Mode: true
 		FrontlineButton@CONTINUE:

@@ -33,7 +33,6 @@ desktop-mission-studio = Mission Studio
 desktop-game-library = Game library
 
 frontline-classic = CLASSIC
-frontline-ra2 = RA2
 frontline-play = PLAY
 frontline-campaign = CAMPAIGN
 frontline-skirmish = SKIRMISH
