@@ -2,6 +2,11 @@
 setlocal EnableDelayedExpansion
 title OpenRA
 
+if exist "%~dp0recovery.local.json" (
+ powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\launch-desktop.ps1" %*
+ exit /b !errorlevel!
+)
+
 FOR /F "tokens=1,2 delims==" %%A IN (mod.config) DO (set %%A=%%B)
 if exist user.config (FOR /F "tokens=1,2 delims==" %%A IN (user.config) DO (set %%A=%%B))
 set TEMPLATE_LAUNCHER=%0

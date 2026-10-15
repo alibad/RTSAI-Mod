@@ -1,0 +1,85 @@
+﻿World:
+	Faction@turkey:
+		Name: faction-turkey.name
+		InternalName: turkey
+		Side: Allies
+		Description: faction-turkey.description
+		RandomFactionMemberOf: RandomAllies
+
+Player:
+	ProvidesFactionDoctrine@TURKEY:
+		Factions: turkey
+		Prerequisites: side.allies, country.turkey, doctrine.mobile-defense
+	CapturedTechnologyManager@TURKEY:
+		Factions: turkey
+
+TRRIFLE:
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+TRAT:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+TRDRONEOP:
+	Inherits@WW3ROLE: ^RoleEngineer
+	Inherits@WW3MINDCONTROLLER: ^ReusableMindController
+	# Named secondary because AttackBase only selects armaments called primary or
+	# secondary; a custom name is never fired, so the controller never sees the attack.
+	Armament@SEIZE:
+		Name: secondary
+		Weapon: TurkeySeizeLink
+		LocalOffset: 0,0,555
+	MindController:
+		ArmamentNames: secondary
+		Capacity: 2
+		DiscardOldest: true
+		ControllingCondition: turkey-seizing
+		Sounds: beepy3.aud
+	SpeedMultiplier@SEIZING:
+		Modifier: 85
+		RequiresCondition: turkey-seizing
+	WithMindControlArc:
+		UsePlayerColor: true
+		Transparency: 190
+		Offset: 0,0,555
+	WithMindControllerPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		Palette: chrome
+GREYWOLF:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+BOZKIR:
+	Inherits@WW3ROLE: ^RoleTransport
+ARAS8:
+	Inherits@WW3ROLE: ^RoleArtillery
+YILDIRIM:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+GOKKALKAN:
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+SANCAK:
+	Inherits@WW3ROLE: ^RoleScoutVehicle
+DENIZKAPLAN:
+	Inherits@WW3ROLE: ^RoleTransport
+	ReusableCapability@WW3NAVALPROFILE:
+		Id: naval-archetype-landing-ship
+		Domain: navy
+		Provides: naval.transport, amphibious-unload
+		Strategies: amphibious-assault, evacuation
+KUZGUNM:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+TURNAAH:
+	Inherits@WW3ROLE: ^RoleInterceptor
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-interceptor
+		Domain: air
+		Provides: air.interceptor, air.return-to-base
+		Strategies: combat-air-patrol, intercept-aircraft
+MARMARA:
+	Inherits@WW3ROLE: ^RoleDestroyer
+EGE:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+POYRAZ:
+	Inherits@WW3ROLE: ^RoleSubmarine

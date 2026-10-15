@@ -7,30 +7,34 @@ Container@AI_PANEL:
 			Width: PARENT_WIDTH
 			Height: 30
 			Children:
-				Button@ASSISTANT_TAB:
+				RTSAIButton@ASSISTANT_TAB:
 					Width: (PARENT_WIDTH - 15) / 4
 					Height: 25
 					Text: button-ai-tab-assistant
 					Font: Bold
-				Button@VOICE_TAB:
+				RTSAIButton@VOICE_TAB:
 					X: 5 + (PARENT_WIDTH - 15) / 4
 					Width: (PARENT_WIDTH - 15) / 4
 					Height: 25
 					Text: button-ai-tab-voice
 					Font: Bold
-				Button@MODELS_TAB:
+				RTSAIButton@MODELS_TAB:
 					X: 10 + 2 * (PARENT_WIDTH - 15) / 4
 					Width: (PARENT_WIDTH - 15) / 4
 					Height: 25
 					Text: button-ai-tab-models
 					Font: Bold
-				Button@USAGE_TAB:
+				RTSAIButton@USAGE_TAB:
 					X: 15 + 3 * (PARENT_WIDTH - 15) / 4
 					Width: (PARENT_WIDTH - 15) / 4
 					Height: 25
 					Text: button-ai-tab-usage
 					Font: Bold
 		ScrollPanel@SETTINGS_SCROLLPANEL:
+			BackgroundColor: 101B22
+			Background: desktop-scroll
+			ScrollBarBackground: desktop-scroll
+			Button: desktop-button
 			Y: 35
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT - 100
@@ -60,7 +64,7 @@ Container@AI_PANEL:
 							Width: PARENT_WIDTH - 20
 							Height: 20
 							Text: label-ai-mode
-						DropDownButton@AI_MODE:
+						RTSAIDropDownButton@AI_MODE:
 							X: 10
 							Y: 25
 							Width: PARENT_WIDTH - 20
@@ -131,7 +135,7 @@ Container@AI_PANEL:
 							Width: PARENT_WIDTH - 20
 							Height: 20
 							Text: label-ai-notification-pace
-						DropDownButton@PACE:
+						RTSAIDropDownButton@PACE:
 							X: 10
 							Y: 25
 							Width: PARENT_WIDTH - 20
@@ -145,7 +149,7 @@ Container@AI_PANEL:
 							Width: PARENT_WIDTH - 20
 							Height: 20
 							Text: label-ai-strategy-brain
-						DropDownButton@STRATEGY_BRAIN:
+						RTSAIDropDownButton@STRATEGY_BRAIN:
 							X: 10
 							Y: 25
 							Width: PARENT_WIDTH - 20
@@ -220,7 +224,7 @@ Container@AI_PANEL:
 							Width: PARENT_WIDTH - 20
 							Height: 20
 							Text: label-ai-voice-priority
-						DropDownButton@VOICE_PRIORITY:
+						RTSAIDropDownButton@VOICE_PRIORITY:
 							X: 10
 							Y: 25
 							Width: PARENT_WIDTH - 20
@@ -237,7 +241,7 @@ Container@AI_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Text: label-ai-transcription-model
-								DropDownButton@TRANSCRIBE_MODEL:
+								RTSAIDropDownButton@TRANSCRIBE_MODEL:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
@@ -249,7 +253,7 @@ Container@AI_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Text: label-ai-speech-model
-								DropDownButton@SPEECH_MODEL:
+								RTSAIDropDownButton@SPEECH_MODEL:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
@@ -261,7 +265,7 @@ Container@AI_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Text: label-ai-speech-voice
-								DropDownButton@SPEECH_VOICE:
+								RTSAIDropDownButton@SPEECH_VOICE:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
@@ -282,7 +286,7 @@ Container@AI_PANEL:
 					Width: PARENT_WIDTH - 24
 					Height: 93
 					Children:
-						DropDownButton@MODEL_SELECTION:
+						RTSAIDropDownButton@MODEL_SELECTION:
 							X: 10
 							Width: PARENT_WIDTH - 20
 							Height: 25
@@ -311,7 +315,7 @@ Container@AI_PANEL:
 							Height: 20
 							Font: Bold
 							Text: label-ai-local-setup-title
-						Button@INSTALL_LOCAL_AI:
+						RTSAIButton@INSTALL_LOCAL_AI:
 							X: PARENT_WIDTH - 175
 							Width: 165
 							Height: 25
@@ -326,7 +330,7 @@ Container@AI_PANEL:
 					Width: PARENT_WIDTH - 24
 					Height: 30
 					Children:
-						Button@ADVANCED_MODELS:
+						RTSAIButton@ADVANCED_MODELS:
 							X: 10
 							Width: PARENT_WIDTH - 20
 							Height: 25
@@ -335,7 +339,7 @@ Container@AI_PANEL:
 					Width: PARENT_WIDTH - 24
 					Height: 30
 					Children:
-						Button@DISCOVER_LM_STUDIO:
+						RTSAIButton@DISCOVER_LM_STUDIO:
 							X: 10
 							Width: PARENT_WIDTH - 20
 							Height: 25
@@ -352,7 +356,7 @@ Container@AI_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Text: label-ai-provider
-								DropDownButton@PROVIDER:
+								RTSAIDropDownButton@PROVIDER:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
@@ -364,7 +368,7 @@ Container@AI_PANEL:
 									Width: PARENT_WIDTH
 									Height: 20
 									Text: label-ai-text-model
-								DropDownButton@TEXT_MODEL:
+								RTSAIDropDownButton@TEXT_MODEL:
 									Y: 25
 									Width: PARENT_WIDTH
 									Height: 25
@@ -377,7 +381,7 @@ Container@AI_PANEL:
 							Width: PARENT_WIDTH - 20
 							Height: 20
 							Text: label-ai-vision-model
-						DropDownButton@VISION_MODEL:
+						RTSAIDropDownButton@VISION_MODEL:
 							X: 10
 							Y: 25
 							Width: PARENT_WIDTH - 20
@@ -480,21 +484,21 @@ Container@AI_PANEL:
 					Width: PARENT_WIDTH - 20
 					Height: 18
 					Font: Tiny
-				Button@APPLY:
+				RTSAIButton@APPLY:
 					X: 10
 					Y: 25
 					Width: 150
 					Height: 25
 					Text: button-ai-apply
 					Font: Bold
-				Button@TEST:
+				RTSAIButton@TEST:
 					X: 170
 					Y: 25
 					Width: 170
 					Height: 25
 					Text: button-ai-test
 					Font: Bold
-				Button@REFRESH_USAGE:
+				RTSAIButton@REFRESH_USAGE:
 					X: 350
 					Y: 25
 					Width: 150

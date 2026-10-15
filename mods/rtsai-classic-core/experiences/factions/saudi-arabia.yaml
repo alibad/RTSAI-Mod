@@ -1,0 +1,47 @@
+World:
+	Faction@saudi:
+		Name: faction-saudi.name
+		InternalName: saudi
+		Side: Allies
+		Description: faction-saudi.description
+		RandomFactionMemberOf: RandomAllies
+
+Player:
+	ProvidesFactionDoctrine@SAUDI:
+		Factions: saudi
+		Prerequisites: side.allies, country.saudi, doctrine.expeditionary
+	CapturedTechnologyManager@SAUDI:
+		Factions: saudi
+
+SANG:
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+SAJTAC:
+	Inherits@WW3ROLE: ^RoleEngineer
+SAAT:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+FALCON1:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+M1A2S:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+SADS:
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+F15SA:
+	Inherits@WW3ROLE: ^RoleInterceptor
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-interceptor
+		Domain: air
+		Provides: air.interceptor, air.return-to-base
+		Strategies: combat-air-patrol, intercept-aircraft
+AH64SA:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+SA_FRGT:
+	Inherits@WW3ROLE: ^RoleDestroyer
+SA_INTC:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+SA_FSS:
+	Inherits@WW3ROLE: ^RoleTransport

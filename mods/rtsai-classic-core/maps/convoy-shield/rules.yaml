@@ -1,0 +1,266 @@
+World:
+	LuaScript:
+		Scripts: campaign.lua, utils.lua, experience-objectives.lua, convoy-shield.lua
+	MissionData:
+		Briefing: briefing
+		WinVideo: allymorf.vqa
+		LossVideo: shipsink.vqa
+	MapOptions:
+		TechLevel: high
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: dropdown-difficulty.label
+		Description: dropdown-difficulty.description
+		Values:
+			easy: options-difficulty.easy
+			normal: options-difficulty.normal
+			hard: options-difficulty.hard
+		Default: normal
+	ScriptLobbyDropdown@convoy-validation:
+		ID: convoy-validation
+		Label: convoy-shield-validation-label
+		Description: convoy-shield-validation-description
+		Values:
+			off: convoy-shield-validation-off
+			autoplay: convoy-shield-validation-autoplay
+			autoplay-safe: convoy-shield-validation-autoplay-safe
+			cargo-failure: convoy-shield-validation-cargo-failure
+			tanker-failure: convoy-shield-validation-tanker-failure
+			escort-failure: convoy-shield-validation-escort-failure
+			survivor-failure: convoy-shield-validation-survivor-failure
+		Default: off
+		Visible: False
+
+Player:
+	PlayerResources:
+		DefaultCash: 0
+
+CONVOYSHIELD.CARGO:
+	Inherits: LST
+	-Buildable:
+	RenderSprites:
+		Image: lst
+	Tooltip:
+		Name: actor-convoy-shield-cargo-name
+	Health:
+		HP: 60000
+	Mobile:
+		Locomotor: naval
+		Speed: 56
+	RejectsOrders:
+	-Voiced:
+	-MustBeDestroyed:
+	ActorLostNotification:
+		-Notification:
+		-TextNotification:
+
+CONVOYSHIELD.CARGO.DISABLED:
+	Inherits: CONVOYSHIELD.CARGO
+	Tooltip:
+		Name: actor-convoy-shield-disabled-cargo-name
+	Mobile:
+		Locomotor: naval
+		Speed: 1
+
+CONVOYSHIELD.TANKER:
+	Inherits: CONVOYSHIELD.CARGO
+	Tooltip:
+		Name: actor-convoy-shield-tanker-name
+	RenderSprites:
+		Image: lst
+	Health:
+		HP: 90000
+	Mobile:
+		Locomotor: naval
+		Speed: 44
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeShip
+		EmptyWeapon: UnitExplodeShip
+
+CONVOYSHIELD.RADAR-PICKET:
+	Inherits: PT
+	-Buildable:
+	RenderSprites:
+		Image: pt
+	Tooltip:
+		Name: actor-convoy-shield-radar-picket-name
+	RevealsShroud:
+		MinRange: 2c0
+		Range: 3c0
+		RevealGeneratedShroud: False
+	Health:
+		HP: 24000
+
+CONVOYSHIELD.RESCUE-TENDER:
+	Inherits: LST
+	-Buildable:
+	RenderSprites:
+		Image: lst
+	Tooltip:
+		Name: actor-convoy-shield-rescue-tender-name
+	Health:
+		HP: 50000
+	Mobile:
+		Locomotor: lcraft
+		Speed: 128
+
+CONVOYSHIELD.SURVIVOR-RAFT:
+	Inherits: ^Ship
+	Tooltip:
+		Name: actor-convoy-shield-survivor-raft-name
+	RenderSprites:
+		Image: pt
+	Health:
+		HP: 8000
+	Armor:
+		Type: Light
+	Mobile:
+		Locomotor: naval
+		Speed: 1
+	RejectsOrders:
+	-MustBeDestroyed:
+	ActorLostNotification:
+		-Notification:
+		-TextNotification:
+
+CONVOYSHIELD.USV:
+	Inherits: PT
+	-Buildable:
+	RenderSprites:
+		Image: pt
+	Tooltip:
+		Name: actor-convoy-shield-usv-name
+	Health:
+		HP: 6500
+	Mobile:
+		TurnSpeed: 32
+		Speed: 172
+	-MustBeDestroyed:
+
+CONVOYSHIELD.FAST-CRAFT:
+	Inherits: PT
+	-Buildable:
+	RenderSprites:
+		Image: pt
+	Tooltip:
+		Name: actor-convoy-shield-fast-craft-name
+	Health:
+		HP: 14000
+	Mobile:
+		Speed: 155
+	-MustBeDestroyed:
+
+CONVOYSHIELD.NAV-HAZARD:
+	Inherits: ^Ship
+	Tooltip:
+		Name: actor-convoy-shield-navigation-hazard-name
+	RenderSprites:
+		Image: pt
+	Health:
+		HP: 5000
+	Armor:
+		Type: Light
+	Mobile:
+		Locomotor: naval
+		Speed: 1
+	RejectsOrders:
+	-MustBeDestroyed:
+
+CONVOYSHIELD.RECON-DRONE:
+	Inherits: YAK
+	-Buildable:
+	RenderSprites:
+		Image: yak
+	Tooltip:
+		Name: actor-convoy-shield-recon-drone-name
+	Health:
+		HP: 7000
+	Aircraft:
+		CruiseAltitude: 2048
+		TurnSpeed: 20
+		Speed: 150
+		Repulsable: False
+	-MustBeDestroyed:
+
+CONVOYSHIELD.MISSILE:
+	Inherits: MIG
+	-Buildable:
+	RenderSprites:
+		Image: mig
+	Tooltip:
+		Name: actor-convoy-shield-missile-name
+	Health:
+		HP: 7500
+	Aircraft:
+		CruiseAltitude: 1792
+		TurnSpeed: 18
+		Speed: 168
+		Repulsable: False
+	Armament:
+		Weapon: Maverick
+		LocalOffset: 0,0,-85
+	AmmoPool:
+		Ammo: 1
+	-MustBeDestroyed:
+
+CONVOYSHIELD.INTEL-CONTACT:
+	Inherits: ^Ship
+	Tooltip:
+		Name: actor-convoy-shield-intel-contact-name
+	RenderSprites:
+		Image: pt
+	Health:
+		HP: 18000
+	Armor:
+		Type: Light
+	Mobile:
+		Locomotor: naval
+		Speed: 1
+	RejectsOrders:
+	-MustBeDestroyed:
+
+CONVOYSHIELD.DIRECTIONAL-CUE:
+	Inherits: FLARE
+	RenderSprites:
+		Image: smokland
+	AmbientSound:
+		SoundFiles: bleep6.aud
+		Delay: 0
+		Interval: 999999
+
+CONVOYSHIELD.SONAR-CUE:
+	Inherits: FLARE
+	RenderSprites:
+		Image: smokland
+	AmbientSound:
+		SoundFiles: sonpulse.aud
+		Delay: 0
+		Interval: 999999
+
+DD:
+	Buildable:
+		Prerequisites: ~disabled
+
+CA:
+	Buildable:
+		Prerequisites: ~disabled
+
+PT:
+	Buildable:
+		Prerequisites: ~disabled
+
+LST:
+	Buildable:
+		Prerequisites: ~disabled
+
+SS:
+	Buildable:
+		Prerequisites: ~disabled
+
+MSUB:
+	Buildable:
+		Prerequisites: ~disabled
+
+MCV:
+	Buildable:
+		Prerequisites: ~disabled

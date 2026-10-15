@@ -1,0 +1,54 @@
+﻿World:
+	ReusableCapability@COUNTERINTELLIGENCE:
+		Id: mind-control-and-disguise
+		Domain: special-units
+		Provides: disguise.identity, counterintelligence.detect, control.capacity, control.release
+		Requires: clear-counterplay, ownership-transfer, effective-owner
+		Strategies: infiltrate, detect-disguise, control-high-value-target
+
+SPY:
+	ReusableCapability@DISGUISE:
+		Id: disguise-operative
+		Domain: special-units
+		Provides: disguise.identity, infiltration
+		Requires: disguise-order, effective-owner
+		Strategies: infiltrate, impersonate
+	Inherits@WW3MINDCONTROLLER: ^ReusableMindController
+	MindControlCapacity:
+		Capacity: 2
+	TargetedWeaponAbility@CONTROL:
+		Weapon: ReusableControlPulse
+		OrderName: ControlTarget
+		Cooldown: 500
+		TargetTerrain: false
+		RequiresForceFire: true
+		Cursor: ability
+		BlockedCursor: ability-blocked
+
+^ReusableMindController:
+	ReusableCapability:
+		Id: mind-controller
+		Domain: special-units
+		Provides: control.target, control.capacity
+		Requires: ownership-transfer, release-policy
+		Strategies: control-high-value-target
+
+^Infantry:
+	TemporaryOwnerManager:
+
+^Vehicle:
+	TemporaryOwnerManager:
+	MindControllable:
+		Condition: mind-controlled
+		RevokeControlSounds: beepy6.aud
+		FallbackOwner: Creeps
+	Targetable@MINDCONTROL:
+		TargetTypes: MindControl
+	WithMindControlArc@MINDCONTROL:
+		UsePlayerColor: true
+		Transparency: 190
+	WithColoredOverlay@MINDCONTROL:
+		# RRGGBBAA. The alpha is deliberately low: this is a tint to show who owns
+		# the unit now, not a repaint. At high alpha it smothers the sprite.
+		Color: A040D040
+		RequiresCondition: mind-controlled

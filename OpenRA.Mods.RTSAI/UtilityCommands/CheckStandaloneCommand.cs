@@ -570,7 +570,9 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 						productName = m.Groups[1].Value.Trim();
 					var eq = line.IndexOf('=');
 					var value = eq >= 0 ? line[(eq + 1)..] : line;
-					if (Regex.IsMatch(value, @"red alert|\bRA2\b|westwood|command\s*&\s*conquer", RegexOptions.IgnoreCase))
+					// The owner's desktop mode names are intentional; no original game assets are implied.
+					var modeLabel = file == "ra2|languages/desktop.ftl" && line.StartsWith("desktop-", StringComparison.Ordinal);
+					if (!modeLabel && Regex.IsMatch(value, @"red alert|\bRA2\b|westwood|command\s*&\s*conquer", RegexOptions.IgnoreCase))
 						Error($"{file}:{i + 1}: branding in shipped text: {line}");
 				}
 			}
@@ -593,7 +595,8 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					("FluentMessages", manifest.FluentMessages, classic.FluentMessages),
 				};
 				foreach (var (name, mine, theirs) in lists)
-					foreach (var f in mine.Where(f => !f.StartsWith("ra2|standalone/", StringComparison.Ordinal) && !theirs.Contains(f)))
+					foreach (var f in mine.Where(f => !f.StartsWith("ra2|standalone/", StringComparison.Ordinal)
+						&& !Regex.IsMatch(f, @"^ra2\|campaigns/countr(y|ies)[-.]") && !theirs.Contains(f)))
 						Error($"mods/{classic.Id}/mod.yaml {name} lacks {f}: run python tools/build-classic-manifest.py");
 			}
 

@@ -1,0 +1,67 @@
+World:
+	ReusableCapability@AIRPROFILES:
+		Id: air-attack-profiles
+		Domain: air
+		Provides: air.interceptor, air.strike, air.bomber-run, air.gunship, air.transport, air.return-to-base
+		Requires: aircraft, rearm-policy, strategic-role
+		Strategies: air-superiority, close-air-support, deep-strike, airlift
+
+^ReusableInterceptorProfile:
+	Inherits: ^RoleInterceptor
+	ReusableCapability:
+		Id: air-profile-interceptor
+		Domain: air
+		Provides: air.interceptor, air.return-to-base
+		Requires: Aircraft, AttackAircraft, ammo-policy
+		Strategies: combat-air-patrol, intercept-aircraft
+
+^ReusableStrikeProfile:
+	Inherits: ^RoleAttackAircraft
+	ReusableCapability:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Requires: Aircraft, AttackAircraft, ammo-policy
+		Strategies: close-air-support, standoff-strike
+
+^ReusableAirliftProfile:
+	Inherits: ^RoleTransport
+	ReusableCapability:
+		Id: air-profile-airlift
+		Domain: air
+		Provides: air.transport, evacuation.embark
+		Requires: Aircraft, Cargo, Passenger
+		Strategies: airlift, evacuation
+
+MIG:
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-interceptor
+		Domain: air
+		Provides: air.interceptor, air.return-to-base
+		Strategies: combat-air-patrol, intercept-aircraft
+
+YAK:
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+HELI:
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+HIND:
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+
+TRAN:
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-airlift
+		Domain: air
+		Provides: air.transport, evacuation.embark
+		Strategies: airlift, evacuation

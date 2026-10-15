@@ -1,0 +1,115 @@
+﻿World:
+	ReusableCapability@STATUSTHERMAL:
+		Id: status-and-thermal-system
+		Domain: effects-and-sensors
+		Provides: status.heat, status.suppression, status.jamming, status.weapon-lock, status.visibility
+		Requires: condition-feedback, ai-status-awareness
+		Strategies: suppress-target, jam-sensors, manage-heat
+
+^ReusableStatusReceiver:
+	ReusableCapability:
+		Id: status-receiver
+		Domain: effects-and-sensors
+		Provides: status.receiver
+		Requires: ExternalCondition
+		Strategies: react-to-status
+	ExternalCondition@HEAT:
+		Condition: status-heat
+	ExternalCondition@SUPPRESSION:
+		Condition: status-suppressed
+	ExternalCondition@SENSORJAM:
+		Condition: status-sensor-jammed
+	ExternalCondition@WEAPONLOCK:
+		Condition: status-weapon-locked
+
+^ReusableStatusEmitter:
+	ReusableCapability:
+		Id: status-emitter
+		Domain: effects-and-sensors
+		Provides: status.source
+		Requires: condition-warhead-or-aura
+		Strategies: prioritize-status-target
+
+^Infantry:
+	Inherits@WW3STATUS: ^ReusableStatusReceiver
+	SpeedMultiplier@WW3HEAT:
+		Modifier: 90
+		RequiresCondition: status-heat
+	SpeedMultiplier@WW3SUPPRESSED:
+		Modifier: 65
+		RequiresCondition: status-suppressed
+	ReloadDelayMultiplier@WW3SUPPRESSED:
+		Modifier: 140
+		RequiresCondition: status-suppressed
+	RangeMultiplier@WW3SENSORJAM:
+		Modifier: 70
+		RequiresCondition: status-sensor-jammed
+	ReloadDelayMultiplier@WW3WEAPONLOCK:
+		Modifier: 300
+		RequiresCondition: status-weapon-locked
+
+^Vehicle:
+	Inherits@WW3STATUS: ^ReusableStatusReceiver
+	ReloadDelayMultiplier@WW3SUPPRESSED:
+		Modifier: 130
+		RequiresCondition: status-suppressed
+	SpeedMultiplier@WW3HEAT:
+		Modifier: 75
+		RequiresCondition: status-heat
+	RangeMultiplier@WW3SENSORJAM:
+		Modifier: 70
+		RequiresCondition: status-sensor-jammed
+	ReloadDelayMultiplier@WW3WEAPONLOCK:
+		Modifier: 300
+		RequiresCondition: status-weapon-locked
+
+^Ship:
+	Inherits@WW3STATUS: ^ReusableStatusReceiver
+	ReloadDelayMultiplier@WW3SUPPRESSED:
+		Modifier: 130
+		RequiresCondition: status-suppressed
+	ReloadDelayMultiplier@WW3WEAPONLOCK:
+		Modifier: 300
+		RequiresCondition: status-weapon-locked
+	SpeedMultiplier@WW3HEAT:
+		Modifier: 80
+		RequiresCondition: status-heat
+	RangeMultiplier@WW3SENSORJAM:
+		Modifier: 75
+		RequiresCondition: status-sensor-jammed
+
+^Plane:
+	Inherits@WW3STATUS: ^ReusableStatusReceiver
+	ReloadDelayMultiplier@WW3SUPPRESSED:
+		Modifier: 130
+		RequiresCondition: status-suppressed
+	ReloadDelayMultiplier@WW3WEAPONLOCK:
+		Modifier: 300
+		RequiresCondition: status-weapon-locked
+	SpeedMultiplier@WW3HEAT:
+		Modifier: 80
+		RequiresCondition: status-heat
+	RangeMultiplier@WW3SENSORJAM:
+		Modifier: 75
+		RequiresCondition: status-sensor-jammed
+
+# RA2's radiation model: contaminated ground is a decaying per-cell level that
+# damages whoever stands in it, rather than a one-off blast. Vehicles are sealed;
+# infantry are not.
+World:
+	TintedCellsLayer@RADIOACTIVITY:
+		Name: radioactivity
+		Color: 30FF30
+		MaxLevel: 500
+		Darkest: 6
+		Brightest: 56
+		FadeoutDelay: 200
+		FadeoutType: Logarithmic
+
+^Infantry:
+	DamagedByTintedCells@RADIOACTIVITY:
+		LayerName: radioactivity
+		Damage: 400
+		DamageLevel: 100
+		DamageInterval: 16
+		DamageTypes: Prone50Percent, FireDeath

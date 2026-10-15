@@ -1,0 +1,29 @@
+World:
+	ReusableCapability@TARGETEDABILITIES:
+		Id: targeted-unit-abilities
+		Domain: units-and-effects
+		Provides: ability.target-actor, ability.target-cell, ability.cooldown, ability.telemetry
+		Requires: synchronized-orders, cursor-feedback
+		Strategies: use-targeted-ability, preserve-cooldown
+
+^ReusableTargetedAbilityHost:
+	ReusableCapability:
+		Id: targeted-ability-host
+		Domain: units-and-effects
+		Provides: ability.command-source
+		Requires: target-validation, cooldown
+		Strategies: use-targeted-ability
+
+# Force-fire with rocket infantry to launch a dedicated signal barrage. This is
+# a separate synchronized order with its own cooldown, weapon, projectile,
+# impact effect, and suppression status rather than a modifier on normal fire.
+E3:
+	Inherits@WW3TARGETEDABILITY: ^ReusableTargetedAbilityHost
+	TargetedWeaponAbility@SIGNALBARRAGE:
+		Weapon: ReusableSignalBarrage
+		OrderName: SignalBarrage
+		Cooldown: 600
+		TargetTerrain: true
+		RequiresForceFire: true
+		Cursor: ability
+		BlockedCursor: ability-blocked

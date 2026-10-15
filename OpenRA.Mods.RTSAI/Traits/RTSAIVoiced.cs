@@ -28,7 +28,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			return rules.Voices.ContainsKey(selected) ? selected : original;
 		}
 		string Selected(Ruleset rules) => Resolve(voiceInfo.VoiceSet, rules,
-			Game.Settings.GetOrCreate<RTSAISettings>(null).VoiceLanguage);
+			RTSAIModePreferences.CurrentVoiceLanguage());
 		string IVoiced.VoiceSet => Selected(Game.ModData.DefaultRules);
 		bool IVoiced.PlayVoice(Actor self, string phrase, string variant)
 		{

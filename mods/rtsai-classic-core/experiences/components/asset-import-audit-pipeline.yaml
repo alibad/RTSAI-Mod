@@ -1,0 +1,8 @@
+World:
+	ReusableCapability@ASSETAUDIT:
+		Id: asset-import-audit-pipeline
+		Domain: asset-pipeline
+		Provides: asset.provenance, sprite.contact-sheet, sprite.facing-audit, sprite.live-turn-validation
+		Requires: source-license-record, fixed-canvas-frames, native-facing-contract
+		Strategies: authoring-quality-gate
+		SimulationAffecting: false

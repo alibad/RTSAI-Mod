@@ -1,0 +1,24 @@
+desktop-scroll:
+	Image: ra2|uibits/desktop-panels.png
+	PanelRegion: 0, 0, 1, 1, 14, 14, 1, 1
+
+desktop-panel:
+	Image: ra2|uibits/desktop-panels.png
+	PanelRegion: 16, 0, 1, 1, 14, 14, 1, 1
+
+desktop-button:
+	Image: ra2|uibits/desktop-panels.png
+	PanelRegion: 16, 0, 1, 1, 14, 14, 1, 1
+
+desktop-button-hover:
+	Image: ra2|uibits/desktop-panels.png
+	PanelRegion: 32, 0, 1, 1, 14, 14, 1, 1
+
+desktop-button-pressed:
+	Image: ra2|uibits/desktop-panels.png
+	PanelRegion: 48, 0, 1, 1, 14, 14, 1, 1
+
+desktop-button-disabled:
+	Image: ra2|uibits/desktop-panels.png
+	PanelRegion: 64, 0, 1, 1, 14, 14, 1, 1
+

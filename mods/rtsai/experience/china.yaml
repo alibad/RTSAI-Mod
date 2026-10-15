@@ -1,0 +1,4 @@
+World:
+	Faction@china:
+		Selectable: true
+		RandomFactionMemberOf: random, random-allies

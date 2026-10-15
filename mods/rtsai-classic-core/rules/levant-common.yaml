@@ -1,0 +1,26 @@
+^LevantIsraelCoordination:
+	ExternalCondition@coordination:
+		Condition: israel-linked
+	ReloadDelayMultiplier@coordination:
+		Modifier: 85
+		RequiresCondition: israel-linked
+	WithTextDecoration@coordination:
+		Text: LINK
+		Color: 80B8FF
+		RequiresCondition: israel-linked
+		RequiresSelection: true
+^Palettes:
+	PaletteFromFile@israel:
+		Name: israel-art
+		Filename: ra|bits/levant/israel.pal
+	PlayerColorPalette@israel:
+		BasePalette: israel-art
+		BaseName: israelplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@hezbollah:
+		Name: hezbollah-art
+		Filename: ra|bits/levant/hezbollah.pal
+	PlayerColorPalette@hezbollah:
+		BasePalette: hezbollah-art
+		BaseName: hezbollahplayer
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31

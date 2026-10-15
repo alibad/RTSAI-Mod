@@ -23,7 +23,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		public RTSAIGameModesLogic(Widget widget, World world)
 		{
 			var button = widget.Get<ButtonWidget>("GAME_MODES_BUTTON");
-			button.GetText = () => Game.ModData.Manifest.Id == "rtsai-topdown" ? "Game mode: Classic" : "Game mode: Isometric";
+			button.GetText = () => Game.ModData.Manifest.Id == "rtsai-classic-core" ? "Game mode: Classic" : "Game mode: RA2";
 			button.OnClick = () => Ui.OpenWindow("RTSAI_GAME_MODES", new WidgetArgs { { "world", world } });
 			// Local acceptance harness: exercise the real dialog and reload, once per process.
 			var target = Environment.GetEnvironmentVariable("RTSAI_VERIFY_MODE_SWITCH");
@@ -44,15 +44,15 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		[ObjectCreator.UseCtor]
 		public RTSAIGameModeDialogLogic(Widget widget)
 		{
-			widget.Get<ButtonWidget>("CLASSIC_MODE").OnClick = () => Switch("rtsai-topdown");
+			widget.Get<ButtonWidget>("CLASSIC_MODE").OnClick = () => Switch("rtsai-classic-core");
 			widget.Get<ButtonWidget>("ISOMETRIC_MODE").OnClick = () => Switch("rtsai");
-			var settings = Game.Settings.GetOrCreate<RTSAISettings>(null);
+			var settings = Game.ModData.GetSettings<RTSAIModeSettings>();
 			var language = widget.Get<ButtonWidget>("VOICE_LANGUAGE");
-			language.GetText = () => RTSAISettings.Normalize(settings.VoiceLanguage) == "en"
+			language.GetText = () => RTSAISettings.Normalize(RTSAIModePreferences.CurrentVoiceLanguage()) == "en"
 				? "Unit voices: English" : "Unit voices: Faction language";
 			language.OnClick = () =>
 			{
-				settings.VoiceLanguage = RTSAISettings.Normalize(settings.VoiceLanguage) == "en" ? "faction" : "en";
+				settings.VoiceLanguage = RTSAISettings.Normalize(RTSAIModePreferences.CurrentVoiceLanguage()) == "en" ? "faction" : "en";
 				Game.Settings.Save();
 			};
 			widget.Get<ButtonWidget>("CANCEL").OnClick = Ui.CloseWindow;

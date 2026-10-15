@@ -1,0 +1,313 @@
+Container@RTSAI_DESKTOP_HOME:
+	Logic: RTSAIDesktopHomeLogic
+	Width: WINDOW_WIDTH
+	Height: WINDOW_HEIGHT
+	Children:
+		ColorBlock@BG:
+			X: 0
+			Y: 0
+			Width: WINDOW_WIDTH
+			Height: WINDOW_HEIGHT
+			Color: 0D1318
+		ColorBlock@SIDE:
+			X: 0
+			Y: 0
+			Width: 210
+			Height: WINDOW_HEIGHT
+			Color: 121C24
+		Label@TITLE:
+			X: 32
+			Y: 30
+			Width: 350
+			Height: 48
+			Text: desktop-rts-ai
+			Font: BigBold
+			TextColor: E9EFF2
+		ColorBlock@RULE:
+			X: 32
+			Y: 93
+			Width: 54
+			Height: 3
+			Color: 64D1D4
+		Label@EDITION:
+			X: WINDOW_WIDTH - 300
+			Y: 45
+			Width: 250
+			Height: 25
+			Text: desktop-desktop-edition
+			Font: Small
+			TextColor: 91A6B1
+		Label@HEADLINE:
+			X: 250
+			Y: 125
+			Width: WINDOW_WIDTH - 280
+			Height: 40
+			Text: desktop-choose-your-experience
+			Font: BigBold
+			TextColor: E9EFF2
+		Label@SUBTITLE:
+			X: 250
+			Y: 172
+			Width: WINDOW_WIDTH - 280
+			Height: 30
+			Text: desktop-distinct-foundations-our-factions-and-modules-remain-yours
+			Font: Regular
+			TextColor: 9BB0BC
+		Label@CURRENT:
+			X: 250
+			Y: WINDOW_HEIGHT - 85
+			Width: WINDOW_WIDTH - 290
+			Height: 25
+			Text: desktop-current-experience
+			Font: Regular
+			TextColor: 9BB0BC
+		RTSAIButton@CONTINUE:
+			X: 25
+			Y: 145
+			Width: 160
+			Height: 40
+			Text: desktop-continue
+			Font: Bold
+		RTSAIButton@PACKS:
+			X: 25
+			Y: 197
+			Width: 160
+			Height: 40
+			Text: desktop-game-packs
+			Font: Bold
+		RTSAIButton@EXPANSIONS:
+			X: 25
+			Y: 249
+			Width: 160
+			Height: 40
+			Text: desktop-expansions
+			Font: Bold
+		RTSAIButton@SETTINGS:
+			X: 25
+			Y: 301
+			Width: 160
+			Height: 40
+			Text: desktop-settings
+			Font: Bold
+		RTSAIButton@QUIT:
+			X: 25
+			Y: WINDOW_HEIGHT - 65
+			Width: 160
+			Height: 40
+			Text: desktop-quit
+			Font: Bold
+		RTSAIButton@STUDIO:
+			X: 25
+			Y: 353
+			Width: 160
+			Height: 40
+			Text: desktop-mission-studio
+			Font: Bold
+		Label@POWERED:
+			X: 25
+			Y: WINDOW_HEIGHT - 113
+			Width: 160
+			Height: 22
+			Text: desktop-powered-by-openra
+			Font: Small
+			TextColor: 91A6B1
+		ColorBlock@CLASSIC_PANEL:
+			X: 250
+			Y: 235
+			Width: (WINDOW_WIDTH - 310) / 2
+			Height: 290
+			Color: 17242D
+		Label@CLASSIC_TAG:
+			X: 250 + 24
+			Y: 257
+			Width: (WINDOW_WIDTH - 370) / 2
+			Height: 22
+			Text: desktop-top-down
+			Font: Small
+			TextColor: 64D1D4
+		Label@CLASSIC_TITLE:
+			X: 250 + 24
+			Y: 300
+			Width: (WINDOW_WIDTH - 370) / 2
+			Height: 38
+			Text: desktop-classic
+			Font: BigBold
+			TextColor: E9EFF2
+		Label@CLASSIC_DESC:
+			X: 250 + 24
+			Y: 353
+			Width: (WINDOW_WIDTH - 370) / 2
+			Height: 25
+			Text: desktop-original-rules-maps-and-custom-systems
+			Font: Small
+			TextColor: AFBFC8
+		RTSAIButton@CLASSIC:
+			Accent: true
+			TextColor: 0D2024
+			Shadow: false
+			Contrast: false
+			X: 250 + 24
+			Y: 443
+			Width: (WINDOW_WIDTH - 410) / 2
+			Height: 46
+			Text: desktop-choose-classic
+			Font: Bold
+		ColorBlock@RA2_PANEL:
+			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20
+			Y: 235
+			Width: (WINDOW_WIDTH - 310) / 2
+			Height: 290
+			Color: 17242D
+		Label@RA2_TAG:
+			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
+			Y: 257
+			Width: (WINDOW_WIDTH - 370) / 2
+			Height: 22
+			Text: desktop-isometric
+			Font: Small
+			TextColor: 64D1D4
+		Label@RA2_TITLE:
+			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
+			Y: 300
+			Width: (WINDOW_WIDTH - 370) / 2
+			Height: 38
+			Text: desktop-ra2
+			Font: BigBold
+			TextColor: E9EFF2
+		Label@RA2_DESC:
+			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
+			Y: 353
+			Width: (WINDOW_WIDTH - 370) / 2
+			Height: 25
+			Text: desktop-established-ra2-rules-and-our-authored-content
+			Font: Small
+			TextColor: AFBFC8
+		RTSAIButton@RA2:
+			Accent: true
+			TextColor: 0D2024
+			Shadow: false
+			Contrast: false
+			X: 250 + (WINDOW_WIDTH - 310) / 2 + 20 + 24
+			Y: 443
+			Width: (WINDOW_WIDTH - 410) / 2
+			Height: 46
+			Text: desktop-choose-ra2
+			Font: Bold
+		Label@OUR_WORK:
+			X: 250
+			Y: 568
+			Width: WINDOW_WIDTH - 310
+			Height: 28
+			Text: desktop-world-war-iii-factions-custom-campaigns-ai-co-commander
+			Font: MediumBold
+			TextColor: E9EFF2
+		Label@CONTENT_NOTE:
+			X: 250
+			Y: 604
+			Width: WINDOW_WIDTH - 310
+			Height: 26
+			Text: desktop-classic-reference-uses-openra-freeware-data-ra2-standalone-uses-our-authored-content
+			Font: Small
+			TextColor: 9BB0BC
+
+RTSAIPanel@RTSAI_PACK_LIBRARY:
+	Logic: RTSAIPackLibraryLogic
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
+	Width: 880
+	Height: 560
+	Children:
+		Label@LIB_TITLE:
+			X: 30
+			Y: 24
+			Width: 800
+			Height: 36
+			Text: desktop-game-packs-expansions
+			Font: BigBold
+			TextColor: E9EFF2
+		Label@LIB_INTRO:
+			X: 30
+			Y: 73
+			Width: 800
+			Height: 26
+			Text: desktop-keep-complete-games-separate-add-modules-inside-a-compatible-foundation
+			Font: Regular
+			TextColor: AFBFC8
+		Label@PACK_TITLE0:
+			X: 30
+			Y: 125
+			Width: 790
+			Height: 25
+			Text: desktop-classic
+			Font: Bold
+			TextColor: E9EFF2
+		Label@PACK_DESC0:
+			X: 30
+			Y: 153
+			Width: 790
+			Height: 24
+			Text: desktop-recovered-classic-foundation-and-experience-profiles
+			Font: Small
+			TextColor: AFBFC8
+		Label@PACK_TITLE1:
+			X: 30
+			Y: 205
+			Width: 790
+			Height: 25
+			Text: desktop-ra2
+			Font: Bold
+			TextColor: E9EFF2
+		Label@PACK_DESC1:
+			X: 30
+			Y: 233
+			Width: 790
+			Height: 24
+			Text: desktop-standalone-isometric-game-factions-and-current-campaigns
+			Font: Small
+			TextColor: AFBFC8
+		Label@PACK_TITLE2:
+			X: 30
+			Y: 285
+			Width: 790
+			Height: 25
+			Text: desktop-world-war-iii
+			Font: Bold
+			TextColor: E9EFF2
+		Label@PACK_DESC2:
+			X: 30
+			Y: 313
+			Width: 790
+			Height: 24
+			Text: desktop-seven-modern-factions-and-configurable-gameplay-systems
+			Font: Small
+			TextColor: AFBFC8
+		Label@PACK_TITLE3:
+			X: 30
+			Y: 365
+			Width: 790
+			Height: 25
+			Text: desktop-community-packs
+			Font: Bold
+			TextColor: E9EFF2
+		Label@PACK_DESC3:
+			X: 30
+			Y: 393
+			Width: 790
+			Height: 24
+			Text: desktop-openhv-combined-arms-ra-and-others-compatibility-review-pending
+			Font: Small
+			TextColor: AFBFC8
+		RTSAIButton@COMPOSER:
+			X: 30
+			Y: 492
+			Width: 300
+			Height: 38
+			Text: desktop-configure-this-experience
+			Font: Bold
+		RTSAIButton@CLOSE:
+			X: 650
+			Y: 492
+			Width: 200
+			Height: 38
+			Text: desktop-back
+			Font: Bold

@@ -1,0 +1,656 @@
+hzrifle:
+	Defaults:
+		Filename: ra|bits/levant/hzrifle.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzrifleicon.shp
+hzat:
+	Defaults:
+		Filename: ra|bits/levant/hzat.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzaticon.shp
+hzspotter:
+	Defaults:
+		Filename: ra|bits/levant/hzspotter.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzspottericon.shp
+hzscout:
+	Defaults:
+		Filename: ra|bits/levant/hzscout.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzscouticon.shp
+hztechnical:
+	Defaults:
+		Filename: ra|bits/levant/hztechnical.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hztechnicalicon.shp
+hzrecoilless:
+	Defaults:
+		Filename: ra|bits/levant/hzrecoilless.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzrecoillessicon.shp
+hzescort:
+	Defaults:
+		Filename: ra|bits/levant/hzescort.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzescorticon.shp
+hzrockets:
+	Defaults:
+		Filename: ra|bits/levant/hzrockets.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	empty:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	empty-idle:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzrocketsicon.shp
+hzdrone:
+	Defaults:
+		Filename: ra|bits/levant/hzdrone.shp
+	idle:
+		Facings: 16
+	rotor:
+		Start: 32
+		Length: 4
+		Tick: 80
+	slow-rotor:
+		Start: 32
+		Length: 4
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzdroneicon.shp
+hzmissileboat:
+	Defaults:
+		Filename: ra|bits/levant/hzmissileboat.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	sink:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzmissileboaticon.shp
+	turret:
+		Start: 0
+		Facings: 32
+		UseClassicFacings: True
+hzskiff:
+	Defaults:
+		Filename: ra|bits/levant/hzskiff.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	sink:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzskifficon.shp
+hzsurvey:
+	Defaults:
+		Filename: ra|bits/levant/hzsurvey.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	sink:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/hzsurveyicon.shp
+	turret:
+		Start: 0
+		Facings: 32
+		UseClassicFacings: True
+hzbunker:
+	Defaults:
+		Filename: ra|bits/levant/hzbunker.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	recoil:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/hzbunkericon.shp
+hzaanest:
+	Defaults:
+		Filename: ra|bits/levant/hzaanest.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	recoil:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/hzaanesticon.shp
+hzcoastal:
+	Defaults:
+		Filename: ra|bits/levant/hzcoastal.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	recoil:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/hzcoastalicon.shp
+hzrelay:
+	Defaults:
+		Filename: ra|bits/levant/hzrelay.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/hzrelayicon.shp
+hzworkshop:
+	Defaults:
+		Filename: ra|bits/levant/hzworkshop.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/hzworkshopicon.shp

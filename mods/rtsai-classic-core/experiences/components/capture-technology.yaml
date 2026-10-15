@@ -1,0 +1,34 @@
+Player:
+	ReusableCapability@CAPTURETECHNOLOGY:
+		Id: capture-technology
+		Domain: factions-and-missions
+		Provides: capture.faction-tech, capture.hybrid-roster, capture.mission-reward
+		Requires: faction.doctrine, capturable-tech-structure
+		Strategies: capture-technology, defend-technology
+	CapturedTechnologyManager:
+		Factions: allies, england, france, germany, soviet, russia, ukraine
+
+^ReusableCapturedTechnology:
+	ReusableCapability:
+		Id: captured-technology-source
+		Domain: factions-and-missions
+		Provides: captured-tech.prerequisite
+		Requires: Capturable, ProvidesPrerequisite
+		Strategies: capture-technology
+
+FACT:
+	TracksCapturedTechnology:
+WEAP:
+	TracksCapturedTechnology:
+BARR:
+	TracksCapturedTechnology:
+TENT:
+	TracksCapturedTechnology:
+AFLD:
+	TracksCapturedTechnology:
+HPAD:
+	TracksCapturedTechnology:
+SPEN:
+	TracksCapturedTechnology:
+SYRD:
+	TracksCapturedTechnology:

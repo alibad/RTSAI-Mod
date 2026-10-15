@@ -1,4 +1,4 @@
-Background@RTSAI_GAME_MODES:
+RTSAIPanel@RTSAI_GAME_MODES:
 	Logic: RTSAIGameModeDialogLogic
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
@@ -13,24 +13,24 @@ Background@RTSAI_GAME_MODES:
 			Height: 35
 			Font: Bold
 			Text: rtsai-choose-mode
-		Button@CLASSIC_MODE:
+		RTSAIButton@CLASSIC_MODE:
 			X: 25
 			Y: 75
 			Width: 450
 			Height: 42
 			Text: rtsai-classic-mode
-		Button@ISOMETRIC_MODE:
+		RTSAIButton@ISOMETRIC_MODE:
 			X: 25
 			Y: 130
 			Width: 450
 			Height: 42
 			Text: rtsai-isometric-mode
-		Button@VOICE_LANGUAGE:
+		RTSAIButton@VOICE_LANGUAGE:
 			X: 25
 			Y: 185
 			Width: 450
 			Height: 42
-		Button@CANCEL:
+		RTSAIButton@CANCEL:
 			X: 325
 			Y: 265
 			Width: 150

@@ -1,0 +1,9 @@
+# Reusable point-defense contract adapted from community OpenRA mods.
+^ReusablePointDefense:
+	Armament@POINTDEFENSE:
+		Name: point-defense
+		Weapon: ReusablePointDefenseTracer
+	PointDefense:
+		Armament: point-defense
+		PointDefenseTypes: Missile
+		ValidRelationships: Neutral, Enemy

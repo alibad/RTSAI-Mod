@@ -1,0 +1,17 @@
+World:
+	ReusableCapability@OBJECTIVETOOLKIT:
+		Id: campaign-objective-toolkit
+		Domain: missions-and-story
+		Provides: objective.lifecycle, reinforcement.schedule, escalation.timer, extraction.zone, difficulty.scale
+		Requires: mission-lua, localization
+		Strategies: authored-objectives, timed-escalation, mission-reinforcement
+		SimulationAffecting: false
+
+^ReusableMissionObjectiveAnchor:
+	ReusableCapability:
+		Id: mission-objective-anchor
+		Domain: missions-and-story
+		Provides: objective.anchor, mission.marker
+		Requires: ScriptTriggers
+		Strategies: capture, defend, destroy, extract
+		SimulationAffecting: false

@@ -1,0 +1,78 @@
+World:
+	ReusableCapability@SUPPLYLOGISTICS:
+		Id: supply-logistics-economy
+		Domain: economy
+		Provides: supply.node, supply.route, supply.resupply, convoy.objective
+		Requires: logistics.actor, transport.route
+		Strategies: protect-supply, interdict-supply, resupply-frontline
+
+^ReusableSupplyNode:
+	ReusableCapability:
+		Id: supply-node
+		Domain: economy
+		Provides: supply.source, resupply.radius
+		Requires: position, ownership
+		Strategies: defend-logistics, raid-logistics
+
+^ReusableSupplyConsumer:
+	ReusableCapability:
+		Id: supply-consumer
+		Domain: logistics
+		Provides: supply.demand
+		Requires: supply.source
+		Strategies: return-to-supply, convoy-escort
+	StrategicRole:
+		Roles: logistics-consumer
+		Domain: logistics
+
+^ReusableSupplyTransport:
+	ReusableCapability:
+		Id: supply-transport
+		Domain: logistics
+		Provides: supply.delivery, convoy.member
+		Requires: supply.source, supply.destination
+		Strategies: convoy-escort, route-resupply
+	StrategicRole:
+		Roles: supply-transport, convoy, logistics
+		Domain: logistics
+		AIWeight: 85
+		TransportWeight: 4
+
+# Editor/mission fixture using native presentation.  Aircraft with the matching
+# consumer contract replenish ammunition while they remain in the service radius.
+ROADMAP.SUPPLYDEPOT:
+	Inherits: ^TechBuilding
+	Inherits@SHAPE: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: actor-hosp.name
+	RenderSprites:
+		Image: hosp
+	ReusableCapability:
+		Id: supply-node
+		Domain: economy
+		Provides: supply.source, resupply.radius
+		Requires: position, ownership
+		Strategies: defend-logistics, raid-logistics
+	ProximityExternalCondition@RESUPPLY:
+		Condition: roadmap-resupplied
+		Range: 5c0
+		ExperienceComponent: supply-logistics-economy
+		ExperienceRangeParameter: resupply-radius
+		ValidRelationships: Ally
+	WithRangeCircle@RESUPPLY:
+		Range: 5c0
+		Color: 5CC8FF80
+	MapEditorData:
+		Categories: Mission, Tech building
+
+MIG:
+	Inherits@WW3SUPPLYCONSUMER: ^ReusableSupplyConsumer
+	ExternalCondition@ROADMAPRESUPPLY:
+		Condition: roadmap-resupplied
+	ReloadAmmoPool@ROADMAPRESUPPLY:
+		Delay: 25
+		Count: 1
+		RequiresCondition: roadmap-resupplied

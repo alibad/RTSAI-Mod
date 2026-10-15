@@ -1,0 +1,48 @@
+﻿World:
+	ReusableCapability@TRANSITNETWORK:
+		Id: teleport-network
+		Domain: buildings-and-support-powers
+		Provides: transit.network, transit.entry, transit.exit, transit.route
+		Requires: synchronized-orders, exit-validation
+		Strategies: rapid-transit, tunnel-flank, emergency-extraction
+
+^ReusableTransitEntrance:
+	ReusableCapability:
+		Id: transit-entrance
+		Domain: buildings-and-support-powers
+		Provides: transit.entry
+		Requires: transit.network, transit.exit
+		Strategies: load-transit, route-transit
+	StrategicRole:
+		Roles: transit-entrance, tunnel, logistics
+		Domain: building
+		AIWeight: 95
+
+^ReusableTransitExit:
+	ReusableCapability:
+		Id: transit-exit
+		Domain: buildings-and-support-powers
+		Provides: transit.exit
+		Requires: transit.network, placement-validation
+		Strategies: choose-safe-exit
+
+# Force-fire a terrain cell with an APC to use the synchronized transit order.
+# Placement and locomotor validation run both while targeting and on resolution.
+APC:
+	Inherits@WW3TRANSIT: ^ReusableTransitEntrance
+	TargetedTransitAbility:
+		OrderName: RapidTransit
+		Range: 12c0
+		Cooldown: 900
+		RequiresForceFire: true
+		Cursor: ability
+		BlockedCursor: ability-blocked
+
+# RA2's chrono miner: once the transit network exists, harvesters returning to a
+# refinery jump the last leg instead of driving it, when the delivery cell is free.
+HARV:
+	Inherits@WW3TRANSIT: ^ReusableTransitEntrance
+	ChronoResourceDelivery:
+		CheckTeleportDelay: 10
+		WarpInSound: chrotnk1.aud
+		WarpOutSound: chrotnk1.aud

@@ -1,0 +1,19 @@
+World:
+	ReusableCapability@CONVOYEVACUATION:
+		Id: convoy-and-evacuation-mission-pattern
+		Domain: missions-and-story
+		Provides: convoy.route, convoy.escort, convoy.interdict, evacuation.embark, extraction.complete
+		Requires: campaign-objective-toolkit, strategic-role.transport
+		Strategies: escort-convoy, ambush-convoy, evacuate-civilians
+
+^ReusableConvoyMember:
+	ReusableCapability:
+		Id: convoy-member
+		Domain: missions-and-story
+		Provides: convoy.member, route.progress
+		Requires: movement, mission.marker
+		Strategies: follow-route, regroup-convoy
+	StrategicRole:
+		Roles: convoy, escort-objective
+		Domain: logistics
+		AIWeight: 80

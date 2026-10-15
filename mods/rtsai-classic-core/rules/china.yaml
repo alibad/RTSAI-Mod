@@ -1,0 +1,1551 @@
+# China playable-faction actors. Capabilities are fictionalized and balanced
+# against native Red Alert rather than intended to simulate real performance.
+
+^BaseWorld:
+	Locomotor@CHINAAMPHIBIOUS:
+		Name: china-amphibious
+		Crushes: wall, mine, crate, infantry
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 78
+			Road: 108
+			Bridge: 108
+			Ore: 78
+			Gems: 78
+			Beach: 92
+			Water: 70
+
+World:
+	StartingUnits@mcvonlychina:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: china
+		BaseActor: mcv
+	StartingUnits@lightchina:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: china
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,jeep,1tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavychina:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: china
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,jeep,1tnk,2tnk,2tnk,2tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+FACT:
+	ProvidesPrerequisite@chinaalliedtree:
+		Factions: china
+		Prerequisite: structures.allies
+	ProvidesPrerequisite@china:
+		Factions: china
+		Prerequisite: structures.china
+
+WEAP:
+	ProvidesPrerequisite@china:
+		Factions: china
+		Prerequisite: vehicles.china
+
+HPAD:
+	ProvidesPrerequisite@china:
+		Factions: china
+		Prerequisite: aircraft.china
+
+TENT:
+	ProvidesPrerequisite@china:
+		Factions: china
+		Prerequisite: infantry.china
+
+SYRD:
+	ProvidesPrerequisite@china:
+		Factions: china
+		Prerequisite: ships.china
+
+^ChinaNetworked:
+	ExternalCondition@COMMANDNETWORK:
+		Condition: china-command-network
+	FirepowerMultiplier@COMMANDNETWORK:
+		Modifier: 112
+		RequiresCondition: china-command-network
+	ReloadDelayMultiplier@COMMANDNETWORK:
+		Modifier: 90
+		RequiresCondition: china-command-network
+
+CNBASTION:
+	Inherits: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 72
+		Prerequisites: tent, ~structures.china, ~techlevel.low
+		Description: actor-cnbastion.description
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: actor-cnbastion.name
+	Health:
+		HP: 43000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		TurnSpeed: 44
+		InitialFacing: 192
+		RequiresCondition: !build-incomplete
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	Armament:
+		Weapon: ChinaBastionGun
+		LocalOffset: 520,-90,210, 520,90,210
+	AttackTurreted:
+		PauseOnCondition: build-incomplete
+	Power:
+		Amount: -35
+	DetectCloaked:
+		Range: 5c0
+	-BodyOrientation:
+	ClassicFacingBodyOrientation:
+	RenderSprites:
+		Image: cnbastion
+
+CNSKYSHIELD:
+	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 94
+		Prerequisites: dome, ~structures.china, ~techlevel.medium
+		Description: actor-cnskyshield.description
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: actor-cnskyshield.name
+	Health:
+		HP: 38000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 52
+		InitialFacing: 832
+		RequiresCondition: !build-incomplete
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	Armament:
+		Weapon: ChinaSkyShieldAA
+		LocalOffset: 450,-170,380, 450,170,380
+	AttackTurreted:
+		PauseOnCondition: disabled || build-incomplete
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Power:
+		Amount: -60
+	-BodyOrientation:
+	ClassicFacingBodyOrientation:
+	RenderSprites:
+		Image: cnskyshield
+
+CNSPECTRUM:
+	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 118
+		Prerequisites: atek, ~structures.china, ~techlevel.high
+		Description: actor-cnspectrum.description
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: actor-cnspectrum.name
+	Health:
+		HP: 34000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 11c0
+		RequiresCondition: !disabled
+	DetectCloaked:
+		Range: 9c0
+		DetectionTypes: Cloak, Underwater
+		RequiresCondition: !disabled
+	JamsMissiles:
+		Range: 5c0
+		Chance: 40
+		DeflectionRelationships: Enemy
+		RequiresCondition: !disabled
+	CreatesShroud:
+		Range: 4c0
+		RequiresCondition: !disabled
+	RenderShroudCircle:
+	WithIdleOverlay@DISH:
+		Sequence: active
+		PauseOnCondition: disabled || build-incomplete
+	-RenderRangeCircle:
+	Power:
+		Amount: -90
+	RenderSprites:
+		Image: cnspectrum
+
+CNRIFLE:
+	Inherits: ^Soldier
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 12
+		Prerequisites: ~infantry.china, ~techlevel.infonly
+		Description: actor-cnrifle.description
+	Valued:
+		Cost: 130
+	Tooltip:
+		Name: actor-cnrifle.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 5600
+	Armament@PRIMARY:
+		Weapon: ChinaServiceRifle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: ChinaServiceRifle
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+		Palette: player-noshadow
+		IsPlayerPalette: true
+	Voiced:
+		VoiceSet: ChinaInfantryVoice
+	RenderSprites:
+		Image: cnrifle
+
+CNNETWORK:
+	Inherits: ^Soldier
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 55
+		Prerequisites: dome, ~infantry.china, ~techlevel.medium
+		Description: actor-cnnetwork.description
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: actor-cnnetwork.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 4800
+	Mobile:
+		Speed: 52
+		PauseOnCondition: network-deployed
+	Armament@PRIMARY:
+		Weapon: ChinaNetworkCarbine
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+		Palette: player-noshadow
+		IsPlayerPalette: true
+	GrantConditionOnDeploy:
+		DeployedCondition: network-deployed
+		SkipMakeAnimation: True
+		UndeployOnMove: True
+		DeploySounds: china-network-deploy.wav
+		UndeploySounds: china-network-fold.wav
+	RevealsShroud@NETWORK:
+		Range: 10c0
+		MinRange: 3c0
+		RequiresCondition: network-deployed
+	DetectCloaked@NETWORK:
+		Range: 8c0
+		DetectionTypes: Cloak, Underwater
+		RequiresCondition: network-deployed
+	JamsMissiles:
+		Range: 5c0
+		Chance: 55
+		DeflectionRelationships: Enemy
+		RequiresCondition: network-deployed
+	WithRangeCircle@NETWORK:
+		Range: 8c0
+		Color: 4ED8FF90
+		RequiresCondition: network-deployed
+	WithIdleOverlay@NETWORK:
+		Sequence: network-pulse
+		RequiresCondition: network-deployed
+	Voiced:
+		VoiceSet: ChinaInfantryVoice
+	RenderSprites:
+		Image: cnnetwork
+
+CNPORTABLE:
+	Inherits: ^Soldier
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 32
+		Prerequisites: ~infantry.china, ~techlevel.infonly
+		Description: actor-cnportable.description
+	Valued:
+		Cost: 360
+	Tooltip:
+		Name: actor-cnportable.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 4600
+	Armament@AT:
+		Name: at
+		Weapon: ChinaPortableAT
+		LocalOffset: 0,0,555
+		RequiresCondition: at-mode
+	Armament@AA:
+		Name: aa
+		Weapon: ChinaPortableAA
+		LocalOffset: 0,0,555
+		RequiresCondition: aa-mode
+	GrantConditionOnDeploy:
+		DeployedCondition: aa-mode
+		UndeployedCondition: at-mode
+		SkipMakeAnimation: True
+		DeploySounds: china-role-aa.wav
+		UndeploySounds: china-role-at.wav
+	WithInfantryBody:
+		AttackSequences:
+			at: shoot
+			aa: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+		Palette: player-noshadow
+		IsPlayerPalette: true
+	AutoTarget:
+		ScanRadius: 6
+	Voiced:
+		VoiceSet: ChinaInfantryVoice
+	RenderSprites:
+		Image: cnportable
+
+REDSPEAR:
+	Inherits: ^Soldier
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 125
+		Prerequisites: atek, ~infantry.china, ~techlevel.high
+		BuildLimit: 1
+		Description: actor-redspear.description
+	Valued:
+		Cost: 1900
+	Tooltip:
+		Name: actor-redspear.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10500
+	Mobile:
+		Speed: 72
+	RevealsShroud:
+		Range: 8c0
+	DetectCloaked:
+		Range: 6c0
+	Armament@PRIMARY:
+		Weapon: ChinaRedSpearRifle
+		LocalOffset: 0,0,420
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: ChinaRedSpearRifle
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		RequiresCondition: !parachute
+	WithInfantryBody@PARACHUTE:
+		StandSequences: parachute
+		RequiresCondition: parachute
+		Palette: player-noshadow
+		IsPlayerPalette: true
+	ProximityExternalCondition@COMMANDNETWORK:
+		Condition: china-command-network
+		Range: 6c0
+		ValidRelationships: Ally
+		AffectsParent: True
+		EnableSound: china-command-online.wav
+	WithRangeCircle@COMMANDNETWORK:
+		Range: 6c0
+		Color: E13D3D80
+	Voiced:
+		VoiceSet: RedSpearVoice
+	RenderSprites:
+		Image: redspear
+
+CNQILIN:
+	Inherits: ^TrackedVehicle
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 225
+		Prerequisites: fix, ~vehicles.china, ~techlevel.medium
+		Description: actor-cnqilin.description
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: actor-cnqilin.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 54000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 74
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 22
+	Armament:
+		Weapon: ChinaQilin125mm
+		Recoil: 192
+		RecoilRecovery: 34
+		LocalOffset: 900,0,128
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: CNQILIN.Husk
+	Voiced:
+		VoiceSet: ChinaVehicleVoice
+	RenderSprites:
+		Image: cnqilin
+
+CNLYNX:
+	Inherits: ^Vehicle
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 112
+		Prerequisites: ~vehicles.china, ~techlevel.low
+		Description: actor-cnlynx.description
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-cnlynx.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 132
+	RevealsShroud:
+		Range: 9c0
+	DetectCloaked:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 40
+	Armament:
+		Weapon: ChinaUGVCannon
+		LocalOffset: 320,0,180
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: CNLYNX.Husk
+	Voiced:
+		VoiceSet: ChinaVehicleVoice
+	RenderSprites:
+		Image: cnlynx
+
+CNZBD:
+	Inherits: ^TrackedVehicle
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@CARGOPIPS: ^CargoPips
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 145
+		Prerequisites: fix, ~vehicles.china, ~techlevel.medium
+		Description: actor-cnzbd.description
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-cnzbd.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 36000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: china-amphibious
+		Speed: 105
+		PauseOnCondition: notmobile || being-captured
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		TurnSpeed: 30
+	Armament@CANNON:
+		Weapon: ChinaZBDAutocannon
+		LocalOffset: 520,0,220
+		MuzzleSequence: muzzle
+	Armament@MISSILE:
+		Weapon: ChinaZBDMissile
+		LocalOffset: 160,-260,260, 160,260,260
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		LoadingCondition: notmobile
+	SpawnActorOnDeath:
+		Actor: CNZBD.Husk
+	Voiced:
+		VoiceSet: ChinaVehicleVoice
+	RenderSprites:
+		Image: cnzbd
+
+CNPHL:
+	Inherits: V2RL
+	Inherits@NETWORK: ^ChinaNetworked
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 255
+		Prerequisites: dome, atek, ~vehicles.china, ~techlevel.high
+		Description: actor-cnphl.description
+	Valued:
+		Cost: 1450
+	Tooltip:
+		Name: actor-cnphl.name
+	Health:
+		HP: 18000
+	Mobile:
+		Speed: 84
+	Armament:
+		Weapon: ChinaLongbowMissile
+		ReloadingCondition: reloading
+	SpawnActorOnDeath:
+		Actor: CNPHL.Husk
+	Voiced:
+		VoiceSet: ChinaVehicleVoice
+	RenderSprites:
+		Image: cnphl
+
+CNMANTIS:
+	Inherits: ^TrackedVehicle
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 205
+		Prerequisites: dome, ~vehicles.china, ~techlevel.medium
+		Description: actor-cnmantis.description
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: actor-cnmantis.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 32000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 86
+	RevealsShroud:
+		Range: 9c0
+	DetectCloaked:
+		Range: 7c0
+	Turreted:
+		TurnSpeed: 34
+	Armament:
+		Weapon: ChinaMantisAA
+		LocalOffset: 350,-260,360, 350,260,360
+	AttackTurreted:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: CNMANTIS.Husk
+	Voiced:
+		VoiceSet: ChinaVehicleVoice
+	RenderSprites:
+		Image: cnmantis
+
+CNSKYSPEAR:
+	Inherits: ^Plane
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 48
+		Prerequisites: ~hpad, atek, ~aircraft.china, ~techlevel.high
+		Description: actor-cnskyspear.description
+	Valued:
+		Cost: 2250
+	Tooltip:
+		Name: actor-cnskyspear.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9200
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 9c0
+		Type: GroundPosition
+	Armament@AAM:
+		Name: aam
+		Weapon: ChinaSkySpearAAM
+		LocalOffset: 0,-620,-64, 0,620,-64
+		PauseOnCondition: !aam-ammo
+	Armament@STRIKE:
+		Name: strike
+		Weapon: ChinaSkySpearStrike
+		LocalOffset: 0,-360,-64, 0,360,-64
+		PauseOnCondition: !strike-ammo
+	AttackAircraft:
+		Armaments: aam, strike
+		FacingTolerance: 72
+		PersistentTargeting: false
+		OpportunityFire: True
+	Aircraft:
+		CruiseAltitude: 2560
+		TurnSpeed: 18
+		Speed: 238
+		RepulsionSpeed: 42
+		MaximumPitch: 56
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: AttackAnything
+	AmmoPool@AAM:
+		Name: aam
+		Armaments: aam
+		Ammo: 4
+		AmmoCondition: aam-ammo
+	AmmoPool@STRIKE:
+		Name: strike
+		Armaments: strike
+		Ammo: 2
+		AmmoCondition: strike-ammo
+	Contrail@LEFT:
+		Offset: -640,-380,0
+	Contrail@RIGHT:
+		Offset: -640,380,0
+	SpawnActorOnDeath:
+		Actor: CNSKYSPEAR.Husk
+	Rearmable:
+		RearmActors: hpad
+		AmmoPools: aam, strike
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	Voiced:
+		VoiceSet: ChinaAirVoice
+	RenderSprites:
+		Image: cnskyspear
+
+CNCLOUD:
+	Inherits: ^Plane
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 22
+		Prerequisites: ~hpad, dome, ~aircraft.china, ~techlevel.medium
+		Description: actor-cncloud.description
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: actor-cncloud.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 4200
+	RevealsShroud:
+		Range: 13c0
+		MinRange: 5c0
+		Type: GroundPosition
+	Armament:
+		Weapon: ChinaCloudStrike
+		LocalOffset: 0,0,-64
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		FacingTolerance: 88
+		PersistentTargeting: false
+		OpportunityFire: False
+	Aircraft:
+		CruiseAltitude: 1920
+		TurnSpeed: 14
+		Speed: 158
+		RepulsionSpeed: 24
+		MaximumPitch: 64
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: AttackAnything
+	AmmoPool:
+		Ammo: 2
+		AmmoCondition: ammo
+	SpawnActorOnDeath:
+		Actor: CNCLOUD.Husk
+	Rearmable:
+		RearmActors: hpad
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	Voiced:
+		VoiceSet: ChinaAirVoice
+	RenderSprites:
+		Image: cncloud
+
+CNCRANE:
+	Inherits: ^Helicopter
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CARGOPIPS: ^CargoPips
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 36
+		Prerequisites: ~hpad, dome, ~aircraft.china, ~techlevel.medium
+		Description: actor-cncrane.description
+	Valued:
+		Cost: 1650
+	Tooltip:
+		Name: actor-cncrane.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 13200
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 6c0
+		Type: GroundPosition
+	Armament@CANNON:
+		Name: cannon
+		Weapon: ChinaCraneCannon
+		LocalOffset: 320,0,-96
+		MuzzleSequence: muzzle
+		PauseOnCondition: !cannon-ammo
+	Armament@ROCKET:
+		Name: rockets
+		Weapon: ChinaCraneRocket
+		LocalOffset: 0,-430,-64, 0,430,-64
+		PauseOnCondition: !rocket-ammo
+	AttackAircraft:
+		Armaments: cannon, rockets
+		FacingTolerance: 96
+		PersistentTargeting: false
+		AttackType: Hover
+		OpportunityFire: True
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 138
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,160
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,160
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	AmmoPool@CANNON:
+		Name: cannon
+		Armaments: cannon
+		Ammo: 18
+		AmmoCondition: cannon-ammo
+	AmmoPool@ROCKET:
+		Name: rocket
+		Armaments: rockets
+		Ammo: 4
+		AmmoCondition: rocket-ammo
+	WithMuzzleOverlay:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 6
+		AfterUnloadDelay: 35
+	SpawnActorOnDeath:
+		Actor: CNCRANE.Husk
+	Rearmable:
+		RearmActors: hpad
+		AmmoPools: cannon, rocket
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	Voiced:
+		VoiceSet: ChinaAirVoice
+	RenderSprites:
+		Image: cncrane
+
+CNLUYANG:
+	Inherits: ^Ship
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 44
+		Prerequisites: ~syrd, dome, ~ships.china, ~techlevel.medium
+		Description: actor-cnluyang.description
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-cnluyang.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 52000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 24
+		Speed: 88
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 5c0
+	Turreted:
+		TurnSpeed: 28
+		Offset: 520,0,120
+	Armament@MISSILE:
+		Weapon: ChinaFrigateMissile
+		LocalOffset: 0,-120,64, 0,120,64
+	Armament@GUN:
+		Weapon: ChinaNavalGun
+		LocalOffset: 320,0,64
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	LeavesTrails@WAKE:
+		Image: china_wake
+		Sequences: idle
+		Palette: effect
+		TerrainTypes: Water
+		Type: CenterPosition
+		MovingInterval: 3
+		Offsets: -640,0,0
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 6c0
+	SpawnActorOnDeath:
+		Actor: CNLUYANG.Sinking
+	-FireWarheadsOnDeath:
+	Voiced:
+		VoiceSet: ChinaNavalVoice
+	RenderSprites:
+		Image: cnluyang
+
+CNHAIWANG:
+	Inherits: ^Ship
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 58
+		Prerequisites: ~syrd, atek, ~ships.china, ~techlevel.high
+		Description: actor-cnhaiwang.description
+	Valued:
+		Cost: 2800
+	Tooltip:
+		Name: actor-cnhaiwang.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 88000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 10
+		Speed: 48
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 7c0
+	Turreted:
+		TurnSpeed: 16
+		Offset: 660,0,160
+	Armament@DRONES:
+		Weapon: ChinaHaiwangDroneStrike
+		LocalOffset: -300,-260,320, -300,260,320
+	Armament@DEFENSE:
+		Weapon: ChinaHaiwangDefense
+		LocalOffset: 360,0,160
+	AttackTurreted:
+	WithSpriteTurret:
+	LeavesTrails@WAKE:
+		Image: china_wake
+		Sequences: idle
+		Palette: effect
+		TerrainTypes: Water
+		Type: CenterPosition
+		MovingInterval: 3
+		Offsets: -768,0,0
+	SpawnActorOnDeath:
+		Actor: CNHAIWANG.Sinking
+	-FireWarheadsOnDeath:
+	Voiced:
+		VoiceSet: ChinaNavalVoice
+	RenderSprites:
+		Image: cnhaiwang
+
+CNHAIYING:
+	Inherits: ^Ship
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 18
+		Prerequisites: ~syrd, ~ships.china, ~techlevel.low
+		Description: actor-cnhaiying.description
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-cnhaiying.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 38
+		Speed: 148
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 44
+		Offset: 290,0,100
+	Armament:
+		Weapon: ChinaPatrolMissile
+		LocalOffset: 280,-80,110, 280,80,110
+	AttackTurreted:
+	WithSpriteTurret:
+	LeavesTrails@WAKE:
+		Image: china_wake
+		Sequences: idle
+		Palette: effect
+		TerrainTypes: Water
+		Type: CenterPosition
+		MovingInterval: 2
+		Offsets: -420,0,0
+	SpawnActorOnDeath:
+		Actor: CNHAIYING.Sinking
+	-FireWarheadsOnDeath:
+	Voiced:
+		VoiceSet: ChinaNavalVoice
+	RenderSprites:
+		Image: cnhaiying
+
+CNKUNLUN:
+	Inherits: ^Ship
+	Inherits@CARGOPIPS: ^CargoPips
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 28
+		Prerequisites: ~syrd, ~ships.china, ~techlevel.low
+		Description: actor-cnkunlun.description
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: actor-cnkunlun.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: lcraft
+		Speed: 82
+		TurnSpeed: 16
+		PauseOnCondition: notmobile
+	RevealsShroud:
+		Range: 7c0
+	WithLandingCraftAnimation:
+		OpenTerrainTypes: Clear, Rough, Road, Ore, Gems, Beach
+	Cargo:
+		Types: Infantry, Vehicle
+		MaxWeight: 8
+		PassengerFacing: 0
+		LoadingCondition: notmobile
+	Turreted:
+		TurnSpeed: 32
+		Offset: 500,0,180
+	Armament:
+		Weapon: ChinaLandingDefense
+		LocalOffset: 300,-100,120, 300,100,120
+	AttackTurreted:
+	WithSpriteTurret:
+	-Chronoshiftable:
+	LeavesTrails@WAKE:
+		Image: china_wake
+		Sequences: idle
+		Palette: effect
+		TerrainTypes: Water
+		Type: CenterPosition
+		MovingInterval: 3
+		Offsets: -850,0,0
+	SpawnActorOnDeath:
+		Actor: CNKUNLUN.Sinking
+	-FireWarheadsOnDeath:
+	Voiced:
+		VoiceSet: ChinaNavalVoice
+	RenderSprites:
+		Image: cnkunlun
+
+CNJIAOLONG:
+	Inherits: ^Submarine
+	Inherits@NETWORK: ^ChinaNetworked
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 36
+		Prerequisites: ~syrd, dome, ~ships.china, ~techlevel.medium
+		Description: actor-cnjiaolong.description
+	Valued:
+		Cost: 1150
+	Tooltip:
+		Name: actor-cnjiaolong.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 18
+		Speed: 74
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: ChinaTorpedo
+		LocalOffset: 0,-150,0, 0,150,0
+	AttackFrontal:
+		FacingTolerance: 0
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: WaterActor, Underwater
+		InvalidTargets: NoAutoTarget, Structure
+	DetectCloaked:
+		DetectionTypes: Underwater
+		Range: 5c0
+	SpawnActorOnDeath:
+		Actor: CNJIAOLONG.Sinking
+	-FireWarheadsOnDeath:
+	Voiced:
+		VoiceSet: ChinaNavalVoice
+	RenderSprites:
+		Image: cnjiaolong
+
+CNQILIN.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: actor-cnqilin-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: cnqilin
+	InfiltrateForTransform:
+		IntoActor: cnqilin
+	RenderSprites:
+		Image: cnqilin.destroyed
+
+CNLYNX.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-cnlynx-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: cnlynx
+	InfiltrateForTransform:
+		IntoActor: cnlynx
+	RenderSprites:
+		Image: cnlynx.destroyed
+
+CNZBD.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: actor-cnzbd-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: cnzbd
+	InfiltrateForTransform:
+		IntoActor: cnzbd
+	RenderSprites:
+		Image: cnzbd.destroyed
+
+CNPHL.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-cnphl-husk-name
+	TransformOnCapture:
+		IntoActor: cnphl
+	InfiltrateForTransform:
+		IntoActor: cnphl
+	RenderSprites:
+		Image: cnphl.destroyed
+
+CNMANTIS.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: actor-cnmantis-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: cnmantis
+	InfiltrateForTransform:
+		IntoActor: cnmantis
+	RenderSprites:
+		Image: cnmantis.destroyed
+
+CNSKYSPEAR.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-cnskyspear-husk-name
+	Aircraft:
+		TurnSpeed: 18
+		Speed: 185
+	RenderSprites:
+		Image: cnskyspear.destroyed
+
+CNCLOUD.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-cncloud-husk-name
+	Aircraft:
+		TurnSpeed: 16
+		Speed: 130
+	RenderSprites:
+		Image: cncloud.destroyed
+
+CNCRANE.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: actor-cncrane-husk-name
+	WithIdleOverlay:
+		Offset: 0,0,160
+		Sequence: rotor
+	RenderSprites:
+		Image: cncrane.destroyed
+
+CNLUYANG.Sinking:
+	Inherits@1: ^BasicHusk
+	Inherits@2: ^SpriteActor
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	Health:
+		HP: 1
+	WithFacingSpriteBody:
+		Sequence: sink
+	QuantizeFacingsFromSequence:
+		Sequence: sink
+	KillsSelf:
+		Delay: 24
+	FireWarheadsOnDeath:
+		Weapon: ChinaShipSink
+	RenderSprites:
+		Image: cnluyang.sinking
+
+CNHAIWANG.Sinking:
+	Inherits@1: ^BasicHusk
+	Inherits@2: ^SpriteActor
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	Health:
+		HP: 1
+	WithFacingSpriteBody:
+		Sequence: sink
+	QuantizeFacingsFromSequence:
+		Sequence: sink
+	KillsSelf:
+		Delay: 24
+	FireWarheadsOnDeath:
+		Weapon: ChinaShipSink
+	RenderSprites:
+		Image: cnhaiwang.sinking
+
+CNHAIYING.Sinking:
+	Inherits: CNLUYANG.Sinking
+	RenderSprites:
+		Image: cnhaiying.sinking
+
+CNKUNLUN.Sinking:
+	Inherits: CNLUYANG.Sinking
+	RenderSprites:
+		Image: cnkunlun.sinking
+
+CNJIAOLONG.Sinking:
+	Inherits: CNLUYANG.Sinking
+	RenderSprites:
+		Image: cnjiaolong.sinking
+
+Player:
+	BaseBuilderBotModule@beginner:
+		AdditionalTechTypes:
+			china: dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			hpad: 1
+			afld: 1
+			safld: 1
+		BuildingLimits:
+			hpad: 1
+			afld: 1
+			safld: 1
+	BaseBuilderBotModule@easy:
+		AdditionalTechTypes:
+			china: dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			cnbastion: 4
+			cnskyshield: 3
+			cnspectrum: 1
+			hpad: 1
+			afld: 1
+			safld: 1
+		BuildingLimits:
+			cnbastion: 4
+			cnskyshield: 3
+			cnspectrum: 1
+			hpad: 1
+			afld: 1
+			safld: 1
+	BaseBuilderBotModule@medium:
+		AdditionalTechTypes:
+			china: dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			cnbastion: 6
+			cnskyshield: 5
+			cnspectrum: 2
+			hpad: 1
+			afld: 1
+			safld: 1
+		BuildingLimits:
+			cnbastion: 6
+			cnskyshield: 5
+			cnspectrum: 2
+			hpad: 2
+			afld: 2
+			safld: 2
+	BaseBuilderBotModule@rush:
+		AdditionalTechTypes:
+			china: mslo, dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			cnbastion: 7
+			cnskyshield: 6
+			cnspectrum: 2
+			hpad: 1
+			afld: 1
+			safld: 1
+		BuildingLimits:
+			cnbastion: 7
+			cnskyshield: 6
+			cnspectrum: 2
+			hpad: 3
+			afld: 3
+			safld: 3
+	BaseBuilderBotModule@normal:
+		AdditionalTechTypes:
+			china: mslo, dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			cnbastion: 8
+			cnskyshield: 6
+			cnspectrum: 3
+			hpad: 1
+			afld: 1
+			safld: 1
+		BuildingLimits:
+			cnbastion: 8
+			cnskyshield: 6
+			cnspectrum: 3
+			hpad: 4
+			afld: 4
+			safld: 4
+	BaseBuilderBotModule@turtle:
+		AdditionalTechTypes:
+			china: mslo, dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			cnbastion: 12
+			cnskyshield: 10
+			cnspectrum: 6
+			hpad: 2
+			afld: 2
+			safld: 1
+		BuildingLimits:
+			cnbastion: 12
+			cnskyshield: 10
+			cnspectrum: 6
+			hpad: 4
+			afld: 4
+			safld: 4
+	BaseBuilderBotModule@naval:
+		AdditionalTechTypes:
+			china: mslo, dome, atek, stek, fix, afld, hpad, safld
+		AdditionalProductionTypes:
+			china: barr,tent,weap,afld,hpad,safld
+		AdditionalNavalProductionTypes:
+			china: spen,syrd
+		AdditionalDefenseTypes:
+			china: hbox,pbox,gun,ftur,tsla,agun,sam,cnbastion,cnskyshield,cnspectrum
+		BuildingFractions:
+			cnbastion: 6
+			cnskyshield: 8
+			cnspectrum: 3
+			hpad: 15
+			afld: 15
+			safld: 15
+		BuildingLimits:
+			cnbastion: 6
+			cnskyshield: 8
+			cnspectrum: 3
+			hpad: 8
+			afld: 8
+			safld: 8
+	UnitBuilderBotModule@easy:
+		UnitsToBuild:
+			cnrifle: 50
+			cnportable: 24
+			cnnetwork: 12
+			cnlynx: 30
+			cnzbd: 22
+			cnqilin: 24
+			cnmantis: 26
+		UnitLimits:
+			cnnetwork: 2
+			cnlynx: 4
+			cnzbd: 3
+			cnqilin: 3
+			cnmantis: 3
+	UnitBuilderBotModule@medium:
+		UnitsToBuild:
+			cnrifle: 55
+			cnportable: 32
+			cnnetwork: 16
+			cnlynx: 34
+			cnzbd: 34
+			cnqilin: 42
+			cnphl: 26
+			cncloud: 28
+			cncrane: 30
+			cnskyspear: 24
+			cnmantis: 30
+			cnhaiying: 22
+			cnkunlun: 8
+			cnjiaolong: 16
+		UnitLimits:
+			cnnetwork: 3
+			cnlynx: 6
+			cnzbd: 6
+			cnqilin: 6
+			cnphl: 4
+			cncloud: 5
+			cncrane: 5
+			cnskyspear: 4
+			cnmantis: 4
+			cnkunlun: 2
+			cnjiaolong: 3
+	UnitBuilderBotModule@rush:
+		UnitsToBuild:
+			cnrifle: 70
+			cnportable: 38
+			cnnetwork: 14
+			redspear: 1
+			cnlynx: 55
+			cnzbd: 48
+			cnqilin: 48
+			cnphl: 38
+			cncloud: 38
+			cncrane: 38
+			cnskyspear: 34
+			cnmantis: 38
+			cnhaiying: 28
+			cnkunlun: 10
+			cnjiaolong: 20
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			cnrifle: 65
+			cnportable: 38
+			cnnetwork: 20
+			redspear: 1
+			cnlynx: 45
+			cnzbd: 46
+			cnqilin: 52
+			cnphl: 40
+			cncloud: 40
+			cncrane: 42
+			cnskyspear: 38
+			cnluyang: 35
+			cnhaiwang: 20
+			cnmantis: 36
+			cnhaiying: 34
+			cnkunlun: 12
+			cnjiaolong: 26
+		UnitLimits:
+			cnnetwork: 4
+			cnphl: 6
+			cncloud: 7
+			cncrane: 6
+			cnskyspear: 6
+			cnluyang: 8
+			cnhaiwang: 3
+			cnmantis: 6
+			cnhaiying: 8
+			cnkunlun: 2
+			cnjiaolong: 5
+	UnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			cnrifle: 52
+			cnportable: 52
+			cnnetwork: 35
+			redspear: 1
+			cnlynx: 24
+			cnzbd: 35
+			cnqilin: 48
+			cnphl: 58
+			cncloud: 28
+			cncrane: 28
+			cnskyspear: 48
+			cnluyang: 45
+			cnhaiwang: 18
+			cnmantis: 48
+			cnhaiying: 26
+			cnkunlun: 10
+			cnjiaolong: 22
+	UnitBuilderBotModule@naval:
+		UnitsToBuild:
+			cnrifle: 35
+			cnportable: 28
+			cnnetwork: 22
+			cnlynx: 20
+			cnzbd: 55
+			cnqilin: 28
+			cnphl: 30
+			cncloud: 48
+			cncrane: 44
+			cnskyspear: 35
+			cnluyang: 65
+			cnhaiwang: 35
+			cnmantis: 32
+			cnhaiying: 70
+			cnkunlun: 20
+			cnjiaolong: 60
+		UnitLimits:
+			cnnetwork: 4
+			cnzbd: 8
+			cnluyang: 12
+			cnhaiwang: 5
+			cnmantis: 6
+			cnhaiying: 14
+			cnkunlun: 4
+			cnjiaolong: 10
+	SquadManagerBotModule@beginner:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong
+	SquadManagerBotModule@easy:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong
+	SquadManagerBotModule@medium:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong
+	SquadManagerBotModule@rush:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong
+	SquadManagerBotModule@normal:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong
+	SquadManagerBotModule@turtle:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong
+	SquadManagerBotModule@naval:
+		AdditionalAirUnitsTypes:
+			china: mig, yak, heli, hind, mh60, cncloud, cncrane, cnskyspear
+		AdditionalNavalUnitsTypes:
+			china: ss, msub, dd, ca, lst, pt, cnluyang, cnhaiwang, cnhaiying, cnkunlun, cnjiaolong

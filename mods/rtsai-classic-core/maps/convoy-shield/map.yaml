@@ -1,0 +1,160 @@
+MapFormat: 12
+
+RequiresMod: ra
+
+Title: Convoy Shield
+
+Author: OpenRA Community Mission
+
+Tileset: DESERT
+
+MapSize: 120,120
+
+Bounds: 1,1,118,118
+
+Visibility: MissionSelector
+
+Categories: Campaign
+
+LockPreview: True
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: allies
+	PlayerReference@Civilians:
+		Name: Civilians
+		NonCombatant: True
+		Faction: allies
+		Color: D9C98B
+		Allies: Escort
+		Enemies: Hostiles
+	PlayerReference@Escort:
+		Name: Escort
+		Playable: True
+		AllowBots: False
+		Required: True
+		LockFaction: True
+		Faction: allies
+		LockColor: True
+		Color: 6CB4EE
+		LockSpawn: True
+		LockTeam: True
+		Allies: Civilians
+		Enemies: Hostiles
+	PlayerReference@Hostiles:
+		Name: Hostiles
+		Bot: campaign
+		Faction: soviet
+		Color: D94A43
+		Enemies: Escort, Civilians
+
+Actors:
+	DefaultCameraPosition: waypoint
+		Owner: Neutral
+		Location: 14,65
+	ConvoyEntry: waypoint
+		Owner: Neutral
+		Location: 10,65
+	ConvoyRally: waypoint
+		Owner: Neutral
+		Location: 20,65
+	ShortChoice: waypoint
+		Owner: Neutral
+		Location: 20,55
+	SafeChoice: waypoint
+		Owner: Neutral
+		Location: 15,75
+	Short1: waypoint
+		Owner: Neutral
+		Location: 25,55
+	Short2: waypoint
+		Owner: Neutral
+		Location: 45,55
+	Short3: waypoint
+		Owner: Neutral
+		Location: 65,55
+	Short4: waypoint
+		Owner: Neutral
+		Location: 85,55
+	Safe1: waypoint
+		Owner: Neutral
+		Location: 15,85
+	Safe2: waypoint
+		Owner: Neutral
+		Location: 15,105
+	Safe3: waypoint
+		Owner: Neutral
+		Location: 35,105
+	Safe4: waypoint
+		Owner: Neutral
+		Location: 55,105
+	Safe5: waypoint
+		Owner: Neutral
+		Location: 75,105
+	Safe6: waypoint
+		Owner: Neutral
+		Location: 95,105
+	Safe7: waypoint
+		Owner: Neutral
+		Location: 105,105
+	Safe8: waypoint
+		Owner: Neutral
+		Location: 110,85
+	RouteJoin: waypoint
+		Owner: Neutral
+		Location: 105,65
+	EvacuationGate: waypoint
+		Owner: Neutral
+		Location: 110,65
+	RadarSector1: waypoint
+		Owner: Neutral
+		Location: 35,55
+	RadarSector2: waypoint
+		Owner: Neutral
+		Location: 60,75
+	RadarSector3: waypoint
+		Owner: Neutral
+		Location: 90,75
+	DisabledVesselPoint: waypoint
+		Owner: Neutral
+		Location: 60,75
+	IntelContact: waypoint
+		Owner: Neutral
+		Location: 80,85
+	NorthThreatEntry1: waypoint
+		Owner: Neutral
+		Location: 40,10
+	NorthThreatEntry2: waypoint
+		Owner: Neutral
+		Location: 80,10
+	SouthThreatEntry1: waypoint
+		Owner: Neutral
+		Location: 40,110
+	SouthThreatEntry2: waypoint
+		Owner: Neutral
+		Location: 80,110
+	EastThreatEntry: waypoint
+		Owner: Neutral
+		Location: 110,40
+	WestThreatEntry: waypoint
+		Owner: Neutral
+		Location: 10,40
+	EvacuationAirEntry: waypoint
+		Owner: Neutral
+		Location: 110,15
+	EvacuationAirExit: waypoint
+		Owner: Neutral
+		Location: 10,15
+	FinalScreenEntry1: waypoint
+		Owner: Neutral
+		Location: 110,75
+	FinalScreenEntry2: waypoint
+		Owner: Neutral
+		Location: 110,85
+
+Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
+
+FluentMessages: ra|fluent/lua.ftl, ra|fluent/campaign.ftl, map.ftl

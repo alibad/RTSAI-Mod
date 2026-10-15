@@ -1,0 +1,153 @@
+NavalFrigateGun:
+	ReloadDelay: 38
+	Range: 7c512
+	Report: naval/ciws-burst.wav
+	ValidTargets: Ground, Water, GroundActor, WaterActor, Ship, SmallBoat, UncrewedSurface
+	Projectile: Bullet
+		Speed: 900
+		Image: 120MM
+		Shadow: true
+		Inaccuracy: 96
+	Warhead@1Dam: SpreadDamage
+		Spread: 160
+		Damage: 4800
+		ValidTargets: GroundActor, WaterActor, Ship, SmallBoat, UncrewedSurface
+		Versus:
+			None: 20
+			Wood: 55
+			Light: 95
+			Heavy: 78
+			Concrete: 30
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: med_splash
+		ImpactSounds: naval/naval-impact.wav
+		ValidTargets: Water, WaterActor, Ship, SmallBoat, UncrewedSurface
+
+NavalInterceptorCannon:
+	ReloadDelay: 8
+	Burst: 4
+	BurstDelays: 2
+	Range: 5c256
+	Report: naval/ciws-burst.wav
+	ValidTargets: WaterActor, Ship, SmallBoat, UncrewedSurface
+	Projectile: Bullet
+		Speed: 1100
+		Image: 50CAL
+		Inaccuracy: 180
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 1150
+		ValidTargets: WaterActor, Ship, SmallBoat, UncrewedSurface
+		Versus:
+			None: 30
+			Wood: 30
+			Light: 130
+			Heavy: 24
+			Concrete: 10
+		DamageTypes: BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: water_piffs
+		ImpactSounds: naval/naval-impact.wav
+		ValidTargets: Water, WaterActor, Ship, SmallBoat, UncrewedSurface
+
+NavalCIWS:
+	ReloadDelay: 5
+	Burst: 6
+	BurstDelays: 1
+	Range: 6c0
+	Report: naval/ciws-burst.wav
+	ValidTargets: AirborneActor, Drone, UncrewedSurface
+	Projectile: InstantHit
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 900
+		ValidTargets: AirborneActor, Drone, UncrewedSurface
+		Versus:
+			Light: 125
+			Heavy: 15
+		DamageTypes: BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_explosion_air
+		ValidTargets: Air, AirborneActor, Drone, WaterActor, UncrewedSurface
+
+YemeniNavalMissile:
+	ReloadDelay: 105
+	Burst: 2
+	BurstDelays: 12
+	Range: 12c0
+	MinRange: 3c0
+	Report: naval/missile-launch.wav
+	ValidTargets: Ground, Water, GroundActor, WaterActor, Ship
+	Projectile: Missile
+		Speed: 270
+		Acceleration: 7
+		Arm: 3
+		Blockable: false
+		Jammable: true
+		JammedDiversionRange: 32
+		ContrailLength: 15
+		ContrailStartWidth: 40
+		Inaccuracy: 96
+		Image: DRAGON
+		Shadow: true
+		HorizontalRateOfTurn: 18
+		RangeLimit: 15c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 11500
+		ValidTargets: GroundActor, WaterActor, Ship
+		Versus:
+			None: 20
+			Wood: 70
+			Light: 105
+			Heavy: 125
+			Concrete: 70
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_splash
+		ImpactSounds: naval/naval-impact.wav
+		ValidTargets: Water, WaterActor, Ship
+
+YemeniSurveillanceGun:
+	ReloadDelay: 18
+	Burst: 2
+	BurstDelays: 3
+	Range: 4c0
+	Report: naval/ciws-burst.wav
+	ValidTargets: WaterActor, Ship, SmallBoat, UncrewedSurface
+	Projectile: Bullet
+		Speed: 950
+		Image: 50CAL
+		Inaccuracy: 220
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 800
+		ValidTargets: WaterActor, Ship, SmallBoat, UncrewedSurface
+		Versus:
+			Light: 100
+			Heavy: 15
+		DamageTypes: BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: water_piffs
+		ValidTargets: Water, WaterActor, Ship, SmallBoat, UncrewedSurface
+
+NavalUSVCharge:
+	ReloadDelay: 1000
+	Range: 0c640
+	Report: naval/naval-alarm.wav
+	ValidTargets: WaterActor, Ship
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 384
+		Damage: 18500
+		ValidTargets: WaterActor, Ship
+		Versus:
+			Light: 120
+			Heavy: 110
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_splash
+		ImpactSounds: naval/naval-impact.wav
+		ValidTargets: Water, WaterActor, Ship

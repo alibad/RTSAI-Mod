@@ -1,0 +1,365 @@
+GenericVoice:
+	Variants:
+		hezbollah: .r01,.r03
+		israel: .v01,.v03
+		allies: .v01,.v03
+		england: .v01,.v03
+		france: .v01,.v03
+		germany: .v01,.v03
+		saudi: .v01,.v03
+		turkey: .v01,.v03
+		china: .v01,.v03
+		soviet: .r01,.r03
+		russia: .r01,.r03
+		ukraine: .r01,.r03
+		yemen: .r01,.r03
+		iran: .r01,.r03
+	Voices:
+		Select: await1,ready,report1,yessir1
+		Action: ackno,affirm1,noprob,overout,ritaway,roger,ugotit
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+	DisableVariants: Die, Burned, Zapped
+
+VehicleVoice:
+	Variants:
+		hezbollah: .r00,.r02
+		israel: .v00,.v02
+		allies: .v00,.v02
+		england: .v00,.v02
+		france: .v00,.v02
+		germany: .v00,.v02
+		saudi: .v00,.v02
+		turkey: .v00,.v02
+		china: .v00,.v02
+		soviet: .r00,.r02
+		russia: .r00,.r02
+		ukraine: .r00,.r02
+		yemen: .r00,.r02
+		iran: .r00,.r02
+	Voices:
+		Select: vehic1,yessir1,report1,await1
+		Action: ackno,affirm1
+
+SaudiVehicleVoice:
+	Voices:
+		Select: rsa-select-1,rsa-select-2
+		Action: rsa-action-1,rsa-action-2
+
+SaudiAirVoice:
+	Voices:
+		Select: rsa-air-select-ar,rsa-air-select-en
+		Action: rsa-air-action-ar,rsa-air-action-en
+
+TurkeyInfantryVoice:
+	Voices:
+		Select: tr-infantry-select-tr,tr-infantry-select-en
+		Move: tr-infantry-move-tr,tr-infantry-move-en
+		Attack: tr-infantry-attack-tr,tr-infantry-attack-en
+		Action: tr-infantry-attack-tr,tr-infantry-attack-en
+		Die: dedman1,dedman3,dedman5
+		Burned: dedman10
+		Zapped: dedman6
+
+TurkeyVehicleVoice:
+	Voices:
+		Select: tr-vehicle-select-tr,tr-vehicle-select-en
+		Action: tr-vehicle-action-tr,tr-vehicle-action-en
+
+TurkeyAirVoice:
+	Voices:
+		Select: tr-air-select-tr,tr-air-select-en
+		Action: tr-air-action-tr,tr-air-action-en
+
+TurkeyNavalVoice:
+	Voices:
+		Select: tr-naval-select-tr,tr-naval-select-en
+		Action: tr-naval-action-tr,tr-naval-action-en
+
+GreyWolfVoice:
+	Voices:
+		Select: tr-greywolf-select-tr,tr-greywolf-select-en
+		Move: tr-greywolf-move-tr,tr-greywolf-move-en
+		Attack: tr-greywolf-attack-tr,tr-greywolf-attack-en
+		Action: tr-greywolf-attack-tr,tr-greywolf-attack-en
+		Die: dedman2,dedman7
+		Burned: dedman10
+		Zapped: dedman6
+
+YemenVehicleVoice:
+	Voices:
+		Select: rye-select-1,rye-select-2
+		Action: rye-action-1,rye-action-2
+
+YemenDroneVoice:
+	Voices:
+		Select: rye-drone-select-ar,rye-drone-select-en
+		Action: rye-drone-action-ar,rye-drone-action-en
+
+IranInfantryVoice:
+	Voices:
+		Select: iran-inf-select-fa,iran-inf-select-en
+		Move: iran-inf-move-fa,iran-inf-move-en
+		Action: iran-inf-action-fa,iran-inf-action-en
+		Attack: iran-inf-attack-fa,iran-inf-attack-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+ChinaInfantryVoice:
+	Voices:
+		Select: rcn-infantry-select-zh,rcn-infantry-select-en
+		Action: rcn-infantry-action-zh,rcn-infantry-action-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+IranVehicleVoice:
+	Voices:
+		Select: iran-veh-select-fa,iran-veh-select-en
+		Move: iran-veh-move-fa,iran-veh-move-en
+		Action: iran-veh-action-fa,iran-veh-action-en
+		Attack: iran-veh-attack-fa,iran-veh-attack-en
+
+IranAirVoice:
+	Voices:
+		Select: iran-air-select-fa,iran-air-select-en
+		Move: iran-air-move-fa,iran-air-move-en
+		Action: iran-air-action-fa,iran-air-action-en
+		Attack: iran-air-attack-fa,iran-air-attack-en
+
+IranDroneVoice:
+	Voices:
+		Select: iran-drone-select-fa,iran-drone-select-en
+		Move: iran-drone-move-fa,iran-drone-move-en
+		Action: iran-drone-action-fa,iran-drone-action-en
+		Attack: iran-drone-attack-fa,iran-drone-attack-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+IranNavalVoice:
+	Voices:
+		Select: iran-naval-select-fa,iran-naval-select-en
+		Move: iran-naval-move-fa,iran-naval-move-en
+		Action: iran-naval-action-fa,iran-naval-action-en
+		Attack: iran-naval-attack-fa,iran-naval-attack-en
+
+ShadowOneVoice:
+	Voices:
+		Select: shadow-select-fa,shadow-select-en
+		Move: shadow-move-fa,shadow-move-en
+		Action: shadow-action-fa,shadow-action-en
+		Attack: shadow-attack-fa,shadow-attack-en
+		Demolish: shadow-demolish-fa,shadow-demolish-en
+		Build: shadow-build-fa,shadow-build-en
+		Kill: shadow-action-fa,shadow-action-en
+		Die: dedman1,dedman3,dedman5
+		Burned: dedman10
+		Zapped: dedman6
+
+ChinaVehicleVoice:
+	Voices:
+		Select: rcn-vehicle-select-zh,rcn-vehicle-select-en
+		Action: rcn-vehicle-action-zh,rcn-vehicle-action-en
+
+ChinaAirVoice:
+	Voices:
+		Select: rcn-air-select-zh,rcn-air-select-en
+		Action: rcn-air-action-zh,rcn-air-action-en
+
+ChinaNavalVoice:
+	Voices:
+		Select: rcn-naval-select-zh,rcn-naval-select-en
+		Action: rcn-naval-action-zh,rcn-naval-action-en
+
+RedSpearVoice:
+	Voices:
+		Select: rcn-redspear-select-zh,rcn-redspear-select-en
+		Action: rcn-redspear-action-zh,rcn-redspear-action-en
+		Die: dedman1,dedman3,dedman5
+		Burned: dedman10
+		Zapped: dedman6
+
+SaudiInfantryVoice:
+	Voices:
+		Select: rsa-inf-select-ar,rsa-inf-select-en
+		Action: rsa-inf-action-ar,rsa-inf-action-en
+		Move: rsa-inf-action-ar,rsa-inf-action-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+SaudiJTACVoice:
+	Voices:
+		Select: rsa-jtac-select-ar,rsa-jtac-select-en
+		Action: rsa-jtac-action-ar,rsa-jtac-action-en
+		Move: rsa-inf-action-ar,rsa-inf-action-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+FalconOneVoice:
+	Voices:
+		Select: rsa-falcon-select-ar,rsa-falcon-select-en
+		Move: rsa-falcon-move-ar,rsa-falcon-move-en
+		Action: rsa-falcon-action-ar,rsa-falcon-action-en
+		Demolish: rsa-falcon-action-ar,rsa-falcon-action-en
+		Build: rsa-falcon-build-ar,rsa-falcon-build-en
+		Kill: rsa-falcon-action-ar,rsa-falcon-action-en
+		Die: dedman1,dedman2,dedman3
+		Burned: dedman10
+		Zapped: dedman6
+
+YemenInfantryVoice:
+	Voices:
+		Select: rye-inf-select-ar,rye-inf-select-en
+		Action: rye-inf-action-ar,rye-inf-action-en
+		Move: rye-inf-action-ar,rye-inf-action-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+YemenSpotterVoice:
+	Voices:
+		Select: rye-spot-select-ar,rye-spot-select-en
+		Action: rye-spot-action-ar,rye-spot-action-en
+		Move: rye-inf-action-ar,rye-inf-action-en
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+WadiGhostVoice:
+	Voices:
+		Select: rye-ghost-select-ar,rye-ghost-select-en
+		Move: rye-ghost-move-ar,rye-ghost-move-en
+		Action: rye-ghost-action-ar,rye-ghost-action-en
+		Demolish: rye-ghost-action-ar,rye-ghost-action-en
+		Build: rye-ghost-build-ar,rye-ghost-build-en
+		Kill: rye-ghost-action-ar,rye-ghost-action-en
+		Die: dedman1,dedman2,dedman3
+		Burned: dedman10
+		Zapped: dedman6
+
+EngineerVoice:
+	Voices:
+		Select: eengin1,eyessir1
+		Action: eaffirm1,emovout1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+MedicVoice:
+	Voices:
+		Select: mrespon1,myessir1
+		Action: maffirm1,mmovout1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+MechanicVoice:
+	Voices:
+		Select: mhuh1,mhowdy1,mlaff1
+		Move: mboss1,mhear1,myes1,mrise1
+		Action: mhotdig1,mwrench1,myeehaw1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+TanyaVoice:
+	Voices:
+		Select: yo1,yes1,yeah1
+		Move: onit1,cmon1,rokroll1
+		Action: tuffguy1,bombit1
+		Die: tandeth1
+		Burned: tandeth1
+		Zapped: tandeth1
+		Build: laugh1
+		Kill: gotit1,lefty1
+		Demolish: keepem1,tuffguy1
+
+DogVoice:
+	Voices:
+		Select: dogw3px
+		Move: dogy1
+		Attack: dogg5p
+		Die: dogw5,dogw7
+		Burned: dogw6
+		Zapped: dogw6
+
+SpyVoice:
+	Voices:
+		Select: syessir1,scomnd1
+		Move: sonway1,sindeed1
+		Action: sking1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+ThiefVoice:
+	Voices:
+		Select: swhat1,syeah1
+		Move: saffirm1,smout1,sokay1
+		Action: scandy,sclean1,ssteal1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+CivilianMaleVoice:
+	Voices:
+		Select: guyyeah1
+		Action: guyokay1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+CivilianFemaleVoice:
+	Voices:
+		Select: girlyeah
+		Action: girlokay
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+EinsteinVoice:
+	Voices:
+		Select: einah1
+		Action: einok1,einyes1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+ShokVoice:
+	Voices:
+		Select: jjuice1,jjump1,jyes1
+		Move: jdance1,jchrge1,jpower1
+		Attack: jburn1,jcrisp1,jshock1,jlight1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+AntVoice:
+	Voices:
+		Select: antbite
+		Action: antbite
+		Die: antdie
+		Burned: antdie
+		Zapped: antdie
+
+StavrosVoice:
+	Voices:
+		Select: stavcmdr
+		Move: stavcrse, stavyes, stavmov
+		Attack: stavcrse, stavyes
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+LevantClassicInfantryVoice:
+	Inherits: GenericVoice
+	Voices:
+		Move: ackno
+		Demolish: ackno
+		Build: ready
+		Kill: ackno

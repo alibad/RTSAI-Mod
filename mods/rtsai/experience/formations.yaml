@@ -1,0 +1,16 @@
+Player:
+	DoctrineSquadManagerBotModule@normal:
+		ExperienceComponent: ra2-combined-arms-ai
+		ExperienceSquadSizeParameter: formation-size
+	DoctrineSquadManagerBotModule@medium:
+		ExperienceComponent: ra2-combined-arms-ai
+		ExperienceSquadSizeParameter: formation-size
+	DoctrineSquadManagerBotModule@rush:
+		ExperienceComponent: ra2-combined-arms-ai
+		ExperienceSquadSizeParameter: formation-size
+	DoctrineSquadManagerBotModule@turtle:
+		ExperienceComponent: ra2-combined-arms-ai
+		ExperienceSquadSizeParameter: formation-size
+	DoctrineSquadManagerBotModule@naval:
+		ExperienceComponent: ra2-combined-arms-ai
+		ExperienceSquadSizeParameter: formation-size

@@ -1,0 +1,673 @@
+ilrifle:
+	Defaults:
+		Filename: ra|bits/levant/ilrifle.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilrifleicon.shp
+ilat:
+	Defaults:
+		Filename: ra|bits/levant/ilat.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilaticon.shp
+ilobserver:
+	Defaults:
+		Filename: ra|bits/levant/ilobserver.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilobservericon.shp
+ilrecon:
+	Defaults:
+		Filename: ra|bits/levant/ilrecon.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Tick: 80
+		Facings: 8
+	shoot:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Tick: 80
+		Facings: 8
+	liedown:
+		Start: 168
+		Length: 2
+		Tick: 80
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Tick: 80
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Tick: 80
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 80
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 80
+	die1:
+		Start: 280
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die2:
+		Start: 344
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die3:
+		Start: 408
+		Length: 8
+		Tick: 80
+		Facings: 8
+	die4:
+		Start: 472
+		Length: 12
+		Tick: 80
+		Facings: 8
+	die5:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die6:
+		Start: 568
+		Length: 18
+		Tick: 80
+		Facings: 8
+	die-crushed:
+		Start: 711
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilreconicon.shp
+merkava:
+	Defaults:
+		Filename: ra|bits/levant/merkava.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/merkavaicon.shp
+ilshield:
+	Defaults:
+		Filename: ra|bits/levant/ilshield.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilshieldicon.shp
+ilhowitzer:
+	Defaults:
+		Filename: ra|bits/levant/ilhowitzer.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilhowitzericon.shp
+namer:
+	Defaults:
+		Filename: ra|bits/levant/namer.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/namericon.shp
+ilfalcon:
+	Defaults:
+		Filename: ra|bits/levant/ilfalcon.shp
+	idle:
+		Facings: 16
+	rotor:
+		Start: 32
+		Length: 4
+		Tick: 80
+	slow-rotor:
+		Start: 32
+		Length: 4
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilfalconicon.shp
+ilgunship:
+	Defaults:
+		Filename: ra|bits/levant/ilgunship.shp
+	idle:
+		Facings: 16
+	rotor:
+		Start: 32
+		Length: 4
+		Tick: 80
+	slow-rotor:
+		Start: 32
+		Length: 4
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilgunshipicon.shp
+ilpatrol:
+	Defaults:
+		Filename: ra|bits/levant/ilpatrol.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	sink:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilpatrolicon.shp
+ilfrigate:
+	Defaults:
+		Filename: ra|bits/levant/ilfrigate.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	ciws:
+		Filename: sa_frgt_ciws.shp
+		Facings: 32
+	sink:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/ilfrigateicon.shp
+iltender:
+	Defaults:
+		Filename: ra|bits/levant/iltender.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	sink:
+		Start: 64
+		Length: 8
+		Tick: 80
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ra|bits/levant/iltendericon.shp
+ilsentry:
+	Defaults:
+		Filename: ra|bits/levant/ilsentry.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	recoil:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/ilsentryicon.shp
+ilbattery:
+	Defaults:
+		Filename: ra|bits/levant/ilbattery.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	recoil:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/ilbatteryicon.shp
+ilatpost:
+	Defaults:
+		Filename: ra|bits/levant/ilatpost.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	recoil:
+		Start: 1
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/ilatposticon.shp
+ilrelay:
+	Defaults:
+		Filename: ra|bits/levant/ilrelay.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/ilrelayicon.shp
+ilworkshop:
+	Defaults:
+		Filename: ra|bits/levant/ilworkshop.shp
+	idle:
+	damaged-idle:
+		Start: 41
+	make:
+		Start: 33
+		Length: 8
+		Tick: 80
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: ra|bits/levant/ilworkshopicon.shp

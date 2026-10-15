@@ -1,0 +1,4 @@
+World:
+	Faction@yemen:
+		Selectable: true
+		RandomFactionMemberOf: random, random-soviets

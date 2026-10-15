@@ -1,0 +1,17 @@
+﻿# Reusable battlefield salvage contract adapted from community OpenRA mods.
+^ReusableSalvageable:
+	SpawnSalvageOnDeath:
+		Actors: REUSABLESALVAGE
+		Probability: 50
+
+REUSABLESALVAGE:
+	Inherits: ^Crate
+	CollectSalvageCrateAction:
+	SalvageValue:
+		Percentage: 15
+
+# RA2 leaves crews behind: a destroyed structure ejects whoever got out alive.
+# They belong to the building's owner, so this is salvage for the loser, not the killer.
+^Building:
+	SpawnSurvivors:
+		Actors: e1, e1

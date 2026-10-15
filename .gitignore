@@ -60,3 +60,7 @@ _ReSharper.*/
 # Immutable verified source archives and isolated local build dependencies.
 .inputs/
 .build-deps/
+
+# Local native recovery builds and the owner's private settings/content.
+.recovery/
+/recovery.local.json

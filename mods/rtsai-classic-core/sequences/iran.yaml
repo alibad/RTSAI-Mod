@@ -1,0 +1,410 @@
+# All moving Iran actors use authored directional art.  Infantry sequences are
+# intentionally uniform so their frame contracts can be tested as a family.
+
+^IranInfantrySequences:
+	Defaults:
+		Filename: irbas.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Start: 168
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 120
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 120
+	die1:
+		Start: 280
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die2:
+		Start: 344
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die3:
+		Start: 408
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die4:
+		Start: 472
+		Length: 12
+		Facings: 8
+		Tick: 80
+	die5:
+		Start: 568
+		Length: 18
+		Facings: 8
+		Tick: 80
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
+		Frames: 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
+		Tick: 80
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+
+irbas:
+	Inherits: ^IranInfantrySequences
+	icon:
+		Filename: irbasicon.shp
+
+iratgm:
+	Inherits: ^IranInfantrySequences
+	Defaults:
+		Filename: iratgm.shp
+	icon:
+		Filename: iratgmicon.shp
+
+irdc:
+	Inherits: ^IranInfantrySequences
+	Defaults:
+		Filename: irdc.shp
+	icon:
+		Filename: irdcicon.shp
+
+shadowone:
+	Inherits: ^IranInfantrySequences
+	Defaults:
+		Filename: shadowone.shp
+	icon:
+		Filename: shadowoneicon.shp
+
+irkarr:
+	Defaults:
+		Filename: irkarr.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: irkarricon.shp
+
+irraad:
+	Defaults:
+		Filename: irraad.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: irraadicon.shp
+
+irfajr:
+	Defaults:
+		Filename: irfajr.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	empty-turret:
+		Start: 64
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: irfajricon.shp
+
+ircoast:
+	Defaults:
+		Filename: ircoast.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ircoasticon.shp
+
+irkarr.destroyed:
+	Defaults:
+		Filename: irkarrhusk.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+irraad.destroyed:
+	Defaults:
+		Filename: irraadhusk.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+irfajr.destroyed:
+	Defaults:
+		Filename: irfajrhusk.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+ircoast.destroyed:
+	Defaults:
+		Filename: ircoasthusk.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+irazar:
+	Defaults:
+		Filename: irazar.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	air-muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: irazaricon.shp
+
+irazar.destroyed:
+	idle:
+		Filename: irazarhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+irtoufan:
+	Defaults:
+		Filename: irtoufan.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor:
+		Filename: irtoufanrotor.shp
+		Length: 4
+		Tick: 1
+	slow-rotor:
+		Filename: irtoufanrotor.shp
+		Start: 4
+		Length: 8
+		Tick: 4
+	air-muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: irtoufanicon.shp
+
+irtoufan.destroyed:
+	idle:
+		Filename: irtoufanhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	rotor:
+		Filename: irtoufanrotor.shp
+		Length: 4
+		Tick: 1
+
+irmohajer:
+	Defaults:
+		Filename: irmohajer.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	icon:
+		Filename: irmohajericon.shp
+
+irmohajer.destroyed:
+	idle:
+		Filename: irmohajerhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+irloiter:
+	Defaults:
+		Filename: irloiter.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	dive:
+		Start: 16
+		Facings: 16
+		InterpolatedFacings: 64
+	icon:
+		Filename: irloitericon.shp
+
+irpey:
+	Defaults:
+		Filename: irpey.shp
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 32
+	muzzle:
+		Filename: irmuzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: irpeyicon.shp
+
+irghadir:
+	idle:
+		Filename: irghadir.shp
+		Facings: 16
+		InterpolatedFacings: 32
+	icon:
+		Filename: irghadiricon.shp
+
+irpey.sink:
+	idle:
+		Filename: irpeysink.shp
+		Length: 8
+		Facings: 16
+		Tick: 2
+		ZOffset: -128
+
+irghadir.sink:
+	idle:
+		Filename: irghadirsink.shp
+		Length: 8
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 2
+		ZOffset: -128
+
+ir_effects:
+	impact:
+		Filename: irimpact.shp
+		Length: 10
+		Tick: 2
+		ZOffset: 2047
+	sabotage:
+		Filename: irsabotage.shp
+		Length: 12
+		Tick: 2
+		ZOffset: 2047
+
+ir_signal:
+	marker:
+		Filename: turkey-designator.shp
+		Length: 8
+		Tick: 4
+	pulse:
+		Filename: turkey-designator.shp
+		Length: 8
+		Tick: 2
+
+ir_cloak:
+	idle:
+		Filename: ircloak.shp
+		Length: 8
+		Tick: 2
+		ZOffset: 2047
+
+ir_wake:
+	idle:
+		Filename: irwake.shp
+		Length: 6
+		Tick: 2
+		ZOffset: -256
+
+irmissile:
+	idle:
+		Filename: irmissile.shp
+		Facings: 32
+		ZOffset: 1023

@@ -1,0 +1,4 @@
+World:
+	Faction@israel:
+		Selectable: true
+		RandomFactionMemberOf: random, random-allies

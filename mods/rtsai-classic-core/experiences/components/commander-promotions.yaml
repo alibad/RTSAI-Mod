@@ -1,0 +1,94 @@
+Player:
+	CommanderPromotionManager:
+	ReusableCapability@COMMANDERPROMOTIONS:
+		Id: commander-promotions
+		Domain: progression
+		Provides: promotion.points, promotion.choice, doctrine.upgrade
+		Requires: faction.doctrine, synchronized-orders
+		Strategies: choose-promotion, counter-doctrine
+
+^ReusablePromotionEligible:
+	ReusableCapability:
+		Id: promotion-eligible
+		Domain: progression
+		Provides: promotion.target, veterancy.delta
+		Requires: GainsExperience, doctrine.upgrade
+		Strategies: prioritize-veterans
+
+^Infantry:
+	Inherits@WW3PROMOTIONELIGIBLE: ^ReusablePromotionEligible
+	GrantConditionOnPrerequisite@WW3PROMOTION1:
+		Condition: ww3-promotion-1
+		Prerequisites: promotion.level.1
+	GrantConditionOnPrerequisite@WW3PROMOTION2:
+		Condition: ww3-promotion-2
+		Prerequisites: promotion.level.2
+	GrantConditionOnPrerequisite@WW3PROMOTION3:
+		Condition: ww3-promotion-3
+		Prerequisites: promotion.level.3
+	GrantConditionOnPrerequisite@WW3FIREPOWER:
+		Condition: ww3-doctrine-firepower
+		Prerequisites: promotion.doctrine.firepower
+	GrantConditionOnPrerequisite@WW3MOBILITY:
+		Condition: ww3-doctrine-mobility
+		Prerequisites: promotion.doctrine.mobility
+	GrantConditionOnPrerequisite@WW3FORTIFICATION:
+		Condition: ww3-doctrine-fortification
+		Prerequisites: promotion.doctrine.fortification
+	FirepowerMultiplier@WW3PROMOTIONS:
+		RequiresCondition: ww3-promotion-1
+		Modifier: 105
+	ReloadDelayMultiplier@WW3PROMOTIONS:
+		RequiresCondition: ww3-promotion-2
+		Modifier: 92
+	DamageMultiplier@WW3PROMOTIONS:
+		RequiresCondition: ww3-promotion-3
+		Modifier: 90
+	FirepowerMultiplier@WW3DOCTRINE:
+		RequiresCondition: ww3-doctrine-firepower
+		Modifier: 110
+	SpeedMultiplier@WW3DOCTRINE:
+		RequiresCondition: ww3-doctrine-mobility
+		Modifier: 112
+	DamageMultiplier@WW3DOCTRINE:
+		RequiresCondition: ww3-doctrine-fortification
+		Modifier: 85
+
+^Vehicle:
+	Inherits@WW3PROMOTIONELIGIBLE: ^ReusablePromotionEligible
+	GrantConditionOnPrerequisite@WW3PROMOTION1:
+		Condition: ww3-promotion-1
+		Prerequisites: promotion.level.1
+	GrantConditionOnPrerequisite@WW3PROMOTION2:
+		Condition: ww3-promotion-2
+		Prerequisites: promotion.level.2
+	GrantConditionOnPrerequisite@WW3PROMOTION3:
+		Condition: ww3-promotion-3
+		Prerequisites: promotion.level.3
+	GrantConditionOnPrerequisite@WW3FIREPOWER:
+		Condition: ww3-doctrine-firepower
+		Prerequisites: promotion.doctrine.firepower
+	GrantConditionOnPrerequisite@WW3MOBILITY:
+		Condition: ww3-doctrine-mobility
+		Prerequisites: promotion.doctrine.mobility
+	GrantConditionOnPrerequisite@WW3FORTIFICATION:
+		Condition: ww3-doctrine-fortification
+		Prerequisites: promotion.doctrine.fortification
+	FirepowerMultiplier@WW3PROMOTIONS:
+		RequiresCondition: ww3-promotion-1
+		Modifier: 105
+	ReloadDelayMultiplier@WW3PROMOTIONS:
+		RequiresCondition: ww3-promotion-2
+		Modifier: 92
+	DamageMultiplier@WW3PROMOTIONS:
+		RequiresCondition: ww3-promotion-3
+		Modifier: 90
+	FirepowerMultiplier@WW3DOCTRINE:
+		RequiresCondition: ww3-doctrine-firepower
+		Modifier: 110
+	SpeedMultiplier@WW3DOCTRINE:
+		RequiresCondition: ww3-doctrine-mobility
+		Modifier: 112
+	DamageMultiplier@WW3DOCTRINE:
+		RequiresCondition: ww3-doctrine-fortification
+		Modifier: 85

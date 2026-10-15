@@ -1,0 +1,593 @@
+World:
+	Faction@israel:
+		Name: faction-israel.name
+		InternalName: israel
+		Side: Allies
+		Description: faction-israel.description
+		RandomFactionMemberOf: RandomAllies
+	StartingUnits@israel-none:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: israel
+		BaseActor: mcv
+	StartingUnits@israel-light:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: israel
+		BaseActor: mcv
+		SupportActors: ilrifle, ilrifle, ilat
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@israel-heavy:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: israel
+		BaseActor: mcv
+		SupportActors: ilrifle, ilrifle, ilat, merkava, ilshield
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+Player:
+	ProvidesFactionDoctrine@IL:
+		Factions: israel
+		Prerequisites: side.allies, country.israel, doctrine.precision-support
+	CapturedTechnologyManager@IL:
+		Factions: israel
+	UnitBuilderBotModule@easy:
+		UnitsToBuild:
+			ilrifle: 45
+			ilat: 8
+			ilobserver: 8
+			ilrecon: 45
+			merkava: 20
+			ilshield: 8
+			ilhowitzer: 8
+			namer: 8
+			ilfalcon: 8
+			ilgunship: 8
+			ilpatrol: 8
+			ilfrigate: 8
+			iltender: 8
+		UnitLimits:
+			ilrecon: 1
+	UnitBuilderBotModule@medium:
+		UnitsToBuild:
+			ilrifle: 45
+			ilat: 8
+			ilobserver: 8
+			ilrecon: 45
+			merkava: 20
+			ilshield: 8
+			ilhowitzer: 8
+			namer: 8
+			ilfalcon: 8
+			ilgunship: 8
+			ilpatrol: 8
+			ilfrigate: 8
+			iltender: 8
+		UnitLimits:
+			ilrecon: 1
+	UnitBuilderBotModule@rush:
+		UnitsToBuild:
+			ilrifle: 45
+			ilat: 8
+			ilobserver: 8
+			ilrecon: 45
+			merkava: 20
+			ilshield: 8
+			ilhowitzer: 8
+			namer: 8
+			ilfalcon: 8
+			ilgunship: 8
+			ilpatrol: 8
+			ilfrigate: 8
+			iltender: 8
+		UnitLimits:
+			ilrecon: 1
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			ilrifle: 45
+			ilat: 8
+			ilobserver: 8
+			ilrecon: 45
+			merkava: 20
+			ilshield: 8
+			ilhowitzer: 8
+			namer: 8
+			ilfalcon: 8
+			ilgunship: 8
+			ilpatrol: 8
+			ilfrigate: 8
+			iltender: 8
+		UnitLimits:
+			ilrecon: 1
+	UnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			ilrifle: 45
+			ilat: 8
+			ilobserver: 8
+			ilrecon: 45
+			merkava: 20
+			ilshield: 8
+			ilhowitzer: 8
+			namer: 8
+			ilfalcon: 8
+			ilgunship: 8
+			ilpatrol: 8
+			ilfrigate: 8
+			iltender: 8
+		UnitLimits:
+			ilrecon: 1
+	UnitBuilderBotModule@naval:
+		UnitsToBuild:
+			ilrifle: 45
+			ilat: 8
+			ilobserver: 8
+			ilrecon: 45
+			merkava: 20
+			ilshield: 8
+			ilhowitzer: 8
+			namer: 8
+			ilfalcon: 8
+			ilgunship: 8
+			ilpatrol: 8
+			ilfrigate: 8
+			iltender: 8
+		UnitLimits:
+			ilrecon: 1
+	BaseBuilderBotModule@normal:
+		AdditionalTechTypes:
+			levant: ilairfield, dome, fix, hpad, atek, stek
+		AdditionalProductionTypes:
+			levant: ilairfield, hpad, afld, barr, tent, weap
+		BuildingLimits:
+			ilairfield: 3
+		BuildingFractions:
+			ilairfield: 1
+	BaseBuilderBotModule@medium:
+		AdditionalTechTypes:
+			levant: ilairfield, dome, fix, hpad, atek, stek
+		AdditionalProductionTypes:
+			levant: ilairfield, hpad, afld, barr, tent, weap
+		BuildingLimits:
+			ilairfield: 3
+		BuildingFractions:
+			ilairfield: 1
+	BaseBuilderBotModule@rush:
+		AdditionalTechTypes:
+			levant: ilairfield, dome, fix, hpad, atek, stek
+		AdditionalProductionTypes:
+			levant: ilairfield, hpad, afld, barr, tent, weap
+		BuildingLimits:
+			ilairfield: 3
+		BuildingFractions:
+			ilairfield: 1
+	BaseBuilderBotModule@turtle:
+		AdditionalTechTypes:
+			levant: ilairfield, dome, fix, hpad, atek, stek
+		AdditionalProductionTypes:
+			levant: ilairfield, hpad, afld, barr, tent, weap
+		BuildingLimits:
+			ilairfield: 3
+		BuildingFractions:
+			ilairfield: 1
+	BaseBuilderBotModule@naval:
+		AdditionalTechTypes:
+			levant: ilairfield, dome, fix, hpad, atek, stek
+		AdditionalProductionTypes:
+			levant: ilairfield, hpad, afld, barr, tent, weap
+		BuildingLimits:
+			ilairfield: 3
+		BuildingFractions:
+			ilairfield: 1
+FACT:
+	ProvidesPrerequisite@israel:
+		Factions: israel
+		Prerequisite: structures.israel
+	ProvidesPrerequisite@israel-side:
+		Factions: israel
+		Prerequisite: structures.allies
+WEAP:
+	ProvidesPrerequisite@israel:
+		Factions: israel
+		Prerequisite: vehicles.israel
+	ProvidesPrerequisite@israel-side:
+		Factions: israel
+		Prerequisite: vehicles.allies
+TENT:
+	ProvidesPrerequisite@israel:
+		Factions: israel
+		Prerequisite: infantry.israel
+	ProvidesPrerequisite@israel-side:
+		Factions: israel
+		Prerequisite: infantry.allies
+HPAD:
+	ProvidesPrerequisite@israel:
+		Factions: israel
+		Prerequisite: aircraft.israel
+	ProvidesPrerequisite@israel-side:
+		Factions: israel
+		Prerequisite: aircraft.allies
+SYRD:
+	ProvidesPrerequisite@israel:
+		Factions: israel
+		Prerequisite: ships.israel
+	ProvidesPrerequisite@israel-side:
+		Factions: israel
+		Prerequisite: ships.allies
+ILAIRFIELD:
+	Inherits: SAFLD
+	Buildable:
+		Prerequisites: dome, ~structures.israel, ~techlevel.medium
+	ProvidesPrerequisite@saudi:
+		Factions: israel
+		Prerequisite: aircraft.israel
+	RenderSprites:
+		Image: afld
+ILRIFLE:
+	WithDeathAnimation:
+		DeathSequencePalette: israelplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilrifle
+	Inherits: SANG
+	Tooltip:
+		Name: levant-ilrifle-name
+	Buildable:
+		Prerequisites: ~infantry.israel, ~techlevel.medium
+		Description: levant-ilrifle-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@coordination: ^LevantIsraelCoordination
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+ILAT:
+	WithDeathAnimation:
+		DeathSequencePalette: israelplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilat
+	Inherits: SAAT
+	Tooltip:
+		Name: levant-ilat-name
+	Buildable:
+		Prerequisites: ~infantry.israel, ~techlevel.medium
+		Description: levant-ilat-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@coordination: ^LevantIsraelCoordination
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+ILOBSERVER:
+	WithDeathAnimation:
+		DeathSequencePalette: israelplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilobserver
+	Inherits: SAJTAC
+	Tooltip:
+		Name: levant-ilobserver-name
+	Buildable:
+		Prerequisites: ~infantry.israel, dome, ~techlevel.medium
+		Description: levant-ilobserver-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@coordination: ^LevantIsraelCoordination
+	Inherits@WW3ROLE: ^RoleEngineer
+ILRECON:
+	WithDeathAnimation:
+		DeathSequencePalette: israelplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilrecon
+	Inherits: FALCON1
+	Tooltip:
+		Name: levant-ilrecon-name
+	Buildable:
+		Prerequisites: ~infantry.israel, ~techlevel.medium
+		Description: levant-ilrecon-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	AirstrikePower@PRECISION:
+		OrderName: IsraelPrecisionStrike
+		UnitType: ilstrike
+	Inherits@coordination: ^LevantIsraelCoordination
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+MERKAVA:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: merkava
+	Inherits: M1A2S
+	Tooltip:
+		Name: levant-merkava-name
+	Buildable:
+		Prerequisites: ~vehicles.israel, ~techlevel.medium
+		Description: levant-merkava-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+	Inherits@coordination: ^LevantIsraelCoordination
+	Valued:
+		Cost: 1450
+	Health:
+		HP: 64000
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+ILSHIELD:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilshield
+	Inherits: SADS
+	Tooltip:
+		Name: levant-ilshield-name
+	Buildable:
+		Prerequisites: ~vehicles.israel, dome, ~techlevel.medium
+		Description: levant-ilshield-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+	Inherits@coordination: ^LevantIsraelCoordination
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+ILHOWITZER:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilhowitzer
+	Inherits: ARTY
+	Tooltip:
+		Name: levant-ilhowitzer-name
+	Buildable:
+		Prerequisites: ~vehicles.israel, dome, ~techlevel.medium
+		Description: levant-ilhowitzer-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+	Inherits@coordination: ^LevantIsraelCoordination
+	Armament:
+		Weapon: 155mm
+	Inherits@WW3ROLE: ^RoleArtillery
+NAMER:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: namer
+	Inherits: APC
+	Tooltip:
+		Name: levant-namer-name
+	Buildable:
+		Prerequisites: ~vehicles.israel, ~techlevel.medium
+		Description: levant-namer-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: israel-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: israel-repair
+	Inherits@coordination: ^LevantIsraelCoordination
+	Valued:
+		Cost: 1050
+	Health:
+		HP: 42000
+	Cargo:
+		MaxWeight: 5
+	Armament:
+		Weapon: RedSeaApacheCannon
+	Armament@secondary:
+		Name: secondary
+		Weapon: RedSeaATGM
+	-AttackFrontal:
+	Turreted:
+		TurnSpeed: 28
+	WithSpriteTurret:
+	AttackTurreted:
+		Armaments: primary, secondary
+	Inherits@WW3ROLE: ^RoleTransport
+ILFALCON:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilfalcon
+	Inherits: F15SA
+	Tooltip:
+		Name: levant-ilfalcon-name
+	Buildable:
+		Prerequisites: ~aircraft.israel, dome, ~techlevel.medium
+		Description: levant-ilfalcon-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Rearmable:
+		RearmActors: ilairfield
+	Inherits@WW3ROLE: ^RoleInterceptor
+	SpawnActorOnDeath:
+		Actor: ILFALCON.Husk
+ILGUNSHIP:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilgunship
+	Inherits: AH64SA
+	Tooltip:
+		Name: levant-ilgunship-name
+	Buildable:
+		Prerequisites: ~aircraft.israel, dome, ~techlevel.medium
+		Description: levant-ilgunship-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	SpawnActorOnDeath:
+		Actor: ILGUNSHIP.Husk
+ILPATROL:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilpatrol
+	Inherits: SA_INTC
+	Tooltip:
+		Name: levant-ilpatrol-name
+	Buildable:
+		Prerequisites: ~ships.israel, ~techlevel.medium
+		Description: levant-ilpatrol-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RolePatrolCraft
+ILFRIGATE:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilfrigate
+	Inherits: SA_FRGT
+	Tooltip:
+		Name: levant-ilfrigate-name
+	Buildable:
+		Prerequisites: ~ships.israel, ~techlevel.medium
+		Description: levant-ilfrigate-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RoleDestroyer
+ILTENDER:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: iltender
+	Inherits: SA_FSS
+	Tooltip:
+		Name: levant-iltender-name
+	Buildable:
+		Prerequisites: ~ships.israel, dome, ~techlevel.medium
+		Description: levant-iltender-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RoleEngineer
+ILSENTRY:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilsentry
+	Inherits: PBOX
+	Tooltip:
+		Name: levant-ilsentry-name
+	Buildable:
+		Prerequisites: ~structures.israel, dome, ~techlevel.medium
+		Description: levant-ilsentry-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^ReusableDefenseStructure
+	-WithBuildingBib:
+ILBATTERY:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilbattery
+	Inherits: SAM
+	Tooltip:
+		Name: levant-ilbattery-name
+	Buildable:
+		Prerequisites: ~structures.israel, dome, ~techlevel.medium
+		Description: levant-ilbattery-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^ReusableDefenseStructure
+	-WithBuildingBib:
+ILATPOST:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilatpost
+	Inherits: GUN
+	Tooltip:
+		Name: levant-ilatpost-name
+	Buildable:
+		Prerequisites: ~structures.israel, dome, ~techlevel.medium
+		Description: levant-ilatpost-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Armament:
+		Weapon: RedSeaATGM
+	Inherits@WW3ROLE: ^ReusableDefenseStructure
+	-WithBuildingBib:
+ILSTRIKE:
+	Inherits: F15SA.STRIKE
+	RenderSprites:
+		Image: ilfalcon
+ILRELAY:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilrelay
+	Inherits: ^Defense
+	-RenderRangeCircle:
+	Tooltip:
+		Name: levant-ilrelay-name
+	Buildable:
+		Queue: Defense
+		Prerequisites: ~structures.israel, dome, ~techlevel.medium
+		BuildPaletteOrder: 65
+		Description: levant-ilrelay-description
+	Valued:
+		Cost: 750
+	Health:
+		HP: 42000
+	Power:
+		Amount: -35
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	ProximityExternalCondition@link:
+		Condition: israel-linked
+		Range: 6c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
+	DetectCloaked:
+		Range: 5c0
+		RequiresCondition: !lowpower && !build-incomplete
+	WithRangeCircle@link:
+		Range: 6c0
+		Color: 80B8FF80
+	StrategicRole:
+		Roles: support
+		Domain: defense
+ILWORKSHOP:
+	RenderSprites:
+		PlayerPalette: israelplayer
+		Image: ilworkshop
+	Inherits: ILRELAY
+	Tooltip:
+		Name: levant-ilworkshop-name
+	Buildable:
+		BuildPaletteOrder: 66
+		Description: levant-ilworkshop-description
+	Valued:
+		Cost: 900
+	-ProximityExternalCondition@link:
+	-DetectCloaked:
+	ProximityExternalCondition@repair:
+		Condition: israel-repair
+		Range: 4c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
+	WithRangeCircle@link:
+		Range: 4c0
+ILFALCON.Husk:
+	Inherits: F15SA.Husk
+	Tooltip:
+		Name: levant-ilfalcon-name
+	RenderSprites:
+		Image: ilfalcon
+		PlayerPalette: israelplayer
+ILGUNSHIP.Husk:
+	Inherits: AH64SA.Husk
+	Tooltip:
+		Name: levant-ilgunship-name
+	RenderSprites:
+		Image: ilgunship
+		PlayerPalette: israelplayer

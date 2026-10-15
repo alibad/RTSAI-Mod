@@ -1,0 +1,1619 @@
+Container@PLAYER_WIDGETS:
+	Logic: LoadIngameChatLogic
+	Children:
+		Container@CHAT_ROOT:
+		Background@AI_COMPANION_STRIP:
+			Logic: CompanionStatusLogic
+			X: (WINDOW_WIDTH - 250) / 2 - WIDTH / 2
+			Y: 8
+			Width: 430
+			Height: 30
+			Background: dialog4
+			ClickThrough: false
+			Children:
+				Label@ASK_SHORTCUT:
+					X: 8
+					Y: 30
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Align: Center
+					Font: TinyBold
+					Contrast: true
+				Label@THREAT_LABEL:
+					X: 8
+					Y: 3
+					Width: 100
+					Height: 14
+					Align: Center
+					Font: TinyBold
+					Contrast: true
+				ColorBlock@THREAT_TRACK:
+					X: 12
+					Y: 20
+					Width: 92
+					Height: 5
+				ColorBlock@THREAT_FILL:
+					X: 12
+					Y: 20
+					Width: 0
+					Height: 5
+				Button@STATUS:
+					X: 118
+					Width: PARENT_WIDTH - 228
+					Height: PARENT_HEIGHT
+					Align: Center
+					Font: TinyBold
+					Contrast: true
+					Background:
+					VisualHeight: 0
+				Button@FEED_TOGGLE:
+					X: PARENT_WIDTH - 136
+					Y: 4
+					Width: 34
+					Height: 22
+					Font: TinyBold
+					VisualHeight: 0
+				Button@FEEDBACK:
+					Y: 4
+					Width: 70
+					Height: 22
+					Font: TinyBold
+					VisualHeight: 0
+					TooltipText: button-ai-companion-feedback.tooltip
+					TooltipDesc: button-ai-companion-feedback.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+				Button@ACTION_CONFIRM:
+					Y: 4
+					Width: 76
+					Height: 22
+					Font: TinyBold
+					VisualHeight: 0
+					Visible: false
+				Button@ACTION_CANCEL:
+					Y: 4
+					Width: 58
+					Height: 22
+					Font: TinyBold
+					VisualHeight: 0
+					Visible: false
+				Button@AUTO_TOGGLE:
+					Y: 4
+					Width: 72
+					Height: 22
+					Font: TinyBold
+				Button@VOICE_TOGGLE:
+					X: PARENT_WIDTH - WIDTH - 4
+					Y: 4
+					Width: 94
+					Height: 22
+					Font: TinyBold
+					Text: button-ai-companion-voice-on
+					TooltipText: button-ai-companion-voice-toggle.tooltip
+					TooltipDesc: button-ai-companion-voice-toggle.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+				Background@FEED_PANEL:
+					Y: 36
+					Width: 430
+					Height: 296
+					Background: dialog4
+					ClickThrough: false
+					Visible: false
+					Children:
+						ColorBlock@FEED_ACCENT:
+							Width: PARENT_WIDTH
+							Height: 3
+						Label@FEED_TITLE:
+							X: 12
+							Y: 7
+							Width: 220
+							Height: 24
+							Font: TinyBold
+							Contrast: true
+						Label@FEED_COUNT:
+							X: PARENT_WIDTH - 162
+							Y: 7
+							Width: 122
+							Height: 24
+							Align: Right
+							Font: TinyBold
+							Contrast: true
+						Button@FILTER_ALL:
+							X: PARENT_WIDTH - 244
+							Y: 6
+							Width: 34
+							Height: 22
+							Font: TinyBold
+							VisualHeight: 0
+						Button@FILTER_YOU:
+							X: PARENT_WIDTH - 206
+							Y: 6
+							Width: 38
+							Height: 22
+							Font: TinyBold
+							VisualHeight: 0
+						Button@FEED_CLOSE:
+							X: PARENT_WIDTH - 32
+							Y: 5
+							Width: 24
+							Height: 24
+							Font: TinyBold
+							VisualHeight: 0
+						ColorBlock@FEED_HEADER_RULE:
+							X: 10
+							Y: 34
+							Width: PARENT_WIDTH - 20
+							Height: 1
+						Label@LATEST_KICKER:
+							X: 12
+							Y: 40
+							Width: PARENT_WIDTH - 24
+							Height: 15
+							Font: TinyBold
+							Contrast: true
+						Label@LATEST_META:
+							X: 12
+							Y: 55
+							Width: PARENT_WIDTH - 24
+							Height: 15
+							Font: TinyBold
+							Contrast: true
+						Label@LATEST_MESSAGE:
+							X: 12
+							Y: 72
+							Width: PARENT_WIDTH - 24
+							Height: 49
+							VAlign: Top
+							Font: Regular
+							Contrast: true
+						ColorBlock@FEED_HISTORY_RULE:
+							X: 10
+							Y: 126
+							Width: PARENT_WIDTH - 20
+							Height: 1
+						ScrollPanel@FEED_HISTORY:
+							X: 8
+							Y: 132
+							Width: PARENT_WIDTH - 16
+							Height: 135
+							CollapseHiddenChildren: true
+							TopBottomSpacing: 5
+							ItemSpacing: 4
+							Align: Bottom
+							Children:
+								Container@FEED_ITEM_TEMPLATE:
+									X: 4
+									Width: PARENT_WIDTH - 35
+									Height: 52
+									Visible: false
+									Children:
+										ColorBlock@CARD_BG:
+											Width: PARENT_WIDTH
+											Height: PARENT_HEIGHT
+										ColorBlock@CARD_ACCENT:
+											Width: 4
+											Height: PARENT_HEIGHT
+										Label@CARD_META:
+											X: 11
+											Y: 4
+											Width: PARENT_WIDTH - 16
+											Height: 15
+											Font: TinyBold
+											Contrast: true
+										Label@CARD_MESSAGE:
+											X: 11
+											Y: 20
+											Width: PARENT_WIDTH - 16
+											Height: 26
+											VAlign: Top
+											Font: Regular
+											WordWrap: true
+											Contrast: true
+						Label@FEED_EMPTY:
+							X: 24
+							Y: 177
+							Width: PARENT_WIDTH - 48
+							Height: 42
+							Align: Center
+							Font: TinyBold
+							Contrast: true
+						Label@FEED_FOOTER:
+							X: 12
+							Y: 271
+							Width: PARENT_WIDTH - 24
+							Height: 17
+							Align: Center
+							Font: TinyBold
+							Contrast: true
+		LogicKeyListener@PLAYER_KEYHANDLER:
+			Logic: RemoveFromControlGroupHotkeyLogic
+				RemoveFromControlGroupKey: RemoveFromControlGroup
+		ControlGroups@CONTROLGROUPS:
+			SelectGroupKeyPrefix: ControlGroupSelect
+			CreateGroupKeyPrefix: ControlGroupCreate
+			AddToGroupKeyPrefix: ControlGroupAddTo
+			CombineWithGroupKeyPrefix: ControlGroupCombineWith
+			JumpToGroupKeyPrefix: ControlGroupJumpTo
+		LogicTicker@SIDEBAR_TICKER:
+		Container@SUPPORT_POWERS:
+			Logic: SupportPowerBinLogic
+			X: 10
+			Y: 10
+			Children:
+				SupportPowers@SUPPORT_PALETTE:
+					IconSize: 62, 46
+					IconSpriteOffset: -1, -1
+					TooltipContainer: TOOLTIP_CONTAINER
+					ReadyText: supportpowers-support-powers-palette.ready
+					HoldText: supportpowers-support-powers-palette.hold
+					HotkeyPrefix: SupportPower
+					HotkeyCount: 6
+				Container@PALETTE_FOREGROUND:
+					Children:
+						Image@ICON_TEMPLATE:
+							Logic: AddFactionSuffixLogic
+							X: 0 - 2
+							Y: 0 - 2
+							Width: 62
+							Height: 46
+							IgnoreMouseOver: true
+							ImageCollection: sidebar
+							ImageName: background-supportoverlay
+		SupportPowerTimer@SUPPORT_POWER_TIMER:
+			X: 80
+			Y: 10
+			Order: Descending
+		Image@COMMAND_BAR_BACKGROUND:
+			X: 5
+			Y: WINDOW_HEIGHT - HEIGHT - 5
+			Width: 434
+			Height: 44
+			ImageCollection: commandbar
+			ImageName: background
+			ClickThrough: False
+		Container@COMMAND_BAR:
+			Logic: CommandBarLogic
+			X: 14
+			Y: WINDOW_HEIGHT - HEIGHT - 14
+			Width: 275
+			Height: 26
+			Children:
+				LogicKeyListener@MODIFIER_OVERRIDES:
+				Button@ATTACK_MOVE:
+					Logic: AddFactionSuffixLogic
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: AttackMove
+					DisableKeySound: true
+					TooltipText: button-command-bar-attack-move.tooltip
+					TooltipDesc: button-command-bar-attack-move.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: attack-move
+				Button@FORCE_MOVE:
+					Logic: AddFactionSuffixLogic
+					X: 34
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					DisableKeySound: true
+					TooltipText: button-command-bar-force-move.tooltip
+					TooltipDesc: button-command-bar-force-move.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: force-move
+				Button@FORCE_ATTACK:
+					Logic: AddFactionSuffixLogic
+					X: 68
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					DisableKeySound: true
+					TooltipText: button-command-bar-force-attack.tooltip
+					TooltipDesc: button-command-bar-force-attack.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: force-attack
+				Button@GUARD:
+					Logic: AddFactionSuffixLogic
+					X: 102
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: Guard
+					DisableKeySound: true
+					TooltipText: button-command-bar-guard.tooltip
+					TooltipDesc: button-command-bar-guard.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: guard
+				Button@DEPLOY:
+					Logic: AddFactionSuffixLogic
+					X: 136
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: Deploy
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-command-bar-deploy.tooltip
+					TooltipDesc: button-command-bar-deploy.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: deploy
+				Button@SCATTER:
+					Logic: AddFactionSuffixLogic
+					X: 170
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: Scatter
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-command-bar-scatter.tooltip
+					TooltipDesc: button-command-bar-scatter.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: scatter
+				Button@STOP:
+					Logic: AddFactionSuffixLogic
+					X: 204
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: Stop
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-command-bar-stop.tooltip
+					TooltipDesc: button-command-bar-stop.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: stop
+				Button@QUEUE_ORDERS:
+					Logic: AddFactionSuffixLogic
+					X: 238
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					DisableKeySound: true
+					TooltipText: button-command-bar-queue-orders.tooltip
+					TooltipDesc: button-command-bar-queue-orders.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 1
+							ImageCollection: command-icons
+							ImageName: queue-orders
+		Container@STANCE_BAR:
+			Logic: StanceSelectorLogic
+			X: 294
+			Y: WINDOW_HEIGHT - HEIGHT - 14
+			Width: 138
+			Height: 26
+			Children:
+				Button@STANCE_ATTACKANYTHING:
+					Logic: AddFactionSuffixLogic
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: StanceAttackAnything
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-stance-bar-attackanything.tooltip
+					TooltipDesc: button-stance-bar-attackanything.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: attack-anything
+				Button@STANCE_DEFEND:
+					Logic: AddFactionSuffixLogic
+					X: 34
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: StanceDefend
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-stance-bar-defend.tooltip
+					TooltipDesc: button-stance-bar-defend.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: defend
+				Button@STANCE_RETURNFIRE:
+					Logic: AddFactionSuffixLogic
+					X: 68
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: StanceReturnFire
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-stance-bar-returnfire.tooltip
+					TooltipDesc: button-stance-bar-returnfire.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: return-fire
+				Button@STANCE_HOLDFIRE:
+					Logic: AddFactionSuffixLogic
+					X: 102
+					Width: 34
+					Height: 26
+					VisualHeight: 0
+					Background: command-button
+					Key: StanceHoldFire
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: button-stance-bar-holdfire.tooltip
+					TooltipDesc: button-stance-bar-holdfire.tooltipdesc
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: hold-fire
+		Container@MUTE_INDICATOR:
+			Logic: MuteIndicatorLogic
+			X: WINDOW_WIDTH - WIDTH - 260
+			Y: 10
+			Width: 200
+			Height: 25
+			Children:
+				Image@ICON:
+					X: PARENT_WIDTH - WIDTH
+					Y: 1
+					Width: 24
+					Height: 24
+					ImageCollection: sidebar-bits
+					ImageName: indicator-muted
+				Label@LABEL:
+					Width: PARENT_WIDTH - 30
+					Height: 25
+					Align: Right
+					Text: label-mute-indicator
+					Contrast: true
+		Image@SIDEBAR_BACKGROUND_TOP:
+			Logic: AddFactionSuffixLogic
+			X: WINDOW_WIDTH - 250
+			Y: 10
+			Width: 238
+			Height: 262
+			ImageCollection: sidebar
+			ImageName: background-top
+			ClickThrough: false
+			Children:
+				Container@TOP_BUTTONS:
+					Logic: MenuButtonsChromeLogic
+					X: 9
+					Y: 7
+					Children:
+						Button@BEACON_BUTTON:
+							Logic: BeaconOrderButtonLogic, AddFactionSuffixLogic
+							Width: 28
+							Height: 28
+							Background: sidebar-button
+							Key: PlaceBeacon
+							TooltipText: button-top-buttons-beacon-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: order-icons
+						Button@SELL_BUTTON:
+							Logic: SellOrderButtonLogic, AddFactionSuffixLogic
+							X: 32
+							Width: 28
+							Height: 28
+							Background: sidebar-button
+							Key: Sell
+							TooltipText: button-top-buttons-sell-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: order-icons
+						Button@POWER_BUTTON:
+							Logic: PowerdownOrderButtonLogic, AddFactionSuffixLogic
+							X: 64
+							Width: 28
+							Height: 28
+							Background: sidebar-button
+							Key: PowerDown
+							TooltipText: button-top-buttons-power-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: order-icons
+						Button@REPAIR_BUTTON:
+							Logic: RepairOrderButtonLogic, AddFactionSuffixLogic
+							X: 96
+							Width: 28
+							Height: 28
+							Background: sidebar-button
+							Key: Repair
+							TooltipText: button-top-buttons-repair-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: order-icons
+						MenuButton@OPTIONS_BUTTON:
+							Logic: AddFactionSuffixLogic
+							X: 192
+							Width: 28
+							Height: 28
+							Background: sidebar-button
+							Key: escape
+							TooltipText: button-top-buttons-options-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							DisableWorldSounds: true
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: order-icons
+									ImageName: options
+				Image@RADAR:
+					Logic: AddFactionSuffixLogic, IngameRadarDisplayLogic
+					X: 8
+					Y: 40
+					ImageCollection: sidebar
+					ImageName: radar
+					Children:
+						LogicTicker@RADAR_TICKER:
+						ColorBlock@RADAR_FADETOBLACK:
+							Width: 222
+							Height: 222
+						Radar@RADAR_MINIMAP:
+							WorldInteractionController: INTERACTION_CONTROLLER
+							X: 1
+							Y: 1
+							Width: 220
+							Height: 220
+							SoundUp: RadarUp
+							SoundDown: RadarDown
+							Children:
+						VideoPlayer@PLAYER:
+							X: 1
+							Y: 1
+							Width: 220
+							Height: 220
+							Skippable: false
+		Container@SIDEBAR_PRODUCTION:
+			Logic: ClassicProductionLogic
+			X: WINDOW_WIDTH - 250
+			Y: 300
+			Width: 238
+			Height: 250
+			Children:
+				Container@PALETTE_BACKGROUND:
+					Children:
+						Container@ROW_TEMPLATE:
+							Width: 238
+							Height: 47
+							ClickThrough: false
+							Children:
+								Image@ROW_BGND:
+									Logic: AddFactionSuffixLogic
+									X: 40
+									Width: 190
+									Height: 47
+									ImageCollection: sidebar
+									ImageName: background-iconbg
+						Image@BOTTOM_CAP:
+							Logic: AddFactionSuffixLogic
+							Width: 238
+							Height: 8
+							ClickThrough: false
+							ImageCollection: sidebar
+							ImageName: background-bottom
+				LogicTicker@PRODUCTION_TICKER:
+				ProductionPalette@PRODUCTION_PALETTE:
+					X: 42
+					Y: 1
+					TooltipContainer: TOOLTIP_CONTAINER
+					ReadyText: productionpalette-sidebar-production-palette.ready
+					HoldText: productionpalette-sidebar-production-palette.hold
+					IconSize: 62, 46
+					IconMargin: 1, 1
+					IconSpriteOffset: -1, -1
+					HotkeyPrefix: Production
+					HotkeyCount: 24
+					SelectProductionBuildingHotkey: SelectProductionBuilding
+				Container@PALETTE_FOREGROUND:
+					Children:
+						Image@ROW_TEMPLATE:
+							Logic: AddFactionSuffixLogic
+							Width: 238
+							Height: 47
+							IgnoreMouseOver: true
+							ImageCollection: sidebar
+							ImageName: background-iconrow
+				Container@PRODUCTION_TYPES:
+					X: 7
+					Y: 2
+					Width: 29
+					Height: 240
+					Children:
+						ProductionTypeButton@BUILDING:
+							Logic: AddFactionSuffixLogic
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-building-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building
+							Key: ProductionTypeBuilding
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@DEFENSE:
+							Logic: AddFactionSuffixLogic
+							Y: 31
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-defense-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Defense
+							Key: ProductionTypeDefense
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@INFANTRY:
+							Logic: AddFactionSuffixLogic
+							Y: 62
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-infantry-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Infantry
+							Key: ProductionTypeInfantry
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@VEHICLE:
+							Logic: AddFactionSuffixLogic
+							Y: 93
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-vehicle-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Vehicle
+							Key: ProductionTypeVehicle
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@AIRCRAFT:
+							Logic: AddFactionSuffixLogic
+							Y: 124
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-aircraft-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Aircraft
+							Key: ProductionTypeAircraft
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@NAVAL:
+							Logic: AddFactionSuffixLogic
+							Y: 155
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-naval-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Ship
+							Key: ProductionTypeNaval
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						Button@SCROLL_UP_BUTTON:
+							Logic: AddFactionSuffixLogic
+							Y: 186
+							Width: 28
+							Height: 22
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-scroll-up-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 3
+									ImageCollection: scrollpanel-decorations
+									ImageName: up
+						Button@SCROLL_DOWN_BUTTON:
+							Logic: AddFactionSuffixLogic
+							Y: 211
+							Width: 28
+							Height: 22
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: button-production-types-scroll-down-tooltip
+							TooltipContainer: TOOLTIP_CONTAINER
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 3
+									ImageCollection: scrollpanel-decorations
+									ImageName: down
+		Image@SIDEBAR_MONEYBIN:
+			Logic: AddFactionSuffixLogic
+			X: WINDOW_WIDTH - 250
+			Y: 272
+			Width: 238
+			Height: 28
+			ImageCollection: sidebar
+			ImageName: background-moneybin
+			ClickThrough: false
+			Children:
+				Label@GAME_TIMER:
+					Logic: GameTimerLogic
+					X: 3
+					Y: 3
+					Width: PARENT_WIDTH
+					Height: 23
+					Align: Center
+					Font: TinyBold
+				LabelWithTooltip@CASH:
+					Logic: IngameCashCounterLogic
+					X: 35
+					Y: 2
+					Width: 50
+					Height: 23
+					Font: Bold
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+					Children:
+						Image@CASH_ICON:
+							X: -21
+							Y: 4
+							ImageCollection: cash-icons
+							ImageName: cash-normal
+				LabelWithTooltip@POWER:
+					Logic: IngamePowerCounterLogic
+					X: PARENT_WIDTH - WIDTH - 30
+					Y: 2
+					Width: 50
+					Height: 23
+					Align: Right
+					Font: Bold
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+					Children:
+						Image@POWER_ICON:
+							X: PARENT_WIDTH + 4
+							Y: 4
+							ImageCollection: power-icons
+							ImageName: power-normal
+		Container@HPF_ROOT:
+			Logic: LoadIngameHierarchicalPathFinderOverlayLogic
+			X: WINDOW_WIDTH - WIDTH - 260
+			Y: 40
+			Width: 175
+
+Background@AI_WAR_ROOM_PANEL:
+	Logic: WarRoomLogic
+	X: (WINDOW_WIDTH - 250) / 2 - WIDTH / 2
+	Y: 44
+	Width: 760
+	Height: 620
+	Background: dialog4
+	Children:
+		ColorBlock@TOP_ACCENT:
+			Width: PARENT_WIDTH
+			Height: 3
+		Label@TITLE:
+			X: 16
+			Y: 9
+			Width: 260
+			Height: 22
+			Text: ai-war-room.title
+			Font: Bold
+		Label@SUBTITLE:
+			X: 16
+			Y: 31
+			Width: 390
+			Height: 15
+			Text: ai-war-room.subtitle
+			Font: Tiny
+		Label@CONNECTION:
+			X: PARENT_WIDTH - 350
+			Y: 10
+			Width: 160
+			Height: 18
+			Align: Right
+			Font: TinyBold
+		Label@THREAT_CAPTION:
+			X: PARENT_WIDTH - 350
+			Y: 31
+			Width: 52
+			Height: 15
+			Text: ai-war-room.threat
+			Align: Right
+			Font: TinyBold
+		ColorBlock@THREAT_TRACK:
+			X: PARENT_WIDTH - 288
+			Y: 37
+			Width: 75
+			Height: 5
+		ColorBlock@THREAT_FILL:
+			X: PARENT_WIDTH - 288
+			Y: 37
+			Width: 0
+			Height: 5
+		Label@THREAT_VALUE:
+			X: PARENT_WIDTH - 205
+			Y: 30
+			Width: 72
+			Height: 16
+			Font: TinyBold
+		Button@REFRESH_BUTTON:
+			X: PARENT_WIDTH - 124
+			Y: 12
+			Width: 72
+			Height: 26
+			Font: TinyBold
+		Button@CLOSE_BUTTON:
+			Key: escape
+			X: PARENT_WIDTH - 42
+			Y: 12
+			Width: 28
+			Height: 26
+			Text: ai-war-room.close
+			Font: Bold
+		Background@NAVIGATION:
+			X: 12
+			Y: 55
+			Width: PARENT_WIDTH - 24
+			Height: 38
+			Background: dialog3
+			Children:
+				Label@NAV_TITLE:
+					Visible: false
+					Text: ai-war-room.command-sections
+				Button@LIVE_TAB:
+					X: 6
+					Y: 5
+					Width: 136
+					Height: 28
+					Text: ai-war-room.tab-live
+					Font: TinyBold
+				Button@DEBRIEF_TAB:
+					X: 152
+					Y: 5
+					Width: 136
+					Height: 28
+					Text: ai-war-room.tab-review
+					Font: TinyBold
+				Button@LEARNING_TAB:
+					X: 298
+					Y: 5
+					Width: 136
+					Height: 28
+					Text: ai-war-room.tab-learning
+					Font: TinyBold
+				Button@BRAIN_TAB:
+					X: 444
+					Y: 5
+					Width: 136
+					Height: 28
+					Text: ai-war-room.tab-brain
+					Font: TinyBold
+				Button@SETTINGS_TAB:
+					X: 590
+					Y: 5
+					Width: 136
+					Height: 28
+					Text: ai-war-room.tab-settings
+					Font: TinyBold
+				Label@LOCAL_NOTE:
+					Visible: false
+					Text: ai-war-room.local-note
+		Container@CONTENT:
+			X: 16
+			Y: 105
+			Width: PARENT_WIDTH - 32
+			Height: PARENT_HEIGHT - 121
+			Children:
+				Container@LIVE_PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@LIVE_HEADING:
+							Width: PARENT_WIDTH
+							Height: 28
+							Text: ai-war-room.live-command
+							Font: Bold
+						Label@LIVE_DESCRIPTION:
+							Y: 28
+							Width: PARENT_WIDTH
+							Height: 18
+							Text: ai-war-room.live-description
+							Font: Tiny
+						Background@LIVE_STATUS_CARD:
+							Y: 58
+							Width: PARENT_WIDTH
+							Height: 74
+							Background: dialog4
+							Children:
+								Label@LIVE_STATUS_KICKER:
+									X: 12
+									Y: 8
+									Width: 150
+									Height: 15
+									Text: ai-war-room.last-transmission
+									Font: TinyBold
+								Label@LIVE_SUMMARY:
+									X: 12
+									Y: 27
+									Width: PARENT_WIDTH - 24
+									Height: 40
+									Font: Regular
+									WordWrap: true
+						Background@LIVE_MAP_CARD:
+							Y: 144
+							Width: PARENT_WIDTH
+							Height: 56
+							Background: dialog4
+							Children:
+								Label@LIVE_MAP_KICKER:
+									X: 12
+									Y: 7
+									Width: 120
+									Height: 15
+									Text: ai-war-room.battlefield
+									Font: TinyBold
+								Label@LIVE_MAP:
+									X: 12
+									Y: 26
+									Width: PARENT_WIDTH - 24
+									Height: 22
+									Font: Bold
+						Background@LIVE_ECONOMY_CARD:
+							Y: 212
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 78
+							Background: dialog4
+							Children:
+								Label@LIVE_ECONOMY_KICKER:
+									X: 12
+									Y: 8
+									Width: 120
+									Height: 15
+									Text: ai-war-room.economy
+									Font: TinyBold
+								Label@LIVE_ECONOMY:
+									X: 12
+									Y: 28
+									Width: PARENT_WIDTH - 24
+									Height: 43
+									Font: TinyBold
+						Background@LIVE_MILITARY_CARD:
+							X: (PARENT_WIDTH - 12) / 2 + 12
+							Y: 212
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 78
+							Background: dialog4
+							Children:
+								Label@LIVE_MILITARY_KICKER:
+									X: 12
+									Y: 8
+									Width: 120
+									Height: 15
+									Text: ai-war-room.military
+									Font: TinyBold
+								Label@LIVE_MILITARY:
+									X: 12
+									Y: 28
+									Width: PARENT_WIDTH - 24
+									Height: 43
+									Font: TinyBold
+						Background@DECISION_CHAIN:
+							Y: 302
+							Width: PARENT_WIDTH
+							Height: 190
+							Background: dialog4
+							Children:
+								Label@DECISION_TITLE:
+									X: 12
+									Y: 8
+									Width: PARENT_WIDTH - 24
+									Height: 18
+									Text: ai-war-room.decision-chain
+									Font: TinyBold
+								Label@DECISION_REASON_KICKER:
+									X: 12
+									Y: 34
+									Width: 100
+									Height: 16
+									Text: ai-war-room.reason
+									Font: TinyBold
+								Label@LIVE_DECISION:
+									X: 112
+									Y: 34
+									Width: PARENT_WIDTH - 124
+									Height: 42
+									Font: Tiny
+									WordWrap: true
+								Label@DECISION_ACTION_KICKER:
+									X: 12
+									Y: 82
+									Width: 100
+									Height: 16
+									Text: ai-war-room.act
+									Font: TinyBold
+								Label@LIVE_ACTION:
+									X: 112
+									Y: 82
+									Width: PARENT_WIDTH - 124
+									Height: 42
+									Font: Tiny
+									WordWrap: true
+								Label@DECISION_VERIFY_KICKER:
+									X: 12
+									Y: 130
+									Width: 100
+									Height: 16
+									Text: ai-war-room.verify
+									Font: TinyBold
+								Label@LIVE_VERIFICATION:
+									X: 112
+									Y: 130
+									Width: PARENT_WIDTH - 330
+									Height: 48
+									Font: Tiny
+									WordWrap: true
+								Button@ACCEPT_BUTTON:
+									X: PARENT_WIDTH - 204
+									Y: 137
+									Width: 92
+									Height: 30
+									Text: ai-war-room.accept
+									Font: TinyBold
+								Button@REJECT_BUTTON:
+									X: PARENT_WIDTH - 104
+									Y: 137
+									Width: 92
+									Height: 30
+									Text: ai-war-room.reject
+									Font: TinyBold
+				Container@DEBRIEF_PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@DEBRIEF_HEADING:
+							Width: PARENT_WIDTH
+							Height: 28
+							Text: ai-war-room.match-debrief
+							Font: Bold
+						Label@DEBRIEF_DESCRIPTION:
+							Y: 28
+							Width: PARENT_WIDTH
+							Height: 18
+							Text: ai-war-room.debrief-description
+							Font: Tiny
+						Background@DEBRIEF_SUMMARY_CARD:
+							Y: 58
+							Width: PARENT_WIDTH
+							Height: 90
+							Background: dialog4
+							Children:
+								Label@DEBRIEF_RESULT:
+									X: 14
+									Y: 12
+									Width: 220
+									Height: 26
+									Font: Bold
+								Label@DEBRIEF_SUMMARY:
+									X: 14
+									Y: 46
+									Width: PARENT_WIDTH - 28
+									Height: 28
+									Font: TinyBold
+						Background@DEBRIEF_METRICS_CARD:
+							Y: 160
+							Width: PARENT_WIDTH
+							Height: 90
+							Background: dialog4
+							Children:
+								Label@DEBRIEF_METRICS_KICKER:
+									X: 14
+									Y: 8
+									Width: 180
+									Height: 16
+									Text: ai-war-room.performance-scorecard
+									Font: TinyBold
+								Label@DEBRIEF_METRICS:
+									X: 14
+									Y: 30
+									Width: PARENT_WIDTH - 28
+									Height: 52
+									Font: TinyBold
+						Background@DEBRIEF_STRENGTHS_CARD:
+							Y: 262
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 160
+							Background: dialog4
+							Children:
+								Label@DEBRIEF_STRENGTHS_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.keep-doing
+									Font: TinyBold
+								Label@DEBRIEF_STRENGTHS:
+									X: 14
+									Y: 34
+									Width: PARENT_WIDTH - 28
+									Height: 116
+									Font: Tiny
+									WordWrap: true
+						Background@DEBRIEF_IMPROVEMENTS_CARD:
+							X: (PARENT_WIDTH - 12) / 2 + 12
+							Y: 262
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 160
+							Background: dialog4
+							Children:
+								Label@DEBRIEF_IMPROVEMENTS_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.change-next
+									Font: TinyBold
+								Label@DEBRIEF_IMPROVEMENTS:
+									X: 14
+									Y: 34
+									Width: PARENT_WIDTH - 28
+									Height: 116
+									Font: Tiny
+									WordWrap: true
+						Background@DEBRIEF_TIMELINE_CARD:
+							Y: 434
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT - 434
+							Background: dialog4
+							Children:
+								Label@DEBRIEF_TIMELINE_KICKER:
+									X: 14
+									Y: 9
+									Width: 180
+									Height: 16
+									Text: ai-war-room.causal-timeline
+									Font: TinyBold
+								Label@DEBRIEF_TIMELINE:
+									X: 14
+									Y: 32
+									Width: PARENT_WIDTH - 28
+									Height: PARENT_HEIGHT - 42
+									Font: Tiny
+				Container@LEARNING_PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@LEARNING_HEADING:
+							Width: PARENT_WIDTH
+							Height: 28
+							Text: ai-war-room.learning-lab
+							Font: Bold
+						Label@LEARNING_DESCRIPTION:
+							Y: 28
+							Width: PARENT_WIDTH
+							Height: 18
+							Text: ai-war-room.learning-description
+							Font: Tiny
+						Background@LEARNING_SUMMARY_CARD:
+							Y: 58
+							Width: PARENT_WIDTH
+							Height: 74
+							Background: dialog4
+							Children:
+								Label@LEARNING_SUMMARY_KICKER:
+									X: 14
+									Y: 8
+									Width: 180
+									Height: 16
+									Text: ai-war-room.evaluation-scorecard
+									Font: TinyBold
+								Label@LEARNING_SUMMARY:
+									X: 14
+									Y: 32
+									Width: PARENT_WIDTH - 28
+									Height: 28
+									Font: Bold
+						Background@LEARNING_DIFFICULTY_CARD:
+							Y: 144
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 130
+							Background: dialog4
+							Children:
+								Label@LEARNING_DIFFICULTY_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.difficulty-ladder
+									Font: TinyBold
+								Label@LEARNING_DIFFICULTY:
+									X: 14
+									Y: 36
+									Width: PARENT_WIDTH - 28
+									Height: 82
+									Font: TinyBold
+						Background@LEARNING_POLICY_CARD:
+							X: (PARENT_WIDTH - 12) / 2 + 12
+							Y: 144
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 130
+							Background: dialog4
+							Children:
+								Label@LEARNING_POLICY_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.policy-promotion
+									Font: TinyBold
+								Label@LEARNING_POLICY:
+									X: 14
+									Y: 36
+									Width: PARENT_WIDTH - 28
+									Height: 24
+									Font: Bold
+								Label@POLICY_RULE:
+									X: 14
+									Y: 68
+									Width: PARENT_WIDTH - 28
+									Height: 50
+									Text: ai-war-room.policy-rule
+									Font: Tiny
+									WordWrap: true
+						Background@LEARNING_LESSONS_CARD:
+							Y: 286
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: PARENT_HEIGHT - 286
+							Background: dialog4
+							Children:
+								Label@LEARNING_LESSONS_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.latest-lessons
+									Font: TinyBold
+								Label@LEARNING_LESSONS:
+									X: 14
+									Y: 36
+									Width: PARENT_WIDTH - 28
+									Height: PARENT_HEIGHT - 48
+									Font: Tiny
+									WordWrap: true
+						Background@LEARNING_ATTEMPTS_CARD:
+							X: (PARENT_WIDTH - 12) / 2 + 12
+							Y: 286
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: PARENT_HEIGHT - 286
+							Background: dialog4
+							Children:
+								Label@LEARNING_ATTEMPTS_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.recent-attempts
+									Font: TinyBold
+								Label@LEARNING_ATTEMPTS:
+									X: 14
+									Y: 36
+									Width: PARENT_WIDTH - 28
+									Height: PARENT_HEIGHT - 48
+									Font: Tiny
+				Container@BRAIN_PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@BRAIN_HEADING:
+							Width: PARENT_WIDTH
+							Height: 28
+							Text: ai-war-room.brain-inspector
+							Font: Bold
+						Label@BRAIN_DESCRIPTION:
+							Y: 28
+							Width: PARENT_WIDTH
+							Height: 18
+							Text: ai-war-room.brain-description
+							Font: Tiny
+						Background@BRAIN_OWNER_CARD:
+							Y: 58
+							Width: (PARENT_WIDTH - 24) / 3
+							Height: 100
+							Background: dialog4
+							Children:
+								Label@BRAIN_OWNER_KICKER:
+									X: 12
+									Y: 10
+									Width: PARENT_WIDTH - 24
+									Height: 16
+									Text: ai-war-room.current-owner
+									Font: TinyBold
+								Label@BRAIN_OWNER:
+									X: 12
+									Y: 39
+									Width: PARENT_WIDTH - 24
+									Height: 34
+									Font: Bold
+						Background@BRAIN_STRATEGY_CARD:
+							X: (PARENT_WIDTH - 24) / 3 + 12
+							Y: 58
+							Width: (PARENT_WIDTH - 24) / 3
+							Height: 100
+							Background: dialog4
+							Children:
+								Label@BRAIN_STRATEGY_KICKER:
+									X: 12
+									Y: 10
+									Width: PARENT_WIDTH - 24
+									Height: 16
+									Text: ai-war-room.native-strategy
+									Font: TinyBold
+								Label@BRAIN_STRATEGY:
+									X: 12
+									Y: 34
+									Width: PARENT_WIDTH - 24
+									Height: 58
+									Font: Tiny
+									WordWrap: true
+						Background@BRAIN_DECISION_CARD:
+							X: 2 * ((PARENT_WIDTH - 24) / 3 + 12)
+							Y: 58
+							Width: (PARENT_WIDTH - 24) / 3
+							Height: 100
+							Background: dialog4
+							Children:
+								Label@BRAIN_DECISION_KICKER:
+									X: 12
+									Y: 10
+									Width: PARENT_WIDTH - 24
+									Height: 16
+									Text: ai-war-room.next-fast-decision
+									Font: TinyBold
+								Label@BRAIN_DECISION:
+									X: 12
+									Y: 34
+									Width: PARENT_WIDTH - 24
+									Height: 58
+									Font: Tiny
+									WordWrap: true
+						Background@BRAIN_GOALS_CARD:
+							Y: 170
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: PARENT_HEIGHT - 170
+							Background: dialog4
+							Children:
+								Label@BRAIN_GOALS_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.goal-blackboard
+									Font: TinyBold
+								Label@BRAIN_GOALS:
+									X: 14
+									Y: 36
+									Width: PARENT_WIDTH - 28
+									Height: PARENT_HEIGHT - 48
+									Font: Tiny
+									WordWrap: true
+						Background@BRAIN_LEASES_CARD:
+							X: (PARENT_WIDTH - 12) / 2 + 12
+							Y: 170
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: PARENT_HEIGHT - 170
+							Background: dialog4
+							Children:
+								Label@BRAIN_LEASES_KICKER:
+									X: 14
+									Y: 10
+									Width: 180
+									Height: 16
+									Text: ai-war-room.leases-receipts
+									Font: TinyBold
+								Label@BRAIN_LEASES:
+									X: 14
+									Y: 36
+									Width: PARENT_WIDTH - 28
+									Height: PARENT_HEIGHT - 48
+									Font: Tiny
+									WordWrap: true
+				Container@SETTINGS_PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Children:
+						Label@SETTINGS_HEADING:
+							Width: PARENT_WIDTH
+							Height: 28
+							Text: ai-war-room.ai-settings
+							Font: Bold
+						Label@SETTINGS_DESCRIPTION:
+							Y: 28
+							Width: PARENT_WIDTH
+							Height: 18
+							Text: ai-war-room.settings-description
+							Font: Tiny
+						Background@SETTINGS_MODEL_CARD:
+							Y: 58
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 92
+							Background: dialog4
+							Children:
+								Label@SETTINGS_MODEL:
+									X: 14
+									Y: 14
+									Width: PARENT_WIDTH - 28
+									Height: 60
+									Font: TinyBold
+						Background@SETTINGS_ROUTER_CARD:
+							X: (PARENT_WIDTH - 12) / 2 + 12
+							Y: 58
+							Width: (PARENT_WIDTH - 12) / 2
+							Height: 92
+							Background: dialog4
+							Children:
+								Label@SETTINGS_ROUTER:
+									X: 14
+									Y: 14
+									Width: PARENT_WIDTH - 28
+									Height: 60
+									Font: TinyBold
+						Background@SETTINGS_CONTROL_CARD:
+							Y: 164
+							Width: PARENT_WIDTH
+							Height: 150
+							Background: dialog4
+							Children:
+								Label@SETTINGS_CONTROL_KICKER:
+									X: 14
+									Y: 12
+									Width: 220
+									Height: 18
+									Text: ai-war-room.gameplay-control
+									Font: TinyBold
+								Button@AUTO_BUTTON:
+									X: 14
+									Y: 50
+									Width: 160
+									Height: 38
+									Font: Bold
+								Button@VOICE_BUTTON:
+									X: 188
+									Y: 50
+									Width: 160
+									Height: 38
+									Font: Bold
+								Button@STRATEGY_BUTTON:
+									X: 362
+									Y: 50
+									Width: PARENT_WIDTH - 376
+									Height: 38
+									Font: Bold
+								Label@CONTROL_NOTE:
+									X: 14
+									Y: 104
+									Width: PARENT_WIDTH - 28
+									Height: 30
+									Text: ai-war-room.control-note
+									Font: Tiny
+									WordWrap: true
+						Background@SETTINGS_PRIVACY_CARD:
+							Y: 328
+							Width: PARENT_WIDTH
+							Height: 112
+							Background: dialog4
+							Children:
+								Label@SETTINGS_PRIVACY_KICKER:
+									X: 14
+									Y: 12
+									Width: 220
+									Height: 18
+									Text: ai-war-room.local-first-privacy
+									Font: TinyBold
+								Label@SETTINGS_PRIVACY:
+									X: 14
+									Y: 42
+									Width: PARENT_WIDTH - 28
+									Height: 56
+									Font: Tiny
+									WordWrap: true

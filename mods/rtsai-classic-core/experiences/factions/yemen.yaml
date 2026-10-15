@@ -1,0 +1,40 @@
+World:
+	Faction@yemen:
+		Name: faction-yemen.name
+		InternalName: yemen
+		Side: Soviet
+		Description: faction-yemen.description
+		RandomFactionMemberOf: RandomSoviet
+
+Player:
+	ProvidesFactionDoctrine@YEMEN:
+		Factions: yemen
+		Prerequisites: side.soviet, country.yemen, doctrine.asymmetric-defense
+	CapturedTechnologyManager@YEMEN:
+		Factions: yemen
+
+YMR:
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+YRPG:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+YSPOT:
+	Inherits@WW3ROLE: ^RoleEngineer
+WADIGHOST:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+TECH:
+	Inherits@WW3ROLE: ^RoleScoutVehicle
+YMLR:
+	Inherits@WW3ROLE: ^RoleArtillery
+SAMAD:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+YE_MSLC:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+YE_USV:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+YE_SURVE:
+	Inherits@WW3ROLE: ^RoleDestroyer

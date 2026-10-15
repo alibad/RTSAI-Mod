@@ -1,4 +1,4 @@
-Background@SETTINGS_PANEL:
+RTSAIPanel@SETTINGS_PANEL:
 	Logic: SettingsLogic
 		ButtonStride: 0, 35
 		Panels:
@@ -21,14 +21,14 @@ Background@SETTINGS_PANEL:
 			Text: button-settings-title
 			Align: Center
 			Font: Bold
-		Button@RESET_BUTTON:
+		RTSAIButton@RESET_BUTTON:
 			X: 20 + 10 + WIDTH
 			Y: PARENT_HEIGHT - 45
 			Width: 160
 			Height: 25
 			Text: button-settings-panel-reset
 			Font: Bold
-		Button@BACK_BUTTON:
+		RTSAIButton@BACK_BUTTON:
 			Key: escape
 			X: PARENT_WIDTH - 180
 			Y: PARENT_HEIGHT - 45
@@ -42,7 +42,7 @@ Background@SETTINGS_PANEL:
 			Width: PARENT_WIDTH
 			Height: 25
 			Children:
-				Button@BUTTON_TEMPLATE:
+				RTSAIButton@BUTTON_TEMPLATE:
 					Width: 160
 					Height: 25
 					Font: Bold

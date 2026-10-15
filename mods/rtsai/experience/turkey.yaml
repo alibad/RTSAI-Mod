@@ -1,0 +1,4 @@
+World:
+	Faction@turkey:
+		Selectable: true
+		RandomFactionMemberOf: random, random-allies

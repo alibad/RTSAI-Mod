@@ -1,0 +1,32 @@
+World:
+	ReusableCapability@PROJECTILELIBRARY:
+		Id: advanced-projectile-library
+		Domain: weapons-and-effects
+		Provides: projectile.guided, projectile.ballistic, projectile.beam, projectile.interceptable, projectile.trail
+		Requires: weapon-test-map, performance-budget
+		Strategies: choose-projectile-profile, intercept-projectile
+
+^ReusableGuidedProjectileHost:
+	ReusableCapability:
+		Id: guided-projectile-host
+		Domain: weapons-and-effects
+		Provides: projectile.guided, projectile.interceptable
+		Requires: Armament, Missile
+		Strategies: standoff-fire, saturation-attack
+
+^ReusableBallisticProjectileHost:
+	ReusableCapability:
+		Id: ballistic-projectile-host
+		Domain: weapons-and-effects
+		Provides: projectile.ballistic, projectile.arc
+		Requires: Armament, Bullet
+		Strategies: indirect-fire
+
+ARTY:
+	Inherits@WW3BALLISTIC: ^ReusableBallisticProjectileHost
+	Armament@WW3BALLISTIC:
+		Weapon: ReusableBallisticStrike
+
+TTNK:
+	Armament@WW3BEAM:
+		Weapon: ReusableBeamLance

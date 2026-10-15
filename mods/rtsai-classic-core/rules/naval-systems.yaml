@@ -1,0 +1,587 @@
+^ModernNavalShip:
+	Inherits: ^Ship
+	Inherits@selection: ^SelectableCombatUnit
+	Mobile:
+		PauseOnCondition: propulsion-disabled
+		TurnSpeed: 10
+	NavalHandling:
+		InitialSpeed: 38
+		Acceleration: 3
+		Deceleration: 6
+		TurningModifier: 70
+	WithNavalWake:
+	GrantConditionOnMovement@ENGINE:
+		Condition: naval-moving
+	AmbientSound@ENGINE:
+		SoundFiles: naval/engine-heavy.wav
+		RequiresCondition: naval-moving
+	GrantConditionOnDamageState@FLOODING:
+		Condition: flooding
+		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@PROPULSION:
+		Condition: propulsion-disabled
+		ValidDamageStates: Critical
+	SpeedMultiplier@FLOODING:
+		Modifier: 55
+		RequiresCondition: flooding && !propulsion-disabled
+	ChangesHealth@FLOODING:
+		Step: -90
+		Delay: 25
+		StartIfBelow: 101
+		RequiresCondition: flooding
+	WithIdleOverlay@FLOODING:
+		Image: naval_flood
+		Sequence: flood
+		Palette: effect
+		Offset: 0,0,32
+		IsDecoration: true
+		RequiresCondition: flooding
+	WithIdleOverlay@FIRE:
+		Image: fire
+		Sequence: 1
+		Palette: effect
+		Offset: 0,0,180
+		IsDecoration: true
+		RequiresCondition: propulsion-disabled
+	AmbientSound@FLOODING:
+		SoundFiles: naval/flooding.wav
+		RequiresCondition: flooding
+	AmbientSound@ALARM:
+		SoundFiles: naval/naval-alarm.wav
+		Interval: 45
+		RequiresCondition: propulsion-disabled
+	WithDeathAnimation:
+		DeathSequence: sink
+		UseDeathTypeSuffix: false
+		FallbackSequence: sink
+		DeathSequencePalette: player
+		DeathPaletteIsPlayerPalette: true
+		UseFacing: true
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeShip
+		EmptyWeapon: UnitExplodeShip
+	NavalResupplyable:
+	Selectable:
+		Bounds: 1536, 1024
+		DecorationBounds: 1536, 1280
+	HitShape:
+		Type: Capsule
+			PointA: 0,-512
+			PointB: 0,512
+			Radius: 320
+
+^NavalChaff:
+	GrantChargedConditionOnToggle@CHAFF:
+		ActivatedCondition: chaff-active
+		ChargeDuration: 400
+		ConditionDuration: 70
+		ActivationSounds: naval/chaff.wav
+		DeactivatedColor: F0C050
+		ActivatedColor: FFFFFF
+	JamsMissiles@CHAFF:
+		Range: 4c512
+		Chance: 68
+		DeflectionRelationships: Enemy, Neutral
+		InterceptCooldown: 8
+		RequiresCondition: chaff-active
+	WithIdleOverlay@CHAFF:
+		Image: naval_chaff
+		Sequence: chaff
+		Palette: effect
+		IsDecoration: true
+		RequiresCondition: chaff-active
+
+SA_FRGT:
+	Inherits: ^ModernNavalShip
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@CHAFF: ^NavalChaff
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 15
+		Prerequisites: ~ships.saudi, dome, ~techlevel.medium
+		Description: actor-sa-frgt.description
+	Valued:
+		Cost: 1850
+	Tooltip:
+		Name: actor-sa-frgt.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 65000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 72
+		TurnSpeed: 9
+	NavalHandling:
+		InitialSpeed: 32
+		Acceleration: 2
+		TurningModifier: 62
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 8c0
+		RevealGeneratedShroud: false
+	RevealsShroudMultiplier@RADAR:
+		Modifier: 175
+		RequiresCondition: active-radar
+	DetectCloaked:
+		DetectionTypes: Underwater, Cloak
+		Range: 6c0
+	DetectCloakedMultiplier@RADAR:
+		Modifier: 200
+		RequiresCondition: active-radar
+	RenderDetectionCircle:
+	-HiddenUnderFog:
+	NavalRadarVisibility:
+		RequiresCondition: active-radar
+	GrantConditionOnDeploy@RADAR:
+		DeployedCondition: active-radar
+		DeploySounds: naval/radar-sweep.wav
+		UndeploySounds: naval/radar-sweep.wav
+		SkipMakeAnimation: true
+		UndeployOnMove: false
+	WithIdleOverlay@RADAR:
+		Image: naval_radar
+		Sequence: radar
+		Palette: effect
+		Offset: 0,0,320
+		IsDecoration: true
+		RequiresCondition: active-radar
+	AppearsOnRadar@ACTIVE:
+		RequiresCondition: active-radar
+	WithRangeCircle@RADAR:
+		Range: 12c0
+		Color: 50D8A080
+		RequiresCondition: active-radar
+	Turreted@GUN:
+		Turret: primary
+		Offset: 470,0,120
+		TurnSpeed: 18
+	Turreted@CIWS:
+		Turret: ciws
+		Offset: -190,0,210
+		TurnSpeed: 42
+	Armament@GUN:
+		Turret: primary
+		Weapon: NavalFrigateGun
+		LocalOffset: 420,0,70
+		Recoil: 96
+		RecoilRecovery: 24
+		MuzzleSequence: muzzle
+	Armament@CIWS:
+		Name: ciws
+		Turret: ciws
+		Weapon: NavalCIWS
+		LocalOffset: 250,0,60
+	AttackTurreted:
+		Turrets: primary, ciws
+		TargetFrozenActors: true
+	WithMuzzleOverlay:
+	WithSpriteTurret@GUN:
+		Turret: primary
+	WithSpriteTurret@CIWS:
+		Turret: ciws
+		Sequence: ciws
+	AmmoPool@INTERCEPTORS:
+		Name: interceptors
+		Armaments: defensive-interceptor
+		Ammo: 8
+		ReloadCount: 1
+		ReloadDelay: 34
+		RearmSound: naval/rearm.wav
+	Rearmable:
+		RearmActors: sa_fss
+		AmmoPools: interceptors
+	JamsMissiles@PASSIVE:
+		Range: 5c0
+		Chance: 92
+		DeflectionRelationships: Enemy, Neutral
+		AmmoPool: interceptors
+		AmmoUsage: 1
+		InterceptCooldown: 18
+		InterceptSound: naval/ciws-burst.wav
+		RequiresCondition: !active-radar
+	JamsMissiles@ACTIVE:
+		Range: 9c0
+		Chance: 96
+		DeflectionRelationships: Enemy, Neutral
+		AmmoPool: interceptors
+		AmmoUsage: 1
+		InterceptCooldown: 14
+		InterceptSound: naval/ciws-burst.wav
+		RequiresCondition: active-radar
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	Targetable:
+		TargetTypes: WaterActor, Ship, RadarEmitter
+
+SA_INTC:
+	Inherits: ^ModernNavalShip
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CHAFF: ^NavalChaff
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 10
+		Prerequisites: ~ships.saudi, ~techlevel.low
+		Description: actor-sa-intc.description
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-sa-intc.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 24000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 150
+		TurnSpeed: 20
+	NavalHandling:
+		InitialSpeed: 52
+		Acceleration: 7
+		Deceleration: 10
+		TurningModifier: 82
+	AmbientSound@ENGINE:
+		SoundFiles: naval/engine-fast.wav
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 8c0
+		RevealGeneratedShroud: false
+	Turreted:
+		Offset: 300,0,80
+		TurnSpeed: 44
+	Armament:
+		Weapon: NavalInterceptorCannon
+		LocalOffset: 245,0,50
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: UncrewedSurface, SmallBoat, Ship
+		InvalidTargets: NoAutoTarget
+	Targetable:
+		TargetTypes: WaterActor, Ship, SmallBoat
+
+SA_FSS:
+	Inherits: ^ModernNavalShip
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 20
+		Prerequisites: ~ships.saudi, dome, ~techlevel.medium
+		Description: actor-sa-fss.description
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-sa-fss.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 76000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 54
+		TurnSpeed: 7
+	NavalHandling:
+		InitialSpeed: 28
+		Acceleration: 2
+		TurningModifier: 58
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 9c0
+		RevealGeneratedShroud: false
+	NavalResupplyHost:
+	RepairsUnits:
+		HpPerStep: 850
+		Interval: 8
+		PlayerExperience: 3
+	NavalRecovery:
+		RecoverySound: naval/rescue.wav
+	NavalTow:
+		AttachSound: naval/rescue.wav
+	Guardable:
+		Range: 3c0
+	Selectable:
+		Bounds: 1792, 1280
+		DecorationBounds: 1792, 1536
+	Targetable:
+		TargetTypes: WaterActor, Ship, NavalSupport
+
+YE_MSLC:
+	Inherits: ^ModernNavalShip
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CHAFF: ^NavalChaff
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		BuildPaletteOrder: 15
+		Prerequisites: ~ships.yemen, dome, ~techlevel.medium
+		Description: actor-ye-mslc.description
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: actor-ye-mslc.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 32000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 118
+		TurnSpeed: 14
+	NavalHandling:
+		InitialSpeed: 46
+		Acceleration: 5
+		TurningModifier: 74
+	AmbientSound@ENGINE:
+		SoundFiles: naval/engine-fast.wav
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 8c0
+		RevealGeneratedShroud: false
+	-HiddenUnderFog:
+	NavalRadarVisibility:
+		RequiresCondition: missile-revealed
+	GrantConditionOnAttack@REVEAL:
+		Condition: missile-revealed
+		RevokeDelay: 190
+	RangeMultiplier@COORDINATED:
+		Modifier: 120
+		RequiresCondition: targeting-link
+	FirepowerMultiplier@COORDINATED:
+		Modifier: 112
+		RequiresCondition: targeting-link
+	ExternalCondition@TARGETINGLINK:
+		Condition: targeting-link
+	Turreted:
+		Offset: -210,0,130
+		TurnSpeed: 16
+	Armament:
+		Weapon: YemeniNavalMissile
+		LocalOffset: 0,-180,150, 0,180,150
+		LocalYaw: 22, -22
+	AttackFrontal:
+		TargetFrozenActors: true
+		FacingTolerance: 16
+	WithSpriteTurret:
+	Targetable:
+		TargetTypes: WaterActor, Ship, SmallBoat
+
+YE_USV:
+	Inherits: ^ModernNavalShip
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		BuildPaletteOrder: 10
+		Prerequisites: ~ships.yemen, ~techlevel.low
+		Description: actor-ye-usv.description
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: actor-ye-usv.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 132
+		TurnSpeed: 22
+		PauseOnCondition: propulsion-disabled || !remote-link
+	NavalHandling:
+		InitialSpeed: 55
+		Acceleration: 8
+		TurningModifier: 84
+	AmbientSound@ENGINE:
+		SoundFiles: naval/engine-fast.wav
+	ExternalCondition@REMOTELINK:
+		Condition: remote-link
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: false
+		RequiresCondition: remote-link
+	Armament:
+		Weapon: NavalUSVCharge
+	AttackFrontal:
+		FacingTolerance: 24
+	GrantConditionOnAttack@TRIGGER:
+		Condition: usv-triggered
+	KillsSelf:
+		RequiresCondition: usv-triggered
+	Targetable:
+		TargetTypes: WaterActor, Ship, SmallBoat, UncrewedSurface
+	Selectable:
+		Bounds: 896, 768
+		DecorationBounds: 896, 896
+
+YE_SURVE:
+	Inherits: ^ModernNavalShip
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CHAFF: ^NavalChaff
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		BuildPaletteOrder: 20
+		Prerequisites: ~ships.yemen, dome, ~techlevel.medium
+		Description: actor-ye-surve.description
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: actor-ye-surve.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 28000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 105
+		TurnSpeed: 15
+	NavalHandling:
+		InitialSpeed: 44
+		Acceleration: 4
+		TurningModifier: 76
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 9c0
+		RevealGeneratedShroud: false
+	RevealsShroudMultiplier@RADAR:
+		Modifier: 165
+		RequiresCondition: active-radar
+	DetectCloaked:
+		DetectionTypes: Underwater, Cloak
+		Range: 7c0
+	DetectCloakedMultiplier@RADAR:
+		Modifier: 175
+		RequiresCondition: active-radar
+	RenderDetectionCircle:
+	-HiddenUnderFog:
+	NavalRadarVisibility:
+		RequiresCondition: active-radar
+	GrantConditionOnDeploy@RADAR:
+		DeployedCondition: active-radar
+		DeploySounds: naval/radar-sweep.wav
+		UndeploySounds: naval/radar-sweep.wav
+		SkipMakeAnimation: true
+		UndeployOnMove: false
+	WithIdleOverlay@RADAR:
+		Image: naval_radar
+		Sequence: radar
+		Palette: effect
+		Offset: 0,0,300
+		IsDecoration: true
+		RequiresCondition: active-radar
+	WithRangeCircle@RADAR:
+		Range: 14c0
+		Color: E0604080
+		RequiresCondition: active-radar
+	ProximityExternalCondition@REMOTE:
+		Condition: remote-link
+		Range: 14c0
+		ValidRelationships: Ally
+		RequiresCondition: active-radar
+	ProximityExternalCondition@TARGETING:
+		Condition: targeting-link
+		Range: 14c0
+		ValidRelationships: Ally
+		RequiresCondition: active-radar
+	Turreted:
+		Offset: 245,0,85
+		TurnSpeed: 34
+	Armament:
+		Weapon: YemeniSurveillanceGun
+		LocalOffset: 220,0,42
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Targetable:
+		TargetTypes: WaterActor, Ship, SmallBoat, RadarEmitter
+
+NAVAL_CIVILIAN:
+	Inherits: ^ModernNavalShip
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: actor-naval-civilian.name
+	Health:
+		HP: 36000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 48
+		TurnSpeed: 6
+		PauseOnCondition: propulsion-disabled || tow-disabled
+	GrantCondition@DISABLED:
+		Condition: tow-disabled
+	RenderSprites:
+		Image: sa_fss
+	Targetable:
+		TargetTypes: WaterActor, Ship, Towable
+	SpawnActorOnDeath@SURVIVORS:
+		Actor: naval_survivor
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@SALVAGE:
+		Actor: naval_salvage
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	MapEditorData:
+		Categories: Civilian naval
+
+NAVAL_SURVIVOR:
+	Inherits: ^SpriteActor
+	Interactable:
+	Tooltip:
+		Name: actor-naval-survivor.name
+	OwnerLostAction:
+		Action: ChangeOwner
+	Mobile:
+		Locomotor: naval
+		Speed: 12
+		TurnSpeed: 4
+	Targetable:
+		TargetTypes: NavalSurvivor
+	NavalRecoverable:
+		Value: 175
+	WithSpriteBody:
+	RenderSprites:
+		Image: naval_survivor
+	HitShape:
+		Type: Circle
+			Radius: 128
+	MapEditorData:
+		Categories: Civilian naval
+
+NAVAL_SALVAGE:
+	Inherits: ^SpriteActor
+	Interactable:
+	Tooltip:
+		Name: actor-naval-salvage.name
+	OwnerLostAction:
+		Action: ChangeOwner
+	Mobile:
+		Locomotor: naval
+		Speed: 1
+		TurnSpeed: 1
+	Targetable:
+		TargetTypes: NavalSalvage
+	NavalRecoverable:
+		Value: 325
+	WithSpriteBody:
+	RenderSprites:
+		Image: naval_salvage
+	HitShape:
+		Type: Circle
+			Radius: 160
+	MapEditorData:
+		Categories: Civilian naval

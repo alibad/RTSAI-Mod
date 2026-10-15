@@ -15,7 +15,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.RTSAI.Traits
 {
-	public interface IStrategicRole
+	public interface IRTSAIStrategicRole
 	{
 		IReadOnlyCollection<string> Roles { get; }
 		IReadOnlyCollection<string> Counters { get; }
@@ -29,7 +29,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 	// modern faction data. It does not change the simulation; DoctrineUnitBuilderBotModule.RoleShares
 	// reads it to recruit combined-arms armies.
 	[Desc("Declares reusable strategic roles and balance metadata without changing actor simulation behavior.")]
-	public class StrategicRoleInfo : TraitInfo
+	public class RTSAIStrategicRoleInfo : TraitInfo
 	{
 		[Desc("Stable role tags used by doctrine AI, mission tooling, and composition templates.")]
 		public readonly FrozenSet<string> Roles = FrozenSet<string>.Empty;
@@ -49,14 +49,14 @@ namespace OpenRA.Mods.RTSAI.Traits
 		[Desc("Stable identifier for the intended veterancy progression.")]
 		public readonly string VeterancyCurve = "standard";
 
-		public override object Create(ActorInitializer init) { return new StrategicRole(this); }
+		public override object Create(ActorInitializer init) { return new RTSAIStrategicRole(this); }
 	}
 
-	public sealed class StrategicRole : IStrategicRole
+	public sealed class RTSAIStrategicRole : IRTSAIStrategicRole
 	{
-		readonly StrategicRoleInfo info;
+		readonly RTSAIStrategicRoleInfo info;
 
-		public StrategicRole(StrategicRoleInfo info) { this.info = info; }
+		public RTSAIStrategicRole(RTSAIStrategicRoleInfo info) { this.info = info; }
 
 		public IReadOnlyCollection<string> Roles => info.Roles;
 		public IReadOnlyCollection<string> Counters => info.Counters;

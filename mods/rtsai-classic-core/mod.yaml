@@ -1,0 +1,377 @@
+Metadata:
+	Title: RTS AI Classic
+	Version: {DEV_VERSION}
+	Website: https://www.openra.net
+	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
+	WindowTitle: RTS AI — Classic
+
+Include: experiences.yaml
+
+SupportsMapsFrom: ra
+
+PackageFormats: Mix
+
+FileSystem: ContentInstallerFileSystem
+	SystemPackages:
+		^EngineDir
+		$rtsai-classic-core: ra
+		$rtsai: ra2
+		^EngineDir|mods/common: common
+		~^SupportDir|Content/ra/v2/: content
+		common|scripts
+		ra|scripts
+		ra|uibits
+	ContentPackages:
+		content|allies.mix
+		content|conquer.mix
+		content|interior.mix
+		content|lores.mix: lores
+		content|hires.mix
+		content|local.mix
+		content|russian.mix
+		content|snow.mix
+		content|sounds.mix
+		content|speech.mix
+		content|temperat.mix
+		content|expand
+		content|expand/expand2.mix
+		content|expand/lores1.mix
+		content|expand/hires1.mix
+		content|cnc/desert.mix
+		~content|movies
+		~content|scores.mix
+		~content|general.mix
+		# Below are mod-provided (system) packages that need to be loaded after the content packages so they can override content assets.
+		ra|bits
+		ra2|uibits
+		ra|bits/desert
+		ra|bits/environment
+	RequiredContentFiles:
+		content|expand/chrotnk1.aud
+		content|expand/fixit1.aud
+		content|expand/jburn1.aud
+		content|expand/jchrge1.aud
+		content|expand/jcrisp1.aud
+		content|expand/jdance1.aud
+		content|expand/jjuice1.aud
+		content|expand/jjump1.aud
+		content|expand/jlight1.aud
+		content|expand/jpower1.aud
+		content|expand/jshock1.aud
+		content|expand/jyes1.aud
+		content|expand/madchrg2.aud
+		content|expand/madexplo.aud
+		content|expand/mboss1.aud
+		content|expand/mhear1.aud
+		content|expand/mhotdig1.aud
+		content|expand/mhowdy1.aud
+		content|expand/mhuh1.aud
+		content|expand/mlaff1.aud
+		content|expand/mrise1.aud
+		content|expand/mwrench1.aud
+		content|expand/myeehaw1.aud
+		content|expand/myes1.aud
+	ContentInstallerMod: rtsai-classic-content
+
+MapFolders:
+	~^SupportDir|maps/rtsai-classic-core/{DEV_VERSION}: User
+	ra|maps: System
+	~^SupportDir|maps/ra/{DEV_VERSION}: User
+
+Rules:
+	ra|rules/misc.yaml
+	ra|experiences/components/faction-doctrine-contract.yaml
+	ra|experiences/components/minefield-generator.yaml
+	ra|experiences/components/point-defense-interception.yaml
+	ra|experiences/components/battlefield-salvage.yaml
+	ra|experiences/components/asset-import-audit-pipeline.yaml
+	ra|experiences/components/supply-logistics-economy.yaml
+	ra|experiences/components/building-garrisons.yaml
+	ra|experiences/components/carrier-and-drone-wing.yaml
+	ra|experiences/components/commander-promotions.yaml
+	ra|experiences/components/unit-composition-doctrine-ai.yaml
+	ra|experiences/components/targeted-unit-abilities.yaml
+	ra|experiences/components/campaign-objective-toolkit.yaml
+	ra|experiences/components/convoy-and-evacuation-mission-pattern.yaml
+	ra|experiences/components/status-and-thermal-system.yaml
+	ra|experiences/components/weather-and-battlefield-lighting.yaml
+	ra|experiences/components/teleport-network.yaml
+	ra|experiences/components/advanced-projectile-library.yaml
+	ra|experiences/components/air-attack-profiles.yaml
+	ra|experiences/components/naval-combat-archetypes.yaml
+	ra|experiences/components/ground-force-archetypes.yaml
+	ra|experiences/components/base-and-defense-archetypes.yaml
+	ra|experiences/components/capture-technology.yaml
+	ra|experiences/components/mind-control-and-disguise.yaml
+	ra|experiences/components/terrain-and-random-map-systems.yaml
+	ra|rules/ai.yaml
+	ra|rules/player.yaml
+	ra|rules/palettes.yaml
+	ra|rules/world.yaml
+	ra|rules/defaults.yaml
+	ra|rules/environment.yaml
+	ra|rules/vehicles.yaml
+	ra|rules/husks.yaml
+	ra|rules/structures.yaml
+	ra|rules/infantry.yaml
+	ra|rules/civilian.yaml
+	ra|rules/decoration.yaml
+	ra|rules/aircraft.yaml
+	ra|rules/ships.yaml
+	ra|rules/fakes.yaml
+	ra|rules/map-generators.yaml
+
+Sequences:
+	ra|sequences/ships.yaml
+	ra|sequences/vehicles.yaml
+	ra|sequences/structures.yaml
+	ra|sequences/infantry.yaml
+	ra|sequences/aircraft.yaml
+	ra|sequences/misc.yaml
+	ra|sequences/decorations.yaml
+
+TileSets:
+	ra|tilesets/snow.yaml
+	ra|tilesets/interior.yaml
+	ra|tilesets/temperat.yaml
+	ra|tilesets/desert.yaml
+
+Cursors:
+	ra|cursors.yaml
+
+Chrome:
+	ra2|desktop-theme.yaml
+	ra|desktop-shell-chrome.yaml
+	ra|chrome.yaml
+
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
+
+ChromeLayout:
+	ra2|chrome/earth-mission-studio.yaml
+	ra2|chrome/desktop-home.yaml
+	common|chrome/ingame.yaml
+	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-transients.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infobriefing.yaml
+	common|chrome/ingame-infoobjectives.yaml
+	common|chrome/ingame-infostats.yaml
+	common|chrome/ingame-info-lobby-options.yaml
+	common|chrome/ingame-menu.yaml
+	ra|chrome/ingame-observer.yaml
+	ra|chrome/ingame-player.yaml
+	common|chrome/ingame-perf.yaml
+	ra|chrome/ingame-debug.yaml
+	common|chrome/ingame-debug-hpf.yaml
+	common|chrome/ingame-debuginfo.yaml
+	common|chrome/ingame-infochat.yaml
+	ra2|chrome/rtsai-mainmenu.yaml
+	common|chrome/mainmenu-prompts.yaml
+	ra2|chrome/settings.yaml
+	ra2|chrome/settings-ai.yaml
+	ra2|chrome/settings-display.yaml
+	ra2|chrome/settings-audio.yaml
+	ra2|chrome/settings-input.yaml
+	ra2|chrome/settings-hotkeys.yaml
+	ra2|chrome/settings-gameplay.yaml
+	ra2|chrome/settings-advanced.yaml
+	ra|chrome/experience-composer.yaml
+	ra|chrome/experience-review.yaml
+	common|chrome/faction-catalog.yaml
+	common|chrome/credits.yaml
+	common|chrome/lobby.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-players.yaml
+	common|chrome/lobby-options.yaml
+	common|chrome/lobby-music.yaml
+	common|chrome/lobby-servers.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-browserpanels.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/connection.yaml
+	common|chrome/replaybrowser.yaml
+	common|chrome/gamesave-browser.yaml
+	common|chrome/load-game-browser.yaml
+	ra|chrome/gamesave-loading.yaml
+	ra2|chrome/dropdowns.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/tooltips.yaml
+	common|chrome/assetbrowser.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/editor.yaml
+	common|chrome/playerprofile.yaml
+	common|chrome/text-notifications.yaml
+
+FluentMessages:
+	ra2|languages/studio.ftl
+	ra2|modern-factions/loading-tips.ftl
+	ra|fluent/war-room.ftl
+	ra2|languages/desktop.ftl
+	ra|fluent/experience.ftl
+	ra2|languages/identity.ftl
+	ra2|languages/game-modes.ftl
+	ra2|languages/chrome/en.ftl
+	ra|fluent/hezbollah.ftl
+	ra|fluent/israel.ftl
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/ingame-debug.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	common|fluent/faction-catalog.ftl
+	ra|fluent/ra.ftl
+	ra|fluent/chrome.ftl
+	ra|fluent/hotkeys.ftl
+	ra|fluent/rules.ftl
+
+AllowUnusedFluentMessagesInExternalPackages: true
+
+Weapons:
+	ra|weapons/explosions.yaml
+	ra|weapons/ballistics.yaml
+	ra|weapons/missiles.yaml
+	ra|weapons/other.yaml
+	ra|weapons/smallcaliber.yaml
+	ra|weapons/superweapons.yaml
+	ra|experiences/weapons/point-defense-interception.yaml
+	ra|experiences/weapons/reusable-abilities.yaml
+
+Voices:
+	ra|audio/voices.yaml
+
+Notifications:
+	ra|audio/notifications.yaml
+
+Music:
+	ra|audio/music.yaml
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/editor.yaml
+	common|hotkeys/control-groups.yaml
+	ra|hotkeys.yaml
+
+LoadScreen: RTSAILoadScreen
+	Image: ra|uibits/loadscreen.png
+
+ServerTraits:
+	CompanionLobbyPolicy
+	LobbyCommands
+	SkirmishLogic
+	PlayerPinger
+	MasterServerPinger
+
+ChromeMetrics:
+	ra2|metrics.yaml
+	common|metrics.yaml
+	ra|metrics.yaml
+
+Fonts:
+	Hero:
+		Font: common|FreeSansBold.ttf
+		Size: 40
+		Ascender: 30
+	Tiny:
+		Font: common|FreeSansArabic.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansArabicBold.ttf
+		Size: 10
+		Ascender: 8
+	Small:
+		Font: common|FreeSansArabic.ttf
+		Size: 12
+		Ascender: 9
+	Regular:
+		Font: common|FreeSansArabic.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansArabicBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansArabicBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansArabicBold.ttf
+		Size: 24
+		Ascender: 18
+	Title:
+		Font: ra|ZoodRangmah.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 48
+		Ascender: 26
+
+Missions:
+	ra|missions.yaml
+
+MapGrid:
+	Type: Rectangular
+
+DefaultOrderGenerator: UnitOrderGenerator
+
+SupportsMapsFrom: ra
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpD2, ShpTD, TmpRA, TmpTD, ShpTS
+
+VideoFormats: Vqa, Wsa
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: ClassicTilesetSpecificSpriteSequence
+
+AssetBrowser:
+	SpriteExtensions: .shp, .tmp, .tem, .des, .sno, .int
+	AudioExtensions: .aud, .wav, .r00, .r01, .r02, .r03, .v00, .v01, .v02, .v03
+	VideoExtensions: .vqa, .wsa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: options-game-speed.slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: options-game-speed.slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: options-game-speed.normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: options-game-speed.fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: options-game-speed.faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: options-game-speed.fastest
+			Timestep: 20
+			OrderLatency: 6
+
+DiscordService:
+	ApplicationId: 699222659766026240
+
+RTSAIModePreferences:
+	Mod: rtsai-classic-core

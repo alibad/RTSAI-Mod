@@ -1,0 +1,386 @@
+﻿TurkeySeizeLink:
+	ReloadDelay: 90
+	Range: 6c0
+	TargetActorCenter: true
+	ValidTargets: MindControl
+	Report: beepy3.aud
+	Projectile: ArcLaserZap
+		UsePlayerColor: true
+		Width: 24
+		Duration: 20
+		TrackTarget: true
+		ZOffset: 1023
+	# A weapon with no warhead is never valid against anything, so the armament
+	# would never fire and MindController would never see the attack.
+	Warhead@1Dam: TargetDamage
+		Damage: 0
+
+TurkeyServiceRifle:
+	Inherits: M1Carbine
+	ReloadDelay: 30
+	Burst: 4
+	BurstDelays: 2
+	Range: 4c256
+	Report: turkey-rifle.wav
+	Projectile: Bullet
+		Speed: 2432
+		Inaccuracy: 72
+		Blockable: true
+		ContrailLength: 4
+		ContrailDelay: 0
+		ContrailStartWidth: 16
+		ContrailEndWidth: 3
+		ContrailStartColor: F05B4F
+		ContrailEndColor: 542522
+		ContrailStartColorAlpha: 215
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 480
+		Versus:
+			None: 110
+			Wood: 35
+			Light: 34
+			Heavy: 18
+			Concrete: 14
+
+TurkeyPortableAT:
+	Inherits: Dragon
+	ReloadDelay: 92
+	Range: 6c0
+	MinRange: 1c0
+	Report: turkey-at-launch.wav
+	Projectile: Missile
+		Speed: 360
+		HorizontalRateOfTurn: 18
+		RangeLimit: 8c0
+		Inaccuracy: 64
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 9800
+		Versus:
+			None: 20
+			Wood: 65
+			Light: 105
+			Heavy: 138
+			Concrete: 55
+	Warhead@3Eff: CreateEffect
+		Image: turkey_at_impact
+		Explosions: impact
+		ImpactSounds: turkey-at-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeyDesignator:
+	ReloadDelay: 70
+	Range: 9c0
+	TargetActorCenter: true
+	ValidTargets: GroundActor, WaterActor
+	Projectile: Bullet
+		Speed: 2048
+		Inaccuracy: 0
+		Blockable: false
+		ContrailLength: 5
+		ContrailDelay: 0
+		ContrailStartWidth: 24
+		ContrailEndWidth: 8
+		ContrailStartColor: 70FFB0
+		ContrailEndColor: 20A060
+		ContrailStartColorAlpha: 220
+		ContrailEndColorAlpha: 0
+	Warhead@DESIGNATE: GrantExternalCondition
+		Condition: turkey-designated
+		Duration: 180
+		Range: 0c256
+		ValidRelationships: Enemy, Neutral
+		ValidTargets: GroundActor, WaterActor
+	Warhead@EFFECT: CreateEffect
+		Image: turkey_designator
+		Explosions: pulse
+		ImpactSounds: turkey-designate.wav
+		ValidTargets: GroundActor, WaterActor
+
+TurkeyGreyWolfCarbine:
+	Inherits: M1Carbine
+	ReloadDelay: 18
+	Range: 5c0
+	Burst: 3
+	BurstDelays: 3
+	Report: turkey-greywolf-fire.wav
+	Projectile: Bullet
+		Speed: 2688
+		Inaccuracy: 36
+		Blockable: true
+		ContrailLength: 5
+		ContrailDelay: 0
+		ContrailStartWidth: 17
+		ContrailEndWidth: 3
+		ContrailStartColor: FF6655
+		ContrailEndColor: 321714
+		ContrailStartColorAlpha: 225
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 750
+		Versus:
+			None: 125
+			Wood: 45
+			Light: 50
+			Heavy: 22
+			Concrete: 18
+
+TurkeyBozkir120:
+	Inherits: ^Cannon
+	ReloadDelay: 76
+	Range: 6c256
+	Report: turkey-tank-fire.wav
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 1280
+		Image: 120MM
+		Shadow: true
+		ContrailLength: 9
+		ContrailDelay: 0
+		ContrailStartWidth: 56
+		ContrailEndWidth: 12
+		ContrailStartColorAlpha: 245
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 9000
+		Versus:
+			None: 30
+			Wood: 70
+			Light: 95
+			Heavy: 125
+			Concrete: 55
+	Warhead@3Eff: CreateEffect
+		Image: turkey_heavy_impact
+		Explosions: impact
+		ImpactSounds: turkey-heavy-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeyRemoteCannon:
+	Inherits: ChainGun.Yak
+	Burst: 4
+	BurstDelays: 2
+	ReloadDelay: 18
+	Range: 5c0
+	Report: turkey-autocannon.wav
+	ValidTargets: GroundActor, WaterActor, AirborneActor
+	Warhead@1Dam: SpreadDamage
+		Damage: 900
+		ValidTargets: GroundActor, WaterActor, AirborneActor
+		Versus:
+			None: 90
+			Wood: 38
+			Light: 75
+			Heavy: 20
+			Concrete: 15
+
+TurkeyYildirimHowitzer:
+	Inherits: 155mm
+	ReloadDelay: 130
+	Range: 11c0
+	MinRange: 3c0
+	Report: turkey-howitzer.wav
+	Projectile: Bullet
+		Speed: 220
+		Blockable: false
+		LaunchAngle: 112
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 8500
+		Falloff: 1000, 420, 150, 40, 0
+	Warhead@3Eff: CreateEffect
+		Image: turkey_artillery_impact
+		Explosions: impact
+		ImpactSounds: turkey-artillery-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeyGokkalkanAA:
+	Inherits: Nike
+	ReloadDelay: 36
+	Range: 8c512
+	Report: turkey-aa-launch.wav
+	Projectile: Missile
+		Speed: 426
+		HorizontalRateOfTurn: 120
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3900
+
+TurkeyGokkalkanGun:
+	Inherits: TurkeyRemoteCannon
+	Range: 5c512
+	ReloadDelay: 15
+
+TurkeyDroneDesignator:
+	Inherits: TurkeyDesignator
+	ReloadDelay: 45
+	Range: 10c0
+	Warhead@DESIGNATE: GrantExternalCondition
+		Condition: turkey-designated
+		Duration: 140
+		Range: 0c384
+		ValidRelationships: Enemy, Neutral
+		ValidTargets: GroundActor, WaterActor
+
+TurkeyDroneMissile:
+	Inherits: Maverick
+	ReloadDelay: 68
+	Range: 7c0
+	Report: turkey-drone-launch.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 6500
+		Versus:
+			None: 35
+			Wood: 85
+			Light: 112
+			Heavy: 98
+			Concrete: 70
+	Warhead@3Eff: CreateEffect
+		Image: turkey_air_impact
+		Explosions: impact
+		ImpactSounds: turkey-air-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeyRotorCannon:
+	Inherits: ChainGun.Yak
+	Burst: 3
+	BurstDelays: 2
+	ReloadDelay: 12
+	Range: 5c0
+	MinRange: 0c512
+	Report: turkey-rotor-cannon.wav
+	ValidTargets: GroundActor, WaterActor
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 1300
+		ValidTargets: GroundActor, WaterActor
+		Versus:
+			None: 115
+			Wood: 55
+			Light: 85
+			Heavy: 22
+			Concrete: 20
+	Warhead@2Eff: CreateEffect
+		Image: turkey_air_impact
+		Explosions: impact
+		ImpactActors: false
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeyRotorMissile:
+	Inherits: HellfireAG
+	ReloadDelay: 52
+	Range: 6c0
+	MinRange: 1c256
+	Burst: 2
+	BurstDelays: 8
+	Report: turkey-rotor-launch.wav
+	Projectile: Missile
+		Speed: 300
+		HorizontalRateOfTurn: 46
+		RangeLimit: 9c0
+		Inaccuracy: 160
+	Warhead@1Dam: SpreadDamage
+		Damage: 5000
+		Versus:
+			None: 24
+			Wood: 82
+			Light: 100
+			Heavy: 92
+			Concrete: 72
+	Warhead@3Eff: CreateEffect
+		Image: turkey_air_impact
+		Explosions: impact
+		ImpactSounds: turkey-air-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeySahinAAM:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 44
+	Range: 9c0
+	MinRange: 2c0
+	Report: turkey-fighter-missile.wav
+	Projectile: Missile
+		Speed: 512
+		HorizontalRateOfTurn: 120
+		RangeLimit: 13c0
+		Inaccuracy: 64
+		CloseEnough: 0c512
+	Warhead@1Dam: SpreadDamage
+		Damage: 4400
+		Versus:
+			Light: 110
+	Warhead@3Eff: CreateEffect
+		Image: turkey_air_impact
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+TurkeySahinCannon:
+	Inherits: ChainGun.Yak
+	Burst: 4
+	BurstDelays: 1
+	ReloadDelay: 10
+	Range: 4c512
+	MinRange: 1c512
+	Report: turkey-fighter-cannon.wav
+	ValidTargets: GroundActor, AirborneActor, WaterActor
+	Warhead@1Dam: SpreadDamage
+		Damage: 1000
+		ValidTargets: GroundActor, AirborneActor, WaterActor
+		Versus:
+			None: 80
+			Wood: 35
+			Light: 75
+			Heavy: 16
+			Concrete: 12
+	Warhead@2Eff: CreateEffect
+		Image: turkey_air_impact
+		Explosions: impact
+		ImpactActors: false
+		ValidTargets: Ground, Air, GroundActor, AirborneActor, WaterActor, Trees
+
+TurkeyNavalGun:
+	Inherits: 8Inch
+	ReloadDelay: 90
+	Range: 9c0
+	Report: turkey-naval-gun.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 7200
+	Warhead@3Eff: CreateEffect
+		Image: turkey_naval_impact
+		Explosions: impact
+		ImpactSounds: turkey-naval-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+TurkeyNavalSAM:
+	Inherits: StingerAA
+	ReloadDelay: 42
+	Range: 9c0
+	Report: turkey-naval-missile.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 3900
+
+TurkeyCorvetteMissile:
+	Inherits: Stinger
+	ReloadDelay: 66
+	Range: 8c0
+	Report: turkey-naval-missile.wav
+	Projectile: Missile
+		Speed: 360
+		HorizontalRateOfTurn: 38
+		RangeLimit: 11c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 5600
+		Versus:
+			None: 35
+			Wood: 72
+			Light: 100
+			Heavy: 94
+			Concrete: 55
+
+TurkeyUSVAutocannon:
+	Inherits: TurkeyRemoteCannon
+	ReloadDelay: 14
+	Range: 5c512
+	Report: turkey-usv-gun.wav

@@ -58,7 +58,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		{
 			return unitsToBuild.Keys.Concat(actors.Where(actor => !actor.Name.StartsWith('^') &&
 				actor.TraitInfoOrDefault<BuildableInfo>() is { } buildable && buildable.Queue.Any(unitQueues.Contains) &&
-				actor.TraitInfos<StrategicRoleInfo>().Any(role => role.Roles.Any(id =>
+				actor.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>().Any(role => role.Roles.Any(id =>
 					roleShares.TryGetValue(id, out var share) && share > 0))).Select(actor => actor.Name)).Distinct().ToArray();
 		}
 
@@ -198,7 +198,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 			bot.QueueOrder(Order.StartProduction(queue.Actor, unit.Name, 1));
 			DoctrineLog.Write(player, $"unit {queue.Info.Type} {unit.Name} " +
-				$"[{DoctrineLog.Describe(unit.TraitInfos<StrategicRoleInfo>().SelectMany(r => r.Roles))}]");
+				$"[{DoctrineLog.Describe(unit.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>().SelectMany(r => r.Roles))}]");
 		}
 
 		// In cases where we want to build a specific unit but don't know the queue name (because there's more than one possibility)
@@ -249,7 +249,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 					enemyAir += CostOf(actor.Info);
 			}
 
-			var ownAirDefense = unitsToBuild.Actors.Where(a => !a.IsDead && a.Info.TraitInfos<StrategicRoleInfo>()
+			var ownAirDefense = unitsToBuild.Actors.Where(a => !a.IsDead && a.Info.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>()
 				.Any(r => r.Roles.Contains(doctrine.AirDefenseRole))).Sum(a => CostOf(a.Info));
 			var alert = enemyAir > 0 && (long)ownAirDefense * 100 < (long)enemyAir * doctrine.AirDefenseRatio;
 			if (alert == airAlert)
@@ -304,7 +304,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			// Limits, delays and rearm requirements have already removed candidates
 			// we cannot recruit. Normalize only the roles still available in this
 			// queue, deduplicating roles shared by several alternative actors.
-			var availableRoles = buildableThings.SelectMany(a => a.TraitInfos<StrategicRoleInfo>())
+			var availableRoles = buildableThings.SelectMany(a => a.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>())
 				.SelectMany(role => role.Roles).Distinct()
 				.Where(role => roleShares.TryGetValue(role, out var share) && share > 0)
 				.ToDictionary(role => role, role => roleShares[role]);
@@ -317,7 +317,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 			// Keep explicitly tracked transformed actors without Buildable metadata.
 			var taggedUnits = allUnits.Where(a => (productionQueue == null ||
 				!a.HasTraitInfo<BuildableInfo>() || a.TraitInfo<BuildableInfo>().Queue.Contains(productionQueue)) &&
-				a.TraitInfos<StrategicRoleInfo>()
+				a.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>()
 				.Any(role => role.Roles.Any(availableRoles.ContainsKey))).ToArray();
 			var totalShare = availableRoles.Values.Sum(share => (long)share);
 			var desiredError = long.MaxValue;
@@ -325,12 +325,12 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 			foreach (var unit in buildableThings)
 			{
-				foreach (var role in unit.TraitInfos<StrategicRoleInfo>().SelectMany(roleInfo => roleInfo.Roles).Distinct())
+				foreach (var role in unit.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>().SelectMany(roleInfo => roleInfo.Roles).Distinct())
 				{
 					if (!availableRoles.TryGetValue(role, out var share))
 						continue;
 
-					var roleCount = taggedUnits.Count(a => a.TraitInfos<StrategicRoleInfo>()
+					var roleCount = taggedUnits.Count(a => a.TraitInfos<OpenRA.Mods.Common.Traits.StrategicRoleInfo>()
 						.Any(roleInfo => roleInfo.Roles.Contains(role)));
 
 					// Cross-multiply normalized shares: no floating point or percentage

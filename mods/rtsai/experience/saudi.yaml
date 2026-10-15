@@ -1,0 +1,4 @@
+World:
+	Faction@saudi:
+		Selectable: true
+		RandomFactionMemberOf: random, random-allies

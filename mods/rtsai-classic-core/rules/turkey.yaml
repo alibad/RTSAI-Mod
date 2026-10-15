@@ -1,0 +1,1246 @@
+# Turkey: mobile combined arms, drones, electronic warfare, layered air
+# defense, amphibious mobility, and sea control. All names and platforms are
+# fictionalized for this RTS setting. Research and design provenance lives in
+# docs/turkey-faction-research.md.
+
+^BaseWorld:
+	Locomotor@AMPHIBIOUS:
+		Name: amphibious
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 55
+			Road: 105
+			Bridge: 100
+			Ore: 75
+			Gems: 75
+			Beach: 90
+			Water: 80
+
+^ExistsInWorld:
+	ExternalCondition@TURKEYDESIGNATED:
+		Condition: turkey-designated
+	DamageMultiplier@TURKEYDESIGNATED:
+		Modifier: 125
+		RequiresCondition: turkey-designated
+	WithDecoration@TURKEYDESIGNATED:
+		Image: turkey_designator
+		Sequence: marker
+		Palette: effect
+		Position: TopRight
+		Margin: 4, 4
+		ValidRelationships: Ally, Enemy, Neutral
+		RequiresCondition: turkey-designated
+
+World:
+	StartingUnits@mcvonlyturkey:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: turkey
+		BaseActor: mcv
+	StartingUnits@lightturkey:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: turkey
+		BaseActor: mcv
+		SupportActors: trrifle,trrifle,trrifle,trat,trdroneop,aras8,gokkalkan
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavyturkey:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: turkey
+		BaseActor: mcv
+		SupportActors: trrifle,trrifle,trrifle,trat,trdroneop,aras8,bozkir,bozkir,denizkaplan
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+FACT:
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, turkey
+		Prerequisite: structures.allies
+	ProvidesPrerequisite@turkey:
+		Factions: turkey
+		Prerequisite: structures.turkey
+
+TENT:
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, turkey
+		Prerequisite: infantry.allies
+	ProvidesPrerequisite@turkey:
+		Factions: turkey
+		Prerequisite: infantry.turkey
+
+WEAP:
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, turkey
+		Prerequisite: vehicles.allies
+	ProvidesPrerequisite@turkey:
+		Factions: turkey
+		Prerequisite: vehicles.turkey
+
+HPAD:
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, turkey
+		Prerequisite: aircraft.allies
+	ProvidesPrerequisite@turkey:
+		Factions: turkey
+		Prerequisite: aircraft.turkey
+
+SYRD:
+	ProvidesPrerequisite@allies:
+		Factions: allies, england, france, germany, turkey
+		Prerequisite: ships.allies
+	ProvidesPrerequisite@turkey:
+		Factions: turkey
+		Prerequisite: ships.turkey
+
+TRRIFLE:
+	Inherits: E1
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~tent, ~infantry.turkey, ~techlevel.infonly
+		Description: actor-trrifle.description
+	Valued:
+		Cost: 140
+	Tooltip:
+		Name: actor-trrifle.name
+	Health:
+		HP: 6200
+	Armament@PRIMARY:
+		Weapon: TurkeyServiceRifle
+	Armament@GARRISONED:
+		Weapon: TurkeyServiceRifle
+	ExternalCondition@MECHANIZED:
+		Condition: turkey-mechanized
+	ExternalCondition@COMMAND:
+		Condition: turkey-command
+	FirepowerMultiplier@MECHANIZED:
+		Modifier: 120
+		RequiresCondition: turkey-mechanized
+	DamageMultiplier@MECHANIZED:
+		Modifier: 80
+		RequiresCondition: turkey-mechanized
+	SpeedMultiplier@MECHANIZED:
+		Modifier: 112
+		RequiresCondition: turkey-mechanized
+	SpeedMultiplier@COMMAND:
+		Modifier: 115
+		RequiresCondition: turkey-command
+	ReloadDelayMultiplier@COMMAND:
+		Modifier: 90
+		RequiresCondition: turkey-command
+	Voiced:
+		VoiceSet: TurkeyInfantryVoice
+	RenderSprites:
+		Image: trrifle
+
+TRAT:
+	Inherits: E3
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 25
+		Prerequisites: dome, ~tent, ~infantry.turkey, ~techlevel.medium
+		Description: actor-trat.description
+	Valued:
+		Cost: 425
+	Tooltip:
+		Name: actor-trat.name
+	Health:
+		HP: 5200
+	Mobile:
+		Speed: 58
+	Armament@PRIMARY:
+		Weapon: TurkeyPortableAT
+	Armament@GARRISONED:
+		Weapon: TurkeyPortableAT
+	Cloak:
+		InitialDelay: 100
+		CloakDelay: 90
+		UncloakOn: Attack, Move, Damage
+		DetectionTypes: Cloak
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	ExternalCondition@COMMAND:
+		Condition: turkey-command
+	SpeedMultiplier@COMMAND:
+		Modifier: 115
+		RequiresCondition: turkey-command
+	ReloadDelayMultiplier@COMMAND:
+		Modifier: 90
+		RequiresCondition: turkey-command
+	Voiced:
+		VoiceSet: TurkeyInfantryVoice
+	RenderSprites:
+		Image: trat
+
+TRDRONEOP:
+	Inherits: E1
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 40
+		Prerequisites: dome, ~tent, ~infantry.turkey, ~techlevel.medium
+		Description: actor-trdroneop.description
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: actor-trdroneop.name
+	Health:
+		HP: 4800
+	Mobile:
+		Speed: 52
+	RevealsShroud:
+		MinRange: 5c0
+		Range: 10c0
+	Armament@PRIMARY:
+		Weapon: TurkeyDesignator
+	Armament@GARRISONED:
+		Weapon: TurkeyDesignator
+	DetectCloaked:
+		DetectionTypes: Cloak
+		Range: 5c0
+	RenderDetectionCircle:
+	ExternalCondition@COMMAND:
+		Condition: turkey-command
+	SpeedMultiplier@COMMAND:
+		Modifier: 115
+		RequiresCondition: turkey-command
+	ReloadDelayMultiplier@COMMAND:
+		Modifier: 90
+		RequiresCondition: turkey-command
+	Voiced:
+		VoiceSet: TurkeyInfantryVoice
+	RenderSprites:
+		Image: trdroneop
+
+GREYWOLF:
+	Inherits: E1
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 120
+		Prerequisites: atek, ~tent, ~infantry.turkey, ~techlevel.high
+		BuildLimit: 1
+		Description: actor-greywolf.description
+	Valued:
+		Cost: 1900
+	Tooltip:
+		Name: actor-greywolf.name
+	Health:
+		HP: 10500
+	Mobile:
+		Speed: 66
+	RevealsShroud:
+		Range: 8c0
+	Armament@PRIMARY:
+		Weapon: TurkeyGreyWolfCarbine
+	Armament@GARRISONED:
+		Weapon: TurkeyGreyWolfCarbine
+	Cloak:
+		InitialDelay: 150
+		CloakDelay: 100
+		UncloakOn: Attack, Move, Damage
+		DetectionTypes: Cloak
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Medium, Heavy, Critical
+	ProximityExternalCondition@COMMAND:
+		Range: 5c0
+		ValidRelationships: Ally
+		Condition: turkey-command
+		AffectsParent: True
+	ExternalCondition@COMMAND:
+		Condition: turkey-command
+	SpeedMultiplier@COMMAND:
+		Modifier: 115
+		RequiresCondition: turkey-command
+	ReloadDelayMultiplier@COMMAND:
+		Modifier: 90
+		RequiresCondition: turkey-command
+	DetectCloaked:
+		DetectionTypes: Cloak
+		Range: 4c0
+	Voiced:
+		VoiceSet: GreyWolfVoice
+	RenderSprites:
+		Image: greywolf
+
+BOZKIR:
+	Inherits: 2TNK
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 220
+		Prerequisites: fix, ~vehicles.turkey, ~techlevel.medium
+		Description: actor-bozkir.description
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: actor-bozkir.name
+	Health:
+		HP: 57000
+	Mobile:
+		Speed: 78
+	Armament:
+		Weapon: TurkeyBozkir120
+		Recoil: 192
+		RecoilRecovery: 34
+		LocalOffset: 960,0,128
+		MuzzleSequence: muzzle
+	SpawnActorOnDeath:
+		Actor: BOZKIR.Husk
+	Voiced:
+		VoiceSet: TurkeyVehicleVoice
+	RenderSprites:
+		Image: bozkir
+
+ARAS8:
+	Inherits: APC
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 110
+		Prerequisites: ~vehicles.turkey, ~techlevel.low
+		Description: actor-aras8.description
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: actor-aras8.name
+	Health:
+		HP: 37000
+	Mobile:
+		Locomotor: wheeled
+		Speed: 132
+		PauseOnCondition: notmobile || being-captured
+	-Armament:
+	-AttackFrontal:
+	Armament@PRIMARY:
+		Weapon: TurkeyRemoteCannon
+		LocalOffset: 520,0,220
+		MuzzleSequence: muzzle
+	Turreted:
+		Offset: 80,0,180
+		TurnSpeed: 40
+	AttackTurreted:
+	WithSpriteTurret:
+	ProximityExternalCondition@MECHANIZED:
+		Range: 4c0
+		ValidRelationships: Ally
+		Condition: turkey-mechanized
+	Cargo:
+		Types: Infantry
+		MaxWeight: 6
+		LoadingCondition: notmobile
+	SpawnActorOnDeath:
+		Actor: ARAS8.Husk
+	Voiced:
+		VoiceSet: TurkeyVehicleVoice
+	RenderSprites:
+		Image: aras8
+
+YILDIRIM:
+	Inherits: ARTY
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 245
+		Prerequisites: dome, ~vehicles.turkey, ~techlevel.medium
+		Description: actor-yildirim.description
+	Valued:
+		Cost: 1150
+	Tooltip:
+		Name: actor-yildirim.name
+	Health:
+		HP: 19000
+	Mobile:
+		Locomotor: wheeled
+		TurnSpeed: 18
+		Speed: 88
+	-Armament:
+	-AttackFrontal:
+	Armament@PRIMARY:
+		Weapon: TurkeyYildirimHowitzer
+		LocalOffset: 790,0,250
+		MuzzleSequence: muzzle
+	Turreted:
+		Offset: -180,0,180
+		TurnSpeed: 12
+	AttackTurreted:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: YILDIRIM.Husk
+	Voiced:
+		VoiceSet: TurkeyVehicleVoice
+	RenderSprites:
+		Image: yildirim
+
+GOKKALKAN:
+	Inherits: FTRK
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 150
+		Prerequisites: dome, ~vehicles.turkey, ~techlevel.medium
+		Description: actor-gokkalkan.description
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-gokkalkan.name
+	Health:
+		HP: 27000
+	Mobile:
+		Speed: 104
+	Armament@AA:
+		Weapon: TurkeyGokkalkanAA
+		LocalOffset: 560,0,250
+	Armament@AG:
+		Weapon: TurkeyGokkalkanGun
+		LocalOffset: 560,0,250
+	DetectCloaked:
+		DetectionTypes: Cloak
+		Range: 7c0
+	SpawnActorOnDeath:
+		Actor: GOKKALKAN.Husk
+	Voiced:
+		VoiceSet: TurkeyVehicleVoice
+	RenderSprites:
+		Image: gokkalkan
+
+SANCAK:
+	Inherits: MRJ
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 320
+		Prerequisites: atek, ~vehicles.turkey, ~techlevel.high
+		Description: actor-sancak.description
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: actor-sancak.name
+	Health:
+		HP: 25000
+	Mobile:
+		Speed: 82
+	ProximityExternalCondition@JAMMER:
+		Range: 14c0
+		ValidRelationships: Enemy, Neutral
+		Condition: jammed
+	JamsMissiles:
+		Range: 7c0
+		DeflectionRelationships: Neutral, Enemy
+	-WithIdleOverlay@SPINNER:
+	Turreted:
+		Offset: 0,0,180
+		TurnSpeed: 12
+	Armament@DESIGNATOR:
+		Weapon: TurkeyDesignator
+		LocalOffset: 480,0,160
+	AttackTurreted:
+	WithSpriteTurret:
+	SpawnActorOnDeath:
+		Actor: SANCAK.Husk
+	Voiced:
+		VoiceSet: TurkeyVehicleVoice
+	RenderSprites:
+		Image: sancak
+
+DENIZKAPLAN:
+	Inherits: ^Vehicle
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@CARGOPIPS: ^CargoPips
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 135
+		Prerequisites: dome, ~vehicles.turkey, ~techlevel.medium
+		Description: actor-denizkaplan.description
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-denizkaplan.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 39000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: amphibious
+		Speed: 96
+		TurnSpeed: 24
+		PauseOnCondition: notmobile || being-captured
+	RevealsShroud:
+		Range: 6c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 6
+		LoadingCondition: notmobile
+	Turreted:
+		Offset: 170,0,190
+		TurnSpeed: 32
+	Armament@PRIMARY:
+		Weapon: TurkeyRemoteCannon
+		LocalOffset: 520,0,220
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	ProximityExternalCondition@MECHANIZED:
+		Range: 4c0
+		ValidRelationships: Ally
+		Condition: turkey-mechanized
+	SpawnActorOnDeath:
+		Actor: DENIZKAPLAN.Husk
+	Voiced:
+		VoiceSet: TurkeyVehicleVoice
+	RenderSprites:
+		Image: denizkaplan
+
+KUZGUNM:
+	Inherits: MIG
+	-Armament:
+	-AmmoPool:
+	ReloadAmmoPool@ROADMAPRESUPPLY:
+		AmmoPool: aam
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 20
+		Prerequisites: dome, ~hpad, ~aircraft.turkey, ~techlevel.medium
+		Description: actor-kuzgunm.description
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: actor-kuzgunm.name
+	Health:
+		HP: 5500
+	Aircraft:
+		CruiseAltitude: 1900
+		TurnSpeed: 14
+		Speed: 164
+		RepulsionSpeed: 26
+		MaximumPitch: 64
+	Armament@AAM:
+		Name: aam
+		Weapon: TurkeyDroneDesignator
+		LocalOffset: 180,0,-32
+		PauseOnCondition: !aam-ammo
+	Armament@CANNON:
+		Name: cannon
+		Weapon: TurkeyDroneMissile
+		LocalOffset: 0,-280,-32, 0,280,-32
+		PauseOnCondition: !gun-ammo
+	AmmoPool@AAM:
+		Name: aam
+		Armaments: aam
+		Ammo: 6
+		ReloadDelay: 16
+		AmmoCondition: aam-ammo
+	AmmoPool@GUN:
+		Name: gun
+		Armaments: cannon
+		Ammo: 2
+		ReloadDelay: 60
+		AmmoCondition: gun-ammo
+	RevealsShroud:
+		MinRange: 8c0
+		Range: 13c0
+	SpawnActorOnDeath:
+		Actor: KUZGUNM.Husk
+	Voiced:
+		VoiceSet: TurkeyAirVoice
+	RenderSprites:
+		Image: kuzgunm
+
+TURNAAH:
+	Inherits: HIND
+	-Armament:
+	-AmmoPool:
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 35
+		Prerequisites: ~hpad, atek, ~aircraft.turkey, ~techlevel.high
+		Description: actor-turnaah.description
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: actor-turnaah.name
+	Health:
+		HP: 15000
+	Aircraft:
+		TurnSpeed: 22
+		Speed: 138
+	Armament@CANNON:
+		Weapon: TurkeyRotorCannon
+		LocalOffset: 384,0,-128
+		MuzzleSequence: air-muzzle
+		PauseOnCondition: !cannon-ammo
+	Armament@ROCKETS:
+		Weapon: TurkeyRotorMissile
+		LocalOffset: 0,-512,-64, 0,512,-64
+		PauseOnCondition: !rocket-ammo
+	AmmoPool@CANNON:
+		Name: cannon
+		Armaments: cannon
+		Ammo: 24
+		ReloadDelay: 4
+		AmmoCondition: cannon-ammo
+	AmmoPool@ROCKETS:
+		Name: rockets
+		Armaments: rockets
+		Ammo: 6
+		ReloadDelay: 18
+		AmmoCondition: rocket-ammo
+	SpawnActorOnDeath:
+		Actor: TURNAAH.Husk
+	Voiced:
+		VoiceSet: TurkeyAirVoice
+	RenderSprites:
+		Image: turnaah
+
+SAHINX:
+	Inherits: MIG
+	-Armament:
+	-AmmoPool:
+	ReloadAmmoPool@ROADMAPRESUPPLY:
+		AmmoPool: aam
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 50
+		Prerequisites: ~hpad, atek, ~aircraft.turkey, ~techlevel.high
+		Description: actor-sahinx.description
+	Valued:
+		Cost: 2300
+	Tooltip:
+		Name: actor-sahinx.name
+	Health:
+		HP: 9800
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 250
+	Armament@AAM:
+		Name: aam
+		Weapon: TurkeySahinAAM
+		LocalOffset: 0,-640,-64, 0,640,-64
+		LocalYaw: -32, 32
+		PauseOnCondition: !aam-ammo
+	Armament@CANNON:
+		Name: cannon
+		Weapon: TurkeySahinCannon
+		LocalOffset: 384,128,-64
+		MuzzleSequence: air-muzzle
+		PauseOnCondition: !gun-ammo
+	AmmoPool@AAM:
+		Name: aam
+		Armaments: aam
+		Ammo: 4
+		ReloadDelay: 28
+		AmmoCondition: aam-ammo
+	AmmoPool@GUN:
+		Name: gun
+		Armaments: cannon
+		Ammo: 12
+		ReloadDelay: 5
+		AmmoCondition: gun-ammo
+	SpawnActorOnDeath:
+		Actor: SAHINX.Husk
+	Voiced:
+		VoiceSet: TurkeyAirVoice
+	RenderSprites:
+		Image: sahinx
+
+MARMARA:
+	Inherits: DD
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 45
+		Prerequisites: ~syrd, atek, ~ships.turkey, ~techlevel.high
+		Description: actor-marmara.description
+	Valued:
+		Cost: 2200
+	Tooltip:
+		Name: actor-marmara.name
+	Health:
+		HP: 68000
+	Mobile:
+		Speed: 72
+		TurnSpeed: 18
+	Armament@PRIMARY:
+		Weapon: TurkeyNavalGun
+	Armament@SECONDARY:
+		Weapon: DepthCharge
+	Armament@TERTIARY:
+		Weapon: TurkeyNavalSAM
+	LeavesTrails@WAKE:
+		Offsets: -850,0,0
+		Image: turkey_wake
+		Sequences: wake
+		MovingInterval: 3
+		SpawnAtLastPosition: True
+		Type: CenterPosition
+	SpawnActorOnDeath:
+		Actor: MARMARA.Sink
+	Voiced:
+		VoiceSet: TurkeyNavalVoice
+	RenderSprites:
+		Image: marmara
+
+EGE:
+	Inherits: PT
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 25
+		Prerequisites: dome, ~syrd, ~ships.turkey, ~techlevel.medium
+		Description: actor-ege.description
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-ege.name
+	Health:
+		HP: 33000
+	Mobile:
+		Speed: 104
+		TurnSpeed: 28
+	-Armament@PRIMARY:
+	Armament@PRIMARY:
+		Weapon: TurkeyCorvetteMissile
+		LocalOffset: 340,0,180
+		MuzzleSequence: muzzle
+	Turreted:
+		Offset: 280,0,160
+		TurnSpeed: 32
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	LeavesTrails@WAKE:
+		Offsets: -650,0,0
+		Image: turkey_wake
+		Sequences: wake
+		MovingInterval: 2
+		SpawnAtLastPosition: True
+		Type: CenterPosition
+	SpawnActorOnDeath:
+		Actor: EGE.Sink
+	Voiced:
+		VoiceSet: TurkeyNavalVoice
+	RenderSprites:
+		Image: ege
+
+POYRAZ:
+	Inherits: PT
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Boat
+		BuildPaletteOrder: 12
+		Prerequisites: ~syrd, ~ships.turkey, ~techlevel.low
+		Description: actor-poyraz.description
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: actor-poyraz.name
+	Health:
+		HP: 12500
+	Mobile:
+		Speed: 145
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 9c0
+	-Armament@PRIMARY:
+	Armament@PRIMARY:
+		Weapon: TurkeyUSVAutocannon
+		LocalOffset: 250,0,90
+		MuzzleSequence: muzzle
+	Turreted:
+		Offset: 40,0,110
+		TurnSpeed: 48
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		DetectionTypes: Underwater, Cloak
+		Range: 5c0
+	RenderDetectionCircle:
+	LeavesTrails@WAKE:
+		Offsets: -420,0,0
+		Image: turkey_wake
+		Sequences: wake
+		MovingInterval: 2
+		SpawnAtLastPosition: True
+		Type: CenterPosition
+	SpawnActorOnDeath:
+		Actor: POYRAZ.Sink
+	Voiced:
+		VoiceSet: TurkeyNavalVoice
+	RenderSprites:
+		Image: poyraz
+
+BOZKIR.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: actor-bozkir-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: bozkir
+	InfiltrateForTransform:
+		IntoActor: bozkir
+	RenderSprites:
+		Image: bozkir.destroyed
+
+ARAS8.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-aras8-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: aras8
+	InfiltrateForTransform:
+		IntoActor: aras8
+	RenderSprites:
+		Image: aras8.destroyed
+
+YILDIRIM.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-yildirim-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: yildirim
+	InfiltrateForTransform:
+		IntoActor: yildirim
+	RenderSprites:
+		Image: yildirim.destroyed
+
+GOKKALKAN.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-gokkalkan-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: gokkalkan
+	InfiltrateForTransform:
+		IntoActor: gokkalkan
+	RenderSprites:
+		Image: gokkalkan.destroyed
+
+SANCAK.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-sancak-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: sancak
+	InfiltrateForTransform:
+		IntoActor: sancak
+	RenderSprites:
+		Image: sancak.destroyed
+
+DENIZKAPLAN.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: amphibious
+	Tooltip:
+		Name: actor-denizkaplan-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: denizkaplan
+	InfiltrateForTransform:
+		IntoActor: denizkaplan
+	RenderSprites:
+		Image: denizkaplan.destroyed
+
+KUZGUNM.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-kuzgunm-husk-name
+	RenderSprites:
+		Image: kuzgunm.destroyed
+
+TURNAAH.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: actor-turnaah-husk-name
+	WithIdleOverlay:
+		Sequence: rotor
+	RenderSprites:
+		Image: turnaah.destroyed
+
+SAHINX.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-sahinx-husk-name
+	RenderSprites:
+		Image: sahinx.destroyed
+
+MARMARA.Sink:
+	Inherits: ^SpriteActor
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	WithFacingSpriteBody:
+		Sequence: sink
+	QuantizeFacingsFromSequence:
+		Sequence: sink
+	KillsSelf:
+		Delay: 150
+		RemoveInstead: True
+	RenderSprites:
+		Image: marmara.destroyed
+
+EGE.Sink:
+	Inherits: ^SpriteActor
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	WithFacingSpriteBody:
+		Sequence: sink
+	QuantizeFacingsFromSequence:
+		Sequence: sink
+	KillsSelf:
+		Delay: 120
+		RemoveInstead: True
+	RenderSprites:
+		Image: ege.destroyed
+
+POYRAZ.Sink:
+	Inherits: ^SpriteActor
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	WithFacingSpriteBody:
+		Sequence: sink
+	QuantizeFacingsFromSequence:
+		Sequence: sink
+	KillsSelf:
+		Delay: 80
+		RemoveInstead: True
+	RenderSprites:
+		Image: poyraz.destroyed
+
+# Turkey keeps native support, economy, repair, engineer, medic, mechanic, and
+# construction contracts, but replaces the legacy Allied combat roster.
+E1:
+	Buildable:
+		Prerequisites: ~barracks, ~!infantry.turkey, ~techlevel.infonly
+E3:
+	Buildable:
+		Prerequisites: ~barracks, ~!infantry.turkey, ~techlevel.infonly
+E7:
+	Buildable:
+		Prerequisites: ~tent, atek, ~!infantry.turkey, ~techlevel.high
+SPY:
+	Buildable:
+		Prerequisites: ~!infantry.england, dome, ~tent, ~!infantry.turkey, ~techlevel.medium
+1TNK:
+	Buildable:
+		Prerequisites: ~vehicles.allies, ~!vehicles.turkey, ~techlevel.low
+2TNK:
+	Buildable:
+		Prerequisites: fix, ~vehicles.allies, ~!vehicles.turkey, ~techlevel.medium
+ARTY:
+	Buildable:
+		Prerequisites: dome, ~vehicles.allies, ~!vehicles.turkey, ~techlevel.medium
+JEEP:
+	Buildable:
+		Prerequisites: ~vehicles.allies, ~!vehicles.turkey, ~techlevel.low
+MRJ:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies, ~!vehicles.turkey, ~techlevel.high
+HELI:
+	Buildable:
+		Prerequisites: ~hpad, atek, ~!aircraft.turkey, ~techlevel.high
+TRAN:
+	Buildable:
+		Prerequisites: ~hpad, ~!aircraft.turkey, ~techlevel.medium
+DD:
+	Buildable:
+		Prerequisites: ~syrd, dome, ~!ships.turkey, ~techlevel.medium
+CA:
+	Buildable:
+		Prerequisites: ~syrd, atek, ~!ships.turkey, ~techlevel.high
+PT:
+	Buildable:
+		Prerequisites: ~syrd, ~!ships.turkey, ~techlevel.low
+LST:
+	Buildable:
+		Prerequisites: ~!ships.turkey, ~techlevel.low
+
+Player:
+	BaseBuilderBotModule@beginner:
+		AdditionalTechTypes:
+			turkey: dome, atek, fix, hpad
+		AdditionalProductionTypes:
+			turkey: barr,tent,weap,hpad
+		AdditionalNavalProductionTypes:
+			turkey: syrd
+		BuildingLimits:
+			weap: 1
+			hpad: 1
+			syrd: 1
+			atek: 1
+			fix: 1
+		BuildingFractions:
+			weap: 1
+			hpad: 1
+			syrd: 1
+			atek: 1
+			fix: 1
+	BaseBuilderBotModule@easy:
+		AdditionalTechTypes:
+			turkey: dome, atek, fix, hpad
+		AdditionalProductionTypes:
+			turkey: barr,tent,weap,hpad
+		AdditionalNavalProductionTypes:
+			turkey: syrd
+		BuildingLimits:
+			hpad: 2
+			syrd: 1
+			atek: 1
+		BuildingFractions:
+			hpad: 1
+			syrd: 1
+			atek: 1
+	BaseBuilderBotModule@normal:
+		AdditionalTechTypes:
+			turkey: dome, atek, stek, fix, afld, hpad
+		AdditionalProductionTypes:
+			turkey: barr,tent,weap,afld,hpad
+	BaseBuilderBotModule@turtle:
+		AdditionalTechTypes:
+			turkey: dome, atek, stek, fix, afld, hpad
+		AdditionalProductionTypes:
+			turkey: barr,tent,weap,afld,hpad
+	UnitBuilderBotModule@beginner:
+		UnitsToBuild:
+			trrifle: 80
+			trat: 20
+			trdroneop: 10
+			aras8: 35
+			bozkir: 12
+			yildirim: 8
+			gokkalkan: 16
+			sancak: 5
+			denizkaplan: 14
+			kuzgunm: 12
+			turnaah: 7
+			sahinx: 6
+			marmara: 5
+			ege: 8
+			poyraz: 12
+		UnitLimits:
+			trrifle: 5
+			trat: 2
+			aras8: 2
+			trdroneop: 2
+			bozkir: 2
+			yildirim: 1
+			gokkalkan: 2
+			sancak: 1
+			denizkaplan: 2
+			kuzgunm: 2
+			turnaah: 1
+			sahinx: 1
+			marmara: 1
+			ege: 2
+			poyraz: 3
+	UnitBuilderBotModule@easy:
+		UnitsToBuild:
+			trrifle: 70
+			trat: 30
+			trdroneop: 15
+			aras8: 40
+			bozkir: 25
+			yildirim: 18
+			gokkalkan: 22
+			sancak: 10
+			denizkaplan: 12
+			kuzgunm: 22
+			turnaah: 14
+			sahinx: 12
+			marmara: 12
+			ege: 20
+			poyraz: 25
+		UnitLimits:
+			trrifle: 10
+			trat: 5
+			trdroneop: 3
+			aras8: 6
+			bozkir: 4
+			yildirim: 3
+			gokkalkan: 4
+			sancak: 2
+			denizkaplan: 3
+			kuzgunm: 4
+			turnaah: 2
+			sahinx: 2
+			marmara: 2
+			ege: 3
+			poyraz: 5
+	SquadManagerBotModule@beginner:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz
+	SquadManagerBotModule@easy:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz
+	UnitBuilderBotModule@medium:
+		UnitsToBuild:
+			trrifle: 65
+			trat: 38
+			trdroneop: 30
+			greywolf: 4
+			aras8: 55
+			bozkir: 50
+			yildirim: 40
+			gokkalkan: 42
+			sancak: 26
+			denizkaplan: 30
+			kuzgunm: 42
+			turnaah: 38
+			sahinx: 34
+			marmara: 20
+			ege: 35
+			poyraz: 40
+		UnitLimits:
+			greywolf: 1
+			trdroneop: 5
+			sancak: 3
+			kuzgunm: 7
+	UnitBuilderBotModule@rush:
+		UnitsToBuild:
+			trrifle: 75
+			trat: 45
+			trdroneop: 32
+			greywolf: 5
+			aras8: 75
+			bozkir: 55
+			yildirim: 48
+			gokkalkan: 35
+			sancak: 20
+			denizkaplan: 50
+			kuzgunm: 55
+			turnaah: 48
+			sahinx: 42
+			marmara: 18
+			ege: 40
+			poyraz: 50
+		UnitLimits:
+			greywolf: 1
+			sancak: 3
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			trrifle: 70
+			trat: 42
+			trdroneop: 38
+			greywolf: 5
+			aras8: 60
+			bozkir: 60
+			yildirim: 50
+			gokkalkan: 48
+			sancak: 34
+			denizkaplan: 45
+			kuzgunm: 58
+			turnaah: 50
+			sahinx: 48
+			marmara: 35
+			ege: 50
+			poyraz: 55
+		UnitLimits:
+			greywolf: 1
+			sancak: 5
+			marmara: 5
+	UnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			trrifle: 60
+			trat: 48
+			trdroneop: 35
+			greywolf: 5
+			aras8: 40
+			bozkir: 55
+			yildirim: 55
+			gokkalkan: 75
+			sancak: 50
+			denizkaplan: 28
+			kuzgunm: 40
+			turnaah: 38
+			sahinx: 65
+			marmara: 45
+			ege: 42
+			poyraz: 35
+		UnitLimits:
+			greywolf: 1
+			gokkalkan: 10
+			sancak: 7
+	UnitBuilderBotModule@naval:
+		UnitsToBuild:
+			trrifle: 35
+			trat: 30
+			trdroneop: 30
+			aras8: 30
+			bozkir: 35
+			yildirim: 35
+			gokkalkan: 45
+			sancak: 30
+			denizkaplan: 75
+			kuzgunm: 65
+			turnaah: 42
+			sahinx: 42
+			marmara: 75
+			ege: 80
+			poyraz: 90
+		UnitLimits:
+			marmara: 10
+			ege: 14
+			poyraz: 18
+			denizkaplan: 10
+	SquadManagerBotModule@medium:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz
+	SquadManagerBotModule@rush:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz
+	SquadManagerBotModule@normal:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz
+	SquadManagerBotModule@turtle:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz
+	SquadManagerBotModule@naval:
+		AdditionalAirUnitsTypes:
+			turkey: mig, yak, heli, hind, mh60, kuzgunm, turnaah, sahinx
+		AdditionalNavalUnitsTypes:
+			turkey: ss, msub, dd, ca, lst, pt, marmara, ege, poyraz

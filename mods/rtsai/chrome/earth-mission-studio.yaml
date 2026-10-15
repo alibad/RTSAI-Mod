@@ -1,0 +1,709 @@
+RTSAIPanel@EARTH_MISSION_PANEL:
+	Logic: EarthMissionStudioLogic
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
+	# Keep a stable base canvas for the nested PARENT_* expressions. The logic
+	# below reflows this canvas to the effective renderer size at runtime.
+	Width: WINDOW_WIDTH - 60
+	Height: WINDOW_HEIGHT - 60
+	Children:
+		Label@TITLE_LABEL:
+			Y: 10
+			Width: PARENT_WIDTH
+			Height: 22
+			Text: label-earth-workbench-title
+			Align: Center
+			Font: Bold
+		Label@SUBTITLE_LABEL:
+			Y: 30
+			Width: PARENT_WIDTH
+			Height: 16
+			Text: label-earth-workbench-subtitle
+			Align: Center
+			Font: Tiny
+		RTSAIPanel@WORKFLOW_ROW:
+			X: 20
+			Y: 49
+			Width: PARENT_WIDTH - 40
+			Height: 24
+			Background: dialog4
+			Children:
+				Label@WORKFLOW_1:
+					Width: PARENT_WIDTH / 4
+					Height: 24
+					Align: Center
+					Font: TinyBold
+				Label@WORKFLOW_2:
+					X: PARENT_WIDTH / 4
+					Width: PARENT_WIDTH / 4
+					Height: 24
+					Align: Center
+					Font: TinyBold
+				Label@WORKFLOW_3:
+					X: PARENT_WIDTH / 2
+					Width: PARENT_WIDTH / 4
+					Height: 24
+					Align: Center
+					Font: TinyBold
+				Label@WORKFLOW_4:
+					X: PARENT_WIDTH * 3 / 4
+					Width: PARENT_WIDTH / 4
+					Height: 24
+					Align: Center
+					Font: TinyBold
+		Container@SEARCH_ROW:
+			X: 20
+			Y: 78
+			Width: PARENT_WIDTH - 40
+			Height: 28
+			Children:
+				TextField@LOCATION:
+					Width: PARENT_WIDTH - 350
+					Height: 28
+					MaxLength: 160
+				RTSAIButton@SEARCH:
+					X: PARENT_WIDTH - 340
+					Width: 105
+					Height: 28
+					Text: button-earth-search
+					Font: Bold
+				Label@COORDINATE_STATUS:
+					X: PARENT_WIDTH - 225
+					Width: 225
+					Height: 28
+					Align: Right
+					Font: TinyBold
+		RTSAIPanel@EARTH_VIEW_CARD:
+			X: 20
+			Y: 112
+			Width: (PARENT_WIDTH - 60) * 35 / 100
+			Height: PARENT_HEIGHT - 365
+			Background: dialog3
+			Children:
+				Label@EARTH_VIEW_TITLE:
+					X: 8
+					Y: 5
+					Width: PARENT_WIDTH - 190
+					Height: 18
+					Text: label-earth-real-map-title
+					Font: TinyBold
+				RTSAIDropDownButton@EARTH_LAYER:
+					X: PARENT_WIDTH - 174
+					Y: 3
+					Width: 166
+					Height: 21
+				EarthMapPreview@EARTH_PREVIEW:
+					X: 6
+					Y: 25
+					Width: PARENT_WIDTH - 12
+					Height: PARENT_HEIGHT - 48
+				RTSAIButton@EARTH_ZOOM_CLOSER:
+					X: 12
+					Y: 31
+					Width: 64
+					Height: 24
+					Text: button-earth-zoom-closer
+					Font: TinyBold
+				RTSAIButton@EARTH_ZOOM_WIDER:
+					X: 80
+					Y: 31
+					Width: 64
+					Height: 24
+					Text: button-earth-zoom-wider
+					Font: TinyBold
+				RTSAIButton@EARTH_ZOOM_FIT:
+					X: 148
+					Y: 31
+					Width: 64
+					Height: 24
+					Text: button-earth-zoom-fit
+					Font: TinyBold
+				Label@EARTH_VIEW_SCALE:
+					X: 218
+					Y: 34
+					Width: PARENT_WIDTH - 230
+					Height: 18
+					Align: Right
+					Font: TinyBold
+					Contrast: true
+				Label@EARTH_EMPTY:
+					X: 20
+					Y: PARENT_HEIGHT / 2 - 22
+					Width: PARENT_WIDTH - 40
+					Height: 44
+					Text: label-earth-map-empty
+					Align: Center
+					Font: Bold
+				Label@EARTH_ATTRIBUTION:
+					X: 8
+					Y: PARENT_HEIGHT - 21
+					Width: PARENT_WIDTH - 16
+					Height: 16
+					Text: label-earth-map-attribution
+					Align: Right
+					Font: Tiny
+					Contrast: true
+		RTSAIPanel@BLUEPRINT_CARD:
+			X: 30 + (PARENT_WIDTH - 60) * 35 / 100
+			Y: 112
+			Width: (PARENT_WIDTH - 60) * 26 / 100
+			Height: PARENT_HEIGHT - 365
+			Background: dialog3
+			Children:
+				Label@BLUEPRINT_TITLE:
+					X: 8
+					Y: 5
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-mission-blueprint
+					Font: TinyBold
+				Label@BLUEPRINT_HEADLINE:
+					X: 8
+					Y: 25
+					Width: PARENT_WIDTH - 16
+					Height: 22
+					Align: Center
+					Font: Bold
+				LabelForInput@TITLE_INPUT_LABEL:
+					X: 8
+					Y: 52
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-mission-name
+					For: TITLE
+				TextField@TITLE:
+					X: 8
+					Y: 70
+					Width: PARENT_WIDTH - 16
+					Height: 26
+					MaxLength: 64
+				Label@RADIUS_LABEL:
+					X: 8
+					Y: 101
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-area-size
+				RTSAIDropDownButton@RADIUS:
+					X: 8
+					Y: 119
+					Width: PARENT_WIDTH - 16
+					Height: 26
+				Label@SIZE_LABEL:
+					X: 8
+					Y: 150
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-map-size
+				RTSAIDropDownButton@MAP_SIZE:
+					X: 8
+					Y: 168
+					Width: PARENT_WIDTH - 16
+					Height: 26
+				Label@ARCHETYPE_LABEL:
+					X: 8
+					Y: 199
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-mission-archetype
+				RTSAIDropDownButton@MISSION_ARCHETYPE:
+					X: 8
+					Y: 217
+					Width: PARENT_WIDTH - 16
+					Height: 26
+				LabelForInput@STORY_LABEL:
+					X: 8
+					Y: 248
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-story-seed
+					For: STORY
+				TextField@STORY:
+					X: 8
+					Y: 266
+					Width: PARENT_WIDTH - 16
+					Height: 26
+					MaxLength: 240
+				Label@MODE_LABEL:
+					X: 8
+					Y: 297
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-generation-mode
+				RTSAIButton@MODE_BALANCED:
+					X: 8
+					Y: 315
+					Width: (PARENT_WIDTH - 20) / 2
+					Height: 26
+					Text: button-earth-mode-balanced
+					Font: TinyBold
+				RTSAIButton@MODE_CREATIVE:
+					X: 12 + (PARENT_WIDTH - 20) / 2
+					Y: 315
+					Width: (PARENT_WIDTH - 20) / 2
+					Height: 26
+					Text: button-earth-mode-creative
+					Font: TinyBold
+				RTSAIButton@ADVANCED:
+					X: 8
+					Y: 346
+					Width: PARENT_WIDTH - 16
+					Height: 25
+					Text: button-earth-advanced
+				RTSAIPanel@BLUEPRINT_CHECKS:
+					X: 8
+					Y: 376
+					Width: PARENT_WIDTH - 16
+					Height: PARENT_HEIGHT - 384
+					Background: dialog4
+					Children:
+						Label@BLUEPRINT_CHECKS_TITLE:
+							X: 6
+							Y: 3
+							Width: PARENT_WIDTH - 12
+							Height: 15
+							Text: label-earth-blueprint-checks
+							Font: TinyBold
+						Label@BLUEPRINT_EVIDENCE_LABEL:
+							X: 6
+							Y: 21
+							Width: PARENT_WIDTH / 2 - 6
+							Height: 16
+							Text: label-earth-blueprint-evidence
+							Font: Tiny
+						Label@BLUEPRINT_EVIDENCE_VALUE:
+							X: PARENT_WIDTH / 2
+							Y: 21
+							Width: PARENT_WIDTH / 2 - 6
+							Height: 16
+							Align: Right
+							Font: TinyBold
+						Label@BLUEPRINT_SAFETY_LABEL:
+							X: 6
+							Y: 38
+							Width: PARENT_WIDTH / 2 - 6
+							Height: 16
+							Text: label-earth-blueprint-safety
+							Font: Tiny
+						Label@BLUEPRINT_SAFETY_VALUE:
+							X: PARENT_WIDTH / 2
+							Y: 38
+							Width: PARENT_WIDTH / 2 - 6
+							Height: 16
+							Align: Right
+							Font: TinyBold
+						Label@BLUEPRINT_STYLE_LABEL:
+							X: 6
+							Y: 55
+							Width: PARENT_WIDTH / 2 - 6
+							Height: 16
+							Text: label-earth-blueprint-style
+							Font: Tiny
+						Label@BLUEPRINT_STYLE_VALUE:
+							X: PARENT_WIDTH / 2
+							Y: 55
+							Width: PARENT_WIDTH / 2 - 6
+							Height: 16
+							Align: Right
+							Font: TinyBold
+		RTSAIPanel@GAME_VIEW_CARD:
+			X: 40 + (PARENT_WIDTH - 60) * 61 / 100
+			Y: 112
+			Width: (PARENT_WIDTH - 60) * 39 / 100
+			Height: PARENT_HEIGHT - 365
+			Background: dialog3
+			Children:
+				Label@GAME_VIEW_TITLE:
+					X: 8
+					Y: 5
+					Width: PARENT_WIDTH - 16
+					Height: 18
+					Text: label-earth-game-preview-title
+					Font: TinyBold
+				GeneratedMapPreview@GENERATED_PREVIEW:
+					X: 6
+					Y: 25
+					Width: PARENT_WIDTH - 12
+					Height: PARENT_HEIGHT - 48
+					ShowSpawnPoints: true
+				Label@GAME_EMPTY:
+					X: 24
+					Y: PARENT_HEIGHT / 2 - 28
+					Width: PARENT_WIDTH - 48
+					Height: 56
+					Align: Center
+					Font: Bold
+				Label@PREVIEW_BADGE:
+					X: 8
+					Y: PARENT_HEIGHT - 21
+					Width: PARENT_WIDTH - 16
+					Height: 16
+					Align: Right
+					Font: TinyBold
+					Contrast: true
+		RTSAIPanel@TERRAIN_INTEL_CARD:
+			X: 20
+			Y: PARENT_HEIGHT - 235
+			Width: (PARENT_WIDTH - 50) * 42 / 100
+			Height: 170
+			Background: dialog3
+			Children:
+				Label@TERRAIN_INTEL_TITLE:
+					X: 8
+					Y: 4
+					Width: PARENT_WIDTH - 16
+					Height: 17
+					Text: label-earth-terrain-intel
+					Font: TinyBold
+				Label@VISION_STATUS:
+					X: PARENT_WIDTH / 2
+					Y: 4
+					Width: PARENT_WIDTH / 2 - 8
+					Height: 17
+					Align: Right
+					Font: Tiny
+				RTSAIPanel@RELIEF_CARD:
+					X: 8
+					Y: 25
+					Width: (PARENT_WIDTH - 24) / 5
+					Height: PARENT_HEIGHT - 33
+					Background: dialog4
+					Children:
+						Label@LABEL:
+							Y: 6
+							Width: PARENT_WIDTH
+							Height: 16
+							Text: label-earth-intel-relief
+							Align: Center
+							Font: Tiny
+						Label@VALUE:
+							Y: 25
+							Width: PARENT_WIDTH
+							Height: 22
+							Align: Center
+							Font: Bold
+						ProgressBar@BAR:
+							X: 8
+							Y: 52
+							Width: PARENT_WIDTH - 16
+							Height: 12
+						Label@DETAIL:
+							Y: 68
+							Width: PARENT_WIDTH
+							Height: 16
+							Align: Center
+							Font: Tiny
+				RTSAIPanel@WATER_CARD:
+					X: 10 + (PARENT_WIDTH - 24) / 5
+					Y: 25
+					Width: (PARENT_WIDTH - 24) / 5
+					Height: PARENT_HEIGHT - 33
+					Background: dialog4
+					Children:
+						Label@LABEL:
+							Y: 6
+							Width: PARENT_WIDTH
+							Height: 16
+							Text: label-earth-intel-water
+							Align: Center
+							Font: Tiny
+						Label@VALUE:
+							Y: 25
+							Width: PARENT_WIDTH
+							Height: 22
+							Align: Center
+							Font: Bold
+						ProgressBar@BAR:
+							X: 8
+							Y: 52
+							Width: PARENT_WIDTH - 16
+							Height: 12
+						Label@DETAIL:
+							Y: 68
+							Width: PARENT_WIDTH
+							Height: 16
+							Align: Center
+							Font: Tiny
+				RTSAIPanel@URBAN_CARD:
+					X: 12 + (PARENT_WIDTH - 24) * 2 / 5
+					Y: 25
+					Width: (PARENT_WIDTH - 24) / 5
+					Height: PARENT_HEIGHT - 33
+					Background: dialog4
+					Children:
+						Label@LABEL:
+							Y: 6
+							Width: PARENT_WIDTH
+							Height: 16
+							Text: label-earth-intel-urban
+							Align: Center
+							Font: Tiny
+						Label@VALUE:
+							Y: 25
+							Width: PARENT_WIDTH
+							Height: 22
+							Align: Center
+							Font: Bold
+						ProgressBar@BAR:
+							X: 8
+							Y: 52
+							Width: PARENT_WIDTH - 16
+							Height: 12
+						Label@DETAIL:
+							Y: 68
+							Width: PARENT_WIDTH
+							Height: 16
+							Align: Center
+							Font: Tiny
+				RTSAIPanel@VEGETATION_CARD:
+					X: 14 + (PARENT_WIDTH - 24) * 3 / 5
+					Y: 25
+					Width: (PARENT_WIDTH - 24) / 5
+					Height: PARENT_HEIGHT - 33
+					Background: dialog4
+					Children:
+						Label@LABEL:
+							Y: 6
+							Width: PARENT_WIDTH
+							Height: 16
+							Text: label-earth-intel-vegetation
+							Align: Center
+							Font: Tiny
+						Label@VALUE:
+							Y: 25
+							Width: PARENT_WIDTH
+							Height: 22
+							Align: Center
+							Font: Bold
+						ProgressBar@BAR:
+							X: 8
+							Y: 52
+							Width: PARENT_WIDTH - 16
+							Height: 12
+						Label@DETAIL:
+							Y: 68
+							Width: PARENT_WIDTH
+							Height: 16
+							Align: Center
+							Font: Tiny
+				RTSAIPanel@LANDMARKS_CARD:
+					X: 16 + (PARENT_WIDTH - 24) * 4 / 5
+					Y: 25
+					Width: (PARENT_WIDTH - 24) / 5
+					Height: PARENT_HEIGHT - 33
+					Background: dialog4
+					Children:
+						Label@LABEL:
+							Y: 6
+							Width: PARENT_WIDTH
+							Height: 16
+							Text: label-earth-intel-landmarks
+							Align: Center
+							Font: Tiny
+						Label@VALUE:
+							Y: 25
+							Width: PARENT_WIDTH
+							Height: 22
+							Align: Center
+							Font: Bold
+						ProgressBar@BAR:
+							X: 8
+							Y: 52
+							Width: PARENT_WIDTH - 16
+							Height: 12
+						Label@DETAIL:
+							Y: 68
+							Width: PARENT_WIDTH
+							Height: 16
+							Align: Center
+							Font: Tiny
+		RTSAIPanel@PROGRESS_CARD:
+			X: 30 + (PARENT_WIDTH - 50) * 42 / 100
+			Y: PARENT_HEIGHT - 235
+			Width: (PARENT_WIDTH - 50) * 58 / 100 - 10
+			Height: 170
+			Background: dialog3
+			Children:
+				Label@PROGRESS_TITLE:
+					X: 8
+					Y: 4
+					Width: PARENT_WIDTH - 16
+					Height: 17
+					Text: label-earth-generation-progress
+					Font: TinyBold
+				RTSAIPanel@STAGE_CARD_1:
+					X: 8
+					Y: 23
+					Width: PARENT_WIDTH / 2 - 12
+					Height: 22
+					Background: dialog4
+					Children:
+						Label@STAGE_1:
+							X: 8
+							Width: PARENT_WIDTH - 16
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+				RTSAIPanel@STAGE_CARD_2:
+					X: 8
+					Y: 51
+					Width: PARENT_WIDTH / 2 - 12
+					Height: 22
+					Background: dialog4
+					Children:
+						Label@STAGE_2:
+							X: 8
+							Width: PARENT_WIDTH - 16
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+				RTSAIPanel@STAGE_CARD_3:
+					X: 8
+					Y: 79
+					Width: PARENT_WIDTH / 2 - 12
+					Height: 22
+					Background: dialog4
+					Children:
+						Label@STAGE_3:
+							X: 8
+							Width: PARENT_WIDTH - 16
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+				RTSAIPanel@STAGE_CARD_4:
+					X: PARENT_WIDTH / 2 + 2
+					Y: 23
+					Width: PARENT_WIDTH / 2 - 10
+					Height: 22
+					Background: dialog4
+					Children:
+						Label@STAGE_4:
+							X: 8
+							Width: PARENT_WIDTH - 16
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+				RTSAIPanel@STAGE_CARD_5:
+					X: PARENT_WIDTH / 2 + 2
+					Y: 51
+					Width: PARENT_WIDTH / 2 - 10
+					Height: 22
+					Background: dialog4
+					Children:
+						Label@STAGE_5:
+							X: 8
+							Width: PARENT_WIDTH - 16
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+				RTSAIPanel@STAGE_CARD_6:
+					X: PARENT_WIDTH / 2 + 2
+					Y: 79
+					Width: PARENT_WIDTH / 2 - 10
+					Height: 22
+					Background: dialog4
+					Children:
+						Label@STAGE_6:
+							X: 8
+							Width: PARENT_WIDTH - 16
+							Height: PARENT_HEIGHT
+							Font: TinyBold
+							Align: Center
+				ProgressBar@GENERATION_BAR:
+					X: 8
+					Y: PARENT_HEIGHT - 45
+					Width: PARENT_WIDTH - 16
+					Height: 12
+				Label@STATUS:
+					X: 8
+					Y: PARENT_HEIGHT - 26
+					Width: PARENT_WIDTH - 16
+					Height: 14
+					Font: TinyBold
+		RTSAIPanel@ADVANCED_OPTIONS:
+			X: 30 + (PARENT_WIDTH - 60) * 35 / 100
+			Y: 470
+			Width: 345
+			Height: 145
+			Background: dialog4
+			Children:
+				Label@ADVANCED_TITLE:
+					Y: 6
+					Width: PARENT_WIDTH
+					Height: 18
+					Text: label-earth-advanced-options
+					Align: Center
+					Font: Bold
+				LabelForInput@LATITUDE_LABEL:
+					X: 12
+					Y: 29
+					Width: 150
+					Height: 17
+					Text: label-earth-latitude
+					For: LATITUDE
+				TextField@LATITUDE:
+					X: 12
+					Y: 47
+					Width: 150
+					Height: 25
+					MaxLength: 20
+				LabelForInput@LONGITUDE_LABEL:
+					X: 174
+					Y: 29
+					Width: 159
+					Height: 17
+					Text: label-earth-longitude
+					For: LONGITUDE
+				TextField@LONGITUDE:
+					X: 174
+					Y: 47
+					Width: 159
+					Height: 25
+					MaxLength: 20
+				LabelForInput@SEED_LABEL:
+					X: 12
+					Y: 78
+					Width: 150
+					Height: 17
+					Text: label-earth-seed
+					For: SEED
+				TextField@SEED:
+					X: 12
+					Y: 96
+					Width: 150
+					Height: 25
+					MaxLength: 10
+				RTSAIButton@ADVANCED_CLOSE:
+					X: 174
+					Y: 96
+					Width: 159
+					Height: 25
+					Text: button-earth-advanced-close
+		RTSAIButton@BACK:
+			Key: escape
+			X: 20
+			Y: PARENT_HEIGHT - 54
+			Width: 140
+			Height: 31
+			Text: button-back
+			Font: Bold
+		RTSAIButton@PLAY:
+			X: PARENT_WIDTH - 630
+			Y: PARENT_HEIGHT - 54
+			Width: 180
+			Height: 31
+			Text: button-earth-play-now
+			Font: Bold
+		RTSAIButton@EDIT:
+			X: PARENT_WIDTH - 440
+			Y: PARENT_HEIGHT - 54
+			Width: 200
+			Height: 31
+			Text: button-earth-continue-editor
+			Font: Bold
+		RTSAIButton@GENERATE:
+			X: PARENT_WIDTH - 230
+			Y: PARENT_HEIGHT - 54
+			Width: 210
+			Height: 31
+			Text: button-earth-create-battlefield
+			Font: Bold

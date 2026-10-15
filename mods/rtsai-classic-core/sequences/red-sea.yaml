@@ -1,0 +1,356 @@
+m1a2s:
+	Defaults:
+		Filename: m1a2s.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: redsea-m1-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: m1a2sicon.shp
+
+m1a2s.destroyed:
+	idle:
+		Filename: m1a2shusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: m1a2shusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+redsea_m1_impact:
+	impact:
+		Filename: redsea-m1-impact.shp
+		Length: 9
+		Tick: 2
+		ZOffset: 2047
+
+redsea_drone_impact:
+	impact:
+		Filename: redsea-drone-impact.shp
+		Length: 11
+		Tick: 2
+		ZOffset: 2047
+
+sads:
+	Defaults:
+		Filename: sads.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 2
+	icon:
+		Filename: sadsicon.shp
+
+sads.destroyed:
+	idle:
+		Filename: sadshusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: sadshusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+tech:
+	Defaults:
+		Filename: tech.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: techicon.shp
+
+tech.destroyed:
+	idle:
+		Filename: techhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: techhusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+ymlr:
+	Defaults:
+		Filename: ymlr.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	empty-idle:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	icon:
+		Filename: ymlricon.shp
+
+ymlr.destroyed:
+	idle:
+		Filename: ymlrhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+samad:
+	Defaults:
+		Filename: samad.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	dive:
+		Start: 16
+		Facings: 16
+		InterpolatedFacings: 64
+	icon:
+		Filename: samadicon.shp
+
+samad.destroyed:
+	idle:
+		Filename: samadhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+f15sa:
+	Defaults:
+		Filename: f15sa.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: f15saicon.shp
+
+f15sa.destroyed:
+	idle:
+		Filename: f15sahusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+ah64sa:
+	Defaults:
+		Filename: ah64sa.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor:
+		Filename: ah64sarotor.shp
+		Length: 4
+		Tick: 1
+	slow-rotor:
+		Filename: ah64sarotor.shp
+		Start: 4
+		Length: 8
+		Tick: 4
+	air-muzzle:
+		Filename: redsea-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ah64saicon.shp
+
+ah64sa.destroyed:
+	idle:
+		Filename: ah64sahusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	rotor:
+		Filename: ah64sarotor.shp
+		Length: 4
+		Tick: 1
+
+redsea_air_impact:
+	impact:
+		Filename: redsea-air-impact.shp
+		Length: 9
+		Tick: 2
+		ZOffset: 2047
+
+# Full 713-frame infantry contract shared by the eight Red Sea roles. Each
+# actor supplies a distinct role-authored body package and production cameo.
+redsea_infantry:
+	Defaults:
+		Filename: sang.shp
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Start: 168
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 120
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 120
+	die1:
+		Start: 280
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die2:
+		Start: 344
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die3:
+		Start: 408
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die4:
+		Start: 472
+		Length: 12
+		Facings: 8
+		Tick: 80
+	die5:
+		Start: 568
+		Length: 18
+		Facings: 8
+		Tick: 80
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
+		Frames: 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
+		Tick: 80
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
+		Length: 6
+		Tick: 1600
+		ZOffset: -511
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sangicon.shp
+
+sang:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: sang.shp
+	icon:
+		Filename: sangicon.shp
+
+sajtac:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: sajtac.shp
+	icon:
+		Filename: sajtacicon.shp
+
+saat:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: saat.shp
+	icon:
+		Filename: saaticon.shp
+
+falcon1:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: falcon1.shp
+	icon:
+		Filename: falcon1icon.shp
+
+ymr:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: ymr.shp
+	icon:
+		Filename: ymricon.shp
+
+yrpg:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: yrpg.shp
+	icon:
+		Filename: yrpgicon.shp
+
+yspot:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: yspot.shp
+	icon:
+		Filename: yspoticon.shp
+
+wadighost:
+	Inherits: redsea_infantry
+	Defaults:
+		Filename: wadighost.shp
+	icon:
+		Filename: wadighosticon.shp

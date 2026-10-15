@@ -1,0 +1,21 @@
+World:
+	ReusableCapability@WEATHERLIGHTING:
+		Id: weather-and-battlefield-lighting
+		Domain: effects-and-missions
+		Provides: weather.sandstorm, weather.rain, lighting.night, visibility.modifier
+		Requires: mission-trigger, palette-compatibility
+		Strategies: weather-visibility, night-operations
+	GrantCondition@ROADMAPWEATHER:
+		Condition: roadmap-weather-active
+	WeatherOverlay@ROADMAPSANDSTORM:
+		RequiresCondition: roadmap-weather-active
+		ParticleDensityFactor: 7
+		ExperienceComponent: weather-and-battlefield-lighting
+		ExperienceIntensityParameter: intensity
+		WindLevels: -10, -6, -3, 3, 6, 10
+		ParticleColors: D2B48CAA, C69C6DAA, 9E7B52AA
+		ParticleSize: 1, 3
+		Gravity: 0.4, 1.1
+		ScatterDirection: -2, 2
+		FadeInTicks: 80
+		FadeOutTicks: 120

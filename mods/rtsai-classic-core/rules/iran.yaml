@@ -1,0 +1,1182 @@
+# Iran is a complete Soviet-lineage faction with a distinct asymmetric roster.
+# Stock economy, construction, repair, defenses, transport, veterancy and core
+# production remain available; the actors below add the faction identity.
+
+^ExistsInWorld:
+	ExternalCondition@IRANSIGNALJAMMED:
+		Condition: iran-signal-jammed
+	ReloadDelayMultiplier@IRANSIGNALJAMMED:
+		Modifier: 165
+		RequiresCondition: iran-signal-jammed
+	WithDecoration@IRANSIGNALJAMMED:
+		Image: ir_signal
+		Sequence: marker
+		Palette: effect
+		Position: TopRight
+		Margin: 4, 4
+		ValidRelationships: Ally, Enemy, Neutral
+		RequiresCondition: iran-signal-jammed
+
+^Infantry:
+	ExternalCondition@IRANSUPPRESSED:
+		Condition: iran-suppressed
+	SpeedMultiplier@IRANSUPPRESSED:
+		Modifier: 82
+		RequiresCondition: iran-suppressed
+	ReloadDelayMultiplier@IRANSUPPRESSED:
+		Modifier: 125
+		RequiresCondition: iran-suppressed
+	WithColoredOverlay@IRANSUPPRESSED:
+		Color: D8893040
+		RequiresCondition: iran-suppressed
+
+^Vehicle:
+	ExternalCondition@IRANATGMTRACKED:
+		Condition: iran-atgm-tracked
+	SpeedMultiplier@IRANATGMTRACKED:
+		Modifier: 65
+		RequiresCondition: iran-atgm-tracked
+	WithColoredOverlay@IRANATGMTRACKED:
+		Color: D8C48938
+		RequiresCondition: iran-atgm-tracked
+
+^Building:
+	ExternalCondition@IRANSABOTAGED:
+		Condition: iran-sabotaged
+	ReloadDelayMultiplier@IRANSABOTAGED:
+		Modifier: 300
+		RequiresCondition: iran-sabotaged
+	WithColoredOverlay@IRANSABOTAGED:
+		Color: 5DC7DF38
+		RequiresCondition: iran-sabotaged
+
+World:
+	StartingUnits@mcvonlyiran:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: iran
+		BaseActor: mcv
+	StartingUnits@lightiran:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: iran
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,apc,ftrk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@heavyiran:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: iran
+		BaseActor: mcv
+		SupportActors: e1,e1,e1,e3,e3,apc,ftrk,3tnk,3tnk
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+
+FACT:
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, iran
+		Prerequisite: structures.soviet
+	ProvidesPrerequisite@iran:
+		Factions: iran
+		Prerequisite: structures.iran
+	ProvidesPrerequisite@iransoviettree:
+		Factions: iran
+		Prerequisite: structures.soviet
+
+WEAP:
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, iran
+		Prerequisite: vehicles.soviet
+	ProvidesPrerequisite@iran:
+		Factions: iran
+		Prerequisite: vehicles.iran
+	ProvidesPrerequisite@iransoviettree:
+		Factions: iran
+		Prerequisite: vehicles.soviet
+
+AFLD:
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, iran
+		Prerequisite: aircraft.soviet
+	ProvidesPrerequisite@iran:
+		Factions: iran
+		Prerequisite: aircraft.iran
+	ProvidesPrerequisite@iransoviettree:
+		Factions: iran
+		Prerequisite: aircraft.soviet
+
+IRHPAD:
+	Inherits: HPAD
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 125
+		Prerequisites: dome, ~structures.iran, ~techlevel.medium
+		Description: actor-irhpad.description
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-irhpad.name
+	ProvidesPrerequisite@iran:
+		Factions: iran
+		Prerequisite: aircraft.iran
+	RenderSprites:
+		Image: hpad
+
+BARR:
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, iran
+		Prerequisite: infantry.soviet
+	ProvidesPrerequisite@iran:
+		Factions: iran
+		Prerequisite: infantry.iran
+	ProvidesPrerequisite@iransoviettree:
+		Factions: iran
+		Prerequisite: infantry.soviet
+
+SPEN:
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine, iran
+		Prerequisite: ships.soviet
+	ProvidesPrerequisite@iran:
+		Factions: iran
+		Prerequisite: ships.iran
+	ProvidesPrerequisite@iransoviettree:
+		Factions: iran
+		Prerequisite: ships.soviet
+
+IRBAS:
+	Inherits: E1
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 8
+		Prerequisites: ~barr, ~infantry.iran, ~techlevel.infonly
+		Description: actor-irbas.description
+	Valued:
+		Cost: 70
+	Tooltip:
+		Name: actor-irbas.name
+	Selectable:
+		Class: IRBAS
+	Health:
+		HP: 3900
+	Mobile:
+		Speed: 58
+	Armament@PRIMARY:
+		Weapon: IranBasijRifle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: IranBasijRifle
+		MuzzleSequence: garrison-muzzle
+	Voiced:
+		VoiceSet: IranInfantryVoice
+	RenderSprites:
+		Image: irbas
+
+IRATGM:
+	Inherits: E3
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 55
+		Prerequisites: dome, ~barr, ~infantry.iran, ~techlevel.medium
+		Description: actor-iratgm.description
+	Valued:
+		Cost: 475
+	Tooltip:
+		Name: actor-iratgm.name
+	Selectable:
+		Class: IRATGM
+	Health:
+		HP: 4200
+	Mobile:
+		Speed: 46
+		PauseOnCondition: reloading
+	Armament@PRIMARY:
+		Weapon: IranATGM
+		LocalOffset: 0,0,555
+		FireDelay: 18
+		ReloadingCondition: reloading
+	-Armament@SECONDARY:
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: IranATGM
+		FireDelay: 18
+	-Armament@GARRISONEDSECONDARY:
+	AutoTarget:
+		ScanRadius: 10
+	Voiced:
+		VoiceSet: IranInfantryVoice
+	RenderSprites:
+		Image: iratgm
+
+IRDC:
+	Inherits: E1
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 75
+		Prerequisites: dome, ~barr, ~infantry.iran, ~techlevel.medium
+		Description: actor-irdc.description
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: actor-irdc.name
+	Selectable:
+		Class: IRDC
+	Health:
+		HP: 4800
+	Mobile:
+		Speed: 54
+	RevealsShroud:
+		MinRange: 6c0
+		Range: 10c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 7c0
+	DetectCloaked:
+		DetectionTypes: Cloak, Underwater
+		Range: 6c0
+	RenderDetectionCircle:
+	ProvidesPrerequisite:
+		Prerequisite: iran.drone-control
+	Armament@PRIMARY:
+		Weapon: IranControllerCarbine
+	Armament@SIGNAL:
+		Name: secondary
+		Weapon: IranSignalSpike
+		LocalOffset: 0,0,555
+		FireDelay: 8
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: IranControllerCarbine
+		MuzzleSequence: garrison-muzzle
+	Voiced:
+		VoiceSet: IranDroneVoice
+	RenderSprites:
+		Image: irdc
+
+SHADOWONE:
+	Inherits: E7
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 145
+		Prerequisites: stek, dome, ~barr, ~infantry.iran, ~techlevel.high
+		BuildLimit: 1
+		Description: actor-shadowone.description
+	Valued:
+		Cost: 1900
+	Tooltip:
+		Name: actor-shadowone.name
+	Selectable:
+		Class: SHADOWONE
+	Health:
+		HP: 9000
+	Mobile:
+		Speed: 74
+		Voice: Move
+	RevealsShroud:
+		Range: 7c0
+	Armament@PRIMARY:
+		Weapon: IranShadowSMG
+		LocalOffset: 0,0,0
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: IranSabotageCharge
+		LocalOffset: 0,0,0
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: IranShadowSMG
+		MuzzleSequence: garrison-muzzle
+	WithInfantryBody:
+		AttackSequences:
+			primary: shoot
+			secondary: shoot
+		DefaultAttackSequence: shoot
+		StandSequences: stand,stand2
+		IdleSequences: idle1,idle2
+		RequiresCondition: !parachute
+	Cloak:
+		InitialDelay: 100
+		CloakDelay: 85
+		# Hidden from enemies, but intentionally legible to its owner.
+		CloakedAlpha: 0.94
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Move
+		DetectionTypes: Cloak
+		CloakedCondition: shadow-cloaked
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	WithIdleOverlay@CLOAK:
+		Image: ir_cloak
+		Sequence: idle
+		Palette: effect
+		RequiresCondition: shadow-cloaked
+	Voiced:
+		VoiceSet: ShadowOneVoice
+	RenderSprites:
+		Image: shadowone
+
+IRKARR:
+	Inherits: 2TNK
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 245
+		Prerequisites: fix, stek, ~vehicles.iran, ~techlevel.high
+		Description: actor-irkarr.description
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: actor-irkarr.name
+	Health:
+		HP: 61000
+	Mobile:
+		Speed: 65
+		Locomotor: tracked
+	Turreted:
+		TurnSpeed: 18
+	Armament:
+		Weapon: IranKarrar125mm
+		Recoil: 150
+		RecoilRecovery: 34
+		LocalOffset: 940,0,120
+		MuzzleSequence: muzzle
+	SpawnActorOnDeath:
+		Actor: IRKARR.Husk
+	Voiced:
+		VoiceSet: IranVehicleVoice
+	RenderSprites:
+		Image: irkarr
+
+IRRAAD:
+	Inherits: 2TNK
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 175
+		Prerequisites: ~vehicles.iran, ~techlevel.low
+		Description: actor-irraad.description
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: actor-irraad.name
+	Health:
+		HP: 23000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 90
+		Locomotor: wheeled
+	Turreted:
+		TurnSpeed: 28
+	Armament:
+		Weapon: IranRaadMissile
+		LocalOffset: 620,0,280
+	AutoTarget:
+		ScanRadius: 12
+	SpawnActorOnDeath:
+		Actor: IRRAAD.Husk
+	Voiced:
+		VoiceSet: IranVehicleVoice
+	RenderSprites:
+		Image: irraad
+
+IRFAJR:
+	Inherits: 2TNK
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 265
+		Prerequisites: dome, ~vehicles.iran, ~techlevel.medium
+		Description: actor-irfajr.description
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-irfajr.name
+	Health:
+		HP: 19000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 76
+		Locomotor: wheeled
+	Turreted:
+		TurnSpeed: 14
+	Armament:
+		Weapon: IranFajrRocket
+		LocalOffset: 640,0,320
+		ReloadingCondition: reloading
+	AutoTarget:
+		ScanRadius: 12
+	AttackTurreted:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+	WithSpriteTurret:
+		RequiresCondition: !reloading
+	WithSpriteTurret@EMPTY:
+		Sequence: empty-turret
+		RequiresCondition: reloading
+	SpawnActorOnDeath:
+		Actor: IRFAJR.Husk
+	Voiced:
+		VoiceSet: IranVehicleVoice
+	RenderSprites:
+		Image: irfajr
+
+IRCOAST:
+	Inherits: 2TNK
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 285
+		Prerequisites: dome, stek, ~vehicles.iran, ~techlevel.high
+		Description: actor-ircoast.description
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-ircoast.name
+	Health:
+		HP: 18000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 70
+		Locomotor: wheeled
+	Turreted:
+		TurnSpeed: 12
+	Armament:
+		Weapon: IranCoastalMissile
+		LocalOffset: 680,-180,300, 680,180,300
+	AutoTarget:
+		ScanRadius: 15
+	AttackTurreted:
+		TargetFrozenActors: True
+		ForceFireIgnoresActors: True
+	SpawnActorOnDeath:
+		Actor: IRCOAST.Husk
+	Voiced:
+		VoiceSet: IranVehicleVoice
+	RenderSprites:
+		Image: ircoast
+
+IRAZAR:
+	Inherits: MIG
+	-Armament:
+	-AmmoPool:
+	ReloadAmmoPool@ROADMAPRESUPPLY:
+		AmmoPool: aam
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 58
+		Prerequisites: ~afld, stek, ~aircraft.iran, ~techlevel.high
+		Description: actor-irazar.description
+	Valued:
+		Cost: 2050
+	Tooltip:
+		Name: actor-irazar.name
+	Health:
+		HP: 8500
+	Armament@AAM:
+		Name: aam
+		Weapon: IranAzarAAM
+		LocalOffset: 0,-640,-64, 0,640,-64
+		LocalYaw: -32, 32
+		PauseOnCondition: !aam-ammo
+	Armament@CANNON:
+		Name: cannon
+		Weapon: IranAzarCannon
+		LocalOffset: 384,128,-64
+		MuzzleSequence: air-muzzle
+		PauseOnCondition: !gun-ammo
+	AmmoPool@AAM:
+		Name: aam
+		Armaments: aam
+		Ammo: 4
+		ReloadDelay: 28
+		AmmoCondition: aam-ammo
+	AmmoPool@GUN:
+		Name: gun
+		Armaments: cannon
+		Ammo: 12
+		ReloadDelay: 5
+		AmmoCondition: gun-ammo
+	Aircraft:
+		CruiseAltitude: 2560
+		TurnSpeed: 18
+		Speed: 232
+		RepulsionSpeed: 42
+		MaximumPitch: 56
+	SpawnActorOnDeath:
+		Actor: IRAZAR.Husk
+	Rearmable:
+		RearmActors: afld, afld.ukraine
+		AmmoPools: aam, gun
+	Voiced:
+		VoiceSet: IranAirVoice
+	RenderSprites:
+		Image: irazar
+
+IRTOUFAN:
+	Inherits: HIND
+	-Armament:
+	-AmmoPool:
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 48
+		Prerequisites: ~irhpad, stek, ~aircraft.iran, ~techlevel.high
+		Description: actor-irtoufan.description
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: actor-irtoufan.name
+	Health:
+		HP: 13200
+	Armament@CANNON:
+		Weapon: IranToufanCannon
+		LocalOffset: 384,0,-128
+		MuzzleSequence: air-muzzle
+		PauseOnCondition: !cannon-ammo
+	Armament@ROCKETS:
+		Weapon: IranToufanRockets
+		LocalOffset: 0,-512,-64, 0,512,-64
+		PauseOnCondition: !rocket-ammo
+	AmmoPool@CANNON:
+		Name: cannon
+		Armaments: cannon
+		Ammo: 24
+		ReloadDelay: 4
+		AmmoCondition: cannon-ammo
+	AmmoPool@ROCKETS:
+		Name: rockets
+		Armaments: rockets
+		Ammo: 6
+		ReloadDelay: 18
+		AmmoCondition: rocket-ammo
+	Aircraft:
+		TurnSpeed: 18
+		Speed: 132
+		CanSlide: False
+		TurnToLand: True
+	AttackAircraft:
+		FacingTolerance: 48
+	SpawnActorOnDeath:
+		Actor: IRTOUFAN.Husk
+	Rearmable:
+		RearmActors: irhpad, hpad, afld, afld.ukraine
+		AmmoPools: cannon, rockets
+	Voiced:
+		VoiceSet: IranAirVoice
+	RenderSprites:
+		Image: irtoufan
+
+IRMOHAJER:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 28
+		Prerequisites: ~afld, dome, ~aircraft.iran, ~techlevel.medium
+		Description: actor-irmohajer.description
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: actor-irmohajer.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 4300
+	RevealsShroud:
+		MinRange: 7c0
+		Range: 11c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 8c0
+		Type: GroundPosition
+	DetectCloaked:
+		DetectionTypes: Cloak
+		Range: 5c0
+	Armament:
+		Weapon: IranMohajerStrike
+		LocalOffset: 0,-220,-64, 0,220,-64
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		FacingTolerance: 86
+		PersistentTargeting: false
+		OpportunityFire: False
+	Aircraft:
+		CruiseAltitude: 1792
+		TurnSpeed: 16
+		Speed: 154
+		RepulsionSpeed: 30
+		MaximumPitch: 56
+		MoveIntoShroud: true
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: AttackAnything
+	AmmoPool:
+		Ammo: 4
+		ReloadDelay: 24
+		AmmoCondition: ammo
+	SpawnActorOnDeath:
+		Actor: IRMOHAJER.Husk
+	Selectable:
+		Bounds: 1280, 1024
+		DecorationBounds: 1365, 1109
+	Rearmable:
+		RearmActors: afld, afld.ukraine
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	Voiced:
+		VoiceSet: IranDroneVoice
+	RenderSprites:
+		Image: irmohajer
+
+IRLOITER:
+	Inherits: IRMOHAJER
+	-Armament:
+	-SpawnActorOnDeath:
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 18
+		Prerequisites: ~afld, iran.drone-control, ~aircraft.iran, ~techlevel.medium
+		Description: actor-irloiter.description
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: actor-irloiter.name
+	Health:
+		HP: 2800
+	Armament@PAYLOAD:
+		Name: primary
+		Weapon: IranLoiterImpact
+		LocalOffset: 0,0,-64
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Armaments: primary
+		Ammo: 1
+		AmmoCondition: ammo
+	AttackAircraft:
+		Armaments: primary
+	GrantConditionOnAttack@PAYLOAD:
+		Condition: payload-released
+		ArmamentNames: primary
+		RevokeDelay: 1
+	KillsSelf@PAYLOAD:
+		RequiresCondition: payload-released
+	Aircraft:
+		CruiseAltitude: 1280
+		TurnSpeed: 13
+		Speed: 136
+		RepulsionSpeed: 20
+		MaximumPitch: 128
+		MoveIntoShroud: true
+		CanForceLand: false
+	Voiced:
+		VoiceSet: IranDroneVoice
+	RenderSprites:
+		Image: irloiter
+
+IRPEY:
+	Inherits: PT
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Submarine
+		BuildPaletteOrder: 35
+		Prerequisites: ~spen, ~ships.iran, ~techlevel.low
+		Description: actor-irpey.description
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: actor-irpey.name
+	Health:
+		HP: 23000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 30
+		Speed: 132
+	Turreted:
+		TurnSpeed: 30
+		Offset: 400,0,64
+	Armament@PRIMARY:
+		Weapon: IranPeykaapMissile
+		LocalOffset: 300,-130,30, 300,130,30
+	-Armament@SECONDARY:
+	LeavesTrails:
+		Offsets: -640,0,-64
+		MovingInterval: 2
+		Image: ir_wake
+		Sequences: idle
+		Palette: effect
+		TerrainTypes: Water
+		SpawnAtLastPosition: False
+		Type: CenterPosition
+	SpawnActorOnDeath:
+		Actor: IRPEY.Sink
+	Voiced:
+		VoiceSet: IranNavalVoice
+	RenderSprites:
+		Image: irpey
+
+IRGHADIR:
+	Inherits: SS
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Submarine
+		BuildPaletteOrder: 45
+		Prerequisites: ~spen, dome, ~ships.iran, ~techlevel.medium
+		Description: actor-irghadir.description
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-irghadir.name
+	Health:
+		HP: 21000
+	Mobile:
+		TurnSpeed: 22
+		Speed: 88
+	Armament:
+		Weapon: IranGhadirTorpedo
+		LocalOffset: 0,-150,0, 0,150,0
+		FireDelay: 2
+	Cloak:
+		InitialDelay: 0
+		CloakDelay: 36
+	SpawnActorOnDeath:
+		Actor: IRGHADIR.Sink
+	Voiced:
+		VoiceSet: IranNavalVoice
+	RenderSprites:
+		Image: irghadir
+
+IRKARR.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: actor-irkarr-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: irkarr
+	InfiltrateForTransform:
+		IntoActor: irkarr
+	RenderSprites:
+		Image: irkarr.destroyed
+
+IRRAAD.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-irraad-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: irraad
+	InfiltrateForTransform:
+		IntoActor: irraad
+	RenderSprites:
+		Image: irraad.destroyed
+
+IRFAJR.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-irfajr-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: irfajr
+	InfiltrateForTransform:
+		IntoActor: irfajr
+	RenderSprites:
+		Image: irfajr.destroyed
+
+IRCOAST.Husk:
+	Inherits: ^Husk
+	Husk:
+		Locomotor: wheeled
+	Tooltip:
+		Name: actor-ircoast-husk-name
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: ircoast
+	InfiltrateForTransform:
+		IntoActor: ircoast
+	RenderSprites:
+		Image: ircoast.destroyed
+
+IRAZAR.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-irazar-husk-name
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 190
+	Contrail@LEFT:
+		Offset: -640,-420,0
+	Contrail@RIGHT:
+		Offset: -640,420,0
+	RenderSprites:
+		Image: irazar.destroyed
+
+IRTOUFAN.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: actor-irtoufan-husk-name
+	Aircraft:
+		TurnSpeed: 18
+		Speed: 108
+	WithIdleOverlay:
+		Offset: 0,0,192
+		Sequence: rotor
+	RenderSprites:
+		Image: irtoufan.destroyed
+
+IRMOHAJER.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-irmohajer-husk-name
+	Aircraft:
+		TurnSpeed: 18
+		Speed: 125
+	RenderSprites:
+		Image: irmohajer.destroyed
+
+IRPEY.Sink:
+	Inherits: ^BasicHusk
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	RenderSprites:
+		Image: irpey.sink
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	WithFacingSpriteBody:
+	KillsSelf:
+		Delay: 16
+		RemoveInstead: true
+	-Health:
+	-HitShape:
+
+IRGHADIR.Sink:
+	Inherits: ^BasicHusk
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	RenderSprites:
+		Image: irghadir.sink
+	Husk:
+		AllowedTerrain: Water
+		Locomotor: naval
+	WithFacingSpriteBody:
+	KillsSelf:
+		Delay: 16
+		RemoveInstead: true
+	-Health:
+	-HitShape:
+
+Player:
+	# Every standard personality can construct Iran's land, air and naval
+	# production chain.  Invalid naval placement is naturally rejected inland.
+	BaseBuilderBotModule@beginner:
+		AdditionalTechTypes:
+			iran: dome, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 1
+			afld: 1
+			irhpad: 1
+			spen: 1
+		BuildingFractions:
+			barr: 3
+			weap: 3
+			afld: 1
+			irhpad: 1
+			spen: 3
+	BaseBuilderBotModule@easy:
+		AdditionalTechTypes:
+			iran: dome, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 1
+			afld: 1
+			irhpad: 1
+			spen: 1
+		BuildingFractions:
+			barr: 3
+			weap: 3
+			afld: 1
+			irhpad: 1
+			spen: 3
+	BaseBuilderBotModule@medium:
+		AdditionalTechTypes:
+			iran: dome, atek, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,tent,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 1
+			afld: 2
+			irhpad: 2
+			spen: 2
+		BuildingFractions:
+			barr: 3
+			weap: 3
+			afld: 1
+			irhpad: 1
+			spen: 3
+	BaseBuilderBotModule@rush:
+		AdditionalTechTypes:
+			iran: mslo, dome, atek, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,tent,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 1
+			afld: 2
+			irhpad: 2
+			spen: 2
+		BuildingFractions:
+			barr: 3
+			weap: 4
+			afld: 2
+			irhpad: 2
+			spen: 4
+	BaseBuilderBotModule@normal:
+		AdditionalTechTypes:
+			iran: mslo, dome, atek, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,tent,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 2
+			afld: 3
+			irhpad: 3
+			spen: 2
+		BuildingFractions:
+			barr: 3
+			weap: 4
+			afld: 2
+			irhpad: 2
+			spen: 4
+	BaseBuilderBotModule@turtle:
+		AdditionalTechTypes:
+			iran: mslo, dome, atek, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,tent,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 2
+			afld: 2
+			irhpad: 2
+			spen: 3
+		BuildingFractions:
+			barr: 3
+			weap: 4
+			afld: 1
+			irhpad: 1
+			spen: 6
+	BaseBuilderBotModule@naval:
+		AdditionalTechTypes:
+			iran: mslo, dome, atek, stek, fix, irhpad
+		AdditionalProductionTypes:
+			iran: barr,weap,afld,irhpad,spen
+		BuildingLimits:
+			barr: 1
+			weap: 2
+			afld: 2
+			irhpad: 2
+			spen: 5
+		BuildingFractions:
+			barr: 3
+			weap: 4
+			afld: 1
+			irhpad: 1
+			spen: 10
+	UnitBuilderBotModule@beginner:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 20
+			irdc: 12
+			irkarr: 18
+			irraad: 500
+			irmohajer: 12
+			irpey: 500
+			irghadir: 8
+		UnitLimits:
+			irbas: 8
+			iratgm: 3
+			irdc: 2
+			irkarr: 2
+			irraad: 2
+			irmohajer: 2
+	UnitBuilderBotModule@easy:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 26
+			irdc: 16
+			irkarr: 24
+			irraad: 500
+			irfajr: 18
+			irmohajer: 18
+			irloiter: 12
+			irpey: 500
+			irghadir: 12
+		UnitLimits:
+			irdc: 3
+			irkarr: 3
+			irraad: 3
+			irfajr: 2
+	UnitBuilderBotModule@medium:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 35
+			irdc: 24
+			shadowone: 2
+			irkarr: 42
+			irraad: 500
+			irfajr: 32
+			ircoast: 20
+			irazar: 26
+			irtoufan: 30
+			irmohajer: 35
+			irloiter: 26
+			irpey: 500
+			irghadir: 24
+		UnitLimits:
+			irdc: 5
+			shadowone: 1
+			ircoast: 4
+	UnitBuilderBotModule@rush:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 42
+			irdc: 28
+			shadowone: 3
+			irkarr: 48
+			irraad: 500
+			irfajr: 46
+			ircoast: 18
+			irazar: 34
+			irtoufan: 44
+			irmohajer: 42
+			irloiter: 48
+			irpey: 500
+			irghadir: 24
+		UnitLimits:
+			irdc: 6
+			shadowone: 1
+			ircoast: 4
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 44
+			irdc: 32
+			shadowone: 3
+			irkarr: 54
+			irraad: 500
+			irfajr: 46
+			ircoast: 28
+			irazar: 42
+			irtoufan: 42
+			irmohajer: 46
+			irloiter: 42
+			irpey: 500
+			irghadir: 38
+		UnitLimits:
+			irdc: 8
+			shadowone: 1
+			ircoast: 6
+	UnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 58
+			irdc: 40
+			shadowone: 2
+			irkarr: 48
+			irraad: 500
+			irfajr: 44
+			ircoast: 52
+			irazar: 38
+			irtoufan: 34
+			irmohajer: 40
+			irloiter: 28
+			irpey: 500
+			irghadir: 46
+		UnitLimits:
+			irdc: 8
+			shadowone: 1
+			irraad: 10
+			ircoast: 8
+	UnitBuilderBotModule@naval:
+		UnitsToBuild:
+			irbas: 500
+			iratgm: 34
+			irdc: 34
+			shadowone: 2
+			irkarr: 30
+			irraad: 500
+			irfajr: 38
+			ircoast: 58
+			irazar: 36
+			irtoufan: 34
+			irmohajer: 50
+			irloiter: 45
+			irpey: 700
+			irghadir: 70
+		UnitLimits:
+			irdc: 8
+			shadowone: 1
+			ircoast: 10
+			irpey: 12
+			irghadir: 12
+	SquadManagerBotModule@beginner:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter
+	SquadManagerBotModule@easy:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter
+	SquadManagerBotModule@medium:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter
+	SquadManagerBotModule@rush:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter
+	SquadManagerBotModule@normal:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter
+	SquadManagerBotModule@turtle:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter
+	SquadManagerBotModule@naval:
+		AdditionalNavalUnitsTypes:
+			iran: ss, msub, dd, ca, lst, pt, irpey, irghadir
+		AdditionalAirUnitsTypes:
+			iran: mig, yak, heli, hind, mh60, irazar, irtoufan, irmohajer, irloiter

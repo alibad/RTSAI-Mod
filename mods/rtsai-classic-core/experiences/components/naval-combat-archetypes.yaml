@@ -1,0 +1,59 @@
+World:
+	ReusableCapability@NAVALARCHETYPES:
+		Id: naval-combat-archetypes
+		Domain: navy
+		Provides: naval.patrol, naval.corvette, naval.destroyer, naval.submarine, naval.landing-ship, naval.carrier
+		Requires: naval-pathing, sonar-detection, strategic-role
+		Strategies: fleet-screen, sea-denial, amphibious-assault
+
+^ReusableMissileCorvette:
+	ReusableCapability:
+		Id: naval-archetype-missile-corvette
+		Domain: navy
+		Provides: naval.screen, naval.missile-platform
+		Requires: point-defense-interception, guided-projectile
+		Strategies: fleet-screen, saturation-attack
+	StrategicRole:
+		Roles: patrol-craft, missile-corvette, naval-screen
+		Counters: submarine, light-ship
+		Domain: naval
+		AIWeight: 95
+
+^ReusableLandingShip:
+	ReusableCapability:
+		Id: naval-archetype-landing-ship
+		Domain: navy
+		Provides: naval.transport, amphibious-unload
+		Requires: Cargo, naval-pathing
+		Strategies: amphibious-assault, evacuation
+	StrategicRole:
+		Roles: landing-ship, transport, evacuation
+		Domain: naval
+		AIWeight: 80
+
+^ReusableCarrierShip:
+	ReusableCapability:
+		Id: naval-archetype-carrier
+		Domain: navy
+		Provides: naval.carrier, wing.parent
+		Requires: carrier-and-drone-wing
+		Strategies: standoff-strike, fleet-screen
+	StrategicRole:
+		Roles: carrier, fleet-escort, wing-controller
+		Counters: aircraft, ship, building
+		Domain: naval
+		AIWeight: 170
+
+PT:
+	ReusableCapability@WW3NAVALPROFILE:
+		Id: naval-archetype-missile-corvette
+		Domain: navy
+		Provides: naval.screen, naval.missile-platform
+		Strategies: fleet-screen, saturation-attack
+
+LST:
+	ReusableCapability@WW3NAVALPROFILE:
+		Id: naval-archetype-landing-ship
+		Domain: navy
+		Provides: naval.transport, amphibious-unload
+		Strategies: amphibious-assault, evacuation

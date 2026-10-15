@@ -1,0 +1,21 @@
+World:
+	Faction@random:
+		RandomFactionMembers: america, germany, england, france, korea, cuba, libya, iraq, russia
+	Faction@allies:
+		RandomFactionMembers: america, germany, england, france, korea
+	Faction@soviets:
+		RandomFactionMembers: cuba, libya, iraq, russia
+	Faction@china:
+		Selectable: false
+	Faction@iran:
+		Selectable: false
+	Faction@turkey:
+		Selectable: false
+	Faction@saudi:
+		Selectable: false
+	Faction@yemen:
+		Selectable: false
+	Faction@israel:
+		Selectable: false
+	Faction@hezbollah:
+		Selectable: false

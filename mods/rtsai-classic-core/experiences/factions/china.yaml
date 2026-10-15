@@ -1,0 +1,122 @@
+﻿World:
+	Faction@china:
+		Name: faction-china.name
+		InternalName: china
+		Side: Allies
+		Description: faction-china.description
+		RandomFactionMemberOf: RandomAllies
+
+Player:
+	ProvidesFactionDoctrine@CHINA:
+		Factions: china
+		Prerequisites: side.allies, country.china, doctrine.networked-combined-arms
+	CapturedTechnologyManager@CHINA:
+		Factions: china
+
+CNRIFLE:
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+CNNETWORK:
+	Inherits@WW3ROLE: ^RoleEngineer
+CNPORTABLE:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+REDSPEAR:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+CNQILIN:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+CNLYNX:
+	Inherits@WW3ROLE: ^RoleScoutVehicle
+CNZBD:
+	Inherits@WW3ROLE: ^RoleTransport
+CNPHL:
+	Inherits@WW3ROLE: ^RoleArtillery
+CNMANTIS:
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+CNSKYSPEAR:
+	Inherits@WW3ROLE: ^RoleInterceptor
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-interceptor
+		Domain: air
+		Provides: air.interceptor, air.return-to-base
+		Strategies: combat-air-patrol, intercept-aircraft
+CNCLOUD:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+CNCRANE:
+	Inherits@WW3ROLE: ^RoleTransport
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-airlift
+		Domain: air
+		Provides: air.transport, evacuation.embark
+		Strategies: airlift, evacuation
+CNLUYANG:
+	Inherits@WW3ROLE: ^RoleDestroyer
+CNHAIWANG:
+	Inherits@WW3ROLE: ^RoleDestroyer
+	Inherits@WW3WINGPARENT: ^ReusableWingParent
+	# Named secondary because AttackBase only selects armaments called primary or
+	# secondary; a custom name is never fired, so no drone would ever launch.
+	# The ship's own defence armament stays primary.
+	Armament@DRONES:
+		Name: secondary
+		Weapon: ChinaHaiwangDroneLaunch
+		RequiresCondition: drones-loaded
+		PauseOnCondition: launching-drones
+	CarrierParent@WW3DRONES:
+		Actors: CNHAIWANGDRONE, CNHAIWANGDRONE, CNHAIWANGDRONE, CNHAIWANGDRONE
+		ArmamentNames: secondary
+		InitialActorCount: -1
+		RespawnTicks: 750
+		RearmTicks: 150
+		InstantRepair: true
+		LaunchingCondition: launching-drones
+		LaunchingTicks: 15
+		LoadedCondition: drones-loaded
+		ChildDisposalOnKill: KillChildren
+		ChildDisposalOnOwnerChange: GiveChildrenToAttacker
+	WithCarrierParentPipsDecoration@WW3DRONES:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		Palette: chrome
+	ReusableCapability@WW3NAVALPROFILE:
+		Id: naval-archetype-carrier
+		Domain: navy
+		Provides: naval.carrier, wing.parent
+		Strategies: standoff-strike, fleet-screen
+CNHAIYING:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+	ReusableCapability@WW3NAVALPROFILE:
+		Id: naval-archetype-missile-corvette
+		Domain: navy
+		Provides: naval.screen, naval.missile-platform
+		Strategies: fleet-screen, saturation-attack
+CNKUNLUN:
+	Inherits@WW3ROLE: ^RoleTransport
+	ReusableCapability@WW3NAVALPROFILE:
+		Id: naval-archetype-landing-ship
+		Domain: navy
+		Provides: naval.transport, amphibious-unload
+		Strategies: amphibious-assault, evacuation
+CNJIAOLONG:
+	Inherits@WW3ROLE: ^RoleSubmarine
+
+CNHAIWANGDRONE:
+	Inherits: CNCLOUD
+	Inherits@WW3WINGCHILD: ^ReusableWingChild
+	-Buildable:
+	-UpdatesPlayerStatistics:
+	-Rearmable:
+	CarrierChild:
+		LandingDistance: 5c0
+		AllowOwnerChange: false
+	AutoTarget:
+		InitialStance: AttackAnything
+		InitialStanceAI: AttackAnything
+	Tooltip:
+		Name: actor-cncloud.name
+	RenderSprites:
+		Image: cncloud

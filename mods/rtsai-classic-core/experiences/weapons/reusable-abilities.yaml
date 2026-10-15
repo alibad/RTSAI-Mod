@@ -1,0 +1,82 @@
+ReusableSignalBarrage:
+	Inherits: Dragon
+	ReloadDelay: 1
+	Range: 7c0
+	MinRange: 1c0
+	Report: rocket1.aud
+	Projectile: Missile
+		Image: DRAGON
+		Speed: 310
+		HorizontalRateOfTurn: 48
+		RangeLimit: 9c0
+		TrailImage: smokey
+		ContrailLength: 8
+	Warhead@1Dam: SpreadDamage
+		Spread: 192
+		Damage: 4200
+		ValidRelationships: Enemy, Neutral
+		Versus:
+			None: 75
+			Wood: 55
+			Light: 60
+			Heavy: 35
+			Concrete: 35
+	Warhead@STATUS: GrantExternalCondition
+		Condition: status-suppressed
+		Duration: 180
+		Range: 1c512
+		ValidRelationships: Enemy, Neutral
+	Warhead@3Eff: CreateEffect
+		Explosions: artillery_explosion
+		ImpactSounds: kaboom12.aud
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+ReusableControlPulse:
+	ReloadDelay: 1
+	Range: 5c0
+	TargetActorCenter: true
+	ValidTargets: GroundActor, WaterActor
+	Projectile: LaserZap
+		Width: 28
+		Duration: 18
+		Color: B050FFFF
+	Warhead@CONTROL: ChangeOwner
+		Duration: 500
+		Range: 128
+		InvalidTargets: Structure
+		ValidRelationships: Enemy, Neutral
+	Warhead@STATUS: GrantExternalCondition
+		Condition: status-sensor-jammed
+		Duration: 120
+		ValidRelationships: Enemy, Neutral
+
+ReusableBallisticStrike:
+	Inherits: 155mm
+	ReloadDelay: 180
+	Range: 13c0
+	MinRange: 4c0
+	Projectile: Bullet
+		Speed: 145
+		Inaccuracy: 768
+		ContrailLength: 40
+	Warhead@STATUS: GrantExternalCondition
+		Condition: status-suppressed
+		Duration: 140
+		Range: 1c0
+		ValidRelationships: Enemy, Neutral
+
+ReusableBeamLance:
+	Inherits: TeslaZap
+	ReloadDelay: 160
+	Range: 8c0
+	Projectile: LaserZap
+		Width: 36
+		Duration: 12
+		Color: 66CCFFFF
+		SecondaryBeam: true
+		SecondaryBeamWidth: 80
+		SecondaryBeamColor: 66CCFF40
+	Warhead@STATUS: GrantExternalCondition
+		Condition: status-weapon-locked
+		Duration: 75
+		ValidRelationships: Enemy, Neutral

@@ -1,0 +1,448 @@
+# Fictionalized Iran-faction weapons.  These describe balanced tactical roles,
+# not real-world ranges, targets, or operations.
+
+IranBasijRifle:
+	Inherits: M1Carbine
+	ReloadDelay: 42
+	Burst: 3
+	BurstDelays: 3
+	Range: 4c256
+	Report: iran-rifle.wav
+	Projectile: Bullet
+		Speed: 2048
+		Inaccuracy: 96
+		Blockable: true
+		ContrailLength: 3
+		ContrailDelay: 0
+		ContrailStartWidth: 18
+		ContrailEndWidth: 5
+		ContrailStartColor: F2C45A
+		ContrailEndColor: C25B24
+		ContrailStartColorAlpha: 210
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 500
+		Versus:
+			None: 105
+			Wood: 30
+			Light: 18
+			Heavy: 6
+			Concrete: 8
+	Warhead@SUPPRESS: GrantExternalCondition
+		Condition: iran-suppressed
+		Duration: 75
+		Range: 0c192
+		ValidRelationships: Enemy, Neutral
+		ValidTargets: Infantry
+
+IranATGM:
+	Inherits: Dragon
+	ReloadDelay: 128
+	Range: 8c768
+	MinRange: 2c256
+	Report: iran-atgm-launch.wav
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 285
+		HorizontalRateOfTurn: 34
+		RangeLimit: 11c0
+		Inaccuracy: 96
+		ContrailLength: 5
+		ContrailStartColor: D8C489
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 9200
+		Versus:
+			None: 16
+			Wood: 55
+			Light: 120
+			Heavy: 135
+			Concrete: 70
+	Warhead@TRACK: GrantExternalCondition
+		Condition: iran-atgm-tracked
+		Duration: 110
+		Range: 0c256
+		ValidRelationships: Enemy, Neutral
+		ValidTargets: Vehicle
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-atgm-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+IranControllerCarbine:
+	Inherits: M1Carbine
+	ReloadDelay: 50
+	Burst: 2
+	BurstDelays: 4
+	Range: 4c0
+	Report: iran-suppressed.wav
+	Projectile: Bullet
+		Speed: 2176
+		Inaccuracy: 112
+		Blockable: true
+		ContrailLength: 3
+		ContrailDelay: 0
+		ContrailStartWidth: 12
+		ContrailEndWidth: 3
+		ContrailStartColor: 62DCA8
+		ContrailEndColor: 173E35
+		ContrailStartColorAlpha: 190
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 360
+
+IranSignalSpike:
+	ReloadDelay: 118
+	Range: 8c0
+	TargetActorCenter: true
+	ValidTargets: GroundActor, WaterActor
+	Projectile: Bullet
+		Speed: 1536
+		Inaccuracy: 0
+		Blockable: false
+		ContrailLength: 9
+		ContrailDelay: 0
+		ContrailStartWidth: 28
+		ContrailEndWidth: 6
+		ContrailStartColor: 5DC3A6
+		ContrailEndColor: 5DC7DF
+		ContrailStartColorAlpha: 235
+		ContrailEndColorAlpha: 0
+	Warhead@JAM: GrantExternalCondition
+		Condition: iran-signal-jammed
+		Duration: 165
+		Range: 0c256
+		ValidRelationships: Enemy, Neutral
+		ValidTargets: GroundActor, WaterActor
+	Warhead@EFFECT: CreateEffect
+		Image: ir_signal
+		Explosions: pulse
+		ImpactSounds: iran-drone-release.wav
+		ValidTargets: GroundActor, WaterActor
+
+IranShadowSMG:
+	Inherits: SilencedPPK
+	ReloadDelay: 18
+	Burst: 3
+	BurstDelays: 2
+	Range: 5c0
+	Report: iran-shadow-fire.wav
+	Projectile: Bullet
+		Speed: 2560
+		Inaccuracy: 48
+		Blockable: true
+		ContrailLength: 2
+		ContrailDelay: 0
+		ContrailStartWidth: 12
+		ContrailEndWidth: 3
+		ContrailStartColor: 5DC7DF
+		ContrailEndColor: 162D32
+		ContrailStartColorAlpha: 150
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2100
+		Versus:
+			None: 125
+			Wood: 22
+			Light: 15
+			Heavy: 4
+			Concrete: 4
+
+IranSabotageCharge:
+	ReloadDelay: 175
+	Range: 1c512
+	ValidTargets: Structure, Defense
+	TargetActorCenter: true
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 15000
+		ValidTargets: Structure, Defense
+		DamageTypes: SmallExplosionDeath, TriggerProne
+		Versus:
+			Wood: 130
+			Light: 70
+			Heavy: 45
+			Concrete: 105
+	Warhead@SABOTAGE: GrantExternalCondition
+		Condition: iran-sabotaged
+		Duration: 225
+		Range: 0c256
+		ValidRelationships: Enemy, Neutral
+		ValidTargets: Structure, Defense
+	Warhead@2Eff: CreateEffect
+		Image: ir_effects
+		Explosions: sabotage
+		ImpactSounds: iran-sabotage.wav
+		ValidTargets: Ground, GroundActor, Structure, Defense
+
+IranKarrar125mm:
+	Inherits: ^Cannon
+	ReloadDelay: 76
+	Range: 6c256
+	Report: iran-tank-fire.wav
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 1180
+		Image: 120MM
+		Shadow: true
+		ContrailLength: 8
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 8600
+		Versus:
+			None: 28
+			Wood: 68
+			Light: 105
+			Heavy: 122
+			Concrete: 58
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-heavy-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+IranRaadMissile:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 44
+	Range: 9c0
+	Report: iran-raad-launch.wav
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 430
+		HorizontalRateOfTurn: 112
+		RangeLimit: 12c0
+		Inaccuracy: 72
+	Warhead@1Dam: SpreadDamage
+		Damage: 3900
+		Versus:
+			Light: 115
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-missile-impact.wav
+		ValidTargets: Air, AirborneActor
+
+IranFajrRocket:
+	Inherits: SCUD
+	ReloadDelay: 165
+	Range: 10c0
+	MinRange: 3c0
+	Report: iran-fajr-launch.wav
+	Projectile: Bullet
+		Speed: 180
+		Blockable: false
+		LaunchAngle: 128
+		Inaccuracy: 1c128
+		Image: IRMISSILE
+		Shadow: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 320
+		Damage: 9100
+		Falloff: 1000, 520, 180, 40, 0
+		Versus:
+			None: 72
+			Wood: 105
+			Light: 92
+			Heavy: 45
+			Concrete: 82
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-heavy-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+IranCoastalMissile:
+	ReloadDelay: 138
+	Range: 12c0
+	MinRange: 4c0
+	Report: iran-coastal-launch.wav
+	ValidTargets: WaterActor, Underwater
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 260
+		HorizontalRateOfTurn: 42
+		RangeLimit: 15c0
+		Inaccuracy: 128
+		ContrailLength: 8
+		ContrailStartColor: D9D4C0
+	Warhead@1Dam: SpreadDamage
+		Spread: 192
+		Damage: 12500
+		ValidTargets: WaterActor, Underwater
+		Versus:
+			Light: 118
+			Heavy: 105
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-heavy-impact.wav
+		ValidTargets: Water, WaterActor, Underwater
+
+IranAzarAAM:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 48
+	Range: 8c512
+	MinRange: 2c0
+	Report: iran-air-missile.wav
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 520
+		HorizontalRateOfTurn: 120
+		RangeLimit: 13c0
+		Inaccuracy: 64
+	Warhead@1Dam: SpreadDamage
+		Damage: 4300
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+IranAzarCannon:
+	Inherits: ChainGun.Yak
+	Burst: 4
+	BurstDelays: 1
+	ReloadDelay: 11
+	Range: 4c256
+	Report: iran-air-cannon.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 850
+		Versus:
+			None: 85
+			Wood: 30
+			Light: 72
+			Heavy: 14
+			Concrete: 10
+
+IranToufanCannon:
+	Inherits: ChainGun
+	Burst: 4
+	BurstDelays: 2
+	ReloadDelay: 12
+	Range: 5c0
+	Report: iran-heli-cannon.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 1050
+		Versus:
+			None: 118
+			Wood: 50
+			Light: 82
+			Heavy: 20
+			Concrete: 18
+
+IranToufanRockets:
+	Inherits: HellfireAG
+	ReloadDelay: 54
+	Range: 6c0
+	MinRange: 1c0
+	Burst: 2
+	BurstDelays: 8
+	Report: iran-heli-rocket.wav
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 305
+		HorizontalRateOfTurn: 48
+		RangeLimit: 9c0
+		Inaccuracy: 160
+	Warhead@1Dam: SpreadDamage
+		Damage: 4500
+
+IranMohajerStrike:
+	ReloadDelay: 62
+	Range: 7c0
+	MinRange: 1c512
+	ValidTargets: GroundActor, WaterActor
+	Report: iran-drone-release.wav
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 295
+		HorizontalRateOfTurn: 46
+		RangeLimit: 9c512
+		Inaccuracy: 96
+	Warhead@1Dam: SpreadDamage
+		Spread: 160
+		Damage: 5600
+		ValidTargets: GroundActor, WaterActor
+		Versus:
+			None: 42
+			Wood: 85
+			Light: 110
+			Heavy: 78
+			Concrete: 66
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-missile-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+IranLoiterImpact:
+	ReloadDelay: 1
+	Range: 0c256
+	TargetActorCenter: true
+	ValidTargets: Ground, Water, GroundActor, WaterActor
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 320
+		Damage: 12000
+		Falloff: 1000, 520, 180, 50, 0
+		ValidTargets: GroundActor, WaterActor
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		Versus:
+			None: 48
+			Wood: 98
+			Light: 112
+			Heavy: 78
+			Concrete: 68
+	Warhead@2Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-loiter-impact.wav
+		ValidTargets: Ground, Water, GroundActor, WaterActor, Trees
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: Crater
+		ValidTargets: Ground, Infantry
+
+IranPeykaapMissile:
+	ReloadDelay: 72
+	Range: 8c512
+	MinRange: 1c512
+	Report: iran-naval-launch.wav
+	ValidTargets: WaterActor, GroundActor
+	Projectile: Missile
+		Image: IRMISSILE
+		Speed: 310
+		HorizontalRateOfTurn: 55
+		RangeLimit: 11c0
+		Inaccuracy: 96
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 7200
+		ValidTargets: WaterActor, GroundActor
+		Versus:
+			None: 20
+			Wood: 55
+			Light: 112
+			Heavy: 98
+			Concrete: 44
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-missile-impact.wav
+		ValidTargets: Ground, Water, GroundActor, WaterActor
+
+IranGhadirTorpedo:
+	Inherits: TorpTube
+	ReloadDelay: 92
+	Range: 7c512
+	Report: iran-torpedo.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 7800
+		Versus:
+			Light: 108
+			Heavy: 118
+	Warhead@3Eff: CreateEffect
+		Image: ir_effects
+		Explosions: impact
+		ImpactSounds: iran-heavy-impact.wav
+		ValidTargets: Water, WaterActor, Underwater

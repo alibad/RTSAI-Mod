@@ -1,0 +1,171 @@
+Player:
+	ProvidesFactionDoctrine@ALLIED:
+		Factions: allies, england, france, germany
+		Prerequisites: side.allies, doctrine.combined-arms
+	ProvidesFactionDoctrine@SOVIET:
+		Factions: soviet, russia, ukraine
+		Prerequisites: side.soviet, doctrine.armored-assault
+
+^RoleRifleInfantry:
+	StrategicRole:
+		Roles: rifle, line-infantry
+		Counters: infantry
+		Domain: infantry
+		TransportWeight: 1
+
+^RoleAntiArmorInfantry:
+	StrategicRole:
+		Roles: anti-armor, line-infantry
+		Counters: armor, building
+		Domain: infantry
+		TransportWeight: 1
+
+^RoleEngineer:
+	StrategicRole:
+		Roles: engineer, capture, repair
+		Domain: infantry
+		AIWeight: 65
+		TransportWeight: 1
+
+^RoleScoutVehicle:
+	StrategicRole:
+		Roles: scout, reconnaissance, light-vehicle
+		Counters: infantry
+		Domain: ground
+		AIWeight: 75
+		TransportWeight: 2
+
+^RoleMainBattleTank:
+	StrategicRole:
+		Roles: main-battle-tank, armor, frontline
+		Counters: armor, building
+		Domain: ground
+		AIWeight: 140
+		TransportWeight: 4
+		VeterancyCurve: armored
+
+^RoleArtillery:
+	StrategicRole:
+		Roles: artillery, indirect-fire, siege
+		Counters: building, defense, infantry
+		Domain: ground
+		AIWeight: 115
+		TransportWeight: 4
+
+^RoleAntiAirVehicle:
+	StrategicRole:
+		Roles: anti-air, escort, light-vehicle
+		Counters: aircraft, drone
+		Domain: ground
+		AIWeight: 105
+		TransportWeight: 3
+
+^RoleTransport:
+	StrategicRole:
+		Roles: transport, evacuation, logistics
+		Domain: logistics
+		AIWeight: 70
+		TransportWeight: 4
+
+^RoleInterceptor:
+	StrategicRole:
+		Roles: interceptor, air-superiority
+		Counters: aircraft, drone
+		Domain: air
+		AIWeight: 120
+		TransportWeight: 0
+
+^RoleAttackAircraft:
+	StrategicRole:
+		Roles: strike-aircraft, close-air-support
+		Counters: armor, building
+		Domain: air
+		AIWeight: 125
+		TransportWeight: 0
+
+^RolePatrolCraft:
+	StrategicRole:
+		Roles: patrol-craft, naval-screen
+		Counters: submarine, light-ship
+		Domain: naval
+		AIWeight: 80
+		TransportWeight: 0
+
+^RoleDestroyer:
+	StrategicRole:
+		Roles: destroyer, fleet-escort, anti-submarine
+		Counters: submarine, aircraft, light-ship
+		Domain: naval
+		AIWeight: 130
+		TransportWeight: 0
+
+^RoleSubmarine:
+	StrategicRole:
+		Roles: submarine, naval-ambush
+		Counters: capital-ship, transport
+		Domain: naval
+		AIWeight: 120
+		TransportWeight: 0
+
+E1:
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+
+E3:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+
+E6:
+	Inherits@WW3ROLE: ^RoleEngineer
+
+JEEP:
+	Inherits@WW3ROLE: ^RoleScoutVehicle
+
+1TNK:
+	Inherits@WW3ROLE: ^RoleScoutVehicle
+
+2TNK:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+
+3TNK:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+
+4TNK:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+
+ARTY:
+	Inherits@WW3ROLE: ^RoleArtillery
+
+V2RL:
+	Inherits@WW3ROLE: ^RoleArtillery
+
+FTRK:
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+
+APC:
+	Inherits@WW3ROLE: ^RoleTransport
+
+YAK:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+
+MIG:
+	Inherits@WW3ROLE: ^RoleInterceptor
+
+HELI:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+
+HIND:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+
+TRAN:
+	Inherits@WW3ROLE: ^RoleTransport
+
+PT:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+
+DD:
+	Inherits@WW3ROLE: ^RoleDestroyer
+
+SS:
+	Inherits@WW3ROLE: ^RoleSubmarine
+
+LST:
+	Inherits@WW3ROLE: ^RoleTransport

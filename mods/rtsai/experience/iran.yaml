@@ -1,0 +1,4 @@
+World:
+	Faction@iran:
+		Selectable: true
+		RandomFactionMemberOf: random, random-soviets

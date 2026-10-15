@@ -1,0 +1,56 @@
+World:
+	Faction@iran:
+		Name: faction-iran.name
+		InternalName: iran
+		Side: Soviet
+		Description: faction-iran.description
+		RandomFactionMemberOf: RandomSoviet
+
+Player:
+	ProvidesFactionDoctrine@IRAN:
+		Factions: iran
+		Prerequisites: side.soviet, country.iran, doctrine.layered-denial
+	CapturedTechnologyManager@IRAN:
+		Factions: iran
+
+IRBAS:
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+IRATGM:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+IRDC:
+	Inherits@WW3ROLE: ^RoleEngineer
+SHADOWONE:
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+IRKARR:
+	Inherits@WW3ROLE: ^RoleMainBattleTank
+IRRAAD:
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+IRFAJR:
+	Inherits@WW3ROLE: ^RoleArtillery
+IRCOAST:
+	Inherits@WW3ROLE: ^RoleScoutVehicle
+IRAZAR:
+	Inherits@WW3ROLE: ^RoleInterceptor
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-interceptor
+		Domain: air
+		Provides: air.interceptor, air.return-to-base
+		Strategies: combat-air-patrol, intercept-aircraft
+IRTOUFAN:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+IRMOHAJER:
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	ReusableCapability@WW3AIRPROFILE:
+		Id: air-profile-strike
+		Domain: air
+		Provides: air.strike, air.return-to-base
+		Strategies: close-air-support, standoff-strike
+IRPEY:
+	Inherits@WW3ROLE: ^RolePatrolCraft
+IRGHADIR:
+	Inherits@WW3ROLE: ^RoleSubmarine

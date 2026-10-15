@@ -1,0 +1,127 @@
+# Dynamic environment events for World at War factions.
+# All effects are neutral world events. Faction adaptation reduces penalties but never grants immunity.
+
+World:
+	EnvironmentDirector:
+	EnvironmentTintPostProcessEffect:
+	FlashPostProcessEffect@ENVIRONMENTLIGHTNING:
+		Type: EnvironmentLightning
+		Length: 16
+		Color: DDEBFF
+
+	WeatherOverlay@SHAMAL:
+		RequiresCondition: environment-shamal
+		ParticleDensityFactor: 22
+		ChangingWindLevel: true
+		WindLevels: 16, 20, 24, 28
+		WindTick: 80, 180
+		UseSquares: false
+		ParticleSize: 1, 2
+		ScatterDirection: -2, 3
+		Gravity: 1.2, 3.2
+		SwingOffset: 0.2, 0.8
+		SwingSpeed: 0.01, 0.04
+		SwingAmplitude: 0.4, 1.2
+		ParticleColors: D7AE72D8, C99552CC, E3C58BB8, 987044D0
+		LineTailAlphaValue: 55
+		FadeInTicks: 65
+		FadeOutTicks: 80
+		InitialParticlePercentage: 0
+
+	WeatherOverlay@OILFIRE:
+		RequiresCondition: environment-oilfire
+		ParticleDensityFactor: 10
+		ChangingWindLevel: true
+		WindLevels: -3, -1, 2, 4
+		WindTick: 120, 260
+		UseSquares: false
+		ParticleSize: 1, 2
+		ScatterDirection: -2, 2
+		Gravity: -0.7, 0.5
+		SwingOffset: 0.8, 2.2
+		SwingSpeed: 0.01, 0.05
+		SwingAmplitude: 1.2, 3.5
+		ParticleColors: 35363870, 48413C68, 5B504760, 6A554958
+		LineTailAlphaValue: 24
+		FadeInTicks: 85
+		FadeOutTicks: 100
+		InitialParticlePercentage: 0
+
+	WeatherOverlay@SQUALL:
+		RequiresCondition: environment-squall
+		ParticleDensityFactor: 28
+		ChangingWindLevel: true
+		WindLevels: -8, -4, 2, 6
+		WindTick: 70, 160
+		UseSquares: false
+		ParticleSize: 1, 2
+		ScatterDirection: -2, 2
+		Gravity: 12, 20
+		SwingOffset: 0, 0
+		SwingSpeed: 0, 0
+		SwingAmplitude: 0, 0
+		ParticleColors: A7CAE8E8, 6F9FCADA, C4DCEEE0, 547FA8D0
+		LineTailAlphaValue: 105
+		FadeInTicks: 60
+		FadeOutTicks: 75
+		InitialParticlePercentage: 0
+
+	WeatherOverlay@MIRAGE:
+		RequiresCondition: environment-mirage
+		ParticleDensityFactor: 5
+		ChangingWindLevel: true
+		WindLevels: -2, 0, 2
+		WindTick: 120, 300
+		UseSquares: true
+		ParticleSize: 2, 4
+		ScatterDirection: -1, 1
+		Gravity: -0.5, 0.4
+		SwingOffset: 1.4, 2.8
+		SwingSpeed: 0.015, 0.04
+		SwingAmplitude: 2, 4
+		ParticleColors: F8C97838, E69C4930, FAE0A428
+		FadeInTicks: 100
+		FadeOutTicks: 100
+		InitialParticlePercentage: 0
+
+	AmbientSound@SHAMAL:
+		SoundFiles: env-shamal-wind.wav
+		RequiresCondition: environment-shamal
+	AmbientSound@OILFIRE:
+		SoundFiles: env-oil-fire.wav
+		RequiresCondition: environment-oilfire
+	AmbientSound@SQUALL:
+		SoundFiles: env-squall-rain.wav
+		RequiresCondition: environment-squall
+	AmbientSound@MIRAGE:
+		SoundFiles: env-mirage-hum.wav
+		RequiresCondition: environment-mirage
+	AmbientSound@BLACKOUT:
+		SoundFiles: env-blackout.wav
+		RequiresCondition: environment-blackout
+
+ENV.OILFIRE:
+	Inherits: ^SpriteActor
+	Immobile:
+		OccupiesSpace: false
+	RenderSprites:
+		Image: smoke_m
+		Palette: effect
+	WithSpriteBody:
+		Sequence: idle
+	WithIdleOverlay@FIRE:
+		Image: fire
+		Sequence: 1
+		Palette: effect
+		Offset: 0,0,96
+		IsDecoration: true
+	HiddenUnderFog:
+		Type: CenterPosition
+
+ENV.MIRAGE-CONTACT:
+	Immobile:
+		OccupiesSpace: false
+	AppearsOnRadar:
+		UseLocation: true
+	RadarColorFromTerrain:
+		Terrain: Gems

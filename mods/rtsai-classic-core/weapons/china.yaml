@@ -1,0 +1,517 @@
+﻿ChinaServiceRifle:
+	Inherits: M1Carbine
+	ReloadDelay: 28
+	Burst: 2
+	BurstDelays: 3
+	Range: 4c256
+	Report: china-rifle.wav
+	Projectile: Bullet
+		Speed: 2560
+		Inaccuracy: 48
+		Blockable: true
+		ContrailLength: 4
+		ContrailDelay: 0
+		ContrailStartWidth: 18
+		ContrailEndWidth: 4
+		ContrailStartColor: E7D06A
+		ContrailEndColor: 526C68
+		ContrailStartColorAlpha: 210
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 800
+		Versus:
+			None: 100
+			Wood: 22
+			Light: 50
+			Heavy: 12
+			Concrete: 8
+
+ChinaNetworkCarbine:
+	Inherits: M1Carbine
+	ReloadDelay: 45
+	Burst: 4
+	BurstDelays: 2
+	Range: 4c0
+	Report: china-network-carbine.wav
+	Projectile: Bullet
+		Speed: 2304
+		Inaccuracy: 80
+		Blockable: true
+		ContrailLength: 3
+		ContrailDelay: 0
+		ContrailStartWidth: 14
+		ContrailEndWidth: 3
+		ContrailStartColor: 60E7DB
+		ContrailEndColor: 183F48
+		ContrailStartColorAlpha: 200
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 260
+
+ChinaPortableAT:
+	Inherits: Dragon
+	ReloadDelay: 64
+	Range: 5c512
+	Report: china-portable-launch.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 300
+		HorizontalRateOfTurn: 44
+		RangeLimit: 8c0
+		Inaccuracy: 96
+	Warhead@1Dam: SpreadDamage
+		Damage: 5200
+		Versus:
+			None: 16
+			Wood: 58
+			Light: 105
+			Heavy: 112
+			Concrete: 55
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ImpactSounds: china-missile-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+ChinaPortableAA:
+	Inherits: RedEye
+	ReloadDelay: 54
+	Range: 7c0
+	Report: china-portable-launch.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 370
+		HorizontalRateOfTurn: 94
+		RangeLimit: 10c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3600
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+ChinaRedSpearRifle:
+	Inherits: ^SnipeWeapon
+	ReloadDelay: 68
+	Burst: 2
+	BurstDelays: 6
+	Range: 7c0
+	Report: china-redspear-rifle.wav
+	ValidTargets: Infantry, Vehicle
+	Projectile: Bullet
+		Speed: 3072
+		Inaccuracy: 0
+		Blockable: false
+		ContrailLength: 7
+		ContrailDelay: 0
+		ContrailStartWidth: 22
+		ContrailEndWidth: 3
+		ContrailStartColor: FF6655
+		ContrailEndColor: 55E0D0
+		ContrailStartColorAlpha: 235
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3300
+		ValidTargets: Infantry, Vehicle
+		Versus:
+			None: 125
+			Wood: 28
+			Light: 58
+			Heavy: 20
+			Concrete: 10
+
+ChinaQilin125mm:
+	Inherits: ^Cannon
+	ReloadDelay: 74
+	Range: 6c0
+	Report: china-qilin-fire.wav
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 1240
+		Image: 120MM
+		Shadow: true
+		ContrailLength: 8
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 8200
+		Versus:
+			None: 28
+			Wood: 65
+			Light: 95
+			Heavy: 122
+			Concrete: 52
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ImpactSounds: china-heavy-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+ChinaUGVCannon:
+	Inherits: ChainGun
+	Burst: 3
+	BurstDelays: 2
+	ReloadDelay: 20
+	Range: 5c0
+	Report: china-ugv-cannon.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 750
+		Versus:
+			None: 105
+			Wood: 35
+			Light: 72
+			Heavy: 12
+			Concrete: 10
+
+ChinaZBDAutocannon:
+	Inherits: ChainGun
+	Burst: 4
+	BurstDelays: 2
+	ReloadDelay: 26
+	Range: 5c256
+	Report: china-zbd-cannon.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 900
+		Versus:
+			None: 110
+			Wood: 42
+			Light: 78
+			Heavy: 18
+			Concrete: 12
+
+ChinaZBDMissile:
+	Inherits: Dragon
+	ReloadDelay: 88
+	Range: 6c0
+	Report: china-zbd-missile.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 310
+		HorizontalRateOfTurn: 48
+		RangeLimit: 9c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 4200
+		Versus:
+			None: 20
+			Wood: 62
+			Light: 98
+			Heavy: 96
+			Concrete: 48
+
+ChinaLongbowMissile:
+	Inherits: SCUD
+	ReloadDelay: 190
+	Range: 12c0
+	MinRange: 4c0
+	Report: china-longbow-launch.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 245
+		HorizontalRateOfTurn: 26
+		VerticalRateOfTurn: 36
+		RangeLimit: 15c0
+		Inaccuracy: 384
+		TrailImage: smokey
+	Warhead@1Dam: SpreadDamage
+		Spread: 384
+		Damage: 9800
+		Falloff: 1000, 520, 180, 60, 0
+		Versus:
+			None: 40
+			Wood: 95
+			Light: 100
+			Heavy: 78
+			Concrete: 72
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ImpactSounds: china-missile-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+ChinaSkySpearAAM:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 48
+	Range: 9c0
+	MinRange: 2c0
+	Report: china-air-missile.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 530
+		HorizontalRateOfTurn: 124
+		RangeLimit: 13c0
+		Inaccuracy: 64
+	Warhead@1Dam: SpreadDamage
+		Damage: 4300
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+ChinaSkySpearStrike:
+	Inherits: Maverick
+	ReloadDelay: 62
+	Range: 8c0
+	MinRange: 2c0
+	Report: china-air-missile.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 430
+		HorizontalRateOfTurn: 70
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 5600
+		Versus:
+			None: 24
+			Wood: 80
+			Light: 100
+			Heavy: 94
+			Concrete: 68
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ImpactSounds: china-missile-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+ChinaCloudStrike:
+	ReloadDelay: 70
+	Range: 7c0
+	MinRange: 1c512
+	Report: china-drone-release.wav
+	ValidTargets: Ground, Water, GroundActor, WaterActor
+	Projectile: Missile
+		Image: china_drone_projectile
+		Speed: 280
+		HorizontalRateOfTurn: 56
+		RangeLimit: 10c0
+		Inaccuracy: 128
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 6800
+		Falloff: 1000, 450, 120, 0
+		Versus:
+			None: 48
+			Wood: 92
+			Light: 95
+			Heavy: 72
+			Concrete: 64
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ImpactSounds: china-drone-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+ChinaCraneCannon:
+	Inherits: ChainGun.Yak
+	Burst: 3
+	BurstDelays: 2
+	ReloadDelay: 13
+	Range: 5c0
+	Report: china-heli-cannon.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 1050
+		Versus:
+			None: 110
+			Wood: 50
+			Light: 82
+			Heavy: 20
+			Concrete: 18
+
+ChinaCraneRocket:
+	Inherits: HellfireAG
+	ReloadDelay: 58
+	Range: 6c0
+	MinRange: 1c256
+	Burst: 2
+	BurstDelays: 8
+	Report: china-heli-rocket.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 310
+		HorizontalRateOfTurn: 48
+		RangeLimit: 9c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 4400
+
+ChinaFrigateMissile:
+	Inherits: Stinger
+	ReloadDelay: 62
+	Range: 9c0
+	Report: china-naval-missile.wav
+	ValidTargets: GroundActor, WaterActor, AirborneActor
+	Projectile: Missile
+		Image: china_missile
+		Speed: 390
+		HorizontalRateOfTurn: 90
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3900
+		ValidTargets: GroundActor, WaterActor, AirborneActor
+	Warhead@3Eff: CreateEffect
+		Image: china_naval_impact
+		Explosions: impact
+		ValidTargets: Ground, Water, GroundActor, WaterActor, Air, AirborneActor
+
+ChinaNavalGun:
+	Inherits: 2Inch
+	ReloadDelay: 38
+	Range: 7c0
+	Report: china-naval-gun.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 3300
+
+ChinaHaiwangDroneLaunch:
+	ReloadDelay: 145
+	Range: 14c0
+	MinRange: 5c0
+	Report: china-carrier-launch.wav
+	ValidTargets: GroundActor, WaterActor, Structure
+	Projectile: InstantHit
+
+ChinaHaiwangDroneStrike:
+	ReloadDelay: 145
+	Range: 14c0
+	MinRange: 5c0
+	Report: china-carrier-launch.wav
+	ValidTargets: GroundActor, WaterActor, Structure
+	Projectile: Missile
+		Image: china_drone_projectile
+		Speed: 230
+		HorizontalRateOfTurn: 48
+		RangeLimit: 17c0
+		Inaccuracy: 256
+		TrailImage: smokey
+	Warhead@1Dam: SpreadDamage
+		Spread: 384
+		Damage: 9000
+		Falloff: 1000, 520, 180, 0
+		ValidTargets: GroundActor, WaterActor, Structure
+		Versus:
+			None: 52
+			Wood: 105
+			Light: 95
+			Heavy: 76
+			Concrete: 82
+	Warhead@3Eff: CreateEffect
+		Image: china_naval_impact
+		Explosions: impact
+		ImpactSounds: china-drone-impact.wav
+		ValidTargets: Ground, Water, GroundActor, WaterActor, Trees
+
+ChinaHaiwangDefense:
+	Inherits: StingerAA
+	ReloadDelay: 48
+	Range: 7c0
+	Report: china-naval-missile.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 410
+		HorizontalRateOfTurn: 100
+		RangeLimit: 10c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+
+ChinaMantisAA:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 42
+	Range: 8c0
+	MinRange: 1c0
+	Burst: 2
+	BurstDelays: 7
+	Report: china-mantis-launch.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 440
+		HorizontalRateOfTurn: 112
+		RangeLimit: 11c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2800
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+ChinaPatrolMissile:
+	Inherits: Stinger
+	ReloadDelay: 54
+	Range: 7c0
+	Report: china-patrol-missile.wav
+	ValidTargets: GroundActor, WaterActor, AirborneActor
+	Projectile: Missile
+		Image: china_missile
+		Speed: 375
+		HorizontalRateOfTurn: 84
+		RangeLimit: 10c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2800
+		ValidTargets: GroundActor, WaterActor, AirborneActor
+
+ChinaLandingDefense:
+	Inherits: StingerAA
+	ReloadDelay: 62
+	Range: 6c0
+	Report: china-patrol-missile.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 390
+		HorizontalRateOfTurn: 96
+		RangeLimit: 9c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 2100
+
+ChinaTorpedo:
+	Inherits: TorpTube
+	ReloadDelay: 92
+	Range: 8c0
+	Report: china-torpedo.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 7200
+		Versus:
+			None: 10
+			Wood: 35
+			Light: 95
+			Heavy: 115
+			Concrete: 25
+
+ChinaBastionGun:
+	Inherits: TurretGun
+	ReloadDelay: 48
+	Range: 6c512
+	Report: china-bastion-fire.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 4300
+		Versus:
+			None: 28
+			Wood: 58
+			Light: 96
+			Heavy: 88
+			Concrete: 44
+
+ChinaSkyShieldAA:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 36
+	Range: 9c0
+	MinRange: 1c0
+	Burst: 2
+	BurstDelays: 6
+	Report: china-skyshield-launch.wav
+	Projectile: Missile
+		Image: china_missile
+		Speed: 470
+		HorizontalRateOfTurn: 128
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3100
+	Warhead@3Eff: CreateEffect
+		Image: china_precision_impact
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+ChinaShipSink:
+	Warhead@1Eff: CreateEffect
+		Image: china_naval_impact
+		Explosions: impact
+		ImpactSounds: china-ship-sink.wav
+		ValidTargets: Water, WaterActor
+	Warhead@2Shake: ShakeScreen
+		Duration: 5
+		Intensity: 2
+		Multiplier: 1,0

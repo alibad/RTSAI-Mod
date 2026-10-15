@@ -1,0 +1,8 @@
+EditorWorld:
+	ReusableCapability@TERRAINRANDOMMAP:
+		Id: terrain-and-random-map-systems
+		Domain: maps-and-worldgen
+		Provides: terrain.autotile, terrain.forest, terrain.liquid, terrain.resource, map.random-generation
+		Requires: earth-tileset, deterministic-seed, worldgen-compatibility
+		Strategies: generate-skirmish-map, enrich-earth-terrain
+		SimulationAffecting: false

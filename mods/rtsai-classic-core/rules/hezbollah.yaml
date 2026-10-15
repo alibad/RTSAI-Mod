@@ -1,0 +1,490 @@
+World:
+	Faction@hezbollah:
+		Name: faction-hezbollah.name
+		InternalName: hezbollah
+		Side: Soviet
+		Description: faction-hezbollah.description
+		RandomFactionMemberOf: RandomSoviet
+	StartingUnits@hezbollah-none:
+		Class: none
+		ClassName: options-starting-units.mcv-only
+		Factions: hezbollah
+		BaseActor: mcv
+	StartingUnits@hezbollah-light:
+		Class: light
+		ClassName: options-starting-units.light-support
+		Factions: hezbollah
+		BaseActor: mcv
+		SupportActors: hzrifle, hzrifle, hzat
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	StartingUnits@hezbollah-heavy:
+		Class: heavy
+		ClassName: options-starting-units.heavy-support
+		Factions: hezbollah
+		BaseActor: mcv
+		SupportActors: hzrifle, hzrifle, hzat, hztechnical, hzrecoilless
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+Player:
+	ProvidesFactionDoctrine@HZ:
+		Factions: hezbollah
+		Prerequisites: side.soviet, country.hezbollah, doctrine.concealed-defense
+	CapturedTechnologyManager@HZ:
+		Factions: hezbollah
+	UnitBuilderBotModule@easy:
+		UnitsToBuild:
+			hzrifle: 45
+			hzat: 8
+			hzspotter: 8
+			hzscout: 45
+			hztechnical: 45
+			hzrecoilless: 8
+			hzescort: 8
+			hzrockets: 8
+			hzdrone: 8
+			hzmissileboat: 8
+			hzskiff: 8
+			hzsurvey: 8
+		UnitLimits:
+			hzscout: 1
+	UnitBuilderBotModule@medium:
+		UnitsToBuild:
+			hzrifle: 45
+			hzat: 8
+			hzspotter: 8
+			hzscout: 45
+			hztechnical: 45
+			hzrecoilless: 8
+			hzescort: 8
+			hzrockets: 8
+			hzdrone: 8
+			hzmissileboat: 8
+			hzskiff: 8
+			hzsurvey: 8
+		UnitLimits:
+			hzscout: 1
+	UnitBuilderBotModule@rush:
+		UnitsToBuild:
+			hzrifle: 45
+			hzat: 8
+			hzspotter: 8
+			hzscout: 45
+			hztechnical: 45
+			hzrecoilless: 8
+			hzescort: 8
+			hzrockets: 8
+			hzdrone: 8
+			hzmissileboat: 8
+			hzskiff: 8
+			hzsurvey: 8
+		UnitLimits:
+			hzscout: 1
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			hzrifle: 45
+			hzat: 8
+			hzspotter: 8
+			hzscout: 45
+			hztechnical: 45
+			hzrecoilless: 8
+			hzescort: 8
+			hzrockets: 8
+			hzdrone: 8
+			hzmissileboat: 8
+			hzskiff: 8
+			hzsurvey: 8
+		UnitLimits:
+			hzscout: 1
+	UnitBuilderBotModule@turtle:
+		UnitsToBuild:
+			hzrifle: 45
+			hzat: 8
+			hzspotter: 8
+			hzscout: 45
+			hztechnical: 45
+			hzrecoilless: 8
+			hzescort: 8
+			hzrockets: 8
+			hzdrone: 8
+			hzmissileboat: 8
+			hzskiff: 8
+			hzsurvey: 8
+		UnitLimits:
+			hzscout: 1
+	UnitBuilderBotModule@naval:
+		UnitsToBuild:
+			hzrifle: 45
+			hzat: 8
+			hzspotter: 8
+			hzscout: 45
+			hztechnical: 45
+			hzrecoilless: 8
+			hzescort: 8
+			hzrockets: 8
+			hzdrone: 8
+			hzmissileboat: 8
+			hzskiff: 8
+			hzsurvey: 8
+		UnitLimits:
+			hzscout: 1
+FACT:
+	ProvidesPrerequisite@hezbollah:
+		Factions: hezbollah
+		Prerequisite: structures.hezbollah
+	ProvidesPrerequisite@hezbollah-side:
+		Factions: hezbollah
+		Prerequisite: structures.soviet
+WEAP:
+	ProvidesPrerequisite@hezbollah:
+		Factions: hezbollah
+		Prerequisite: vehicles.hezbollah
+	ProvidesPrerequisite@hezbollah-side:
+		Factions: hezbollah
+		Prerequisite: vehicles.soviet
+BARR:
+	ProvidesPrerequisite@hezbollah:
+		Factions: hezbollah
+		Prerequisite: infantry.hezbollah
+	ProvidesPrerequisite@hezbollah-side:
+		Factions: hezbollah
+		Prerequisite: infantry.soviet
+AFLD:
+	ProvidesPrerequisite@hezbollah:
+		Factions: hezbollah
+		Prerequisite: aircraft.hezbollah
+	ProvidesPrerequisite@hezbollah-side:
+		Factions: hezbollah
+		Prerequisite: aircraft.soviet
+SPEN:
+	ProvidesPrerequisite@hezbollah:
+		Factions: hezbollah
+		Prerequisite: ships.hezbollah
+	ProvidesPrerequisite@hezbollah-side:
+		Factions: hezbollah
+		Prerequisite: ships.soviet
+HZRIFLE:
+	WithDeathAnimation:
+		DeathSequencePalette: hezbollahplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzrifle
+	Inherits: YMR
+	Tooltip:
+		Name: levant-hzrifle-name
+	Buildable:
+		Prerequisites: ~infantry.hezbollah, ~techlevel.medium
+		Description: levant-hzrifle-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+HZAT:
+	WithDeathAnimation:
+		DeathSequencePalette: hezbollahplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzat
+	Inherits: YRPG
+	Tooltip:
+		Name: levant-hzat-name
+	Buildable:
+		Prerequisites: ~infantry.hezbollah, ~techlevel.medium
+		Description: levant-hzat-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+HZSPOTTER:
+	WithDeathAnimation:
+		DeathSequencePalette: hezbollahplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzspotter
+	Inherits: YSPOT
+	Tooltip:
+		Name: levant-hzspotter-name
+	Buildable:
+		Prerequisites: ~infantry.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzspotter-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@WW3ROLE: ^RoleEngineer
+HZSCOUT:
+	WithDeathAnimation:
+		DeathSequencePalette: hezbollahplayer
+		DeathPaletteIsPlayerPalette: true
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzscout
+	Inherits: WADIGHOST
+	Tooltip:
+		Name: levant-hzscout-name
+	Buildable:
+		Prerequisites: ~infantry.hezbollah, ~techlevel.medium
+		Description: levant-hzscout-description
+	Voiced:
+		VoiceSet: LevantClassicInfantryVoice
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+HZTECHNICAL:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hztechnical
+	Inherits: TECH
+	Tooltip:
+		Name: levant-hztechnical-name
+	Buildable:
+		Prerequisites: ~vehicles.hezbollah, ~techlevel.medium
+		Description: levant-hztechnical-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+	Inherits@WW3ROLE: ^RoleRifleInfantry
+HZRECOILLESS:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzrecoilless
+	Inherits: TECH
+	Tooltip:
+		Name: levant-hzrecoilless-name
+	Buildable:
+		Prerequisites: ~vehicles.hezbollah, ~techlevel.medium
+		Description: levant-hzrecoilless-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+	Armament:
+		Weapon: RedSeaRPG
+	Inherits@WW3ROLE: ^RoleAntiArmorInfantry
+HZESCORT:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzescort
+	Inherits: FTRK
+	Tooltip:
+		Name: levant-hzescort-name
+	Buildable:
+		Prerequisites: ~vehicles.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzescort-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+	Armament@primary:
+		Weapon: RedSeaInterceptor
+	Inherits@WW3ROLE: ^RoleAntiAirVehicle
+HZROCKETS:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzrockets
+	Inherits: YMLR
+	Tooltip:
+		Name: levant-hzrockets-name
+	Buildable:
+		Prerequisites: ~vehicles.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzrockets-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	ExternalCondition@repair:
+		Condition: hezbollah-repair
+	ChangesHealth@field:
+		Step: 200
+		Delay: 25
+		StartIfBelow: 70
+		RequiresCondition: hezbollah-repair
+	GrantConditionOnMovement@setup:
+		Condition: moving
+	ReloadDelayMultiplier@setup:
+		Modifier: 70
+		RequiresCondition: !moving
+	Inherits@WW3ROLE: ^RoleArtillery
+HZDRONE:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzdrone
+	Inherits: SAMAD
+	Tooltip:
+		Name: levant-hzdrone-name
+	Buildable:
+		Prerequisites: ~aircraft.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzdrone-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RoleAttackAircraft
+	SpawnActorOnDeath:
+		Actor: HZDRONE.Husk
+HZMISSILEBOAT:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzmissileboat
+	Inherits: YE_MSLC
+	-WithSpriteTurret:
+	Tooltip:
+		Name: levant-hzmissileboat-name
+	Buildable:
+		Prerequisites: ~ships.hezbollah, ~techlevel.medium
+		Description: levant-hzmissileboat-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RolePatrolCraft
+HZSKIFF:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzskiff
+	Inherits: YE_USV
+	Tooltip:
+		Name: levant-hzskiff-name
+	Buildable:
+		Prerequisites: ~ships.hezbollah, ~techlevel.medium
+		Description: levant-hzskiff-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RolePatrolCraft
+HZSURVEY:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzsurvey
+	Inherits: YE_SURVE
+	Tooltip:
+		Name: levant-hzsurvey-name
+	Buildable:
+		Prerequisites: ~ships.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzsurvey-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^RoleEngineer
+HZBUNKER:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzbunker
+	Inherits: HBOX
+	Tooltip:
+		Name: levant-hzbunker-name
+	Buildable:
+		Prerequisites: ~structures.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzbunker-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Cloak:
+		InitialDelay: 75
+		CloakDelay: 125
+		UncloakOn: Attack, Damage
+		CloakTypes: Cloak
+	Inherits@WW3ROLE: ^ReusableDefenseStructure
+HZAANEST:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzaanest
+	Inherits: SAM
+	Tooltip:
+		Name: levant-hzaanest-name
+	Buildable:
+		Prerequisites: ~structures.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzaanest-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Inherits@WW3ROLE: ^ReusableDefenseStructure
+	-WithBuildingBib:
+HZCOASTAL:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzcoastal
+	Inherits: GUN
+	Tooltip:
+		Name: levant-hzcoastal-name
+	Buildable:
+		Prerequisites: ~structures.hezbollah, dome, ~techlevel.medium
+		Description: levant-hzcoastal-description
+	Voiced:
+		VoiceSet: VehicleVoice
+	Armament:
+		Weapon: RedSeaATGM
+	Cloak:
+		InitialDelay: 75
+		CloakDelay: 125
+		UncloakOn: Attack, Damage
+		CloakTypes: Cloak
+	Inherits@WW3ROLE: ^ReusableDefenseStructure
+	-WithBuildingBib:
+HZRELAY:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzrelay
+	Inherits: ^Defense
+	-RenderRangeCircle:
+	Tooltip:
+		Name: levant-hzrelay-name
+	Buildable:
+		Queue: Defense
+		Prerequisites: ~structures.hezbollah, dome, ~techlevel.medium
+		BuildPaletteOrder: 65
+		Description: levant-hzrelay-description
+	Valued:
+		Cost: 750
+	Health:
+		HP: 42000
+	Power:
+		Amount: -35
+	GrantConditionOnPowerState@LOWPOWER:
+		Condition: lowpower
+		ValidPowerStates: Low, Critical
+	ProximityExternalCondition@link:
+		Condition: redsea-spotted
+		Range: 6c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
+	DetectCloaked:
+		Range: 5c0
+		RequiresCondition: !lowpower && !build-incomplete
+	WithRangeCircle@link:
+		Range: 6c0
+		Color: B3B88180
+	StrategicRole:
+		Roles: support
+		Domain: defense
+HZWORKSHOP:
+	RenderSprites:
+		PlayerPalette: hezbollahplayer
+		Image: hzworkshop
+	Inherits: HZRELAY
+	Tooltip:
+		Name: levant-hzworkshop-name
+	Buildable:
+		BuildPaletteOrder: 66
+		Description: levant-hzworkshop-description
+	Valued:
+		Cost: 900
+	-ProximityExternalCondition@link:
+	-DetectCloaked:
+	ProximityExternalCondition@repair:
+		Condition: hezbollah-repair
+		Range: 4c0
+		ValidRelationships: Ally
+		RequiresCondition: !lowpower && !build-incomplete
+	WithRangeCircle@link:
+		Range: 4c0
+HZDRONE.Husk:
+	Inherits: SAMAD.Husk
+	Tooltip:
+		Name: levant-hzdrone-name
+	RenderSprites:
+		Image: hzdrone
+		PlayerPalette: hezbollahplayer

@@ -1,0 +1,175 @@
+sa_frgt:
+	Defaults:
+		Filename: sa_frgt.shp
+	idle:
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	critical-idle:
+		Start: 64
+		Facings: 32
+	sink:
+		Start: 96
+		Length: 8
+		Facings: 32
+		Tick: 7
+	turret:
+		Filename: sa_frgt_turret.shp
+		Facings: 32
+	ciws:
+		Filename: sa_frgt_ciws.shp
+		Facings: 32
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: sa_frgt_icon.shp
+
+sa_intc:
+	Defaults:
+		Filename: sa_intc.shp
+	idle:
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	critical-idle:
+		Start: 64
+		Facings: 32
+	sink:
+		Start: 96
+		Length: 8
+		Facings: 32
+		Tick: 6
+	turret:
+		Filename: sa_intc_turret.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sa_intc_icon.shp
+
+sa_fss:
+	Defaults:
+		Filename: sa_fss.shp
+	idle:
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	critical-idle:
+		Start: 64
+		Facings: 32
+	sink:
+		Start: 96
+		Length: 8
+		Facings: 32
+		Tick: 8
+	icon:
+		Filename: sa_fss_icon.shp
+
+ye_mslc:
+	Defaults:
+		Filename: ye_mslc.shp
+	idle:
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	critical-idle:
+		Start: 64
+		Facings: 32
+	sink:
+		Start: 96
+		Length: 8
+		Facings: 32
+		Tick: 6
+	turret:
+		Filename: ye_mslc_turret.shp
+		Facings: 32
+	muzzle:
+		Filename: gunfire2.shp
+		Length: 5
+	icon:
+		Filename: ye_mslc_icon.shp
+
+ye_usv:
+	Defaults:
+		Filename: ye_usv.shp
+	idle:
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	critical-idle:
+		Start: 64
+		Facings: 32
+	sink:
+		Start: 96
+		Length: 8
+		Facings: 32
+		Tick: 5
+	icon:
+		Filename: ye_usv_icon.shp
+
+ye_surve:
+	Defaults:
+		Filename: ye_surve.shp
+	idle:
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	critical-idle:
+		Start: 64
+		Facings: 32
+	sink:
+		Start: 96
+		Length: 8
+		Facings: 32
+		Tick: 6
+	turret:
+		Filename: ye_surve_turret.shp
+		Facings: 32
+	muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: ye_surve_icon.shp
+
+naval_wake:
+	wake:
+		Filename: naval_wake.shp
+		Length: 4
+		Facings: 32
+		Tick: 5
+
+naval_chaff:
+	chaff:
+		Filename: naval_chaff.shp
+		Length: 12
+		Tick: 3
+
+naval_radar:
+	radar:
+		Filename: naval_radar.shp
+		Length: 12
+		Tick: 5
+
+naval_flood:
+	flood:
+		Filename: naval_flood.shp
+		Length: 6
+		Tick: 6
+
+naval_survivor:
+	idle:
+		Filename: naval_survivor.shp
+
+naval_salvage:
+	idle:
+		Filename: naval_salvage.shp

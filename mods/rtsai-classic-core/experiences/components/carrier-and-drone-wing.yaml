@@ -1,0 +1,33 @@
+World:
+	ReusableCapability@CARRIERWINGS:
+		Id: carrier-and-drone-wing
+		Domain: navy-and-air
+		Provides: wing.parent, wing.child, wing.replenish, wing.recall
+		Requires: docking, ammo-policy, target-selection
+		Strategies: standoff-strike, combat-air-patrol, drone-screen
+
+^ReusableWingParent:
+	ReusableCapability:
+		Id: wing-parent
+		Domain: navy-and-air
+		Provides: wing.launch, wing.replenish, wing.command-link
+		Requires: wing.child, rearm-policy
+		Strategies: standoff-strike, drone-screen
+	StrategicRole:
+		Roles: carrier, drone-mothership, wing-controller
+		Counters: armor, ship, building
+		Domain: naval
+		AIWeight: 170
+
+^ReusableWingChild:
+	ReusableCapability:
+		Id: wing-child
+		Domain: air
+		Provides: autonomous-sortie, parent-return
+		Requires: wing.parent, attack-profile
+		Strategies: sortie, return-to-parent
+	StrategicRole:
+		Roles: drone, carrier-aircraft, expendable-wing
+		Domain: air
+		AIWeight: 45
+		TransportWeight: 0

@@ -4,7 +4,7 @@
 # No news box and no content-manager button: the standalone game has no external content to manage.
 
 Container@MAINMENU:
-	Logic: MainMenuLogic, RTSAIGameModesLogic
+	Logic: MainMenuLogic, RTSAIGameModesLogic, RTSAIDesktopEntryLogic
 	Children:
 		LogicKeyListener@GLOBAL_KEYHANDLER:
 			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
@@ -22,6 +22,13 @@ Container@MAINMENU:
 			SafeLeft: 580
 			SafeRight: 1810
 			InsetLeft: 341
+		RTSAIButton@DESKTOP_HOME_BUTTON:
+			X: WINDOW_WIDTH - 270
+			Y: 85
+			Width: 230
+			Height: 38
+			Text: Game library
+			Font: Bold
 		ColorBlock@MENU_BAND:
 			Width: 340
 			Height: WINDOW_HEIGHT
@@ -55,37 +62,41 @@ Container@MAINMENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
 					Children:
-						Button@SINGLEPLAYER_BUTTON:
+						RTSAIButton@EARTH_STUDIO_BUTTON:
+							Visible: false
+							Width: 1
+							Height: 1
+						RTSAIButton@SINGLEPLAYER_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-singleplayer-title
 							Font: MediumBold
-						Button@MULTIPLAYER_BUTTON:
+						RTSAIButton@MULTIPLAYER_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-multiplayer-title
 							Font: MediumBold
-						Button@SETTINGS_BUTTON:
+						RTSAIButton@SETTINGS_BUTTON:
 							Y: 136
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-settings-title
 							Font: MediumBold
-						Button@EXTRAS_BUTTON:
+						RTSAIButton@EXTRAS_BUTTON:
 							Y: 184
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-title
 							Font: MediumBold
-						Button@GAME_MODES_BUTTON:
+						RTSAIButton@GAME_MODES_BUTTON:
 							Y: 232
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: rtsai-game-modes
 							Font: MediumBold
-						Button@QUIT_BUTTON:
+						RTSAIButton@QUIT_BUTTON:
 							Y: 280
 							Width: PARENT_WIDTH
 							Height: 38
@@ -102,25 +113,25 @@ Container@MAINMENU:
 							Font: Bold
 							TextColor: 8FD8E2
 							Shadow: true
-						Button@SKIRMISH_BUTTON:
+						RTSAIButton@SKIRMISH_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-singleplayer-menu-skirmish
 							Font: MediumBold
-						Button@MISSIONS_BUTTON:
+						RTSAIButton@MISSIONS_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-missions-title
 							Font: MediumBold
-						Button@LOAD_BUTTON:
+						RTSAIButton@LOAD_BUTTON:
 							Y: 136
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-singleplayer-menu-load
 							Font: MediumBold
-						Button@BACK_BUTTON:
+						RTSAIButton@BACK_BUTTON:
 							Key: escape
 							Y: 280
 							Width: PARENT_WIDTH
@@ -138,37 +149,37 @@ Container@MAINMENU:
 							Font: Bold
 							TextColor: 8FD8E2
 							Shadow: true
-						Button@REPLAYS_BUTTON:
+						RTSAIButton@REPLAYS_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-menu-replays
 							Font: MediumBold
-						Button@MUSIC_BUTTON:
+						RTSAIButton@MUSIC_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-music-title
 							Font: MediumBold
-						Button@MAP_EDITOR_BUTTON:
+						RTSAIButton@MAP_EDITOR_BUTTON:
 							Y: 136
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-map-editor-title
 							Font: MediumBold
-						Button@ASSETBROWSER_BUTTON:
+						RTSAIButton@ASSETBROWSER_BUTTON:
 							Y: 184
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-extras-menu-assetbrowser
 							Font: MediumBold
-						Button@CREDITS_BUTTON:
+						RTSAIButton@CREDITS_BUTTON:
 							Y: 232
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: label-credits-title
 							Font: MediumBold
-						Button@BACK_BUTTON:
+						RTSAIButton@BACK_BUTTON:
 							Key: escape
 							Y: 280
 							Width: PARENT_WIDTH
@@ -186,19 +197,19 @@ Container@MAINMENU:
 							Font: Bold
 							TextColor: 8FD8E2
 							Shadow: true
-						Button@NEW_MAP_BUTTON:
+						RTSAIButton@NEW_MAP_BUTTON:
 							Y: 40
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-map-editor-new-map
 							Font: MediumBold
-						Button@LOAD_MAP_BUTTON:
+						RTSAIButton@LOAD_MAP_BUTTON:
 							Y: 88
 							Width: PARENT_WIDTH
 							Height: 38
 							Text: button-map-editor-load-map
 							Font: MediumBold
-						Button@BACK_BUTTON:
+						RTSAIButton@BACK_BUTTON:
 							Key: escape
 							Y: 280
 							Width: PARENT_WIDTH
@@ -228,7 +239,7 @@ Container@MAINMENU:
 					Width: 170
 					Height: 40
 					Contrast: true
-				Background@GRAPH_BG:
+				RTSAIPanel@GRAPH_BG:
 					ClickThrough: true
 					Background: dialog4
 					X: WINDOW_WIDTH - 240
@@ -266,7 +277,7 @@ Container@RTSAI_LOCAL_PROFILE_PANEL:
 					Font: TinyBold
 					TextColor: AEB6BF
 					Shadow: true
-				Button@DESTROY_KEY:
+				RTSAIButton@DESTROY_KEY:
 					X: PARENT_WIDTH - 60
 					Width: 60
 					Height: 22
@@ -280,7 +291,7 @@ Container@RTSAI_LOCAL_PROFILE_PANEL:
 			Width: PARENT_WIDTH
 			Height: 24
 			Children:
-				Button@LINK_BUTTON:
+				RTSAIButton@LINK_BUTTON:
 					Width: PARENT_WIDTH
 					Height: 22
 					Background:
@@ -312,7 +323,7 @@ Container@RTSAI_LOCAL_PROFILE_PANEL:
 					TextColor: 8FA7B0
 					Shadow: true
 					Text: label-rtsai-profile-error
-				Button@RETRY_BUTTON:
+				RTSAIButton@RETRY_BUTTON:
 					X: PARENT_WIDTH - 60
 					Width: 60
 					Height: 22

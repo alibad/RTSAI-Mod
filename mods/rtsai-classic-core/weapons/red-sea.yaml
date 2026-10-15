@@ -1,0 +1,497 @@
+RedSeaAbrams120mm:
+	Inherits: ^Cannon
+	ReloadDelay: 72
+	Range: 6c0
+	Report: redsea-m1-fire.wav
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 1280
+		Image: 120MM
+		Shadow: true
+		ContrailLength: 9
+		ContrailDelay: 0
+		ContrailStartWidth: 56
+		ContrailEndWidth: 12
+		ContrailStartColorAlpha: 245
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 8500
+		Versus:
+			None: 30
+			Wood: 70
+			Light: 95
+			Heavy: 125
+			Concrete: 55
+	Warhead@3Eff: CreateEffect
+		Image: redsea_m1_impact
+		Explosions: impact
+		ImpactSounds: redsea-m1-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+	Warhead@Shake: ShakeScreen
+		Duration: 5
+		Intensity: 2
+		Multiplier: 1,0
+
+RedSeaInterceptor:
+	Inherits: Nike
+	ReloadDelay: 42
+	Range: 9c0
+	Report: redsea-interceptor.wav
+	Projectile: Missile
+		Speed: 426
+		HorizontalRateOfTurn: 120
+		RangeLimit: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3600
+
+RedSeaMobileStrike:
+	Inherits: SCUD
+	ReloadDelay: 150
+	Range: 9c0
+	Report: redsea-mobile-launch.wav
+	Projectile: Bullet
+		Speed: 170
+		Blockable: false
+		LaunchAngle: 128
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 9000
+
+RedSeaDroneStrike:
+	ReloadDelay: 1
+	Range: 2c0
+	Report: redsea-drone-strike.wav
+	TargetActorCenter: true
+	ValidTargets: Ground, Water, GroundActor, WaterActor
+	Projectile: Missile
+		Image: samad
+		Sequences: dive
+		Palette: player
+		IsPlayerPalette: True
+		Shadow: True
+		Blockable: false
+		Speed: 192
+		Acceleration: 12
+		HorizontalRateOfTurn: 32
+		VerticalRateOfTurn: 40
+		CruiseAltitude: 0
+		RangeLimit: 4c0
+		CloseEnough: 0c128
+	Warhead@1Dam: SpreadDamage
+		Spread: 384
+		Damage: 14000
+		Falloff: 1000, 500, 180, 60, 0
+		ValidTargets: GroundActor, WaterActor
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		Versus:
+			None: 45
+			Wood: 105
+			Light: 110
+			Heavy: 82
+			Concrete: 70
+	Warhead@2Eff: CreateEffect
+		Image: redsea_drone_impact
+		Explosions: impact
+		ImpactSounds: redsea-drone-impact.wav
+		ValidTargets: Ground, Water, GroundActor, WaterActor, Trees
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: Crater
+		ValidTargets: Ground, Infantry
+	Warhead@4Shake: ShakeScreen
+		Duration: 8
+		Intensity: 3
+		Multiplier: 1,0
+
+RedSeaF15AAM:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 46
+	Range: 8c512
+	MinRange: 2c0
+	Report: redsea-f15-missile.wav
+	Projectile: Missile
+		Speed: 512
+		HorizontalRateOfTurn: 120
+		RangeLimit: 13c0
+		Inaccuracy: 64
+		CloseEnough: 0c512
+	Warhead@1Dam: SpreadDamage
+		Damage: 4200
+		Versus:
+			Light: 110
+	Warhead@3Eff: CreateEffect
+		Image: redsea_air_impact
+		Explosions: impact
+		ValidTargets: Air, AirborneActor
+
+RedSeaF15Strike:
+	Inherits: Maverick
+	ReloadDelay: 58
+	Range: 8c0
+	MinRange: 2c0
+	Report: redsea-f15-missile.wav
+	Projectile: Missile
+		Speed: 430
+		HorizontalRateOfTurn: 70
+		RangeLimit: 12c0
+		Inaccuracy: 128
+	Warhead@1Dam: SpreadDamage
+		Damage: 6500
+		Versus:
+			None: 35
+			Wood: 85
+			Light: 105
+			Heavy: 100
+			Concrete: 70
+	Warhead@3Eff: CreateEffect
+		Image: redsea_air_impact
+		Explosions: impact
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+RedSeaF15Cannon:
+	Inherits: ChainGun.Yak
+	Burst: 4
+	BurstDelays: 1
+	ReloadDelay: 10
+	Range: 4c512
+	MinRange: 1c512
+	Report: redsea-f15-cannon.wav
+	ValidTargets: GroundActor, AirborneActor, WaterActor
+	Warhead@1Dam: SpreadDamage
+		Damage: 950
+		ValidTargets: GroundActor, AirborneActor, WaterActor
+		Versus:
+			None: 80
+			Wood: 35
+			Light: 75
+			Heavy: 16
+			Concrete: 12
+	Warhead@2Eff: CreateEffect
+		Image: redsea_air_impact
+		Explosions: impact
+		ImpactActors: false
+		ValidTargets: Ground, Air, GroundActor, AirborneActor, WaterActor, Trees
+	Warhead@DESIGNATED: TargetDamage
+		Damage: 400
+		ValidTargets: RedSeaDesignated
+
+RedSeaApacheCannon:
+	Inherits: ChainGun.Yak
+	Burst: 3
+	BurstDelays: 2
+	ReloadDelay: 12
+	Range: 5c0
+	MinRange: 0c512
+	Report: redsea-ah64-cannon.wav
+	ValidTargets: GroundActor, WaterActor
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 1200
+		ValidTargets: GroundActor, WaterActor
+		Versus:
+			None: 115
+			Wood: 55
+			Light: 85
+			Heavy: 22
+			Concrete: 20
+	Warhead@2Eff: CreateEffect
+		Image: redsea_air_impact
+		Explosions: impact
+		ImpactActors: false
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+	Warhead@DESIGNATED: TargetDamage
+		Damage: 350
+		ValidTargets: RedSeaDesignated
+
+RedSeaApacheRockets:
+	Inherits: HellfireAG
+	ReloadDelay: 52
+	Range: 6c0
+	MinRange: 1c256
+	Burst: 2
+	BurstDelays: 8
+	Report: redsea-ah64-rocket.wav
+	Projectile: Missile
+		Speed: 300
+		HorizontalRateOfTurn: 46
+		RangeLimit: 9c0
+		Inaccuracy: 160
+	Warhead@1Dam: SpreadDamage
+		Damage: 4800
+		Versus:
+			None: 24
+			Wood: 82
+			Light: 100
+			Heavy: 92
+			Concrete: 72
+	Warhead@3Eff: CreateEffect
+		Image: redsea_air_impact
+		Explosions: impact
+		ImpactSounds: redsea-drone-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+	Warhead@DESIGNATED: TargetDamage
+		Damage: 1500
+		ValidTargets: RedSeaDesignated
+
+# --- Red Sea infantry weapons and support payloads -------------------------
+
+RedSeaGuardRifle:
+	Inherits: M1Carbine
+	Burst: 3
+	BurstDelays: 3
+	ReloadDelay: 34
+	Range: 5c512
+	Report: redsea-guard-rifle.wav
+	Projectile: Bullet
+		Speed: 2304
+		Inaccuracy: 88
+		Blockable: true
+		ContrailLength: 4
+		ContrailDelay: 0
+		ContrailStartWidth: 17
+		ContrailEndWidth: 4
+		ContrailStartColor: E8CE7C
+		ContrailEndColor: 5A4730
+		ContrailStartColorAlpha: 210
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 920
+		Versus:
+			None: 110
+			Wood: 25
+			Light: 18
+			Heavy: 8
+			Concrete: 8
+
+RedSeaMountainRifle:
+	Inherits: M1Carbine
+	ReloadDelay: 36
+	Burst: 2
+	BurstDelays: 5
+	Range: 5c0
+	Report: redsea-mountain-rifle.wav
+	Projectile: Bullet
+		Speed: 2048
+		Inaccuracy: 128
+		Blockable: true
+		ContrailLength: 3
+		ContrailDelay: 0
+		ContrailStartWidth: 14
+		ContrailEndWidth: 3
+		ContrailStartColor: D2A45D
+		ContrailEndColor: 563B28
+		ContrailStartColorAlpha: 190
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 650
+		Versus:
+			None: 118
+			Wood: 24
+			Light: 16
+			Heavy: 6
+			Concrete: 6
+
+RedSeaJTACDesignator:
+	ReloadDelay: 95
+	Range: 8c0
+	TargetActorCenter: true
+	ValidTargets: GroundActor, WaterActor
+	Projectile: LaserZap
+		Width: 22
+		Duration: 14
+		ZOffset: 2047
+		Color: 52E7D6C0
+		SecondaryBeam: true
+		SecondaryBeamWidth: 64
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: 52E7D630
+	Warhead@MARK: GrantExternalCondition
+		Condition: redsea-designated
+		Duration: 250
+		ValidRelationships: Enemy, Neutral
+
+RedSeaATGM:
+	Inherits: Dragon
+	ReloadDelay: 105
+	Range: 8c512
+	MinRange: 2c0
+	Report: redsea-atgm-launch.wav
+	Projectile: Missile
+		Speed: 256
+		Acceleration: 5
+		HorizontalRateOfTurn: 36
+		RangeLimit: 12c0
+		Inaccuracy: 48
+		TrailImage: smokey
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 11000
+		ValidTargets: Vehicle, Ship, Structure, GroundActor, WaterActor
+		Versus:
+			None: 18
+			Wood: 65
+			Light: 125
+			Heavy: 145
+			Concrete: 48
+	Warhead@3Eff: CreateEffect
+		Image: redsea_m1_impact
+		Explosions: impact
+		ImpactSounds: redsea-drone-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+RedSeaRPG:
+	Inherits: Dragon
+	ReloadDelay: 75
+	Range: 4c256
+	MinRange: 0c768
+	Report: redsea-rpg-launch.wav
+	Projectile: Missile
+		Speed: 208
+		HorizontalRateOfTurn: 24
+		RangeLimit: 6c0
+		Inaccuracy: 128
+		TrailImage: smokey
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 9200
+		ValidTargets: Vehicle, Ship, Structure, GroundActor, WaterActor
+		Versus:
+			None: 25
+			Wood: 72
+			Light: 125
+			Heavy: 115
+			Concrete: 55
+	Warhead@3Eff: CreateEffect
+		Image: redsea_m1_impact
+		Explosions: impact
+		ImpactSounds: redsea-drone-impact.wav
+		ValidTargets: Ground, GroundActor, WaterActor, Trees
+
+RedSeaFalconRifle:
+	Inherits: SilencedPPK
+	ReloadDelay: 28
+	Burst: 2
+	BurstDelays: 8
+	Range: 7c0
+	Report: redsea-suppressed.wav
+	Projectile: Bullet
+		Speed: 2944
+		Inaccuracy: 12
+		Blockable: false
+		ContrailLength: 6
+		ContrailDelay: 0
+		ContrailStartWidth: 18
+		ContrailEndWidth: 2
+		ContrailStartColor: EEE5C7
+		ContrailEndColor: 766E5C
+		ContrailStartColorAlpha: 150
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Spread: 36
+		Damage: 3900
+		ValidTargets: Infantry, Barrel
+
+RedSeaGhostCarbine:
+	Inherits: SilencedPPK
+	ReloadDelay: 48
+	Burst: 2
+	BurstDelays: 5
+	Range: 5c512
+	Report: redsea-suppressed.wav
+	Projectile: Bullet
+		Speed: 2432
+		Inaccuracy: 36
+		Blockable: true
+		ContrailLength: 4
+		ContrailDelay: 0
+		ContrailStartWidth: 13
+		ContrailEndWidth: 2
+		ContrailStartColor: 56D4B5
+		ContrailEndColor: 17372F
+		ContrailStartColorAlpha: 140
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 2800
+		ValidTargets: Infantry, Barrel
+
+RedSeaSpotterCarbine:
+	Inherits: M1Carbine
+	ReloadDelay: 46
+	Burst: 2
+	BurstDelays: 5
+	Range: 4c0
+	Report: redsea-mountain-rifle.wav
+	Projectile: Bullet
+		Speed: 2112
+		Inaccuracy: 144
+		Blockable: true
+		ContrailLength: 2
+		ContrailDelay: 0
+		ContrailStartWidth: 11
+		ContrailEndWidth: 2
+		ContrailStartColor: 5BD5C0
+		ContrailEndColor: 24443D
+		ContrailStartColorAlpha: 175
+		ContrailEndColorAlpha: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 340
+
+RedSeaPrecisionBomb:
+	ReloadDelay: 10
+	Range: 5c0
+	ValidTargets: Ground, Water, GroundActor, WaterActor
+	Projectile: GravityBomb
+		Image: BOMB
+		Velocity: 0, 0, -80
+		Acceleration: 0, 0, -8
+		Shadow: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 384
+		Damage: 18000
+		Falloff: 1000, 430, 110, 0
+		ValidTargets: GroundActor, WaterActor
+		Versus:
+			None: 55
+			Wood: 105
+			Light: 115
+			Heavy: 92
+			Concrete: 80
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Image: redsea_drone_impact
+		Explosions: impact
+		ImpactSounds: redsea-drone-impact.wav
+		ValidTargets: Ground, Water, GroundActor, WaterActor, Trees
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: Crater
+		ValidTargets: Ground, Infantry
+	Warhead@DESIGNATED: TargetDamage
+		Damage: 5500
+		ValidTargets: RedSeaDesignated
+
+RedSeaRemoteDemolition:
+	ReloadDelay: 160
+	Range: 2c0
+	TargetActorCenter: true
+	ValidTargets: Vehicle, Structure, Ship, GroundActor, WaterActor
+	Projectile: InstantHit
+		Blockable: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 15000
+		Delay: 75
+		ValidTargets: Vehicle, Structure, Ship, GroundActor, WaterActor
+		Versus:
+			None: 55
+			Wood: 120
+			Light: 120
+			Heavy: 82
+			Concrete: 105
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Delay: 75
+		Image: redsea_drone_impact
+		Explosions: impact
+		ImpactSounds: redsea-remote-charge.wav
+		ValidTargets: Ground, Water, GroundActor, WaterActor, Trees

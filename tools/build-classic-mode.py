@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build the standalone rectangular Classic profile from shared modern-faction rules.
+"""Preserve the experimental rectangular profile made from shared isometric rules.
 
-Both profiles use the same authored faction assets and companion contracts. Classic
+This experimental profile is not the recovered Classic foundation. It
 has its own rectangular map grid, original square terrain and maps; it never mounts
 an owned-content package. Historical Classic campaigns are retained separately.
 """
@@ -76,6 +76,7 @@ def maps():
 
 def manifest():
     source=(ROOT/'mods/rtsai/mod.yaml').read_text(encoding='utf-8')
+    source=source.replace('Mod: rtsai\n', 'Mod: rtsai-topdown\n')
     source=source.replace('\tTitle: mod-title','\tTitle: classic-mode-title').replace('\tWindowTitle: ra2-preview-window-title','\tWindowTitle: classic-mode-title')
     source=source.replace('\t\t$rtsai: ra2','\t\t$rtsai: ra2\n\t\t$rtsai-topdown: classic')
     source=re.sub(r'MapFolders:\n.*?(?=\nRules:)', 'MapFolders:\n\tclassic|campaigns/maps: System\n\tclassic|maps: System\n\t~^SupportDir|maps/rtsai-topdown/{DEV_VERSION}: User\n',source,flags=re.S)
@@ -85,6 +86,7 @@ def manifest():
     source=source.replace('FluentMessages:\n','FluentMessages:\n\tclassic|mode.ftl\n')
     source=source.replace('\nModelSequences:', '\n\tclassic|sequences.yaml\n\nModelSequences:')
     text(MODE/'mod.yaml',source)
+    text(MODE/'experiences.yaml', (ROOT/'mods/rtsai/experiences.yaml').read_text(encoding='utf-8').replace('Mod: rtsai\n', 'Mod: rtsai-topdown\n'))
     text(MODE/'mode.ftl','classic-mode-title = RTS AI — Classic\n')
     rules='^Palettes:\n\tPaletteFromFile@terrain-temperate:\n\t\tFilename: classic|terrain/terrain.pal\n\n^SpriteActor:\n\tBodyOrientation:\n\t\tUseClassicPerspectiveFudge: true\n'
     for actor in sorted({match[1] for path in (ROOT/'mods/rtsai').rglob('*.yaml')

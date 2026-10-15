@@ -1,0 +1,66 @@
+Player:
+	ReusableCapability@COMPOSITIONAI:
+		Id: unit-composition-doctrine-ai
+		Domain: strategy-ai
+		Provides: composition.template, role-demand, counter-response
+		Requires: strategic-role, faction.doctrine
+		Strategies: combined-arms, layered-defense, asymmetric-raiding
+	UnitBuilderBotModule@rush:
+		RoleShares:
+			line-infantry: 24
+			anti-armor: 14
+			main-battle-tank: 28
+			artillery: 12
+			anti-air: 10
+			transport: 6
+			interceptor: 6
+	UnitBuilderBotModule@normal:
+		RoleShares:
+			line-infantry: 20
+			anti-armor: 12
+			main-battle-tank: 24
+			artillery: 12
+			anti-air: 10
+			transport: 6
+			interceptor: 6
+			strike-aircraft: 6
+			naval-screen: 4
+	UnitBuilderBotModule@turtle:
+		RoleShares:
+			line-infantry: 18
+			anti-armor: 14
+			main-battle-tank: 20
+			artillery: 16
+			anti-air: 14
+			transport: 4
+			interceptor: 6
+			naval-screen: 4
+			anti-submarine: 4
+	UnitBuilderBotModule@naval:
+		RoleShares:
+			naval-screen: 28
+			anti-submarine: 22
+			submarine: 20
+			interceptor: 10
+			strike-aircraft: 10
+			anti-air: 10
+	SquadManagerBotModule@rush:
+		ExperienceComponent: unit-composition-doctrine-ai
+		ExperienceSquadSizeParameter: formation-size
+	SquadManagerBotModule@normal:
+		ExperienceComponent: unit-composition-doctrine-ai
+		ExperienceSquadSizeParameter: formation-size
+	SquadManagerBotModule@turtle:
+		ExperienceComponent: unit-composition-doctrine-ai
+		ExperienceSquadSizeParameter: formation-size
+	SquadManagerBotModule@naval:
+		ExperienceComponent: unit-composition-doctrine-ai
+		ExperienceSquadSizeParameter: formation-size
+
+^ReusableCompositionMember:
+	ReusableCapability:
+		Id: composition-member
+		Domain: strategy-ai
+		Provides: formation.role
+		Requires: strategic-role
+		Strategies: assemble-formation, replace-losses

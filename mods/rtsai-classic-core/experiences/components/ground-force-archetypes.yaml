@@ -1,0 +1,36 @@
+World:
+	ReusableCapability@GROUNDARCHETYPES:
+		Id: ground-force-archetypes
+		Domain: soldiers-and-tanks
+		Provides: ground.rifle, ground.anti-tank, ground.engineer, ground.scout, ground.apc, ground.mbt, ground.artillery, ground.air-defense, ground.recovery
+		Requires: strategic-role, balance-envelope, sprite-audit
+		Strategies: combined-arms, armored-assault, mobile-defense
+
+^ReusableTankDestroyer:
+	Inherits: ^RoleMainBattleTank
+	ReusableCapability:
+		Id: ground-archetype-tank-destroyer
+		Domain: soldiers-and-tanks
+		Provides: ground.anti-armor, formation.overwatch
+		Requires: vehicle-mobility, anti-armor-weapon
+		Strategies: armored-ambush, defensive-overwatch
+	StrategicRole:
+		Roles: tank-destroyer, anti-armor, overwatch
+		Counters: armor, main-battle-tank
+		Domain: ground
+		AIWeight: 130
+		TransportWeight: 4
+
+^ReusableRecoveryVehicle:
+	Inherits: ^RoleTransport
+	ReusableCapability:
+		Id: ground-archetype-recovery
+		Domain: soldiers-and-tanks
+		Provides: ground.recovery, salvage.collector, field-repair
+		Requires: repair-contract, salvage-and-scrap-economy
+		Strategies: recover-wrecks, support-armor
+	StrategicRole:
+		Roles: recovery, field-repair, salvage-collector
+		Domain: logistics
+		AIWeight: 75
+		TransportWeight: 4

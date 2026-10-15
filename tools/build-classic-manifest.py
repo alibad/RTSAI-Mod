@@ -127,6 +127,8 @@ def build() -> str:
             parts.append(CLASSIC[key] + tail)
             continue
         lines = [ln for ln in body.splitlines(keepends=True) if not DROP.match(ln)]
+        if key == "RTSAIModePreferences":
+            lines = [ln.replace("Mod: rtsai", "Mod: rtsai-classic") for ln in lines]
         if key == "ModCredits":
             lines = [re.sub(r"ModTabTitle: ([^#\n]*?)\s*(#.*)?$", r"ModTabTitle: \1 Classic", ln) for ln in lines]
         if key in APPEND:
@@ -148,6 +150,8 @@ def main():
         return
     DST.parent.mkdir(parents=True, exist_ok=True)
     DST.write_text(out, encoding="utf-8", newline="\n")
+    catalog = (SRC.parent / "experiences.yaml").read_text(encoding="utf-8")
+    (DST.parent / "experiences.yaml").write_text(catalog.replace("Mod: rtsai\n", "Mod: rtsai-classic\n"), encoding="utf-8", newline="\n")
     print(f"wrote {DST.relative_to(ROOT)}")
 
 

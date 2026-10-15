@@ -1,0 +1,400 @@
+^turkey-infantry:
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Start: 168
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Facings: 8
+	parachute:
+		Start: 712
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 120
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 120
+	die1:
+		Start: 280
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die2:
+		Start: 344
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die3:
+		Start: 408
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die4:
+		Start: 472
+		Length: 12
+		Facings: 8
+		Tick: 80
+	die5:
+		Start: 568
+		Length: 18
+		Facings: 8
+		Tick: 80
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
+		Frames: 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
+		Tick: 80
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: trrifleicon.shp
+
+trrifle:
+	Inherits: ^turkey-infantry
+	Defaults:
+		Filename: trrifle.shp
+
+trat:
+	Inherits: ^turkey-infantry
+	Defaults:
+		Filename: trat.shp
+	icon:
+		Filename: traticon.shp
+
+trdroneop:
+	Inherits: ^turkey-infantry
+	Defaults:
+		Filename: trdroneop.shp
+	icon:
+		Filename: trdroneopicon.shp
+
+greywolf:
+	Inherits: ^turkey-infantry
+	Defaults:
+		Filename: greywolf.shp
+	icon:
+		Filename: greywolficon.shp
+
+^turkey-ground:
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: turkey-ground-muzzle.shp
+		Length: 6
+		Facings: 8
+
+bozkir:
+	Inherits: ^turkey-ground
+	Defaults:
+		Filename: bozkir.shp
+	icon:
+		Filename: bozkiricon.shp
+
+aras8:
+	Inherits: ^turkey-ground
+	Defaults:
+		Filename: aras8.shp
+	icon:
+		Filename: aras8icon.shp
+
+yildirim:
+	Inherits: ^turkey-ground
+	Defaults:
+		Filename: yildirim.shp
+	icon:
+		Filename: yildirimicon.shp
+
+gokkalkan:
+	Inherits: ^turkey-ground
+	Defaults:
+		Filename: gokkalkan.shp
+	icon:
+		Filename: gokkalkanicon.shp
+
+sancak:
+	Inherits: ^turkey-ground
+	Defaults:
+		Filename: sancak.shp
+	icon:
+		Filename: sancakicon.shp
+
+denizkaplan:
+	Inherits: ^turkey-ground
+	Defaults:
+		Filename: denizkaplan.shp
+	icon:
+		Filename: denizkaplanicon.shp
+
+^turkey-ground-destroyed:
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+bozkir.destroyed:
+	Inherits: ^turkey-ground-destroyed
+	Defaults:
+		Filename: bozkirhusk.shp
+
+aras8.destroyed:
+	Inherits: ^turkey-ground-destroyed
+	Defaults:
+		Filename: aras8husk.shp
+
+yildirim.destroyed:
+	Inherits: ^turkey-ground-destroyed
+	Defaults:
+		Filename: yildirimhusk.shp
+
+gokkalkan.destroyed:
+	Inherits: ^turkey-ground-destroyed
+	Defaults:
+		Filename: gokkalkanhusk.shp
+
+sancak.destroyed:
+	Inherits: ^turkey-ground-destroyed
+	Defaults:
+		Filename: sancakhusk.shp
+
+denizkaplan.destroyed:
+	Inherits: ^turkey-ground-destroyed
+	Defaults:
+		Filename: denizkaplanhusk.shp
+
+kuzgunm:
+	Defaults:
+		Filename: kuzgunm.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	air-muzzle:
+		Filename: turkey-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: kuzgunmicon.shp
+
+kuzgunm.destroyed:
+	idle:
+		Filename: kuzgunmhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+sahinx:
+	Defaults:
+		Filename: sahinx.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 64
+	air-muzzle:
+		Filename: turkey-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: sahinxicon.shp
+
+sahinx.destroyed:
+	idle:
+		Filename: sahinxhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+turnaah:
+	Defaults:
+		Filename: turnaah.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor:
+		Filename: turnaahrotor.shp
+		Length: 4
+		Tick: 1
+	slow-rotor:
+		Filename: turnaahrotor.shp
+		Start: 4
+		Length: 8
+		Tick: 4
+	air-muzzle:
+		Filename: turkey-air-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: turnaahicon.shp
+
+turnaah.destroyed:
+	idle:
+		Filename: turnaahhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	rotor:
+		Filename: turnaahrotor.shp
+		Length: 4
+		Tick: 1
+
+^turkey-ship:
+	idle:
+		Facings: 16
+		InterpolatedFacings: 32
+	turret:
+		Start: 16
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: turkey-ground-muzzle.shp
+		Length: 6
+		Facings: 8
+
+marmara:
+	Inherits: ^turkey-ship
+	Defaults:
+		Filename: marmara.shp
+	icon:
+		Filename: marmaraicon.shp
+
+ege:
+	Inherits: ^turkey-ship
+	Defaults:
+		Filename: ege.shp
+	icon:
+		Filename: egeicon.shp
+
+poyraz:
+	Inherits: ^turkey-ship
+	Defaults:
+		Filename: poyraz.shp
+	icon:
+		Filename: poyrazicon.shp
+
+marmara.destroyed:
+	sink:
+		Filename: marmarasink.shp
+		Length: 6
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 25
+		ZOffset: -512
+
+ege.destroyed:
+	sink:
+		Filename: egesink.shp
+		Length: 6
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 20
+		ZOffset: -512
+
+poyraz.destroyed:
+	sink:
+		Filename: poyrazsink.shp
+		Length: 6
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 13
+		ZOffset: -512
+
+turkey_wake:
+	wake:
+		Filename: turkey-wake.shp
+		Length: 8
+		Tick: 3
+
+turkey_designator:
+	marker:
+		Filename: turkey-designator.shp
+		Length: 8
+		Tick: 4
+	pulse:
+		Filename: turkey-designator.shp
+		Length: 8
+		Tick: 2
+
+turkey_at_impact:
+	impact:
+		Filename: turkey-at-impact.shp
+		Length: 9
+		Tick: 2
+		ZOffset: 2047
+
+turkey_heavy_impact:
+	impact:
+		Filename: turkey-heavy-impact.shp
+		Length: 11
+		Tick: 2
+		ZOffset: 2047
+
+turkey_artillery_impact:
+	impact:
+		Filename: turkey-artillery-impact.shp
+		Length: 12
+		Tick: 2
+		ZOffset: 2047
+
+turkey_air_impact:
+	impact:
+		Filename: turkey-air-impact.shp
+		Length: 9
+		Tick: 2
+		ZOffset: 2047
+
+turkey_naval_impact:
+	impact:
+		Filename: turkey-naval-impact.shp
+		Length: 11
+		Tick: 2
+		ZOffset: 2047

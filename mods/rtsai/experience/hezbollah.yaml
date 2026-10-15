@@ -1,0 +1,4 @@
+World:
+	Faction@hezbollah:
+		Selectable: true
+		RandomFactionMemberOf: random, random-soviets

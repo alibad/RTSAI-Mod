@@ -1,0 +1,548 @@
+# China infantry uses the complete detailed custom-faction contract: eight
+# authored facings for every directional action, facing-specific deaths, and a
+# dedicated parachute frame. Each actor supplies role-specific 713-frame art.
+
+^china-infantry:
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Start: 128
+		Facings: 8
+	prone-stand2:
+		Start: 128
+		Facings: 8
+	prone-run:
+		Start: 136
+		Length: 4
+		Facings: 8
+		Tick: 100
+	liedown:
+		Start: 168
+		Length: 2
+		Facings: 8
+	standup:
+		Start: 184
+		Length: 2
+		Facings: 8
+	prone-shoot:
+		Start: 200
+		Length: 8
+		Facings: 8
+	idle1:
+		Start: 264
+		Length: 8
+		Tick: 120
+	idle2:
+		Start: 272
+		Length: 8
+		Tick: 120
+	die1:
+		Start: 280
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die2:
+		Start: 344
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die3:
+		Start: 408
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die4:
+		Start: 472
+		Length: 12
+		Facings: 8
+		Tick: 80
+	die5:
+		Start: 568
+		Length: 18
+		Facings: 8
+		Tick: 80
+	die6:
+		Filename: electro.tem
+		TilesetFilenames:
+			SNOW: electro.sno
+		Frames: 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
+		Tick: 80
+	die-crushed:
+		Filename: corpse1.tem
+		TilesetFilenames:
+			SNOW: corpse1.sno
+		Length: *
+		Tick: 1600
+		ZOffset: -511
+	parachute:
+		Start: 712
+	garrison-muzzle:
+		Filename: minigun.shp
+		Length: 6
+		Facings: 8
+
+cnrifle:
+	Inherits: ^china-infantry
+	Defaults:
+		Filename: cnrifle.shp
+	icon:
+		Filename: cnrifleicon.shp
+
+cnnetwork:
+	Inherits: ^china-infantry
+	Defaults:
+		Filename: cnnetwork.shp
+	network-pulse:
+		Filename: china-network-pulse.shp
+		Length: 8
+		Tick: 4
+		ZOffset: 256
+	icon:
+		Filename: cnnetworkicon.shp
+
+cnportable:
+	Inherits: ^china-infantry
+	Defaults:
+		Filename: cnportable.shp
+	icon:
+		Filename: cnportableicon.shp
+
+redspear:
+	Inherits: ^china-infantry
+	Defaults:
+		Filename: redspear.shp
+	icon:
+		Filename: redspearicon.shp
+
+cnqilin:
+	Defaults:
+		Filename: cnqilin.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: china-heavy-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: cnqilinicon.shp
+
+cnqilin.destroyed:
+	idle:
+		Filename: cnqilinhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: cnqilinhusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+cnlynx:
+	Defaults:
+		Filename: cnlynx.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: china-light-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: cnlynxicon.shp
+
+cnlynx.destroyed:
+	idle:
+		Filename: cnlynxhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: cnlynxhusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+cnzbd:
+	Defaults:
+		Filename: cnzbd.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Filename: china-light-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: cnzbdicon.shp
+
+cnzbd.destroyed:
+	idle:
+		Filename: cnzbdhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: cnzbdhusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+cnphl:
+	Defaults:
+		Filename: cnphl.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	empty-idle:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	icon:
+		Filename: cnphlicon.shp
+
+cnphl.destroyed:
+	idle:
+		Filename: cnphlhusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+cnmantis:
+	Defaults:
+		Filename: cnmantis.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	icon:
+		Filename: cnmantisicon.shp
+
+cnmantis.destroyed:
+	idle:
+		Filename: cnmantishusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Filename: cnmantishusk.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+cnskyspear:
+	idle:
+		Filename: cnskyspear.shp
+		Facings: 16
+		InterpolatedFacings: 64
+	icon:
+		Filename: cnskyspearicon.shp
+
+cnskyspear.destroyed:
+	idle:
+		Filename: cnskyspearhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+cncloud:
+	idle:
+		Filename: cncloud.shp
+		Facings: 16
+		InterpolatedFacings: 64
+	icon:
+		Filename: cncloudicon.shp
+
+cncloud.destroyed:
+	idle:
+		Filename: cncloudhusk.shp
+		Facings: 16
+		InterpolatedFacings: 64
+		ZOffset: -512
+
+cncrane:
+	Defaults:
+		Filename: cncrane.shp
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor:
+		Filename: cncranerotor.shp
+		Length: 4
+		Tick: 1
+	slow-rotor:
+		Filename: cncranerotor.shp
+		Start: 4
+		Length: 8
+		Tick: 4
+	muzzle:
+		Filename: china-light-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: cncraneicon.shp
+
+cncrane.destroyed:
+	idle:
+		Filename: cncranehusk.shp
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	rotor:
+		Filename: cncranerotor.shp
+		Length: 4
+		Tick: 1
+
+cnluyang:
+	idle:
+		Filename: cnluyang.shp
+		Facings: 16
+		InterpolatedFacings: 32
+	turret:
+		Filename: cnluyangturret.shp
+		Facings: 32
+	muzzle:
+		Filename: china-heavy-muzzle.shp
+		Length: 6
+		Facings: 8
+	icon:
+		Filename: cnluyangicon.shp
+
+cnluyang.sinking:
+	sink:
+		Filename: cnluyangsink.shp
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 6
+
+cnhaiwang:
+	idle:
+		Filename: cnhaiwang.shp
+		Facings: 16
+		InterpolatedFacings: 32
+	turret:
+		Filename: cnhaiwangturret.shp
+		Facings: 32
+	icon:
+		Filename: cnhaiwangicon.shp
+
+cnhaiwang.sinking:
+	sink:
+		Filename: cnhaiwangsink.shp
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 6
+
+cnhaiying:
+	idle:
+		Filename: cnhaiying.shp
+		Facings: 16
+		InterpolatedFacings: 32
+	turret:
+		Filename: cnhaiyingturret.shp
+		Facings: 32
+	icon:
+		Filename: cnhaiyingicon.shp
+
+cnhaiying.sinking:
+	sink:
+		Filename: cnhaiyingsink.shp
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 6
+
+cnkunlun:
+	Defaults:
+		Filename: cnkunlun.shp
+	idle:
+		Facings: 16
+		InterpolatedFacings: 32
+	open:
+		Start: 16
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 5
+	close:
+		Start: 80
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 5
+	unload:
+		Start: 19
+		Facings: 16
+		Stride: 4
+		InterpolatedFacings: 32
+		ZOffset: -511
+	turret:
+		Filename: cnkunlunturret.shp
+		Facings: 32
+	icon:
+		Filename: cnkunlunicon.shp
+
+cnkunlun.sinking:
+	sink:
+		Filename: cnkunlunsink.shp
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 6
+
+cnjiaolong:
+	idle:
+		Filename: cnjiaolong.shp
+		Facings: 16
+		InterpolatedFacings: 32
+	icon:
+		Filename: cnjiaolongicon.shp
+
+cnjiaolong.sinking:
+	sink:
+		Filename: cnjiaolongsink.shp
+		Length: 4
+		Facings: 16
+		InterpolatedFacings: 32
+		Tick: 6
+
+cnbastion:
+	Defaults:
+		Filename: cnbastion.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	make:
+		Start: 2
+		Length: 10
+		Tick: 3
+	turret:
+		Filename: cnbastiontop.shp
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Filename: cnbastiontop.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	icon:
+		Filename: cnbastionicon.shp
+
+cnskyshield:
+	Defaults:
+		Filename: cnskyshield.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	make:
+		Start: 2
+		Length: 10
+		Tick: 3
+	turret:
+		Filename: cnskyshieldtop.shp
+		Facings: 32
+		UseClassicFacings: True
+	damaged-turret:
+		Filename: cnskyshieldtop.shp
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	icon:
+		Filename: cnskyshieldicon.shp
+
+cnspectrum:
+	Defaults:
+		Filename: cnspectrum.shp
+	idle:
+	damaged-idle:
+		Start: 1
+	make:
+		Start: 2
+		Length: 10
+		Tick: 3
+	active:
+		Filename: cnspectrumtop.shp
+		Length: 16
+		Tick: 3
+	damaged-active:
+		Filename: cnspectrumtop.shp
+		Start: 16
+		Length: 16
+		Tick: 3
+	icon:
+		Filename: cnspectrumicon.shp
+
+china_missile:
+	idle:
+		Filename: china-missile.shp
+		Facings: 16
+		InterpolatedFacings: 64
+
+china_drone_projectile:
+	idle:
+		Filename: china-drone-projectile.shp
+		Facings: 16
+		InterpolatedFacings: 64
+
+china_network_impact:
+	impact:
+		Filename: china-network-impact.shp
+		Length: 10
+		Tick: 2
+		ZOffset: 2047
+
+china_precision_impact:
+	impact:
+		Filename: china-precision-impact.shp
+		Length: 10
+		Tick: 2
+		ZOffset: 2047
+
+china_naval_impact:
+	impact:
+		Filename: china-naval-impact.shp
+		Length: 10
+		Tick: 2
+		ZOffset: 2047
+
+china_wake:
+	idle:
+		Filename: china-wake.shp
+		Length: 8
+		Tick: 3
+		ZOffset: -256

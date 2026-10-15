@@ -1,3 +1,5 @@
+Include: experiences.yaml
+
 Metadata:
 	Title: classic-mode-title
 	WindowTitle: classic-mode-title
@@ -40,6 +42,7 @@ Rules:
 	ra2|rules/companion.yaml
 	ra2|rules/proxy-actors.yaml
 	ra2|rules/misc.yaml
+	ra2|rules/map-generators.yaml
 	ra2|rules/ai.yaml
 	ra2|rules/player.yaml
 	ra2|rules/world.yaml
@@ -115,6 +118,8 @@ Rules:
 
 	ra2|campaigns/countries.yaml
 
+	ra2|experience/factions-disabled.yaml
+
 Sequences:
 	ra2|sequences/aircraft.yaml
 	ra2|sequences/allied-infantry.yaml
@@ -157,6 +162,7 @@ Sequences:
 	ra2|standalone/sequences.yaml
 
 	ra2|campaigns/country-sequences.yaml
+
 	classic|sequences.yaml
 
 ModelSequences:
@@ -166,11 +172,15 @@ Cursors:
 	ra2|standalone/cursors.yaml
 
 Chrome:
+	ra2|desktop-theme.yaml
 	ra2|chrome.yaml
 
 Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
 
 ChromeLayout:
+	ra2|chrome/experience-composer.yaml
+	ra2|chrome/experience-review.yaml
+	ra2|chrome/desktop-home.yaml
 	ra2|chrome/game-modes.yaml
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
@@ -196,12 +206,12 @@ ChromeLayout:
 	common|chrome/ingame-infochat.yaml
 	ra2|chrome/settings.yaml
 	ra2|chrome/settings-ai.yaml
-	common|chrome/settings-gameplay.yaml
-	common|chrome/settings-display.yaml
-	common|chrome/settings-audio.yaml
-	common|chrome/settings-input.yaml
-	common|chrome/settings-hotkeys.yaml
-	common|chrome/settings-advanced.yaml
+	ra2|chrome/settings-gameplay.yaml
+	ra2|chrome/settings-display.yaml
+	ra2|chrome/settings-audio.yaml
+	ra2|chrome/settings-input.yaml
+	ra2|chrome/settings-hotkeys.yaml
+	ra2|chrome/settings-advanced.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
 	common|chrome/lobby-players.yaml
@@ -220,7 +230,7 @@ ChromeLayout:
 	common|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/color-picker.yaml
-	common|chrome/dropdowns.yaml
+	ra2|chrome/dropdowns.yaml
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	common|chrome/gamesave-browser.yaml
@@ -281,6 +291,8 @@ Music:
 
 FluentMessages:
 	classic|mode.ftl
+	ra2|languages/desktop.ftl
+	ra2|languages/experience.ftl
 	ra2|languages/game-modes.ftl
 	common|fluent/common.ftl
 	common|fluent/chrome.ftl
@@ -289,6 +301,7 @@ FluentMessages:
 	common|fluent/rules.ftl
 	ra2|languages/rules/en.ftl
 	ra2|languages/chrome/en.ftl
+	ra2|languages/map-generator.ftl
 	ra2|languages/identity.ftl
 	ra2|standalone/standalone.ftl
 	ra2|languages/native-preview.ftl
@@ -427,3 +440,6 @@ GameSpeeds:
 			Name: options-game-speed.fastest
 			Timestep: 20
 			OrderLatency: 6
+
+RTSAIModePreferences:
+	Mod: rtsai-topdown

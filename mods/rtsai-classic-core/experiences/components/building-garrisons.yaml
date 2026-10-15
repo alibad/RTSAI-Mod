@@ -1,0 +1,68 @@
+World:
+	ReusableCapability@BUILDINGGARRISONS:
+		Id: building-garrisons
+		Domain: buildings-and-infantry
+		Provides: garrison.enter, garrison.fire, garrison.evacuate
+		Requires: cargo, passenger, attack-garrisoned
+		Strategies: occupy-strongpoint, clear-garrison, evacuate-garrison
+
+^ReusableGarrisonableBuilding:
+	ReusableCapability:
+		Id: garrisonable-building
+		Domain: buildings-and-infantry
+		Provides: garrison.host, passenger.fire-port
+		Requires: Cargo, AttackGarrisoned, building-damage-feedback
+		Strategies: occupy-strongpoint, urban-defense
+	StrategicRole:
+		Roles: garrison, urban-strongpoint, infantry-cover
+		Counters: infantry, light-vehicle
+		Domain: building
+		AIWeight: 100
+
+^ReusableGarrisonInfantry:
+	ReusableCapability:
+		Id: garrison-infantry
+		Domain: infantry
+		Provides: garrison.passenger, garrison.armament
+		Requires: Passenger, Armament
+		Strategies: occupy-strongpoint, evacuate-garrison
+
+# Concrete stock-city fixtures make the component immediately usable in existing
+# urban maps while retaining the native building art and passenger weapons.
+V01:
+	ReusableCapability@WW3GARRISON:
+		Id: garrisonable-city-building
+		Domain: buildings-and-infantry
+		Provides: garrison.host, passenger.fire-port
+		Requires: Cargo, AttackGarrisoned
+		Strategies: occupy-strongpoint, urban-defense
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		ExperienceComponent: building-garrisons
+		ExperienceCapacityParameter: capacity
+		EjectOnDeath: true
+	AttackGarrisoned:
+		Armaments: garrisoned
+		PortOffsets: 512,0,256, 0,-512,256, -512,0,256, 0,512,256
+		PortYaws: 0, 256, 512, 768
+		PortCones: 192, 192, 192, 192
+
+V02:
+	ReusableCapability@WW3GARRISON:
+		Id: garrisonable-city-building
+		Domain: buildings-and-infantry
+		Provides: garrison.host, passenger.fire-port
+		Requires: Cargo, AttackGarrisoned
+		Strategies: occupy-strongpoint, urban-defense
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		ExperienceComponent: building-garrisons
+		ExperienceCapacityParameter: capacity
+		EjectOnDeath: true
+	AttackGarrisoned:
+		Armaments: garrisoned
+		PortOffsets: 512,0,256, 0,-512,256, -512,0,256, 0,512,256
+		PortYaws: 0, 256, 512, 768
+		PortCones: 192, 192, 192, 192

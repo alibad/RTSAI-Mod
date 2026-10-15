@@ -1,0 +1,11 @@
+# Reusable replenishing minefield generator adapted from community OpenRA mods.
+^ReusableMinefieldGenerator:
+	LaysMinefield:
+		Mines: MINV, MINP
+		SelectionMode: Shuffled
+		Locations: 0,-1, 1,0, 0,1, -1,0
+		InitialDelay: 1
+		RecreationInterval: 2500
+		RemoveOnDisable: true
+		KillOnRemove: false
+		IgnorePlacementRules: false

@@ -1,0 +1,753 @@
+ExperienceCatalog:
+	Mod: rtsai-classic-core
+	DefaultProfile: world-war-iii
+	Components:
+		faction-and-subfaction-contract:
+			Kind: Authoring
+			Title: Faction and doctrine contract
+			Description: Stable country, side, doctrine, and unit-role identifiers for rosters, AI, missions, promotions, and captured technology.
+			Effects: Publishes faction, doctrine, combat-role, counter, AI-weight, and transport metadata used by the modern country rosters and dependent modules.
+			Tradeoffs: No direct combat or economy change by itself; enabling it can automatically support modules that depend on this shared vocabulary.
+			Scope: Framework metadata for actors and players that inherit its contracts; it does not add units or change a faction roster on its own.
+			Category: Factions and strategies
+			Preview: ra|uibits/experience-previews/faction-and-subfaction-contract.png
+			Version: 1
+			Source: RA Plus, Combined Arms, Cameo, and Generals Alpha patterns synthesized for OpenRA AI
+			License: GPL-3.0-or-later code; no upstream presentation assets
+			Rules: ra|experiences/components/faction-doctrine-contract.yaml
+		red-sea-roster-content:
+			Title: Red Sea roster foundation
+			Description: Shared Saudi Arabian and Yemeni roster data used by their independently selectable faction packs.
+			Effects: Loads the common Red Sea actor, weapon, sequence, and naval definitions required by either country roster.
+			Tradeoffs: Internal dependency only; it is enabled and removed automatically with the faction packs that require it.
+			Scope: Shared faction-pack implementation data.
+			Category: Faction packs
+			Version: 1
+			Source: Original OpenRA AI faction work
+			License: GPL-3.0-or-later code; original project presentation
+			Kind: Internal
+			Hidden: true
+			Rules: ra|rules/red-sea.yaml, ra|rules/naval-systems.yaml
+			Weapons: ra|weapons/red-sea.yaml, ra|weapons/naval-systems.yaml
+			Sequences: ra|sequences/red-sea.yaml, ra|sequences/naval-systems.yaml
+		israel-faction:
+			Title: Israel
+			Description: Fictional RTS faction; precision armor and protected support.
+			Effects: Complete faction roster, production trees, support buildings and bot composition.
+			Tradeoffs: High costs and dependency on vulnerable support.
+			Scope: Selectable faction; local development content.
+			Category: Faction packs
+			Version: 1
+			Source: Original project rules and procedural art
+			License: GPL-3.0-or-later code; original project presentation
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, red-sea-roster-content, naval-combat-archetypes
+			Rules: ra|rules/levant-common.yaml, ra|rules/israel.yaml
+			Sequences: ra|sequences/israel.yaml
+			Faction:
+				InternalName: israel
+				Side: Allies
+				RandomPool: RandomAllies
+				Doctrine: precision-support
+				Preview: ra|uibits/faction-previews/israel.png
+				Roster:
+					Infantry: ILRIFLE, ILAT, ILOBSERVER, ILRECON
+					Vehicles: MERKAVA, ILSHIELD, ILHOWITZER, NAMER
+					Aircraft: ILFALCON, ILGUNSHIP
+					Navy: ILPATROL, ILFRIGATE, ILTENDER
+					Buildings: FACT, WEAP, TENT, HPAD, ILAIRFIELD, SYRD, ILRELAY, ILWORKSHOP
+					Defenses: ILSENTRY, ILBATTERY, ILATPOST
+		hezbollah-faction:
+			Title: Hezbollah
+			Description: Fictional RTS faction; light forces and concealed defense.
+			Effects: Complete faction roster, production trees, support buildings and bot composition.
+			Tradeoffs: Low durability and dependency on detection gaps.
+			Scope: Selectable faction; local development content.
+			Category: Faction packs
+			Version: 1
+			Source: Original project rules and procedural art
+			License: GPL-3.0-or-later code; original project presentation
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, red-sea-roster-content, naval-combat-archetypes
+			Rules: ra|rules/levant-common.yaml, ra|rules/hezbollah.yaml
+			Sequences: ra|sequences/hezbollah.yaml
+			Faction:
+				InternalName: hezbollah
+				Side: Soviet
+				RandomPool: RandomSoviet
+				Doctrine: concealed-defense
+				Preview: ra|uibits/faction-previews/hezbollah.png
+				Roster:
+					Infantry: HZRIFLE, HZAT, HZSPOTTER, HZSCOUT
+					Vehicles: HZTECHNICAL, HZRECOILLESS, HZESCORT, HZROCKETS
+					Aircraft: HZDRONE
+					Navy: HZMISSILEBOAT, HZSKIFF, HZSURVEY
+					Buildings: FACT, WEAP, BARR, AFLD, SPEN, HZRELAY, HZWORKSHOP
+					Defenses: HZBUNKER, HZAANEST, HZCOASTAL
+		saudi-arabia-faction:
+			Title: Saudi Arabia
+			Description: Expeditionary combined arms built around high-quality armor, air power, layered defense, and modern Red Sea naval support.
+			Effects: Adds Saudi Arabia to the Allies lobby and random pool with a complete country roster, doctrine metadata, AI roles, and presentation preview.
+			Tradeoffs: Expensive advanced platforms reward coordination but make attrition and poor positioning costly.
+			Scope: Entire selectable faction; disabling this pack removes Saudi Arabia from faction selection and random assignment.
+			Category: Faction packs
+			Version: 1
+			Source: Original OpenRA AI faction work
+			License: GPL-3.0-or-later code; original project presentation generated with GPT Image
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, red-sea-roster-content, naval-combat-archetypes
+			Rules: ra|experiences/factions/saudi-arabia.yaml
+			Faction:
+				InternalName: saudi
+				Side: Allies
+				RandomPool: RandomAllies
+				Doctrine: expeditionary
+				Preview: ra|uibits/faction-previews/saudi-arabia.png
+				Roster:
+					Infantry: SANG, SAJTAC, SAAT, FALCON1
+					Vehicles: M1A2S, SADS
+					Aircraft: F15SA, AH64SA
+					Navy: SA_FRGT, SA_INTC, SA_FSS
+					Buildings: FACT, WEAP, TENT, HPAD, SAFLD, SYRD
+					Defenses: PBOX, GUN, AGUN, SAM
+		yemen-faction:
+			Title: Yemen
+			Description: Terrain-led asymmetric defense using inexpensive infantry, mobile rockets, drones, concealed positions, and agile coastal forces.
+			Effects: Adds Yemen to the Soviet lobby and random pool with a complete country roster, doctrine metadata, AI roles, and presentation preview.
+			Tradeoffs: Light units and improvised systems depend on terrain, ambushes, dispersion, and careful preservation against heavy armor.
+			Scope: Entire selectable faction; disabling this pack removes Yemen from faction selection and random assignment.
+			Category: Faction packs
+			Version: 1
+			Source: Original OpenRA AI faction work
+			License: GPL-3.0-or-later code; original project presentation generated with GPT Image
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, red-sea-roster-content, naval-combat-archetypes
+			Rules: ra|experiences/factions/yemen.yaml
+			Faction:
+				InternalName: yemen
+				Side: Soviet
+				RandomPool: RandomSoviet
+				Doctrine: asymmetric-defense
+				Preview: ra|uibits/faction-previews/yemen.png
+				Roster:
+					Infantry: YMR, YRPG, YSPOT, WADIGHOST
+					Vehicles: TECH, YMLR
+					Aircraft: SAMAD
+					Navy: YE_MSLC, YE_USV, YE_SURVE
+					Buildings: FACT, WEAP, BARR, AFLD, SPEN
+					Defenses: PBOX, FTUR, SAM
+		turkey-faction:
+			Title: Turkey
+			Description: Mobile defense and combined arms using indigenous armor, electronic warfare, reconnaissance drones, layered air defense, and a balanced fleet.
+			Effects: Adds Turkey to the Allies lobby and random pool with its complete roster, doctrine metadata, AI roles, weapons, sequences, and preview.
+			Tradeoffs: The force excels while moving as a connected formation but loses efficiency when its reconnaissance and support layers are isolated.
+			Scope: Entire selectable faction; disabling this pack unloads its gameplay files and removes Turkey from selection.
+			Category: Faction packs
+			Version: 1
+			Source: Original OpenRA AI faction work
+			License: GPL-3.0-or-later code; original project presentation generated with GPT Image
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, naval-combat-archetypes, mind-control-and-disguise
+			Rules: ra|rules/turkey.yaml, ra|experiences/factions/turkey.yaml
+			Weapons: ra|weapons/turkey.yaml
+			Sequences: ra|sequences/turkey.yaml
+			Faction:
+				InternalName: turkey
+				Side: Allies
+				RandomPool: RandomAllies
+				Doctrine: mobile-defense
+				Preview: ra|uibits/faction-previews/turkey.png
+				Roster:
+					Infantry: TRRIFLE, TRAT, TRDRONEOP, GREYWOLF
+					Vehicles: BOZKIR, ARAS8, YILDIRIM, GOKKALKAN, SANCAK, DENIZKAPLAN
+					Aircraft: KUZGUNM, TURNAAH, SAHINX
+					Navy: MARMARA, EGE, POYRAZ
+					Buildings: FACT, TENT, WEAP, HPAD, SYRD
+					Defenses: PBOX, GUN, AGUN, SAM
+		iran-faction:
+			Title: Iran
+			Description: Layered denial through long-range fires, mobile air defense, drones, sabotage, coastal missiles, and compact naval ambush forces.
+			Effects: Adds Iran to the Soviet lobby and random pool with its complete roster, doctrine metadata, AI roles, weapons, sequences, and preview.
+			Tradeoffs: Specialized systems create powerful overlapping zones but demand setup, scouting, and protection from concentrated breakthroughs.
+			Scope: Entire selectable faction; disabling this pack unloads its gameplay files and removes Iran from selection.
+			Category: Faction packs
+			Version: 1
+			Source: Original OpenRA AI faction work
+			License: GPL-3.0-or-later code; original project presentation generated with GPT Image
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, naval-combat-archetypes
+			Rules: ra|rules/iran.yaml, ra|experiences/factions/iran.yaml
+			Weapons: ra|weapons/iran.yaml
+			Sequences: ra|sequences/iran.yaml
+			Faction:
+				InternalName: iran
+				Side: Soviet
+				RandomPool: RandomSoviet
+				Doctrine: layered-denial
+				Preview: ra|uibits/faction-previews/iran.png
+				Roster:
+					Infantry: IRBAS, IRATGM, IRDC, SHADOWONE
+					Vehicles: IRKARR, IRRAAD, IRFAJR, IRCOAST
+					Aircraft: IRAZAR, IRTOUFAN, IRMOHAJER, IRLOITER
+					Navy: IRPEY, IRGHADIR
+					Buildings: FACT, WEAP, BARR, AFLD, IRHPAD, SPEN
+					Defenses: PBOX, FTUR, TSLA, SAM
+		china-faction:
+			Title: China
+			Description: Networked combined arms coordinating armored formations, amphibious mobility, integrated air defense, aviation, drones, and blue-water naval support.
+			Effects: Adds China to the Allies lobby and random pool with its complete roster, doctrine metadata, AI roles, weapons, sequences, and preview.
+			Tradeoffs: Network bonuses and diverse assets reward combined formations, while disruption and fragmented engagements reduce their advantage.
+			Scope: Entire selectable faction; disabling this pack unloads its gameplay files and removes China from selection.
+			Category: Faction packs
+			Version: 1
+			Source: Original OpenRA AI faction work
+			License: GPL-3.0-or-later code; original project presentation generated with GPT Image
+			Kind: Faction
+			Dependencies: faction-and-subfaction-contract, naval-combat-archetypes, carrier-and-drone-wing
+			Rules: ra|rules/china.yaml, ra|experiences/factions/china.yaml
+			Weapons: ra|weapons/china.yaml
+			Sequences: ra|sequences/china.yaml
+			Faction:
+				InternalName: china
+				Side: Allies
+				RandomPool: RandomAllies
+				Doctrine: networked-combined-arms
+				Preview: ra|uibits/faction-previews/china.png
+				Roster:
+					Infantry: CNRIFLE, CNNETWORK, CNPORTABLE, REDSPEAR
+					Vehicles: CNQILIN, CNLYNX, CNZBD, CNPHL, CNMANTIS
+					Aircraft: CNSKYSPEAR, CNCLOUD, CNCRANE
+					Navy: CNLUYANG, CNHAIWANG, CNHAIYING, CNKUNLUN, CNJIAOLONG
+					Buildings: FACT, WEAP, TENT, HPAD, SYRD
+					Defenses: CNBASTION, CNSKYSHIELD, CNSPECTRUM
+		minefield-generator:
+			Kind: Authoring
+			Title: Replenishing minefields
+			Description: Structures and mission proxies can maintain configurable defensive mine perimeters.
+			Effects: Enables reusable generators to place and replace a configured ring of anti-vehicle or anti-personnel mines around authored positions.
+			Tradeoffs: Strong area denial rewards detection, clearing, artillery, or attacking the generator; faster replacement and more slots make defenses harder to breach.
+			Scope: Concrete only where a roster or map uses the ReusableMinefieldGenerator contract; it does not place mines on every map automatically.
+			Category: Defenses
+			Preview: ra|uibits/experience-previews/minefield-generator.png
+			Version: 1
+			Source: Combined Arms and Generals Alpha adaptations
+			License: GPL-3.0-or-later
+			Rules: ra|experiences/components/minefield-generator.yaml
+			Parameters:
+				recreation-interval:
+					Title: Replenishment interval
+					Description: Ticks between attempts to rebuild destroyed defensive mines.
+					Group: Balance
+					Type: Integer
+					Default: 2500
+					Minimum: 250
+					Maximum: 5000
+					Step: 250
+					Unit: ticks
+				slot-count:
+					Title: Active mine slots
+					Description: Maximum mine positions maintained by each generator.
+					Group: Units
+					Type: Integer
+					Default: 4
+					Minimum: 1
+					Maximum: 4
+					Step: 1
+					Unit: mines
+		mission-aware-minelayer-ai:
+			Title: Mission-aware minelayer AI
+			Description: Bots seed authored mine zones, scan quickly, filter rosters, and recover stuck minelayers.
+			Effects: Changes bot control of available minelayers by assigning mine zones, choosing legal units, and recovering stalled orders.
+			Tradeoffs: More frequent scans improve responsiveness but add bot work; larger radii spread mines farther and may leave individual approaches thinner.
+			Scope: Bot behavior only in matches with compatible minelayers or authored mine zones; human unit controls are unchanged.
+			Category: AI strategies
+			Preview: ra|uibits/experience-previews/mission-aware-minelayer-ai.png
+			Version: 1
+			Source: Shattered Paradise pattern adapted into native OpenRA AI
+			License: GPL-3.0-or-later
+			Dependencies: minefield-generator
+			Parameters:
+				scan-interval:
+					Title: AI scan interval
+					Description: Ticks between minelayer assignment scans after the opening phase.
+					Group: AI
+					Type: Integer
+					Default: 320
+					Minimum: 80
+					Maximum: 640
+					Step: 40
+					Unit: ticks
+				minefield-radius:
+					Title: AI minefield radius
+					Description: Radius used for automated mine-laying orders.
+					Group: AI
+					Type: Integer
+					Default: 1
+					Minimum: 1
+					Maximum: 4
+					Step: 1
+					Unit: cells
+				stuck-recovery:
+					Title: Recover stuck minelayers
+					Description: Stops and reassigns AI minelayers that fail to move between scans.
+					Group: AI
+					Type: Boolean
+					Default: true
+		point-defense-interception:
+			Kind: Authoring
+			Title: Point-defense interception
+			Description: Opt-in anti-missile weapons create layered protection for bases, fleets, and aircraft groups.
+			Effects: Allows equipped defenses to target and destroy interceptable missiles, with configurable reach and optional interception feedback.
+			Tradeoffs: Reduces the reliability of missile volleys and rewards saturation or disabling the screen first; it does not stop bullets, shells, or beams.
+			Scope: Concrete only on actors that inherit the ReusablePointDefense contract; it does not grant point defense to every unit.
+			Category: Defenses
+			Preview: ra|uibits/experience-previews/point-defense-interception.png
+			Version: 1
+			Source: Combined Arms and RA Plus adaptations
+			License: GPL-3.0-or-later
+			Rules: ra|experiences/components/point-defense-interception.yaml
+			Weapons: ra|experiences/weapons/point-defense-interception.yaml
+			Parameters:
+				range-percent:
+					Title: Interception range
+					Description: Percentage of the point-defense weapon range that can intercept missiles.
+					Group: Weapons
+					Type: Integer
+					Default: 100
+					Minimum: 25
+					Maximum: 150
+					Step: 5
+					Unit: percent
+				intercept-effects:
+					Title: Interception effects
+					Description: Fires the configured visual and audio interception effect when a missile is stopped.
+					Group: Effects
+					Type: Boolean
+					Default: true
+		salvage-and-scrap-economy:
+			Kind: Authoring
+			Title: Battlefield salvage
+			Description: Destroyed vehicles can leave recoverable value for scavenger forces and mission objectives.
+			Effects: Eligible destroyed actors can drop collectible salvage that awards a configurable percentage of their sell value.
+			Tradeoffs: Creates contested post-battle income and can amplify a winning force if wreck sites are not denied; drop chance, value, and eligible faction are configurable.
+			Scope: Concrete for actors marked ReusableSalvageable, plus every structure, which now ejects surviving crew on destruction.
+			Category: Economy and missions
+			Preview: ra|uibits/experience-previews/salvage-and-scrap-economy.png
+			Version: 1
+			Source: OpenHV and Combined Arms adaptations
+			License: GPL-3.0-or-later
+			Rules: ra|experiences/components/battlefield-salvage.yaml
+			Parameters:
+				spawn-probability:
+					Title: Salvage frequency
+					Description: Percentage chance that an eligible destroyed unit leaves salvage.
+					Group: Units
+					Type: Integer
+					Default: 50
+					Minimum: 0
+					Maximum: 100
+					Step: 5
+					Unit: percent
+				value-percentage:
+					Title: Salvage value
+					Description: Percentage of the destroyed unit sell value awarded to the collector.
+					Group: Economy
+					Type: Integer
+					Default: 15
+					Minimum: 5
+					Maximum: 50
+					Step: 5
+					Unit: percent
+				eligible-faction:
+					Title: Eligible faction
+					Description: Restricts salvage drops to one faction, or allows every faction.
+					Group: Factions
+					Type: Choice
+					Default: All
+					Options: All, allies, england, france, germany, saudi, turkey, china, soviet, russia, ukraine, yemen, iran
+		asset-import-audit-pipeline:
+			Kind: Authoring
+			Title: Asset acceptance contract
+			Description: Records provenance, fixed canvases, native facing order, contact sheets, and live turning as mandatory authoring gates.
+			Effects: Publishes asset provenance and sprite-validation capability metadata for tooling and for modules that require audited presentation.
+			Tradeoffs: Adds no player-facing mechanics; its value is stricter authoring and compatibility checks for dependent content.
+			Scope: Authoring and compatibility framework only; enabling it does not replace art or alter a live match.
+			Category: Authoring and compatibility
+			Preview: ra|uibits/experience-previews/asset-import-audit-pipeline.png
+			Version: 1
+			Source: OpenRA Mod SDK and OpenHV pipeline patterns
+			License: GPL-3.0-or-later tooling; per-file presentation licenses remain mandatory
+			Rules: ra|experiences/components/asset-import-audit-pipeline.yaml
+		supply-logistics-economy:
+			Kind: Authoring
+			Title: Supply and logistics
+			Description: Reusable supply nodes, consumers, transports, convoy routes, resupply, protection, and interdiction contracts.
+			Effects: Adds logistics contracts plus a mission-editor supply depot that reloads compatible aircraft such as the MiG while they remain in its service radius.
+			Tradeoffs: Makes positioning and protecting service nodes meaningful; aircraft that rely on a mission depot must leave combat to replenish there.
+			Scope: Concrete in authored missions using the supplied depot and on actors inheriting the logistics contracts; it does not impose fuel on every roster.
+			Category: Economy and logistics
+			Preview: ra|uibits/experience-previews/supply-logistics-economy.png
+			Version: 1
+			Source: Generals Alpha mechanics synthesized into native OpenRA contracts
+			License: GPL-3.0-or-later code; original presentation required
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/supply-logistics-economy.yaml
+			Parameters:
+				resupply-radius:
+					Title: Resupply radius
+					Description: Preferred service radius for concrete supply nodes.
+					Group: Economy
+					Type: Integer
+					Default: 4
+					Minimum: 1
+					Maximum: 12
+					Step: 1
+					Unit: cells
+		building-garrisons:
+			Title: Building garrisons
+			Description: Enterable strongpoints, passenger firing, evacuation, and AI occupancy using native Cargo and AttackGarrisoned primitives.
+			Effects: Makes the stock V01 and V02 civilian structures carry up to four infantry who can fire through directional ports, and exposes reusable garrison contracts.
+			Tradeoffs: Infantry gain protection and fire positions but become concentrated targets; destroying the structure ejects surviving passengers and dedicated clearing remains effective.
+			Scope: Immediately affects V01 and V02 on maps plus any structure inheriting the reusable contract; other buildings remain unchanged.
+			Category: Buildings and infantry
+			Preview: ra|uibits/experience-previews/building-garrisons.png
+			Version: 1
+			Source: Romanov's Vengeance, Shattered Paradise, Cameo, and Generals Alpha patterns
+			License: GPL-3.0-or-later code; original damage overlays required
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/building-garrisons.yaml
+			Parameters:
+				capacity:
+					Title: Default garrison capacity
+					Description: Preferred passenger capacity for concrete garrison buildings.
+					Group: Units
+					Type: Integer
+					Default: 4
+					Minimum: 1
+					Maximum: 8
+					Step: 1
+					Unit: infantry
+		carrier-and-drone-wing:
+			Title: Carrier and drone wings
+			Description: Normalized parent, child, sortie, recall, command-link, and replenishment contracts for carriers and unmanned systems, including China Haiwang carriers that replenish real Cloud strike drones.
+			Effects: Publishes carrier-parent and wing-child roles for launching, recalling, replenishing, and directing compatible aircraft or drones, with configurable wing capacity for authored units.
+			Tradeoffs: Wing platforms concentrate reusable striking power in a valuable parent and reward destroying or isolating that command link.
+			Scope: Framework for compatible carriers and drones; China Haiwang carriers use it when the China faction pack is active, while authored units may also use the wing system. Replacement drones arrive individually after a delay and retain normal targeting and rearming limits.
+			Category: Navy and air
+			Preview: ra|uibits/experience-previews/carrier-and-drone-wing.png
+			Version: 1
+			Source: Combined Arms, OpenRA RA2, OpenHV, and RA+ patterns
+			License: GPL-3.0-or-later code; original units required
+			Dependencies: faction-and-subfaction-contract, air-attack-profiles
+			Rules: ra|experiences/components/carrier-and-drone-wing.yaml
+			Parameters:
+				wing-size:
+					Title: Preferred wing size
+					Description: Default child count for concrete carrier implementations.
+					Group: Units
+					Type: Integer
+					Default: 4
+					Minimum: 1
+					Maximum: 12
+					Step: 1
+					Unit: aircraft
+		commander-promotions:
+			Title: Commander promotions
+			Description: Infantry and vehicles gain army-wide combat bonuses as their commander earns combat experience.
+			Effects: Unlocks +5% damage at 250 points, 8% faster reload at 750, and 10% damage resistance at 1500. The chosen doctrine adds firepower, speed or protection.
+			Tradeoffs: Bonuses reward successful combat and can reinforce an early lead. The selected doctrine applies equally to every player for this experience.
+			Scope: All infantry and vehicles in the match. Choose the doctrine here before starting; no separate in-match promotion menu is required.
+			Category: Factions and strategies
+			Preview: ra|uibits/experience-previews/commander-promotions.png
+			Version: 1
+			Source: Cameo, Generals Alpha, and Combined Arms patterns
+			License: GPL-3.0-or-later code; original icons required
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/commander-promotions.yaml
+			Parameters:
+				point-rate:
+					Title: Promotion point rate
+					Description: Relative rate used by concrete commander-point award implementations.
+					Group: Balance
+					Type: Integer
+					Default: 100
+					Minimum: 25
+					Maximum: 200
+					Step: 5
+					Unit: percent
+				doctrine:
+					Title: Commander doctrine
+					Description: Starting army bonus for every player: Balanced adds none; Firepower +10% damage; Mobility +12% speed; Fortification 15% damage resistance.
+					Group: Factions
+					Type: Choice
+					Default: Balanced
+					Options: Balanced, Firepower, Mobility, Fortification
+		unit-composition-doctrine-ai:
+			Title: Composition and doctrine AI
+			Description: Role-driven combined-arms formations, faction doctrine templates, loss replacement, and counter-response contracts.
+			Effects: Changes standard rush, normal, turtle, and naval bot production shares to mix infantry, armor, artillery, air defense, aircraft, and naval roles by personality.
+			Tradeoffs: More coherent combined arms can make bots harder to exploit, but role weighting is a preference rather than a guaranteed counter and still depends on available factories and tech.
+			Scope: Concrete bot-production behavior for units carrying strategic-role metadata; human production and unit statistics are unchanged.
+			Category: AI strategies
+			Preview: ra|uibits/experience-previews/unit-composition-doctrine-ai.png
+			Version: 1
+			Source: Combined Arms and Cameo patterns adapted into native role metadata
+			License: GPL-3.0-or-later
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/unit-composition-doctrine-ai.yaml
+			Parameters:
+				formation-size:
+					Title: Preferred formation size
+					Description: Target size used by concrete doctrine formation builders.
+					Group: AI
+					Type: Integer
+					Default: 8
+					Minimum: 3
+					Maximum: 20
+					Step: 1
+					Unit: units
+		targeted-unit-abilities:
+			Title: Targeted unit abilities
+			Description: Rocket soldiers gain a directed signal barrage with a separate cooldown and suppression effect.
+			Effects: Force-fire with a rocket soldier to launch the barrage at a legal target or terrain cell. The cooldown setting also scales compatible activated powers.
+			Tradeoffs: The barrage has minimum range and a long recharge, so careful timing and screening matter.
+			Scope: Stock rocket soldiers (E3), plus compatible powers supplied by transit and mind-control modules.
+			Category: Units and effects
+			Preview: ra|uibits/experience-previews/targeted-unit-abilities.png
+			Version: 1
+			Source: Combined Arms and Cameo patterns
+			License: GPL-3.0-or-later code; original cursors and effects required
+			Dependencies: status-and-thermal-system
+			Rules: ra|experiences/components/targeted-unit-abilities.yaml
+			Weapons: ra|experiences/weapons/reusable-abilities.yaml
+			Parameters:
+				cooldown-rate:
+					Title: Ability cooldown rate
+					Description: Global rate applied by concrete targeted ability implementations.
+					Group: Balance
+					Type: Integer
+					Default: 100
+					Minimum: 25
+					Maximum: 200
+					Step: 5
+					Unit: percent
+		campaign-objective-toolkit:
+			Kind: Authoring
+			Title: Campaign objective toolkit
+			Description: Original Lua helpers for objectives, reinforcement schedules, escalation, extraction, waves, and difficulty scaling.
+			Effects: Provides mission authors with objective, reinforcement, escalation, extraction, wave, and difficulty-scaling anchors.
+			Tradeoffs: Adds no autonomous skirmish mechanic and only changes missions that explicitly use the toolkit.
+			Scope: Mission-authoring framework; existing missions and ordinary skirmishes are unchanged unless authored against it.
+			Category: Missions and story
+			Preview: ra|uibits/experience-previews/campaign-objective-toolkit.png
+			Version: 1
+			Source: Patterns extracted from Combined Arms, OpenHV, Shattered Paradise, Romanov's Vengeance, and Cameo
+			License: Original GPL-3.0-or-later module; no upstream story text or media
+			Rules: ra|experiences/components/campaign-objective-toolkit.yaml
+		convoy-and-evacuation-mission-pattern:
+			Kind: Authoring
+			Title: Convoy and evacuation missions
+			Description: Composable escort, interdiction, embarkation, unloading, extraction, regroup, and failure-state contracts.
+			Effects: Adds reusable mission roles for convoy routing, escort, ambush, embarkation, unloading, regrouping, extraction, and failure conditions.
+			Tradeoffs: Convoys create vulnerable moving objectives and route-management pressure for both escort and interdiction forces.
+			Scope: Mission-authoring framework for compatible scripted maps; it does not spawn convoys in normal skirmishes.
+			Category: Missions and story
+			Preview: ra|uibits/experience-previews/convoy-and-evacuation-mission-pattern.png
+			Version: 1
+			Source: Original module synthesized from Combined Arms, Generals Alpha, and OpenHV mission patterns
+			License: Original GPL-3.0-or-later module
+			Dependencies: campaign-objective-toolkit, supply-logistics-economy
+			Rules: ra|experiences/components/convoy-and-evacuation-mission-pattern.yaml
+		status-and-thermal-system:
+			Kind: Authoring
+			Title: Status and thermal system
+			Description: Shared heat, suppression, sensor-jam, weapon-lock, visibility, emitter, and receiver contracts.
+			Effects: Enables compatible actors to receive heat, suppression, sensor-jam, and weapon-lock conditions, exposes matching emitter roles, and adds RA2's radioactivity layer with the fallout the Atomic superweapon leaves behind.
+			Tradeoffs: Temporary disabling and visibility pressure reward combined arms, while condition duration and application remain defined by each concrete weapon or aura.
+			Scope: Framework for actors and weapons that inherit the receiver or emitter contracts. Existing weapons do not gain status effects automatically, but infantry take damage from contaminated ground.
+			Category: Effects and sensors
+			Preview: ra|uibits/experience-previews/status-and-thermal-system.png
+			Version: 1
+			Source: Combined Arms and Cameo condition patterns
+			License: GPL-3.0-or-later code; original overlays required
+			Rules: ra|experiences/components/status-and-thermal-system.yaml
+			Weapons: ra|experiences/weapons/status-and-thermal-system.yaml
+		weather-and-battlefield-lighting:
+			Kind: Authoring
+			Title: Weather and battlefield lighting
+			Description: Mission-triggered deterministic sandstorm overlay plus rain, night-lighting, and visibility extension contracts.
+			Effects: Adds a mission-triggered sandstorm overlay and contracts for rain, night lighting, and visibility modifiers at configurable intensity.
+			Tradeoffs: Weather can reduce clarity and visibility, changing target acquisition and readability; mission authors control when it occurs.
+			Scope: Authored weather only. The separate Dynamic Environment lobby option controls global random events and remains off by default.
+			Category: Effects and missions
+			Preview: ra|uibits/experience-previews/weather-and-battlefield-lighting.png
+			Version: 1
+			Source: OpenRA RA2, RA+, Cameo, and Shattered Paradise patterns using native WeatherOverlay
+			License: GPL-3.0-or-later code; original particles and audio only
+			Rules: ra|experiences/components/weather-and-battlefield-lighting.yaml
+			Parameters:
+				intensity:
+					Title: Weather intensity
+					Description: Preferred density for mission-triggered weather profiles.
+					Group: Effects
+					Type: Integer
+					Default: 100
+					Minimum: 25
+					Maximum: 200
+					Step: 5
+					Unit: percent
+		teleport-network:
+			Title: Transit network
+			Description: Generalized entrance, exit, routing, placement validation, and AI contracts for tunnels or rapid transit, including short targeted jumps for stock APCs and chrono-harvester delivery warps.
+			Effects: Publishes synchronized entrance, exit, routing, placement, and AI contracts for tunnel or rapid-transit networks. Stock APCs can force-fire a legal ground cell within 12 cells, while chrono harvesters jump the last leg of a delivery run.
+			Tradeoffs: Fast redeployment depends on valid, vulnerable endpoints and safe exit placement; losing the network removes the mobility advantage.
+			Scope: Framework for transit structures and compatible transports, plus RA2's chrono miner. Stock APCs use a 900-tick base cooldown and cannot bypass terrain restrictions; no tunnel is added to stock build menus.
+			Category: Buildings and support powers
+			Preview: ra|uibits/experience-previews/teleport-network.png
+			Version: 1
+			Source: Combined Arms and OpenHV teleport-network patterns generalized for modern transit
+			License: GPL-3.0-or-later code; original effects required
+			Dependencies: targeted-unit-abilities
+			Rules: ra|experiences/components/teleport-network.yaml
+		advanced-projectile-library:
+			Title: Artillery barrage and Tesla lance
+			Description: Artillery gains a long-range suppressing shell, and Tesla tanks gain a beam that slows enemy weapon reloads.
+			Effects: Adds a 13-cell ballistic attack to Artillery and an 8-cell beam to Tesla tanks, alongside their existing armaments.
+			Tradeoffs: These substantially strengthen the two stock units. Artillery still needs a screen inside its four-cell minimum range; the beam has a slow reload.
+			Scope: Stock Artillery (ARTY) and Tesla tanks (TTNK). Custom faction artillery and tanks retain their own weapons.
+			Category: Weapons and effects
+			Preview: ra|uibits/experience-previews/advanced-projectile-library.png
+			Version: 1
+			Source: Combined Arms, Cameo, Shattered Paradise, and OpenHV patterns
+			License: GPL-3.0-or-later code; original effects and audio required
+			Dependencies: point-defense-interception, status-and-thermal-system
+			Rules: ra|experiences/components/advanced-projectile-library.yaml
+			Weapons: ra|experiences/weapons/reusable-abilities.yaml
+		air-attack-profiles:
+			Kind: Authoring
+			Title: Air attack profiles
+			Description: Interceptor, strike, airlift, bomber-run, gunship, and return-to-base role contracts for current and future aircraft.
+			Effects: Publishes interceptor, strike, airlift, bomber, gunship, rearm, and return-to-base roles used by compatible aircraft and AI composition.
+			Tradeoffs: Aircraft roles preserve ammo, rearming, air-defense, and mission-profile counters instead of providing unlimited loitering firepower.
+			Scope: Role framework for aircraft inheriting these profiles; it does not add aircraft or change every plane by itself.
+			Category: Air warfare
+			Preview: ra|uibits/experience-previews/air-attack-profiles.png
+			Version: 1
+			Source: Combined Arms, RA+, Cameo, and Generals Alpha patterns merged with current air warfare
+			License: GPL-3.0-or-later code; no upstream aircraft binaries
+			Dependencies: faction-and-subfaction-contract, asset-import-audit-pipeline
+			Rules: ra|experiences/components/air-attack-profiles.yaml
+		naval-combat-archetypes:
+			Kind: Authoring
+			Title: Naval combat archetypes
+			Description: Patrol, missile-corvette, destroyer, submarine, landing-ship, and carrier contracts with explicit counter roles.
+			Effects: Publishes patrol, missile-corvette, destroyer, submarine, landing-ship, and carrier roles with fleet-screen and amphibious strategies.
+			Tradeoffs: The roles form an explicit counter web: screens protect valuable platforms, submarines ambush, escorts detect, and transports remain vulnerable.
+			Scope: Naval role framework for compatible ships and bots; it does not add ships to maps without naval production or change stock hull statistics alone.
+			Category: Navy and air
+			Preview: ra|uibits/experience-previews/naval-combat-archetypes.png
+			Version: 1
+			Source: Role patterns from Combined Arms, RA+, Romanov's Vengeance, OpenHV, and Cameo
+			License: Original data contracts; original ships and effects required
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/naval-combat-archetypes.yaml
+		ground-force-archetypes:
+			Kind: Authoring
+			Title: Ground force archetypes
+			Description: Rifle, AT, engineer, scout, APC, MBT, artillery, air-defense, tank-destroyer, and recovery role contracts.
+			Effects: Publishes ground combat roles and reusable tank-destroyer and recovery profiles for combined-arms rosters and bot composition.
+			Tradeoffs: Each role is deliberately incomplete alone—armor needs infantry and air-defense cover, artillery needs screening, and recovery units trade firepower for support.
+			Scope: Ground-role framework for actors inheriting these profiles; no unit is inserted into a build queue by this module alone.
+			Category: Soldiers and tanks
+			Preview: ra|uibits/experience-previews/ground-force-archetypes.png
+			Version: 1
+			Source: Role and balance patterns synthesized across all cataloged gameplay mods
+			License: Original data contracts; original sprites required
+			Dependencies: faction-and-subfaction-contract, asset-import-audit-pipeline
+			Rules: ra|experiences/components/ground-force-archetypes.yaml
+		base-and-defense-archetypes:
+			Kind: Authoring
+			Title: Base and defense archetypes
+			Description: Command, power, production, radar, tech, repair, gun, SAM, artillery, garrison, point-defense, and mine contracts.
+			Effects: Publishes command, power, production, radar, technology, repair, gun, SAM, artillery, garrison, point-defense, and mine roles for bases and AI planning.
+			Tradeoffs: Layered defense requires power, technology, placement, and mixed coverage; no single emplacement counters every threat domain.
+			Scope: Base and defense framework for compatible structures; it does not place defenses or modify stock build trees by itself.
+			Category: Buildings and defenses
+			Preview: ra|uibits/experience-previews/base-and-defense-archetypes.png
+			Version: 1
+			Source: Base grammar synthesized across all cataloged gameplay mods
+			License: Original data contracts; original sprites required
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/base-and-defense-archetypes.yaml
+		capture-technology:
+			Title: Capture technology
+			Description: Controlled captured-faction prerequisites, hybrid rosters, capturable structures, and mission reward contracts.
+			Effects: Tracks captured factories, barracks, airfields, helipads, and naval yards so compatible rosters or missions can grant controlled foreign-technology prerequisites.
+			Tradeoffs: Hybrid access requires capturing and holding valuable production structures, creating a visible objective the original owner can reclaim or destroy.
+			Scope: Immediately adds capture tracking to the listed production structures; actual foreign units still require build rules that consume the captured prerequisites.
+			Category: Factions and missions
+			Preview: ra|uibits/experience-previews/capture-technology.png
+			Version: 1
+			Source: Combined Arms and Cameo patterns
+			License: GPL-3.0-or-later
+			Dependencies: faction-and-subfaction-contract
+			Rules: ra|experiences/components/capture-technology.yaml
+		mind-control-and-disguise:
+			Title: Mind control and disguise
+			Description: Disguise, detection, effective ownership, control capacity, release policy, and counterplay contracts, including temporary control by stock Spies and RA2 Turkey drone operators.
+			Effects: Publishes disguise, infiltration, detection, ownership-transfer, control-capacity, and release-policy roles, grants RA2 mind control to implementing units, and lets Spies force-fire legal nearby enemy infantry or vehicles.
+			Tradeoffs: Capacity limits, vehicle-only targets, a visible control arc, and release on the controller's death provide counterplay. Holding a link slows the operator.
+			Scope: Special-unit framework plus the concrete implementations: every vehicle becomes mind-controllable, Turkey's drone operator can seize them, and stock Spies can control legal targets within five cells for 500 ticks, holding two by default. Buildings cannot be controlled.
+			Category: Special units
+			Preview: ra|uibits/experience-previews/mind-control-and-disguise.png
+			Version: 1
+			Source: Combined Arms, OpenRA RA2, Romanov's Vengeance, and Cameo patterns
+			License: GPL-3.0-or-later code; no upstream content
+			Dependencies: targeted-unit-abilities
+			Rules: ra|experiences/components/mind-control-and-disguise.yaml
+			Parameters:
+				capacity:
+					Title: Control capacity
+					Description: Maximum number of enemy units one operative can control at the same time.
+					Group: Units
+					Type: Integer
+					Default: 2
+					Minimum: 1
+					Maximum: 6
+					Step: 1
+					Unit: units
+		terrain-and-random-map-systems:
+			Kind: Authoring
+			Title: Terrain and random map systems
+			Description: Earth terrain enrichment, auto-tiling, forests, liquids, resources, deterministic seeds, and native random map integration.
+			Effects: Publishes editor and generator contracts for Earth auto-tiling, forests, liquids, resources, deterministic seeds, and native random-map integration.
+			Tradeoffs: Richer generated terrain can change pathing and resource distribution, but deterministic seeds preserve reproducibility and multiplayer compatibility.
+			Scope: Map-authoring and generation framework; it does not rewrite an already selected map when enabled.
+			Category: Maps and world generation
+			Preview: ra|uibits/experience-previews/terrain-and-random-map-systems.png
+			Version: 1
+			Source: OpenHV patterns compared with the existing OpenRA AI world generator
+			License: GPL-3.0-or-later code; every terrain folder remains separately license-gated
+			Dependencies: asset-import-audit-pipeline
+			Rules: ra|experiences/components/terrain-and-random-map-systems.yaml
+	Profiles:
+		ai-assistant-only:
+			Title: AI Assistant Only
+			Description: Starts with every optional gameplay and presentation module disabled. The AI Assistant remains available and is configured separately under Settings > AI.
+			Components:
+		world-war-iii:
+			Title: World War III
+			Description: Seven modern factions, active combat upgrades and AI support, with reusable authoring modules. Gameplay cards explain the units changed by each upgrade.
+			Components: hezbollah-faction, israel-faction, saudi-arabia-faction, turkey-faction, china-faction, yemen-faction, iran-faction, asset-import-audit-pipeline, faction-and-subfaction-contract, minefield-generator, mission-aware-minelayer-ai, supply-logistics-economy, point-defense-interception, building-garrisons, carrier-and-drone-wing, commander-promotions, unit-composition-doctrine-ai, targeted-unit-abilities, salvage-and-scrap-economy, campaign-objective-toolkit, convoy-and-evacuation-mission-pattern, status-and-thermal-system, weather-and-battlefield-lighting, teleport-network, advanced-projectile-library, air-attack-profiles, naval-combat-archetypes, ground-force-archetypes, base-and-defense-archetypes, capture-technology, mind-control-and-disguise, terrain-and-random-map-systems
+		layered-defense:
+			Title: Layered Defense
+			Description: Mine warfare, defensive AI, projectile interception, garrisons, status effects, and reusable base defenses.
+			Components: faction-and-subfaction-contract, minefield-generator, mission-aware-minelayer-ai, point-defense-interception, building-garrisons, status-and-thermal-system, advanced-projectile-library, base-and-defense-archetypes
+		campaign-authoring:
+			Title: Campaign Authoring
+			Description: Mission objectives, logistics, convoys, evacuation, capture rewards, weather, and terrain-generation contracts.
+			Components: campaign-objective-toolkit, convoy-and-evacuation-mission-pattern, capture-technology, weather-and-battlefield-lighting, terrain-and-random-map-systems
+		combined-arms-laboratory:
+			Title: Combined Arms Laboratory
+			Description: Role archetypes, doctrine AI, abilities, air profiles, naval wings, logistics, promotions, transit, and special-unit experiments.
+			Components: ground-force-archetypes, air-attack-profiles, naval-combat-archetypes, unit-composition-doctrine-ai, supply-logistics-economy, commander-promotions, targeted-unit-abilities, teleport-network, mind-control-and-disguise

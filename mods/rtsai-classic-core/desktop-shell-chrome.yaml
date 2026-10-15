@@ -1,0 +1,4 @@
+rtsai-menu:
+	Image: ra2|standalone/art/menu-backdrop.png
+	Regions:
+		backdrop: 0, 0, 1920, 1080
