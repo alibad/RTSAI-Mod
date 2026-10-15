@@ -1,1 +1,1 @@
-classic-mode-title = RTS AI — Classic
+classic-mode-title = RTS AI — Experimental top-down

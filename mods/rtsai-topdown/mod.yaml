@@ -178,6 +178,7 @@ Chrome:
 Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.RA2.dll, OpenRA.Mods.RTSAI.dll
 
 ChromeLayout:
+	common|chrome/faction-catalog.yaml
 	ra2|chrome/experience-composer.yaml
 	ra2|chrome/experience-review.yaml
 	ra2|chrome/desktop-home.yaml
@@ -291,6 +292,7 @@ Music:
 
 FluentMessages:
 	classic|mode.ftl
+	common|fluent/faction-catalog.ftl
 	ra2|languages/desktop.ftl
 	ra2|languages/experience.ftl
 	ra2|languages/game-modes.ftl

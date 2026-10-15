@@ -87,7 +87,7 @@ def manifest():
     source=source.replace('\nModelSequences:', '\n\tclassic|sequences.yaml\n\nModelSequences:')
     text(MODE/'mod.yaml',source)
     text(MODE/'experiences.yaml', (ROOT/'mods/rtsai/experiences.yaml').read_text(encoding='utf-8').replace('Mod: rtsai\n', 'Mod: rtsai-topdown\n'))
-    text(MODE/'mode.ftl','classic-mode-title = RTS AI — Classic\n')
+    text(MODE/'mode.ftl','classic-mode-title = RTS AI — Experimental top-down\n')
     rules='^Palettes:\n\tPaletteFromFile@terrain-temperate:\n\t\tFilename: classic|terrain/terrain.pal\n\n^SpriteActor:\n\tBodyOrientation:\n\t\tUseClassicPerspectiveFudge: true\n'
     for actor in sorted({match[1] for path in (ROOT/'mods/rtsai').rglob('*.yaml')
                          for match in re.finditer(r'^([^\s#][^:\n]*):[^\n]*\n((?:\t[^\n]*\n|\n)*)', path.read_text(encoding='utf-8'), re.M)

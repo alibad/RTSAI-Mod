@@ -30,3 +30,4 @@ desktop-openhv-combined-arms-ra-and-others-compatibility-review-pending = OpenHV
 desktop-configure-this-experience = Configure this experience
 desktop-back = Back
 desktop-mission-studio = Mission Studio
+desktop-game-library = Game library

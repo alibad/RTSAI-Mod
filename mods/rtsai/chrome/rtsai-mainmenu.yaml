@@ -27,7 +27,7 @@ Container@MAINMENU:
 			Y: 85
 			Width: 230
 			Height: 38
-			Text: Game library
+			Text: desktop-game-library
 			Font: Bold
 		ColorBlock@MENU_BAND:
 			Width: 340
