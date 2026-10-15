@@ -87,6 +87,31 @@ def export_engine(repo, dest):
         shutil.move(str(stage), dest)
     return value
 
+def snapshot_committed(repo, dest, prefixes):
+    branch = git(repo, "branch", "--show-current").decode().strip()
+    if branch not in ("main", "master"): raise ValueError(f"Only primary main/master inputs permitted: {repo} is {branch}")
+    head = git(repo, "rev-parse", "HEAD").decode().strip()
+    omitted = []
+    with tempfile.TemporaryDirectory(dir=dest.parent) as work:
+        stage = Path(work) / "source"; stage.mkdir()
+        archive = Path(work) / "source.tar"
+        subprocess.run(["git", "-C", str(repo), "archive", "--format=tar", "--output", str(archive), head, *prefixes], check=True)
+        with tarfile.open(archive) as tar:
+            for member in tar:
+                rel = Path(member.name)
+                if rel.is_absolute() or ".." in rel.parts or member.issym() or member.islnk():
+                    raise ValueError(f"Unsafe archive member: {member.name}")
+                if not member.isfile(): continue
+                if EXCLUDED_PARTS.intersection(rel.parts) or rel.name in SECRET_NAMES or rel.name.startswith(".env.") or rel.suffix.lower() in PROPRIETARY | {".pem", ".key", ".p12", ".pfx"}:
+                    omitted.append(member.name); continue
+                tar.extract(member, stage, filter="data")
+        value = manifest(stage, {"kind": "committed-tree-snapshot", "source": str(repo), "branch": branch,
+            "head": head, "prefixes": prefixes, "omitted": omitted,
+            "excludedWorkingChanges": git(repo, "status", "--short").decode().splitlines()})
+        shutil.move(str(stage), dest)
+    return value
+
+
 def snapshot(repo, dest, prefixes):
     branch = git(repo, "branch", "--show-current").decode().strip()
     if branch not in ("main", "master"): raise ValueError(f"Only primary main/master inputs permitted: {repo} is {branch}")
@@ -136,7 +161,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     subs = ap.add_subparsers(dest="command", required=True)
     engine = subs.add_parser("engine"); engine.add_argument("--repo", type=Path, default=ROOT.parent / "OpenRA"); engine.add_argument("--out", type=Path, required=True)
-    snap = subs.add_parser("snapshot"); snap.add_argument("--repo", type=Path, required=True); snap.add_argument("--out", type=Path, required=True); snap.add_argument("--include", action="append", default=[])
+    snap = subs.add_parser("snapshot"); snap.add_argument("--repo", type=Path, required=True); snap.add_argument("--out", type=Path, required=True); snap.add_argument("--include", action="append", default=[]); snap.add_argument("--committed", action="store_true", help="Export HEAD only, preserving concurrent uncommitted work outside the build")
     cp = subs.add_parser("copy"); cp.add_argument("--input", type=Path, required=True); cp.add_argument("--out", type=Path, required=True)
     verify = subs.add_parser("verify"); verify.add_argument("path", type=Path)
     args = ap.parse_args()
@@ -145,7 +170,7 @@ def main():
         source = args.input.resolve(); dest = new_destination(args.out, source); value = build_copy(source, dest)
     else:
         repo = args.repo.resolve(); dest = new_destination(args.out, repo)
-        value = export_engine(repo, dest) if args.command == "engine" else snapshot(repo, dest, args.include)
+        value = export_engine(repo, dest) if args.command == "engine" else (snapshot_committed if args.committed else snapshot)(repo, dest, args.include)
         check(dest)
     print(json.dumps({k: v for k, v in value.items() if k != "files"}, indent=2))
 
