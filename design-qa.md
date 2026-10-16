@@ -1,60 +1,51 @@
-# Frontline native menu QA — 15 October 2026
+# Native Library, Customize and Community QA — 16 October 2026
 
 final result: passed
 
-**Comparison target and evidence**
+This is native OpenRA C#, following the owner's accepted three-screen direction. Browser CSS, console, phone and RTL tests do not apply. Original game lobbies/HUD/settings are retained as requested. Previous main-menu QA is preserved in docs/frontline-menu-qa-20261015.md.
 
-- Source visual truth: `C:/Users/Admin/Code/hq/games/RTSAI-Mod/docs/frontline-menu-assets/selected-reference.png`, the first displayed proposal selected by the owner; 1672x941 pixels.
-- Native implementation: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/live-game-window.png`; 1942x1136 window capture, including Windows chrome. Client content is 1920x1080, from a 1280x720 logical window at Windows display scale 1.5 and game UI scale 1.
-- Normalized content: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/game-menu.png`. The 11px side/bottom borders and 45px title area were removed. A comparison-only copy was downsampled to 1672x941; the application assets were not stretched or retouched for QA.
-- State: RA2 selected, main menu, enabled Play, idle pointer. Source and implementation were opened together in the same comparison image.
-- Full-view evidence: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/comparison-live.png`.
-- Focused controls evidence: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/comparison-controls-final.png`.
-- Focused pack-control evidence: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/comparison-packs.png`.
-- Narrow-screen evidence: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/home-4x3-final/window-020.png`; 1024x768 logical window, requested game UI scale 1.5, 1536x1152 client pixels.
-- This is a C# OpenRA application. Browser CSS size, browser console and phone breakpoints do not apply. Native stdout/stderr and real window captures were inspected instead.
+## Comparison evidence
 
-**Required fidelity surfaces**
+Evidence root: C:/Users/Admin/Code/hq/games/artifacts/desktop-three-games-design-20261016/.
 
-- Fonts/typography: the distressed wordmark is a separate generated raster asset. Actual controls use bundled OFL Black Ops One and Chakra Petch Bold, with discrete font sizes chosen for the effective UI scale. The Play hierarchy, navigation weight, tracking and single-line labels match the selected direction. Native font rasterization and letter shapes differ slightly from the generated reference. No clipping or unintended wrapping in the checked viewports.
-- Spacing/layout: logo, compact mode selector, primary plate, secondary actions and lower pack access retain the reference proportions and alignment. Authored coordinates reflow from a fixed baseline rather than accumulating rounding errors. A left-anchored backdrop crop protects dark texture behind controls at 4:3. Tools and Experience are intentional quiet additions to retain custom workflows.
-- Colors/tokens: ivory text and button, warm battlefield, dark rocky left side and amber selected-mode underline replace the teal dashboard treatment. Hover uses amber text/marker; Play has an amber hover edge. Disabled tools retain a distinct dim state.
-- Image quality: battlefield, wordmark, plate, chevron and puzzle are actual generated raster assets, not HTML, SVG, text-symbol or code-drawn art substitutes. Original source PNGs are preserved. Engine texture packaging adds only transparent padding. No broken image, visible transparency halo or distorted vehicle appeared in native captures. Slight generated-art variation from the approved image remains P3.
-- Copy/content: primary labels are PLAY, CAMPAIGN, SKIRMISH, MULTIPLAYER, SETTINGS, QUIT, CLASSIC and RA2. Technical provenance and recovery explanations were removed from the main menu. The optional slogan in the mock was intentionally omitted. Existing product content remains in its own settings, composer and tools screens.
-- Icons: the generated chevron and puzzle match the target's material and optical weight. The puzzle is drawn inside the Game packs button, so the icon and text share one hit target. The extra tiny trailing pack chevron in the mock is omitted as redundant, P3.
+| Screen | Source visual truth | Native implementation | Paired comparison |
+| --- | --- | --- | --- |
+| Library | game-library.png | actual-library.png | compare-library.jpg |
+| Customize | customize-game.png | actual-customize-classic.png | compare-customize.jpg |
+| Community | community-install.png | actual-community.png | compare-community.jpg |
 
-**Comparison history**
+Source images are 1672×941. Library/Community native windows are 1443×841; Customize Classic/RTS windows are 1283×831; RA2/fullscreen captures are 2560×1440 logical pixels. Windows scale is 150%, game UI scale 1. Comparisons remove the Windows title/border (30px top, 1px sides), normalize content to 1280×720, and place source and implementation in one image. The 16:10 Customize native window includes canvas letterboxing; this is not a pixel-identical viewport. Full views and paired 1600×630 focus crops were inspected, covering controls and typography. Real catalog rows differ from illustrative examples. Additional screenshots include actual-customize-ra2.png, actual-customize-rts.png, actual-import-targets.png, actual-fullscreen-confirm.png, actual-ra2-campaigns.png, actual-classic-production.png and actual-ra2-deployed.png.
 
-1. Initial comparison: `comparison-main.png` and `comparison-controls.png`. P2: Play lettering was too small relative to its plate. Fixed the authored display size from 56 to 72 and added larger native font sizes. Post-fix evidence: `comparison-final.png` and `comparison-controls-final.png`.
-2. Narrow-screen review: `classic-tools-4x3/window-016.png`. P2: centering the battlefield crop removed too much of the dark left region. Changed the cover focus to the left edge. Post-fix evidence: `home-4x3-final/window-020.png`; labels remain readable and all main actions fit.
-3. Control review: P2: puzzle icon had been a separate non-interactive sibling outside the pack button. Integrated the icon into the button and expanded its hit target. Post-fix evidence: `comparison-packs.png` and `live-game-window.png`; unchanged visual position with a unified native button.
-4. Final full-view and focused comparisons above: no actionable P0/P1/P2 visual findings remain.
+## Findings, fixes and comparison history
 
-**Native behavior and validation**
+1. P1 fixed: native Settings panels required a concrete Common controller and crashed with the mod's controller. Seven constructors now use the existing ISettingsLogic interface. All seven tabs opened; fullscreen Apply/Keep and timed rollback were tested.
+2. P1 fixed: duplicate SupportsMapsFrom root keys disabled authored RA2 campaigns. Each manifest now has one compatible map list. Native campaign list is visible in actual-ra2-campaigns.png and recording 11-ra2.mp4.
+3. P2 fixed: Community search was unlabelled. Added Search beside the field, recaptured actual-community.png and repeated full/focused paired comparison. Empty searches now clear selection, detail and the install action; native no-result state was checked separately.
+4. P1 fixed during build acceptance: poster dimensions violated the engine atlas contract. Source pixels are preserved with transparent padding to 2048²; visible regions retain original coordinates. Strict standalone validation and rendered posters pass.
 
-- Successful local Release builds, zero compiler warnings/errors.
-- Actual Play handler opens the real skirmish lobby; Campaign opens the actual mission browser; Multiplayer opens its established browser.
-- Native display settings, composer and Tools render successfully. The selected main-menu design does not claim to restyle those panels.
-- Settings, Campaign and Game packs return through their real Back/Close callbacks to Frontline. Explicit native return assertions passed.
-- Both real foundation reloads passed: RA2 to `rtsai-classic-core`, and Classic to `rtsai`. Selected-mode treatment appears in the rendered windows.
-- Classic Tools retains Mission Studio; its existing native panel opened. Earth/companion service availability is separate from menu navigation and was not established by that UI smoke test.
-- All eight mode/profile rule sets and independent settings/profile/voice round trips passed.
-- Strict standalone checking: zero warnings. RA2 YAML lint: no errors/warnings. Classic YAML lint: no errors, 44 existing warnings.
-- Reports/logs/screenshots: `C:/Users/Admin/Code/hq/games/artifacts/frontline-native-20261015/`.
-- Native game buttons are used throughout this menu; there is no HTML select. No dropdown popup was redesigned here. Existing settings pickers retain their existing native behavior; this QA does not label their expanded menus as newly polished.
-- Review window uses a copy of player preferences and a separate support directory. The existing Classic match was left running. Companion autostart is disabled only for the concurrent review window to avoid competing with that match. The canonical desktop launcher retains its normal companion behavior.
+No actionable P0/P1/P2 visual issue remains in the checked desktop states. Native adaptations below are intentional design-system/content constraints, not a claim of exact screenshot reproduction.
 
-**Open questions and follow-up polish**
+## Required fidelity surfaces
 
-- P3: optional refinement of the generated wordmark edge texture, exact font letter shapes and pack chevron.
-- Existing settings/lobby/workbench visual systems are outside this selected main-menu frame and remain candidates for a later explicitly selected design pass.
-- Gameplay balance, campaign completion, external multiplayer connectivity, neural voice quality and full Arabic localization were not retested by this menu change. No such coverage is claimed.
+- Fonts/typography: reused bundled Frontline Black Ops One display and Chakra Petch Bold controls. Native text is heavier and more stencil-like than the concept. The hierarchy remains readable, without clipped headings or unintended wrapping in checked views. Lighter body weight is P3 follow-up.
+- Spacing/layout: three equal poster columns and one main action per game; Customize separates additions from explanation and Save; Community separates a list from requirements/actions. Native presets omit decorative thumbnail strips. Four rows/page fit real catalog content. Rectangular ON/OFF buttons replace illustrated pill switches with explicit selected/focus states. These are intentional native adaptations.
+- Colors/tokens: Frontline charcoal, ivory and amber carry background, primary action, selection and focus. Original blue/metal HUD/settings remain inside games, explicitly requested by the owner.
+- Image quality: source PNG illustrations/provenance are preserved, padded for native textures. Poster crops match their three subjects; backdrop/wordmark reuse real raster assets. No SVG/CSS/glyph substitute replaces imagery. No distortion/halo appeared. Decorative preset and list thumbnails are omitted to keep real names readable. Community labels illustration NOT GAMEPLAY; actual gameplay is recorded separately.
+- Copy/content: real catalog replaces imaginary examples: Classic 17 player rows, RA2/RTS eight each. Authoring contracts remain in Creator Tools. Two verified complete games replace fictional packs. Seven source checkouts have a separate list and no fake Install action. Save applies to new matches; imports name the target game. Technical paths stay outside normal game choice.
+- Controls/states: selected/hover/focus/disabled, segmented filters, expanded native faction dropdown, import targets, download requirements and installed actions were inspected. No screen-reader or mobile behavior claim is made.
 
-**Implementation checklist**
+## Behavior and acceptance
 
-- [x] Selected visual mapped to real native controls and local assets.
-- [x] Main actions, settings, composer and custom tools retained.
-- [x] Both mode switches and return paths checked in real native windows.
-- [x] Full-view and focused comparisons inspected; P2 findings corrected.
-- [x] Assets, original images, prompts and font licenses saved in the project.
-- [x] Local-only delivery; no web release or deployment.
+Library launches Classic, RA2 and RTS with independent settings/save roots. Original/Custom round trips retain choices and AI preference. Classic MCV deployment, AI review/apply, construction sidebar and Power Plant placement were exercised. RA2 original-country picker, authored campaigns, China/combined-arms saved setup, MCV deployment and production were exercised. RTS opens its separate setup and retained Creator Tools. Display Keep persists; unattended confirmation reverts; Classic settings stay independent.
+
+OpenHV and Combined Arms were installed through the native utility worker and launched with separate compatible engines. OpenHV's settings were inspected. Combined Arms reaches its first-run setup; telemetry consent is left to the owner. Full utility verification covers identities/settings, profiles, dependency closure, safe extraction, strict standalone art and all four mod/map checks. Missing-Fluent-key warnings use readable fallback text and remain recorded in logs.
+
+## Implementation checklist
+
+- [x] Native entry, three independent game identities, settings and saved custom choices.
+- [x] Preserve base menus, controls, custom catalogs and authoring workflows.
+- [x] Community install worker, add-on targeting and source-checkout distinction.
+- [x] Local build, paired visual comparisons, real native capture and neural-narrated walkthrough.
+- [x] No push, deployment, hosted CI or worktree.
+
+P3 polish: consider lighter body typography and optional preset illustrations if warranted by feedback. Remaining test scope: full multiplayer sessions, every mission/module combination and arbitrary external add-ons are not exhaustively playtested. This work does not restore retail RA2 assets/campaigns or port every Classic module to RA2.
