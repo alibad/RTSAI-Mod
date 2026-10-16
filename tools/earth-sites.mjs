@@ -73,8 +73,13 @@ if (args.includes('--import-osm')) {
   if (!Number.isFinite(updatedAt) || !Array.isArray(raw.elements) || raw.remark) throw Error('Import requires an intact attributed Overpass response');
   const file = path.join(root, 'regions', `${id}.json`), region = JSON.parse(fs.readFileSync(file, 'utf8'));
   region.sites = [...new Map([...region.sites, ...osmSites(raw, updatedAt)].map(s => [s.id, s])).values()];
-  region.sources.push({ provider: 'OpenStreetMap', license: 'ODbL-1.0', url: 'https://www.openstreetmap.org/copyright', note: 'Preserved local public-source response. Original query bounds unavailable; no full-region coverage claim.' });
-  write(file, region); write(path.join(root, 'sources', `${id}-osm-preserved.json`), raw);
+  const query = args.includes('--query-file') ? fs.readFileSync(path.resolve(args[args.indexOf('--query-file') + 1]), 'utf8') : null;
+  const archived = { query, updatedAt, payload: raw }, sourceFile = `${id}-osm-preserved-${hash(JSON.stringify(archived)).slice(0, 16)}.json`;
+  const source = { provider: 'OpenStreetMap', license: 'ODbL-1.0', url: 'https://www.openstreetmap.org/copyright', file: sourceFile,
+    note: query ? 'Exact bounded query and public-source response preserved; no full-region coverage claim.' : 'Preserved local public-source response. Original query bounds unavailable; no full-region coverage claim.' };
+  if (!region.sources.some(s => s.file === sourceFile)) region.sources.push(source);
+  region.updatedAt = Math.max(region.updatedAt, updatedAt);
+  write(file, region); write(path.join(root, 'sources', sourceFile), archived);
 }
 
 // Build deterministic immutable packs from every preserved region. Old packs remain available for old manifests.

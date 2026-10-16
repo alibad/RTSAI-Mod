@@ -1,0 +1,322 @@
+{
+  "query": "[out:json][timeout:15];(nwr[\"landuse\"=\"military\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945);nwr[\"military\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945);nwr[\"aeroway\"=\"aerodrome\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945);nwr[\"landuse\"~\"^(port|harbour)$\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945);nwr[\"harbour\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945);nwr[\"industrial\"=\"port\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945);nwr[\"seamark:type\"=\"harbour\"](29.9601688825009,31.14621963276055,30.139831117499103,31.35378036723945););out tags center;",
+  "updatedAt": 1792173289000,
+  "payload": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.4 2390de5a",
+    "osm3s": {
+      "timestamp_osm_base": "2026-10-16T17:54:49Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": 4758733550,
+        "lat": 29.9905709,
+        "lon": 31.2716993,
+        "tags": {
+          "description": "يقوم الضحيه قائد السياره بالتوقف عند اول ورشه لتصليح الكاوتش ويقوم العامل بثقب الاطار عده ثقوب ثم يطلب من الضحيه اصلاحهم نظير مبلغ كبير",
+          "landuse": "military",
+          "military": "danger_area",
+          "name": "فاعل رقم 2 ورشه تصليح الكاوتش",
+          "name:ar": "فاعل رقم 2 ورشه تصليح الكاوتش"
+        }
+      },
+      {
+        "type": "way",
+        "id": 24847242,
+        "center": {
+          "lat": 30.1086473,
+          "lon": 31.3590449
+        },
+        "tags": {
+          "landuse": "military",
+          "military": "barracks",
+          "name": "الكلية الحربية",
+          "name:ar": "الكلية الحربية",
+          "name:en": "Military Academy",
+          "name:hu": "Katonai Akadémia",
+          "wikidata": "Q3603942",
+          "wikipedia": "ar:الكلية الحربية (مصر)"
+        }
+      },
+      {
+        "type": "way",
+        "id": 24886508,
+        "center": {
+          "lat": 30.0824929,
+          "lon": 31.3139667
+        },
+        "tags": {
+          "landuse": "military",
+          "military": "barracks"
+        }
+      },
+      {
+        "type": "way",
+        "id": 24959204,
+        "center": {
+          "lat": 30.0865601,
+          "lon": 31.3327213
+        },
+        "tags": {
+          "landuse": "military",
+          "military": "barracks",
+          "name": "القيادة المشتركة - منطقة عسكرية",
+          "name:ar": "القيادة المشتركة - منطقة عسكرية",
+          "name:en": "El Qiada El Mushtaraka"
+        }
+      },
+      {
+        "type": "way",
+        "id": 35579007,
+        "center": {
+          "lat": 30.0724547,
+          "lon": 31.3264133
+        },
+        "tags": {
+          "landuse": "military",
+          "military": "barracks",
+          "name": "وزارة الدفاع",
+          "name:ar": "وزارة الدفاع",
+          "name:en": "Ministry of Defence"
+        }
+      },
+      {
+        "type": "way",
+        "id": 38550720,
+        "center": {
+          "lat": 30.0727348,
+          "lon": 31.3342454
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 38550721,
+        "center": {
+          "lat": 30.0705051,
+          "lon": 31.333742
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 38550722,
+        "center": {
+          "lat": 30.0706193,
+          "lon": 31.3313714
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 39657082,
+        "center": {
+          "lat": 30.0638673,
+          "lon": 31.3148785
+        },
+        "tags": {
+          "landuse": "military",
+          "name": "منصة العرض العسكري",
+          "name:ar": "منصة العرض العسكري",
+          "name:en": "Military Parades Tribune"
+        }
+      },
+      {
+        "type": "way",
+        "id": 52131044,
+        "center": {
+          "lat": 30.0820257,
+          "lon": 31.2925803
+        },
+        "tags": {
+          "addr:city": "Cairo Governorate",
+          "addr:housenumber": "23",
+          "addr:street": "شارع الخليفه المأمون",
+          "building": "yes",
+          "military": "office",
+          "name": "Ministry of Defence",
+          "name:ar": "وزارة الدفاع",
+          "name:en": "Ministry of Defence",
+          "name:fa": "وزارت دفاع",
+          "office": "government",
+          "phone": "+20224008000",
+          "website": "https://www.mod.gov.eg/"
+        }
+      },
+      {
+        "type": "way",
+        "id": 182521820,
+        "center": {
+          "lat": 30.0368077,
+          "lon": 31.2287039
+        },
+        "tags": {
+          "leisure": "marina",
+          "seamark:harbour:category": "marina",
+          "seamark:type": "harbour"
+        }
+      },
+      {
+        "type": "way",
+        "id": 187359002,
+        "center": {
+          "lat": 29.9694236,
+          "lon": 31.2460622
+        },
+        "tags": {
+          "aeroway": "aerodrome",
+          "name": "مطار مستشفى معادي العسكري",
+          "name:ar": "مطار مستشفى معادي العسكري",
+          "name:en": "Maadi Hospital Military Airport"
+        }
+      },
+      {
+        "type": "way",
+        "id": 205658668,
+        "center": {
+          "lat": 30.0930155,
+          "lon": 31.3435863
+        },
+        "tags": {
+          "barrier": "fence",
+          "landuse": "military",
+          "name": "Vocational Training",
+          "name:ar": "التدريب المهني",
+          "name:en": "Vocational Training"
+        }
+      },
+      {
+        "type": "way",
+        "id": 217697877,
+        "center": {
+          "lat": 30.0810018,
+          "lon": 31.3224754
+        },
+        "tags": {
+          "landuse": "military",
+          "name": "دار القوات الجوية",
+          "name:ar": "دار القوات الجوية",
+          "name:en": "Air Force House"
+        }
+      },
+      {
+        "type": "way",
+        "id": 320784665,
+        "center": {
+          "lat": 30.0932041,
+          "lon": 31.3582744
+        },
+        "tags": {
+          "aeroway": "aerodrome",
+          "ele": "91",
+          "icao": "HEAZ",
+          "landuse": "military",
+          "military": "airfield",
+          "name": "مطار ألماظة",
+          "name:ar": "مطار ألماظة",
+          "name:en": "Almaza AFB Airport",
+          "name:hu": "Almaza AFB Repülőtér",
+          "name:ml": "അൽമാസാ സൈനിക വിമാനത്താവളം",
+          "wikidata": "Q11824207",
+          "wikipedia": "en:Almaza Air Base"
+        }
+      },
+      {
+        "type": "way",
+        "id": 346571438,
+        "center": {
+          "lat": 30.0693545,
+          "lon": 31.3310708
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 455470538,
+        "center": {
+          "lat": 30.0600374,
+          "lon": 31.3207929
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 455470539,
+        "center": {
+          "lat": 30.0626354,
+          "lon": 31.3156146
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1074633056,
+        "center": {
+          "lat": 30.0817977,
+          "lon": 31.292063
+        },
+        "tags": {
+          "landuse": "military"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1329486639,
+        "center": {
+          "lat": 29.9863253,
+          "lon": 31.1539657
+        },
+        "tags": {
+          "landuse": "military",
+          "name": "منطقه عسكريه"
+        }
+      },
+      {
+        "type": "relation",
+        "id": 454382,
+        "center": {
+          "lat": 30.0518394,
+          "lon": 31.3108587
+        },
+        "tags": {
+          "alt_name": "مباحث أمن الدولة",
+          "landuse": "military",
+          "name": "National Security Investigative Service",
+          "name:ar": "مباحث أمن الدولة",
+          "name:en": "National Security Investigative Service",
+          "type": "multipolygon"
+        }
+      },
+      {
+        "type": "relation",
+        "id": 15021810,
+        "center": {
+          "lat": 30.081306,
+          "lon": 31.2920643
+        },
+        "tags": {
+          "addr:street": "شارع الخليفه المأمون",
+          "military": "barracks",
+          "name": "Army Barracks",
+          "name:ar": "هيئة عمليات القوات المسلحة",
+          "name:en": "Army Barracks",
+          "type": "multipolygon"
+        }
+      }
+    ]
+  }
+}
