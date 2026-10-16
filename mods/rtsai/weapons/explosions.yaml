@@ -44,7 +44,14 @@ UnitExplode:
 	Warhead@1Eff: CreateEffect
 		Explosions: large_twlt
 		ImpactSounds: ra2|audio/sfx/rtsai-explode-medium.wav
-		ValidTargets: Ground, Water, Air
+		ValidTargets: Ground, Air
+		ImpactActors: false
+	Warhead@WaterEff: CreateEffect
+		Explosions: large_watersplash
+		ImpactSounds: ra2|audio/sfx/rtsai-explode-medium.wav
+		ValidTargets: Water
+		ImpactActors: false
+		ForceDisplayAtGroundLevel: true
 
 UnitExplodeSmall:
 	Inherits: UnitExplode
