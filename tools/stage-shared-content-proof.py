@@ -16,13 +16,18 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--mode', choices=['classic', 'ra2'], required=True)
+    p.add_argument('--runtime-config', type=Path, help='Optional verified local preview receipt')
     a = p.parse_args()
-    config = json.loads((ROOT / 'recovery.local.json').read_text(encoding='utf-8-sig'))
+    config = json.loads((a.runtime_config or ROOT / 'recovery.local.json').read_text(encoding='utf-8-sig'))
+    if 'native' in config:
+        config = {**config, 'engineDirectory': config['native'], 'supportDirectory': config['support']}
     runtime = Path(config['engineDirectory'])
     mode = 'rtsai-classic-core' if a.mode == 'classic' else 'rtsai-ra2'
     target = a.mode + '-desktop'
     content = json.loads((runtime / 'mods/rtsai/shared-content/manifest.json').read_text())
     unit = content['targets'][target]['actor'].lower()
+    if (runtime / 'mods/rtsai/unit-overrides/manifest.json').is_file():
+        content['revision'] = json.loads((runtime / 'mods/rtsai/unit-overrides/manifest.json').read_text())['revision']
     source = runtime / ('mods/rtsai-classic-core/maps/a-nuclear-winter' if a.mode == 'classic' else 'mods/rtsai/standalone/maps/twin-fords')
     support = a.out.resolve() / a.mode / 'support'
     support.mkdir(parents=True, exist_ok=True)
@@ -64,6 +69,7 @@ def main():
         print("SHARED_CONTENT|{target}|{content['revision']}|cost|" .. Actor.Cost("{unit}") .. "|before|" .. before)
         local accepted = owner.Build({{ "{unit}" }}, function(actors)
             print("SHARED_PRODUCTION|{target}|trained|" .. #actors .. "|spent|" .. (before - owner.Cash))
+            print("UNIT_HEALTH|{target}|" .. actors[1].Health .. "|max|" .. actors[1].MaxHealth)
         end)
         print("SHARED_QUEUE|{target}|accepted|" .. tostring(accepted))
     end)
