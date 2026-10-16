@@ -75,7 +75,8 @@ def build(web_root, log):
     receipts = []
     for mod in ['rtsai-classic-core', 'rtsai-ra2']:
         result = subprocess.check_output([str(native / 'bin/OpenRA.Utility.exe'), mod, '--check-unit-modifications'],
-                                        cwd=native, env={**os.environ, 'OPENRA_AI_HOST': '0'}, text=True)
+                                        cwd=native, env={**os.environ, 'OPENRA_AI_HOST': '0', 'ENGINE_DIR': str(native),
+                                                         'SUPPORT_DIR': config['supportDirectory'], 'MOD_SEARCH_PATHS': str(native / 'mods')}, text=True)
         receipts.append(json.loads(result))
     snapshot = out / 'mod'
     snapshot.mkdir()
