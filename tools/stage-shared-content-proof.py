@@ -17,6 +17,7 @@ def main():
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--mode', choices=['classic', 'ra2'], required=True)
     p.add_argument('--runtime-config', type=Path, help='Optional verified local preview receipt')
+    p.add_argument('--no-hud', action='store_true', help='Keep acceptance runs isolated from menu clicks')
     a = p.parse_args()
     config = json.loads((a.runtime_config or ROOT / 'recovery.local.json').read_text(encoding='utf-8-sig'))
     if 'native' in config:
@@ -58,7 +59,7 @@ def main():
     for i, (actor, dx, dy) in enumerate(buildings):
         actors += f'\tProofBuilding{i}: {actor}\n\t\tOwner: Multi0\n\t\tLocation: {x+dx},{y+dy}\n'
     (dest / 'map.yaml').write_text(header + actors + '\nRules: proof.yaml\n', encoding='utf-8')
-    (dest / 'proof.yaml').write_text('World:\n\tScriptTriggers:\n\tLuaScript:\n\t\tScripts: proof.lua\nPlayer:\n\tScriptTriggers:\n', encoding='utf-8')
+    (dest / 'proof.yaml').write_text('World:\n' + ('\t-LoadWidgetAtGameStart:\n' if a.no_hud else '') + '\tScriptTriggers:\n\tLuaScript:\n\t\tScripts: proof.lua\nPlayer:\n\tScriptTriggers:\n', encoding='utf-8')
     lua = f'''WorldLoaded = function()
     local owner = Player.GetPlayer("Multi0")
     Trigger.AfterDelay(125, function()

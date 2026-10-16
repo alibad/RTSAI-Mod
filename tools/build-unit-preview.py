@@ -46,6 +46,14 @@ def build(web_root, log):
         raise ValueError('Rebuild the canonical desktop runtime for the current engine first.')
     game = ROOT.parent / 'RTSAI-WebGame'
     seed = game / 'build/shared-content-pilot-20261016'
+    run('git', '-C', game, 'fetch', 'origin', 'main')
+    run('git', '-C', game, 'merge', '--ff-only', 'origin/main')
+    host_commit = json.loads((seed / 'host/INPUTS.json').read_text())['head']
+    if subprocess.run(['git', '-C', str(game), 'diff', '--quiet', host_commit, 'HEAD', '--', 'sim']).returncode:
+        raise ValueError('The browser simulation changed. Rebuild its verified WASM runtime before unit previews.')
+    changed = git('diff', '--name-only', config['modCommit'], '--', 'OpenRA.Mods.RA2', 'OpenRA.Mods.RTSAI').splitlines()
+    if any(not path.startswith('OpenRA.Mods.RTSAI/UtilityCommands/') for path in changed):
+        raise ValueError('Gameplay C# changed. Rebuild its verified WASM runtime before unit previews.')
     if not (seed / 'browser/runtime/dotnet.js').is_file():
         # Runtime layout can vary by .NET version; a manifest is sufficient to locate the existing verified runtime.
         if not (seed / 'browser/runtime').is_dir():
@@ -93,13 +101,23 @@ def build(web_root, log):
         run('dotnet', runner, 'unpack', '--pack', target / 'web-bundle.pack', '--root', scratch)
         run('dotnet', runner, 'bake', '--root', scratch, '--maps', 'web-arena', '--out', target / 'sprites')
         link(seed / 'browser/runtime', target / 'wasm-interp')
-        shutil.copy2(seed_mode / 'data' / profile / 'content-profile.json', target / 'content-profile.json')
+        profile_data = json.loads((seed_mode / 'data' / profile / 'content-profile.json').read_text())
+        profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'])
+        unit.atomic(target / 'content-profile.json', json.dumps(profile_data, indent=2) + '\n')
+    # Rebuild the current committed web interface; only the unchanged simulation runtime is reused.
+    frontend = out / 'frontend'
+    run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', frontend, '--include', 'web', '--committed')
+    link(game / 'web/node_modules', frontend / 'web/node_modules')
+    run('node', game / 'tools/sync-catalog.mjs', '--from', web_root, '--out', frontend / 'web/src/data/factions.json')
+    run('node', web_root / 'scripts/sync-shared-content.mjs', cwd=web_root)
+    run('node', '--import', 'tsx', web_root / 'scripts/export-viewer-data.mts', frontend / 'web/public/viewer', cwd=web_root)
+    run('node', game / 'web/node_modules/vite/bin/vite.js', 'build', '--outDir', out / 'web', cwd=frontend / 'web', env={**os.environ, 'RTSAI_SITE_ROOT': str(web_root)})
     with socket.socket() as sock:
         sock.bind(('127.0.0.1', 0))
         port = sock.getsockname()[1]
     server_log = (out / 'web-server.log').open('w')
     server = subprocess.Popen(['node', str(game / 'server/serve.mjs')], cwd=game,
-        env={**os.environ, 'RTSAI_WEBGAME_PORT': str(port), 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(seed / 'web'), 'RTSAI_WEB_SCRATCH': str(out / 'web-scratch')},
+        env={**os.environ, 'RTSAI_WEBGAME_PORT': str(port), 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(out / 'web'), 'RTSAI_WEB_SCRATCH': str(out / 'web-scratch')},
         stdout=server_log, stderr=server_log, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     import time
     import urllib.request
@@ -116,6 +134,7 @@ def build(web_root, log):
     receipt = {'revision': content['revision'], 'native': str(native), 'support': config['supportDirectory'],
                'webUrl': f'http://127.0.0.1:{port}/', 'webPid': server.pid, 'sourceCommit': git('rev-parse', 'HEAD'),
                'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
+               'browserHostCommit': host_commit, 'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
                'scope': 'RA2 desktop/web; Classic desktop and explicitly mapped web adapter units only'}
     unit.atomic(out / 'receipt.json', json.dumps(receipt, indent=2) + '\n')
     unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
