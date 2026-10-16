@@ -37,7 +37,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		public RTSAICustomizeLogic(LibrarySurfaceWidget widget, ModData modData, World world)
 		{
 			surface = widget; mod = modData; this.world = world;
-			catalog = mod.Get<ExperienceCatalog>();
+			catalog = mod.GetOrNull<ExperienceCatalog>() ?? throw new InvalidOperationException("This game has no customization catalog.");
 			settings = Game.Settings.GetOrCreate<ExperienceSettings>(null, mod.Manifest.Id);
 			custom = Game.Settings.GetOrCreate<RTSAICustomSetup>(null, mod.Manifest.Id);
 			selected = catalog.ActiveComponentIds;
@@ -133,7 +133,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			if (preset == "Custom") { custom.HasSavedCustom = true; custom.Components = settings.EnabledComponents; }
 			var skirmish = Game.Settings.GetOrCreate<SkirmishLogic.SkirmishSettings>(null, mod.Manifest.Id);
 			var options = skirmish.Yaml.Nodes.FirstOrDefault(n => n.Key == "Options");
-			if (options == null) { options = new MiniYamlNodeBuilder("Options", new MiniYamlBuilder(null)); skirmish.Yaml.Nodes.Add(options); }
+			if (options == null) { options = new MiniYamlNodeBuilder("Options", new MiniYamlBuilder((string)null)); skirmish.Yaml.Nodes.Add(options); }
 			options.Value.Nodes.RemoveAll(n => n.Key == "rtsai-cocommander");
 			options.Value.Nodes.Add(new MiniYamlNodeBuilder("rtsai-cocommander", new MiniYamlBuilder(assistant ? "True" : "False")));
 			Game.Settings.Save();

@@ -31,6 +31,16 @@ namespace OpenRA.Mods.RTSAI.Library
 				var previous = Path.Combine(Root, "settings.yaml");
 				if (File.Exists(previous))
 					File.Copy(previous, settings);
+				foreach (var kind in new[] { "Saves", "Replays", "maps", "ExperiencePacks" })
+				{
+					var legacy = Path.Combine(Root, kind, id);
+					if (Directory.Exists(legacy)) CopyDirectory(legacy, Path.Combine(target, kind, id));
+				}
+				if (id == "rtsai-classic-core")
+				{
+					var legacyMaps = Path.Combine(Root, "maps", "ra");
+					if (Directory.Exists(legacyMaps)) CopyDirectory(legacyMaps, Path.Combine(target, "maps", "ra"));
+				}
 				File.WriteAllText(Path.Combine(target, "migration.json"), JsonSerializer.Serialize(new
 				{
 					source = previous, game = id, createdUtc = DateTime.UtcNow, originalPreserved = true

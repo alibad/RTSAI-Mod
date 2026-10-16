@@ -136,7 +136,7 @@ namespace OpenRA.Mods.RTSAI.Widgets
 			{
 				Game.Renderer.RgbaColorRenderer.FillRect(new Vector3(r.Left, r.Top, 0), new Vector3(r.Right, r.Bottom, 0), color);
 				var border = hover || selected ? LibrarySurfaceWidget.Amber : LibrarySurfaceWidget.LineColor;
-				Game.Renderer.RgbaColorRenderer.DrawRect(new Vector3(r.Left, r.Top, 0), new Vector3(r.Right, r.Bottom, 0), border);
+				Game.Renderer.RgbaColorRenderer.DrawRect(new Vector3(r.Left, r.Top, 0), new Vector3(r.Right, r.Bottom, 0), 1, border);
 			}
 			var font = Surface.FontFor(TextSize);
 			var text = GetText();
