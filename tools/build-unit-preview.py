@@ -51,6 +51,7 @@ def build(web_root, log):
     host_commit = json.loads((seed / 'host/INPUTS.json').read_text())['head']
     rebuild_runtime = subprocess.run(['git', '-C', str(game), 'diff', '--quiet', host_commit, 'HEAD', '--', 'sim']).returncode != 0
     changed = git('diff', '--name-only', config['modCommit'], '--', 'OpenRA.Mods.RA2', 'OpenRA.Mods.RTSAI').splitlines()
+    rebuild_runtime |= config['engineCommit'] != '8dfa3b12ea9039b1f23dcaf6d7e9e0d3405bdd28'
     rebuild_runtime |= any(not path.startswith('OpenRA.Mods.RTSAI/UtilityCommands/') for path in changed)
     if not (seed / 'browser/runtime/dotnet.js').is_file():
         # Runtime layout can vary by .NET version; a manifest is sufficient to locate the existing verified runtime.
@@ -98,7 +99,7 @@ def build(web_root, log):
             run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', code,
                 '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
         browser_engine = out / 'browser-engine'
-        shutil.copytree(seed / 'inputs/engine', browser_engine)
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', engine_source, '--out', browser_engine, '--committed')
         (browser_engine / 'VERSION').write_text(config['engineCommit'] + '\n')
         dotnet = Path.home() / '.dotnet/dotnet.exe' if os.name == 'nt' else 'dotnet'
         runtime_source = out / 'runtime'
@@ -118,7 +119,7 @@ def build(web_root, log):
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', out / 'mod-code',
             '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
     if not (out / 'browser-engine').exists():
-        shutil.copytree(seed / 'inputs/engine', out / 'browser-engine')
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', engine_source, '--out', out / 'browser-engine', '--committed')
     run('dotnet', 'build', out / 'host/sim/OpenRA.WebSim.Native/OpenRA.WebSim.Native.csproj', '-c', 'Release',
         '-p:WebProfile=public', f'-p:EngineRoot={(out / "browser-engine").as_posix()}/',
         f'-p:ModRoot={(out / "mod-code").as_posix()}/', f'-p:WebBuildRoot={(out / "native-host").as_posix()}/')
