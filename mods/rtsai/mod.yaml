@@ -2,7 +2,7 @@ Include: experiences.yaml
 
 Metadata:
 	Title: mod-title
-	WindowTitle: ra2-preview-window-title
+	WindowTitle: RTS AI — RTS
 	Version: {DEV_VERSION}
 
 ModCredits:
@@ -184,6 +184,7 @@ ChromeLayout:
 	ra2|chrome/experience-composer.yaml
 	ra2|chrome/experience-review.yaml
 	ra2|chrome/desktop-home.yaml
+	ra2|chrome/library.yaml
 	ra2|chrome/game-modes.yaml
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml

@@ -149,6 +149,7 @@ Assemblies: OpenRA.Mods.RTSAI.dll, OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, 
 ChromeLayout:
 	ra2|chrome/earth-mission-studio.yaml
 	ra2|chrome/desktop-home.yaml
+	ra2|chrome/library.yaml
 	common|chrome/ingame.yaml
 	common|chrome/ingame-chat.yaml
 	common|chrome/ingame-transients.yaml

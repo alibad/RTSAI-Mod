@@ -1,0 +1,36 @@
+{
+  "created": "2026-10-16",
+  "purpose": "Native desktop three-game library menu illustrations. These are not gameplay screenshots and must never be presented as evidence of implemented gameplay or retail RA2 artwork.",
+  "tool": "Built-in image_gen",
+  "sourceReferences": [
+    "C:/Users/Admin/Code/hq/games/artifacts/desktop-three-games-design-20261016/game-library.png",
+    "C:/Users/Admin/Code/hq/games/RTSAI-Mod/docs/frontline-menu-assets/selected-reference.png"
+  ],
+  "generationNote": "References were visually inspected to guide composition and palette. Images generated from original textual prompts; references were not supplied as edit targets. Original generated files remain under Codex generated_images.",
+  "files": [
+    {
+      "file": "classic.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": null,
+      "source": "C:/Users/Admin/.codex/generated_images/01a14383-3e52-7cc0-a3c9-ab92f5ab3da4/exec-9118e13c-c2bb-4878-add3-9528d9cd2903.png",
+      "prompt": "Use case: stylized-concept\nAsset type: original menu illustration for the Classic game card in a native desktop RTS game library, not a gameplay screenshot.\nPrimary request: Portrait 4:5 illustrated top-down old-school real-time-strategy military base on vivid but weathered green terrain. Camera directly overhead / very steep top-down, small chunky low-resolution sprite-like blue-and-ivory prefabricated command building, radar mast, compact power plant, four small tanks and scattered infantry, dirt service tracks, conifer trees, gold mineral flecks. Original designs only, no existing game logos, faction emblems, national flags or recognizable copyrighted building designs.\nStyle/medium: sophisticated cinematic reinterpretation of 1990s pixel RTS terrain and sprites, readable small strategic units, grounded handcrafted pixel clusters rather than photoreal miniatures. Keep unmistakably a top-down game world. No isometric tall city or giant foreground tank.\nComposition/framing: single portrait image 4:5 approximately 1024x1280. Central 65 percent contains entire base and tank group. Dark uncluttered natural tree-shadow upper 18 percent and lower 18 percent allow UI text added separately. Scene goes edge-to-edge with no frame or panel. No text of any kind.\nLighting/mood: late golden hour slanted amber light, deep charcoal forest shade, ivory highlights, crisp green ground. Cohesive premium military game library art. Restrained contrast, strong central focal area.\nConstraints: No UI, no HUD, no border, no title, no letters, no numbers, no logos, no watermark. Avoid cyan / turquoise overlays. This is illustrative menu art, never imitate a captured desktop screen."
+    },
+    {
+      "file": "ra2.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": null,
+      "source": "C:/Users/Admin/.codex/generated_images/01a14383-3e52-7cc0-a3c9-ab92f5ab3da4/exec-7dbe3ab1-9f09-4870-a4eb-f94c08429368.png",
+      "prompt": "Use case: stylized-concept\nAsset type: original menu illustration for an isometric RA2-inspired game card in a native desktop RTS game library, not a gameplay screenshot.\nPrimary request: A compact original isometric strategy military base at a forested coastal harbor, seen at a clear diamond-grid 45-degree isometric camera. Large angular ivory-and-graphite construction headquarters, red-accented industrial power plants with pipes, tall radar dish, modest concrete command tower, four small red-and-charcoal tracked tanks on diamond-shaped paved yards, infantry squads at game-unit scale. Original project-made retro-futurist Allied-inspired military designs; no exact copies of retail Red Alert 2 units or buildings and no recognizable real-world military emblems or faction insignia.\nStyle/medium: polished dense hand-painted isometric game box illustration, defined isometric geometry, highly readable structures and small tanks, tactile stone, concrete and metal. Visually distinguish this from low-res top-down Classic and from the cinematic modern warfare card. Rich but restrained.\nComposition/framing: one portrait 4:5 image, approximately 1024x1280. Central 65 percent holds the complete focal base. Forest shadow in upper 18 percent and dark harbor cliff/shadow in lower 18 percent provide natural uncluttered space for separate UI type. Edge-to-edge scene, no frame. Coastal water to one side, no horizon skyline dominating frame.\nLighting/mood: warm late golden hour amber raking light, charcoal shadows, muted red structural accents and ivory concrete; small cool gray water only. Cohesive premium military strategy game library art.\nConstraints: No UI, no HUD, no title, no text, no letters, no numbers, no logos, no flags, no watermark. No cyan or turquoise sci-fi overlays. Do not imitate a captured desktop screen."
+    },
+    {
+      "file": "rts.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": null,
+      "source": "C:/Users/Admin/.codex/generated_images/01a14383-3e52-7cc0-a3c9-ab92f5ab3da4/exec-31192b36-c7f9-4884-9bb6-013eeac8af4b.png",
+      "prompt": "Use case: stylized-concept\nAsset type: original cinematic menu illustration for experimental RTS mode card in a native desktop military game library; illustration, not gameplay screenshot.\nPrimary request: Modern combined-arms battlefield with a powerful original tan-and-graphite main battle tank and a few infantry in the central foreground, a wheeled multi-launch rocket vehicle firing in mid-distance at right, two helicopters over a dusty industrial compound in the background. Original believable military hardware without brands, flags, emblems, text or identifiable existing game assets. Desert mountain valley at late sunset, smoke towers and dim concrete industrial structures. A sense of open-ended tactical experimentation rather than a specific real conflict.\nStyle/medium: premium grounded military game key art, detailed illustrated realism matching a charcoal/ivory/amber strategy game library. Confident composition, physically plausible hardware, atmospheric depth.\nComposition/framing: one portrait 4:5 image approximately 1024x1280. Main tank entirely within center 60 percent, broadside angled toward viewer, barrel not cropped. Keep upper 18 percent dark smoky sky with little detail, lower 18 percent dark rocky ground to hold separately rendered UI text. Supporting vehicles and helicopters small enough to read scale, one central hero tank. Image edge to edge, no frame, no panel.\nLighting/mood: warm amber sunset and rocket flame against deep charcoal smoke, ivory desert dust highlights, restrained desaturated earth colors. No cyan or turquoise.\nConstraints: Absolutely no text, letters, numbers, logos, military symbols, flags, UI, HUD, menus, title, border or watermark. No science-fiction lasers or fantasy armor. No gore. Keep enough quiet dark top/bottom space for later UI overlay."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+LibrarySurface@RTSAI_CUSTOMIZE:
+	Logic: RTSAICustomizeLogic
+	Width: WINDOW_WIDTH
+	Height: WINDOW_HEIGHT
+
+LibrarySurface@RTSAI_COMMUNITY:
+	Logic: RTSAILibraryLogic
+	Width: WINDOW_WIDTH
+	Height: WINDOW_HEIGHT
+
+LibrarySurface@RTSAI_DISPLAY_CONFIRM:
+	Logic: RTSAIDisplayConfirmLogic
+	Width: WINDOW_WIDTH
+	Height: WINDOW_HEIGHT
+
+RTSAIPanel@RTSAI_PACKAGE_BROWSER:
+	Logic: RTSAIPackageBrowserLogic
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
+	Width: 760
+	Height: 390
+	Children:
+		Label@TITLE:
+			Y: 15
+			Width: PARENT_WIDTH
+			Height: 25
+			Text: label-capability-pack-browser-title
+			Align: Center
+			Font: Bold
+		Label@SUBTITLE:
+			X: 25
+			Y: 42
+			Width: PARENT_WIDTH - 50
+			Height: 34
+			Text: label-capability-pack-browser-subtitle
+			Align: Center
+			Font: Tiny
+			WordWrap: true
+		RTSAIButton@DOWNLOADS_BUTTON:
+			X: 25
+			Y: 82
+			Width: 125
+			Height: 27
+			Text: button-capability-pack-browser-downloads
+			Font: TinyBold
+		RTSAIButton@DESKTOP_BUTTON:
+			X: 160
+			Y: 82
+			Width: 125
+			Height: 27
+			Text: button-capability-pack-browser-desktop
+			Font: TinyBold
+		RTSAIButton@DOCUMENTS_BUTTON:
+			X: 295
+			Y: 82
+			Width: 125
+			Height: 27
+			Text: button-capability-pack-browser-documents
+			Font: TinyBold
+		RTSAIButton@COMPUTER_BUTTON:
+			X: 430
+			Y: 82
+			Width: 125
+			Height: 27
+			Text: button-capability-pack-browser-computer
+			Font: TinyBold
+		RTSAIButton@UP_BUTTON:
+			X: 570
+			Y: 82
+			Width: 75
+			Height: 27
+			Text: button-capability-pack-browser-up
+			Font: TinyBold
+		RTSAIButton@REFRESH_BUTTON:
+			X: 655
+			Y: 82
+			Width: 80
+			Height: 27
+			Text: button-capability-pack-browser-refresh
+			Font: TinyBold
+		RTSAIPanel@LOCATION_PANEL:
+			X: 25
+			Y: 116
+			Width: PARENT_WIDTH - 50
+			Height: 28
+			Background: dialog3
+			Children:
+				LabelWithTooltip@CURRENT_LOCATION:
+					X: 10
+					Width: PARENT_WIDTH - 20
+					Height: 28
+					Font: TinyBold
+					TooltipContainer: RTSAI_PACKAGE_BROWSER_TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+		ScrollPanel@PACK_SOURCES:
+			BackgroundColor: 101B22
+			Background: desktop-scroll
+			ScrollBarBackground: desktop-scroll
+			Button: desktop-button
+			X: 25
+			Y: 151
+			Width: PARENT_WIDTH - 50
+			Height: 142
+			TopBottomSpacing: 4
+			ItemSpacing: 3
+			Children:
+				RTSAIScrollItem@PACK_SOURCE_TEMPLATE:
+					Width: PARENT_WIDTH - 27
+					Height: 29
+					Visible: false
+					EnableChildMouseOver: true
+					Children:
+						LabelWithTooltip@NAME:
+							X: 10
+							Width: PARENT_WIDTH - 220
+							Height: 29
+							Font: TinyBold
+							TooltipContainer: RTSAI_PACKAGE_BROWSER_TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
+						Label@TYPE:
+							X: PARENT_WIDTH - 205
+							Width: 195
+							Height: 29
+							Align: Right
+							Font: Tiny
+		Label@SELECTION:
+			X: 25
+			Y: 300
+			Width: PARENT_WIDTH - 50
+			Height: 20
+			Font: Bold
+		Label@STATUS:
+			X: 25
+			Y: 321
+			Width: PARENT_WIDTH - 50
+			Height: 28
+			Font: Tiny
+			WordWrap: true
+		RTSAIButton@CANCEL_BUTTON:
+			X: 25
+			Y: PARENT_HEIGHT - 37
+			Width: 150
+			Height: 27
+			Text: button-cancel
+			Font: Bold
+			Key: escape
+		RTSAIButton@OPEN_BUTTON:
+			X: PARENT_WIDTH - 335
+			Y: PARENT_HEIGHT - 37
+			Width: 150
+			Height: 27
+			Text: button-capability-pack-browser-open
+			Font: Bold
+		RTSAIButton@INSTALL_BUTTON:
+			X: PARENT_WIDTH - 175
+			Y: PARENT_HEIGHT - 37
+			Width: 150
+			Height: 27
+			Text: button-capability-pack-browser-install
+			Font: Bold
+			Key: return
+		TooltipContainer@RTSAI_PACKAGE_BROWSER_TOOLTIP_CONTAINER:

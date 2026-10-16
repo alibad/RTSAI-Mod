@@ -1,5 +1,5 @@
 Container@DISPLAY_PANEL:
-	Logic: DisplaySettingsLogic
+	Logic: RTSAIDisplaySettingsLogic
 	Width: PARENT_WIDTH
 	Height: PARENT_HEIGHT
 	Children:

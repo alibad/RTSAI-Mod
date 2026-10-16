@@ -1,5 +1,5 @@
 RTSAIPanel@SETTINGS_PANEL:
-	Logic: SettingsLogic
+	Logic: RTSAISettingsLogic
 		ButtonStride: 0, 35
 		Panels:
 			GAMEPLAY_PANEL: button-panel-gameplay

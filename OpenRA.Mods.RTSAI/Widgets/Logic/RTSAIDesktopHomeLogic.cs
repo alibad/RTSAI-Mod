@@ -3,6 +3,7 @@ using OpenRA.Mods.Common.Experience;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Common.Widgets.Logic;
 using OpenRA.Widgets;
+using OpenRA.Mods.RTSAI.Library;
 
 namespace OpenRA.Mods.RTSAI.Widgets.Logic
 {
@@ -32,10 +33,12 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		{
 			var classic = widget.Get<ButtonWidget>("CLASSIC");
 			var ra2 = widget.Get<ButtonWidget>("RA2");
-			classic.OnClick = () => Select("rtsai-classic-core");
-			ra2.OnClick = () => Select("rtsai");
-			classic.IsHighlighted = () => Game.ModData.Manifest.Id == "rtsai-classic-core";
-			ra2.IsHighlighted = () => Game.ModData.Manifest.Id == "rtsai";
+			classic.GetText = () => NativeGameLibrary.Name(Game.ModData.Manifest.Id).ToUpperInvariant();
+			classic.OnClick = () => { };
+			ra2.GetText = () => "LIBRARY";
+			ra2.OnClick = () => NativeGameLibrary.Open(NativeGameLibrary.Hub);
+			classic.IsHighlighted = () => true;
+			ra2.IsHighlighted = () => false;
 
 			void Singleplayer(string action)
 			{
@@ -56,9 +59,11 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			widget.Get<ButtonWidget>("EXPANSIONS").OnClick = () =>
 			{
 				if (Game.ModData.GetOrNull<ExperienceCatalog>() != null)
-					Game.OpenWindow("EXPERIENCE_COMPOSER_PANEL", new WidgetArgs { { "onExit", (Action)(() => { }) } });
+					Game.OpenWindow("RTSAI_CUSTOMIZE", new WidgetArgs());
 			};
-			widget.Get<ButtonWidget>("PACKS").OnClick = () => Game.OpenWindow("RTSAI_PACK_LIBRARY", new WidgetArgs());
+			widget.Get<ButtonWidget>("EXPANSIONS").GetText = () => "Customize " + NativeGameLibrary.Name(Game.ModData.Manifest.Id);
+			widget.Get<ButtonWidget>("PACKS").GetText = () => "Community";
+			widget.Get<ButtonWidget>("PACKS").OnClick = () => NativeGameLibrary.Open(NativeGameLibrary.Hub, "community");
 			widget.Get<ButtonWidget>("QUIT").OnClick = Game.Exit;
 
 			var tools = mainMenu.Get("EXTRAS_MENU");
@@ -68,6 +73,24 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			tools.Get<ButtonWidget>("SAVED_GAMES_TOOLS").OnClick = () => Singleplayer("LOAD_BUTTON");
 			tools.Get<ButtonWidget>("SAVED_GAMES_TOOLS").IsDisabled = mainMenu.Get<ButtonWidget>("LOAD_BUTTON").IsDisabled;
 
+			var pendingImport = Environment.GetEnvironmentVariable("RTSAI_PENDING_ADDON");
+			if (!string.IsNullOrWhiteSpace(pendingImport))
+			{
+				Environment.SetEnvironmentVariable("RTSAI_PENDING_ADDON", null);
+				try
+				{
+					CapabilityPackRegistry.Import(Game.ModData.Manifest.Id, pendingImport);
+					Game.RunAfterTick(() => Game.InitializeMod(Game.Mods[Game.ModData.Manifest.Id], new Arguments()));
+					return;
+				}
+				catch (Exception e) { Console.WriteLine("RTSAI_IMPORT_ERROR|" + e.Message); }
+			}
+			var libraryScreen = Environment.GetEnvironmentVariable("RTSAI_LIBRARY_SCREEN");
+			Environment.SetEnvironmentVariable("RTSAI_LIBRARY_SCREEN", null);
+			if (NativeDisplayRestart.HasPending)
+				Game.RunAfterTick(() => Game.OpenWindow("RTSAI_DISPLAY_CONFIRM", new WidgetArgs()));
+			else if (libraryScreen == "customize")
+				Game.RunAfterTick(() => Game.OpenWindow("RTSAI_CUSTOMIZE", new WidgetArgs()));
 			Console.WriteLine("RTSAI_NATIVE_SCREEN|home|" + Game.ModData.Manifest.Id);
 			var screen = Environment.GetEnvironmentVariable("RTSAI_RECOVERY_SCREEN");
 			if (screen == "switch-classic" || screen == "switch-ra2")

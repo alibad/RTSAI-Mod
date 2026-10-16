@@ -195,6 +195,7 @@ ChromeLayout:
 	ra2|chrome/experience-composer.yaml
 	ra2|chrome/experience-review.yaml
 	ra2|chrome/desktop-home.yaml
+	ra2|chrome/library.yaml
 	ra2|chrome/game-modes.yaml
 	common|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml

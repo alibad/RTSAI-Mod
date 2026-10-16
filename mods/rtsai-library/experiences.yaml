@@ -1,0 +1,213 @@
+ExperienceCatalog:
+	Mod: rtsai-library
+	DefaultProfile: ra2-modern
+	Components:
+		ra2-china:
+			Title: China
+			Description: Our established China modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/china.yaml
+			Faction:
+				InternalName: china
+				Side: Allies
+				RandomPool: random-allies
+				Doctrine: established-china
+				Preview: ra2|modern-factions/icons/r2qilin.png
+				Roster:
+					Infantry: r2cnrifle, r2cnportable, r2cnnetwork, r2redspear, engineer, dog, spy
+					Vehicles: r2qilin, r2lynx, r2mantis, r2zbd, r2phl, cmin, amcv
+					Aircraft: r2cloud, r2skyspear, r2crane
+					Navy: r2luyang, r2haiwang, r2haiying, r2kunlun, r2jiaolong
+					Buildings: gacnst, gapowr, garefn, gaweap, gapile, gaairc, gayard, gatech, gadept
+					Defenses: r2bastion, r2skyshield, r2spectrum
+		ra2-iran:
+			Title: Iran
+			Description: Our established Iran modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/iran.yaml
+			Faction:
+				InternalName: iran
+				Side: Soviets
+				RandomPool: random-soviets
+				Doctrine: established-iran
+				Preview: ra2|modern-factions/icons/r2karrar.png
+				Roster:
+					Infantry: r2basij, r2toophan, r2dronecontrol, r2shadowone, engineer, dog
+					Vehicles: r2karrar, r2raad, r2fajr, r2coast, htk, harv, smcv
+					Aircraft: r2mohajer, r2toufan, r2azar, r2loiter
+					Navy: r2peykaap, r2ghadir, sapc
+					Buildings: nacnst, napowr, narefn, naweap, nahand, naradr, nayard, natech, nadept
+					Defenses: r2irbunker, r2iraasite, r2ircoast
+		ra2-turkey:
+			Title: Türkiye
+			Description: Our established Türkiye modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/turkey.yaml
+			Faction:
+				InternalName: turkey
+				Side: Allies
+				RandomPool: random-allies
+				Doctrine: established-turkey
+				Preview: ra2|modern-factions/icons/r2trat.png
+				Roster:
+					Infantry: r2trrifle, r2trat, r2trdroneop, r2greywolf, engineer, dog, spy
+					Vehicles: r2bozkir, r2aras, r2yildirim, r2gokkalkan, r2sancak, r2deniz, cmin, amcv
+					Aircraft: r2kuzgun, r2turna, r2sahin
+					Navy: r2poyraz, r2ege, r2marmara, lcrf
+					Buildings: gacnst, gapowr, garefn, gaweap, gapile, gaairc, gayard, gatech, gadept
+					Defenses: r2hisar, r2siper, r2boran
+		ra2-saudi:
+			Title: Saudi Arabia
+			Description: Our established Saudi Arabia modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/saudi.yaml
+			Faction:
+				InternalName: saudi
+				Side: Allies
+				RandomPool: random-allies
+				Doctrine: established-saudi
+				Preview: ra2|modern-factions/icons/r2aras.png
+				Roster:
+					Infantry: r2sang, r2saat, r2sajtac, r2falcon, engineer, dog, spy
+					Vehicles: r2m1a2s, r2sads, r2caesar, r2bradley, cmin, amcv
+					Aircraft: r2f15sa, r2ah64sa
+					Navy: r2sadiq, r2riyadh, r2jubail, lcrf
+					Buildings: gacnst, gapowr, garefn, gaweap, gapile, gaairc, gayard, gatech, gadept
+					Defenses: r2saguard, r2sapatriot, r2satow
+		ra2-yemen:
+			Title: Yemen
+			Description: Our established Yemen modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/yemen.yaml
+			Faction:
+				InternalName: yemen
+				Side: Soviets
+				RandomPool: random-soviets
+				Doctrine: established-yemen
+				Preview: ra2|modern-factions/icons/r2ybunker.png
+				Roster:
+					Infantry: r2ymr, r2yrpg, r2yspot, r2wadighost, engineer, dog
+					Vehicles: r2technical, r2ytechrr, r2yzu, r2ymlr, htk, harv, smcv
+					Aircraft: r2samad
+					Navy: r2hodeidah, r2sahaab, r2mokha, sapc
+					Buildings: nacnst, napowr, narefn, naweap, nahand, naradr, nayard, natech, nadept
+					Defenses: r2ybunker, r2yzunest, r2ycoastal
+		ra2-israel:
+			Title: Israel
+			Description: Our established Israel modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/israel.yaml
+			Faction:
+				InternalName: israel
+				Side: Allies
+				RandomPool: random-allies
+				Doctrine: established-israel
+				Preview: ra2|modern-factions/icons/r2merkava.png
+				Roster:
+					Infantry: r2ilrifle, r2ilat, r2ilobserver, r2ilrecon, engineer, dog, spy
+					Vehicles: r2merkava, r2ilshield, r2ilhowitzer, r2namer, cmin, amcv
+					Aircraft: r2ilfalcon, r2ilgunship
+					Navy: r2ilpatrol, r2ilfrigate, r2iltender
+					Buildings: gacnst, gapowr, garefn, gaweap, gapile, gaairc, gayard, gatech, gadept, r2ilrelay, r2ilworkshop
+					Defenses: r2ilsentry, r2ilbattery, r2ilatpost
+		ra2-hezbollah:
+			Title: Hezbollah
+			Description: Our established Hezbollah modern faction roster, art, voices and doctrine.
+			Effects: Enables this country in faction selection and compatible random pools.
+			Tradeoffs: Retains existing army balance and production dependencies.
+			Scope: Lobby selection; actor definitions remain available for authored campaigns and saves.
+			Category: Faction packs
+			Version: 1
+			Source: Preserved RTS AI modern-faction work
+			License: Original project assets with existing provenance manifests
+			Kind: Faction
+			Rules: ra2|experience/hezbollah.yaml
+			Faction:
+				InternalName: hezbollah
+				Side: Soviets
+				RandomPool: random-soviets
+				Doctrine: established-hezbollah
+				Preview: ra2|modern-factions/icons/r2hztechnical.png
+				Roster:
+					Infantry: r2hzrifle, r2hzat, r2hzspotter, r2hzscout, r2hzfpv, flakt, dog, engineer
+					Vehicles: r2hztechnical, r2hzrecoilless, r2hzescort, r2hzrockets, r2hzrail, smcv
+					Aircraft: r2hzdrone
+					Navy: r2hzmissileboat, r2hzskiff, r2hzsurvey
+					Buildings: nacnst, napowr, narefn, naweap, nahand, naradr, nayard, natech, nadept, r2hzrelay, r2hzworkshop
+					Defenses: r2hzbunker, r2hzaanest, r2hzcoastal
+		ra2-combined-arms-ai:
+			Title: Combined-arms AI
+			Preview: ra2|experience/combined-ai.png
+			Description: Role-aware production and configurable formation sizes.
+			Effects: Enables our existing combined-arms role shares and formation controls.
+			Tradeoffs: Different army composition from actor-share-only recruitment.
+			Scope: Native bots; human unit statistics remain unchanged.
+			Category: AI & Strategy
+			Version: 1
+			Rules: ra2|modern-factions/combined-arms-ai.yaml, ra2|experience/formations.yaml
+			Parameters:
+				formation-size:
+					Title: Preferred formation size
+					Description: Units bots assemble before attacking, before faction doctrine modifiers.
+					Group: AI
+					Type: Integer
+					Default: 8
+					Minimum: 3
+					Maximum: 20
+					Step: 1
+					Unit: units
+	Profiles:
+		ra2-modern:
+			Title: RA2 — World War III
+			Description: Our seven modern factions join the nine established countries, with doctrine bots.
+			Components: ra2-china, ra2-iran, ra2-turkey, ra2-saudi, ra2-yemen, ra2-israel, ra2-hezbollah, ra2-combined-arms-ai
+		ra2-original-combined-arms:
+			Title: RA2 — Original Countries, Smarter Bots
+			Description: The nine established country rules and our combined-arms bots; project-authored standalone presentation.
+			Components: ra2-combined-arms-ai
+		ra2-classic:
+			Title: RA2 — Original Countries
+			Description: The nine established countries without modern-country selection or additional role-share configuration.
+			Components:

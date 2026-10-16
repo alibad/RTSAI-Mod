@@ -38,3 +38,21 @@ frontline-icons:
 	Regions:
 		chevron: 300, 190, 320, 505
 		puzzle: 1098, 177, 556, 533
+
+library-classic:
+	Image: ra2|uibits/library/classic.png
+	Regions:
+		poster: 0, 65, 1122, 1272
+		landscape: 0, 360, 1122, 295
+
+library-ra2:
+	Image: ra2|uibits/library/ra2.png
+	Regions:
+		poster: 0, 65, 1122, 1272
+		landscape: 0, 360, 1122, 295
+
+library-rts:
+	Image: ra2|uibits/library/rts.png
+	Regions:
+		poster: 0, 65, 1122, 1272
+		landscape: 0, 360, 1122, 295
