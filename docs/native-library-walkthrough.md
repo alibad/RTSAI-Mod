@@ -20,7 +20,7 @@ Add-ons use the existing capability-pack format and an explicit Classic/RA2/RTS 
 
 Build: `powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-desktop-recovery.ps1`. It fetches/fast-forwards canonical mod and owner engine main, builds a committed immutable snapshot and records SHAs in recovery.local.json/recovery-build.json. Verify with `tools/verify-desktop-recovery.ps1`: profiles, settings/identity isolation, dependencies/extraction boundaries, strict standalone assets and all four mod YAML/map checks.
 
-The engine change is small: seven settings-panel constructors use the existing ISettingsLogic interface. The rest is native mod code/assets. No public engine pin was changed or pushed.
+The engine change is small: seven settings-panel constructors use the existing ISettingsLogic interface. The rest is native mod code/assets. The initial walkthrough was accepted locally before publishing. The subsequent owner-authorized engine publication, matching engine pin and categorized source commits are recorded in [main-publication-20261016.md](main-publication-20261016.md).
 
 Artifact root: `C:/Users/Admin/Code/hq/games/artifacts/desktop-three-games-design-20261016/`.
 
@@ -29,4 +29,4 @@ Artifact root: `C:/Users/Admin/Code/hq/games/artifacts/desktop-three-games-desig
 - `final-verification-b59393f.log`: final full code verification. Compilation has zero warnings/errors. YAML checks retain missing-Fluent-key warnings with readable literal fallback.
 - `compare-*.jpg`/focused comparisons and root design-qa.md document native design acceptance.
 
-Tested: all entries, independent setup, native Classic/RA2 construction/production, RA2 campaign listing, seven settings panels, fullscreen Keep/timed rollback, community install and independent launch. Not exhaustively tested: full multiplayer sessions, every authored mission/module combination, arbitrary external add-ons. No retail RA2 restoration or complete Classic-to-RA2 feature port is claimed. All changes remain local on canonical main.
+Tested: all entries, independent setup, native Classic/RA2 construction/production, RA2 campaign listing, seven settings panels, fullscreen Keep/timed rollback, community install and independent launch. Not exhaustively tested: full multiplayer sessions, every authored mission/module combination, arbitrary external add-ons. No retail RA2 restoration or complete Classic-to-RA2 feature port is claimed. Builds and capture artifacts remain local; source publication follows the separate owner request recorded in the category index.

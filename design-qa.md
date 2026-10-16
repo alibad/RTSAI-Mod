@@ -47,6 +47,6 @@ OpenHV and Combined Arms were installed through the native utility worker and la
 - [x] Preserve base menus, controls, custom catalogs and authoring workflows.
 - [x] Community install worker, add-on targeting and source-checkout distinction.
 - [x] Local build, paired visual comparisons, real native capture and neural-narrated walkthrough.
-- [x] No push, deployment, hosted CI or worktree.
+- [x] Initial acceptance used local builds with no push, deployment, hosted CI or new worktree. Subsequent owner-authorized source publication is recorded in docs/main-publication-20261016.md.
 
 P3 polish: consider lighter body typography and optional preset illustrations if warranted by feedback. Remaining test scope: full multiplayer sessions, every mission/module combination and arbitrary external add-ons are not exhaustively playtested. This work does not restore retail RA2 assets/campaigns or port every Classic module to RA2.
