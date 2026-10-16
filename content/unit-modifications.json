@@ -8,6 +8,16 @@
     },
     "classic:e6": {
       "cost": 650
+    },
+    "classic:e1": {
+      "cost": 125,
+      "health": 6000,
+      "speed": 60
+    },
+    "classic:cnrifle": {
+      "cost": 175,
+      "health": 6500,
+      "speed": 61
     }
   }
 }

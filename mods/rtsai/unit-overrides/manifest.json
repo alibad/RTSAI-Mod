@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "revision": "73f3fc4cbf62722234850816a6e6f05cd2fa3c38bf81c9e40d507151629182f3",
+  "revision": "40d6880f5e25da0553a9088b1df255b0b5a2243d0f7dc3cea07fb3b115ecabdd",
   "units": {
     "ra2:engineer": {
       "cost": 700,
@@ -9,6 +9,16 @@
     },
     "classic:e6": {
       "cost": 650
+    },
+    "classic:e1": {
+      "cost": 125,
+      "health": 6000,
+      "speed": 60
+    },
+    "classic:cnrifle": {
+      "cost": 175,
+      "health": 6500,
+      "speed": 61
     }
   },
   "bindingsRevision": "167df31ac485a2dceaaa9073a1dcab31dbd737789d760fc9f2f9f269e98f64c2",
@@ -16,22 +26,22 @@
     "classic-desktop": {
       "mod": "rtsai-classic-core",
       "rules": "ra2|unit-overrides/classic-desktop.yaml",
-      "sha256": "0cd3e561cbdab746186bc3d7083a5e92a5f9776de1a57f070e76f7cf70bb9af6"
+      "sha256": "b3a1926e5c92ce9bc7cc220113e7528a585f1a7c38d3eef10af70f1d177440e1"
     },
     "classic-web": {
       "mod": "rtsai-classic-core",
       "rules": "ra2|unit-overrides/classic-web.yaml",
-      "sha256": "0cd3e561cbdab746186bc3d7083a5e92a5f9776de1a57f070e76f7cf70bb9af6"
+      "sha256": "b3a1926e5c92ce9bc7cc220113e7528a585f1a7c38d3eef10af70f1d177440e1"
     },
     "ra2-desktop": {
       "mod": "rtsai-ra2",
       "rules": "ra2|unit-overrides/ra2-desktop.yaml",
-      "sha256": "a44cf88b79eabac55c3d96664251a9b6e67bfddd0abc5d2231e2d9f8ae1fb82e"
+      "sha256": "47a8321e599c737793a89d45c7b26693ff341e3d2a0cadcdcb8068f17458d2f9"
     },
     "ra2-web": {
       "mod": "rtsai",
       "rules": "ra2|unit-overrides/ra2-web.yaml",
-      "sha256": "a44cf88b79eabac55c3d96664251a9b6e67bfddd0abc5d2231e2d9f8ae1fb82e"
+      "sha256": "47a8321e599c737793a89d45c7b26693ff341e3d2a0cadcdcb8068f17458d2f9"
     }
   }
 }
