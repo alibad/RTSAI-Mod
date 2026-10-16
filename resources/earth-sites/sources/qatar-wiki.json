@@ -1,0 +1,101 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gscoord=25.1173|51.3149&gsradius=10000&gslimit=500&format=json&origin=*",
+  "updatedAt": 1792172775727,
+  "payload": {
+    "batchcomplete": "",
+    "query": {
+      "geosearch": [
+        {
+          "pageid": 3830783,
+          "ns": 0,
+          "title": "Al Udeid Air Base",
+          "lat": 25.11861111111111,
+          "lon": 51.31861111111112,
+          "dist": 401.1,
+          "primary": ""
+        },
+        {
+          "pageid": 59954249,
+          "ns": 0,
+          "title": "Zone 81, Qatar",
+          "lat": 25.127444,
+          "lon": 51.311402,
+          "dist": 1181.7,
+          "primary": ""
+        },
+        {
+          "pageid": 24959347,
+          "ns": 0,
+          "title": "The Cambridge School, Doha, Qatar",
+          "lat": 25.144379,
+          "lon": 51.301707,
+          "dist": 3291,
+          "primary": ""
+        },
+        {
+          "pageid": 59571391,
+          "ns": 0,
+          "title": "Al Khaldiya (Qatar)",
+          "lat": 25.14638888888889,
+          "lon": 51.29277777777778,
+          "dist": 3927.1,
+          "primary": ""
+        },
+        {
+          "pageid": 59569936,
+          "ns": 0,
+          "title": "Abu Nakhla",
+          "lat": 25.15,
+          "lon": 51.333333333333336,
+          "dist": 4082.2,
+          "primary": ""
+        },
+        {
+          "pageid": 59571450,
+          "ns": 0,
+          "title": "Ummahat Owaina",
+          "lat": 25.138333333333332,
+          "lon": 51.26611111111111,
+          "dist": 5440.1,
+          "primary": ""
+        },
+        {
+          "pageid": 6079224,
+          "ns": 0,
+          "title": "Abdulla Bin Zaid Al Mahmoud Islamic Cultural Center",
+          "lat": 25.172028,
+          "lon": 51.3286,
+          "dist": 6239.8,
+          "primary": ""
+        },
+        {
+          "pageid": 57903937,
+          "ns": 0,
+          "title": "Umm Al Zubar East",
+          "lat": 25.17388888888889,
+          "lon": 51.269444444444446,
+          "dist": 7780,
+          "primary": ""
+        },
+        {
+          "pageid": 47195382,
+          "ns": 0,
+          "title": "Al Mukaynis",
+          "lat": 25.116666666666667,
+          "lon": 51.233333333333334,
+          "dist": 8212.5,
+          "primary": ""
+        },
+        {
+          "pageid": 57904069,
+          "ns": 0,
+          "title": "Umm Al Zubar Al Qibliya",
+          "lat": 25.17638888888889,
+          "lon": 51.25194444444445,
+          "dist": 9128.3,
+          "primary": ""
+        }
+      ]
+    }
+  }
+}

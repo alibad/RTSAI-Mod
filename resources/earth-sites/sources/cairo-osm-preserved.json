@@ -1,0 +1,23 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-16T17:41:31Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 182521820,
+      "center": {
+        "lat": 30.0368077,
+        "lon": 31.2287039
+      },
+      "tags": {
+        "leisure": "marina",
+        "seamark:harbour:category": "marina",
+        "seamark:type": "harbour"
+      }
+    }
+  ]
+}

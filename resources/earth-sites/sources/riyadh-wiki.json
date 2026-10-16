@@ -1,0 +1,1244 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gscoord=24.7136|46.6753&gsradius=10000&gslimit=500&format=json&origin=*",
+  "updatedAt": 1792172764162,
+  "payload": {
+    "batchcomplete": "",
+    "query": {
+      "geosearch": [
+        {
+          "pageid": 77244229,
+          "ns": 0,
+          "title": "King Abdullah Mosque",
+          "lat": 24.7113,
+          "lon": 46.6744,
+          "dist": 271.4,
+          "primary": ""
+        },
+        {
+          "pageid": 1619137,
+          "ns": 0,
+          "title": "Kingdom Centre",
+          "lat": 24.7113,
+          "lon": 46.6744,
+          "dist": 271.4,
+          "primary": ""
+        },
+        {
+          "pageid": 67758287,
+          "ns": 0,
+          "title": "Naila Art Gallery",
+          "lat": 24.702027777777776,
+          "lon": 46.66630555555555,
+          "dist": 1575.2,
+          "primary": ""
+        },
+        {
+          "pageid": 77729538,
+          "ns": 0,
+          "title": "STC metro station",
+          "lat": 24.7268,
+          "lon": 46.6666,
+          "dist": 1710.7,
+          "primary": ""
+        },
+        {
+          "pageid": 78687632,
+          "ns": 0,
+          "title": "Princess Latifa bint Sultan Mosque",
+          "lat": 24.719166666666666,
+          "lon": 46.65861111111111,
+          "dist": 1795.8,
+          "primary": ""
+        },
+        {
+          "pageid": 81020084,
+          "ns": 0,
+          "title": "Al Olaya bombing",
+          "lat": 24.696126805134178,
+          "lon": 46.67673583032501,
+          "dist": 1948.3,
+          "primary": ""
+        },
+        {
+          "pageid": 12824118,
+          "ns": 0,
+          "title": "Al Olaya (Riyadh)",
+          "lat": 24.69567,
+          "lon": 46.68112,
+          "dist": 2078.6,
+          "primary": ""
+        },
+        {
+          "pageid": 78541501,
+          "ns": 0,
+          "title": "Narcissus Hotel and Spa Riyadh",
+          "lat": 24.69593,
+          "lon": 46.68352,
+          "dist": 2133.1,
+          "primary": ""
+        },
+        {
+          "pageid": 75607287,
+          "ns": 0,
+          "title": "Hamad Tower",
+          "lat": 24.691944444444445,
+          "lon": 46.68277777777777,
+          "dist": 2523.7,
+          "primary": ""
+        },
+        {
+          "pageid": 76285991,
+          "ns": 0,
+          "title": "King Khalid Grand Mosque",
+          "lat": 24.700833333333332,
+          "lon": 46.65222222222222,
+          "dist": 2729.4,
+          "primary": ""
+        },
+        {
+          "pageid": 1568168,
+          "ns": 0,
+          "title": "Al Faisaliah Tower",
+          "lat": 24.690277777777776,
+          "lon": 46.68527777777778,
+          "dist": 2782.3,
+          "primary": ""
+        },
+        {
+          "pageid": 6551291,
+          "ns": 0,
+          "title": "Sahara Mall",
+          "lat": 24.738611111111112,
+          "lon": 46.68277777777777,
+          "dist": 2881.8,
+          "primary": ""
+        },
+        {
+          "pageid": 52934397,
+          "ns": 0,
+          "title": "Al-Majdoul Tower",
+          "lat": 24.7391,
+          "lon": 46.6593,
+          "dist": 3263.6,
+          "primary": ""
+        },
+        {
+          "pageid": 555583,
+          "ns": 0,
+          "title": "World Assembly of Muslim Youth",
+          "lat": 24.738333333333333,
+          "lon": 46.657777777777774,
+          "dist": 3270.4,
+          "primary": ""
+        },
+        {
+          "pageid": 17129128,
+          "ns": 0,
+          "title": "King Fahad National Library",
+          "lat": 24.685833333333335,
+          "lon": 46.68694444444444,
+          "dist": 3304,
+          "primary": ""
+        },
+        {
+          "pageid": 29401580,
+          "ns": 0,
+          "title": "Riyadh College of Technology",
+          "lat": 24.73,
+          "lon": 46.704,
+          "dist": 3424.7,
+          "primary": ""
+        },
+        {
+          "pageid": 70629462,
+          "ns": 0,
+          "title": "Riyadh Gallery Mall",
+          "lat": 24.743055555555557,
+          "lon": 46.658055555555556,
+          "dist": 3709.6,
+          "primary": ""
+        },
+        {
+          "pageid": 70484187,
+          "ns": 0,
+          "title": "International Indian Public School, Riyadh",
+          "lat": 24.690833333333334,
+          "lon": 46.70472222222222,
+          "dist": 3904.2,
+          "primary": ""
+        },
+        {
+          "pageid": 23803543,
+          "ns": 0,
+          "title": "Bangladesh International School, English Section, Riyadh",
+          "lat": 24.6846,
+          "lon": 46.6982,
+          "dist": 3968.7,
+          "primary": ""
+        },
+        {
+          "pageid": 57978320,
+          "ns": 0,
+          "title": "Communication and Information Technology Regulatory Authority (Kuwait)",
+          "lat": 24.74888888888889,
+          "lon": 46.68833333333333,
+          "dist": 4138.9,
+          "primary": ""
+        },
+        {
+          "pageid": 31748114,
+          "ns": 0,
+          "title": "Riyadh Military Hospital",
+          "lat": 24.683333333333334,
+          "lon": 46.7,
+          "dist": 4189.6,
+          "primary": ""
+        },
+        {
+          "pageid": 4320437,
+          "ns": 0,
+          "title": "King Fahad Medical City",
+          "lat": 24.6875,
+          "lon": 46.70527777777778,
+          "dist": 4194.5,
+          "primary": ""
+        },
+        {
+          "pageid": 78632809,
+          "ns": 0,
+          "title": "Al Mursalat (Riyadh)",
+          "lat": 24.749166666666667,
+          "lon": 46.69027777777777,
+          "dist": 4234.3,
+          "primary": ""
+        },
+        {
+          "pageid": 38309186,
+          "ns": 0,
+          "title": "Al-Nakheel Tower",
+          "lat": 24.748836,
+          "lon": 46.652761,
+          "dist": 4531.3,
+          "primary": ""
+        },
+        {
+          "pageid": 5195060,
+          "ns": 0,
+          "title": "Al Rajhi Bank Tower",
+          "lat": 24.750086,
+          "lon": 46.653576,
+          "dist": 4612.3,
+          "primary": ""
+        },
+        {
+          "pageid": 4265518,
+          "ns": 0,
+          "title": "King Faisal Specialist Hospital and Research Centre",
+          "lat": 24.671666666666667,
+          "lon": 46.67472222222222,
+          "dist": 4663.1,
+          "primary": ""
+        },
+        {
+          "pageid": 23181893,
+          "ns": 0,
+          "title": "Delta Schools",
+          "lat": 24.755277777777778,
+          "lon": 46.660555555555554,
+          "dist": 4867.7,
+          "primary": ""
+        },
+        {
+          "pageid": 7383016,
+          "ns": 0,
+          "title": "Communications, Space and Technology Commission",
+          "lat": 24.736666666666668,
+          "lon": 46.634166666666665,
+          "dist": 4882.5,
+          "primary": ""
+        },
+        {
+          "pageid": 74835845,
+          "ns": 0,
+          "title": "Al Wahah (Riyadh)",
+          "lat": 24.740277777777777,
+          "lon": 46.714444444444446,
+          "dist": 4942.7,
+          "primary": ""
+        },
+        {
+          "pageid": 60644935,
+          "ns": 0,
+          "title": "King Salman Park",
+          "lat": 24.719,
+          "lon": 46.724,
+          "dist": 4955.6,
+          "primary": ""
+        },
+        {
+          "pageid": 578090,
+          "ns": 0,
+          "title": "King Saud University",
+          "lat": 24.722,
+          "lon": 46.627,
+          "dist": 4967.3,
+          "primary": ""
+        },
+        {
+          "pageid": 79915911,
+          "ns": 0,
+          "title": "King Salman Air Base (closed 2021)",
+          "lat": 24.709722222222222,
+          "lon": 46.72527777777778,
+          "dist": 5066.7,
+          "primary": ""
+        },
+        {
+          "pageid": 76417445,
+          "ns": 0,
+          "title": "Ministry of Interior building",
+          "lat": 24.67058,
+          "lon": 46.69575,
+          "dist": 5210.7,
+          "primary": ""
+        },
+        {
+          "pageid": 718088,
+          "ns": 0,
+          "title": "Saudia Flight 163",
+          "lat": 24.711666666666666,
+          "lon": 46.72694444444445,
+          "dist": 5221.1,
+          "primary": ""
+        },
+        {
+          "pageid": 70407421,
+          "ns": 0,
+          "title": "Delhi Public School, Riyadh",
+          "lat": 24.75861111111111,
+          "lon": 46.65555555555555,
+          "dist": 5387.6,
+          "primary": ""
+        },
+        {
+          "pageid": 58694477,
+          "ns": 0,
+          "title": "King Saud University Stadium",
+          "lat": 24.729166666666664,
+          "lon": 46.62388888888889,
+          "dist": 5473.6,
+          "primary": ""
+        },
+        {
+          "pageid": 75552175,
+          "ns": 0,
+          "title": "U Walk",
+          "lat": 24.73908,
+          "lon": 46.62882,
+          "dist": 5483.2,
+          "primary": ""
+        },
+        {
+          "pageid": 15759888,
+          "ns": 0,
+          "title": "Alfaisal University",
+          "lat": 24.664166666666667,
+          "lon": 46.67638888888889,
+          "dist": 5497.8,
+          "primary": ""
+        },
+        {
+          "pageid": 2474012,
+          "ns": 0,
+          "title": "Saudi Central Bank",
+          "lat": 24.6643,
+          "lon": 46.6871,
+          "dist": 5610.1,
+          "primary": ""
+        },
+        {
+          "pageid": 59656179,
+          "ns": 0,
+          "title": "List of ambassadors of Italy to Saudi Arabia",
+          "lat": 24.685202,
+          "lon": 46.628873,
+          "dist": 5654.1,
+          "primary": ""
+        },
+        {
+          "pageid": 77934805,
+          "ns": 0,
+          "title": "Embassy of the Philippines, Riyadh",
+          "lat": 24.68277777777778,
+          "lon": 46.629583333333336,
+          "dist": 5751.2,
+          "primary": ""
+        },
+        {
+          "pageid": 58083550,
+          "ns": 0,
+          "title": "List of ambassadors of Canada to Saudi Arabia",
+          "lat": 24.681959,
+          "lon": 46.62729,
+          "dist": 5991.9,
+          "primary": ""
+        },
+        {
+          "pageid": 71748002,
+          "ns": 0,
+          "title": "Al Wizarat",
+          "lat": 24.67,
+          "lon": 46.71083333333333,
+          "dist": 6032.5,
+          "primary": ""
+        },
+        {
+          "pageid": 67602226,
+          "ns": 0,
+          "title": "Shola Mall",
+          "lat": 24.67638888888889,
+          "lon": 46.71888888888889,
+          "dist": 6042.5,
+          "primary": ""
+        },
+        {
+          "pageid": 78767537,
+          "ns": 0,
+          "title": "Ad Dhubbat",
+          "lat": 24.679722222222225,
+          "lon": 46.723055555555554,
+          "dist": 6121,
+          "primary": ""
+        },
+        {
+          "pageid": 4908328,
+          "ns": 0,
+          "title": "Tuwaiq Palace",
+          "lat": 24.688463,
+          "lon": 46.619539,
+          "dist": 6288.4,
+          "primary": ""
+        },
+        {
+          "pageid": 78472123,
+          "ns": 0,
+          "title": "Hayy Assafarat Grand Mosque",
+          "lat": 24.681944444444447,
+          "lon": 46.62305555555555,
+          "dist": 6344,
+          "primary": ""
+        },
+        {
+          "pageid": 73417783,
+          "ns": 0,
+          "title": "Al Kindi Plaza",
+          "lat": 24.681944444444447,
+          "lon": 46.62305555555555,
+          "dist": 6344,
+          "primary": ""
+        },
+        {
+          "pageid": 71233214,
+          "ns": 0,
+          "title": "Diplomatic Quarter (Riyadh)",
+          "lat": 24.68111111111111,
+          "lon": 46.62277777777778,
+          "dist": 6419.1,
+          "primary": ""
+        },
+        {
+          "pageid": 60755417,
+          "ns": 0,
+          "title": "KAFD Grand Mosque",
+          "lat": 24.761416666666666,
+          "lon": 46.63922222222222,
+          "dist": 6445.6,
+          "primary": ""
+        },
+        {
+          "pageid": 38930759,
+          "ns": 0,
+          "title": "Public Investment Fund Tower",
+          "lat": 24.7628,
+          "lon": 46.6403,
+          "dist": 6513.3,
+          "primary": ""
+        },
+        {
+          "pageid": 51583013,
+          "ns": 0,
+          "title": "KAFD World Trade Center",
+          "lat": 24.763,
+          "lon": 46.6406,
+          "dist": 6515.7,
+          "primary": ""
+        },
+        {
+          "pageid": 75122597,
+          "ns": 0,
+          "title": "Embassy of the United States, Riyadh",
+          "lat": 24.68138888888889,
+          "lon": 46.62138888888889,
+          "dist": 6518.5,
+          "primary": ""
+        },
+        {
+          "pageid": 60057825,
+          "ns": 0,
+          "title": "List of ambassadors of Morocco to Saudi Arabia",
+          "lat": 24.680238,
+          "lon": 46.622105,
+          "dist": 6530,
+          "primary": ""
+        },
+        {
+          "pageid": 67757926,
+          "ns": 0,
+          "title": "Riyadh International Convention and Exhibition Center",
+          "lat": 24.751277777777776,
+          "lon": 46.72602777777778,
+          "dist": 6618.2,
+          "primary": ""
+        },
+        {
+          "pageid": 67827897,
+          "ns": 0,
+          "title": "Riyadh Park",
+          "lat": 24.756777777777778,
+          "lon": 46.63002777777778,
+          "dist": 6629.9,
+          "primary": ""
+        },
+        {
+          "pageid": 77713941,
+          "ns": 0,
+          "title": "Jabal Abu Makhruq",
+          "lat": 24.673333333333336,
+          "lon": 46.72555555555556,
+          "dist": 6769.4,
+          "primary": ""
+        },
+        {
+          "pageid": 77727703,
+          "ns": 0,
+          "title": "KAFD metro station",
+          "lat": 24.7675,
+          "lon": 46.6431,
+          "dist": 6818.8,
+          "primary": ""
+        },
+        {
+          "pageid": 65297648,
+          "ns": 0,
+          "title": "Al Yamamah Palace",
+          "lat": 24.662777777777777,
+          "lon": 46.63638888888889,
+          "dist": 6884.1,
+          "primary": ""
+        },
+        {
+          "pageid": 73904292,
+          "ns": 0,
+          "title": "VIA Riyadh",
+          "lat": 24.667572,
+          "lon": 46.626914,
+          "dist": 7077.5,
+          "primary": ""
+        },
+        {
+          "pageid": 55745425,
+          "ns": 0,
+          "title": "Ritz-Carlton, Riyadh",
+          "lat": 24.665646,
+          "lon": 46.628674,
+          "dist": 7115,
+          "primary": ""
+        },
+        {
+          "pageid": 68797910,
+          "ns": 0,
+          "title": "Al Nafal (Riyadh)",
+          "lat": 24.78011167192293,
+          "lon": 46.67369551577138,
+          "dist": 7397.5,
+          "primary": ""
+        },
+        {
+          "pageid": 70638999,
+          "ns": 0,
+          "title": "Boulevard City",
+          "lat": 24.75027777777778,
+          "lon": 46.61333333333334,
+          "dist": 7470,
+          "primary": ""
+        },
+        {
+          "pageid": 77333295,
+          "ns": 0,
+          "title": "Nasiriyah Gate",
+          "lat": 24.64748,
+          "lon": 46.69052,
+          "dist": 7511.3,
+          "primary": ""
+        },
+        {
+          "pageid": 83393453,
+          "ns": 0,
+          "title": "Al-Jami'u Al-Kabeer",
+          "lat": 24.722827777777777,
+          "lon": 46.60023888888889,
+          "dist": 7650.8,
+          "primary": ""
+        },
+        {
+          "pageid": 25593906,
+          "ns": 0,
+          "title": "Saqr Al Jazeera Aviation Museum",
+          "lat": 24.7538,
+          "lon": 46.7392,
+          "dist": 7850.4,
+          "primary": ""
+        },
+        {
+          "pageid": 1633183,
+          "ns": 0,
+          "title": "Riyadh TV Tower",
+          "lat": 24.643333333333334,
+          "lon": 46.69583333333333,
+          "dist": 8084.1,
+          "primary": ""
+        },
+        {
+          "pageid": 36174691,
+          "ns": 0,
+          "title": "National Center for Assessment in Higher Education",
+          "lat": 24.728888888888886,
+          "lon": 46.596944444444446,
+          "dist": 8094.8,
+          "primary": ""
+        },
+        {
+          "pageid": 69026206,
+          "ns": 0,
+          "title": "Al Malaz",
+          "lat": 24.66472222222222,
+          "lon": 46.73527777777778,
+          "dist": 8139.9,
+          "primary": ""
+        },
+        {
+          "pageid": 75968142,
+          "ns": 0,
+          "title": "Al Wisham",
+          "lat": 24.643333333333334,
+          "lon": 46.698055555555555,
+          "dist": 8144.6,
+          "primary": ""
+        },
+        {
+          "pageid": 67547006,
+          "ns": 0,
+          "title": "King Abdullah Park",
+          "lat": 24.66638888888889,
+          "lon": 46.73694444444445,
+          "dist": 8145.3,
+          "primary": ""
+        },
+        {
+          "pageid": 21309739,
+          "ns": 0,
+          "title": "National Museum of Saudi Arabia",
+          "lat": 24.647222222222222,
+          "lon": 46.71083333333333,
+          "dist": 8207.7,
+          "primary": ""
+        },
+        {
+          "pageid": 40039635,
+          "ns": 0,
+          "title": "Murabba Palace",
+          "lat": 24.6465,
+          "lon": 46.7093,
+          "dist": 8214,
+          "primary": ""
+        },
+        {
+          "pageid": 78694045,
+          "ns": 0,
+          "title": "Al Madi Mosque",
+          "lat": 24.6475,
+          "lon": 46.7123,
+          "dist": 8246.1,
+          "primary": ""
+        },
+        {
+          "pageid": 32073582,
+          "ns": 0,
+          "title": "ʽUlaysha Prison",
+          "lat": 24.639444444444443,
+          "lon": 46.68277777777777,
+          "dist": 8280.3,
+          "primary": ""
+        },
+        {
+          "pageid": 70235095,
+          "ns": 0,
+          "title": "Al Murabba",
+          "lat": 24.64611111111111,
+          "lon": 46.71,
+          "dist": 8283,
+          "primary": ""
+        },
+        {
+          "pageid": 68016278,
+          "ns": 0,
+          "title": "Al Rabwah (Riyadh)",
+          "lat": 24.692777777777778,
+          "lon": 46.75416666666667,
+          "dist": 8296.7,
+          "primary": ""
+        },
+        {
+          "pageid": 78693806,
+          "ns": 0,
+          "title": "King Abdulaziz Mosque (Riyadh)",
+          "lat": 24.645555555555553,
+          "lon": 46.70916666666667,
+          "dist": 8304,
+          "primary": ""
+        },
+        {
+          "pageid": 71760564,
+          "ns": 0,
+          "title": "National Museum Park",
+          "lat": 24.6448,
+          "lon": 46.71,
+          "dist": 8415.4,
+          "primary": ""
+        },
+        {
+          "pageid": 71787370,
+          "ns": 0,
+          "title": "Al Murabaa (Riyadh Season zone)",
+          "lat": 24.6448,
+          "lon": 46.71,
+          "dist": 8415.4,
+          "primary": ""
+        },
+        {
+          "pageid": 71812416,
+          "ns": 0,
+          "title": "Wahat al-Nakheel",
+          "lat": 24.64472222222222,
+          "lon": 46.71,
+          "dist": 8423.2,
+          "primary": ""
+        },
+        {
+          "pageid": 71761401,
+          "ns": 0,
+          "title": "Al-Watan Park",
+          "lat": 24.645,
+          "lon": 46.71194444444445,
+          "dist": 8479.1,
+          "primary": ""
+        },
+        {
+          "pageid": 67757834,
+          "ns": 0,
+          "title": "Al Hokair Land",
+          "lat": 24.765166666666666,
+          "lon": 46.73725,
+          "dist": 8486.4,
+          "primary": ""
+        },
+        {
+          "pageid": 54308113,
+          "ns": 0,
+          "title": "Al Alia International Indian School",
+          "lat": 24.654999999999998,
+          "lon": 46.72916666666667,
+          "dist": 8489.9,
+          "primary": ""
+        },
+        {
+          "pageid": 77151056,
+          "ns": 0,
+          "title": "Qaṣr al-Shamsīyya",
+          "lat": 24.645,
+          "lon": 46.71222222222222,
+          "dist": 8491.4,
+          "primary": ""
+        },
+        {
+          "pageid": 77325067,
+          "ns": 0,
+          "title": "Qaṣr al-ʿĀmir Fayṣal bin Saʿad",
+          "lat": 24.645,
+          "lon": 46.71222222222222,
+          "dist": 8491.4,
+          "primary": ""
+        },
+        {
+          "pageid": 71757016,
+          "ns": 0,
+          "title": "Riyadh Water Tower",
+          "lat": 24.645,
+          "lon": 46.71222222222222,
+          "dist": 8491.4,
+          "primary": ""
+        },
+        {
+          "pageid": 78607929,
+          "ns": 0,
+          "title": "National Museum metro station",
+          "lat": 24.6456,
+          "lon": 46.7138,
+          "dist": 8503.2,
+          "primary": ""
+        },
+        {
+          "pageid": 74191211,
+          "ns": 0,
+          "title": "Al Batʼha (Riyadh)",
+          "lat": 24.64627,
+          "lon": 46.71524,
+          "dist": 8505.1,
+          "primary": ""
+        },
+        {
+          "pageid": 75973989,
+          "ns": 0,
+          "title": "Downtown Riyadh",
+          "lat": 24.64627,
+          "lon": 46.71524,
+          "dist": 8505.1,
+          "primary": ""
+        },
+        {
+          "pageid": 83367973,
+          "ns": 0,
+          "title": "Al-Jaddah Al-Kubra",
+          "lat": 24.723503,
+          "lon": 46.591121,
+          "dist": 8573.6,
+          "primary": ""
+        },
+        {
+          "pageid": 78737138,
+          "ns": 0,
+          "title": "Jarir (Riyadh)",
+          "lat": 24.677222222222223,
+          "lon": 46.750277777777775,
+          "dist": 8587.1,
+          "primary": ""
+        },
+        {
+          "pageid": 77536434,
+          "ns": 0,
+          "title": "Quṣūr al-Fuṭa",
+          "lat": 24.6425,
+          "lon": 46.70916666666667,
+          "dist": 8614.7,
+          "primary": ""
+        },
+        {
+          "pageid": 72665633,
+          "ns": 0,
+          "title": "Al Fouta",
+          "lat": 24.6425,
+          "lon": 46.70916666666667,
+          "dist": 8614.7,
+          "primary": ""
+        },
+        {
+          "pageid": 75361096,
+          "ns": 0,
+          "title": "Prince Faisal bin Fahd Sports City Stadium",
+          "lat": 24.6626,
+          "lon": 46.7397,
+          "dist": 8630.9,
+          "primary": ""
+        },
+        {
+          "pageid": 10056915,
+          "ns": 0,
+          "title": "Almarai",
+          "lat": 24.785614,
+          "lon": 46.707441,
+          "dist": 8640.4,
+          "primary": ""
+        },
+        {
+          "pageid": 70775519,
+          "ns": 0,
+          "title": "Al Yasmin International School",
+          "lat": 24.66583333333333,
+          "lon": 46.74333333333333,
+          "dist": 8686.5,
+          "primary": ""
+        },
+        {
+          "pageid": 68352087,
+          "ns": 0,
+          "title": "Imam Mohammad Ibn Saud Islamic University Al Malaz Campus",
+          "lat": 24.65596,
+          "lon": 46.73626,
+          "dist": 8888.9,
+          "primary": ""
+        },
+        {
+          "pageid": 72670451,
+          "ns": 0,
+          "title": "Al Fouta Garden",
+          "lat": 24.639166666666664,
+          "lon": 46.70916666666667,
+          "dist": 8956.1,
+          "primary": ""
+        },
+        {
+          "pageid": 69633981,
+          "ns": 0,
+          "title": "King Faisal Street (Riyadh)",
+          "lat": 24.641111111111112,
+          "lon": 46.714444444444446,
+          "dist": 8978.5,
+          "primary": ""
+        },
+        {
+          "pageid": 74124669,
+          "ns": 0,
+          "title": "Al Amal (Riyadh)",
+          "lat": 24.645555555555553,
+          "lon": 46.72416666666667,
+          "dist": 9034.7,
+          "primary": ""
+        },
+        {
+          "pageid": 70870544,
+          "ns": 0,
+          "title": "Ulaysha",
+          "lat": 24.63222222222222,
+          "lon": 46.68472222222222,
+          "dist": 9098.8,
+          "primary": ""
+        },
+        {
+          "pageid": 70244999,
+          "ns": 0,
+          "title": "Umm Sulaim (Riyadh)",
+          "lat": 24.633888888888887,
+          "lon": 46.698055555555555,
+          "dist": 9156.9,
+          "primary": ""
+        },
+        {
+          "pageid": 74005023,
+          "ns": 0,
+          "title": "Mohammed Bin Salman Nonprofit City",
+          "lat": 24.6984,
+          "lon": 46.58593,
+          "dist": 9184.7,
+          "primary": ""
+        },
+        {
+          "pageid": 76094643,
+          "ns": 0,
+          "title": "Hotat Khalid",
+          "lat": 24.63788,
+          "lon": 46.71227,
+          "dist": 9211.1,
+          "primary": ""
+        },
+        {
+          "pageid": 74633061,
+          "ns": 0,
+          "title": "Four Points by Sheraton Riyadh Khaldia",
+          "lat": 24.63788,
+          "lon": 46.71227,
+          "dist": 9211.1,
+          "primary": ""
+        },
+        {
+          "pageid": 51554,
+          "ns": 0,
+          "title": "Riyadh",
+          "lat": 24.6383,
+          "lon": 46.715,
+          "dist": 9284.3,
+          "primary": ""
+        },
+        {
+          "pageid": 74063974,
+          "ns": 0,
+          "title": "Thulaim Palace",
+          "lat": 24.63878,
+          "lon": 46.71696,
+          "dist": 9323.9,
+          "primary": ""
+        },
+        {
+          "pageid": 72865287,
+          "ns": 0,
+          "title": "Diriyah Arena",
+          "lat": 24.73809,
+          "lon": 46.58611,
+          "dist": 9410.9,
+          "primary": ""
+        },
+        {
+          "pageid": 27348150,
+          "ns": 0,
+          "title": "Granada Center",
+          "lat": 24.781666666666666,
+          "lon": 46.73111111111111,
+          "dist": 9436.6,
+          "primary": ""
+        },
+        {
+          "pageid": 70330566,
+          "ns": 0,
+          "title": "Irqah Hospital",
+          "lat": 24.6925,
+          "lon": 46.58444444444444,
+          "dist": 9473.3,
+          "primary": ""
+        },
+        {
+          "pageid": 83502122,
+          "ns": 0,
+          "title": "Maydan Ad-Diriyah",
+          "lat": 24.723266038888887,
+          "lon": 46.5815853,
+          "dist": 9526.6,
+          "primary": ""
+        },
+        {
+          "pageid": 74117765,
+          "ns": 0,
+          "title": "Thulaim",
+          "lat": 24.641111111111112,
+          "lon": 46.72694444444445,
+          "dist": 9602,
+          "primary": ""
+        },
+        {
+          "pageid": 78491208,
+          "ns": 0,
+          "title": "Al Rawdah (Riyadh)",
+          "lat": 24.734722222222224,
+          "lon": 46.76777777777777,
+          "dist": 9631.2,
+          "primary": ""
+        },
+        {
+          "pageid": 53459219,
+          "ns": 0,
+          "title": "Riyadh railway station",
+          "lat": 24.6504,
+          "lon": 46.7406,
+          "dist": 9639.3,
+          "primary": ""
+        },
+        {
+          "pageid": 59552539,
+          "ns": 0,
+          "title": "Riyadh Street Circuit",
+          "lat": 24.738611111111112,
+          "lon": 46.58388888888889,
+          "dist": 9642.3,
+          "primary": ""
+        },
+        {
+          "pageid": 23627543,
+          "ns": 0,
+          "title": "King Saud Medical City",
+          "lat": 24.62777777777778,
+          "lon": 46.69027777777777,
+          "dist": 9662.3,
+          "primary": ""
+        },
+        {
+          "pageid": 76070000,
+          "ns": 0,
+          "title": "Shalaga cemetery",
+          "lat": 24.63361111111111,
+          "lon": 46.71333333333334,
+          "dist": 9689.1,
+          "primary": ""
+        },
+        {
+          "pageid": 71468071,
+          "ns": 0,
+          "title": "Mohammed Abdo Arena",
+          "lat": 24.773693,
+          "lon": 46.605288,
+          "dist": 9728.2,
+          "primary": ""
+        },
+        {
+          "pageid": 81597270,
+          "ns": 0,
+          "title": "Beast Land",
+          "lat": 24.7783152,
+          "lon": 46.6093588,
+          "dist": 9804.3,
+          "primary": ""
+        },
+        {
+          "pageid": 78543438,
+          "ns": 0,
+          "title": "Al Maigliah Market Center",
+          "lat": 24.630277777777778,
+          "lon": 46.70861111111111,
+          "dist": 9857.5,
+          "primary": ""
+        },
+        {
+          "pageid": 19793270,
+          "ns": 0,
+          "title": "International Indian School, Riyadh",
+          "lat": 24.722777777777775,
+          "lon": 46.7725,
+          "dist": 9870.8,
+          "primary": ""
+        },
+        {
+          "pageid": 28880707,
+          "ns": 0,
+          "title": "Irqah",
+          "lat": 24.687,
+          "lon": 46.582,
+          "dist": 9878.5,
+          "primary": ""
+        },
+        {
+          "pageid": 52809829,
+          "ns": 0,
+          "title": "Imam Turki bin Abdullah Grand Mosque",
+          "lat": 24.63072222222222,
+          "lon": 46.71080555555556,
+          "dist": 9889.3,
+          "primary": ""
+        },
+        {
+          "pageid": 5248115,
+          "ns": 0,
+          "title": "Deera Square",
+          "lat": 24.630884,
+          "lon": 46.711838,
+          "dist": 9910.9,
+          "primary": ""
+        },
+        {
+          "pageid": 62251903,
+          "ns": 0,
+          "title": "Lasad Dam",
+          "lat": 24.631969166666668,
+          "lon": 46.71506472222222,
+          "dist": 9926.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62251818,
+          "ns": 0,
+          "title": "Hareeq Dam",
+          "lat": 24.631969166666668,
+          "lon": 46.71506472222222,
+          "dist": 9926.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62194065,
+          "ns": 0,
+          "title": "Haeer Dam",
+          "lat": 24.631969166666668,
+          "lon": 46.71506472222222,
+          "dist": 9926.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62251820,
+          "ns": 0,
+          "title": "Helwah Dam",
+          "lat": 24.631969166666668,
+          "lon": 46.71506472222222,
+          "dist": 9926.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62194349,
+          "ns": 0,
+          "title": "Hanabej Dam",
+          "lat": 24.631969166666668,
+          "lon": 46.71506472222222,
+          "dist": 9926.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62176538,
+          "ns": 0,
+          "title": "Al-Alab Dam",
+          "lat": 24.631969166666668,
+          "lon": 46.71506472222222,
+          "dist": 9926.5,
+          "primary": ""
+        },
+        {
+          "pageid": 74690483,
+          "ns": 0,
+          "title": "Al Ajnab",
+          "lat": 24.631666666666668,
+          "lon": 46.714444444444446,
+          "dist": 9932.1,
+          "primary": ""
+        },
+        {
+          "pageid": 74688473,
+          "ns": 0,
+          "title": "Swaigah Trade Center",
+          "lat": 24.631666666666668,
+          "lon": 46.714444444444446,
+          "dist": 9932.1,
+          "primary": ""
+        },
+        {
+          "pageid": 4817310,
+          "ns": 0,
+          "title": "Al Masmak Palace",
+          "lat": 24.63111111111111,
+          "lon": 46.71333333333334,
+          "dist": 9944.9,
+          "primary": ""
+        },
+        {
+          "pageid": 73165121,
+          "ns": 0,
+          "title": "Boulevard World",
+          "lat": 24.773888888888887,
+          "lon": 46.6025,
+          "dist": 9949.4,
+          "primary": ""
+        },
+        {
+          "pageid": 72800504,
+          "ns": 0,
+          "title": "Qasr Al-Hukm",
+          "lat": 24.63,
+          "lon": 46.71083333333333,
+          "dist": 9965.2,
+          "primary": ""
+        },
+        {
+          "pageid": 74143383,
+          "ns": 0,
+          "title": "Safat Clocktower",
+          "lat": 24.63019,
+          "lon": 46.71191,
+          "dist": 9985.3,
+          "primary": ""
+        }
+      ]
+    }
+  }
+}

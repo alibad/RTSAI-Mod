@@ -1,0 +1,101 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gscoord=30.592|32.318&gsradius=10000&gslimit=500&format=json&origin=*",
+  "updatedAt": 1792172787056,
+  "payload": {
+    "batchcomplete": "",
+    "query": {
+      "geosearch": [
+        {
+          "pageid": 2015925,
+          "ns": 0,
+          "title": "Suez Canal Stadium",
+          "lat": 30.592667,
+          "lon": 32.292528,
+          "dist": 2439.3,
+          "primary": ""
+        },
+        {
+          "pageid": 4474717,
+          "ns": 0,
+          "title": "Suez Canal Authority",
+          "lat": 30.58833333333333,
+          "lon": 32.2825,
+          "dist": 3422.4,
+          "primary": ""
+        },
+        {
+          "pageid": 468782,
+          "ns": 0,
+          "title": "Ismailia Governorate",
+          "lat": 30.6,
+          "lon": 32.28333333333333,
+          "dist": 3435.3,
+          "primary": ""
+        },
+        {
+          "pageid": 18860008,
+          "ns": 0,
+          "title": "Lake Timsah",
+          "lat": 30.56667,
+          "lon": 32.28333,
+          "dist": 4353,
+          "primary": ""
+        },
+        {
+          "pageid": 3925792,
+          "ns": 0,
+          "title": "Ismailia Stadium",
+          "lat": 30.601111111111113,
+          "lon": 32.27361111111111,
+          "dist": 4367.7,
+          "primary": ""
+        },
+        {
+          "pageid": 448508,
+          "ns": 0,
+          "title": "Ismailia",
+          "lat": 30.583333333333332,
+          "lon": 32.266666666666666,
+          "dist": 5007.4,
+          "primary": ""
+        },
+        {
+          "pageid": 18963176,
+          "ns": 0,
+          "title": "Suez Canal University",
+          "lat": 30.622777777777777,
+          "lon": 32.275,
+          "dist": 5352.3,
+          "primary": ""
+        },
+        {
+          "pageid": 2562582,
+          "ns": 0,
+          "title": "El Ferdan Railway Bridge",
+          "lat": 30.65694444444444,
+          "lon": 32.33388888888889,
+          "dist": 7379.8,
+          "primary": ""
+        },
+        {
+          "pageid": 597416,
+          "ns": 0,
+          "title": "Bar Lev Line",
+          "lat": 30.525,
+          "lon": 32.335,
+          "dist": 7625.8,
+          "primary": ""
+        },
+        {
+          "pageid": 24098222,
+          "ns": 0,
+          "title": "Ismailia Air Base",
+          "lat": 30.598263888888887,
+          "lon": 32.23690555555556,
+          "dist": 7793.2,
+          "primary": ""
+        }
+      ]
+    }
+  }
+}

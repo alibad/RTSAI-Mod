@@ -1,0 +1,3386 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gscoord=30.0444|31.2357&gsradius=10000&gslimit=500&format=json&origin=*",
+  "updatedAt": 1792172740921,
+  "payload": {
+    "batchcomplete": "",
+    "query": {
+      "geosearch": [
+        {
+          "pageid": 46636675,
+          "ns": 0,
+          "title": "The Girl in the Blue Bra",
+          "lat": 30.0444,
+          "lon": 31.2358,
+          "dist": 9.6,
+          "primary": ""
+        },
+        {
+          "pageid": 6293,
+          "ns": 0,
+          "title": "Cairo",
+          "lat": 30.044444444444448,
+          "lon": 31.235833333333336,
+          "dist": 13.8,
+          "primary": ""
+        },
+        {
+          "pageid": 67308553,
+          "ns": 0,
+          "title": "Pharaohs' Golden Parade",
+          "lat": 30.044444444444448,
+          "lon": 31.235833333333336,
+          "dist": 13.8,
+          "primary": ""
+        },
+        {
+          "pageid": 50065250,
+          "ns": 0,
+          "title": "Siege of Cairo (1801)",
+          "lat": 30.044444444444448,
+          "lon": 31.235833333333336,
+          "dist": 13.8,
+          "primary": ""
+        },
+        {
+          "pageid": 18816231,
+          "ns": 0,
+          "title": "Tahrir Square",
+          "lat": 30.044444444444448,
+          "lon": 31.235833333333336,
+          "dist": 13.8,
+          "primary": ""
+        },
+        {
+          "pageid": 30625300,
+          "ns": 0,
+          "title": "2011 Egyptian revolution",
+          "lat": 30.044444444444448,
+          "lon": 31.235555555555557,
+          "dist": 14.8,
+          "primary": ""
+        },
+        {
+          "pageid": 39859815,
+          "ns": 0,
+          "title": "June 2013 Egyptian protests",
+          "lat": 30.044444444444448,
+          "lon": 31.235555555555557,
+          "dist": 14.8,
+          "primary": ""
+        },
+        {
+          "pageid": 6329247,
+          "ns": 0,
+          "title": "Headquarters of the Arab League",
+          "lat": 30.04416666666667,
+          "lon": 31.234722222222224,
+          "dist": 97.6,
+          "primary": ""
+        },
+        {
+          "pageid": 26637706,
+          "ns": 0,
+          "title": "The Mogamma",
+          "lat": 30.04310538888889,
+          "lon": 31.234994444444446,
+          "dist": 159.2,
+          "primary": ""
+        },
+        {
+          "pageid": 18380544,
+          "ns": 0,
+          "title": "Khairy Pasha Palace",
+          "lat": 30.04277777777778,
+          "lon": 31.237222222222222,
+          "dist": 232.4,
+          "primary": ""
+        },
+        {
+          "pageid": 20613113,
+          "ns": 0,
+          "title": "Institut d'Égypte",
+          "lat": 30.042164,
+          "lon": 31.235928,
+          "dist": 249.6,
+          "primary": ""
+        },
+        {
+          "pageid": 50535883,
+          "ns": 0,
+          "title": "The GrEEK Campus",
+          "lat": 30.04399,
+          "lon": 31.23884,
+          "dist": 305.7,
+          "primary": ""
+        },
+        {
+          "pageid": 18370384,
+          "ns": 0,
+          "title": "Dubara Palace",
+          "lat": 30.042222222222225,
+          "lon": 31.233611111111113,
+          "dist": 314.8,
+          "primary": ""
+        },
+        {
+          "pageid": 47110098,
+          "ns": 0,
+          "title": "Semiramis InterContinental Hotel",
+          "lat": 30.04301,
+          "lon": 31.23252,
+          "dist": 342.9,
+          "primary": ""
+        },
+        {
+          "pageid": 18606047,
+          "ns": 0,
+          "title": "Egyptian Geographic Society",
+          "lat": 30.041115,
+          "lon": 31.236016,
+          "dist": 366.5,
+          "primary": ""
+        },
+        {
+          "pageid": 46549205,
+          "ns": 0,
+          "title": "Café Riche",
+          "lat": 30.047002,
+          "lon": 31.238271,
+          "dist": 380.7,
+          "primary": ""
+        },
+        {
+          "pageid": 29206081,
+          "ns": 0,
+          "title": "Ministry of Industry, Trade and Small Industries",
+          "lat": 30.041944444444447,
+          "lon": 31.232499999999998,
+          "dist": 411.6,
+          "primary": ""
+        },
+        {
+          "pageid": 17951297,
+          "ns": 0,
+          "title": "Ministry of Endowments (Egypt)",
+          "lat": 30.041944444444447,
+          "lon": 31.232499999999998,
+          "dist": 411.6,
+          "primary": ""
+        },
+        {
+          "pageid": 10478236,
+          "ns": 0,
+          "title": "Collège des Frères (Bab al-Louq)",
+          "lat": 30.042051,
+          "lon": 31.239147,
+          "dist": 422.3,
+          "primary": ""
+        },
+        {
+          "pageid": 23159095,
+          "ns": 0,
+          "title": "Downtown Cairo",
+          "lat": 30.047500000000003,
+          "lon": 31.238333333333333,
+          "dist": 427.9,
+          "primary": ""
+        },
+        {
+          "pageid": 187781,
+          "ns": 0,
+          "title": "Egyptian Museum",
+          "lat": 30.047778,
+          "lon": 31.233333,
+          "dist": 439.3,
+          "primary": ""
+        },
+        {
+          "pageid": 440851,
+          "ns": 0,
+          "title": "Narmer Palette",
+          "lat": 30.0478,
+          "lon": 31.2333,
+          "dist": 443.1,
+          "primary": ""
+        },
+        {
+          "pageid": 75283384,
+          "ns": 0,
+          "title": "Embassy of the United States, Cairo",
+          "lat": 30.041111111111114,
+          "lon": 31.233055555555556,
+          "dist": 445.6,
+          "primary": ""
+        },
+        {
+          "pageid": 52985700,
+          "ns": 0,
+          "title": "Annunciation Cathedral, Cairo",
+          "lat": 30.04683,
+          "lon": 31.2395,
+          "dist": 454.7,
+          "primary": ""
+        },
+        {
+          "pageid": 17991282,
+          "ns": 0,
+          "title": "Shepheard's Hotel",
+          "lat": 30.042222222222225,
+          "lon": 31.231666666666666,
+          "dist": 457.6,
+          "primary": ""
+        },
+        {
+          "pageid": 1913567,
+          "ns": 0,
+          "title": "Parliament of Egypt",
+          "lat": 30.040196895446748,
+          "lon": 31.236757858462262,
+          "dist": 478.3,
+          "primary": ""
+        },
+        {
+          "pageid": 1912306,
+          "ns": 0,
+          "title": "House of Representatives (Egypt)",
+          "lat": 30.04007,
+          "lon": 31.23658,
+          "dist": 488.9,
+          "primary": ""
+        },
+        {
+          "pageid": 26601270,
+          "ns": 0,
+          "title": "The Townhouse Gallery",
+          "lat": 30.04888888888889,
+          "lon": 31.23777777777778,
+          "dist": 537.7,
+          "primary": ""
+        },
+        {
+          "pageid": 42415662,
+          "ns": 0,
+          "title": "Ministry of Military Production (Egypt)",
+          "lat": 30.039166666666667,
+          "lon": 31.237222222222222,
+          "dist": 600.1,
+          "primary": ""
+        },
+        {
+          "pageid": 31158414,
+          "ns": 0,
+          "title": "Ministry of Health and Population (Egypt)",
+          "lat": 30.039166666666667,
+          "lon": 31.237222222222222,
+          "dist": 600.1,
+          "primary": ""
+        },
+        {
+          "pageid": 25370404,
+          "ns": 0,
+          "title": "Talaat Harb Street",
+          "lat": 30.048912,
+          "lon": 31.239524,
+          "dist": 622.2,
+          "primary": ""
+        },
+        {
+          "pageid": 19108301,
+          "ns": 0,
+          "title": "Bab al-Louq",
+          "lat": 30.05,
+          "lon": 31.233333333333334,
+          "dist": 663.1,
+          "primary": ""
+        },
+        {
+          "pageid": 1108151,
+          "ns": 0,
+          "title": "1959 African Cup of Nations",
+          "lat": 30.05,
+          "lon": 31.233333333333334,
+          "dist": 663.1,
+          "primary": ""
+        },
+        {
+          "pageid": 48781828,
+          "ns": 0,
+          "title": "Armenian Catholic Eparchy of Alexandria",
+          "lat": 30.05,
+          "lon": 31.2333,
+          "dist": 664.2,
+          "primary": ""
+        },
+        {
+          "pageid": 25771543,
+          "ns": 0,
+          "title": "Mausoleum of Saad Zaghloul",
+          "lat": 30.037583,
+          "lon": 31.237894,
+          "dist": 786.9,
+          "primary": ""
+        },
+        {
+          "pageid": 16810218,
+          "ns": 0,
+          "title": "Beit El-Umma",
+          "lat": 30.0375,
+          "lon": 31.23777777777778,
+          "dist": 792.9,
+          "primary": ""
+        },
+        {
+          "pageid": 31586588,
+          "ns": 0,
+          "title": "Abu al-'Ila Mosque",
+          "lat": 30.039444444444445,
+          "lon": 31.22972222222222,
+          "dist": 796.7,
+          "primary": ""
+        },
+        {
+          "pageid": 14422887,
+          "ns": 0,
+          "title": "6th October Bridge",
+          "lat": 30.0492,
+          "lon": 31.2292,
+          "dist": 822.4,
+          "primary": ""
+        },
+        {
+          "pageid": 8328331,
+          "ns": 0,
+          "title": "Ministry of Education (Egypt)",
+          "lat": 30.03638888888889,
+          "lon": 31.23638888888889,
+          "dist": 893.3,
+          "primary": ""
+        },
+        {
+          "pageid": 4713693,
+          "ns": 0,
+          "title": "Yacoubian Building (Cairo)",
+          "lat": 30.051177,
+          "lon": 31.240777,
+          "dist": 898.1,
+          "primary": ""
+        },
+        {
+          "pageid": 39496449,
+          "ns": 0,
+          "title": "Belayim oil field",
+          "lat": 30.0472,
+          "lon": 31.2445,
+          "dist": 902.4,
+          "primary": ""
+        },
+        {
+          "pageid": 39820540,
+          "ns": 0,
+          "title": "Bank Misr Building",
+          "lat": 30.048361111111113,
+          "lon": 31.244833333333336,
+          "dist": 983.3,
+          "primary": ""
+        },
+        {
+          "pageid": 4369970,
+          "ns": 0,
+          "title": "St. Andrew's United Church in Cairo",
+          "lat": 30.053583,
+          "lon": 31.238016,
+          "dist": 1045.2,
+          "primary": ""
+        },
+        {
+          "pageid": 80253543,
+          "ns": 0,
+          "title": "Nasser station",
+          "lat": 30.0536,
+          "lon": 31.2388,
+          "dist": 1065.6,
+          "primary": ""
+        },
+        {
+          "pageid": 11440611,
+          "ns": 0,
+          "title": "Sha'ar Hashamayim Synagogue (Cairo)",
+          "lat": 30.05138888888889,
+          "lon": 31.24361111111111,
+          "dist": 1088,
+          "primary": ""
+        },
+        {
+          "pageid": 1633082,
+          "ns": 0,
+          "title": "Cairo Tower",
+          "lat": 30.045833333333334,
+          "lon": 31.224444444444444,
+          "dist": 1095.1,
+          "primary": ""
+        },
+        {
+          "pageid": 31170211,
+          "ns": 0,
+          "title": "Maspero Television Building",
+          "lat": 30.053333333333335,
+          "lon": 31.230833333333333,
+          "dist": 1098.2,
+          "primary": ""
+        },
+        {
+          "pageid": 15955867,
+          "ns": 0,
+          "title": "Boulaq",
+          "lat": 30.053,
+          "lon": 31.23,
+          "dist": 1102.5,
+          "primary": ""
+        },
+        {
+          "pageid": 26383310,
+          "ns": 0,
+          "title": "Garden City, Cairo",
+          "lat": 30.03527777777778,
+          "lon": 31.231111111111108,
+          "dist": 1106.4,
+          "primary": ""
+        },
+        {
+          "pageid": 19001861,
+          "ns": 0,
+          "title": "1942 Abdeen Palace incident",
+          "lat": 30.042,
+          "lon": 31.247,
+          "dist": 1120,
+          "primary": ""
+        },
+        {
+          "pageid": 62319127,
+          "ns": 0,
+          "title": "Embassy of Indonesia, Cairo",
+          "lat": 30.034935,
+          "lon": 31.231067,
+          "dist": 1143.1,
+          "primary": ""
+        },
+        {
+          "pageid": 83671922,
+          "ns": 0,
+          "title": "Al-Kikhya Mosque",
+          "lat": 30.04906,
+          "lon": 31.24642,
+          "dist": 1154.6,
+          "primary": ""
+        },
+        {
+          "pageid": 2101290,
+          "ns": 0,
+          "title": "Cairo Opera House",
+          "lat": 30.04245,
+          "lon": 31.22353,
+          "dist": 1191.3,
+          "primary": ""
+        },
+        {
+          "pageid": 6914540,
+          "ns": 0,
+          "title": "Mokhtar El Tetsh Stadium",
+          "lat": 30.04527777777778,
+          "lon": 31.223333333333333,
+          "dist": 1194.3,
+          "primary": ""
+        },
+        {
+          "pageid": 51606684,
+          "ns": 0,
+          "title": "Al Ahly Sports Hall",
+          "lat": 30.04527777777778,
+          "lon": 31.223333333333333,
+          "dist": 1194.3,
+          "primary": ""
+        },
+        {
+          "pageid": 16810261,
+          "ns": 0,
+          "title": "Museum of Modern Egyptian Art",
+          "lat": 30.04278,
+          "lon": 31.2231,
+          "dist": 1226.1,
+          "primary": ""
+        },
+        {
+          "pageid": 2678958,
+          "ns": 0,
+          "title": "Institut Français d'Archéologie Orientale",
+          "lat": 30.033293,
+          "lon": 31.234993,
+          "dist": 1236.9,
+          "primary": ""
+        },
+        {
+          "pageid": 47124711,
+          "ns": 0,
+          "title": "Sofitel Cairo Nile El Gezirah Hotel",
+          "lat": 30.038666666666668,
+          "lon": 31.22458333333333,
+          "dist": 1245.6,
+          "primary": ""
+        },
+        {
+          "pageid": 30819363,
+          "ns": 0,
+          "title": "Ramses Exchange",
+          "lat": 30.055,
+          "lon": 31.240000000000002,
+          "dist": 1249.2,
+          "primary": ""
+        },
+        {
+          "pageid": 80397115,
+          "ns": 0,
+          "title": "Ramses Exchange fire",
+          "lat": 30.055,
+          "lon": 31.240000000000002,
+          "dist": 1249.2,
+          "primary": ""
+        },
+        {
+          "pageid": 2330962,
+          "ns": 0,
+          "title": "Abdeen Palace",
+          "lat": 30.041666666666668,
+          "lon": 31.248333333333335,
+          "dist": 1253.4,
+          "primary": ""
+        },
+        {
+          "pageid": 80120081,
+          "ns": 0,
+          "title": "Maspero station",
+          "lat": 30.0555,
+          "lon": 31.2322,
+          "dist": 1279.4,
+          "primary": ""
+        },
+        {
+          "pageid": 16810275,
+          "ns": 0,
+          "title": "Mukhtar Museum",
+          "lat": 30.0405,
+          "lon": 31.2229,
+          "dist": 1306.2,
+          "primary": ""
+        },
+        {
+          "pageid": 28078465,
+          "ns": 0,
+          "title": "Hilton Cairo Grand Nile",
+          "lat": 30.0348,
+          "lon": 31.2276,
+          "dist": 1321.9,
+          "primary": ""
+        },
+        {
+          "pageid": 19884337,
+          "ns": 0,
+          "title": "Ministry of Foreign Affairs (Egypt)",
+          "lat": 30.05527777777778,
+          "lon": 31.229999999999997,
+          "dist": 1328.2,
+          "primary": ""
+        },
+        {
+          "pageid": 16810226,
+          "ns": 0,
+          "title": "Carriage Museum (Egypt)",
+          "lat": 30.055914088398364,
+          "lon": 31.23130089093144,
+          "dist": 1348.5,
+          "primary": ""
+        },
+        {
+          "pageid": 2100784,
+          "ns": 0,
+          "title": "Khedivial Opera House",
+          "lat": 30.0507,
+          "lon": 31.248,
+          "dist": 1375.6,
+          "primary": ""
+        },
+        {
+          "pageid": 63604519,
+          "ns": 0,
+          "title": "Bayt al-Sinnari",
+          "lat": 30.0329,
+          "lon": 31.242,
+          "dist": 1415.3,
+          "primary": ""
+        },
+        {
+          "pageid": 79812744,
+          "ns": 0,
+          "title": "Nile Fountain",
+          "lat": 30.03615,
+          "lon": 31.22433,
+          "dist": 1428.1,
+          "primary": ""
+        },
+        {
+          "pageid": 67504788,
+          "ns": 0,
+          "title": "Postal Museum (Cairo)",
+          "lat": 30.050111,
+          "lon": 31.249111,
+          "dist": 1438.6,
+          "primary": ""
+        },
+        {
+          "pageid": 15926044,
+          "ns": 0,
+          "title": "Azbakeya",
+          "lat": 30.052777777777777,
+          "lon": 31.248333333333335,
+          "dist": 1531.8,
+          "primary": ""
+        },
+        {
+          "pageid": 76284527,
+          "ns": 0,
+          "title": "Khanqah of Saad al-Din bin Ghurab",
+          "lat": 30.03666666666667,
+          "lon": 31.24888888888889,
+          "dist": 1533.4,
+          "primary": ""
+        },
+        {
+          "pageid": 54345030,
+          "ns": 0,
+          "title": "Sayyida Zainab Mosque, Cairo",
+          "lat": 30.031666666666666,
+          "lon": 31.241944444444446,
+          "dist": 1538.2,
+          "primary": ""
+        },
+        {
+          "pageid": 40057473,
+          "ns": 0,
+          "title": "Prince Amr Ibrahim Palace",
+          "lat": 30.0552,
+          "lon": 31.2257,
+          "dist": 1539,
+          "primary": ""
+        },
+        {
+          "pageid": 78722099,
+          "ns": 0,
+          "title": "Assassination of Wasfi Tal",
+          "lat": 30.038880555555558,
+          "lon": 31.219930555555553,
+          "dist": 1637.3,
+          "primary": ""
+        },
+        {
+          "pageid": 7311309,
+          "ns": 0,
+          "title": "Museum of Islamic Art, Cairo",
+          "lat": 30.044722222222223,
+          "lon": 31.252777777777776,
+          "dist": 1644.2,
+          "primary": ""
+        },
+        {
+          "pageid": 30763510,
+          "ns": 0,
+          "title": "Cairo fire",
+          "lat": 30.058055555555555,
+          "lon": 31.228888888888886,
+          "dist": 1653.9,
+          "primary": ""
+        },
+        {
+          "pageid": 24278927,
+          "ns": 0,
+          "title": "Tomb of Salar and Sangar al-Gawli",
+          "lat": 30.058055555555555,
+          "lon": 31.228888888888886,
+          "dist": 1653.9,
+          "primary": ""
+        },
+        {
+          "pageid": 36161027,
+          "ns": 0,
+          "title": "Timeline of Cairo",
+          "lat": 30.058055555555555,
+          "lon": 31.228888888888886,
+          "dist": 1653.9,
+          "primary": ""
+        },
+        {
+          "pageid": 54677835,
+          "ns": 0,
+          "title": "Sulayman Pasha Mosque",
+          "lat": 30.058055555555555,
+          "lon": 31.228888888888886,
+          "dist": 1653.9,
+          "primary": ""
+        },
+        {
+          "pageid": 7493517,
+          "ns": 0,
+          "title": "Kasr Al Aini Hospital",
+          "lat": 30.030277777777776,
+          "lon": 31.229444444444443,
+          "dist": 1681.8,
+          "primary": ""
+        },
+        {
+          "pageid": 16810320,
+          "ns": 0,
+          "title": "Qasr Al-Eini Museum",
+          "lat": 30.030555555555555,
+          "lon": 31.228055555555553,
+          "dist": 1706.3,
+          "primary": ""
+        },
+        {
+          "pageid": 13431241,
+          "ns": 0,
+          "title": "Cairo Marriott Hotel",
+          "lat": 30.056944444444444,
+          "lon": 31.22472222222222,
+          "dist": 1749.9,
+          "primary": ""
+        },
+        {
+          "pageid": 18370681,
+          "ns": 0,
+          "title": "Gezirah Palace",
+          "lat": 30.057222222222222,
+          "lon": 31.224999999999998,
+          "dist": 1758.8,
+          "primary": ""
+        },
+        {
+          "pageid": 37017026,
+          "ns": 0,
+          "title": "Cultural Park for Children",
+          "lat": 30.031247,
+          "lon": 31.246944,
+          "dist": 1819.5,
+          "primary": ""
+        },
+        {
+          "pageid": 18370223,
+          "ns": 0,
+          "title": "Mohamed Mahmoud Khalil Museum",
+          "lat": 30.035555555555558,
+          "lon": 31.21972222222222,
+          "dist": 1825.6,
+          "primary": ""
+        },
+        {
+          "pageid": 21658609,
+          "ns": 0,
+          "title": "2009 Khan el-Khalili bombing",
+          "lat": 30.033333333333335,
+          "lon": 31.25,
+          "dist": 1846.4,
+          "primary": ""
+        },
+        {
+          "pageid": 12830009,
+          "ns": 0,
+          "title": "Saint Mark's Coptic Orthodox Cathedral, Azbakeya",
+          "lat": 30.0569,
+          "lon": 31.2489,
+          "dist": 1883.1,
+          "primary": ""
+        },
+        {
+          "pageid": 33612987,
+          "ns": 0,
+          "title": "All Saints' Cathedral, Cairo",
+          "lat": 30.058,
+          "lon": 31.2237,
+          "dist": 1902.9,
+          "primary": ""
+        },
+        {
+          "pageid": 1978274,
+          "ns": 0,
+          "title": "Ottoman Egypt",
+          "lat": 30.05,
+          "lon": 31.216666666666665,
+          "dist": 1934.9,
+          "primary": ""
+        },
+        {
+          "pageid": 9555087,
+          "ns": 0,
+          "title": "Kingdom of Egypt",
+          "lat": 30.05,
+          "lon": 31.216666666666665,
+          "dist": 1934.9,
+          "primary": ""
+        },
+        {
+          "pageid": 75509363,
+          "ns": 0,
+          "title": "Republic of Egypt (1953–1958)",
+          "lat": 30.05,
+          "lon": 31.216666666666665,
+          "dist": 1934.9,
+          "primary": ""
+        },
+        {
+          "pageid": 18961975,
+          "ns": 0,
+          "title": "Sultanate of Egypt",
+          "lat": 30.05,
+          "lon": 31.216666666666665,
+          "dist": 1934.9,
+          "primary": ""
+        },
+        {
+          "pageid": 18816482,
+          "ns": 0,
+          "title": "Gezira (Cairo)",
+          "lat": 30.05,
+          "lon": 31.216666666666665,
+          "dist": 1934.9,
+          "primary": ""
+        },
+        {
+          "pageid": 18961987,
+          "ns": 0,
+          "title": "Khedivate of Egypt",
+          "lat": 30.05,
+          "lon": 31.216666666666665,
+          "dist": 1934.9,
+          "primary": ""
+        },
+        {
+          "pageid": 27498362,
+          "ns": 0,
+          "title": "Egyptian e-Learning University",
+          "lat": 30.0378,
+          "lon": 31.2168,
+          "dist": 1961.7,
+          "primary": ""
+        },
+        {
+          "pageid": 67997747,
+          "ns": 0,
+          "title": "Mosque of Qaytbay (Qal'at al-Kabsh)",
+          "lat": 30.029166666666665,
+          "lon": 31.246111111111112,
+          "dist": 1968.1,
+          "primary": ""
+        },
+        {
+          "pageid": 80953684,
+          "ns": 0,
+          "title": "Fouda Tower",
+          "lat": 30.055862,
+          "lon": 31.220081,
+          "dist": 1970.9,
+          "primary": ""
+        },
+        {
+          "pageid": 4192630,
+          "ns": 0,
+          "title": "Manial Palace and Museum",
+          "lat": 30.0274,
+          "lon": 31.2298,
+          "dist": 1973.8,
+          "primary": ""
+        },
+        {
+          "pageid": 26063878,
+          "ns": 0,
+          "title": "El Manial",
+          "lat": 30.0275,
+          "lon": 31.229166666666664,
+          "dist": 1981.6,
+          "primary": ""
+        },
+        {
+          "pageid": 56277986,
+          "ns": 0,
+          "title": "Al-Fath Mosque",
+          "lat": 30.059846,
+          "lon": 31.246056,
+          "dist": 1985.8,
+          "primary": ""
+        },
+        {
+          "pageid": 60585447,
+          "ns": 0,
+          "title": "Sinan Pasha Mosque (Cairo)",
+          "lat": 30.062109,
+          "lon": 31.229399,
+          "dist": 2060.4,
+          "primary": ""
+        },
+        {
+          "pageid": 72477262,
+          "ns": 0,
+          "title": "Embassy of Nigeria, Cairo",
+          "lat": 30.05517609741751,
+          "lon": 31.218072782358306,
+          "dist": 2077.1,
+          "primary": ""
+        },
+        {
+          "pageid": 75944249,
+          "ns": 0,
+          "title": "Mosque of Ulmas al-Hajib",
+          "lat": 30.03527777777778,
+          "lon": 31.254722222222224,
+          "dist": 2093.2,
+          "primary": ""
+        },
+        {
+          "pageid": 18793201,
+          "ns": 0,
+          "title": "Mosque of Sultan al-Muayyad",
+          "lat": 30.043055555555558,
+          "lon": 31.2575,
+          "dist": 2103.7,
+          "primary": ""
+        },
+        {
+          "pageid": 56276405,
+          "ns": 0,
+          "title": "Amir Qijmas al-Ishaqi Mosque",
+          "lat": 30.0414302,
+          "lon": 31.257432,
+          "dist": 2117.7,
+          "primary": ""
+        },
+        {
+          "pageid": 56193986,
+          "ns": 0,
+          "title": "Qasaba of Radwan Bey",
+          "lat": 30.042025000000002,
+          "lon": 31.257551,
+          "dist": 2119.8,
+          "primary": ""
+        },
+        {
+          "pageid": 26231935,
+          "ns": 0,
+          "title": "Agouza",
+          "lat": 30.052222222222223,
+          "lon": 31.215555555555554,
+          "dist": 2125.1,
+          "primary": ""
+        },
+        {
+          "pageid": 56271146,
+          "ns": 0,
+          "title": "Mahmud al-Kurdi Mosque",
+          "lat": 30.041111111111114,
+          "lon": 31.2575,
+          "dist": 2130,
+          "primary": ""
+        },
+        {
+          "pageid": 1582575,
+          "ns": 0,
+          "title": "Bab Zuwayla",
+          "lat": 30.042825,
+          "lon": 31.257797222222223,
+          "dist": 2134.2,
+          "primary": ""
+        },
+        {
+          "pageid": 24512134,
+          "ns": 0,
+          "title": "Saliba Street",
+          "lat": 30.03039,
+          "lon": 31.250865,
+          "dist": 2134.9,
+          "primary": ""
+        },
+        {
+          "pageid": 41384516,
+          "ns": 0,
+          "title": "Comité de Conservation des Monuments de l'Art Arabe",
+          "lat": 30.042222222222225,
+          "lon": 31.25777777777778,
+          "dist": 2138.9,
+          "primary": ""
+        },
+        {
+          "pageid": 2784207,
+          "ns": 0,
+          "title": "Al-Salih Tala'i Mosque",
+          "lat": 30.042222222222225,
+          "lon": 31.25777777777778,
+          "dist": 2138.9,
+          "primary": ""
+        },
+        {
+          "pageid": 62203941,
+          "ns": 0,
+          "title": "Madrasa of Amir Sunqur Sa'di",
+          "lat": 30.033122257797206,
+          "lon": 31.253911689287595,
+          "dist": 2155.4,
+          "primary": ""
+        },
+        {
+          "pageid": 54626511,
+          "ns": 0,
+          "title": "Al-Ashraf Mosque",
+          "lat": 30.0474403,
+          "lon": 31.2578523,
+          "dist": 2158.9,
+          "primary": ""
+        },
+        {
+          "pageid": 54626447,
+          "ns": 0,
+          "title": "Mosque of Taghribirdi",
+          "lat": 30.030595,
+          "lon": 31.251524,
+          "dist": 2162.6,
+          "primary": ""
+        },
+        {
+          "pageid": 24278660,
+          "ns": 0,
+          "title": "Madrasa of Sarghatmish",
+          "lat": 30.030385,
+          "lon": 31.251284,
+          "dist": 2163.1,
+          "primary": ""
+        },
+        {
+          "pageid": 1843638,
+          "ns": 0,
+          "title": "Mosque of Ibn Tulun",
+          "lat": 30.028888888888886,
+          "lon": 31.249444444444446,
+          "dist": 2173.8,
+          "primary": ""
+        },
+        {
+          "pageid": 24280074,
+          "ns": 0,
+          "title": "Amir Taz Palace",
+          "lat": 30.031944444444445,
+          "lon": 31.253333333333334,
+          "dist": 2190.7,
+          "primary": ""
+        },
+        {
+          "pageid": 44895,
+          "ns": 0,
+          "title": "United Arab Republic",
+          "lat": 30.033333333333335,
+          "lon": 31.216666666666665,
+          "dist": 2207,
+          "primary": ""
+        },
+        {
+          "pageid": 400388,
+          "ns": 0,
+          "title": "Cairo Governorate",
+          "lat": 30.033333333333335,
+          "lon": 31.216666666666665,
+          "dist": 2207,
+          "primary": ""
+        },
+        {
+          "pageid": 37842204,
+          "ns": 0,
+          "title": "2012–2013 Egyptian protests",
+          "lat": 30.033333333333335,
+          "lon": 31.216666666666665,
+          "dist": 2207,
+          "primary": ""
+        },
+        {
+          "pageid": 37791586,
+          "ns": 0,
+          "title": "Timeline of the Egyptian Crisis under Mohamed Morsi",
+          "lat": 30.033333333333335,
+          "lon": 31.216666666666665,
+          "dist": 2207,
+          "primary": ""
+        },
+        {
+          "pageid": 31044243,
+          "ns": 0,
+          "title": "Timeline of the Egyptian Crisis under the SCAF",
+          "lat": 30.033333333333335,
+          "lon": 31.216666666666665,
+          "dist": 2207,
+          "primary": ""
+        },
+        {
+          "pageid": 62253660,
+          "ns": 0,
+          "title": "Al-Darb al-Ahmar",
+          "lat": 30.0414,
+          "lon": 31.2584,
+          "dist": 2210.3,
+          "primary": ""
+        },
+        {
+          "pageid": 45249029,
+          "ns": 0,
+          "title": "Bab El Shaariya station",
+          "lat": 30.054000000000002,
+          "lon": 31.255972222222223,
+          "dist": 2224.1,
+          "primary": ""
+        },
+        {
+          "pageid": 12981199,
+          "ns": 0,
+          "title": "Church of the Virgin Mary (Haret Zuweila)",
+          "lat": 30.0519,
+          "lon": 31.2574,
+          "dist": 2249,
+          "primary": ""
+        },
+        {
+          "pageid": 67260425,
+          "ns": 0,
+          "title": "Academy of the Arabic Language in Cairo",
+          "lat": 30.062,
+          "lon": 31.2241,
+          "dist": 2253.1,
+          "primary": ""
+        },
+        {
+          "pageid": 24333838,
+          "ns": 0,
+          "title": "Palace of Yashbak",
+          "lat": 30.0325,
+          "lon": 31.254722222222224,
+          "dist": 2259.2,
+          "primary": ""
+        },
+        {
+          "pageid": 31094228,
+          "ns": 0,
+          "title": "Mosque and Khanqah of Shaykhu",
+          "lat": 30.030511,
+          "lon": 31.252956,
+          "dist": 2268.1,
+          "primary": ""
+        },
+        {
+          "pageid": 26849186,
+          "ns": 0,
+          "title": "Haïm Capoussi Synagogue",
+          "lat": 30.04967,
+          "lon": 31.2585,
+          "dist": 2271.4,
+          "primary": ""
+        },
+        {
+          "pageid": 26723051,
+          "ns": 0,
+          "title": "Maimonides Synagogue",
+          "lat": 30.0507,
+          "lon": 31.2583,
+          "dist": 2285.3,
+          "primary": ""
+        },
+        {
+          "pageid": 4985536,
+          "ns": 0,
+          "title": "Gayer-Anderson Museum",
+          "lat": 30.0284,
+          "lon": 31.2507,
+          "dist": 2291.3,
+          "primary": ""
+        },
+        {
+          "pageid": 67487517,
+          "ns": 0,
+          "title": "Madrasa of Uljay al-Yusufi",
+          "lat": 30.034916666666668,
+          "lon": 31.25713888888889,
+          "dist": 2317.5,
+          "primary": ""
+        },
+        {
+          "pageid": 31092533,
+          "ns": 0,
+          "title": "Mosque of Amir al-Maridani",
+          "lat": 30.03974,
+          "lon": 31.25922,
+          "dist": 2322.5,
+          "primary": ""
+        },
+        {
+          "pageid": 60090173,
+          "ns": 0,
+          "title": "Ramses Station rail disaster",
+          "lat": 30.063055555555557,
+          "lon": 31.246666666666666,
+          "dist": 2327.5,
+          "primary": ""
+        },
+        {
+          "pageid": 54623518,
+          "ns": 0,
+          "title": "Mosque of Qanibay al-Muhammadi",
+          "lat": 30.030743,
+          "lon": 31.254103,
+          "dist": 2333.3,
+          "primary": ""
+        },
+        {
+          "pageid": 31167474,
+          "ns": 0,
+          "title": "Sultan al-Ghuri Complex",
+          "lat": 30.04605,
+          "lon": 31.259880555555554,
+          "dist": 2334.7,
+          "primary": ""
+        },
+        {
+          "pageid": 67483554,
+          "ns": 0,
+          "title": "Mosque and Mausoleum of Amir Ahmad al-Mihmandar",
+          "lat": 30.040666666666667,
+          "lon": 31.25963888888889,
+          "dist": 2341.4,
+          "primary": ""
+        },
+        {
+          "pageid": 61443341,
+          "ns": 0,
+          "title": "2019 Cairo bombing",
+          "lat": 30.0237,
+          "lon": 31.2307,
+          "dist": 2351.5,
+          "primary": ""
+        },
+        {
+          "pageid": 18413037,
+          "ns": 0,
+          "title": "Al-Mu'izz Street",
+          "lat": 30.046666666666667,
+          "lon": 31.26,
+          "dist": 2352.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62275111,
+          "ns": 0,
+          "title": "Sabil-Kuttab of Qaytbay",
+          "lat": 30.030833333333334,
+          "lon": 31.254722222222224,
+          "dist": 2372.5,
+          "primary": ""
+        },
+        {
+          "pageid": 18378496,
+          "ns": 0,
+          "title": "Bayt al-Razzaz",
+          "lat": 30.0375,
+          "lon": 31.259166666666665,
+          "dist": 2385.6,
+          "primary": ""
+        },
+        {
+          "pageid": 3264074,
+          "ns": 0,
+          "title": "Ramses Station",
+          "lat": 30.06361111111111,
+          "lon": 31.247222222222224,
+          "dist": 2406.9,
+          "primary": ""
+        },
+        {
+          "pageid": 13060670,
+          "ns": 0,
+          "title": "Saint Mary Church (Haret Elroum)",
+          "lat": 30.0433,
+          "lon": 31.2608,
+          "dist": 2419.1,
+          "primary": ""
+        },
+        {
+          "pageid": 28719961,
+          "ns": 0,
+          "title": "Children's Cancer Hospital Egypt",
+          "lat": 30.022715,
+          "lon": 31.23787,
+          "dist": 2420.3,
+          "primary": ""
+        },
+        {
+          "pageid": 69762319,
+          "ns": 0,
+          "title": "Dar al-Kiswa",
+          "lat": 30.05,
+          "lon": 31.26,
+          "dist": 2420.4,
+          "primary": ""
+        },
+        {
+          "pageid": 62275481,
+          "ns": 0,
+          "title": "Madrasa of Umm al-Sultan Sha'ban",
+          "lat": 30.037222222222223,
+          "lon": 31.259444444444444,
+          "dist": 2420.9,
+          "primary": ""
+        },
+        {
+          "pageid": 56200934,
+          "ns": 0,
+          "title": "Wikala of al-Ghuri",
+          "lat": 30.045722222222224,
+          "lon": 31.26088888888889,
+          "dist": 2429,
+          "primary": ""
+        },
+        {
+          "pageid": 6844647,
+          "ns": 0,
+          "title": "Ministry of Culture (Egypt)",
+          "lat": 30.059166666666666,
+          "lon": 31.216944444444444,
+          "dist": 2440.2,
+          "primary": ""
+        },
+        {
+          "pageid": 1815973,
+          "ns": 0,
+          "title": "Mosque-Madrasa of Sultan Hasan",
+          "lat": 30.0319,
+          "lon": 31.2567,
+          "dist": 2453.2,
+          "primary": ""
+        },
+        {
+          "pageid": 1685191,
+          "ns": 0,
+          "title": "Dokki",
+          "lat": 30.03805555555556,
+          "lon": 31.211111111111112,
+          "dist": 2469.8,
+          "primary": ""
+        },
+        {
+          "pageid": 76186497,
+          "ns": 0,
+          "title": "Khalij (Cairo)",
+          "lat": 30.022499999999997,
+          "lon": 31.230277777777776,
+          "dist": 2490.5,
+          "primary": ""
+        },
+        {
+          "pageid": 18643363,
+          "ns": 0,
+          "title": "Qalawun complex",
+          "lat": 30.049528,
+          "lon": 31.260972,
+          "dist": 2498.4,
+          "primary": ""
+        },
+        {
+          "pageid": 77964566,
+          "ns": 0,
+          "title": "Mosque of Sayyida Sukayna",
+          "lat": 30.026944444444442,
+          "lon": 31.252083333333335,
+          "dist": 2500.9,
+          "primary": ""
+        },
+        {
+          "pageid": 61642674,
+          "ns": 0,
+          "title": "Bab al-Wazir",
+          "lat": 30.036306,
+          "lon": 31.259967,
+          "dist": 2503.3,
+          "primary": ""
+        },
+        {
+          "pageid": 17945207,
+          "ns": 0,
+          "title": "Ministry of Agriculture and Land Reclamation (Egypt)",
+          "lat": 30.043055555555558,
+          "lon": 31.209722222222222,
+          "dist": 2505,
+          "primary": ""
+        },
+        {
+          "pageid": 16386514,
+          "ns": 0,
+          "title": "Faggala",
+          "lat": 30.060277777777777,
+          "lon": 31.254166666666666,
+          "dist": 2505.2,
+          "primary": ""
+        },
+        {
+          "pageid": 31128898,
+          "ns": 0,
+          "title": "Madrasa of al-Nasir Muhammad",
+          "lat": 30.0497504112967,
+          "lon": 31.26106369365175,
+          "dist": 2512.8,
+          "primary": ""
+        },
+        {
+          "pageid": 33036769,
+          "ns": 0,
+          "title": "2011 attack on the Israeli Embassy in Egypt",
+          "lat": 30.028666666666666,
+          "lon": 31.216944444444444,
+          "dist": 2514,
+          "primary": ""
+        },
+        {
+          "pageid": 28794200,
+          "ns": 0,
+          "title": "Mosque of Abu al-Dhahab",
+          "lat": 30.046066,
+          "lon": 31.261755,
+          "dist": 2514.7,
+          "primary": ""
+        },
+        {
+          "pageid": 15658611,
+          "ns": 0,
+          "title": "Aqsunqur Mosque",
+          "lat": 30.036,
+          "lon": 31.26,
+          "dist": 2518.7,
+          "primary": ""
+        },
+        {
+          "pageid": 24943034,
+          "ns": 0,
+          "title": "Salihiyya Madrasa",
+          "lat": 30.04913888888889,
+          "lon": 31.261333333333333,
+          "dist": 2522.9,
+          "primary": ""
+        },
+        {
+          "pageid": 47964661,
+          "ns": 0,
+          "title": "Mosque of Qani-Bay",
+          "lat": 30.0322,
+          "lon": 31.2579,
+          "dist": 2531.2,
+          "primary": ""
+        },
+        {
+          "pageid": 69913810,
+          "ns": 0,
+          "title": "Salah al-Din Square",
+          "lat": 30.031,
+          "lon": 31.257,
+          "dist": 2534.6,
+          "primary": ""
+        },
+        {
+          "pageid": 62221987,
+          "ns": 0,
+          "title": "Cairo Citadel Aqueduct",
+          "lat": 30.02208333333333,
+          "lon": 31.230277777777776,
+          "dist": 2535.8,
+          "primary": ""
+        },
+        {
+          "pageid": 65602723,
+          "ns": 0,
+          "title": "Hammam of Sultan Inal",
+          "lat": 30.050527777777777,
+          "lon": 31.261222222222223,
+          "dist": 2549.3,
+          "primary": ""
+        },
+        {
+          "pageid": 56277189,
+          "ns": 0,
+          "title": "Al-Mahmoudia Mosque",
+          "lat": 30.031608,
+          "lon": 31.257721,
+          "dist": 2552.8,
+          "primary": ""
+        },
+        {
+          "pageid": 54622339,
+          "ns": 0,
+          "title": "Funerary complex of Sultan Barquq",
+          "lat": 30.05027777777778,
+          "lon": 31.261388888888888,
+          "dist": 2557.5,
+          "primary": ""
+        },
+        {
+          "pageid": 21772840,
+          "ns": 0,
+          "title": "February 2009 Cairo terrorist attacks",
+          "lat": 30.048,
+          "lon": 31.262,
+          "dist": 2562.9,
+          "primary": ""
+        },
+        {
+          "pageid": 75917767,
+          "ns": 0,
+          "title": "Mosque of Aslam al-Silahdar",
+          "lat": 30.040528,
+          "lon": 31.261975,
+          "dist": 2565.5,
+          "primary": ""
+        },
+        {
+          "pageid": 16810221,
+          "ns": 0,
+          "title": "Beshtak Palace",
+          "lat": 30.050555555555555,
+          "lon": 31.261388888888888,
+          "dist": 2565.6,
+          "primary": ""
+        },
+        {
+          "pageid": 3477950,
+          "ns": 0,
+          "title": "Egyptian National Library and Archives",
+          "lat": 30.06638888888889,
+          "lon": 31.2275,
+          "dist": 2569.3,
+          "primary": ""
+        },
+        {
+          "pageid": 54666778,
+          "ns": 0,
+          "title": "Wikala and Sabil-Kuttab of Sultan Qaytbay",
+          "lat": 30.04521,
+          "lon": 31.26241,
+          "dist": 2572.5,
+          "primary": ""
+        },
+        {
+          "pageid": 21453277,
+          "ns": 0,
+          "title": "Bayn al-Qasrayn",
+          "lat": 30.0505,
+          "lon": 31.2615,
+          "dist": 2574.3,
+          "primary": ""
+        },
+        {
+          "pageid": 34615614,
+          "ns": 0,
+          "title": "Amir Alin Aq Palace",
+          "lat": 30.0355,
+          "lon": 31.2604,
+          "dist": 2575.3,
+          "primary": ""
+        },
+        {
+          "pageid": 54623277,
+          "ns": 0,
+          "title": "Amir Khayrbak Funerary Complex",
+          "lat": 30.0355,
+          "lon": 31.2604,
+          "dist": 2575.3,
+          "primary": ""
+        },
+        {
+          "pageid": 7971987,
+          "ns": 0,
+          "title": "Khan el-Khalili",
+          "lat": 30.047500000000003,
+          "lon": 31.26222222222222,
+          "dist": 2576,
+          "primary": ""
+        },
+        {
+          "pageid": 79689823,
+          "ns": 0,
+          "title": "El-Fishawy Café",
+          "lat": 30.0475,
+          "lon": 31.2623,
+          "dist": 2583.4,
+          "primary": ""
+        },
+        {
+          "pageid": 274751,
+          "ns": 0,
+          "title": "Al-Azhar University",
+          "lat": 30.045833333333334,
+          "lon": 31.2625,
+          "dist": 2584.5,
+          "primary": ""
+        },
+        {
+          "pageid": 18155679,
+          "ns": 0,
+          "title": "Sabil-Kuttab of Abd al-Rahman Katkhuda",
+          "lat": 30.050730555555557,
+          "lon": 31.261580555555554,
+          "dist": 2588.6,
+          "primary": ""
+        },
+        {
+          "pageid": 69449602,
+          "ns": 0,
+          "title": "Mausoleum of Shajar al-Durr",
+          "lat": 30.025916666666667,
+          "lon": 31.252083333333335,
+          "dist": 2590.6,
+          "primary": ""
+        },
+        {
+          "pageid": 38110068,
+          "ns": 0,
+          "title": "Agricultural Museum, Egypt",
+          "lat": 30.046666666666667,
+          "lon": 31.20888888888889,
+          "dist": 2592.9,
+          "primary": ""
+        },
+        {
+          "pageid": 24290834,
+          "ns": 0,
+          "title": "Al-Azhar Mosque",
+          "lat": 30.045709,
+          "lon": 31.262683,
+          "dist": 2601.3,
+          "primary": ""
+        },
+        {
+          "pageid": 1837097,
+          "ns": 0,
+          "title": "Islamic Cairo",
+          "lat": 30.04600277777778,
+          "lon": 31.262716666666666,
+          "dist": 2606.6,
+          "primary": ""
+        },
+        {
+          "pageid": 61624146,
+          "ns": 0,
+          "title": "Mashhad of Sayyida Ruqayya",
+          "lat": 30.025555555555556,
+          "lon": 31.251944444444444,
+          "dist": 2614.6,
+          "primary": ""
+        },
+        {
+          "pageid": 62318558,
+          "ns": 0,
+          "title": "Maristan of al-Mu'ayyad",
+          "lat": 30.032777777777778,
+          "lon": 31.259444444444444,
+          "dist": 2625.7,
+          "primary": ""
+        },
+        {
+          "pageid": 15926275,
+          "ns": 0,
+          "title": "Coptic Hospital",
+          "lat": 30.063055555555557,
+          "lon": 31.2525,
+          "dist": 2630.1,
+          "primary": ""
+        },
+        {
+          "pageid": 22150172,
+          "ns": 0,
+          "title": "Aqmar Mosque",
+          "lat": 30.051667,
+          "lon": 31.261944,
+          "dist": 2652.1,
+          "primary": ""
+        },
+        {
+          "pageid": 69801801,
+          "ns": 0,
+          "title": "Mostafa Kamel Museum",
+          "lat": 30.029569444444444,
+          "lon": 31.25735,
+          "dist": 2657.6,
+          "primary": ""
+        },
+        {
+          "pageid": 13037586,
+          "ns": 0,
+          "title": "Al-Hussein Mosque",
+          "lat": 30.047777777777778,
+          "lon": 31.263055555555557,
+          "dist": 2659.7,
+          "primary": ""
+        },
+        {
+          "pageid": 61218917,
+          "ns": 0,
+          "title": "Mausoleum of Tarabay al-Sharifi",
+          "lat": 30.034555,
+          "lon": 31.260918,
+          "dist": 2662.9,
+          "primary": ""
+        },
+        {
+          "pageid": 54677299,
+          "ns": 0,
+          "title": "Mosque-Sabil of Sulayman Agha al-Silahdar",
+          "lat": 30.052445,
+          "lon": 31.261878,
+          "dist": 2673.7,
+          "primary": ""
+        },
+        {
+          "pageid": 83704552,
+          "ns": 0,
+          "title": "Zeinab Khatoon House",
+          "lat": 30.0448,
+          "lon": 31.2636,
+          "dist": 2685.9,
+          "primary": ""
+        },
+        {
+          "pageid": 54349519,
+          "ns": 0,
+          "title": "Al-Burdayni Mosque",
+          "lat": 30.0259745,
+          "lon": 31.2537894,
+          "dist": 2688.9,
+          "primary": ""
+        },
+        {
+          "pageid": 76161108,
+          "ns": 0,
+          "title": "Wikala of Bazar'a",
+          "lat": 30.050555555555555,
+          "lon": 31.262777777777778,
+          "dist": 2694.7,
+          "primary": ""
+        },
+        {
+          "pageid": 22240082,
+          "ns": 0,
+          "title": "El Sawy Culture Wheel",
+          "lat": 30.06227777777778,
+          "lon": 31.216416666666667,
+          "dist": 2719.6,
+          "primary": ""
+        },
+        {
+          "pageid": 16810210,
+          "ns": 0,
+          "title": "Bayt al-Suhaymi",
+          "lat": 30.052222222222223,
+          "lon": 31.2625,
+          "dist": 2722.2,
+          "primary": ""
+        },
+        {
+          "pageid": 56279472,
+          "ns": 0,
+          "title": "Amir Jamal al-Din al-Ustadar Mosque",
+          "lat": 30.050778,
+          "lon": 31.263227,
+          "dist": 2742.8,
+          "primary": ""
+        },
+        {
+          "pageid": 67575856,
+          "ns": 0,
+          "title": "Mosque of Almalik al-Jukandar",
+          "lat": 30.047430555555557,
+          "lon": 31.26398888888889,
+          "dist": 2743.7,
+          "primary": ""
+        },
+        {
+          "pageid": 20097354,
+          "ns": 0,
+          "title": "Dar El Tarbiah School",
+          "lat": 30.05527777777778,
+          "lon": 31.21,
+          "dist": 2753.5,
+          "primary": ""
+        },
+        {
+          "pageid": 16525467,
+          "ns": 0,
+          "title": "Orman Garden",
+          "lat": 30.029166666666665,
+          "lon": 31.213055555555556,
+          "dist": 2760.6,
+          "primary": ""
+        },
+        {
+          "pageid": 8311210,
+          "ns": 0,
+          "title": "Roda Island",
+          "lat": 30.020833333333332,
+          "lon": 31.225555555555555,
+          "dist": 2796.5,
+          "primary": ""
+        },
+        {
+          "pageid": 70258560,
+          "ns": 0,
+          "title": "Cairo Citadel Clock",
+          "lat": 30.02935,
+          "lon": 31.25934,
+          "dist": 2824.7,
+          "primary": ""
+        },
+        {
+          "pageid": 16886062,
+          "ns": 0,
+          "title": "Khanqah of Baybars II",
+          "lat": 30.051666666666666,
+          "lon": 31.26388888888889,
+          "dist": 2831,
+          "primary": ""
+        },
+        {
+          "pageid": 76167705,
+          "ns": 0,
+          "title": "Wikala of Qawsun",
+          "lat": 30.05302777777778,
+          "lon": 31.263972222222222,
+          "dist": 2885.4,
+          "primary": ""
+        },
+        {
+          "pageid": 78974467,
+          "ns": 0,
+          "title": "Ablaq Palace",
+          "lat": 30.028611,
+          "lon": 31.259722,
+          "dist": 2903.4,
+          "primary": ""
+        },
+        {
+          "pageid": 8796682,
+          "ns": 0,
+          "title": "Muhammad Ali Mosque",
+          "lat": 30.028611,
+          "lon": 31.259722,
+          "dist": 2903.4,
+          "primary": ""
+        },
+        {
+          "pageid": 54345764,
+          "ns": 0,
+          "title": "Al-Sayyida Nafisa Mosque",
+          "lat": 30.022499,
+          "lon": 31.252136,
+          "dist": 2904.1,
+          "primary": ""
+        },
+        {
+          "pageid": 46595527,
+          "ns": 0,
+          "title": "Housing and Building National Research Center",
+          "lat": 30.036848,
+          "lon": 31.206705,
+          "dist": 2914.6,
+          "primary": ""
+        },
+        {
+          "pageid": 18371150,
+          "ns": 0,
+          "title": "Al-Gawhara Palace",
+          "lat": 30.028055555555554,
+          "lon": 31.259444444444444,
+          "dist": 2920.2,
+          "primary": ""
+        },
+        {
+          "pageid": 140554,
+          "ns": 0,
+          "title": "Al-Hakim Mosque",
+          "lat": 30.054444444444446,
+          "lon": 31.26388888888889,
+          "dist": 2934.1,
+          "primary": ""
+        },
+        {
+          "pageid": 16794054,
+          "ns": 0,
+          "title": "Bab al-Futuh",
+          "lat": 30.05552777777778,
+          "lon": 31.26342222222222,
+          "dist": 2941.2,
+          "primary": ""
+        },
+        {
+          "pageid": 76430576,
+          "ns": 0,
+          "title": "Sidi Zouk Tomb",
+          "lat": 30.055557,
+          "lon": 31.263542,
+          "dist": 2953,
+          "primary": ""
+        },
+        {
+          "pageid": 2045006,
+          "ns": 0,
+          "title": "Al-Nasir Muhammad Mosque",
+          "lat": 30.029151,
+          "lon": 31.260945,
+          "dist": 2963.2,
+          "primary": ""
+        },
+        {
+          "pageid": 38688504,
+          "ns": 0,
+          "title": "Egyptian National Military Museum",
+          "lat": 30.029444444444444,
+          "lon": 31.261388888888888,
+          "dist": 2980,
+          "primary": ""
+        },
+        {
+          "pageid": 2814371,
+          "ns": 0,
+          "title": "Cairo Citadel",
+          "lat": 30.029444444444444,
+          "lon": 31.261388888888888,
+          "dist": 2980,
+          "primary": ""
+        },
+        {
+          "pageid": 54666908,
+          "ns": 0,
+          "title": "Wikala of Sultan Qaytbay",
+          "lat": 30.0541,
+          "lon": 31.2646,
+          "dist": 2983.4,
+          "primary": ""
+        },
+        {
+          "pageid": 54349097,
+          "ns": 0,
+          "title": "Sayeda Aisha Mosque",
+          "lat": 30.024675,
+          "lon": 31.256782,
+          "dist": 2988.2,
+          "primary": ""
+        },
+        {
+          "pageid": 16864556,
+          "ns": 0,
+          "title": "Bab al-Nasr (Cairo)",
+          "lat": 30.054166666666667,
+          "lon": 31.264722222222222,
+          "dist": 2997.1,
+          "primary": ""
+        },
+        {
+          "pageid": 51194549,
+          "ns": 0,
+          "title": "List of ambassadors of China to Egypt",
+          "lat": 30.067977,
+          "lon": 31.218959,
+          "dist": 3077.2,
+          "primary": ""
+        },
+        {
+          "pageid": 16113143,
+          "ns": 0,
+          "title": "Zamalek",
+          "lat": 30.066666666666666,
+          "lon": 31.216666666666665,
+          "dist": 3079.9,
+          "primary": ""
+        },
+        {
+          "pageid": 30207616,
+          "ns": 0,
+          "title": "Capture of Cairo (1517)",
+          "lat": 30.066666666666666,
+          "lon": 31.216666666666665,
+          "dist": 3079.9,
+          "primary": ""
+        },
+        {
+          "pageid": 1267797,
+          "ns": 0,
+          "title": "Faculty of Dar Al-Uloom, Cairo University",
+          "lat": 30.0276,
+          "lon": 31.21014,
+          "dist": 3089.3,
+          "primary": ""
+        },
+        {
+          "pageid": 78055755,
+          "ns": 0,
+          "title": "Qasr El-Eyni Faculty of Medicine, Cairo University",
+          "lat": 30.0276,
+          "lon": 31.21014,
+          "dist": 3089.3,
+          "primary": ""
+        },
+        {
+          "pageid": 609874,
+          "ns": 0,
+          "title": "Cairo University",
+          "lat": 30.0276,
+          "lon": 31.21014,
+          "dist": 3089.3,
+          "primary": ""
+        },
+        {
+          "pageid": 5197325,
+          "ns": 0,
+          "title": "Al-Qata'i",
+          "lat": 30.016666666666666,
+          "lon": 31.233333333333334,
+          "dist": 3092.2,
+          "primary": ""
+        },
+        {
+          "pageid": 8311301,
+          "ns": 0,
+          "title": "Old Cairo",
+          "lat": 30.016666666666666,
+          "lon": 31.233333333333334,
+          "dist": 3092.2,
+          "primary": ""
+        },
+        {
+          "pageid": 2206705,
+          "ns": 0,
+          "title": "Theodor Bilharz",
+          "lat": 30.016666666666666,
+          "lon": 31.233333333333334,
+          "dist": 3092.2,
+          "primary": ""
+        },
+        {
+          "pageid": 16810204,
+          "ns": 0,
+          "title": "Ahmed Shawki Museum",
+          "lat": 30.02138888888889,
+          "lon": 31.217499999999998,
+          "dist": 3101.1,
+          "primary": ""
+        },
+        {
+          "pageid": 44742610,
+          "ns": 0,
+          "title": "Fairmont Nile City",
+          "lat": 30.071774,
+          "lon": 31.227951,
+          "dist": 3133.9,
+          "primary": ""
+        },
+        {
+          "pageid": 8311302,
+          "ns": 0,
+          "title": "Shubra",
+          "lat": 30.072499999999998,
+          "lon": 31.240833333333335,
+          "dist": 3163.4,
+          "primary": ""
+        },
+        {
+          "pageid": 62215257,
+          "ns": 0,
+          "title": "Sultaniyya Mausoleum",
+          "lat": 30.023888888888887,
+          "lon": 31.259444444444444,
+          "dist": 3229,
+          "primary": ""
+        },
+        {
+          "pageid": 20008513,
+          "ns": 0,
+          "title": "Al Musafir Khana Palace",
+          "lat": 30.057222222222222,
+          "lon": 31.265833333333333,
+          "dist": 3231.8,
+          "primary": ""
+        },
+        {
+          "pageid": 77295318,
+          "ns": 0,
+          "title": "Mausoleum of Amir Qawsun",
+          "lat": 30.023555555555554,
+          "lon": 31.259416666666667,
+          "dist": 3253.4,
+          "primary": ""
+        },
+        {
+          "pageid": 60512353,
+          "ns": 0,
+          "title": "List of ambassadors of Iran to Egypt",
+          "lat": 30.039603,
+          "lon": 31.202332,
+          "dist": 3255.9,
+          "primary": ""
+        },
+        {
+          "pageid": 24960046,
+          "ns": 0,
+          "title": "St. Mary's Coptic Orthodox Church Massarra",
+          "lat": 30.07305,
+          "lon": 31.24357,
+          "dist": 3274.5,
+          "primary": ""
+        },
+        {
+          "pageid": 48011437,
+          "ns": 0,
+          "title": "Arab Academy for Management, Banking and Financial Sciences",
+          "lat": 30.05082,
+          "lon": 31.202388,
+          "dist": 3284.8,
+          "primary": ""
+        },
+        {
+          "pageid": 21106499,
+          "ns": 0,
+          "title": "Dar al-Ifta al-Misriyyah",
+          "lat": 30.045555555555556,
+          "lon": 31.27,
+          "dist": 3304,
+          "primary": ""
+        },
+        {
+          "pageid": 31017496,
+          "ns": 0,
+          "title": "Mosque of al-Zahir Baybars",
+          "lat": 30.0623,
+          "lon": 31.2634,
+          "dist": 3327.1,
+          "primary": ""
+        },
+        {
+          "pageid": 8311297,
+          "ns": 0,
+          "title": "Mohandiseen",
+          "lat": 30.053055555555556,
+          "lon": 31.201944444444443,
+          "dist": 3388.5,
+          "primary": ""
+        },
+        {
+          "pageid": 78558375,
+          "ns": 0,
+          "title": "Tomb and Khanqah of Khawand Tughay",
+          "lat": 30.04247,
+          "lon": 31.27108,
+          "dist": 3412.3,
+          "primary": ""
+        },
+        {
+          "pageid": 26849184,
+          "ns": 0,
+          "title": "Ets Hayim Synagogue",
+          "lat": 30.06339,
+          "lon": 31.2638,
+          "dist": 3431.2,
+          "primary": ""
+        },
+        {
+          "pageid": 38056788,
+          "ns": 0,
+          "title": "Zamalek Stadium disaster",
+          "lat": 30.058611111111112,
+          "lon": 31.203611111111112,
+          "dist": 3469.3,
+          "primary": ""
+        },
+        {
+          "pageid": 69161433,
+          "ns": 0,
+          "title": "Abdulrahman Fawzi Hall",
+          "lat": 30.058407,
+          "lon": 31.203397,
+          "dist": 3477.4,
+          "primary": ""
+        },
+        {
+          "pageid": 60902565,
+          "ns": 0,
+          "title": "Helmy Zamora Stadium",
+          "lat": 30.058611111111112,
+          "lon": 31.203333333333333,
+          "dist": 3493.1,
+          "primary": ""
+        },
+        {
+          "pageid": 80073361,
+          "ns": 0,
+          "title": "Gamat El Dowal station",
+          "lat": 30.051,
+          "lon": 31.1997,
+          "dist": 3541.9,
+          "primary": ""
+        },
+        {
+          "pageid": 15963594,
+          "ns": 0,
+          "title": "Rod El Farag",
+          "lat": 30.07611111111111,
+          "lon": 31.239722222222223,
+          "dist": 3547.3,
+          "primary": ""
+        },
+        {
+          "pageid": 38576133,
+          "ns": 0,
+          "title": "Imbaba Bridge",
+          "lat": 30.0751,
+          "lon": 31.2255,
+          "dist": 3552,
+          "primary": ""
+        },
+        {
+          "pageid": 45248479,
+          "ns": 0,
+          "title": "El-Geish station",
+          "lat": 30.06188888888889,
+          "lon": 31.266861111111112,
+          "dist": 3574.4,
+          "primary": ""
+        },
+        {
+          "pageid": 3225049,
+          "ns": 0,
+          "title": "Battle of al-Babein",
+          "lat": 30.016666666666666,
+          "lon": 31.216666666666665,
+          "dist": 3587.1,
+          "primary": ""
+        },
+        {
+          "pageid": 60458077,
+          "ns": 0,
+          "title": "Institute of Arabic Manuscripts",
+          "lat": 30.048311,
+          "lon": 31.198412,
+          "dist": 3615.3,
+          "primary": ""
+        },
+        {
+          "pageid": 80069552,
+          "ns": 0,
+          "title": "Wadi El Nile station",
+          "lat": 30.0584,
+          "lon": 31.201,
+          "dist": 3684.8,
+          "primary": ""
+        },
+        {
+          "pageid": 26849193,
+          "ns": 0,
+          "title": "Pahad Itzhak Synagogue",
+          "lat": 30.06599,
+          "lon": 31.26477,
+          "dist": 3686.6,
+          "primary": ""
+        },
+        {
+          "pageid": 7904728,
+          "ns": 0,
+          "title": "Mit Okba Stadium",
+          "lat": 30.06222222222222,
+          "lon": 31.202777777777776,
+          "dist": 3737.3,
+          "primary": ""
+        },
+        {
+          "pageid": 76286904,
+          "ns": 0,
+          "title": "Dome of Saad al-Din bin Ghurab",
+          "lat": 30.04377777777778,
+          "lon": 31.274638888888887,
+          "dist": 3748.7,
+          "primary": ""
+        },
+        {
+          "pageid": 41738434,
+          "ns": 0,
+          "title": "Funerary complex of Sultan Qaytbay",
+          "lat": 30.0439,
+          "lon": 31.2749,
+          "dist": 3773.6,
+          "primary": ""
+        },
+        {
+          "pageid": 60889107,
+          "ns": 0,
+          "title": "Qubbat Afandina",
+          "lat": 30.041676,
+          "lon": 31.274987,
+          "dist": 3793.7,
+          "primary": ""
+        },
+        {
+          "pageid": 12790772,
+          "ns": 0,
+          "title": "Amr ibn al-As Mosque",
+          "lat": 30.01,
+          "lon": 31.233055555555556,
+          "dist": 3833.6,
+          "primary": ""
+        },
+        {
+          "pageid": 15943875,
+          "ns": 0,
+          "title": "El Sakkakini",
+          "lat": 30.067,
+          "lon": 31.266,
+          "dist": 3849.6,
+          "primary": ""
+        },
+        {
+          "pageid": 15164451,
+          "ns": 0,
+          "title": "City of the Dead (Cairo)",
+          "lat": 30.046666666666667,
+          "lon": 31.27638888888889,
+          "dist": 3924.6,
+          "primary": ""
+        },
+        {
+          "pageid": 80093492,
+          "ns": 0,
+          "title": "Boulak El Dakrour station",
+          "lat": 30.0376,
+          "lon": 31.1955,
+          "dist": 3942.8,
+          "primary": ""
+        },
+        {
+          "pageid": 80254921,
+          "ns": 0,
+          "title": "Cairo University station",
+          "lat": 30.025,
+          "lon": 31.2014,
+          "dist": 3944.1,
+          "primary": ""
+        },
+        {
+          "pageid": 80067529,
+          "ns": 0,
+          "title": "Tawfikia station",
+          "lat": 30.0651,
+          "lon": 31.2022,
+          "dist": 3961.5,
+          "primary": ""
+        },
+        {
+          "pageid": 62242424,
+          "ns": 0,
+          "title": "Khanqah-Mausoleum of Sultan Barsbay",
+          "lat": 30.047500000000003,
+          "lon": 31.27722222222222,
+          "dist": 4011.5,
+          "primary": ""
+        },
+        {
+          "pageid": 28330880,
+          "ns": 0,
+          "title": "Juyushi Mosque",
+          "lat": 30.021992,
+          "lon": 31.2685,
+          "dist": 4022.2,
+          "primary": ""
+        },
+        {
+          "pageid": 12511620,
+          "ns": 0,
+          "title": "Manshiyat Naser",
+          "lat": 30.032244444444444,
+          "lon": 31.27528611111111,
+          "dist": 4043.2,
+          "primary": ""
+        },
+        {
+          "pageid": 76420109,
+          "ns": 0,
+          "title": "Mashhad al-Tabataba",
+          "lat": 30.0098442,
+          "lon": 31.2491908,
+          "dist": 4056,
+          "primary": ""
+        },
+        {
+          "pageid": 79901227,
+          "ns": 0,
+          "title": "Sudan station",
+          "lat": 30.0698,
+          "lon": 31.2053,
+          "dist": 4066.6,
+          "primary": ""
+        },
+        {
+          "pageid": 29847198,
+          "ns": 0,
+          "title": "Lulua Mosque",
+          "lat": 30.01986,
+          "lon": 31.268187,
+          "dist": 4150.5,
+          "primary": ""
+        },
+        {
+          "pageid": 60827589,
+          "ns": 0,
+          "title": "Hosh al-Basha",
+          "lat": 30.012069,
+          "lon": 31.257277,
+          "dist": 4152,
+          "primary": ""
+        },
+        {
+          "pageid": 32252840,
+          "ns": 0,
+          "title": "Abbassia",
+          "lat": 30.065008,
+          "lon": 31.27171,
+          "dist": 4154.8,
+          "primary": ""
+        },
+        {
+          "pageid": 99675,
+          "ns": 0,
+          "title": "Collège du Sacré-Cœur (Egypt)",
+          "lat": 30.0699,
+          "lon": 31.2676,
+          "dist": 4179.2,
+          "primary": ""
+        },
+        {
+          "pageid": 61887097,
+          "ns": 0,
+          "title": "Khanqah of Faraj ibn Barquq",
+          "lat": 30.0491,
+          "lon": 31.2788,
+          "dist": 4181.3,
+          "primary": ""
+        },
+        {
+          "pageid": 26849192,
+          "ns": 0,
+          "title": "Moussa Dar'i Synagogue",
+          "lat": 30.061952,
+          "lon": 31.274376,
+          "dist": 4203,
+          "primary": ""
+        },
+        {
+          "pageid": 56438027,
+          "ns": 0,
+          "title": "Mausoleum of Imam al-Shafi'i",
+          "lat": 30.0117,
+          "lon": 31.25805,
+          "dist": 4225,
+          "primary": ""
+        },
+        {
+          "pageid": 24705781,
+          "ns": 0,
+          "title": "Emir Qurqumas Complex",
+          "lat": 30.051841,
+          "lon": 31.278823,
+          "dist": 4232.3,
+          "primary": ""
+        },
+        {
+          "pageid": 18974245,
+          "ns": 0,
+          "title": "Church of Saint Menas (Cairo)",
+          "lat": 30.00638888888889,
+          "lon": 31.231666666666666,
+          "dist": 4244.4,
+          "primary": ""
+        },
+        {
+          "pageid": 16810303,
+          "ns": 0,
+          "title": "Umm Kulthum Museum",
+          "lat": 30.00722222222222,
+          "lon": 31.225277777777777,
+          "dist": 4254,
+          "primary": ""
+        },
+        {
+          "pageid": 12836118,
+          "ns": 0,
+          "title": "Coptic Cairo",
+          "lat": 30.00628,
+          "lon": 31.231781,
+          "dist": 4255.5,
+          "primary": ""
+        },
+        {
+          "pageid": 21305754,
+          "ns": 0,
+          "title": "Church of St. George (Cairo)",
+          "lat": 30.0064,
+          "lon": 31.23006,
+          "dist": 4260.2,
+          "primary": ""
+        },
+        {
+          "pageid": 32283248,
+          "ns": 0,
+          "title": "Mit Okba",
+          "lat": 30.060774,
+          "lon": 31.195407,
+          "dist": 4284.2,
+          "primary": ""
+        },
+        {
+          "pageid": 63664945,
+          "ns": 0,
+          "title": "Manasterly Palace",
+          "lat": 30.007,
+          "lon": 31.2247,
+          "dist": 4291.4,
+          "primary": ""
+        },
+        {
+          "pageid": 12835988,
+          "ns": 0,
+          "title": "Babylon Fortress",
+          "lat": 30.00611111111111,
+          "lon": 31.22972222222222,
+          "dist": 4296.3,
+          "primary": ""
+        },
+        {
+          "pageid": 55685610,
+          "ns": 0,
+          "title": "Siege of Babylon Fortress",
+          "lat": 30.0061,
+          "lon": 31.2297,
+          "dist": 4297.8,
+          "primary": ""
+        },
+        {
+          "pageid": 11440371,
+          "ns": 0,
+          "title": "Ben Ezra Synagogue",
+          "lat": 30.00581,
+          "lon": 31.23097,
+          "dist": 4315.1,
+          "primary": ""
+        },
+        {
+          "pageid": 603083,
+          "ns": 0,
+          "title": "Cairo Geniza",
+          "lat": 30.0058,
+          "lon": 31.231,
+          "dist": 4315.9,
+          "primary": ""
+        },
+        {
+          "pageid": 19030942,
+          "ns": 0,
+          "title": "Saint Barbara Church in Coptic Cairo",
+          "lat": 30.0057,
+          "lon": 31.2311,
+          "dist": 4326,
+          "primary": ""
+        },
+        {
+          "pageid": 12674700,
+          "ns": 0,
+          "title": "Coptic Museum",
+          "lat": 30.00563,
+          "lon": 31.23055,
+          "dist": 4339.5,
+          "primary": ""
+        },
+        {
+          "pageid": 12835443,
+          "ns": 0,
+          "title": "Hanging Church",
+          "lat": 30.0054,
+          "lon": 31.2301,
+          "dist": 4370,
+          "primary": ""
+        },
+        {
+          "pageid": 1399689,
+          "ns": 0,
+          "title": "Fustat",
+          "lat": 30.005,
+          "lon": 31.2375,
+          "dist": 4384.5,
+          "primary": ""
+        },
+        {
+          "pageid": 7517187,
+          "ns": 0,
+          "title": "Battle of Ghamra",
+          "lat": 30.074942,
+          "lon": 31.264569,
+          "dist": 4387.8,
+          "primary": ""
+        },
+        {
+          "pageid": 21300631,
+          "ns": 0,
+          "title": "Ramses College",
+          "lat": 30.0704,
+          "lon": 31.27,
+          "dist": 4388.1,
+          "primary": ""
+        },
+        {
+          "pageid": 42967406,
+          "ns": 0,
+          "title": "Abdou Pasha station",
+          "lat": 30.064833333333333,
+          "lon": 31.27477777777778,
+          "dist": 4394.1,
+          "primary": ""
+        },
+        {
+          "pageid": 80119474,
+          "ns": 0,
+          "title": "Imbaba station",
+          "lat": 30.0759,
+          "lon": 31.2075,
+          "dist": 4431,
+          "primary": ""
+        },
+        {
+          "pageid": 15973686,
+          "ns": 0,
+          "title": "El Sahel",
+          "lat": 30.084722222222222,
+          "lon": 31.242222222222225,
+          "dist": 4527.4,
+          "primary": ""
+        },
+        {
+          "pageid": 26600528,
+          "ns": 0,
+          "title": "Darb 1718",
+          "lat": 30.003333333333334,
+          "lon": 31.231944444444444,
+          "dist": 4580.7,
+          "primary": ""
+        },
+        {
+          "pageid": 77910608,
+          "ns": 0,
+          "title": "Al Waily",
+          "lat": 30.066666666666666,
+          "lon": 31.27611111111111,
+          "dist": 4610.5,
+          "primary": ""
+        },
+        {
+          "pageid": 44774551,
+          "ns": 0,
+          "title": "Melkite Patriarchal Dependent Territory of Egypt, Sudan, and South Sudan",
+          "lat": 30.085,
+          "lon": 31.2462,
+          "dist": 4626.2,
+          "primary": ""
+        },
+        {
+          "pageid": 24437025,
+          "ns": 0,
+          "title": "Basilica of St Therese of the Child Jesus, Cairo",
+          "lat": 30.084999999999997,
+          "lon": 31.24638888888889,
+          "dist": 4630.2,
+          "primary": ""
+        },
+        {
+          "pageid": 15973127,
+          "ns": 0,
+          "title": "Al-Daher",
+          "lat": 30.074166666666667,
+          "lon": 31.27,
+          "dist": 4674.6,
+          "primary": ""
+        },
+        {
+          "pageid": 13065978,
+          "ns": 0,
+          "title": "Church of the Holy Virgin (Babylon El-Darag)",
+          "lat": 30.0018,
+          "lon": 31.2308,
+          "dist": 4760.3,
+          "primary": ""
+        },
+        {
+          "pageid": 79906206,
+          "ns": 0,
+          "title": "El-Bohy station",
+          "lat": 30.082,
+          "lon": 31.2105,
+          "dist": 4833.4,
+          "primary": ""
+        },
+        {
+          "pageid": 2210451,
+          "ns": 0,
+          "title": "Saint Mark's Coptic Orthodox Cathedral",
+          "lat": 30.072222222222223,
+          "lon": 31.275555555555556,
+          "dist": 4927.9,
+          "primary": ""
+        },
+        {
+          "pageid": 52578047,
+          "ns": 0,
+          "title": "St. Peter and St. Paul's Church, Cairo",
+          "lat": 30.0722,
+          "lon": 31.2756,
+          "dist": 4929.6,
+          "primary": ""
+        },
+        {
+          "pageid": 56274762,
+          "ns": 0,
+          "title": "Al-Rahman al-Rahim Mosque",
+          "lat": 30.0615186,
+          "lon": 31.2829897,
+          "dist": 4933.5,
+          "primary": ""
+        },
+        {
+          "pageid": 61965245,
+          "ns": 0,
+          "title": "Fatimid conquest of Egypt",
+          "lat": 30,
+          "lon": 31.233333333333334,
+          "dist": 4942.3,
+          "primary": ""
+        },
+        {
+          "pageid": 61563260,
+          "ns": 0,
+          "title": "Qorsaya Island",
+          "lat": 30.002,
+          "lon": 31.219,
+          "dist": 4981.3,
+          "primary": ""
+        },
+        {
+          "pageid": 19388445,
+          "ns": 0,
+          "title": "2008 Duweika, Cairo Rockslide",
+          "lat": 30.0457,
+          "lon": 31.2882,
+          "dist": 5055.4,
+          "primary": ""
+        },
+        {
+          "pageid": 79343009,
+          "ns": 0,
+          "title": "Bashteel railway station",
+          "lat": 30.066194444444445,
+          "lon": 31.188808333333334,
+          "dist": 5122.6,
+          "primary": ""
+        },
+        {
+          "pageid": 42967270,
+          "ns": 0,
+          "title": "Abbassiya station",
+          "lat": 30.069666666666667,
+          "lon": 31.280916666666666,
+          "dist": 5179.9,
+          "primary": ""
+        },
+        {
+          "pageid": 54627891,
+          "ns": 0,
+          "title": "Demerdash Mosque",
+          "lat": 30.075166,
+          "lon": 31.277294,
+          "dist": 5265.7,
+          "primary": ""
+        },
+        {
+          "pageid": 31315521,
+          "ns": 0,
+          "title": "Ministry of Water Resources and Irrigation",
+          "lat": 30.091388888888886,
+          "lon": 31.226388888888888,
+          "dist": 5301.2,
+          "primary": ""
+        },
+        {
+          "pageid": 43529424,
+          "ns": 0,
+          "title": "Institute of Aviation Engineering and Technology",
+          "lat": 30.07,
+          "lon": 31.1887,
+          "dist": 5344.5,
+          "primary": ""
+        },
+        {
+          "pageid": 16810251,
+          "ns": 0,
+          "title": "Egyptian Geological Museum",
+          "lat": 29.9963,
+          "lon": 31.2286,
+          "dist": 5392,
+          "primary": ""
+        },
+        {
+          "pageid": 43493549,
+          "ns": 0,
+          "title": "Imbaba Airport",
+          "lat": 30.075,
+          "lon": 31.191666666666666,
+          "dist": 5434.7,
+          "primary": ""
+        },
+        {
+          "pageid": 79386214,
+          "ns": 0,
+          "title": "Pharaonic Village",
+          "lat": 29.997222222222224,
+          "lon": 31.21527777777778,
+          "dist": 5602.3,
+          "primary": ""
+        },
+        {
+          "pageid": 18378049,
+          "ns": 0,
+          "title": "Faculty of Medicine, Ain Shams University",
+          "lat": 30.075928,
+          "lon": 31.281214,
+          "dist": 5610.4,
+          "primary": ""
+        },
+        {
+          "pageid": 2203490,
+          "ns": 0,
+          "title": "Theodor Bilharz Research Institute",
+          "lat": 30.093888888888888,
+          "lon": 31.223333333333333,
+          "dist": 5630.1,
+          "primary": ""
+        },
+        {
+          "pageid": 56278441,
+          "ns": 0,
+          "title": "Al-Nour Mosque (Cairo)",
+          "lat": 30.075289,
+          "lon": 31.282943,
+          "dist": 5698.2,
+          "primary": ""
+        },
+        {
+          "pageid": 34572170,
+          "ns": 0,
+          "title": "Police Academy Stadium",
+          "lat": 30.069529,
+          "lon": 31.2884604,
+          "dist": 5795.8,
+          "primary": ""
+        },
+        {
+          "pageid": 71521339,
+          "ns": 0,
+          "title": "Giza church fire",
+          "lat": 30.075,
+          "lon": 31.186944444444446,
+          "dist": 5796.1,
+          "primary": ""
+        },
+        {
+          "pageid": 40239450,
+          "ns": 0,
+          "title": "Higher Institute of Cinema",
+          "lat": 30.0036,
+          "lon": 31.197,
+          "dist": 5870.6,
+          "primary": ""
+        },
+        {
+          "pageid": 18370037,
+          "ns": 0,
+          "title": "Saffron Palace",
+          "lat": 30.0768,
+          "lon": 31.2844,
+          "dist": 5911.5,
+          "primary": ""
+        },
+        {
+          "pageid": 3031329,
+          "ns": 0,
+          "title": "Osman Ahmed Osman Stadium",
+          "lat": 30.051166666666667,
+          "lon": 31.297,
+          "dist": 5948,
+          "primary": ""
+        },
+        {
+          "pageid": 29205916,
+          "ns": 0,
+          "title": "Ministry of Electricity and Renewable Energy",
+          "lat": 30.070833333333333,
+          "lon": 31.289444444444445,
+          "dist": 5949.3,
+          "primary": ""
+        },
+        {
+          "pageid": 1980417,
+          "ns": 0,
+          "title": "Ain Shams University",
+          "lat": 30.076944444444443,
+          "lon": 31.285,
+          "dist": 5967.1,
+          "primary": ""
+        },
+        {
+          "pageid": 17599379,
+          "ns": 0,
+          "title": "Academy of Arts (Egypt)",
+          "lat": 30.0024305,
+          "lon": 31.1970038,
+          "dist": 5971.5,
+          "primary": ""
+        },
+        {
+          "pageid": 79905987,
+          "ns": 0,
+          "title": "El-Qawmia station",
+          "lat": 30.0932,
+          "lon": 31.209,
+          "dist": 6003.9,
+          "primary": ""
+        },
+        {
+          "pageid": 68228880,
+          "ns": 0,
+          "title": "Athar an Nabi",
+          "lat": 29.990277777777777,
+          "lon": 31.233055555555556,
+          "dist": 6023.5,
+          "primary": ""
+        },
+        {
+          "pageid": 15996474,
+          "ns": 0,
+          "title": "Cairo Conservatoire",
+          "lat": 30.0021506,
+          "lon": 31.1961194,
+          "dist": 6049.1,
+          "primary": ""
+        },
+        {
+          "pageid": 3897498,
+          "ns": 0,
+          "title": "Imbaba",
+          "lat": 30.092499999999998,
+          "lon": 31.200555555555553,
+          "dist": 6328,
+          "primary": ""
+        },
+        {
+          "pageid": 60837644,
+          "ns": 0,
+          "title": "Rod El Farag Axis Bridge",
+          "lat": 30.1023,
+          "lon": 31.2375,
+          "dist": 6440.5,
+          "primary": ""
+        },
+        {
+          "pageid": 16810361,
+          "ns": 0,
+          "title": "Taha Hussein Museum",
+          "lat": 30.0049,
+          "lon": 31.1851,
+          "dist": 6559.2,
+          "primary": ""
+        },
+        {
+          "pageid": 6914548,
+          "ns": 0,
+          "title": "El Sekka El Hadid Stadium",
+          "lat": 30.055634,
+          "lon": 31.304265,
+          "dist": 6716.5,
+          "primary": ""
+        },
+        {
+          "pageid": 79904374,
+          "ns": 0,
+          "title": "Ring Road station",
+          "lat": 30.0964,
+          "lon": 31.1996,
+          "dist": 6745.4,
+          "primary": ""
+        },
+        {
+          "pageid": 79801909,
+          "ns": 0,
+          "title": "Basatin cemetery",
+          "lat": 29.993055555555557,
+          "lon": 31.273055555555555,
+          "dist": 6747.7,
+          "primary": ""
+        },
+        {
+          "pageid": 21408902,
+          "ns": 0,
+          "title": "Mokattam",
+          "lat": 30.02,
+          "lon": 31.3,
+          "dist": 6758.4,
+          "primary": ""
+        },
+        {
+          "pageid": 144514,
+          "ns": 0,
+          "title": "Giza",
+          "lat": 29.987,
+          "lon": 31.2118,
+          "dist": 6784.8,
+          "primary": ""
+        },
+        {
+          "pageid": 9652444,
+          "ns": 0,
+          "title": "Nile Badrawi Hospital",
+          "lat": 29.982611,
+          "lon": 31.231198,
+          "dist": 6884.3,
+          "primary": ""
+        },
+        {
+          "pageid": 17700710,
+          "ns": 0,
+          "title": "El-Gabal el-Ahmar",
+          "lat": 30.0456113,
+          "lon": 31.3080056,
+          "dist": 6961,
+          "primary": ""
+        },
+        {
+          "pageid": 77157607,
+          "ns": 0,
+          "title": "Military Technical College",
+          "lat": 30.079,
+          "lon": 31.296,
+          "dist": 6962.7,
+          "primary": ""
+        },
+        {
+          "pageid": 61563473,
+          "ns": 0,
+          "title": "Dahab Island",
+          "lat": 29.982,
+          "lon": 31.224,
+          "dist": 7029.4,
+          "primary": ""
+        },
+        {
+          "pageid": 42981197,
+          "ns": 0,
+          "title": "Fair Zone station",
+          "lat": 30.07333,
+          "lon": 31.30091,
+          "dist": 7052.3,
+          "primary": ""
+        },
+        {
+          "pageid": 32283180,
+          "ns": 0,
+          "title": "Saft El Laban",
+          "lat": 30.025631,
+          "lon": 31.165366,
+          "dist": 7085,
+          "primary": ""
+        },
+        {
+          "pageid": 56275377,
+          "ns": 0,
+          "title": "Gamal Abdel Nasser Mosque",
+          "lat": 30.083415,
+          "lon": 31.2944055,
+          "dist": 7123.1,
+          "primary": ""
+        },
+        {
+          "pageid": 3419618,
+          "ns": 0,
+          "title": "Cairo Stadium Indoor Halls Complex",
+          "lat": 30.070092,
+          "lon": 31.307098,
+          "dist": 7441.7,
+          "primary": ""
+        },
+        {
+          "pageid": 35225050,
+          "ns": 0,
+          "title": "6th of October Panorama",
+          "lat": 30.074166666666667,
+          "lon": 31.30666666666667,
+          "dist": 7589.6,
+          "primary": ""
+        },
+        {
+          "pageid": 2372942,
+          "ns": 0,
+          "title": "Cairo International Stadium",
+          "lat": 30.069166666666668,
+          "lon": 31.31222222222222,
+          "dist": 7862.8,
+          "primary": ""
+        },
+        {
+          "pageid": 8073852,
+          "ns": 0,
+          "title": "Unknown Soldier Memorial (Egypt)",
+          "lat": 30.065,
+          "lon": 31.31388888888889,
+          "dist": 7866.2,
+          "primary": ""
+        },
+        {
+          "pageid": 79375609,
+          "ns": 0,
+          "title": "Mokattam Formation",
+          "lat": 30,
+          "lon": 31.3,
+          "dist": 7918.2,
+          "primary": ""
+        },
+        {
+          "pageid": 30836429,
+          "ns": 0,
+          "title": "Assassination of Anwar Sadat",
+          "lat": 30.064230555555557,
+          "lon": 31.31479722222222,
+          "dist": 7925.6,
+          "primary": ""
+        },
+        {
+          "pageid": 80922438,
+          "ns": 0,
+          "title": "Mohamed Ali Palace",
+          "lat": 30.1158,
+          "lon": 31.2457,
+          "dist": 7997.4,
+          "primary": ""
+        },
+        {
+          "pageid": 79903739,
+          "ns": 0,
+          "title": "Rod El Farag Corridor station",
+          "lat": 30.1019,
+          "lon": 31.1844,
+          "dist": 8077.6,
+          "primary": ""
+        },
+        {
+          "pageid": 31159080,
+          "ns": 0,
+          "title": "Ministry of Manpower (Egypt)",
+          "lat": 30.076666666666668,
+          "lon": 31.314722222222223,
+          "dist": 8408.9,
+          "primary": ""
+        },
+        {
+          "pageid": 50112780,
+          "ns": 0,
+          "title": "Tiba Outlet Mall",
+          "lat": 30.06663888888889,
+          "lon": 31.31975,
+          "dist": 8458.8,
+          "primary": ""
+        },
+        {
+          "pageid": 756533,
+          "ns": 0,
+          "title": "Maadi",
+          "lat": 29.967499999999998,
+          "lon": 31.235833333333336,
+          "dist": 8550.9,
+          "primary": ""
+        },
+        {
+          "pageid": 16810247,
+          "ns": 0,
+          "title": "Gamal Abdel Nasser Museum",
+          "lat": 30.08652,
+          "lon": 31.310653,
+          "dist": 8600.2,
+          "primary": ""
+        },
+        {
+          "pageid": 32346367,
+          "ns": 0,
+          "title": "Manshiet el Bakry Hospital",
+          "lat": 30.091631,
+          "lon": 31.306502,
+          "dist": 8602.6,
+          "primary": ""
+        },
+        {
+          "pageid": 49346825,
+          "ns": 0,
+          "title": "RAF Heliopolis",
+          "lat": 30.08361111111111,
+          "lon": 31.31361111111111,
+          "dist": 8673.4,
+          "primary": ""
+        },
+        {
+          "pageid": 39900327,
+          "ns": 0,
+          "title": "Republican Guard headquarters clashes",
+          "lat": 30.080833333333334,
+          "lon": 31.316666666666666,
+          "dist": 8782.2,
+          "primary": ""
+        },
+        {
+          "pageid": 10989939,
+          "ns": 0,
+          "title": "Koubbeh Palace",
+          "lat": 30.0987,
+          "lon": 31.303,
+          "dist": 8854.2,
+          "primary": ""
+        },
+        {
+          "pageid": 40091495,
+          "ns": 0,
+          "title": "Rabaa al-Adawiya Mosque",
+          "lat": 30.0668,
+          "lon": 31.3258,
+          "dist": 9022.2,
+          "primary": ""
+        },
+        {
+          "pageid": 26500295,
+          "ns": 0,
+          "title": "Tahra Palace",
+          "lat": 30.098235,
+          "lon": 31.308509,
+          "dist": 9215.4,
+          "primary": ""
+        },
+        {
+          "pageid": 8311279,
+          "ns": 0,
+          "title": "El Qobbah",
+          "lat": 30.096666666666664,
+          "lon": 31.310277777777777,
+          "dist": 9234.7,
+          "primary": ""
+        },
+        {
+          "pageid": 8207425,
+          "ns": 0,
+          "title": "Modern Academy For Engineering & Technology",
+          "lat": 29.9931,
+          "lon": 31.3125,
+          "dist": 9338.9,
+          "primary": ""
+        },
+        {
+          "pageid": 24405971,
+          "ns": 0,
+          "title": "Luna Park, Cairo",
+          "lat": 30.092718,
+          "lon": 31.315358,
+          "dist": 9360.9,
+          "primary": ""
+        },
+        {
+          "pageid": 3897705,
+          "ns": 0,
+          "title": "Shubra El Kheima",
+          "lat": 30.128611111111113,
+          "lon": 31.242222222222225,
+          "dist": 9384.9,
+          "primary": ""
+        },
+        {
+          "pageid": 10989607,
+          "ns": 0,
+          "title": "Heliopolis Palace",
+          "lat": 30.08833333333333,
+          "lon": 31.32,
+          "dist": 9469.8,
+          "primary": ""
+        },
+        {
+          "pageid": 61900813,
+          "ns": 0,
+          "title": "El Warraq",
+          "lat": 30.118055555555557,
+          "lon": 31.184166666666666,
+          "dist": 9574.2,
+          "primary": ""
+        },
+        {
+          "pageid": 24500829,
+          "ns": 0,
+          "title": "Saint Fatima School",
+          "lat": 30.05901,
+          "lon": 31.333775,
+          "dist": 9578.3,
+          "primary": ""
+        },
+        {
+          "pageid": 44304579,
+          "ns": 0,
+          "title": "Heliopolis War Cemetery",
+          "lat": 30.0787,
+          "lon": 31.3294,
+          "dist": 9790.9,
+          "primary": ""
+        },
+        {
+          "pageid": 20135480,
+          "ns": 0,
+          "title": "Maadi Community Church",
+          "lat": 29.960264,
+          "lon": 31.26681,
+          "dist": 9823.4,
+          "primary": ""
+        },
+        {
+          "pageid": 8756314,
+          "ns": 0,
+          "title": "Zeitoun, Cairo",
+          "lat": 30.105,
+          "lon": 31.3103,
+          "dist": 9845.6,
+          "primary": ""
+        },
+        {
+          "pageid": 79915362,
+          "ns": 0,
+          "title": "Tanash",
+          "lat": 30.12527777777778,
+          "lon": 31.1925,
+          "dist": 9907.3,
+          "primary": ""
+        }
+      ]
+    }
+  }
+}

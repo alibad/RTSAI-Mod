@@ -1,0 +1,20 @@
+{
+  "url": "https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gscoord=26.6|56.4&gsradius=10000&gslimit=500&format=json&origin=*",
+  "updatedAt": 1792172752801,
+  "payload": {
+    "batchcomplete": "",
+    "query": {
+      "geosearch": [
+        {
+          "pageid": 29005,
+          "ns": 0,
+          "title": "Strait of Hormuz",
+          "lat": 26.6,
+          "lon": 56.5,
+          "dist": 9942.6,
+          "primary": ""
+        }
+      ]
+    }
+  }
+}
