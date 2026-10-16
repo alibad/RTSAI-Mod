@@ -92,8 +92,8 @@ TRACKS = [
      "tense cinematic industrial electronic instrumental, ticking percussion, low drones, slowly building "
      "synth arpeggio, distant war drums, suspenseful", 96, "C# minor", 180, "all"),
     ("rtsai-final-push", "Final Push",
-     "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic "
-     "percussion, alarm-like synth leads, intense and triumphant", 145, "A minor", 170, "all"),
+     "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, "
+     "a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm", 100, "C minor", 85, "all"),
     ("score", "Debrief",
      "short cinematic electronic outro instrumental, steady military snare, warm synth pads, low brass, "
      "reflective and resolved", 90, "D major", 75, "score screen"),

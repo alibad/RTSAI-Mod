@@ -1,0 +1,1 @@
+Rejected by the owner on 16 October 2026 for its abrasive acid bass and alarm-like lead. Preserved master and original provenance; excluded from the shipped playlist. Original raw take was in an external temporary cache and is not present here; its hash remains in the provenance.

@@ -340,7 +340,7 @@
    "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
    "dit": "acestep-v15-xl-turbo",
    "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
-   "generated": "2026-10-07",
+   "generated": "2026-10-14",
    "generator": "tools/standalone-music.py",
    "license": "MIT (code and weights); the output carries no third-party rights",
    "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
@@ -348,56 +348,52 @@
    "mastering": {
     "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
     "crossfade_bars": 2,
-    "crossfade_seconds": 3.31,
-    "input_lufs": -10.96,
-    "input_true_peak": -0.42,
-    "loop_bars": 88.0,
-    "loop_seconds": 145.66,
-    "normalization": "static gain -3.04 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.53,
-    "output_lufs": -14.06,
-    "output_true_peak": -3.82,
-    "source_seconds": 170.0,
-    "wrap_flux_percentile_estimate": 55.5
+    "crossfade_seconds": 4.8,
+    "input_lufs": -13.05,
+    "input_true_peak": -0.85,
+    "loop_bars": 28.02,
+    "loop_seconds": 67.26,
+    "normalization": "static gain -0.95 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.039,
+    "output_lufs": -14.07,
+    "output_true_peak": -1.74,
+    "source_seconds": 85.0,
+    "wrap_flux_percentile_estimate": 94.2
    },
-   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
-   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT + acestep-5Hz-lm-1.7B planner; precision/offload flags were not recorded in the source sidecar",
+   "notes": "Locally generated instrumental, reused from the preserved 14 October finale cue. No third-party recording was imported. Old master archived under resources/music-archive/final-push-techno-20261007.",
    "planner": {
-    "bpm": 145,
+    "bpm": 100,
     "caption": null,
-    "duration": 170,
-    "keyscale": "A minor",
+    "duration": 85,
+    "keyscale": "C minor",
     "timesignature": "4",
     "vocal_language": null
    },
-   "prompt": "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant",
-   "raw_take_sha256": "3d339c7813e08d1240627f739f4cd740177906a2dca6922faa931e9b9ee76b2b",
+   "prompt": "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm",
+   "raw_take_sha256": "7ce54d4ea7275e4bdc9e3dfc7ed85e5504392119abb06e8c02d6082c5a9b22b5",
+   "replaced": "2026-10-16",
+   "replacement_reason": "Owner rejected abrasive acid bass and alarm leads; use the preserved warm orchestral instrumental.",
    "request": {
-    "bpm": "145",
-    "caption": "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant",
-    "duration": "170",
+    "bpm": "100",
+    "caption": "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm",
+    "duration": "85",
     "format": "flac",
     "instrumental": "true",
-    "keyscale": "A minor",
-    "rewrite_caption": "false",
-    "seed": "7410",
+    "keyscale": "C minor",
+    "seed": "629497889",
     "task": "text2music",
-    "thinking": "true",
     "timesignature": "4"
    },
-   "seed": 7410,
+   "seed": 629497889,
    "service": {
     "dit": "acestep-v15-xl-turbo",
     "lm": "acestep-5Hz-lm-1.7B",
-    "lm_backend": "pt",
-    "model": "ace-step-1.5",
-    "offload": {
-     "lm": true,
-     "vae_text_encoder": true
-    },
-    "quantization": "int8_weight_only"
+    "model": "ace-step-1.5"
    },
-   "sha256": "ad6f6b895df6d7798c7acebbeea329ed013a533e0cd216eb35535ec2d3393ce2",
+   "sha256": "c287687a12762f28539c46d78e3713c6f831c5f04f4b5e9609f25bad759a3eda",
+   "source_audio": "resources/music-sources/final-push-orchestral-20261014/source.flac",
+   "source_metadata": "resources/music-sources/final-push-orchestral-20261014/source.json",
    "steps": 8,
    "theatre": "all",
    "title": "Final Push"
@@ -6116,7 +6112,7 @@
     "asr_transcript": "I'll take that building.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6160,7 +6156,7 @@
     "asr_transcript": "Going in.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6204,7 +6200,7 @@
     "asr_transcript": "Securing the site",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6252,7 +6248,7 @@
     "asr_transcript": "Arrgh.",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -6309,7 +6305,7 @@
     "asr_transcript": "Aww.",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -6366,7 +6362,7 @@
     "asr_transcript": "Noo!",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -6423,7 +6419,7 @@
     "asr_transcript": "Ung.",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -6476,7 +6472,7 @@
     "asr_transcript": "Taking fire.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6520,7 +6516,7 @@
     "asr_transcript": "I need cover.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6564,7 +6560,7 @@
     "asr_transcript": "Get me out of here.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6608,7 +6604,7 @@
     "asr_transcript": "Moving.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6652,7 +6648,7 @@
     "asr_transcript": "On my way.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6696,7 +6692,7 @@
     "asr_transcript": "Heading there now.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6740,7 +6736,7 @@
     "asr_transcript": "Engineer Ready",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6784,7 +6780,7 @@
     "asr_transcript": "Tools ready, what's the job?",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6828,7 +6824,7 @@
     "asr_transcript": "What Needs Fixing",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -6872,7 +6868,7 @@
     "asr_transcript": "Engineer on the net.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -7106,7 +7102,7 @@
    "seed": 10,
    "sha256": "45577275b75cb23d8312d188bc1305531b291a1c73ee701322a029c9bf923a48",
    "shipped_check": {
-    "asr_transcript": "\u3042\u3001\u3042\u3042\u3002",
+    "asr_transcript": "あ、ああ。",
     "cer": null
    },
    "side": "shared, Soviet side (Iran, Yemen, Hezbollah)",
@@ -8172,7 +8168,7 @@
     "asr_transcript": "On my way.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8215,7 +8211,7 @@
     "asr_transcript": "Getting inside.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8258,7 +8254,7 @@
     "asr_transcript": "Let's see what they know.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8305,7 +8301,7 @@
     "asr_transcript": "Aw.",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -8360,7 +8356,7 @@
     "asr_transcript": "Ung.",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -8415,7 +8411,7 @@
     "asr_transcript": "Uh, ah!",
     "cer": null
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 12,
    "tempo": 1.0,
@@ -8466,7 +8462,7 @@
     "asr_transcript": "My cover is blown.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8509,7 +8505,7 @@
     "asr_transcript": "They're onto me.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8552,7 +8548,7 @@
     "asr_transcript": "Blending in",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8595,7 +8591,7 @@
     "asr_transcript": "Nobody will notice.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8638,7 +8634,7 @@
     "asr_transcript": "moving discreetly",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8681,7 +8677,7 @@
     "asr_transcript": "Consider it done.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8724,7 +8720,7 @@
     "asr_transcript": "Yes.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8767,7 +8763,7 @@
     "asr_transcript": "Listening.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8810,7 +8806,7 @@
     "asr_transcript": "Quietly now.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8853,7 +8849,7 @@
     "asr_transcript": "Agent ready.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 0.95,
@@ -8896,7 +8892,7 @@
     "asr_transcript": "Understood.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -8940,7 +8936,7 @@
     "asr_transcript": "Copy that.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -8984,7 +8980,7 @@
     "asr_transcript": "Will do.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9028,7 +9024,7 @@
     "asr_transcript": "Acknowledged.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9072,7 +9068,7 @@
     "asr_transcript": "Right away.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9116,7 +9112,7 @@
     "asr_transcript": "Rolling.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9160,7 +9156,7 @@
     "asr_transcript": "Moving out.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9204,7 +9200,7 @@
     "asr_transcript": "On the way.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9248,7 +9244,7 @@
     "asr_transcript": "On course.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9292,7 +9288,7 @@
     "asr_transcript": "Vehicle ready.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9336,7 +9332,7 @@
     "asr_transcript": "Driver here.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9380,7 +9376,7 @@
     "asr_transcript": "Systems Green.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9424,7 +9420,7 @@
     "asr_transcript": "Awaiting orders.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9468,7 +9464,7 @@
     "asr_transcript": "Standing by.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9952,7 +9948,7 @@
     "asr_transcript": "Engaging",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -9996,7 +9992,7 @@
     "asr_transcript": "Target in sight.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10040,7 +10036,7 @@
     "asr_transcript": "Firing",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10084,7 +10080,7 @@
     "asr_transcript": "Underway",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10128,7 +10124,7 @@
     "asr_transcript": "Setting course",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10172,7 +10168,7 @@
     "asr_transcript": "Heading for the beach.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10216,7 +10212,7 @@
     "asr_transcript": "Full ahead.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10260,7 +10256,7 @@
     "asr_transcript": "Course laid in.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10304,7 +10300,7 @@
     "asr_transcript": "Boat ready.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10348,7 +10344,7 @@
     "asr_transcript": "Helm here.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10392,7 +10388,7 @@
     "asr_transcript": "Ready to load.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,
@@ -10436,7 +10432,7 @@
     "asr_transcript": "Landing craft standing by.",
     "cer": 0.0
    },
-   "side": "shared, Allied side (China, T\u00fcrkiye, Saudi Arabia, Israel)",
+   "side": "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)",
    "synthetic_voice_disclosed": true,
    "takes": 1,
    "tempo": 1.0,

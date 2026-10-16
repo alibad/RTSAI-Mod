@@ -1,0 +1,67 @@
+{
+  "category": "music",
+  "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+  "dit": "acestep-v15-xl-turbo",
+  "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+  "generated": "2026-10-07",
+  "generator": "tools/standalone-music.py",
+  "license": "MIT (code and weights); the output carries no third-party rights",
+  "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+  "lm": "acestep-5Hz-lm-1.7B",
+  "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
+    "crossfade_seconds": 3.31,
+    "input_lufs": -10.96,
+    "input_true_peak": -0.42,
+    "loop_bars": 88.0,
+    "loop_seconds": 145.66,
+    "normalization": "static gain -3.04 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.53,
+    "output_lufs": -14.06,
+    "output_true_peak": -3.82,
+    "source_seconds": 170.0,
+    "wrap_flux_percentile_estimate": 55.5
+  },
+  "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+  "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+  "planner": {
+    "bpm": 145,
+    "caption": null,
+    "duration": 170,
+    "keyscale": "A minor",
+    "timesignature": "4",
+    "vocal_language": null
+  },
+  "prompt": "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant",
+  "raw_take_sha256": "3d339c7813e08d1240627f739f4cd740177906a2dca6922faa931e9b9ee76b2b",
+  "request": {
+    "bpm": "145",
+    "caption": "fast industrial techno instrumental, pounding four-on-the-floor kick, distorted acid bassline, metallic percussion, alarm-like synth leads, intense and triumphant",
+    "duration": "170",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "A minor",
+    "rewrite_caption": "false",
+    "seed": "7410",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+  },
+  "seed": 7410,
+  "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+      "lm": true,
+      "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+  },
+  "sha256": "ad6f6b895df6d7798c7acebbeea329ed013a533e0cd216eb35535ec2d3393ce2",
+  "steps": 8,
+  "theatre": "all",
+  "title": "Final Push"
+}
