@@ -6487,6 +6487,34 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -6550,6 +6578,34 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -6597,6 +6653,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -6738,6 +6810,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -6973,6 +7061,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7157,6 +7261,18 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7533,6 +7649,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7580,6 +7712,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7627,6 +7775,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7674,6 +7838,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7721,6 +7901,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7768,6 +7964,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7846,6 +8058,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7893,6 +8121,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7940,6 +8184,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -7987,6 +8247,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -8034,6 +8310,22 @@
         {
           "id": "korea",
           "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
         }
       ],
       "bindings": {
@@ -8490,6 +8782,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -8576,6 +8880,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -8662,6 +8978,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -8748,6 +9076,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9049,6 +9389,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9092,6 +9444,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9135,6 +9499,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9178,6 +9554,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9221,6 +9609,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9264,6 +9664,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9307,6 +9719,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9350,6 +9774,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9393,6 +9829,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9436,6 +9884,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9479,6 +9939,18 @@
         {
           "id": "russia",
           "name": "Russia"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
         }
       ],
       "bindings": {
@@ -9592,6 +10064,3850 @@
             "speed": 90
           },
           "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2cnrifle": {
+      "mode": "ra2",
+      "actor": "r2cnrifle",
+      "name": "Combined-Arms Rifleman",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2cnrifle",
+          "baseline": {
+            "cost": 170,
+            "health": 115,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2cnrifle",
+          "baseline": {
+            "cost": 170,
+            "health": 115,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2cnportable": {
+      "mode": "ra2",
+      "actor": "r2cnportable",
+      "name": "Portable Missile Team",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2cnportable",
+          "baseline": {
+            "cost": 400,
+            "health": 90,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2cnportable",
+          "baseline": {
+            "cost": 400,
+            "health": 90,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2cnnetwork": {
+      "mode": "ra2",
+      "actor": "r2cnnetwork",
+      "name": "Network Technician",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2cnnetwork",
+          "baseline": {
+            "cost": 550,
+            "health": 85,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2cnnetwork",
+          "baseline": {
+            "cost": 550,
+            "health": 85,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2redspear": {
+      "mode": "ra2",
+      "actor": "r2redspear",
+      "name": "Red Spear",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2redspear",
+          "baseline": {
+            "cost": 1900,
+            "health": 190,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2redspear",
+          "baseline": {
+            "cost": 1900,
+            "health": 190,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2qilin": {
+      "mode": "ra2",
+      "actor": "r2qilin",
+      "name": "Qilin Battle Tank",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2qilin",
+          "baseline": {
+            "cost": 750,
+            "health": 350,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2qilin",
+          "baseline": {
+            "cost": 750,
+            "health": 350,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2zbd": {
+      "mode": "ra2",
+      "actor": "r2zbd",
+      "name": "Sea Dragon IFV",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2zbd",
+          "baseline": {
+            "cost": 850,
+            "health": 300,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2zbd",
+          "baseline": {
+            "cost": 850,
+            "health": 300,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2lynx": {
+      "mode": "ra2",
+      "actor": "r2lynx",
+      "name": "Lynx Command Scout",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2lynx",
+          "baseline": {
+            "cost": 600,
+            "health": 180,
+            "speed": 135
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2lynx",
+          "baseline": {
+            "cost": 600,
+            "health": 180,
+            "speed": 135
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2mantis": {
+      "mode": "ra2",
+      "actor": "r2mantis",
+      "name": "Mantis Air Defense",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2mantis",
+          "baseline": {
+            "cost": 950,
+            "health": 230,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2mantis",
+          "baseline": {
+            "cost": 950,
+            "health": 230,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2phl": {
+      "mode": "ra2",
+      "actor": "r2phl",
+      "name": "Longbow Rocket Artillery",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2phl",
+          "baseline": {
+            "cost": 1500,
+            "health": 220,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2phl",
+          "baseline": {
+            "cost": 1500,
+            "health": 220,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2skyspear": {
+      "mode": "ra2",
+      "actor": "r2skyspear",
+      "name": "Skyspear Interceptor",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2skyspear",
+          "baseline": {
+            "cost": 1700,
+            "health": 200,
+            "speed": 285
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2skyspear",
+          "baseline": {
+            "cost": 1700,
+            "health": 200,
+            "speed": 285
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2cloud": {
+      "mode": "ra2",
+      "actor": "r2cloud",
+      "name": "Cloud Recon Drone",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2cloud",
+          "baseline": {
+            "cost": 1000,
+            "health": 120,
+            "speed": 180
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2cloud",
+          "baseline": {
+            "cost": 1000,
+            "health": 120,
+            "speed": 180
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2crane": {
+      "mode": "ra2",
+      "actor": "r2crane",
+      "name": "Crane Airlift",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2crane",
+          "baseline": {
+            "cost": 1200,
+            "health": 230,
+            "speed": 155
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2crane",
+          "baseline": {
+            "cost": 1200,
+            "health": 230,
+            "speed": 155
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2kunlun": {
+      "mode": "ra2",
+      "actor": "r2kunlun",
+      "name": "Kunlun Landing Ship",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2kunlun",
+          "baseline": {
+            "cost": 1100,
+            "health": 550,
+            "speed": 70
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2kunlun",
+          "baseline": {
+            "cost": 1100,
+            "health": 550,
+            "speed": 70
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2luyang": {
+      "mode": "ra2",
+      "actor": "r2luyang",
+      "name": "Luyang Destroyer",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2luyang",
+          "baseline": {
+            "cost": 1250,
+            "health": 650,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2luyang",
+          "baseline": {
+            "cost": 1250,
+            "health": 650,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2haiying": {
+      "mode": "ra2",
+      "actor": "r2haiying",
+      "name": "Haiying Missile Corvette",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2haiying",
+          "baseline": {
+            "cost": 950,
+            "health": 350,
+            "speed": 130
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2haiying",
+          "baseline": {
+            "cost": 950,
+            "health": 350,
+            "speed": 130
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2jiaolong": {
+      "mode": "ra2",
+      "actor": "r2jiaolong",
+      "name": "Jiaolong Submarine",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2jiaolong",
+          "baseline": {
+            "cost": 1300,
+            "health": 500,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2jiaolong",
+          "baseline": {
+            "cost": 1300,
+            "health": 500,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2haiwang": {
+      "mode": "ra2",
+      "actor": "r2haiwang",
+      "name": "Haiwang Drone Carrier",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2haiwang",
+          "baseline": {
+            "cost": 2400,
+            "health": 850,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2haiwang",
+          "baseline": {
+            "cost": 2400,
+            "health": 850,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2bastion": {
+      "mode": "ra2",
+      "actor": "r2bastion",
+      "name": "Bastion Autocannon",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2bastion",
+          "baseline": {
+            "cost": 650,
+            "health": 500,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2bastion",
+          "baseline": {
+            "cost": 650,
+            "health": 500,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2skyshield": {
+      "mode": "ra2",
+      "actor": "r2skyshield",
+      "name": "Skyshield Battery",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2skyshield",
+          "baseline": {
+            "cost": 1000,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2skyshield",
+          "baseline": {
+            "cost": 1000,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2spectrum": {
+      "mode": "ra2",
+      "actor": "r2spectrum",
+      "name": "Spectrum Relay",
+      "factions": [
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2spectrum",
+          "baseline": {
+            "cost": 1200,
+            "health": 400,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2spectrum",
+          "baseline": {
+            "cost": 1200,
+            "health": 400,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2basij": {
+      "mode": "ra2",
+      "actor": "r2basij",
+      "name": "Basij Rifleman",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2basij",
+          "baseline": {
+            "cost": 90,
+            "health": 105,
+            "speed": 65
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2basij",
+          "baseline": {
+            "cost": 90,
+            "health": 105,
+            "speed": 65
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2toophan": {
+      "mode": "ra2",
+      "actor": "r2toophan",
+      "name": "Toophan AT Team",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2toophan",
+          "baseline": {
+            "cost": 450,
+            "health": 85,
+            "speed": 48
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2toophan",
+          "baseline": {
+            "cost": 450,
+            "health": 85,
+            "speed": 48
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2dronecontrol": {
+      "mode": "ra2",
+      "actor": "r2dronecontrol",
+      "name": "Drone Coordinator",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2dronecontrol",
+          "baseline": {
+            "cost": 550,
+            "health": 100,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2dronecontrol",
+          "baseline": {
+            "cost": 550,
+            "health": 100,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2shadowone": {
+      "mode": "ra2",
+      "actor": "r2shadowone",
+      "name": "Shadow One",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2shadowone",
+          "baseline": {
+            "cost": 1900,
+            "health": 180,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2shadowone",
+          "baseline": {
+            "cost": 1900,
+            "health": 180,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2karrar": {
+      "mode": "ra2",
+      "actor": "r2karrar",
+      "name": "Karrar Battle Tank",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2karrar",
+          "baseline": {
+            "cost": 900,
+            "health": 420,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2karrar",
+          "baseline": {
+            "cost": 900,
+            "health": 420,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2raad": {
+      "mode": "ra2",
+      "actor": "r2raad",
+      "name": "Raad Air Defense",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2raad",
+          "baseline": {
+            "cost": 1000,
+            "health": 260,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2raad",
+          "baseline": {
+            "cost": 1000,
+            "health": 260,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2fajr": {
+      "mode": "ra2",
+      "actor": "r2fajr",
+      "name": "Fajr Rocket Artillery",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2fajr",
+          "baseline": {
+            "cost": 1300,
+            "health": 200,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2fajr",
+          "baseline": {
+            "cost": 1300,
+            "health": 200,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2coast": {
+      "mode": "ra2",
+      "actor": "r2coast",
+      "name": "Coastal Missile Launcher",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2coast",
+          "baseline": {
+            "cost": 1500,
+            "health": 220,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2coast",
+          "baseline": {
+            "cost": 1500,
+            "health": 220,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2mohajer": {
+      "mode": "ra2",
+      "actor": "r2mohajer",
+      "name": "Mohajer Recon Drone",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2mohajer",
+          "baseline": {
+            "cost": 950,
+            "health": 110,
+            "speed": 170
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2mohajer",
+          "baseline": {
+            "cost": 950,
+            "health": 110,
+            "speed": 170
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2loiter": {
+      "mode": "ra2",
+      "actor": "r2loiter",
+      "name": "Loiter Munition",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2loiter",
+          "baseline": {
+            "cost": 500,
+            "health": 70,
+            "speed": 205
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2loiter",
+          "baseline": {
+            "cost": 500,
+            "health": 70,
+            "speed": 205
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2toufan": {
+      "mode": "ra2",
+      "actor": "r2toufan",
+      "name": "Toufan Gunship",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2toufan",
+          "baseline": {
+            "cost": 1450,
+            "health": 220,
+            "speed": 145
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2toufan",
+          "baseline": {
+            "cost": 1450,
+            "health": 220,
+            "speed": 145
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2azar": {
+      "mode": "ra2",
+      "actor": "r2azar",
+      "name": "Azar Strike Aircraft",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2azar",
+          "baseline": {
+            "cost": 2050,
+            "health": 190,
+            "speed": 240
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2azar",
+          "baseline": {
+            "cost": 2050,
+            "health": 190,
+            "speed": 240
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2peykaap": {
+      "mode": "ra2",
+      "actor": "r2peykaap",
+      "name": "Peykaap Missile Craft",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2peykaap",
+          "baseline": {
+            "cost": 750,
+            "health": 260,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2peykaap",
+          "baseline": {
+            "cost": 750,
+            "health": 260,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ghadir": {
+      "mode": "ra2",
+      "actor": "r2ghadir",
+      "name": "Ghadir Submarine",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ghadir",
+          "baseline": {
+            "cost": 1050,
+            "health": 380,
+            "speed": 95
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ghadir",
+          "baseline": {
+            "cost": 1050,
+            "health": 380,
+            "speed": 95
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2irbunker": {
+      "mode": "ra2",
+      "actor": "r2irbunker",
+      "name": "Gun Bunker",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2irbunker",
+          "baseline": {
+            "cost": 450,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2irbunker",
+          "baseline": {
+            "cost": 450,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2iraasite": {
+      "mode": "ra2",
+      "actor": "r2iraasite",
+      "name": "Raad AA Site",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2iraasite",
+          "baseline": {
+            "cost": 950,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2iraasite",
+          "baseline": {
+            "cost": 950,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ircoast": {
+      "mode": "ra2",
+      "actor": "r2ircoast",
+      "name": "Denial Missile Battery",
+      "factions": [
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ircoast",
+          "baseline": {
+            "cost": 1250,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ircoast",
+          "baseline": {
+            "cost": 1250,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2trrifle": {
+      "mode": "ra2",
+      "actor": "r2trrifle",
+      "name": "Mechanized Rifleman",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2trrifle",
+          "baseline": {
+            "cost": 155,
+            "health": 125,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2trrifle",
+          "baseline": {
+            "cost": 155,
+            "health": 125,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2trat": {
+      "mode": "ra2",
+      "actor": "r2trat",
+      "name": "Portable AT Specialist",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2trat",
+          "baseline": {
+            "cost": 400,
+            "health": 100,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2trat",
+          "baseline": {
+            "cost": 400,
+            "health": 100,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2trdroneop": {
+      "mode": "ra2",
+      "actor": "r2trdroneop",
+      "name": "Forward Drone Operator",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2trdroneop",
+          "baseline": {
+            "cost": 550,
+            "health": 90,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2trdroneop",
+          "baseline": {
+            "cost": 550,
+            "health": 90,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2greywolf": {
+      "mode": "ra2",
+      "actor": "r2greywolf",
+      "name": "Grey Wolf",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2greywolf",
+          "baseline": {
+            "cost": 1800,
+            "health": 200,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2greywolf",
+          "baseline": {
+            "cost": 1800,
+            "health": 200,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2aras": {
+      "mode": "ra2",
+      "actor": "r2aras",
+      "name": "Aras-8 Infantry Carrier",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2aras",
+          "baseline": {
+            "cost": 650,
+            "health": 260,
+            "speed": 130
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2aras",
+          "baseline": {
+            "cost": 650,
+            "health": 260,
+            "speed": 130
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2bozkir": {
+      "mode": "ra2",
+      "actor": "r2bozkir",
+      "name": "Bozkir Battle Tank",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2bozkir",
+          "baseline": {
+            "cost": 950,
+            "health": 400,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2bozkir",
+          "baseline": {
+            "cost": 950,
+            "health": 400,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2gokkalkan": {
+      "mode": "ra2",
+      "actor": "r2gokkalkan",
+      "name": "Gokkalkan Air Defense",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2gokkalkan",
+          "baseline": {
+            "cost": 950,
+            "health": 240,
+            "speed": 110
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2gokkalkan",
+          "baseline": {
+            "cost": 950,
+            "health": 240,
+            "speed": 110
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2yildirim": {
+      "mode": "ra2",
+      "actor": "r2yildirim",
+      "name": "Yildirim Howitzer",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2yildirim",
+          "baseline": {
+            "cost": 1200,
+            "health": 220,
+            "speed": 110
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2yildirim",
+          "baseline": {
+            "cost": 1200,
+            "health": 220,
+            "speed": 110
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2deniz": {
+      "mode": "ra2",
+      "actor": "r2deniz",
+      "name": "Deniz Kaplan Amphibious Carrier",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2deniz",
+          "baseline": {
+            "cost": 950,
+            "health": 260,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2deniz",
+          "baseline": {
+            "cost": 950,
+            "health": 260,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2sancak": {
+      "mode": "ra2",
+      "actor": "r2sancak",
+      "name": "Sancak Support Vehicle",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sancak",
+          "baseline": {
+            "cost": 850,
+            "health": 180,
+            "speed": 120
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2sancak",
+          "baseline": {
+            "cost": 850,
+            "health": 180,
+            "speed": 120
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2sahin": {
+      "mode": "ra2",
+      "actor": "r2sahin",
+      "name": "Sahin-X Interceptor",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sahin",
+          "baseline": {
+            "cost": 1800,
+            "health": 220,
+            "speed": 260
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2sahin",
+          "baseline": {
+            "cost": 1800,
+            "health": 220,
+            "speed": 260
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2kuzgun": {
+      "mode": "ra2",
+      "actor": "r2kuzgun",
+      "name": "Kuzgun Recon Drone",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2kuzgun",
+          "baseline": {
+            "cost": 1000,
+            "health": 130,
+            "speed": 180
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2kuzgun",
+          "baseline": {
+            "cost": 1000,
+            "health": 130,
+            "speed": 180
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2turna": {
+      "mode": "ra2",
+      "actor": "r2turna",
+      "name": "Turna-AH Gunship",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2turna",
+          "baseline": {
+            "cost": 1600,
+            "health": 250,
+            "speed": 165
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2turna",
+          "baseline": {
+            "cost": 1600,
+            "health": 250,
+            "speed": 165
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2poyraz": {
+      "mode": "ra2",
+      "actor": "r2poyraz",
+      "name": "Poyraz Patrol Craft",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2poyraz",
+          "baseline": {
+            "cost": 650,
+            "health": 250,
+            "speed": 130
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2poyraz",
+          "baseline": {
+            "cost": 650,
+            "health": 250,
+            "speed": 130
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ege": {
+      "mode": "ra2",
+      "actor": "r2ege",
+      "name": "Ege Missile Corvette",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ege",
+          "baseline": {
+            "cost": 1200,
+            "health": 500,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ege",
+          "baseline": {
+            "cost": 1200,
+            "health": 500,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2marmara": {
+      "mode": "ra2",
+      "actor": "r2marmara",
+      "name": "Marmara Frigate",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2marmara",
+          "baseline": {
+            "cost": 2000,
+            "health": 850,
+            "speed": 70
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2marmara",
+          "baseline": {
+            "cost": 2000,
+            "health": 850,
+            "speed": 70
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hisar": {
+      "mode": "ra2",
+      "actor": "r2hisar",
+      "name": "Hisar Sentry Turret",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hisar",
+          "baseline": {
+            "cost": 550,
+            "health": 450,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2hisar",
+          "baseline": {
+            "cost": 550,
+            "health": 450,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2siper": {
+      "mode": "ra2",
+      "actor": "r2siper",
+      "name": "Siper Air-Defense Battery",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2siper",
+          "baseline": {
+            "cost": 1100,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2siper",
+          "baseline": {
+            "cost": 1100,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2boran": {
+      "mode": "ra2",
+      "actor": "r2boran",
+      "name": "Boran Anti-Armor Turret",
+      "factions": [
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2boran",
+          "baseline": {
+            "cost": 1300,
+            "health": 700,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2boran",
+          "baseline": {
+            "cost": 1300,
+            "health": 700,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2sang": {
+      "mode": "ra2",
+      "actor": "r2sang",
+      "name": "Saudi National Guard",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sang",
+          "baseline": {
+            "cost": 220,
+            "health": 135,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2sang",
+          "baseline": {
+            "cost": 220,
+            "health": 135,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2saat": {
+      "mode": "ra2",
+      "actor": "r2saat",
+      "name": "ATGM Team",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2saat",
+          "baseline": {
+            "cost": 500,
+            "health": 95,
+            "speed": 45
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2saat",
+          "baseline": {
+            "cost": 500,
+            "health": 95,
+            "speed": 45
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2sajtac": {
+      "mode": "ra2",
+      "actor": "r2sajtac",
+      "name": "Saudi JTAC",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sajtac",
+          "baseline": {
+            "cost": 600,
+            "health": 90,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2sajtac",
+          "baseline": {
+            "cost": 600,
+            "health": 90,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2falcon": {
+      "mode": "ra2",
+      "actor": "r2falcon",
+      "name": "Falcon One",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2falcon",
+          "baseline": {
+            "cost": 1900,
+            "health": 190,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2falcon",
+          "baseline": {
+            "cost": 1900,
+            "health": 190,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2m1a2s": {
+      "mode": "ra2",
+      "actor": "r2m1a2s",
+      "name": "M1A2S Battle Tank",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2m1a2s",
+          "baseline": {
+            "cost": 1150,
+            "health": 520,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2m1a2s",
+          "baseline": {
+            "cost": 1150,
+            "health": 520,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2bradley": {
+      "mode": "ra2",
+      "actor": "r2bradley",
+      "name": "Bradley IFV",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2bradley",
+          "baseline": {
+            "cost": 850,
+            "health": 300,
+            "speed": 110
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2bradley",
+          "baseline": {
+            "cost": 850,
+            "health": 300,
+            "speed": 110
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2sads": {
+      "mode": "ra2",
+      "actor": "r2sads",
+      "name": "Mobile Air Defense System",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sads",
+          "baseline": {
+            "cost": 1050,
+            "health": 240,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2sads",
+          "baseline": {
+            "cost": 1050,
+            "health": 240,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2caesar": {
+      "mode": "ra2",
+      "actor": "r2caesar",
+      "name": "CAESAR Howitzer",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2caesar",
+          "baseline": {
+            "cost": 1250,
+            "health": 200,
+            "speed": 115
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2caesar",
+          "baseline": {
+            "cost": 1250,
+            "health": 200,
+            "speed": 115
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2f15sa": {
+      "mode": "ra2",
+      "actor": "r2f15sa",
+      "name": "F-15SA Eagle",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2f15sa",
+          "baseline": {
+            "cost": 2200,
+            "health": 240,
+            "speed": 270
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2f15sa",
+          "baseline": {
+            "cost": 2200,
+            "health": 240,
+            "speed": 270
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2ah64sa": {
+      "mode": "ra2",
+      "actor": "r2ah64sa",
+      "name": "AH-64E Apache",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ah64sa",
+          "baseline": {
+            "cost": 1700,
+            "health": 280,
+            "speed": 150
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2ah64sa",
+          "baseline": {
+            "cost": 1700,
+            "health": 280,
+            "speed": 150
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2sadiq": {
+      "mode": "ra2",
+      "actor": "r2sadiq",
+      "name": "Al Sadiq Fast Interceptor",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sadiq",
+          "baseline": {
+            "cost": 650,
+            "health": 230,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2sadiq",
+          "baseline": {
+            "cost": 650,
+            "health": 230,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2riyadh": {
+      "mode": "ra2",
+      "actor": "r2riyadh",
+      "name": "Al Riyadh Frigate",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2riyadh",
+          "baseline": {
+            "cost": 1850,
+            "health": 700,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2riyadh",
+          "baseline": {
+            "cost": 1850,
+            "health": 700,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2jubail": {
+      "mode": "ra2",
+      "actor": "r2jubail",
+      "name": "Al Jubail Support Ship",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2jubail",
+          "baseline": {
+            "cost": 1500,
+            "health": 800,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2jubail",
+          "baseline": {
+            "cost": 1500,
+            "health": 800,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2saguard": {
+      "mode": "ra2",
+      "actor": "r2saguard",
+      "name": "Guard Tower",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2saguard",
+          "baseline": {
+            "cost": 600,
+            "health": 500,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2saguard",
+          "baseline": {
+            "cost": 600,
+            "health": 500,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2sapatriot": {
+      "mode": "ra2",
+      "actor": "r2sapatriot",
+      "name": "Patriot Battery",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sapatriot",
+          "baseline": {
+            "cost": 1200,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2sapatriot",
+          "baseline": {
+            "cost": 1200,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2satow": {
+      "mode": "ra2",
+      "actor": "r2satow",
+      "name": "TOW Emplacement",
+      "factions": [
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2satow",
+          "baseline": {
+            "cost": 1100,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2satow",
+          "baseline": {
+            "cost": 1100,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ilrifle": {
+      "mode": "ra2",
+      "actor": "r2ilrifle",
+      "name": "Rifle Team",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilrifle",
+          "baseline": {
+            "cost": 220,
+            "health": 135,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilrifle",
+          "baseline": {
+            "cost": 220,
+            "health": 135,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilat": {
+      "mode": "ra2",
+      "actor": "r2ilat",
+      "name": "Anti-Armor Team",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilat",
+          "baseline": {
+            "cost": 550,
+            "health": 95,
+            "speed": 45
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilat",
+          "baseline": {
+            "cost": 550,
+            "health": 95,
+            "speed": 45
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilobserver": {
+      "mode": "ra2",
+      "actor": "r2ilobserver",
+      "name": "Forward Observer",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilobserver",
+          "baseline": {
+            "cost": 600,
+            "health": 90,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilobserver",
+          "baseline": {
+            "cost": 600,
+            "health": 90,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilrecon": {
+      "mode": "ra2",
+      "actor": "r2ilrecon",
+      "name": "Recon Specialist",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilrecon",
+          "baseline": {
+            "cost": 1900,
+            "health": 190,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilrecon",
+          "baseline": {
+            "cost": 1900,
+            "health": 190,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2merkava": {
+      "mode": "ra2",
+      "actor": "r2merkava",
+      "name": "Merkava Battle Tank",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2merkava",
+          "baseline": {
+            "cost": 1400,
+            "health": 580,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2merkava",
+          "baseline": {
+            "cost": 1400,
+            "health": 580,
+            "speed": 80
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2namer": {
+      "mode": "ra2",
+      "actor": "r2namer",
+      "name": "Namer Support Carrier",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2namer",
+          "baseline": {
+            "cost": 1050,
+            "health": 420,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2namer",
+          "baseline": {
+            "cost": 1050,
+            "health": 420,
+            "speed": 85
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilshield": {
+      "mode": "ra2",
+      "actor": "r2ilshield",
+      "name": "Mobile Air Shield",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilshield",
+          "baseline": {
+            "cost": 1050,
+            "health": 240,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilshield",
+          "baseline": {
+            "cost": 1050,
+            "health": 240,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilhowitzer": {
+      "mode": "ra2",
+      "actor": "r2ilhowitzer",
+      "name": "Siege Howitzer",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilhowitzer",
+          "baseline": {
+            "cost": 1250,
+            "health": 200,
+            "speed": 115
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilhowitzer",
+          "baseline": {
+            "cost": 1250,
+            "health": 200,
+            "speed": 115
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilfalcon": {
+      "mode": "ra2",
+      "actor": "r2ilfalcon",
+      "name": "Falcon Multirole Jet",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilfalcon",
+          "baseline": {
+            "cost": 2200,
+            "health": 240,
+            "speed": 270
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2ilfalcon",
+          "baseline": {
+            "cost": 2200,
+            "health": 240,
+            "speed": 270
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2ilgunship": {
+      "mode": "ra2",
+      "actor": "r2ilgunship",
+      "name": "Escort Gunship",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilgunship",
+          "baseline": {
+            "cost": 1700,
+            "health": 280,
+            "speed": 150
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2ilgunship",
+          "baseline": {
+            "cost": 1700,
+            "health": 280,
+            "speed": 150
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2ilpatrol": {
+      "mode": "ra2",
+      "actor": "r2ilpatrol",
+      "name": "Coastal Patrol Craft",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilpatrol",
+          "baseline": {
+            "cost": 650,
+            "health": 230,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilpatrol",
+          "baseline": {
+            "cost": 650,
+            "health": 230,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilfrigate": {
+      "mode": "ra2",
+      "actor": "r2ilfrigate",
+      "name": "Shield Frigate",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilfrigate",
+          "baseline": {
+            "cost": 1850,
+            "health": 700,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ilfrigate",
+          "baseline": {
+            "cost": 1850,
+            "health": 700,
+            "speed": 75
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2iltender": {
+      "mode": "ra2",
+      "actor": "r2iltender",
+      "name": "Fleet Support Tender",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2iltender",
+          "baseline": {
+            "cost": 1500,
+            "health": 800,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2iltender",
+          "baseline": {
+            "cost": 1500,
+            "health": 800,
+            "speed": 55
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ilsentry": {
+      "mode": "ra2",
+      "actor": "r2ilsentry",
+      "name": "Sentry Emplacement",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilsentry",
+          "baseline": {
+            "cost": 600,
+            "health": 500,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ilsentry",
+          "baseline": {
+            "cost": 600,
+            "health": 500,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ilbattery": {
+      "mode": "ra2",
+      "actor": "r2ilbattery",
+      "name": "Interceptor Battery",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilbattery",
+          "baseline": {
+            "cost": 1200,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ilbattery",
+          "baseline": {
+            "cost": 1200,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ilatpost": {
+      "mode": "ra2",
+      "actor": "r2ilatpost",
+      "name": "Anti-Armor Emplacement",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilatpost",
+          "baseline": {
+            "cost": 1100,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ilatpost",
+          "baseline": {
+            "cost": 1100,
+            "health": 650,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ilrelay": {
+      "mode": "ra2",
+      "actor": "r2ilrelay",
+      "name": "Coordination Relay",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilrelay",
+          "baseline": {
+            "cost": 750,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ilrelay",
+          "baseline": {
+            "cost": 750,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ilworkshop": {
+      "mode": "ra2",
+      "actor": "r2ilworkshop",
+      "name": "Field Service Station",
+      "factions": [
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ilworkshop",
+          "baseline": {
+            "cost": 900,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ilworkshop",
+          "baseline": {
+            "cost": 900,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ymr": {
+      "mode": "ra2",
+      "actor": "r2ymr",
+      "name": "Mountain Rifleman",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ymr",
+          "baseline": {
+            "cost": 165,
+            "health": 100,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ymr",
+          "baseline": {
+            "cost": 165,
+            "health": 100,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2yrpg": {
+      "mode": "ra2",
+      "actor": "r2yrpg",
+      "name": "RPG Hunter",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2yrpg",
+          "baseline": {
+            "cost": 350,
+            "health": 95,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2yrpg",
+          "baseline": {
+            "cost": 350,
+            "health": 95,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2yspot": {
+      "mode": "ra2",
+      "actor": "r2yspot",
+      "name": "Drone Spotter",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2yspot",
+          "baseline": {
+            "cost": 525,
+            "health": 90,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2yspot",
+          "baseline": {
+            "cost": 525,
+            "health": 90,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2wadighost": {
+      "mode": "ra2",
+      "actor": "r2wadighost",
+      "name": "Wadi Ghost",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2wadighost",
+          "baseline": {
+            "cost": 1650,
+            "health": 170,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2wadighost",
+          "baseline": {
+            "cost": 1650,
+            "health": 170,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2technical": {
+      "mode": "ra2",
+      "actor": "r2technical",
+      "name": "Armed Technical",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2technical",
+          "baseline": {
+            "cost": 400,
+            "health": 180,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2technical",
+          "baseline": {
+            "cost": 400,
+            "health": 180,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ytechrr": {
+      "mode": "ra2",
+      "actor": "r2ytechrr",
+      "name": "Recoilless Technical",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ytechrr",
+          "baseline": {
+            "cost": 550,
+            "health": 170,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ytechrr",
+          "baseline": {
+            "cost": 550,
+            "health": 170,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2yzu": {
+      "mode": "ra2",
+      "actor": "r2yzu",
+      "name": "ZU-23 Technical",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2yzu",
+          "baseline": {
+            "cost": 600,
+            "health": 190,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2yzu",
+          "baseline": {
+            "cost": 600,
+            "health": 190,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ymlr": {
+      "mode": "ra2",
+      "actor": "r2ymlr",
+      "name": "Mobile Missile Launcher",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ymlr",
+          "baseline": {
+            "cost": 900,
+            "health": 180,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2ymlr",
+          "baseline": {
+            "cost": 900,
+            "health": 180,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2samad": {
+      "mode": "ra2",
+      "actor": "r2samad",
+      "name": "Samad Drone",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2samad",
+          "baseline": {
+            "cost": 700,
+            "health": 90,
+            "speed": 150
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2samad",
+          "baseline": {
+            "cost": 700,
+            "health": 90,
+            "speed": 150
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2sahaab": {
+      "mode": "ra2",
+      "actor": "r2sahaab",
+      "name": "Sahaab USV",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2sahaab",
+          "baseline": {
+            "cost": 300,
+            "health": 90,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2sahaab",
+          "baseline": {
+            "cost": 300,
+            "health": 90,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hodeidah": {
+      "mode": "ra2",
+      "actor": "r2hodeidah",
+      "name": "Hodeidah Missile Craft",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hodeidah",
+          "baseline": {
+            "cost": 1100,
+            "health": 300,
+            "speed": 120
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hodeidah",
+          "baseline": {
+            "cost": 1100,
+            "health": 300,
+            "speed": 120
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2mokha": {
+      "mode": "ra2",
+      "actor": "r2mokha",
+      "name": "Mokha Surveillance Craft",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2mokha",
+          "baseline": {
+            "cost": 900,
+            "health": 280,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2mokha",
+          "baseline": {
+            "cost": 900,
+            "health": 280,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2ybunker": {
+      "mode": "ra2",
+      "actor": "r2ybunker",
+      "name": "Mountain Bunker",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ybunker",
+          "baseline": {
+            "cost": 450,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ybunker",
+          "baseline": {
+            "cost": 450,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2yzunest": {
+      "mode": "ra2",
+      "actor": "r2yzunest",
+      "name": "ZU-23 Nest",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2yzunest",
+          "baseline": {
+            "cost": 800,
+            "health": 450,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2yzunest",
+          "baseline": {
+            "cost": 800,
+            "health": 450,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2ycoastal": {
+      "mode": "ra2",
+      "actor": "r2ycoastal",
+      "name": "Coastal Missile Battery",
+      "factions": [
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2ycoastal",
+          "baseline": {
+            "cost": 1200,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2ycoastal",
+          "baseline": {
+            "cost": 1200,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2hzrifle": {
+      "mode": "ra2",
+      "actor": "r2hzrifle",
+      "name": "Line Fighter",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzrifle",
+          "baseline": {
+            "cost": 300,
+            "health": 130,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzrifle",
+          "baseline": {
+            "cost": 300,
+            "health": 130,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzat": {
+      "mode": "ra2",
+      "actor": "r2hzat",
+      "name": "Ridge Missile Team",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzat",
+          "baseline": {
+            "cost": 500,
+            "health": 120,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzat",
+          "baseline": {
+            "cost": 500,
+            "health": 120,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzfpv": {
+      "mode": "ra2",
+      "actor": "r2hzfpv",
+      "name": "FPV Team",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzfpv",
+          "baseline": {
+            "cost": 500,
+            "health": 110,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzfpv",
+          "baseline": {
+            "cost": 500,
+            "health": 110,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzspotter": {
+      "mode": "ra2",
+      "actor": "r2hzspotter",
+      "name": "Field Spotter",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzspotter",
+          "baseline": {
+            "cost": 450,
+            "health": 115,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzspotter",
+          "baseline": {
+            "cost": 450,
+            "health": 115,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzscout": {
+      "mode": "ra2",
+      "actor": "r2hzscout",
+      "name": "Cedar Scout",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzscout",
+          "baseline": {
+            "cost": 1800,
+            "health": 240,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzscout",
+          "baseline": {
+            "cost": 1800,
+            "health": 240,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hztechnical": {
+      "mode": "ra2",
+      "actor": "r2hztechnical",
+      "name": "Cedar Technical",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hztechnical",
+          "baseline": {
+            "cost": 400,
+            "health": 180,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hztechnical",
+          "baseline": {
+            "cost": 400,
+            "health": 180,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzrecoilless": {
+      "mode": "ra2",
+      "actor": "r2hzrecoilless",
+      "name": "Recoilless Technical",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzrecoilless",
+          "baseline": {
+            "cost": 475,
+            "health": 170,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzrecoilless",
+          "baseline": {
+            "cost": 475,
+            "health": 170,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzescort": {
+      "mode": "ra2",
+      "actor": "r2hzescort",
+      "name": "Escort Gun Truck",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzescort",
+          "baseline": {
+            "cost": 600,
+            "health": 190,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzescort",
+          "baseline": {
+            "cost": 600,
+            "health": 190,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzrail": {
+      "mode": "ra2",
+      "actor": "r2hzrail",
+      "name": "Rail Technical",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzrail",
+          "baseline": {
+            "cost": 450,
+            "health": 140,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzrail",
+          "baseline": {
+            "cost": 450,
+            "health": 140,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzrockets": {
+      "mode": "ra2",
+      "actor": "r2hzrockets",
+      "name": "Mobile Rocket Battery",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzrockets",
+          "baseline": {
+            "cost": 800,
+            "health": 180,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzrockets",
+          "baseline": {
+            "cost": 800,
+            "health": 180,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzdrone": {
+      "mode": "ra2",
+      "actor": "r2hzdrone",
+      "name": "Loiter Drone",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzdrone",
+          "baseline": {
+            "cost": 450,
+            "health": 60,
+            "speed": 190
+          },
+          "speedTrait": "Aircraft"
+        },
+        "ra2-web": {
+          "actor": "r2hzdrone",
+          "baseline": {
+            "cost": 450,
+            "health": 60,
+            "speed": 190
+          },
+          "speedTrait": "Aircraft"
+        }
+      }
+    },
+    "ra2:r2hzskiff": {
+      "mode": "ra2",
+      "actor": "r2hzskiff",
+      "name": "Attack Skiff",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzskiff",
+          "baseline": {
+            "cost": 300,
+            "health": 90,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzskiff",
+          "baseline": {
+            "cost": 300,
+            "health": 90,
+            "speed": 140
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzmissileboat": {
+      "mode": "ra2",
+      "actor": "r2hzmissileboat",
+      "name": "Coastal Missile Boat",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzmissileboat",
+          "baseline": {
+            "cost": 1000,
+            "health": 300,
+            "speed": 120
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzmissileboat",
+          "baseline": {
+            "cost": 1000,
+            "health": 300,
+            "speed": 120
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzsurvey": {
+      "mode": "ra2",
+      "actor": "r2hzsurvey",
+      "name": "Coastal Survey Boat",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzsurvey",
+          "baseline": {
+            "cost": 900,
+            "health": 280,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        },
+        "ra2-web": {
+          "actor": "r2hzsurvey",
+          "baseline": {
+            "cost": 900,
+            "health": 280,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        }
+      }
+    },
+    "ra2:r2hzbunker": {
+      "mode": "ra2",
+      "actor": "r2hzbunker",
+      "name": "Concealed Bunker",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzbunker",
+          "baseline": {
+            "cost": 450,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2hzbunker",
+          "baseline": {
+            "cost": 450,
+            "health": 550,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2hzaanest": {
+      "mode": "ra2",
+      "actor": "r2hzaanest",
+      "name": "Short-Range AA Nest",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzaanest",
+          "baseline": {
+            "cost": 800,
+            "health": 450,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2hzaanest",
+          "baseline": {
+            "cost": 800,
+            "health": 450,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2hzcoastal": {
+      "mode": "ra2",
+      "actor": "r2hzcoastal",
+      "name": "Coastal Missile Emplacement",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzcoastal",
+          "baseline": {
+            "cost": 1000,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2hzcoastal",
+          "baseline": {
+            "cost": 1000,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2hzrelay": {
+      "mode": "ra2",
+      "actor": "r2hzrelay",
+      "name": "Signal Post",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzrelay",
+          "baseline": {
+            "cost": 750,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2hzrelay",
+          "baseline": {
+            "cost": 750,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        }
+      }
+    },
+    "ra2:r2hzworkshop": {
+      "mode": "ra2",
+      "actor": "r2hzworkshop",
+      "name": "Field Workshop",
+      "factions": [
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "r2hzworkshop",
+          "baseline": {
+            "cost": 900,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "ra2-web": {
+          "actor": "r2hzworkshop",
+          "baseline": {
+            "cost": 900,
+            "health": 420,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     }
