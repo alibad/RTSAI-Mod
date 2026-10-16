@@ -199,7 +199,7 @@ ChromeLayout:
 	common|chrome/ingame-chat.yaml
 	common|chrome/ingame-transients.yaml
 	common|chrome/ingame-fmvplayer.yaml
-	common|chrome/ingame-menu.yaml
+	ra2|chrome/ingame-menu.yaml
 	common|chrome/ingame-info.yaml
 	common|chrome/ingame-info-lobby-options.yaml
 	common|chrome/ingame-infoscripterror.yaml

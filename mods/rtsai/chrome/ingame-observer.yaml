@@ -69,6 +69,7 @@ Container@OBSERVER_WIDGETS:
 					Children:
 						LogicKeyListener@SHROUD_KEYHANDLER:
 						Image@FLAG:
+							FitToBounds: true
 							Width: 23
 							Height: 23
 							X: 4
@@ -629,6 +630,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 2
 									Y: 2
 									ImageName: random
@@ -716,6 +718,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 2
 									Y: 2
 									ImageName: random
@@ -789,6 +792,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 2
 									Y: 2
 									ImageName: random
@@ -826,6 +830,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 2
 									Y: 2
 									ImageName: random
@@ -863,6 +868,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
@@ -902,6 +908,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 2
 									Y: 2
 									ImageName: random

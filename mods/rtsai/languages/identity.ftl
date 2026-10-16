@@ -13,3 +13,5 @@ label-rtsai-dev-build = development build { $build }
 button-rtsai-profile-link = Link a forum account
 label-rtsai-profile-checking = Checking forum profile...
 label-rtsai-profile-error = Forum profile unavailable
+
+button-rtsai-paused-resume = PAUSED — Click to resume

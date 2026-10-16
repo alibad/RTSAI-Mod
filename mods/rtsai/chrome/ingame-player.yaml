@@ -2,6 +2,14 @@ Container@PLAYER_WIDGETS:
 	Logic: LoadIngameChatLogic
 	Children:
 		Container@CHAT_ROOT:
+		Button@PAUSED_STATUS:
+			Logic: RTSAIPauseStatusLogic
+			X: (WINDOW_WIDTH - 250 - WIDTH) / 2
+			Y: 66
+			Width: 330
+			Height: 42
+			Font: Bold
+			Text: button-rtsai-paused-resume
 		Background@AI_COMPANION_STRIP:
 			Logic: CompanionStatusLogic
 			X: (WINDOW_WIDTH - 250) / 2 - WIDTH / 2

@@ -104,6 +104,7 @@ Container@OBSERVER_WIDGETS:
 					Children:
 						LogicKeyListener@SHROUD_KEYHANDLER:
 						Image@FLAG:
+							FitToBounds: true
 							X: 4
 							Y: 6
 							Width: 32
@@ -700,6 +701,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
@@ -790,6 +792,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
@@ -873,6 +876,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
@@ -913,6 +917,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
@@ -953,6 +958,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
@@ -993,6 +999,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
+									FitToBounds: true
 									X: 5
 									Y: 4
 									Width: 35
