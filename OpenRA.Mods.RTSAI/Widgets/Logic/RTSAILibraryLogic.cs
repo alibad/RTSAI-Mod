@@ -89,7 +89,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		{
 			search = new TextFieldWidget { Id = "COMMUNITY_SEARCH", Text = query, Font = "Regular", MaxLength = 80 };
 			search.OnTextEdited = () => { query = search.Text; Refilter(); };
-			surface.Place(search, 80, 260, 700, 55);
+			surface.Place(search, 210, 260, 570, 55);
 			foreach (var (name, x) in new[] { ("All", 80), ("Complete games", 320), ("Add-ons", 560) })
 			{
 				var value = name;
@@ -246,6 +246,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		{
 			surface.Text(80, 145, "Find your next battlefield.", 64, display: true);
 			surface.Text(80, 225, "Install a complete game, or an add-on for one of yours.", 26, LibrarySurfaceWidget.Muted);
+			surface.Text(80, 274, "Search", 24, LibrarySurfaceWidget.Muted);
 			var release = CommunityInstall.Releases[selected];
 			if (filter == "Add-ons")
 			{

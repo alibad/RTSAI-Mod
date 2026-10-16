@@ -45,6 +45,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		[ObjectCreator.UseCtor]
 		public RTSAIPackageBrowserLogic(Widget widget, string initialDirectory, Action<string> onSelected, Action onCancel)
 		{
+			widget.Get<LabelWidget>("TITLE").GetText = () => "Import package";
+			widget.Get<LabelWidget>("SUBTITLE").GetText = () => "Choose an official portable game ZIP, or a compatible add-on ZIP or folder. The package is validated before installation.";
 			this.onSelected = onSelected;
 			this.onCancel = onCancel;
 			sourceList = widget.Get<ScrollPanelWidget>("PACK_SOURCES");
