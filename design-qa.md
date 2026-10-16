@@ -22,6 +22,7 @@ Source images are 1672×941. Library/Community native windows are 1443×841; Cus
 2. P1 fixed: duplicate SupportsMapsFrom root keys disabled authored RA2 campaigns. Each manifest now has one compatible map list. Native campaign list is visible in actual-ra2-campaigns.png and recording 11-ra2.mp4.
 3. P2 fixed: Community search was unlabelled. Added Search beside the field, recaptured actual-community.png and repeated full/focused paired comparison. Empty searches now clear selection, detail and the install action; native no-result state was checked separately.
 4. P1 fixed during build acceptance: poster dimensions violated the engine atlas contract. Source pixels are preserved with transparent padding to 2048²; visible regions retain original coordinates. Strict standalone validation and rendered posters pass.
+5. P2 fixed in final input QA: typed search used the small default game font. Text fields now use the same dynamically scaled Frontline face/color and proportional padding as Library controls. The post-fix native empty-result capture is actual-community-empty.png.
 
 No actionable P0/P1/P2 visual issue remains in the checked desktop states. Native adaptations below are intentional design-system/content constraints, not a claim of exact screenshot reproduction.
 

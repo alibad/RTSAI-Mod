@@ -50,6 +50,12 @@ namespace OpenRA.Mods.RTSAI.Widgets
 				var r = pair.Value;
 				pair.Key.Bounds = new WidgetBounds((int)(Origin.X + r.X * Scale), (int)(Origin.Y + r.Y * Scale),
 					(int)(r.Width * Scale), (int)(r.Height * Scale));
+				if (pair.Key is TextFieldWidget field)
+				{
+					field.Font = FontName(24);
+					field.LeftMargin = field.RightMargin = Math.Max(5, (int)(16 * Scale));
+					field.TextColor = Cream;
+				}
 			}
 		}
 		public override void Tick() { Layout(); OnTick(); base.Tick(); }
@@ -61,7 +67,8 @@ namespace OpenRA.Mods.RTSAI.Widgets
 			RenderContent();
 		}
 		public Vector2 Point(float x, float y) => Origin + new Vector2(x, y) * Scale;
-		public SpriteFont FontFor(int size, bool display = false) => Game.Renderer.Fonts[(display ? "FrontlinePlay" : "FrontlineMenu") + Sizes.MinBy(s => Math.Abs(s - size * Scale))];
+		string FontName(int size, bool display = false) => (display ? "FrontlinePlay" : "FrontlineMenu") + Sizes.MinBy(s => Math.Abs(s - size * Scale));
+		public SpriteFont FontFor(int size, bool display = false) => Game.Renderer.Fonts[FontName(size, display)];
 		public void Text(float x, float y, string text, int size = 24, Color? color = null, int width = 0, bool display = false)
 		{
 			var font = FontFor(size, display);
