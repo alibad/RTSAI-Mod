@@ -122,6 +122,7 @@ Rules:
 	ra|rules/map-generators.yaml
 
 	ra2|shared-content/classic-desktop.yaml
+	ra2|unit-overrides/classic-desktop.yaml
 
 Sequences:
 	ra|sequences/ships.yaml

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "revision": "14791e54d6f238abae0c68a162aea778ad46aeafb6321ebc0f563bd5a41d2452",
+  "units": {},
+  "bindingsRevision": "ced418e286bc8aab65d0fccd217d8b5194dc3a4b72fd3542fa08b8436f0fb789",
+  "targets": {
+    "classic-desktop": {
+      "mod": "rtsai-classic-core",
+      "rules": "ra2|unit-overrides/classic-desktop.yaml",
+      "sha256": "aaf3e72ceaf74480392d487c9699fa0c7e8c7eb846a26e0a26df3b158a686ad8"
+    },
+    "classic-web": {
+      "mod": "rtsai-topdown",
+      "rules": "ra2|unit-overrides/classic-web.yaml",
+      "sha256": "aaf3e72ceaf74480392d487c9699fa0c7e8c7eb846a26e0a26df3b158a686ad8"
+    },
+    "ra2-desktop": {
+      "mod": "rtsai-ra2",
+      "rules": "ra2|unit-overrides/ra2-desktop.yaml",
+      "sha256": "aaf3e72ceaf74480392d487c9699fa0c7e8c7eb846a26e0a26df3b158a686ad8"
+    },
+    "ra2-web": {
+      "mod": "rtsai",
+      "rules": "ra2|unit-overrides/ra2-web.yaml",
+      "sha256": "aaf3e72ceaf74480392d487c9699fa0c7e8c7eb846a26e0a26df3b158a686ad8"
+    }
+  }
+}

@@ -123,6 +123,7 @@ Rules:
 	ra2|experience/factions-disabled.yaml
 
 	ra2|shared-content/ra2-web.yaml
+	ra2|unit-overrides/ra2-web.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml

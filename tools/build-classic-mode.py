@@ -82,6 +82,7 @@ def manifest():
     source=re.sub(r'MapFolders:\n.*?(?=\nRules:)', 'MapFolders:\n\tclassic|campaigns/maps: System\n\tclassic|maps: System\n\t~^SupportDir|maps/rtsai-topdown/{DEV_VERSION}: User\n',source,flags=re.S)
     source=source.replace('\tra2|standalone/rules.yaml','\tra2|standalone/rules.yaml\n\tclassic|rules.yaml')
     source=source.replace('ra2|shared-content/ra2-web.yaml', 'ra2|shared-content/classic-web.yaml')
+    source=source.replace('ra2|unit-overrides/ra2-web.yaml', 'ra2|unit-overrides/classic-web.yaml')
     source=source.replace('TileSets:\n\tra2|standalone/tilesets/temperat.yaml','TileSets:\n\tclassic|tileset.yaml')
     source=re.sub(r'MapGrid:\n.*?(?=\nMusic:)', 'MapGrid:\n\tType: Rectangular\n\tEnableDepthBuffer: false\n\tMaximumTerrainHeight: 0\n',source,flags=re.S)
     source=source.replace('FluentMessages:\n','FluentMessages:\n\tclassic|mode.ftl\n')
