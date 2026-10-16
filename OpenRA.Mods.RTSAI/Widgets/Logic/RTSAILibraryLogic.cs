@@ -27,6 +27,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		public RTSAILibraryLogic(LibrarySurfaceWidget widget, ModData modData)
 		{
 			surface = widget; mod = modData;
+			selectedGame = Math.Max(0, Array.FindIndex(NativeGameLibrary.Games, g => g.Id == Game.Settings.GetOrCreate<RTSAILauncherSettings>(null).LastGame));
 			if (Environment.GetEnvironmentVariable("RTSAI_LIBRARY_SCREEN") == "community" || widget.Id == "RTSAI_COMMUNITY") page = "community";
 			Environment.SetEnvironmentVariable("RTSAI_LIBRARY_SCREEN", null);
 			surface.OnBack = () => { if (page != "library") { page = "library"; Build(); } };
@@ -107,12 +108,13 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			var current = CommunityInstall.Releases[selected];
 			var action = surface.Button(mod, "INSTALL", "Check & install", 860, 790, 610, 70, () =>
 			{
+				var chosen = CommunityInstall.Releases[selected];
 				if (installer.Busy) { installer.Cancel(); return; }
-				if (installed[current.Id]) { Try(() => CommunityInstall.Launch(current)); return; }
+				if (installed[chosen.Id]) { Try(() => CommunityInstall.Launch(chosen)); return; }
 				if (!reviewed) { reviewed = true; message = "Official Windows x64 release · includes its compatible engine. Ready to install."; Build(); return; }
-				wasBusy = true; installer.RequestInstall(current);
+				wasBusy = true; installer.RequestInstall(chosen);
 			}, true);
-			action.GetText = () => installer.Busy ? "Pause download" : installed[current.Id] ? "Open " + current.Name : reviewed ? $"Install · {current.Bytes / 1048576d:0} MB" : "Check & install";
+			action.GetText = () => installer.Busy ? "Pause download" : installed[CommunityInstall.Releases[selected].Id] ? "Open " + CommunityInstall.Releases[selected].Name : reviewed ? $"Install · {CommunityInstall.Releases[selected].Bytes / 1048576d:0} MB" : "Check & install";
 			action.IsVisible = () => filter != "Add-ons";
 			surface.Button(mod, "SOURCE_PROJECTS", "Other downloaded projects", 80, 727, 700, 58, () => Go("sources")).Flat = true;
 			surface.Button(mod, "IMPORT", "Import downloaded pack…", 1470, 986, 375, 58, () => Go("import")).Flat = true;
@@ -120,11 +122,29 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			surface.Button(mod, "IMPORT_ADDON", "Import an add-on", 860, 790, 610, 70, () => Go("import"), true).IsVisible = () => filter == "Add-ons";
 			Refilter();
 		}
-		void Refilter() { }
+		void Refilter()
+		{
+			var match = Array.FindIndex(CommunityInstall.Releases, r => r.Name.Contains(query, StringComparison.OrdinalIgnoreCase));
+			if (match >= 0 && !CommunityInstall.Releases[selected].Name.Contains(query, StringComparison.OrdinalIgnoreCase))
+			{
+				selected = match; reviewed = false;
+			}
+		}
 		void Preferences()
 		{
+			var preferences = Game.Settings.GetOrCreate<RTSAILauncherSettings>(null);
 			surface.Button(mod, "OPEN_STORAGE", "Open local storage", 100, 410, 620, 72,
 				() => Try(() => System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(NativeGameLibrary.Root) { UseShellExecute = true })));
+			surface.Button(mod, "OPEN_DOWNLOADS", "Open downloaded packages", 780, 410, 620, 72,
+				() => Try(() =>
+				{
+					var downloads = Path.Combine(NativeGameLibrary.Root, "Downloads"); Directory.CreateDirectory(downloads);
+					System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(downloads) { UseShellExecute = true });
+				}));
+			surface.Button(mod, "KEEP_LIBRARY", preferences.KeepLibraryOpen ? "Keep Library open: ON" : "Keep Library open: OFF", 100, 700, 900, 72, () =>
+			{
+				preferences.KeepLibraryOpen = !preferences.KeepLibraryOpen; Game.Settings.Save(); Build();
+			});
 			surface.Button(mod, "BACK", "Back to Library", 100, 920, 330, 64, () => Go("library"), true);
 		}
 		void Downloads()
@@ -219,7 +239,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				surface.Text(x + 38, 758, i == 2 ? "INSTALLED · EXPERIMENTAL" : "INSTALLED", 22, i == 2 ? LibrarySurfaceWidget.Amber : LibrarySurfaceWidget.Cream);
 				surface.Frame(x, 265, 560, 635, i == selectedGame ? LibrarySurfaceWidget.Amber : LibrarySurfaceWidget.LineColor);
 			}
-			surface.Text(80, 1052, "Language · Downloads · Storage", 18, LibrarySurfaceWidget.Muted);
+			surface.Text(80, 1052, "Downloads · Storage", 18, LibrarySurfaceWidget.Muted);
 			if (!installed.Values.Any(v => v)) surface.Text(618, 948, "Each opens its own menu, campaigns and settings.", 25, LibrarySurfaceWidget.Muted);
 		}
 		void DrawCommunity()
@@ -238,6 +258,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				surface.Text(80, 550, "No games match your search.", 28, LibrarySurfaceWidget.Muted);
 			surface.Image("library-" + release.Art, "landscape", 860, 277, 950, 250);
 			surface.Rect(860, 277, 950, 250, OpenRA.Primitives.Color.FromArgb(75, 5, 10, 12));
+			surface.Text(880, 485, "MENU ILLUSTRATION · NOT GAMEPLAY", 18, LibrarySurfaceWidget.Cream);
 			surface.Text(860, 552, release.Name, 56, display: true);
 			surface.Text(860, 632, release.Description, 28, width: 930);
 			surface.Text(860, 720, $"Complete game · version {release.Version} · {release.Bytes / 1048576d:0} MB · Windows x64", 25, LibrarySurfaceWidget.Muted);

@@ -133,10 +133,15 @@ namespace OpenRA.Mods.RTSAI.Library
 				if (importedArchive == null && !File.Exists(archive))
 					await Download(release, archive, token);
 				Status = "Verifying the official download…";
+				bool valid;
 				await using (var stream = File.OpenRead(archive))
 				{
-					if (stream.Length != release.Bytes || Convert.ToHexString(await SHA256.HashDataAsync(stream, token)).ToLowerInvariant() != release.Sha256)
-						throw new InvalidDataException("The download does not match the official release. Import a fresh official archive to retry.");
+					valid = stream.Length == release.Bytes && Convert.ToHexString(await SHA256.HashDataAsync(stream, token)).ToLowerInvariant() == release.Sha256;
+				}
+				if (!valid)
+				{
+					if (importedArchive == null) File.Move(archive, archive + ".invalid-" + Guid.NewGuid().ToString("N"));
+					throw new InvalidDataException("The archive does not match the official release. Retry to download a fresh copy.");
 				}
 				Status = "Installing the game and its compatible engine…";
 				Publish(true);

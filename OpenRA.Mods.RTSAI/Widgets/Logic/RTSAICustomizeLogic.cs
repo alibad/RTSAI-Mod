@@ -16,6 +16,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 	{
 		public bool HasSavedCustom;
 		public string Components = "";
+		public bool AssistantConfigured;
+		public bool AssistantEnabled = true;
 	}
 
 	public sealed class RTSAICustomizeLogic : ChromeLogic
@@ -45,9 +47,10 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			custom = Game.Settings.GetOrCreate<RTSAICustomSetup>(null, mod.Manifest.Id);
 			selected = catalog.ActiveComponentIds;
 			customSelection = custom.HasSavedCustom ? custom.Components.Split(',', StringSplitOptions.RemoveEmptyEntries).Where(catalog.Components.ContainsKey).ToImmutableArray() : selected;
-			preset = catalog.UsesCustomComponents ? "Custom" : selected.Length == 0 ? "Original" : "Enhanced";
+			preset = selected.Order().SequenceEqual(OriginalSelection.Order()) ? "Original" : catalog.UsesCustomComponents ? "Custom" : "Enhanced";
 			var options = Game.Settings.GetOrCreate<SkirmishLogic.SkirmishSettings>(null, mod.Manifest.Id).Yaml.Build().NodeWithKeyOrDefault("Options");
 			assistant = options?.Value.NodeWithKeyOrDefault("rtsai-cocommander")?.Value.Value != "False";
+			if (custom.AssistantConfigured) assistant = custom.AssistantEnabled;
 			components = catalog.Components.Values.Where(c => c.IsSelectable && c.Kind != ExperienceComponentKind.Authoring)
 				.OrderBy(c => c.Kind == ExperienceComponentKind.Faction ? 1 : 0).ThenBy(c => c.Title).ToArray();
 			detail = components.FirstOrDefault(c => c.Id == "minefield-generator")?.Id ?? components.FirstOrDefault()?.Id;
@@ -134,6 +137,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			settings.UseCustomComponents = preset == "Custom" || (preset == "Original" && mod.Manifest.Id == "rtsai");
 			settings.EnabledComponents = settings.UseCustomComponents ? string.Join(",", selected.Order()) : "";
 			if (preset == "Custom") { custom.HasSavedCustom = true; custom.Components = settings.EnabledComponents; }
+			custom.AssistantConfigured = true; custom.AssistantEnabled = assistant;
 			var skirmish = Game.Settings.GetOrCreate<SkirmishLogic.SkirmishSettings>(null, mod.Manifest.Id);
 			var options = skirmish.Yaml.Nodes.FirstOrDefault(n => n.Key == "Options");
 			if (options == null) { options = new MiniYamlNodeBuilder("Options", new MiniYamlBuilder((string)null)); skirmish.Yaml.Nodes.Add(options); }

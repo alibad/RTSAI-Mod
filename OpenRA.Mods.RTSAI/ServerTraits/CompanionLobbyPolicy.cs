@@ -12,6 +12,7 @@
 using System;
 using System.Linq;
 using OpenRA.Mods.RTSAI.Traits;
+using OpenRA.Mods.RTSAI.Widgets.Logic;
 using OpenRA.Network;
 using OpenRA.Server;
 using S = OpenRA.Server.Server;
@@ -56,6 +57,11 @@ namespace OpenRA.Mods.RTSAI.Server
 					return;
 
 				var desired = DefaultFor(server.LobbyInfo.NonBotClients.Count());
+				if (server.LobbyInfo.NonBotClients.Count() < 2 && Game.Settings != null)
+				{
+					var setup = Game.Settings.GetOrCreate<RTSAICustomSetup>(null, server.ModData.Manifest.Id);
+					if (setup.AssistantConfigured) desired = setup.AssistantEnabled.ToString();
+				}
 				if (option.Value == desired)
 					return;
 

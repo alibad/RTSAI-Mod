@@ -7,6 +7,12 @@ using System.Text.Json;
 namespace OpenRA.Mods.RTSAI.Library
 {
 	public sealed record LibraryGame(string Id, string Name, string Subtitle, string Art);
+	[SettingsModule.YamlNode("RTSAILauncher", shared: true)]
+	public sealed class RTSAILauncherSettings : SettingsModule
+	{
+		public bool KeepLibraryOpen;
+		public string LastGame = "rtsai-ra2";
+	}
 
 	public static class NativeGameLibrary
 	{
@@ -26,10 +32,11 @@ namespace OpenRA.Mods.RTSAI.Library
 			var target = GameDirectory(id);
 			Directory.CreateDirectory(target);
 			var settings = Path.Combine(target, "settings.yaml");
-			if (!File.Exists(settings))
+			var receipt = Path.Combine(target, "migration.json");
+			if (!File.Exists(receipt))
 			{
 				var previous = Path.Combine(Root, "settings.yaml");
-				if (File.Exists(previous))
+				if (File.Exists(previous) && !File.Exists(settings))
 					File.Copy(previous, settings);
 				foreach (var kind in new[] { "Saves", "Replays", "maps", "ExperiencePacks" })
 				{
@@ -41,7 +48,7 @@ namespace OpenRA.Mods.RTSAI.Library
 					var legacyMaps = Path.Combine(Root, "maps", "ra");
 					if (Directory.Exists(legacyMaps)) CopyDirectory(legacyMaps, Path.Combine(target, "maps", "ra"));
 				}
-				File.WriteAllText(Path.Combine(target, "migration.json"), JsonSerializer.Serialize(new
+				File.WriteAllText(receipt, JsonSerializer.Serialize(new
 				{
 					source = previous, game = id, createdUtc = DateTime.UtcNow, originalPreserved = true
 				}));
@@ -57,7 +64,10 @@ namespace OpenRA.Mods.RTSAI.Library
 		{
 			Directory.CreateDirectory(destination);
 			foreach (var file in Directory.EnumerateFiles(source))
-				File.Copy(file, Path.Combine(destination, Path.GetFileName(file)), false);
+			{
+				var target = Path.Combine(destination, Path.GetFileName(file));
+				if (!File.Exists(target)) File.Copy(file, target, false);
+			}
 			foreach (var directory in Directory.EnumerateDirectories(source))
 			{
 				if ((File.GetAttributes(directory) & FileAttributes.ReparsePoint) != 0)
@@ -71,6 +81,12 @@ namespace OpenRA.Mods.RTSAI.Library
 			if (id != Hub && !Games.Any(g => g.Id == id))
 				throw new ArgumentException("Unknown game.", nameof(id));
 			Prepare(id);
+			if (Game.ModData.Manifest.Id == Hub && id != Hub)
+			{
+				var preferences = Game.Settings.GetOrCreate<RTSAILauncherSettings>(null);
+				preferences.LastGame = id;
+				exitCurrent &= !preferences.KeepLibraryOpen;
+			}
 			Game.Settings.Save();
 			var info = new ProcessStartInfo(Path.Combine(Platform.EngineDir, "bin", "OpenRA.exe"))
 			{

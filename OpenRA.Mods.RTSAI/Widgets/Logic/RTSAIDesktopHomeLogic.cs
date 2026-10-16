@@ -83,7 +83,13 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 					Game.RunAfterTick(() => Game.InitializeMod(Game.Mods[Game.ModData.Manifest.Id], new Arguments()));
 					return;
 				}
-				catch (Exception e) { Console.WriteLine("RTSAI_IMPORT_ERROR|" + e.Message); }
+				catch (Exception e)
+				{
+					Console.WriteLine("RTSAI_IMPORT_ERROR|" + e.Message);
+					Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(world, "Import failed", e.Message,
+						confirmText: "OK", onConfirm: () => { }));
+					return;
+				}
 			}
 			var libraryScreen = Environment.GetEnvironmentVariable("RTSAI_LIBRARY_SCREEN");
 			Environment.SetEnvironmentVariable("RTSAI_LIBRARY_SCREEN", null);

@@ -65,8 +65,14 @@ namespace OpenRA.Mods.RTSAI.LoadScreens
 
 		public override void StartGame(Arguments args)
 		{
+			if (Library.NativeDisplayRestart.HasPending && Environment.GetEnvironmentVariable("RTSAI_LIBRARY_SCREEN") != "display-confirm")
+			{
+				Library.NativeDisplayRestart.Revert();
+				return;
+			}
 			// Before the first world: the companion bridge reads the ports chosen here.
-			CompanionHost.Initialize(Game.ModData);
+			if (Game.ModData.Manifest.Id != "rtsai-library")
+				CompanionHost.Initialize(Game.ModData);
 			base.StartGame(args);
 		}
 
