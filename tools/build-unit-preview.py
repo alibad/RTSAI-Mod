@@ -158,12 +158,21 @@ def build(web_root, log):
     run('node', web_root / 'scripts/sync-shared-content.mjs', cwd=web_root)
     run('node', '--import', 'tsx', web_root / 'scripts/export-viewer-data.mts', frontend / 'web/public/viewer', cwd=web_root)
     run('node', game / 'web/node_modules/vite/bin/vite.js', 'build', '--outDir', out / 'web', cwd=frontend / 'web', env={**os.environ, 'RTSAI_SITE_ROOT': str(web_root)})
-    with socket.socket() as sock:
+    names = ['RTSAI_WEBGAME_PORT', 'RTSAI_WEB_COMPANION_GRPC', 'RTSAI_WEB_COMPANION_PORT', 'RTSAI_WEB_MOCK_AI_PORT', 'RTSAI_WEB_LOCAL_AI_PORT']
+    ports, reservations = {}, []
+    for name in names:
+        sock = socket.socket()
         sock.bind(('127.0.0.1', 0))
-        port = sock.getsockname()[1]
+        ports[name] = str(sock.getsockname()[1])
+        reservations.append(sock)
+    port = int(ports['RTSAI_WEBGAME_PORT'])
+    for sock in reservations:
+        sock.close()
     server_log = (out / 'web-server.log').open('w')
     server = subprocess.Popen(['node', str(game / 'server/serve.mjs')], cwd=game,
-        env={**os.environ, 'RTSAI_WEBGAME_PORT': str(port), 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(out / 'web'), 'RTSAI_WEB_SCRATCH': str(out / 'web-scratch')},
+        env={**os.environ, **ports, 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(out / 'web'), 'RTSAI_WEB_SCRATCH': str(out / 'web-scratch'),
+             'RTSAI_WEB_BUILD': str(out / 'native-host'), 'RTSAI_WEB_CLASSIC_MOD': 'rtsai-classic-core',
+             'RTSAI_MAP_MOD_ROOT': str(ROOT), 'RTSAI_MAP_OUTPUT_ROOT': str(out / 'workshop-maps')},
         stdout=server_log, stderr=server_log, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     import time
     import urllib.request
