@@ -89,6 +89,15 @@ def build(web_root, log):
     snapshot.mkdir()
     link(native / 'mods', snapshot / 'mods')
     runtime_source = seed / 'browser/runtime'
+    latest = web_root / '.cache/unit-preview-latest.json'
+    if latest.is_file():
+        previous = json.loads(latest.read_text())
+        previous_host = previous.get('browserHostCommit')
+        runtime_changed = subprocess.run(['git', '-C', str(game), 'diff', '--quiet', previous_host or host_commit, 'HEAD', '--',
+            'sim/OpenRA.WebSim', 'sim/OpenRA.WebSim.Browser', 'sim/OpenRA.Mods.RTSAI', 'sim/OpenRA.Mods.RA2']).returncode != 0
+        candidate = Path(previous.get('runtime', str(seed / 'missing')))
+        if previous.get('engineCommit') == config['engineCommit'] and previous_host and candidate.is_dir() and not runtime_changed:
+            runtime_source, host_commit, rebuild_runtime = candidate, previous_host, False
     if rebuild_runtime:
         host = out / 'host'
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', host,
@@ -99,7 +108,7 @@ def build(web_root, log):
             run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', code,
                 '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
         browser_engine = out / 'browser-engine'
-        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', engine_source, '--out', browser_engine, '--committed')
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'engine', '--repo', engine_source, '--out', browser_engine, '--commit', config['engineCommit'])
         (browser_engine / 'VERSION').write_text(config['engineCommit'] + '\n')
         dotnet = Path.home() / '.dotnet/dotnet.exe' if os.name == 'nt' else 'dotnet'
         runtime_source = out / 'runtime'
@@ -119,7 +128,7 @@ def build(web_root, log):
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', out / 'mod-code',
             '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
     if not (out / 'browser-engine').exists():
-        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', engine_source, '--out', out / 'browser-engine', '--committed')
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'engine', '--repo', engine_source, '--out', out / 'browser-engine', '--commit', config['engineCommit'])
     run('dotnet', 'build', out / 'host/sim/OpenRA.WebSim.Native/OpenRA.WebSim.Native.csproj', '-c', 'Release',
         '-p:WebProfile=public', f'-p:EngineRoot={(out / "browser-engine").as_posix()}/',
         f'-p:ModRoot={(out / "mod-code").as_posix()}/', f'-p:WebBuildRoot={(out / "native-host").as_posix()}/')
@@ -171,7 +180,7 @@ def build(web_root, log):
     receipt = {'revision': content['revision'], 'native': str(native), 'support': config['supportDirectory'],
                'webUrl': f'http://127.0.0.1:{port}/', 'webPid': server.pid, 'sourceCommit': git('rev-parse', 'HEAD'),
                'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
-               'browserHostCommit': host_commit, 'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
+               'runtime': str(runtime_source), 'browserHostCommit': host_commit, 'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
                'scope': 'RA2 and recovered Classic desktop/web; all Studio roster units; installed Classic inputs remain local'}
     unit.atomic(out / 'receipt.json', json.dumps(receipt, indent=2) + '\n')
     unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
