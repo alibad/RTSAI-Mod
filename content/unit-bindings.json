@@ -64,6 +64,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "E1",
+          "baseline": {
+            "cost": 100,
+            "health": 5000,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -130,6 +139,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "E3",
+          "baseline": {
+            "cost": 300,
+            "health": 4500,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -169,6 +187,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MEDI",
+          "baseline": {
+            "cost": 200,
+            "health": 6000,
+            "speed": 49
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "MEDI",
           "baseline": {
             "cost": 200,
@@ -244,11 +271,11 @@
           "speedTrait": "Mobile"
         },
         "classic-web": {
-          "actor": "engineer",
+          "actor": "E6",
           "baseline": {
-            "cost": 500,
-            "health": 75,
-            "speed": 60
+            "cost": 400,
+            "health": 2500,
+            "speed": 54
           },
           "speedTrait": "Mobile"
         }
@@ -290,6 +317,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SPY",
+          "baseline": {
+            "cost": 500,
+            "health": 2500,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "SPY",
           "baseline": {
             "cost": 500,
@@ -343,6 +379,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SPY.England",
+          "baseline": {
+            "cost": 250,
+            "health": 2500,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -389,6 +434,15 @@
             "speed": 49
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "MECH",
+          "baseline": {
+            "cost": 500,
+            "health": 8000,
+            "speed": 49
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -428,6 +482,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "E7",
+          "baseline": {
+            "cost": 1800,
+            "health": 10000,
+            "speed": 68
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "E7",
           "baseline": {
             "cost": 1800,
@@ -501,6 +564,15 @@
             "speed": 72
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HARV",
+          "baseline": {
+            "cost": 1100,
+            "health": 60000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -560,6 +632,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "1TNK",
+          "baseline": {
+            "cost": 700,
+            "health": 23000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "1TNK",
           "baseline": {
             "cost": 700,
@@ -633,6 +714,15 @@
             "speed": 128
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "APC",
+          "baseline": {
+            "cost": 850,
+            "health": 35000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -692,6 +782,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FTRK",
+          "baseline": {
+            "cost": 600,
+            "health": 15000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "FTRK",
           "baseline": {
             "cost": 600,
@@ -765,6 +864,15 @@
             "speed": 164
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "JEEP",
+          "baseline": {
+            "cost": 500,
+            "health": 15000,
+            "speed": 164
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -824,6 +932,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MCV",
+          "baseline": {
+            "cost": 2000,
+            "health": 60000,
+            "speed": 60
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "MCV",
           "baseline": {
             "cost": 2000,
@@ -897,6 +1014,15 @@
             "speed": 72
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "2TNK",
+          "baseline": {
+            "cost": 850,
+            "health": 46000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -956,6 +1082,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "3TNK",
+          "baseline": {
+            "cost": 1150,
+            "health": 60000,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "3TNK",
           "baseline": {
             "cost": 1150,
@@ -1029,6 +1164,15 @@
             "speed": 72
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ARTY",
+          "baseline": {
+            "cost": 850,
+            "health": 10000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1088,6 +1232,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "V2RL",
+          "baseline": {
+            "cost": 900,
+            "health": 20000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "V2RL",
           "baseline": {
             "cost": 900,
@@ -1161,6 +1314,15 @@
             "speed": 113
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "MNLY",
+          "baseline": {
+            "cost": 800,
+            "health": 30000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1200,6 +1362,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MRJ",
+          "baseline": {
+            "cost": 1000,
+            "health": 22000,
+            "speed": 68
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "MRJ",
           "baseline": {
             "cost": 1000,
@@ -1253,6 +1424,15 @@
             "speed": 86
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "CTNK",
+          "baseline": {
+            "cost": 1350,
+            "health": 40000,
+            "speed": 86
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1299,6 +1479,15 @@
             "speed": 72
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "MGG",
+          "baseline": {
+            "cost": 1000,
+            "health": 22000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1338,6 +1527,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "STNK",
+          "baseline": {
+            "cost": 1000,
+            "health": 35000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "STNK",
           "baseline": {
             "cost": 1000,
@@ -1411,6 +1609,15 @@
             "speed": 113
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "TRUK",
+          "baseline": {
+            "cost": 500,
+            "health": 11000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1450,6 +1657,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "TRAN",
+          "baseline": {
+            "cost": 900,
+            "health": 14000,
+            "speed": 128
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "TRAN",
           "baseline": {
             "cost": 900,
@@ -1503,6 +1719,15 @@
             "speed": 112
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "MH60",
+          "baseline": {
+            "cost": 1500,
+            "health": 10000,
+            "speed": 112
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -1542,6 +1767,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HELI",
+          "baseline": {
+            "cost": 2000,
+            "health": 12000,
+            "speed": 149
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "HELI",
           "baseline": {
             "cost": 2000,
@@ -1615,6 +1849,15 @@
             "speed": 115
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "LST",
+          "baseline": {
+            "cost": 500,
+            "health": 40000,
+            "speed": 115
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1654,6 +1897,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "PT",
+          "baseline": {
+            "cost": 500,
+            "health": 20000,
+            "speed": 142
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "PT",
           "baseline": {
             "cost": 500,
@@ -1707,6 +1959,15 @@
             "speed": 92
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "DD",
+          "baseline": {
+            "cost": 1000,
+            "health": 40000,
+            "speed": 92
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -1746,6 +2007,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CA",
+          "baseline": {
+            "cost": 2400,
+            "health": 80000,
+            "speed": 44
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CA",
           "baseline": {
             "cost": 2400,
@@ -1799,6 +2069,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "PBOX",
+          "baseline": {
+            "cost": 600,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -1838,6 +2117,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HBOX",
+          "baseline": {
+            "cost": 750,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "HBOX",
           "baseline": {
             "cost": 750,
@@ -1891,6 +2179,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "GUN",
+          "baseline": {
+            "cost": 800,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -1930,6 +2227,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "AGUN",
+          "baseline": {
+            "cost": 800,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "AGUN",
           "baseline": {
             "cost": 800,
@@ -2003,6 +2309,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "POWR",
+          "baseline": {
+            "cost": 300,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2049,6 +2364,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "SBAG",
+          "baseline": {
+            "cost": 30,
+            "health": 15000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2088,6 +2412,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "TENT",
+          "baseline": {
+            "cost": 500,
+            "health": 60000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "TENT",
           "baseline": {
             "cost": 500,
@@ -2161,6 +2494,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "BRIK",
+          "baseline": {
+            "cost": 200,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2227,6 +2569,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "SILO",
+          "baseline": {
+            "cost": 150,
+            "health": 30000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2266,6 +2617,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SYRD",
+          "baseline": {
+            "cost": 1000,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "SYRD",
           "baseline": {
             "cost": 1000,
@@ -2339,6 +2699,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "PROC",
+          "baseline": {
+            "cost": 1400,
+            "health": 90000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2398,6 +2767,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "WEAP",
+          "baseline": {
+            "cost": 2000,
+            "health": 150000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "WEAP",
           "baseline": {
             "cost": 2000,
@@ -2471,6 +2849,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "DOME",
+          "baseline": {
+            "cost": 1500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2530,6 +2917,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FIX",
+          "baseline": {
+            "cost": 1200,
+            "health": 80000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "FIX",
           "baseline": {
             "cost": 1200,
@@ -2603,6 +2999,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "APWR",
+          "baseline": {
+            "cost": 500,
+            "health": 70000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2642,6 +3047,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "GAP",
+          "baseline": {
+            "cost": 800,
+            "health": 50000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "GAP",
           "baseline": {
             "cost": 800,
@@ -2695,6 +3109,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "HPAD",
+          "baseline": {
+            "cost": 500,
+            "health": 80000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2741,6 +3164,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "PDOX",
+          "baseline": {
+            "cost": 1500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2780,6 +3212,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ATEK",
+          "baseline": {
+            "cost": 1500,
+            "health": 60000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "ATEK",
           "baseline": {
             "cost": 1500,
@@ -2853,6 +3294,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "MSLO",
+          "baseline": {
+            "cost": 2500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2868,6 +3318,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FPWR",
+          "baseline": {
+            "cost": 30,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "FPWR",
           "baseline": {
             "cost": 30,
@@ -2897,6 +3356,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "TENF",
+          "baseline": {
+            "cost": 50,
+            "health": 60000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2912,6 +3380,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SYRF",
+          "baseline": {
+            "cost": 100,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "SYRF",
           "baseline": {
             "cost": 100,
@@ -2941,6 +3418,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "WEAF",
+          "baseline": {
+            "cost": 200,
+            "health": 150000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -2956,6 +3442,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "DOMF",
+          "baseline": {
+            "cost": 180,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "DOMF",
           "baseline": {
             "cost": 180,
@@ -2985,6 +3480,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "FIXF",
+          "baseline": {
+            "cost": 120,
+            "health": 80000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3000,6 +3504,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FAPW",
+          "baseline": {
+            "cost": 50,
+            "health": 70000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "FAPW",
           "baseline": {
             "cost": 50,
@@ -3029,6 +3542,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "ATEF",
+          "baseline": {
+            "cost": 150,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3044,6 +3566,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "PDOF",
+          "baseline": {
+            "cost": 150,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "PDOF",
           "baseline": {
             "cost": 150,
@@ -3073,6 +3604,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "MSLF",
+          "baseline": {
+            "cost": 250,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3088,6 +3628,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FACF",
+          "baseline": {
+            "cost": 200,
+            "health": 150000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "FACF",
           "baseline": {
             "cost": 200,
@@ -3133,6 +3682,15 @@
             "speed": 68
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "E2",
+          "baseline": {
+            "cost": 150,
+            "health": 5000,
+            "speed": 68
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -3164,6 +3722,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "DOG",
+          "baseline": {
+            "cost": 200,
+            "health": 1800,
+            "speed": 100
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "DOG",
           "baseline": {
             "cost": 200,
@@ -3209,6 +3776,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "E4",
+          "baseline": {
+            "cost": 300,
+            "health": 4000,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -3240,6 +3816,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "THF",
+          "baseline": {
+            "cost": 500,
+            "health": 8000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "THF",
           "baseline": {
             "cost": 500,
@@ -3285,6 +3870,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SHOK",
+          "baseline": {
+            "cost": 350,
+            "health": 5000,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -3316,6 +3910,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "4TNK",
+          "baseline": {
+            "cost": 2000,
+            "health": 90000,
+            "speed": 43
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "4TNK",
           "baseline": {
             "cost": 2000,
@@ -3361,6 +3964,15 @@
             "speed": 67
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "DTRK",
+          "baseline": {
+            "cost": 2500,
+            "health": 2800,
+            "speed": 67
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -3399,6 +4011,15 @@
             "speed": 92
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "TTNK",
+          "baseline": {
+            "cost": 1350,
+            "health": 40000,
+            "speed": 92
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -3430,6 +4051,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "QTNK",
+          "baseline": {
+            "cost": 2000,
+            "health": 90000,
+            "speed": 46
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "QTNK",
           "baseline": {
             "cost": 2000,
@@ -3483,6 +4113,15 @@
             "speed": 178
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "YAK",
+          "baseline": {
+            "cost": 1350,
+            "health": 6000,
+            "speed": 178
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -3514,6 +4153,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MIG",
+          "baseline": {
+            "cost": 2000,
+            "health": 8000,
+            "speed": 223
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "MIG",
           "baseline": {
             "cost": 2000,
@@ -3559,6 +4207,15 @@
             "speed": 78
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SS",
+          "baseline": {
+            "cost": 950,
+            "health": 25000,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -3590,6 +4247,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MSUB",
+          "baseline": {
+            "cost": 2000,
+            "health": 40000,
+            "speed": 44
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "MSUB",
           "baseline": {
             "cost": 2000,
@@ -3635,6 +4301,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "FTUR",
+          "baseline": {
+            "cost": 600,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3666,6 +4341,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "TSLA",
+          "baseline": {
+            "cost": 1200,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "TSLA",
           "baseline": {
             "cost": 1200,
@@ -3711,6 +4395,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "SAM",
+          "baseline": {
+            "cost": 700,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3742,6 +4435,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FENC",
+          "baseline": {
+            "cost": 30,
+            "health": 15000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "FENC",
           "baseline": {
             "cost": 30,
@@ -3787,6 +4489,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "BARR",
+          "baseline": {
+            "cost": 500,
+            "health": 60000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3818,6 +4529,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SPEN",
+          "baseline": {
+            "cost": 800,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "SPEN",
           "baseline": {
             "cost": 800,
@@ -3863,6 +4583,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "AFLD",
+          "baseline": {
+            "cost": 500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3894,6 +4623,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRON",
+          "baseline": {
+            "cost": 2000,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "IRON",
           "baseline": {
             "cost": 2000,
@@ -3939,6 +4677,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "STEK",
+          "baseline": {
+            "cost": 1500,
+            "health": 80000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3977,6 +4724,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "KENN",
+          "baseline": {
+            "cost": 200,
+            "health": 30000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -3992,6 +4748,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "AFLD.Ukraine",
+          "baseline": {
+            "cost": 500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "AFLD.Ukraine",
           "baseline": {
             "cost": 500,
@@ -4021,6 +4786,15 @@
             "speed": 58
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ILRIFLE",
+          "baseline": {
+            "cost": 180,
+            "health": 7800,
+            "speed": 58
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4036,6 +4810,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILAT",
+          "baseline": {
+            "cost": 575,
+            "health": 4600,
+            "speed": 43
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "ILAT",
           "baseline": {
             "cost": 575,
@@ -4065,6 +4848,15 @@
             "speed": 62
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ILOBSERVER",
+          "baseline": {
+            "cost": 650,
+            "health": 5200,
+            "speed": 62
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4080,6 +4872,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILRECON",
+          "baseline": {
+            "cost": 1900,
+            "health": 11500,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "ILRECON",
           "baseline": {
             "cost": 1900,
@@ -4109,6 +4910,15 @@
             "speed": 128
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "NAMER",
+          "baseline": {
+            "cost": 1050,
+            "health": 42000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4124,6 +4934,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MERKAVA",
+          "baseline": {
+            "cost": 1450,
+            "health": 64000,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "MERKAVA",
           "baseline": {
             "cost": 1450,
@@ -4153,6 +4972,15 @@
             "speed": 113
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ILSHIELD",
+          "baseline": {
+            "cost": 1050,
+            "health": 22000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4168,6 +4996,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILHOWITZER",
+          "baseline": {
+            "cost": 850,
+            "health": 10000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "ILHOWITZER",
           "baseline": {
             "cost": 850,
@@ -4197,6 +5034,15 @@
             "speed": 132
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "ILGUNSHIP",
+          "baseline": {
+            "cost": 1850,
+            "health": 14500,
+            "speed": 132
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -4212,6 +5058,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILFALCON",
+          "baseline": {
+            "cost": 2200,
+            "health": 9000,
+            "speed": 240
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "ILFALCON",
           "baseline": {
             "cost": 2200,
@@ -4241,6 +5096,15 @@
             "speed": 150
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ILPATROL",
+          "baseline": {
+            "cost": 650,
+            "health": 24000,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4256,6 +5120,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILFRIGATE",
+          "baseline": {
+            "cost": 1850,
+            "health": 65000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "ILFRIGATE",
           "baseline": {
             "cost": 1850,
@@ -4285,6 +5158,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ILTENDER",
+          "baseline": {
+            "cost": 1500,
+            "health": 76000,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4300,6 +5182,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILSENTRY",
+          "baseline": {
+            "cost": 600,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "ILSENTRY",
           "baseline": {
             "cost": 600,
@@ -4329,6 +5220,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "ILATPOST",
+          "baseline": {
+            "cost": 800,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -4344,6 +5244,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILBATTERY",
+          "baseline": {
+            "cost": 700,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "ILBATTERY",
           "baseline": {
             "cost": 700,
@@ -4373,6 +5282,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "ILRELAY",
+          "baseline": {
+            "cost": 750,
+            "health": 42000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -4388,6 +5306,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "ILWORKSHOP",
+          "baseline": {
+            "cost": 900,
+            "health": 42000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "ILWORKSHOP",
           "baseline": {
             "cost": 900,
@@ -4417,6 +5344,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "ILAIRFIELD",
+          "baseline": {
+            "cost": 500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -4432,6 +5368,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZRIFLE",
+          "baseline": {
+            "cost": 75,
+            "health": 4200,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "HZRIFLE",
           "baseline": {
             "cost": 75,
@@ -4461,6 +5406,15 @@
             "speed": 61
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HZAT",
+          "baseline": {
+            "cost": 325,
+            "health": 4300,
+            "speed": 61
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4476,6 +5430,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZSPOTTER",
+          "baseline": {
+            "cost": 525,
+            "health": 4500,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "HZSPOTTER",
           "baseline": {
             "cost": 525,
@@ -4505,6 +5468,15 @@
             "speed": 82
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HZSCOUT",
+          "baseline": {
+            "cost": 1650,
+            "health": 9000,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4520,6 +5492,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZRECOILLESS",
+          "baseline": {
+            "cost": 350,
+            "health": 10500,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "HZRECOILLESS",
           "baseline": {
             "cost": 350,
@@ -4549,6 +5530,15 @@
             "speed": 145
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HZTECHNICAL",
+          "baseline": {
+            "cost": 350,
+            "health": 10500,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4564,6 +5554,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZESCORT",
+          "baseline": {
+            "cost": 600,
+            "health": 15000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "HZESCORT",
           "baseline": {
             "cost": 600,
@@ -4593,6 +5592,15 @@
             "speed": 88
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HZROCKETS",
+          "baseline": {
+            "cost": 750,
+            "health": 16000,
+            "speed": 88
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4608,6 +5616,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZDRONE",
+          "baseline": {
+            "cost": 700,
+            "health": 3200,
+            "speed": 128
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "HZDRONE",
           "baseline": {
             "cost": 700,
@@ -4637,6 +5654,15 @@
             "speed": 132
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HZSKIFF",
+          "baseline": {
+            "cost": 300,
+            "health": 9000,
+            "speed": 132
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4652,6 +5678,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZMISSILEBOAT",
+          "baseline": {
+            "cost": 1200,
+            "health": 32000,
+            "speed": 118
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "HZMISSILEBOAT",
           "baseline": {
             "cost": 1200,
@@ -4681,6 +5716,15 @@
             "speed": 105
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "HZSURVEY",
+          "baseline": {
+            "cost": 900,
+            "health": 28000,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4696,6 +5740,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZBUNKER",
+          "baseline": {
+            "cost": 750,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "HZBUNKER",
           "baseline": {
             "cost": 750,
@@ -4725,6 +5778,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "HZCOASTAL",
+          "baseline": {
+            "cost": 800,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -4740,6 +5802,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZAANEST",
+          "baseline": {
+            "cost": 700,
+            "health": 40000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "HZAANEST",
           "baseline": {
             "cost": 700,
@@ -4769,6 +5840,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "HZRELAY",
+          "baseline": {
+            "cost": 750,
+            "health": 42000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -4784,6 +5864,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "HZWORKSHOP",
+          "baseline": {
+            "cost": 900,
+            "health": 42000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "HZWORKSHOP",
           "baseline": {
             "cost": 900,
@@ -4813,6 +5902,15 @@
             "speed": 58
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SANG",
+          "baseline": {
+            "cost": 180,
+            "health": 7800,
+            "speed": 58
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4828,6 +5926,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SAAT",
+          "baseline": {
+            "cost": 575,
+            "health": 4600,
+            "speed": 43
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "SAAT",
           "baseline": {
             "cost": 575,
@@ -4857,6 +5964,15 @@
             "speed": 62
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SAJTAC",
+          "baseline": {
+            "cost": 650,
+            "health": 5200,
+            "speed": 62
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4872,6 +5988,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "FALCON1",
+          "baseline": {
+            "cost": 1900,
+            "health": 11500,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "FALCON1",
           "baseline": {
             "cost": 1900,
@@ -4901,6 +6026,15 @@
             "speed": 82
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "M1A2S",
+          "baseline": {
+            "cost": 1250,
+            "health": 52000,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -4916,6 +6050,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SADS",
+          "baseline": {
+            "cost": 1050,
+            "health": 22000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "SADS",
           "baseline": {
             "cost": 1050,
@@ -4945,6 +6088,15 @@
             "speed": 132
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "AH64SA",
+          "baseline": {
+            "cost": 1850,
+            "health": 14500,
+            "speed": 132
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -4960,6 +6112,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "F15SA",
+          "baseline": {
+            "cost": 2200,
+            "health": 9000,
+            "speed": 240
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "F15SA",
           "baseline": {
             "cost": 2200,
@@ -4989,6 +6150,15 @@
             "speed": 150
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SA_INTC",
+          "baseline": {
+            "cost": 650,
+            "health": 24000,
+            "speed": 150
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5004,6 +6174,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SA_FRGT",
+          "baseline": {
+            "cost": 1850,
+            "health": 65000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "SA_FRGT",
           "baseline": {
             "cost": 1850,
@@ -5033,6 +6212,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "SA_FSS",
+          "baseline": {
+            "cost": 1500,
+            "health": 76000,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5048,6 +6236,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SAFLD",
+          "baseline": {
+            "cost": 500,
+            "health": 100000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "SAFLD",
           "baseline": {
             "cost": 500,
@@ -5077,6 +6274,15 @@
             "speed": 66
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "YMR",
+          "baseline": {
+            "cost": 75,
+            "health": 4200,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5092,6 +6298,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "YRPG",
+          "baseline": {
+            "cost": 325,
+            "health": 4300,
+            "speed": 61
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "YRPG",
           "baseline": {
             "cost": 325,
@@ -5121,6 +6336,15 @@
             "speed": 64
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "YSPOT",
+          "baseline": {
+            "cost": 525,
+            "health": 4500,
+            "speed": 64
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5136,6 +6360,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "WADIGHOST",
+          "baseline": {
+            "cost": 1650,
+            "health": 9000,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "WADIGHOST",
           "baseline": {
             "cost": 1650,
@@ -5165,6 +6398,15 @@
             "speed": 145
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "TECH",
+          "baseline": {
+            "cost": 350,
+            "health": 10500,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5180,6 +6422,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "YMLR",
+          "baseline": {
+            "cost": 750,
+            "health": 16000,
+            "speed": 88
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "YMLR",
           "baseline": {
             "cost": 750,
@@ -5209,6 +6460,15 @@
             "speed": 128
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "SAMAD",
+          "baseline": {
+            "cost": 700,
+            "health": 3200,
+            "speed": 128
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -5224,6 +6484,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "YE_USV",
+          "baseline": {
+            "cost": 300,
+            "health": 9000,
+            "speed": 132
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "YE_USV",
           "baseline": {
             "cost": 300,
@@ -5253,6 +6522,15 @@
             "speed": 118
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "YE_MSLC",
+          "baseline": {
+            "cost": 1200,
+            "health": 32000,
+            "speed": 118
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5268,6 +6546,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "YE_SURVE",
+          "baseline": {
+            "cost": 900,
+            "health": 28000,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "YE_SURVE",
           "baseline": {
             "cost": 900,
@@ -5297,6 +6584,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "TRRIFLE",
+          "baseline": {
+            "cost": 140,
+            "health": 6200,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5312,6 +6608,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "TRAT",
+          "baseline": {
+            "cost": 425,
+            "health": 5200,
+            "speed": 58
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "TRAT",
           "baseline": {
             "cost": 425,
@@ -5341,6 +6646,15 @@
             "speed": 52
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "TRDRONEOP",
+          "baseline": {
+            "cost": 550,
+            "health": 4800,
+            "speed": 52
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5356,6 +6670,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "GREYWOLF",
+          "baseline": {
+            "cost": 1900,
+            "health": 10500,
+            "speed": 66
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "GREYWOLF",
           "baseline": {
             "cost": 1900,
@@ -5385,6 +6708,15 @@
             "speed": 132
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "ARAS8",
+          "baseline": {
+            "cost": 900,
+            "health": 37000,
+            "speed": 132
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5400,6 +6732,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "DENIZKAPLAN",
+          "baseline": {
+            "cost": 1050,
+            "health": 39000,
+            "speed": 96
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "DENIZKAPLAN",
           "baseline": {
             "cost": 1050,
@@ -5429,6 +6770,15 @@
             "speed": 104
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "GOKKALKAN",
+          "baseline": {
+            "cost": 1250,
+            "health": 27000,
+            "speed": 104
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5444,6 +6794,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "BOZKIR",
+          "baseline": {
+            "cost": 1400,
+            "health": 57000,
+            "speed": 78
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "BOZKIR",
           "baseline": {
             "cost": 1400,
@@ -5473,6 +6832,15 @@
             "speed": 88
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "YILDIRIM",
+          "baseline": {
+            "cost": 1150,
+            "health": 19000,
+            "speed": 88
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5488,6 +6856,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SANCAK",
+          "baseline": {
+            "cost": 1350,
+            "health": 25000,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "SANCAK",
           "baseline": {
             "cost": 1350,
@@ -5517,6 +6894,15 @@
             "speed": 164
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "KUZGUNM",
+          "baseline": {
+            "cost": 950,
+            "health": 5500,
+            "speed": 164
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -5532,6 +6918,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "TURNAAH",
+          "baseline": {
+            "cost": 1750,
+            "health": 15000,
+            "speed": 138
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "TURNAAH",
           "baseline": {
             "cost": 1750,
@@ -5561,6 +6956,15 @@
             "speed": 250
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "SAHINX",
+          "baseline": {
+            "cost": 2300,
+            "health": 9800,
+            "speed": 250
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -5576,6 +6980,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "POYRAZ",
+          "baseline": {
+            "cost": 500,
+            "health": 12500,
+            "speed": 145
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "POYRAZ",
           "baseline": {
             "cost": 500,
@@ -5605,6 +7018,15 @@
             "speed": 104
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "EGE",
+          "baseline": {
+            "cost": 1050,
+            "health": 33000,
+            "speed": 104
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5620,6 +7042,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "MARMARA",
+          "baseline": {
+            "cost": 2200,
+            "health": 68000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "MARMARA",
           "baseline": {
             "cost": 2200,
@@ -5649,6 +7080,15 @@
             "speed": 58
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "IRBAS",
+          "baseline": {
+            "cost": 70,
+            "health": 3900,
+            "speed": 58
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5664,6 +7104,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRATGM",
+          "baseline": {
+            "cost": 475,
+            "health": 4200,
+            "speed": 46
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "IRATGM",
           "baseline": {
             "cost": 475,
@@ -5693,6 +7142,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "IRDC",
+          "baseline": {
+            "cost": 550,
+            "health": 4800,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5708,6 +7166,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "SHADOWONE",
+          "baseline": {
+            "cost": 1900,
+            "health": 9000,
+            "speed": 74
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "SHADOWONE",
           "baseline": {
             "cost": 1900,
@@ -5737,6 +7204,15 @@
             "speed": 90
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "IRRAAD",
+          "baseline": {
+            "cost": 950,
+            "health": 23000,
+            "speed": 90
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5752,6 +7228,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRKARR",
+          "baseline": {
+            "cost": 1350,
+            "health": 61000,
+            "speed": 65
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "IRKARR",
           "baseline": {
             "cost": 1350,
@@ -5781,6 +7266,15 @@
             "speed": 76
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "IRFAJR",
+          "baseline": {
+            "cost": 1050,
+            "health": 19000,
+            "speed": 76
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5796,6 +7290,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRCOAST",
+          "baseline": {
+            "cost": 1250,
+            "health": 18000,
+            "speed": 70
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "IRCOAST",
           "baseline": {
             "cost": 1250,
@@ -5825,6 +7328,15 @@
             "speed": 136
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "IRLOITER",
+          "baseline": {
+            "cost": 600,
+            "health": 2800,
+            "speed": 136
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -5840,6 +7352,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRMOHAJER",
+          "baseline": {
+            "cost": 850,
+            "health": 4300,
+            "speed": 154
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "IRMOHAJER",
           "baseline": {
             "cost": 850,
@@ -5869,6 +7390,15 @@
             "speed": 132
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "IRTOUFAN",
+          "baseline": {
+            "cost": 1700,
+            "health": 13200,
+            "speed": 132
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -5884,6 +7414,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRAZAR",
+          "baseline": {
+            "cost": 2050,
+            "health": 8500,
+            "speed": 232
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "IRAZAR",
           "baseline": {
             "cost": 2050,
@@ -5913,6 +7452,15 @@
             "speed": 132
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "IRPEY",
+          "baseline": {
+            "cost": 750,
+            "health": 23000,
+            "speed": 132
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -5928,6 +7476,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "IRGHADIR",
+          "baseline": {
+            "cost": 1050,
+            "health": 21000,
+            "speed": 88
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "IRGHADIR",
           "baseline": {
             "cost": 1050,
@@ -5957,6 +7514,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "IRHPAD",
+          "baseline": {
+            "cost": 650,
+            "health": 80000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -5972,6 +7538,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNRIFLE",
+          "baseline": {
+            "cost": 130,
+            "health": 5600,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNRIFLE",
           "baseline": {
             "cost": 130,
@@ -6001,6 +7576,15 @@
             "speed": 54
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "CNPORTABLE",
+          "baseline": {
+            "cost": 360,
+            "health": 4600,
+            "speed": 54
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -6016,6 +7600,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNNETWORK",
+          "baseline": {
+            "cost": 550,
+            "health": 4800,
+            "speed": 52
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNNETWORK",
           "baseline": {
             "cost": 550,
@@ -6045,6 +7638,15 @@
             "speed": 72
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "REDSPEAR",
+          "baseline": {
+            "cost": 1900,
+            "health": 10500,
+            "speed": 72
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -6060,6 +7662,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNLYNX",
+          "baseline": {
+            "cost": 650,
+            "health": 15000,
+            "speed": 132
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNLYNX",
           "baseline": {
             "cost": 650,
@@ -6089,6 +7700,15 @@
             "speed": 105
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "CNZBD",
+          "baseline": {
+            "cost": 1050,
+            "health": 36000,
+            "speed": 105
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -6104,6 +7724,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNMANTIS",
+          "baseline": {
+            "cost": 1000,
+            "health": 32000,
+            "speed": 86
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNMANTIS",
           "baseline": {
             "cost": 1000,
@@ -6133,6 +7762,15 @@
             "speed": 74
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "CNQILIN",
+          "baseline": {
+            "cost": 1200,
+            "health": 54000,
+            "speed": 74
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -6148,6 +7786,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNPHL",
+          "baseline": {
+            "cost": 1450,
+            "health": 18000,
+            "speed": 84
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNPHL",
           "baseline": {
             "cost": 1450,
@@ -6177,6 +7824,15 @@
             "speed": 158
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "CNCLOUD",
+          "baseline": {
+            "cost": 900,
+            "health": 4200,
+            "speed": 158
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -6192,6 +7848,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNCRANE",
+          "baseline": {
+            "cost": 1650,
+            "health": 13200,
+            "speed": 138
+          },
+          "speedTrait": "Aircraft"
+        },
+        "classic-web": {
           "actor": "CNCRANE",
           "baseline": {
             "cost": 1650,
@@ -6221,6 +7886,15 @@
             "speed": 238
           },
           "speedTrait": "Aircraft"
+        },
+        "classic-web": {
+          "actor": "CNSKYSPEAR",
+          "baseline": {
+            "cost": 2250,
+            "health": 9200,
+            "speed": 238
+          },
+          "speedTrait": "Aircraft"
         }
       }
     },
@@ -6236,6 +7910,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNHAIYING",
+          "baseline": {
+            "cost": 650,
+            "health": 21000,
+            "speed": 148
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNHAIYING",
           "baseline": {
             "cost": 650,
@@ -6265,6 +7948,15 @@
             "speed": 82
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "CNKUNLUN",
+          "baseline": {
+            "cost": 1200,
+            "health": 60000,
+            "speed": 82
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -6280,6 +7972,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNJIAOLONG",
+          "baseline": {
+            "cost": 1150,
+            "health": 30000,
+            "speed": 74
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNJIAOLONG",
           "baseline": {
             "cost": 1150,
@@ -6309,6 +8010,15 @@
             "speed": 88
           },
           "speedTrait": "Mobile"
+        },
+        "classic-web": {
+          "actor": "CNLUYANG",
+          "baseline": {
+            "cost": 1500,
+            "health": 52000,
+            "speed": 88
+          },
+          "speedTrait": "Mobile"
         }
       }
     },
@@ -6324,6 +8034,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNHAIWANG",
+          "baseline": {
+            "cost": 2800,
+            "health": 88000,
+            "speed": 48
+          },
+          "speedTrait": "Mobile"
+        },
+        "classic-web": {
           "actor": "CNHAIWANG",
           "baseline": {
             "cost": 2800,
@@ -6353,6 +8072,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "CNBASTION",
+          "baseline": {
+            "cost": 750,
+            "health": 43000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -6375,6 +8103,15 @@
             "speed": null
           },
           "speedTrait": null
+        },
+        "classic-web": {
+          "actor": "CNSKYSHIELD",
+          "baseline": {
+            "cost": 900,
+            "health": 38000,
+            "speed": null
+          },
+          "speedTrait": null
         }
       }
     },
@@ -6390,6 +8127,15 @@
       ],
       "bindings": {
         "classic-desktop": {
+          "actor": "CNSPECTRUM",
+          "baseline": {
+            "cost": 1100,
+            "health": 34000,
+            "speed": null
+          },
+          "speedTrait": null
+        },
+        "classic-web": {
           "actor": "CNSPECTRUM",
           "baseline": {
             "cost": 1100,

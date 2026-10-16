@@ -110,19 +110,35 @@ def build(web_root, log):
         run('node', game / 'tools/stamp-runtime.mjs', framework)
         run('node', game / 'tools/verify-runtime.mjs', framework)
     data = out / 'data'
+    # The recovered Classic packer and the browser must use the same committed host.
+    if not (out / 'host').exists():
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', out / 'host',
+            '--include', 'sim', '--include', 'tools', '--include', 'Directory.Build.props', '--committed')
+    if not (out / 'mod-code').exists():
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', out / 'mod-code',
+            '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
+    if not (out / 'browser-engine').exists():
+        shutil.copytree(seed / 'inputs/engine', out / 'browser-engine')
+    run('dotnet', 'build', out / 'host/sim/OpenRA.WebSim.Native/OpenRA.WebSim.Native.csproj', '-c', 'Release',
+        '-p:WebProfile=public', f'-p:EngineRoot={(out / "browser-engine").as_posix()}/',
+        f'-p:ModRoot={(out / "mod-code").as_posix()}/', f'-p:WebBuildRoot={(out / "native-host").as_posix()}/')
+    runner = out / 'native-host/bin/OpenRA.WebSim.Native-public/Release/net10.0/websim.dll'
     for mode, profile, folder in [('isometric', 'public', 'isometric'), ('classic', 'public-classic', 'classic')]:
         seed_mode = seed / folder
-        runner = seed_mode / 'bin/OpenRA.WebSim.Native-public/Release/net10.0/websim.dll'
         target = data / profile
         target.mkdir(parents=True)
+        pack_mode = 'classic-core' if mode == 'classic' else mode
         run('dotnet', runner, 'pack', '--engine', seed_mode / 'work/engine', '--mod', snapshot,
-            '--out', target / 'web-bundle.pack', '--content', seed_mode / 'content', '--no-mix-database', '--game-mode', mode)
+            '--out', target / 'web-bundle.pack', '--content', seed_mode / 'content', '--no-mix-database',
+            '--game-mode', pack_mode, '--support', config['supportDirectory'])
         scratch = out / f'vfs-{profile}'
         run('dotnet', runner, 'unpack', '--pack', target / 'web-bundle.pack', '--root', scratch)
         run('dotnet', runner, 'bake', '--root', scratch, '--maps', 'web-arena', '--out', target / 'sprites')
         link(runtime_source, target / 'wasm-interp')
         profile_data = json.loads((seed_mode / 'data' / profile / 'content-profile.json').read_text())
         profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'])
+        if mode == 'classic':
+            profile_data.update(modId='rtsai-classic-core', localOnly=True, gameMode='classic', foundation='recovered-classic')
         unit.atomic(target / 'content-profile.json', json.dumps(profile_data, indent=2) + '\n')
     # Rebuild the current committed web interface; only the unchanged simulation runtime is reused.
     frontend = out / 'frontend'
@@ -155,7 +171,7 @@ def build(web_root, log):
                'webUrl': f'http://127.0.0.1:{port}/', 'webPid': server.pid, 'sourceCommit': git('rev-parse', 'HEAD'),
                'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
                'browserHostCommit': host_commit, 'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
-               'scope': 'RA2 desktop/web; Classic desktop and explicitly mapped web adapter units only'}
+               'scope': 'RA2 and recovered Classic desktop/web; all Studio roster units; installed Classic inputs remain local'}
     unit.atomic(out / 'receipt.json', json.dumps(receipt, indent=2) + '\n')
     unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
     print(json.dumps(receipt))

@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path('content/unit-modifications.json')
 REGISTRY = Path('content/unit-bindings.json')
 OUTPUT = Path('mods/rtsai/unit-overrides')
-MODS = {'classic-desktop': 'rtsai-classic-core', 'classic-web': 'rtsai-topdown', 'ra2-desktop': 'rtsai-ra2', 'ra2-web': 'rtsai'}
+MODS = {'classic-desktop': 'rtsai-classic-core', 'classic-web': 'rtsai-classic-core', 'ra2-desktop': 'rtsai-ra2', 'ra2-web': 'rtsai'}
 FIELDS = {'cost': ('Valued', 'Cost', 100000), 'health': ('Health', 'HP', 10000000), 'speed': (None, 'Speed', 1000)}
 
 
@@ -106,7 +106,7 @@ def view(root, key):
     values = source['units'].get(key, {})
     for target, binding in unit['bindings'].items():
         inherited = dict(binding['baseline'])
-        pilot_binding = pilot['bindings'].get(target)
+        pilot_binding = pilot['bindings'].get('classic-desktop' if target == 'classic-web' else target)
         if pilot_binding and binding['actor'].lower() == pilot_binding['actor'].lower() and pilot['cost'] is not None:
             inherited['cost'] = pilot['cost']
         targets[target] = {**binding, 'inherited': inherited, 'effective': {**inherited, **values}}

@@ -22,7 +22,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			using var bindings = mod.DefaultFileSystem.Open("ra2|unit-overrides/bindings.json");
 			using var registry = JsonDocument.Parse(bindings);
 			var target = doc.RootElement.GetProperty("targets").EnumerateObject()
-				.Single(p => p.Value.GetProperty("mod").GetString() == mod.Manifest.Id).Name;
+				.First(p => p.Value.GetProperty("mod").GetString() == mod.Manifest.Id).Name;
 			var results = new List<object>();
 			foreach (var unit in doc.RootElement.GetProperty("units").EnumerateObject())
 			{

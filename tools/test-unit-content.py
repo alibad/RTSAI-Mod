@@ -18,10 +18,11 @@ class UnitContentTest(unittest.TestCase):
         for name in ['unit-bindings.json', 'shared-content.json']:
             shutil.copyfile(unit.ROOT / 'content' / name, self.root / 'content' / name)
         (self.root / unit.SOURCE).write_text(json.dumps({'schema': 1, 'units': {}}))
-        for target, mod in unit.MODS.items():
+        for mod in set(unit.MODS.values()):
+            targets = [t for t, m in unit.MODS.items() if m == mod]
             path = self.root / 'mods' / mod / 'mod.yaml'
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(f'Metadata:\n\tTitle: fixture\nRules:\n\tra2|unit-overrides/{target}.yaml\n\nSequences:\n')
+            path.write_text('Metadata:\n\tTitle: fixture\nRules:\n' + ''.join(f'\tra2|unit-overrides/{target}.yaml\n' for target in targets) + '\nSequences:\n')
         unit.compile_content(self.root)
 
     def tearDown(self):
@@ -42,12 +43,15 @@ class UnitContentTest(unittest.TestCase):
         self.assertEqual(result['revision'], before)
         self.assertEqual(result['targets']['ra2-web']['effective']['cost'], 625)
 
-    def test_classic_binding_and_unmapped_unit_are_explicit(self):
+    def test_every_classic_unit_has_identical_native_and_web_bindings(self):
         result = self.edit('classic:e6', {'cost': 650, 'health': 14000})
         self.assertEqual(result['targets']['classic-desktop']['effective']['cost'], 650)
         self.assertEqual(result['targets']['classic-web']['effective']['health'], 14000)
         other = next(key for key in unit.load(self.root / unit.REGISTRY)['units'] if key.startswith('classic:') and key != 'classic:e6')
-        self.assertEqual(list(unit.view(self.root, other)['targets']), ['classic-desktop'])
+        for key, entry in unit.load(self.root / unit.REGISTRY)['units'].items():
+            if key.startswith('classic:'):
+                self.assertEqual(entry['bindings']['classic-desktop'], entry['bindings']['classic-web'], key)
+        self.assertEqual(self.edit(other, {'cost': 375})['targets']['classic-web']['effective']['cost'], 375)
 
     def test_invalid_fields_units_values_and_stale_writes_preserve_source(self):
         before = (self.root / unit.SOURCE).read_bytes()
