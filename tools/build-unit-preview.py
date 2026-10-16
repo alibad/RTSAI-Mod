@@ -49,11 +49,9 @@ def build(web_root, log):
     run('git', '-C', game, 'fetch', 'origin', 'main')
     run('git', '-C', game, 'merge', '--ff-only', 'origin/main')
     host_commit = json.loads((seed / 'host/INPUTS.json').read_text())['head']
-    if subprocess.run(['git', '-C', str(game), 'diff', '--quiet', host_commit, 'HEAD', '--', 'sim']).returncode:
-        raise ValueError('The browser simulation changed. Rebuild its verified WASM runtime before unit previews.')
+    rebuild_runtime = subprocess.run(['git', '-C', str(game), 'diff', '--quiet', host_commit, 'HEAD', '--', 'sim']).returncode != 0
     changed = git('diff', '--name-only', config['modCommit'], '--', 'OpenRA.Mods.RA2', 'OpenRA.Mods.RTSAI').splitlines()
-    if any(not path.startswith('OpenRA.Mods.RTSAI/UtilityCommands/') for path in changed):
-        raise ValueError('Gameplay C# changed. Rebuild its verified WASM runtime before unit previews.')
+    rebuild_runtime |= any(not path.startswith('OpenRA.Mods.RTSAI/UtilityCommands/') for path in changed)
     if not (seed / 'browser/runtime/dotnet.js').is_file():
         # Runtime layout can vary by .NET version; a manifest is sufficient to locate the existing verified runtime.
         if not (seed / 'browser/runtime').is_dir():
@@ -89,6 +87,28 @@ def build(web_root, log):
     snapshot = out / 'mod'
     snapshot.mkdir()
     link(native / 'mods', snapshot / 'mods')
+    runtime_source = seed / 'browser/runtime'
+    if rebuild_runtime:
+        host = out / 'host'
+        run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', host,
+            '--include', 'sim', '--include', 'tools', '--include', 'Directory.Build.props', '--committed')
+        host_commit = json.loads((host / 'INPUTS.json').read_text())['head']
+        code = out / 'mod-code'
+        if not code.exists():
+            run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', code,
+                '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
+        browser_engine = out / 'browser-engine'
+        shutil.copytree(seed / 'inputs/engine', browser_engine)
+        (browser_engine / 'VERSION').write_text(config['engineCommit'] + '\n')
+        dotnet = Path.home() / '.dotnet/dotnet.exe' if os.name == 'nt' else 'dotnet'
+        runtime_source = out / 'runtime'
+        run(dotnet, 'publish', host / 'sim/OpenRA.WebSim.Browser/OpenRA.WebSim.Browser.csproj', '-c', 'Release',
+            '--runtime', 'browser-wasm', '-p:DefineConstants=BROWSER', '-p:WebProfile=public',
+            f'-p:EngineRoot={browser_engine.as_posix()}/', f'-p:ModRoot={code.as_posix()}/',
+            f'-p:WebBuildRoot={(out / "browser-build").as_posix()}/', '-o', runtime_source)
+        framework = runtime_source / 'wwwroot/_framework'
+        run('node', game / 'tools/stamp-runtime.mjs', framework)
+        run('node', game / 'tools/verify-runtime.mjs', framework)
     data = out / 'data'
     for mode, profile, folder in [('isometric', 'public', 'isometric'), ('classic', 'public-classic', 'classic')]:
         seed_mode = seed / folder
@@ -100,7 +120,7 @@ def build(web_root, log):
         scratch = out / f'vfs-{profile}'
         run('dotnet', runner, 'unpack', '--pack', target / 'web-bundle.pack', '--root', scratch)
         run('dotnet', runner, 'bake', '--root', scratch, '--maps', 'web-arena', '--out', target / 'sprites')
-        link(seed / 'browser/runtime', target / 'wasm-interp')
+        link(runtime_source, target / 'wasm-interp')
         profile_data = json.loads((seed_mode / 'data' / profile / 'content-profile.json').read_text())
         profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'])
         unit.atomic(target / 'content-profile.json', json.dumps(profile_data, indent=2) + '\n')
