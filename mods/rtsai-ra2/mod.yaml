@@ -1,5 +1,7 @@
 Include: experiences.yaml
 
+SupportsMapsFrom: rtsai
+
 Metadata:
 	Title: RTS AI RA2
 	WindowTitle: RTS AI — RA2

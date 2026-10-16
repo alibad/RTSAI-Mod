@@ -1,5 +1,7 @@
 Include: experiences.yaml
 
+SupportsMapsFrom: rtsai
+
 Metadata:
 	Title: RTS AI Library
 	WindowTitle: RTS AI — Library

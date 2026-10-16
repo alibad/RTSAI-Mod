@@ -32,6 +32,9 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		int first;
 		bool assistant;
 		const int PageSize = 4;
+		string EnhancedProfile => mod.Manifest.Id == "rtsai-ra2" ? "ra2-original-combined-arms" : catalog.DefaultProfileId;
+		ImmutableArray<string> OriginalSelection => mod.Manifest.Id == "rtsai"
+			? catalog.Components.Values.Where(c => c.Kind == ExperienceComponentKind.Faction).Select(c => c.Id).ToImmutableArray() : [];
 
 		[ObjectCreator.UseCtor]
 		public RTSAICustomizeLogic(LibrarySurfaceWidget widget, ModData modData, World world)
@@ -59,7 +62,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		{
 			if (preset == "Custom") customSelection = selected;
 			preset = value;
-			selected = value == "Original" ? [] : value == "Custom" ? customSelection : catalog.ComponentsForProfile(catalog.DefaultProfileId);
+			selected = value == "Original" ? OriginalSelection : value == "Custom" ? customSelection : catalog.ComponentsForProfile(EnhancedProfile);
 			message = value == "Original" ? "Optional gameplay additions disabled. Your custom setup is retained." : "";
 			Build();
 		}
@@ -127,9 +130,9 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		}
 		void Save()
 		{
-			settings.Profile = preset == "Original" ? (mod.Manifest.Id == "rtsai-classic-core" ? "ai-assistant-only" : "ra2-classic") : catalog.DefaultProfileId;
-			settings.UseCustomComponents = preset == "Custom";
-			settings.EnabledComponents = preset == "Custom" ? string.Join(",", selected.Order()) : "";
+			settings.Profile = preset == "Original" ? (mod.Manifest.Id == "rtsai-classic-core" ? "ai-assistant-only" : mod.Manifest.Id == "rtsai" ? "ra2-modern" : "ra2-classic") : EnhancedProfile;
+			settings.UseCustomComponents = preset == "Custom" || (preset == "Original" && mod.Manifest.Id == "rtsai");
+			settings.EnabledComponents = settings.UseCustomComponents ? string.Join(",", selected.Order()) : "";
 			if (preset == "Custom") { custom.HasSavedCustom = true; custom.Components = settings.EnabledComponents; }
 			var skirmish = Game.Settings.GetOrCreate<SkirmishLogic.SkirmishSettings>(null, mod.Manifest.Id);
 			var options = skirmish.Yaml.Nodes.FirstOrDefault(n => n.Key == "Options");
