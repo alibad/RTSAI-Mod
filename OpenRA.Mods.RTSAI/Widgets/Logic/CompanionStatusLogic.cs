@@ -21,6 +21,7 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Common.Widgets.Logic;
+using OpenRA.Mods.RTSAI.Companion;
 using OpenRA.Mods.RTSAI.Traits;
 using CompanionBridge = OpenRA.Mods.RTSAI.Traits.CompanionBridge;
 using OpenRA.Primitives;
@@ -31,29 +32,13 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 {
 	public sealed class CompanionStatusLogic : ChromeLogic
 	{
-		const int SidebarWidth = 250;
-		const int EdgeMargin = 16;
-		const int HorizontalPadding = 12;
-		const int VerticalPadding = 8;
 		const int VoiceButtonWidth = 94;
-		const int VoiceButtonMargin = 4;
-		const int VoiceButtonGap = 8;
 		const int FeedbackButtonWidth = 70;
-		const int FeedbackButtonGap = 5;
-		const int FeedButtonWidth = 34;
-		const int FeedButtonGap = 5;
 		const int ActionConfirmButtonWidth = 76;
 		const int ActionCancelButtonWidth = 58;
-		const int ActionButtonGap = 4;
 		const int AutoButtonWidth = 72;
-		const int AutoButtonGap = 4;
-		const int ThreatPanelWidth = 106;
-		const int ThreatTrackWidth = 92;
-		const int FeedPanelTargetWidth = 620;
-		const int FeedPanelHeight = 296;
+		const int FeedPanelHeight = 356;
 		const int MaxFeedEntries = 80;
-		const int MinWidth = 430;
-		const int MaxWidth = 860;
 		const int ButtonTextPadding = 6;
 		sealed class FeedEntry
 		{
@@ -132,6 +117,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			feedEmptyLabel = feedPanel.Get<LabelWidget>("FEED_EMPTY");
 			feedAccent = feedPanel.Get<ColorBlockWidget>("FEED_ACCENT");
 			latestFont = Game.Renderer.Fonts[latestMessageLabel.Font];
+			statusButton.Font = "Regular";
+			statusButton.Align = TextAlign.Left;
 			var font = Game.Renderer.Fonts[statusButton.Font];
 			var displayMessage = "";
 			var requestPending = false;
@@ -139,15 +126,14 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			var autoRequestPending = false;
 			var feedbackRequestPending = false;
 
-			feedPanel.Get<LabelWidget>("FEED_TITLE").GetText = () => "AI TACTICAL FEED // COMMS LOG";
+			feedPanel.Get<LabelWidget>("FEED_TITLE").GetText = () => "ACTIVITY";
 			feedPanel.Get<LabelWidget>("LATEST_KICKER").GetText = () =>
-				showOnlyPlayer ? "YOUR TRANSMISSIONS" : "LAST TRANSMISSION";
+				showOnlyPlayer ? "YOUR REQUESTS" : "LATEST UPDATE";
 			feedPanel.Get<LabelWidget>("FEED_FOOTER").GetText = () =>
-				$"OPENRA AI {modData.Manifest.Metadata.Version.ToUpperInvariant()}     " +
-				$"{Binding("AIAsk").ToUpperInvariant()} // COMMAND CHANNEL";
+				"Automatic orders and spoken replies are optional.";
 			feedEmptyLabel.GetText = () => showOnlyPlayer
-				? $"NO VOICE TRANSMISSIONS YET // HOLD {Binding("AIAsk").ToUpperInvariant()}"
-				: $"NO SIGNALS YET // HOLD {Binding("AIAsk").ToUpperInvariant()} TO OPEN COMMS";
+				? "Your requests will appear here."
+				: "Advice and confirmed orders will appear here.";
 			feedPanel.Get<ButtonWidget>("FEED_CLOSE").GetText = () => "X";
 			feedPanel.Get<ButtonWidget>("FEED_CLOSE").OnClick = () => feedExpanded = false;
 			feedPanel.Get<ColorBlockWidget>("FEED_HEADER_RULE").GetColor = () => Color.FromArgb(130, latestColor);
@@ -157,7 +143,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			feedPanel.Get<LabelWidget>("FEED_FOOTER").GetColor = () => Color.Gray;
 			feedPanel.IsVisible = () => feedExpanded;
 			feedEmptyLabel.IsVisible = () => showOnlyPlayer ? PlayerEntryCount() == 0 : feedEntries.Count == 0;
-			feedCountLabel.GetText = () => $"{feedEntries.Count} SIGNALS // {PlayerEntryCount()} YOU";
+			feedCountLabel.GetText = () => $"{feedEntries.Count} updates";
 			feedCountLabel.GetColor = () => feedEntries.Count == 0 ? Color.Gray : latestColor;
 			latestMetaLabel.GetText = () => latestMeta;
 			latestMetaLabel.GetColor = () => latestColor;
@@ -185,7 +171,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 			statusButton.OnClick = () => OpenWarRoom("live");
 			feedToggleButton.OnClick = ToggleFeed;
-			feedToggleButton.GetText = () => feedExpanded ? "X" : "LOG";
+			feedToggleButton.GetText = () => feedExpanded ? "CLOSE" : "DETAILS";
 			feedToggleButton.IsHighlighted = () => feedExpanded;
 			feedbackButton.GetText = () => feedbackRequestPending ? "WAIT" : "REPORT";
 			feedbackButton.IsHighlighted = () => feedbackRequestPending;
@@ -392,86 +378,74 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				}
 			}
 
+			// Keep secondary controls in the optional activity panel, not across the battlefield.
+			foreach (var control in new Widget[] { feedbackButton, autoButton, voiceButton, askShortcut })
+			{
+				if (control == null)
+					continue;
+				widget.Children.Remove(control);
+				feedPanel.AddChild(control);
+			}
+
 			widget.IsVisible = () =>
 			{
-				if (!CompanionBridge.TryGetStatus(out _, out var message))
+				if (!CompanionBridge.HudAvailable || !CompanionBridge.TryGetStatus(out var state, out var message))
 					return false;
 
-				message = LocalizeShortcutMessage(message);
-				var playableWidth = Math.Max(MinWidth, Game.Renderer.Resolution.Width - SidebarWidth);
-				var availableWidth = Math.Max(2 * HorizontalPadding + 1, playableWidth - 2 * EdgeMargin);
-				var maximumWidth = Math.Min(MaxWidth, availableWidth);
-				// Buttons are at least their designed width and grow to fit their current text, so a
-				// long label (AUTO: STARTING..., or a longer translation) cannot spill into its neighbour.
+				var (x, width, height) = CompanionHudDisplay.Layout(Game.Renderer.Resolution.Width, HasPendingAction());
 				var voiceWidth = voiceButton.Bounds.Width = FitButton(voiceButton, VoiceButtonWidth);
 				var autoWidth = autoButton.Bounds.Width = FitButton(autoButton, AutoButtonWidth);
-				var feedWidthButton = feedToggleButton.Bounds.Width = FitButton(feedToggleButton, FeedButtonWidth);
+				var feedWidthButton = feedToggleButton.Bounds.Width = FitButton(feedToggleButton, 78);
 				var feedbackWidth = feedbackButton.Bounds.Width = FitButton(feedbackButton, FeedbackButtonWidth);
 				var confirmWidth = actionConfirmButton.Bounds.Width = FitButton(actionConfirmButton, ActionConfirmButtonWidth);
 				var cancelWidth = actionCancelButton.Bounds.Width = FitButton(actionCancelButton, ActionCancelButtonWidth);
-				var growth = voiceWidth - VoiceButtonWidth + feedWidthButton - FeedButtonWidth + feedbackWidth - FeedbackButtonWidth;
-				var actionControlsWidth = HasPendingAction()
-					? confirmWidth + cancelWidth + 2 * ActionButtonGap
-					: 0;
-				var autoControlsWidth = autoWidth + AutoButtonGap;
-				var minimumWidth = Math.Min(MinWidth + growth + actionControlsWidth + autoControlsWidth, maximumWidth);
-				var desiredWidth = font.Measure(message).X + 2 * HorizontalPadding + ThreatPanelWidth +
-					voiceWidth + VoiceButtonGap + feedbackWidth + FeedbackButtonGap +
-					feedWidthButton + FeedButtonGap +
-					actionControlsWidth + autoControlsWidth;
-				var width = Math.Clamp(desiredWidth, minimumWidth, maximumWidth);
-
-				widget.Bounds.X = Math.Max(EdgeMargin, (playableWidth - width) / 2);
+				widget.Bounds.X = x;
 				widget.Bounds.Width = width;
-				statusButton.Bounds.X = HorizontalPadding + ThreatPanelWidth;
-				voiceButton.Bounds.X = width - voiceWidth - VoiceButtonMargin;
-				autoButton.Bounds.X = voiceButton.Bounds.X - AutoButtonGap - autoWidth;
-				if (HasPendingAction())
-				{
-					actionCancelButton.Bounds.X = autoButton.Bounds.X - ActionButtonGap - cancelWidth;
-					actionConfirmButton.Bounds.X = actionCancelButton.Bounds.X - ActionButtonGap - confirmWidth;
-					feedToggleButton.Bounds.X = actionConfirmButton.Bounds.X - FeedButtonGap - feedWidthButton;
-				}
-				else
-					feedToggleButton.Bounds.X = autoButton.Bounds.X - FeedButtonGap - feedWidthButton;
-				feedbackButton.Bounds.X = feedToggleButton.Bounds.X - FeedbackButtonGap - feedbackWidth;
-				statusButton.Bounds.Width = Math.Max(1, feedbackButton.Bounds.X - FeedbackButtonGap - statusButton.Bounds.X);
+				widget.Bounds.Height = height;
+				statusButton.Bounds.X = 12;
+				statusButton.Bounds.Y = 27;
+				statusButton.Bounds.Width = width - 24;
+				statusButton.Bounds.Height = 32;
+				displayMessage = FitToTwoLines(CompanionHudDisplay.Message(state, LocalizeShortcutMessage(message)), statusButton.Bounds.Width, font);
+				feedToggleButton.Bounds.X = width - feedWidthButton - 8;
+				feedToggleButton.Bounds.Y = 5;
+				feedToggleButton.Bounds.Height = 24;
+				actionConfirmButton.Bounds.X = width - confirmWidth - cancelWidth - 20;
+				actionCancelButton.Bounds.X = width - cancelWidth - 12;
+				actionConfirmButton.Bounds.Y = actionCancelButton.Bounds.Y = 70;
+				actionConfirmButton.Bounds.Height = actionCancelButton.Bounds.Height = 26;
+				threatLabel.Bounds.X = 12;
+				threatLabel.Bounds.Y = 4;
+				threatLabel.Bounds.Width = width - feedWidthButton - 36;
+				threatLabel.Bounds.Height = 20;
+				threatLabel.Align = TextAlign.Left;
+				// A numerical threat meter suggests precision we cannot promise before an observation.
+				threatTrack.IsVisible = () => false;
+				threatFill.IsVisible = () => false;
 
-				displayMessage = FitToTwoLines(message, statusButton.Bounds.Width, font);
-				var height = Math.Max(30, font.Measure(displayMessage).Y + VerticalPadding);
-				widget.Bounds.Height = height + (askShortcut == null ? 0 : 18);
+				feedPanel.Bounds.X = 0;
+				feedPanel.Bounds.Y = height + 6;
+				feedPanel.Bounds.Width = width;
+				feedPanel.Bounds.Height = FeedPanelHeight;
+				LayoutFeed(width);
+				feedPanel.Get<LabelWidget>("FEED_TITLE").Bounds.Width = Math.Max(70, width - 280);
+				feedbackButton.Bounds.X = 12;
+				autoButton.Bounds.X = feedbackWidth + 20;
+				voiceButton.Bounds.X = feedbackWidth + autoWidth + 28;
+				feedbackButton.Bounds.Y = autoButton.Bounds.Y = voiceButton.Bounds.Y = 300;
+				feedbackButton.Bounds.Height = autoButton.Bounds.Height = voiceButton.Bounds.Height = 26;
 				if (askShortcut != null)
 				{
-					askShortcut.Bounds.Y = height;
+					askShortcut.Bounds.Y = 332;
 					askShortcut.Bounds.Width = width - 16;
 				}
-				statusButton.Bounds.Height = height;
-				voiceButton.Bounds.Y = (height - voiceButton.Bounds.Height) / 2;
-				autoButton.Bounds.Y = (height - autoButton.Bounds.Height) / 2;
-				feedToggleButton.Bounds.Y = (height - feedToggleButton.Bounds.Height) / 2;
-				feedbackButton.Bounds.Y = (height - feedbackButton.Bounds.Height) / 2;
-				actionConfirmButton.Bounds.Y = (height - actionConfirmButton.Bounds.Height) / 2;
-				actionCancelButton.Bounds.Y = (height - actionCancelButton.Bounds.Height) / 2;
-				threatLabel.Bounds.Y = (height - 24) / 2;
-				threatTrack.Bounds.Y = threatLabel.Bounds.Y + 17;
-				threatFill.Bounds.Y = threatTrack.Bounds.Y;
-				CompanionBridge.TryGetThreat(out var score, out _, out _);
-				threatFill.Bounds.Width = ThreatTrackWidth * Math.Clamp(score, 0, 100) / 100;
-
-				var feedWidth = Math.Clamp(FeedPanelTargetWidth, minimumWidth, maximumWidth);
-				feedPanel.Bounds.X = (width - feedWidth) / 2;
-				feedPanel.Bounds.Y = widget.Bounds.Height + 6;
-				feedPanel.Bounds.Width = feedWidth;
-				feedPanel.Bounds.Height = FeedPanelHeight;
-				LayoutFeed(feedWidth);
 				return true;
 			};
 
 			statusButton.GetText = () => displayMessage;
 			statusButton.IsHighlighted = () => feedExpanded;
-			threatLabel.GetText = () => CompanionBridge.TryGetThreat(out var score, out _, out _)
-				? $"THREAT {score}"
-				: "THREAT 0";
+			threatLabel.GetText = () => CompanionBridge.TryGetThreat(out _, out var level, out var reason) && !string.IsNullOrWhiteSpace(reason)
+				? $"ADVISER / {level.ToUpperInvariant()}" : "ADVISER";
 			threatTrack.GetColor = () => Color.FromArgb(62, 66, 72);
 			threatFill.GetColor = () => CompanionBridge.TryGetThreat(out _, out var level, out _)
 				? ThreatColor(level)
@@ -491,6 +465,11 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 		public override void Tick()
 		{
+			if (!CompanionBridge.HudAvailable)
+			{
+				feedExpanded = false;
+				return;
+			}
 			if (!postGameDebriefScheduled && !world.IsReplay && world.IsGameOver && world.LocalPlayer != null)
 			{
 				postGameDebriefScheduled = true;

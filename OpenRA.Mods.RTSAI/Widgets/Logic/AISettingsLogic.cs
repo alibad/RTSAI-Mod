@@ -185,6 +185,31 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		Func<bool> InitPanel(Widget panel)
 		{
 			scrollPanel = panel.Get<ScrollPanelWidget>("SETTINGS_SCROLLPANEL");
+			if (!CompanionHost.IsAvailable)
+			{
+				// An unbundled preview cannot enable AI. Explain that once, here, without fake setup controls.
+				panel.Get("AI_TAB_BAR").IsVisible = () => false;
+				panel.Get("ACTIONS_ROW").IsVisible = () => false;
+				foreach (var child in scrollPanel.Children)
+					child.IsVisible = () => false;
+				var row = panel.Get("AI_MODE_ROW");
+				row.IsVisible = () => true;
+				row.Bounds.Height = 170;
+				panel.Get("AI_MODE").IsVisible = () => false;
+				var title = panel.Get<LabelWidget>("AI_MODE_LABEL");
+				title.Font = "Bold";
+				title.GetText = () => "AI adviser is not included in this build";
+				var detail = panel.Get<LabelWidget>("AI_MODE_STATUS");
+				detail.Font = "Regular";
+				detail.WordWrap = true;
+				detail.Bounds.Y = 36;
+				detail.Bounds.Height = 118;
+				detail.GetText = () => "This local game preview contains the game and your saved content, but no AI companion. " +
+					"You can play normally. Adviser controls and voice shortcuts stay hidden on the battlefield. " +
+					"Use the main desktop launcher with the companion installed to use AI advice.";
+				SettingsUtils.AdjustSettingsScrollPanelLayout(scrollPanel);
+				return () => false;
+			}
 			BindTab(panel.Get<ButtonWidget>("ASSISTANT_TAB"), "assistant");
 			BindTab(panel.Get<ButtonWidget>("VOICE_TAB"), "voice");
 			BindTab(panel.Get<ButtonWidget>("MODELS_TAB"), "models");

@@ -190,6 +190,9 @@ namespace OpenRA.Mods.RTSAI.Companion
 		/// </summary>
 		static bool Included() => Bundled.Value;
 
+		/// <summary>Settings may offer setup only when a companion can actually be launched.</summary>
+		public static bool IsAvailable => State == CompanionHostState.External || Included();
+
 		/// <summary>One line for the AI settings panel.</summary>
 		public static string StatusLine()
 		{

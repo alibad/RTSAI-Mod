@@ -990,6 +990,17 @@ namespace OpenRA.Mods.RTSAI.Traits
 			return TryGetStatus(out state, out message, out _, out _);
 		}
 
+		internal static bool HudAvailable
+		{
+			get
+			{
+				lock (CurrentLock)
+					return current != null && CompanionHudDisplay.IsVisible(CompanionHost.State,
+						current.companionStatusAcknowledged, companionStatus.Enabled,
+						current.enabled && !current.disabledForMatch);
+			}
+		}
+
 		internal static bool TryGetAutoAct(out bool autoActEnabled)
 		{
 			lock (CurrentLock)
