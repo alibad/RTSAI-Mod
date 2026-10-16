@@ -59,6 +59,13 @@ tool does, so desktop Kestrel code is excluded from the embedded build.
 
 ## Next increment
 
+Update, 16 October 2026: the selected-unit Faction Studio now supplies cost,
+health and movement edits for all 195 recovered Classic units and all 197 RA2
+units. Classic browser previews run the real `rtsai-classic-core` foundation.
+The pilot evidence above and its old adapter binding are historical records;
+the current per-unit bindings are `content/unit-bindings.json`. See sibling
+RTSAI-Web's `docs/shared-content-authoring.md` for the current workflow.
+
 Expand only after this boundary is accepted: replace the Classic web adapter with
 the actual Classic foundation, add more reviewed editable fields, and then add
 durable online admin drafts/private assets and a build queue. Keep AI generation
