@@ -21,6 +21,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		int selected, selectedGame = 1;
 		bool reviewed, wasBusy;
 		TextFieldWidget search;
+		DateTime lastPoll;
 
 		[ObjectCreator.UseCtor]
 		public RTSAILibraryLogic(LibrarySurfaceWidget widget, ModData modData)
@@ -31,6 +32,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			surface.OnBack = () => { if (page != "library") { page = "library"; Build(); } };
 			surface.OnTick = () =>
 			{
+				if ((DateTime.UtcNow - lastPoll).TotalMilliseconds < 500) return;
+				lastPoll = DateTime.UtcNow; installer.Poll();
 				if (wasBusy && !installer.Busy) Build();
 				wasBusy = installer.Busy;
 			};
@@ -107,7 +110,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				if (installer.Busy) { installer.Cancel(); return; }
 				if (installed[current.Id]) { Try(() => CommunityInstall.Launch(current)); return; }
 				if (!reviewed) { reviewed = true; message = "Official Windows x64 release · includes its compatible engine. Ready to install."; Build(); return; }
-				wasBusy = true; _ = installer.InstallAsync(current);
+				wasBusy = true; installer.RequestInstall(current);
 			}, true);
 			action.GetText = () => installer.Busy ? "Pause download" : installed[current.Id] ? "Open " + current.Name : reviewed ? $"Install · {current.Bytes / 1048576d:0} MB" : "Check & install";
 			action.IsVisible = () => filter != "Add-ons";
@@ -160,7 +163,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 					var release = CommunityInstall.Releases.FirstOrDefault(r => r.Sha256 == sha)
 						?? throw new InvalidDataException("This is not a supported official portable game package. Choose OpenHV or Combined Arms from Community.");
 					selected = Array.IndexOf(CommunityInstall.Releases, release); page = "community"; reviewed = true; Build();
-					wasBusy = true; _ = installer.InstallAsync(release, source);
+					wasBusy = true; installer.RequestInstall(release, source);
 				}
 				else
 				{

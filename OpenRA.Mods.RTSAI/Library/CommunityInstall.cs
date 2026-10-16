@@ -15,6 +15,7 @@ namespace OpenRA.Mods.RTSAI.Library
 	public sealed record CommunityRelease(string Id, string Name, string Version, string Description,
 		string Url, long Bytes, string Sha256, string Executable, string Art, string Source);
 	public sealed record CommunityReceipt(string Id, string Version, string Sha256, string Executable, DateTime InstalledUtc);
+	public sealed record DownloadState(string Id, string Status, double Progress, bool Busy, int Process, DateTime UpdatedUtc);
 
 	public sealed class CommunityInstall
 	{
@@ -32,6 +33,54 @@ namespace OpenRA.Mods.RTSAI.Library
 		public bool Busy { get; private set; }
 		public string ActiveId { get; private set; }
 		CancellationTokenSource cancellation;
+		DateTime published;
+		static string JobFile => Path.Combine(NativeGameLibrary.Root, "Downloads", "community-job.json");
+		static string CancelFile => Path.Combine(NativeGameLibrary.Root, "Downloads", "cancel-community-job");
+		public void RequestInstall(CommunityRelease release, string archive = null)
+		{
+			Poll();
+			if (Busy) return;
+			Directory.CreateDirectory(Path.GetDirectoryName(JobFile));
+			if (File.Exists(CancelFile)) File.Delete(CancelFile);
+			var start = new ProcessStartInfo(Path.Combine(Platform.EngineDir, "bin", "OpenRA.Utility.exe"))
+			{
+				UseShellExecute = false, CreateNoWindow = true, WorkingDirectory = Platform.EngineDir
+			};
+			start.ArgumentList.Add(NativeGameLibrary.Hub); start.ArgumentList.Add("--community-install"); start.ArgumentList.Add(release.Id);
+			if (archive != null) start.ArgumentList.Add(Path.GetFullPath(archive));
+			start.Environment["ENGINE_DIR"] = Platform.EngineDir;
+			start.Environment["MOD_SEARCH_PATHS"] = Path.Combine(Platform.EngineDir, "mods");
+			start.Environment["RTSAI_LIBRARY_SUPPORT"] = NativeGameLibrary.Root;
+			Process.Start(start);
+			Busy = true; ActiveId = release.Id; Status = "Starting download…"; Progress = 0;
+		}
+		public void Poll()
+		{
+			try
+			{
+				if (!File.Exists(JobFile)) return;
+				var job = JsonSerializer.Deserialize<DownloadState>(File.ReadAllText(JobFile));
+				if (job == null) return;
+				ActiveId = job.Id; Status = job.Status; Progress = job.Progress; Busy = job.Busy;
+				if (Busy && (DateTime.UtcNow - job.UpdatedUtc).TotalSeconds > 30)
+				{
+					try { if (Process.GetProcessById(job.Process).HasExited) Busy = false; }
+					catch (ArgumentException) { Busy = false; }
+					if (!Busy) Status = "Download interrupted. Resume from Community.";
+				}
+			}
+			catch (IOException) { }
+			catch (JsonException) { }
+		}
+		void Publish(bool force = false)
+		{
+			if (!force && (DateTime.UtcNow - published).TotalMilliseconds < 250) return;
+			published = DateTime.UtcNow;
+			var temporary = JobFile + ".tmp";
+			File.WriteAllText(temporary, JsonSerializer.Serialize(new DownloadState(ActiveId, Status, Progress, Busy, Environment.ProcessId, published)));
+			File.Move(temporary, JobFile, true);
+			if (File.Exists(CancelFile)) cancellation?.Cancel();
+		}
 		static string DirectoryFor(CommunityRelease release) => Path.Combine(NativeGameLibrary.Root, "CommunityGames", release.Id, release.Version);
 		static string ReceiptFor(CommunityRelease release) => Path.Combine(DirectoryFor(release), "rtsai-install.json");
 		public static string InstalledExecutable(CommunityRelease release)
@@ -56,7 +105,12 @@ namespace OpenRA.Mods.RTSAI.Library
 				throw new InvalidDataException("The archive contains a file outside its installation folder.");
 			return target;
 		}
-		public void Cancel() => cancellation?.Cancel();
+		public void Cancel()
+		{
+			cancellation?.Cancel();
+			Directory.CreateDirectory(Path.GetDirectoryName(CancelFile));
+			File.WriteAllText(CancelFile, "pause");
+		}
 		public async Task InstallAsync(CommunityRelease release, string importedArchive = null)
 		{
 			if (Busy) return;
@@ -65,12 +119,17 @@ namespace OpenRA.Mods.RTSAI.Library
 			var token = cancellation.Token;
 			var cache = Path.Combine(NativeGameLibrary.Root, "Downloads");
 			Directory.CreateDirectory(cache);
+			using var installLock = new FileStream(Path.Combine(cache, "community-install.lock"), FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+			if (File.Exists(CancelFile)) File.Delete(CancelFile);
 			var archive = importedArchive ?? Path.Combine(cache, release.Id + "-" + release.Version + ".zip");
 			var staging = DirectoryFor(release) + ".staging-" + Guid.NewGuid().ToString("N");
 			try
 			{
+				Status = "Checking local installation requirements…"; Publish(true);
 				if (!Environment.Is64BitOperatingSystem)
 					throw new InvalidOperationException("This package requires 64-bit Windows.");
+				if (new DriveInfo(Path.GetPathRoot(NativeGameLibrary.Root)).AvailableFreeSpace < release.Bytes * 4)
+					throw new IOException("Not enough free storage. Free at least " + release.Bytes * 4 / 1048576 + " MB and retry.");
 				if (importedArchive == null && !File.Exists(archive))
 					await Download(release, archive, token);
 				Status = "Verifying the official download…";
@@ -80,6 +139,7 @@ namespace OpenRA.Mods.RTSAI.Library
 						throw new InvalidDataException("The download does not match the official release. Import a fresh official archive to retry.");
 				}
 				Status = "Installing the game and its compatible engine…";
+				Publish(true);
 				Directory.CreateDirectory(staging);
 				await Task.Run(() =>
 				{
@@ -98,6 +158,7 @@ namespace OpenRA.Mods.RTSAI.Library
 							entry.ExtractToFile(destination, false);
 						}
 						Progress = ++completed / (double)zip.Entries.Count;
+						Publish();
 					}
 				}, token);
 				var executable = Directory.EnumerateFiles(staging, release.Executable, SearchOption.AllDirectories).SingleOrDefault()
@@ -112,7 +173,7 @@ namespace OpenRA.Mods.RTSAI.Library
 			}
 			catch (OperationCanceledException) { Status = "Download paused. Resume when you’re ready."; }
 			catch (Exception e) { Status = e.Message; }
-			finally { Busy = false; cancellation.Dispose(); cancellation = null; }
+			finally { Busy = false; Publish(true); cancellation.Dispose(); cancellation = null; }
 		}
 		async Task Download(CommunityRelease release, string archive, CancellationToken token)
 		{
@@ -137,6 +198,7 @@ namespace OpenRA.Mods.RTSAI.Library
 					await output.WriteAsync(buffer.AsMemory(0, read), token);
 					offset += read; Progress = Math.Min(1, offset / (double)release.Bytes);
 					Status = $"Downloading {release.Name} · {offset / 1048576d:0.0} / {release.Bytes / 1048576d:0.0} MB";
+					Publish();
 				}
 			}
 			File.Move(partial, archive, true);
