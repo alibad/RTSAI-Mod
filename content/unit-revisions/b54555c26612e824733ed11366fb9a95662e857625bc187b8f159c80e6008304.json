@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "units": {
+    "ra2:engineer": {
+      "cost": 700,
+      "health": 100,
+      "speed": 66
+    }
+  }
+}
