@@ -39,6 +39,27 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 						throw new InvalidDataException("A game setup leaked into another game.");
 			}
 			finally { if (File.Exists(temporary)) File.Delete(temporary); }
+			// Shared engine sections are isolated by support file, not by mod key.
+			var files = NativeGameLibrary.Games.Select((g, i) => temporary + "." + i).ToArray();
+			try
+			{
+				for (var i = 0; i < files.Length; i++)
+				{
+					var own = new Settings(files[i], Arguments.Empty);
+					own.Graphics.Mode = (WindowMode)i;
+					own.Graphics.WindowedSize = new int2(1200 + i * 100, 720 + i * 10);
+					own.Sound.SoundVolume = (i + 1) / 10f;
+					own.Save();
+				}
+				for (var i = 0; i < files.Length; i++)
+				{
+					var own = new Settings(files[i], Arguments.Empty);
+					if (own.Graphics.Mode != (WindowMode)i || own.Graphics.WindowedSize.X != 1200 + i * 100 ||
+						Math.Abs(own.Sound.SoundVolume - (i + 1) / 10f) > .001)
+						throw new InvalidDataException("Display/audio settings did not remain independent.");
+				}
+			}
+			finally { foreach (var file in files) if (File.Exists(file)) File.Delete(file); }
 			var catalog = utility.ModData.GetOrNull<ExperienceCatalog>();
 			if (catalog != null)
 			{
@@ -49,7 +70,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 						throw new InvalidDataException("Required additions missing for " + component.Id);
 				}
 			}
-			Console.WriteLine("Game library checks passed: three identities; independent saved setups; dependency closure; safe extraction boundaries.");
+			Console.WriteLine("Game library checks passed: three identities; independent saved setups and display/audio files; dependency closure; safe extraction boundaries.");
 		}
 	}
 }

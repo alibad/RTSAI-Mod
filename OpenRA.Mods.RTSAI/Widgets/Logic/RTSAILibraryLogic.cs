@@ -115,7 +115,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				wasBusy = true; installer.RequestInstall(chosen);
 			}, true);
 			action.GetText = () => installer.Busy ? "Pause download" : installed[CommunityInstall.Releases[selected].Id] ? "Open " + CommunityInstall.Releases[selected].Name : reviewed ? $"Install · {CommunityInstall.Releases[selected].Bytes / 1048576d:0} MB" : "Check & install";
-			action.IsVisible = () => filter != "Add-ons";
+			action.IsVisible = () => filter != "Add-ons" && CommunityInstall.Releases.Any(r => r.Name.Contains(query, StringComparison.OrdinalIgnoreCase));
 			surface.Button(mod, "SOURCE_PROJECTS", "Other downloaded projects", 80, 727, 700, 58, () => Go("sources")).Flat = true;
 			surface.Button(mod, "IMPORT", "Import downloaded pack…", 1470, 986, 375, 58, () => Go("import")).Flat = true;
 			surface.Button(mod, "BACK", "Back to Library", 80, 986, 330, 58, () => Go("library")).Flat = true;
@@ -256,7 +256,10 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				return;
 			}
 			if (!CommunityInstall.Releases.Any(r => r.Name.Contains(query, StringComparison.OrdinalIgnoreCase)))
+			{
 				surface.Text(80, 550, "No games match your search.", 28, LibrarySurfaceWidget.Muted);
+				return;
+			}
 			surface.Image("library-" + release.Art, "landscape", 860, 277, 950, 250);
 			surface.Rect(860, 277, 950, 250, OpenRA.Primitives.Color.FromArgb(75, 5, 10, 12));
 			surface.Text(880, 485, "MENU ILLUSTRATION · NOT GAMEPLAY", 18, LibrarySurfaceWidget.Cream);
