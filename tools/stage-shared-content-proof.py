@@ -18,6 +18,8 @@ def main():
     p.add_argument('--mode', choices=['classic', 'ra2'], required=True)
     p.add_argument('--runtime-config', type=Path, help='Optional verified local preview receipt')
     p.add_argument('--no-hud', action='store_true', help='Keep acceptance runs isolated from menu clicks')
+    p.add_argument('--actor', help='Optional reviewed Studio actor to train instead of the Engineer')
+    p.add_argument('--faction', help='Use one of that actor\'s own factions')
     a = p.parse_args()
     config = json.loads((a.runtime_config or ROOT / 'recovery.local.json').read_text(encoding='utf-8-sig'))
     if 'native' in config:
@@ -27,6 +29,13 @@ def main():
     target = a.mode + '-desktop'
     content = json.loads((runtime / 'mods/rtsai/shared-content/manifest.json').read_text())
     unit = content['targets'][target]['actor'].lower()
+    faction = 'england' if a.mode == 'classic' else 'america'
+    if a.actor:
+        registry = json.loads((runtime / 'mods/rtsai/unit-overrides/bindings.json').read_text())['units']
+        entry = registry[f'{a.mode}:{a.actor}']
+        unit = entry['bindings'][target]['actor'].lower()
+        faction = a.faction or entry['factions'][0]['id']
+        if faction not in [f['id'] for f in entry['factions']]: raise ValueError('Choose an enabled faction for this actor')
     if (runtime / 'mods/rtsai/unit-overrides/manifest.json').is_file():
         content['revision'] = json.loads((runtime / 'mods/rtsai/unit-overrides/manifest.json').read_text())['revision']
     source = runtime / ('mods/rtsai-classic-core/maps/a-nuclear-winter' if a.mode == 'classic' else 'mods/rtsai/standalone/maps/twin-fords')
@@ -79,7 +88,7 @@ end
     (dest / 'proof.lua').write_text(lua, encoding='utf-8')
     args = [str(runtime / 'bin/OpenRA.exe'), f'Engine.EngineDir={runtime}', f'Engine.ModSearchPaths={runtime}/mods',
             f'Engine.SupportDir={support}', f'Game.Mod={mode}', 'Launch.Map=shared-content-proof',
-            f"Launch.Faction={'england' if a.mode == 'classic' else 'america'}", 'Launch.Bots=Multi1:normal:russia',
+            f'Launch.Faction={faction}', 'Launch.Bots=Multi1:normal:russia',
             'Game.FetchNews=false', 'Game.IntroductionPromptVersion=99', 'Debug.SystemInformationVersionPrompt=99',
             'Graphics.Mode=Windowed', 'Graphics.WindowedSize=1440,900', 'Graphics.UIScale=1', 'Sound.Mute=true']
     (support.parent / 'launch.json').write_text(json.dumps(args, indent=2))
