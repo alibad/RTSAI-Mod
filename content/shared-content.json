@@ -2,12 +2,28 @@
   "schema": 1,
   "entities": {
     "engineer": {
-      "cost": null,
+      "cost": 625,
       "bindings": {
-        "classic-desktop": { "mod": "rtsai-classic-core", "actor": "E6", "baselineCost": 400 },
-        "classic-web": { "mod": "rtsai-topdown", "actor": "engineer", "baselineCost": 500 },
-        "ra2-desktop": { "mod": "rtsai-ra2", "actor": "engineer", "baselineCost": 500 },
-        "ra2-web": { "mod": "rtsai", "actor": "engineer", "baselineCost": 500 }
+        "classic-desktop": {
+          "mod": "rtsai-classic-core",
+          "actor": "E6",
+          "baselineCost": 400
+        },
+        "classic-web": {
+          "mod": "rtsai-topdown",
+          "actor": "engineer",
+          "baselineCost": 500
+        },
+        "ra2-desktop": {
+          "mod": "rtsai-ra2",
+          "actor": "engineer",
+          "baselineCost": 500
+        },
+        "ra2-web": {
+          "mod": "rtsai",
+          "actor": "engineer",
+          "baselineCost": 500
+        }
       }
     }
   }
