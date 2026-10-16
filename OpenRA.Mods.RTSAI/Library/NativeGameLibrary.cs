@@ -60,7 +60,7 @@ namespace OpenRA.Mods.RTSAI.Library
 				CopyDirectory(content, Path.Combine(target, "Content"));
 		}
 
-		static void CopyDirectory(string source, string destination)
+		internal static void CopyDirectory(string source, string destination)
 		{
 			Directory.CreateDirectory(destination);
 			foreach (var file in Directory.EnumerateFiles(source))

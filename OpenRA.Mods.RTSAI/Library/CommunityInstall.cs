@@ -21,7 +21,7 @@ namespace OpenRA.Mods.RTSAI.Library
 	{
 		public static readonly CommunityRelease[] Releases =
 		[
-			new("combined-arms", "Combined Arms", "1.09", "A separate combined-arms RTS with its own factions, campaigns and settings.",
+			new("combined-arms", "Combined Arms", "1.09", "A separate RTS with its own factions and campaigns. First launch may download freeware game content.",
 				"https://github.com/Inq8/CAmod/releases/download/1.09/CombinedArms-1.09-x64-winportable.zip",
 				233902710, "229ebb20e1dbb518ab9d2085ee4e09f5bbd44c5e7fb9688fd9feecb50b1110c2", "CombinedArms.exe", "classic", "https://github.com/Inq8/CAmod/releases/tag/1.09"),
 			new("openhv", "OpenHV", "20250725", "An original pixel-art science-fiction RTS. Includes its own engine and game content.",
@@ -221,6 +221,11 @@ namespace OpenRA.Mods.RTSAI.Library
 			info.ArgumentList.Add("Engine.ModSearchPaths=" + Path.Combine(engine, "mods"));
 			var support = Path.Combine(NativeGameLibrary.Root, "CommunitySupport", release.Id);
 			Directory.CreateDirectory(support);
+			// Reuse only the installed freeware RA data, in a separate copy. The
+			// official game's own content installer handles missing optional assets.
+			var freeware = Path.Combine(NativeGameLibrary.Root, "Content", "ra", "v2");
+			if (release.Id == "combined-arms" && Directory.Exists(freeware))
+				NativeGameLibrary.CopyDirectory(freeware, Path.Combine(support, "Content", "ca"));
 			info.ArgumentList.Add("Engine.SupportDir=" + support);
 			info.ArgumentList.Add("Game.FetchNews=false");
 			Process.Start(info);
