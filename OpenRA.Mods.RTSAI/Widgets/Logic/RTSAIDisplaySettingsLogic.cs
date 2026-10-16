@@ -106,7 +106,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		readonly string selectPreset;
 
 		[ObjectCreator.UseCtor]
-		public RTSAIDisplaySettingsLogic(ModData modData, SettingsLogic settingsLogic, string panelID, string label, WorldRenderer worldRenderer)
+		public RTSAIDisplaySettingsLogic(ModData modData, ISettingsLogic settingsLogic, string panelID, string label, WorldRenderer worldRenderer)
 		{
 			this.worldRenderer = worldRenderer;
 			this.modData = modData;
