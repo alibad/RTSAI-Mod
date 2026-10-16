@@ -212,7 +212,16 @@ namespace OpenRA.Mods.RTSAI.Library
 		{
 			var executable = InstalledExecutable(release) ?? throw new IOException("Install this game first.");
 			var info = new ProcessStartInfo(executable) { UseShellExecute = false, CreateNoWindow = true, WorkingDirectory = Path.GetDirectoryName(executable) };
-			info.ArgumentList.Add("Engine.SupportDir=" + Path.Combine(NativeGameLibrary.Root, "CommunitySupport", release.Id));
+			var engine = Path.GetDirectoryName(executable);
+			info.Environment["ENGINE_DIR"] = engine;
+			info.Environment["MOD_SEARCH_PATHS"] = Path.Combine(engine, "mods");
+			info.Environment.Remove("OPENRA_UTILITY_EXPERIENCE_PROFILE");
+			info.Environment.Remove("RTSAI_LIBRARY_SCREEN");
+			info.ArgumentList.Add("Engine.EngineDir=" + engine);
+			info.ArgumentList.Add("Engine.ModSearchPaths=" + Path.Combine(engine, "mods"));
+			var support = Path.Combine(NativeGameLibrary.Root, "CommunitySupport", release.Id);
+			Directory.CreateDirectory(support);
+			info.ArgumentList.Add("Engine.SupportDir=" + support);
 			info.ArgumentList.Add("Game.FetchNews=false");
 			Process.Start(info);
 		}
