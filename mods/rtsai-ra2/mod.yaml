@@ -562,7 +562,7 @@ Fonts:
 
 DefaultOrderGenerator: UnitOrderGenerator
 
-SupportsMapsFrom: ra2
+SupportsMapsFrom: ra2, rtsai
 
 SoundFormats: Aud, Wav, Ogg
 
