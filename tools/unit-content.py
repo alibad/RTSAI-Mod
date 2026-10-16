@@ -106,11 +106,21 @@ def view(root, key):
     values = source['units'].get(key, {})
     for target, binding in unit['bindings'].items():
         inherited = dict(binding['baseline'])
+        for field, parents in binding.get('inheritance', {}).items():
+            for parent in parents:
+                parent_values = source['units'].get(f"{unit['mode']}:{parent}", {})
+                if field in parent_values:
+                    inherited[field] = parent_values[field]
+                    break
         pilot_binding = pilot['bindings'].get('classic-desktop' if target == 'classic-web' else target)
         if pilot_binding and binding['actor'].lower() == pilot_binding['actor'].lower() and pilot['cost'] is not None:
             inherited['cost'] = pilot['cost']
         targets[target] = {**binding, 'inherited': inherited, 'effective': {**inherited, **values}}
-    return {'supported': True, 'revision': revision, 'key': key, 'unit': unit, 'overrides': values, 'targets': targets}
+    related = [{'key': other_key, 'name': other['name'], 'fields': sorted(field for field in values
+                if unit['actor'] in other['bindings'].get(f"{unit['mode']}-desktop", {}).get('inheritance', {}).get(field, []))}
+               for other_key, other in registry['units'].items() if other['mode'] == unit['mode'] and other_key != key]
+    return {'supported': True, 'revision': revision, 'key': key, 'unit': unit, 'overrides': values, 'targets': targets,
+            'relatedUnits': [entry for entry in related if entry['fields']]}
 
 
 def edit(root, body):

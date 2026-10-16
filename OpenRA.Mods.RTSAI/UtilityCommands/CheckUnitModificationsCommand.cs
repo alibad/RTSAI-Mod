@@ -40,6 +40,11 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					{
 						if (field.Value.ValueKind == JsonValueKind.Null) continue;
 						var expected = field.Value.GetInt32();
+						if (binding.TryGetProperty("inheritance", out var inheritance) && inheritance.TryGetProperty(field.Name, out var ancestors))
+							foreach (var ancestor in ancestors.EnumerateArray())
+								if (overrides.TryGetProperty(unit.Value.GetProperty("mode").GetString() + ":" + ancestor.GetString(), out var parent)
+									&& parent.TryGetProperty(field.Name, out var inherited))
+								{ expected = inherited.GetInt32(); break; }
 						if (field.Name == "cost" && actor == pilotTarget.GetProperty("actor").GetString().ToLowerInvariant()) expected = pilotTarget.GetProperty("cost").GetInt32();
 						if (values.ValueKind == JsonValueKind.Object && values.TryGetProperty(field.Name, out var value)) expected = value.GetInt32();
 						var actual = field.Name switch

@@ -69,6 +69,27 @@ class UnitContentTest(unittest.TestCase):
             self.edit('ra2:engineer', {'cost': 700})
         self.assertEqual((self.root / unit.SOURCE).read_bytes(), before)
 
+    def test_inherited_classic_stats_follow_real_rules_and_child_override_wins(self):
+        result = self.edit('classic:e1', {'health': 6000, 'speed': 60})
+        child = unit.view(self.root, 'classic:trrifle')
+        self.assertEqual(child['targets']['classic-web']['effective']['speed'], 60)
+        self.assertEqual(child['targets']['classic-web']['effective']['health'], 6200)
+        self.assertIn('classic:trrifle', [u['key'] for u in result['relatedUnits']])
+        self.assertEqual(self.edit('classic:trrifle', {'speed': 67})['targets']['classic-web']['effective']['speed'], 67)
+        self.edit('classic:e1', {})
+        self.assertEqual(unit.view(self.root, 'classic:trrifle')['targets']['classic-web']['effective']['speed'], 67)
+
+    def test_all_classic_roster_stats_compile_to_both_targets_without_touching_rules(self):
+        registry = unit.load(self.root / unit.REGISTRY)['units']
+        edits = {key: {field: value + 1 for field, value in entry['bindings']['classic-desktop']['baseline'].items() if value is not None}
+                 for key, entry in registry.items() if key.startswith('classic:')}
+        unit.atomic(self.root / unit.SOURCE, json.dumps({'schema': 1, 'units': edits}))
+        files, _ = unit.compiled(self.root)
+        self.assertEqual(files[unit.OUTPUT / 'classic-desktop.yaml'], files[unit.OUTPUT / 'classic-web.yaml'])
+        self.assertEqual(len(edits), 195)
+        for key in edits:
+            self.assertIn(registry[key]['bindings']['classic-web']['actor'] + ':\n', files[unit.OUTPUT / 'classic-web.yaml'])
+
 
 if __name__ == '__main__':
     unittest.main()
