@@ -85,11 +85,9 @@ def build(web_root, log):
                                         cwd=native, env={**os.environ, 'OPENRA_AI_HOST': '0', 'ENGINE_DIR': str(native),
                                                          'SUPPORT_DIR': config['supportDirectory'], 'MOD_SEARCH_PATHS': str(native / 'mods'), 'OPENRA_UTILITY_EXPERIENCE_PROFILE': 'world-war-iii'}, text=True, stderr=subprocess.STDOUT)
         receipts.append(json.loads(result))
-    snapshot = out / 'mod'
-    snapshot.mkdir()
-    link(native / 'mods', snapshot / 'mods')
+    snapshot = native
     runtime_source = seed / 'browser/runtime'
-    latest = web_root / '.cache/unit-preview-latest.json'
+    latest = web_root / '.cache/unit-runtime-latest.json'
     if latest.is_file():
         previous = json.loads(latest.read_text())
         previous_host = previous.get('browserHostCommit')
@@ -119,6 +117,8 @@ def build(web_root, log):
         framework = runtime_source / 'wwwroot/_framework'
         run('node', game / 'tools/stamp-runtime.mjs', framework)
         run('node', game / 'tools/verify-runtime.mjs', framework)
+        unit.atomic(latest, json.dumps({'engineCommit': config['engineCommit'], 'browserHostCommit': host_commit,
+                    'runtime': str(runtime_source)}, indent=2) + '\n')
     data = out / 'data'
     # The recovered Classic packer and the browser must use the same committed host.
     if not (out / 'host').exists():
@@ -144,7 +144,7 @@ def build(web_root, log):
         scratch = out / f'vfs-{profile}'
         run('dotnet', runner, 'unpack', '--pack', target / 'web-bundle.pack', '--root', scratch)
         run('dotnet', runner, 'bake', '--root', scratch, '--maps', 'web-arena', '--out', target / 'sprites')
-        link(runtime_source, target / 'wasm-interp')
+        shutil.copytree(runtime_source, target / 'wasm-interp')
         profile_data = json.loads((seed_mode / 'data' / profile / 'content-profile.json').read_text())
         profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'])
         if mode == 'classic':
@@ -180,6 +180,7 @@ def build(web_root, log):
     receipt = {'revision': content['revision'], 'native': str(native), 'support': config['supportDirectory'],
                'webUrl': f'http://127.0.0.1:{port}/', 'webPid': server.pid, 'sourceCommit': git('rev-parse', 'HEAD'),
                'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
+               'verifiedExperienceProfile': 'world-war-iii',
                'runtime': str(runtime_source), 'browserHostCommit': host_commit, 'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
                'scope': 'RA2 and recovered Classic desktop/web; all Studio roster units; installed Classic inputs remain local'}
     unit.atomic(out / 'receipt.json', json.dumps(receipt, indent=2) + '\n')
@@ -197,6 +198,8 @@ if __name__ == '__main__':
         try:
             build(web, log)
         except Exception as error:
+            if isinstance(error, subprocess.CalledProcessError) and error.output:
+                print(error.output, file=log)
             print(str(error), file=log)
             print('Local preview build failed; see .cache/unit-preview-build.log', file=sys.stderr)
             sys.exit(1)
