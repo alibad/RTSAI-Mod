@@ -18,8 +18,18 @@ foreach ($profile in @('ra2-modern','ra2-original-combined-arms','ra2-classic'))
  Check 'rtsai' @('--check-native-recovery')
 }
 $env:OPENRA_UTILITY_EXPERIENCE_PROFILE = $null
+foreach ($mode in @('rtsai-library','rtsai-ra2','rtsai','rtsai-classic-core')) {
+ Check $mode @('--check-game-library')
+}
+foreach ($profile in @('ra2-classic','ra2-original-combined-arms','ra2-modern')) {
+ $env:OPENRA_UTILITY_EXPERIENCE_PROFILE = $profile
+ Check 'rtsai-ra2' @('--check-native-recovery')
+}
+$env:OPENRA_UTILITY_EXPERIENCE_PROFILE = $null
 Check 'rtsai' @('--check-desktop-settings')
 Check 'rtsai' @('--check-standalone','--strict')
 Check 'rtsai' @('--check-yaml')
 Check 'rtsai-classic-core' @('--check-yaml')
+Check 'rtsai-ra2' @('--check-yaml')
+Check 'rtsai-library' @('--check-yaml')
 Write-Host 'Native rules, settings and standalone checks passed. Rendered acceptance is tools/recovery-smoke.py.'

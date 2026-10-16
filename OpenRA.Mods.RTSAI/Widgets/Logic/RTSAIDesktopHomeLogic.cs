@@ -86,7 +86,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				catch (Exception e)
 				{
 					Console.WriteLine("RTSAI_IMPORT_ERROR|" + e.Message);
-					Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(world, "Import failed", e.Message,
+					Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(Game.ModData, "Import failed", e.Message,
 						confirmText: "OK", onConfirm: () => { }));
 					return;
 				}
