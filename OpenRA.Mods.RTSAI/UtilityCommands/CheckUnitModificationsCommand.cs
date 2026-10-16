@@ -11,7 +11,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 	public sealed class CheckUnitModificationsCommand : IUtilityCommand
 	{
 		string IUtilityCommand.Name => "--check-unit-modifications";
-		bool IUtilityCommand.ValidateArguments(string[] args) => args.Length == 1;
+		bool IUtilityCommand.ValidateArguments(string[] args) => args.Length == 1 || args.Length == 2 && args[1] == "all";
 		[Desc("Check saved unit modifications against the actual merged engine rules.")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
@@ -24,6 +24,36 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			var target = doc.RootElement.GetProperty("targets").EnumerateObject()
 				.First(p => p.Value.GetProperty("mod").GetString() == mod.Manifest.Id).Name;
 			var results = new List<object>();
+			if (args.Length == 2)
+			{
+				using var pilotStream = mod.DefaultFileSystem.Open("ra2|shared-content/manifest.json");
+				using var pilot = JsonDocument.Parse(pilotStream);
+				var pilotTarget = pilot.RootElement.GetProperty("targets").GetProperty(target);
+				foreach (var unit in registry.RootElement.GetProperty("units").EnumerateObject())
+				{
+					if (!unit.Value.GetProperty("bindings").TryGetProperty(target, out var binding)) continue;
+					var actor = binding.GetProperty("actor").GetString().ToLowerInvariant();
+					var info = mod.DefaultRules.Actors[actor];
+					var overrides = doc.RootElement.GetProperty("units");
+					overrides.TryGetProperty(unit.Name, out var values);
+					foreach (var field in binding.GetProperty("baseline").EnumerateObject())
+					{
+						if (field.Value.ValueKind == JsonValueKind.Null) continue;
+						var expected = field.Value.GetInt32();
+						if (field.Name == "cost" && actor == pilotTarget.GetProperty("actor").GetString().ToLowerInvariant()) expected = pilotTarget.GetProperty("cost").GetInt32();
+						if (values.ValueKind == JsonValueKind.Object && values.TryGetProperty(field.Name, out var value)) expected = value.GetInt32();
+						var actual = field.Name switch
+						{
+							"cost" => info.TraitInfo<ValuedInfo>().Cost,
+							"health" => info.TraitInfo<HealthInfo>().HP,
+							"speed" => info.TraitInfoOrDefault<MobileInfo>()?.Speed ?? info.TraitInfo<AircraftInfo>().Speed,
+							_ => throw new InvalidDataException("Unsupported stat")
+						};
+						if (actual != expected) throw new InvalidDataException($"{target} {actor} {field.Name}: {actual} != {expected}");
+						results.Add(new { actor, field = field.Name, value = actual });
+					}
+				}
+			}
 			foreach (var unit in doc.RootElement.GetProperty("units").EnumerateObject())
 			{
 				var entry = registry.RootElement.GetProperty("units").GetProperty(unit.Name).GetProperty("bindings");
@@ -42,7 +72,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					};
 					if (actual != field.Value.GetInt32())
 						throw new InvalidDataException($"{target} {actor} {field.Name}: {actual} != {field.Value}");
-					results.Add(new { actor, field = field.Name, value = actual });
+					if (args.Length == 1) results.Add(new { actor, field = field.Name, value = actual });
 				}
 			}
 			Console.WriteLine(JsonSerializer.Serialize(new { passed = true, target,

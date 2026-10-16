@@ -57,7 +57,7 @@ def build(web_root, log):
         # Runtime layout can vary by .NET version; a manifest is sufficient to locate the existing verified runtime.
         if not (seed / 'browser/runtime').is_dir():
             raise ValueError('The verified local browser runtime is missing. Restore it before building unit previews.')
-    out = ROOT.parent / 'artifacts/unit-studio-previews' / (datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-') + uuid.uuid4().hex[:8])
+    out = Path(os.environ.get('LOCALAPPDATA', str(Path.home() / '.cache'))) / 'RTSAI/StudioPreviews' / (datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-') + uuid.uuid4().hex[:8])
     out.mkdir(parents=True)
     native = out / 'native'
     native.mkdir()
@@ -81,7 +81,7 @@ def build(web_root, log):
         raise ValueError('Content changed during the preview snapshot; build again.')
     receipts = []
     for mod in ['rtsai-classic-core', 'rtsai-ra2']:
-        result = subprocess.check_output([str(native / 'bin/OpenRA.Utility.exe'), mod, '--check-unit-modifications'],
+        result = subprocess.check_output([str(native / 'bin/OpenRA.Utility.exe'), mod, '--check-unit-modifications', 'all'],
                                         cwd=native, env={**os.environ, 'OPENRA_AI_HOST': '0', 'ENGINE_DIR': str(native),
                                                          'SUPPORT_DIR': config['supportDirectory'], 'MOD_SEARCH_PATHS': str(native / 'mods')}, text=True)
         receipts.append(json.loads(result))
