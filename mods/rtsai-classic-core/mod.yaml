@@ -121,6 +121,8 @@ Rules:
 	ra|rules/fakes.yaml
 	ra|rules/map-generators.yaml
 
+	ra2|shared-content/classic-desktop.yaml
+
 Sequences:
 	ra|sequences/ships.yaml
 	ra|sequences/vehicles.yaml

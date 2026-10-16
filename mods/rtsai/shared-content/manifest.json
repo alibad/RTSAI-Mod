@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "revision": "78478dc6320f9d87268bf598b98fe1b14c9763159a43b5455b283d9e18046f66",
+  "entity": "engineer",
+  "overrideCost": null,
+  "targets": {
+    "classic-desktop": {
+      "mod": "rtsai-classic-core",
+      "actor": "E6",
+      "baselineCost": 400,
+      "cost": 400,
+      "rules": "ra2|shared-content/classic-desktop.yaml",
+      "rulesSha256": "2552d3152673d3abfaee6cc54ba38788c09edc5d9ff85c821670aa46cc9b9c25"
+    },
+    "classic-web": {
+      "mod": "rtsai-topdown",
+      "actor": "engineer",
+      "baselineCost": 500,
+      "cost": 500,
+      "rules": "ra2|shared-content/classic-web.yaml",
+      "rulesSha256": "2552d3152673d3abfaee6cc54ba38788c09edc5d9ff85c821670aa46cc9b9c25"
+    },
+    "ra2-desktop": {
+      "mod": "rtsai-ra2",
+      "actor": "engineer",
+      "baselineCost": 500,
+      "cost": 500,
+      "rules": "ra2|shared-content/ra2-desktop.yaml",
+      "rulesSha256": "2552d3152673d3abfaee6cc54ba38788c09edc5d9ff85c821670aa46cc9b9c25"
+    },
+    "ra2-web": {
+      "mod": "rtsai",
+      "actor": "engineer",
+      "baselineCost": 500,
+      "cost": 500,
+      "rules": "ra2|shared-content/ra2-web.yaml",
+      "rulesSha256": "2552d3152673d3abfaee6cc54ba38788c09edc5d9ff85c821670aa46cc9b9c25"
+    }
+  }
+}

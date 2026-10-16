@@ -122,6 +122,8 @@ Rules:
 
 	ra2|experience/factions-disabled.yaml
 
+	ra2|shared-content/ra2-web.yaml
+
 Sequences:
 	ra2|sequences/aircraft.yaml
 	ra2|sequences/allied-infantry.yaml

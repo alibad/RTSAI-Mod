@@ -15,6 +15,8 @@ foreach ($root in @($projectRoot,$EngineSource)) {
 }
 $modCommit = (& git -C $projectRoot rev-parse HEAD).Trim()
 $engineCommit = (& git -C $EngineSource rev-parse HEAD).Trim()
+& python (Join-Path $PSScriptRoot 'shared-content.py') check
+if ($LASTEXITCODE -ne 0) { throw 'Shared content is stale; compile and commit it before building.' }
 Push-Location $EngineSource
 try { & dotnet build OpenRA.slnx -c Release --nologo -v quiet; if ($LASTEXITCODE -ne 0) { throw 'Engine build failed.' } }
 finally { Pop-Location }
