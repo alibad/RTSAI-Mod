@@ -83,7 +83,7 @@ def build(web_root, log):
     for mod in ['rtsai-classic-core', 'rtsai-ra2']:
         result = subprocess.check_output([str(native / 'bin/OpenRA.Utility.exe'), mod, '--check-unit-modifications', 'all'],
                                         cwd=native, env={**os.environ, 'OPENRA_AI_HOST': '0', 'ENGINE_DIR': str(native),
-                                                         'SUPPORT_DIR': config['supportDirectory'], 'MOD_SEARCH_PATHS': str(native / 'mods')}, text=True)
+                                                         'SUPPORT_DIR': config['supportDirectory'], 'MOD_SEARCH_PATHS': str(native / 'mods'), 'OPENRA_UTILITY_EXPERIENCE_PROFILE': 'world-war-iii'}, text=True, stderr=subprocess.STDOUT)
         receipts.append(json.loads(result))
     snapshot = out / 'mod'
     snapshot.mkdir()
