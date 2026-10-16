@@ -37,7 +37,10 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 				if (pending && height < 100)
 					throw new InvalidDataException("Pending orders have no dedicated review row.");
 			}
-			Console.WriteLine($"COMPANION HUD PASS: {cases} availability cases; 12 viewport/action layouts; live enabled companions remain accessible.");
+			const string unavailable = "AI ALERTS ONLY  •  AI GATEWAY NOT RUNNING";
+			if (CompanionHudDisplay.Message("ready:normal", unavailable) != unavailable)
+				throw new InvalidDataException("Model unavailability was hidden by a ready label.");
+			Console.WriteLine($"COMPANION HUD PASS: {cases} availability cases; 12 viewport/action layouts; live enabled companions remain accessible; unavailable model warnings preserved.");
 		}
 	}
 }

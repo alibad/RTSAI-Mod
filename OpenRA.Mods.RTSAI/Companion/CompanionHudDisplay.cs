@@ -19,8 +19,12 @@ namespace OpenRA.Mods.RTSAI.Companion
 
 		public static string Message(string state, string message)
 		{
+			if (message != null && message.StartsWith("AI ALERTS ONLY", StringComparison.Ordinal))
+				return message;
+			if (state == "muted")
+				return "Spoken replies are off. Battlefield alerts remain available.";
 			if (state != null && (state == "ready" || state.StartsWith("ready:", StringComparison.Ordinal)))
-				return "Ready when you need advice. Open Details for activity and controls.";
+				return "Adviser connected. Open Details for activity and controls.";
 			return state == "error" ? "Advice paused. Check AI settings for details." : message;
 		}
 	}

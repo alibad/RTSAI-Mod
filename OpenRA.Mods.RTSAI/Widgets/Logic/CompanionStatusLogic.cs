@@ -453,14 +453,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			threatLabel.GetColor = () => CompanionBridge.TryGetThreat(out _, out var level, out _)
 				? ThreatColor(level)
 				: Color.LightGreen;
-			statusButton.GetColor = () =>
-			{
-				if (!CompanionBridge.TryGetStatus(out var state, out var message))
-					return Color.White;
-
-				CompanionBridge.TryGetThreat(out var threatScore, out _, out _);
-				return FeedColor(state, message, threatScore);
-			};
+			statusButton.GetColor = () => Color.White;
 		}
 
 		public override void Tick()
