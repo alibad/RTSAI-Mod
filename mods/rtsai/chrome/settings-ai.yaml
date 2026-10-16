@@ -1,5 +1,5 @@
 Container@AI_PANEL:
-	Logic: AISettingsLogic
+	Logic: RTSAIAISettingsLogic
 	Width: PARENT_WIDTH
 	Height: PARENT_HEIGHT
 	Children:

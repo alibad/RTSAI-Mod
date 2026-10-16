@@ -39,7 +39,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		}
 	}
 
-	public class AISettingsLogic : ChromeLogic
+	public class RTSAIAISettingsLogic : ChromeLogic
 	{
 		const string DefaultAILayerUrl = "http://127.0.0.1:4000";
 
@@ -176,7 +176,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		readonly ModData modData;
 
 		[ObjectCreator.UseCtor]
-		public AISettingsLogic(ModData modData, ISettingsLogic settingsLogic, string panelID, string label)
+		public RTSAIAISettingsLogic(ModData modData, ISettingsLogic settingsLogic, string panelID, string label)
 		{
 			this.modData = modData;
 			settingsLogic.RegisterSettingsPanel(panelID, label, InitPanel, ResetPanel);
