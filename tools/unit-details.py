@@ -167,8 +167,15 @@ def verification(root, receipt):
             if target=='ra2-web': continue # The native utility above uses the frozen desktop assemblies; actual web is checked in WASM below.
             actual=yaml.parse(utility(root,target,'--resolved-rules',binding['actor'],config))
             compare(parse(detail['actor']),actual)
+            checked_target = 'classic-desktop' if target=='classic-web' else target
+            typed=next(u for c in receipt['nativeChecks'] if c['target']==checked_target for u in c.get('unitDetails',[]) if u['unit']==key)
+            overlay=parse(detail['actor'])
+            armor=yaml.value(next((n for n in overlay if n.key=='Armor'),None),'Type')
+            duration=yaml.value(next((n for n in overlay if n.key=='Buildable'),None),'BuildDuration')
+            if armor is not None and typed['armor']!=armor: raise ValueError('Native armor mismatch')
+            if duration is not None and typed['buildDuration']!=int(duration): raise ValueError('Native build duration mismatch')
             for arm,w in detail['weapons'].items():
                 compare([yaml.Node(arm,None,[yaml.Node('Weapon',alias(key,arm),[])])],actual)
                 compare(parse(w['rules']),yaml.parse(utility(root,target,'--resolved-weapons',alias(key,arm),config)))
-            results.append({'unit':key,'target':target,'passed':True})
+            results.append({'unit':key,'target':target,'passed':True,'engineValues':typed})
     return results

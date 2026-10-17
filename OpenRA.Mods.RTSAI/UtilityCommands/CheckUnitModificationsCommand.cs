@@ -80,8 +80,26 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					if (args.Length == 1) results.Add(new { actor, field = field.Name, value = actual });
 				}
 			}
+			var unitDetails = new List<object>();
+			if (doc.RootElement.TryGetProperty("details", out var detailed))
+				foreach (var unit in detailed.EnumerateObject())
+				{
+					if (!registry.RootElement.GetProperty("units").GetProperty(unit.Name).GetProperty("bindings").TryGetProperty(target, out var binding)) continue;
+					var actor = binding.GetProperty("actor").GetString().ToLowerInvariant();
+					var info = mod.DefaultRules.Actors[actor];
+					unitDetails.Add(new { unit = unit.Name, actor,
+						armor = info.TraitInfos<ArmorInfo>().FirstOrDefault()?.Type,
+						buildDuration = info.TraitInfoOrDefault<BuildableInfo>()?.BuildDuration,
+						sight = info.TraitInfos<RevealsShroudInfo>().FirstOrDefault(t => t.InstanceName == null)?.Range.Length,
+						weapons = info.TraitInfos<ArmamentInfo>().Select(arm =>
+						{
+							var w = mod.DefaultRules.Weapons[arm.Weapon.ToLowerInvariant()];
+							return new { name = arm.Weapon, range = w.Range.Length, reload = w.ReloadDelay, burst = w.Burst,
+								damage = w.Warheads.OfType<OpenRA.Mods.Common.Warheads.DamageWarhead>().Sum(d => d.Damage) };
+						}).ToArray() });
+				}
 			Console.WriteLine(JsonSerializer.Serialize(new { passed = true, target,
-				revision = doc.RootElement.GetProperty("revision").GetString(), fields = results }, new JsonSerializerOptions { WriteIndented = true }));
+				revision = doc.RootElement.GetProperty("revision").GetString(), fields = results, unitDetails }, new JsonSerializerOptions { WriteIndented = true }));
 		}
 	}
 }
