@@ -518,14 +518,12 @@ bridgb2:
 
 cabhut:
 	idle:
-		-TilesetFilenames:
 		Filename: ra2|standalone/bridges/cabhut.png
 		Start: 0
 		Length: 1
 		Offset: 0, 0, 0
 		ShadowStart: -1
 	damaged-idle:
-		-TilesetFilenames:
 		Filename: ra2|standalone/bridges/cabhut.png
 		Start: 1
 		Length: 1

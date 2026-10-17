@@ -10,7 +10,6 @@ from pathlib import Path
 import hashlib
 import json
 import random
-import re
 from PIL import Image, ImageDraw
 from PIL.PngImagePlugin import PngInfo
 
@@ -138,7 +137,7 @@ def write(name, frames, sequences, overrides, records):
     path = OUT/f'{name}.png'; im.save(path,pnginfo=meta,optimize=True)
     overrides.extend([f'\n{name}:'])
     for i, seq in enumerate(sequences):
-        overrides.extend([f'\t{seq}:', '\t\t-TilesetFilenames:', f'\t\tFilename: ra2|standalone/bridges/{name}.png',
+        overrides.extend([f'\t{seq}:'] + ([] if name == 'cabhut' else ['\t\t-TilesetFilenames:']) + [f'\t\tFilename: ra2|standalone/bridges/{name}.png',
             f'\t\tStart: {i}', '\t\tLength: 1', '\t\tOffset: 0, 0, 0', '\t\tShadowStart: -1'])
     records.append({'file':path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'frames':len(frames)})
 
