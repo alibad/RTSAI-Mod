@@ -40,6 +40,7 @@ def build(web_root, log):
     spec = importlib.util.spec_from_file_location('unit_content', ROOT / 'tools/unit-content.py')
     unit = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(unit)
+    source_commit = git('rev-parse', 'HEAD')
     content = unit.compile_content(ROOT, check=True)
     config = json.loads((ROOT / 'recovery.local.json').read_text(encoding='utf-8-sig'))
     runtime = Path(config['engineDirectory'])
@@ -152,7 +153,7 @@ def build(web_root, log):
         run('dotnet', runner, 'bake', '--root', scratch, '--maps', 'web-arena', '--out', target / 'sprites')
         shutil.copytree(runtime_source, target / 'wasm-interp')
         profile_data = json.loads((seed_mode / 'data' / profile / 'content-profile.json').read_text())
-        profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'], modId='rtsai-classic-core' if mode == 'classic' else 'rtsai')
+        profile_data.update(modSource=source_commit, unitRevision=content['revision'], modId='rtsai-classic-core' if mode == 'classic' else 'rtsai')
         if mode == 'classic':
             profile_data.update(modId='rtsai-classic-core', localOnly=True, gameMode='classic', foundation='recovered-classic')
         unit.atomic(target / 'content-profile.json', json.dumps(profile_data, indent=2) + '\n')
@@ -179,7 +180,7 @@ def build(web_root, log):
     build_id = 'studio-' + out.name
     web_url = f'http://127.0.0.1:{port}/local-builds/{build_id}/'
     receipt = {'schema': 2, 'buildId': build_id, 'revision': content['revision'], 'native': str(native),
-               'support': config['supportDirectory'], 'webUrl': web_url, 'sourceCommit': git('rev-parse', 'HEAD'),
+               'support': config['supportDirectory'], 'webUrl': web_url, 'sourceCommit': source_commit,
                'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
                'builtAt': datetime.now(timezone.utc).isoformat(), 'verified': False,
                'verifiedExperienceProfile': 'world-war-iii', 'serverFile': str(server_file),
@@ -218,6 +219,8 @@ def build(web_root, log):
         receipt['verification'] = verifier.verify(receipt, ROOT, out, log)
         if unit.compile_content(ROOT, check=True)['revision'] != content['revision']:
             raise ValueError('Content changed during acceptance. Saved edits are preserved; build again.')
+        if git('diff', '--name-only', source_commit, 'HEAD', '--', 'OpenRA.Mods.RA2', 'OpenRA.Mods.RTSAI', 'mods'):
+            raise ValueError('Game source changed during acceptance. Build again from the latest main.')
         # These hashes are checked on ordinary local launches, not just during acceptance.
         paths = [*list((native / 'bin').glob('*.dll')), native / 'bin/OpenRA.exe',
                  native / 'mods/rtsai/unit-overrides/manifest.json', out / 'web/index.html', server_file]
