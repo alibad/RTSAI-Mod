@@ -111,12 +111,12 @@ def main():
             for dead in [False, True]:
                 name = f'{material}_{axis}' + ('_d' if dead else '')
                 seqs = ['idle','aramp','bramp','abramp','editor'] if dead else ['idle','idle2','idle3','idle4','adead','bdead','abdead']
-                frames = [span(material == 'lobrdb', axis == 'b',
+                frames = [span(material == 'lobrdg', axis == 'b',
                     ('both' if dead else 'a' if seq == 'adead' else 'b' if seq == 'bdead' else 'both' if seq == 'abdead' else ''), i)
                     for i, seq in enumerate(seqs)]
                 write(name, frames, seqs, overrides, records)
         for direction in ['ne','nw','se','sw']:
-            write(f'{material}_r_{direction}', [span(material == 'lobrdb', direction in ['nw','se'], ramp='a' if direction in ['ne','nw'] else 'b')]*2,
+            write(f'{material}_r_{direction}', [span(material == 'lobrdg', direction in ['nw','se'], ramp='a' if direction in ['ne','nw'] else 'b')]*2,
                   ['idle','damaged-idle'], overrides, records)
     for name in ['bridge1','bridge2','bridgb1','bridgb2']:
         write(name, [span(name.startswith('bridgb'), name.endswith('2'), high=True)], ['idle'], overrides, records)
