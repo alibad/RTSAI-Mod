@@ -63,7 +63,9 @@ def build(web_root, log):
         # Runtime layout can vary by .NET version; a manifest is sufficient to locate the existing verified runtime.
         if not (seed / 'browser/runtime').is_dir():
             raise ValueError('The verified local browser runtime is missing. Restore it before building unit previews.')
-    build_root = Path(os.environ.get('RTSAI_STUDIO_BUILD_ROOT', str(Path(os.environ.get('LOCALAPPDATA', str(Path.home() / '.cache'))) / 'RTSAI/StudioPreviews')))
+    settings_file = ROOT / '.recovery/studio-settings.json'
+    settings = json.loads(settings_file.read_text(encoding='utf-8-sig')) if settings_file.exists() else {}
+    build_root = Path(os.environ.get('RTSAI_STUDIO_BUILD_ROOT', settings.get('buildRoot', str(Path(os.environ.get('LOCALAPPDATA', str(Path.home() / '.cache'))) / 'RTSAI/StudioPreviews'))))
     out = build_root / (datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-') + uuid.uuid4().hex[:8])
     out.mkdir(parents=True)
     native = out / 'native'
@@ -225,6 +227,9 @@ def build(web_root, log):
         # These hashes are checked on ordinary local launches, not just during acceptance.
         paths = [*list((native / 'bin').glob('*.dll')), native / 'bin/OpenRA.exe',
                  native / 'mods/rtsai/unit-overrides/manifest.json', out / 'web/index.html', server_file]
+        # Desktop consumes loose rule files, unlike the hashed web pack. Freeze those inputs too.
+        for mod in ['rtsai', 'rtsai-ra2', 'rtsai-classic-core']:
+            paths += list((native / 'mods' / mod).rglob('*.yaml'))
         for profile in ['public', 'public-classic']:
             paths += [data / profile / 'web-bundle.pack', data / profile / 'content-profile.json']
             paths += list((data / profile / 'wasm-interp/wwwroot/_framework').glob('*.wasm'))
