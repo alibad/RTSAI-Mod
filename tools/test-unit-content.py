@@ -120,7 +120,7 @@ class UnitContentTest(unittest.TestCase):
 
     def test_advanced_rule_validation_blocks_ambiguous_and_core_stat_overrides(self):
         registry=unit.load(self.root/unit.REGISTRY)
-        for actor in ['Inherits: ^SOLDIER\n','Health:\n\tHP: 1\n','Armor:\n\tType: Light\nArmor:\n\tType: Heavy\n','Armor:\n    Type: Light\n']:
+        for actor in ['Inherits: ^SOLDIER\n','Health:\n\tHP: 1\n','Armor:\n\tType: Light\nArmor:\n\tType: Heavy\n','Armor:\n  Type: Light\n']:
             with self.assertRaises(ValueError):
                 unit.details.validate({'schema':1,'units':{'classic:e1':{'actor':actor,'weapons':{}}}},registry)
 

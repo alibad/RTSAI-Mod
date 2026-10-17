@@ -33,9 +33,10 @@ def parse(text):
         if not line.strip() or line.lstrip().startswith('#'): continue
         indent = len(line) - len(line.lstrip(' \t'))
         prefix = line[:indent]
-        if ' ' in prefix or prefix.count('\t') > previous + 1:
-            raise ValueError('Use tabs for rule indentation, one level at a time')
-        previous = prefix.count('\t')
+        normalized = prefix.replace('    ', '\t')
+        if ' ' in normalized or normalized.count('\t') > previous + 1:
+            raise ValueError('Indent rules with tabs or groups of four spaces, one level at a time')
+        previous = normalized.count('\t')
     nodes = yaml.parse(text)
     def check(rows):
         keys = set()
