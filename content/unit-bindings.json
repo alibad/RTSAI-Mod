@@ -43,10 +43,6 @@
           "name": "Yemen"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "iran",
           "name": "Iran"
         },
@@ -132,10 +128,6 @@
         {
           "id": "yemen",
           "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
         },
         {
           "id": "iran",
@@ -345,115 +337,14 @@
         }
       }
     },
-    "classic:spy": {
-      "mode": "classic",
-      "actor": "spy",
-      "name": "Spy",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "SPY",
-          "baseline": {
-            "cost": 500,
-            "health": 2500,
-            "speed": 54
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [
-              "^soldier",
-              "^infantry"
-            ],
-            "speed": [
-              "^soldier",
-              "^infantry"
-            ]
-          }
-        },
-        "classic-web": {
-          "actor": "SPY",
-          "baseline": {
-            "cost": 500,
-            "health": 2500,
-            "speed": 54
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [
-              "^soldier",
-              "^infantry"
-            ],
-            "speed": [
-              "^soldier",
-              "^infantry"
-            ]
-          }
-        }
-      }
-    },
     "classic:spy.england": {
       "mode": "classic",
       "actor": "spy.england",
-      "name": "Spy.england",
+      "name": "British Spy",
       "factions": [
         {
           "id": "england",
           "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "china",
-          "name": "China"
         }
       ],
       "bindings": {
@@ -594,10 +485,6 @@
           "name": "Saudi Arabia"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "china",
           "name": "China"
         }
@@ -736,36 +623,12 @@
           "name": "Germany"
         },
         {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
           "id": "israel",
           "name": "Israel"
         },
         {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
           "id": "saudi",
           "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
         },
         {
           "id": "china",
@@ -792,176 +655,6 @@
           "baseline": {
             "cost": 700,
             "health": 23000,
-            "speed": 113
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
-    "classic:apc": {
-      "mode": "classic",
-      "actor": "apc",
-      "name": "Armored Personnel Carrier",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "APC",
-          "baseline": {
-            "cost": 850,
-            "health": 35000,
-            "speed": 128
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "APC",
-          "baseline": {
-            "cost": 850,
-            "health": 35000,
-            "speed": 128
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
-    "classic:ftrk": {
-      "mode": "classic",
-      "actor": "ftrk",
-      "name": "Mobile Flak",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "FTRK",
-          "baseline": {
-            "cost": 600,
-            "health": 15000,
-            "speed": 113
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "FTRK",
-          "baseline": {
-            "cost": 600,
-            "health": 15000,
             "speed": 113
           },
           "speedTrait": "Mobile",
@@ -991,36 +684,12 @@
           "name": "Germany"
         },
         {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
           "id": "israel",
           "name": "Israel"
         },
         {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
           "id": "saudi",
           "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
         },
         {
           "id": "china",
@@ -1161,36 +830,12 @@
           "name": "Germany"
         },
         {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
           "id": "israel",
           "name": "Israel"
         },
         {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
           "id": "saudi",
           "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
         },
         {
           "id": "china",
@@ -1218,91 +863,6 @@
             "cost": 850,
             "health": 46000,
             "speed": 72
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
-    "classic:3tnk": {
-      "mode": "classic",
-      "actor": "3tnk",
-      "name": "Heavy Tank",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "3TNK",
-          "baseline": {
-            "cost": 1150,
-            "health": 60000,
-            "speed": 64
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "3TNK",
-          "baseline": {
-            "cost": 1150,
-            "health": 60000,
-            "speed": 64
           },
           "speedTrait": "Mobile",
           "inheritance": {
@@ -1331,36 +891,12 @@
           "name": "Germany"
         },
         {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
           "id": "israel",
           "name": "Israel"
         },
         {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
           "id": "saudi",
           "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
         },
         {
           "id": "china",
@@ -1387,91 +923,6 @@
           "baseline": {
             "cost": 850,
             "health": 10000,
-            "speed": 72
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
-    "classic:v2rl": {
-      "mode": "classic",
-      "actor": "v2rl",
-      "name": "V2 Rocket Launcher",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "V2RL",
-          "baseline": {
-            "cost": 900,
-            "health": 20000,
-            "speed": 72
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "V2RL",
-          "baseline": {
-            "cost": 900,
-            "health": 20000,
             "speed": 72
           },
           "speedTrait": "Mobile",
@@ -1594,10 +1045,6 @@
           "name": "Saudi Arabia"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "china",
           "name": "China"
         }
@@ -1623,71 +1070,6 @@
             "cost": 1000,
             "health": 22000,
             "speed": 68
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
-    "classic:ctnk": {
-      "mode": "classic",
-      "actor": "ctnk",
-      "name": "Chrono Tank",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "CTNK",
-          "baseline": {
-            "cost": 1350,
-            "health": 40000,
-            "speed": 86
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "CTNK",
-          "baseline": {
-            "cost": 1350,
-            "health": 40000,
-            "speed": 86
           },
           "speedTrait": "Mobile",
           "inheritance": {
@@ -1706,30 +1088,6 @@
         {
           "id": "england",
           "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "china",
-          "name": "China"
         }
       ],
       "bindings": {
@@ -1753,71 +1111,6 @@
             "cost": 1000,
             "health": 22000,
             "speed": 72
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
-    "classic:stnk": {
-      "mode": "classic",
-      "actor": "stnk",
-      "name": "Phase Transport",
-      "factions": [
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "STNK",
-          "baseline": {
-            "cost": 1000,
-            "health": 35000,
-            "speed": 128
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "STNK",
-          "baseline": {
-            "cost": 1000,
-            "health": 35000,
-            "speed": 128
           },
           "speedTrait": "Mobile",
           "inheritance": {
@@ -1937,10 +1230,6 @@
         {
           "id": "saudi",
           "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
         },
         {
           "id": "china",
@@ -2069,10 +1358,6 @@
           "name": "Saudi Arabia"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "china",
           "name": "China"
         }
@@ -2150,10 +1435,6 @@
           "name": "Yemen"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "iran",
           "name": "Iran"
         },
@@ -2219,10 +1500,6 @@
           "name": "Saudi Arabia"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "china",
           "name": "China"
         }
@@ -2284,10 +1561,6 @@
           "name": "Saudi Arabia"
         },
         {
-          "id": "turkey",
-          "name": "Turkey"
-        },
-        {
           "id": "china",
           "name": "China"
         }
@@ -2347,10 +1620,6 @@
         {
           "id": "saudi",
           "name": "Saudi Arabia"
-        },
-        {
-          "id": "turkey",
-          "name": "Turkey"
         },
         {
           "id": "china",
@@ -3868,6 +3137,116 @@
         }
       }
     },
+    "classic:spy": {
+      "mode": "classic",
+      "actor": "spy",
+      "name": "Spy",
+      "factions": [
+        {
+          "id": "france",
+          "name": "France"
+        },
+        {
+          "id": "germany",
+          "name": "Germany"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "SPY",
+          "baseline": {
+            "cost": 500,
+            "health": 2500,
+            "speed": 54
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [
+              "^soldier",
+              "^infantry"
+            ],
+            "speed": [
+              "^soldier",
+              "^infantry"
+            ]
+          }
+        },
+        "classic-web": {
+          "actor": "SPY",
+          "baseline": {
+            "cost": 500,
+            "health": 2500,
+            "speed": 54
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [
+              "^soldier",
+              "^infantry"
+            ],
+            "speed": [
+              "^soldier",
+              "^infantry"
+            ]
+          }
+        }
+      }
+    },
+    "classic:stnk": {
+      "mode": "classic",
+      "actor": "stnk",
+      "name": "Phase Transport",
+      "factions": [
+        {
+          "id": "france",
+          "name": "France"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "STNK",
+          "baseline": {
+            "cost": 1000,
+            "health": 35000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "STNK",
+          "baseline": {
+            "cost": 1000,
+            "health": 35000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
     "classic:fpwr": {
       "mode": "classic",
       "actor": "fpwr",
@@ -4319,6 +3698,47 @@
         }
       }
     },
+    "classic:ctnk": {
+      "mode": "classic",
+      "actor": "ctnk",
+      "name": "Chrono Tank",
+      "factions": [
+        {
+          "id": "germany",
+          "name": "Germany"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "CTNK",
+          "baseline": {
+            "cost": 1350,
+            "health": 40000,
+            "speed": 86
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "CTNK",
+          "baseline": {
+            "cost": 1350,
+            "health": 40000,
+            "speed": 86
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
     "classic:e2": {
       "mode": "classic",
       "actor": "e2",
@@ -4561,22 +3981,6 @@
         {
           "id": "russia",
           "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
         }
       ],
       "bindings": {
@@ -4612,6 +4016,234 @@
               "^soldier",
               "^infantry"
             ]
+          }
+        }
+      }
+    },
+    "classic:apc": {
+      "mode": "classic",
+      "actor": "apc",
+      "name": "Armored Personnel Carrier",
+      "factions": [
+        {
+          "id": "russia",
+          "name": "Russia"
+        },
+        {
+          "id": "ukraine",
+          "name": "Ukraine"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "APC",
+          "baseline": {
+            "cost": 850,
+            "health": 35000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "APC",
+          "baseline": {
+            "cost": 850,
+            "health": 35000,
+            "speed": 128
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
+    "classic:ftrk": {
+      "mode": "classic",
+      "actor": "ftrk",
+      "name": "Mobile Flak",
+      "factions": [
+        {
+          "id": "russia",
+          "name": "Russia"
+        },
+        {
+          "id": "ukraine",
+          "name": "Ukraine"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "FTRK",
+          "baseline": {
+            "cost": 600,
+            "health": 15000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "FTRK",
+          "baseline": {
+            "cost": 600,
+            "health": 15000,
+            "speed": 113
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
+    "classic:3tnk": {
+      "mode": "classic",
+      "actor": "3tnk",
+      "name": "Heavy Tank",
+      "factions": [
+        {
+          "id": "russia",
+          "name": "Russia"
+        },
+        {
+          "id": "ukraine",
+          "name": "Ukraine"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "3TNK",
+          "baseline": {
+            "cost": 1150,
+            "health": 60000,
+            "speed": 64
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "3TNK",
+          "baseline": {
+            "cost": 1150,
+            "health": 60000,
+            "speed": 64
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
+    "classic:v2rl": {
+      "mode": "classic",
+      "actor": "v2rl",
+      "name": "V2 Rocket Launcher",
+      "factions": [
+        {
+          "id": "russia",
+          "name": "Russia"
+        },
+        {
+          "id": "ukraine",
+          "name": "Ukraine"
+        },
+        {
+          "id": "hezbollah",
+          "name": "Hezbollah"
+        },
+        {
+          "id": "yemen",
+          "name": "Yemen"
+        },
+        {
+          "id": "iran",
+          "name": "Iran"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "V2RL",
+          "baseline": {
+            "cost": 900,
+            "health": 20000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "V2RL",
+          "baseline": {
+            "cost": 900,
+            "health": 20000,
+            "speed": 72
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
           }
         }
       }
@@ -4673,63 +4305,6 @@
         }
       }
     },
-    "classic:dtrk": {
-      "mode": "classic",
-      "actor": "dtrk",
-      "name": "Demolition Truck",
-      "factions": [
-        {
-          "id": "russia",
-          "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
-        }
-      ],
-      "bindings": {
-        "classic-desktop": {
-          "actor": "DTRK",
-          "baseline": {
-            "cost": 2500,
-            "health": 2800,
-            "speed": 67
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "classic-web": {
-          "actor": "DTRK",
-          "baseline": {
-            "cost": 2500,
-            "health": 2800,
-            "speed": 67
-          },
-          "speedTrait": "Mobile",
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
     "classic:ttnk": {
       "mode": "classic",
       "actor": "ttnk",
@@ -4738,22 +4313,6 @@
         {
           "id": "russia",
           "name": "Russia"
-        },
-        {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
-          "id": "hezbollah",
-          "name": "Hezbollah"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
-          "id": "iran",
-          "name": "Iran"
         }
       ],
       "bindings": {
@@ -4984,10 +4543,6 @@
           "name": "Hezbollah"
         },
         {
-          "id": "yemen",
-          "name": "Yemen"
-        },
-        {
           "id": "iran",
           "name": "Iran"
         }
@@ -5039,10 +4594,6 @@
         {
           "id": "hezbollah",
           "name": "Hezbollah"
-        },
-        {
-          "id": "yemen",
-          "name": "Yemen"
         },
         {
           "id": "iran",
@@ -5432,10 +4983,6 @@
           "name": "Russia"
         },
         {
-          "id": "ukraine",
-          "name": "Ukraine"
-        },
-        {
           "id": "hezbollah",
           "name": "Hezbollah"
         },
@@ -5642,6 +5189,47 @@
             "speed": null
           },
           "speedTrait": null,
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
+    "classic:dtrk": {
+      "mode": "classic",
+      "actor": "dtrk",
+      "name": "Demolition Truck",
+      "factions": [
+        {
+          "id": "ukraine",
+          "name": "Ukraine"
+        }
+      ],
+      "bindings": {
+        "classic-desktop": {
+          "actor": "DTRK",
+          "baseline": {
+            "cost": 2500,
+            "health": 2800,
+            "speed": 67
+          },
+          "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "classic-web": {
+          "actor": "DTRK",
+          "baseline": {
+            "cost": 2500,
+            "health": 2800,
+            "speed": 67
+          },
+          "speedTrait": "Mobile",
           "inheritance": {
             "cost": [],
             "health": [],
@@ -12524,79 +12112,6 @@
         }
       }
     },
-    "ra2:gaairc": {
-      "mode": "ra2",
-      "actor": "gaairc",
-      "name": "Airfield",
-      "factions": [
-        {
-          "id": "america",
-          "name": "America"
-        },
-        {
-          "id": "germany",
-          "name": "Germany"
-        },
-        {
-          "id": "england",
-          "name": "England"
-        },
-        {
-          "id": "france",
-          "name": "France"
-        },
-        {
-          "id": "korea",
-          "name": "Korea"
-        },
-        {
-          "id": "china",
-          "name": "China"
-        },
-        {
-          "id": "turkey",
-          "name": "Türkiye"
-        },
-        {
-          "id": "saudi",
-          "name": "Saudi Arabia"
-        },
-        {
-          "id": "israel",
-          "name": "Israel"
-        }
-      ],
-      "bindings": {
-        "ra2-desktop": {
-          "actor": "gaairc",
-          "baseline": {
-            "cost": 1000,
-            "health": 600,
-            "speed": null
-          },
-          "speedTrait": null,
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        },
-        "ra2-web": {
-          "actor": "gaairc",
-          "baseline": {
-            "cost": 1000,
-            "health": 600,
-            "speed": null
-          },
-          "speedTrait": null,
-          "inheritance": {
-            "cost": [],
-            "health": [],
-            "speed": []
-          }
-        }
-      }
-    },
     "ra2:gadept": {
       "mode": "ra2",
       "actor": "gadept",
@@ -12922,6 +12437,75 @@
             "speed": 75
           },
           "speedTrait": "Mobile",
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        }
+      }
+    },
+    "ra2:gaairc": {
+      "mode": "ra2",
+      "actor": "gaairc",
+      "name": "Airfield",
+      "factions": [
+        {
+          "id": "germany",
+          "name": "Germany"
+        },
+        {
+          "id": "england",
+          "name": "England"
+        },
+        {
+          "id": "france",
+          "name": "France"
+        },
+        {
+          "id": "korea",
+          "name": "Korea"
+        },
+        {
+          "id": "china",
+          "name": "China"
+        },
+        {
+          "id": "turkey",
+          "name": "Türkiye"
+        },
+        {
+          "id": "saudi",
+          "name": "Saudi Arabia"
+        },
+        {
+          "id": "israel",
+          "name": "Israel"
+        }
+      ],
+      "bindings": {
+        "ra2-desktop": {
+          "actor": "gaairc",
+          "baseline": {
+            "cost": 1000,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null,
+          "inheritance": {
+            "cost": [],
+            "health": [],
+            "speed": []
+          }
+        },
+        "ra2-web": {
+          "actor": "gaairc",
+          "baseline": {
+            "cost": 1000,
+            "health": 600,
+            "speed": null
+          },
+          "speedTrait": null,
           "inheritance": {
             "cost": [],
             "health": [],
