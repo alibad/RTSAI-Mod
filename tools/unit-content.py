@@ -197,6 +197,7 @@ def main():
     result = view(root, a.unit) if a.command in ['view', 'workspace'] else edit(root, json.load(sys.stdin)) if a.command == 'edit' else compile_content(root, a.command == 'check')
     if a.command == 'workspace' and result['supported']:
         result['details'] = details.view(root, a.unit, load(root / REGISTRY))
+        result['history'] = details.history(root, a.unit)
     print(json.dumps(result, indent=2))
 
 

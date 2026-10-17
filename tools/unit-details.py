@@ -146,6 +146,25 @@ def check_engine(root, registry, data):
             utility(root, target, '--check-unit-modifications')
 
 
+def history(root, key):
+    """Unit-specific snapshots; restoring one never replaces other units' work."""
+    directory=root/'content/unit-revisions'
+    files=sorted((p for p in directory.glob('*.json') if re.fullmatch(r'[a-f0-9]{64}',p.stem)),key=lambda p:p.stat().st_mtime,reverse=True)
+    rows,seen=[],set()
+    for path in files:
+        try:
+            values=json.loads(path.read_text(encoding='utf-8-sig'))['units'].get(key,{})
+            detailed=path.with_name(path.stem+'-details.json')
+            detail=json.loads(detailed.read_text(encoding='utf-8-sig'))['units'].get(key,{'actor':'','weapons':{}}) if detailed.exists() else {'actor':'','weapons':{}}
+            identity=json.dumps([values,detail],sort_keys=True)
+            if identity in seen: continue
+            seen.add(identity)
+            rows.append({'revision':path.stem,'savedAt':path.stat().st_mtime,'values':values,'details':detail})
+            if len(rows)>=12: break
+        except (ValueError,KeyError): continue
+    return rows
+
+
 def verification(root, receipt):
     """Compare every saved leaf with engine-resolved native rules; the browser checks the same expectations."""
     native = Path(receipt['native'])

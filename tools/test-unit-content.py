@@ -106,6 +106,9 @@ class UnitContentTest(unittest.TestCase):
         # The old stat API must retain the full rule edits.
         self.edit('classic:e1', {'cost':110})
         self.assertEqual(unit.details.load(self.root)['units']['classic:e1'],detail)
+        rows=unit.details.history(self.root,'classic:e1')
+        self.assertTrue(any(r['values']=={'cost':105} and r['details']==detail for r in rows))
+        self.assertTrue(any(r['values']=={} and r['details']=={'actor':'','weapons':{}} for r in rows))
 
     def test_engine_rejection_rolls_back_all_sources_and_generated_outputs(self):
         source = (self.root/unit.SOURCE).read_bytes()
