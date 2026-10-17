@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "units": {
+    "classic:e1": {
+      "actor": "Armor:\n\tType: Light\nBuildable:\n\tBuildDuration: 90\nRevealsShroud:\n\tRange: 6c0\n",
+      "weapons": {
+        "Armament@PRIMARY": {
+          "base": "M1Carbine",
+          "rules": "Range: 6c0\nReloadDelay: 16\nWarhead@1Dam:\n\tDamage: 1200\n"
+        }
+      }
+    },
+    "ra2:e1": {
+      "actor": "Armor:\n\tType: Light\nBuildable:\n\tBuildDuration: 95\nRevealsShroud:\n\tRange: 7c0\n",
+      "weapons": {
+        "Armament@primary": {
+          "base": "M60",
+          "rules": "Range: 6c0\nReloadDelay: 17\nWarhead@1Dam:\n\tDamage: 32\n"
+        }
+      }
+    }
+  }
+}

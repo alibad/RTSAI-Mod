@@ -249,6 +249,7 @@ Weapons:
 	ra|weapons/superweapons.yaml
 	ra|experiences/weapons/point-defense-interception.yaml
 	ra|experiences/weapons/reusable-abilities.yaml
+	ra2|unit-overrides/classic-desktop-weapons.yaml
 
 Voices:
 	ra|audio/voices.yaml

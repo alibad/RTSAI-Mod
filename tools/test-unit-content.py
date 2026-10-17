@@ -4,6 +4,7 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('unit_content', Path(__file__).with_name('unit-content.py'))
 unit = importlib.util.module_from_spec(spec)
@@ -89,6 +90,39 @@ class UnitContentTest(unittest.TestCase):
         self.assertGreater(len(edits), 0)
         for key in edits:
             self.assertIn(registry[key]['bindings']['classic-web']['actor'] + ':\n', files[unit.OUTPUT / 'classic-web.yaml'])
+
+    def test_full_rules_clone_weapons_and_keep_other_units_and_modes(self):
+        detail = {'actor':'Armor:\n\tType: Light\nBuildable:\n\tBuildDuration: 90\n',
+          'weapons':{'Armament@PRIMARY':{'base':'M1Carbine','rules':'Range: 6c0\nReloadDelay: 16\nWarhead@1Dam: SpreadDamage\n\tDamage: 18\n'}}}
+        before = unit.state(self.root)[2]
+        with patch.object(unit.details, 'check_engine'):
+            result = unit.edit(self.root, {'unit':'classic:e1','values':{'cost':105},'details':detail,'baseRevision':before})
+        files, manifest = unit.compiled(self.root)
+        self.assertNotEqual(before, manifest['revision'])
+        self.assertIn('Weapon: studio_classic_e1_armament_primary',files[unit.OUTPUT/'classic-web.yaml'])
+        self.assertIn('Inherits: M1Carbine', files[unit.OUTPUT/'classic-web-weapons.yaml'])
+        self.assertNotIn('Range: 6c0', files[unit.OUTPUT/'ra2-web-weapons.yaml'])
+        self.assertEqual(manifest['details']['classic:e1'],detail)
+        # The old stat API must retain the full rule edits.
+        self.edit('classic:e1', {'cost':110})
+        self.assertEqual(unit.details.load(self.root)['units']['classic:e1'],detail)
+
+    def test_engine_rejection_rolls_back_all_sources_and_generated_outputs(self):
+        source = (self.root/unit.SOURCE).read_bytes()
+        files, _ = unit.compiled(self.root)
+        detail = {'actor':'NotARealTrait:\n\tValue: 3\n','weapons':{}}
+        with patch.object(unit.details,'check_engine', side_effect=ValueError('Engine rejected rules')):
+            with self.assertRaisesRegex(ValueError,'Engine rejected'):
+                unit.edit(self.root, {'unit':'ra2:e1','values':{'cost':220},'details':detail,'baseRevision':unit.state(self.root)[2]})
+        self.assertEqual((self.root/unit.SOURCE).read_bytes(),source)
+        self.assertEqual(unit.details.load(self.root)['units'],{})
+        for path,text in files.items(): self.assertEqual((self.root/path).read_text(),text)
+
+    def test_advanced_rule_validation_blocks_ambiguous_and_core_stat_overrides(self):
+        registry=unit.load(self.root/unit.REGISTRY)
+        for actor in ['Inherits: ^SOLDIER\n','Health:\n\tHP: 1\n','Armor:\n\tType: Light\nArmor:\n\tType: Heavy\n','Armor:\n    Type: Light\n']:
+            with self.assertRaises(ValueError):
+                unit.details.validate({'schema':1,'units':{'classic:e1':{'actor':actor,'weapons':{}}}},registry)
 
 
 if __name__ == '__main__':

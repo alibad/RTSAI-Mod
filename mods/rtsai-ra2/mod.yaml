@@ -265,6 +265,7 @@ Weapons:
 	ra2|modern-factions/yemen-weapons.yaml
 	ra2|modern-factions/hezbollah-weapons.yaml
 	ra2|modern-factions/art-vehicles-fx-weapons.yaml
+	ra2|unit-overrides/ra2-desktop-weapons.yaml
 
 Voices:
 	ra2|modern-factions/levant-voices.yaml

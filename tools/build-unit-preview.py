@@ -63,7 +63,8 @@ def build(web_root, log):
         # Runtime layout can vary by .NET version; a manifest is sufficient to locate the existing verified runtime.
         if not (seed / 'browser/runtime').is_dir():
             raise ValueError('The verified local browser runtime is missing. Restore it before building unit previews.')
-    out = Path(os.environ.get('LOCALAPPDATA', str(Path.home() / '.cache'))) / 'RTSAI/StudioPreviews' / (datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-') + uuid.uuid4().hex[:8])
+    build_root = Path(os.environ.get('RTSAI_STUDIO_BUILD_ROOT', str(Path(os.environ.get('LOCALAPPDATA', str(Path.home() / '.cache'))) / 'RTSAI/StudioPreviews')))
+    out = build_root / (datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-') + uuid.uuid4().hex[:8])
     out.mkdir(parents=True)
     native = out / 'native'
     native.mkdir()

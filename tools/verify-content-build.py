@@ -8,6 +8,11 @@ import sys
 import time
 
 def verify(receipt, root, out, log):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('unit_details_verify', root/'tools/unit-details.py')
+    details = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(details)
+    full_rules = details.verification(root, receipt)
     native = Path(receipt['native'])
     proofs = []
     config = out / 'receipt.json'
@@ -41,6 +46,7 @@ def verify(receipt, root, out, log):
     if not browser['passed'] or browser['revision'] != receipt['revision']:
         raise ValueError('Browser acceptance revision mismatch')
     return {'passed': True, 'revision': receipt['revision'], 'nativeProduction': proofs,
+            'unitRules': full_rules,
             'browser': str(out / 'acceptance/browser-receipt.json'),
             'targets': ['classic-desktop', 'classic-web', 'ra2-desktop', 'ra2-web'],
             'scope': 'All bound unit stats; native Engineer production in each mode; browser stock/custom Classic and RA2 production. Not full campaign or UI parity.'}

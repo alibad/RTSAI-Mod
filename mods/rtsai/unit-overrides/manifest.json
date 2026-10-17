@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "revision": "06642b3cb639d275a54be977cf5f0a46720e51e5e9f5dcfbf53d4d40548befb1",
+  "revision": "2e2d2cb01b8d7265896e03e9dc2d4b43670ec1fce1750da54f4779e5cbbcf987",
   "units": {
     "ra2:engineer": {
       "cost": 700,
@@ -16,22 +16,42 @@
     "classic-desktop": {
       "mod": "rtsai-classic-core",
       "rules": "ra2|unit-overrides/classic-desktop.yaml",
-      "sha256": "38728cff70418273229bdaae72fdfe0f1b17ff0e4484b60f9ec0ccc0b1b50e2b"
+      "sha256": "87f9a1a1d126848d7206457feea7cc41aeaf8fb106444d3c772f9444ff02c7b4"
     },
     "classic-web": {
       "mod": "rtsai-classic-core",
       "rules": "ra2|unit-overrides/classic-web.yaml",
-      "sha256": "38728cff70418273229bdaae72fdfe0f1b17ff0e4484b60f9ec0ccc0b1b50e2b"
+      "sha256": "87f9a1a1d126848d7206457feea7cc41aeaf8fb106444d3c772f9444ff02c7b4"
     },
     "ra2-desktop": {
       "mod": "rtsai-ra2",
       "rules": "ra2|unit-overrides/ra2-desktop.yaml",
-      "sha256": "adbc504f1d63945029c1cb321304d5803096f027991eff9550f2e214d22ced2c"
+      "sha256": "42306f5a6dbba95a7bfbd74443f5ff5e074f2c7d1aaf73e2ebce58b13c2d6bd3"
     },
     "ra2-web": {
       "mod": "rtsai",
       "rules": "ra2|unit-overrides/ra2-web.yaml",
-      "sha256": "adbc504f1d63945029c1cb321304d5803096f027991eff9550f2e214d22ced2c"
+      "sha256": "42306f5a6dbba95a7bfbd74443f5ff5e074f2c7d1aaf73e2ebce58b13c2d6bd3"
+    }
+  },
+  "details": {
+    "classic:e1": {
+      "actor": "Armor:\n\tType: Light\nBuildable:\n\tBuildDuration: 90\nRevealsShroud:\n\tRange: 6c0\n",
+      "weapons": {
+        "Armament@PRIMARY": {
+          "base": "M1Carbine",
+          "rules": "Range: 6c0\nReloadDelay: 16\nWarhead@1Dam:\n\tDamage: 1200\n"
+        }
+      }
+    },
+    "ra2:e1": {
+      "actor": "Armor:\n\tType: Light\nBuildable:\n\tBuildDuration: 95\nRevealsShroud:\n\tRange: 7c0\n",
+      "weapons": {
+        "Armament@primary": {
+          "base": "M60",
+          "rules": "Range: 6c0\nReloadDelay: 17\nWarhead@1Dam:\n\tDamage: 32\n"
+        }
+      }
     }
   }
 }
