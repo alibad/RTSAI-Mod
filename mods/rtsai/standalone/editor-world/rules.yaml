@@ -44,42 +44,42 @@ cathosp:
 	RenderSprites:
 		Image: editor-world-cathosp
 
-srock01:
+SROCK01:
 	RenderSprites:
 		Image: editor-world-srock01
 
-srock02:
+SROCK02:
 	RenderSprites:
 		Image: editor-world-srock02
 
-srock03:
+SROCK03:
 	RenderSprites:
 		Image: editor-world-srock03
 
-srock04:
+SROCK04:
 	RenderSprites:
 		Image: editor-world-srock04
 
-srock05:
+SROCK05:
 	RenderSprites:
 		Image: editor-world-srock05
 
-trock01:
+TROCK01:
 	RenderSprites:
 		Image: editor-world-trock01
 
-trock02:
+TROCK02:
 	RenderSprites:
 		Image: editor-world-trock02
 
-trock03:
+TROCK03:
 	RenderSprites:
 		Image: editor-world-trock03
 
-trock04:
+TROCK04:
 	RenderSprites:
 		Image: editor-world-trock04
 
-trock05:
+TROCK05:
 	RenderSprites:
 		Image: editor-world-trock05

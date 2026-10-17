@@ -83,7 +83,8 @@ def main():
     rules = ['# Rendering-only overrides. Native capture, economy, repair and combat traits are preserved.']
     for actor, (atlas, index, target) in actors.items():
         image = f'editor-world-{actor}'
-        rules += [f'\n{actor}:', '\tRenderSprites:', f'\t\tImage: {image}']
+        key = actor.upper() if atlas == 'rocks' else actor
+        rules += [f'\n{key}:', '\tRenderSprites:', f'\t\tImage: {image}']
         rules += [f'\t-{trait}:' for trait in removals.get(actor, [])]
         sequences += [f'\n{image}:']
         states = [('idle', index)]
