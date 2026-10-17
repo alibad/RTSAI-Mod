@@ -58,7 +58,8 @@ def main():
             'collection': 'Red Alert 2',
             'source': source.relative_to(ROOT).as_posix(),
             'upstream': 'https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/' + name,
-            'sourceYamlSha256': sha(original), 'sourceTerrainSha256': sha(terrain),
+            'sourceYamlSha256': sha(original.decode('utf-8-sig').replace('\r\n', '\n').encode('utf-8')), 'sourceTerrainSha256': sha(terrain),
+            'yamlHashEncoding': 'UTF-8 without BOM, LF line endings',
             'adaptation': 'RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.',
             'contentNotice': 'Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.',
             'files': {key: sha(data) for key, data in files.items()},
@@ -67,7 +68,10 @@ def main():
         for filename, data in files.items():
             path = target / filename
             if args.check:
-                assert path.read_bytes() == data, f'{path}: differs from reviewed source adapter'
+                actual = path.read_bytes()
+                if filename.endswith(('.yaml', '.json')):
+                    actual = actual.replace(b'\r\n', b'\n')
+                assert actual == data, f'{path}: differs from reviewed source adapter'
             else:
                 target.mkdir(parents=True, exist_ok=True)
                 path.write_bytes(data)
@@ -75,7 +79,7 @@ def main():
     catalog = ROOT / 'resources/web-skirmish-maps.json'
     data = (json.dumps({'schema': 1, 'maps': records}, indent=2, ensure_ascii=False) + '\n').encode('utf-8')
     if args.check:
-        assert catalog.read_bytes() == data, 'Catalog differs from map provenance'
+        assert catalog.read_bytes().replace(b'\r\n', b'\n') == data, 'Catalog differs from map provenance'
     else:
         catalog.write_bytes(data)
     print(f'{len(records)} reviewed maps; terrain byte-identical; 2/4/6/8-player coverage; ' + ('verified' if args.check else 'installed'))

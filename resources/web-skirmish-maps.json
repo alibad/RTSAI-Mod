@@ -13,6 +13,7 @@
       "upstream": "https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/little-big-lake",
       "sourceYamlSha256": "66be79ab3b4ca614fd346110e687005346f7412522718e1180d32dbef3d9d3b4",
       "sourceTerrainSha256": "ee3c2aeeeef9a0faea0036d22d959c8d97c0dd93b22530330d744e854b8a3d32",
+      "yamlHashEncoding": "UTF-8 without BOM, LF line endings",
       "adaptation": "RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.",
       "contentNotice": "Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.",
       "files": {
@@ -33,6 +34,7 @@
       "upstream": "https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/tournament-2B",
       "sourceYamlSha256": "df28f53bf74d5d654992028e4aa5ecf096a45580db8f36784bb2039669f88193",
       "sourceTerrainSha256": "f2d5c3fc9c4e934179c6ef9ef5db25d5a79f45d7dc875ecf2cdf855b3c495c2b",
+      "yamlHashEncoding": "UTF-8 without BOM, LF line endings",
       "adaptation": "RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.",
       "contentNotice": "Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.",
       "files": {
@@ -53,6 +55,7 @@
       "upstream": "https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/tsunami",
       "sourceYamlSha256": "e9e3afd056a8027d7115a2ed3bc160552853a3e2140e4bd1b8673f4102231d82",
       "sourceTerrainSha256": "094e6a9da1fde29973b2737bea56326b0a0b87bcfec0465be735c4399b7356c5",
+      "yamlHashEncoding": "UTF-8 without BOM, LF line endings",
       "adaptation": "RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.",
       "contentNotice": "Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.",
       "files": {
@@ -73,6 +76,7 @@
       "upstream": "https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/valley-of-gems",
       "sourceYamlSha256": "b00c2f6754c2e5e434ccd0eb98b1db985025522346af6f68ab0fd4555788a9b6",
       "sourceTerrainSha256": "1f4514b68fd26ac22b6bae10478101c5643197f318b2e08ab04d8b61d234b2a5",
+      "yamlHashEncoding": "UTF-8 without BOM, LF line endings",
       "adaptation": "RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.",
       "contentNotice": "Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.",
       "files": {
@@ -93,6 +97,7 @@
       "upstream": "https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/defcon-6",
       "sourceYamlSha256": "a8652209774250411b3b74551c5d6eb475534a7111080f098dca09aa8eaf8c8c",
       "sourceTerrainSha256": "129a53e46a2d4cd095bfa36903f42d68fb46f59e9a6f7de0c659bff855fd3f11",
+      "yamlHashEncoding": "UTF-8 without BOM, LF line endings",
       "adaptation": "RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.",
       "contentNotice": "Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.",
       "files": {
@@ -113,6 +118,7 @@
       "upstream": "https://github.com/OpenRA/ra2/tree/61e24e3c1d7b586aa55a86096d29e1559aa9b994/mods/ra2/maps/a-path-beyond-2",
       "sourceYamlSha256": "9347285612c43808133352d1e39ff9b2785d74942ff9983274bae7a04491a7f6",
       "sourceTerrainSha256": "6c9603aaf66f8703fe18a83b7b0bba5fe3356344e15ee6b96cee2a171b97e29e",
+      "yamlHashEncoding": "UTF-8 without BOM, LF line endings",
       "adaptation": "RequiresMod changed to rtsai; ore drill RenderSprites.Image uses project oremine artwork. Terrain, heights, resources, actors, starting locations and map rules preserved.",
       "contentNotice": "Westwood map layout from the existing OpenRA RA2 port. Project terrain and scenery; no original game archives or installation required. Upstream repository: GPL-3.0; original map authorship retained. Local integration is not a publication authorization.",
       "files": {
