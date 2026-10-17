@@ -165,6 +165,7 @@ Sequences:
 	ra2|standalone/kit-extra-sequences.yaml
 	ra2|standalone/smudge-sequences.yaml
 	ra2|standalone/sequences.yaml
+	ra2|standalone/bridges/sequences.yaml
 	ra2|standalone/civilian/civilian-sequences.yaml
 	ra2|standalone/civilian/village-sequences.yaml
 

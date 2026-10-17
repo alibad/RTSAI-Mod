@@ -1,0 +1,114 @@
+{
+  "generator": "tools/standalone-bridges.py",
+  "source": "Project-authored 3D polygons, colours and material patterns; no input images.",
+  "license": "CC0-1.0",
+  "projection": "30 px x 15 px cell basis; 192 x 144 frame; centered at native actor center",
+  "scope": "Bridge actor artwork only. Ground-level connections, damage, repair and passability remain native OpenRA traits. Elevated actors remain native placeholders.",
+  "files": [
+    {
+      "file": "lobrdg_a.png",
+      "sha256": "f26eba74d7d68acdfdb88258d8249be090f89a655a5821e4756faba2d5d5ae68",
+      "frames": 7
+    },
+    {
+      "file": "lobrdg_a_d.png",
+      "sha256": "5483fedcf6e7b9384074e1d5a573cfc7b86db7174124283c84e83f87deeda406",
+      "frames": 5
+    },
+    {
+      "file": "lobrdg_b.png",
+      "sha256": "421a1dad21f61e43be05c4adc70782e10b2ce13d980bd1f5e61e5bddee09349d",
+      "frames": 7
+    },
+    {
+      "file": "lobrdg_b_d.png",
+      "sha256": "28c8eee6bdead3b02a26a622fab0a08795055553f723e7221f0cc502c6c66c4d",
+      "frames": 5
+    },
+    {
+      "file": "lobrdg_r_ne.png",
+      "sha256": "5bf6469225b4dac0ac7c0a71d4b24935b14d934703aefa5ee5681263423de452",
+      "frames": 2
+    },
+    {
+      "file": "lobrdg_r_nw.png",
+      "sha256": "cea62a0eabe9601fdcefb7a23f00b5f83bc8ca34c416ef5d47cd4823672d4522",
+      "frames": 2
+    },
+    {
+      "file": "lobrdg_r_se.png",
+      "sha256": "ca961721034014e61212418ab4cbf35f34af8fd682f36cb9c332c08124d6a6dd",
+      "frames": 2
+    },
+    {
+      "file": "lobrdg_r_sw.png",
+      "sha256": "6884bcee447f49d1f397762dbdf38fc0e50d0ca1103cb80a635274ba9dff7d9b",
+      "frames": 2
+    },
+    {
+      "file": "lobrdb_a.png",
+      "sha256": "e90ec00dea5ed98f407e10b5042ab301b42496e6f497bf5847254b35fc513a74",
+      "frames": 7
+    },
+    {
+      "file": "lobrdb_a_d.png",
+      "sha256": "e1106fcf01729f1500c73a1f3b2e1e8b81253cb712f20f55273ae46f93591046",
+      "frames": 5
+    },
+    {
+      "file": "lobrdb_b.png",
+      "sha256": "668e4084b99a536ccc3317ae611563f36ec8cd0e457b83195268f1d79f13e106",
+      "frames": 7
+    },
+    {
+      "file": "lobrdb_b_d.png",
+      "sha256": "73aa8daad25ea2dc08110a2c244d2c5b701c55567766594e05883887e138470a",
+      "frames": 5
+    },
+    {
+      "file": "lobrdb_r_ne.png",
+      "sha256": "32fa2b9bd18fccf4d7b7e52c57a499255cdd51dc08d4493a0631ef1e46389804",
+      "frames": 2
+    },
+    {
+      "file": "lobrdb_r_nw.png",
+      "sha256": "27a2295a0be41ba9024908ae2a607677ee5159af57140bcb94521f331e32cfb1",
+      "frames": 2
+    },
+    {
+      "file": "lobrdb_r_se.png",
+      "sha256": "de23a086279543e128f91306e85a1b53cf2c0835aada75217d5786f317dc971c",
+      "frames": 2
+    },
+    {
+      "file": "lobrdb_r_sw.png",
+      "sha256": "7794a33e6affcb89eb7a12676171de6a0b425cffc0189782a10d1b8ca5079647",
+      "frames": 2
+    },
+    {
+      "file": "bridge1.png",
+      "sha256": "3e98d360e4563513831386ea6d4b218135900f852a591464e560a5921cfae7da",
+      "frames": 1
+    },
+    {
+      "file": "bridge2.png",
+      "sha256": "691ebf1cfaab93a76a5519b8a444bdd051e776e190c72ec5f32ca7f80b8b2d4e",
+      "frames": 1
+    },
+    {
+      "file": "bridgb1.png",
+      "sha256": "69c4e94f2f4ea6c4ffa1524216bda63f9cb863ed1e28972e1d07d54fd75e6349",
+      "frames": 1
+    },
+    {
+      "file": "bridgb2.png",
+      "sha256": "df9ded25a494498a44fbeeb66be8e3a60bcae09b96d0a3942e338027de699aeb",
+      "frames": 1
+    },
+    {
+      "file": "cabhut.png",
+      "sha256": "859df370c1961b84a28a322991bd13a602259478d2ade357827829b48ab35b99",
+      "frames": 2
+    }
+  ]
+}
