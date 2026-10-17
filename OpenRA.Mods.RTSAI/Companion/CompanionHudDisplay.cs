@@ -4,6 +4,13 @@ namespace OpenRA.Mods.RTSAI.Companion
 {
 	public static class CompanionHudDisplay
 	{
+		public static string PendingMessage(string previous, string state, string message, bool enabled)
+		{
+			if (!enabled || state is "disabled" or "action-executed" or "action-cancelled" or "action-rejected" or "action-expired")
+				return null;
+			return state == "action-pending" ? message : previous;
+		}
+
 		public static bool IsVisible(CompanionHostState host, bool acknowledged, bool enabled, bool allowed)
 		{
 			return acknowledged && enabled && allowed &&

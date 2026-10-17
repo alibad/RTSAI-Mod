@@ -40,6 +40,18 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			const string unavailable = "AI ALERTS ONLY  •  AI GATEWAY NOT RUNNING";
 			if (CompanionHudDisplay.Message("ready:normal", unavailable) != unavailable)
 				throw new InvalidDataException("Model unavailability was hidden by a ready label.");
+			var proposal = CompanionHudDisplay.PendingMessage(null, "action-pending", "Build an Ore Refinery", true);
+			foreach (var transient in new[] { "speaking", "listening", "transcript", "thinking", "muted", "ready", "ready:normal", "error" })
+			{
+				proposal = CompanionHudDisplay.PendingMessage(proposal, transient, "Temporary status", true);
+				if (proposal != "Build an Ore Refinery")
+					throw new InvalidDataException("Voice or idle status erased the pending order controls.");
+			}
+			foreach (var terminal in new[] { "disabled", "action-executed", "action-cancelled", "action-rejected", "action-expired" })
+				if (CompanionHudDisplay.PendingMessage(proposal, terminal, "Done", true) != null)
+					throw new InvalidDataException("Resolved or disabled order kept stale controls.");
+			if (CompanionHudDisplay.PendingMessage(proposal, "ready", "Off", false) != null)
+				throw new InvalidDataException("Opting out kept a pending order visible.");
 			Console.WriteLine($"COMPANION HUD PASS: {cases} availability cases; 12 viewport/action layouts; live enabled companions remain accessible; unavailable model warnings preserved.");
 		}
 	}

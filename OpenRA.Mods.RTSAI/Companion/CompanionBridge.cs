@@ -76,6 +76,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 		const long ErrorStatusTimeoutMilliseconds = 4000;
 		static CompanionBridge current;
 		static RLProto.CompanionStatus companionStatus = ReadyStatus();
+		static string pendingActionMessage;
 		static RLProto.CompanionThreat companionThreat = CalmThreat();
 		static long companionStatusUpdatedAt = Environment.TickCount64;
 
@@ -158,6 +159,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 						: ReadyStatus();
 				}
 
+				pendingActionMessage = null;
 				companionThreat = CalmThreat();
 				companionStatusUpdatedAt = Environment.TickCount64;
 			}
@@ -879,6 +881,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 					return false;
 
 				companionStatus = status.Clone();
+				pendingActionMessage = CompanionHudDisplay.PendingMessage(pendingActionMessage, status.State, status.Message, status.Enabled);
 				companionStatusUpdatedAt = Environment.TickCount64;
 				current.companionStatusAcknowledged = true;
 				current.UpdateAssistantRequest(status.State);
@@ -980,6 +983,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 
 				companionStatus.State = state;
 				companionStatus.Message = message;
+				pendingActionMessage = CompanionHudDisplay.PendingMessage(pendingActionMessage, state, message, companionStatus.Enabled);
 				companionStatusUpdatedAt = Environment.TickCount64;
 				return true;
 			}
@@ -998,6 +1002,15 @@ namespace OpenRA.Mods.RTSAI.Traits
 					return current != null && CompanionHudDisplay.IsVisible(CompanionHost.State,
 						current.companionStatusAcknowledged, companionStatus.Enabled,
 						current.enabled && !current.disabledForMatch);
+			}
+		}
+
+		internal static bool TryGetPendingAction(out string message)
+		{
+			lock (CurrentLock)
+			{
+				message = pendingActionMessage;
+				return current != null && current.enabled && !current.disabledForMatch && companionStatus.Enabled && message != null;
 			}
 		}
 

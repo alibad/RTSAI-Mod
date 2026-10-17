@@ -224,7 +224,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 			bool HasPendingAction()
 			{
-				return CompanionBridge.TryGetStatus(out var state, out _) && state == "action-pending";
+				return CompanionBridge.TryGetPendingAction(out _);
 			}
 
 			actionConfirmButton.GetText = () => actionRequestPending ? "WAIT" : "ACCEPT";
@@ -253,7 +253,10 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 					using var state = await OpenRAAILocalClient.GetAsync(uri, "v1/state");
 					if (!state.RootElement.TryGetProperty("pending_action", out var pending)
 						|| pending.ValueKind != JsonValueKind.Object)
+					{
+						Game.RunAfterTick(() => CompanionBridge.UpdateLocalStatus("action-rejected", "That proposal has expired. Ask for fresh advice."));
 						return;
+					}
 					var proposalId = pending.GetProperty("proposal_id").GetString();
 					var summary = pending.GetProperty("summary").GetString();
 					if (operation == "confirm")
@@ -390,7 +393,16 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			widget.IsVisible = () =>
 			{
 				if (!CompanionBridge.HudAvailable || !CompanionBridge.TryGetStatus(out var state, out var message))
+				{
+					feedExpanded = false;
 					return false;
+				}
+
+				if (CompanionBridge.TryGetPendingAction(out var proposal))
+				{
+					state = "action-pending";
+					message = proposal;
+				}
 
 				var (x, width, height) = CompanionHudDisplay.Layout(Game.Renderer.Resolution.Width, HasPendingAction());
 				var voiceWidth = voiceButton.Bounds.Width = FitButton(voiceButton, VoiceButtonWidth);
