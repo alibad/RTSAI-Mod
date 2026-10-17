@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "classic-agenda",
+  "title": "Agenda",
+  "author": "SoScared",
+  "collection": "Classic",
+  "players": 2,
+  "tileset": "SNOW",
+  "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/agenda.oramap",
+  "sourceYamlSha256": "6a0cbf8a3598550599fa4e384f85ec8257c86a2e6e869799afa9f9a6f0a2d4b5",
+  "terrainSha256": "39c51230be8a8cf00af230f15c6dbb24eb017c945b22de8ef5dcf56a84f63051",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "f6867ee8b5de90d1f9e16b1e328f642eea7ff8e32dc3e2f0dbdb0a3d9faa317b",
+    "map.bin": "39c51230be8a8cf00af230f15c6dbb24eb017c945b22de8ef5dcf56a84f63051",
+    "map.png": "a547b751fbf02656801ea185ef563e1d5d59a50cc1ad5188720fba5533aaa5f7"
+  }
+}

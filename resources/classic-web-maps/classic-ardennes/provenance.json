@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "classic-ardennes",
+  "title": "Ardennes",
+  "author": "netnazgul",
+  "collection": "Classic",
+  "players": 8,
+  "tileset": "TEMPERAT",
+  "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/ardennes.oramap",
+  "sourceYamlSha256": "9db6734c95bdae0e2956ef0e62b76da026849432ede09616db03401454ee3671",
+  "terrainSha256": "ea4b6566dd5a5c5d5fd31d3c9dac1251c7efb0a8c4a8c87fe2c8a557025371df",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "10bceeae7b3d7eff200769764a8b391d4157a915792fc0e87258bcc8dd5efe78",
+    "map.bin": "ea4b6566dd5a5c5d5fd31d3c9dac1251c7efb0a8c4a8c87fe2c8a557025371df",
+    "map.png": "d8d28937cb9e74279b231f299f06eef99a0d862be210f21fdf87a63bb5c8f95e"
+  }
+}

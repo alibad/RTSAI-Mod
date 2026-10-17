@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "ca-outdoor-trails",
+  "title": "Outdoor Trails",
+  "author": "CRLF",
+  "collection": "Combined Arms",
+  "players": 4,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/outdoor-trails.oramap",
+  "sourceYamlSha256": "204f57b42d2b3240651600f2cca952a5b4de4b3c25145091a55760f7d9fbb5b7",
+  "terrainSha256": "74c5339cc4094c6c985993a41e72c97b983fa84d9dbb32c23ad9ca98e0cd5602",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "d158065322902f651f17a5caa7ad965f8743afea26002bd80a76a0616eb56cb1",
+    "map.bin": "74c5339cc4094c6c985993a41e72c97b983fa84d9dbb32c23ad9ca98e0cd5602",
+    "map.png": "72f2d36044624e01e7d2872458743a6cba047d69fb4d86a0f567cc36e50e94b7"
+  }
+}

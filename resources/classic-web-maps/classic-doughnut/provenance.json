@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "classic-doughnut",
+  "title": "Doughnut",
+  "author": "hamb",
+  "collection": "Classic",
+  "players": 6,
+  "tileset": "TEMPERAT",
+  "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/doughnut.oramap",
+  "sourceYamlSha256": "fcdf0e5de502bc8ad194d79045f4370a0c5591f2db8865e3517aa82d1b14ddeb",
+  "terrainSha256": "27a078a7f80f6c1e05fe5f7aabf62b9bf9be0f54204e734cce738e18d8908428",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "0953ec9cb4d3d803da16f61f943739d5e6c5cf3f86b12ea91b86c934d339ca29",
+    "map.bin": "27a078a7f80f6c1e05fe5f7aabf62b9bf9be0f54204e734cce738e18d8908428",
+    "map.png": "5e4a14942609780ba127c1525504ac9c4d44a1804bc6badd1c11241e9ecd672c"
+  }
+}

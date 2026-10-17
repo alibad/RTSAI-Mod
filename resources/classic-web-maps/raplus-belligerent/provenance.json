@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "raplus-belligerent",
+  "title": "Belligerent",
+  "author": "Lad",
+  "collection": "Red Alert Plus",
+  "players": 6,
+  "tileset": "DESERT",
+  "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/belligerent",
+  "sourceYamlSha256": "48bea22c21245bb194891539e9002ac76f6fcdb8b3b079716c5eb2a1896741a6",
+  "terrainSha256": "d82120ef772c290a84910f6de4f83d2882c7311bc5040defcc04809b8be3773a",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "0d4b2d90e0edc5b276533977ec04ea1b7ca9361e9f3cf7731ae083a7125a7ac9",
+    "map.bin": "d82120ef772c290a84910f6de4f83d2882c7311bc5040defcc04809b8be3773a",
+    "map.png": "bf23618af36085c943a34986bfd160ac0d1fba01ccc45f16ec9d4006758d37b8"
+  }
+}

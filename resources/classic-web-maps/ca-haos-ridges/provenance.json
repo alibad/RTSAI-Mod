@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "ca-haos-ridges",
+  "title": "Haos Ridges",
+  "author": "Seru",
+  "collection": "Combined Arms",
+  "players": 6,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/haos-ridges.oramap",
+  "sourceYamlSha256": "fe0345840b0f4ce559680eae187161ab95c907c212177793130bdd7d8ccd9104",
+  "terrainSha256": "cfada3f50db5e1d336c4fb7c960aaf17692808be421b0814a554106cebaf2f25",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "38c4f3944a791de17519c7f33f315d95089f91706b642f94fb37529c7e4ee018",
+    "map.bin": "cfada3f50db5e1d336c4fb7c960aaf17692808be421b0814a554106cebaf2f25",
+    "map.png": "67e410e8257fa80b0d3e3695dec9e0979870f7e55685d7547601bfb2d2c2beb9"
+  }
+}

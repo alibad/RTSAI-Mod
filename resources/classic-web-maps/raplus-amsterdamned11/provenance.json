@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "raplus-amsterdamned11",
+  "title": "Amsterdamned",
+  "author": "wippie",
+  "collection": "Red Alert Plus",
+  "players": 2,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/amsterdamned11",
+  "sourceYamlSha256": "f17f2e44dfac905aab509d34536908507dfe75995b7b13b505ea8103a4622bb3",
+  "terrainSha256": "a68ee495aac1eea54720969821c83066c5560225819d369f2be382b01ed78de6",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "f5d99f970c2f8b0e0a0409f7de362e6a760f1082a0cc1ebcd3c3cbc6a1c179c0",
+    "map.bin": "a68ee495aac1eea54720969821c83066c5560225819d369f2be382b01ed78de6",
+    "map.png": "0d3be7b96676f87d06419570defa6eaa19764056504b692156a70aa5a2be75a3"
+  }
+}

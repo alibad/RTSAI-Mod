@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "ca-green-belt",
+  "title": "Green Belt",
+  "author": "Christian",
+  "collection": "Combined Arms",
+  "players": 2,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/green-belt.oramap",
+  "sourceYamlSha256": "90836cd68e0ba607624348f4b13d88ba62faf31064b6a3962107480ae16163b4",
+  "terrainSha256": "9496f97edd9e14ac4e96cebfb5f06bc2cbd6ecf9f9eb9697edfd2016468f6596",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "cdf8eb447290d4c1cea67095ef6ff4e45461da2e1c1f16977965d2a081faa0de",
+    "map.bin": "9496f97edd9e14ac4e96cebfb5f06bc2cbd6ecf9f9eb9697edfd2016468f6596",
+    "map.png": "26877da72302fab5b1360343ecdf8110bb0bd4fedc940682d01b6b976c1874bf"
+  }
+}

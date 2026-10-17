@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "ca-all-connected",
+  "title": "All Connected",
+  "author": "Buddha",
+  "collection": "Combined Arms",
+  "players": 8,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/all-connected.oramap",
+  "sourceYamlSha256": "4f80a61cf66730dedfe6fee81b5822f2c743d4146b2b7f5108c8feee31d33760",
+  "terrainSha256": "1a7d4fca2bb8e47006d94b6eaa3f40a2f0a9e486735f5b562939a5e7ff6c80a0",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "13fd5fd3100b9ac058d9b9aeb79ab7dec223db4ad1ae377ba573253af3af3e39",
+    "map.bin": "1a7d4fca2bb8e47006d94b6eaa3f40a2f0a9e486735f5b562939a5e7ff6c80a0",
+    "map.png": "bccce018dc30074fc7122e886a8b9d9d9a34663084cbad5fe6d0b46ba5698dd2"
+  }
+}

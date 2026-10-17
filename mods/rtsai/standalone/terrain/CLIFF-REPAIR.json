@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "generator": "tools/standalone-terrain.py --repair-cliffs --install",
+  "fix": "External walls descend to the template zero datum, including templates containing only raised cells.",
+  "templates": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    390,
+    393,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550
+  ],
+  "files": [
+    {
+      "file": "t0071a.png",
+      "sha256": "d62e546dec1a5767b796ad72a8821228c970690d1aba5573f008ddc2ce2e22c8"
+    },
+    {
+      "file": "t0072a.png",
+      "sha256": "528c1845a01d059c92d68d89cb3f2d6bc9f94f59ab7a506f5712045a7c6a2b31"
+    },
+    {
+      "file": "t0073a.png",
+      "sha256": "c5850fca5985b3a5ea0a909becc770f3520f8ada660fb6d72b6b94c2997f2e52"
+    },
+    {
+      "file": "t0074a.png",
+      "sha256": "30e4fae77f6a80a74c5e7411ab2ec4241df12e29b1be482077739b55e644b9bb"
+    },
+    {
+      "file": "t0075a.png",
+      "sha256": "760bbaa071830512841087f2ceaa858429676be2ff6880c139023bc96b5a8426"
+    },
+    {
+      "file": "t0076a.png",
+      "sha256": "09f748aaffd98b359e7fb9e507c8ab7ed514d653b21c2c747318500a3a6375d2"
+    },
+    {
+      "file": "t0077a.png",
+      "sha256": "f48bd7c65c9077b6b36263cf37ada59452f12088484c6eac5186436a22c6428e"
+    },
+    {
+      "file": "t0078a.png",
+      "sha256": "c5a2c2d82dd30fdf399a5b24fa732d9f681af1e5bf3c93bc1cdc15881b218eb2"
+    },
+    {
+      "file": "t0079a.png",
+      "sha256": "884ee61cfbbf35811827718184eda2a5d523aaa593a02b1b9ee82ae3934fc754"
+    },
+    {
+      "file": "t0080a.png",
+      "sha256": "c9d1988d2220dae58e905e559260f4bdb27a22a2266f9f41f6a1d1a068c4f4ce"
+    },
+    {
+      "file": "t0081a.png",
+      "sha256": "ce5d7186fca1b0e015b1a49f43b2041c27a278783d996695236890e81a2f1375"
+    },
+    {
+      "file": "t0081b.png",
+      "sha256": "6e6841b25411c68e55c15d2d1a0f8df0028adb51473e4d9ed66fbed9a57241bc"
+    },
+    {
+      "file": "t0082a.png",
+      "sha256": "4bdbe31e8d2100d21232aa827e62cfbb6b8255212e3e4fa723bcfc0b5da1a085"
+    },
+    {
+      "file": "t0082b.png",
+      "sha256": "b8819aa1deb2cda42f84153435df404dc7984cbd07476ff3202f689d96e74f74"
+    },
+    {
+      "file": "t0083a.png",
+      "sha256": "233e085d0b2660055d7be7e137dd9158706811f6a28e319c567dcf0db5281cdf"
+    },
+    {
+      "file": "t0084a.png",
+      "sha256": "dfc9cf295fb40a40601d2796df3ecc85a21220c6bddee0feb74d7f72d65f5352"
+    },
+    {
+      "file": "t0085a.png",
+      "sha256": "0a6aa3848cfce9deaf2cf0df5c4dde76c39e5b5e4634774fb487d9a899c4a1bd"
+    },
+    {
+      "file": "t0086a.png",
+      "sha256": "23e4518ef5639677d0c54fe5c7de1a2eef134d7909fbac8545c13dbf8e480adf"
+    },
+    {
+      "file": "t0087a.png",
+      "sha256": "b1877f5b181143fef1a544f71d46a50e584b9dea3e67b78daccb91ad861f4c66"
+    },
+    {
+      "file": "t0088a.png",
+      "sha256": "8cf38a250fe23839ceaff665627ea726d357026cbea8751c9be587048cde216b"
+    },
+    {
+      "file": "t0390a.png",
+      "sha256": "ef4b5ce9ea8a207e973016b08e2600973e217551613ce438c1b617cf4bb3c73a"
+    },
+    {
+      "file": "t0393a.png",
+      "sha256": "5efc5874a231232757851f1eaef691539413b530c385c1cb2e9464074a9987df"
+    },
+    {
+      "file": "t0543a.png",
+      "sha256": "6c90a6a69dd39158b51a902148da8d79e034e795db844ba206039e8663450ff2"
+    },
+    {
+      "file": "t0544a.png",
+      "sha256": "4f8e69badadcf1620a5fd13d33fb9459d91a65272bf204c27dfe5c2c6d99f98e"
+    },
+    {
+      "file": "t0545a.png",
+      "sha256": "11d1609f49a3466e4d49b63fe00b01d21e461399dc4d207417d0ace68d94d4b0"
+    },
+    {
+      "file": "t0546a.png",
+      "sha256": "5712d7821aab8d2222b2d3f825eb8b614da229a4c0d925d63ce832411e1088d7"
+    },
+    {
+      "file": "t0547a.png",
+      "sha256": "2755094dea7b85856f1cdb2d86d52a04bf3821226012303d92bdc49415b97dd0"
+    },
+    {
+      "file": "t0548a.png",
+      "sha256": "1bc80373c364d80490974a759d8f341c2210de19a2cf275f47d2ab7cb48d3e24"
+    },
+    {
+      "file": "t0549a.png",
+      "sha256": "05209552aab0056693603c428adc5615b907684954f22b2ea217610fe5194b22"
+    },
+    {
+      "file": "t0550a.png",
+      "sha256": "88ad1342fd942c91c84d3d38521082f69e0ab01ef86b12dcb5ace2e0224ce9f2"
+    }
+  ],
+  "paletteSha256": "24b0620ca36b54205ce76a032417b2ee7186a6d66983b7d72344e60b6c9161af",
+  "preserved": "Map binaries, terrain types, heights, ramps, collision and all unrelated artwork."
+}

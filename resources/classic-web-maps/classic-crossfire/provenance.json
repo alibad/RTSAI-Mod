@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "classic-crossfire",
+  "title": "Crossfire",
+  "author": "Janitor",
+  "collection": "Classic",
+  "players": 4,
+  "tileset": "TEMPERAT",
+  "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/crossfire.oramap",
+  "sourceYamlSha256": "8277e5c542693e8e262e32c0406f3967ca24431721c3f537ed4066c276cd45d3",
+  "terrainSha256": "eef2c76be80e0e76b7664e1e22a3f44227ec5e5c95093b42399f95faec5cff95",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "f1a4ea6eaa1658909dadec69caa44bc18933320581db14ab04482b2a9256e3d8",
+    "map.bin": "eef2c76be80e0e76b7664e1e22a3f44227ec5e5c95093b42399f95faec5cff95",
+    "map.png": "89c74d2f393fdd5874093ac9c52744f4f1aaa43239668b61c8b17e4d51a7cb8e"
+  }
+}

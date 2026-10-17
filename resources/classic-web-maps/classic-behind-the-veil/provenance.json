@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "classic-behind-the-veil",
+  "title": "Behind the Veil",
+  "author": "Kyrylo Silin",
+  "collection": "Classic",
+  "players": 2,
+  "tileset": "DESERT",
+  "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/behind-the-veil.oramap",
+  "sourceYamlSha256": "3c10c5c5aef81e312f5c0fe66e9dac804d1f52b0b3765795a835e21df10eb2c3",
+  "terrainSha256": "0ff4ad2e94cdf09b568ae9c5990070c82dc4b5e0530a8c7e2c6a1d13cc33d681",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "a10ca8445158a198aff2f753a8cc33086d901ad9f414bebdc26c9969cba91465",
+    "map.bin": "0ff4ad2e94cdf09b568ae9c5990070c82dc4b5e0530a8c7e2c6a1d13cc33d681",
+    "map.png": "a74b36683a0be85aa4e0278431cdd664ce50c98167fb7aab221c6955c88df5e8"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "classic-discovery",
+  "title": "Discovery",
+  "author": "Lad",
+  "collection": "Classic",
+  "players": 2,
+  "tileset": "TEMPERAT",
+  "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/discovery.oramap",
+  "sourceYamlSha256": "733d4cc664c542338e8c768770251c17cc9170cca37e1f9017caa46173d5f3e3",
+  "terrainSha256": "ba2b02ed4a4db55cdb0da6041d2de728952e61df1556b1e51a6cb402b6adb2f6",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "d44fbf4116198ef3aab660b00529b0e9f12aecc854fbdc2094f458ef123fdaba",
+    "map.bin": "ba2b02ed4a4db55cdb0da6041d2de728952e61df1556b1e51a6cb402b6adb2f6",
+    "map.png": "108dab61465371a18f8c9f0fa51ea16175c4792afc2bafbe35626ab64a895623"
+  }
+}

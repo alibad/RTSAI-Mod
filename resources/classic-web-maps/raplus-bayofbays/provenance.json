@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "raplus-bayofbays",
+  "title": "Bay of Bays",
+  "author": "Endless",
+  "collection": "Red Alert Plus",
+  "players": 8,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/bayofbays",
+  "sourceYamlSha256": "4c7a737d2f7905c6d59a823f3282bc588aec4b82d2148cc02a5682aaf7af485c",
+  "terrainSha256": "6f801e4355de7e8f55ab6589b0b8bae949f9fbbd2eb994bda8791aafa3f0cdef",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "035c4e16b4370eb3afab4f0ee479257db2dec4312826aaf8d97ffbd6f1ebce9a",
+    "map.bin": "6f801e4355de7e8f55ab6589b0b8bae949f9fbbd2eb994bda8791aafa3f0cdef",
+    "map.png": "8146fcff5c82690fcccf86578c01acc45b40eb8d54e28d1a1a12196b70f7b689"
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "maps": [
+    {
+      "schema": 1,
+      "id": "classic-discovery",
+      "title": "Discovery",
+      "author": "Lad",
+      "collection": "Classic",
+      "players": 2,
+      "tileset": "TEMPERAT",
+      "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/discovery.oramap",
+      "sourceYamlSha256": "733d4cc664c542338e8c768770251c17cc9170cca37e1f9017caa46173d5f3e3",
+      "terrainSha256": "ba2b02ed4a4db55cdb0da6041d2de728952e61df1556b1e51a6cb402b6adb2f6",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "d44fbf4116198ef3aab660b00529b0e9f12aecc854fbdc2094f458ef123fdaba",
+        "map.bin": "ba2b02ed4a4db55cdb0da6041d2de728952e61df1556b1e51a6cb402b6adb2f6",
+        "map.png": "108dab61465371a18f8c9f0fa51ea16175c4792afc2bafbe35626ab64a895623"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "classic-agenda",
+      "title": "Agenda",
+      "author": "SoScared",
+      "collection": "Classic",
+      "players": 2,
+      "tileset": "SNOW",
+      "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/agenda.oramap",
+      "sourceYamlSha256": "6a0cbf8a3598550599fa4e384f85ec8257c86a2e6e869799afa9f9a6f0a2d4b5",
+      "terrainSha256": "39c51230be8a8cf00af230f15c6dbb24eb017c945b22de8ef5dcf56a84f63051",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "f6867ee8b5de90d1f9e16b1e328f642eea7ff8e32dc3e2f0dbdb0a3d9faa317b",
+        "map.bin": "39c51230be8a8cf00af230f15c6dbb24eb017c945b22de8ef5dcf56a84f63051",
+        "map.png": "a547b751fbf02656801ea185ef563e1d5d59a50cc1ad5188720fba5533aaa5f7"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "classic-behind-the-veil",
+      "title": "Behind the Veil",
+      "author": "Kyrylo Silin",
+      "collection": "Classic",
+      "players": 2,
+      "tileset": "DESERT",
+      "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/behind-the-veil.oramap",
+      "sourceYamlSha256": "3c10c5c5aef81e312f5c0fe66e9dac804d1f52b0b3765795a835e21df10eb2c3",
+      "terrainSha256": "0ff4ad2e94cdf09b568ae9c5990070c82dc4b5e0530a8c7e2c6a1d13cc33d681",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "a10ca8445158a198aff2f753a8cc33086d901ad9f414bebdc26c9969cba91465",
+        "map.bin": "0ff4ad2e94cdf09b568ae9c5990070c82dc4b5e0530a8c7e2c6a1d13cc33d681",
+        "map.png": "a74b36683a0be85aa4e0278431cdd664ce50c98167fb7aab221c6955c88df5e8"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "classic-crossfire",
+      "title": "Crossfire",
+      "author": "Janitor",
+      "collection": "Classic",
+      "players": 4,
+      "tileset": "TEMPERAT",
+      "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/crossfire.oramap",
+      "sourceYamlSha256": "8277e5c542693e8e262e32c0406f3967ca24431721c3f537ed4066c276cd45d3",
+      "terrainSha256": "eef2c76be80e0e76b7664e1e22a3f44227ec5e5c95093b42399f95faec5cff95",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "f1a4ea6eaa1658909dadec69caa44bc18933320581db14ab04482b2a9256e3d8",
+        "map.bin": "eef2c76be80e0e76b7664e1e22a3f44227ec5e5c95093b42399f95faec5cff95",
+        "map.png": "89c74d2f393fdd5874093ac9c52744f4f1aaa43239668b61c8b17e4d51a7cb8e"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "classic-doughnut",
+      "title": "Doughnut",
+      "author": "hamb",
+      "collection": "Classic",
+      "players": 6,
+      "tileset": "TEMPERAT",
+      "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/doughnut.oramap",
+      "sourceYamlSha256": "fcdf0e5de502bc8ad194d79045f4370a0c5591f2db8865e3517aa82d1b14ddeb",
+      "terrainSha256": "27a078a7f80f6c1e05fe5f7aabf62b9bf9be0f54204e734cce738e18d8908428",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "0953ec9cb4d3d803da16f61f943739d5e6c5cf3f86b12ea91b86c934d339ca29",
+        "map.bin": "27a078a7f80f6c1e05fe5f7aabf62b9bf9be0f54204e734cce738e18d8908428",
+        "map.png": "5e4a14942609780ba127c1525504ac9c4d44a1804bc6badd1c11241e9ecd672c"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "classic-ardennes",
+      "title": "Ardennes",
+      "author": "netnazgul",
+      "collection": "Classic",
+      "players": 8,
+      "tileset": "TEMPERAT",
+      "source": "RTSAI-Mod/mods/rtsai-classic-core/maps/ardennes.oramap",
+      "sourceYamlSha256": "9db6734c95bdae0e2956ef0e62b76da026849432ede09616db03401454ee3671",
+      "terrainSha256": "ea4b6566dd5a5c5d5fd31d3c9dac1251c7efb0a8c4a8c87fe2c8a557025371df",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "10bceeae7b3d7eff200769764a8b391d4157a915792fc0e87258bcc8dd5efe78",
+        "map.bin": "ea4b6566dd5a5c5d5fd31d3c9dac1251c7efb0a8c4a8c87fe2c8a557025371df",
+        "map.png": "d8d28937cb9e74279b231f299f06eef99a0d862be210f21fdf87a63bb5c8f95e"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "raplus-amsterdamned11",
+      "title": "Amsterdamned",
+      "author": "wippie",
+      "collection": "Red Alert Plus",
+      "players": 2,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/amsterdamned11",
+      "sourceYamlSha256": "f17f2e44dfac905aab509d34536908507dfe75995b7b13b505ea8103a4622bb3",
+      "terrainSha256": "a68ee495aac1eea54720969821c83066c5560225819d369f2be382b01ed78de6",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "f5d99f970c2f8b0e0a0409f7de362e6a760f1082a0cc1ebcd3c3cbc6a1c179c0",
+        "map.bin": "a68ee495aac1eea54720969821c83066c5560225819d369f2be382b01ed78de6",
+        "map.png": "0d3be7b96676f87d06419570defa6eaa19764056504b692156a70aa5a2be75a3"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "raplus-black-belt",
+      "title": "Black Belt",
+      "author": "morkel",
+      "collection": "Red Alert Plus",
+      "players": 4,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/Black_Belt",
+      "sourceYamlSha256": "e92a83efba4d18026f7eaee6d41bca0bc2c9fdf77c16d2fc358bee6925260f90",
+      "terrainSha256": "0ebafc8d6edae18fdca63ee8f71d37ee585d1e054e48909e7e2001a51ecc0790",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "7e3c0c3ad3ad4e12b0d31cd2cb30573df41f26ffcf9277ed1285a4b603d46dc0",
+        "map.bin": "0ebafc8d6edae18fdca63ee8f71d37ee585d1e054e48909e7e2001a51ecc0790",
+        "map.png": "5bc623949e52c5ef333db0ea2857d9447070b85003d5c17956d24a37802d24c3"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "raplus-belligerent",
+      "title": "Belligerent",
+      "author": "Lad",
+      "collection": "Red Alert Plus",
+      "players": 6,
+      "tileset": "DESERT",
+      "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/belligerent",
+      "sourceYamlSha256": "48bea22c21245bb194891539e9002ac76f6fcdb8b3b079716c5eb2a1896741a6",
+      "terrainSha256": "d82120ef772c290a84910f6de4f83d2882c7311bc5040defcc04809b8be3773a",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "0d4b2d90e0edc5b276533977ec04ea1b7ca9361e9f3cf7731ae083a7125a7ac9",
+        "map.bin": "d82120ef772c290a84910f6de4f83d2882c7311bc5040defcc04809b8be3773a",
+        "map.png": "bf23618af36085c943a34986bfd160ac0d1fba01ccc45f16ec9d4006758d37b8"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "raplus-bayofbays",
+      "title": "Bay of Bays",
+      "author": "Endless",
+      "collection": "Red Alert Plus",
+      "players": 8,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/bayofbays",
+      "sourceYamlSha256": "4c7a737d2f7905c6d59a823f3282bc588aec4b82d2148cc02a5682aaf7af485c",
+      "terrainSha256": "6f801e4355de7e8f55ab6589b0b8bae949f9fbbd2eb994bda8791aafa3f0cdef",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "035c4e16b4370eb3afab4f0ee479257db2dec4312826aaf8d97ffbd6f1ebce9a",
+        "map.bin": "6f801e4355de7e8f55ab6589b0b8bae949f9fbbd2eb994bda8791aafa3f0cdef",
+        "map.png": "8146fcff5c82690fcccf86578c01acc45b40eb8d54e28d1a1a12196b70f7b689"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "ca-green-belt",
+      "title": "Green Belt",
+      "author": "Christian",
+      "collection": "Combined Arms",
+      "players": 2,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/green-belt.oramap",
+      "sourceYamlSha256": "90836cd68e0ba607624348f4b13d88ba62faf31064b6a3962107480ae16163b4",
+      "terrainSha256": "9496f97edd9e14ac4e96cebfb5f06bc2cbd6ecf9f9eb9697edfd2016468f6596",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "cdf8eb447290d4c1cea67095ef6ff4e45461da2e1c1f16977965d2a081faa0de",
+        "map.bin": "9496f97edd9e14ac4e96cebfb5f06bc2cbd6ecf9f9eb9697edfd2016468f6596",
+        "map.png": "26877da72302fab5b1360343ecdf8110bb0bd4fedc940682d01b6b976c1874bf"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "ca-outdoor-trails",
+      "title": "Outdoor Trails",
+      "author": "CRLF",
+      "collection": "Combined Arms",
+      "players": 4,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/outdoor-trails.oramap",
+      "sourceYamlSha256": "204f57b42d2b3240651600f2cca952a5b4de4b3c25145091a55760f7d9fbb5b7",
+      "terrainSha256": "74c5339cc4094c6c985993a41e72c97b983fa84d9dbb32c23ad9ca98e0cd5602",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "d158065322902f651f17a5caa7ad965f8743afea26002bd80a76a0616eb56cb1",
+        "map.bin": "74c5339cc4094c6c985993a41e72c97b983fa84d9dbb32c23ad9ca98e0cd5602",
+        "map.png": "72f2d36044624e01e7d2872458743a6cba047d69fb4d86a0f567cc36e50e94b7"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "ca-haos-ridges",
+      "title": "Haos Ridges",
+      "author": "Seru",
+      "collection": "Combined Arms",
+      "players": 6,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/haos-ridges.oramap",
+      "sourceYamlSha256": "fe0345840b0f4ce559680eae187161ab95c907c212177793130bdd7d8ccd9104",
+      "terrainSha256": "cfada3f50db5e1d336c4fb7c960aaf17692808be421b0814a554106cebaf2f25",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "38c4f3944a791de17519c7f33f315d95089f91706b642f94fb37529c7e4ee018",
+        "map.bin": "cfada3f50db5e1d336c4fb7c960aaf17692808be421b0814a554106cebaf2f25",
+        "map.png": "67e410e8257fa80b0d3e3695dec9e0979870f7e55685d7547601bfb2d2c2beb9"
+      }
+    },
+    {
+      "schema": 1,
+      "id": "ca-all-connected",
+      "title": "All Connected",
+      "author": "Buddha",
+      "collection": "Combined Arms",
+      "players": 8,
+      "tileset": "TEMPERAT",
+      "source": "OpenRA-Upstreams/CAmod/mods/ca/maps/all-connected.oramap",
+      "sourceYamlSha256": "4f80a61cf66730dedfe6fee81b5822f2c743d4146b2b7f5108c8feee31d33760",
+      "terrainSha256": "1a7d4fca2bb8e47006d94b6eaa3f40a2f0a9e486735f5b562939a5e7ff6c80a0",
+      "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+      "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+      "files": {
+        "map.yaml": "13fd5fd3100b9ac058d9b9aeb79ab7dec223db4ad1ae377ba573253af3af3e39",
+        "map.bin": "1a7d4fca2bb8e47006d94b6eaa3f40a2f0a9e486735f5b562939a5e7ff6c80a0",
+        "map.png": "bccce018dc30074fc7122e886a8b9d9d9a34663084cbad5fe6d0b46ba5698dd2"
+      }
+    }
+  ]
+}

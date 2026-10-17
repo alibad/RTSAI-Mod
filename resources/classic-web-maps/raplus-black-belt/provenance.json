@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "raplus-black-belt",
+  "title": "Black Belt",
+  "author": "morkel",
+  "collection": "Red Alert Plus",
+  "players": 4,
+  "tileset": "TEMPERAT",
+  "source": "OpenRA-Upstreams/raplusmod/mods/raplus/maps/Black_Belt",
+  "sourceYamlSha256": "e92a83efba4d18026f7eaee6d41bca0bc2c9fdf77c16d2fc358bee6925260f90",
+  "terrainSha256": "0ebafc8d6edae18fdca63ee8f71d37ee585d1e054e48909e7e2001a51ecc0790",
+  "adaptation": "RequiresMod only. Native Classic terrain, actors, resources, starts and gameplay rules preserved.",
+  "scope": "Local Classic preview. Source authors retained; upstream collection files preserved in place.",
+  "files": {
+    "map.yaml": "7e3c0c3ad3ad4e12b0d31cd2cb30573df41f26ffcf9277ed1285a4b603d46dc0",
+    "map.bin": "0ebafc8d6edae18fdca63ee8f71d37ee585d1e054e48909e7e2001a51ecc0790",
+    "map.png": "5bc623949e52c5ef333db0ea2857d9447070b85003d5c17956d24a37802d24c3"
+  }
+}
