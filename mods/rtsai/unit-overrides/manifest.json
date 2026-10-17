@@ -16,22 +16,22 @@
     "classic-desktop": {
       "mod": "rtsai-classic-core",
       "rules": "ra2|unit-overrides/classic-desktop.yaml",
-      "sha256": "87f9a1a1d126848d7206457feea7cc41aeaf8fb106444d3c772f9444ff02c7b4"
+      "sha256": "0ee420ebc37071b101c17edfadcc3aeebf58f41d2353eb3250236afe43340393"
     },
     "classic-web": {
       "mod": "rtsai-classic-core",
       "rules": "ra2|unit-overrides/classic-web.yaml",
-      "sha256": "87f9a1a1d126848d7206457feea7cc41aeaf8fb106444d3c772f9444ff02c7b4"
+      "sha256": "0ee420ebc37071b101c17edfadcc3aeebf58f41d2353eb3250236afe43340393"
     },
     "ra2-desktop": {
       "mod": "rtsai-ra2",
       "rules": "ra2|unit-overrides/ra2-desktop.yaml",
-      "sha256": "42306f5a6dbba95a7bfbd74443f5ff5e074f2c7d1aaf73e2ebce58b13c2d6bd3"
+      "sha256": "ad92402f131eb74c037222cbc5f88481a3005bc0ae20a9d24bda783438e4cff9"
     },
     "ra2-web": {
       "mod": "rtsai",
       "rules": "ra2|unit-overrides/ra2-web.yaml",
-      "sha256": "42306f5a6dbba95a7bfbd74443f5ff5e074f2c7d1aaf73e2ebce58b13c2d6bd3"
+      "sha256": "ad92402f131eb74c037222cbc5f88481a3005bc0ae20a9d24bda783438e4cff9"
     }
   },
   "details": {

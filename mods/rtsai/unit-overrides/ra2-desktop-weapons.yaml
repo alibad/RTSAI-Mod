@@ -1,5 +1,5 @@
 # Generated unit weapon variants; revision 2e2d2cb01b8d7265896e03e9dc2d4b43670ec1fce1750da54f4779e5cbbcf987
-studio_ra2_e1_armament_primary:
+studio_ra2_e1_armament_primary_28b2b5527a:
 	Inherits: M60
 	Range: 6c0
 	ReloadDelay: 17

@@ -1,5 +1,6 @@
 """Full unit rule overlays. Base actors, shared weapons and authored resources stay intact."""
 import copy
+import hashlib
 import importlib.util
 import json
 import os
@@ -73,7 +74,8 @@ def validate(data, registry):
 
 
 def alias(key, arm):
-    return 'studio_' + re.sub(r'[^a-z0-9_]', '_', key.lower() + '_' + arm.lower())
+    suffix=hashlib.sha256(f'{key}/{arm}'.encode()).hexdigest()[:10]
+    return 'studio_' + re.sub(r'[^a-z0-9_]', '_', key.lower() + '_' + arm.lower()) + '_' + suffix
 
 
 def compile_overlays(root, registry):

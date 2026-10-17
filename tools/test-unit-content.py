@@ -126,6 +126,8 @@ class UnitContentTest(unittest.TestCase):
         for actor in ['Inherits: ^SOLDIER\n','Health:\n\tHP: 1\n','Armor:\n\tType: Light\nArmor:\n\tType: Heavy\n','Armor:\n  Type: Light\n']:
             with self.assertRaises(ValueError):
                 unit.details.validate({'schema':1,'units':{'classic:e1':{'actor':actor,'weapons':{}}}},registry)
+        self.assertNotEqual(unit.details.alias('classic:a-b','Armament@PRIMARY'),unit.details.alias('classic:a.b','Armament@PRIMARY'))
+        self.assertNotEqual(unit.details.alias('ra2:e1','Armament@primary'),unit.details.alias('ra2:e1','Armament@PRIMARY'))
 
 
 if __name__ == '__main__':
