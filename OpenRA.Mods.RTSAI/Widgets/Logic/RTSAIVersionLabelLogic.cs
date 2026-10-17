@@ -11,6 +11,8 @@
 
 using System.Linq;
 using System.Reflection;
+using System.IO;
+using System.Text.Json;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Widgets;
 
@@ -41,11 +43,28 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 		public static string VersionText(string manifestVersion)
 		{
+			var content = ContentText();
+			if (content != null)
+				return content;
 			if (!string.IsNullOrEmpty(manifestVersion) && manifestVersion != "{DEV_VERSION}")
 				return manifestVersion;
 
 			var stamp = BuildStamp();
 			return FluentProvider.GetMessage(DevBuild, "build", string.IsNullOrEmpty(stamp) ? "?" : stamp);
+		}
+
+		public static string ContentText()
+		{
+			var file = Path.Combine(Platform.EngineDir, "content-build.json");
+			if (!File.Exists(file)) return null;
+			try
+			{
+				using var doc = JsonDocument.Parse(File.ReadAllText(file));
+				var revision = doc.RootElement.GetProperty("revision").GetString();
+				var verified = doc.RootElement.GetProperty("verified").GetBoolean();
+				return $"Content {revision[..10]} · {(verified ? "Verified" : "Built")} · Local";
+			}
+			catch (JsonException) { return "Local content identity unavailable"; }
 		}
 	}
 }

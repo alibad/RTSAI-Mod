@@ -204,7 +204,7 @@ Container@MAINMENU:
 							Text: button-back
 							DesignFontSize: 24
 		Label@VERSION_LABEL:
-			Visible: false
+			Visible: true
 			Logic: RTSAIVersionLabelLogic
 			X: WINDOW_WIDTH - 424
 			Y: WINDOW_HEIGHT - 34

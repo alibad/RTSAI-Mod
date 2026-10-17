@@ -240,6 +240,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				surface.Frame(x, 265, 560, 635, i == selectedGame ? LibrarySurfaceWidget.Amber : LibrarySurfaceWidget.LineColor);
 			}
 			surface.Text(80, 1052, "Downloads · Storage", 18, LibrarySurfaceWidget.Muted);
+			var content = RTSAIVersionLabelLogic.ContentText();
+			if (content != null) surface.Text(1000, 1052, content, 18, LibrarySurfaceWidget.Muted);
 			if (!installed.Values.Any(v => v)) surface.Text(618, 948, "Each opens its own menu, campaigns and settings.", 25, LibrarySurfaceWidget.Muted);
 		}
 		void DrawCommunity()

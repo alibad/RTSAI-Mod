@@ -4,6 +4,20 @@ $projectRoot = Split-Path $PSScriptRoot -Parent
 $configPath = Join-Path $projectRoot 'recovery.local.json'
 if (!(Test-Path -LiteralPath $configPath)) { throw 'Build the local desktop with tools/build-desktop-recovery.ps1 first.' }
 $config = Get-Content -LiteralPath $configPath -Raw | ConvertFrom-Json
+$contentPointer = Join-Path $projectRoot '.recovery/content-current.json'
+if (Test-Path -LiteralPath $contentPointer) {
+ $reference = Get-Content -LiteralPath $contentPointer -Raw | ConvertFrom-Json
+ if ((Get-FileHash -LiteralPath $reference.receipt -Algorithm SHA256).Hash.ToLowerInvariant() -ne $reference.sha256) { throw 'Shared content receipt changed; build and verify again in Studio.' }
+ $content = Get-Content -LiteralPath $reference.receipt -Raw | ConvertFrom-Json
+ $saved = & python (Join-Path $projectRoot 'tools/unit-content.py') check | ConvertFrom-Json
+ if ($LASTEXITCODE -ne 0 -or !$content.verified -or !$content.verification.passed -or $content.revision -ne $saved.revision) { throw 'Saved content needs a verified build. Open Studio and choose Build & test locally.' }
+ foreach ($entry in $content.checksums) {
+  if ((Get-FileHash -LiteralPath $entry.path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256) { throw "Shared build file changed: $($entry.path)" }
+ }
+ $config.engineDirectory = $content.native
+ $config.supportDirectory = $content.support
+ Write-Host "Content $($content.revision.Substring(0,10)) - Built and verified in Classic/RA2 desktop/web - Local"
+}
 $runtimeRoot = $config.engineDirectory
 $runtimeExe = Join-Path $runtimeRoot 'bin/OpenRA.exe'
 if (!(Test-Path -LiteralPath $runtimeExe)) { throw "Local native runtime missing: $runtimeExe" }

@@ -3,6 +3,7 @@
 import argparse
 from datetime import datetime, timezone
 import importlib.util
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -28,6 +29,10 @@ def build(web_root, log):
         subprocess.run(list(map(str, args)), check=True, stdout=log, stderr=log, **kw)
     def git(*args):
         return subprocess.check_output(['git', '-C', str(ROOT), *args], text=True).strip()
+    lock = ROOT / 'content/unit-preview.lock'
+    fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+    os.write(fd, str(os.getpid()).encode())
+    os.close(fd)
     engine_source = ROOT.parent / 'OpenRA'
     for repo, remote in [(ROOT, 'origin'), (engine_source, 'fork')]:
         run('git', '-C', repo, 'fetch', remote, 'main')
@@ -87,6 +92,7 @@ def build(web_root, log):
         receipts.append(json.loads(result))
     snapshot = native
     runtime_source = seed / 'browser/runtime'
+    code_identity = hashlib.sha256((git('rev-parse', 'HEAD:OpenRA.Mods.RTSAI') + git('rev-parse', 'HEAD:OpenRA.Mods.RA2')).encode()).hexdigest()
     latest = web_root / '.cache/unit-runtime-latest.json'
     if latest.is_file():
         previous = json.loads(latest.read_text())
@@ -94,12 +100,12 @@ def build(web_root, log):
         runtime_changed = subprocess.run(['git', '-C', str(game), 'diff', '--quiet', previous_host or host_commit, 'HEAD', '--',
             'sim/OpenRA.WebSim', 'sim/OpenRA.WebSim.Browser', 'sim/OpenRA.Mods.RTSAI', 'sim/OpenRA.Mods.RA2']).returncode != 0
         candidate = Path(previous.get('runtime', str(seed / 'missing')))
-        if previous.get('engineCommit') == config['engineCommit'] and previous_host and candidate.is_dir() and not runtime_changed:
+        if previous.get('modCodeIdentity') == code_identity and previous.get('engineCommit') == config['engineCommit'] and previous_host and candidate.is_dir() and not runtime_changed:
             runtime_source, host_commit, rebuild_runtime = candidate, previous_host, False
     if rebuild_runtime:
         host = out / 'host'
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', host,
-            '--include', 'sim', '--include', 'tools', '--include', 'Directory.Build.props', '--committed')
+            '--include', 'sim', '--include', 'tools', '--include', 'server', '--include', 'Directory.Build.props', '--committed')
         host_commit = json.loads((host / 'INPUTS.json').read_text())['head']
         code = out / 'mod-code'
         if not code.exists():
@@ -117,13 +123,13 @@ def build(web_root, log):
         framework = runtime_source / 'wwwroot/_framework'
         run('node', game / 'tools/stamp-runtime.mjs', framework)
         run('node', game / 'tools/verify-runtime.mjs', framework)
-        unit.atomic(latest, json.dumps({'engineCommit': config['engineCommit'], 'browserHostCommit': host_commit,
+        unit.atomic(latest, json.dumps({'modCodeIdentity': code_identity, 'engineCommit': config['engineCommit'], 'browserHostCommit': host_commit,
                     'runtime': str(runtime_source)}, indent=2) + '\n')
     data = out / 'data'
     # The recovered Classic packer and the browser must use the same committed host.
     if not (out / 'host').exists():
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', out / 'host',
-            '--include', 'sim', '--include', 'tools', '--include', 'Directory.Build.props', '--committed')
+            '--include', 'sim', '--include', 'tools', '--include', 'server', '--include', 'Directory.Build.props', '--committed')
     if not (out / 'mod-code').exists():
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT, '--out', out / 'mod-code',
             '--include', 'OpenRA.Mods.RA2', '--include', 'OpenRA.Mods.RTSAI', '--committed')
@@ -146,7 +152,7 @@ def build(web_root, log):
         run('dotnet', runner, 'bake', '--root', scratch, '--maps', 'web-arena', '--out', target / 'sprites')
         shutil.copytree(runtime_source, target / 'wasm-interp')
         profile_data = json.loads((seed_mode / 'data' / profile / 'content-profile.json').read_text())
-        profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'])
+        profile_data.update(modSource=git('rev-parse', 'HEAD'), unitRevision=content['revision'], modId='rtsai-classic-core' if mode == 'classic' else 'rtsai')
         if mode == 'classic':
             profile_data.update(modId='rtsai-classic-core', localOnly=True, gameMode='classic', foundation='recovered-classic')
         unit.atomic(target / 'content-profile.json', json.dumps(profile_data, indent=2) + '\n')
@@ -168,33 +174,71 @@ def build(web_root, log):
     port = int(ports['RTSAI_WEBGAME_PORT'])
     for sock in reservations:
         sock.close()
+    # Freeze the host and bind all lazy asset reads to this build's immutable address.
+    server_file = out / 'host/server/serve.mjs'
+    build_id = 'studio-' + out.name
+    web_url = f'http://127.0.0.1:{port}/local-builds/{build_id}/'
+    receipt = {'schema': 2, 'buildId': build_id, 'revision': content['revision'], 'native': str(native),
+               'support': config['supportDirectory'], 'webUrl': web_url, 'sourceCommit': git('rev-parse', 'HEAD'),
+               'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
+               'builtAt': datetime.now(timezone.utc).isoformat(), 'verified': False,
+               'verifiedExperienceProfile': 'world-war-iii', 'serverFile': str(server_file),
+               'runtime': str(runtime_source), 'browserHostCommit': host_commit,
+               'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
+               'scope': 'Classic and RA2 unit content on desktop/web; installed Classic inputs remain local'}
+    receipt_file = out / 'receipt.json'
+    unit.atomic(receipt_file, json.dumps(receipt, indent=2) + '\n')
+    env = {**ports, 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(out / 'web'),
+           'RTSAI_WEB_SCRATCH': str(out / 'web-scratch'), 'RTSAI_WEB_BUILD': str(out / 'native-host'),
+           'RTSAI_WEB_CLASSIC_MOD': 'rtsai-classic-core', 'RTSAI_WEB_SCENARIOS': str(game / 'scenarios'),
+           'RTSAI_MAP_MOD_ROOT': str(ROOT), 'RTSAI_MAP_OUTPUT_ROOT': str(out / 'workshop-maps'),
+           'RTSAI_SITE_PUBLIC': str(web_root / 'public'), 'RTSAI_OPENRA_AI': str(ROOT.parent / 'OpenRA-AI'),
+           'RTSAI_CONTENT_RECEIPT': str(receipt_file),
+           'RTSAI_CONTENT_SOURCE': str(ROOT / 'mods/rtsai/unit-overrides/manifest.json'),
+           'RTSAI_VERIFIED_LOCAL_BUILD': json.dumps({'buildId': build_id, 'page': str(out / 'web'),
+               'data': str(data), 'native': str(out / 'native-host'), 'scenarios': str(game / 'scenarios')})}
+    unit.atomic(out / 'server-env.json', json.dumps(env, indent=2) + '\n')
     server_log = (out / 'web-server.log').open('w')
-    server = subprocess.Popen(['node', str(game / 'server/serve.mjs')], cwd=game,
-        env={**os.environ, **ports, 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(out / 'web'), 'RTSAI_WEB_SCRATCH': str(out / 'web-scratch'),
-             'RTSAI_WEB_BUILD': str(out / 'native-host'), 'RTSAI_WEB_CLASSIC_MOD': 'rtsai-classic-core',
-             'RTSAI_MAP_MOD_ROOT': str(ROOT), 'RTSAI_MAP_OUTPUT_ROOT': str(out / 'workshop-maps')},
+    server = subprocess.Popen(['node', str(server_file)], cwd=game, env={**os.environ, **env},
         stdout=server_log, stderr=server_log, creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
     import time
     import urllib.request
-    for _ in range(30):
-        try:
-            urllib.request.urlopen(f'http://127.0.0.1:{port}/', timeout=1).close()
-            break
-        except OSError:
-            if server.poll() is not None:
-                raise ValueError('The local web preview server did not start.')
-            time.sleep(.2)
-    else:
-        raise ValueError('The local web preview server did not become ready.')
-    receipt = {'revision': content['revision'], 'native': str(native), 'support': config['supportDirectory'],
-               'webUrl': f'http://127.0.0.1:{port}/', 'webPid': server.pid, 'sourceCommit': git('rev-parse', 'HEAD'),
-               'engineCommit': config['engineCommit'], 'nativeChecks': receipts, 'localOnly': True,
-               'verifiedExperienceProfile': 'world-war-iii',
-               'runtime': str(runtime_source), 'browserHostCommit': host_commit, 'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
-               'scope': 'RA2 and recovered Classic desktop/web; all Studio roster units; installed Classic inputs remain local'}
-    unit.atomic(out / 'receipt.json', json.dumps(receipt, indent=2) + '\n')
-    unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
-    print(json.dumps(receipt))
+    try:
+        for _ in range(60):
+            try:
+                urllib.request.urlopen(f'http://127.0.0.1:{port}/', timeout=2).close()
+                break
+            except OSError:
+                if server.poll() is not None: raise ValueError('The frozen local server did not start.')
+                time.sleep(.3)
+        else: raise ValueError('The local preview server did not become ready.')
+        check_spec = importlib.util.spec_from_file_location('verify_content_build', ROOT / 'tools/verify-content-build.py')
+        verifier = importlib.util.module_from_spec(check_spec)
+        check_spec.loader.exec_module(verifier)
+        receipt['verification'] = verifier.verify(receipt, ROOT, out, log)
+        if unit.compile_content(ROOT, check=True)['revision'] != content['revision']:
+            raise ValueError('Content changed during acceptance. Saved edits are preserved; build again.')
+        # These hashes are checked on ordinary local launches, not just during acceptance.
+        paths = [*list((native / 'bin').glob('*.dll')), native / 'bin/OpenRA.exe',
+                 native / 'mods/rtsai/unit-overrides/manifest.json', out / 'web/index.html', server_file]
+        for profile in ['public', 'public-classic']:
+            paths += [data / profile / 'web-bundle.pack', data / profile / 'content-profile.json']
+            paths += list((data / profile / 'wasm-interp/wwwroot/_framework').glob('*.wasm'))
+        receipt['checksums'] = [{'path': str(path), 'sha256': hashlib.file_digest(path.open('rb'), 'sha256').hexdigest()} for path in paths]
+        receipt.update(verified=True, verifiedAt=datetime.now(timezone.utc).isoformat(), webPid=server.pid)
+        unit.atomic(native / 'content-build.json', json.dumps({'revision': content['revision'], 'verified': True, 'buildId': build_id}) + '\n')
+        unit.atomic(receipt_file, json.dumps(receipt, indent=2) + '\n')
+        pointer = ROOT / '.recovery/content-current.json'
+        if pointer.exists():
+            unit.atomic(out / 'previous-pointer.json', pointer.read_text())
+        unit.atomic(pointer, json.dumps({'receipt': str(receipt_file), 'sha256': hashlib.sha256(receipt_file.read_bytes()).hexdigest()}, indent=2) + '\n')
+        unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
+        print(json.dumps({'buildId': build_id, 'revision': content['revision'], 'verified': True, 'webUrl': web_url}))
+    except Exception:
+        server.terminate()
+        server.wait(timeout=15)
+        raise
+
 
 
 if __name__ == '__main__':
@@ -203,6 +247,7 @@ if __name__ == '__main__':
     a = ap.parse_args()
     web = a.web_root.resolve()
     (web / '.cache').mkdir(exist_ok=True)
+    lock = ROOT / 'content/unit-preview.lock'
     with (web / '.cache/unit-preview-build.log').open('w') as log:
         try:
             build(web, log)
@@ -212,3 +257,5 @@ if __name__ == '__main__':
             print(str(error), file=log)
             print('Local preview build failed; see .cache/unit-preview-build.log', file=sys.stderr)
             sys.exit(1)
+        finally:
+            if lock.exists() and lock.read_text() == str(os.getpid()): lock.unlink()
