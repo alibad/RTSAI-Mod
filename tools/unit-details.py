@@ -176,6 +176,15 @@ def verification(root, receipt):
             if duration is not None and typed['buildDuration']!=int(duration): raise ValueError('Native build duration mismatch')
             for arm,w in detail['weapons'].items():
                 compare([yaml.Node(arm,None,[yaml.Node('Weapon',alias(key,arm),[])])],actual)
-                compare(parse(w['rules']),yaml.parse(utility(root,target,'--resolved-weapons',alias(key,arm),config)))
+                weapon_actual=yaml.parse(utility(root,target,'--resolved-weapons',alias(key,arm),config))
+                compare(parse(w['rules']),weapon_actual)
+                native_weapon=next(row for row in typed['weapons'] if row['name'].lower()==alias(key,arm))
+                reload_value=next((n.value for n in weapon_actual if n.key=='ReloadDelay'),None)
+                range_value=next((n.value for n in weapon_actual if n.key=='Range'),None)
+                if reload_value is not None and native_weapon['reload']!=int(reload_value): raise ValueError('Native weapon reload mismatch')
+                if range_value is not None:
+                    match=re.fullmatch(r'(-?)(\d+)c(\d+)',range_value)
+                    expected_range=(-1 if match[1] else 1)*(int(match[2])*1024+int(match[3])) if match else int(range_value)
+                    if native_weapon['range']!=expected_range: raise ValueError('Native weapon range mismatch')
             results.append({'unit':key,'target':target,'passed':True,'engineValues':typed})
     return results
