@@ -1,7 +1,1 @@
-# Generated unit weapon variants; revision 2e2d2cb01b8d7265896e03e9dc2d4b43670ec1fce1750da54f4779e5cbbcf987
-studio_classic_e1_armament_primary_0dbafaaaa1:
-	Inherits: M1Carbine
-	Range: 6c0
-	ReloadDelay: 16
-	Warhead@1Dam:
-		Damage: 1200
+# Generated unit weapon variants; revision 06642b3cb639d275a54be977cf5f0a46720e51e5e9f5dcfbf53d4d40548befb1
