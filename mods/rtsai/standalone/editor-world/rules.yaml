@@ -1,0 +1,85 @@
+# Rendering-only overrides. Native capture, economy, repair and combat traits are preserved.
+
+caairp:
+	RenderSprites:
+		Image: editor-world-caairp
+	-WithIdleOverlay@decoration:
+
+caairp.rubble:
+	RenderSprites:
+		Image: editor-world-caairp
+
+cahosp:
+	RenderSprites:
+		Image: editor-world-cahosp
+	-WithIdleOverlay:
+
+cahosp.rubble:
+	RenderSprites:
+		Image: editor-world-cahosp
+
+caoild:
+	RenderSprites:
+		Image: editor-world-caoild
+	-WithIdleOverlay@pump:
+
+caoild.rubble:
+	RenderSprites:
+		Image: editor-world-caoild
+
+caoutp:
+	RenderSprites:
+		Image: editor-world-caoutp
+	-WithIdleOverlay@tower:
+	-WithIdleOverlay@tower-shadow:
+	-WithIdleOverlay@bib:
+	-WithVoxelTurret:
+	-RenderVoxels:
+
+caoutp.rubble:
+	RenderSprites:
+		Image: editor-world-caoutp
+
+cathosp:
+	RenderSprites:
+		Image: editor-world-cathosp
+
+srock01:
+	RenderSprites:
+		Image: editor-world-srock01
+
+srock02:
+	RenderSprites:
+		Image: editor-world-srock02
+
+srock03:
+	RenderSprites:
+		Image: editor-world-srock03
+
+srock04:
+	RenderSprites:
+		Image: editor-world-srock04
+
+srock05:
+	RenderSprites:
+		Image: editor-world-srock05
+
+trock01:
+	RenderSprites:
+		Image: editor-world-trock01
+
+trock02:
+	RenderSprites:
+		Image: editor-world-trock02
+
+trock03:
+	RenderSprites:
+		Image: editor-world-trock03
+
+trock04:
+	RenderSprites:
+		Image: editor-world-trock04
+
+trock05:
+	RenderSprites:
+		Image: editor-world-trock05

@@ -1,0 +1,480 @@
+{
+  "origin": "Original assets generated for RTS AI using OpenAI image_gen on 2026-10-17. No source-game pixels.",
+  "packaging": "PNG frame metadata only. Original IDAT bytes are preserved verbatim.",
+  "actors": {
+    "caairp": [
+      "tech",
+      0,
+      180
+    ],
+    "cahosp": [
+      "tech",
+      3,
+      300
+    ],
+    "caoild": [
+      "tech",
+      6,
+      120
+    ],
+    "caoutp": [
+      "tech",
+      9,
+      210
+    ],
+    "cathosp": [
+      "tech",
+      12,
+      300
+    ],
+    "srock01": [
+      "rocks",
+      5,
+      38
+    ],
+    "srock02": [
+      "rocks",
+      6,
+      48
+    ],
+    "srock03": [
+      "rocks",
+      7,
+      58
+    ],
+    "srock04": [
+      "rocks",
+      8,
+      52
+    ],
+    "srock05": [
+      "rocks",
+      9,
+      50
+    ],
+    "trock01": [
+      "rocks",
+      10,
+      42
+    ],
+    "trock02": [
+      "rocks",
+      11,
+      54
+    ],
+    "trock03": [
+      "rocks",
+      12,
+      66
+    ],
+    "trock04": [
+      "rocks",
+      13,
+      60
+    ],
+    "trock05": [
+      "rocks",
+      14,
+      52
+    ]
+  },
+  "atlases": {
+    "rocks": {
+      "source": "exec-75357415-5a65-49d0-9918-7a30fdf7078e.png",
+      "sourceSha256": "06d207b151488b62d51d79f600e01fb785f4f4ece8d5810f809571961ea26d27",
+      "sha256": "113216852860c54605e0713425e73975f58ffcf20a26dd09ff0e1fea8a4186bd",
+      "frames": [
+        {
+          "region": [
+            8,
+            64,
+            337,
+            280
+          ],
+          "offset": [
+            0,
+            -55.75
+          ]
+        },
+        {
+          "region": [
+            356,
+            81,
+            309,
+            259
+          ],
+          "offset": [
+            0,
+            -52.25
+          ]
+        },
+        {
+          "region": [
+            665,
+            78,
+            305,
+            274
+          ],
+          "offset": [
+            0,
+            -60.75
+          ]
+        },
+        {
+          "region": [
+            975,
+            66,
+            300,
+            276
+          ],
+          "offset": [
+            0,
+            -63.0
+          ]
+        },
+        {
+          "region": [
+            30,
+            425,
+            324,
+            214
+          ],
+          "offset": [
+            0,
+            -26.0
+          ]
+        },
+        {
+          "region": [
+            393,
+            415,
+            235,
+            204
+          ],
+          "offset": [
+            0,
+            -43.25
+          ]
+        },
+        {
+          "region": [
+            666,
+            417,
+            289,
+            214
+          ],
+          "offset": [
+            0,
+            -34.75
+          ]
+        },
+        {
+          "region": [
+            978,
+            387,
+            279,
+            245
+          ],
+          "offset": [
+            0,
+            -52.75
+          ]
+        },
+        {
+          "region": [
+            26,
+            741,
+            328,
+            154
+          ],
+          "offset": [
+            0,
+            5.0
+          ]
+        },
+        {
+          "region": [
+            391,
+            665,
+            243,
+            246
+          ],
+          "offset": [
+            0,
+            -62.25
+          ]
+        },
+        {
+          "region": [
+            666,
+            679,
+            272,
+            230
+          ],
+          "offset": [
+            0,
+            -47.0
+          ]
+        },
+        {
+          "region": [
+            973,
+            698,
+            288,
+            210
+          ],
+          "offset": [
+            0,
+            -33.0
+          ]
+        },
+        {
+          "region": [
+            30,
+            943,
+            301,
+            243
+          ],
+          "offset": [
+            0,
+            -46.25
+          ]
+        },
+        {
+          "region": [
+            355,
+            1015,
+            304,
+            160
+          ],
+          "offset": [
+            0,
+            -4.0
+          ]
+        },
+        {
+          "region": [
+            674,
+            926,
+            271,
+            264
+          ],
+          "offset": [
+            0,
+            -64.25
+          ]
+        },
+        {
+          "region": [
+            987,
+            966,
+            274,
+            211
+          ],
+          "offset": [
+            0,
+            -37.0
+          ]
+        }
+      ]
+    },
+    "tech": {
+      "source": "exec-a5f51271-0057-421f-86cf-5317f87a909e.png",
+      "sourceSha256": "c2c75c8004bdde6ac480e55af7a32cbd16353811f1be1665b2da66db7c2cf2a7",
+      "sha256": "1925da17a9166c861e7f17d90d834b824cca153116f7029bba6ad93e738ea9e7",
+      "frames": [
+        {
+          "region": [
+            11,
+            69,
+            314,
+            282
+          ],
+          "offset": [
+            0,
+            -62.5
+          ]
+        },
+        {
+          "region": [
+            338,
+            69,
+            302,
+            275
+          ],
+          "offset": [
+            0,
+            -62.0
+          ]
+        },
+        {
+          "region": [
+            651,
+            112,
+            311,
+            238
+          ],
+          "offset": [
+            0,
+            -41.25
+          ]
+        },
+        {
+          "region": [
+            9,
+            405,
+            295,
+            242
+          ],
+          "offset": [
+            0,
+            -47.25
+          ]
+        },
+        {
+          "region": [
+            332,
+            403,
+            294,
+            245
+          ],
+          "offset": [
+            0,
+            -49.0
+          ]
+        },
+        {
+          "region": [
+            652,
+            424,
+            311,
+            218
+          ],
+          "offset": [
+            0,
+            -31.25
+          ]
+        },
+        {
+          "region": [
+            21,
+            691,
+            289,
+            254
+          ],
+          "offset": [
+            0,
+            -54.75
+          ]
+        },
+        {
+          "region": [
+            340,
+            695,
+            290,
+            249
+          ],
+          "offset": [
+            0,
+            -52.0
+          ]
+        },
+        {
+          "region": [
+            660,
+            751,
+            302,
+            194
+          ],
+          "offset": [
+            0,
+            -21.5
+          ]
+        },
+        {
+          "region": [
+            22,
+            983,
+            295,
+            276
+          ],
+          "offset": [
+            0,
+            -64.25
+          ]
+        },
+        {
+          "region": [
+            339,
+            995,
+            294,
+            263
+          ],
+          "offset": [
+            0,
+            -58.0
+          ]
+        },
+        {
+          "region": [
+            654,
+            1053,
+            309,
+            205
+          ],
+          "offset": [
+            0,
+            -25.25
+          ]
+        },
+        {
+          "region": [
+            9,
+            1341,
+            307,
+            211
+          ],
+          "offset": [
+            0,
+            -28.75
+          ]
+        },
+        {
+          "region": [
+            334,
+            1348,
+            309,
+            201
+          ],
+          "offset": [
+            0,
+            -23.25
+          ]
+        },
+        {
+          "region": [
+            662,
+            1349,
+            303,
+            199
+          ],
+          "offset": [
+            0,
+            -23.75
+          ]
+        }
+      ]
+    }
+  },
+  "unusedRockAtlasFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    15
+  ],
+  "limitations": [
+    "Outpost turret and resupply crane are static artwork; native combat and repair logic remains."
+  ]
+}

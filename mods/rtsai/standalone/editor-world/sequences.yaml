@@ -1,0 +1,245 @@
+# Original generated artwork. PNG frame metadata preserves source pixels.
+
+editor-world-caairp:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 0
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.573248
+		ZRamp: 1
+	damaged-idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 1
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.596026
+		ZRamp: 1
+	rubble:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 2
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.578778
+		ZRamp: 1
+	flag:
+		Filename: ra2|standalone/art/rallypoint-flag.png
+		Length: 10
+		ShadowStart: -1
+		Offset: 0, -16, 16
+
+editor-world-cahosp:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 3
+		Length: 1
+		ShadowStart: -1
+		Scale: 1.016949
+		ZRamp: 1
+	damaged-idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 4
+		Length: 1
+		ShadowStart: -1
+		Scale: 1.020408
+		ZRamp: 1
+	rubble:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 5
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.964630
+		ZRamp: 1
+	flag:
+		Filename: ra2|standalone/art/rallypoint-flag.png
+		Length: 10
+		ShadowStart: -1
+		Offset: 0, -16, 16
+
+editor-world-caoild:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 6
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.415225
+		ZRamp: 1
+	damaged-idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 7
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.413793
+		ZRamp: 1
+	rubble:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 8
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.397351
+		ZRamp: 1
+	flag:
+		Filename: ra2|standalone/art/rallypoint-flag.png
+		Length: 10
+		ShadowStart: -1
+		Offset: 0, -16, 16
+
+editor-world-caoutp:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 9
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.711864
+		ZRamp: 1
+	damaged-idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 10
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.714286
+		ZRamp: 1
+	rubble:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 11
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.679612
+		ZRamp: 1
+	active-crane:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 9
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.711864
+		ZRamp: 1
+	damaged-active-crane:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 10
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.714286
+		ZRamp: 1
+	flag:
+		Filename: ra2|standalone/art/rallypoint-flag.png
+		Length: 10
+		ShadowStart: -1
+		Offset: 0, -16, 16
+
+editor-world-cathosp:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 12
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.977199
+		ZRamp: 1
+	damaged-idle:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 13
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.970874
+		ZRamp: 1
+	rubble:
+		Filename: ra2|standalone/editor-world/editor-tech-states.png
+		Start: 14
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.990099
+		ZRamp: 1
+	flag:
+		Filename: ra2|standalone/art/rallypoint-flag.png
+		Length: 10
+		ShadowStart: -1
+		Offset: 0, -16, 16
+
+editor-world-srock01:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 5
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.161702
+		ZRamp: 1
+
+editor-world-srock02:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 6
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.166090
+		ZRamp: 1
+
+editor-world-srock03:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 7
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.207885
+		ZRamp: 1
+
+editor-world-srock04:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 8
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.158537
+		ZRamp: 1
+
+editor-world-srock05:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 9
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.205761
+		ZRamp: 1
+
+editor-world-trock01:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 10
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.154412
+		ZRamp: 1
+
+editor-world-trock02:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 11
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.187500
+		ZRamp: 1
+
+editor-world-trock03:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 12
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.219269
+		ZRamp: 1
+
+editor-world-trock04:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 13
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.197368
+		ZRamp: 1
+
+editor-world-trock05:
+	idle:
+		Filename: ra2|standalone/editor-world/editor-rocks.png
+		Start: 14
+		Length: 1
+		ShadowStart: -1
+		Scale: 0.191882
+		ZRamp: 1
