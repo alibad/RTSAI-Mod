@@ -25,6 +25,7 @@ usage: python tools/standalone-terrain.py [--only 0,314,49] [--samples 48] [--th
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -158,7 +159,7 @@ class Noise:
 def tile_class(t: Template, k: int) -> str:
     tile = t.tiles[k]
     if tile.type == "Cliff":
-        lo = min(x.height for x in t.tiles.values())
+        lo = min(0, min(x.height for x in t.tiles.values()))
         return "rough" if tile.height > lo else "rubble"
     return TYPE_CLASS.get(tile.type, "grass")
 
@@ -267,7 +268,11 @@ def template_geometry(t: Template, ox: int, oy: int, seed: int, n: int = 8, skir
             if nb is not None:
                 bot = z_of(nb, np.zeros_like(s), s) if side == "+x" else z_of(nb, s, np.zeros_like(s))
             elif tile.type == "Cliff" or tile.height > lo:
-                bot = np.full_like(s, float(lo))
+                # A corner template can contain only raised cells (all Height: 4).
+                # Its own minimum is then the cliff TOP, not the surrounding floor.
+                # Render the external wall to the template's zero datum; the map's
+                # height placement still supplies its absolute world elevation.
+                bot = np.full_like(s, float(min(0, lo) if tile.type == "Cliff" else lo))
             else:
                 continue
             if np.max(top - bot) < 0.05:
@@ -386,7 +391,13 @@ def render_batch(placed, size, work: Path, name: str, threads: int, samples: int
     npz = work / f"{name}.npz"
     np.savez(npz, verts=V, tris=T, skirt=skirt, weights=Wt, size=np.array([W, H]), target=target,
              classes=np.array(CLASSES), seed=np.array([seed]), samples=np.array([samples]))
-    png = work / f"{name}.png"
+    # A cached render must describe these exact inputs and this renderer. Old
+    # batch00.png files must not survive a geometry or material correction.
+    identity = hashlib.sha256()
+    for part in (V, T, Wt, skirt, np.array(size), np.array([samples, seed])):
+        identity.update(part.tobytes())
+    identity.update(BATCH_SCRIPT.read_bytes())
+    png = work / f"{name}-{identity.hexdigest()[:16]}.png"
     if not png.exists():
         t0 = time.time()
         r = subprocess.run([str(BLENDER), "-b", "--factory-startup", "-noaudio", "-P", str(BATCH_SCRIPT), "--",
@@ -741,12 +752,18 @@ def main():
     ap.add_argument("--mines", action="store_true", help="render the ore mine (resource spawn) instead of the tileset")
     ap.add_argument("--trees", action="store_true", help="render the trees (tree01-tree28) instead of the tileset")
     ap.add_argument("--only", help="comma-separated template ids (test renders; output goes to --work only)")
+    ap.add_argument("--repair-cliffs", action="store_true", help="rebuild raised-only cliff templates with their missing external walls")
+    ap.add_argument("--install", action="store_true", help="with --repair-cliffs: install only repaired sheets, preserving the existing palette and all other terrain")
     ap.add_argument("--work", type=Path, default=Path(os.environ.get("TEMP", "/tmp")) / "rtsai-terrain")
     ap.add_argument("--threads", type=int, default=max(4, (os.cpu_count() or 8) - 4))
     ap.add_argument("--samples", type=int, default=64)
     ap.add_argument("--per-batch", type=int, default=48)
     ap.add_argument("--seed", type=int, default=7)
     a = ap.parse_args()
+    if a.install and not a.repair_cliffs:
+        ap.error("--install is only supported with --repair-cliffs")
+    if a.only and a.repair_cliffs:
+        ap.error("Choose --only or --repair-cliffs")
     a.work.mkdir(parents=True, exist_ok=True)
     if a.resources:
         render_resources(a.work, a.threads)
@@ -763,6 +780,9 @@ def main():
     head, templates = parse_tileset(SRC_TILESET.read_text(encoding="utf-8"))
     extras = transition_templates()
     alltpl = templates + extras
+    if a.repair_cliffs:
+        alltpl = [t for t in templates if min(tile.height for tile in t.tiles.values()) > 0
+                  and any(tile.type == "Cliff" for tile in t.tiles.values())]
     if a.only:
         ids = {int(x) for x in a.only.split(",")}
         alltpl = [t for t in alltpl if t.id in ids]
@@ -776,12 +796,28 @@ def main():
         placed, size = layout(jobs[bi:bi + a.per_batch])
         png, walls = render_batch(placed, size, a.work, f"batch{bi // a.per_batch:02d}", a.threads, a.samples, a.seed)
         frames.update(cut_frames(png, placed, walls))
-    pal = build_palette(frames)
-    if a.only:
+    pal = np.array(Image.open(OUT_DIR / "t0000a.png").getpalette(), np.uint8).reshape(256, 3) if a.repair_cliffs else build_palette(frames)
+    if a.only or a.repair_cliffs:
         prev = a.work / "preview"
         prev.mkdir(exist_ok=True)
         for (tid, v), fr in frames.items():
             write_sheet(prev / f"t{tid:04d}{'abcd'[v]}.png", fr, pal)
+        if a.install:
+            import shutil
+            installed = []
+            for path in sorted(prev.glob("t*.png")):
+                if int(path.stem[1:5]) not in {t.id for t in alltpl}:
+                    continue
+                shutil.copyfile(path, OUT_DIR / path.name)
+                installed.append({"file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+            (OUT_DIR / "CLIFF-REPAIR.json").write_text(json.dumps({
+                "schema": 1, "generator": "tools/standalone-terrain.py --repair-cliffs --install",
+                "fix": "External walls descend to the template zero datum, including templates containing only raised cells.",
+                "templates": [t.id for t in alltpl], "files": installed,
+                "paletteSha256": hashlib.sha256((OUT_DIR / "temperate.pal").read_bytes()).hexdigest(),
+                "preserved": "Map binaries, terrain types, heights, ramps, collision and all unrelated artwork."
+            }, indent=2) + "\n", encoding="utf-8")
+            print(f"installed {len(installed)} repaired sheets; existing terrain palette retained")
         print(f"test sheets in {prev}")
         return
     OUT_DIR.mkdir(parents=True, exist_ok=True)
