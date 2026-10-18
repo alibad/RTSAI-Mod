@@ -335,69 +335,6 @@
    "theatre": "Arabian peninsula",
    "title": "Desert Convoy"
   },
-  "music/rtsai-final-push.ogg": {
-   "category": "music",
-   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
-   "dit": "acestep-v15-xl-turbo",
-   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
-   "generated": "2026-10-14",
-   "generator": "tools/standalone-music.py",
-   "license": "MIT (code and weights); the output carries no third-party rights",
-   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "mastering": {
-    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
-    "crossfade_bars": 2,
-    "crossfade_seconds": 4.8,
-    "input_lufs": -13.05,
-    "input_true_peak": -0.85,
-    "loop_bars": 28.02,
-    "loop_seconds": 67.26,
-    "normalization": "static gain -0.95 dB, look-ahead limiter at -2.7 dBFS",
-    "onset_alignment": 0.039,
-    "output_lufs": -14.07,
-    "output_true_peak": -1.74,
-    "source_seconds": 85.0,
-    "wrap_flux_percentile_estimate": 94.2
-   },
-   "model": "ACE-Step/acestep-v15-xl-turbo DiT + acestep-5Hz-lm-1.7B planner; precision/offload flags were not recorded in the source sidecar",
-   "notes": "Locally generated instrumental, reused from the preserved 14 October finale cue. No third-party recording was imported. Old master archived under resources/music-archive/final-push-techno-20261007.",
-   "planner": {
-    "bpm": 100,
-    "caption": null,
-    "duration": 85,
-    "keyscale": "C minor",
-    "timesignature": "4",
-    "vocal_language": null
-   },
-   "prompt": "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm",
-   "raw_take_sha256": "7ce54d4ea7275e4bdc9e3dfc7ed85e5504392119abb06e8c02d6082c5a9b22b5",
-   "replaced": "2026-10-16",
-   "replacement_reason": "Owner rejected abrasive acid bass and alarm leads; use the preserved warm orchestral instrumental.",
-   "request": {
-    "bpm": "100",
-    "caption": "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm",
-    "duration": "85",
-    "format": "flac",
-    "instrumental": "true",
-    "keyscale": "C minor",
-    "seed": "629497889",
-    "task": "text2music",
-    "timesignature": "4"
-   },
-   "seed": 629497889,
-   "service": {
-    "dit": "acestep-v15-xl-turbo",
-    "lm": "acestep-5Hz-lm-1.7B",
-    "model": "ace-step-1.5"
-   },
-   "sha256": "c287687a12762f28539c46d78e3713c6f831c5f04f4b5e9609f25bad759a3eda",
-   "source_audio": "resources/music-sources/final-push-orchestral-20261014/source.flac",
-   "source_metadata": "resources/music-sources/final-push-orchestral-20261014/source.json",
-   "steps": 8,
-   "theatre": "all",
-   "title": "Final Push"
-  },
   "music/rtsai-grid-assault.ogg": {
    "category": "music",
    "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
@@ -586,6 +523,73 @@
    "steps": 8,
    "theatre": "all",
    "title": "Grid Assault"
+  },
+  "music/rtsai-highland-caravan.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-19",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
+    "crossfade_seconds": 4.07,
+    "input_lufs": -12.49,
+    "input_true_peak": -0.79,
+    "loop_bars": 74.0,
+    "loop_seconds": 150.51,
+    "normalization": "static gain -1.51 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.076,
+    "output_lufs": -14.05,
+    "output_true_peak": -2.01,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 23.4
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 118,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "D minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "driving cinematic world fusion instrumental, oud riffs, frame drums and darbuka groove, hand claps, low string ostinato, warm bass, deep war drums, determined and adventurous, wide mountain atmosphere",
+   "raw_take_sha256": "e8a8c5f59104715c47396dcbc37ef136640d277fb0c770f4f19bf19da55866d3",
+   "request": {
+    "bpm": "118",
+    "caption": "driving cinematic world fusion instrumental, oud riffs, frame drums and darbuka groove, hand claps, low string ostinato, warm bass, deep war drums, determined and adventurous, wide mountain atmosphere",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "D minor",
+    "rewrite_caption": "false",
+    "seed": "7401",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7401,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "4a8a077ace9c0a3d003dbbd02f95a2005ac2a675503a3ef380909236b9947081",
+   "steps": 8,
+   "theatre": "Yemen highlands",
+   "title": "Highland Caravan"
   },
   "music/rtsai-iron-foundry.ogg": {
    "category": "music",
@@ -983,6 +987,73 @@
    "steps": 8,
    "theatre": "all",
    "title": "Pressure Front"
+  },
+  "music/rtsai-steel-horizon.ogg": {
+   "category": "music",
+   "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+   "dit": "acestep-v15-xl-turbo",
+   "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+   "generated": "2026-10-19",
+   "generator": "tools/standalone-music.py",
+   "license": "MIT (code and weights); the output carries no third-party rights",
+   "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+   "lm": "acestep-5Hz-lm-1.7B",
+   "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
+    "crossfade_seconds": 4.21,
+    "input_lufs": -12.53,
+    "input_true_peak": -1.2,
+    "loop_bars": 76.99,
+    "loop_seconds": 162.09,
+    "normalization": "static gain -1.47 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.136,
+    "output_lufs": -14.06,
+    "output_true_peak": -3.03,
+    "source_seconds": 180.0,
+    "wrap_flux_percentile_estimate": 81.1
+   },
+   "model": "ACE-Step/acestep-v15-xl-turbo DiT (int8 weight-only as served), ACE-Step/Ace-Step1.5 (5Hz LM planner 1.7B, VAE; MIT), Qwen/Qwen3-Embedding-0.6B text encoder (Apache-2.0); the exact DiT, LM and quantization of each take are in its record",
+   "notes": "AI-generated instrumental. A generated track can still resemble existing music by chance.",
+   "planner": {
+    "bpm": 114,
+    "caption": null,
+    "duration": 180,
+    "keyscale": "G minor",
+    "timesignature": "4",
+    "vocal_language": null
+   },
+   "prompt": "hybrid orchestral battle march instrumental, driving string ostinato, bold french horn and trombone theme, snare drum march, taiko and low toms, warm cello lines, heroic and determined, cinematic strategy game score",
+   "raw_take_sha256": "947c52895d674320a3a30f7d9d00c20c9d00df414aca34edb6fa2a3af8242666",
+   "request": {
+    "bpm": "114",
+    "caption": "hybrid orchestral battle march instrumental, driving string ostinato, bold french horn and trombone theme, snare drum march, taiko and low toms, warm cello lines, heroic and determined, cinematic strategy game score",
+    "duration": "180",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "G minor",
+    "rewrite_caption": "false",
+    "seed": "7421",
+    "task": "text2music",
+    "thinking": "true",
+    "timesignature": "4"
+   },
+   "seed": 7421,
+   "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "lm_backend": "pt",
+    "model": "ace-step-1.5",
+    "offload": {
+     "lm": true,
+     "vae_text_encoder": true
+    },
+    "quantization": "int8_weight_only"
+   },
+   "sha256": "dc24045947a87621950ba974e5ca54f8ec6c6528c8b714e24fa59bf788c4f9c8",
+   "steps": 8,
+   "theatre": "all",
+   "title": "Steel Horizon"
   },
   "music/rtsai-yangtze-steel.ogg": {
    "category": "music",

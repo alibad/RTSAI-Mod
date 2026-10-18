@@ -91,9 +91,15 @@ TRACKS = [
     ("rtsai-pressure-front", "Pressure Front",
      "tense cinematic industrial electronic instrumental, ticking percussion, low drones, slowly building "
      "synth arpeggio, distant war drums, suspenseful", 96, "C# minor", 180, "all"),
-    ("rtsai-final-push", "Final Push",
-     "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, "
-     "a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm", 100, "C minor", 85, "all"),
+    # Final Push left the soundtrack on 18 Oct 2026 (owner): resources/music-archive keeps both of its takes.
+    ("rtsai-highland-caravan", "Highland Caravan",
+     "driving cinematic world fusion instrumental, oud riffs, frame drums and darbuka groove, hand claps, "
+     "low string ostinato, warm bass, deep war drums, determined and adventurous, wide mountain atmosphere",
+     118, "D minor", 180, "Yemen highlands"),
+    ("rtsai-steel-horizon", "Steel Horizon",
+     "hybrid orchestral battle march instrumental, driving string ostinato, bold french horn and trombone theme, "
+     "snare drum march, taiko and low toms, warm cello lines, heroic and determined, cinematic strategy game score",
+     114, "G minor", 180, "all"),
     ("score", "Debrief",
      "short cinematic electronic outro instrumental, steady military snare, warm synth pads, low brass, "
      "reflective and resolved", 90, "D major", 75, "score screen"),

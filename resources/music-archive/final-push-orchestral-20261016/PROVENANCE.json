@@ -1,0 +1,63 @@
+{
+  "category": "music",
+  "code": "github.com/ace-step/ACE-Step-1.5@ca1e85fe9430179831e6bc6be790c332190a3866 (MIT)",
+  "dit": "acestep-v15-xl-turbo",
+  "engine": "ACE-Step 1.5 text2music (XL turbo DiT + 5Hz LM planner), local BeTenshi music service",
+  "generated": "2026-10-14",
+  "generator": "tools/standalone-music.py",
+  "license": "MIT (code and weights); the output carries no third-party rights",
+  "license_evidence": "Model cards shipped with the checkpoints (license: mit) and https://huggingface.co/ACE-Step/acestep-v15-xl-turbo: 'Commercial-Ready: Trained on legally compliant datasets. Generated music can be used for commercial purposes.' Training data per the card: licensed music, royalty-free/public domain and synthetic (MIDI-to-audio) data.",
+  "lm": "acestep-5Hz-lm-1.7B",
+  "mastering": {
+    "codec": "Ogg Vorbis q4, 44.1 kHz stereo",
+    "crossfade_bars": 2,
+    "crossfade_seconds": 4.8,
+    "input_lufs": -13.05,
+    "input_true_peak": -0.85,
+    "loop_bars": 28.02,
+    "loop_seconds": 67.26,
+    "normalization": "static gain -0.95 dB, look-ahead limiter at -2.7 dBFS",
+    "onset_alignment": 0.039,
+    "output_lufs": -14.07,
+    "output_true_peak": -1.74,
+    "source_seconds": 85.0,
+    "wrap_flux_percentile_estimate": 94.2
+  },
+  "model": "ACE-Step/acestep-v15-xl-turbo DiT + acestep-5Hz-lm-1.7B planner; precision/offload flags were not recorded in the source sidecar",
+  "notes": "Locally generated instrumental, reused from the preserved 14 October finale cue. No third-party recording was imported. Old master archived under resources/music-archive/final-push-techno-20261007.",
+  "planner": {
+    "bpm": 100,
+    "caption": null,
+    "duration": 85,
+    "keyscale": "C minor",
+    "timesignature": "4",
+    "vocal_language": null
+  },
+  "prompt": "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm",
+  "raw_take_sha256": "7ce54d4ea7275e4bdc9e3dfc7ed85e5504392119abb06e8c02d6082c5a9b22b5",
+  "replaced": "2026-10-16",
+  "replacement_reason": "Owner rejected abrasive acid bass and alarm leads; use the preserved warm orchestral instrumental.",
+  "request": {
+    "bpm": "100",
+    "caption": "epic finale cinematic game score, full orchestra with oud and frame drum joining synth pulses and taiko, a broad warm brass theme stated in full, building to a triumphant final chord, instrumental, no vocals, 96 bpm",
+    "duration": "85",
+    "format": "flac",
+    "instrumental": "true",
+    "keyscale": "C minor",
+    "seed": "629497889",
+    "task": "text2music",
+    "timesignature": "4"
+  },
+  "seed": 629497889,
+  "service": {
+    "dit": "acestep-v15-xl-turbo",
+    "lm": "acestep-5Hz-lm-1.7B",
+    "model": "ace-step-1.5"
+  },
+  "sha256": "c287687a12762f28539c46d78e3713c6f831c5f04f4b5e9609f25bad759a3eda",
+  "source_audio": "resources/music-sources/final-push-orchestral-20261014/source.flac",
+  "source_metadata": "resources/music-sources/final-push-orchestral-20261014/source.json",
+  "steps": 8,
+  "theatre": "all",
+  "title": "Final Push"
+}

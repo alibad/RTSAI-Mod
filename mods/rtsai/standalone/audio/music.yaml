@@ -33,8 +33,11 @@ rtsai-black-ore: Black Ore
 rtsai-pressure-front: Pressure Front
 	Filename: rtsai-pressure-front
 	Extension: ogg
-rtsai-final-push: Final Push
-	Filename: rtsai-final-push
+rtsai-highland-caravan: Highland Caravan
+	Filename: rtsai-highland-caravan
+	Extension: ogg
+rtsai-steel-horizon: Steel Horizon
+	Filename: rtsai-steel-horizon
 	Extension: ogg
 score: Debrief
 	Filename: score

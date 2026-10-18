@@ -1,0 +1,1 @@
+Removed from the soundtrack by the owner on 18 October 2026, together with the 7 October take it had replaced (../final-push-techno-20261007): Final Push left the playlist and two new tracks took its place. This is the orchestral master that shipped in the mod from 16 October; its source take stays in resources/music-sources/final-push-orchestral-20261014.
