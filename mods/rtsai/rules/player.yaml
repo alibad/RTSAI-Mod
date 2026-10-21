@@ -88,6 +88,10 @@ Player:
 	PlayerResources:
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
+		# No $2,500 (the engine's lowest default choice): a refinery ($2,000) needs a power plant ($600 Tesla Reactor,
+		# $800 Allied), so a start below $2,600 can never pay for an economy and every side stalls (AI or human).
+		SelectableCash: 5000, 10000, 20000
+		DefaultCash: 5000
 	DeveloperMode:
 		CheckboxEnabled: true
 		CheckboxDisplayOrder: 5
