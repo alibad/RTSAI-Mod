@@ -72,6 +72,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			# The original Allies' Weather Controller: the lightning storm, aimed like the nuclear missile.
+			weathercontrol:
+				OrderName: WeatherControlDevice
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 	SuperweaponBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		ExcludeTypes: cmin, harv, amcv, smcv
@@ -104,6 +120,8 @@ Player:
 			gatech: 1
 			natech: 1
 			gagap: 2
+			gaweat: 1
+			gaorep: 1
 		BuildingFractions:
 			garefn: 30
 			narefn: 30
@@ -135,6 +153,9 @@ Player:
 			namisl: 1
 			gacsph: 1
 			nairon: 1
+			# Original Allies: Weather Controller (fired by the WeatherControlDevice decision) and Ore Purifier.
+			gaweat: 1
+			gaorep: 2
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
@@ -177,10 +198,29 @@ Player:
 			sub: 20
 			hyd: 20
 			sqd: 5
+			# The nine original countries' own units (an AI-vs-AI survey on 22 Oct 2026 found the bots never built them:
+			# only the units listed here or tagged with a strategic role are trained). Harrier and Black Eagle stay
+			# capped at one each by combined-arms-ai.yaml.
+			v3: 15
+			zep: 10
+			dron: 15
+			dred: 15
+			terror: 8
+			dtruck: 5
+			orca: 15
+			beag: 15
+			cleg: 5
 		UnitLimits:
 			dog: 4
 			cmin: 8
 			harv: 8
+			v3: 4
+			zep: 2
+			dron: 6
+			dred: 3
+			terror: 4
+			dtruck: 2
+			cleg: 2
 	McvManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		McvTypes: amcv, smcv
@@ -263,6 +303,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			# The original Allies' Weather Controller: the lightning storm, aimed like the nuclear missile.
+			weathercontrol:
+				OrderName: WeatherControlDevice
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 	SuperweaponBotModule@medium:
 		RequiresCondition: enable-medium-ai
 		ExcludeTypes: cmin, harv, amcv, smcv
@@ -295,6 +351,8 @@ Player:
 			gatech: 1
 			natech: 1
 			gagap: 2
+			gaweat: 1
+			gaorep: 1
 		BuildingFractions:
 			garefn: 30
 			narefn: 30
@@ -326,6 +384,9 @@ Player:
 			namisl: 1
 			gacsph: 1
 			nairon: 1
+			# Original Allies: Weather Controller (fired by the WeatherControlDevice decision) and Ore Purifier.
+			gaweat: 1
+			gaorep: 2
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@medium:
 		RequiresCondition: enable-medium-ai
@@ -368,10 +429,29 @@ Player:
 			sub: 20
 			hyd: 20
 			sqd: 5
+			# The nine original countries' own units (an AI-vs-AI survey on 22 Oct 2026 found the bots never built them:
+			# only the units listed here or tagged with a strategic role are trained). Harrier and Black Eagle stay
+			# capped at one each by combined-arms-ai.yaml.
+			v3: 15
+			zep: 10
+			dron: 15
+			dred: 15
+			terror: 8
+			dtruck: 5
+			orca: 15
+			beag: 15
+			cleg: 5
 		UnitLimits:
 			dog: 4
 			cmin: 8
 			harv: 8
+			v3: 4
+			zep: 2
+			dron: 6
+			dred: 3
+			terror: 4
+			dtruck: 2
+			cleg: 2
 	McvManagerBotModule@medium:
 		RequiresCondition: enable-medium-ai
 		McvTypes: amcv, smcv
@@ -454,6 +534,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			# The original Allies' Weather Controller: the lightning storm, aimed like the nuclear missile.
+			weathercontrol:
+				OrderName: WeatherControlDevice
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 	SuperweaponBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		ExcludeTypes: cmin, harv, amcv, smcv
@@ -486,6 +582,8 @@ Player:
 			gatech: 1
 			natech: 1
 			gagap: 2
+			gaweat: 1
+			gaorep: 1
 		BuildingFractions:
 			garefn: 30
 			narefn: 30
@@ -517,6 +615,9 @@ Player:
 			namisl: 1
 			gacsph: 1
 			nairon: 1
+			# Original Allies: Weather Controller (fired by the WeatherControlDevice decision) and Ore Purifier.
+			gaweat: 1
+			gaorep: 2
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@rush:
 		RequiresCondition: enable-rush-ai
@@ -559,10 +660,29 @@ Player:
 			sub: 20
 			hyd: 20
 			sqd: 5
+			# The nine original countries' own units (an AI-vs-AI survey on 22 Oct 2026 found the bots never built them:
+			# only the units listed here or tagged with a strategic role are trained). Harrier and Black Eagle stay
+			# capped at one each by combined-arms-ai.yaml.
+			v3: 15
+			zep: 10
+			dron: 15
+			dred: 15
+			terror: 8
+			dtruck: 5
+			orca: 15
+			beag: 15
+			cleg: 5
 		UnitLimits:
 			dog: 4
 			cmin: 8
 			harv: 8
+			v3: 4
+			zep: 2
+			dron: 6
+			dred: 3
+			terror: 4
+			dtruck: 2
+			cleg: 2
 	McvManagerBotModule@rush:
 		RequiresCondition: enable-rush-ai
 		McvTypes: amcv, smcv
@@ -645,6 +765,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			# The original Allies' Weather Controller: the lightning storm, aimed like the nuclear missile.
+			weathercontrol:
+				OrderName: WeatherControlDevice
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 	SuperweaponBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		ExcludeTypes: cmin, harv, amcv, smcv
@@ -677,6 +813,8 @@ Player:
 			gatech: 1
 			natech: 1
 			gagap: 2
+			gaweat: 1
+			gaorep: 1
 		BuildingFractions:
 			garefn: 30
 			narefn: 30
@@ -708,6 +846,9 @@ Player:
 			namisl: 1
 			gacsph: 1
 			nairon: 1
+			# Original Allies: Weather Controller (fired by the WeatherControlDevice decision) and Ore Purifier.
+			gaweat: 1
+			gaorep: 2
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
@@ -750,10 +891,29 @@ Player:
 			sub: 20
 			hyd: 20
 			sqd: 5
+			# The nine original countries' own units (an AI-vs-AI survey on 22 Oct 2026 found the bots never built them:
+			# only the units listed here or tagged with a strategic role are trained). Harrier and Black Eagle stay
+			# capped at one each by combined-arms-ai.yaml.
+			v3: 15
+			zep: 10
+			dron: 15
+			dred: 15
+			terror: 8
+			dtruck: 5
+			orca: 15
+			beag: 15
+			cleg: 5
 		UnitLimits:
 			dog: 4
 			cmin: 8
 			harv: 8
+			v3: 4
+			zep: 2
+			dron: 6
+			dred: 3
+			terror: 4
+			dtruck: 2
+			cleg: 2
 	McvManagerBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
 		McvTypes: amcv, smcv
@@ -836,6 +996,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			# The original Allies' Weather Controller: the lightning storm, aimed like the nuclear missile.
+			weathercontrol:
+				OrderName: WeatherControlDevice
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 	SuperweaponBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		ExcludeTypes: cmin, harv, amcv, smcv
@@ -868,6 +1044,8 @@ Player:
 			gatech: 1
 			natech: 1
 			gagap: 2
+			gaweat: 1
+			gaorep: 1
 		BuildingFractions:
 			garefn: 30
 			narefn: 30
@@ -899,6 +1077,9 @@ Player:
 			namisl: 1
 			gacsph: 1
 			nairon: 1
+			# Original Allies: Weather Controller (fired by the WeatherControlDevice decision) and Ore Purifier.
+			gaweat: 1
+			gaorep: 2
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@naval:
 		RequiresCondition: enable-naval-ai
@@ -941,10 +1122,29 @@ Player:
 			sub: 60
 			hyd: 20
 			sqd: 5
+			# The nine original countries' own units (an AI-vs-AI survey on 22 Oct 2026 found the bots never built them:
+			# only the units listed here or tagged with a strategic role are trained). Harrier and Black Eagle stay
+			# capped at one each by combined-arms-ai.yaml.
+			v3: 15
+			zep: 10
+			dron: 15
+			dred: 40
+			terror: 8
+			dtruck: 5
+			orca: 15
+			beag: 15
+			cleg: 5
 		UnitLimits:
 			dog: 4
 			cmin: 8
 			harv: 8
+			v3: 4
+			zep: 2
+			dron: 6
+			dred: 3
+			terror: 4
+			dtruck: 2
+			cleg: 2
 	McvManagerBotModule@naval:
 		RequiresCondition: enable-naval-ai
 		McvTypes: amcv, smcv
