@@ -114,6 +114,7 @@ dog:
 			RadiationDeath: 1
 			PsychicDeath: 1
 			ElectroDeath: 2
+			FlameDeath: 1
 	-WithDeathAnimation@effect:
 	-SpawnActorOnDeath@flames:
 	-WithInfantryBody:

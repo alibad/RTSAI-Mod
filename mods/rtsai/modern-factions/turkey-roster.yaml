@@ -24,6 +24,15 @@
 		RequiresCondition: rank-elite
 		Modifier: 140
 	-WithDeathAnimation@effect:
+	# Their art has no melt, psychic or zap frames (die4-die6): those deaths play the ordinary falls instead of
+	# leaving nothing on screen (websim effectsaudit).
+	WithDeathAnimation@normal:
+		DeathTypes:
+			ExplosionDeath: 1
+			BulletDeath: 2
+			RadiationDeath: 1
+			PsychicDeath: 2
+			ElectroDeath: 1
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 32
