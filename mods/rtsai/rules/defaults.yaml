@@ -169,6 +169,13 @@
 	HandicapFirepowerMultiplier:
 	HandicapDamageMultiplier:
 	HandicapProductionTimeMultiplier:
+	# Training difficulty is explicit and shared by desktop and web. Normal/Rush remain full strength.
+	GrantConditionOnBotOwner@training:
+		Bots: medium
+		Condition: training-ai
+	FirepowerMultiplier@training:
+		RequiresCondition: training-ai
+		Modifier: 60
 
 ^GainsExperience:
 	GainsExperience:
