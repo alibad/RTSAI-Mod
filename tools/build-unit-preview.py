@@ -173,7 +173,9 @@ def build(web_root, log):
     run('node', game / 'tools/sync-catalog.mjs', '--from', web_root, '--out', frontend / 'web/src/data/factions.json')
     run('node', web_root / 'scripts/sync-shared-content.mjs', cwd=web_root)
     run('node', '--import', 'tsx', web_root / 'scripts/export-viewer-data.mts', frontend / 'web/public/viewer', cwd=web_root)
-    run('node', game / 'web/node_modules/vite/bin/vite.js', 'build', '--outDir', out / 'web', cwd=frontend / 'web', env={**os.environ, 'RTSAI_SITE_ROOT': str(web_root)})
+    run('node', game / 'web/node_modules/vite/bin/vite.js', 'build', '--outDir', out / 'web', cwd=frontend / 'web', env={**os.environ,
+        'RTSAI_SITE_ROOT': str(web_root), 'VITE_GAME_MODES': 'public,public-classic',
+        'VITE_DEFAULT_PROFILE': 'public', 'VITE_DEFAULT_RUNTIME': 'interp'})
     names = ['RTSAI_WEBGAME_PORT', 'RTSAI_WEB_COMPANION_GRPC', 'RTSAI_WEB_COMPANION_PORT', 'RTSAI_WEB_MOCK_AI_PORT', 'RTSAI_WEB_LOCAL_AI_PORT']
     ports, reservations = {}, []
     for name in names:
