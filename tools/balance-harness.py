@@ -136,12 +136,16 @@ def plan(campaign: dict, seed: int | None = None, suites: set[str] | None = None
         if suites and suite["id"] not in suites:
             continue
         for map_entry, bot, replicate, (a, b) in itertools.product(
-                suite["maps"], suite["bots"], range(suite.get("replicates", 1)), pairings(suite)):
+                suite["maps"], suite.get("bot_pairs", suite.get("bots", ["normal"])), range(suite.get("replicates", 1)), pairings(suite)):
+            profiles = (bot, bot) if isinstance(bot, str) else tuple(bot)
+            if len(profiles) != 2 or any(not isinstance(p, str) or not p for p in profiles):
+                raise ValueError("bot_pairs entries must contain two nonempty bot profile names")
+            label = bot if isinstance(bot, str) else "-vs-".join(profiles)
             for first, second in ((a, b), (b, a)):
-                key = f"{suite['id']}.{slug(map_entry['map'])}.{bot}.{first}-{second}.r{replicate}"
+                key = f"{suite['id']}.{slug(map_entry['map'])}.{label}.{first}-{second}.r{replicate}"
                 matches.append(Match(
                     id=key, suite=suite["id"], map=map_entry["map"], map_title=map_entry.get("title", map_entry["map"]),
-                    factions=(first, second), spawns=tuple(map_entry.get("spawns", (1, 2))), bots=(bot, bot),
+                    factions=(first, second), spawns=tuple(map_entry.get("spawns", (1, 2))), bots=profiles if first == a else profiles[::-1],
                     replicate=replicate, seed=derived_seed(seed, key), tick_cap=int(suite.get("tick_cap", 45000)),
                     sample_interval=int(suite.get("sample_interval", 250)), rules=suite_rules(suite)))
     ordered = sorted(matches, key=lambda m: (m.replicate, derived_seed(seed, "order:" + m.id)))

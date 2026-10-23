@@ -59,6 +59,15 @@ def result_for(match, rows, exit_code=0):
 
 
 class HarnessTests(unittest.TestCase):
+    def test_mixed_difficulties_follow_faction_across_spawns(self):
+        campaign = {"name": "difficulty", "suites": [{"id": "easy", "factions": ["saudi", "iran"],
+            "bot_pairs": [["normal", "medium"]], "maps": [{"map": "twin-fords"}]}]}
+        matches = bh.plan(campaign)
+        self.assertEqual(len(matches), 2)
+        self.assertEqual(len({m.id for m in matches}), 2)
+        for match in matches:
+            self.assertEqual(dict(zip(match.factions, match.bots)), {"saudi": "normal", "iran": "medium"})
+
     def test_plan_is_deterministic_and_orientation_balanced(self):
         matches = bh.plan(CAMPAIGN)
         self.assertEqual(matches, bh.plan(CAMPAIGN))

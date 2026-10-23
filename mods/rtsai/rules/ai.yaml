@@ -324,6 +324,9 @@ Player:
 		ExcludeTypes: cmin, harv, amcv, smcv
 	DoctrineBaseBuilderBotModule@medium:
 		RequiresCondition: enable-medium-ai
+		# Deliberate breathing room: the former Medium profile was byte-for-byte Normal.
+		StructureProductionActiveDelay: 75
+		StructureProductionInactiveDelay: 250
 		DefenseQueues: Support
 		ConstructionYardTypes: gacnst, nacnst
 		RefineryTypes: garefn, narefn
@@ -390,6 +393,10 @@ Player:
 		DefenseTypes: gapill, nasam, gtgcan, atesla, naflak, tesla, nalasr
 	DoctrineSquadManagerBotModule@medium:
 		RequiresCondition: enable-medium-ai
+		MinimumAttackForceDelay: 4500
+		AttackForceInterval: 150
+		RushInterval: 1800
+		AssignRolesInterval: 100
 		SquadSize: 5
 		ExcludeFromSquadsTypes: cmin, harv, amcv, smcv
 		ConstructionYardTypes: gacnst, nacnst
@@ -399,6 +406,7 @@ Player:
 		ProtectionTypes: gacnst, gapowr, gapile, garefn, gaairc, amradr, gaweap, gayard, gadept, gatech, gapill, nasam, gtgcan, gaorep, gaspysat, gagap, gaweat, gacsph, atesla, nacnst, napowr, nahand, narefn, naradr, naweap, nayard, nadept, nanrct, natech, naclon, napsis, nairon, namisl, naflak, tesla, nalasr, amcv, cmin, smcv, harv
 	DoctrineUnitBuilderBotModule@medium:
 		RequiresCondition: enable-medium-ai
+		ProductionMinCashRequirement: 1500
 		UnitsToBuild:
 			e1: 90
 			e2: 90
