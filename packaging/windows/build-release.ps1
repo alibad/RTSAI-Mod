@@ -86,6 +86,20 @@ if (-not (Test-Path -LiteralPath (Join-Path $engine "OpenRA.Game\OpenRA.Game.csp
     throw "The pinned engine is missing in $engine. Run make.cmd all (or fetch-local-engine.sh) first."
 }
 
+# Both games should ship the same units: RTSAI-WebGame tools/gameplay-check.mjs compares a web bundle with the desktop
+# game this mod commit builds and leaves a receipt. Warn-only for now (owner, 23 Oct 2026); it becomes a refusal later.
+$modCommit = (& git -C $root rev-parse HEAD).Trim()
+$receipts = "D:/rtsai-play-release/gameplay-check/receipts"
+$compared = @(if (Test-Path -LiteralPath $receipts) {
+    Get-ChildItem -LiteralPath $receipts -Filter *.json | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Json } |
+        Where-Object { $_.mod -eq $modCommit }
+})
+if (-not $compared) {
+    Write-Warning "Mod $($modCommit.Substring(0,7)) has not been compared with the web game. Run node tools/gameplay-check.mjs --pack <live public web-bundle.pack> in RTSAI-WebGame."
+} elseif (-not ($compared | Where-Object { $_.passed })) {
+    Write-Warning "The web game and the desktop game this commit builds disagree (gameplay check failed); see $receipts."
+}
+
 if ($Version -notmatch '^(\d+)\.(\d+)\.(\d+)(?:-[a-z]+\.?(\d+))?$') { throw "Version must look like 0.2.0-alpha.1" }
 $fileVersion = "$($Matches[1]).$($Matches[2]).$($Matches[3]).$(if ($Matches[4]) { $Matches[4] } else { 0 })"
 
