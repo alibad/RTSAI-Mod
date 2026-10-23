@@ -86,6 +86,12 @@ def build(web_root, log):
         for project in ['OpenRA.Mods.RA2', 'OpenRA.Mods.RTSAI']:
             run('dotnet', 'build', code / project / f'{project}.csproj', '-c', 'Release', '--nologo', '-v:q',
                 f'-p:EngineRootPath={engine_source}', f'-p:OutputPath={native / "bin"}')
+    # The actual game process, not only its shortcut, carries the approved Windows icon.
+    if os.name == 'nt':
+        run('dotnet', 'publish', engine_source / 'OpenRA.WindowsLauncher/OpenRA.WindowsLauncher.csproj',
+            '-c', 'Release', '-r', 'win-x64', '--self-contained', 'false', '--nologo', '-v:q',
+            '-p:LauncherName=RTSAI', '-p:ModID=rtsai-library', '-p:DisplayName=RTS AI',
+            f'-p:LauncherIcon={ROOT / "packaging/artwork/rtsai.ico"}', '-o', native / 'bin')
     if json.loads((native / 'mods/rtsai/unit-overrides/manifest.json').read_text())['revision'] != content['revision']:
         raise ValueError('Content changed during the preview snapshot; build again.')
     receipts = []
@@ -225,7 +231,7 @@ def build(web_root, log):
         if git('diff', '--name-only', source_commit, 'HEAD', '--', 'OpenRA.Mods.RA2', 'OpenRA.Mods.RTSAI', 'mods'):
             raise ValueError('Game source changed during acceptance. Build again from the latest main.')
         # These hashes are checked on ordinary local launches, not just during acceptance.
-        paths = [*list((native / 'bin').glob('*.dll')), native / 'bin/OpenRA.exe',
+        paths = [*list((native / 'bin').glob('*.dll')), *list((native / 'bin').glob('*.exe')), *list((native / 'bin').glob('*.json')),
                  native / 'mods/rtsai/unit-overrides/manifest.json', out / 'web/index.html', server_file]
         # Desktop consumes loose rule files, unlike the hashed web pack. Freeze those inputs too.
         for mod in ['rtsai', 'rtsai-ra2', 'rtsai-classic-core']:

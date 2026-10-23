@@ -19,7 +19,8 @@ if (Test-Path -LiteralPath $contentPointer) {
  Write-Host "Content $($content.revision.Substring(0,10)) - Built and verified in Classic/RA2 desktop/web - Local"
 }
 $runtimeRoot = $config.engineDirectory
-$runtimeExe = Join-Path $runtimeRoot 'bin/OpenRA.exe'
+$runtimeExe = Join-Path $runtimeRoot 'bin/RTSAI.exe'
+if (!(Test-Path -LiteralPath $runtimeExe)) { $runtimeExe = Join-Path $runtimeRoot 'bin/OpenRA.exe' }
 if (!(Test-Path -LiteralPath $runtimeExe)) { throw "Local native runtime missing: $runtimeExe" }
 # Reuse the project's local companion. Its settings and lifetime stay owned by the game.
 $companionRoot = Join-Path (Split-Path $projectRoot -Parent) 'OpenRA-AI'

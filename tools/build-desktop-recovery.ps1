@@ -43,6 +43,8 @@ foreach ($relative in @('bin','glsl','mods/common','mods/common-content','global
  } else { Copy-Item -LiteralPath $sourcePath -Destination $destinationPath -Force }
 }
 $supportRoot = Join-Path $projectRoot '.recovery/support'
+& dotnet publish (Join-Path $EngineSource 'OpenRA.WindowsLauncher/OpenRA.WindowsLauncher.csproj') -c Release -r win-x64 --self-contained false --nologo -v quiet '-p:LauncherName=RTSAI' '-p:ModID=rtsai-library' '-p:DisplayName=RTS AI' "-p:LauncherIcon=$projectRoot/packaging/artwork/rtsai.ico" -o "$runtimeRoot/bin"
+if ($LASTEXITCODE -ne 0) { throw 'Branded desktop launcher build failed.' }
 # Snapshot game data as well as assemblies so later source edits cannot change this build.
 foreach ($pack in Get-ChildItem -LiteralPath (Join-Path $projectRoot 'mods') -Directory) {
  $destinationPack = Join-Path $runtimeRoot "mods/$($pack.Name)"

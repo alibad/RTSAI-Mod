@@ -1,0 +1,99 @@
+{
+  "selectedBy": "User",
+  "selectionOrder": [
+    "Desktop",
+    "Faction Studio",
+    "Website",
+    "Web Game"
+  ],
+  "rawSelection": [
+    2,
+    5,
+    3,
+    1
+  ],
+  "theme": "Command Red",
+  "palette": {
+    "Base": "#151719",
+    "Surface": "#2B3034",
+    "Text": "#F5EFE4",
+    "Accent": "#E15A43",
+    "Highlight": "#D8B66C"
+  },
+  "icons": [
+    {
+      "app": "desktop",
+      "label": "Desktop",
+      "variation": 2,
+      "name": "Head-on command",
+      "theme": "Command Red",
+      "atlas": "assets/desktop-command-red-five.png",
+      "atlasIndex": 1,
+      "generatedImageId": "3b10751a-a1be-4ac3-bb18-58112c046681",
+      "atlasSha256": "2e6c51ad9e3f9d1482272fc442976b619efec757652b9d7af07aaa87286cf2ae",
+      "masterSha256": "96211246f8bb752ef19416e6922c25a50466b58f6f65053cc6fd818e92d825e5",
+      "extractionBox": [
+        512,
+        0,
+        1024,
+        512
+      ]
+    },
+    {
+      "app": "studio",
+      "label": "Faction Studio",
+      "variation": 5,
+      "name": "Graphic tank & pen",
+      "theme": "Command Red",
+      "atlas": "assets/studio-command-red-five.png",
+      "atlasIndex": 4,
+      "generatedImageId": "b838c303-bb9e-4ed2-bec7-6bb332d01769",
+      "atlasSha256": "3eafee79c54ddb3d9d9be5bfd3bb23147d797516357c9794a712db4ec92d7e16",
+      "masterSha256": "bfeeb6ccb7b1a99536b53fd35584d29afabb816dfafb176ed916a61c3cc0a8d7",
+      "extractionBox": [
+        512,
+        512,
+        1024,
+        1024
+      ]
+    },
+    {
+      "app": "website",
+      "label": "Website",
+      "variation": 3,
+      "name": "Flat compass",
+      "theme": "Command Red",
+      "atlas": "assets/website-command-red-five.png",
+      "atlasIndex": 2,
+      "generatedImageId": "b44470f7-43df-45e8-9785-305c2dccabbc",
+      "atlasSha256": "259c24b4e74976a578a1446a5d6e47c4b675ca9962b19add784e9013020d670f",
+      "masterSha256": "a863da190d6d2805fef117c5ab7cde626eece2c7d8f70968a33e4926f05f01c0",
+      "extractionBox": [
+        1024,
+        0,
+        1536,
+        512
+      ]
+    },
+    {
+      "app": "webgame",
+      "label": "Web Game",
+      "variation": 1,
+      "name": "Armored advance",
+      "theme": "Command Red",
+      "atlas": "assets/webgame-command-red-five.png",
+      "atlasIndex": 0,
+      "generatedImageId": "ee2b7620-3b54-4af3-b607-cc8bf5a98e06",
+      "atlasSha256": "c877b043092ca12525446f6f3b687d388b02165f9ac878844bd243de33591c2b",
+      "masterSha256": "1c9106050bab6bbbf2ff6dc913e1fd17b1c9a5ed3e9c7c8ffaecebf8d5360028",
+      "extractionBox": [
+        0,
+        0,
+        512,
+        512
+      ]
+    }
+  ],
+  "appliedToProducts": true,
+  "operation": "Exact approved tile extraction and format/size exports; no new generation or repainting"
+}
