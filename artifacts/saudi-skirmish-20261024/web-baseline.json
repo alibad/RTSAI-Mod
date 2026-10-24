@@ -1,0 +1,29 @@
+{
+  "map": "twin-fords",
+  "players": [
+    {
+      "bot": "normal",
+      "color": "2A6FDB",
+      "slot": "Multi0",
+      "spawn": 1,
+      "faction": "saudi"
+    },
+    {
+      "bot": "normal",
+      "color": "D83A2E",
+      "slot": "Multi1",
+      "spawn": 2,
+      "faction": "iran"
+    }
+  ],
+  "seed": 4242,
+  "options": {
+    "startingunits": "medium",
+    "gamespeed": "default",
+    "explored": "True",
+    "startingcash": "10000",
+    "shortgame": "True",
+    "crates": "False",
+    "fog": "True"
+  }
+}

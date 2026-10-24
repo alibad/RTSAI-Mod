@@ -1,0 +1,28 @@
+{
+  "saudi": {
+    "suites": [
+      {
+        "factions": [
+          "saudi",
+          "iran"
+        ],
+        "id": "baseline",
+        "sample_interval": 250,
+        "replicates": 1,
+        "tick_cap": 45000,
+        "maps": [
+          {
+            "map": "twin-fords",
+            "title": "Twin Fords"
+          }
+        ],
+        "bots": [
+          "normal"
+        ]
+      }
+    ],
+    "wall_guard_seconds": 900,
+    "seed": 20261024,
+    "description": "Saudi versus Iran on Twin Fords: full base-building skirmishes, both spawn orientations."
+  }
+}

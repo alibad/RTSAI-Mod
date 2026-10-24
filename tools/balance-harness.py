@@ -23,7 +23,7 @@ ticks changes, so matches run as fast as the host allows. Durations are reported
 normal-speed game time (25 ticks per second). Replays keep the ``default`` speed id.
 
 Each match runs in its own support directory, with the owned RA2 content linked in (never
-copied; ``--standalone`` links nothing), no companion bridge and no network port. Both slots are bots of the same type; the
+copied; ``--standalone`` links nothing), no companion bridge and no network port. Both slots use the configured bot profiles; the
 local client spectates. The engine seeds its RNG from the clock, so replicates are independent
 samples, not reruns. Every match records the winner, the end reason (conquest, tick-cap draw,
 mutual defeat, crash, hang), the duration and per-side production.

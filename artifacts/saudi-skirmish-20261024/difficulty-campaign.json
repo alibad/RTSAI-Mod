@@ -1,0 +1,39 @@
+{
+  "saudi": {
+    "suites": [
+      {
+        "maps": [
+          {
+            "title": "Twin Fords",
+            "map": "twin-fords"
+          }
+        ],
+        "factions": [
+          "saudi",
+          "iran"
+        ],
+        "bot_pairs": [
+          [
+            "normal",
+            "medium"
+          ],
+          [
+            "normal",
+            "normal"
+          ],
+          [
+            "normal",
+            "rush"
+          ]
+        ],
+        "tick_cap": 60000,
+        "replicates": 6,
+        "id": "difficulty",
+        "sample_interval": 250
+      }
+    ],
+    "seed": 20261024,
+    "wall_guard_seconds": 900,
+    "description": "Saudi normal bot versus Easy, Normal and Rush Iran; both spawn orientations, full conquest."
+  }
+}
