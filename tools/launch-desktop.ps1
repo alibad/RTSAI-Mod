@@ -1,4 +1,7 @@
-param([Parameter(ValueFromRemainingArguments=$true)][string[]]$GameArguments)
+param(
+ [Parameter(ValueFromRemainingArguments=$true)][string[]]$GameArguments,
+ [ValidateSet('rtsai-library', 'rtsai', 'rtsai-ra2', 'rtsai-classic-core')][string]$Mod = 'rtsai-library'
+)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 $configPath = Join-Path $projectRoot 'recovery.local.json'
@@ -32,7 +35,7 @@ $env:OPENRA_UTILITY_EXPERIENCE_PROFILE = $null
 $env:RTSAI_LIBRARY_SUPPORT = $config.supportDirectory
 $hubSupport = Join-Path $config.supportDirectory 'Games/rtsai-library'
 New-Item -ItemType Directory -Path $hubSupport -Force | Out-Null
-$launchArgs = @('Game.Mod=rtsai-library', "Engine.EngineDir=$runtimeRoot", "Engine.ModSearchPaths=$runtimeRoot/mods", "Engine.SupportDir=$hubSupport", 'Game.FetchNews=false', "Engine.LaunchPath=$projectRoot/launch-game.cmd") + $GameArguments
+$launchArgs = @("Game.Mod=$Mod", "Engine.EngineDir=$runtimeRoot", "Engine.ModSearchPaths=$runtimeRoot/mods", "Engine.SupportDir=$hubSupport", 'Game.FetchNews=false', "Engine.LaunchPath=$projectRoot/launch-game.cmd") + $GameArguments
 Push-Location $runtimeRoot
 try { & $runtimeExe @launchArgs; exit $LASTEXITCODE }
 finally { Pop-Location }
