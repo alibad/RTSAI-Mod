@@ -1,4 +1,6 @@
 Player:
+	SaudiBraceBotModule:
+		RequiresCondition: enable-normal-ai || enable-medium-ai || enable-rush-ai || enable-turtle-ai || enable-naval-ai
 	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2sang: 65
