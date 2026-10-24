@@ -1,5 +1,6 @@
+[CmdletBinding(PositionalBinding=$false)]
 param(
- [Parameter(ValueFromRemainingArguments=$true)][string[]]$GameArguments,
+ [Parameter(Position=0, ValueFromRemainingArguments=$true)][string[]]$GameArguments,
  [ValidateSet('rtsai-library', 'rtsai', 'rtsai-ra2', 'rtsai-classic-core')][string]$Mod = 'rtsai-library'
 )
 $ErrorActionPreference = 'Stop'
