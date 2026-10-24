@@ -33,9 +33,9 @@ $env:RTSAI_RECOVERY_SCREEN = $null
 $env:RTSAI_VERIFY_MODE_SWITCH = $null
 $env:OPENRA_UTILITY_EXPERIENCE_PROFILE = $null
 $env:RTSAI_LIBRARY_SUPPORT = $config.supportDirectory
-$hubSupport = Join-Path $config.supportDirectory 'Games/rtsai-library'
-New-Item -ItemType Directory -Path $hubSupport -Force | Out-Null
-$launchArgs = @("Game.Mod=$Mod", "Engine.EngineDir=$runtimeRoot", "Engine.ModSearchPaths=$runtimeRoot/mods", "Engine.SupportDir=$hubSupport", 'Game.FetchNews=false', "Engine.LaunchPath=$projectRoot/launch-game.cmd") + $GameArguments
+$modeSupport = Join-Path $config.supportDirectory "Games/$Mod"
+New-Item -ItemType Directory -Path $modeSupport -Force | Out-Null
+$launchArgs = @("Game.Mod=$Mod", "Engine.EngineDir=$runtimeRoot", "Engine.ModSearchPaths=$runtimeRoot/mods", "Engine.SupportDir=$modeSupport", 'Game.FetchNews=false', "Engine.LaunchPath=$projectRoot/launch-game.cmd") + $GameArguments
 Push-Location $runtimeRoot
 try { & $runtimeExe @launchArgs; exit $LASTEXITCODE }
 finally { Pop-Location }
