@@ -432,7 +432,7 @@ moveflsh:
 
 wake:
 	idle:
-		Filename: conquer|wake1.shp
+		Filename: wake1.png
 		Length: *
 		Tick: 180
 		ZOffset: -512
