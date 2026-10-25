@@ -432,7 +432,7 @@ moveflsh:
 
 wake:
 	idle:
-		Filename: wake1.png
+		Filename: ra2|standalone/effects/wake1.png
 		Length: *
 		Tick: 180
 		ZOffset: -512
