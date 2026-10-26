@@ -135,7 +135,7 @@ garefn:
 	Inherits: ^Structure
 	Defaults:
 		Filename: ggrefn.shp
-		Offset: -12, -52, 24
+		Offset: -12, -52, 48
 	idle:
 		Filename: ggrefn.shp
 		TilesetFilenames:
