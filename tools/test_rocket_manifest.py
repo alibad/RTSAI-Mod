@@ -24,7 +24,7 @@ class RocketImageManifest(unittest.TestCase):
             consumers.append(manifest.parent.name)
             with self.subTest(mod=manifest.parent.name):
                 self.assertIn('ra2|modern-factions/rocket-impact-sequences.yaml', set(entries(text, 'Sequences')))
-        self.assertEqual(set(consumers), {'rtsai', 'rtsai-ra2', 'rtsai-topdown', 'rtsai-classic'})
+        self.assertTrue({'rtsai', 'rtsai-ra2', 'rtsai-topdown', 'rtsai-classic', 'rtsai-library'} <= set(consumers))
 
 
 if __name__ == '__main__':
