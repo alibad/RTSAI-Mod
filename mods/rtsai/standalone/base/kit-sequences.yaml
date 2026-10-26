@@ -1044,7 +1044,7 @@ hpwr-hezbollah:
 refn-china:
 	Defaults:
 		Filename: refn-china.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1106,7 +1106,7 @@ refn-china:
 refn-iran:
 	Defaults:
 		Filename: refn-iran.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1168,7 +1168,7 @@ refn-iran:
 refn-turkey:
 	Defaults:
 		Filename: refn-turkey.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1230,7 +1230,7 @@ refn-turkey:
 refn-saudi:
 	Defaults:
 		Filename: refn-saudi.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1292,7 +1292,7 @@ refn-saudi:
 refn-israel:
 	Defaults:
 		Filename: refn-israel.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1354,7 +1354,7 @@ refn-israel:
 refn-yemen:
 	Defaults:
 		Filename: refn-yemen.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
@@ -1416,7 +1416,7 @@ refn-yemen:
 refn-hezbollah:
 	Defaults:
 		Filename: refn-hezbollah.shp
-		Offset: 1, -31, 31
+		Offset: 1, -31, -12
 	idle:
 		Start: 0
 		ShadowStart: 3
