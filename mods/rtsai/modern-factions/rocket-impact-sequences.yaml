@@ -3,9 +3,11 @@
 # canvas centre. Keep one fixed pivot for every frame; Scale also scales Offset.
 # Use a separate image so bombs, vehicle deaths and original-country art retain
 # their own size, and the browser's generic explosion anchor patch cannot apply twice.
+# The unscaled blast uses depth 30. Preserve that depth after quarter-scaling so
+# the hit flash draws on the hull instead of disappearing behind the tank.
 rtsai-atgm-impact:
 	impact:
 		Filename: ra2|standalone/effects/s_clsn58.shp
 		Length: *
 		Scale: 0.25
-		Offset: 0, -72, 30
+		Offset: 0, -72, 120
