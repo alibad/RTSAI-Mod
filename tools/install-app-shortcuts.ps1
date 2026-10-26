@@ -20,7 +20,7 @@ $apps = @(
     @{name='RTS AI'; script="$modRoot/tools/launch-desktop.ps1"; args=''; icon="$modRoot/packaging/artwork/rtsai.ico"; description='RTS AI native desktop game'},
     @{name='Faction Studio'; script="$games/RTSAI-Web/scripts/launch-app.ps1"; args='-App Studio'; icon="$games/RTSAI-Web/public/brand/faction-studio/favicon.ico"; description='Local Faction Studio — units, artwork and encounters'},
     @{name='RTS AI Website'; script="$games/RTSAI-Web/scripts/launch-app.ps1"; args='-App Website'; icon="$games/RTSAI-Web/public/favicon.ico"; description='RTS AI website in its own local app window'},
-    @{name='RTS AI Web Game'; script="$games/RTSAI-WebGame/tools/launch-web-game.ps1"; args=''; icon="$games/RTSAI-WebGame/web/public/favicon.ico"; description='Verified local RTS AI browser game in its own app window'}
+    @{name='RTS AI Web Game'; script="$games/RTSAI-WebGame/tools/launch-web-game.ps1"; args='-Public'; icon="$games/RTSAI-WebGame/web/public/favicon.ico"; description='Latest published RTS AI browser game in its own app window'}
 )
 foreach ($app in $apps) {
     if (!(Test-Path -LiteralPath $app.icon)) { throw "Missing approved icon: $($app.icon)" }
