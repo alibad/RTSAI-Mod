@@ -9,7 +9,7 @@ R2MountainRifle:
 		Damage: 13
 
 R2YemenRPG:
-	Inherits: Maverick
+	Inherits: ^R2InfantryRocket
 	Range: 4c512
 	MinRange: 0c768
 	ReloadDelay: 90

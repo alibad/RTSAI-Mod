@@ -16,7 +16,7 @@ R2ChinaCarbine:
 
 # Round 3: damage 65 -> 80, range 6c -> 7c (0.90 per credit against 1.4-1.5 for the Saudi ATGM).
 R2ChinaPortableAT:
-	Inherits: Maverick
+	Inherits: ^R2InfantryRocket
 	Range: 7c0
 	MinRange: 1c0
 	ReloadDelay: 110

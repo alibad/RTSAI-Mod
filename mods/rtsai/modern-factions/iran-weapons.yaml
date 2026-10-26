@@ -6,7 +6,7 @@ R2BasijRifle:
 		Damage: 12
 
 R2ToophanMissile:
-	Inherits: Maverick
+	Inherits: ^R2InfantryRocket
 	Range: 7c0
 	MinRange: 2c0
 	ReloadDelay: 125

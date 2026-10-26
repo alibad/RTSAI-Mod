@@ -14,7 +14,7 @@ R2HZMountainRifle:
 # basic unguided rocket does less against heavy and medium armour (95 -> 65, 100 -> 80): the modern factions lead
 # with main battle tanks, and the AT team traded about twice as well against them as against America and Russia.
 R2HZYemenRPG:
-	Inherits: Maverick
+	Inherits: ^R2InfantryRocket
 	Range: 5c0
 	MinRange: 0c768
 	ReloadDelay: 90

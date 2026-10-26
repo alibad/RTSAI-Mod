@@ -1,3 +1,10 @@
+# Shared presentation only: retain Maverick's projectile and damage mechanics.
+^R2InfantryRocket:
+	Inherits: Maverick
+	Warhead@2Eff: CreateEffect
+		Image: rtsai-atgm-impact
+		Explosions: impact
+
 # Round 3: the Qilin and Bozkir reach 5c768 like the 120mm of the Rhino and Karrar (105mm base: 5c0);
 # outranged by every ATGM team, they traded 0.65-0.76 per credit (docs/balance.md).
 R2QilinGun:

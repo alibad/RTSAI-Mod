@@ -11,7 +11,7 @@ R2ILGuardRifle:
 		Damage: 9
 
 R2ILSaudiATGM:
-	Inherits: Maverick
+	Inherits: ^R2InfantryRocket
 	Range: 8c0
 	MinRange: 2c0
 	ReloadDelay: 110

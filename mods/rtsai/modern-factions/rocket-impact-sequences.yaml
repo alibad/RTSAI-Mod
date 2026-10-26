@@ -1,0 +1,11 @@
+# Infantry rockets need a tank-sized hit flash, not Maverick's full-size blast.
+# This project SHP was authored by fx_forge with ground contact 72 px below the
+# canvas centre. Keep one fixed pivot for every frame; Scale also scales Offset.
+# Use a separate image so bombs, vehicle deaths and original-country art retain
+# their own size, and the browser's generic explosion anchor patch cannot apply twice.
+rtsai-atgm-impact:
+	impact:
+		Filename: ra2|standalone/effects/s_clsn58.shp
+		Length: *
+		Scale: 0.25
+		Offset: 0, -72, 30
