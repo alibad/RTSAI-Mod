@@ -20,4 +20,4 @@ The historical `rtsai-classic` manifest is an owned-RA2 migration reference. It 
 
 Never replace reviewed assets with older variants just to flatten folders. Activate archived resources after checking provenance, manifests, sequences, rules and gameplay. Preserve original worktrees until unique work has a verified destination.
 
-The delivery plan is `OpenRA-AI/docs/roadmap.md`. Build and verification stay local; public distribution and production deployment are separate actions.
+The delivery plan is `docs/roadmap.md`. Build and verification stay local; public distribution and production deployment are separate actions.
