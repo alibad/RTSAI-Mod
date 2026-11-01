@@ -3,15 +3,18 @@ from pathlib import Path
 import argparse,subprocess,os,time,json,sys,contextlib,shutil
 ROOT=Path(__file__).resolve().parents[1]
 def main():
- p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--mod',default='rtsai');p.add_argument('--screen',default='home');p.add_argument('--seconds',type=int,default=25);p.add_argument('--map');p.add_argument('--bots',default='Multi0:normal:china,Multi1:normal:iran');p.add_argument('--content',type=Path);p.add_argument('--out',type=Path,required=True);p.add_argument('--art-tools',type=Path,required=True);p.add_argument('--leave-open',action='store_true');p.add_argument('--size',default='1440,900');p.add_argument('--ui-scale',default='1');a=p.parse_args();a.engine=a.engine.resolve();a.out=a.out.resolve();a.art_tools=a.art_tools.resolve()
- data_root=a.engine if (a.engine/'recovery-build.json').exists() else ROOT
+ p=argparse.ArgumentParser();p.add_argument('--engine',type=Path,required=True);p.add_argument('--mod',default='rtsai');p.add_argument('--screen',default='home');p.add_argument('--seconds',type=int,default=25);p.add_argument('--map');p.add_argument('--bots',default='Multi0:normal:china,Multi1:normal:iran');p.add_argument('--content',type=Path);p.add_argument('--out',type=Path,required=True);p.add_argument('--art-tools',type=Path,required=True);p.add_argument('--leave-open',action='store_true');p.add_argument('--size',default='1440,900');p.add_argument('--ui-scale',default='1');p.add_argument('--packaged',action='store_true',help='--engine is an installed release: RTSAI.exe and mods/ side by side');a=p.parse_args();a.engine=a.engine.resolve();a.out=a.out.resolve();a.art_tools=a.art_tools.resolve()
+ data_root=a.engine if a.packaged or (a.engine/'recovery-build.json').exists() else ROOT
+ # A release has no bin/OpenRA.exe; Engine.LaunchPath makes its RTSAI.exe run the game in this process.
+ exe=a.engine/'RTSAI.exe' if a.packaged else a.engine/'bin/OpenRA.exe'
  a.out.mkdir(parents=True,exist_ok=True);support=a.out/'support';support.mkdir(exist_ok=True)
  if a.content and not (support/'Content').exists():shutil.copytree(a.content,support/'Content')
  sys.path.insert(0,str(a.art_tools));import route_lock
  env=dict(os.environ);env.update(OPENRA_AI_HOST='0',OPENRA_AI_COMPANION='0',OPENRA_AI_DISABLE_AUTOSTART='1',RTSAI_RECOVERY_SCREEN=a.screen)
- args=[str(a.engine/'bin/OpenRA.exe'),f'Engine.EngineDir={a.engine}',f'Engine.ModSearchPaths={data_root / "mods"},{a.engine / "mods"}',f'Engine.SupportDir={support}',f'Game.Mod={a.mod}','Game.FetchNews=false','Game.IntroductionPromptVersion=99','Debug.SystemInformationVersionPrompt=99','Graphics.Mode=Windowed',f'Graphics.WindowedSize={a.size}',f'Graphics.UIScale={a.ui_scale}','Game.ViewportEdgeScroll=false','Sound.Mute=true']
+ args=[str(exe),*([f'Engine.LaunchPath={exe}'] if a.packaged else []),f'Engine.EngineDir={a.engine}',f'Engine.ModSearchPaths={data_root / "mods"},{a.engine / "mods"}',f'Engine.SupportDir={support}',f'Game.Mod={a.mod}','Game.FetchNews=false','Game.IntroductionPromptVersion=99','Debug.SystemInformationVersionPrompt=99','Graphics.Mode=Windowed',f'Graphics.WindowedSize={a.size}',f'Graphics.UIScale={a.ui_scale}','Game.ViewportEdgeScroll=false','Sound.Mute=true']
  if a.map:
-  source=next((p/a.map for p in [data_root/'mods'/a.mod/'maps',data_root/'mods'/a.mod/'standalone/maps',data_root/'mods'/a.mod/'campaigns/maps'] if (p/a.map).exists()),None)
+  # rtsai-ra2 and the Library borrow the RTS game's maps (ra2|standalone/maps).
+  source=next((p/a.map for m in [a.mod,'rtsai'] for p in [data_root/'mods'/m/'maps',data_root/'mods'/m/'standalone/maps',data_root/'mods'/m/'campaigns/maps'] if (p/a.map).is_dir()),None)
   if source is None:raise ValueError('Map not found: '+a.map)
   manifest=(data_root/'mods'/a.mod/'mod.yaml').read_text(encoding='utf-8-sig')
   import re

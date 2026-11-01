@@ -3,15 +3,19 @@ param(
     [Parameter(Mandatory=$true)][string]$ExpectedSha256,
     [Parameter(Mandatory=$true)][string]$TestRoot,
     [string]$Version = '0.4.0-alpha.1',
-    [string]$LocalAIModelSource
+    [string]$LocalAIModelSource,
+    # A Content folder holding Classic's freeware Red Alert files (Content\ra\v2); without it Classic's skirmish is not run.
+    [string]$ClassicContent
 )
 $ErrorActionPreference = 'Stop'
 if ($Version -notmatch '^\d+\.\d+\.\d+(?:-[a-z]+\.\d+)?$') { throw 'Invalid release version.' }
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
 $TestRoot = [IO.Path]::GetFullPath($TestRoot)
-if (-not $TestRoot.StartsWith('D:\rtsai-release\online-e2e-', [StringComparison]::OrdinalIgnoreCase)) { throw 'TestRoot must be in the explicitly designated online acceptance directory.' }
+# Task working folders live only in F:\work\<topic>-<YYYYMMDD>\ (owner rule, 31 October 2026).
+if ($TestRoot -notmatch '^F:\\work\\[^\\]+-\d{8}\\') { throw 'TestRoot must be inside a task folder F:\work\<topic>-<YYYYMMDD>\.' }
 if ((Get-FileHash -LiteralPath $Installer -Algorithm SHA256).Hash -ne $ExpectedSha256) { throw 'Downloaded installer hash mismatch.' }
-$install = Join-Path $TestRoot 'installed-game'
+# A space in the path, like the default install folder (%LOCALAPPDATA%\Programs\RTS AI).
+$install = Join-Path $TestRoot 'RTS AI'
 if (Test-Path -LiteralPath $install) { throw 'Acceptance install directory already exists; preserve the previous run.' }
 $backup = Join-Path $TestRoot 'previous-registration'
 New-Item -ItemType Directory -Path $backup -Force | Out-Null
@@ -46,17 +50,23 @@ try {
     if (-not (Test-Path -LiteralPath $links[2])) { throw 'Windows desktop shortcut is missing.' }
     $desktopShortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($links[2])
     if ($desktopShortcut.TargetPath -ne (Join-Path $install 'RTSAI.exe')) { throw 'Windows desktop shortcut targets the wrong game.' }
-    & python (Join-Path $workspace 'tools/standalone-smoke.py') menu --packaged --worktree $install --switch-mode rtsai-topdown --seconds 24 --out (Join-Path $TestRoot 'installed-mode-switch') --set Game.IntroductionPromptVersion=99 --set Debug.SystemInformationVersionPrompt=99
-    if ($LASTEXITCODE -ne 0) { throw 'Installed game smoke command failed.' }
-    $log = Get-Content -LiteralPath (Join-Path $TestRoot 'installed-mode-switch/stdout.log') -Raw
-    if ($log -notmatch 'Loading mod: rtsai-topdown' -or $log -match 'Exception|Fatal') { throw 'Installed mode switch failed.' }
-    foreach ($mode in @('rtsai', 'rtsai-topdown')) {
-        $map = if ($mode -eq 'rtsai') { 'twin-fords' } else { 'classic-frontier' }
-        $out = Join-Path $TestRoot "installed-skirmish-$mode"
-        & python (Join-Path $workspace 'tools/standalone-smoke.py') skirmish --packaged --worktree $install --mod $mode --map $map --observe --seconds 55 --out $out --set Game.IntroductionPromptVersion=99 --set Debug.SystemInformationVersionPrompt=99
-        if ($LASTEXITCODE -ne 0) { throw "Installed $mode skirmish command failed." }
-        $result = Get-Content -LiteralPath (Join-Path $out 'report.json') -Raw | ConvertFrom-Json
-        if ($result.exited_early -or $result.'exception.log' -or $result.missing_sounds.Count -gt 0 -or $result.replays.Count -eq 0 -or -not ($result.lua -match 'CENSUS\|')) { throw "Installed $mode skirmish acceptance failed." }
+    if ((Get-Content -LiteralPath (Join-Path $install 'mods/rtsai-library/mod.yaml') -Raw) -notmatch "Version: $([regex]::Escape($Version))") { throw 'The installed Library is not this version.' }
+    # The Library's three games (OpenRA.Mods.RTSAI/Library/NativeGameLibrary.cs): a bot skirmish in each, started
+    # from the installed RTSAI.exe in its own fresh support directory, with window grabs and a per-bot census.
+    $artTools = Join-Path (Split-Path $workspace -Parent) 'RTSAI-Art/tools'
+    $games = @(
+        @{ Mod = 'rtsai-classic-core'; Map = 'a-nuclear-winter'; Bots = 'Multi0:normal:england,Multi1:normal:russia' },
+        @{ Mod = 'rtsai-ra2'; Map = 'ra2-defcon-6'; Bots = 'Multi0:normal:america,Multi1:normal:russia' },
+        @{ Mod = 'rtsai'; Map = 'ra2-defcon-6'; Bots = 'Multi0:normal:china,Multi1:normal:iran' })
+    $skirmishes = [ordered]@{}
+    foreach ($game in $games) {
+        if ($game.Mod -eq 'rtsai-classic-core' -and -not $ClassicContent) { $skirmishes[$game.Mod] = 'not-run (no -ClassicContent)'; continue }
+        $out = Join-Path $TestRoot "installed-skirmish-$($game.Mod)"
+        $smoke = @('--engine', $install, '--packaged', '--mod', $game.Mod, '--map', $game.Map, '--bots', $game.Bots, '--seconds', '70', '--out', $out, '--art-tools', $artTools)
+        if ($game.Mod -eq 'rtsai-classic-core') { $smoke += @('--content', [IO.Path]::GetFullPath($ClassicContent)) }
+        & python (Join-Path $workspace 'tools/recovery-smoke.py') @smoke
+        if ($LASTEXITCODE -ne 0) { throw "Installed $($game.Mod) skirmish failed; see $out." }
+        $skirmishes[$game.Mod] = 'passed'
     }
     if ($LocalAIModelSource) {
         $modelSource = [IO.Path]::GetFullPath($LocalAIModelSource)
@@ -82,7 +92,7 @@ try {
     if (Test-Path -LiteralPath $links[2]) { throw 'Uninstaller left the Windows desktop shortcut behind.' }
     if (-not (Test-Path -LiteralPath (Join-Path $install 'keep-this-test-file.txt'))) { throw 'Uninstaller removed an unrelated file.' }
     $uninstalled = $true
-    @{ version=$Version; scope='Fresh support directory on this Windows host; not a fresh OS'; installerHashVerified=$true; installer='passed'; modeSwitch='passed'; classicSkirmish='passed'; isometricSkirmish='passed'; localCompanion=$(if ($LocalAIModelSource) { 'passed' } else { 'not-run' }); uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
+    @{ version=$Version; scope='Fresh support directory on this Windows host; not a fresh OS'; installerHashVerified=$true; installer='passed'; skirmishes=$skirmishes; localCompanion=$(if ($LocalAIModelSource) { 'passed' } else { 'not-run' }); uninstall='passed'; unrelatedFilePreserved=$true; existingRegistrationRestored=$true } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TestRoot 'installer-acceptance.json')
     Write-Output 'Packaged installer: install, configuration, shortcuts, gameplay and uninstall passed.'
 } finally {
     # Restore the specific pre-existing registration and shortcut files touched by this installer.

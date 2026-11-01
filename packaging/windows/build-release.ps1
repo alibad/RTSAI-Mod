@@ -20,12 +20,18 @@ The installer only offers the AI options this build can deliver:
     -CompanionDirectory              "Full local AI" and "No AI"
     -CompanionDirectory -HostedAI    also "Hosted AI + local voice" (only once the hosted service is live)
 
-PACKAGING_STANDALONE="True" in mod.config (the rtsai/standalone game) ships only mods/<MOD_ID> and leaves
-out the engine's MIX filename database and every Red Alert 2 reference in the installer and version info.
+PACKAGING_STANDALONE="True" in mod.config (the rtsai/standalone game) ships only the mods named in
+PACKAGING_STANDALONE_MODS (the desktop Library, its three games and Classic's content installer; never the owned-RA2
+add-ons) and leaves out every Red Alert 2 reference in the installer and version info. The engine's content installer
+chrome and MIX filename database ship only when a shipped mod uses them (Classic downloads the freeware Red Alert
+content on first start). RTSAI.exe opens PACKAGING_LAUNCHER_MOD_ID (the Library).
+
+The engine is the canonical sibling checkout ..\OpenRA (or -EngineSource), like tools/build-desktop-recovery.ps1:
+both repositories are fast-forwarded to their owner main and must be clean, so the release is built from committed
+main only. BUILD-INPUTS.json in the output records the mod and engine commits.
 
 Requirements: .NET 10 SDK, NSIS 3 (winget install NSIS.NSIS), rcedit-x64.exe
 (https://github.com/electron/rcedit/releases) and tar.exe (built into Windows 10/11).
-Run `make.cmd all` once first so ./engine exists.
 
 .EXAMPLE
 packaging\windows\build-release.ps1 -Version 0.3.0-alpha.1 -OutputDirectory D:\rtsai-release\out `
@@ -37,6 +43,7 @@ param(
     [string]$Version,
     [Parameter(Mandatory = $true)]
     [string]$OutputDirectory,
+    [string]$EngineSource,
     [string]$CompanionDirectory,
     [switch]$HostedAI,
     [string]$VoicePack,
@@ -79,12 +86,24 @@ if (Test-Path -LiteralPath $userConfig) {
 }
 $modId = $config["MOD_ID"]
 $launcherName = $config["PACKAGING_WINDOWS_LAUNCHER_NAME"]
-$engine = [IO.Path]::GetFullPath((Join-Path $root $config["ENGINE_DIRECTORY"]))
+$launcherMod = if ($config["PACKAGING_LAUNCHER_MOD_ID"]) { $config["PACKAGING_LAUNCHER_MOD_ID"] } else { $modId }
+$engine = if ($EngineSource) { $EngineSource } else { Join-Path (Split-Path $root -Parent) "OpenRA" }
+$engine = [IO.Path]::GetFullPath($engine)
 $installerName = $config["PACKAGING_INSTALLER_NAME"]
 $standalone = $config["PACKAGING_STANDALONE"] -eq "True"
 if (-not (Test-Path -LiteralPath (Join-Path $engine "OpenRA.Game\OpenRA.Game.csproj"))) {
-    throw "The pinned engine is missing in $engine. Run make.cmd all (or fetch-local-engine.sh) first."
+    throw "No engine checkout in $engine (the canonical OpenRA checkout, or pass -EngineSource)."
 }
+
+# Committed main only, as tools/build-desktop-recovery.ps1 builds the local desktop.
+Invoke-Native git @("-C", $root, "fetch", "origin", "main") "git fetch failed in $root"
+Invoke-Native git @("-C", $root, "merge", "--ff-only", "origin/main") "$root cannot fast-forward to origin/main"
+Invoke-Native git @("-C", $engine, "fetch", "fork", "main") "git fetch failed in $engine"
+Invoke-Native git @("-C", $engine, "merge", "--ff-only", "fork/main") "$engine cannot fast-forward to fork/main"
+foreach ($repository in @($root, $engine)) {
+    if (& git -C $repository status --porcelain) { throw "Commit source changes before building: $repository" }
+}
+$engineCommit = (& git -C $engine rev-parse HEAD).Trim()
 
 # Both games should ship the same units: RTSAI-WebGame tools/gameplay-check.mjs compares a web bundle with the desktop
 # game this mod commit builds and leaves a receipt. Warn-only for now (owner, 23 Oct 2026); it becomes a refusal later.
@@ -146,18 +165,33 @@ Invoke-Native dotnet @("publish", "-c", "Release", "-p:TargetPlatform=win-x64", 
     "-p:CopyCncDll=$($config['PACKAGING_COPY_CNC_DLL'])", "-p:CopyD2kDll=$($config['PACKAGING_COPY_D2K_DLL'])",
     "-r", "win-x64", "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q", "-m:1") "Engine publish failed" $engine
 
+$mods = @(Get-ChildItem -LiteralPath (Join-Path $root "mods") -Directory)
+if ($standalone) {
+    # The desktop Library and its games, sharing authored content; never the owned-RA2 add-ons.
+    $wanted = @($config["PACKAGING_STANDALONE_MODS"] -split '\s+' | Where-Object { $_ })
+    if ($wanted.Count -eq 0) { $wanted = @($modId) }
+    $missing = @($wanted | Where-Object { $_ -notin $mods.Name })
+    if ($missing) { throw "PACKAGING_STANDALONE_MODS names mods that do not exist: $($missing -join ', ')" }
+    $mods = @($mods | Where-Object { $_.Name -in $wanted })
+}
+if (-not ($mods.Name -contains $launcherMod)) { throw "No mods\$launcherMod to package." }
+$manifests = @($mods | ForEach-Object { Get-Content -LiteralPath (Join-Path $_.FullName "mod.yaml") -Raw })
+# Classic mounts the freeware Red Alert archives its content installer downloads on first start.
+$contentInstaller = -not $standalone -or [bool]($manifests -match '(?m)^\s*ContentInstallerMod:')
+$mixArchives = -not $standalone -or [bool]($manifests -match '(?m)^PackageFormats:.*\bMix\b')
+
 Write-Host "== Engine data"
-$engineFiles = @("VERSION", "AUTHORS", "COPYING", "IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP")
-# The MIX filename database only serves Westwood archives, which the standalone game never mounts.
-if (-not $standalone) { $engineFiles += "global mix database.dat" }
+$engineFiles = @("AUTHORS", "COPYING", "IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP")
+# The MIX filename database only serves Westwood archives.
+if ($mixArchives) { $engineFiles += "global mix database.dat" }
 foreach ($file in $engineFiles) {
     Copy-Item -LiteralPath (Join-Path $engine $file) -Destination $stage
 }
 Copy-Item -LiteralPath (Join-Path $engine "glsl") -Destination $stage -Recurse
 New-Item -ItemType Directory -Path (Join-Path $stage "mods") | Out-Null
 Copy-Item -LiteralPath (Join-Path $engine "mods\common") -Destination (Join-Path $stage "mods") -Recurse
-# mods/common-content is the content installer's chrome; the standalone game has no content installer.
-$engineExtras = if ($standalone) { @() } else { @($config["PACKAGING_COPY_ENGINE_FILES"] -split '\s+' | Where-Object { $_ }) }
+# mods/common-content is the content installer's chrome.
+$engineExtras = if ($contentInstaller) { @($config["PACKAGING_COPY_ENGINE_FILES"] -split '\s+' | Where-Object { $_ }) } else { @() }
 foreach ($extra in $engineExtras) {
     $relative = $extra -replace '^\./', '' -replace '/', '\'
     $target = Join-Path $stage $relative
@@ -167,11 +201,7 @@ foreach ($extra in $engineExtras) {
 
 Write-Host "== Mod assemblies and content"
 Invoke-Native dotnet @("publish", (Join-Path $root "RTSAI.sln"), "-c", "Release", "-p:TargetPlatform=win-x64", "-r", "win-x64",
-    "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q") "Mod publish failed" $root
-$mods = @(Get-ChildItem -LiteralPath (Join-Path $root "mods") -Directory)
-# Standalone: both gameplay profiles, sharing authored content. Exclude the historical owned-content add-on.
-if ($standalone) { $mods = @($mods | Where-Object { $_.Name -in @($modId, "rtsai-topdown") }) }
-if ($mods.Count -eq 0) { throw "No mods\$modId to package." }
+    "-p:EngineRootPath=$engine", "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q") "Mod publish failed" $root
 foreach ($mod in $mods) {
     Copy-Item -LiteralPath $mod.FullName -Destination (Join-Path $stage "mods") -Recurse
     $manifest = Join-Path $stage "mods\$($mod.Name)\mod.yaml"
@@ -181,13 +211,13 @@ foreach ($mod in $mods) {
         [IO.File]::WriteAllText($manifest, $text)
     }
 }
-Set-Content -LiteralPath (Join-Path $stage "VERSION") -Value $config["ENGINE_VERSION"] -Encoding ASCII
+Set-Content -LiteralPath (Join-Path $stage "VERSION") -Value $engineCommit -Encoding ASCII
 
 Write-Host "== $launcherName.exe launcher"
 $launcherObj = Join-Path $engine "OpenRA.WindowsLauncher\obj"
 if (Test-Path -LiteralPath $launcherObj) { Remove-Item -LiteralPath $launcherObj -Recurse -Force }
 Invoke-Native dotnet @("publish", (Join-Path $engine "OpenRA.WindowsLauncher\OpenRA.WindowsLauncher.csproj"), "-c", "Release", "-r", "win-x64",
-    "-p:LauncherName=$launcherName", "-p:TargetPlatform=win-x64", "-p:ModID=$modId", "-p:PublishDir=$stage\",
+    "-p:LauncherName=$launcherName", "-p:TargetPlatform=win-x64", "-p:ModID=$launcherMod", "-p:PublishDir=$stage\",
     "-p:FaqUrl=$($config['PACKAGING_FAQ_URL'])", "-p:InformationalVersion=$Version", "-p:DisplayName=$($config['PACKAGING_DISPLAY_NAME'])",
     "-p:LauncherIcon=$icon", "--self-contained", "true", "--nologo", "-v", "q") "Launcher publish failed" $root
 Copy-Item -LiteralPath $icon -Destination (Join-Path $stage "rtsai.ico")
@@ -278,6 +308,11 @@ $sums = foreach ($artifact in $artifacts) {
     $line
 }
 Set-Content -LiteralPath (Join-Path $OutputDirectory "SHA256SUMS.txt") -Value $sums -Encoding ASCII
+[ordered]@{
+    version = $Version; modCommit = $modCommit; engineCommit = $engineCommit; launcherMod = $launcherMod
+    mods = @($mods.Name); companion = [bool]$CompanionDirectory; hostedAI = [bool]$HostedAI; signing = $signing
+    artifacts = @($sums)
+} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $OutputDirectory "BUILD-INPUTS.json") -Encoding ASCII
 
 [pscustomobject]@{
     Version = $Version

@@ -42,7 +42,7 @@ namespace OpenRA.Mods.RTSAI.Library
 			if (Busy) return;
 			Directory.CreateDirectory(Path.GetDirectoryName(JobFile));
 			if (File.Exists(CancelFile)) File.Delete(CancelFile);
-			var start = new ProcessStartInfo(Path.Combine(Platform.EngineDir, "bin", "OpenRA.Utility.exe"))
+			var start = new ProcessStartInfo(Path.Combine(Platform.BinDir, "OpenRA.Utility.exe"))
 			{
 				UseShellExecute = false, CreateNoWindow = true, WorkingDirectory = Platform.EngineDir
 			};

@@ -88,7 +88,13 @@ namespace OpenRA.Mods.RTSAI.Library
 				exitCurrent &= !preferences.KeepLibraryOpen;
 			}
 			Game.Settings.Save();
-			var info = new ProcessStartInfo(Path.Combine(Platform.EngineDir, "bin", "OpenRA.exe"))
+			// A development build starts games with bin/OpenRA.exe. A release has only the branded launcher next to
+			// the engine; Engine.LaunchPath makes it run the game itself, keeping arguments with spaces in one piece.
+			var exe = Path.Combine(Platform.BinDir, "OpenRA.exe");
+			var packaged = !File.Exists(exe);
+			if (packaged)
+				exe = Environment.ProcessPath;
+			var info = new ProcessStartInfo(exe)
 			{
 				UseShellExecute = false, WorkingDirectory = Platform.EngineDir, CreateNoWindow = true
 			};
@@ -96,6 +102,8 @@ namespace OpenRA.Mods.RTSAI.Library
 				"Engine.ModSearchPaths=" + Path.Combine(Platform.EngineDir, "mods"),
 				"Engine.SupportDir=" + GameDirectory(id), "Game.FetchNews=false" })
 				info.ArgumentList.Add(arg);
+			if (packaged)
+				info.ArgumentList.Add("Engine.LaunchPath=" + exe);
 			info.Environment["RTSAI_LIBRARY_SUPPORT"] = Root;
 			info.Environment.Remove("OPENRA_UTILITY_EXPERIENCE_PROFILE");
 			info.Environment.Remove("RTSAI_RECOVERY_SCREEN");
