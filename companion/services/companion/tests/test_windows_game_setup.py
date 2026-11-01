@@ -49,7 +49,7 @@ class WindowsGameSetupTests(unittest.TestCase):
 
     @unittest.skipUnless(os.name == "nt", "Windows PowerShell launcher")
     def test_launcher_preserves_quoted_arguments_and_accepts_both_games(self):
-        canonical = ROOT.parent / "OpenRA"
+        canonical = ROOT.parent.parent / "OpenRA"
         for mod in ("ra", "ra2"):
             with tempfile.TemporaryDirectory(prefix="openra space ") as directory:
                 root = Path(directory)

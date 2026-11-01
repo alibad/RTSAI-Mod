@@ -17,7 +17,7 @@ spec.loader.exec_module(module)
 class ContentCatalogTests(unittest.TestCase):
     def setUp(self):
         self.catalog = json.loads(module.CATALOG.read_text(encoding="utf-8"))
-        self.engine = ROOT.parent / "OpenRA"
+        self.engine = ROOT.parent.parent / "OpenRA"
 
     def test_all_actor_references_resolve(self):
         module.validate(self.catalog, self.engine)

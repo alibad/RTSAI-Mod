@@ -10,7 +10,7 @@ display name, queue, cost, palette order and the buildings that unlock it.
 Catalog names and aliases from ``catalog/factions.json`` are added per faction.
 
     python scripts/build-companion-tech-tree.py \
-        --profile rtsai=../RTSAI-Mod@main --profile standalone=../RTSAI-Mod@rtsai/standalone
+        --profile rtsai=..@main --profile standalone=..@rtsai/standalone
 
 A profile is ``name=<mod checkout>[@<git ref>]``; with a ref the files are read
 from git, so the output does not depend on any worktree's state.  The result is
@@ -464,7 +464,7 @@ def catalog_aliases() -> dict[str, dict]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--profile", action="append", required=True,
-                        help="name=<mod checkout>[@<git ref>], e.g. rtsai=../RTSAI-Mod@main")
+                        help="name=<mod checkout>[@<git ref>], e.g. rtsai=..@main")
     parser.add_argument("--mod-dir", default="mods/rtsai")
     parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()

@@ -141,8 +141,8 @@ def run_mode(mode: str, engine: Path, content: Path, ra2_mods: Path | None, outp
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--engine", type=Path, default=ROOT.parent / "OpenRA")
-    parser.add_argument("--content", type=Path, default=ROOT.parent / "OpenRA" / "Support" / "Content")
+    parser.add_argument("--engine", type=Path, default=ROOT.parent.parent / "OpenRA")
+    parser.add_argument("--content", type=Path, default=ROOT.parent.parent / "OpenRA" / "Support" / "Content")
     parser.add_argument("--ra2-mods", type=Path, help="Integrated mods directory containing ra2/ (prepared when omitted)")
     parser.add_argument("--modes", nargs="+", choices=("ra", "ra2"), default=["ra", "ra2"])
     parser.add_argument("--output", type=Path, default=ROOT / "artifacts" / "companion-catalog-live")

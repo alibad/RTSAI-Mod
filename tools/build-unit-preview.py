@@ -204,7 +204,7 @@ def build(web_root, log):
            'RTSAI_WEB_SCRATCH': str(out / 'web-scratch'), 'RTSAI_WEB_BUILD': str(out / 'native-host'),
            'RTSAI_WEB_CLASSIC_MOD': 'rtsai-classic-core', 'RTSAI_WEB_SCENARIOS': str(game / 'scenarios'),
            'RTSAI_MAP_MOD_ROOT': str(ROOT), 'RTSAI_MAP_OUTPUT_ROOT': str(out / 'workshop-maps'),
-           'RTSAI_SITE_PUBLIC': str(web_root / 'public'), 'RTSAI_OPENRA_AI': str(ROOT.parent / 'OpenRA-AI'),
+           'RTSAI_SITE_PUBLIC': str(web_root / 'public'), 'RTSAI_OPENRA_AI': str(ROOT / 'companion'),
            'RTSAI_CONTENT_RECEIPT': str(receipt_file),
            'RTSAI_CONTENT_SOURCE': str(ROOT / 'mods/rtsai/unit-overrides/manifest.json'),
            'RTSAI_VERIFIED_LOCAL_BUILD': json.dumps({'buildId': build_id, 'page': str(out / 'web'),

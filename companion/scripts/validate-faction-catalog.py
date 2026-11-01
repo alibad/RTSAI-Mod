@@ -98,7 +98,7 @@ def check_mode(engine: Path, catalog_path: Path, mode: str, output: Path, ra2_mo
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--engine", type=Path, default=ROOT.parent / "OpenRA", help="Built engine checkout")
+    parser.add_argument("--engine", type=Path, default=ROOT.parent.parent / "OpenRA", help="Built engine checkout")
     parser.add_argument("--catalog", type=Path, default=content_catalog.CATALOG)
     parser.add_argument("--modes", nargs="+", choices=("ra", "ra2"), default=["ra", "ra2"])
     parser.add_argument("--ra2-mods", type=Path, help="Existing integrated mods directory containing ra2/")

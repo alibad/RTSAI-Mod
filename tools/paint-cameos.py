@@ -21,7 +21,7 @@ tools/cameo-generation.json. SUPERSEDED on 2026-10-06: the game's cameos are now
 record are archived in RTSAI-Art history/ (and history/_records/ART-PROVENANCE.json).
 
 No reference images are given to the model: every cameo is text-to-image. Needs Pillow, numpy and
-requests (e.g. OpenRA-AI/.venv).
+requests (e.g. companion/.venv).
 """
 from __future__ import annotations
 

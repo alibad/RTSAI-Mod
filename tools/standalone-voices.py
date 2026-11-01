@@ -2,7 +2,7 @@
 """Voices for the shared stock units the standalone build keeps (engineer, spy, MCVs and ore trucks, the naval
 transports, and the generic infantry death cries), made with the same licensed engines as the faction sets.
 
-Speech comes from OpenRA-AI's scripts/voice_engines.py: Kokoro-82M (Apache-2.0) at the pinned revision, the same
+Speech comes from companion/scripts/voice_engines.py: Kokoro-82M (Apache-2.0) at the pinned revision, the same
 QA (Whisper large-v3 transcript and character error rate) and a radio chain in the style of the faction sets
 (ffmpeg band-pass, compression, loudness, squelch tone, noise floor, fades). These units are shared by several
 factions (the Allied-side or the Soviet-side voice set), so every line is English, as the faction sets' English lines
@@ -13,10 +13,10 @@ reference at exaggeration 1.3 and cfg_weight 0.3: Kokoro reads interjections as 
 interjection and closest to the expected length is kept. Melted, Zapped and PsyCrush add a procedural layer from
 tools/standalone_dsp.py.
 
-  python tools/standalone-voices.py build [FILE ...] [--openra-ai ../OpenRA-AI] [--device cuda]
+  python tools/standalone-voices.py build [FILE ...] [--openra-ai companion] [--device cuda]
   python tools/standalone-voices.py list
 
-Run it in the voice environment described in OpenRA-AI scripts/voice_engines.py (kokoro 0.9.4, faster-whisper
+Run it in the voice environment described in companion/scripts/voice_engines.py (kokoro 0.9.4, faster-whisper
 1.2.1, torch). Output: mods/rtsai/standalone/audio/voices/*.wav (44.1 kHz mono 16-bit, like the faction sets),
 records in mods/rtsai/standalone/audio/PROVENANCE.json and rows in docs/voice-review.csv.
 """
@@ -392,7 +392,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("cmd", choices=["build", "list"])
     ap.add_argument("files", nargs="*")
-    ap.add_argument("--openra-ai", default=str(ROOT.parent / "OpenRA-AI"))
+    ap.add_argument("--openra-ai", default=str(ROOT / "companion"))
     ap.add_argument("--device", default=None)
     a = ap.parse_args()
     if a.cmd == "list":

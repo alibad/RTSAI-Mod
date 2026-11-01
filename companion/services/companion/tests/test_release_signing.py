@@ -16,6 +16,10 @@ RELEASE = importlib.util.module_from_spec(RELEASE_SPEC)
 RELEASE_SPEC.loader.exec_module(RELEASE)
 
 
+# The retired OpenRA AI installers (apps/installer) stayed in the archived OpenRA-AI repository.
+LEGACY_INSTALLER = (REPOSITORY_ROOT / "apps" / "installer").is_dir()
+
+
 class ReleaseSigningTests(unittest.TestCase):
     def test_official_commands_enforce_platform_signing(self) -> None:
         with mock.patch.object(RELEASE.subprocess, "run") as run:
@@ -30,6 +34,7 @@ class ReleaseSigningTests(unittest.TestCase):
         self.assertEqual(environment["OPENRA_AI_OFFICIAL_RELEASE"], "1")
         self.assertEqual(os.environ.get("OPENRA_AI_OFFICIAL_RELEASE"), None)
 
+    @unittest.skipUnless(LEGACY_INSTALLER, "tests the retired OpenRA AI installer")
     def test_windows_signing_uses_certificate_store_not_committed_credentials(self) -> None:
         signing_script = (REPOSITORY_ROOT / "scripts/sign-windows-artifacts.ps1").read_text(encoding="utf-8")
         package_script = (REPOSITORY_ROOT / "scripts/package-windows.ps1").read_text(encoding="utf-8")

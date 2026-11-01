@@ -21,7 +21,7 @@ def main():
     import soundfile as sf
     from faster_whisper import WhisperModel
     from huggingface_hub import snapshot_download
-    sys.path.insert(0, str(ROOT.parent / "OpenRA-AI/scripts"))
+    sys.path.insert(0, str(ROOT / "companion/scripts"))
     import voice_engines as ve
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--output", type=Path, required=True)

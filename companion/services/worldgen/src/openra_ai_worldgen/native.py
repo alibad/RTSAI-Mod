@@ -142,13 +142,20 @@ def generation_options(selection: GeoSelection, analysis: TerrainAnalysis) -> di
     return options
 
 
+def _engine_checkout() -> Path:
+    """engine/openra in the former OpenRA-AI layout, else the canonical OpenRA checkout beside RTSAI-Mod."""
+    workspace = Path(__file__).resolve().parents[4]
+    legacy = workspace / "engine" / "openra"
+    return legacy if legacy.is_dir() else workspace.parent.parent / "OpenRA"
+
+
 class NativeMapGenerator:
     def __init__(self, engine_root: Path | None = None):
         configured = os.environ.get("OPENRA_AI_ENGINE_DIR", "").strip()
         self.engine_root = (
             engine_root
             or (Path(configured) if configured else None)
-            or Path(__file__).resolve().parents[4] / "engine" / "openra"
+            or _engine_checkout()
         ).resolve()
 
     @property

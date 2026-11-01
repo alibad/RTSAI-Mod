@@ -27,7 +27,7 @@ $runtimeExe = Join-Path $runtimeRoot 'bin/RTSAI.exe'
 if (!(Test-Path -LiteralPath $runtimeExe)) { $runtimeExe = Join-Path $runtimeRoot 'bin/OpenRA.exe' }
 if (!(Test-Path -LiteralPath $runtimeExe)) { throw "Local native runtime missing: $runtimeExe" }
 # Reuse the project's local companion. Its settings and lifetime stay owned by the game.
-$companionRoot = Join-Path (Split-Path $projectRoot -Parent) 'OpenRA-AI'
+$companionRoot = Join-Path $projectRoot 'companion'
 if (Test-Path -LiteralPath (Join-Path $companionRoot '.venv/Scripts/python.exe')) { $env:OPENRA_AI_ROOT = $companionRoot }
 $env:MOD_SEARCH_PATHS = "$runtimeRoot/mods"
 $env:RTSAI_RECOVERY_SCREEN = $null

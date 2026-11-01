@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """First-pass review of the non-English faction voice lines, and regeneration of the ones that fail it.
 
-The voice lines are made by OpenRA-AI (scripts/generate-rtsai-mod-audio.py and voice_engines.py); this tool reuses
-that code, so it runs in the same Python environment (see voice_engines.py) with --openra-ai pointing at a checkout.
+The voice lines are made by the companion's scripts (companion/scripts/generate-rtsai-mod-audio.py and voice_engines.py);
+this tool reuses that code, so it runs in the same Python environment (see voice_engines.py).
 
     transcribe   Transcribe every non-English line in PROVENANCE.json with the pinned Whisper large-v3, three ways:
                  forced to the line's language (the generator's QA settings), with automatic language detection,
@@ -13,8 +13,8 @@ that code, so it runs in the same Python environment (see voice_engines.py) with
                  but with a longer seed range (the documented range already produced the shipped take). Records
                  are merged into PROVENANCE.json. Run it on a scratch copy of the mod, then copy the results in.
 
-    python tools/voice-review.py transcribe --openra-ai ../OpenRA-AI --mod .
-    python tools/voice-review.py regenerate --openra-ai ../OpenRA-AI --mod <copy> --seeds 24 iran-naval-attack-fa.wav
+    python tools/voice-review.py transcribe --mod .
+    python tools/voice-review.py regenerate --mod <copy> --seeds 24 iran-naval-attack-fa.wav
 """
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ HUMAN = ["literal_meaning", "verdict", "action", "notes", "native_speaker"]
 def load_openra_ai(path: Path):
     scripts = path.resolve() / "scripts"
     sys.path.insert(0, str(scripts))
-    import voice_engines  # noqa: E402  (OpenRA-AI)
+    import voice_engines  # noqa: E402  (companion/scripts)
     return voice_engines
 
 
@@ -162,7 +162,7 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     for name in ("transcribe", "regenerate"):
         command = sub.add_parser(name)
-        command.add_argument("--openra-ai", type=Path, required=True)
+        command.add_argument("--openra-ai", type=Path, default=Path(__file__).resolve().parents[1] / "companion")
         command.add_argument("--mod", type=Path, default=Path(__file__).resolve().parents[1])
     sub.choices["transcribe"].add_argument("--device", default="cuda")
     sub.choices["regenerate"].add_argument("--seeds", type=int, default=24)

@@ -18,6 +18,10 @@ from openra_ai_companion.bridge import OpenRABridge
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 
 
+# The retired OpenRA AI installers (apps/installer) stayed in the archived OpenRA-AI repository.
+LEGACY_INSTALLER = (REPOSITORY_ROOT / "apps" / "installer").is_dir()
+
+
 class LauncherStartupTests(unittest.TestCase):
 
     def test_local_game_bridge_caps_reconnect_backoff_after_menu_wait(self) -> None:
@@ -107,6 +111,7 @@ class LauncherStartupTests(unittest.TestCase):
         self.assertEqual(args.parent_pid, 42)
         self.assertEqual(args.game_pid, 0)
 
+    @unittest.skipUnless(LEGACY_INSTALLER, "tests the retired OpenRA AI installer")
     def test_macos_launcher_waits_for_companion_before_game(self) -> None:
         wrapper = (REPOSITORY_ROOT / "apps/installer/macos/OpenRAAI").read_text(encoding="utf-8")
         companion_start = wrapper.index('"$companion" watch')
@@ -124,6 +129,7 @@ class LauncherStartupTests(unittest.TestCase):
         self.assertIn("OPENRA_AI_STARTUP_AUTO_ACT", wrapper[health_wait:game_start])
         self.assertIn('OPENRA_AI_VERSION="$map_version"', wrapper[:companion_start])
 
+    @unittest.skipUnless(LEGACY_INSTALLER, "tests the retired OpenRA AI installer")
     def test_macos_apphost_has_dotnet_jit_entitlement(self) -> None:
         entitlements = (
             REPOSITORY_ROOT / "apps/installer/macos/OpenRAAI.entitlements"
@@ -134,6 +140,7 @@ class LauncherStartupTests(unittest.TestCase):
         self.assertIn('--entitlements "$ENTITLEMENTS"', package_script)
         self.assertIn('"$MACOS/apphost-$ARCH_DIR"', package_script)
 
+    @unittest.skipUnless(LEGACY_INSTALLER, "tests the retired OpenRA AI installer")
     def test_macos_app_and_companion_have_microphone_entitlement(self) -> None:
         root = Path(__file__).resolve().parents[3]
         entitlements = (
@@ -151,6 +158,7 @@ class LauncherStartupTests(unittest.TestCase):
         self.assertIn('com.apple.security.device.audio-input', smoke_script)
         self.assertIn('"$app/Contents/Resources/bin/openra-ai-companion"', smoke_script)
 
+    @unittest.skipUnless(LEGACY_INSTALLER, "tests the retired OpenRA AI installer")
     def test_macos_bundle_uses_native_responsible_process(self) -> None:
         root = Path(__file__).resolve().parents[3]
         launcher = (root / "apps/installer/macos/OpenRAAILauncher.m").read_text(encoding="utf-8")

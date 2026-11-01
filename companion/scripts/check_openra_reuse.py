@@ -15,7 +15,7 @@ from openra_upstream_inventory import target_baseline
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs" / "upstream-reuse"
-REFERENCES = ROOT.parent / "OpenRA-Upstreams"
+REFERENCES = ROOT.parent.parent / "OpenRA-Upstreams"
 
 
 def composer_component_ids(path: Path) -> tuple[set[str], set[str], str]:

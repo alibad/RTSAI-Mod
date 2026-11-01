@@ -59,7 +59,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 	/// <summary>
 	/// Starts the AI companion sidecar when the game starts and stops it when the game exits.
 	///
-	/// The sidecar is the frozen companion from OpenRA-AI (companion/rtsai-companion.exe). It runs
+	/// The sidecar is the frozen companion built from this repository's companion/ (companion/rtsai-companion.exe). It runs
 	/// without a console window, logs to {SupportDir}/Logs and keeps its settings, provider config
 	/// and hosted-AI install token in {SupportDir}/ai-companion. Loopback ports are chosen per launch.
 	/// If the files are missing or the process keeps crashing, the game carries on and the HUD says so.
@@ -410,7 +410,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 					return new Sidecar { Program = program, Root = Path.GetFullPath(directory) };
 			}
 
-			// Development: an OpenRA-AI checkout with its virtual environment.
+			// Development: this repository's companion/ folder with its virtual environment (tools/launch-desktop.ps1 sets OPENRA_AI_ROOT).
 			var root = Environment.GetEnvironmentVariable("OPENRA_AI_ROOT");
 			if (!string.IsNullOrWhiteSpace(root))
 			{

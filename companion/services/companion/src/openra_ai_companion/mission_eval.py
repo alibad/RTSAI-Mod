@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-from .autonomous import EngineProcess, _default_engine, _workspace_root
+from .autonomous import EngineProcess, _default_engine, _workspace_root, engine_checkout
 from .bridge import OpenRABridge
 from .game_runtime import GameRuntime
 from .models import ActionCommand, GameSnapshot
@@ -119,9 +119,10 @@ def _mission_entries(path: Path) -> list[tuple[str, str]]:
 
 def inventory_missions(root: Path | None = None) -> list[MissionSpec]:
     root = root or _workspace_root()
-    maps_dir = root / "engine" / "openra" / "mods" / "ra" / "maps"
+    engine = engine_checkout() if root == _workspace_root() else root / "engine" / "openra"
+    maps_dir = engine / "mods" / "ra" / "maps"
     generated_dir = root / "generated" / "missions"
-    manifest = root / "engine" / "openra" / "mods" / "ra" / "missions.yaml"
+    manifest = engine / "mods" / "ra" / "missions.yaml"
     specs: list[MissionSpec] = []
     for campaign, map_name in _mission_entries(manifest):
         system_package = maps_dir / map_name
@@ -504,7 +505,7 @@ def evaluate_all_missions(
     )
     created_packages = _install_generated_packages(specs)
     engine_path = (engine_executable or _default_engine()).resolve()
-    engine = EngineProcess(engine_path, root / "engine" / "openra", port, evidence_root / "engine")
+    engine = EngineProcess(engine_path, engine_checkout(), port, evidence_root / "engine")
     results: list[MissionEvalResult] = []
     try:
         engine.start()

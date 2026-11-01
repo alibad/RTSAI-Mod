@@ -7,8 +7,8 @@ writes `mods/rtsai/modern-factions/audio/PROVENANCE.json`. References that no
 voice generator owns must be listed in SFX (procedural sound effects); each is
 checked with speech recognition so no synthetic speech can slip in unrecorded.
 
-    python scripts/generate-rtsai-mod-audio.py --mod ../RTSAI-Mod
-    python scripts/generate-rtsai-mod-audio.py --mod ../RTSAI-Mod --only rcn-air-select-zh.wav --skip-eva
+    python scripts/generate-rtsai-mod-audio.py --mod ..
+    python scripts/generate-rtsai-mod-audio.py --mod .. --only rcn-air-select-zh.wav --skip-eva
 """
 
 from __future__ import annotations
@@ -148,7 +148,7 @@ def check_sfx(name: str, path: Path, synth: Synthesizer) -> dict[str, object]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mod", type=Path, default=ROOT.parent / "RTSAI-Mod")
+    parser.add_argument("--mod", type=Path, default=ROOT.parent)
     parser.add_argument("--only", help="comma-separated voice filenames to regenerate (merged into PROVENANCE.json)")
     parser.add_argument("--skip-eva", action="store_true")
     parser.add_argument("--eva-only", action="store_true")

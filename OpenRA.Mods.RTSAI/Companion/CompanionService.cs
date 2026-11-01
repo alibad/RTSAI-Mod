@@ -18,7 +18,7 @@ namespace OpenRA.Mods.RTSAI.Traits
 {
 	/// <summary>
 	/// gRPC service for the in-game AI companion. It implements only the companion RPCs that
-	/// the product's Python client (OpenRA-AI services/companion bridge.py) uses during a match:
+	/// the product's Python client (companion/services/companion bridge.py) uses during a match:
 	/// Observe, GetState, UpdateCompanionStatus, UpdateCompanionThreat, CaptureCompanionFrame
 	/// and ExecuteCompanionActions.
 	///

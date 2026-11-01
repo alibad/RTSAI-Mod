@@ -22,7 +22,7 @@ from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCES = ROOT / "docs" / "upstream-reuse" / "sources.json"
-DEFAULT_REFERENCES = ROOT.parent / "OpenRA-Upstreams"
+DEFAULT_REFERENCES = ROOT.parent.parent / "OpenRA-Upstreams"
 DEFAULT_JSON = ROOT / "docs" / "upstream-reuse" / "generated" / "catalog.json"
 DEFAULT_MARKDOWN = ROOT / "docs" / "upstream-reuse" / "generated" / "catalog.md"
 TARGET_ENGINE = ROOT / "engine" / "openra"

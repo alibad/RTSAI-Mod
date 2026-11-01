@@ -118,11 +118,11 @@ def same_path(a: str | Path | None, b: Path) -> bool:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--engine", type=Path, default=ROOT.parent / "OpenRA")
+    parser.add_argument("--engine", type=Path, default=ROOT.parent.parent / "OpenRA")
     parser.add_argument("--output", type=Path, default=ROOT / "artifacts" / "catalog-package-layout")
     parser.add_argument("--launch-game", action="store_true",
                         help="Also open the Faction Catalog from the staged Windows layout and save a native screenshot")
-    parser.add_argument("--content", type=Path, default=ROOT.parent / "OpenRA" / "Support" / "Content",
+    parser.add_argument("--content", type=Path, default=ROOT.parent.parent / "OpenRA" / "Support" / "Content",
                         help="Existing game content, linked read-only into a disposable profile for --launch-game")
     args = parser.parse_args(argv)
     engine = args.engine.resolve()

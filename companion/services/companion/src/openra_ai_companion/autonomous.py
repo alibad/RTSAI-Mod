@@ -247,8 +247,15 @@ def _workspace_root() -> Path:
     return Path(__file__).resolve().parents[4]
 
 
+def engine_checkout() -> Path:
+    """The engine checkout the development tools run: engine/openra when present (the layout of the former
+    OpenRA-AI repository), otherwise the canonical OpenRA checkout beside RTSAI-Mod (companion/ -> RTSAI-Mod -> games)."""
+    legacy = _workspace_root() / "engine" / "openra"
+    return legacy if legacy.is_dir() else _workspace_root().parent.parent / "OpenRA"
+
+
 def _default_engine() -> Path:
-    root = _workspace_root() / "engine" / "openra" / "bin"
+    root = engine_checkout() / "bin"
     packaged = root / "win-x64" / "OpenRA.exe"
     fallback = root / ("OpenRA.exe" if os.name == "nt" else "OpenRA")
     # Development builds are written directly to bin. Prefer them when they are
@@ -262,7 +269,7 @@ def _default_engine() -> Path:
         return packaged
     if fallback.is_file():
         return fallback
-    raise RuntimeError("A built OpenRA executable was not found under engine/openra/bin")
+    raise RuntimeError(f"A built OpenRA executable was not found under {root}")
 
 
 def _reuse_project_key() -> None:
@@ -646,7 +653,7 @@ async def autoplay(
     engine: EngineProcess | None = None
     if not reuse_engine:
         executable = (engine_executable or _default_engine()).resolve()
-        engine = EngineProcess(executable, _workspace_root() / "engine" / "openra", port, evidence_dir)
+        engine = EngineProcess(executable, engine_checkout(), port, evidence_dir)
         engine.start()
 
     bridge = OpenRABridge(f"127.0.0.1:{port}", timeout=10)

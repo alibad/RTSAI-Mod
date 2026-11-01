@@ -205,9 +205,13 @@ def route_entry(rel: str, digest: str, art: Art) -> dict:
     return entry
 
 
+FLAG_SCRIPT_COMMIT = "18eb1082b4c761a19edfa1a8f7419406e3dbb562"
+
+
 def flag_entry(rel: str, digest: str, product: Path) -> dict:
     script = "scripts/build-levant-flags.py"
-    commit = git(product, "log", "-1", "--format=%H", "--", script) if (product / script).exists() else None
+    # The flags were drawn in the former OpenRA-AI repository (archived 1 Nov 2026); its history pins the script.
+    commit = git(product, "log", "-1", "--format=%H", "--", script) if (product / script).exists() else FLAG_SCRIPT_COMMIT
     return {"sha256": digest, "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)", "origin": "procedural",
             "generator": "procedural-flag", "script": f"OpenRA-AI {script}" + (f" @ {commit}" if commit else ""),
             "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; "

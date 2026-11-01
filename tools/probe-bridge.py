@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Probe the mod-hosted companion gRPC bridge with the product's Python client.
 
-Imports OpenRA-AI/services/companion (read-only) and issues real RPCs against a
+Imports companion/services/companion (read-only) and issues real RPCs against a
 running `Game.Mod=rtsai` instance started with OPENRA_AI_COMPANION=1.
 
-Usage (with a Python that has grpcio + protobuf, e.g. OpenRA-AI/.venv):
-  python tools/probe-bridge.py [--address 127.0.0.1:9998] [--product ../OpenRA-AI] [--wait 90] [--samples 3]
+Usage (with a Python that has grpcio + protobuf, e.g. companion/.venv):
+  python tools/probe-bridge.py [--address 127.0.0.1:9998] [--product companion] [--wait 90] [--samples 3]
 """
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--address", default="127.0.0.1:9998")
-    parser.add_argument("--product", type=Path, default=ROOT.parent / "OpenRA-AI")
+    parser.add_argument("--product", type=Path, default=ROOT / "companion")
     parser.add_argument("--wait", type=float, default=90.0, help="seconds to wait for the first observation")
     parser.add_argument("--samples", type=int, default=3)
     parser.add_argument("--interval", type=float, default=5.0)

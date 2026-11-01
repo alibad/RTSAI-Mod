@@ -6,7 +6,7 @@ Build the RTS AI Windows release on a Windows host: portable zip, per-user NSIS 
 A Windows-native port of the Mod SDK's packaging/windows/buildpackage.sh (which needs Linux,
 wine64 and ImageMagick). It publishes the pinned engine and the mod self-contained for win-x64,
 builds the RTSAI.exe launcher with the RTS AI icon, stamps version resources with rcedit, adds
-the frozen AI companion when -CompanionDirectory is given (companion\, from OpenRA-AI
+the frozen AI companion when -CompanionDirectory is given (companion\, from this repository's companion/
 scripts/package-rtsai-companion.ps1), signs every .exe when signing is configured (sign-windows.ps1)
 and writes:
 
@@ -125,7 +125,7 @@ $fileVersion = "$($Matches[1]).$($Matches[2]).$($Matches[3]).$(if ($Matches[4]) 
 if ($CompanionDirectory) {
     $CompanionDirectory = (Resolve-Path -LiteralPath $CompanionDirectory).Path
     if (-not (Test-Path -LiteralPath (Join-Path $CompanionDirectory "rtsai-companion.exe"))) {
-        throw "No rtsai-companion.exe in $CompanionDirectory (build it with OpenRA-AI scripts/package-rtsai-companion.ps1)."
+        throw "No rtsai-companion.exe in $CompanionDirectory (build it with companion/scripts/package-rtsai-companion.ps1)."
     }
 } elseif ($HostedAI -or $VoicePack) {
     throw "-HostedAI and -VoicePack need the AI companion (-CompanionDirectory)."

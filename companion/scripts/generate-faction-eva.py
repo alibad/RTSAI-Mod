@@ -10,7 +10,7 @@ The output tree matches RTSAI-Mod's Speech prefixes,
 `ra2|modern-factions/audio/eva/<faction>/<clip>.wav`: IMA ADPCM, 22.05 kHz mono,
 the format RA2's own announcer uses and OpenRA's WAV loader reads.
 
-    python scripts/generate-faction-eva.py --mod ../RTSAI-Mod [--factions china,iran] [--clips 048,062]
+    python scripts/generate-faction-eva.py --mod .. [--factions china,iran] [--clips 048,062]
 """
 
 from __future__ import annotations
@@ -245,7 +245,7 @@ def generate(output: Path, provenance: Path | None, factions: list[str], clips: 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mod", type=Path, default=ROOT.parent / "RTSAI-Mod", help="RTSAI-Mod checkout")
+    parser.add_argument("--mod", type=Path, default=ROOT.parent, help="RTSAI-Mod checkout")
     parser.add_argument("--factions", default=",".join(FACTIONS))
     parser.add_argument("--clips", help="comma-separated clip ids (default: every Speech clip in the mod)")
     parser.add_argument("--output", type=Path, help="default: <mod>/mods/rtsai/modern-factions/audio/eva")

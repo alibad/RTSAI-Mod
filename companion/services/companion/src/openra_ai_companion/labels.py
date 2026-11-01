@@ -33,7 +33,9 @@ def _engine_roots() -> tuple[Path, ...]:
     roots = []
     if configured:
         roots.append(Path(configured))
-    roots.append(Path(__file__).resolve().parents[4] / "engine" / "openra")
+    workspace = Path(__file__).resolve().parents[4]
+    roots.append(workspace / "engine" / "openra")  # layout of the former OpenRA-AI repository
+    roots.append(workspace.parent.parent / "OpenRA")  # the canonical engine beside RTSAI-Mod
     return tuple(dict.fromkeys(root.resolve() for root in roots))
 
 

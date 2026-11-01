@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The faction catalog has one home, catalog/factions.json in this repository; every other copy is made from it.
 
-Writes the copies this repository owns (the desktop engine and AI companion's copy in the sibling OpenRA-AI checkout,
+Writes the copies this repository owns (the desktop engine and AI companion's copy in companion/catalog,
 and the loading-screen tips), then checks every copy, including the website's and the web game's, which change only
 through their own release steps. See catalog/README.md.
 
@@ -18,7 +18,7 @@ from pathlib import Path
 MOD = Path(__file__).resolve().parents[1]
 GAMES = MOD.parent
 MASTER = MOD / "catalog" / "factions.json"
-DESKTOP_COPY = GAMES / "OpenRA-AI" / "catalog" / "factions.json"
+DESKTOP_COPY = MOD / "companion" / "catalog" / "factions.json"
 TIPS_TOOL = MOD / "tools" / "faction-loading-tips.py"
 TIPS = MOD / "mods" / "rtsai" / "modern-factions" / "loading-tips.ftl"
 WEBSITE = GAMES / "RTSAI-Web" / "data"
@@ -57,9 +57,9 @@ def checks(master: bytes) -> list[tuple[str, str, bool | None]]:
     catalog = json.loads(master)
     rows = []
     if DESKTOP_COPY.exists():
-        rows.append(("OpenRA-AI/catalog/factions.json", "desktop engine and AI companion", lf(DESKTOP_COPY) == master))
+        rows.append(("companion/catalog/factions.json", "desktop engine and AI companion", lf(DESKTOP_COPY) == master))
     else:
-        rows.append(("OpenRA-AI/catalog/factions.json", "no OpenRA-AI checkout", None))
+        rows.append(("companion/catalog/factions.json", "missing", None))
     rendered = tips_tool().render(master)
     shipped = TIPS.read_text(encoding="utf-8")
     exact = shipped.replace("\r\n", "\n") == rendered

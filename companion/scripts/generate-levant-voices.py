@@ -28,7 +28,7 @@ from pathlib import Path
 from voice_engines import ENGINES, QA, Synthesizer
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT.parent / "RTSAI-Mod" / "mods" / "rtsai" / "modern-factions" / "audio"
+OUTPUT = ROOT.parent / "mods" / "rtsai" / "modern-factions" / "audio"
 PROVENANCE = ROOT / "assets" / "levant" / "voice-provenance.json"
 
 

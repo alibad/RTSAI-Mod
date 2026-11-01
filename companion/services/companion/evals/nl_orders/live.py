@@ -39,7 +39,7 @@ from openra_ai_companion.bridge import OpenRABridge  # noqa: E402
 from openra_ai_companion.models import ActionCommand, ActionReceipt, GameSnapshot  # noqa: E402
 
 DEFAULT_ENGINE = REPOSITORY / "engine" / "openra"
-CANONICAL_RA_CONTENT = REPOSITORY.parent / "OpenRA" / "Support" / "Content" / "ra"
+CANONICAL_RA_CONTENT = REPOSITORY.parent.parent / "OpenRA" / "Support" / "Content" / "ra"
 
 
 def free_port() -> int:
