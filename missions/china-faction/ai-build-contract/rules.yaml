@@ -1,0 +1,166 @@
+Player:
+	PlayerResources:
+		DefaultCashDropdownVisible: False
+		DefaultCashDropdownLocked: True
+		DefaultCash: 100000
+	Shroud:
+		FogCheckboxVisible: False
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		ExploredMapCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+	BaseBuilderBotModule@normal:
+		TechTypes: dome, atek, fix, hpad
+		ProductionTypes: tent,weap,hpad
+		NavalProductionTypes: syrd
+		DefenseTypes: cnbastion,cnskyshield,cnspectrum
+		BuildingLimits:
+			tent: 1
+			weap: 1
+			dome: 1
+			atek: 1
+			fix: 1
+			hpad: 2
+			syrd: 1
+			cnbastion: 1
+			cnskyshield: 1
+			cnspectrum: 1
+		BuildingFractions:
+			powr: 1
+			proc: 1
+			tent: 1
+			weap: 1
+			dome: 1
+			atek: 1
+			fix: 1
+			hpad: 1
+			syrd: 1
+			cnbastion: 100
+			cnskyshield: 100
+			cnspectrum: 100
+		BuildingDelays:
+			dome: 0
+			atek: 0
+			fix: 0
+			hpad: 0
+			syrd: 0
+	UnitBuilderBotModule@normal:
+		UnitsToBuild:
+			cnrifle: 100
+			cnportable: 100
+			cnnetwork: 100
+			redspear: 100
+			cnlynx: 100
+			cnzbd: 100
+			cnqilin: 100
+			cnphl: 100
+			cncloud: 100
+			cncrane: 100
+			cnskyspear: 100
+			cnluyang: 100
+			cnhaiwang: 100
+			cnmantis: 100
+			cnhaiying: 100
+			cnkunlun: 100
+			cnjiaolong: 100
+		UnitLimits:
+			cnrifle: 2
+			cnportable: 1
+			cnnetwork: 1
+			redspear: 1
+			cnlynx: 1
+			cnzbd: 1
+			cnqilin: 1
+			cnphl: 1
+			cncloud: 1
+			cncrane: 1
+			cnskyspear: 1
+			cnluyang: 1
+			cnhaiwang: 1
+			cnmantis: 1
+			cnhaiying: 1
+			cnkunlun: 1
+			cnjiaolong: 1
+
+FACT:
+	DamageMultiplier@AICONTRACT:
+		Modifier: 0
+
+ATEK:
+	-GpsPower:
+
+# Keep the contract focused on China's production roster. The faction still
+# retains the stock Allied structures, economy, repair, and tech chain.
+E1:
+	Buildable:
+		Prerequisites: ~disabled
+E3:
+	Buildable:
+		Prerequisites: ~disabled
+E6:
+	Buildable:
+		Prerequisites: ~disabled
+E7:
+	Buildable:
+		Prerequisites: ~disabled
+SPY:
+	Buildable:
+		Prerequisites: ~disabled
+MEDI:
+	Buildable:
+		Prerequisites: ~disabled
+MECH:
+	Buildable:
+		Prerequisites: ~disabled
+THF:
+	Buildable:
+		Prerequisites: ~disabled
+1TNK:
+	Buildable:
+		Prerequisites: ~disabled
+2TNK:
+	Buildable:
+		Prerequisites: ~disabled
+JEEP:
+	Buildable:
+		Prerequisites: ~disabled
+APC:
+	Buildable:
+		Prerequisites: ~disabled
+ARTY:
+	Buildable:
+		Prerequisites: ~disabled
+HELI:
+	Buildable:
+		Prerequisites: ~disabled
+MH60:
+	Buildable:
+		Prerequisites: ~disabled
+DD:
+	Buildable:
+		Prerequisites: ~disabled
+PT:
+	Buildable:
+		Prerequisites: ~disabled
+LST:
+	Buildable:
+		Prerequisites: ~disabled
+CA:
+	Buildable:
+		Prerequisites: ~disabled
+PBOX:
+	Buildable:
+		Prerequisites: ~disabled
+HBOX:
+	Buildable:
+		Prerequisites: ~disabled
+GUN:
+	Buildable:
+		Prerequisites: ~disabled
+AGUN:
+	Buildable:
+		Prerequisites: ~disabled
+GAP:
+	Buildable:
+		Prerequisites: ~disabled

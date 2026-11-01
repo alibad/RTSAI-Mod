@@ -1,0 +1,601 @@
+from __future__ import annotations
+
+import json
+from http import HTTPStatus
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from urllib.parse import parse_qs, urlparse
+
+from .client_contract import CONTRACT_VERSION, contract, validate_request
+from .core import Companion
+from .feedback import FeedbackStore, feedback_page
+from .game_content import import_owned_ra2
+from .learning import LearningStore, learning_dashboard
+from .model_setup import LocalAISetupError
+from .lm_studio import discover as discover_lm_studio
+from .models import GameSnapshot
+from .router import RouterError
+from .voice import AudioPlayer, microphone_status, record_question
+from .webui import AI_CONSOLE_HTML
+
+
+class CompanionHandler(BaseHTTPRequestHandler):
+    server_version = "OpenRAAICompanion/0.1"
+
+    @property
+    def companion(self) -> Companion:
+        return self.server.companion  # type: ignore[attr-defined]
+
+    @property
+    def player(self) -> AudioPlayer:
+        return self.server.player  # type: ignore[attr-defined]
+
+    def _headers(self, status: int, content_type: str, length: int, **extra: str) -> None:
+        self.send_response(status)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(length))
+        origin = self.headers.get("Origin", "")
+        if origin and self._trusted_request():
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Vary", "Origin")
+        for key, value in extra.items():
+            self.send_header(key.replace("_", "-"), value)
+        self.end_headers()
+
+    def _json(self, status: int, payload: dict) -> None:
+        body = json.dumps(payload).encode("utf-8")
+        self._headers(status, "application/json", len(body))
+        self.wfile.write(body)
+
+    def _html(self, value: str) -> None:
+        body = value.encode("utf-8")
+        self._headers(HTTPStatus.OK, "text/html; charset=utf-8", len(body))
+        self.wfile.write(body)
+
+    def _binary(self, value: bytes, content_type: str, *, cache_control: str = "no-store") -> None:
+        self._headers(HTTPStatus.OK, content_type, len(value), Cache_Control=cache_control)
+        self.wfile.write(value)
+
+    def _publish_action_response(self, response: object) -> None:
+        metadata = getattr(response, "metadata", {})
+        action = metadata.get("action", {}) if isinstance(metadata, dict) else {}
+        action_state = action.get("state") if isinstance(action, dict) else None
+        state = {
+            "pending": "action-pending",
+            "executed": "action-executed",
+            "cancelled": "action-cancelled",
+            "rejected": "action-rejected",
+            "failed": "action-rejected",
+            "unavailable": "action-rejected",
+            "expired": "action-rejected",
+            "missing": "action-rejected",
+        }.get(action_state)
+        publisher = getattr(self.server, "status_publisher", None)
+        if state and publisher:
+            try:
+                publisher(state, f"AI  •  {getattr(response, 'text', '')}")
+            except Exception:
+                pass
+
+    def _state_payload(self) -> dict:
+        state = {
+            "enabled": self.companion.enabled,
+            "voice_enabled": not self.companion.muted,
+            "auto_act_enabled": self.companion.auto_act_enabled,
+            "pending_action": self.companion.pending_action(),
+            # Every offer still waiting, newest first ("pending_action" is the newest one).
+            "pending_actions": self.companion.pending_actions(),
+            "contextual_strategy": self.companion.contextual_strategy_state(),
+            "brain": self.companion.brain_state(),
+            "snapshot": self.companion.latest_snapshot.compact() if self.companion.latest_snapshot else None,
+            "threat": self.companion.threat_status(),
+            "config": self.companion.router.settings.as_dict(),
+            "usage": self.companion.router.usage_summary(),
+            "router": self.companion.router.health(),
+            # Where the thinking runs now (hosted, local fallback, or alerts only).
+            "ai_service": self.companion.ai_service_status(),
+        }
+        manager = getattr(self.server, "local_ai_manager", None)
+        if manager:
+            state["local_ai"] = manager.status()
+        return state
+
+    def _voice_readiness(self) -> dict:
+        model = self.companion.router.settings.transcribe_model.strip().lower()
+        microphone = microphone_status()
+        controller = getattr(self.server, "voice_controller", None)
+        capture_status = getattr(controller, "capture_status", None)
+        capture_result = capture_status() if callable(capture_status) else {}
+        last_capture = capture_result if isinstance(capture_result, dict) else {}
+        if model != "local-whisper":
+            return {
+                "ready": True,
+                "model": model,
+                "action": "none",
+                "reason": "ready",
+                "microphone": microphone,
+                "last_capture": last_capture,
+            }
+
+        manager = getattr(self.server, "local_ai_manager", None)
+        if manager is None:
+            return {
+                "ready": False,
+                "model": model,
+                "action": "choose_cloud",
+                "reason": "local_ai_unsupported",
+                "microphone": microphone,
+                "last_capture": last_capture,
+                "local_ai": {
+                    "supported": False,
+                    "installed": False,
+                    "state": "unsupported",
+                    "detail": "Local AI installation is unavailable in this build.",
+                },
+            }
+
+        local_ai = manager.status()
+        state = str(local_ai.get("state", "unsupported"))
+        actions = {
+            "not_installed": "install",
+            "installing": "view_progress",
+            "ready": "start",
+            "starting": "wait",
+            "error": "retry",
+            "unsupported": "choose_cloud",
+        }
+        return {
+            "ready": state == "running",
+            "model": model,
+            "action": "none" if state == "running" else actions.get(state, "wait"),
+            "reason": "ready" if state == "running" else f"local_ai_{state}",
+            "microphone": microphone,
+            "last_capture": last_capture,
+            "local_ai": local_ai,
+        }
+
+    def _war_room_payload(self) -> dict:
+        store = LearningStore()
+        dashboard = store.dashboard()
+        state = self._state_payload()
+        return {
+            "contract_version": 1,
+            "live": {
+                "active": state["snapshot"] is not None,
+                "enabled": state["enabled"],
+                "voice_enabled": state["voice_enabled"],
+                "auto_act_enabled": state["auto_act_enabled"],
+                "pending_action": state["pending_action"],
+                "snapshot": state["snapshot"],
+                "threat": state["threat"],
+                "brain": state["brain"],
+                "strategy": self.companion.status()["strategy"],
+                "router": state["router"],
+            },
+            "debrief": store.latest(),
+            "learning": dashboard,
+            "settings": state["config"],
+        }
+
+    def _trusted_request(self) -> bool:
+        hosts = self.headers.get_all("Host", [])
+        origins = self.headers.get_all("Origin", [])
+        if len(hosts) != 1 or len(origins) > 1:
+            return False
+        try:
+            parsed = urlparse("http://" + hosts[0])
+            if (parsed.hostname not in {"localhost", "127.0.0.1", "::1"}
+                    or parsed.port != self.server.server_port
+                    or parsed.username or parsed.password or parsed.path or parsed.query or parsed.fragment):
+                return False
+            if not origins:
+                return True
+            origin = urlparse(origins[0])
+            return (origin.scheme == "http" and origin.netloc == parsed.netloc
+                    and not origin.path and not origin.query and not origin.fragment)
+        except ValueError:
+            return False
+
+    def _content_length(self, limit: int) -> int:
+        lengths = self.headers.get_all("Content-Length", [])
+        if len(lengths) > 1 or self.headers.get("Transfer-Encoding"):
+            raise ValueError("ambiguous request length")
+        raw = lengths[0] if lengths else "0"
+        if not raw.isascii() or not raw.isdecimal() or len(raw) > 10:
+            raise ValueError("Content-Length must be a nonnegative integer")
+        size = int(raw)
+        if size > limit:
+            raise ValueError("request too large")
+        return size
+
+    def _payload(self, limit: int = 256_000) -> bytes:
+        size = self._content_length(limit)
+        body = self.rfile.read(size)
+        if len(body) != size:
+            raise ValueError("incomplete request body")
+        return body
+
+    def do_OPTIONS(self) -> None:  # noqa: N802
+        if not self._trusted_request():
+            self._json(HTTPStatus.FORBIDDEN, {"error": "untrusted_origin_or_host"})
+            return
+        self.send_response(HTTPStatus.NO_CONTENT)
+        origin = self.headers.get("Origin", "")
+        if origin:
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Vary", "Origin")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.end_headers()
+
+    def do_GET(self) -> None:  # noqa: N802
+        if not self._trusted_request():
+            self._json(HTTPStatus.FORBIDDEN, {"error": "untrusted_origin_or_host"})
+            return
+        path = urlparse(self.path).path
+        if path == "/":
+            self._html(AI_CONSOLE_HTML)
+        elif path == "/health":
+            status = self.companion.status()
+            status["control_ready"] = bool(getattr(self.server, "control_ready", False))
+            manager = getattr(self.server, "local_ai_manager", None)
+            if manager:
+                status["local_ai"] = manager.status()
+            self._json(HTTPStatus.OK, status)
+        elif path == "/v1/contract":
+            self._json(HTTPStatus.OK, contract(self.companion.router.settings.timeout_seconds))
+        elif path == "/v1/config":
+            self._json(HTTPStatus.OK, self.companion.router.settings.as_dict())
+        elif path == "/v1/factions":
+            query = parse_qs(urlparse(self.path).query)
+            knowledge = self.companion.faction_knowledge
+            question = (query.get("q") or [""])[0]
+            mode = (query.get("mode") or [self.companion.catalog_mode()])[0]
+            self._json(HTTPStatus.OK, {**knowledge.status(), "mode": mode, "lookup": knowledge.lookup(question, mode)})
+        elif path == "/v1/catalog":
+            catalogue = self.companion.router.catalogue()
+            manager = getattr(self.server, "local_ai_manager", None)
+            if manager:
+                catalogue["local_setup"] = manager.status()
+            self._json(HTTPStatus.OK, catalogue)
+        elif path == "/v1/local-ai":
+            manager = getattr(self.server, "local_ai_manager", None)
+            if manager:
+                self._json(HTTPStatus.OK, manager.status())
+            else:
+                self._json(HTTPStatus.OK, {
+                    "supported": False,
+                    "installed": False,
+                    "state": "unsupported",
+                    "detail": "Local AI installation is unavailable in this build.",
+                })
+        elif path == "/v1/lm-studio":
+            try:
+                self._json(HTTPStatus.OK, discover_lm_studio())
+            except (OSError, ValueError, TypeError, KeyError):
+                self._json(HTTPStatus.SERVICE_UNAVAILABLE, {
+                    "error": "Start LM Studio's local server on port 1234. Token-protected servers are not supported by discovery yet."
+                })
+        elif path == "/v1/voice/readiness":
+            self._json(HTTPStatus.OK, self._voice_readiness())
+        elif path == "/v1/learning":
+            self._json(HTTPStatus.OK, learning_dashboard())
+        elif path == "/v1/learning/latest":
+            self._json(HTTPStatus.OK, LearningStore().latest())
+        elif path == "/v1/war-room":
+            self._json(HTTPStatus.OK, self._war_room_payload())
+        elif path.startswith("/feedback/"):
+            parts = path.strip("/").split("/")
+            if len(parts) != 2:
+                self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+                return
+            try:
+                record = FeedbackStore().get(parts[1])
+            except (FileNotFoundError, ValueError):
+                self._json(HTTPStatus.NOT_FOUND, {"error": "feedback_not_found"})
+                return
+            self._html(feedback_page(parts[1], record))
+        elif path.startswith("/v1/feedback/"):
+            parts = path.strip("/").split("/")
+            try:
+                if len(parts) == 3:
+                    self._json(HTTPStatus.OK, FeedbackStore().get(parts[2]))
+                elif len(parts) == 4 and parts[3] == "screenshot":
+                    self._binary(FeedbackStore().screenshot_path(parts[2]).read_bytes(), "image/png")
+                else:
+                    self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+            except (FileNotFoundError, ValueError):
+                self._json(HTTPStatus.NOT_FOUND, {"error": "feedback_not_found"})
+        elif path.startswith("/v1/learning/matches/"):
+            parts = path.strip("/").split("/")
+            attempt = parts[3] if len(parts) >= 4 else ""
+            try:
+                record = LearningStore().match(attempt)
+            except ValueError:
+                self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+                return
+            if len(parts) == 4:
+                self._json(HTTPStatus.OK if record else HTTPStatus.NOT_FOUND, record or {"error": "not_found"})
+            elif len(parts) == 6 and parts[4] == "frames" and record:
+                filename = parts[5]
+                evidence_dir = Path(str(record.get("evidence_dir", ""))).resolve()
+                frames_dir = (evidence_dir / "frames").resolve()
+                frame = (frames_dir / filename).resolve()
+                visual_evidence = record.get("visual_evidence", {})
+                recent_frames = visual_evidence.get("recent_frames", []) if isinstance(visual_evidence, dict) else []
+                known_frames = {
+                    Path(str(item.get("file", ""))).name
+                    for item in recent_frames
+                    if isinstance(item, dict)
+                }
+                if (
+                    filename in known_frames
+                    and frame.parent == frames_dir
+                    and frame.suffix.lower() == ".png"
+                    and frame.is_file()
+                ):
+                    self._binary(frame.read_bytes(), "image/png", cache_control="private, max-age=300")
+                else:
+                    self._json(HTTPStatus.NOT_FOUND, {"error": "frame_not_found"})
+            else:
+                self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+        elif path == "/v1/strategies":
+            self._json(HTTPStatus.OK, self.companion.contextual_strategy_state())
+        elif path in {"/v1/state", "/v1/usage"}:
+            state = self._state_payload()
+            self._json(HTTPStatus.OK, state if path == "/v1/state" else state["usage"])
+        else:
+            self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+
+    def do_POST(self) -> None:  # noqa: N802
+        path = urlparse(self.path).path
+        if not self._trusted_request():
+            self._json(HTTPStatus.FORBIDDEN, {"error": "untrusted_origin_or_host"})
+            return
+        try:
+            self._content_length(20_000_000)
+            if path in {"/v1/advice", "/v1/proposals", "/v1/proposals/confirm", "/v1/proposals/cancel"}:
+                payload = json.loads(self._payload() or b"{}")
+                if path == "/v1/advice":
+                    response = self.companion.ask(validate_request(payload, "question"))
+                elif path == "/v1/proposals":
+                    response = self.companion.propose_only(validate_request(payload, "instruction"))
+                elif path.endswith("/confirm"):
+                    response = self.companion.confirm_action(validate_request(payload, "proposal_id"))
+                else:
+                    response = self.companion.cancel_action(validate_request(payload, "proposal_id"))
+                self._publish_action_response(response)
+                self._json(HTTPStatus.OK, {"contract_version": CONTRACT_VERSION, **response.as_dict()})
+            elif path == "/v1/content/ra2/import":
+                self._payload()
+                self._json(HTTPStatus.OK, import_owned_ra2())
+            elif path == "/v1/factions/live":
+                # Rules-derived catalog facts from the running game (static knowledge, no match state).
+                digest = json.loads(self._payload(limit=4_000_000) or b"{}")
+                self._json(HTTPStatus.OK, self.companion.faction_knowledge.update_live(digest))
+            elif path in {"/v1/local-ai/install", "/v1/local-ai/retry"}:
+                self._payload()
+                manager = getattr(self.server, "local_ai_manager", None)
+                if manager is None:
+                    raise LocalAISetupError("Local AI installation is unavailable in this build.")
+                result = manager.install() if path.endswith("/install") else manager.retry()
+                self._json(HTTPStatus.ACCEPTED, result)
+            elif path == "/v1/config":
+                payload = json.loads(self._payload() or b"{}")
+                config = self.companion.router.configure(payload)
+                self.companion.apply_settings()
+                self._json(HTTPStatus.OK, config)
+            elif path == "/v1/state":
+                payload = json.loads(self._payload() or b"{}")
+                config_values = dict(payload.get("config") or {})
+                for key in (
+                    "router_url", "model_provider", "text_model", "vision_model", "transcribe_model", "transcribe_language",
+                    "speech_model", "speech_voice", "model_selection",
+                    "notification_pace", "voice_priority", "companion_enabled", "voice_enabled", "auto_act_enabled", "native_strategy",
+                ):
+                    if key in payload:
+                        config_values[key] = payload[key]
+                self.companion.router.configure(config_values)
+                self.companion.apply_settings()
+                if self.companion.muted:
+                    self.player.stop()
+                publisher = getattr(self.server, "status_publisher", None)
+                if publisher:
+                    try:
+                        publisher(*self.companion.idle_status())
+                    except Exception:
+                        pass
+                self._json(HTTPStatus.OK, {
+                    "enabled": self.companion.enabled,
+                    "voice_enabled": not self.companion.muted,
+                    "auto_act_enabled": self.companion.auto_act_enabled,
+                    "config": self.companion.router.settings.as_dict(),
+                    "usage": self.companion.router.usage_summary(),
+                    "router": self.companion.router.health(),
+                })
+            elif path == "/v1/test/connection":
+                self._payload()
+                health = self.companion.router.health()
+                self._json(HTTPStatus.OK if health["reachable"] else HTTPStatus.BAD_GATEWAY, health)
+            elif path == "/v1/test/chat":
+                self._payload()
+                result = self.companion.router.chat([
+                    {"role": "system", "content": "Reply with one short sentence confirming the OpenRA AI companion is operational."},
+                    {"role": "user", "content": "Run the companion diagnostic."},
+                ])
+                self._json(HTTPStatus.OK, {"ok": True, "model": result.model, "latency_ms": result.latency_ms, "text": result.text})
+            elif path == "/v1/test/microphone":
+                self._payload()
+                result = self.companion.transcribe(record_question(3.0))
+                self._json(HTTPStatus.OK, {"ok": True, "model": result.metadata.get("model"), "latency_ms": result.latency_ms, "transcript": result.text})
+            elif path == "/v1/test/speech":
+                self._payload()
+                audio, metadata = self.companion.speech("OpenRA AI speech route is operational.")
+                self.player.play(audio)
+                self._json(HTTPStatus.OK, {"ok": bool(audio), **metadata})
+            elif path == "/v1/test/full":
+                self._payload()
+                health = self.companion.router.health()
+                if not health["reachable"]:
+                    raise RouterError(f"AI layer is unavailable at {health['url']}")
+                result = self.companion.router.chat([
+                    {"role": "system", "content": "Reply with one short sentence confirming the OpenRA AI companion is operational."},
+                    {"role": "user", "content": "Run the full companion diagnostic."},
+                ])
+                audio, speech = self.companion.speech(result.text)
+                self.player.play(audio)
+                self._json(HTTPStatus.OK, {
+                    "ok": bool(audio),
+                    "connection": health,
+                    "text": {"model": result.model, "latency_ms": result.latency_ms, "response": result.text},
+                    "speech": speech,
+                    "microphone": "Run the separate microphone test to verify live input.",
+                })
+            elif path == "/v1/observe":
+                response = self.companion.observe(GameSnapshot.from_dict(json.loads(self._payload() or b"{}")))
+                self._json(HTTPStatus.OK, {"speak": response is not None, "response": response.as_dict() if response else None})
+            elif path == "/v1/strategies":
+                payload = json.loads(self._payload() or b"{}")
+                self._json(HTTPStatus.OK, self.companion.select_contextual_strategy(payload.get("strategy"), payload.get("reserve", 0)))
+            elif path == "/v1/strategies/step":
+                payload = json.loads(self._payload() or b"{}")
+                if not isinstance(payload.get("automatic", False), bool):
+                    raise ValueError("automatic must be a boolean")
+                response = self.companion.contextual_strategy_step(automatic=payload.get("automatic", False))
+                self._publish_action_response(response)
+                self._json(HTTPStatus.OK, response.as_dict())
+            elif path == "/v1/ask":
+                payload = json.loads(self._payload() or b"{}")
+                self.companion.begin_user_turn()
+                try:
+                    response = self.companion.handle_player_input(str(payload.get("question", "")))
+                finally:
+                    self.companion.end_user_turn()
+                self._publish_action_response(response)
+                self._json(HTTPStatus.OK, response.as_dict())
+            elif path == "/v1/actions/propose":
+                payload = json.loads(self._payload() or b"{}")
+                instruction = payload.get("instruction")
+                if not isinstance(instruction, str):
+                    raise ValueError("instruction must be text")
+                response = self.companion.propose_only(instruction)
+                self._publish_action_response(response)
+                self._json(HTTPStatus.OK, response.as_dict())
+            elif path == "/v1/actions/confirm":
+                payload = json.loads(self._payload() or b"{}")
+                response = self.companion.confirm_action(str(payload.get("proposal_id", "")))
+                self._publish_action_response(response)
+                self._json(HTTPStatus.OK, response.as_dict())
+            elif path == "/v1/actions/cancel":
+                payload = json.loads(self._payload() or b"{}")
+                response = self.companion.cancel_action(str(payload.get("proposal_id", "")))
+                self._publish_action_response(response)
+                self._json(HTTPStatus.OK, response.as_dict())
+            elif path == "/v1/design/mission":
+                payload = json.loads(self._payload() or b"{}")
+                self._json(HTTPStatus.OK, self.companion.draft_mission(payload).as_dict())
+            elif path == "/v1/design/terrain":
+                import base64
+
+                payload = json.loads(self._payload(3_000_000) or b"{}")
+                image = base64.b64decode(str(payload.get("image_base64", "")), validate=True)
+                if not image.startswith(b"\x89PNG\r\n\x1a\n"):
+                    raise ValueError("terrain image must be a PNG")
+                self._json(HTTPStatus.OK, self.companion.analyze_terrain(dict(payload.get("context") or {}), image))
+            elif path == "/v1/feedback/capture":
+                self._payload()
+                self._json(HTTPStatus.CREATED, self.companion.capture_feedback())
+            elif path.startswith("/v1/feedback/"):
+                parts = path.strip("/").split("/")
+                if len(parts) != 3:
+                    self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+                    return
+                payload = json.loads(self._payload() or b"{}")
+                self._json(HTTPStatus.OK, FeedbackStore().update(parts[2], payload))
+            elif path == "/v1/interrupt":
+                self._payload()
+                self._json(HTTPStatus.OK, {"interrupted": True, "generation": self.companion.interrupt()})
+            elif path == "/v1/control":
+                payload = json.loads(self._payload() or b"{}")
+                state = self.companion.configure(
+                    enabled=payload.get("enabled"),
+                    muted=payload.get("muted"),
+                    auto_act=payload.get("auto_act"),
+                    native_strategy=payload.get("native_strategy"),
+                    persist=True,
+                )
+                if state["muted"]:
+                    self.player.stop()
+                publisher = getattr(self.server, "status_publisher", None)
+                if publisher:
+                    try:
+                        publisher(*self.companion.idle_status())
+                    except Exception:
+                        pass
+                self._json(HTTPStatus.OK, state)
+            elif path == "/v1/transcribe":
+                query = parse_qs(urlparse(self.path).query)
+                filename = query.get("filename", ["question.wav"])[0]
+                self._json(HTTPStatus.OK, self.companion.transcribe(self._payload(20_000_000), filename).as_dict())
+            elif path == "/v1/speak":
+                payload = json.loads(self._payload() or b"{}")
+                audio, metadata = self.companion.speech(str(payload.get("text", "")))
+                if metadata.get("interrupted"):
+                    self._json(HTTPStatus.CONFLICT, metadata)
+                else:
+                    self._headers(HTTPStatus.OK, str(metadata.get("content_type", "audio/wav")), len(audio), X_OpenRA_AI_Utterance=str(metadata["utterance_id"]))
+                    self.wfile.write(audio)
+            elif path in {"/v1/voice/start", "/v1/voice/stop"}:
+                self._payload()
+                if path.endswith("/start"):
+                    readiness = self._voice_readiness()
+                    if not readiness["ready"]:
+                        self._json(HTTPStatus.PRECONDITION_REQUIRED, {
+                            "ok": False,
+                            "error": "voice_setup_required",
+                            **readiness,
+                        })
+                        return
+                controller = getattr(self.server, "voice_controller", None)
+                if controller is None:
+                    self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"ok": False, "error": "voice_controller_unavailable"})
+                else:
+                    active = controller.start_question() if path.endswith("/start") else controller.stop_question()
+                    self._json(HTTPStatus.OK, {"ok": True, "active": active})
+            else:
+                self._json(HTTPStatus.NOT_FOUND, {"error": "not_found"})
+        except (ValueError, TypeError, json.JSONDecodeError) as exc:
+            self._json(HTTPStatus.BAD_REQUEST, {"error": "invalid_request", "detail": str(exc)})
+        except RouterError as exc:
+            self._json(HTTPStatus.BAD_GATEWAY, {"error": "ai_router_error", "detail": str(exc)})
+        except LocalAISetupError as exc:
+            self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"error": "local_ai_setup", "detail": str(exc)})
+        except FileNotFoundError:
+            self._json(HTTPStatus.NOT_FOUND, {"error": "feedback_not_found"})
+        except Exception as exc:
+            self._json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": "diagnostic_failed", "detail": str(exc)})
+
+    def log_message(self, fmt: str, *args: object) -> None:
+        print(f"companion: {fmt % args}")
+
+
+def create_server(
+    host: str = "127.0.0.1",
+    port: int = 8787,
+    companion: Companion | None = None,
+    player: AudioPlayer | None = None,
+) -> ThreadingHTTPServer:
+    server = ThreadingHTTPServer((host, port), CompanionHandler)
+    server.companion = companion or Companion()  # type: ignore[attr-defined]
+    server.player = player or AudioPlayer()  # type: ignore[attr-defined]
+    server.status_publisher = None  # type: ignore[attr-defined]
+    server.voice_controller = None  # type: ignore[attr-defined]
+    server.local_ai_manager = None  # type: ignore[attr-defined]
+    server.control_ready = False  # type: ignore[attr-defined]
+    return server
+
+
+def serve(host: str = "127.0.0.1", port: int = 8787, companion: Companion | None = None) -> None:
+    server = create_server(host, port, companion)
+    print(f"OpenRA AI companion listening on http://{host}:{port}")
+    server.serve_forever()

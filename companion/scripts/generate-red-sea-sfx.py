@@ -1,0 +1,357 @@
+from __future__ import annotations
+
+import argparse
+import math
+import random
+import struct
+import wave
+from pathlib import Path
+
+
+SAMPLE_RATE = 44_100
+SEED = 20_260_811
+
+
+def envelope(position: float, attack: float = 0.02, release: float = 0.18) -> float:
+    if position < attack:
+        return position / attack
+    if position > 1.0 - release:
+        return max(0.0, (1.0 - position) / release)
+    return 1.0
+
+
+def write_wav(path: Path, samples: list[float], peak_level: float = 0.72) -> None:
+    mean = sum(samples) / len(samples)
+    dc_free = [sample - mean for sample in samples]
+    # Gentle saturation controls procedural spikes while retaining transients.
+    mastered = [math.tanh(sample * 1.28) for sample in dc_free]
+    peak = max(0.001, max(abs(sample) for sample in mastered))
+    scale = peak_level / peak
+    frames = b"".join(
+        struct.pack("<h", int(max(-1.0, min(1.0, sample * scale)) * 32767))
+        for sample in mastered
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with wave.open(str(path), "wb") as output:
+        output.setnchannels(1)
+        output.setsampwidth(2)
+        output.setframerate(SAMPLE_RATE)
+        output.writeframes(frames)
+
+
+def interceptor(rng: random.Random) -> list[float]:
+    duration = 0.78
+    samples: list[float] = []
+    phase = 0.0
+    low_noise = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        frequency = 310 + 3900 * p * p
+        phase += math.tau * frequency / SAMPLE_RATE
+        low_noise = low_noise * 0.88 + rng.uniform(-1, 1) * 0.12
+        ignition = max(0.0, t - 0.11)
+        launch = math.sin(phase) * (0.56 - 0.28 * p) * min(1.0, ignition * 45)
+        whoosh = low_noise * (0.16 + 0.42 * p) * min(1.0, ignition * 35)
+        lock_a = math.exp(-95 * abs(t - 0.035)) * math.sin(math.tau * 1080 * t)
+        lock_b = math.exp(-95 * abs(t - 0.095)) * math.sin(math.tau * 1380 * t)
+        motor = math.sin(math.tau * 78 * t) * math.exp(-9 * max(0, t - 0.11))
+        samples.append((launch + whoosh + 0.22 * lock_a + 0.18 * lock_b + 0.22 * motor) * envelope(p, 0.008, 0.16))
+    return samples
+
+
+def mobile_launch(rng: random.Random) -> list[float]:
+    duration = 1.25
+    samples: list[float] = []
+    rumble = 0.0
+    hiss = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        rumble = rumble * 0.96 + rng.uniform(-1, 1) * 0.04
+        hiss = hiss * 0.55 + rng.uniform(-1, 1) * 0.45
+        launch_time = max(0.0, t - 0.14)
+        ignition = math.sin(math.tau * (58 + 52 * p) * t) * math.exp(-3.4 * launch_time)
+        exhaust = hiss * min(1.0, launch_time * 28) * math.exp(-1.35 * launch_time)
+        body = rumble * min(1.0, launch_time * 22) * (0.52 - 0.20 * p)
+        clamp = math.exp(-125 * abs(t - 0.045)) * math.sin(math.tau * 175 * t)
+        door = math.exp(-85 * abs(t - 0.105)) * math.sin(math.tau * 92 * t)
+        samples.append((0.30 * clamp + 0.22 * door + 0.58 * ignition + 0.64 * exhaust + body) * envelope(p, 0.006, 0.22))
+    return samples
+
+
+def drone_strike(rng: random.Random) -> list[float]:
+    duration = 0.95
+    samples: list[float] = []
+    mechanical = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        propeller = (
+            math.sin(math.tau * 92 * t)
+            + 0.45 * math.sin(math.tau * 184 * t)
+            + 0.2 * math.sin(math.tau * 276 * t)
+        )
+        mechanical = mechanical * 0.72 + rng.uniform(-1, 1) * 0.28
+        release_click = math.exp(-210 * abs(t - 0.16)) * (0.6 * mechanical + math.sin(math.tau * 240 * t))
+        dive = math.sin(math.tau * (240 + 1850 * p * p) * t) * max(0.0, p - 0.16)
+        air = mechanical * max(0.0, p - 0.12) * (1.0 - 0.55 * p)
+        samples.append(
+            (0.20 * propeller + 0.48 * release_click + 0.42 * dive + 0.16 * air)
+            * envelope(p, 0.018, 0.17)
+        )
+    return samples
+
+
+def drone_loiter(rng: random.Random) -> list[float]:
+    """Build a quiet, seamless one-second pusher-propeller loop."""
+
+    duration = 1.0
+    samples: list[float] = []
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        # Integer-cycle harmonics and modulation meet at the loop boundary.
+        propeller = (
+            math.sin(math.tau * 84 * t)
+            + 0.38 * math.sin(math.tau * 168 * t)
+            + 0.16 * math.sin(math.tau * 252 * t)
+        )
+        flutter = 0.82 + 0.12 * math.sin(math.tau * 4 * t) + 0.06 * math.sin(math.tau * 7 * t)
+        airframe = 0.08 * math.sin(math.tau * 336 * t + 0.4)
+        samples.append(propeller * flutter + airframe)
+    return samples
+
+
+def drone_impact(rng: random.Random) -> list[float]:
+    duration = 1.05
+    samples: list[float] = []
+    crackle = 0.0
+    dust = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        white = rng.uniform(-1, 1)
+        crackle = crackle * 0.34 + white * 0.66
+        dust = dust * 0.965 + white * 0.035
+        snap = crackle * math.exp(-48 * t)
+        pressure = math.sin(math.tau * (64 - 28 * p) * t) * math.exp(-7.8 * t)
+        fragments = (
+            math.exp(-105 * abs(t - 0.09)) * math.sin(math.tau * 690 * t)
+            + math.exp(-92 * abs(t - 0.16)) * math.sin(math.tau * 920 * t)
+        )
+        tail = dust * math.exp(-3.4 * t) * min(1.0, t * 24)
+        samples.append(
+            (1.15 * snap + 0.82 * pressure + 0.30 * fragments + 0.44 * tail)
+            * envelope(p, 0.001, 0.24)
+        )
+    return samples
+
+
+def fighter_missile(rng: random.Random) -> list[float]:
+    duration = 0.86
+    samples: list[float] = []
+    exhaust = 0.0
+    phase = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        phase += math.tau * (420 + 2800 * p * p) / SAMPLE_RATE
+        exhaust = exhaust * 0.62 + rng.uniform(-1, 1) * 0.38
+        rail = math.exp(-150 * abs(t - 0.055)) * math.sin(math.tau * 190 * t)
+        motor = math.sin(phase) * min(1.0, t * 32) * (0.68 - 0.28 * p)
+        wind = exhaust * min(1.0, t * 25) * (0.24 + 0.36 * p)
+        samples.append((0.44 * rail + motor + 0.48 * wind) * envelope(p, 0.005, 0.16))
+    return samples
+
+
+def fighter_cannon(rng: random.Random) -> list[float]:
+    duration = 0.46
+    samples: list[float] = []
+    noise = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        noise = noise * 0.22 + rng.uniform(-1, 1) * 0.78
+        bursts = sum(math.exp(-120 * abs(t - pulse)) for pulse in (0.03, 0.105, 0.18, 0.255))
+        body = math.sin(math.tau * 96 * t) * math.exp(-5.5 * t)
+        samples.append((0.68 * noise * bursts + 0.38 * body) * envelope(p, 0.002, 0.22))
+    return samples
+
+
+def apache_cannon(rng: random.Random) -> list[float]:
+    duration = 0.62
+    samples: list[float] = []
+    noise = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        noise = noise * 0.31 + rng.uniform(-1, 1) * 0.69
+        pulses = sum(math.exp(-105 * abs(t - pulse)) for pulse in (0.04, 0.15, 0.26, 0.37))
+        mechanism = math.sin(math.tau * 72 * t) * math.exp(-3.8 * t)
+        samples.append((0.76 * noise * pulses + 0.42 * mechanism) * envelope(p, 0.002, 0.18))
+    return samples
+
+
+def apache_rocket(rng: random.Random) -> list[float]:
+    duration = 0.74
+    samples: list[float] = []
+    hiss = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        hiss = hiss * 0.52 + rng.uniform(-1, 1) * 0.48
+        ignition = math.exp(-95 * abs(t - 0.045)) * math.sin(math.tau * 125 * t)
+        motor = hiss * min(1.0, t * 35) * math.exp(-1.7 * t)
+        whistle = math.sin(math.tau * (530 + 1450 * p) * t) * min(1.0, t * 18)
+        samples.append((0.52 * ignition + 0.66 * motor + 0.22 * whistle) * envelope(p, 0.004, 0.18))
+    return samples
+
+
+def m1_fire(rng: random.Random) -> list[float]:
+    duration = 0.92
+    samples: list[float] = []
+    blast_noise = 0.0
+    tail_noise = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        white = rng.uniform(-1, 1)
+        blast_noise = blast_noise * 0.28 + white * 0.72
+        tail_noise = tail_noise * 0.94 + white * 0.06
+        crack = blast_noise * math.exp(-42 * t)
+        pressure = math.sin(math.tau * (54 - 16 * p) * t) * math.exp(-7.0 * t)
+        breech = math.sin(math.tau * 128 * t) * math.exp(-115 * abs(t - 0.055))
+        desert_tail = tail_noise * math.exp(-3.8 * t) * min(1.0, t * 30)
+        samples.append((1.30 * crack + 0.92 * pressure + 0.30 * breech + 0.36 * desert_tail) * envelope(p, 0.001, 0.20))
+    return samples
+
+
+def m1_impact(rng: random.Random) -> list[float]:
+    duration = 0.78
+    samples: list[float] = []
+    debris = 0.0
+    dust = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        white = rng.uniform(-1, 1)
+        debris = debris * 0.48 + white * 0.52
+        dust = dust * 0.97 + white * 0.03
+        strike = debris * math.exp(-35 * t)
+        ground = math.sin(math.tau * (72 - 30 * p) * t) * math.exp(-8.5 * t)
+        fragments = (
+            math.exp(-150 * abs(t - 0.075)) * math.sin(math.tau * 540 * t)
+            + math.exp(-130 * abs(t - 0.135)) * math.sin(math.tau * 710 * t)
+        )
+        samples.append((0.95 * strike + 0.70 * ground + 0.28 * fragments + 0.40 * dust * math.exp(-3.2 * t)) * envelope(p, 0.001, 0.22))
+    return samples
+
+
+def infantry_rifle(rng: random.Random, *, burst: bool) -> list[float]:
+    duration = 0.42 if burst else 0.25
+    pulses = (0.025, 0.115, 0.205) if burst else (0.025,)
+    samples: list[float] = []
+    noise = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        noise = noise * .18 + rng.uniform(-1, 1) * .82
+        cracks = sum(math.exp(-180 * abs(t - pulse)) for pulse in pulses)
+        body = sum(math.sin(math.tau * 145 * max(0, t - pulse)) * math.exp(-38 * max(0, t - pulse)) for pulse in pulses if t >= pulse)
+        samples.append((.84 * noise * cracks + .38 * body) * envelope(p, .002, .25))
+    return samples
+
+
+def shoulder_launcher(rng: random.Random, *, heavy: bool) -> list[float]:
+    duration = .92 if heavy else .68
+    samples: list[float] = []
+    hiss = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        hiss = hiss * .47 + rng.uniform(-1, 1) * .53
+        launch = math.exp(-105 * abs(t - .035)) * (hiss + .48 * math.sin(math.tau * 88 * t))
+        exhaust = hiss * min(1.0, t * 34) * math.exp((-1.55 if heavy else -2.1) * t)
+        motor = math.sin(math.tau * (320 + 1450 * p * p) * t) * min(1.0, t * 24) * (.42 - .18 * p)
+        samples.append((.74 * launch + .63 * exhaust + .32 * motor) * envelope(p, .003, .2))
+    return samples
+
+
+def suppressed_rifle(rng: random.Random) -> list[float]:
+    duration = .34
+    samples: list[float] = []
+    noise = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        noise = noise * .28 + rng.uniform(-1, 1) * .72
+        snap = noise * math.exp(-72 * t)
+        gas = math.sin(math.tau * 210 * t) * math.exp(-28 * t)
+        action = math.exp(-160 * abs(t - .12)) * math.sin(math.tau * 520 * t)
+        samples.append((.52 * snap + .42 * gas + .18 * action) * envelope(p, .002, .3))
+    return samples
+
+
+def remote_charge(rng: random.Random) -> list[float]:
+    duration = 1.05
+    samples: list[float] = []
+    debris = 0.0
+    for index in range(int(duration * SAMPLE_RATE)):
+        t = index / SAMPLE_RATE
+        p = t / duration
+        white = rng.uniform(-1, 1)
+        debris = debris * .38 + white * .62
+        beep = math.exp(-150 * abs(t - .05)) * math.sin(math.tau * 980 * t)
+        blast_t = max(0, t - .18)
+        crack = debris * math.exp(-42 * blast_t) if t >= .18 else 0
+        pressure = math.sin(math.tau * (58 - 20 * p) * blast_t) * math.exp(-7 * blast_t) if t >= .18 else 0
+        samples.append((.22 * beep + 1.05 * crack + .78 * pressure) * envelope(p, .002, .22))
+    return samples
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Generate original Red Sea vertical-slice sound effects")
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("engine/openra/mods/ra/bits"),
+        help="OpenRA package directory for generated WAV files",
+    )
+    parser.add_argument("--air-only", action="store_true", help="Write only air-warfare sound effects")
+    args = parser.parse_args()
+    rng = random.Random(SEED)
+    outputs = {
+        "redsea-interceptor.wav": (interceptor(rng), 0.72),
+        "redsea-mobile-launch.wav": (mobile_launch(rng), 0.72),
+        "redsea-drone-strike.wav": (drone_strike(rng), 0.68),
+        "redsea-drone-loiter.wav": (drone_loiter(rng), 0.26),
+        "redsea-drone-impact.wav": (drone_impact(rng), 0.72),
+        "redsea-m1-fire.wav": (m1_fire(rng), 0.72),
+        "redsea-m1-impact.wav": (m1_impact(rng), 0.72),
+        "redsea-f15-missile.wav": (fighter_missile(rng), 0.70),
+        "redsea-f15-cannon.wav": (fighter_cannon(rng), 0.66),
+        "redsea-ah64-cannon.wav": (apache_cannon(rng), 0.68),
+        "redsea-ah64-rocket.wav": (apache_rocket(rng), 0.68),
+        "redsea-guard-rifle.wav": (infantry_rifle(rng, burst=True), 0.60),
+        "redsea-mountain-rifle.wav": (infantry_rifle(rng, burst=False), 0.62),
+        "redsea-atgm-launch.wav": (shoulder_launcher(rng, heavy=True), 0.66),
+        "redsea-rpg-launch.wav": (shoulder_launcher(rng, heavy=False), 0.64),
+        "redsea-suppressed.wav": (suppressed_rifle(rng), 0.48),
+        "redsea-remote-charge.wav": (remote_charge(rng), 0.70),
+    }
+    if args.air_only:
+        air_names = {
+            "redsea-drone-strike.wav", "redsea-drone-loiter.wav", "redsea-drone-impact.wav",
+            "redsea-f15-missile.wav", "redsea-f15-cannon.wav", "redsea-ah64-cannon.wav",
+            "redsea-ah64-rocket.wav",
+        }
+        outputs = {name: value for name, value in outputs.items() if name in air_names}
+    for name, (samples, peak_level) in outputs.items():
+        path = args.output / name
+        write_wav(path, samples, peak_level)
+        print(path)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,40 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build output
+artifacts/
+.artifacts/
+.codex-build/
+bin/
+obj/
+dist/
+coverage/
+node_modules/
+.venv/
+.dotnet/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Generated games, maps, and geographic caches
+.cache/
+generated/
+!services/companion/src/openra_ai_companion/generated/
+!services/companion/src/openra_ai_companion/generated/*.py
+downloads/
+*.oramap
+
+# Local development logs
+*.dev-server.out.log
+*.dev-server.err.log
+/ai/
+/logs/

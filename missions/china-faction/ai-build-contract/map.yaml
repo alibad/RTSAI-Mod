@@ -1,0 +1,60 @@
+MapFormat: 12
+
+RequiresMod: ra
+
+Title: China AI Build Contract
+
+Author: OpenRA AI
+
+Tileset: DESERT
+
+MapSize: 96,96
+
+Bounds: 1,1,94,94
+
+Visibility: Shellmap
+
+Categories: Testing
+
+LockPreview: True
+
+Players:
+	PlayerReference@Observer:
+		Name: Observer
+		Playable: True
+		Required: True
+		AllowBots: False
+		LockFaction: True
+		Faction: china
+		Color: C83A32
+		Enemies: ChinaAI
+	PlayerReference@ChinaAI:
+		Name: ChinaAI
+		Playable: True
+		Required: True
+		AllowBots: True
+		LockFaction: True
+		Faction: china
+		Color: 506070
+		Enemies: Observer
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: allies
+
+Actors:
+	ObserverAnchor: fact
+		Location: 10,34
+		Owner: Observer
+	ObserverSpawn: mpspawn
+		Location: 18,36
+		Owner: Neutral
+	AISpawn: mpspawn
+		Location: 76,52
+		Owner: Neutral
+	ObserverCamera: camera
+		Location: 48,48
+		Owner: Observer
+
+Rules: rules.yaml
