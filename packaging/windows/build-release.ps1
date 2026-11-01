@@ -28,7 +28,7 @@ content on first start). RTSAI.exe opens PACKAGING_LAUNCHER_MOD_ID (the Library)
 
 The engine is the canonical sibling checkout ..\OpenRA (or -EngineSource), like tools/build-desktop-recovery.ps1:
 both repositories are fast-forwarded to their owner main and must be clean, so the release is built from committed
-main only. BUILD-INPUTS.json in the output records the mod and engine commits.
+main only. BUILD-INPUTS.json in the output records the mod and engine commits, and the companion's from its SOURCE.json.
 
 Requirements: .NET 10 SDK, NSIS 3 (winget install NSIS.NSIS), rcedit-x64.exe
 (https://github.com/electron/rcedit/releases) and tar.exe (built into Windows 10/11).
@@ -127,6 +127,17 @@ if ($CompanionDirectory) {
     if (-not (Test-Path -LiteralPath (Join-Path $CompanionDirectory "rtsai-companion.exe"))) {
         throw "No rtsai-companion.exe in $CompanionDirectory (build it with companion/scripts/package-rtsai-companion.ps1)."
     }
+    # GPL: the release names the public source of everything it ships, the companion included.
+    $companionSourceFile = Join-Path $CompanionDirectory "SOURCE.json"
+    if (-not (Test-Path -LiteralPath $companionSourceFile)) {
+        throw "The companion has no SOURCE.json: package it again with companion/scripts/package-rtsai-companion.ps1, which records its commit."
+    }
+    $companionSource = Get-Content -LiteralPath $companionSourceFile -Raw | ConvertFrom-Json
+    $companionCommit = "$($companionSource.commit)"
+    if ($companionCommit -notmatch '^[0-9a-f]{40}$') { throw "$companionSourceFile names no commit." }
+    if ($companionSource.dirty) { throw "The companion was packaged from uncommitted changes: commit them and package it again." }
+    Invoke-Native git @("-C", $root, "merge-base", "--is-ancestor", $companionCommit, "origin/main") `
+        "The companion's commit $($companionCommit.Substring(0, 7)) is not on origin/main, so its source is not public: push it and package it again"
 } elseif ($HostedAI -or $VoicePack) {
     throw "-HostedAI and -VoicePack need the AI companion (-CompanionDirectory)."
 }
@@ -323,7 +334,7 @@ $sums = foreach ($artifact in $artifacts) {
 Set-Content -LiteralPath (Join-Path $OutputDirectory "SHA256SUMS.txt") -Value $sums -Encoding ASCII
 [ordered]@{
     version = $Version; modCommit = $modCommit; engineCommit = $engineCommit; launcherMod = $launcherMod
-    mods = @($mods.Name); companion = [bool]$CompanionDirectory; hostedAI = [bool]$HostedAI; signing = $signing
+    mods = @($mods.Name); companion = [bool]$CompanionDirectory; companionCommit = $companionCommit; hostedAI = [bool]$HostedAI; signing = $signing
     artifacts = @($sums)
 } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $OutputDirectory "BUILD-INPUTS.json") -Encoding ASCII
 

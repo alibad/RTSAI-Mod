@@ -17,6 +17,10 @@ The bundle also carries the pinned llama.cpp / whisper.cpp CPU runtimes (ai\runt
 packaging\ai-runtime.lock.json, SHA-256 verified) and the AI pack lock. The models
 themselves are never bundled: the installer or the game downloads the voice pack.
 
+SOURCE.json names the RTSAI-Mod commit the bundle was frozen from (GPL: the release must say where its source is).
+packaging\windows\build-release.ps1 records it in BUILD-INPUTS.json and refuses a companion without one, or one
+frozen from uncommitted or unpushed changes.
+
 .EXAMPLE
 ./scripts/package-rtsai-companion.ps1 -OutputDirectory C:\temp\rtsai-payload
 # -> C:\temp\rtsai-payload\companion\rtsai-companion.exe
@@ -117,6 +121,12 @@ foreach ($file in @("ai-pack.lock.json", "ai-runtime.lock.json", "THIRD_PARTY_MO
 Copy-Item -LiteralPath (Join-Path $repositoryRoot "LICENSE") -Destination (Join-Path $companionRoot "LICENSE.txt")
 New-Item -ItemType Directory -Path (Join-Path $companionRoot "catalog") -Force | Out-Null
 Copy-Item -LiteralPath (Join-Path $repositoryRoot "catalog\factions.json") -Destination (Join-Path $companionRoot "catalog\factions.json")
+$commit = "$(& git -C $repositoryRoot rev-parse HEAD)".Trim()
+if ($LASTEXITCODE -ne 0 -or $commit -notmatch '^[0-9a-f]{40}$') { throw "The companion must be packaged from a Git checkout of RTSAI-Mod." }
+[ordered]@{
+    repository = "alibad/RTSAI-Mod"; path = "companion"; commit = $commit
+    dirty = [bool](& git -C $repositoryRoot status --porcelain -- .)
+} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $companionRoot "SOURCE.json") -Encoding ASCII
 
 # Pinned CPU runtimes for local voice (whisper-server) and the optional local model (llama-server).
 Invoke-Native $Python @((Join-Path $PSScriptRoot "ai_pack.py"), "prepare-runtime", "--target", "windows-x64",
