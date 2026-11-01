@@ -13,3 +13,7 @@
 *.sh eol=lf
 mod.config eol=lf
 user.config eol=lf
+
+# missions/ came from OpenRA-AI (1 Nov 2026), which exported it under core.autocrlf. Keep that, so the /play
+# release's missions snapshot (RTSAI-WebGame tools/prepare-inputs.py --committed) stays byte-identical.
+missions/** !eol
