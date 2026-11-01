@@ -110,24 +110,35 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 		/// decorations, rally flags, beacons, trails, death effects and world layers, whatever the field is called.
 		/// A string that names an actor (a prerequisite, a bot build list, a production type) is not an image use:
 		/// an actor's look is its render image, resolved per faction (FactionImages for the game's own factions,
-		/// else Image, else the actor's name), and only for actors that can exist.
+		/// else Image, else the actor's name), and only for actors that can exist. Bot modules draw nothing, and their
+		/// unit lists may name actors this game does not have (the shared bot lists name the web game's Dreadnought
+		/// and V3), so their strings are not image uses either; nor is an editor-only render (map editor markers).
+		/// A map-placed actor is drawn as that map's own rules say (the Westwood maps draw their ore drills with the
+		/// ore mine).
 		/// </summary>
 		static HashSet<string> DrawableImages(ModData modData, Ruleset rules, HashSet<string> reachable, List<string> factions)
 		{
 			var actors = new HashSet<string>(reachable) { SystemActors.World.ToString().ToLowerInvariant(), SystemActors.Player.ToString().ToLowerInvariant() };
+			var images = new HashSet<string>();
 			foreach (var map in modData.MapCache.EnumerateMapDirPackagesAndNames())
 			{
 				using var package = map.Package.OpenPackage(map.Map, modData.ModFiles);
 				if (package == null)
 					continue;
-				using var s = package.GetStream("map.yaml");
-				if (s == null)
-					continue;
-				var yaml = MiniYaml.FromStream(s, "map.yaml");
-				var actorsNode = yaml.FirstOrDefault(n => n.Key == "Actors");
-				if (actorsNode != null)
-					foreach (var n in actorsNode.Value.Nodes)
-						actors.Add(n.Value.Value.ToLowerInvariant());
+				List<MiniYamlNode> yaml;
+				using (var s = package.GetStream("map.yaml"))
+				{
+					if (s == null)
+						continue;
+					yaml = MiniYaml.FromStream(s, "map.yaml").ToList();
+				}
+
+				var placed = yaml.FirstOrDefault(n => n.Key == "Actors")?.Value.Nodes.Select(n => n.Value.Value.ToLowerInvariant()).ToList() ?? [];
+				var custom = yaml.FirstOrDefault(n => n.Key == "Rules") is MiniYamlNode r && (r.Value.Value != null || r.Value.Nodes.Length > 0);
+				if (custom)
+					images.UnionWith(ImagesOf(new Map(modData, package).Rules, placed, factions));
+				else
+					actors.UnionWith(placed);
 			}
 
 			// Actors the map generator places: every actor of the tilesets' brush collections (forests, villages and their
@@ -145,6 +156,16 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 					.Where(f => f.GetCustomAttribute<ActorReferenceAttribute>() != null))
 					foreach (var s in Strings(f.GetValue(ti)))
 						actors.Add(s.ToLowerInvariant());
+
+			images.UnionWith(ImagesOf(rules, actors, factions));
+			return images;
+		}
+
+		/// <summary>The images the given actors draw under one ruleset (see DrawableImages).</summary>
+		static HashSet<string> ImagesOf(Ruleset rules, IEnumerable<string> actors, List<string> factions)
+		{
+			static bool DrawsNothing(TraitInfo ti) =>
+				ti.GetType().Name.EndsWith("BotModuleInfo", StringComparison.Ordinal) || ti.GetType().Name == "RenderSpritesEditorOnlyInfo";
 
 			var strings = new HashSet<string>();
 			var weaponsSeen = new HashSet<string>();
@@ -187,9 +208,9 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			{
 				if (!rules.Actors.TryGetValue(a, out var info))
 					continue;
-				foreach (var ti in info.TraitInfos<TraitInfo>())
+				foreach (var ti in info.TraitInfos<TraitInfo>().Where(ti => !DrawsNothing(ti)))
 					Collect(ti, 0);
-				foreach (var rs in info.TraitInfos<RenderSpritesInfo>())
+				foreach (var rs in info.TraitInfos<RenderSpritesInfo>().Where(rs => !DrawsNothing(rs)))
 				{
 					// owned by a game faction: its FactionImages entry, else Image, else the actor name; neutral and
 					// map-placed actors use Image / the name as well

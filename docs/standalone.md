@@ -93,6 +93,15 @@ edge (fixed in Phase 3).
 
     That holds whatever the field is called, and it follows nested warheads and weapons. An actor's look is its
     render image per faction.
+  - **What does not count (1 November 2026).** The refreshed desktop build failed on 7 placeholder files that no
+    game draws. The check now leaves out three things:
+    - Bot modules draw nothing. The shared bot lists name the web game's Dreadnought and V3, which the desktop rules
+      do not have, so `dredicon.shp` and `v3icon.shp` were read as images.
+    - An actor on a map is drawn as that map's own rules say. The six Westwood maps draw their ore drills with the ore
+      mine (`tools/import-web-skirmish-maps.py`), so `tibtre01-03.tem` are not drawn.
+    - Editor-only renders: the lamps' light post (`galite.shp`, `liteicon.shp`) shows only in the map editor.
+
+    Taking one map's ore-mine override out makes the check fail again on `tibtre02.tem`.
   - The wider check found 27 more placeholder files that the earlier field-name rule missed. They are replaced by
     code-drawn art:
     - the scorch marks and craters left by explosions (the "flat yellow disc");
