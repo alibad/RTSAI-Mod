@@ -89,7 +89,9 @@ CLASSIC = {
 }
 APPEND = {
     "Rules": ["classic|rules/factions.yaml"],
-    "FluentMessages": ["classic|languages/en.ftl"],
+    # The owned-RA2 content prompts (the engine's main menu asks to import the player's RA2 files) belong only to this
+    # add-on; the standalone manifest leaves them out (4e7799a added them here by hand on 15 Oct).
+    "FluentMessages": ["common|fluent/owned-ra2.ftl", "classic|languages/en.ftl"],
 }
 # Standalone entries the add-on leaves out. campaigns/countr* dress the original countries in modern-faction art,
 # voices and EVA so the standalone game can offer them without EA files; the add-on plays them with the player's

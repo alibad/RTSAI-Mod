@@ -138,7 +138,9 @@ Rules:
 	ra2|modern-factions/art-buildings.yaml
 	ra2|experience/factions-disabled.yaml
 	ra2|shared-content/ra2-web.yaml
+	ra2|unit-overrides/ra2-web.yaml
 	classic|rules/factions.yaml
+
 
 
 
@@ -275,6 +277,7 @@ Weapons:
 	ra2|modern-factions/yemen-weapons.yaml
 	ra2|modern-factions/hezbollah-weapons.yaml
 	ra2|modern-factions/art-vehicles-fx-weapons.yaml
+	ra2|unit-overrides/ra2-web-weapons.yaml
 
 Voices:
 	ra2|modern-factions/levant-voices.yaml
@@ -315,7 +318,6 @@ FluentMessages:
 	ra2|languages/game-modes.ftl
 	common|fluent/common.ftl
 	common|fluent/chrome.ftl
-	common|fluent/owned-ra2.ftl
 	common|fluent/ingame-debug.ftl
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
@@ -335,6 +337,7 @@ FluentMessages:
 	ra2|modern-factions/yemen-messages.ftl
 	ra2|modern-factions/hezbollah-messages.ftl
 	ra2|modern-factions/loading-tips.ftl
+	common|fluent/owned-ra2.ftl
 	classic|languages/en.ftl
 
 Hotkeys:
@@ -364,6 +367,176 @@ ChromeMetrics:
 	ra2|metrics.yaml
 
 Fonts:
+	FrontlineMenu72:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 72
+		Ascender: 56
+	FrontlineMenu80:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 80
+		Ascender: 62
+	FrontlineMenu96:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 96
+		Ascender: 75
+	FrontlinePlay72:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 72
+		Ascender: 56
+	FrontlinePlay80:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 80
+		Ascender: 62
+	FrontlinePlay96:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 96
+		Ascender: 75
+	FrontlineMenu12:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 12
+		Ascender: 9
+	FrontlineMenu14:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 14
+		Ascender: 11
+	FrontlineMenu16:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 16
+		Ascender: 12
+	FrontlineMenu18:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 18
+		Ascender: 14
+	FrontlineMenu20:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 20
+		Ascender: 16
+	FrontlineMenu22:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 22
+		Ascender: 17
+	FrontlineMenu24:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 24
+		Ascender: 19
+	FrontlineMenu28:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 28
+		Ascender: 22
+	FrontlineMenu32:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 32
+		Ascender: 25
+	FrontlineMenu36:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 36
+		Ascender: 28
+	FrontlineMenu40:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 40
+		Ascender: 31
+	FrontlineMenu48:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 48
+		Ascender: 37
+	FrontlineMenu56:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 56
+		Ascender: 44
+	FrontlineMenu64:
+		Font: ra2|uibits/fonts/ChakraPetch-Bold.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 64
+		Ascender: 50
+	FrontlinePlay12:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 12
+		Ascender: 9
+	FrontlinePlay14:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 14
+		Ascender: 11
+	FrontlinePlay16:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 16
+		Ascender: 12
+	FrontlinePlay18:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 18
+		Ascender: 14
+	FrontlinePlay20:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 20
+		Ascender: 16
+	FrontlinePlay22:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 22
+		Ascender: 17
+	FrontlinePlay24:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 24
+		Ascender: 19
+	FrontlinePlay28:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 28
+		Ascender: 22
+	FrontlinePlay32:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 32
+		Ascender: 25
+	FrontlinePlay36:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 36
+		Ascender: 28
+	FrontlinePlay40:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 40
+		Ascender: 31
+	FrontlinePlay48:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 48
+		Ascender: 37
+	FrontlinePlay56:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 56
+		Ascender: 44
+	FrontlinePlay64:
+		Font: ra2|uibits/fonts/BlackOpsOne-Regular.ttf
+		FallbackFonts: common|NotoSansArabic-Bold.ttf
+		Size: 64
+		Ascender: 50
 	Regular:
 		Font: common|FreeSans.ttf
 		Size: 14
