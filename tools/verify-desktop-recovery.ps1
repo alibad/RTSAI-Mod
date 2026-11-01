@@ -28,6 +28,8 @@ foreach ($profile in @('ra2-classic','ra2-original-combined-arms','ra2-modern'))
 $env:OPENRA_UTILITY_EXPERIENCE_PROFILE = $null
 Check 'rtsai' @('--check-desktop-settings')
 Check 'rtsai' @('--check-standalone','--strict')
+# The Library's RA2 game shares the RTS game's standalone art; it once missed the rocks and bridges (1 Nov 2026).
+Check 'rtsai-ra2' @('--check-standalone','--strict')
 Check 'rtsai' @('--check-yaml')
 Check 'rtsai-classic-core' @('--check-yaml')
 Check 'rtsai-ra2' @('--check-yaml')

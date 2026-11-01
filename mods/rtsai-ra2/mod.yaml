@@ -124,6 +124,7 @@ Rules:
 
 	ra2|shared-content/ra2-desktop.yaml
 	ra2|unit-overrides/ra2-desktop.yaml
+	ra2|standalone/editor-world/rules.yaml
 
 Sequences:
 	ra2|sequences/aircraft.yaml
@@ -166,10 +167,12 @@ Sequences:
 	ra2|standalone/kit-extra-sequences.yaml
 	ra2|standalone/smudge-sequences.yaml
 	ra2|standalone/sequences.yaml
+	ra2|standalone/bridges/sequences.yaml
 	ra2|standalone/civilian/civilian-sequences.yaml
 	ra2|standalone/civilian/village-sequences.yaml
 
 	ra2|campaigns/country-sequences.yaml
+	ra2|standalone/editor-world/sequences.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml
