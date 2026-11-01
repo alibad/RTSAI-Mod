@@ -813,7 +813,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--decisions", type=Path, default=ROOT.parent / "RTSAI-Art" / "sound-review.json")
     ap.add_argument("--art", type=Path, help="RTSAI-Art root (default: the decisions file's folder)")
     ap.add_argument("--mod", type=Path, default=ROOT)
-    ap.add_argument("--bakeoff", type=Path, default=Path("D:/rtsai-sound/bakeoff"), help="its RA2 references are refused by hash")
+    ap.add_argument("--bakeoff", type=Path, default=Path("D:/Generated/RTSAI/sound/bakeoff"), help="its RA2 references are refused by hash")
     ap.add_argument("--dry-run", action="store_true", help="print the plan and the diff; write nothing")
     ap.add_argument("--allow-main", action="store_true", help="write even on main/master (normally refused)")
     ap.add_argument("--skip-checks", action="store_true")
