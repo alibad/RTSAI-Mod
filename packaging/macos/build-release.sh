@@ -2,22 +2,30 @@
 # Build the RTS AI macOS release on a macOS host: one universal (Apple silicon + Intel) app in a disk image.
 #
 # The Mod SDK's buildpackage.sh in this folder predates the .NET engine (it compiles the Mono launchers, which the
-# pinned engine no longer has). This script follows the engine's own packaging/macos/buildpackage.sh instead: it
-# publishes the pinned engine and the mod self-contained for osx-arm64 and osx-x64, compiles the launcher, the
+# engine no longer has). This script follows the engine's own packaging/macos/buildpackage.sh instead: it
+# publishes the engine and the mod self-contained for osx-arm64 and osx-x64, compiles the launcher, the
 # apphosts and the Utility wrapper with clang and writes
 #
 #     <outputdir>/RTSAI-<version>-macos.dmg          "RTS AI.app" next to an Applications link
 #     <outputdir>/RTSAI-<version>-macos.dmg.sha256
+#     <outputdir>/BUILD-INPUTS-macos.json            the mod and engine commits, the shipped mods
 #
-# The payload matches the Windows build (packaging/windows/build-release.ps1): with PACKAGING_STANDALONE="True"
-# rtsai and rtsai-topdown ship without Westwood archives. An optional frozen companion is local by default.
+# The payload matches the Windows build (packaging/windows/build-release.ps1): PACKAGING_STANDALONE="True" ships only
+# the mods named in PACKAGING_STANDALONE_MODS (the desktop Library, its three games, Classic's content installer and
+# the RTS game's top-down mode; never the owned-RA2 add-ons) and the app opens PACKAGING_LAUNCHER_MOD_ID (the Library).
+# The engine's content installer chrome and MIX filename database ship only when a shipped mod uses them (Classic
+# downloads the freeware Red Alert content on first start); no Westwood archives ship. An optional frozen companion
+# is local by default.
+#
+# The engine is the canonical sibling checkout ../OpenRA (or RTSAI_MAC_ENGINE), like tools/build-desktop-recovery.ps1:
+# both repositories are fast-forwarded to their owner main (github.com/alibad) and must be clean, so the release is
+# built from committed main only. Resources/VERSION is the engine commit; the ENGINE_VERSION pin is not used here.
 #
 # Signing: with MACOS_DEVELOPER_IDENTITY (a Developer ID Application identity in the keychain) the app is signed
 # with the hardened runtime; otherwise it is ad-hoc signed (codesign -s -), which Gatekeeper treats as an
 # unidentified developer: the player approves it once. Notarization is not done here.
 #
-# Requirements: macOS, .NET 10 SDK, Xcode command line tools (clang, lipo, codesign, iconutil, hdiutil).
-# Run ./fetch-engine.sh first so ./engine exists.
+# Requirements: macOS, git, .NET 10 SDK, Xcode command line tools (clang, lipo, codesign, iconutil, hdiutil).
 #
 # usage: packaging/macos/build-release.sh <version> <outputdir>
 set -o errexit -o pipefail
@@ -27,7 +35,7 @@ if [[ "${OSTYPE}" != "darwin"* ]]; then
 	exit 1
 fi
 
-for tool in clang lipo codesign iconutil hdiutil dotnet shasum perl; do
+for tool in git clang lipo codesign iconutil hdiutil dotnet shasum perl; do
 	command -v "${tool}" >/dev/null 2>&1 || { echo >&2 "macOS packaging requires ${tool}."; exit 1; }
 done
 
@@ -50,17 +58,67 @@ if [ -f "${ROOT}/user.config" ]; then
 	. "${ROOT}/user.config"
 fi
 
-ENGINE="${RTSAI_MAC_ENGINE:-${ROOT}/${ENGINE_DIRECTORY#./}}"
+# mod.config's ENGINE_DIRECTORY (./engine) is an old engine copy, and RTSAI.sln names its projects.
+ENGINE="${RTSAI_MAC_ENGINE:-$(cd "${ROOT}/.." && pwd)/OpenRA}"
 ENGINE_MACOS="${ENGINE}/packaging/macos"
 if [ ! -f "${ENGINE}/OpenRA.Game/OpenRA.Game.csproj" ] || [ ! -f "${ENGINE_MACOS}/launcher.m" ]; then
-	echo >&2 "The pinned engine is missing in ${ENGINE}. Run ./fetch-engine.sh first."
+	echo >&2 "No engine checkout in ${ENGINE} (the canonical OpenRA checkout next to this one, or set RTSAI_MAC_ENGINE)."
 	exit 1
 fi
+ENGINE="$(cd "${ENGINE}" && pwd)"
+ENGINE_MACOS="${ENGINE}/packaging/macos"
+
+# Committed main only. The owner's remote is found by its URL: a Mac checkout may not call it origin or fork.
+update_to_main() {
+	local remote
+	remote="$(git -C "$1" remote -v | awk -v repo="$2" '$3 == "(fetch)" && $2 ~ ("github[.]com[:/]alibad/" repo "([.]git)?$") { print $1; exit }')"
+	[ -n "${remote}" ] || { echo >&2 "$1 has no remote for github.com/alibad/$2."; exit 1; }
+	[ "$(git -C "$1" rev-parse --abbrev-ref HEAD)" = "main" ] || { echo >&2 "$1 is not on main."; exit 1; }
+	git -C "$1" fetch "${remote}" main
+	git -C "$1" merge --ff-only "${remote}/main" || { echo >&2 "$1 cannot fast-forward to ${remote}/main."; exit 1; }
+	[ -z "$(git -C "$1" status --porcelain)" ] || { echo >&2 "Commit source changes before building: $1"; exit 1; }
+}
+update_to_main "${ROOT}" RTSAI-Mod
+update_to_main "${ENGINE}" OpenRA
+MOD_COMMIT="$(git -C "${ROOT}" rev-parse HEAD)"
+ENGINE_COMMIT="$(git -C "${ENGINE}" rev-parse HEAD)"
 
 STANDALONE="${PACKAGING_STANDALONE:-False}"
+LAUNCHER_MOD="${PACKAGING_LAUNCHER_MOD_ID:-${MOD_ID}}"
+if [ "${STANDALONE}" = "True" ]; then
+	# The desktop Library and its games, sharing authored content; never the owned-RA2 add-ons.
+	MODS="${PACKAGING_STANDALONE_MODS:-${MOD_ID}}"
+	for mod in ${MODS}; do
+		[ -d "${ROOT}/mods/${mod}" ] || { echo >&2 "PACKAGING_STANDALONE_MODS names a mod that does not exist: ${mod}"; exit 1; }
+	done
+else
+	MODS=""
+	for mod in "${ROOT}/mods/"*/; do
+		MODS="${MODS} $(basename "${mod}")"
+	done
+fi
+case " ${MODS} " in
+	*" ${LAUNCHER_MOD} "*) [ -f "${ROOT}/mods/${LAUNCHER_MOD}/mod.yaml" ] ;;
+	*) false ;;
+esac || { echo >&2 "No mods/${LAUNCHER_MOD} to package."; exit 1; }
+MANIFESTS=()
+for mod in ${MODS}; do
+	if [ -f "${ROOT}/mods/${mod}/mod.yaml" ]; then
+		MANIFESTS+=("${ROOT}/mods/${mod}/mod.yaml")
+	fi
+done
+# Classic mounts the freeware Red Alert archives its content installer downloads on first start.
+CONTENT_INSTALLER="True"
+MIX_ARCHIVES="True"
+if [ "${STANDALONE}" = "True" ]; then
+	grep -Eq '^[[:space:]]*ContentInstallerMod:' "${MANIFESTS[@]}" || CONTENT_INSTALLER="False"
+	grep -Eq '^PackageFormats:(.*[[:space:],])?Mix([[:space:],]|$)' "${MANIFESTS[@]}" || MIX_ARCHIVES="False"
+fi
+
 APP_NAME="${PACKAGING_DISPLAY_NAME}.app"
 DMG="${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${VERSION}-macos.dmg"
-BUILT="${RTSAI_MAC_BUILD_ROOT:-${PACKAGING_DIR}/build}"
+# Outside the repository, which must stay clean between builds.
+BUILT="${RTSAI_MAC_BUILD_ROOT:-${TMPDIR:-/tmp}/rtsai-macos-build}"
 APP="${BUILT}/${APP_NAME}"
 CONTENTS="${APP}/Contents"
 RESOURCES="${CONTENTS}/Resources"
@@ -80,6 +138,9 @@ modify_plist "{DEV_VERSION}" "${VERSION}" "${PLIST}"
 modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${PLIST}"
 # .NET 10 requires macOS 15 and later.
 modify_plist "{MINIMUM_SYSTEM_VERSION}" "15.0" "${PLIST}"
+# The Launcher opens ModId (the Library); the bundle id, icon and URL scheme keep MOD_ID, as RTSAI.exe keeps its
+# registry key.
+LAUNCHER_MOD="${LAUNCHER_MOD}" perl -0pi -e 's|(<key>ModId</key>\s*<string>)\{MOD_ID\}|$1$ENV{LAUNCHER_MOD}|' "${PLIST}"
 modify_plist "{MOD_ID}" "${MOD_ID}" "${PLIST}"
 modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${PLIST}"
 modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${VERSION}" "${PLIST}"
@@ -89,6 +150,7 @@ else
 	modify_plist "<string>{DISCORD_URL_SCHEME}</string>" "" "${PLIST}"
 fi
 plutil -lint "${PLIST}"
+[ "$(plutil -extract ModId raw "${PLIST}")" = "${LAUNCHER_MOD}" ] || { echo >&2 "Info.plist ModId is not ${LAUNCHER_MOD}"; exit 1; }
 
 clang "${ENGINE_MACOS}/apphost.c" -o "${CONTENTS}/MacOS/apphost-x86_64" -framework AppKit -target x86_64-apple-macos10.15
 clang "${ENGINE_MACOS}/apphost.c" -o "${CONTENTS}/MacOS/apphost-arm64" -framework AppKit -target arm64-apple-macos10.15
@@ -102,10 +164,17 @@ for target in x86_64:osx-x64 arm64:osx-arm64; do
 	(cd "${ENGINE}" && dotnet publish -c Release -p:TargetPlatform="${RID}" -p:CopyGenericLauncher=True \
 		-p:CopyCncDll="${PACKAGING_COPY_CNC_DLL}" -p:CopyD2kDll="${PACKAGING_COPY_D2K_DLL}" -r "${RID}" \
 		-p:PublishDir="${CONTENTS}/MacOS/${ARCH}/" -p:Deterministic=true --self-contained true --nologo -v q)
+	ENGINE_SUMS="$(cd "${CONTENTS}/MacOS/${ARCH}" && shasum -a 256 OpenRA.Game.dll OpenRA.Mods.Common.dll OpenRA.Mods.Cnc.dll)"
+	# The mod projects alone: RTSAI.sln names the old ./engine projects, and publishing it overwrote the engine's
+	# assemblies with that copy's. The engine references are Private=False, so only the mod assemblies are added.
 	for project in OpenRA.Mods.RA2 OpenRA.Mods.RTSAI; do
 		(cd "${ROOT}" && dotnet publish "${project}/${project}.csproj" -p:EngineRootPath="${ENGINE}/" -c Release -p:TargetPlatform="${RID}" -r "${RID}" \
 			-p:PublishDir="${CONTENTS}/MacOS/${ARCH}/" --self-contained true --nologo -v q)
 	done
+	(cd "${CONTENTS}/MacOS/${ARCH}" && printf '%s\n' "${ENGINE_SUMS}" | shasum -a 256 -s -c) || {
+		echo >&2 "The mod publish replaced an engine assembly (${ARCH})."
+		exit 1
+	}
 	for required in OpenRA.dll OpenRA.Utility.dll libhostfxr.dylib OpenRA.Mods.RTSAI.dll; do
 		[ -f "${CONTENTS}/MacOS/${ARCH}/${required}" ] || { echo >&2 "Missing ${ARCH}/${required}"; exit 1; }
 	done
@@ -114,35 +183,34 @@ done
 echo "== Engine data"
 # The engine archive has no GeoIP database; the engine's install_data fetches it the same way.
 bash "${ENGINE}/fetch-geoip.sh"
-for file in VERSION AUTHORS COPYING IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP; do
+for file in AUTHORS COPYING IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP; do
 	cp "${ENGINE}/${file}" "${RESOURCES}/"
 done
+if [ "${MIX_ARCHIVES}" = "True" ]; then
+	# The MIX filename database only serves Westwood archives.
+	cp "${ENGINE}/global mix database.dat" "${RESOURCES}/"
+fi
 cp -R "${ENGINE}/glsl" "${RESOURCES}/"
 cp -R "${ENGINE}/mods/common" "${RESOURCES}/mods/"
-if [ "${STANDALONE}" != "True" ]; then
-	# The MIX filename database and the content installer's chrome only serve the RA2-based mod.
-	cp "${ENGINE}/global mix database.dat" "${RESOURCES}/"
+if [ "${CONTENT_INSTALLER}" = "True" ]; then
+	# mods/common-content is the content installer's chrome.
 	for extra in ${PACKAGING_COPY_ENGINE_FILES}; do
 		extra="${extra#./}"
 		mkdir -p "${RESOURCES}/$(dirname "${extra}")"
 		cp -R "${ENGINE}/${extra}" "${RESOURCES}/${extra}"
 	done
 fi
-echo "${ENGINE_VERSION}" > "${RESOURCES}/VERSION"
+echo "${ENGINE_COMMIT}" > "${RESOURCES}/VERSION"
 
-echo "== Mod content"
-for mod in "${ROOT}/mods/"*/; do
-	mod="$(basename "${mod}")"
-	if [ "${STANDALONE}" = "True" ] && [ "${mod}" != "rtsai" ] && [ "${mod}" != "rtsai-topdown" ]; then
-		continue
-	fi
+echo "== Mod content: ${MODS}"
+for mod in ${MODS}; do
 	cp -LR "${ROOT}/mods/${mod}" "${RESOURCES}/mods/"
 	if [ -f "${RESOURCES}/mods/${mod}/mod.yaml" ]; then
 		# The SDK's set_mod_version: the release tag replaces the development placeholder.
 		VERSION="${VERSION}" perl -pi -e 's/\{DEV_VERSION\}/$ENV{VERSION}/g' "${RESOURCES}/mods/${mod}/mod.yaml"
 	fi
 done
-[ -f "${RESOURCES}/mods/${MOD_ID}/mod.yaml" ] || { echo >&2 "No mods/${MOD_ID} to package."; exit 1; }
+[ -f "${RESOURCES}/mods/${LAUNCHER_MOD}/mod.yaml" ] || { echo >&2 "No mods/${LAUNCHER_MOD} to package."; exit 1; }
 
 AI_MODE="none"
 if [ -n "${RTSAI_MAC_COMPANION}" ]; then
@@ -193,6 +261,14 @@ ln -s /Applications "${BUILT}/Applications"
 rm -f "${DMG}"
 hdiutil create "${DMG}" -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -format UDZO -imagekey zlib-level=9 -srcfolder "${BUILT}"
 (cd "${OUTPUTDIR}" && shasum -a 256 "$(basename "${DMG}")" > "$(basename "${DMG}").sha256")
-[ "${RTSAI_MAC_KEEP_BUILD:-0}" = "1" ] || rm -rf "${BUILT}"
+MODS_JSON="$(printf '"%s", ' ${MODS})"
+printf '{"version": "%s", "modCommit": "%s", "engineCommit": "%s", "launcherMod": "%s", "mods": [%s], "companion": %s, "signing": "%s", "artifacts": ["%s"]}\n' \
+	"${VERSION}" "${MOD_COMMIT}" "${ENGINE_COMMIT}" "${LAUNCHER_MOD}" "${MODS_JSON%, }" "$([ "${AI_MODE}" = "local" ] && echo true || echo false)" \
+	"${SIGNING}" "$(cat "${DMG}.sha256")" > "${OUTPUTDIR}/BUILD-INPUTS-macos.json"
+if [ "${RTSAI_MAC_KEEP_BUILD:-0}" = "1" ]; then
+	echo "Kept the build in ${BUILT}"
+else
+	rm -rf "${BUILT}"
+fi
 
-echo "Built ${DMG} ($(stat -f %z "${DMG}") bytes, ${SIGNING} signature)"
+echo "Built ${DMG} ($(stat -f %z "${DMG}") bytes, ${SIGNING} signature; mod ${MOD_COMMIT:0:7}, engine ${ENGINE_COMMIT:0:7})"
