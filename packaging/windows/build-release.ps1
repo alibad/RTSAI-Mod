@@ -164,6 +164,10 @@ Write-Host "== Engine assemblies (self-contained win-x64)"
 Invoke-Native dotnet @("publish", "-c", "Release", "-p:TargetPlatform=win-x64", "-p:CopyGenericLauncher=False",
     "-p:CopyCncDll=$($config['PACKAGING_COPY_CNC_DLL'])", "-p:CopyD2kDll=$($config['PACKAGING_COPY_D2K_DLL'])",
     "-r", "win-x64", "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q", "-m:1") "Engine publish failed" $engine
+$engineAssemblies = @{}
+foreach ($assembly in @("OpenRA.Game.dll", "OpenRA.Mods.Common.dll", "OpenRA.Mods.Cnc.dll")) {
+    $engineAssemblies[$assembly] = (Get-FileHash -LiteralPath (Join-Path $stage $assembly)).Hash
+}
 
 $mods = @(Get-ChildItem -LiteralPath (Join-Path $root "mods") -Directory)
 if ($standalone) {
@@ -200,8 +204,17 @@ foreach ($extra in $engineExtras) {
 }
 
 Write-Host "== Mod assemblies and content"
-Invoke-Native dotnet @("publish", (Join-Path $root "RTSAI.sln"), "-c", "Release", "-p:TargetPlatform=win-x64", "-r", "win-x64",
-    "-p:EngineRootPath=$engine", "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q") "Mod publish failed" $root
+# The mod projects alone: RTSAI.sln names the old ./engine projects, and publishing it overwrote the engine's
+# assemblies with that copy's. The engine references are Private=False, so only the mod assemblies are added.
+foreach ($project in @("OpenRA.Mods.RA2", "OpenRA.Mods.RTSAI")) {
+    Invoke-Native dotnet @("publish", (Join-Path $root "$project\$project.csproj"), "-c", "Release", "-p:TargetPlatform=win-x64", "-r", "win-x64",
+        "-p:EngineRootPath=$engine", "-p:PublishDir=$stage\", "--self-contained", "true", "--nologo", "-v", "q") "$project publish failed" $root
+}
+foreach ($assembly in $engineAssemblies.Keys) {
+    if ((Get-FileHash -LiteralPath (Join-Path $stage $assembly)).Hash -ne $engineAssemblies[$assembly]) {
+        throw "The mod publish replaced the engine's $assembly."
+    }
+}
 foreach ($mod in $mods) {
     Copy-Item -LiteralPath $mod.FullName -Destination (Join-Path $stage "mods") -Recurse
     $manifest = Join-Path $stage "mods\$($mod.Name)\mod.yaml"
