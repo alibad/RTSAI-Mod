@@ -1,7 +1,5 @@
 # RTS AI 0.4.0-alpha.3 — the desktop Library (Windows)
 
-**Draft, not published.** Release candidate built and tested on 1 November 2026; publishing needs the owner's word.
-
 The Windows download now opens the **RTS AI Library**: one window from which you start three games.
 
 - **Classic**: the original, with your additions. On its first start it downloads the freeware Red Alert content
@@ -18,10 +16,10 @@ AI requires optional model downloads and appropriate hardware. This alpha is **u
 published for every artifact. No macOS package is included.
 
 Tested on the build machine (not a fresh Windows install): silent install into a folder with a space, a bot skirmish
-in each of the three games started from the installed `RTSAI.exe`, the Library listing all three games and a game reopening the Library, and uninstall.
-Broader clean-OS, microphone and network acceptance remain open.
+in each of the three games started from the installed `RTSAI.exe`, the Library listing all three games and a game
+reopening the Library, and uninstall. Broader clean-OS, microphone and network acceptance remain open.
 
 Build input: mod `4c55d2e` (alibad/RTSAI-Mod main); engine `f158a224d52b16359ed3c0d643f0f0f5ec53f2c5`
 (`BUILD-INPUTS.json` beside the downloads).
 
-Download: https://rtsai.net/download · Browser: https://rtsai.net/play/
+Website: https://rtsai.net · Browser: https://rtsai.net/play/
