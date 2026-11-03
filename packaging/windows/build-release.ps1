@@ -108,7 +108,7 @@ $engineCommit = (& git -C $engine rev-parse HEAD).Trim()
 # Both games should ship the same units: RTSAI-WebGame tools/gameplay-check.mjs compares a web bundle with the desktop
 # game this mod commit builds and leaves a receipt. Warn-only for now (owner, 23 Oct 2026); it becomes a refusal later.
 $modCommit = (& git -C $root rev-parse HEAD).Trim()
-$receipts = "D:/rtsai-play-release/gameplay-check/receipts"
+$receipts = "D:/Builds/RTSAI/play-release/gameplay-check/receipts"
 $compared = @(if (Test-Path -LiteralPath $receipts) {
     Get-ChildItem -LiteralPath $receipts -Filter *.json | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Json } |
         Where-Object { $_.mod -eq $modCommit }
