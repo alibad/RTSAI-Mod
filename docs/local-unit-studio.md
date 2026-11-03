@@ -28,7 +28,7 @@ Distances use OpenRA notation (`6c0` = six cells); reload values are engine tick
 - `content/unit-revisions/`: preserved, unit-restorable snapshots of both sources.
 - `mods/rtsai/unit-overrides/`: generated target overlays, bindings and content manifest.
 - `.recovery/content-current.json`: checksum-protected pointer to the last passing local build.
-- `.recovery/studio-settings.json`: optional `buildRoot` for preview output storage; this machine uses `D:/RTSAI-StudioPreviews`.
+- `.recovery/studio-settings.json`: optional `buildRoot` for preview output storage; this machine uses `D:/Builds/RTSAI/studio-previews`.
 
 Weapons are cloned privately for the edited unit/armament, with collision-resistant names. Other units retain the shared weapon. Actor inheritance still applies to child variants; their own overrides take precedence. No authored art, audio, maps, models or base rule files are replaced.
 
