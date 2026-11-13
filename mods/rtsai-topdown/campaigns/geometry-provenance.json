@@ -63,8 +63,8 @@
       }
     },
     {
-      "id": "hezbollah-relay",
-      "geometry_input": "maps/hezbollah-relay",
+      "id": "lebanon-relay",
+      "geometry_input": "maps/lebanon-relay",
       "native_objectives": "OpenRA.Mods.RTSAI/Traits/RTSAICampaign.cs",
       "native_objective_rule_sha256": "47ef0cc4c2571ad062965703d27565dd2c0681dbf5aa8e1af89b1e2f03545194",
       "output": {

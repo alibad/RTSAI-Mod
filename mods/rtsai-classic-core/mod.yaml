@@ -225,7 +225,7 @@ FluentMessages:
 	ra2|languages/identity.ftl
 	ra2|languages/game-modes.ftl
 	ra2|languages/chrome/en.ftl
-	ra|fluent/hezbollah.ftl
+	ra|fluent/lebanon.ftl
 	ra|fluent/israel.ftl
 	common|fluent/common.ftl
 	common|fluent/chrome.ftl

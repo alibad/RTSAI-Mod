@@ -1,10 +1,10 @@
-# Hezbollah doctrine: Salvo and Swarm
+# Lebanon doctrine: Salvo and Swarm
 
-Status: **implemented** on branch `rtsai/hezbollah-doctrine` (local, from `main` 3db6883, main 5df5950 merged). Owner
+Status: **implemented** on branch `rtsai/lebanon-doctrine` (local, from `main` 3db6883, main 5df5950 merged). Owner
 gates: (a) design approved, (b) art approved at 1x/3x, (c) balance table: see "As built" at the end. Sections 1-8
 are the approved design; where the build differs, "As built" says so.
 Owner brief (2026-10-07): "basic missiles, very powerful soldiers, very mini drones". Every existing unit stays;
-they are retuned, and the doctrine adds what it needs. The faction keeps its real flag.
+they are retuned, and the doctrine adds what it needs. The faction shows Lebanon's national flag.
 
 **[ran]** = measured in the round-4 final (docs/balance.md, `docs/balance-data/r4-final*`). **[inferred]** = from rules.
 
@@ -19,7 +19,7 @@ do the heavy lifting, and FPV teams launch regenerating micro-drones that anti-a
 | Powerful soldiers | Line Fighter, Ridge Missile Team, Field Spotter, Cedar Scout (hero) | none | Veteran from the barracks, faster promotion, cover on rough ground, stationary concealment |
 | Mini drones | Loiter Drone (scaled down), Signal Post (link) | **FPV Team** + its **FPV Drone** | Operator launches 3 one-way micro-drones that regenerate; drones need the operator's link |
 
-## Where Hezbollah stands now [ran]
+## Where Lebanon stands now [ran]
 
 Round-4 final: 57% (45-68) against the modern factions, 48% (30-67) against America and Russia, 54% (38-69) on the
 naval map. Value destroyed per credit produced, land maps:
@@ -61,7 +61,7 @@ Fewer but stronger: each fighter costs more and is worth more. At equal credits 
 damage and health per credit as today [inferred], concentrated in fewer bodies, so splash and artillery hurt them
 less. The edge comes from rank, cover and concealment.
 
-**Doctrine traits on every Hezbollah infantry unit** (`^R2HezbollahInfantry`):
+**Doctrine traits on every Lebanon infantry unit** (`^R2LebanonInfantry`):
 
 | Trait | Mechanic | Effect |
 |---|---|---|
@@ -81,7 +81,7 @@ is the stationary concealment above plus the concealed bunker; no garrison mecha
 | Cedar Scout (`r2hzscout`), the hero | 1650; 170 HP; Veteran rank only by kills | **1800**; **240 HP**; leaves the barracks **Elite**; carbine 30 → **34**; demolition kept; still one at a time |
 
 Hero tier: every faction has exactly one build-limit-1 commando (Red Spear, Shadow One, Grey Wolf, Falcon, Wadi
-Ghost, Recon Specialist). Hezbollah's is the Cedar Scout, so it becomes the hero instead of adding a second one.
+Ghost, Recon Specialist). Lebanon's is the Cedar Scout, so it becomes the hero instead of adding a second one.
 
 ## 3. Very mini drones
 
@@ -136,7 +136,7 @@ Workshop: rules unchanged (descriptions only where a cross-reference changes).
 
 ## 5. Bot doctrine
 
-`doctrines.yaml` `BotDoctrine@hezbollah`:
+`doctrines.yaml` `BotDoctrine@lebanon`:
 
 | Setting | Now | Proposed |
 |---|---|---|
@@ -146,9 +146,9 @@ Workshop: rules unchanged (descriptions only where a cross-reference changes).
 | line-infantry / anti-armor | 140 / 140 | **100 / 120** |
 | artillery | 125 | **175** (rocket volume) |
 | support / anti-air / strike-aircraft | 120 / 40 / (100) | 100 / 40 / **50** |
-| new role `drone-swarm` | — | share **8** in all five profiles (only Hezbollah has the role), FPV Team tagged with it |
+| new role `drone-swarm` | — | share **8** in all five profiles (only Lebanon has the role), FPV Team tagged with it |
 
-`hezbollah-ai.yaml` / `hezbollah.yaml`: limits Rocket Battery 4 → 5, Rail Technical 6, FPV Team 6, Loiter Drone 5 → 4;
+`lebanon-ai.yaml` / `lebanon.yaml`: limits Rocket Battery 4 → 5, Rail Technical 6, FPV Team 6, Loiter Drone 5 → 4;
 the Rail Technical joins the vehicle list. `bot-types.yaml`: no change (the FPV Drone never joins squads: it rejects
 orders like a Hornet; it is added to `ExcludeFromSquadsTypes` if the squad manager picks it up).
 
@@ -166,13 +166,13 @@ Edited on a separate local branch so the narrative agent's identity and rival-vi
 | units | 17 | 19: + `hzfpv` (FPV Team, role "Drone swarm"), + `hzrail` (Rail Technical, "Artillery"); every changed unit's story follows its new in-game description |
 
 Left alone: `story` (faction identity) and anything the narrative agent adds. `content_catalog.py` must pass against
-this branch (`--mod ../RTSAI-Mod-wt-hezbollah`).
+this branch (`--mod ../RTSAI-Mod-wt-lebanon`).
 
 ## 7. Voices
 
-Same licensed set as the other Hezbollah lines (`OpenRA-AI/scripts/generate-levant-voices.py`: Chatterbox
+Same licensed set as the other Lebanon lines (`OpenRA-AI/scripts/generate-levant-voices.py`: Chatterbox
 Multilingual cloned from the Lebanese reference, Kokoro for English, "handheld field radio" finish), one new set
-`R2HezbollahfpvVoice`, 8 clips, reviewed in `docs/voice-review.csv`:
+`R2LebanonfpvVoice`, 8 clips, reviewed in `docs/voice-review.csv`:
 
 | File | Lebanese Arabic | English |
 |---|---|---|
@@ -187,7 +187,7 @@ acknowledgements only, like every other line.
 ## 8. Art (authored in Blender, no image-to-3D)
 
 Three new models, scripted with bmesh in Blender 5.2 (hard-surface parts, real pivots, explicit team-colour
-regions), faction look from `RTSAI-Art/bible/hezbollah.md`: pale stone lit faces, olive and khaki accents, dark
+regions), faction look from `RTSAI-Art/bible/lebanon.md`: pale stone lit faces, olive and khaki accents, dark
 mechanisms, short antennas.
 
 | Actor | Route | Size target (true 1x) | Design |
@@ -201,7 +201,7 @@ before the review sheet. Sheet at 1x and 3x goes to the owner (gate b) before an
 
 ## 9. Balance plan
 
-Harness `tools/balance-harness.py`, normal bots, 40-minute cap, campaigns with `focus: [hezbollah]` against all
+Harness `tools/balance-harness.py`, normal bots, 40-minute cap, campaigns with `focus: [lebanon]` against all
 eight other factions:
 - land: Dustbowl and Tournament Map A, both orientations, 3 replicates: **96 games**;
 - naval: Little Big Lake, 3 replicates: **48 games**;
@@ -214,7 +214,7 @@ Technical cost, FPV respawn time, infantry cost step, then doctrine shares. The 
 
 ## 10. Checks before merge
 
-`make test` with 0 warnings; `hit_lab.py --faction hezbollah` (new armaments included); `content_catalog.py`
+`make test` with 0 warnings; `hit_lab.py --faction lebanon` (new armaments included); `content_catalog.py`
 against the branch; one windowed bot match (game-window lock, gpu-yield line, `OPENRA_AI_HOST=0`); path-limited
 local commits, nothing pushed.
 
@@ -233,13 +233,13 @@ Differences from the design above. Each one was decided at an owner gate or meas
 | Item | Design | Built | Why |
 |---|---|---|---|
 | FPV drones vs small arms | anti-air only | `MicroDrone` target type: every `^MG` rifle and machine gun can hit them, and the ground auto-target lists include them | Owner watch item, gate (a) |
-| Ridge Missile Team | 450; RPG 90 against every armour as before | **500**, stationary concealment kept; RPG against heavy / medium armour 95 / 100 -> **65 / 80** | Trims 1-4. At 450 it traded 1.31 per credit. Without concealment (trims 1-2), Hezbollah fell to 21% against America, whose bots field almost no detectors. The modern factions lead with tanks. |
+| Ridge Missile Team | 450; RPG 90 against every armour as before | **500**, stationary concealment kept; RPG against heavy / medium armour 95 / 100 -> **65 / 80** | Trims 1-4. At 450 it traded 1.31 per credit. Without concealment (trims 1-2), Lebanon fell to 21% against America, whose bots field almost no detectors. The modern factions lead with tanks. |
 | Line Fighter | 225, rifle 16 | **275**, rifle 16 | Trims 1-2: it traded 2.07 per credit at 225. Trim 3 tried rifle 14; trim 4 reverted it, because the riflemen's core stats carry the doctrine. |
 | Fast promotion | Elite after 60% of the usual kills | **usual rate**; every fighter still leaves the barracks Veteran | Trim 5: elite riflemen snowballed where they killed most cheaply (2.19 per credit against the modern factions, 1.19 against America and Russia) |
 | Cedar Scout (hero) | leaves the barracks Elite | leaves the barracks **Veteran** | Trim 5 ("Veteran rather than more") |
 | Rough-ground cover | damage x0.80 | **x0.90** | Trim 1 (it stacks with the Veteran start) |
 | Rocket Battery / Rail Technical vs infantry | 60-70% / 80% | **100% / 100%** | Trim 4: rocket volume answers the infantry masses of America and Russia |
-| Bot anti-air share | 24 (unchanged) | **40** | Trim 4: America's jets and rocketeers caused a fifth of Hezbollah's losses |
+| Bot anti-air share | 24 (unchanged) | **40** | Trim 4: America's jets and rocketeers caused a fifth of Lebanon's losses |
 | FPV Drone art | spinning rotor frames | dark prop blur discs inside the ducts | Thin spinning blades speckled at 1x (art gate) |
 | FPV Team art | goggles, controller, small backpack quad | a large quad carried over the shoulders, a whip antenna, the controller held forward (operator pose) | Owner revision, gate (b) |
 | Rail Technical art | 6-rail rack, empty reload sprite | six square launch tubes on a dark core raised 22 degrees, dark mouths at both ends; no empty sprite | Owner revision, gate (b): it reads as a launcher at 1x |
@@ -247,7 +247,7 @@ Differences from the design above. Each one was decided at an owner gate or meas
 
 ### Balance (gate c)
 
-Harness: normal bots, 40-minute cap. Hezbollah played all eight other factions on Dustbowl and Official Tournament
+Harness: normal bots, 40-minute cap. Lebanon played all eight other factions on Dustbowl and Official Tournament
 Map A, in both orientations with 3 replicates (96 games). 0 errors in every run. Score = wins plus half the draws,
 with the 95% Wilson interval.
 
@@ -269,15 +269,15 @@ Yemen 42%. Naval (Little Big Lake, 48 games): 46% (31-62) against the modern fac
 closest to both bands: it is 4 points out in total, against 5 for trims 1-2 and 7 for trims 3 and 4.
 The trim cap (two rounds after trim 3) is reached.
 
-**Why the modern band cannot be met from Hezbollah's side [inferred from the per-opponent data].** Over the four
-trimmed rule sets, Hezbollah's score against the modern factions stayed at 69-72%. Over the same rule sets, its score
+**Why the modern band cannot be met from Lebanon's side [inferred from the per-opponent data].** Over the four
+trimmed rule sets, Lebanon's score against the modern factions stayed at 69-72%. Over the same rule sets, its score
 against America and Russia moved from 32% to 75%. Each trim after trims 1-2 moved the America+Russia score by 6 to 43
 points and the modern score by at most 3. A cut large enough to bring the modern score to 65% would take America+Russia back to about
 the 32% of trim 3. The gap sits with the opponents:
 - **China** was the weakest modern faction in round 4 (33% against the modern factions, the one target round 4
-  missed). Hezbollah beat it 11-1 in round 4 and goes 10-1 (1 draw) now. Against the other five modern factions,
-  Hezbollah scores **65%**, inside the band.
-- **Defences and infantry mass.** Against America and Russia, Hezbollah loses about 48,000 credits per game. GIs,
+  missed). Lebanon beat it 11-1 in round 4 and goes 10-1 (1 draw) now. Against the other five modern factions,
+  Lebanon scores **65%**, inside the band.
+- **Defences and infantry mass.** Against America and Russia, Lebanon loses about 48,000 credits per game. GIs,
   conscripts and flak troopers kill about 16,000 of it. Pillboxes, Tesla coils, Prism towers and sentry guns kill
   about 10,700. Against the modern factions it loses about 35,000 per game. Their rifle infantry and militia kill
   about 10,800 of it, and their bunkers and bastions about 1,500. So the veteran riflemen trade 1.89 destroyed per credit against the modern
@@ -295,8 +295,8 @@ mesh-v1-blender`; FPV Drone and Rail Technical through `glb_prerender.py` (Horne
 pass), FPV Team through `infantry_route.py` with authored landmarks (gate vs GI/Conscript passes), cameos with name
 bars. Checks on the final rules:
 - `make test`: exit 0, 0 warnings.
-- Hezbollah hit lab: 27/27, including the FPV launch link and both rocket launchers.
+- Lebanon hit lab: 27/27, including the FPV launch link and both rocket launchers.
 - `art-provenance.py --check`: 313 files, none flagged.
 - The catalog validates against this branch.
-- One windowed bot match, Hezbollah vs America (game-window lock, gpu-yield line, `OPENRA_AI_HOST=0`, rules of
+- One windowed bot match, Lebanon vs America (game-window lock, gpu-yield line, `OPENRA_AI_HOST=0`, rules of
   2ed217e): 10.8 game minutes, no exception or Lua error. The FPV Team, Rail Technical and Loiter Drone were built.

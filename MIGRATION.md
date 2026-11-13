@@ -43,7 +43,7 @@ release build.
 
 - Push order: `rtsai/engine` (68c1e95557) to `alibad/OpenRA` first, then this `main`. Not approved yet.
 - RTSAI-Web: the Studio ran `sync:art` on `rtsai/integration` (56f1bf5, ce9b33d); `sync:content` and `sync:game-media`
-  remain for its owner. The Levant game-media sync reads `israel-art/` and `hezbollah-art/source-art-review.png`,
+  remain for its owner. The Levant game-media sync reads `israel-art/` and `lebanon-art/source-art-review.png`,
   which left the mod (archived in RTSAI-Art `history/_shared/`).
 - RTSAI-Art: 28 uncommitted `voxel-v5-glb/meta.json` muzzle edits and 73 untracked candidate folders from other
   agents (2026-10-06) were left alone.

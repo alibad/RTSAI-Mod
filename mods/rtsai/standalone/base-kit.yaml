@@ -26,7 +26,7 @@ gacnst:
 			saudi: cnst-saudi
 			israel: cnst-israel
 			yemen: cnst-yemen
-			hezbollah: cnst-hezbollah
+			lebanon: cnst-lebanon
 	-WithBuildingPlacedOverlay:
 	WithBuildingPlacedAnimation:
 
@@ -41,7 +41,7 @@ nacnst:
 			saudi: cnst-saudi
 			israel: cnst-israel
 			yemen: cnst-yemen
-			hezbollah: cnst-hezbollah
+			lebanon: cnst-lebanon
 	-WithIdleOverlay@normal:
 
 gapowr:
@@ -55,7 +55,7 @@ gapowr:
 			saudi: powr-saudi
 			israel: powr-israel
 			yemen: powr-yemen
-			hezbollah: powr-hezbollah
+			lebanon: powr-lebanon
 
 napowr:
 	RenderSprites:
@@ -68,7 +68,7 @@ napowr:
 			saudi: powr-saudi
 			israel: powr-israel
 			yemen: powr-yemen
-			hezbollah: powr-hezbollah
+			lebanon: powr-lebanon
 	Building:
 		Dimensions: 2,2
 		Footprint: xx xx
@@ -89,7 +89,7 @@ garefn:
 			saudi: refn-saudi
 			israel: refn-israel
 			yemen: refn-yemen
-			hezbollah: refn-hezbollah
+			lebanon: refn-lebanon
 	Pluggable@purifier:
 		Offset: 1,1
 		Conditions:
@@ -117,7 +117,7 @@ narefn:
 			saudi: refn-saudi
 			israel: refn-israel
 			yemen: refn-yemen
-			hezbollah: refn-hezbollah
+			lebanon: refn-lebanon
 
 gapile:
 	RenderSprites:
@@ -130,7 +130,7 @@ gapile:
 			saudi: barr-saudi
 			israel: barr-israel
 			yemen: barr-yemen
-			hezbollah: barr-hezbollah
+			lebanon: barr-lebanon
 
 nahand:
 	RenderSprites:
@@ -143,7 +143,7 @@ nahand:
 			saudi: barr-saudi
 			israel: barr-israel
 			yemen: barr-yemen
-			hezbollah: barr-hezbollah
+			lebanon: barr-lebanon
 	WithIdleOverlay@flag:
 		Sequence: idle-flag
 	Building:
@@ -188,7 +188,7 @@ gaweap:
 			saudi: weap-saudi
 			israel: weap-israel
 			yemen: weap-yemen
-			hezbollah: weap-hezbollah
+			lebanon: weap-lebanon
 	-WithIdleOverlay@air-open:
 	-WithIdleOverlay@air-inside:
 
@@ -203,7 +203,7 @@ naweap:
 			saudi: weap-saudi
 			israel: weap-israel
 			yemen: weap-yemen
-			hezbollah: weap-hezbollah
+			lebanon: weap-lebanon
 	-WithIdleOverlay@air-open:
 	-WithIdleOverlay@air-inside:
 
@@ -218,7 +218,7 @@ naradr:
 			saudi: radr-saudi
 			israel: radr-israel
 			yemen: radr-yemen
-			hezbollah: radr-hezbollah
+			lebanon: radr-lebanon
 
 gaairc:
 	RenderSprites:
@@ -231,7 +231,7 @@ gaairc:
 			saudi: airf-saudi
 			israel: airf-israel
 			yemen: airf-yemen
-			hezbollah: airf-hezbollah
+			lebanon: airf-lebanon
 	-WithIdleOverlay@mid:
 
 gayard:
@@ -245,7 +245,7 @@ gayard:
 			saudi: yard-saudi
 			israel: yard-israel
 			yemen: yard-yemen
-			hezbollah: yard-hezbollah
+			lebanon: yard-lebanon
 
 nayard:
 	RenderSprites:
@@ -258,7 +258,7 @@ nayard:
 			saudi: yard-saudi
 			israel: yard-israel
 			yemen: yard-yemen
-			hezbollah: yard-hezbollah
+			lebanon: yard-lebanon
 
 gadept:
 	RenderSprites:
@@ -271,7 +271,7 @@ gadept:
 			saudi: dept-saudi
 			israel: dept-israel
 			yemen: dept-yemen
-			hezbollah: dept-hezbollah
+			lebanon: dept-lebanon
 
 nadept:
 	RenderSprites:
@@ -284,7 +284,7 @@ nadept:
 			saudi: dept-saudi
 			israel: dept-israel
 			yemen: dept-yemen
-			hezbollah: dept-hezbollah
+			lebanon: dept-lebanon
 	Building:
 		Dimensions: 3,3
 		Footprint: x== x== x==
@@ -305,7 +305,7 @@ gatech:
 			saudi: tech-saudi
 			israel: tech-israel
 			yemen: tech-yemen
-			hezbollah: tech-hezbollah
+			lebanon: tech-lebanon
 
 natech:
 	RenderSprites:
@@ -318,7 +318,7 @@ natech:
 			saudi: tech-saudi
 			israel: tech-israel
 			yemen: tech-yemen
-			hezbollah: tech-hezbollah
+			lebanon: tech-lebanon
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 	Building:
@@ -341,7 +341,7 @@ gacsph:
 			saudi: sw1-saudi
 			israel: sw1-israel
 			yemen: sw1-yemen
-			hezbollah: sw1-hezbollah
+			lebanon: sw1-lebanon
 	Tooltip:
 		Name: standalone-sw1-name
 	Buildable:
@@ -361,7 +361,7 @@ nairon:
 			saudi: sw2-saudi
 			israel: sw2-israel
 			yemen: sw2-yemen
-			hezbollah: sw2-hezbollah
+			lebanon: sw2-lebanon
 	WithSupportPowerActivationAnimation:
 		Sequence: active
 	Tooltip:
@@ -383,7 +383,7 @@ gawall:
 			saudi: wall-saudi
 			israel: wall-israel
 			yemen: wall-yemen
-			hezbollah: wall-hezbollah
+			lebanon: wall-lebanon
 
 nawall:
 	RenderSprites:
@@ -396,7 +396,7 @@ nawall:
 			saudi: wall-saudi
 			israel: wall-israel
 			yemen: wall-yemen
-			hezbollah: wall-hezbollah
+			lebanon: wall-lebanon
 
 nanrct:
 	RenderSprites:
@@ -409,7 +409,7 @@ nanrct:
 			saudi: hpwr-saudi
 			israel: hpwr-israel
 			yemen: hpwr-yemen
-			hezbollah: hpwr-hezbollah
+			lebanon: hpwr-lebanon
 	Buildable:
 		Description: standalone-hpwr-description
 	Tooltip:
@@ -441,7 +441,7 @@ amcv:
 			saudi: unit-mcv-saudi
 			israel: unit-mcv-israel
 			yemen: unit-mcv-yemen
-			hezbollah: unit-mcv-hezbollah
+			lebanon: unit-mcv-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -459,7 +459,7 @@ smcv:
 			saudi: unit-mcv-saudi
 			israel: unit-mcv-israel
 			yemen: unit-mcv-yemen
-			hezbollah: unit-mcv-hezbollah
+			lebanon: unit-mcv-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -476,7 +476,7 @@ cmin:
 			saudi: unit-harv-saudi
 			israel: unit-harv-israel
 			yemen: unit-harv-yemen
-			hezbollah: unit-harv-hezbollah
+			lebanon: unit-harv-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -495,7 +495,7 @@ harv:
 			saudi: unit-harv-saudi
 			israel: unit-harv-israel
 			yemen: unit-harv-yemen
-			hezbollah: unit-harv-hezbollah
+			lebanon: unit-harv-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -515,7 +515,7 @@ htk:
 			saudi: unit-htk-saudi
 			israel: unit-htk-israel
 			yemen: unit-htk-yemen
-			hezbollah: unit-htk-hezbollah
+			lebanon: unit-htk-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -540,7 +540,7 @@ sapc:
 			saudi: unit-sapc-saudi
 			israel: unit-sapc-israel
 			yemen: unit-sapc-yemen
-			hezbollah: unit-sapc-hezbollah
+			lebanon: unit-sapc-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -558,7 +558,7 @@ lcrf:
 			saudi: unit-lcrf-saudi
 			israel: unit-lcrf-israel
 			yemen: unit-lcrf-yemen
-			hezbollah: unit-lcrf-hezbollah
+			lebanon: unit-lcrf-lebanon
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithFacingSpriteBody:
@@ -574,7 +574,7 @@ spy:
 			saudi: unit-spy-saudi
 			israel: unit-spy-israel
 			yemen: unit-spy-yemen
-			hezbollah: unit-spy-hezbollah
+			lebanon: unit-spy-lebanon
 
 dog:
 	RenderSprites:
@@ -587,7 +587,7 @@ dog:
 			saudi: unit-dog-saudi
 			israel: unit-dog-israel
 			yemen: unit-dog-yemen
-			hezbollah: unit-dog-hezbollah
+			lebanon: unit-dog-lebanon
 
 engineer:
 	RenderSprites:
@@ -600,7 +600,7 @@ engineer:
 			saudi: unit-engineer-saudi
 			israel: unit-engineer-israel
 			yemen: unit-engineer-yemen
-			hezbollah: unit-engineer-hezbollah
+			lebanon: unit-engineer-lebanon
 
 r2kunlun:
 	RenderSprites:
@@ -612,7 +612,7 @@ r2kunlun:
 			saudi: r2kunlun
 			israel: r2kunlun
 			yemen: r2kunlun
-			hezbollah: r2kunlun
+			lebanon: r2kunlun
 
 amcv.colorpicker:
 	RenderSprites:
@@ -635,7 +635,7 @@ gapurifier:
 			saudi: purifier-saudi
 			israel: purifier-israel
 			yemen: purifier-yemen
-			hezbollah: purifier-hezbollah
+			lebanon: purifier-lebanon
 	Valued:
 		Cost: 1000
 	Tooltip:

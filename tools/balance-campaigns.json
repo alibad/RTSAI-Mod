@@ -131,7 +131,7 @@
     "id": "levant",
     "factions": [
      "israel",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -161,7 +161,7 @@
      "saudi",
      "israel",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -194,7 +194,7 @@
      "saudi",
      "israel",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -221,7 +221,7 @@
      "saudi",
      "israel",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -287,7 +287,7 @@
      "saudi",
      "israel",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"

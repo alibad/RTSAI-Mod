@@ -30,7 +30,7 @@ from pathlib import Path
 AUDIO = Path("mods/rtsai/modern-factions/audio")
 SHEET = Path("docs/voice-review.csv")
 FACTIONS = {"iran": "Iran", "shadow": "Iran", "rcn": "China", "tr": "Türkiye", "rsa": "Saudi Arabia", "rye": "Yemen",
-            "il": "Israel", "hz": "Hezbollah"}
+            "il": "Israel", "hz": "Lebanon"}
 MACHINE = ["file", "faction", "language", "engine", "role", "intended_text", "english_line", "asr_transcript", "cer",
            "detected_language", "whisper_translation", "low_confidence_words"]
 HUMAN = ["literal_meaning", "verdict", "action", "notes", "native_speaker"]

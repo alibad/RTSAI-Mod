@@ -143,8 +143,8 @@ SPEAKERS: dict[str, Speaker] = {
     "yemen-crew": Speaker(("bm_lewis", "am_michael"), "b"),
     "israel-infantry": Speaker(("am_puck", "bm_lewis")),
     "israel-crew": Speaker(("am_michael", "am_adam")),
-    "hezbollah-infantry": Speaker(("am_fenrir", "am_michael")),
-    "hezbollah-crew": Speaker(("bm_george", "am_puck"), "b"),
+    "lebanon-infantry": Speaker(("am_fenrir", "am_michael")),
+    "lebanon-crew": Speaker(("bm_george", "am_puck"), "b"),
     # Classic mission controllers (not shipped in the RA2 mod).
     "china-control": Speaker(("am_michael", "am_puck")),
     "turkey-control": Speaker(("bm_george", "am_fenrir"), "b"),
@@ -156,7 +156,7 @@ SPEAKERS: dict[str, Speaker] = {
     "saudi-eva": Speaker(("af_kore",)),
     "yemen-eva": Speaker(("af_aoede",)),
     "israel-eva": Speaker(("bf_emma", "af_heart")),  # bf_emma alone adds a tail ("Unit Laster") on 4 clips
-    "hezbollah-eva": Speaker(("bf_isabella",), "b"),
+    "lebanon-eva": Speaker(("bf_isabella",), "b"),
 }
 
 

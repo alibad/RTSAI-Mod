@@ -27,9 +27,9 @@ unit-mcv-yemen:
 	Inherits@amcv: amcv
 	Inherits@kit: mcv-yemen
 
-unit-mcv-hezbollah:
+unit-mcv-lebanon:
 	Inherits@amcv: amcv
-	Inherits@kit: mcv-hezbollah
+	Inherits@kit: mcv-lebanon
 
 unit-harv-china:
 	Inherits@cmin: cmin
@@ -61,10 +61,10 @@ unit-harv-yemen:
 	Inherits@harv: harv
 	Inherits@kit: harv-yemen
 
-unit-harv-hezbollah:
+unit-harv-lebanon:
 	Inherits@cmin: cmin
 	Inherits@harv: harv
-	Inherits@kit: harv-hezbollah
+	Inherits@kit: harv-lebanon
 
 unit-htk-china:
 	Inherits@htk: htk
@@ -90,9 +90,9 @@ unit-htk-yemen:
 	Inherits@htk: htk
 	Inherits@kit: htk-yemen
 
-unit-htk-hezbollah:
+unit-htk-lebanon:
 	Inherits@htk: htk
-	Inherits@kit: htk-hezbollah
+	Inherits@kit: htk-lebanon
 
 unit-sapc-china:
 	Inherits@sapc: sapc
@@ -118,9 +118,9 @@ unit-sapc-yemen:
 	Inherits@sapc: sapc
 	Inherits@kit: sapc-yemen
 
-unit-sapc-hezbollah:
+unit-sapc-lebanon:
 	Inherits@sapc: sapc
-	Inherits@kit: sapc-hezbollah
+	Inherits@kit: sapc-lebanon
 
 unit-lcrf-china:
 	Inherits@lcrf: lcrf
@@ -146,9 +146,9 @@ unit-lcrf-yemen:
 	Inherits@lcrf: lcrf
 	Inherits@kit: lcrf-yemen
 
-unit-lcrf-hezbollah:
+unit-lcrf-lebanon:
 	Inherits@lcrf: lcrf
-	Inherits@kit: lcrf-hezbollah
+	Inherits@kit: lcrf-lebanon
 
 unit-spy-china:
 	Inherits@BasicInfantry: ^BasicInfantry
@@ -180,10 +180,10 @@ unit-spy-yemen:
 	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: spy-yemen
 
-unit-spy-hezbollah:
+unit-spy-lebanon:
 	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@MindControllable: ^MindControllable
-	Inherits@kit: spy-hezbollah
+	Inherits@kit: spy-lebanon
 
 unit-dog-china:
 	Inherits@BasicInfantry: ^BasicInfantry
@@ -221,11 +221,11 @@ unit-dog-yemen:
 	jump:
 		Filename: dog-yemen.shp
 
-unit-dog-hezbollah:
+unit-dog-lebanon:
 	Inherits@BasicInfantry: ^BasicInfantry
-	Inherits@kit: dog-hezbollah
+	Inherits@kit: dog-lebanon
 	jump:
-		Filename: dog-hezbollah.shp
+		Filename: dog-lebanon.shp
 
 unit-engineer-china:
 	Inherits@BasicInfantry: ^BasicInfantry
@@ -257,10 +257,10 @@ unit-engineer-yemen:
 	Inherits@MindControllable: ^MindControllable
 	Inherits@kit: engineer-yemen
 
-unit-engineer-hezbollah:
+unit-engineer-lebanon:
 	Inherits@BasicInfantry: ^BasicInfantry
 	Inherits@MindControllable: ^MindControllable
-	Inherits@kit: engineer-hezbollah
+	Inherits@kit: engineer-lebanon
 
 purifier-china:
 	icon:
@@ -292,9 +292,9 @@ purifier-yemen:
 		Filename: purifier-yemenicon.png
 		Offset: 0, 0
 
-purifier-hezbollah:
+purifier-lebanon:
 	icon:
-		Filename: purifier-hezbollahicon.png
+		Filename: purifier-lebanonicon.png
 		Offset: 0, 0
 
 # 3. Effects delivered as PNG sheets under the stock stems (standalone/effects).

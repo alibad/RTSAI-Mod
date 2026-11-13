@@ -282,8 +282,8 @@ R2IsraelnavalVoice__en:
 		Attack: ra2|modern-factions/audio/il-naval-attack-en
 		Action: ra2|modern-factions/audio/il-naval-action-en
 
-R2HezbollahinfantryVoice__faction:
-	Inherits: R2HezbollahinfantryVoice
+R2LebanoninfantryVoice__faction:
+	Inherits: R2LebanoninfantryVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-inf-select-ar
 		Move: ra2|modern-factions/audio/hz-inf-move-ar
@@ -292,8 +292,8 @@ R2HezbollahinfantryVoice__faction:
 		Demolish: ra2|modern-factions/audio/hz-inf-action-ar
 		Build: ra2|modern-factions/audio/hz-inf-select-ar
 
-R2HezbollahinfantryVoice__en:
-	Inherits: R2HezbollahinfantryVoice
+R2LebanoninfantryVoice__en:
+	Inherits: R2LebanoninfantryVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-inf-select-en
 		Move: ra2|modern-factions/audio/hz-inf-move-en
@@ -302,8 +302,8 @@ R2HezbollahinfantryVoice__en:
 		Demolish: ra2|modern-factions/audio/hz-inf-action-en
 		Build: ra2|modern-factions/audio/hz-inf-select-en
 
-R2HezbollahspotterVoice__faction:
-	Inherits: R2HezbollahspotterVoice
+R2LebanonspotterVoice__faction:
+	Inherits: R2LebanonspotterVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-spotter-select-ar
 		Move: ra2|modern-factions/audio/hz-spotter-move-ar
@@ -312,8 +312,8 @@ R2HezbollahspotterVoice__faction:
 		Demolish: ra2|modern-factions/audio/hz-spotter-action-ar
 		Build: ra2|modern-factions/audio/hz-spotter-select-ar
 
-R2HezbollahspotterVoice__en:
-	Inherits: R2HezbollahspotterVoice
+R2LebanonspotterVoice__en:
+	Inherits: R2LebanonspotterVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-spotter-select-en
 		Move: ra2|modern-factions/audio/hz-spotter-move-en
@@ -322,8 +322,8 @@ R2HezbollahspotterVoice__en:
 		Demolish: ra2|modern-factions/audio/hz-spotter-action-en
 		Build: ra2|modern-factions/audio/hz-spotter-select-en
 
-R2HezbollahscoutVoice__faction:
-	Inherits: R2HezbollahscoutVoice
+R2LebanonscoutVoice__faction:
+	Inherits: R2LebanonscoutVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-scout-select-ar
 		Move: ra2|modern-factions/audio/hz-scout-move-ar
@@ -332,8 +332,8 @@ R2HezbollahscoutVoice__faction:
 		Demolish: ra2|modern-factions/audio/hz-scout-action-ar
 		Build: ra2|modern-factions/audio/hz-scout-select-ar
 
-R2HezbollahscoutVoice__en:
-	Inherits: R2HezbollahscoutVoice
+R2LebanonscoutVoice__en:
+	Inherits: R2LebanonscoutVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-scout-select-en
 		Move: ra2|modern-factions/audio/hz-scout-move-en
@@ -342,8 +342,8 @@ R2HezbollahscoutVoice__en:
 		Demolish: ra2|modern-factions/audio/hz-scout-action-en
 		Build: ra2|modern-factions/audio/hz-scout-select-en
 
-R2HezbollahfpvVoice__faction:
-	Inherits: R2HezbollahfpvVoice
+R2LebanonfpvVoice__faction:
+	Inherits: R2LebanonfpvVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-fpv-select-ar
 		Move: ra2|modern-factions/audio/hz-fpv-move-ar
@@ -352,8 +352,8 @@ R2HezbollahfpvVoice__faction:
 		Demolish: ra2|modern-factions/audio/hz-fpv-action-ar
 		Build: ra2|modern-factions/audio/hz-fpv-select-ar
 
-R2HezbollahfpvVoice__en:
-	Inherits: R2HezbollahfpvVoice
+R2LebanonfpvVoice__en:
+	Inherits: R2LebanonfpvVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-fpv-select-en
 		Move: ra2|modern-factions/audio/hz-fpv-move-en
@@ -362,48 +362,48 @@ R2HezbollahfpvVoice__en:
 		Demolish: ra2|modern-factions/audio/hz-fpv-action-en
 		Build: ra2|modern-factions/audio/hz-fpv-select-en
 
-R2HezbollahvehicleVoice__faction:
-	Inherits: R2HezbollahvehicleVoice
+R2LebanonvehicleVoice__faction:
+	Inherits: R2LebanonvehicleVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-veh-select-ar
 		Move: ra2|modern-factions/audio/hz-veh-move-ar
 		Attack: ra2|modern-factions/audio/hz-veh-attack-ar
 		Action: ra2|modern-factions/audio/hz-veh-action-ar
 
-R2HezbollahvehicleVoice__en:
-	Inherits: R2HezbollahvehicleVoice
+R2LebanonvehicleVoice__en:
+	Inherits: R2LebanonvehicleVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-veh-select-en
 		Move: ra2|modern-factions/audio/hz-veh-move-en
 		Attack: ra2|modern-factions/audio/hz-veh-attack-en
 		Action: ra2|modern-factions/audio/hz-veh-action-en
 
-R2HezbollahdroneVoice__faction:
-	Inherits: R2HezbollahdroneVoice
+R2LebanondroneVoice__faction:
+	Inherits: R2LebanondroneVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-drone-select-ar
 		Move: ra2|modern-factions/audio/hz-drone-move-ar
 		Attack: ra2|modern-factions/audio/hz-drone-attack-ar
 		Action: ra2|modern-factions/audio/hz-drone-action-ar
 
-R2HezbollahdroneVoice__en:
-	Inherits: R2HezbollahdroneVoice
+R2LebanondroneVoice__en:
+	Inherits: R2LebanondroneVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-drone-select-en
 		Move: ra2|modern-factions/audio/hz-drone-move-en
 		Attack: ra2|modern-factions/audio/hz-drone-attack-en
 		Action: ra2|modern-factions/audio/hz-drone-action-en
 
-R2HezbollahnavalVoice__faction:
-	Inherits: R2HezbollahnavalVoice
+R2LebanonnavalVoice__faction:
+	Inherits: R2LebanonnavalVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-naval-select-ar
 		Move: ra2|modern-factions/audio/hz-naval-move-ar
 		Attack: ra2|modern-factions/audio/hz-naval-attack-ar
 		Action: ra2|modern-factions/audio/hz-naval-action-ar
 
-R2HezbollahnavalVoice__en:
-	Inherits: R2HezbollahnavalVoice
+R2LebanonnavalVoice__en:
+	Inherits: R2LebanonnavalVoice
 	Voices:
 		Select: ra2|modern-factions/audio/hz-naval-select-en
 		Move: ra2|modern-factions/audio/hz-naval-move-en

@@ -125,7 +125,7 @@
 	Faction@random:
 		Name: faction-random-name
 		InternalName: Random
-		RandomFactionMembers: china, iran, turkey, saudi, israel, yemen, hezbollah
+		RandomFactionMembers: china, iran, turkey, saudi, israel, yemen, lebanon
 		Side: Randoms
 		Description: faction-random-description
 	CliffBackImpassabilityLayer:

@@ -11,8 +11,8 @@ def banner(name,w,h):
  if name=='israel':
   d.rectangle((0,0,w,h),fill='#edece3');d.rectangle((0,h*.13,w,h*.25),fill='#44729d');d.rectangle((0,h*.75,w,h*.87),fill='#44729d')
   d.polygon([(w/2,h*.30),(w*.39,h*.65),(w*.61,h*.65)],outline='#44729d');d.polygon([(w/2,h*.70),(w*.39,h*.35),(w*.61,h*.35)],outline='#44729d')
- elif name=='hezbollah':
-  d.rectangle((0,0,w,h),fill='#555c3d');d.rectangle((0,h-3,w,h),fill='#b3b881');d.ellipse((w*.38,h*.18,w*.62,h*.77),outline='#e0dbaf',width=1)
+ elif name=='lebanon':
+  d.rectangle((0,0,w,h),fill='#f4f3ee');d.rectangle((0,0,w,h*.25),fill='#d9262c');d.rectangle((0,h*.75,w,h),fill='#d9262c');d.polygon([(w/2,h*.29),(w*.41,h*.70),(w*.59,h*.70)],fill='#1f9a54')
  elif name in ('england','america'):
   if name=='england':
    d.rectangle((0,0,w,h),fill='#f0eee7');d.rectangle((w*.4,0,w*.6,h),fill='#b73a3e');d.rectangle((0,h*.37,w,h*.63),fill='#b73a3e')
@@ -33,7 +33,7 @@ def banner(name,w,h):
 
 for mode,folder in [('ra2',ROOT/'RTSAI-Mod/mods/rtsai'),('ra',ROOT/'OpenRA/mods/ra')]:
  path=folder/'chrome.yaml';text=path.read_text(encoding='utf-8');m=re.search(r'^flags:\n(.*?)(?=^\S|\Z)',text,re.S|re.M);block=m[0]
- if '\t\tisrael:' not in block:block=block.rstrip()+'\n\t\tisrael: 260, 1, 30, 15\n\t\thezbollah: 260, 17, 30, 15\n\n'
+ if '\t\tisrael:' not in block:block=block.rstrip()+'\n\t\tisrael: 260, 1, 30, 15\n\t\tlebanon: 260, 17, 30, 15\n\n'
  rects=re.findall(r'^\t\t([^:]+): (\d+), (\d+), (\d+), (\d+)\s*$',block,re.M)
  atlas=Image.new('RGBA',(512,384))
  for name,x,y,w,h in rects:atlas.alpha_composite(banner(name,int(w),int(h)),(int(x),int(y)))

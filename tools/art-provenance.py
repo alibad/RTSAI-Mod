@@ -16,8 +16,8 @@ Sources (since the owner-approved art preview was promoted on 2026-10-06):
   * infantry/  GLB-rigged infantry sprites and palettes          RTSAI-Art units/<actor>/candidates/sprite-v3-glb
   * buildings/ building and defense sprites and palettes         RTSAI-Art units/<actor>/candidates/sprite-v3-glb
   * icons/     build-menu cameos with a name bar                 RTSAI-Art units/<actor>/candidates/cameo-v3-render
-  * ui/        lobby flag atlases drawn by OpenRA-AI scripts/build-levant-flags.py (PIL primitives); the Hezbollah
-               region is its real flag, rendered by tools/faction-flag.py from tools/flag-sources/hezbollah.svg
+  * ui/        lobby flag atlases drawn by OpenRA-AI scripts/build-levant-flags.py (PIL primitives); the Lebanon
+               region is the national flag, rendered by tools/faction-flag.py from tools/flag-sources/lebanon.svg
 Each candidate's file must match the installed file byte for byte, and its bytes must be committed in RTSAI-Art.
 
 --check exits non-zero when a file is uncovered, of unknown origin, unreferenced by the game, or differs from
@@ -72,10 +72,10 @@ GENERATORS = {
     },
     "procedural-flag": {
         "kind": "flag atlases drawn with PIL primitives (rectangles, lines, ellipses, polygons)",
-        "license": "GPL-3.0-or-later (project code); national flags are public symbols; the Hezbollah region is "
-                   "non-free artwork shipped by owner decision (7 October 2026, docs/art-provenance.md)",
-        "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Hezbollah region: its real flag "
-                  "(tools/flag-sources/hezbollah.svg, from Wikipedia, the website's copy), rasterized by "
+        "license": "GPL-3.0-or-later (project code); national flags are public symbols; the Lebanon region is "
+                   "the flag-icons national flag (MIT; docs/art-provenance.md)",
+        "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Lebanon region: the national flag "
+                  "(tools/flag-sources/lebanon.svg, lipis/flag-icons v7.3.2, MIT), rasterized by "
                   "tools/faction-flag.py. The EA chrome is never copied.",
     },
 }
@@ -215,7 +215,7 @@ def flag_entry(rel: str, digest: str, product: Path) -> dict:
     return {"sha256": digest, "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)", "origin": "procedural",
             "generator": "procedural-flag", "script": f"OpenRA-AI {script}" + (f" @ {commit}" if commit else ""),
             "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; "
-                     "the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah"}
+                     "the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon"}
 
 
 def build(args) -> dict:

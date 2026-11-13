@@ -13,18 +13,18 @@ Players:
 		OwnsWorld: True
 		NonCombatant: True
 		Faction: china
-	PlayerReference@Hezbollah:
-		Name: Hezbollah
+	PlayerReference@Lebanon:
+		Name: Lebanon
 		Playable: True
 		Required: True
 		LockFaction: True
-		Faction: hezbollah
+		Faction: lebanon
 		Enemies: Opposition
 	PlayerReference@Opposition:
 		Name: Opposition
 		Faction: israel
 		Color: D83A2E
-		Enemies: Hezbollah
+		Enemies: Lebanon
 Actors:
 	Mine0: oremine
 		Owner: Neutral
@@ -41,50 +41,50 @@ Actors:
 	MissionSpawn: mpspawn
 		Owner: Neutral
 		Location: 13,94
-	HezbollahConyard: nacnst
-		Owner: Hezbollah
+	LebanonConyard: nacnst
+		Owner: Lebanon
 		Location: 12,92
-	HezbollahPower: napowr
-		Owner: Hezbollah
+	LebanonPower: napowr
+		Owner: Lebanon
 		Location: 8,98
-	HezbollahRefinery: narefn
-		Owner: Hezbollah
+	LebanonRefinery: narefn
+		Owner: Lebanon
 		Location: 15,98
-	HezbollahBarracks: nahand
-		Owner: Hezbollah
+	LebanonBarracks: nahand
+		Owner: Lebanon
 		Location: 10,104
-	HezbollahFactory: naweap
-		Owner: Hezbollah
+	LebanonFactory: naweap
+		Owner: Lebanon
 		Location: 18,108
-	HezbollahRadar: naradr
-		Owner: Hezbollah
+	LebanonRadar: naradr
+		Owner: Lebanon
 		Location: 5,106
-	HezbollahHarvester: harv
-		Owner: Hezbollah
+	LebanonHarvester: harv
+		Owner: Lebanon
 		Location: 19,94
 	Rifle0: r2hzrifle
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 18,96
 	Rifle1: r2hzrifle
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 20,96
 	Rifle2: r2hzrifle
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 22,96
 	Rifle3: r2hzrifle
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 24,96
 	AT0: r2hzat
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 18,102
 	AT1: r2hzat
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 21,102
 	Scout: r2hzscout
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 23,96
 	Launcher: r2hzrockets
-		Owner: Hezbollah
+		Owner: Lebanon
 		Location: 22,105
 	EnemyCommand: gacnst
 		Owner: Opposition
@@ -113,7 +113,7 @@ Rules:
 				normal: label-missionbrowser-normal-difficulty
 				hard: campaign-difficulty-hard
 		RTSAICampaign:
-			Mission: hezbollah-relay
+			Mission: lebanon-relay
 		ObjectivesPanel:
 			PanelName: MISSION_OBJECTIVES
 		MissionData:

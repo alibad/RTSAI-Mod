@@ -140,7 +140,7 @@ R2HZZU23:
 
 # Mobile Rocket Battery (Salvo and swarm): a volley of 8 unguided rockets with real scatter. Volume over
 # precision: it punishes clusters, infantry and buildings and wastes rockets on a lone fast target. Guidance
-# (^R2HezbollahGuided) extends range and shortens the reload.
+# (^R2LebanonGuided) extends range and shortens the reload.
 R2HZRocketVolley:
 	Inherits: Maverick
 	Range: 12c0
@@ -211,7 +211,7 @@ R2HZRailRockets:
 		Explosions: medium_clsn
 		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
 
-# The round-4 strike missile, kept for reference; no Hezbollah unit fires it since Salvo and swarm.
+# The round-4 strike missile, kept for reference; no Lebanon unit fires it since Salvo and swarm.
 R2HZYemenStrikeMissile:
 	Inherits: Maverick
 	Range: 13c0

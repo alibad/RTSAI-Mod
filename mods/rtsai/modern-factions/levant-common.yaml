@@ -14,6 +14,6 @@ Player:
 	ProvidesPrerequisite@israel:
 		Prerequisite: faction.israel
 		Factions: israel
-	ProvidesPrerequisite@hezbollah:
-		Prerequisite: faction.hezbollah
-		Factions: hezbollah
+	ProvidesPrerequisite@lebanon:
+		Prerequisite: faction.lebanon
+		Factions: lebanon

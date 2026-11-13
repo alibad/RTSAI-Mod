@@ -1,6 +1,6 @@
 GenericVoice:
 	Variants:
-		hezbollah: .r01,.r03
+		lebanon: .r01,.r03
 		israel: .v01,.v03
 		allies: .v01,.v03
 		england: .v01,.v03
@@ -24,7 +24,7 @@ GenericVoice:
 
 VehicleVoice:
 	Variants:
-		hezbollah: .r00,.r02
+		lebanon: .r00,.r02
 		israel: .v00,.v02
 		allies: .v00,.v02
 		england: .v00,.v02

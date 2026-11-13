@@ -5,7 +5,7 @@
  "sources": {
   "RTSAI-Art (local)": {
    "repo": "RTSAI-Art",
-   "head": "ddba372f2591d152b93f972078a0b5909df90060"
+   "head": "89e6756d4ccc4844ed4e20024fe0db6240f1643b"
   }
  },
  "generators": {
@@ -22,8 +22,8 @@
   },
   "procedural-flag": {
    "kind": "flag atlases drawn with PIL primitives (rectangles, lines, ellipses, polygons)",
-   "license": "GPL-3.0-or-later (project code); national flags are public symbols; the Hezbollah region is non-free artwork shipped by owner decision (7 October 2026, docs/art-provenance.md)",
-   "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Hezbollah region: its real flag (tools/flag-sources/hezbollah.svg, from Wikipedia, the website's copy), rasterized by tools/faction-flag.py. The EA chrome is never copied."
+   "license": "GPL-3.0-or-later (project code); national flags are public symbols; the Lebanon region is the flag-icons national flag (MIT; docs/art-provenance.md)",
+   "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Lebanon region: the national flag (tools/flag-sources/lebanon.svg, lipis/flag-icons v7.3.2, MIT), rasterized by tools/faction-flag.py. The EA chrome is never copied."
   }
  },
  "commercialRa2Data": "None found. Every unit sprite and cameo is a render of the project's own 3D model (a GLB generated locally from the project's concept picture), installed from a committed RTSAI-Art candidate with the same bytes; original RA2 files were read only locally to measure target statistics, never as input pixels; the flags are drawn from code. See docs/art-provenance.md.",
@@ -7962,30 +7962,30 @@
    "runtime": "referenced by rules/sequences"
   },
   "ui/faction-flags-2x.png": {
-   "sha256": "fba64cdcad2f9e9b217f8ddf6f1b9bbd27d720f56e18ce2db48c4b3fb31f96ee",
+   "sha256": "d68adc471dbce8e2e3d504d6c9207ec6465199958076cbed3a950246d2b850ce",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah",
+   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "ui/faction-flags-3x.png": {
-   "sha256": "86db7b85bf7d9fcc8a028b79a727933cf7820b6ef685f92b7ebd41371a2917b8",
+   "sha256": "e9b5e2e250365fb484eb20c9caadbb2aa8a91ec715132a48b35deea8fb4e74f4",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah",
+   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "ui/faction-flags.png": {
-   "sha256": "7482c9c86787dc8a4ff21097c57da45ae74b9a5a97a3d767d2991b2944541075",
+   "sha256": "2fd3e0e78a70fd6b15a3ee12d47b094d1c6bca029ce24ea22dbaedcd1449e2cc",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
    "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Hezbollah region replaced with the real flag by tools/faction-flag.py hezbollah",
+   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "vehicles/china-prerender.pal": {
@@ -8011,35 +8011,6 @@
     "fromImage": "units/r2cloud/candidates/cameo-v1-role-rebuild/master.png",
     "concept": {
      "candidate": "units/r2cloud/candidates/cameo-v1-role-rebuild",
-     "model": "built-in image generation tool (model ID unavailable)",
-     "costUsd": null
-    }
-   },
-   "runtime": "referenced by rules/sequences"
-  },
-  "vehicles/hezbollah-prerender.pal": {
-   "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
-   "source": {
-    "repo": "RTSAI-Art (local)",
-    "path": "units/r2hzdrone/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
-    "commit": "88a31bfb980e69d6f573c32908e8505156a05707",
-    "date": "2026-10-06"
-   },
-   "type": "palette (index 0 transparent, 1 shadow, 16-31 player remap)",
-   "origin": "procedural",
-   "generator": "project-geometry",
-   "candidate": "sprite-v6-prerender",
-   "route": "glb-prerender-v2",
-   "tool": "tools/glb_prerender.py",
-   "date": "2026-10-06",
-   "script": "computed by the route from the project's material classes and faction colours",
-   "geometry": {
-    "mesh": "units/r2hzdrone/candidates/mesh-v1-role-rebuild/mesh.glb",
-    "sha256": "edf05fbe1d36a2b5b5ae0d9be9c6212c3e8d3a179e5f9433d22e3cad6e5c05a1",
-    "madeBy": "TRELLIS.2 (local trellis-cli), seed 42",
-    "fromImage": "units/r2hzdrone/candidates/cameo-v1-role-rebuild/master.png",
-    "concept": {
-     "candidate": "units/r2hzdrone/candidates/cameo-v1-role-rebuild",
      "model": "built-in image generation tool (model ID unavailable)",
      "costUsd": null
     }
@@ -8098,6 +8069,35 @@
     "fromImage": "units/r2ilfalcon/candidates/cameo-v1-role-rebuild/master.png",
     "concept": {
      "candidate": "units/r2ilfalcon/candidates/cameo-v1-role-rebuild",
+     "model": "built-in image generation tool (model ID unavailable)",
+     "costUsd": null
+    }
+   },
+   "runtime": "referenced by rules/sequences"
+  },
+  "vehicles/lebanon-prerender.pal": {
+   "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
+   "source": {
+    "repo": "RTSAI-Art (local)",
+    "path": "units/r2hzdrone/candidates/sprite-v6-prerender/lebanon-prerender.pal",
+    "commit": "89e6756d4ccc4844ed4e20024fe0db6240f1643b",
+    "date": "2026-11-13"
+   },
+   "type": "palette (index 0 transparent, 1 shadow, 16-31 player remap)",
+   "origin": "procedural",
+   "generator": "project-geometry",
+   "candidate": "sprite-v6-prerender",
+   "route": "glb-prerender-v2",
+   "tool": "tools/glb_prerender.py",
+   "date": "2026-10-06",
+   "script": "computed by the route from the project's material classes and faction colours",
+   "geometry": {
+    "mesh": "units/r2hzdrone/candidates/mesh-v1-role-rebuild/mesh.glb",
+    "sha256": "edf05fbe1d36a2b5b5ae0d9be9c6212c3e8d3a179e5f9433d22e3cad6e5c05a1",
+    "madeBy": "TRELLIS.2 (local trellis-cli), seed 42",
+    "fromImage": "units/r2hzdrone/candidates/cameo-v1-role-rebuild/master.png",
+    "concept": {
+     "candidate": "units/r2hzdrone/candidates/cameo-v1-role-rebuild",
      "model": "built-in image generation tool (model ID unavailable)",
      "costUsd": null
     }

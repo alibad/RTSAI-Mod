@@ -21,8 +21,8 @@ WorldLoaded=function()
   A=Player.GetPlayer('DuelA'); B=Player.GetPlayer('DuelB')
   actors={}
   for i,typ in ipairs(Config.israel) do actors[#actors+1]=Spawn(A,typ,8+(i-1)%5*5,8+math.floor((i-1)/5)*5) end
-  for i,typ in ipairs(Config.hezbollah) do actors[#actors+1]=Spawn(B,typ,36+(i-1)%5*5,8+math.floor((i-1)/5)*5) end
-  Check('roster-instantiation',#actors==#Config.israel+#Config.hezbollah,#actors)
+  for i,typ in ipairs(Config.lebanon) do actors[#actors+1]=Spawn(B,typ,36+(i-1)%5*5,8+math.floor((i-1)/5)*5) end
+  Check('roster-instantiation',#actors==#Config.israel+#Config.lebanon,#actors)
   if Config.naval then
     Spawn(B,Config.ra2 and 'nayard' or 'spen',39,11)
     for i,a in ipairs(actors) do initialLocations[a]=a.Location end
@@ -57,13 +57,13 @@ Tick=function()
   end
   if t==10 then
     Check('israel-production-prerequisites',A.HasPrerequisites(Config.ra2 and {'faction.israel','gaweap'} or {'vehicles.israel','infantry.israel'}))
-    Check('hezbollah-production-prerequisites',B.HasPrerequisites(Config.ra2 and {'faction.hezbollah','naweap'} or {'vehicles.hezbollah','infantry.hezbollah'}))
+    Check('lebanon-production-prerequisites',B.HasPrerequisites(Config.ra2 and {'faction.lebanon','naweap'} or {'vehicles.lebanon','infantry.lebanon'}))
     A.Build({Config.ra2 and 'r2ilrifle' or 'ilrifle'},function(g) produced.ilinf=#g end)
     A.Build({Config.ra2 and 'r2merkava' or 'merkava'},function(g) produced.ilvehicle=#g end)
     A.Build({Config.ra2 and 'r2ilfalcon' or 'ilfalcon'},function(g) produced.ilair=#g end)
     B.Build({Config.ra2 and 'r2hzrifle' or 'hzrifle'},function(g) produced.hzinf=#g end)
-    Check('off-faction-prerequisites-rejected',not A.HasPrerequisites({'faction.hezbollah'}) and not B.HasPrerequisites({'faction.israel'}))
-    Check('hezbollah-vehicle-air-queue-start',B.Build({Config.ra2 and 'r2hztechnical' or 'hztechnical',Config.ra2 and 'r2hzdrone' or 'hzdrone'},function(g)
+    Check('off-faction-prerequisites-rejected',not A.HasPrerequisites({'faction.lebanon'}) and not B.HasPrerequisites({'faction.israel'}))
+    Check('lebanon-vehicle-air-queue-start',B.Build({Config.ra2 and 'r2hztechnical' or 'hztechnical',Config.ra2 and 'r2hzdrone' or 'hzdrone'},function(g)
       for _,a in ipairs(g) do if a.Type==(Config.ra2 and 'r2hztechnical' or 'hztechnical') then produced.hzvehicle=1 else produced.hzair=1 end end
     end))
   end

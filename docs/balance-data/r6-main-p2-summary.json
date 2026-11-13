@@ -225,7 +225,7 @@
     "r2ah64sa": 46
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "games": 64,
    "wins": 30,
    "draws": 10,
@@ -865,7 +865,7 @@
  },
  "matrix": {
   "america": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 5,
     "draws": 1,
@@ -915,7 +915,7 @@
     "score": 0.5
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "america": {
     "games": 8,
     "wins": 2,
@@ -988,7 +988,7 @@
     "losses": 3,
     "score": 0.5
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 2,
     "draws": 1,
@@ -1032,7 +1032,7 @@
    }
   },
   "china": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 0,
     "draws": 1,
@@ -1090,7 +1090,7 @@
    }
   },
   "iran": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 1,
     "draws": 2,
@@ -1148,7 +1148,7 @@
    }
   },
   "russia": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 4,
     "draws": 1,
@@ -1199,7 +1199,7 @@
    }
   },
   "saudi": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 8,
     "draws": 0,
@@ -1257,7 +1257,7 @@
    }
   },
   "turkey": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 1,
     "draws": 2,
@@ -1315,7 +1315,7 @@
    }
   },
   "yemen": {
-   "hezbollah": {
+   "lebanon": {
     "games": 8,
     "wins": 3,
     "draws": 2,

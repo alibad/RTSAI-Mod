@@ -97,15 +97,15 @@ Rules:
 	ra2|modern-factions/saudi-roles.yaml
 	ra2|modern-factions/israel-roles.yaml
 	ra2|modern-factions/yemen.yaml
-	ra2|modern-factions/hezbollah.yaml
+	ra2|modern-factions/lebanon.yaml
 	ra2|modern-factions/yemen-roster.yaml
-	ra2|modern-factions/hezbollah-roster.yaml
+	ra2|modern-factions/lebanon-roster.yaml
 	ra2|modern-factions/yemen-ai.yaml
-	ra2|modern-factions/hezbollah-ai.yaml
+	ra2|modern-factions/lebanon-ai.yaml
 	ra2|modern-factions/yemen-audio.yaml
-	ra2|modern-factions/hezbollah-audio.yaml
+	ra2|modern-factions/lebanon-audio.yaml
 	ra2|modern-factions/yemen-roles.yaml
-	ra2|modern-factions/hezbollah-roles.yaml
+	ra2|modern-factions/lebanon-roles.yaml
 	ra2|modern-factions/combined-arms-ai.yaml
 	ra2|modern-factions/doctrines.yaml
 	ra2|modern-factions/modern-scope.yaml
@@ -153,9 +153,9 @@ Sequences:
 	ra2|modern-factions/saudi-roster-sequences.yaml
 	ra2|modern-factions/israel-roster-sequences.yaml
 	ra2|modern-factions/yemen-sequences.yaml
-	ra2|modern-factions/hezbollah-sequences.yaml
+	ra2|modern-factions/lebanon-sequences.yaml
 	ra2|modern-factions/yemen-roster-sequences.yaml
-	ra2|modern-factions/hezbollah-roster-sequences.yaml
+	ra2|modern-factions/lebanon-roster-sequences.yaml
 	ra2|modern-factions/art-vehicles-sequences.yaml
 	ra2|modern-factions/art-vehicles-fx-sequences.yaml
 	ra2|modern-factions/rocket-impact-sequences.yaml
@@ -267,7 +267,7 @@ Weapons:
 	ra2|modern-factions/saudi-weapons.yaml
 	ra2|modern-factions/israel-weapons.yaml
 	ra2|modern-factions/yemen-weapons.yaml
-	ra2|modern-factions/hezbollah-weapons.yaml
+	ra2|modern-factions/lebanon-weapons.yaml
 	ra2|modern-factions/art-vehicles-fx-weapons.yaml
 	ra2|unit-overrides/ra2-desktop-weapons.yaml
 
@@ -328,7 +328,7 @@ FluentMessages:
 	ra2|modern-factions/saudi-messages.ftl
 	ra2|modern-factions/israel-messages.ftl
 	ra2|modern-factions/yemen-messages.ftl
-	ra2|modern-factions/hezbollah-messages.ftl
+	ra2|modern-factions/lebanon-messages.ftl
 	ra2|modern-factions/loading-tips.ftl
 	ra2|standalone/names.ftl
 

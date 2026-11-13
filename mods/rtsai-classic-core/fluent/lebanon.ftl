@@ -1,5 +1,5 @@
-faction-hezbollah =
-    .name = Hezbollah
+faction-lebanon =
+    .name = Lebanon
     .description = Fictional RTS faction: light forces, concealment and guided support.
 
 levant-hzrifle-name = Line Fighter

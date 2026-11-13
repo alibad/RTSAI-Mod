@@ -53,7 +53,7 @@ REF_SECONDS = {k: v["seconds"] for k, v in json.loads(
     (ROOT / "tools" / "standalone-audio" / "reference-metrics.json").read_text())["sounds"].items()}
 
 ALLIED = "shared, Allied side (China, Türkiye, Saudi Arabia, Israel)"
-SOVIET = "shared, Soviet side (Iran, Yemen, Hezbollah)"
+SOVIET = "shared, Soviet side (Iran, Yemen, Lebanon)"
 ALL = "shared, all seven factions"
 
 # speaker id -> (Kokoro voicepacks, G2P accent). Blends of the packs the faction sets use.

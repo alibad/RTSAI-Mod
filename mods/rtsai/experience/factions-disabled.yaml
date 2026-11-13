@@ -17,5 +17,5 @@ World:
 		Selectable: false
 	Faction@israel:
 		Selectable: false
-	Faction@hezbollah:
+	Faction@lebanon:
 		Selectable: false

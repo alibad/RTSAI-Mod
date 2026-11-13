@@ -1,7 +1,7 @@
-# Hezbollah, "Salvo and swarm" (docs/hezbollah-doctrine.md): few but veteran fighters, cheap unguided rocket
+# Lebanon, "Salvo and swarm" (docs/lebanon-doctrine.md): few but veteran fighters, cheap unguided rocket
 # volume and FPV micro-drone teams. Spotters and signal posts guide missiles and extend the drone link; coastal
 # forces need surveillance links; defenses hide until they fire. Detection, splash and anti-air answer them.
-^R2HezbollahInfantry:
+^R2LebanonInfantry:
 	Inherits: ^Infantry
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@MC: ^MindControllable
@@ -53,16 +53,16 @@
 		Range: 5c0
 
 r2hzrifle:
-	Inherits: ^R2HezbollahInfantry
+	Inherits: ^R2LebanonInfantry
 	Tooltip:
 		Name: levant-r2hzrifle-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nahand
+		Prerequisites: ~faction.lebanon, nahand
 		BuildPaletteOrder: 10
 		Description: levant-r2hzrifle-description
 	# Salvo and swarm: 150 -> 275 and 100 -> 130 HP, rifle 13 -> 14 (16 in the design), Veteran from the barracks:
 	# fewer, stronger fighters. The design (225, 16) measured 2.07 destroyed per credit (round 5); trims 2-3.
-	# Balance round 5: 275 -> 300 (2.88 destroyed per credit, 30% of Hezbollah's kills in the standalone baseline).
+	# Balance round 5: 275 -> 300 (2.88 destroyed per credit, 30% of Lebanon's kills in the standalone baseline).
 	Valued:
 		Cost: 300
 	Health:
@@ -71,27 +71,27 @@ r2hzrifle:
 		Speed: 66
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzat:
-	Inherits: ^R2HezbollahInfantry
-	Inherits@guidance: ^R2HezbollahGuided
+	Inherits: ^R2LebanonInfantry
+	Inherits@guidance: ^R2LebanonGuided
 	Tooltip:
 		Name: levant-r2hzat-name
 	WithColoredOverlay@guidance:
 		Color: 52E7D628
 		RequiresCondition: r2-hz-guidance
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nahand
+		Prerequisites: ~faction.lebanon, nahand
 		BuildPaletteOrder: 20
 		Description: levant-r2hzat-description
 	# 300 -> 350 (round 4); Salvo and swarm: 500, 95 -> 120 HP, RPG 90 at 5 cells (less against heavy armour since
 	# trim 4), stationary concealment (template) and Veteran from the barracks: an ambush team bought in fewer
-	# numbers. Round 5: without concealment (trims 1-2) Hezbollah fell to 21% against America, whose bots field almost
+	# numbers. Round 5: without concealment (trims 1-2) Lebanon fell to 21% against America, whose bots field almost
 	# no detectors while the modern factions all do, so the concealment stays.
 	Valued:
 		Cost: 500
@@ -105,18 +105,18 @@ r2hzat:
 		Range: 6c0
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzspotter:
-	Inherits: ^R2HezbollahInfantry
+	Inherits: ^R2LebanonInfantry
 	Tooltip:
 		Name: levant-r2hzspotter-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nahand, radar
+		Prerequisites: ~faction.lebanon, nahand, radar
 		BuildPaletteOrder: 60
 		Description: levant-r2hzspotter-description
 	# Salvo and swarm: 525 -> 450, 90 -> 115 HP; also relays the FPV drone link.
@@ -147,18 +147,18 @@ r2hzspotter:
 		Color: 52E7D680
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzscout:
-	Inherits: ^R2HezbollahInfantry
+	Inherits: ^R2LebanonInfantry
 	Tooltip:
 		Name: levant-r2hzscout-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nahand, natech
+		Prerequisites: ~faction.lebanon, nahand, natech
 		BuildPaletteOrder: 140
 		BuildLimit: 1
 		Description: levant-r2hzscout-description
@@ -195,23 +195,23 @@ r2hzscout:
 		Voice: Build
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 # FPV Team: an operator with a backpack rack of three FPV micro-drones (the stock carrier mechanism,
 # CarrierParent / CarrierChild, as the Aircraft Carrier's Hornets). Each launch reveals the concealed operator;
 # a drone is one-way (destroyed by its own charge) and the rack regrows one drone every 6 s. Killing the
 # operator downs its airborne drones.
 r2hzfpv:
-	Inherits: ^R2HezbollahInfantry
-	Inherits@guidance: ^R2HezbollahGuided
+	Inherits: ^R2LebanonInfantry
+	Inherits@guidance: ^R2LebanonGuided
 	Tooltip:
 		Name: levant-r2hzfpv-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nahand, radar
+		Prerequisites: ~faction.lebanon, nahand, radar
 		BuildPaletteOrder: 50
 		Description: levant-r2hzfpv-description
 	Valued:
@@ -229,7 +229,7 @@ r2hzfpv:
 		Armaments: primary, launcher
 	CarrierParent:
 		Actors: r2hzquad, r2hzquad, r2hzquad
-		# Round 6 (owner: Hezbollah on top): a drone regenerates every 100 ticks (was 150), so more of the
+		# Round 6 (owner: Lebanon on top): a drone regenerates every 100 ticks (was 150), so more of the
 		# swarm is in the air. Still three drones per team.
 		RespawnTicks: 100
 		RearmTicks: 40
@@ -252,12 +252,12 @@ r2hzfpv:
 		Range: 7c0
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 
 # FPV micro-drone, carried and launched by r2hzfpv; never built on its own. Small, fast and fragile: anti-air
 # and small arms (^MG weapons, MicroDrone target type) shoot it down; cannons, artillery and missiles cannot.
@@ -321,7 +321,7 @@ r2hzdrone:
 	Tooltip:
 		Name: levant-r2hzdrone-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, naweap, radar
+		Prerequisites: ~faction.lebanon, naweap, radar
 		BuildPaletteOrder: 85
 		Description: levant-r2hzdrone-description
 	# Salvo and swarm: scaled down, 700 -> 450, 90 -> 60 HP, faster (150 -> 190), warhead 220 -> 150.
@@ -350,7 +350,7 @@ r2hzdrone:
 r2hzdronehusk:
 	Inherits: ^R2DroneHusk
 
-^R2HezbollahShip:
+^R2LebanonShip:
 	Inherits: ^Ship
 	Tooltip:
 		GenericName: ra2-modern-ship
@@ -368,11 +368,11 @@ r2hzdronehusk:
 	HitShape:
 
 r2hzmissileboat:
-	Inherits: ^R2HezbollahShip
+	Inherits: ^R2LebanonShip
 	Tooltip:
 		Name: levant-r2hzmissileboat-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nayard, radar
+		Prerequisites: ~faction.lebanon, nayard, radar
 		BuildPaletteOrder: 20
 		Description: levant-r2hzmissileboat-description
 	# Salvo and swarm: 1100 -> 1000; three smaller missiles a cycle (R2HZHodeidahMissile).
@@ -415,18 +415,18 @@ r2hzmissileboat:
 		RevokeDelay: 190
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzskiff:
-	Inherits: ^R2HezbollahShip
+	Inherits: ^R2LebanonShip
 	Tooltip:
 		Name: levant-r2hzskiff-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nayard
+		Prerequisites: ~faction.lebanon, nayard
 		BuildPaletteOrder: 10
 		Description: levant-r2hzskiff-description
 	Valued:
@@ -466,18 +466,18 @@ r2hzskiff:
 		RequiresCondition: !r2-hz-link
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzsurvey:
-	Inherits: ^R2HezbollahShip
+	Inherits: ^R2LebanonShip
 	Tooltip:
 		Name: levant-r2hzsurvey-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, nayard, radar
+		Prerequisites: ~faction.lebanon, nayard, radar
 		BuildPaletteOrder: 30
 		Description: levant-r2hzsurvey-description
 	Valued:
@@ -550,13 +550,13 @@ r2hzsurvey:
 		RequiresCondition: active-radar
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
-^R2HezbollahDefense:
+		RequiresCondition: lebanon-repair
+^R2LebanonDefense:
 	Inherits: ^SupportBuilding
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
@@ -590,23 +590,23 @@ r2hzsurvey:
 		Adjacent: 6
 
 # Concealed positions: camouflaged until they fire or are hit.
-^R2HezbollahConcealed:
+^R2LebanonConcealed:
 	Cloak:
 		InitialDelay: 125
 		CloakDelay: 125
 		UncloakOn: Attack, Damage
 		DetectionTypes: Cloak
 		IsPlayerPalette: true
-		# Unpowered concealment fails too, so a beaten Hezbollah base can always be found and destroyed.
+		# Unpowered concealment fails too, so a beaten Lebanon base can always be found and destroyed.
 		RequiresCondition: !build-incomplete && !lowpower
 
 r2hzbunker:
-	Inherits: ^R2HezbollahDefense
-	Inherits@concealed: ^R2HezbollahConcealed
+	Inherits: ^R2LebanonDefense
+	Inherits@concealed: ^R2LebanonConcealed
 	Tooltip:
 		Name: levant-r2hzbunker-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, barracks
+		Prerequisites: ~faction.lebanon, barracks
 		BuildPaletteOrder: 20
 		Description: levant-r2hzbunker-description
 	Valued:
@@ -619,12 +619,12 @@ r2hzbunker:
 		Range: 5c512
 
 r2hzaanest:
-	Inherits: ^R2HezbollahDefense
+	Inherits: ^R2LebanonDefense
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: levant-r2hzaanest-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, barracks, radar
+		Prerequisites: ~faction.lebanon, barracks, radar
 		BuildPaletteOrder: 30
 		Description: levant-r2hzaanest-description
 	Valued:
@@ -639,12 +639,12 @@ r2hzaanest:
 		Range: 9c0
 
 r2hzcoastal:
-	Inherits: ^R2HezbollahDefense
-	Inherits@concealed: ^R2HezbollahConcealed
+	Inherits: ^R2LebanonDefense
+	Inherits@concealed: ^R2LebanonConcealed
 	Tooltip:
 		Name: levant-r2hzcoastal-name
 	Buildable:
-		Prerequisites: ~faction.hezbollah, radar
+		Prerequisites: ~faction.lebanon, radar
 		BuildPaletteOrder: 40
 		Description: levant-r2hzcoastal-description
 	# Salvo and swarm: 1200 -> 1000; four smaller missiles a cycle (R2HZYemenCoastalMissile).
@@ -666,12 +666,12 @@ r2hzcoastal:
 		Range: 12c0
 
 r2hzrelay:
-	Inherits: ^R2HezbollahDefense
+	Inherits: ^R2LebanonDefense
 	Tooltip:
 		Name: levant-r2hzrelay-name
 	Buildable:
 		Queue: Support
-		Prerequisites: ~faction.hezbollah, radar
+		Prerequisites: ~faction.lebanon, radar
 		BuildPaletteOrder: 65
 		Description: levant-r2hzrelay-description
 	Valued:
@@ -725,7 +725,7 @@ r2hzworkshop:
 	-ProximityExternalCondition@fpvlink:
 	-DetectCloaked:
 	ProximityExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 		Range: 4c0
 		ValidRelationships: Ally
 		RequiresCondition: !lowpower && !build-incomplete

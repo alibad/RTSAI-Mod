@@ -1715,7 +1715,7 @@
       "status": "legacy-classic; provenance/port review required"
     },
     {
-      "source": "OpenRA/mods/ra/bits/levant/hezbollah.pal",
+      "source": "OpenRA/mods/ra/bits/levant/lebanon.pal",
       "bytes": 768,
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "archiveMember": "objects/a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
@@ -4480,7 +4480,7 @@
       "status": "legacy-classic; provenance/port review required"
     },
     {
-      "source": "OpenRA/mods/ra/fluent/hezbollah.ftl",
+      "source": "OpenRA/mods/ra/fluent/lebanon.ftl",
       "bytes": 3587,
       "sha256": "3c957be3bb2efb0273b5d2d3cfcbb6a99644f72e899d079e7ca5dbcb8577dfcb",
       "archiveMember": "objects/3c957be3bb2efb0273b5d2d3cfcbb6a99644f72e899d079e7ca5dbcb8577dfcb",
@@ -4788,7 +4788,7 @@
       "status": "legacy-classic; provenance/port review required"
     },
     {
-      "source": "OpenRA/mods/ra/rules/hezbollah.yaml",
+      "source": "OpenRA/mods/ra/rules/lebanon.yaml",
       "bytes": 11846,
       "sha256": "b766599b47ee03639b2cfccd9593605dfc85734ef291b80f7fa237b70ffed331",
       "archiveMember": "objects/b766599b47ee03639b2cfccd9593605dfc85734ef291b80f7fa237b70ffed331",
@@ -4893,7 +4893,7 @@
       "status": "legacy-classic; provenance/port review required"
     },
     {
-      "source": "OpenRA/mods/ra/sequences/hezbollah.yaml",
+      "source": "OpenRA/mods/ra/sequences/lebanon.yaml",
       "bytes": 10010,
       "sha256": "36691d93310203e61697553f45540f7aa505baf4cd6c4757fc9fb53bd1466972",
       "archiveMember": "objects/36691d93310203e61697553f45540f7aa505baf4cd6c4757fc9fb53bd1466972",
@@ -5145,7 +5145,7 @@
       "status": "legacy-classic; provenance/port review required"
     },
     {
-      "source": "OpenRA/mods/ra/uibits/faction-previews/hezbollah.png",
+      "source": "OpenRA/mods/ra/uibits/faction-previews/lebanon.png",
       "bytes": 92197,
       "sha256": "60a486040f0359da932704c38d8e1b8e8add18c4e7fdc4b6b3895bf2a9cab002",
       "archiveMember": "objects/60a486040f0359da932704c38d8e1b8e8add18c4e7fdc4b6b3895bf2a9cab002",
@@ -36372,557 +36372,557 @@
       "sha256": "42fb5636b5c08540fe6d4621113cb1aeb2a191bfbe81bff9da322bb6acfc5143"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/001.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/001.wav",
       "bytes": 16478,
       "sha256": "551854db36c2fb2154fd36c88f56e5cd5bd61da8b534793e158849ff7df6f359"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/002.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/002.wav",
       "bytes": 15454,
       "sha256": "39af2fdb7d0df2cfceacd1443c15dc92f9f631b332b95c5143b8c5dd3b592971"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/003.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/003.wav",
       "bytes": 15454,
       "sha256": "1d99bbd6710e73bf81957b9ff079daaf635949b3b525ab63816f8b1bed51724a"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/004.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/004.wav",
       "bytes": 14430,
       "sha256": "b695690dd8627d96502c0960219a3ce65105566e625c4d9e67af41b487a35c4f"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/005.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/005.wav",
       "bytes": 19550,
       "sha256": "a9a099523bfeb89d9790aa6bfad8f205b0049fca885168d5f05d28ad1f80d923"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/006.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/006.wav",
       "bytes": 14430,
       "sha256": "6fd30bc8b6ff3d793d71fee9b94eec0a541b8012d2e803a7582d53c7609bdd9d"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/007.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/007.wav",
       "bytes": 13406,
       "sha256": "d9b46661c9e2f31ea3b2949f4216acede33cd7ccea98c0d08e90596add337cbd"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/008.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/008.wav",
       "bytes": 14430,
       "sha256": "acea830c959344027966ac8690c98bc2afc16a94a322ed2e2bac1d75ea317b01"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/009.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/009.wav",
       "bytes": 12382,
       "sha256": "182f1ae1ec0876b7d25291bb00241b280f9f02b91eff42accefe6f420b67868e"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/010.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/010.wav",
       "bytes": 19550,
       "sha256": "e62dc4ae60114db9281c2429739fd634fbbf395306c59b93a58c01b6d91a1307"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/011.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/011.wav",
       "bytes": 15454,
       "sha256": "f21d67f64ad0575d5a8659bafefc9a6af326b912b2c4dd844d414945fc025e3b"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/012.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/012.wav",
       "bytes": 15454,
       "sha256": "ef50948d8f99a7934615e97f04a26d79b499070230e1c1026b45c2c0af8228e7"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/013.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/013.wav",
       "bytes": 16478,
       "sha256": "5c448b0aee74c175ab542189f13968e1bfbf836f30b53dabb5f026ccbb334004"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/014.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/014.wav",
       "bytes": 11358,
       "sha256": "80d1b97d9b062052a772e364467e0d4b51889ce2f0f92bc2449cf4fb48f36ac5"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/015.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/015.wav",
       "bytes": 18526,
       "sha256": "f6ff194e9ac2203a267be48d4a862599fb522faefff6fdcd14e637e351bd5f80"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/016.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/016.wav",
       "bytes": 31838,
       "sha256": "604a6c7853546ca7c47d48931d1d91079204d0acc8f7bf48b68db4566915d48d"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/017.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/017.wav",
       "bytes": 16478,
       "sha256": "3e793e93917fb8abb41f719b4863477ebfb9efc1aa80a696c860f400676f188d"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/018.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/018.wav",
       "bytes": 21598,
       "sha256": "fef33a4664cf816f1347f9d4a3225a8254bda1c02afb140b4e8325ccf5d263cd"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/019.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/019.wav",
       "bytes": 17502,
       "sha256": "5f4ef0cdc256b6fe0432c19ba2be8c642bcf147e4102e84e622955214a5ca2cc"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/020.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/020.wav",
       "bytes": 14430,
       "sha256": "febaa602b5a0bdc3cf7d6ec69100bdd4f35c031f2acb8d3a620b7c00c5fdc40d"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/021.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/021.wav",
       "bytes": 15454,
       "sha256": "de2e1c4717dbe1bf4d8a2dcd084f93a2385e89bc67e73bb4e94377ee2691b289"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/022.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/022.wav",
       "bytes": 9310,
       "sha256": "f4b8b35f8e46ed6284468a415cc328bc3f3dad8b366084a63bbb47897aa1b7c3"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/023.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/023.wav",
       "bytes": 13406,
       "sha256": "418c1b4af92c7377307f03b4f09a9cdab478857a887d85ac3c83b4c0ca342fed"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/024.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/024.wav",
       "bytes": 10334,
       "sha256": "589981a22b345f07f8673d66bdc055579291fc483623464c16b893d183300ef1"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/025.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/025.wav",
       "bytes": 14430,
       "sha256": "4cefae8f8f431d17ccb34cb3c6fc80ef2cf4db229d3f60f38c347ded1bd0fa07"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/026.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/026.wav",
       "bytes": 16478,
       "sha256": "965bea7134d80ebfb9ac5f0c5b712395bc9087a8c008053b569fc8eb2463db45"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/027.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/027.wav",
       "bytes": 13406,
       "sha256": "c80422025ec8c334ec20bbcc59248d8b5e03f51e440ce3923c2fba9aa7fb0fed"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/028.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/028.wav",
       "bytes": 13406,
       "sha256": "4bbc787cefbe9be7aa63de3ed051fb278d25d80a3d6ee88495e408d9d330ab1c"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/029.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/029.wav",
       "bytes": 14430,
       "sha256": "d814c9614425ad18d272ba597734284e537c8dff00f327c1b6c0567297107d4f"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/030.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/030.wav",
       "bytes": 13406,
       "sha256": "f8ac91a27f8071ae4091e52a2500651c2d365b5a7a0e28dd87519ecfb380fd70"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/031.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/031.wav",
       "bytes": 13406,
       "sha256": "50ad5d918f83fddc7e73b9b22bcf2a4c72bfea55562b03a5b43318bc9bf64a04"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/032.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/032.wav",
       "bytes": 11358,
       "sha256": "7b0c8a95054b320b60cfdda66193542f06f222f92716c7a0562d69dcd321c247"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/033.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/033.wav",
       "bytes": 11358,
       "sha256": "cf817f82cb9b2949fddd38545f4c662e73c89f88eb777b72ee6c41cd95bd52e0"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/035.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/035.wav",
       "bytes": 10334,
       "sha256": "f91f1f56b3f9d47243f79ad1864648ac91125ff1fd67fabfb34285a9ff81dff9"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/036.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/036.wav",
       "bytes": 9310,
       "sha256": "17f67991712b86e7b20139fe34527a499449a415764a8055c2938234b4830399"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/037.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/037.wav",
       "bytes": 15454,
       "sha256": "d8cad3084fa685807943ea2b6b926972924443096375af7f0b33dbb63e4a37ca"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/038.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/038.wav",
       "bytes": 18526,
       "sha256": "4bb2d2a38e73364f58b5fa73783062c4950e4518cacfc51960e053739dffb00a"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/039.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/039.wav",
       "bytes": 17502,
       "sha256": "f57c654e5f1ac0029188e7ee1d8ab02069aec335a0911451b54feef22bf1e137"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/040.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/040.wav",
       "bytes": 12382,
       "sha256": "88160cb925d0a16acd55d1d50e47eb9be8cbcf926e4ad0abcc813a8549ec59b7"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/041.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/041.wav",
       "bytes": 10334,
       "sha256": "eb7e998ab59af1cbf41ed27430fa08a1c66e01474c3fe3f9d7d658d0da2a1f07"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/042.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/042.wav",
       "bytes": 10334,
       "sha256": "8dad41dc342301c4a152330c32ee3b0ccac5d33e746a494030855ec447358b45"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/043.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/043.wav",
       "bytes": 12382,
       "sha256": "dda5638a8908cb6da37079713f8d0e5dd6c71775836f3938451cd3449e4bc892"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/044.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/044.wav",
       "bytes": 11358,
       "sha256": "f7aaf10ebf403fa855a2e85e715660719ceb0958945734bb30aa76a943e45929"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/045.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/045.wav",
       "bytes": 16478,
       "sha256": "a4bed918e9a23b1cb3995d2a00db0b0cf8d70b6553a0613ee78791ecd1b8c148"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/046.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/046.wav",
       "bytes": 10334,
       "sha256": "ff21767d517822f206c62906a719cdd677496c92f7fdef847040637b8e6f0b4a"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/047.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/047.wav",
       "bytes": 28766,
       "sha256": "b548b7d54789464b876d90444925b41ee24eca85bd7afa9c9a080a2de6b0e667"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/048.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/048.wav",
       "bytes": 14430,
       "sha256": "87ccd60b86af5c217ab364cc75df1ad36cbf7abbe8471e4a018969c41f44ea38"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/049.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/049.wav",
       "bytes": 16478,
       "sha256": "663472fc0a5ba099a317f93a6440e120ebda13fb4b23c4b79269a820223c8c7c"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/050.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/050.wav",
       "bytes": 14430,
       "sha256": "bb82ad4f597c6f698e81845b462d55fe5453651eac7f8530df45ac71931159a0"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/051.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/051.wav",
       "bytes": 9310,
       "sha256": "d2c090ef8c1c405625f7a6bdec22c67c6d1b19790bf974d2b2c5af0deb26a6a1"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/052.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/052.wav",
       "bytes": 7262,
       "sha256": "91e5e9f4f005dc6ed5aa35e489aac1a75a5cc175b23be0801c84384abc71db3c"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/053.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/053.wav",
       "bytes": 10334,
       "sha256": "49fcac6a726b5fae00082ed96dcad4e96200ed41bee140f12b7b68f1a95e0527"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/054.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/054.wav",
       "bytes": 16478,
       "sha256": "e69be876059b1d900631fc4e44154febbd38a0086e264955d227cbb1b580f790"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/055.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/055.wav",
       "bytes": 15454,
       "sha256": "7a5f6b226a7bd8ef96e30e71fc5716328f1bafbdaaac3726b070f2c08f22ffdd"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/056.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/056.wav",
       "bytes": 14430,
       "sha256": "3a451c0c441d12faa2b4ffce21ab132f60f2956b9fd8f991fb303169fd9e7a82"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/057.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/057.wav",
       "bytes": 10334,
       "sha256": "59ce043320c608a48ed7afc3e75dcffa068f7c4d59b279aefce98d0de42a6d69"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/058.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/058.wav",
       "bytes": 11358,
       "sha256": "00c298242b5ac825b2969c34c7c62c74669843f756c5d1cec0283326511f4678"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/059.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/059.wav",
       "bytes": 17502,
       "sha256": "922514e61827d768bc61ebd8502c2248395f5f2b4a3477d82476526317264eee"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/060.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/060.wav",
       "bytes": 11358,
       "sha256": "90a49f682d1bf534ba5d3325f6fc88e5ca7150999f7080360ddc9738aa5d41a2"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/061.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/061.wav",
       "bytes": 11358,
       "sha256": "4fb97123aebf67d49a958bbfea2ee944c18546aefcf261387245b200af15b434"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/062.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/062.wav",
       "bytes": 10334,
       "sha256": "a5ecbe8f76aaa04506d4b3c8841718ce6a9e9f3048aa2444482c83883f0029e7"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/063.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/063.wav",
       "bytes": 14430,
       "sha256": "051338c979761c4ba2e8ebb5df98f4516cf666cec3c33c5ab87028bb3e87f921"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/064.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/064.wav",
       "bytes": 10334,
       "sha256": "b3495c0453731067fe51c911e4215808ddfd43ba701ddcc55c425f2fef7c31dc"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/065.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/065.wav",
       "bytes": 11358,
       "sha256": "0d073d6cda9a9a9223a169e7740fae5af89f42251119507f4ae397d8bccc93b7"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/066.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/066.wav",
       "bytes": 8286,
       "sha256": "00d116b574f47b850c7c74141700256d8f89ea63554bdb7c6f183e70ec21f079"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/067.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/067.wav",
       "bytes": 9310,
       "sha256": "a0774dd4ef60a8c5a3ed05936521d8e08867a588ba945f8313539b19fa35a925"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/068.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/068.wav",
       "bytes": 13406,
       "sha256": "3a4c0cc64b3df7de3cee31e7f917f659e4b89ad07038195127f3c99a4f5206c0"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/069.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/069.wav",
       "bytes": 16478,
       "sha256": "7e7a3aad1e4fc6ad86fde7a310a365311d7d7f2b99acacdefd21ec840a08680c"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/070.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/070.wav",
       "bytes": 11358,
       "sha256": "227491f8fd88105d0c81daafbd1be093e6e55402096f05a06afad166892353dc"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/071.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/071.wav",
       "bytes": 10334,
       "sha256": "b4f670c10fdf2afd6e4ee9903d1c805c4657b46352226ebe5f11fde7226beb43"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/072.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/072.wav",
       "bytes": 11358,
       "sha256": "41ae4d18baf71af41aa4d09725f9bbf9cc60a994463e670405fc5ca82b6710ea"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/073.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/073.wav",
       "bytes": 17502,
       "sha256": "cb0ae411b5b29b5a9821915e212577813f5d3092031184a05aaf1c7c8ae476f1"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/074.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/074.wav",
       "bytes": 15454,
       "sha256": "b28d5628fa9cf6f3ed9ab9632bfbfa4cea1743dabc186c84e79e4d68d2867c24"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/075.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/075.wav",
       "bytes": 18526,
       "sha256": "679850e01992c5c6f07e66c898e7a1658ca993caaf78c172ec24b129a79a057e"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/076.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/076.wav",
       "bytes": 16478,
       "sha256": "069b6231275cc95d880157e6c4842631342f3e5690155e7800798e0d4bf07870"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/077.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/077.wav",
       "bytes": 14430,
       "sha256": "74addfe83e4323ff241f97758869e2cf0ee800c7ef8554acca7bf56a28d0f6e0"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/078.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/078.wav",
       "bytes": 14430,
       "sha256": "260d0bcc256b0ea0937ed65861f56621afdb8b203b7aa2da7f1f27c1d7ae64e9"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/079.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/079.wav",
       "bytes": 10334,
       "sha256": "baf4fd1ba1374906ed690e10230c4aa713d54afc56c4ea3b4f84168bd343358e"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/080.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/080.wav",
       "bytes": 15454,
       "sha256": "734cfdf706e9d8568eefdffcae453ef9f71339fa7e91ab09a647bc5f45d06a75"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/081.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/081.wav",
       "bytes": 19550,
       "sha256": "ddf26d7f9daabac61a3544b8e8afe3a1e41ba8df9c5240185ba175b0eb97adb6"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/082.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/082.wav",
       "bytes": 17502,
       "sha256": "5f7afeffc54c8252c747f972d94f2b49d590c3d08a2165b27574790841355c13"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/083.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/083.wav",
       "bytes": 18526,
       "sha256": "7d65f0cc23c0c234f1daef4598d375c95512d9d2ec9747c08634fb4dc29a0386"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/084.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/084.wav",
       "bytes": 15454,
       "sha256": "e7bbbbb2f079e0f78bc8035da41468c6ad8703d3c6655204548d57f68ffd8183"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/085.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/085.wav",
       "bytes": 12382,
       "sha256": "8f53f27db9ec01ddd6898c8ad46c6eec215fdb953123603c36b0aab2149c901d"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/086.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/086.wav",
       "bytes": 14430,
       "sha256": "f7aae541081b418978700c569c26ad62e7dc233f14e21a99705ddd0a5b62e4f7"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/087.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/087.wav",
       "bytes": 15454,
       "sha256": "043d3cd3d909cbfef0624e5d00e47bd4cd609d53ad4254f3c6a38a95ad7f9cf4"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/088.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/088.wav",
       "bytes": 29790,
       "sha256": "4d16f82fe7e45d838d71f4b03e5222aa2a0c5b150557eade471ddb35319830f6"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/089.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/089.wav",
       "bytes": 31838,
       "sha256": "2c2bc2a4f8d2cc9a91e9a89445570a2bf06993e5d507af677754fd7b66261f9d"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/090.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/090.wav",
       "bytes": 24670,
       "sha256": "a438ba5d3f8ffd42247872d0a537a814c3790c79549925c2b2a63675e8d9f583"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/091.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/091.wav",
       "bytes": 30814,
       "sha256": "67158ad2a0c66cd7a784c6783acb2654f84c641d11358b39f6676a08b49924fc"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/092.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/092.wav",
       "bytes": 13406,
       "sha256": "faa3f580f5bb3e83cb5926371718662cac4431740ebd59319365db7927979ef1"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/093.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/093.wav",
       "bytes": 16478,
       "sha256": "87da45b7ba9a118622ac5927322e3c744595f9884462ba6586fec7e5973da757"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/094.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/094.wav",
       "bytes": 10334,
       "sha256": "6bfb630ee748246645f203085beee112423485776729d7aa04bc5627029f31c3"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/095.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/095.wav",
       "bytes": 15454,
       "sha256": "dc334823295f82dd3b7f44e43ef7fca9f2aeeac82edc8fb7927d6c1c04c65eb8"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/096.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/096.wav",
       "bytes": 18526,
       "sha256": "eac012812fffa50ee3551e609cb18ed25442532704089ca857fb51c06d9b9c73"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/097.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/097.wav",
       "bytes": 14430,
       "sha256": "585718da6f81c1b037cffba59d6901bd593e3a8ca94631db27b9930cfd1a4b34"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/098.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/098.wav",
       "bytes": 20574,
       "sha256": "0700b311055c2536d6fb091a95206b66f934dab73deb99192ac41bdca85d8842"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/099.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/099.wav",
       "bytes": 22622,
       "sha256": "8c0beaaa92b29372e869503b7bd0cf856f4ea1de6261585b26fd70beaf93a9bf"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/100.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/100.wav",
       "bytes": 16478,
       "sha256": "a414db4c3efa3e28588490ca6c0c53efa0570ef9ab4fba4153fbdf92e93df6fb"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/101.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/101.wav",
       "bytes": 16478,
       "sha256": "82b6791b5d012726b2a9ca6e8e51f73b4fbac727d452502243a6bcf94d1c7c41"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/102.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/102.wav",
       "bytes": 12382,
       "sha256": "fe2630bded524a61c291547b6f069c0ad7a28ebc518fef38e8af8d56a9a8b55f"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/103.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/103.wav",
       "bytes": 16478,
       "sha256": "f0852734d7a3af9369d4fb271cb3399d4dc150756f618b09651d416c1b81ae78"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/104.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/104.wav",
       "bytes": 16478,
       "sha256": "27716738431b8a16c928e30b55c3613a280bf848673feef5b3efa724e9ceb852"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/105.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/105.wav",
       "bytes": 13406,
       "sha256": "2a202e13eef98af99a184afb71cce4b8843f60d0ecd93a50190ed13ecf7ff698"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/106.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/106.wav",
       "bytes": 13406,
       "sha256": "112f1d8b0df536a359863e769769e02c6977210d2e72bdfd34000ecbaa0fd353"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/107.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/107.wav",
       "bytes": 16478,
       "sha256": "77a32dc9cfacd7881a701628cca1b1b26dfb612e04df12604296593b3c1c27c6"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/108.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/108.wav",
       "bytes": 11358,
       "sha256": "0371a1cc8dd368385c785d572e12d00ae290b6797aec0e8d9482d9b45aa69dec"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/109.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/109.wav",
       "bytes": 16478,
       "sha256": "e0dd5d32da9980f87050c2ec0817b655988b5e6c8e47e02f371b982bf8c48e04"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/120.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/120.wav",
       "bytes": 15454,
       "sha256": "a0f623ffb52501d469a8fc5a9cd23a09f24a711f5cb1b19494903b1003fdb987"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/121.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/121.wav",
       "bytes": 16478,
       "sha256": "c961ea79b24e85263e97615ae46f0d3a89bbea407ccbc724494fcb4f8dac3b6e"
     },
     {
-      "path": "mods/rtsai/modern-factions/audio/eva/hezbollah/122.wav",
+      "path": "mods/rtsai/modern-factions/audio/eva/lebanon/122.wav",
       "bytes": 19550,
       "sha256": "af33aba3972ef5886d119fcb9f5f1720c7c611845b5e95d3c69a9a89090b47c4"
     },
@@ -41387,47 +41387,47 @@
       "sha256": "b64d8f678895049bd45d9188eb72928da0ab458561c4017e60e353977a4477a9"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-ai.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-ai.yaml",
       "bytes": 4020,
       "sha256": "028f16cf4c88b4a0f1fa3c075fb59327123d9ef63c37839a6deb1a650a6af9d0"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-audio.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-audio.yaml",
       "bytes": 975,
       "sha256": "45a168d5a065d3fe14d25b7517dfec124e821d2c045603497f342841a3cfe9b4"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-messages.ftl",
+      "path": "mods/rtsai/modern-factions/lebanon-messages.ftl",
       "bytes": 4863,
       "sha256": "387528f3a79485383d0f6b8887d5bb74cf2b560ba064d8d481b809576ca71d46"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-roles.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-roles.yaml",
       "bytes": 1289,
       "sha256": "5e8ced0e1f66fab4438d017c024ddfa0b198913c92f836fe18a9e56c65579463"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-roster-sequences.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-roster-sequences.yaml",
       "bytes": 434,
       "sha256": "6daf9c1f39f2d8e2a2677250f1952522ac7725fa2f2e36d30a033eb42eda8bb1"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-roster.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-roster.yaml",
       "bytes": 18231,
       "sha256": "e7def45f687bac19e000ae0f778e9ae9cfefd34b1a76109e093ba67aba588b79"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-sequences.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-sequences.yaml",
       "bytes": 737,
       "sha256": "c11fdd12703be094ef9e4c42812b6ade232ef342350b5a3767c8b67ea14117f4"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah-weapons.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon-weapons.yaml",
       "bytes": 9365,
       "sha256": "d9269b34134d96729bf7eec93451439d1217112cca5c748c1edba7be9ea0e37f"
     },
     {
-      "path": "mods/rtsai/modern-factions/hezbollah.yaml",
+      "path": "mods/rtsai/modern-factions/lebanon.yaml",
       "bytes": 7246,
       "sha256": "f2ae2e130b68fb22a9393ca22b08085adaa23b08086e8902b204f939fc336f56"
     },
@@ -42602,7 +42602,7 @@
       "sha256": "2bb086c62b8941f8dd89fc019f22c907dd5741a3874c426efdd85e1c8a3ad1a4"
     },
     {
-      "path": "mods/rtsai/modern-factions/vehicles/hezbollah-prerender.pal",
+      "path": "mods/rtsai/modern-factions/vehicles/lebanon-prerender.pal",
       "bytes": 768,
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e"
     },
@@ -44567,12 +44567,12 @@
       "sha256": "8ccb5f78d0ae27bb43b4c7fd6f53bb9deec92a9a21a1f6cc983b8846d575daae"
     },
     {
-      "path": "mods/rtsai/standalone/base/airf-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/airf-lebanon.shp",
       "bytes": 388281,
       "sha256": "48bfb180cf0f966b8f09a1b8b17b09c6f036f982a9f098de8490ffafb9641be4"
     },
     {
-      "path": "mods/rtsai/standalone/base/airf-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/airf-lebanonicon.png",
       "bytes": 5158,
       "sha256": "2108e666fc72c4e87cbf3f6ab4078bc35a4386559c3bb01f36e50a778a0c25f8"
     },
@@ -44637,12 +44637,12 @@
       "sha256": "fe852a95cee30172926dff01d96fa996b692d6544cf63d086ec112899ff68b9d"
     },
     {
-      "path": "mods/rtsai/standalone/base/barr-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/barr-lebanon.shp",
       "bytes": 475286,
       "sha256": "1291618204b900b9e7c61f0b30f189d92d6650bffc9b5de374ca7814ea795e72"
     },
     {
-      "path": "mods/rtsai/standalone/base/barr-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/barr-lebanonicon.png",
       "bytes": 4788,
       "sha256": "c83200051cd7213a0171064add42738597029191a6c1d435e54ae27f7fed81dc"
     },
@@ -44707,12 +44707,12 @@
       "sha256": "b7f70d8b97bbb3bb773aedad80aedc8bd1c2c3611ce5398e45e11c08f903a38c"
     },
     {
-      "path": "mods/rtsai/standalone/base/cnst-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/cnst-lebanon.shp",
       "bytes": 2323312,
       "sha256": "6af537859f0a4e4787f41bb8f50f4420f08d67882499036c643afc445a402893"
     },
     {
-      "path": "mods/rtsai/standalone/base/cnst-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/cnst-lebanonicon.png",
       "bytes": 5319,
       "sha256": "bdeb0b97eb2104577bc5c5f9403760edfa441ccfb702b9ee7ab992ead1d161eb"
     },
@@ -44777,12 +44777,12 @@
       "sha256": "71138552ce07a674198019ddfa1886a2ee5469e4f434994d0fa9c54d9d72b80a"
     },
     {
-      "path": "mods/rtsai/standalone/base/dept-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/dept-lebanon.shp",
       "bytes": 577657,
       "sha256": "ddd6978bc3328c2cb24715ff710047aa24bd5e955a12a7d46cab7a8f45332e10"
     },
     {
-      "path": "mods/rtsai/standalone/base/dept-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/dept-lebanonicon.png",
       "bytes": 5067,
       "sha256": "c8f1321302945cad2977267d5d583d2a183169f0be5f3b4db2b4b8dbbfdaf5f7"
     },
@@ -44847,12 +44847,12 @@
       "sha256": "d5798f361231d41fe0173346b04a9665e4d4d1ecfb0300e98441ebeea592294e"
     },
     {
-      "path": "mods/rtsai/standalone/base/hpwr-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/hpwr-lebanon.shp",
       "bytes": 610028,
       "sha256": "d55aa7d277349affb354b2310f696501dc48705420c88f3dc399044995e8d52a"
     },
     {
-      "path": "mods/rtsai/standalone/base/hpwr-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/hpwr-lebanonicon.png",
       "bytes": 5457,
       "sha256": "4afbd11ac448b30157bbe5593cebc0d4cbcf4b166a9aa37a5cf9e79fcd7a225c"
     },
@@ -44927,12 +44927,12 @@
       "sha256": "904bcbef7ba03a7cf96fb32ceac68878342073440074ce9b4c2c871001929173"
     },
     {
-      "path": "mods/rtsai/standalone/base/powr-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/powr-lebanon.shp",
       "bytes": 300347,
       "sha256": "8acd6624238ba5ef11826801202ac5ef0943aa05747093343b8ebaf370628291"
     },
     {
-      "path": "mods/rtsai/standalone/base/powr-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/powr-lebanonicon.png",
       "bytes": 4854,
       "sha256": "20bed9692b51bf5b55a9d48f7542beefb14f744dd57339e81ddcb487772f38e5"
     },
@@ -44992,7 +44992,7 @@
       "sha256": "5b75a1b998fbed736d1d7b4499b0f132c0a2aa2a746fd2f4fbd2282c5f902dc4"
     },
     {
-      "path": "mods/rtsai/standalone/base/purifier-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/purifier-lebanonicon.png",
       "bytes": 5025,
       "sha256": "200a93ca5cc8d5c44ecf371842a5bd60ae412e2dfe9cbdf4623133dfbf75fdab"
     },
@@ -45032,12 +45032,12 @@
       "sha256": "51710bdc2c160f7aa64366f6aa5dce2be86f23a196566ad069412a98732154c8"
     },
     {
-      "path": "mods/rtsai/standalone/base/radr-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/radr-lebanon.shp",
       "bytes": 340671,
       "sha256": "8d956d6491422f1b152ceabfdccdfa331e1a7dd6d0ae3aceac4548c0607a25ad"
     },
     {
-      "path": "mods/rtsai/standalone/base/radr-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/radr-lebanonicon.png",
       "bytes": 4607,
       "sha256": "4e4a04acfecc5704e1c0d333f735f6525addb827936efeaf5da1f3bb0a0a2d17"
     },
@@ -45102,12 +45102,12 @@
       "sha256": "4f96169ee6770ec49ccdba44d8c58e1970d906d1691d168b08419ff3d2a0f3e8"
     },
     {
-      "path": "mods/rtsai/standalone/base/refn-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/refn-lebanon.shp",
       "bytes": 805520,
       "sha256": "93983e8c6cb1131194bd18ed010e18d21ad8109645189eac404f90ffce0e53f5"
     },
     {
-      "path": "mods/rtsai/standalone/base/refn-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/refn-lebanonicon.png",
       "bytes": 5320,
       "sha256": "49cb28196b38c9e0394b732c603033ea820ee862fde8105b4a382f5374623013"
     },
@@ -45172,12 +45172,12 @@
       "sha256": "6aee50e40cddeddc34babfea95e42f814d57c3f6823a2265de41216325fff859"
     },
     {
-      "path": "mods/rtsai/standalone/base/sw1-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/sw1-lebanon.shp",
       "bytes": 720742,
       "sha256": "c3ea677cb8968592dc82ef28c63d3cbcdf19472dd4aef7d55273246972c8283d"
     },
     {
-      "path": "mods/rtsai/standalone/base/sw1-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/sw1-lebanonicon.png",
       "bytes": 5438,
       "sha256": "d82a804464e8c78f51e19638e5293ba6dd49eb28c48ba4f7902373053ead8954"
     },
@@ -45242,12 +45242,12 @@
       "sha256": "47f6eca2baf58df92c7aa2d6e837bc6cf86d8701c77843b82d8413a1b7374491"
     },
     {
-      "path": "mods/rtsai/standalone/base/sw2-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/sw2-lebanon.shp",
       "bytes": 1040936,
       "sha256": "a436557c4b24728c017eba4eaca9459876a9b49cdd8e3caffe6b02b0b203ea1c"
     },
     {
-      "path": "mods/rtsai/standalone/base/sw2-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/sw2-lebanonicon.png",
       "bytes": 5121,
       "sha256": "98657d329e1fa178bda4eb58d2f2358e04cbe3e7c471e1210dc7ce758d5ac76e"
     },
@@ -45312,12 +45312,12 @@
       "sha256": "6a83ba38229a77d3824e2428241f05a8de89a213239aeb8c0fdcbc7adc14cfa9"
     },
     {
-      "path": "mods/rtsai/standalone/base/tech-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/tech-lebanon.shp",
       "bytes": 444856,
       "sha256": "c64ea39e9d60a1bc67d873394686bb91876b8cc3dc0b448d174cbe8b2a552e20"
     },
     {
-      "path": "mods/rtsai/standalone/base/tech-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/tech-lebanonicon.png",
       "bytes": 4475,
       "sha256": "f1c5a927d8bd396010e4bdf4d29f2e166e489c0aa531fcc89a8958c705d3feed"
     },
@@ -45382,12 +45382,12 @@
       "sha256": "059fb91b06672bbfb89edefc06dedaa483bf67bfaf334f32c1bfe3c0e01bb1be"
     },
     {
-      "path": "mods/rtsai/standalone/base/wall-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/wall-lebanon.shp",
       "bytes": 80848,
       "sha256": "245393afe55d61e5976191961bfb704555c1d6318e6a697d7835501bd908eded"
     },
     {
-      "path": "mods/rtsai/standalone/base/wall-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/wall-lebanonicon.png",
       "bytes": 4617,
       "sha256": "b5770124f85fbfd053adfa68caca5abf85a22953503fac939b26dd304ac62bf2"
     },
@@ -45452,12 +45452,12 @@
       "sha256": "7a97d7dd8f9be0a0fcc84499c98a2b3decb4edc7bad8dd665ea4b3a76c6f2283"
     },
     {
-      "path": "mods/rtsai/standalone/base/weap-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/weap-lebanon.shp",
       "bytes": 1168662,
       "sha256": "a2d58ccb88ad18be14c00dc3e905460061c8c4574f6aff6fef554b4c5a0ffd83"
     },
     {
-      "path": "mods/rtsai/standalone/base/weap-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/weap-lebanonicon.png",
       "bytes": 5308,
       "sha256": "8d44788bd18f00c8e7920ca1e9f18a5c7f20a11b4da476c5da26d88521a4ef4f"
     },
@@ -45522,12 +45522,12 @@
       "sha256": "ce8a4452a5cfa73ae6fa18c4e6308a6489f854c446ed7bc0dd7a69fcd2416ab1"
     },
     {
-      "path": "mods/rtsai/standalone/base/yard-hezbollah.shp",
+      "path": "mods/rtsai/standalone/base/yard-lebanon.shp",
       "bytes": 777963,
       "sha256": "2243b5872a6b973e43134fa436306119e36450c97f8e415cfe847d6cefa8f230"
     },
     {
-      "path": "mods/rtsai/standalone/base/yard-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/base/yard-lebanonicon.png",
       "bytes": 5370,
       "sha256": "7cb092e7984e7146c779ae436eda69992522170b7dba2cc73899624b8c4cc523"
     },
@@ -54907,12 +54907,12 @@
       "sha256": "f0f59005d8922032009b4b6e10091928898639ed6176eb2b4c8f5c326cbebd8d"
     },
     {
-      "path": "mods/rtsai/standalone/units/dog-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/dog-lebanon.shp",
       "bytes": 251627,
       "sha256": "3ef1b35448959d07ff33e58b378f8101febc89336020b6b25f8af3adc37f9d25"
     },
     {
-      "path": "mods/rtsai/standalone/units/dog-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/dog-lebanonicon.png",
       "bytes": 5353,
       "sha256": "f0f59005d8922032009b4b6e10091928898639ed6176eb2b4c8f5c326cbebd8d"
     },
@@ -54977,12 +54977,12 @@
       "sha256": "e432082655a55bfcee5c379e259936835a44f3d7e95af5f55e32e000e216bf40"
     },
     {
-      "path": "mods/rtsai/standalone/units/engineer-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/engineer-lebanon.shp",
       "bytes": 267511,
       "sha256": "a42afc3333a187eb304a1b595719fb48435db6cce5474b454233428bfd6b3a85"
     },
     {
-      "path": "mods/rtsai/standalone/units/engineer-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/engineer-lebanonicon.png",
       "bytes": 4472,
       "sha256": "6ebc542166b1d90b521d69700bad2a3a7b73b57b31ae4cc1279d73a8c75537b0"
     },
@@ -55047,12 +55047,12 @@
       "sha256": "4fdb5960570af26bf5a50438e4f498d14bc8127923a45fc334f41d7566eb6a8d"
     },
     {
-      "path": "mods/rtsai/standalone/units/harv-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/harv-lebanon.shp",
       "bytes": 89590,
       "sha256": "8df5bbbc3942803f95a5b37ed161999d3c58d45d8a0275f586975c3d2802e3c0"
     },
     {
-      "path": "mods/rtsai/standalone/units/harv-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/harv-lebanonicon.png",
       "bytes": 5332,
       "sha256": "d7fca7020972089bb88ca2b7c6538a6ada9873d34f62a700aa3d14f5e2a252f5"
     },
@@ -55117,12 +55117,12 @@
       "sha256": "ee14a76cdb47f37326fd8f261b2060db7b6de024a9d1c75210329f79dc1ad846"
     },
     {
-      "path": "mods/rtsai/standalone/units/htk-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/htk-lebanon.shp",
       "bytes": 86353,
       "sha256": "c8bde79438878f66bceef5e5b8dea2dd9d84f000abbdcf181ed6458c543eb06f"
     },
     {
-      "path": "mods/rtsai/standalone/units/htk-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/htk-lebanonicon.png",
       "bytes": 4816,
       "sha256": "f46cc9e6934027fa7bd73a9e33a7b3b3f4e0a08f97a64a3cb761215b44e21659"
     },
@@ -55187,12 +55187,12 @@
       "sha256": "39e5768dc8cd980917fb549e7dcfc7db721289baac2a0a35ee25aefca0784bf6"
     },
     {
-      "path": "mods/rtsai/standalone/units/lcrf-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/lcrf-lebanon.shp",
       "bytes": 119226,
       "sha256": "b19a03a098c0c759ce8dc19128388ebec0394164a2810e6e1cae2a1744f8fadc"
     },
     {
-      "path": "mods/rtsai/standalone/units/lcrf-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/lcrf-lebanonicon.png",
       "bytes": 5420,
       "sha256": "4e33ae0927787e957af06004cb575a080942fe1c722838ba6bfcee729ea8f92e"
     },
@@ -55257,12 +55257,12 @@
       "sha256": "7496839e3d6ea68bb98fe1d2e311970863ec511e0ca21289631479b3482323f1"
     },
     {
-      "path": "mods/rtsai/standalone/units/mcv-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/mcv-lebanon.shp",
       "bytes": 114099,
       "sha256": "bcf8131fde63a892517ce9fc1eaf4cccd3d6fe964049116ff484cfab63cdd886"
     },
     {
-      "path": "mods/rtsai/standalone/units/mcv-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/mcv-lebanonicon.png",
       "bytes": 5466,
       "sha256": "8e5175b963141405a84792a7d7645fce13327076343913df1a1240a0025098e0"
     },
@@ -55327,12 +55327,12 @@
       "sha256": "229db675c7434d831b605d7350ba64426f981f1338610361e17ab1e319073733"
     },
     {
-      "path": "mods/rtsai/standalone/units/sapc-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/sapc-lebanon.shp",
       "bytes": 78214,
       "sha256": "8844ebe51bae4f44da11453ee8b954d0f65aa23774b431035fd314459cc2f438"
     },
     {
-      "path": "mods/rtsai/standalone/units/sapc-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/sapc-lebanonicon.png",
       "bytes": 4878,
       "sha256": "e09accf7376ab46b0b83971698d5af13c9da80e2d2fad3553e734b6bcfd45e23"
     },
@@ -55397,12 +55397,12 @@
       "sha256": "f8dd1d23806c7a8ab78098c80de80cb98e9f56cd3d08e0305678deb5273474bf"
     },
     {
-      "path": "mods/rtsai/standalone/units/spy-hezbollah.shp",
+      "path": "mods/rtsai/standalone/units/spy-lebanon.shp",
       "bytes": 250776,
       "sha256": "5da8912d4bd63f54a4baefb035af07698243ccfa05c2eafde081c7629d6cd9c2"
     },
     {
-      "path": "mods/rtsai/standalone/units/spy-hezbollahicon.png",
+      "path": "mods/rtsai/standalone/units/spy-lebanonicon.png",
       "bytes": 4743,
       "sha256": "6c7d9218670ed5ba0abd531586dbe37f4d431f6539a302fe03eb38c73d4ba49f"
     },
@@ -55567,17 +55567,17 @@
       "sha256": "f1b602db7d8f696a65f6437cae7ef896c653a60eab81f65fb784ed6930d42549"
     },
     {
-      "path": "mods/rtsai/campaigns/maps/hezbollah-relay/map.bin",
+      "path": "mods/rtsai/campaigns/maps/lebanon-relay/map.bin",
       "bytes": 49169,
       "sha256": "22e0086eac818074a195b8d7ec3d96720d95c9b68e4994e3a70425724788d7c5"
     },
     {
-      "path": "mods/rtsai/campaigns/maps/hezbollah-relay/map.png",
+      "path": "mods/rtsai/campaigns/maps/lebanon-relay/map.png",
       "bytes": 4214,
       "sha256": "acd8011139fa9f275f784ca6e83f41ea85bab1d1be653b76fb4e4364635f8537"
     },
     {
-      "path": "mods/rtsai/campaigns/maps/hezbollah-relay/map.yaml",
+      "path": "mods/rtsai/campaigns/maps/lebanon-relay/map.yaml",
       "bytes": 2628,
       "sha256": "c55236d174627ffae533d0e5d447ed5f3a9015414b13c3a5feb136af1f394b05"
     },
@@ -55682,17 +55682,17 @@
       "sha256": "4de92924ef818c631de5259eb813dff8e68e5e97e4ccaf03a638a57d2d01d05d"
     },
     {
-      "path": "mods/rtsai-topdown/campaigns/maps/hezbollah-relay/map.bin",
+      "path": "mods/rtsai-topdown/campaigns/maps/lebanon-relay/map.bin",
       "bytes": 49169,
       "sha256": "e30991b06dc751ecba09d3e2cadbb89950ab602726c8e47965f064b3b6c2a6e7"
     },
     {
-      "path": "mods/rtsai-topdown/campaigns/maps/hezbollah-relay/map.png",
+      "path": "mods/rtsai-topdown/campaigns/maps/lebanon-relay/map.png",
       "bytes": 4214,
       "sha256": "acd8011139fa9f275f784ca6e83f41ea85bab1d1be653b76fb4e4364635f8537"
     },
     {
-      "path": "mods/rtsai-topdown/campaigns/maps/hezbollah-relay/map.yaml",
+      "path": "mods/rtsai-topdown/campaigns/maps/lebanon-relay/map.yaml",
       "bytes": 2633,
       "sha256": "d56dd0e365d8ff3e0894c1758f562ef2e4f80734859a8b43bd5f726ea4f18bf4"
     },
@@ -55888,7 +55888,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/bible/hezbollah.md",
+      "source": "RTSAI-Art/bible/lebanon.md",
       "sha256": "5d22e076540327acf1b2543ed94939df0b7fcfcb236e9efa152573b5da7960e4",
       "bytes": 609,
       "status": "retained editable source library; do not remove"
@@ -56050,7 +56050,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/_shared/20261004-60a486040f-hezbollah.png",
+      "source": "RTSAI-Art/history/_shared/20261004-60a486040f-lebanon.png",
       "sha256": "60a486040f0359da932704c38d8e1b8e8add18c4e7fdc4b6b3895bf2a9cab002",
       "bytes": 92197,
       "status": "retained editable source library; do not remove"
@@ -56062,13 +56062,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/_shared/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/_shared/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/_shared/20261004-a80f079ad8-hezbollah.pal",
+      "source": "RTSAI-Art/history/_shared/20261004-a80f079ad8-lebanon.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -56116,7 +56116,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/_shared/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/_shared/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59668,7 +59668,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzdrone/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzdrone/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59692,7 +59692,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzdrone/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzdrone/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59710,7 +59710,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzdrone/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzdrone/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59776,7 +59776,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzescort/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzescort/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59854,7 +59854,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzescort/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzescort/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59872,7 +59872,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzescort/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzescort/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59926,7 +59926,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzmissileboat/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzmissileboat/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -59974,13 +59974,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzmissileboat/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzmissileboat/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzmissileboat/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzmissileboat/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60040,7 +60040,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzrecoilless/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzrecoilless/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60154,7 +60154,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzrecoilless/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzrecoilless/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60172,7 +60172,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzrecoilless/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzrecoilless/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60364,7 +60364,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzrockets/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzrockets/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60406,13 +60406,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzrockets/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzrockets/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzrockets/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzrockets/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60550,7 +60550,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzskiff/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzskiff/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60562,13 +60562,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzskiff/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzskiff/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzskiff/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzskiff/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60712,7 +60712,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzsurvey/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hzsurvey/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60802,13 +60802,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzsurvey/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzsurvey/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hzsurvey/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hzsurvey/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60856,7 +60856,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hztechnical/20261004-a80f079ad8-hezbollah-voxels.pal",
+      "source": "RTSAI-Art/history/r2hztechnical/20261004-a80f079ad8-lebanon-voxels.pal",
       "sha256": "a80f079ad829ca3b53b7536e9a873f98dafb905237bddedc5e23523cdf1f41e8",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -60904,13 +60904,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hztechnical/20261005-c324ebe1c7-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hztechnical/20261005-c324ebe1c7-lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/history/r2hztechnical/20261005-cb4fc9d34f-hezbollah-glb.pal",
+      "source": "RTSAI-Art/history/r2hztechnical/20261005-cb4fc9d34f-lebanon-glb.pal",
       "sha256": "cb4fc9d34f6c83396bd5e7f2371b992d6713bef8dbebd40f1a29fffb5880c899",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -70186,7 +70186,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/tools/palettes/hezbollah.json",
+      "source": "RTSAI-Art/tools/palettes/lebanon.json",
       "sha256": "72cee362ab159c9fe3230bd1c7b7c5de352906e4510f6cf8d95420a08549f77f",
       "bytes": 1294,
       "status": "retained editable source library; do not remove"
@@ -71818,19 +71818,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v1/airf-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v1/airf-lebanon.shp",
       "sha256": "47b7543ef11a5463db20794324b49dee8c3cf155447b4765d876018d0436593f",
       "bytes": 381466,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v1/airf-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v1/airf-lebanonicon-nolabel.png",
       "sha256": "d2893d20a7e01c6f98da81f43b92764f8873a043b4f4d90f6e321d821a3938d9",
       "bytes": 4611,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v1/airf-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v1/airf-lebanonicon.png",
       "sha256": "1412a2ed0fb6b452b30198e9d321d86a0a5201d0ad12b1b75b84fa65e1f703ff",
       "bytes": 4630,
       "status": "retained editable source library; do not remove"
@@ -71974,19 +71974,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v2/airf-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v2/airf-lebanon.shp",
       "sha256": "48bfb180cf0f966b8f09a1b8b17b09c6f036f982a9f098de8490ffafb9641be4",
       "bytes": 388281,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v2/airf-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v2/airf-lebanonicon-nolabel.png",
       "sha256": "6b02459deafe00346dbde292c8c6828df3154fada375b11e4f5d849818de9a92",
       "bytes": 5273,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v2/airf-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-airf/candidates/kit-v2/airf-lebanonicon.png",
       "sha256": "2108e666fc72c4e87cbf3f6ab4078bc35a4386559c3bb01f36e50a778a0c25f8",
       "bytes": 5158,
       "status": "retained editable source library; do not remove"
@@ -72130,19 +72130,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v1/barr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v1/barr-lebanon.shp",
       "sha256": "12cc9a72101d35902f170778006cbc99f5b124556318119cb4fbf6897e1ae1ae",
       "bytes": 468103,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v1/barr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v1/barr-lebanonicon-nolabel.png",
       "sha256": "525d50f18eed0d9bd72b8fa0a3659735c0c77a1ce0606f317ad08ac283bc9e27",
       "bytes": 4476,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v1/barr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v1/barr-lebanonicon.png",
       "sha256": "3e7c73f304cf50788bbcbe2b957979754773b5ba4d7560dd722501153ffd92b0",
       "bytes": 4526,
       "status": "retained editable source library; do not remove"
@@ -72286,19 +72286,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v2/barr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v2/barr-lebanon.shp",
       "sha256": "1291618204b900b9e7c61f0b30f189d92d6650bffc9b5de374ca7814ea795e72",
       "bytes": 475286,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v2/barr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v2/barr-lebanonicon-nolabel.png",
       "sha256": "f3067ca3cc7ad004318a43a005ff2779590738f457d88ab25246d756940a6c0c",
       "bytes": 4753,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v2/barr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-barr/candidates/kit-v2/barr-lebanonicon.png",
       "sha256": "c83200051cd7213a0171064add42738597029191a6c1d435e54ae27f7fed81dc",
       "bytes": 4788,
       "status": "retained editable source library; do not remove"
@@ -72442,19 +72442,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v1/cnst-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v1/cnst-lebanon.shp",
       "sha256": "3835069eca9faad879c3cfed4bc866f816bea18963cdea16be7087dfc45c31bb",
       "bytes": 2286840,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v1/cnst-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v1/cnst-lebanonicon-nolabel.png",
       "sha256": "35cf875eb7fa8cc1d7d9e8e4ba5f8ab560c0296c52d19945722d99abbb8a050d",
       "bytes": 5134,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v1/cnst-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v1/cnst-lebanonicon.png",
       "sha256": "cf0d96ad7e6d6c70f61fa440f49f96631037da7a12cc12f9ece343a06e947937",
       "bytes": 5075,
       "status": "retained editable source library; do not remove"
@@ -72598,19 +72598,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v2/cnst-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v2/cnst-lebanon.shp",
       "sha256": "6af537859f0a4e4787f41bb8f50f4420f08d67882499036c643afc445a402893",
       "bytes": 2323312,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v2/cnst-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v2/cnst-lebanonicon-nolabel.png",
       "sha256": "fa83cbd5c1a902e8a3051ff1445094bd01b9f962a17ca5b53b066bbe41466f17",
       "bytes": 5481,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v2/cnst-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-cnst/candidates/kit-v2/cnst-lebanonicon.png",
       "sha256": "bdeb0b97eb2104577bc5c5f9403760edfa441ccfb702b9ee7ab992ead1d161eb",
       "bytes": 5319,
       "status": "retained editable source library; do not remove"
@@ -72754,19 +72754,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v1/dept-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v1/dept-lebanon.shp",
       "sha256": "aaf9e702a058e50197cb4664c3757e0aabc88c396ed0fecf36263b0cc58267f5",
       "bytes": 556078,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v1/dept-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v1/dept-lebanonicon-nolabel.png",
       "sha256": "44c49cd95656d22ec32dfd3c763d58ac5a914e83d950713d9529c47ff866ee39",
       "bytes": 5239,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v1/dept-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v1/dept-lebanonicon.png",
       "sha256": "41e7a2d31fda4414c84b289efd92414861cd929983c5ca9054214a4f3c61544f",
       "bytes": 5082,
       "status": "retained editable source library; do not remove"
@@ -72910,19 +72910,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v2/dept-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v2/dept-lebanon.shp",
       "sha256": "ddd6978bc3328c2cb24715ff710047aa24bd5e955a12a7d46cab7a8f45332e10",
       "bytes": 577657,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v2/dept-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v2/dept-lebanonicon-nolabel.png",
       "sha256": "d9e4fb766a8a110c9aa33bff7681c08e585ac9d0e6b34ee3b29a8c8753ceeb12",
       "bytes": 5311,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v2/dept-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-dept/candidates/kit-v2/dept-lebanonicon.png",
       "sha256": "c8f1321302945cad2977267d5d583d2a183169f0be5f3b4db2b4b8dbbfdaf5f7",
       "bytes": 5067,
       "status": "retained editable source library; do not remove"
@@ -73066,19 +73066,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v1/dog-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v1/dog-lebanon.shp",
       "sha256": "551b264dcb89500f5769e5ff17648ff23298accf664765c85eec7d13300df16f",
       "bytes": 102898,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v1/dog-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v1/dog-lebanonicon-nolabel.png",
       "sha256": "d73fa9759e63e1181ea01879dd60617fc0e6511a5a70c3992078b18152e7baa9",
       "bytes": 4966,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v1/dog-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v1/dog-lebanonicon.png",
       "sha256": "ef0e4d7f589b7d3efaf4a5ffe34b623794b0f0062ece56529e5e89346d1b25c0",
       "bytes": 4970,
       "status": "retained editable source library; do not remove"
@@ -73216,19 +73216,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v2/dog-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v2/dog-lebanon.shp",
       "sha256": "3ef1b35448959d07ff33e58b378f8101febc89336020b6b25f8af3adc37f9d25",
       "bytes": 251627,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v2/dog-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v2/dog-lebanonicon-nolabel.png",
       "sha256": "438370fba5300c8b1cdd2867f726b64cb4378180582089e6726725e7e87f2fbb",
       "bytes": 5527,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v2/dog-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-dog/candidates/kit-v2/dog-lebanonicon.png",
       "sha256": "f0f59005d8922032009b4b6e10091928898639ed6176eb2b4c8f5c326cbebd8d",
       "bytes": 5353,
       "status": "retained editable source library; do not remove"
@@ -73366,19 +73366,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v1/engineer-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v1/engineer-lebanon.shp",
       "sha256": "6d1eb632271d4d2472c8b44b4908610b33cf6133e6587542b537753ab083d4a8",
       "bytes": 251682,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v1/engineer-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v1/engineer-lebanonicon-nolabel.png",
       "sha256": "745a6486f3b24ec7c176ebe756be28e9ce8d62200a532b52bb3047370690e489",
       "bytes": 4538,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v1/engineer-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v1/engineer-lebanonicon.png",
       "sha256": "07e358a3100e1914640a14d6e1bbc7d2313d71c6f986a687c41d5f2321ace034",
       "bytes": 4349,
       "status": "retained editable source library; do not remove"
@@ -73516,19 +73516,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v2/engineer-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v2/engineer-lebanon.shp",
       "sha256": "a42afc3333a187eb304a1b595719fb48435db6cce5474b454233428bfd6b3a85",
       "bytes": 267511,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v2/engineer-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v2/engineer-lebanonicon-nolabel.png",
       "sha256": "d53b60776cff39a02f9a7db66f73c07793e49b591a5876bed9744482790c80fe",
       "bytes": 4967,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v2/engineer-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-engineer/candidates/kit-v2/engineer-lebanonicon.png",
       "sha256": "6ebc542166b1d90b521d69700bad2a3a7b73b57b31ae4cc1279d73a8c75537b0",
       "bytes": 4472,
       "status": "retained editable source library; do not remove"
@@ -73840,19 +73840,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v1/harv-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v1/harv-lebanon.shp",
       "sha256": "efe7d31b5ef441892d97c915c1c1a8c7220755e261b1ff6e4a5d03a5e5f2ed92",
       "bytes": 89378,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v1/harv-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v1/harv-lebanonicon-nolabel.png",
       "sha256": "3a3ffd774fafc3d205a25a39d1ceab94e6d72173f1edba8d0ddc3cfd0d8f84b1",
       "bytes": 5375,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v1/harv-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v1/harv-lebanonicon.png",
       "sha256": "f2397cf54a25e96ff4426ded703e096ff53f32c65a3a18ec2833bf5db0b6ef45",
       "bytes": 5252,
       "status": "retained editable source library; do not remove"
@@ -73990,19 +73990,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v2/harv-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v2/harv-lebanon.shp",
       "sha256": "8df5bbbc3942803f95a5b37ed161999d3c58d45d8a0275f586975c3d2802e3c0",
       "bytes": 89590,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v2/harv-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v2/harv-lebanonicon-nolabel.png",
       "sha256": "18d350bbf479f42e0d6c8ffea6e16c799850b3d41a8574e3247ec74ef7f6a80d",
       "bytes": 5470,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v2/harv-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-harv/candidates/kit-v2/harv-lebanonicon.png",
       "sha256": "d7fca7020972089bb88ca2b7c6538a6ada9873d34f62a700aa3d14f5e2a252f5",
       "bytes": 5332,
       "status": "retained editable source library; do not remove"
@@ -74146,19 +74146,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-hpwr/candidates/kit-v2/hpwr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-hpwr/candidates/kit-v2/hpwr-lebanon.shp",
       "sha256": "d55aa7d277349affb354b2310f696501dc48705420c88f3dc399044995e8d52a",
       "bytes": 610028,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-hpwr/candidates/kit-v2/hpwr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-hpwr/candidates/kit-v2/hpwr-lebanonicon-nolabel.png",
       "sha256": "f3784731fdc7b402f148951c3235cff8187801be8d0727e813adf0e016edbb2c",
       "bytes": 5561,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-hpwr/candidates/kit-v2/hpwr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-hpwr/candidates/kit-v2/hpwr-lebanonicon.png",
       "sha256": "4afbd11ac448b30157bbe5593cebc0d4cbcf4b166a9aa37a5cf9e79fcd7a225c",
       "bytes": 5457,
       "status": "retained editable source library; do not remove"
@@ -74296,19 +74296,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v1/htk-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v1/htk-lebanon.shp",
       "sha256": "5d0d11690002152c1c7beae4cc9930189ecba78e37c485caecbbdaca435ea27b",
       "bytes": 86489,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v1/htk-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v1/htk-lebanonicon-nolabel.png",
       "sha256": "eaddb256c8a773913dfa48dc8651861d44e447674b444ec29b7d76c63d624016",
       "bytes": 4567,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v1/htk-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v1/htk-lebanonicon.png",
       "sha256": "507d38254c3e95f39b572da0865c3ea6be4d966abf852dd41e195ba1910eb877",
       "bytes": 4571,
       "status": "retained editable source library; do not remove"
@@ -74446,19 +74446,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v2/htk-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v2/htk-lebanon.shp",
       "sha256": "c8bde79438878f66bceef5e5b8dea2dd9d84f000abbdcf181ed6458c543eb06f",
       "bytes": 86353,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v2/htk-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v2/htk-lebanonicon-nolabel.png",
       "sha256": "d1b0abed1bfa96d07cfbd96e9c11b1cfe9f541753232093feba0dab9bac556f0",
       "bytes": 4854,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v2/htk-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-htk/candidates/kit-v2/htk-lebanonicon.png",
       "sha256": "f46cc9e6934027fa7bd73a9e33a7b3b3f4e0a08f97a64a3cb761215b44e21659",
       "bytes": 4816,
       "status": "retained editable source library; do not remove"
@@ -74602,19 +74602,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v1/lcrf-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v1/lcrf-lebanon.shp",
       "sha256": "34e26c7d24fdaffab2d6a675163da3fe898a62e014525e5a7ea080bd346f0713",
       "bytes": 118999,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v1/lcrf-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v1/lcrf-lebanonicon-nolabel.png",
       "sha256": "091907e9c8ebcb5865f582521ef418a7db2a723e7ff9aed94cf8bb20a12a3a1c",
       "bytes": 4928,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v1/lcrf-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v1/lcrf-lebanonicon.png",
       "sha256": "a596a12990dfba1496f5540b0bae5a4ce755cf08c7f82e8f89d5535f7779f713",
       "bytes": 4978,
       "status": "retained editable source library; do not remove"
@@ -74752,19 +74752,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v2/lcrf-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v2/lcrf-lebanon.shp",
       "sha256": "b19a03a098c0c759ce8dc19128388ebec0394164a2810e6e1cae2a1744f8fadc",
       "bytes": 119226,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v2/lcrf-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v2/lcrf-lebanonicon-nolabel.png",
       "sha256": "b78dabd6e89808d1c5a4753f1d6883054e5a6fdff49b74f3b2d0ad472e591505",
       "bytes": 5408,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v2/lcrf-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-lcrf/candidates/kit-v2/lcrf-lebanonicon.png",
       "sha256": "4e33ae0927787e957af06004cb575a080942fe1c722838ba6bfcee729ea8f92e",
       "bytes": 5420,
       "status": "retained editable source library; do not remove"
@@ -74902,19 +74902,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v1/mcv-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v1/mcv-lebanon.shp",
       "sha256": "30299a3503dd858b4978094ab035156dde36f88743bf0215a7f31b5302ab57d2",
       "bytes": 113678,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v1/mcv-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v1/mcv-lebanonicon-nolabel.png",
       "sha256": "e0fbc14a9743d6e656249a176e3fa372d0164e2d436f06e0b1f19d834c99b737",
       "bytes": 5173,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v1/mcv-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v1/mcv-lebanonicon.png",
       "sha256": "6a659b74d14e61071bc2386a3c1fad13311f8ce702b1dd341e7b7505495d8061",
       "bytes": 5177,
       "status": "retained editable source library; do not remove"
@@ -75052,19 +75052,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v2/mcv-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v2/mcv-lebanon.shp",
       "sha256": "bcf8131fde63a892517ce9fc1eaf4cccd3d6fe964049116ff484cfab63cdd886",
       "bytes": 114099,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v2/mcv-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v2/mcv-lebanonicon-nolabel.png",
       "sha256": "acb43b5b7e142ebfa2ae75302b9f18d4b888a79286ec197a50c826a700c1cb0d",
       "bytes": 5487,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v2/mcv-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-mcv/candidates/kit-v2/mcv-lebanonicon.png",
       "sha256": "8e5175b963141405a84792a7d7645fce13327076343913df1a1240a0025098e0",
       "bytes": 5466,
       "status": "retained editable source library; do not remove"
@@ -75214,19 +75214,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v1/powr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v1/powr-lebanon.shp",
       "sha256": "25d16cb20be3d44b75f22d60cef84c39011e8af19acb0ac8f8f21b5dea183320",
       "bytes": 283703,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v1/powr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v1/powr-lebanonicon-nolabel.png",
       "sha256": "5dc3ad8e1711c6dfd9d0371cd358ee738f01751bc074fd512dcfcb7dc8ae4e42",
       "bytes": 4759,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v1/powr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v1/powr-lebanonicon.png",
       "sha256": "588a5ac6454fb095fd13407c1bb46ce3874157611559cd4390be065ba5314aa5",
       "bytes": 4553,
       "status": "retained editable source library; do not remove"
@@ -75370,19 +75370,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v2/powr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v2/powr-lebanon.shp",
       "sha256": "8acd6624238ba5ef11826801202ac5ef0943aa05747093343b8ebaf370628291",
       "bytes": 300347,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v2/powr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v2/powr-lebanonicon-nolabel.png",
       "sha256": "9a8ad783a949baeb531c8f5d3109377e86f8d7ab2233283e22e2b716492f3159",
       "bytes": 5092,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v2/powr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-powr/candidates/kit-v2/powr-lebanonicon.png",
       "sha256": "20bed9692b51bf5b55a9d48f7542beefb14f744dd57339e81ddcb487772f38e5",
       "bytes": 4854,
       "status": "retained editable source library; do not remove"
@@ -75526,19 +75526,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v1/radr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v1/radr-lebanon.shp",
       "sha256": "b7ec23e01941baa6ffd5906e8c51b057036f2361cfa607fdcc5a61c4bd593937",
       "bytes": 335811,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v1/radr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v1/radr-lebanonicon-nolabel.png",
       "sha256": "c13f82738f36f28fdc7f78fe70e255838d2e8bceb19e91bbc1d289111c89e86b",
       "bytes": 4376,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v1/radr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v1/radr-lebanonicon.png",
       "sha256": "b80c549c2a7ca1a6dce76d169b17c9c9a045c851770362e152a71f19b9b8e982",
       "bytes": 4387,
       "status": "retained editable source library; do not remove"
@@ -75682,19 +75682,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v2/radr-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v2/radr-lebanon.shp",
       "sha256": "8d956d6491422f1b152ceabfdccdfa331e1a7dd6d0ae3aceac4548c0607a25ad",
       "bytes": 340671,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v2/radr-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v2/radr-lebanonicon-nolabel.png",
       "sha256": "02c4e5f1320bc889eaeeebf3f4f4d6aa1fdf5d3b0093e66d86e004e5fde29e80",
       "bytes": 4606,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v2/radr-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-radr/candidates/kit-v2/radr-lebanonicon.png",
       "sha256": "4e4a04acfecc5704e1c0d333f735f6525addb827936efeaf5da1f3bb0a0a2d17",
       "bytes": 4607,
       "status": "retained editable source library; do not remove"
@@ -75838,19 +75838,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v1/refn-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v1/refn-lebanon.shp",
       "sha256": "38d939ae5882eb5a33e985d1cec0c8996d9b1bec3becb07dd5d4d627e59d2551",
       "bytes": 771056,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v1/refn-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v1/refn-lebanonicon-nolabel.png",
       "sha256": "4472d5fc33219234f737d93818b1036a85b86474dfb4c1fe89c5d321e77e3426",
       "bytes": 5070,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v1/refn-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v1/refn-lebanonicon.png",
       "sha256": "3b894a70103165ee23af876e32889156a83f0e12595c1ba6a82e2485f05c4bf4",
       "bytes": 5067,
       "status": "retained editable source library; do not remove"
@@ -75988,13 +75988,13 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/purifier-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/purifier-lebanonicon-nolabel.png",
       "sha256": "dfc44f0b2f4f408af48cfd0eb2405c33da3a33b9e5ba56116501d06945af82fe",
       "bytes": 5153,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/purifier-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/purifier-lebanonicon.png",
       "sha256": "200a93ca5cc8d5c44ecf371842a5bd60ae412e2dfe9cbdf4623133dfbf75fdab",
       "bytes": 5025,
       "status": "retained editable source library; do not remove"
@@ -76078,19 +76078,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/refn-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/refn-lebanon.shp",
       "sha256": "93983e8c6cb1131194bd18ed010e18d21ad8109645189eac404f90ffce0e53f5",
       "bytes": 805520,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/refn-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/refn-lebanonicon-nolabel.png",
       "sha256": "d6066c367fec7d3d9d46229262cb2d7b7144d8b6031fbc5fe73bdd83051c83e6",
       "bytes": 5385,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/refn-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-refn/candidates/kit-v2/refn-lebanonicon.png",
       "sha256": "49cb28196b38c9e0394b732c603033ea820ee862fde8105b4a382f5374623013",
       "bytes": 5320,
       "status": "retained editable source library; do not remove"
@@ -76228,19 +76228,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v1/sapc-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v1/sapc-lebanon.shp",
       "sha256": "2183e8b87d19aad75b72553128e55c88f8c21899176dc834a0bfff73fcffa765",
       "bytes": 78833,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v1/sapc-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v1/sapc-lebanonicon-nolabel.png",
       "sha256": "05aa803f71d3edb6c58c13797894f4ec35cbc629f12032e69fa9e938408f0f0b",
       "bytes": 4784,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v1/sapc-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v1/sapc-lebanonicon.png",
       "sha256": "fe47ab5ab1c068599cbac3a27b689e56d1aecadd50adffbc009b19a1b6d9953c",
       "bytes": 4738,
       "status": "retained editable source library; do not remove"
@@ -76378,19 +76378,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v2/sapc-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v2/sapc-lebanon.shp",
       "sha256": "8844ebe51bae4f44da11453ee8b954d0f65aa23774b431035fd314459cc2f438",
       "bytes": 78214,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v2/sapc-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v2/sapc-lebanonicon-nolabel.png",
       "sha256": "73b31bd15405592f32c33953f2c6d91ac25e4579855b2becd692b75ccd5c178d",
       "bytes": 4957,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v2/sapc-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-sapc/candidates/kit-v2/sapc-lebanonicon.png",
       "sha256": "e09accf7376ab46b0b83971698d5af13c9da80e2d2fad3553e734b6bcfd45e23",
       "bytes": 4878,
       "status": "retained editable source library; do not remove"
@@ -76534,19 +76534,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v1/spy-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v1/spy-lebanon.shp",
       "sha256": "9bcdca954ed4eabc9ece128a2f6acac7a3c062db08e2b71f9db5e8f6fdb23084",
       "bytes": 243614,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v1/spy-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v1/spy-lebanonicon-nolabel.png",
       "sha256": "56dd08099d283e114474e67f04794718d61404dcee82e1c959e4c1681da0fe3a",
       "bytes": 4538,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v1/spy-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v1/spy-lebanonicon.png",
       "sha256": "7114fcaf99ac19dd6a8ec44665959626cac9216916ae123a401310682bc5d95b",
       "bytes": 4365,
       "status": "retained editable source library; do not remove"
@@ -76684,19 +76684,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v2/spy-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v2/spy-lebanon.shp",
       "sha256": "5da8912d4bd63f54a4baefb035af07698243ccfa05c2eafde081c7629d6cd9c2",
       "bytes": 250776,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v2/spy-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v2/spy-lebanonicon-nolabel.png",
       "sha256": "e8a879f3bc2475cc12494db268bc1bebe49c2c955dd82fc0423397a7019b7526",
       "bytes": 5287,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v2/spy-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-spy/candidates/kit-v2/spy-lebanonicon.png",
       "sha256": "6c7d9218670ed5ba0abd531586dbe37f4d431f6539a302fe03eb38c73d4ba49f",
       "bytes": 4743,
       "status": "retained editable source library; do not remove"
@@ -77008,19 +77008,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v1/sw1-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v1/sw1-lebanon.shp",
       "sha256": "2d0476e7bb7718dbef9132d0fc1a466a3dfb51dc1b160268546f95950587214b",
       "bytes": 713736,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v1/sw1-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v1/sw1-lebanonicon-nolabel.png",
       "sha256": "c484dd013c2537125225502c7d818b38814de2ec602dd95fd739498670a89cfd",
       "bytes": 5542,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v1/sw1-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v1/sw1-lebanonicon.png",
       "sha256": "2beb9f8f436faadcb492ab75da8bd58b834319a00f0b82667c4e67d318a9f0c8",
       "bytes": 5469,
       "status": "retained editable source library; do not remove"
@@ -77164,19 +77164,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v2/sw1-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v2/sw1-lebanon.shp",
       "sha256": "c3ea677cb8968592dc82ef28c63d3cbcdf19472dd4aef7d55273246972c8283d",
       "bytes": 720742,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v2/sw1-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v2/sw1-lebanonicon-nolabel.png",
       "sha256": "43c6f375bd8abe26aa79f2e52886af1b043f3454b0ceb4e54358a6e1e4d61f0c",
       "bytes": 5629,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v2/sw1-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-sw1/candidates/kit-v2/sw1-lebanonicon.png",
       "sha256": "d82a804464e8c78f51e19638e5293ba6dd49eb28c48ba4f7902373053ead8954",
       "bytes": 5438,
       "status": "retained editable source library; do not remove"
@@ -77320,19 +77320,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v1/sw2-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v1/sw2-lebanon.shp",
       "sha256": "486fceb65467e874cf2f17d6e259c3bcaea51e8afbdd2667026e9c63bf7cdecc",
       "bytes": 997853,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v1/sw2-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v1/sw2-lebanonicon-nolabel.png",
       "sha256": "91882862f48e4f09dae5436429514213d5e6332a35b4f125364b62fb2eb11456",
       "bytes": 4549,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v1/sw2-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v1/sw2-lebanonicon.png",
       "sha256": "bb4faf957ae02677ea37b24619d1d524b9dd89b646e4ee5346de2e12f35f05f8",
       "bytes": 4490,
       "status": "retained editable source library; do not remove"
@@ -77476,19 +77476,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v2/sw2-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v2/sw2-lebanon.shp",
       "sha256": "a436557c4b24728c017eba4eaca9459876a9b49cdd8e3caffe6b02b0b203ea1c",
       "bytes": 1040936,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v2/sw2-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v2/sw2-lebanonicon-nolabel.png",
       "sha256": "fc07963ae912070855da98acf4770c936c9d307a74a11023c5ebc2c5c7ed72e6",
       "bytes": 5219,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v2/sw2-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-sw2/candidates/kit-v2/sw2-lebanonicon.png",
       "sha256": "98657d329e1fa178bda4eb58d2f2358e04cbe3e7c471e1210dc7ce758d5ac76e",
       "bytes": 5121,
       "status": "retained editable source library; do not remove"
@@ -77632,19 +77632,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v1/tech-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v1/tech-lebanon.shp",
       "sha256": "ee3dbb8d44909cd26219c89dbb89c967c8117177db19a566cafcf382a490fe91",
       "bytes": 439782,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v1/tech-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v1/tech-lebanonicon-nolabel.png",
       "sha256": "06319ecfdbdffe8b8208c4d4a4bae3c731d2870bc8925cbc26bdd16650be0161",
       "bytes": 4267,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v1/tech-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v1/tech-lebanonicon.png",
       "sha256": "6590f1e70727c6706eba58b63e26f1466e83f90b36de663a7f331bce05a45a97",
       "bytes": 4288,
       "status": "retained editable source library; do not remove"
@@ -77788,19 +77788,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v2/tech-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v2/tech-lebanon.shp",
       "sha256": "c64ea39e9d60a1bc67d873394686bb91876b8cc3dc0b448d174cbe8b2a552e20",
       "bytes": 444856,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v2/tech-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v2/tech-lebanonicon-nolabel.png",
       "sha256": "8cccc64a92e651f4328ebfef1bf34c6b46fa1c519162d81e9005a2d5f612854d",
       "bytes": 4462,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v2/tech-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-tech/candidates/kit-v2/tech-lebanonicon.png",
       "sha256": "f1c5a927d8bd396010e4bdf4d29f2e166e489c0aa531fcc89a8958c705d3feed",
       "bytes": 4475,
       "status": "retained editable source library; do not remove"
@@ -77944,19 +77944,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v1/wall-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v1/wall-lebanon.shp",
       "sha256": "165dec98e97ea240884db86cc0ff32638fa23d44164a7a6aec2c308aa56eab0d",
       "bytes": 79260,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v1/wall-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v1/wall-lebanonicon-nolabel.png",
       "sha256": "ba57d9b07ac394e1dd4771d97b6ce68e72125435f1e1542a4e0a83e765c46dcb",
       "bytes": 4366,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v1/wall-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v1/wall-lebanonicon.png",
       "sha256": "e378019442dc101e983fbc4e28757552e00dac05106525cc227e9ca59a30173c",
       "bytes": 4317,
       "status": "retained editable source library; do not remove"
@@ -78100,19 +78100,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v2/wall-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v2/wall-lebanon.shp",
       "sha256": "245393afe55d61e5976191961bfb704555c1d6318e6a697d7835501bd908eded",
       "bytes": 80848,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v2/wall-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v2/wall-lebanonicon-nolabel.png",
       "sha256": "c11e382598d23717facc98a0917da7804b1ea18e6fa9d5506f452eb31d4fb0a1",
       "bytes": 4670,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v2/wall-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-wall/candidates/kit-v2/wall-lebanonicon.png",
       "sha256": "b5770124f85fbfd053adfa68caca5abf85a22953503fac939b26dd304ac62bf2",
       "bytes": 4617,
       "status": "retained editable source library; do not remove"
@@ -78256,19 +78256,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v1/weap-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v1/weap-lebanon.shp",
       "sha256": "f3d247a70f09fc7c64a1de6d39bfbee0d02cc2dce6f71c21d4fbed7efee0c932",
       "bytes": 1111070,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v1/weap-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v1/weap-lebanonicon-nolabel.png",
       "sha256": "a2474c0d3f526ec121fbd89cea459f12fad39029334236b3015f0a7bf765ed91",
       "bytes": 4865,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v1/weap-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v1/weap-lebanonicon.png",
       "sha256": "aee7d84682bea0ace72bd7a836a0a207d0824a3da5128b0a02e97fa44c80714e",
       "bytes": 4929,
       "status": "retained editable source library; do not remove"
@@ -78412,19 +78412,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v2/weap-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v2/weap-lebanon.shp",
       "sha256": "a2d58ccb88ad18be14c00dc3e905460061c8c4574f6aff6fef554b4c5a0ffd83",
       "bytes": 1168662,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v2/weap-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v2/weap-lebanonicon-nolabel.png",
       "sha256": "b6c1efd3eb3dcd4d3259067f3adfcad6015862edc0346d1e35e28fdeb6a08315",
       "bytes": 5371,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v2/weap-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-weap/candidates/kit-v2/weap-lebanonicon.png",
       "sha256": "8d44788bd18f00c8e7920ca1e9f18a5c7f20a11b4da476c5da26d88521a4ef4f",
       "bytes": 5308,
       "status": "retained editable source library; do not remove"
@@ -78568,19 +78568,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v1/yard-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v1/yard-lebanon.shp",
       "sha256": "e1d4892e065644d5b20e4f4a90214727d603ceaa43a13db3a1b2f17b3130991b",
       "bytes": 747593,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v1/yard-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v1/yard-lebanonicon-nolabel.png",
       "sha256": "6b8c70d25c5cfaff307dc47dc50aac65bfd7f4a1bb5515452dbf33ac432ca093",
       "bytes": 5159,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v1/yard-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v1/yard-lebanonicon.png",
       "sha256": "57584384dc77339cf2d93ecd604fd41aec16e6858cac9a7ea280eded8c4e4156",
       "bytes": 5047,
       "status": "retained editable source library; do not remove"
@@ -78724,19 +78724,19 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v2/yard-hezbollah.shp",
+      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v2/yard-lebanon.shp",
       "sha256": "2243b5872a6b973e43134fa436306119e36450c97f8e415cfe847d6cefa8f230",
       "bytes": 777963,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v2/yard-hezbollahicon-nolabel.png",
+      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v2/yard-lebanonicon-nolabel.png",
       "sha256": "2d9894854a31043667f52def460e312c87a6f8bce2d09e887997dc05342c76d3",
       "bytes": 5600,
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v2/yard-hezbollahicon.png",
+      "source": "RTSAI-Art/units/kit-yard/candidates/kit-v2/yard-lebanonicon.png",
       "sha256": "7cb092e7984e7146c779ae436eda69992522170b7dba2cc73899624b8c4cc523",
       "bytes": 5370,
       "status": "retained editable source library; do not remove"
@@ -91804,7 +91804,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzdrone/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzdrone/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -91888,7 +91888,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzdrone/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzdrone/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -91978,7 +91978,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzdrone/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzdrone/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -92236,7 +92236,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzescort/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzescort/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -92332,7 +92332,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzescort/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzescort/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -92452,7 +92452,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzescort/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzescort/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -92932,7 +92932,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzmissileboat/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzmissileboat/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93010,7 +93010,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzmissileboat/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzmissileboat/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93088,7 +93088,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzmissileboat/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzmissileboat/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93196,7 +93196,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzquad/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzquad/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93328,7 +93328,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrail/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzrail/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93580,7 +93580,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrecoilless/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzrecoilless/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93676,7 +93676,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrecoilless/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzrecoilless/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -93796,7 +93796,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrecoilless/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzrecoilless/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -94648,7 +94648,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrockets/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzrockets/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -94732,7 +94732,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrockets/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzrockets/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -94840,7 +94840,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzrockets/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzrockets/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -95416,7 +95416,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzskiff/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzskiff/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -95494,7 +95494,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzskiff/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzskiff/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -95572,7 +95572,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzskiff/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzskiff/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -96142,7 +96142,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzsurvey/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hzsurvey/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -96244,7 +96244,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzsurvey/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hzsurvey/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -96376,7 +96376,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hzsurvey/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hzsurvey/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -96670,7 +96670,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hztechnical/candidates/sprite-v6-prerender/hezbollah-prerender.pal",
+      "source": "RTSAI-Art/units/r2hztechnical/candidates/sprite-v6-prerender/lebanon-prerender.pal",
       "sha256": "aba688f1569970a0d336696e8dc5fa3150f4ebe45c679ebd93c357cf0a35031e",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -96766,7 +96766,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hztechnical/candidates/voxel-v5-glb/hezbollah-glb.pal",
+      "source": "RTSAI-Art/units/r2hztechnical/candidates/voxel-v5-glb/lebanon-glb.pal",
       "sha256": "c324ebe1c74a14180a3fcacdb0af6df9ec95b8f40d6dda5e5c765b12f50372ec",
       "bytes": 768,
       "status": "retained editable source library; do not remove"
@@ -96874,7 +96874,7 @@
       "status": "retained editable source library; do not remove"
     },
     {
-      "source": "RTSAI-Art/units/r2hztechnical/candidates/voxel-v6-bold/hezbollah-glb-bold.pal",
+      "source": "RTSAI-Art/units/r2hztechnical/candidates/voxel-v6-bold/lebanon-glb-bold.pal",
       "sha256": "f0aedc8d94db29e194b66d25168f2b6351473c4497761538bd261ced04889d10",
       "bytes": 768,
       "status": "retained editable source library; do not remove"

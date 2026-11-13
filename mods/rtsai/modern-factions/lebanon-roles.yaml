@@ -18,7 +18,7 @@ r2hzscout:
 		Roles: line-infantry
 		Domain: ground
 
-# Salvo and swarm: the FPV Team has its own role (drone-swarm, share in hezbollah-ai.yaml), so the bot's
+# Salvo and swarm: the FPV Team has its own role (drone-swarm, share in lebanon-ai.yaml), so the bot's
 # infantry mix keeps it apart from the line riflemen.
 r2hzfpv:
 	StrategicRole:

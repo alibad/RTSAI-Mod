@@ -355,9 +355,9 @@ dog-yemen:
 		Filename: dog-yemenicon.png
 		Offset: 0, 0
 
-dog-hezbollah:
+dog-lebanon:
 	Defaults:
-		Filename: dog-hezbollah.shp
+		Filename: dog-lebanon.shp
 		Offset: 0, 0, 0
 	stand:
 		Start: 0
@@ -411,7 +411,7 @@ dog-hezbollah:
 		Facings: 8
 		ShadowStart: 352
 	icon:
-		Filename: dog-hezbollahicon.png
+		Filename: dog-lebanonicon.png
 		Offset: 0, 0
 
 engineer-china:
@@ -942,9 +942,9 @@ engineer-yemen:
 		Filename: engineer-yemenicon.png
 		Offset: 0, 0
 
-engineer-hezbollah:
+engineer-lebanon:
 	Defaults:
-		Filename: engineer-hezbollah.shp
+		Filename: engineer-lebanon.shp
 		Offset: 0, 0, 16
 	stand:
 		Start: 0
@@ -1027,7 +1027,7 @@ engineer-hezbollah:
 		Facings: 8
 		ShadowStart: 508
 	icon:
-		Filename: engineer-hezbollahicon.png
+		Filename: engineer-lebanonicon.png
 		Offset: 0, 0
 
 harv-china:
@@ -1096,15 +1096,15 @@ harv-yemen:
 		Filename: harv-yemenicon.png
 		Offset: 0, 0
 
-harv-hezbollah:
+harv-lebanon:
 	Defaults:
-		Filename: harv-hezbollah.shp
+		Filename: harv-lebanon.shp
 	idle:
 		Start: 0
 		Facings: 32
 		ShadowStart: 32
 	icon:
-		Filename: harv-hezbollahicon.png
+		Filename: harv-lebanonicon.png
 		Offset: 0, 0
 
 htk-china:
@@ -1197,9 +1197,9 @@ htk-yemen:
 		Filename: htk-yemenicon.png
 		Offset: 0, 0
 
-htk-hezbollah:
+htk-lebanon:
 	Defaults:
-		Filename: htk-hezbollah.shp
+		Filename: htk-lebanon.shp
 	idle:
 		Start: 0
 		Facings: 32
@@ -1209,7 +1209,7 @@ htk-hezbollah:
 		Facings: 32
 		ShadowStart: 96
 	icon:
-		Filename: htk-hezbollahicon.png
+		Filename: htk-lebanonicon.png
 		Offset: 0, 0
 
 lcrf-china:
@@ -1278,15 +1278,15 @@ lcrf-yemen:
 		Filename: lcrf-yemenicon.png
 		Offset: 0, 0
 
-lcrf-hezbollah:
+lcrf-lebanon:
 	Defaults:
-		Filename: lcrf-hezbollah.shp
+		Filename: lcrf-lebanon.shp
 	idle:
 		Start: 0
 		Facings: 32
 		ShadowStart: 32
 	icon:
-		Filename: lcrf-hezbollahicon.png
+		Filename: lcrf-lebanonicon.png
 		Offset: 0, 0
 
 mcv-china:
@@ -1355,15 +1355,15 @@ mcv-yemen:
 		Filename: mcv-yemenicon.png
 		Offset: 0, 0
 
-mcv-hezbollah:
+mcv-lebanon:
 	Defaults:
-		Filename: mcv-hezbollah.shp
+		Filename: mcv-lebanon.shp
 	idle:
 		Start: 0
 		Facings: 32
 		ShadowStart: 32
 	icon:
-		Filename: mcv-hezbollahicon.png
+		Filename: mcv-lebanonicon.png
 		Offset: 0, 0
 
 sapc-china:
@@ -1432,15 +1432,15 @@ sapc-yemen:
 		Filename: sapc-yemenicon.png
 		Offset: 0, 0
 
-sapc-hezbollah:
+sapc-lebanon:
 	Defaults:
-		Filename: sapc-hezbollah.shp
+		Filename: sapc-lebanon.shp
 	idle:
 		Start: 0
 		Facings: 32
 		ShadowStart: 32
 	icon:
-		Filename: sapc-hezbollahicon.png
+		Filename: sapc-lebanonicon.png
 		Offset: 0, 0
 
 spy-china:
@@ -1971,9 +1971,9 @@ spy-yemen:
 		Filename: spy-yemenicon.png
 		Offset: 0, 0
 
-spy-hezbollah:
+spy-lebanon:
 	Defaults:
-		Filename: spy-hezbollah.shp
+		Filename: spy-lebanon.shp
 		Offset: 0, 0, 16
 	stand:
 		Start: 0
@@ -2056,5 +2056,5 @@ spy-hezbollah:
 		Facings: 8
 		ShadowStart: 508
 	icon:
-		Filename: spy-hezbollahicon.png
+		Filename: spy-lebanonicon.png
 		Offset: 0, 0

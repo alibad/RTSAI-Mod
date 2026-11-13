@@ -43,7 +43,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MODERN = ["china", "iran", "turkey", "saudi", "yemen", "israel", "hezbollah"]
+MODERN = ["china", "iran", "turkey", "saudi", "yemen", "israel", "lebanon"]
 SD_DIR = "sd"  # below modern-factions/audio/
 GENERATED = {
     "Rules": "modern-factions/sound-desk-rules.yaml",

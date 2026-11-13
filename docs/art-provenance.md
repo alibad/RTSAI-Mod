@@ -22,7 +22,7 @@ record itself are out of scope.
 | Infantry (`infantry/`) | 28 SHP + 28 palettes | 10.0 MB | `tools/infantry_blender.py`, `infantry_sprite_post.py` | `sprite-v3-glb` |
 | Buildings and defenses (`buildings/`) | 25 SHP + 25 palettes | 5.7 MB | `tools/building_sprites.py` | `sprite-v3-glb` |
 | Build-menu cameos (`icons/`) | 122 PNG, 60x48 | 0.6 MB | `tools/cameo_render.py` | `cameo-v3-render` |
-| Lobby flags (`ui/`) | 3 PNG atlases | 0.03 MB | OpenRA-AI `scripts/build-levant-flags.py`; Hezbollah: `tools/faction-flag.py` | (drawn from code; Hezbollah: its real flag, see below) |
+| Lobby flags (`ui/`) | 3 PNG atlases | 0.03 MB | OpenRA-AI `scripts/build-levant-flags.py`; Lebanon: `tools/faction-flag.py` | (drawn from code; Lebanon: its national flag, see below) |
 
 The owner approved all of it on 2026-10-06 ("I approve all the changes"). RTSAI-Art `review.json` records a "use"
 decision for each of the 122 units' battlefield model and build icon (RTSAI-Art 88a31bf, authored "owner bulk approval
@@ -58,7 +58,7 @@ voxel light vector. Each faction's sprites therefore light like a voxel unit wou
 quantized into one palette per faction (`<faction>-prerender.pal`, remap 16-31 for the player colour).
 
 - **SHP layout.** 32 facings per sequence: body, turret, spinning rotors and radars as extra frames, still variants for
-  landed and undeployed states, empty-launcher bodies for the Yemen MLR and Hezbollah rocket truck while they reload,
+  landed and undeployed states, empty-launcher bodies for the Yemen MLR and Lebanon rocket truck while they reload,
   and sun-shadow frames for ground units (aircraft use `WithShadow`).
 - **Size.** The on-screen area is matched to the unit's class size target, within about 2%.
 - **Muzzles.** Every armament's `LocalOffset` is measured on the renders (`tools/muzzle_fit.py`), so shots leave the
@@ -107,19 +107,16 @@ and is never baked in.
 ### Faction flags
 
 The lobby and tooltip flags (`ui/faction-flags*.png`, chrome collection `flags`) are drawn from code, except
-Hezbollah's.
-- **Owner decision, 7 October 2026:** Hezbollah shows its real flag everywhere, the game included, as the public
-  website already does.
-- **Source:** `tools/flag-sources/hezbollah.svg`, the website's copy, from
-  https://upload.wikimedia.org/wikipedia/en/0/08/Flag_of_Hezbollah.svg (downloaded 4 October 2026).
-- **How it is built:** `tools/faction-flag.py hezbollah` rasterizes it with headless Chrome. It fits the flag
-  undistorted into the 2:1 region, extends the yellow field to the sides, and writes the 1x, 2x and 3x atlases.
-- **Status: non-free artwork,** not covered by any licence the project holds. The website's `docs/faction-art.md`
-  records the known risks, which the owner accepted: Hezbollah's symbols are restricted in Germany, Austria, the UK
-  and other countries that list it as a terrorist organisation. This note records that the game now ships the
-  flag too; it is not legal advice.
-- **To withdraw it:** restore the three atlases from git history before this change and re-run
-  `tools/art-provenance.py`.
+Lebanon's.
+- **Owner decision, 13 November 2026:** the seventh modern faction is Lebanon and shows Lebanon's national flag.
+  The flag it showed before was withdrawn from the game and the website on the same day.
+- **Source:** `tools/flag-sources/lebanon.svg`, the national flag from lipis/flag-icons v7.3.2
+  (`flags/4x3/lb.svg`, MIT), the set the website's other national flags come from.
+- **How it is built:** `tools/faction-flag.py lebanon` rasterizes it with headless Chrome. It fits the flag
+  undistorted into the 2:1 region, extends the stripes to the sides, and writes the 1x, 2x and 3x atlases.
+  `--classic` does the same for the Classic pack's atlases (`mods/rtsai-classic-core/uibits`); the engine's
+  `mods/ra/uibits` atlases are byte copies of those.
+- **Status:** a national flag under the MIT licence of flag-icons. Nothing non-free is shipped.
 
 ## How main's art is laid out
 
@@ -166,8 +163,8 @@ The promotion removed the pre-promotion placeholder art from the mod:
 
 - 114 procedural voxel models (VXL/HVA) and their palettes;
 - 53 procedural infantry and defense SHPs with the faction palettes;
-- the Israel/Hezbollah animation sheets;
-- the 87 Qwen-Image cameos from 2026-10-02 and the 35 Israel/Hezbollah placeholder cameos;
+- the Israel/Lebanon animation sheets;
+- the 87 Qwen-Image cameos from 2026-10-02 and the 35 Israel/Lebanon placeholder cameos;
 - the unused Levant preview pictures.
 
 The Qilin's jade voxel pilot (2b5218c) went too. RTSAI-Art `history/` archives every one of these files, plus every

@@ -37,7 +37,7 @@ UNITS_DIR = ROOT / "mods" / "rtsai" / "standalone" / "units"
 EXTRA_SEQ = ROOT / "mods" / "rtsai" / "standalone" / "kit-extra-sequences.yaml"
 ECON_ART = ROOT / "mods" / "rtsai" / "standalone" / "art" / "econ"
 FONT = ROOT / "engine" / "mods" / "common" / "FreeSansBold.ttf"
-FACTIONS = ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]
+FACTIONS = ["china", "iran", "turkey", "saudi", "israel", "yemen", "lebanon"]
 
 ROLE = {
     "gacnst": "cnst", "nacnst": "cnst", "gapowr": "powr", "napowr": "powr", "garefn": "refn", "narefn": "refn",
@@ -120,7 +120,7 @@ UNITS = {
 UNIT_INHERITORS = {
     # China's Kunlun landing ship inherits lcrf and renders its own prerendered sprite.
     "r2kunlun": "\tRenderSprites:\n\t\tImage: r2kunlun\n\t\tFactionImages:\n" + "".join(
-        f"\t\t\t{f}: r2kunlun\n" for f in ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]),
+        f"\t\t\t{f}: r2kunlun\n" for f in ["china", "iran", "turkey", "saudi", "israel", "yemen", "lebanon"]),
     # The lobby colour picker's preview: the kit MCV on the kit palette, remapped live to the picked colour.
     "amcv.colorpicker": "\tRenderSprites:\n\t\tPalette: kitcolorpicker\n",
 }

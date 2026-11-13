@@ -1,6 +1,6 @@
 {
  "hz-probe": {
-  "description": "Salvo and swarm screening probe: Hezbollah against all eight other factions, both orientations, Dustbowl and Tournament Map A, one replicate (32 games).",
+  "description": "Salvo and swarm screening probe: Lebanon against all eight other factions, both orientations, Dustbowl and Tournament Map A, one replicate (32 games).",
   "seed": 20261071,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -13,12 +13,12 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
     "focus": [
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -39,7 +39,7 @@
   ]
  },
  "hz-land": {
-  "description": "Salvo and swarm land run: Hezbollah against all eight other factions, both orientations, Dustbowl and Tournament Map A, 3 replicates (96 games); round-4 design.",
+  "description": "Salvo and swarm land run: Lebanon against all eight other factions, both orientations, Dustbowl and Tournament Map A, 3 replicates (96 games); round-4 design.",
   "seed": 20261072,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -52,12 +52,12 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
     "focus": [
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -78,7 +78,7 @@
   ]
  },
  "hz-naval": {
-  "description": "Salvo and swarm naval run: Hezbollah against all eight other factions on Little Big Lake, both orientations, 3 replicates (48 games).",
+  "description": "Salvo and swarm naval run: Lebanon against all eight other factions on Little Big Lake, both orientations, 3 replicates (48 games).",
   "seed": 20261073,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -91,12 +91,12 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
     "focus": [
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -126,12 +126,12 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
     "focus": [
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -149,7 +149,7 @@
      }
     ],
     "rules": [
-     "^R2HezbollahInfantry:",
+     "^R2LebanonInfantry:",
      "\tDamageMultiplier@rough:",
      "\t\tModifier: 90",
      "r2hzat:",

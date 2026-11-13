@@ -33,133 +33,133 @@
    "role": "Drone carrier"
   },
   "r2hzaanest": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Short-Range AA Nest"
    ],
    "role": "Anti air"
   },
   "r2hzat": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Ridge Missile Team"
    ],
    "role": "Anti armor"
   },
   "r2hzbunker": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Concealed Bunker"
    ],
    "role": "Line infantry"
   },
   "r2hzcoastal": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Coastal Missile Emplacement"
    ],
    "role": "Anti armor"
   },
   "r2hzdrone": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Loiter Drone"
    ],
    "role": "Strike aircraft"
   },
   "r2hzescort": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Escort Gun Truck"
    ],
    "role": "Anti air"
   },
   "r2hzfpv": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "FPV Team"
    ],
    "role": "Drone swarm"
   },
   "r2hzmissileboat": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Coastal Missile Boat"
    ],
    "role": "Naval screen"
   },
   "r2hzrail": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Rail Technical"
    ],
    "role": "Artillery"
   },
   "r2hzrecoilless": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Recoilless Technical"
    ],
    "role": "Anti armor"
   },
   "r2hzrelay": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Signal Post"
    ],
    "role": "Support structure"
   },
   "r2hzrifle": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Line Fighter"
    ],
    "role": "Line infantry"
   },
   "r2hzrockets": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Mobile Rocket Battery"
    ],
    "role": "Artillery"
   },
   "r2hzscout": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Cedar Scout"
    ],
    "role": "Line infantry"
   },
   "r2hzskiff": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Attack Skiff"
    ],
    "role": "Naval screen"
   },
   "r2hzspotter": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Field Spotter"
    ],
    "role": "Support"
   },
   "r2hzsurvey": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Coastal Survey Boat"
    ],
    "role": "Support"
   },
   "r2hztechnical": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Cedar Technical"
    ],
    "role": "Line infantry"
   },
   "r2hzworkshop": {
-   "faction": "hezbollah",
+   "faction": "lebanon",
    "names": [
     "Field Workshop"
    ],
@@ -4568,7 +4568,7 @@
       "gacnst"
      ]
     },
-    "hezbollah": {
+    "lebanon": {
      "base": "smcv",
      "items": {
       "dog": {
@@ -5297,7 +5297,7 @@
        "queue": "Vehicle"
       }
      },
-     "name": "Hezbollah",
+     "name": "Lebanon",
      "side": "Soviets",
      "start": [
       "nacnst",
@@ -12182,7 +12182,7 @@
       "gacnst"
      ]
     },
-    "hezbollah": {
+    "lebanon": {
      "base": "smcv",
      "items": {
       "dog": {
@@ -12858,7 +12858,7 @@
        "queue": "Vehicle"
       }
      },
-     "name": "Hezbollah",
+     "name": "Lebanon",
      "side": "Soviets",
      "start": [
       "nacnst",

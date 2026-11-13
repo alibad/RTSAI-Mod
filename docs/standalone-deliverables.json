@@ -18,7 +18,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gacnst": [
@@ -253,7 +253,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gapowr": [
@@ -426,7 +426,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "garefn": [
@@ -653,7 +653,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gapile": [
@@ -819,7 +819,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gaweap": [
@@ -1167,7 +1167,7 @@
     "factions": [
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "naradr": [
@@ -1402,7 +1402,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gayard": [
@@ -1659,7 +1659,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gadept": [
@@ -1895,7 +1895,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gatech": [
@@ -2147,7 +2147,7 @@
     "factions": [
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "nairon": [
@@ -2239,7 +2239,7 @@
      "israel",
      "iran",
      "yemen",
-     "hezbollah"
+     "lebanon"
     ],
     "replaces": {
      "gawall": [
@@ -2353,7 +2353,7 @@
     ],
     "factions": [
      "china",
-     "hezbollah",
+     "lebanon",
      "iran",
      "israel",
      "saudi",
@@ -2434,7 +2434,7 @@
     ],
     "factions": [
      "china",
-     "hezbollah",
+     "lebanon",
      "iran",
      "israel",
      "saudi",
@@ -2547,7 +2547,7 @@
     ],
     "factions": [
      "china",
-     "hezbollah",
+     "lebanon",
      "iran",
      "israel",
      "saudi",
@@ -2662,7 +2662,7 @@
     ],
     "factions": [
      "china",
-     "hezbollah",
+     "lebanon",
      "iran",
      "israel",
      "saudi",
@@ -2929,7 +2929,7 @@
     ],
     "factions": [
      "china",
-     "hezbollah",
+     "lebanon",
      "iran",
      "israel",
      "saudi",
@@ -2948,7 +2948,7 @@
      "htk"
     ],
     "factions": [
-     "hezbollah",
+     "lebanon",
      "iran",
      "yemen"
     ],
@@ -3006,7 +3006,7 @@
      "sapc"
     ],
     "factions": [
-     "hezbollah",
+     "lebanon",
      "iran",
      "yemen"
     ],
@@ -6032,12 +6032,12 @@
      "R2ChinanavalVoice/Burned",
      "R2ChinaredspearVoice/Burned",
      "R2ChinavehicleVoice/Burned",
-     "R2HezbollahdroneVoice/Burned",
-     "R2HezbollahinfantryVoice/Burned",
-     "R2HezbollahnavalVoice/Burned",
-     "R2HezbollahscoutVoice/Burned",
-     "R2HezbollahspotterVoice/Burned",
-     "R2HezbollahvehicleVoice/Burned",
+     "R2LebanondroneVoice/Burned",
+     "R2LebanoninfantryVoice/Burned",
+     "R2LebanonnavalVoice/Burned",
+     "R2LebanonscoutVoice/Burned",
+     "R2LebanonspotterVoice/Burned",
+     "R2LebanonvehicleVoice/Burned",
      "R2IranairVoice/Burned",
      "R2IrandroneVoice/Burned",
      "R2IraninfantryVoice/Burned",
@@ -6489,12 +6489,12 @@
      "R2ChinanavalVoice/PsyCrush",
      "R2ChinaredspearVoice/PsyCrush",
      "R2ChinavehicleVoice/PsyCrush",
-     "R2HezbollahdroneVoice/PsyCrush",
-     "R2HezbollahinfantryVoice/PsyCrush",
-     "R2HezbollahnavalVoice/PsyCrush",
-     "R2HezbollahscoutVoice/PsyCrush",
-     "R2HezbollahspotterVoice/PsyCrush",
-     "R2HezbollahvehicleVoice/PsyCrush",
+     "R2LebanondroneVoice/PsyCrush",
+     "R2LebanoninfantryVoice/PsyCrush",
+     "R2LebanonnavalVoice/PsyCrush",
+     "R2LebanonscoutVoice/PsyCrush",
+     "R2LebanonspotterVoice/PsyCrush",
+     "R2LebanonvehicleVoice/PsyCrush",
      "R2IranairVoice/PsyCrush",
      "R2IrandroneVoice/PsyCrush",
      "R2IraninfantryVoice/PsyCrush",
@@ -6646,12 +6646,12 @@
      "R2ChinanavalVoice/Melted",
      "R2ChinaredspearVoice/Melted",
      "R2ChinavehicleVoice/Melted",
-     "R2HezbollahdroneVoice/Melted",
-     "R2HezbollahinfantryVoice/Melted",
-     "R2HezbollahnavalVoice/Melted",
-     "R2HezbollahscoutVoice/Melted",
-     "R2HezbollahspotterVoice/Melted",
-     "R2HezbollahvehicleVoice/Melted",
+     "R2LebanondroneVoice/Melted",
+     "R2LebanoninfantryVoice/Melted",
+     "R2LebanonnavalVoice/Melted",
+     "R2LebanonscoutVoice/Melted",
+     "R2LebanonspotterVoice/Melted",
+     "R2LebanonvehicleVoice/Melted",
      "R2IranairVoice/Melted",
      "R2IrandroneVoice/Melted",
      "R2IraninfantryVoice/Melted",
@@ -6803,12 +6803,12 @@
      "R2ChinanavalVoice/Melted",
      "R2ChinaredspearVoice/Melted",
      "R2ChinavehicleVoice/Melted",
-     "R2HezbollahdroneVoice/Melted",
-     "R2HezbollahinfantryVoice/Melted",
-     "R2HezbollahnavalVoice/Melted",
-     "R2HezbollahscoutVoice/Melted",
-     "R2HezbollahspotterVoice/Melted",
-     "R2HezbollahvehicleVoice/Melted",
+     "R2LebanondroneVoice/Melted",
+     "R2LebanoninfantryVoice/Melted",
+     "R2LebanonnavalVoice/Melted",
+     "R2LebanonscoutVoice/Melted",
+     "R2LebanonspotterVoice/Melted",
+     "R2LebanonvehicleVoice/Melted",
      "R2IranairVoice/Melted",
      "R2IrandroneVoice/Melted",
      "R2IraninfantryVoice/Melted",
@@ -6960,12 +6960,12 @@
      "R2ChinanavalVoice/Melted",
      "R2ChinaredspearVoice/Melted",
      "R2ChinavehicleVoice/Melted",
-     "R2HezbollahdroneVoice/Melted",
-     "R2HezbollahinfantryVoice/Melted",
-     "R2HezbollahnavalVoice/Melted",
-     "R2HezbollahscoutVoice/Melted",
-     "R2HezbollahspotterVoice/Melted",
-     "R2HezbollahvehicleVoice/Melted",
+     "R2LebanondroneVoice/Melted",
+     "R2LebanoninfantryVoice/Melted",
+     "R2LebanonnavalVoice/Melted",
+     "R2LebanonscoutVoice/Melted",
+     "R2LebanonspotterVoice/Melted",
+     "R2LebanonvehicleVoice/Melted",
      "R2IranairVoice/Melted",
      "R2IrandroneVoice/Melted",
      "R2IraninfantryVoice/Melted",
@@ -7117,12 +7117,12 @@
      "R2ChinanavalVoice/Zapped",
      "R2ChinaredspearVoice/Zapped",
      "R2ChinavehicleVoice/Zapped",
-     "R2HezbollahdroneVoice/Zapped",
-     "R2HezbollahinfantryVoice/Zapped",
-     "R2HezbollahnavalVoice/Zapped",
-     "R2HezbollahscoutVoice/Zapped",
-     "R2HezbollahspotterVoice/Zapped",
-     "R2HezbollahvehicleVoice/Zapped",
+     "R2LebanondroneVoice/Zapped",
+     "R2LebanoninfantryVoice/Zapped",
+     "R2LebanonnavalVoice/Zapped",
+     "R2LebanonscoutVoice/Zapped",
+     "R2LebanonspotterVoice/Zapped",
+     "R2LebanonvehicleVoice/Zapped",
      "R2IranairVoice/Zapped",
      "R2IrandroneVoice/Zapped",
      "R2IraninfantryVoice/Zapped",
@@ -7272,12 +7272,12 @@
      "R2ChinanavalVoice/Die",
      "R2ChinaredspearVoice/Die",
      "R2ChinavehicleVoice/Die",
-     "R2HezbollahdroneVoice/Die",
-     "R2HezbollahinfantryVoice/Die",
-     "R2HezbollahnavalVoice/Die",
-     "R2HezbollahscoutVoice/Die",
-     "R2HezbollahspotterVoice/Die",
-     "R2HezbollahvehicleVoice/Die",
+     "R2LebanondroneVoice/Die",
+     "R2LebanoninfantryVoice/Die",
+     "R2LebanonnavalVoice/Die",
+     "R2LebanonscoutVoice/Die",
+     "R2LebanonspotterVoice/Die",
+     "R2LebanonvehicleVoice/Die",
      "R2IranairVoice/Die",
      "R2IrandroneVoice/Die",
      "R2IraninfantryVoice/Die",
@@ -7423,12 +7423,12 @@
      "R2ChinanavalVoice/Die",
      "R2ChinaredspearVoice/Die",
      "R2ChinavehicleVoice/Die",
-     "R2HezbollahdroneVoice/Die",
-     "R2HezbollahinfantryVoice/Die",
-     "R2HezbollahnavalVoice/Die",
-     "R2HezbollahscoutVoice/Die",
-     "R2HezbollahspotterVoice/Die",
-     "R2HezbollahvehicleVoice/Die",
+     "R2LebanondroneVoice/Die",
+     "R2LebanoninfantryVoice/Die",
+     "R2LebanonnavalVoice/Die",
+     "R2LebanonscoutVoice/Die",
+     "R2LebanonspotterVoice/Die",
+     "R2LebanonvehicleVoice/Die",
      "R2IranairVoice/Die",
      "R2IrandroneVoice/Die",
      "R2IraninfantryVoice/Die",
@@ -7574,12 +7574,12 @@
      "R2ChinanavalVoice/Die",
      "R2ChinaredspearVoice/Die",
      "R2ChinavehicleVoice/Die",
-     "R2HezbollahdroneVoice/Die",
-     "R2HezbollahinfantryVoice/Die",
-     "R2HezbollahnavalVoice/Die",
-     "R2HezbollahscoutVoice/Die",
-     "R2HezbollahspotterVoice/Die",
-     "R2HezbollahvehicleVoice/Die",
+     "R2LebanondroneVoice/Die",
+     "R2LebanoninfantryVoice/Die",
+     "R2LebanonnavalVoice/Die",
+     "R2LebanonscoutVoice/Die",
+     "R2LebanonspotterVoice/Die",
+     "R2LebanonvehicleVoice/Die",
      "R2IranairVoice/Die",
      "R2IrandroneVoice/Die",
      "R2IraninfantryVoice/Die",

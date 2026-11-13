@@ -33,7 +33,7 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "tools" / "standalone-audit" / "StandaloneAudit.cs"
-MODERN = ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]
+MODERN = ["china", "iran", "turkey", "saudi", "israel", "yemen", "lebanon"]
 
 
 def link_dir(link: Path, target: Path):

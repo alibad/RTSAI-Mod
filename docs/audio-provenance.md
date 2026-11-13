@@ -1,7 +1,7 @@
 # Audio provenance
 
 Status, 2026-10-06: everything below ships on `main`. It arrived with the promotion of the owner-approved art preview,
-which also brought Israel's Hebrew and Hezbollah's Lebanese Arabic voices, announcers and call signs. `make.cmd test`
+which also brought Israel's Hebrew and Lebanon's Lebanese Arabic voices, announcers and call signs. `make.cmd test`
 on `main` decodes every clip through `CheckFactionAudio`, with no warnings [ran]. Art has its own record:
 [art-provenance.md](art-provenance.md).
 
@@ -42,7 +42,7 @@ No real person's voice is cloned. Each speaker is a Kokoro voicepack, or the ave
      across), it speaks the same sentence in the target language.
   2. Each line is cloned from that native clip at the default `cfg_weight` 0.5. Reference and
      target then share a language, as the model card recommends.
-- Hezbollah's native clip is a Lebanese Arabic sentence (`NATIVE_REFERENCE_TEXT["ar-LB"]`), so its
+- Lebanon's native clip is a Lebanese Arabic sentence (`NATIVE_REFERENCE_TEXT["ar-LB"]`), so its
   lines are cloned from Lebanese rather than Modern Standard Arabic speech.
 - Hebrew is read with vowel points (niqqud), written by hand in `generate-levant-voices.py`.
   Chatterbox's Hebrew front end expects pointed text; it would add the points with the optional
@@ -59,25 +59,25 @@ No real person's voice is cloned. Each speaker is a Kokoro voicepack, or the ave
 | Saudi Arabia | `bm_george` | `bm_fable` | `af_kore`, operations room with a short room tail |
 | Yemen | `am_fenrir` + `bm_fable` | `bm_lewis` + `am_michael` | `af_aoede`, lo-fi field radio |
 | Israel | `am_puck` + `bm_lewis` | `am_michael` + `am_adam` | `bf_emma` + `af_heart`, clipped digital command net |
-| Hezbollah | `am_fenrir` + `am_michael` | `bm_george` + `am_puck` | `bf_isabella`, VHF field radio with a short slap |
+| Lebanon | `am_fenrir` + `am_michael` | `bm_george` + `am_puck` | `bf_isabella`, VHF field radio with a short slap |
 
-Arabic is Modern Standard Arabic for Saudi Arabia and Yemen. Hezbollah's lines are written in
+Arabic is Modern Standard Arabic for Saudi Arabia and Yemen. Lebanon's lines are written in
 Lebanese Arabic (هلق، عم، شو، منتحرك) and cloned from a Lebanese reference; Chatterbox has no
 dialect setting, so how Lebanese they sound is for the native reviewer. The Persian fine-tune was
 trained on read speech, so the Persian lines are flatter than the others.
 
-Israel and Hezbollah (since 5 October) have the same inventory as Iran: six voice sets of select,
+Israel and Lebanon (since 5 October) have the same inventory as Iran: six voice sets of select,
 move, attack and action lines, each in the faction's language and in English (24 + 24 lines), plus
-their own announcer. `levant-voices.yaml` defines the sets (`R2Israel*Voice`, `R2Hezbollah*Voice`):
+their own announcer. `levant-voices.yaml` defines the sets (`R2Israel*Voice`, `R2Lebanon*Voice`):
 infantry, forward observer or field spotter, the recon specialist or scout, vehicles (also used by
 their defenses, as before), aircraft or drone, and naval. `israel-audio.yaml` and
-`hezbollah-audio.yaml` assign them to the units, and `eva-notifications.yaml` points both factions
+`lebanon-audio.yaml` assign them to the units, and `eva-notifications.yaml` points both factions
 at their announcer folders instead of the stock `ceva` and `csof`. Every line is a neutral unit
 acknowledgement or report, like the other factions': no slogans, no religious or political phrases,
 no real people or operations.
 
-Hezbollah's FPV Team (Salvo and swarm, 7 October) adds a seventh set, `R2HezbollahfpvVoice`: four Lebanese Arabic
-lines and their English counterparts (`hz-fpv-*`), same generator, speaker (`hezbollah-infantry`) and field-radio
+Lebanon's FPV Team (Salvo and swarm, 7 October) adds a seventh set, `R2LebanonfpvVoice`: four Lebanese Arabic
+lines and their English counterparts (`hz-fpv-*`), same generator, speaker (`lebanon-infantry`) and field-radio
 chain. They were rendered on the CPU because the GPU was claimed by another session, so the Lebanese reference
 was bootstrapped again (seed 5, CER 0.07); the machine review rows are in `docs/voice-review.csv` and the native
 check is pending, like the other Lebanese lines. The FPV drones themselves are not voiced (not selectable).
@@ -184,7 +184,7 @@ How the first pass was done:
 | Turkish (tr-TR) | Türkiye | 12 | 0 | 1 | 11 |
 | Mandarin (zh-CN) | China | 10 | 1 (call sign) | 0 (plus 1) | 9 |
 | Hebrew (he-IL) | Israel | 24 (new) | 0 | 5 | 19 |
-| Lebanese Arabic (ar-LB) | Hezbollah | 24 (new) | 2 | 4 (plus 1) | 18 |
+| Lebanese Arabic (ar-LB) | Lebanon | 24 (new) | 2 | 4 (plus 1) | 18 |
 | **Total** | | **122** | **9** | **23 (plus 5)** | **90** |
 
 ### Regenerated lines
@@ -249,7 +249,7 @@ line afterwards with the generator or `tools/voice-review.py regenerate`, then r
 
 `mods/rtsai/modern-factions/eva-notifications.yaml` adds a Speech prefix for each modern faction,
 so the engine plays `audio/eva/<faction>/<clip>.wav` for that faction's player. Every Speech clip in
-`audio/notifications.yaml` has a line for all seven factions (Israel and Hezbollah since 5 October). The wording is original, not a
+`audio/notifications.yaml` has a line for all seven factions (Israel and Lebanon since 5 October). The wording is original, not a
 transcript of the Red Alert 2 announcer. Announcers are English so alerts stay clear for every
 player. Files are IMA ADPCM WAV at 22.05 kHz mono, the format RA2's own announcer uses.
 
@@ -288,7 +288,7 @@ python scripts/generate-rtsai-mod-audio.py --mod ../RTSAI-Mod --eva-only --eva-c
 ```
 
 Partial runs merge their records into `PROVENANCE.json`. Set `RTSAI_MOSS_PYTHON` to the Persian
-worker's interpreter. The Israel and Hezbollah lines come from `scripts/generate-levant-voices.py`,
+worker's interpreter. The Israel and Lebanon lines come from `scripts/generate-levant-voices.py`,
 which the driver loads like the other faction generators; their announcers are in
 `generate-faction-eva.py`. Hebrew needs no diacritizer: the points are in the script.
 

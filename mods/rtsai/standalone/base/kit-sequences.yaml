@@ -319,9 +319,9 @@ cnst-yemen:
 		Filename: cnst-yemenicon.png
 		Offset: 0, 0
 
-cnst-hezbollah:
+cnst-lebanon:
 	Defaults:
-		Filename: cnst-hezbollah.shp
+		Filename: cnst-lebanon.shp
 		Offset: 13, -31, 31
 	idle:
 		Start: 0
@@ -369,7 +369,7 @@ cnst-hezbollah:
 		ShadowStart: 82
 		Tick: 100
 	icon:
-		Filename: cnst-hezbollahicon.png
+		Filename: cnst-lebanonicon.png
 		Offset: 0, 0
 powr-china:
 	Defaults:
@@ -659,9 +659,9 @@ powr-yemen:
 		Filename: powr-yemenicon.png
 		Offset: 0, 0
 
-powr-hezbollah:
+powr-lebanon:
 	Defaults:
-		Filename: powr-hezbollah.shp
+		Filename: powr-lebanon.shp
 		Offset: 17, -26, 26
 	idle:
 		Start: 0
@@ -704,7 +704,7 @@ powr-hezbollah:
 		ShadowStart: 22
 		Tick: 100
 	icon:
-		Filename: powr-hezbollahicon.png
+		Filename: powr-lebanonicon.png
 		Offset: 0, 0
 hpwr-china:
 	Defaults:
@@ -994,9 +994,9 @@ hpwr-yemen:
 		Filename: hpwr-yemenicon.png
 		Offset: 0, 0
 
-hpwr-hezbollah:
+hpwr-lebanon:
 	Defaults:
-		Filename: hpwr-hezbollah.shp
+		Filename: hpwr-lebanon.shp
 		Offset: 14, -23, 23
 	idle:
 		Start: 0
@@ -1039,7 +1039,7 @@ hpwr-hezbollah:
 		ShadowStart: 22
 		Tick: 120
 	icon:
-		Filename: hpwr-hezbollahicon.png
+		Filename: hpwr-lebanonicon.png
 		Offset: 0, 0
 refn-china:
 	Defaults:
@@ -1413,9 +1413,9 @@ refn-yemen:
 		Filename: refn-yemenicon.png
 		Offset: 0, 0
 
-refn-hezbollah:
+refn-lebanon:
 	Defaults:
-		Filename: refn-hezbollah.shp
+		Filename: refn-lebanon.shp
 		Offset: 1, -31, -12
 	idle:
 		Start: 0
@@ -1472,7 +1472,7 @@ refn-hezbollah:
 		ShadowStart: 85
 		Tick: 100
 	icon:
-		Filename: refn-hezbollahicon.png
+		Filename: refn-lebanonicon.png
 		Offset: 0, 0
 barr-china:
 	Defaults:
@@ -1672,9 +1672,9 @@ barr-yemen:
 		Filename: barr-yemenicon.png
 		Offset: 0, 0
 
-barr-hezbollah:
+barr-lebanon:
 	Defaults:
-		Filename: barr-hezbollah.shp
+		Filename: barr-lebanon.shp
 		Offset: 3, -31, 31
 	idle:
 		Start: 0
@@ -1702,7 +1702,7 @@ barr-hezbollah:
 		ShadowStart: 38
 		Tick: 90
 	icon:
-		Filename: barr-hezbollahicon.png
+		Filename: barr-lebanonicon.png
 		Offset: 0, 0
 weap-china:
 	Defaults:
@@ -2352,9 +2352,9 @@ weap-yemen:
 		Filename: weap-yemenicon.png
 		Offset: 0, 0
 
-weap-hezbollah:
+weap-lebanon:
 	Defaults:
-		Filename: weap-hezbollah.shp
+		Filename: weap-lebanon.shp
 		Offset: 19, -31, 31
 	idle:
 		Start: 0
@@ -2457,7 +2457,7 @@ weap-hezbollah:
 		ShadowStart: 100
 		Tick: 100
 	icon:
-		Filename: weap-hezbollahicon.png
+		Filename: weap-lebanonicon.png
 		Offset: 0, 0
 radr-china:
 	Defaults:
@@ -2657,9 +2657,9 @@ radr-yemen:
 		Filename: radr-yemenicon.png
 		Offset: 0, 0
 
-radr-hezbollah:
+radr-lebanon:
 	Defaults:
-		Filename: radr-hezbollah.shp
+		Filename: radr-lebanon.shp
 		Offset: 7, -24, 24
 	idle:
 		Start: 0
@@ -2687,7 +2687,7 @@ radr-hezbollah:
 		ShadowStart: 70
 		Tick: 70
 	icon:
-		Filename: radr-hezbollahicon.png
+		Filename: radr-lebanonicon.png
 		Offset: 0, 0
 airf-china:
 	Defaults:
@@ -3037,9 +3037,9 @@ airf-yemen:
 		Filename: airf-yemenicon.png
 		Offset: 0, 0
 
-airf-hezbollah:
+airf-lebanon:
 	Defaults:
-		Filename: airf-hezbollah.shp
+		Filename: airf-lebanon.shp
 		Offset: 12, -18, 18
 	idle:
 		Start: 0
@@ -3092,7 +3092,7 @@ airf-hezbollah:
 		ShadowStart: 75
 		Tick: 90
 	icon:
-		Filename: airf-hezbollahicon.png
+		Filename: airf-lebanonicon.png
 		Offset: 0, 0
 yard-china:
 	Defaults:
@@ -3484,9 +3484,9 @@ yard-yemen:
 		Filename: yard-yemenicon.png
 		Offset: 0, 0
 
-yard-hezbollah:
+yard-lebanon:
 	Defaults:
-		Filename: yard-hezbollah.shp
+		Filename: yard-lebanon.shp
 		Offset: 3, -38, 38
 	idle:
 		Start: 0
@@ -3546,7 +3546,7 @@ yard-hezbollah:
 		ShadowStart: 116
 		Tick: 120
 	icon:
-		Filename: yard-hezbollahicon.png
+		Filename: yard-lebanonicon.png
 		Offset: 0, 0
 dept-china:
 	Defaults:
@@ -3950,9 +3950,9 @@ dept-yemen:
 		Filename: dept-yemenicon.png
 		Offset: 0, 0
 
-dept-hezbollah:
+dept-lebanon:
 	Defaults:
-		Filename: dept-hezbollah.shp
+		Filename: dept-lebanon.shp
 		Offset: 14, -27, 27
 	idle:
 		Start: 0
@@ -4014,7 +4014,7 @@ dept-hezbollah:
 		ShadowStart: 45
 		Tick: 70
 	icon:
-		Filename: dept-hezbollahicon.png
+		Filename: dept-lebanonicon.png
 		Offset: 0, 0
 tech-china:
 	Defaults:
@@ -4244,9 +4244,9 @@ tech-yemen:
 		Filename: tech-yemenicon.png
 		Offset: 0, 0
 
-tech-hezbollah:
+tech-lebanon:
 	Defaults:
-		Filename: tech-hezbollah.shp
+		Filename: tech-lebanon.shp
 		Offset: 12, -43, 43
 	idle:
 		Start: 0
@@ -4279,7 +4279,7 @@ tech-hezbollah:
 		ShadowStart: 38
 		Tick: 80
 	icon:
-		Filename: tech-hezbollahicon.png
+		Filename: tech-lebanonicon.png
 		Offset: 0, 0
 sw1-china:
 	Defaults:
@@ -4479,9 +4479,9 @@ sw1-yemen:
 		Filename: sw1-yemenicon.png
 		Offset: 0, 0
 
-sw1-hezbollah:
+sw1-lebanon:
 	Defaults:
-		Filename: sw1-hezbollah.shp
+		Filename: sw1-lebanon.shp
 		Offset: 1, -25, 25
 	idle:
 		Start: 0
@@ -4509,7 +4509,7 @@ sw1-hezbollah:
 		ShadowStart: 38
 		Tick: 80
 	icon:
-		Filename: sw1-hezbollahicon.png
+		Filename: sw1-lebanonicon.png
 		Offset: 0, 0
 sw2-china:
 	Defaults:
@@ -4709,9 +4709,9 @@ sw2-yemen:
 		Filename: sw2-yemenicon.png
 		Offset: 0, 0
 
-sw2-hezbollah:
+sw2-lebanon:
 	Defaults:
-		Filename: sw2-hezbollah.shp
+		Filename: sw2-lebanon.shp
 		Offset: 13, -15, 15
 	idle:
 		Start: 0
@@ -4739,7 +4739,7 @@ sw2-hezbollah:
 		ShadowStart: 38
 		Tick: 80
 	icon:
-		Filename: sw2-hezbollahicon.png
+		Filename: sw2-lebanonicon.png
 		Offset: 0, 0
 wall-china:
 	Defaults:
@@ -4861,9 +4861,9 @@ wall-yemen:
 		Filename: wall-yemenicon.png
 		Offset: 0, 0
 
-wall-hezbollah:
+wall-lebanon:
 	Defaults:
-		Filename: wall-hezbollah.shp
+		Filename: wall-lebanon.shp
 		Offset: 7, -9, 9
 	idle:
 		Start: 0
@@ -4878,5 +4878,5 @@ wall-hezbollah:
 		Length: 16
 		ShadowStart: 80
 	icon:
-		Filename: wall-hezbollahicon.png
+		Filename: wall-lebanonicon.png
 		Offset: 0, 0

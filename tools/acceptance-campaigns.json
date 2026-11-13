@@ -272,7 +272,7 @@
         "id": "pair-13",
         "factions": [
           "libya",
-          "hezbollah"
+          "lebanon"
         ],
         "bots": [
           "normal"
@@ -293,7 +293,7 @@
       {
         "id": "pair-14",
         "factions": [
-          "hezbollah",
+          "lebanon",
           "iraq"
         ],
         "bots": [
@@ -595,7 +595,7 @@
         "id": "pair-13",
         "factions": [
           "libya",
-          "hezbollah"
+          "lebanon"
         ],
         "bots": [
           "normal"
@@ -611,7 +611,7 @@
       {
         "id": "pair-14",
         "factions": [
-          "hezbollah",
+          "lebanon",
           "iraq"
         ],
         "bots": [

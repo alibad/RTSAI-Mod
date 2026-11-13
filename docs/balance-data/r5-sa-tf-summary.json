@@ -132,7 +132,7 @@
     "r2yzu": 48
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "games": 24,
    "wins": 12,
    "draws": 8,
@@ -681,7 +681,7 @@
  },
  "matrix": {
   "china": {
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 0,
     "draws": 1,
@@ -724,7 +724,7 @@
     "score": 0.25
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "china": {
     "games": 4,
     "wins": 3,
@@ -776,7 +776,7 @@
     "losses": 1,
     "score": 0.75
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 0,
     "draws": 2,
@@ -820,7 +820,7 @@
     "losses": 1,
     "score": 0.375
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 1,
@@ -864,7 +864,7 @@
     "losses": 3,
     "score": 0.25
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 2,
     "draws": 1,
@@ -908,7 +908,7 @@
     "losses": 3,
     "score": 0.25
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 0,
     "draws": 2,
@@ -952,7 +952,7 @@
     "losses": 1,
     "score": 0.75
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 1,

@@ -21,7 +21,7 @@ write=DEFINITIONS['write']; units_by_faction=DEFINITIONS['FACTIONS']
 TEAM=(224,0,0)
 COLORS={
  'israel': {'paint':(108,115,90),'edge':(156,165,133),'dark':(58,66,56),'glass':(92,171,204),'stone':(139,146,140),'accent':(89,139,184)},
- 'hezbollah': {'paint':(103,99,62),'edge':(147,146,105),'dark':(55,57,40),'glass':(113,157,148),'stone':(142,133,110),'accent':(170,162,99)},
+ 'lebanon': {'paint':(103,99,62),'edge':(147,146,105),'dark':(55,57,40),'glass':(113,157,148),'stone':(142,133,110),'accent':(170,162,99)},
 }
 FONT=ROOT/'OpenRA/mods/common/FreeSansBold.ttf'
 REPORT={ 'evidence':'measured', 'source':'CPU authored geometry; no original game assets', 'paidSpend':0,'actors':{} }
@@ -56,7 +56,7 @@ def body(faction, kind, actor=''):
   mesh.cylinder_y((0,-1.60,.44),.78,.055,c['dark'],segments=8)
   return mesh
  if kind in ('interceptor','strike-aircraft'):
-  jet=kind=='interceptor'; drone=faction=='hezbollah'
+  jet=kind=='interceptor'; drone=faction=='lebanon'
   length=3.0 if jet else 1.8
   mesh.tapered_box((-.38,.38,-length,1.7,.40),(-.24,.24,-length+.25,1.4,.91),c['paint'])
   for sign in (-1,1):
@@ -234,7 +234,7 @@ def build(faction, units):
   old=actor[2:]; air=role in ('interceptor','strike-aircraft'); naval=idx in (range(10,13) if faction=='israel' else range(9,12)); defense=idx>=(13 if faction=='israel' else 12)
   if idx<4:
    c=COLORS[faction]; infantryrole=('rifle','atgm','jtac','commando') if faction=='israel' else ('rifle','rpg','spotter','ghost')
-   style=infantry.InfantryStyle(infantryrole[idx],c['paint'],c['dark'],c['edge'],(157,117,83),(34,39,39),c['glass'],1.10 if faction=='israel' else .96,hood=idx==3 and faction=='hezbollah',scarf=faction=='hezbollah')
+   style=infantry.InfantryStyle(infantryrole[idx],c['paint'],c['dark'],c['edge'],(157,117,83),(34,39,39),c['glass'],1.10 if faction=='israel' else .96,hood=idx==3 and faction=='lebanon',scarf=faction=='lebanon')
    frames=[]
    for action,length in [('stand',1),('stand',1),('run',6),('shoot',8),('prone',1),('prone',4),('transition',2),('transition',2),('prone-shoot',8)]:
     for facing in range(8):
@@ -264,7 +264,7 @@ def build(faction, units):
    REPORT['actors'][actor]={'format':'SHP','frames':len(frames),'canvas':[96,96],'sha256':digest}
   else:
    kind=('frigate' if role=='anti-submarine' else 'tender' if role=='support' else 'ship') if naval else role
-   hull=body(faction,kind,actor); parts=[hull]; turret=not air and not(role=='support' and naval) and not (faction=='hezbollah' and actor in ('r2hzmissileboat','r2hzskiff'))
+   hull=body(faction,kind,actor); parts=[hull]; turret=not air and not(role=='support' and naval) and not (faction=='lebanon' and actor in ('r2hzmissileboat','r2hzskiff'))
    if turret:parts.append(weapon(faction,role))
    if actor=='r2ilgunship':
     rotor=geometry.Mesh();rotor.box(-2.8,2.8,-.08,.08,1.56,1.60,(34,39,39));rotor.box(-.08,.08,-2.8,2.8,1.56,1.60,(34,39,39));parts.append(rotor)

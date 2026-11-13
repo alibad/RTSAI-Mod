@@ -7,7 +7,7 @@ Speech:
 	DefaultPrefix: ra2|modern-factions/audio/eva/china/
 	Prefixes:
 		israel: ra2|modern-factions/audio/eva/israel/
-		hezbollah: ra2|modern-factions/audio/eva/hezbollah/
+		lebanon: ra2|modern-factions/audio/eva/lebanon/
 		china: ra2|modern-factions/audio/eva/china/
 		iran: ra2|modern-factions/audio/eva/iran/
 		turkey: ra2|modern-factions/audio/eva/turkey/

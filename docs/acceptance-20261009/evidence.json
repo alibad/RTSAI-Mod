@@ -894,16 +894,16 @@
       "replay_sha256": "e3230694424c3ad81e05c9947aeea88c3e6901980bf7a72cb533b726a757f700"
     },
     {
-      "id": "rtsai--hezbollah-relay--win",
+      "id": "rtsai--lebanon-relay--win",
       "mod": "rtsai",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "win",
         "expected": "won"
       },
       "actual": "won",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "drive|0|build|20",
         "drive|1|survive|20",
         "complete|0|21",
@@ -933,7 +933,7 @@
       "exit_code": 0,
       "wall_seconds": 20.03,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2\\cases\\rtsai--hezbollah-relay--win\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2\\cases\\rtsai--lebanon-relay--win\\support",
       "passed": true,
       "difficulty": "normal",
       "objective_statuses_pass": true,
@@ -941,9 +941,9 @@
       "replay_sha256": "0e8dd1e500dd71d20fa9d6be543e3a9c4daca7ff330f3f813d29095366d15dd0"
     },
     {
-      "id": "rtsai--hezbollah-relay--army-wipe",
+      "id": "rtsai--lebanon-relay--army-wipe",
       "mod": "rtsai",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "army-wipe",
         "expected": "lost",
@@ -951,14 +951,14 @@
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 11.78,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2\\cases\\rtsai--hezbollah-relay--army-wipe\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2\\cases\\rtsai--lebanon-relay--army-wipe\\support",
       "passed": true,
       "difficulty": "normal",
       "objective_statuses_pass": true,
@@ -966,24 +966,24 @@
       "replay_sha256": "52cbaae5f7661566ef83dc4c0ac389618e178d8fbe5823793e82e70221a22bdd"
     },
     {
-      "id": "rtsai--hezbollah-relay--base-HezbollahConyard",
+      "id": "rtsai--lebanon-relay--base-LebanonConyard",
       "mod": "rtsai",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
-        "id": "base-HezbollahConyard",
+        "id": "base-LebanonConyard",
         "expected": "lost",
-        "kill": "HezbollahConyard"
+        "kill": "LebanonConyard"
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 9.8,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2\\cases\\rtsai--hezbollah-relay--base-HezbollahConyard\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2\\cases\\rtsai--lebanon-relay--base-LebanonConyard\\support",
       "passed": true,
       "difficulty": "normal",
       "objective_statuses_pass": true,
@@ -1888,16 +1888,16 @@
       "replay_sha256": "fd8e4834fb65a76da724ba1f15bb2da38825ce462b27e253f0a1a1444a489649"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--win",
+      "id": "rtsai-topdown--lebanon-relay--win",
       "mod": "rtsai-topdown",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "win",
         "expected": "won"
       },
       "actual": "won",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "drive|0|build|20",
         "drive|1|survive|20",
         "complete|0|21",
@@ -1927,7 +1927,7 @@
       "exit_code": 0,
       "wall_seconds": 18.67,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic\\cases\\rtsai-topdown--hezbollah-relay--win\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic\\cases\\rtsai-topdown--lebanon-relay--win\\support",
       "passed": true,
       "difficulty": "normal",
       "objective_statuses_pass": true,
@@ -1935,9 +1935,9 @@
       "replay_sha256": "83aafb8de1ca0f00b763e4cdd320b4bac34a155abbac58bcdc4e322c97e2f810"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--army-wipe",
+      "id": "rtsai-topdown--lebanon-relay--army-wipe",
       "mod": "rtsai-topdown",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "army-wipe",
         "expected": "lost",
@@ -1945,14 +1945,14 @@
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 9.89,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic\\cases\\rtsai-topdown--hezbollah-relay--army-wipe\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic\\cases\\rtsai-topdown--lebanon-relay--army-wipe\\support",
       "passed": true,
       "difficulty": "normal",
       "objective_statuses_pass": true,
@@ -1960,24 +1960,24 @@
       "replay_sha256": "ce1a002e109a42957b0baf9304352150f1638c6de7093b65633908187cc29483"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--base-HezbollahConyard",
+      "id": "rtsai-topdown--lebanon-relay--base-LebanonConyard",
       "mod": "rtsai-topdown",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
-        "id": "base-HezbollahConyard",
+        "id": "base-LebanonConyard",
         "expected": "lost",
-        "kill": "HezbollahConyard"
+        "kill": "LebanonConyard"
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 8.88,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic\\cases\\rtsai-topdown--hezbollah-relay--base-HezbollahConyard\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic\\cases\\rtsai-topdown--lebanon-relay--base-LebanonConyard\\support",
       "passed": true,
       "difficulty": "normal",
       "objective_statuses_pass": true,
@@ -2878,17 +2878,17 @@
       "replay_sha256": "5cdf579be294fe8ddd5840751aa19a29052ef171e340950340ce7425639e6a7a"
     },
     {
-      "id": "rtsai--hezbollah-relay--win",
+      "id": "rtsai--lebanon-relay--win",
       "mod": "rtsai",
       "difficulty": "easy",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "win",
         "expected": "won"
       },
       "actual": "won",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "drive|0|build|20",
         "drive|1|survive|20",
         "complete|0|21",
@@ -2918,17 +2918,17 @@
       "exit_code": 0,
       "wall_seconds": 27.03,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-easy\\cases\\rtsai--hezbollah-relay--win\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-easy\\cases\\rtsai--lebanon-relay--win\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "0ad46d639f1f808c9afa0fc2659fb20cf34ba4690674cff31d4bb0f98d17a5aa"
     },
     {
-      "id": "rtsai--hezbollah-relay--army-wipe",
+      "id": "rtsai--lebanon-relay--army-wipe",
       "mod": "rtsai",
       "difficulty": "easy",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "army-wipe",
         "expected": "lost",
@@ -2936,39 +2936,39 @@
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 12.16,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-easy\\cases\\rtsai--hezbollah-relay--army-wipe\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-easy\\cases\\rtsai--lebanon-relay--army-wipe\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "37296937bb05d5ecf1653835c12b989e327675422c93f6fa202c960021d10c26"
     },
     {
-      "id": "rtsai--hezbollah-relay--base-HezbollahConyard",
+      "id": "rtsai--lebanon-relay--base-LebanonConyard",
       "mod": "rtsai",
       "difficulty": "easy",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
-        "id": "base-HezbollahConyard",
+        "id": "base-LebanonConyard",
         "expected": "lost",
-        "kill": "HezbollahConyard"
+        "kill": "LebanonConyard"
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 12.08,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-easy\\cases\\rtsai--hezbollah-relay--base-HezbollahConyard\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-easy\\cases\\rtsai--lebanon-relay--base-LebanonConyard\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
@@ -3872,17 +3872,17 @@
       "replay_sha256": "f565619d2795333a9eab554d2f3f91a1e61c73cbab20b61fc4b1400ed1f2a549"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--win",
+      "id": "rtsai-topdown--lebanon-relay--win",
       "mod": "rtsai-topdown",
       "difficulty": "hard",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "win",
         "expected": "won"
       },
       "actual": "won",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "drive|0|build|20",
         "drive|1|survive|20",
         "complete|0|21",
@@ -3912,17 +3912,17 @@
       "exit_code": 0,
       "wall_seconds": 23.83,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-hard\\cases\\rtsai-topdown--hezbollah-relay--win\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-hard\\cases\\rtsai-topdown--lebanon-relay--win\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "592b39a52c8f6025f868daaf9e64e8ae4002b906921e530348bab67618ba246f"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--army-wipe",
+      "id": "rtsai-topdown--lebanon-relay--army-wipe",
       "mod": "rtsai-topdown",
       "difficulty": "hard",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "army-wipe",
         "expected": "lost",
@@ -3930,39 +3930,39 @@
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 11.75,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-hard\\cases\\rtsai-topdown--hezbollah-relay--army-wipe\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-hard\\cases\\rtsai-topdown--lebanon-relay--army-wipe\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "4e05541ff10db59b88cb949eaabf718fb705c81a02f62cb4346ffeeec36f1359"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--base-HezbollahConyard",
+      "id": "rtsai-topdown--lebanon-relay--base-LebanonConyard",
       "mod": "rtsai-topdown",
       "difficulty": "hard",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
-        "id": "base-HezbollahConyard",
+        "id": "base-LebanonConyard",
         "expected": "lost",
-        "kill": "HezbollahConyard"
+        "kill": "LebanonConyard"
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "failed|0|11",
         "outcome|lost|11"
       ],
       "exit_code": 0,
       "wall_seconds": 11.25,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-hard\\cases\\rtsai-topdown--hezbollah-relay--base-HezbollahConyard\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-hard\\cases\\rtsai-topdown--lebanon-relay--base-LebanonConyard\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
@@ -4869,17 +4869,17 @@
       "replay_sha256": "cfda1b85370a64cf2d52f31b36cba0178ff3f1549fee3134d0e2f8fbaf55d67a"
     },
     {
-      "id": "rtsai--hezbollah-relay--win",
+      "id": "rtsai--lebanon-relay--win",
       "mod": "rtsai",
       "difficulty": "hard",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "win",
         "expected": "won"
       },
       "actual": "won",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "difficulty|hard|0",
         "drive|0|build|20",
         "drive|1|survive|20",
@@ -4910,17 +4910,17 @@
       "exit_code": 0,
       "wall_seconds": 19.8,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-hard\\cases\\rtsai--hezbollah-relay--win\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-hard\\cases\\rtsai--lebanon-relay--win\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "9989e7ffb749a53892b0fd18648af858dfc7f0b087b404d7e656738f59f18949"
     },
     {
-      "id": "rtsai--hezbollah-relay--army-wipe",
+      "id": "rtsai--lebanon-relay--army-wipe",
       "mod": "rtsai",
       "difficulty": "hard",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "army-wipe",
         "expected": "lost",
@@ -4928,7 +4928,7 @@
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "difficulty|hard|0",
         "failed|0|11",
         "outcome|lost|11"
@@ -4936,25 +4936,25 @@
       "exit_code": 0,
       "wall_seconds": 11.69,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-hard\\cases\\rtsai--hezbollah-relay--army-wipe\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-hard\\cases\\rtsai--lebanon-relay--army-wipe\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "f693a15480aef2985699a4694d93736650ac32969cd64f98740a968294f71d58"
     },
     {
-      "id": "rtsai--hezbollah-relay--base-HezbollahConyard",
+      "id": "rtsai--lebanon-relay--base-LebanonConyard",
       "mod": "rtsai",
       "difficulty": "hard",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
-        "id": "base-HezbollahConyard",
+        "id": "base-LebanonConyard",
         "expected": "lost",
-        "kill": "HezbollahConyard"
+        "kill": "LebanonConyard"
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "difficulty|hard|0",
         "failed|0|11",
         "outcome|lost|11"
@@ -4962,7 +4962,7 @@
       "exit_code": 0,
       "wall_seconds": 10.7,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-hard\\cases\\rtsai--hezbollah-relay--base-HezbollahConyard\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-ra2-hard\\cases\\rtsai--lebanon-relay--base-LebanonConyard\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
@@ -5876,17 +5876,17 @@
       "replay_sha256": "812b5d82547a44b2482311641a745b26f1e34bd99b542d8cad2ac1837588e7cd"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--win",
+      "id": "rtsai-topdown--lebanon-relay--win",
       "mod": "rtsai-topdown",
       "difficulty": "easy",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "win",
         "expected": "won"
       },
       "actual": "won",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "difficulty|easy|0",
         "drive|0|build|20",
         "drive|1|survive|20",
@@ -5917,17 +5917,17 @@
       "exit_code": 0,
       "wall_seconds": 18.55,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-easy\\cases\\rtsai-topdown--hezbollah-relay--win\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-easy\\cases\\rtsai-topdown--lebanon-relay--win\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "e2ce48eca1e4a3adb1e1f21db402ec3a0dc99d49488c0c9229c0a8ef044a0402"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--army-wipe",
+      "id": "rtsai-topdown--lebanon-relay--army-wipe",
       "mod": "rtsai-topdown",
       "difficulty": "easy",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
         "id": "army-wipe",
         "expected": "lost",
@@ -5935,7 +5935,7 @@
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "difficulty|easy|0",
         "failed|0|11",
         "outcome|lost|11"
@@ -5943,25 +5943,25 @@
       "exit_code": 0,
       "wall_seconds": 10.91,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-easy\\cases\\rtsai-topdown--hezbollah-relay--army-wipe\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-easy\\cases\\rtsai-topdown--lebanon-relay--army-wipe\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
       "replay_sha256": "943bae3c775cc17b01ed36b0192d64d3374fe84657932923bb87b0de7fa113d8"
     },
     {
-      "id": "rtsai-topdown--hezbollah-relay--base-HezbollahConyard",
+      "id": "rtsai-topdown--lebanon-relay--base-LebanonConyard",
       "mod": "rtsai-topdown",
       "difficulty": "easy",
-      "mission": "hezbollah-relay",
+      "mission": "lebanon-relay",
       "case": {
-        "id": "base-HezbollahConyard",
+        "id": "base-LebanonConyard",
         "expected": "lost",
-        "kill": "HezbollahConyard"
+        "kill": "LebanonConyard"
       },
       "actual": "lost",
       "events": [
-        "loaded|hezbollah-relay|0",
+        "loaded|lebanon-relay|0",
         "difficulty|easy|0",
         "failed|0|11",
         "outcome|lost|11"
@@ -5969,7 +5969,7 @@
       "exit_code": 0,
       "wall_seconds": 9.61,
       "fixture": "assisted-condition-coverage",
-      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-easy\\cases\\rtsai-topdown--hezbollah-relay--base-HezbollahConyard\\support",
+      "support": "D:\\rtsai-acceptance-20261009\\campaign-classic-easy\\cases\\rtsai-topdown--lebanon-relay--base-LebanonConyard\\support",
       "objective_statuses_pass": true,
       "passed": true,
       "difficulty_verified": true,
@@ -7406,14 +7406,14 @@
       "adaptation": "Adapted from the original Red Alert mission for RTS AI units and project terrain."
     },
     {
-      "id": "hezbollah-relay",
+      "id": "lebanon-relay",
       "title": "Relay Under Siege",
-      "faction": "hezbollah",
+      "faction": "lebanon",
       "campaign": "Combined Arms",
-      "slot": "Hezbollah",
+      "slot": "Lebanon",
       "enemy": "Opposition",
       "protect": [
-        "HezbollahConyard"
+        "LebanonConyard"
       ],
       "briefing": "A fictional training exercise: establish a relay and field workshop, defend your supply base through repeated attacks, then destroy the opposing command post. Use rifle teams, anti-tank specialists, mobile launchers and reconnaissance drones together. Expand the economy before the main assault. No real operation or force disposition is represented.",
       "adaptation": "An original RTS AI mission using project units, art and terrain.",
@@ -7455,7 +7455,7 @@
     "rows": [
       {
         "file": "hz-drone-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic drone operator",
@@ -7490,7 +7490,7 @@
       },
       {
         "file": "hz-drone-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic drone operator",
@@ -7525,7 +7525,7 @@
       },
       {
         "file": "hz-drone-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic drone operator",
@@ -7562,7 +7562,7 @@
       },
       {
         "file": "hz-drone-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic drone operator",
@@ -7597,7 +7597,7 @@
       },
       {
         "file": "hz-fpv-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "FPV drone team",
@@ -7632,7 +7632,7 @@
       },
       {
         "file": "hz-fpv-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "FPV drone team",
@@ -7667,7 +7667,7 @@
       },
       {
         "file": "hz-fpv-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "FPV drone team",
@@ -7702,7 +7702,7 @@
       },
       {
         "file": "hz-fpv-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "FPV drone team",
@@ -7737,7 +7737,7 @@
       },
       {
         "file": "hz-inf-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic infantry",
@@ -7772,7 +7772,7 @@
       },
       {
         "file": "hz-inf-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic infantry",
@@ -7807,7 +7807,7 @@
       },
       {
         "file": "hz-inf-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic infantry",
@@ -7842,7 +7842,7 @@
       },
       {
         "file": "hz-inf-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic infantry",
@@ -7877,7 +7877,7 @@
       },
       {
         "file": "hz-naval-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic naval crew",
@@ -7912,7 +7912,7 @@
       },
       {
         "file": "hz-naval-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic naval crew",
@@ -7947,7 +7947,7 @@
       },
       {
         "file": "hz-naval-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic naval crew",
@@ -7982,7 +7982,7 @@
       },
       {
         "file": "hz-naval-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic naval crew",
@@ -8017,7 +8017,7 @@
       },
       {
         "file": "hz-scout-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "fictional scout",
@@ -8052,7 +8052,7 @@
       },
       {
         "file": "hz-scout-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "fictional scout",
@@ -8087,7 +8087,7 @@
       },
       {
         "file": "hz-scout-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "fictional scout",
@@ -8122,7 +8122,7 @@
       },
       {
         "file": "hz-scout-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "fictional scout",
@@ -8157,7 +8157,7 @@
       },
       {
         "file": "hz-spotter-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "field spotter",
@@ -8194,7 +8194,7 @@
       },
       {
         "file": "hz-spotter-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "field spotter",
@@ -8229,7 +8229,7 @@
       },
       {
         "file": "hz-spotter-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "field spotter",
@@ -8264,7 +8264,7 @@
       },
       {
         "file": "hz-spotter-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "field spotter",
@@ -8299,7 +8299,7 @@
       },
       {
         "file": "hz-veh-action-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic vehicle crew",
@@ -8334,7 +8334,7 @@
       },
       {
         "file": "hz-veh-attack-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic vehicle crew",
@@ -8369,7 +8369,7 @@
       },
       {
         "file": "hz-veh-move-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic vehicle crew",
@@ -8404,7 +8404,7 @@
       },
       {
         "file": "hz-veh-select-ar.wav",
-        "faction": "Hezbollah",
+        "faction": "Lebanon",
         "language": "ar-LB",
         "engine": "chatterbox",
         "role": "generic vehicle crew",
@@ -12433,7 +12433,7 @@
             "cleg": 1
           }
         },
-        "hezbollah": {
+        "lebanon": {
           "games": 16,
           "wins": 1,
           "draws": 15,
@@ -13289,7 +13289,7 @@
             "losses": 0,
             "score": 0.5
           },
-          "hezbollah": {
+          "lebanon": {
             "games": 8,
             "wins": 0,
             "draws": 7,
@@ -13297,7 +13297,7 @@
             "score": 0.438
           }
         },
-        "hezbollah": {
+        "lebanon": {
           "libya": {
             "games": 8,
             "wins": 1,
@@ -13314,7 +13314,7 @@
           }
         },
         "iraq": {
-          "hezbollah": {
+          "lebanon": {
             "games": 8,
             "wins": 0,
             "draws": 8,
@@ -14007,7 +14007,7 @@
             "flakt": 3
           }
         },
-        "hezbollah": {
+        "lebanon": {
           "games": 4,
           "wins": 0,
           "draws": 4,
@@ -14771,7 +14771,7 @@
             "losses": 0,
             "score": 0.5
           },
-          "hezbollah": {
+          "lebanon": {
             "games": 2,
             "wins": 0,
             "draws": 2,
@@ -14779,7 +14779,7 @@
             "score": 0.5
           }
         },
-        "hezbollah": {
+        "lebanon": {
           "libya": {
             "games": 2,
             "wins": 0,
@@ -14796,7 +14796,7 @@
           }
         },
         "iraq": {
-          "hezbollah": {
+          "lebanon": {
             "games": 2,
             "wins": 0,
             "draws": 2,

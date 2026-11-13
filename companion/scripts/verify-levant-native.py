@@ -40,11 +40,11 @@ def run(mode, naval, output):
     data = dict(a='r2sadiq' if ra2 and naval else 'r2sang' if ra2 else 'sa_intc' if naval else 'sang', b='r2sadiq' if ra2 and naval else 'r2sang' if ra2 else 'sa_intc' if naval else 'sang', count=1, reps=1, duration=120, candidate='nearest', baseline='hold', opponent='hold')
     api.fixture(fixture, mode, data, 'hold', 0)
     yaml = (fixture / 'map.yaml').read_text(encoding='utf-8')
-    for player, faction in [('DuelA', 'israel'), ('DuelB', 'hezbollah')]:
+    for player, faction in [('DuelA', 'israel'), ('DuelB', 'lebanon')]:
         yaml = yaml.replace(f'Name: {player}\n\t\tFaction: '+('america' if ra2 else 'england'), f'Name: {player}\n\t\tFaction: {faction}')
     (fixture / 'map.yaml').write_text(yaml, encoding='utf-8')
     rosters = {}
-    for faction in ['israel', 'hezbollah']:
+    for faction in ['israel', 'lebanon']:
         units = defs['FACTIONS'][faction][1]
         naval_range = range(10, 13) if faction == 'israel' else range(9, 12)
         actors = [u[1] if ra2 else u[1][2:] for i, u in enumerate(units) if (i in naval_range) == naval]
@@ -53,7 +53,7 @@ def run(mode, naval, output):
     lua = (Path(__file__).with_name('verify-levant-native.lua')).read_text(encoding='utf-8')
     rules=fixture/'arena-rules.yaml'
     rules.write_text(rules.read_text(encoding='utf-8').replace('Player:\n','Player:\n\t-ConquestVictoryConditions:\n',1),encoding='utf-8')
-    values = {'ra2': ra2, 'naval': naval, 'israel': rosters['israel'], 'hezbollah': rosters['hezbollah']}
+    values = {'ra2': ra2, 'naval': naval, 'israel': rosters['israel'], 'lebanon': rosters['lebanon']}
     def literal(v):
         if isinstance(v, bool): return str(v).lower()
         if isinstance(v, list): return '{'+','.join(json.dumps(x) for x in v)+'}'

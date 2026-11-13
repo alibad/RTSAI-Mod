@@ -20,9 +20,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "standalone-deliverables.json"
-MODERN = ["china", "iran", "turkey", "saudi", "israel", "yemen", "hezbollah"]
+MODERN = ["china", "iran", "turkey", "saudi", "israel", "yemen", "lebanon"]
 ALLIED_SIDE = ["china", "turkey", "saudi", "israel"]
-SOVIET_SIDE = ["iran", "yemen", "hezbollah"]
+SOVIET_SIDE = ["iran", "yemen", "lebanon"]
 
 # Base kit: one original design per role, painted per faction (art agent proposal of 7 Oct, accepted).
 KIT = {

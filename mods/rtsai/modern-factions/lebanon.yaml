@@ -1,39 +1,39 @@
 World:
-	Faction@hezbollah:
-		Name: ra2-modern-hezbollah-name
-		InternalName: hezbollah
+	Faction@lebanon:
+		Name: ra2-modern-lebanon-name
+		InternalName: lebanon
 		Side: Soviets
-		Description: ra2-modern-hezbollah-description
-	StartingUnits@hezbollah-none:
+		Description: ra2-modern-lebanon-description
+	StartingUnits@lebanon-none:
 		Class: none
 		ClassName: options-starting-units.mcv-only
-		Factions: hezbollah
+		Factions: lebanon
 		BaseActor: smcv
 		BaseActorFacing: 896
-	StartingUnits@hezbollah-light:
+	StartingUnits@lebanon-light:
 		Class: light
 		ClassName: options-starting-units.light
-		Factions: hezbollah
+		Factions: lebanon
 		BaseActor: smcv
 		BaseActorFacing: 896
 		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat
 		SupportActorsFacing: 896
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	StartingUnits@hezbollah-medium:
+	StartingUnits@lebanon-medium:
 		Class: medium
 		ClassName: options-starting-units.medium
-		Factions: hezbollah
+		Factions: lebanon
 		BaseActor: smcv
 		BaseActorFacing: 896
 		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat, r2hztechnical, r2hzrail, engineer
 		SupportActorsFacing: 896
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
-	StartingUnits@hezbollah-heavy:
+	StartingUnits@lebanon-heavy:
 		Class: heavy
 		ClassName: options-starting-units.heavy
-		Factions: hezbollah
+		Factions: lebanon
 		BaseActor: smcv
 		BaseActorFacing: 896
 		SupportActors: dog, r2hzrifle, r2hzrifle, r2hzat, r2hzfpv, r2hzspotter, r2hztechnical, r2hzrecoilless, r2hzescort, r2hzrockets, engineer
@@ -42,9 +42,9 @@ World:
 		OuterSupportRadius: 5
 
 Player:
-	ProvidesPrerequisite@hezbollah:
-		Prerequisite: faction.hezbollah
-		Factions: hezbollah
+	ProvidesPrerequisite@lebanon:
+		Prerequisite: faction.lebanon
+		Factions: lebanon
 	DoctrineUnitBuilderBotModule@normal:
 		UnitsToBuild:
 			r2hztechnical: 45
@@ -97,7 +97,7 @@ Player:
 			r2hzrail: 6
 
 naweap:
-	GrantConditionOnProduction@hezbollah-drone:
+	GrantConditionOnProduction@lebanon-drone:
 		Actors: r2hzdrone
 		Condition: roof-open
 		Duration: 50
@@ -105,22 +105,22 @@ naweap:
 
 # The shipyard's shore relay keeps a fresh Sahaab boat controllable at the pier.
 nayard:
-	GrantConditionOnFaction@hezbollah-relay:
-		Condition: hezbollah-relay
-		Factions: hezbollah
-	ProximityExternalCondition@hezbollah-relay:
+	GrantConditionOnFaction@lebanon-relay:
+		Condition: lebanon-relay
+		Factions: lebanon
+	ProximityExternalCondition@lebanon-relay:
 		Condition: r2-hz-link
 		Range: 6c0
 		ValidRelationships: Ally
-		RequiresCondition: hezbollah-relay
+		RequiresCondition: lebanon-relay
 
 dog:
 	RenderSprites:
 		FactionImages:
-			hezbollah: dog
+			lebanon: dog
 
 # Drone Spotter guidance: longer reach and faster reloads, never stacking.
-^R2HezbollahGuided:
+^R2LebanonGuided:
 	ExternalCondition@guidance:
 		Condition: r2-hz-guidance
 	RangeMultiplier@guidance:
@@ -143,7 +143,7 @@ r2hztechnical:
 		Name: levant-r2hztechnical-name
 	Buildable:
 		BuildPaletteOrder: 11
-		Prerequisites: ~faction.hezbollah, naweap
+		Prerequisites: ~faction.lebanon, naweap
 		Description: levant-r2hztechnical-description
 	Valued:
 		Cost: 400
@@ -164,19 +164,19 @@ r2hztechnical:
 		Range: 8c0
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzrecoilless:
 	Inherits: ^R2ModernVehicle
 	Tooltip:
 		Name: levant-r2hzrecoilless-name
 	Buildable:
 		BuildPaletteOrder: 21
-		Prerequisites: ~faction.hezbollah, naweap
+		Prerequisites: ~faction.lebanon, naweap
 		Description: levant-r2hzrecoilless-description
 	# Salvo and swarm: 550 -> 475 (recoilless 85 -> 78): basic anti-armour, more of them.
 	Valued:
@@ -196,12 +196,12 @@ r2hzrecoilless:
 		MuzzleSequence: muzzle
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzescort:
 	Inherits: ^R2ModernVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAir
@@ -209,7 +209,7 @@ r2hzescort:
 		Name: levant-r2hzescort-name
 	Buildable:
 		BuildPaletteOrder: 41
-		Prerequisites: ~faction.hezbollah, naweap
+		Prerequisites: ~faction.lebanon, naweap
 		Description: levant-r2hzescort-description
 	Valued:
 		Cost: 600
@@ -229,20 +229,20 @@ r2hzescort:
 		ScanRadius: 9
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 r2hzrockets:
 	Inherits: ^R2ModernVehicle
-	Inherits@guidance: ^R2HezbollahGuided
+	Inherits@guidance: ^R2LebanonGuided
 	Tooltip:
 		Name: levant-r2hzrockets-name
 	Buildable:
 		BuildPaletteOrder: 61
-		Prerequisites: ~faction.hezbollah, naweap, radar
+		Prerequisites: ~faction.lebanon, naweap, radar
 		Description: levant-r2hzrockets-description
 	# Salvo and swarm: 900 -> 800; one strike missile -> a volley of 8 unguided rockets (the art is a tube
 	# launcher). The empty launcher is the visible reload window; flank it then.
@@ -267,12 +267,12 @@ r2hzrockets:
 		Range: 12c0
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair
 	GrantConditionOnMovement@setup:
 		Condition: moving
 	ReloadDelayMultiplier@setup:
@@ -288,12 +288,12 @@ r2hzrockets:
 # fired forward; no radar needed. Guided by spotters and signal posts like the rocket battery.
 r2hzrail:
 	Inherits: ^R2ModernVehicle
-	Inherits@guidance: ^R2HezbollahGuided
+	Inherits@guidance: ^R2LebanonGuided
 	Tooltip:
 		Name: levant-r2hzrail-name
 	Buildable:
 		BuildPaletteOrder: 55
-		Prerequisites: ~faction.hezbollah, naweap
+		Prerequisites: ~faction.lebanon, naweap
 		Description: levant-r2hzrail-description
 	Valued:
 		Cost: 450
@@ -316,9 +316,9 @@ r2hzrail:
 		Range: 10c0
 
 	ExternalCondition@repair:
-		Condition: hezbollah-repair
+		Condition: lebanon-repair
 	ChangesHealth@field:
 		Step: 2
 		Delay: 25
 		StartIfBelow: 70
-		RequiresCondition: hezbollah-repair
+		RequiresCondition: lebanon-repair

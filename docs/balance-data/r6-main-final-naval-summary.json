@@ -486,7 +486,7 @@
     "aegis": 35
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "games": 48,
    "wins": 18,
    "draws": 7,
@@ -860,7 +860,7 @@
     "losses": 1,
     "score": 0.583
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 3,
     "draws": 2,
@@ -911,7 +911,7 @@
     "losses": 2,
     "score": 0.417
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 3,
     "draws": 1,
@@ -961,7 +961,7 @@
     "score": 0.5
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "america": {
     "games": 6,
     "wins": 1,
@@ -1034,7 +1034,7 @@
     "losses": 3,
     "score": 0.417
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 3,
     "draws": 1,
@@ -1092,7 +1092,7 @@
     "losses": 2,
     "score": 0.667
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 2,
     "draws": 1,
@@ -1150,7 +1150,7 @@
     "losses": 3,
     "score": 0.333
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 2,
     "draws": 1,
@@ -1208,7 +1208,7 @@
     "losses": 3,
     "score": 0.5
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 2,
     "draws": 0,
@@ -1266,7 +1266,7 @@
     "losses": 2,
     "score": 0.5
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 4,
     "draws": 0,
@@ -1317,7 +1317,7 @@
     "losses": 4,
     "score": 0.25
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 6,
     "wins": 4,
     "draws": 1,

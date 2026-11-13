@@ -13,7 +13,7 @@
 	Faction@soviets:
 		Name: faction-random-soviets-name
 		InternalName: random-soviets
-		RandomFactionMembers: cuba, libya, iraq, russia, iran, yemen, hezbollah
+		RandomFactionMembers: cuba, libya, iraq, russia, iran, yemen, lebanon
 		Side: Randoms
 		Description: faction-random-soviets-description
 	Faction@1:

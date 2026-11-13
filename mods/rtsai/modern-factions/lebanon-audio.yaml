@@ -1,0 +1,67 @@
+r2hzrifle:
+	RTSAIVoiced:
+		VoiceSet: R2LebanoninfantryVoice
+
+r2hzat:
+	RTSAIVoiced:
+		VoiceSet: R2LebanoninfantryVoice
+
+r2hzspotter:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonspotterVoice
+
+r2hzscout:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonscoutVoice
+
+r2hzfpv:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonfpvVoice
+
+r2hztechnical:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzrecoilless:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzescort:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzrockets:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzrail:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzdrone:
+	RTSAIVoiced:
+		VoiceSet: R2LebanondroneVoice
+
+r2hzmissileboat:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonnavalVoice
+
+r2hzskiff:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonnavalVoice
+
+r2hzsurvey:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonnavalVoice
+
+r2hzbunker:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzaanest:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice
+
+r2hzcoastal:
+	RTSAIVoiced:
+		VoiceSet: R2LebanonvehicleVoice

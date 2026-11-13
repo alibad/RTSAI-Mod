@@ -35,7 +35,7 @@ METRES_PER_VOXEL = 0.14   # the voxel route's length class (units/<actor>/voxel-
 LINEUP = [
     ("r2ymlr", -0.25, "back", -3.0),       # Yemen
     ("r2merkava", 0.11, "back", 2.0),      # Israel
-    ("r2hzrockets", 0.465, "back", -2.0),   # Hezbollah
+    ("r2hzrockets", 0.465, "back", -2.0),   # Lebanon
     ("r2qilin", 0.79, "back", 3.0),        # China
     ("r2karrar", -0.07, "front", 2.0),     # Iran
     ("r2bozkir", 0.285, "front", -3.0),     # Türkiye

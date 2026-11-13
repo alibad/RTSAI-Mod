@@ -101,7 +101,7 @@ r2karrar:
 		BuildPaletteOrder: 21
 		Prerequisites: ~faction.iran, naweap
 		Description: ra2-r2karrar-description
-	# Round 6: 850 -> 900 with the coaxial machine gun (R2QilinCoax) the Allied-side MBTs have. With Hezbollah
+	# Round 6: 850 -> 900 with the coaxial machine gun (R2QilinCoax) the Allied-side MBTs have. With Lebanon
 	# stronger, Iran fell to 31% against the modern factions on main in the round-6 probes (0-7 against China); the
 	# Karrar traded 0.66-0.78 per credit.
 	Valued:

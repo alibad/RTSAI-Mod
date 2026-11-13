@@ -43,7 +43,7 @@
   }
  },
  "factions": {
-  "hezbollah": {
+  "lebanon": {
    "games": 24,
    "wins": 11,
    "draws": 5,
@@ -683,7 +683,7 @@
  },
  "matrix": {
   "china": {
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 3,
@@ -726,7 +726,7 @@
     "score": 0.625
    }
   },
-  "hezbollah": {
+  "lebanon": {
    "china": {
     "games": 4,
     "wins": 0,
@@ -778,7 +778,7 @@
     "losses": 1,
     "score": 0.625
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 0,
@@ -822,7 +822,7 @@
     "losses": 1,
     "score": 0.625
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 3,
     "draws": 0,
@@ -866,7 +866,7 @@
     "losses": 0,
     "score": 0.75
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 0,
@@ -910,7 +910,7 @@
     "losses": 3,
     "score": 0.25
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 0,
@@ -954,7 +954,7 @@
     "losses": 2,
     "score": 0.375
    },
-   "hezbollah": {
+   "lebanon": {
     "games": 4,
     "wins": 1,
     "draws": 2,

@@ -36,7 +36,7 @@ Rebased onto RTSAI-Mod main `57df33c` (the promoted art); measurements below wer
 - Also fixed: an upstream indentation bug in `audio/voices.yaml` made `DisablePrefixes` a voice, so prefixed death
   voices looked up nonexistent files. Ogg is a registered sound format (the audio agent's music).
 - Checks: `--check-yaml` passes for both mods (the add-on with owned content mounted, all 28 maps); boot to the main
-  menu with the "RTS AI" title; a Türkiye vs Hezbollah bot skirmish ran 5 minutes with 0 exceptions.
+  menu with the "RTS AI" title; a Türkiye vs Lebanon bot skirmish ran 5 minutes with 0 exceptions.
 
 ### Phase 2: done [ran]
 
@@ -114,7 +114,7 @@ edge (fixed in Phase 3).
   dog barks, death cries). 0 unresolved sounds for what the 7 factions can field.
 - **Branded main menu** (`chrome/rtsai-mainmenu.yaml`, replacing the stock layout; same widget ids and logic):
   - a full-window backdrop of one flagship per faction (Qilin, Karrar, Bozkir, M1A2S, Merkava, the Yemeni launcher,
-    Hezbollah rockets), rendered from the project's own GLB meshes in RTSAI-Art on a procedural desert at golden
+    Lebanon rockets), rendered from the project's own GLB meshes in RTSAI-Art on a procedural desert at golden
     hour (`tools/standalone-menu.py`, Blender Cycles on the CPU). The new `CoverImageWidget` scales it to cover any
     window, and the vehicles stay inside a safe area, so 16:10 and 4:3 windows crop only sky and sand;
   - the product name from `-product-name`, in a new 56 px `Hero` font;
@@ -169,13 +169,13 @@ rosters (`Buildable: Prerequisites: ~disabled`); the classic add-on keeps them. 
 | Cut building | Side | Cost / power | Role lost | For the balance pass |
 |---|---|---|---|---|
 | Ore Purifier `gaorep` | Allied (China, Türkiye, Saudi, Israel) | 2500 / −200 | +25% on every ore delivery | Allied-side late income is 20% lower than with it. Candidates: a refinery upgrade, cheaper harvesters, or more ore value |
-| Nuclear Reactor `nanrct` | Soviet (Iran, Yemen, Hezbollah) | 1000 / +2000 | Bulk power at 0.5 credits per power | Only the power plant is left: 150 power for 600 (4 credits per power, the Allied rate is 200 for 800). Replacing one reactor takes 13 plants and about 8 times the credits. It now uses the Allied 2×2 footprint and kit art, so it could also give 200 |
+| Nuclear Reactor `nanrct` | Soviet (Iran, Yemen, Lebanon) | 1000 / +2000 | Bulk power at 0.5 credits per power | Only the power plant is left: 150 power for 600 (4 credits per power, the Allied rate is 200 for 800). Replacing one reactor takes 13 plants and about 8 times the credits. It now uses the Allied 2×2 footprint and kit art, so it could also give 200 |
 | Cloning Vats `naclon` | Soviet | 2500 / −200 | A free copy of each infantry unit produced | Soviet-side late infantry output halves |
 | Missile Silo `namisl` | Soviet | 5000 / −200 | Damage superweapon (nuke, 15000-tick charge) | No faction keeps a damage superweapon. The two kit slots are utility powers; only Israel and Saudi Arabia have a strike power (`AirstrikePower@falcon`). Late sieges may stall |
 | Weather Control `gaweat` | Allied | 5000 / −200 | Damage superweapon (lightning storm, 15000-tick charge) | Same as above |
 | Spy Satellite `gaspysat` | Allied | 1500 / −100 | Reveals the whole map | Allied-side late scouting rests on units |
 | Gap Generator `gagap` | Allied | 1000 / −100 | Shroud over a 10-cell radius | Base concealment is gone. A defence role, but a minor one |
-| Psychic Sensor `napsis` | Soviet | 1000 / −100 | Detects cloaked units within 6 cells | Small loss: every faction keeps roster detectors (Iran: drone control, Ghadir, Peykaap; Yemen: Mokha, spotter; Hezbollah: relay, spotter, survey, workshop) and the dog |
+| Psychic Sensor `napsis` | Soviet | 1000 / −100 | Detects cloaked units within 6 cells | Small loss: every faction keeps roster detectors (Iran: drone control, Ghadir, Peykaap; Yemen: Mokha, spotter; Lebanon: relay, spotter, survey, workshop) and the dog |
 
 **What replaces them** (coordinator, 7 October 2026; `tools/standalone-kit-rules.py`):
 
@@ -238,8 +238,8 @@ commandos come late.
   anything the factions can field. `--list-names` prints every name a player can see. `make test` also fails when
   `names.ftl` is stale.
 
-**Hezbollah's flag.** The lobby and tooltip flag is the real flag, set on RTSAI-Mod main (owner decision,
-7 October 2026; see `docs/art-provenance.md` for its non-free status and the risks the owner accepted).
+**Lebanon's flag.** The lobby and tooltip flag is Lebanon's national flag (owner decision, 13 November 2026;
+see `docs/art-provenance.md` for its source and licence).
 
 **Ore mines (found while measuring).** In the first smoke, bots stalled. Twin Fords and Harbor Line had no ore spawn,
 so the fields ran dry by about minute 10. Both sides then sat at 0 credits for the rest of the game, nobody reached a
@@ -312,7 +312,7 @@ boxes), so survivors in missions were drawn as engineers and the map generator p
   |---|---|---|
   | Saudi Arabia | 56% | 10-7-7 |
   | Israel | 54% | 6-14-4 |
-  | Hezbollah | 54% | 9-8-7 |
+  | Lebanon | 54% | 9-8-7 |
   | Yemen | 52% | 6-13-5 |
   | Iran | 50% | 5-14-5 |
   | China | 42% | 4-12-8 |
@@ -356,7 +356,7 @@ Faction scores (draw counts as half; 24 games each, 95% intervals about ±20 poi
 | Saudi Arabia | 56% | 48% | 40% |
 | Israel | 54% | 35% | 54% |
 | Yemen | 62% | 62% | 48% |
-| Hezbollah | 56% | 69% | 65% |
+| Lebanon | 56% | 69% | 65% |
 
 Reading:
 - **Power economy fixed.** The cuts quadrupled the Soviet side's power price, and the heavy plant brings it back to
@@ -368,7 +368,7 @@ Reading:
   both arms.
 - **For the balance pass:**
   - China trails in every arm (23–40%).
-  - Iran and Hezbollah lead.
+  - Iran and Lebanon lead.
   - The Allied side as a whole is about 10–20 points behind against the Soviet side.
   - The bots never fire the Israeli and Saudi strike powers (`AirstrikePower@falcon`): there is no bot rule for
     them.
@@ -420,7 +420,7 @@ The counts are unique files. "Modern scope" means what the 7 modern factions can
 | UI chrome | 10 files, all shipped by the mod: 6 identical to the upstream OpenRA RA2 mod (chrome, dialog, load screen, music player, spawn points, strategic), `buttons.png` = upstream + project flags; Allied-eagle and Soviet-star emblems in the RA2 style | flags, faction-flag sheets, engine glyphs | 6 upstream files (provenance not established; RA2-style emblems) | **M** |
 | Cursors, palettes, fonts | `mouse.shp` EA (112 cursor sequences); 17 EA palettes (`unittem.pal`, `isotem.pal`, `cameo.pal`, `anim.pal`, ...); fonts are the engine's FreeSans (GPL) | 2 cursors, 83 palettes | `mouse.shp`, 17 palettes | **S** |
 | Upstream mod bits | 20 sprites identical to upstream (pips, `isodepth`, waypoint, spawn, camera) | — | 20, provenance unverified (`pipsra.shp` looks RA1-derived) | **S** |
-| Shared buildings | 30 stock buildings reachable (15 Allied-side for China/Türkiye/Saudi/Israel, 15 Soviet-side for Iran/Yemen/Hezbollah) incl. RA2 superweapons (Chronosphere, Weather Control, Iron Curtain, Nuclear Silo, Psychic Sensor, Cloning Vats); 284 EA sprite files with build-palette icons | 0 | all 30 | **L** |
+| Shared buildings | 30 stock buildings reachable (15 Allied-side for China/Türkiye/Saudi/Israel, 15 Soviet-side for Iran/Yemen/Lebanon) incl. RA2 superweapons (Chronosphere, Weather Control, Iron Curtain, Nuclear Silo, Psychic Sensor, Cloning Vats); 284 EA sprite files with build-palette icons | 0 | all 30 | **L** |
 | Shared units | 16 stock units: 2 MCVs, 2 harvesters, engineer, dog, spy, sell-spawned GI/conscript, burning-death `flameguy`, still-buildable stock specials (Chrono Commando, Yuri Prime, Flak Track, amphibious APC, landing craft), the airstrike reveal camera; 34 EA sprite files, 12 EA voxel models | 0 | all 16 (5 can simply leave the modern rosters) | **M** |
 | Modern units | 142 actors (122 buildable + husks and drones) | 246 sprite files (incl. 122 icons), 69 voxel images, all project | 16 stock FX files inside their sequences (below) | done |
 | Effects | 55 shared effect images, 308 EA files; modern scope uses 22 images (94 files: explosions, pips, rank, chrono, crate, parachute, wake, smoke, beacon, rally point) plus 16 stock files named in new-unit sequences (`gunfire`, `vtmuzzle`, `sgrysmk1`, `lgrysmk1`, `fire01-03`, `mgun-*`, `yuricntl`); shroud and fog | 0 | 110 files + shroud | **M** |

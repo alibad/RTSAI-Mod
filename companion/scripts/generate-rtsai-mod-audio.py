@@ -74,7 +74,7 @@ REJECTED = [
     {"candidate": "Chatterbox Hebrew from unpointed text", "reason": "Its Hebrew front end expects niqqud (added by "
      "the optional dicta_onnx diacritizer, not installed); unpointed: CER 0.21, 4/24 lines clean, Hebrew ID 0.51; "
      "hand-pointed: CER 0.05, 18/24 clean, Hebrew ID 0.69. Chatterbox reads pointed text."},
-    {"candidate": "MOSS-TTS-Nano base for Lebanese Arabic", "reason": "Hezbollah scripts: CER 0.19, 4/24 clean, "
+    {"candidate": "MOSS-TTS-Nano base for Lebanese Arabic", "reason": "Lebanon scripts: CER 0.19, 4/24 clean, "
      "Arabic ID 0.46, against CER 0.03, 18/24 clean, Arabic ID 0.90 for Chatterbox."},
     {"candidate": "Persian alternatives to the MOSS fine-tune cloned from the English clip (CER 0.09, Persian ID "
      "0.65)", "reason": "MOSS-TTS-Nano base: CER 0.19, ID 0.05. Fine-tune cloned from a synthetic Persian "

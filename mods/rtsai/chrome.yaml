@@ -1613,7 +1613,7 @@ flags:
 		random-soviets: 45, 105, 45, 21
 		spectator: 45, 84, 45, 21
 		israel: 260, 1, 30, 15
-		hezbollah: 260, 17, 30, 15
+		lebanon: 260, 17, 30, 15
 
 music:
 	Image: musicplayer.png

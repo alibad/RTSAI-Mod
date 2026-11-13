@@ -67,7 +67,7 @@ class ContentCatalogTests(unittest.TestCase):
         def identity(c, faction_id):
             return faction(c, faction_id)["identity"]
 
-        def silence_hezbollah(c):
+        def silence_lebanon(c):
             for target, index, rival in (("turkey", 2, "saudi-arabia"), ("saudi-arabia", 2, "china"), ("israel", 0, "turkey")):
                 views(c, target)[index].update(rival=rival)
             loading(c, "israel")[1].update(rival="turkey")
@@ -83,7 +83,7 @@ class ContentCatalogTests(unittest.TestCase):
             lambda c: identity(c, "israel").update(story=one_sentence),
             lambda c: identity(c, "israel").update(story="We hold. We stay. We endure."),
             # Equal depth: one faction's story may not shrink far below the others.
-            lambda c: identity(c, "hezbollah").update(story=short_story),
+            lambda c: identity(c, "lebanon").update(story=short_story),
             lambda c: identity(c, "china").update(keywords=["Unity", "Discipline"]),
             lambda c: identity(c, "china").update(keywords=["Unity", "unity", "Renewal"]),
             lambda c: identity(c, "china").update(keywords=["Unity", "Discipline", "lowercase"]),
@@ -97,9 +97,9 @@ class ContentCatalogTests(unittest.TestCase):
             lambda c: loading(c, "china").pop(),
             lambda c: loading(c, "china")[1].update(rival="iran"),
             lambda c: loading(c, "china")[0].update(rival="turkey"),
-            lambda c: faction(c, "hezbollah")["flavour"].update(voiceIdeas=[]),
-            # No faction may be only a target: Hezbollah must voice at least one rival view.
-            silence_hezbollah,
+            lambda c: faction(c, "lebanon")["flavour"].update(voiceIdeas=[]),
+            # No faction may be only a target: Lebanon must voice at least one rival view.
+            silence_lebanon,
         ):
             candidate = copy.deepcopy(self.catalog)
             mutation(candidate)

@@ -49,21 +49,21 @@
    }
   },
   {
-   "file": "base/airf-hezbollah.shp",
+   "file": "base/airf-lebanon.shp",
    "bytes": 388281,
    "sha256": "48bfb180cf0f966b8f09a1b8b17b09c6f036f982a9f098de8490ffafb9641be4",
    "origin": "project-generated",
-   "candidate": "units/kit-airf/candidates/kit-v2/airf-hezbollah.shp",
+   "candidate": "units/kit-airf/candidates/kit-v2/airf-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/airf-hezbollahicon.png",
+   "file": "base/airf-lebanonicon.png",
    "bytes": 5153,
    "sha256": "8ce6b2710580f386543ce1ae83d8ed4afa3fe274bc1148ac0c06b0b77cbe5ca6",
    "origin": "project-generated",
-   "candidate": "units/kit-airf/candidates/kit-v2/airf-hezbollahicon.png",
+   "candidate": "units/kit-airf/candidates/kit-v2/airf-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -71,7 +71,7 @@
     {
      "sha256": "2108e666fc72c4e87cbf3f6ab4078bc35a4386559c3bb01f36e50a778a0c25f8",
      "bytes": 5158,
-     "candidate": "units/kit-airf/candidates/kit-v2/airf-hezbollahicon.png",
+     "candidate": "units/kit-airf/candidates/kit-v2/airf-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -294,21 +294,21 @@
    }
   },
   {
-   "file": "base/barr-hezbollah.shp",
+   "file": "base/barr-lebanon.shp",
    "bytes": 475286,
    "sha256": "1291618204b900b9e7c61f0b30f189d92d6650bffc9b5de374ca7814ea795e72",
    "origin": "project-generated",
-   "candidate": "units/kit-barr/candidates/kit-v2/barr-hezbollah.shp",
+   "candidate": "units/kit-barr/candidates/kit-v2/barr-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/barr-hezbollahicon.png",
+   "file": "base/barr-lebanonicon.png",
    "bytes": 4799,
    "sha256": "e8b65959e95fbd4da5017c0e479c1dc3ecd4f9d93f2252f5d57790c118a7b57a",
    "origin": "project-generated",
-   "candidate": "units/kit-barr/candidates/kit-v2/barr-hezbollahicon.png",
+   "candidate": "units/kit-barr/candidates/kit-v2/barr-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -316,7 +316,7 @@
     {
      "sha256": "c83200051cd7213a0171064add42738597029191a6c1d435e54ae27f7fed81dc",
      "bytes": 4788,
-     "candidate": "units/kit-barr/candidates/kit-v2/barr-hezbollahicon.png",
+     "candidate": "units/kit-barr/candidates/kit-v2/barr-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -539,21 +539,21 @@
    }
   },
   {
-   "file": "base/cnst-hezbollah.shp",
+   "file": "base/cnst-lebanon.shp",
    "bytes": 2323312,
    "sha256": "6af537859f0a4e4787f41bb8f50f4420f08d67882499036c643afc445a402893",
    "origin": "project-generated",
-   "candidate": "units/kit-cnst/candidates/kit-v2/cnst-hezbollah.shp",
+   "candidate": "units/kit-cnst/candidates/kit-v2/cnst-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/cnst-hezbollahicon.png",
+   "file": "base/cnst-lebanonicon.png",
    "bytes": 5311,
    "sha256": "2640f7e8be0e9505a530984b7411a58002a0e1822dfc495bf1f908d791d08b59",
    "origin": "project-generated",
-   "candidate": "units/kit-cnst/candidates/kit-v2/cnst-hezbollahicon.png",
+   "candidate": "units/kit-cnst/candidates/kit-v2/cnst-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -561,7 +561,7 @@
     {
      "sha256": "bdeb0b97eb2104577bc5c5f9403760edfa441ccfb702b9ee7ab992ead1d161eb",
      "bytes": 5319,
-     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-hezbollahicon.png",
+     "candidate": "units/kit-cnst/candidates/kit-v2/cnst-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -784,21 +784,21 @@
    }
   },
   {
-   "file": "base/dept-hezbollah.shp",
+   "file": "base/dept-lebanon.shp",
    "bytes": 577657,
    "sha256": "ddd6978bc3328c2cb24715ff710047aa24bd5e955a12a7d46cab7a8f45332e10",
    "origin": "project-generated",
-   "candidate": "units/kit-dept/candidates/kit-v2/dept-hezbollah.shp",
+   "candidate": "units/kit-dept/candidates/kit-v2/dept-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/dept-hezbollahicon.png",
+   "file": "base/dept-lebanonicon.png",
    "bytes": 5069,
    "sha256": "f2ae643b8969b75ac1466666cfbeed969234d728e1be5a7f1033dcdd66e0283d",
    "origin": "project-generated",
-   "candidate": "units/kit-dept/candidates/kit-v2/dept-hezbollahicon.png",
+   "candidate": "units/kit-dept/candidates/kit-v2/dept-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -806,7 +806,7 @@
     {
      "sha256": "c8f1321302945cad2977267d5d583d2a183169f0be5f3b4db2b4b8dbbfdaf5f7",
      "bytes": 5067,
-     "candidate": "units/kit-dept/candidates/kit-v2/dept-hezbollahicon.png",
+     "candidate": "units/kit-dept/candidates/kit-v2/dept-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -1029,21 +1029,21 @@
    }
   },
   {
-   "file": "base/hpwr-hezbollah.shp",
+   "file": "base/hpwr-lebanon.shp",
    "bytes": 610028,
    "sha256": "d55aa7d277349affb354b2310f696501dc48705420c88f3dc399044995e8d52a",
    "origin": "project-generated",
-   "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-hezbollah.shp",
+   "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-lebanon.shp",
    "rtsaiArtCommit": "860f6c56",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/hpwr-hezbollahicon.png",
+   "file": "base/hpwr-lebanonicon.png",
    "bytes": 5464,
    "sha256": "4ed212e01ea49929a07b12eb5658ce4c3af1c3803028eaffcd53304e49f83a7d",
    "origin": "project-generated",
-   "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-hezbollahicon.png",
+   "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -1051,7 +1051,7 @@
     {
      "sha256": "4afbd11ac448b30157bbe5593cebc0d4cbcf4b166a9aa37a5cf9e79fcd7a225c",
      "bytes": 5457,
-     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-hezbollahicon.png",
+     "candidate": "units/kit-hpwr/candidates/kit-v2/hpwr-lebanonicon.png",
      "rtsaiArtCommit": "860f6c56"
     }
    ],
@@ -1291,21 +1291,21 @@
    }
   },
   {
-   "file": "base/powr-hezbollah.shp",
+   "file": "base/powr-lebanon.shp",
    "bytes": 300347,
    "sha256": "8acd6624238ba5ef11826801202ac5ef0943aa05747093343b8ebaf370628291",
    "origin": "project-generated",
-   "candidate": "units/kit-powr/candidates/kit-v2/powr-hezbollah.shp",
+   "candidate": "units/kit-powr/candidates/kit-v2/powr-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/powr-hezbollahicon.png",
+   "file": "base/powr-lebanonicon.png",
    "bytes": 4867,
    "sha256": "6e8d812745f53e350512790ca94147fdff2a394c68bbaffc4846df720d58d898",
    "origin": "project-generated",
-   "candidate": "units/kit-powr/candidates/kit-v2/powr-hezbollahicon.png",
+   "candidate": "units/kit-powr/candidates/kit-v2/powr-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -1313,7 +1313,7 @@
     {
      "sha256": "20bed9692b51bf5b55a9d48f7542beefb14f744dd57339e81ddcb487772f38e5",
      "bytes": 4854,
-     "candidate": "units/kit-powr/candidates/kit-v2/powr-hezbollahicon.png",
+     "candidate": "units/kit-powr/candidates/kit-v2/powr-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -1526,11 +1526,11 @@
    }
   },
   {
-   "file": "base/purifier-hezbollahicon.png",
+   "file": "base/purifier-lebanonicon.png",
    "bytes": 5036,
    "sha256": "7290e3c529e39f4c316616e22bd8b8a394dc3ae7a184af6ff471c6f961c78f23",
    "origin": "project-generated",
-   "candidate": "units/kit-refn/candidates/kit-v2/purifier-hezbollahicon.png",
+   "candidate": "units/kit-refn/candidates/kit-v2/purifier-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -1538,7 +1538,7 @@
     {
      "sha256": "200a93ca5cc8d5c44ecf371842a5bd60ae412e2dfe9cbdf4623133dfbf75fdab",
      "bytes": 5025,
-     "candidate": "units/kit-refn/candidates/kit-v2/purifier-hezbollahicon.png",
+     "candidate": "units/kit-refn/candidates/kit-v2/purifier-lebanonicon.png",
      "rtsaiArtCommit": "860f6c56"
     }
    ],
@@ -1711,21 +1711,21 @@
    }
   },
   {
-   "file": "base/radr-hezbollah.shp",
+   "file": "base/radr-lebanon.shp",
    "bytes": 340671,
    "sha256": "8d956d6491422f1b152ceabfdccdfa331e1a7dd6d0ae3aceac4548c0607a25ad",
    "origin": "project-generated",
-   "candidate": "units/kit-radr/candidates/kit-v2/radr-hezbollah.shp",
+   "candidate": "units/kit-radr/candidates/kit-v2/radr-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/radr-hezbollahicon.png",
+   "file": "base/radr-lebanonicon.png",
    "bytes": 4609,
    "sha256": "9a143cc9ba32ef7a4a9e63ab40148815a76e94b1851b4841c48691a04a673319",
    "origin": "project-generated",
-   "candidate": "units/kit-radr/candidates/kit-v2/radr-hezbollahicon.png",
+   "candidate": "units/kit-radr/candidates/kit-v2/radr-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -1733,7 +1733,7 @@
     {
      "sha256": "4e4a04acfecc5704e1c0d333f735f6525addb827936efeaf5da1f3bb0a0a2d17",
      "bytes": 4607,
-     "candidate": "units/kit-radr/candidates/kit-v2/radr-hezbollahicon.png",
+     "candidate": "units/kit-radr/candidates/kit-v2/radr-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -1956,21 +1956,21 @@
    }
   },
   {
-   "file": "base/refn-hezbollah.shp",
+   "file": "base/refn-lebanon.shp",
    "bytes": 805520,
    "sha256": "93983e8c6cb1131194bd18ed010e18d21ad8109645189eac404f90ffce0e53f5",
    "origin": "project-generated",
-   "candidate": "units/kit-refn/candidates/kit-v2/refn-hezbollah.shp",
+   "candidate": "units/kit-refn/candidates/kit-v2/refn-lebanon.shp",
    "rtsaiArtCommit": "860f6c56",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/refn-hezbollahicon.png",
+   "file": "base/refn-lebanonicon.png",
    "bytes": 5328,
    "sha256": "d97664db889ed43ea4e025274b194f7be7fe80bb659087951c23189d8e92dba8",
    "origin": "project-generated",
-   "candidate": "units/kit-refn/candidates/kit-v2/refn-hezbollahicon.png",
+   "candidate": "units/kit-refn/candidates/kit-v2/refn-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -1978,7 +1978,7 @@
     {
      "sha256": "49cb28196b38c9e0394b732c603033ea820ee862fde8105b4a382f5374623013",
      "bytes": 5320,
-     "candidate": "units/kit-refn/candidates/kit-v2/refn-hezbollahicon.png",
+     "candidate": "units/kit-refn/candidates/kit-v2/refn-lebanonicon.png",
      "rtsaiArtCommit": "860f6c56"
     }
    ],
@@ -2186,21 +2186,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/sw1-hezbollah.shp",
+   "file": "base/sw1-lebanon.shp",
    "bytes": 720742,
    "sha256": "c3ea677cb8968592dc82ef28c63d3cbcdf19472dd4aef7d55273246972c8283d",
    "origin": "project-generated",
-   "candidate": "units/kit-sw1/candidates/kit-v2/sw1-hezbollah.shp",
+   "candidate": "units/kit-sw1/candidates/kit-v2/sw1-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/sw1-hezbollahicon.png",
+   "file": "base/sw1-lebanonicon.png",
    "bytes": 5438,
    "sha256": "d82a804464e8c78f51e19638e5293ba6dd49eb28c48ba4f7902373053ead8954",
    "origin": "project-generated",
-   "candidate": "units/kit-sw1/candidates/kit-v2/sw1-hezbollahicon.png",
+   "candidate": "units/kit-sw1/candidates/kit-v2/sw1-lebanonicon.png",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -2341,21 +2341,21 @@
    }
   },
   {
-   "file": "base/sw2-hezbollah.shp",
+   "file": "base/sw2-lebanon.shp",
    "bytes": 1040936,
    "sha256": "a436557c4b24728c017eba4eaca9459876a9b49cdd8e3caffe6b02b0b203ea1c",
    "origin": "project-generated",
-   "candidate": "units/kit-sw2/candidates/kit-v2/sw2-hezbollah.shp",
+   "candidate": "units/kit-sw2/candidates/kit-v2/sw2-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/sw2-hezbollahicon.png",
+   "file": "base/sw2-lebanonicon.png",
    "bytes": 5115,
    "sha256": "19a3bf9fc347a52606b0540956ba50d298b572ade68535967b57ae83972c5154",
    "origin": "project-generated",
-   "candidate": "units/kit-sw2/candidates/kit-v2/sw2-hezbollahicon.png",
+   "candidate": "units/kit-sw2/candidates/kit-v2/sw2-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -2363,7 +2363,7 @@
     {
      "sha256": "98657d329e1fa178bda4eb58d2f2358e04cbe3e7c471e1210dc7ce758d5ac76e",
      "bytes": 5121,
-     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-hezbollahicon.png",
+     "candidate": "units/kit-sw2/candidates/kit-v2/sw2-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -2571,21 +2571,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/tech-hezbollah.shp",
+   "file": "base/tech-lebanon.shp",
    "bytes": 444856,
    "sha256": "c64ea39e9d60a1bc67d873394686bb91876b8cc3dc0b448d174cbe8b2a552e20",
    "origin": "project-generated",
-   "candidate": "units/kit-tech/candidates/kit-v2/tech-hezbollah.shp",
+   "candidate": "units/kit-tech/candidates/kit-v2/tech-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/tech-hezbollahicon.png",
+   "file": "base/tech-lebanonicon.png",
    "bytes": 4475,
    "sha256": "f1c5a927d8bd396010e4bdf4d29f2e166e489c0aa531fcc89a8958c705d3feed",
    "origin": "project-generated",
-   "candidate": "units/kit-tech/candidates/kit-v2/tech-hezbollahicon.png",
+   "candidate": "units/kit-tech/candidates/kit-v2/tech-lebanonicon.png",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -2711,21 +2711,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/wall-hezbollah.shp",
+   "file": "base/wall-lebanon.shp",
    "bytes": 80848,
    "sha256": "245393afe55d61e5976191961bfb704555c1d6318e6a697d7835501bd908eded",
    "origin": "project-generated",
-   "candidate": "units/kit-wall/candidates/kit-v2/wall-hezbollah.shp",
+   "candidate": "units/kit-wall/candidates/kit-v2/wall-lebanon.shp",
    "rtsaiArtCommit": "860f6c56",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/wall-hezbollahicon.png",
+   "file": "base/wall-lebanonicon.png",
    "bytes": 4617,
    "sha256": "b5770124f85fbfd053adfa68caca5abf85a22953503fac939b26dd304ac62bf2",
    "origin": "project-generated",
-   "candidate": "units/kit-wall/candidates/kit-v2/wall-hezbollahicon.png",
+   "candidate": "units/kit-wall/candidates/kit-v2/wall-lebanonicon.png",
    "rtsaiArtCommit": "860f6c56",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -2866,21 +2866,21 @@
    }
   },
   {
-   "file": "base/weap-hezbollah.shp",
+   "file": "base/weap-lebanon.shp",
    "bytes": 1168662,
    "sha256": "a2d58ccb88ad18be14c00dc3e905460061c8c4574f6aff6fef554b4c5a0ffd83",
    "origin": "project-generated",
-   "candidate": "units/kit-weap/candidates/kit-v2/weap-hezbollah.shp",
+   "candidate": "units/kit-weap/candidates/kit-v2/weap-lebanon.shp",
    "rtsaiArtCommit": "860f6c56",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/weap-hezbollahicon.png",
+   "file": "base/weap-lebanonicon.png",
    "bytes": 5323,
    "sha256": "ed61ba9628ed21e5740f843e8a5432fc1390999b1c897d8afc707d48e2afeace",
    "origin": "project-generated",
-   "candidate": "units/kit-weap/candidates/kit-v2/weap-hezbollahicon.png",
+   "candidate": "units/kit-weap/candidates/kit-v2/weap-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -2888,7 +2888,7 @@
     {
      "sha256": "8d44788bd18f00c8e7920ca1e9f18a5c7f20a11b4da476c5da26d88521a4ef4f",
      "bytes": 5308,
-     "candidate": "units/kit-weap/candidates/kit-v2/weap-hezbollahicon.png",
+     "candidate": "units/kit-weap/candidates/kit-v2/weap-lebanonicon.png",
      "rtsaiArtCommit": "860f6c56"
     }
    ],
@@ -3111,21 +3111,21 @@
    }
   },
   {
-   "file": "base/yard-hezbollah.shp",
+   "file": "base/yard-lebanon.shp",
    "bytes": 777963,
    "sha256": "2243b5872a6b973e43134fa436306119e36450c97f8e415cfe847d6cefa8f230",
    "origin": "project-generated",
-   "candidate": "units/kit-yard/candidates/kit-v2/yard-hezbollah.shp",
+   "candidate": "units/kit-yard/candidates/kit-v2/yard-lebanon.shp",
    "rtsaiArtCommit": "7e1e206e",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "base/yard-hezbollahicon.png",
+   "file": "base/yard-lebanonicon.png",
    "bytes": 5370,
    "sha256": "c263c3fc9a465766db8666240709a0ca51d846710abd2f8211a83ea6c29f5450",
    "origin": "project-generated",
-   "candidate": "units/kit-yard/candidates/kit-v2/yard-hezbollahicon.png",
+   "candidate": "units/kit-yard/candidates/kit-v2/yard-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -3133,7 +3133,7 @@
     {
      "sha256": "7cb092e7984e7146c779ae436eda69992522170b7dba2cc73899624b8c4cc523",
      "bytes": 5370,
-     "candidate": "units/kit-yard/candidates/kit-v2/yard-hezbollahicon.png",
+     "candidate": "units/kit-yard/candidates/kit-v2/yard-lebanonicon.png",
      "rtsaiArtCommit": "7e1e206e"
     }
    ],
@@ -3341,21 +3341,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/dog-hezbollah.shp",
+   "file": "units/dog-lebanon.shp",
    "bytes": 251627,
    "sha256": "3ef1b35448959d07ff33e58b378f8101febc89336020b6b25f8af3adc37f9d25",
    "origin": "project-generated",
-   "candidate": "units/kit-dog/candidates/kit-v2/dog-hezbollah.shp",
+   "candidate": "units/kit-dog/candidates/kit-v2/dog-lebanon.shp",
    "rtsaiArtCommit": "db58d9f9",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/dog-hezbollahicon.png",
+   "file": "units/dog-lebanonicon.png",
    "bytes": 5353,
    "sha256": "f0f59005d8922032009b4b6e10091928898639ed6176eb2b4c8f5c326cbebd8d",
    "origin": "project-generated",
-   "candidate": "units/kit-dog/candidates/kit-v2/dog-hezbollahicon.png",
+   "candidate": "units/kit-dog/candidates/kit-v2/dog-lebanonicon.png",
    "rtsaiArtCommit": "db58d9f9",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -3496,21 +3496,21 @@
    }
   },
   {
-   "file": "units/engineer-hezbollah.shp",
+   "file": "units/engineer-lebanon.shp",
    "bytes": 267511,
    "sha256": "a42afc3333a187eb304a1b595719fb48435db6cce5474b454233428bfd6b3a85",
    "origin": "project-generated",
-   "candidate": "units/kit-engineer/candidates/kit-v2/engineer-hezbollah.shp",
+   "candidate": "units/kit-engineer/candidates/kit-v2/engineer-lebanon.shp",
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/kit_infantry.py",
    "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/engineer-hezbollahicon.png",
+   "file": "units/engineer-lebanonicon.png",
    "bytes": 4475,
    "sha256": "aa9c31ba840472019a009624e74cc0b9df4f07d36c594c1628fb30be40f0a764",
    "origin": "project-generated",
-   "candidate": "units/kit-engineer/candidates/kit-v2/engineer-hezbollahicon.png",
+   "candidate": "units/kit-engineer/candidates/kit-v2/engineer-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
    "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
@@ -3518,7 +3518,7 @@
     {
      "sha256": "6ebc542166b1d90b521d69700bad2a3a7b73b57b31ae4cc1279d73a8c75537b0",
      "bytes": 4472,
-     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-hezbollahicon.png",
+     "candidate": "units/kit-engineer/candidates/kit-v2/engineer-lebanonicon.png",
      "rtsaiArtCommit": "10c8e45b"
     }
    ],
@@ -3741,21 +3741,21 @@
    }
   },
   {
-   "file": "units/harv-hezbollah.shp",
+   "file": "units/harv-lebanon.shp",
    "bytes": 89590,
    "sha256": "8df5bbbc3942803f95a5b37ed161999d3c58d45d8a0275f586975c3d2802e3c0",
    "origin": "project-generated",
-   "candidate": "units/kit-harv/candidates/kit-v2/harv-hezbollah.shp",
+   "candidate": "units/kit-harv/candidates/kit-v2/harv-lebanon.shp",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/harv-hezbollahicon.png",
+   "file": "units/harv-lebanonicon.png",
    "bytes": 5333,
    "sha256": "68fc48e2e4b138c40ec2e9a88b387fca723a7974450de8e8bf68716f4df67cfb",
    "origin": "project-generated",
-   "candidate": "units/kit-harv/candidates/kit-v2/harv-hezbollahicon.png",
+   "candidate": "units/kit-harv/candidates/kit-v2/harv-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -3763,7 +3763,7 @@
     {
      "sha256": "d7fca7020972089bb88ca2b7c6538a6ada9873d34f62a700aa3d14f5e2a252f5",
      "bytes": 5332,
-     "candidate": "units/kit-harv/candidates/kit-v2/harv-hezbollahicon.png",
+     "candidate": "units/kit-harv/candidates/kit-v2/harv-lebanonicon.png",
      "rtsaiArtCommit": "59ea031d"
     }
    ],
@@ -3986,21 +3986,21 @@
    }
   },
   {
-   "file": "units/htk-hezbollah.shp",
+   "file": "units/htk-lebanon.shp",
    "bytes": 86353,
    "sha256": "c8bde79438878f66bceef5e5b8dea2dd9d84f000abbdcf181ed6458c543eb06f",
    "origin": "project-generated",
-   "candidate": "units/kit-htk/candidates/kit-v2/htk-hezbollah.shp",
+   "candidate": "units/kit-htk/candidates/kit-v2/htk-lebanon.shp",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/htk-hezbollahicon.png",
+   "file": "units/htk-lebanonicon.png",
    "bytes": 4816,
    "sha256": "b092a915e3cf2e83e72630ccf6a4cf99dbb937e6f3db8adee8e847db30896669",
    "origin": "project-generated",
-   "candidate": "units/kit-htk/candidates/kit-v2/htk-hezbollahicon.png",
+   "candidate": "units/kit-htk/candidates/kit-v2/htk-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files",
@@ -4008,7 +4008,7 @@
     {
      "sha256": "f46cc9e6934027fa7bd73a9e33a7b3b3f4e0a08f97a64a3cb761215b44e21659",
      "bytes": 4816,
-     "candidate": "units/kit-htk/candidates/kit-v2/htk-hezbollahicon.png",
+     "candidate": "units/kit-htk/candidates/kit-v2/htk-lebanonicon.png",
      "rtsaiArtCommit": "59ea031d"
     }
    ],
@@ -4216,21 +4216,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/lcrf-hezbollah.shp",
+   "file": "units/lcrf-lebanon.shp",
    "bytes": 119226,
    "sha256": "b19a03a098c0c759ce8dc19128388ebec0394164a2810e6e1cae2a1744f8fadc",
    "origin": "project-generated",
-   "candidate": "units/kit-lcrf/candidates/kit-v2/lcrf-hezbollah.shp",
+   "candidate": "units/kit-lcrf/candidates/kit-v2/lcrf-lebanon.shp",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/lcrf-hezbollahicon.png",
+   "file": "units/lcrf-lebanonicon.png",
    "bytes": 5420,
    "sha256": "4e33ae0927787e957af06004cb575a080942fe1c722838ba6bfcee729ea8f92e",
    "origin": "project-generated",
-   "candidate": "units/kit-lcrf/candidates/kit-v2/lcrf-hezbollahicon.png",
+   "candidate": "units/kit-lcrf/candidates/kit-v2/lcrf-lebanonicon.png",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -4356,21 +4356,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/mcv-hezbollah.shp",
+   "file": "units/mcv-lebanon.shp",
    "bytes": 114099,
    "sha256": "bcf8131fde63a892517ce9fc1eaf4cccd3d6fe964049116ff484cfab63cdd886",
    "origin": "project-generated",
-   "candidate": "units/kit-mcv/candidates/kit-v2/mcv-hezbollah.shp",
+   "candidate": "units/kit-mcv/candidates/kit-v2/mcv-lebanon.shp",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/mcv-hezbollahicon.png",
+   "file": "units/mcv-lebanonicon.png",
    "bytes": 5466,
    "sha256": "8e5175b963141405a84792a7d7645fce13327076343913df1a1240a0025098e0",
    "origin": "project-generated",
-   "candidate": "units/kit-mcv/candidates/kit-v2/mcv-hezbollahicon.png",
+   "candidate": "units/kit-mcv/candidates/kit-v2/mcv-lebanonicon.png",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -4496,21 +4496,21 @@
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/sapc-hezbollah.shp",
+   "file": "units/sapc-lebanon.shp",
    "bytes": 78214,
    "sha256": "8844ebe51bae4f44da11453ee8b954d0f65aa23774b431035fd314459cc2f438",
    "origin": "project-generated",
-   "candidate": "units/kit-sapc/candidates/kit-v2/sapc-hezbollah.shp",
+   "candidate": "units/kit-sapc/candidates/kit-v2/sapc-lebanon.shp",
    "rtsaiArtCommit": "59ea031d",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/sapc-hezbollahicon.png",
+   "file": "units/sapc-lebanonicon.png",
    "bytes": 4878,
    "sha256": "e09accf7376ab46b0b83971698d5af13c9da80e2d2fad3553e734b6bcfd45e23",
    "origin": "project-generated",
-   "candidate": "units/kit-sapc/candidates/kit-v2/sapc-hezbollahicon.png",
+   "candidate": "units/kit-sapc/candidates/kit-v2/sapc-lebanonicon.png",
    "rtsaiArtCommit": "860f6c56",
    "generator": "tools/base_kit.py",
    "method": "Hand-authored procedural Blender model (bmesh script, tools/base_kit_designs.py), rendered by tools/blender_base_kit.py (Cycles CPU: beauty, material-ID and shadow layers) and quantised into the shared kitbase.pal by tools/base_kit.py; no image-to-3D, no EA files"
@@ -4651,21 +4651,21 @@
    }
   },
   {
-   "file": "units/spy-hezbollah.shp",
+   "file": "units/spy-lebanon.shp",
    "bytes": 250776,
    "sha256": "5da8912d4bd63f54a4baefb035af07698243ccfa05c2eafde081c7629d6cd9c2",
    "origin": "project-generated",
-   "candidate": "units/kit-spy/candidates/kit-v2/spy-hezbollah.shp",
+   "candidate": "units/kit-spy/candidates/kit-v2/spy-lebanon.shp",
    "rtsaiArtCommit": "b6b62a9a",
    "generator": "tools/kit_infantry.py",
    "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files"
   },
   {
-   "file": "units/spy-hezbollahicon.png",
+   "file": "units/spy-lebanonicon.png",
    "bytes": 4736,
    "sha256": "bd7f5c13ab3315884dd7f18199d35f61833660755fbaa747876a91b789951f7e",
    "origin": "project-generated",
-   "candidate": "units/kit-spy/candidates/kit-v2/spy-hezbollahicon.png",
+   "candidate": "units/kit-spy/candidates/kit-v2/spy-lebanonicon.png",
    "rtsaiArtCommit": "ddba372f2591d152b93f972078a0b5909df90060",
    "generator": "tools/kit_infantry.py",
    "method": "Hand-authored Blender model (tools/kit_infantry_models.py) rendered by the faction infantry route (tools/infantry_route.py) with the faction uniform system, mapped onto kitbase.pal by tools/kit_infantry.py; portrait cameo by tools/cameo_render.py; no image-to-3D, no EA files",
@@ -4673,7 +4673,7 @@
     {
      "sha256": "6c7d9218670ed5ba0abd531586dbe37f4d431f6539a302fe03eb38c73d4ba49f",
      "bytes": 4743,
-     "candidate": "units/kit-spy/candidates/kit-v2/spy-hezbollahicon.png",
+     "candidate": "units/kit-spy/candidates/kit-v2/spy-lebanonicon.png",
      "rtsaiArtCommit": "b6b62a9a"
     }
    ],

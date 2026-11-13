@@ -1,6 +1,6 @@
 {
  "r6-main-p1": {
-  "description": "Round 6 main land probe 1: 9 factions, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "description": "Round 6 main land probe 1: 9 factions, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate, plus 1 more replicate of every Lebanon and Israel pairing.",
   "seed": 20261101,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -13,7 +13,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
@@ -39,7 +39,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ]
    },
    {
@@ -51,7 +51,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
@@ -71,14 +71,14 @@
      }
     ],
     "focus": [
-     "hezbollah",
+     "lebanon",
      "israel"
     ]
    }
   ]
  },
  "r6-sa-p1": {
-  "description": "Round 6 standalone probe 1: the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "description": "Round 6 standalone probe 1: the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate, plus 1 more replicate of every Lebanon and Israel pairing.",
   "seed": 20261103,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -91,7 +91,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -118,7 +118,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -136,14 +136,14 @@
      }
     ],
     "focus": [
-     "hezbollah",
+     "lebanon",
      "israel"
     ]
    }
   ]
  },
  "r6-main-p2": {
-  "description": "Round 6 main land probe 2: 9 factions, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "description": "Round 6 main land probe 2: 9 factions, every pairing with a modern faction, both orientations, Dustbowl and Tournament Map A, 1 replicate, plus 1 more replicate of every Lebanon and Israel pairing.",
   "seed": 20261111,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -156,7 +156,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
@@ -182,7 +182,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ]
    },
    {
@@ -194,7 +194,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
@@ -214,14 +214,14 @@
      }
     ],
     "focus": [
-     "hezbollah",
+     "lebanon",
      "israel"
     ]
    }
   ]
  },
  "r6-sa-p2": {
-  "description": "Round 6 standalone probe 2: the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.",
+  "description": "Round 6 standalone probe 2: the 7 modern factions, every pairing, both orientations, Twin Fords and Harbor Line, 1 replicate, plus 1 more replicate of every Lebanon and Israel pairing.",
   "seed": 20261113,
   "wall_guard_seconds": 1500,
   "suites": [
@@ -234,7 +234,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -261,7 +261,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"
@@ -279,7 +279,7 @@
      }
     ],
     "focus": [
-     "hezbollah",
+     "lebanon",
      "israel"
     ]
    }
@@ -299,7 +299,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
@@ -325,7 +325,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ]
    }
   ]
@@ -344,7 +344,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah",
+     "lebanon",
      "america",
      "russia"
     ],
@@ -366,7 +366,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ]
    }
   ]
@@ -385,7 +385,7 @@
      "saudi",
      "yemen",
      "israel",
-     "hezbollah"
+     "lebanon"
     ],
     "bots": [
      "normal"

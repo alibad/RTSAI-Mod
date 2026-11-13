@@ -8,9 +8,9 @@ Status: on local `main` only. Nothing is pushed or published yet. The build need
 
 ### New factions
 
-- **Israel** and **Hezbollah** join China, Iran, Türkiye, Saudi Arabia and Yemen.
+- **Israel** and **Lebanon** join China, Iran, Türkiye, Saudi Arabia and Yemen.
   - Each has its own roster, doctrine, bot, support mechanics and lobby flag.
-  - Israel speaks Hebrew and Hezbollah speaks Lebanese Arabic: unit voices, announcers and call signs.
+  - Israel speaks Hebrew and Lebanon speaks Lebanese Arabic: unit voices, announcers and call signs.
 
 ### New art for every modern unit
 
@@ -33,17 +33,17 @@ models; details in [art-provenance.md](art-provenance.md).
 ### Balance and bots
 
 - **Balance rounds 3 and 4** ([balance.md](balance.md)).
-  - China, Türkiye and Israel lifted; the Yemen and Hezbollah militia and RPG teams trimmed.
+  - China, Türkiye and Israel lifted; the Yemen and Lebanon militia and RPG teams trimmed.
   - The ZBD fixed.
   - Explosive USVs can now reach a ship.
-- **Bots** no longer waste money on ships that cannot reach the enemy or on extra airfield jets. Israel and Hezbollah
+- **Bots** no longer waste money on ships that cannot reach the enemy or on extra airfield jets. Israel and Lebanon
   bots use the right unit types.
 
 ### Engine
 
 `rtsai/engine` 68c1e95557:
 
-- missiles follow raised ground and ramps, so the Yemen and Hezbollah RPGs hit on high ground without a workaround;
+- missiles follow raised ground and ramps, so the Yemen and Lebanon RPGs hit on high ground without a workaround;
 - turret depth is consistent;
 - a crash when a vehicle crossed between near-equal ramp tilts is fixed;
 - faction flag sheets are padded to power-of-two sizes (a rendered-client crash).

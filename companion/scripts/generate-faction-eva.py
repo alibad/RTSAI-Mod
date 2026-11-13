@@ -167,7 +167,7 @@ FACTIONS = {
               "highpass=f=300,lowpass=f=4200,acompressor=threshold=-24dB:ratio=4:attack=4:release=60," + LOUDNESS),
     "israel": ("israel-eva", "clipped digital command net",
                "highpass=f=150,lowpass=f=7600,acompressor=threshold=-21dB:ratio=3.2:attack=3:release=50," + LOUDNESS),
-    "hezbollah": ("hezbollah-eva", "VHF field radio with a short slap",
+    "lebanon": ("lebanon-eva", "VHF field radio with a short slap",
                   "highpass=f=240,lowpass=f=5200,acompressor=threshold=-23dB:ratio=3.5:attack=4:release=60,"
                   "aecho=0.8:0.35:22:0.1," + LOUDNESS),
 }

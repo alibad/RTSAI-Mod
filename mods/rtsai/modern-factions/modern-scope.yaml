@@ -3,11 +3,11 @@
 # The original game's heroes (Chrono Commando, Yuri Prime) are not won by infiltrating a tech centre.
 ccomand:
 	Buildable:
-		Prerequisites: ~gapile, ~allies.tech.infiltrated, ~!faction.china, ~!faction.turkey, ~!faction.saudi, ~!faction.israel, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~gapile, ~allies.tech.infiltrated, ~!faction.china, ~!faction.turkey, ~!faction.saudi, ~!faction.israel, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 yuripr:
 	Buildable:
-		Prerequisites: ~nahand, ~soviets.tech.infiltrated, ~!faction.china, ~!faction.turkey, ~!faction.saudi, ~!faction.israel, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~nahand, ~soviets.tech.infiltrated, ~!faction.china, ~!faction.turkey, ~!faction.saudi, ~!faction.israel, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 # A destroyed building drops the owner's own riflemen, not the original GI or conscript.
 Player:
@@ -41,8 +41,8 @@ Player:
 		Replacements:
 			e1: r2ymr
 			e2: r2ymr
-	SurvivorReplacements@hezbollah:
-		Factions: hezbollah
+	SurvivorReplacements@lebanon:
+		Factions: lebanon
 		Replacements:
 			e1: r2hzrifle
 			e2: r2hzrifle

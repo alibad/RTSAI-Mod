@@ -284,7 +284,7 @@
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
-	# MicroDrone: FPV micro-drones (Hezbollah r2hzquad); only weapons that can hit them (^MG small arms) engage.
+	# MicroDrone: FPV micro-drones (Lebanon r2hzquad); only weapons that can hit them (^MG small arms) engage.
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Infantry, Vehicle, Water, Underwater, Defense, MicroDrone

@@ -13,7 +13,7 @@ PRODUCT = Path(__file__).resolve().parents[1]
 CATALOG = PRODUCT / "catalog" / "factions.json"
 MOD = PRODUCT.parent
 # Classic (ra) mode is checked against the canonical alibad/OpenRA main checkout beside this repository, as the
-# tests do. The engine/openra submodule pins an older engine without the Classic Israel and Hezbollah packs.
+# tests do. The engine/openra submodule pins an older engine without the Classic Israel and Lebanon packs.
 # Packagers pass --engine with the engine they are packaging.
 ENGINE = PRODUCT.parent.parent / "OpenRA"
 # Where each mode's faction rules and player-facing Fluent strings live. RA2 is the

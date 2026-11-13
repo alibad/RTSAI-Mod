@@ -1,5 +1,5 @@
-ra2-modern-hezbollah-name = Hezbollah
-ra2-modern-hezbollah-description = Fictional RTS faction: few veteran fighters, cheap rocket volleys and FPV micro-drone teams.
+ra2-modern-lebanon-name = Lebanon
+ra2-modern-lebanon-description = Fictional RTS faction: few veteran fighters, cheap rocket volleys and FPV micro-drone teams.
     Includes economy, production, land, air, naval and support buildings.
     New local development roster; balance and final art approval pending.
 

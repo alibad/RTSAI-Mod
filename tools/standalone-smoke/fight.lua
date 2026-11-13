@@ -1,6 +1,6 @@
 -- Standalone smoke test (tools/standalone-smoke.py --lua fight.lua --look X,Y): two small armies meet at one cell
 -- and the camera holds there, for screenshots of combat effects (muzzle flashes, explosions, fire, smoke, deaths).
--- Multi0 should be Türkiye and Multi1 Hezbollah (the unit types below are theirs).
+-- Multi0 should be Türkiye and Multi1 Lebanon (the unit types below are theirs).
 WorldLoaded = function()
   local a = Player.GetPlayer("Multi0")
   local b = Player.GetPlayer("Multi1")

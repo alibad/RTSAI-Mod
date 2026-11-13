@@ -448,7 +448,7 @@ flags:
 		Random: 226, 241, 30, 15
 		spectator: 226, 241, 30, 15
 		israel: 260, 1, 30, 15
-		hezbollah: 260, 17, 30, 15
+		lebanon: 260, 17, 30, 15
 
 music:
 	Inherits: ^Glyphs

@@ -1,8 +1,8 @@
-# Salvo and swarm (docs/hezbollah-doctrine.md): fewer riflemen, FPV teams, the Rail Technical; the doctrine
-# itself (role shares, opening, squad size) is BotDoctrine@hezbollah in doctrines.yaml.
+# Salvo and swarm (docs/lebanon-doctrine.md): fewer riflemen, FPV teams, the Rail Technical; the doctrine
+# itself (role shares, opening, squad size) is BotDoctrine@lebanon in doctrines.yaml.
 Player:
 	DoctrineUnitBuilderBotModule@normal:
-		# Only Hezbollah has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
+		# Only Lebanon has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
 		RoleShares:
 			drone-swarm: 8
 		UnitsToBuild:
@@ -38,7 +38,7 @@ Player:
 			r2hzcoastal: 4
 	DoctrineSquadManagerBotModule@normal:
 	DoctrineUnitBuilderBotModule@medium:
-		# Only Hezbollah has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
+		# Only Lebanon has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
 		RoleShares:
 			drone-swarm: 8
 		UnitsToBuild:
@@ -73,7 +73,7 @@ Player:
 			r2hzcoastal: 4
 	DoctrineSquadManagerBotModule@medium:
 	DoctrineUnitBuilderBotModule@rush:
-		# Only Hezbollah has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
+		# Only Lebanon has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
 		RoleShares:
 			drone-swarm: 8
 		UnitsToBuild:
@@ -108,7 +108,7 @@ Player:
 			r2hzcoastal: 4
 	DoctrineSquadManagerBotModule@rush:
 	DoctrineUnitBuilderBotModule@turtle:
-		# Only Hezbollah has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
+		# Only Lebanon has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
 		RoleShares:
 			drone-swarm: 8
 		UnitsToBuild:
@@ -143,7 +143,7 @@ Player:
 			r2hzcoastal: 4
 	DoctrineSquadManagerBotModule@turtle:
 	DoctrineUnitBuilderBotModule@naval:
-		# Only Hezbollah has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
+		# Only Lebanon has a drone-swarm unit (the FPV Team), so this share is inert for every other faction.
 		RoleShares:
 			drone-swarm: 8
 		UnitsToBuild:

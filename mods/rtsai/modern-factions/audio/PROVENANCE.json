@@ -113,14 +113,14 @@
    ],
    "accent": "a"
   },
-  "hezbollah-infantry": {
+  "lebanon-infantry": {
    "kokoro_voicepacks": [
     "am_fenrir",
     "am_michael"
    ],
    "accent": "a"
   },
-  "hezbollah-crew": {
+  "lebanon-crew": {
    "kokoro_voicepacks": [
     "bm_george",
     "am_puck"
@@ -185,7 +185,7 @@
    ],
    "accent": "a"
   },
-  "hezbollah-eva": {
+  "lebanon-eva": {
    "kokoro_voicepacks": [
     "bf_isabella"
    ],
@@ -197,7 +197,7 @@
   "metric": "character error rate against the script after punctuation/diacritic normalization"
  },
  "voice_review": {
-  "date": "2026-10-05 (first pass); 2026-10-06 (Israel, Hezbollah, call signs)",
+  "date": "2026-10-05 (first pass); 2026-10-06 (Israel, Lebanon, call signs)",
   "status": "machine-assisted first pass only; native-speaker sign-off is still required (owner gate)",
   "sheet": "docs/voice-review.csv",
   "method": "every non-English line re-transcribed from the shipped file with the pinned Whisper large-v3 (forced language, automatic language ID, translation), compared with the generation-time transcript, the script and its English line, and judged for wording; a line was regenerated when both transcriptions heard a different content word",
@@ -217,7 +217,7 @@
    "rsa-falcon-build-ar.wav, rsa-falcon-select-ar.wav": "فالكون -> الصقر",
    "rcn-redspear-select-zh.wav": "红矛 -> 赤矛 (avoids the 红毛 homophone)"
   },
-  "added": "Israel (he-IL) and Hezbollah (ar-LB): 48 native lines with 48 English counterparts, 2026-10-06",
+  "added": "Israel (he-IL) and Lebanon (ar-LB): 48 native lines with 48 English counterparts, 2026-10-06",
   "persian_alternatives": "tested 2026-10-06, not clearly better; Persian set kept (see rejected)"
  },
  "rejected": [
@@ -271,7 +271,7 @@
   },
   {
    "candidate": "MOSS-TTS-Nano base for Lebanese Arabic",
-   "reason": "Hezbollah scripts: CER 0.19, 4/24 clean, Arabic ID 0.46, against CER 0.03, 18/24 clean, Arabic ID 0.90 for Chatterbox."
+   "reason": "Lebanon scripts: CER 0.19, 4/24 clean, Arabic ID 0.46, against CER 0.03, 18/24 clean, Arabic ID 0.90 for Chatterbox."
   },
   {
    "candidate": "Persian alternatives to the MOSS fine-tune cloned from the English clip (CER 0.09, Persian ID 0.65)",
@@ -283,7 +283,7 @@
    "filename": "hz-drone-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -331,7 +331,7 @@
    "filename": "hz-drone-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -367,7 +367,7 @@
    "filename": "hz-drone-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -415,7 +415,7 @@
    "filename": "hz-drone-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -451,7 +451,7 @@
    "filename": "hz-drone-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -499,7 +499,7 @@
    "filename": "hz-drone-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -535,7 +535,7 @@
    "filename": "hz-drone-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -583,7 +583,7 @@
    "filename": "hz-drone-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -619,7 +619,7 @@
    "filename": "hz-fpv-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -667,7 +667,7 @@
    "filename": "hz-fpv-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -703,7 +703,7 @@
    "filename": "hz-fpv-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -751,7 +751,7 @@
    "filename": "hz-fpv-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -787,7 +787,7 @@
    "filename": "hz-fpv-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -835,7 +835,7 @@
    "filename": "hz-fpv-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -871,7 +871,7 @@
    "filename": "hz-fpv-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -919,7 +919,7 @@
    "filename": "hz-fpv-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -955,7 +955,7 @@
    "filename": "hz-inf-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1003,7 +1003,7 @@
    "filename": "hz-inf-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1039,7 +1039,7 @@
    "filename": "hz-inf-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1087,7 +1087,7 @@
    "filename": "hz-inf-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1123,7 +1123,7 @@
    "filename": "hz-inf-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1171,7 +1171,7 @@
    "filename": "hz-inf-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1207,7 +1207,7 @@
    "filename": "hz-inf-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1255,7 +1255,7 @@
    "filename": "hz-inf-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1291,7 +1291,7 @@
    "filename": "hz-naval-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1339,7 +1339,7 @@
    "filename": "hz-naval-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1375,7 +1375,7 @@
    "filename": "hz-naval-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1423,7 +1423,7 @@
    "filename": "hz-naval-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1459,7 +1459,7 @@
    "filename": "hz-naval-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1507,7 +1507,7 @@
    "filename": "hz-naval-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1543,7 +1543,7 @@
    "filename": "hz-naval-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1591,7 +1591,7 @@
    "filename": "hz-naval-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -1627,7 +1627,7 @@
    "filename": "hz-scout-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1675,7 +1675,7 @@
    "filename": "hz-scout-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1711,7 +1711,7 @@
    "filename": "hz-scout-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1759,7 +1759,7 @@
    "filename": "hz-scout-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1795,7 +1795,7 @@
    "filename": "hz-scout-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1843,7 +1843,7 @@
    "filename": "hz-scout-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1879,7 +1879,7 @@
    "filename": "hz-scout-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1927,7 +1927,7 @@
    "filename": "hz-scout-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -1963,7 +1963,7 @@
    "filename": "hz-spotter-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2011,7 +2011,7 @@
    "filename": "hz-spotter-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2047,7 +2047,7 @@
    "filename": "hz-spotter-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2095,7 +2095,7 @@
    "filename": "hz-spotter-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2131,7 +2131,7 @@
    "filename": "hz-spotter-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2185,7 +2185,7 @@
    "filename": "hz-spotter-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2221,7 +2221,7 @@
    "filename": "hz-spotter-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2269,7 +2269,7 @@
    "filename": "hz-spotter-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-infantry",
+    "speaker": "lebanon-infantry",
     "kokoro_voicepacks": [
      "am_fenrir",
      "am_michael"
@@ -2305,7 +2305,7 @@
    "filename": "hz-veh-action-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2353,7 +2353,7 @@
    "filename": "hz-veh-action-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2389,7 +2389,7 @@
    "filename": "hz-veh-attack-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2437,7 +2437,7 @@
    "filename": "hz-veh-attack-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2473,7 +2473,7 @@
    "filename": "hz-veh-move-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2521,7 +2521,7 @@
    "filename": "hz-veh-move-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2557,7 +2557,7 @@
    "filename": "hz-veh-select-ar.wav",
    "language": "ar-LB",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -2611,7 +2611,7 @@
    "filename": "hz-veh-select-en.wav",
    "language": "en-US",
    "voice": {
-    "speaker": "hezbollah-crew",
+    "speaker": "lebanon-crew",
     "kokoro_voicepacks": [
      "bm_george",
      "am_puck"
@@ -14780,17 +14780,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/001.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/001.wav",
+   "faction": "lebanon",
    "clip": "001",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -14816,17 +14816,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/002.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/002.wav",
+   "faction": "lebanon",
    "clip": "002",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -14852,17 +14852,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/003.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/003.wav",
+   "faction": "lebanon",
    "clip": "003",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -14888,17 +14888,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/004.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/004.wav",
+   "faction": "lebanon",
    "clip": "004",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -14924,17 +14924,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/005.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/005.wav",
+   "faction": "lebanon",
    "clip": "005",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -14960,17 +14960,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/006.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/006.wav",
+   "faction": "lebanon",
    "clip": "006",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -14996,17 +14996,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/007.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/007.wav",
+   "faction": "lebanon",
    "clip": "007",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15032,17 +15032,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/008.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/008.wav",
+   "faction": "lebanon",
    "clip": "008",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15068,17 +15068,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/009.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/009.wav",
+   "faction": "lebanon",
    "clip": "009",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15104,17 +15104,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/010.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/010.wav",
+   "faction": "lebanon",
    "clip": "010",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15140,17 +15140,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/011.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/011.wav",
+   "faction": "lebanon",
    "clip": "011",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15176,17 +15176,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/012.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/012.wav",
+   "faction": "lebanon",
    "clip": "012",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15212,17 +15212,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/013.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/013.wav",
+   "faction": "lebanon",
    "clip": "013",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15248,17 +15248,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/014.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/014.wav",
+   "faction": "lebanon",
    "clip": "014",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15284,17 +15284,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/015.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/015.wav",
+   "faction": "lebanon",
    "clip": "015",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15320,17 +15320,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/016.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/016.wav",
+   "faction": "lebanon",
    "clip": "016",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15356,17 +15356,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/017.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/017.wav",
+   "faction": "lebanon",
    "clip": "017",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15392,17 +15392,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/018.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/018.wav",
+   "faction": "lebanon",
    "clip": "018",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15428,17 +15428,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/019.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/019.wav",
+   "faction": "lebanon",
    "clip": "019",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15464,17 +15464,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/020.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/020.wav",
+   "faction": "lebanon",
    "clip": "020",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15500,17 +15500,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/021.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/021.wav",
+   "faction": "lebanon",
    "clip": "021",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15536,17 +15536,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/022.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/022.wav",
+   "faction": "lebanon",
    "clip": "022",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15572,17 +15572,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/023.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/023.wav",
+   "faction": "lebanon",
    "clip": "023",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15608,17 +15608,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/024.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/024.wav",
+   "faction": "lebanon",
    "clip": "024",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15644,17 +15644,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/025.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/025.wav",
+   "faction": "lebanon",
    "clip": "025",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15680,17 +15680,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/026.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/026.wav",
+   "faction": "lebanon",
    "clip": "026",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15716,17 +15716,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/027.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/027.wav",
+   "faction": "lebanon",
    "clip": "027",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15752,17 +15752,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/028.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/028.wav",
+   "faction": "lebanon",
    "clip": "028",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15788,17 +15788,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/029.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/029.wav",
+   "faction": "lebanon",
    "clip": "029",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15824,17 +15824,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/030.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/030.wav",
+   "faction": "lebanon",
    "clip": "030",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15860,17 +15860,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/031.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/031.wav",
+   "faction": "lebanon",
    "clip": "031",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15896,17 +15896,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/032.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/032.wav",
+   "faction": "lebanon",
    "clip": "032",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15932,17 +15932,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/033.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/033.wav",
+   "faction": "lebanon",
    "clip": "033",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -15968,17 +15968,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/035.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/035.wav",
+   "faction": "lebanon",
    "clip": "035",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16004,17 +16004,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/036.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/036.wav",
+   "faction": "lebanon",
    "clip": "036",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16040,17 +16040,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/037.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/037.wav",
+   "faction": "lebanon",
    "clip": "037",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16076,17 +16076,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/038.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/038.wav",
+   "faction": "lebanon",
    "clip": "038",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16112,17 +16112,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/039.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/039.wav",
+   "faction": "lebanon",
    "clip": "039",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16148,17 +16148,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/040.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/040.wav",
+   "faction": "lebanon",
    "clip": "040",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16184,17 +16184,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/041.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/041.wav",
+   "faction": "lebanon",
    "clip": "041",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16220,17 +16220,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/042.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/042.wav",
+   "faction": "lebanon",
    "clip": "042",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16256,17 +16256,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/043.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/043.wav",
+   "faction": "lebanon",
    "clip": "043",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16292,17 +16292,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/044.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/044.wav",
+   "faction": "lebanon",
    "clip": "044",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16328,17 +16328,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/045.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/045.wav",
+   "faction": "lebanon",
    "clip": "045",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16364,17 +16364,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/046.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/046.wav",
+   "faction": "lebanon",
    "clip": "046",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16400,17 +16400,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/047.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/047.wav",
+   "faction": "lebanon",
    "clip": "047",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16436,17 +16436,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/048.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/048.wav",
+   "faction": "lebanon",
    "clip": "048",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16472,17 +16472,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/049.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/049.wav",
+   "faction": "lebanon",
    "clip": "049",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16508,17 +16508,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/050.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/050.wav",
+   "faction": "lebanon",
    "clip": "050",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16544,17 +16544,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/051.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/051.wav",
+   "faction": "lebanon",
    "clip": "051",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16580,17 +16580,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/052.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/052.wav",
+   "faction": "lebanon",
    "clip": "052",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16616,17 +16616,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/053.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/053.wav",
+   "faction": "lebanon",
    "clip": "053",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16652,17 +16652,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/054.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/054.wav",
+   "faction": "lebanon",
    "clip": "054",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16688,17 +16688,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/055.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/055.wav",
+   "faction": "lebanon",
    "clip": "055",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16724,17 +16724,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/056.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/056.wav",
+   "faction": "lebanon",
    "clip": "056",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16760,17 +16760,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/057.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/057.wav",
+   "faction": "lebanon",
    "clip": "057",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16796,17 +16796,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/058.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/058.wav",
+   "faction": "lebanon",
    "clip": "058",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16832,17 +16832,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/059.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/059.wav",
+   "faction": "lebanon",
    "clip": "059",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16868,17 +16868,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/060.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/060.wav",
+   "faction": "lebanon",
    "clip": "060",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16904,17 +16904,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/061.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/061.wav",
+   "faction": "lebanon",
    "clip": "061",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16940,17 +16940,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/062.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/062.wav",
+   "faction": "lebanon",
    "clip": "062",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -16976,17 +16976,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/063.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/063.wav",
+   "faction": "lebanon",
    "clip": "063",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17012,17 +17012,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/064.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/064.wav",
+   "faction": "lebanon",
    "clip": "064",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17048,17 +17048,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/065.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/065.wav",
+   "faction": "lebanon",
    "clip": "065",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17084,17 +17084,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/066.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/066.wav",
+   "faction": "lebanon",
    "clip": "066",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17120,17 +17120,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/067.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/067.wav",
+   "faction": "lebanon",
    "clip": "067",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17156,17 +17156,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/068.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/068.wav",
+   "faction": "lebanon",
    "clip": "068",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17192,17 +17192,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/069.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/069.wav",
+   "faction": "lebanon",
    "clip": "069",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17228,17 +17228,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/070.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/070.wav",
+   "faction": "lebanon",
    "clip": "070",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17264,17 +17264,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/071.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/071.wav",
+   "faction": "lebanon",
    "clip": "071",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17300,17 +17300,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/072.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/072.wav",
+   "faction": "lebanon",
    "clip": "072",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17336,17 +17336,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/073.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/073.wav",
+   "faction": "lebanon",
    "clip": "073",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17372,17 +17372,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/074.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/074.wav",
+   "faction": "lebanon",
    "clip": "074",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17408,17 +17408,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/075.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/075.wav",
+   "faction": "lebanon",
    "clip": "075",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17444,17 +17444,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/076.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/076.wav",
+   "faction": "lebanon",
    "clip": "076",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17480,17 +17480,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/077.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/077.wav",
+   "faction": "lebanon",
    "clip": "077",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17516,17 +17516,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/078.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/078.wav",
+   "faction": "lebanon",
    "clip": "078",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17552,17 +17552,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/079.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/079.wav",
+   "faction": "lebanon",
    "clip": "079",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17588,17 +17588,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/080.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/080.wav",
+   "faction": "lebanon",
    "clip": "080",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17624,17 +17624,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/081.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/081.wav",
+   "faction": "lebanon",
    "clip": "081",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17660,17 +17660,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/082.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/082.wav",
+   "faction": "lebanon",
    "clip": "082",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17696,17 +17696,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/083.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/083.wav",
+   "faction": "lebanon",
    "clip": "083",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17732,17 +17732,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/084.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/084.wav",
+   "faction": "lebanon",
    "clip": "084",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17768,17 +17768,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/085.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/085.wav",
+   "faction": "lebanon",
    "clip": "085",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17804,17 +17804,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/086.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/086.wav",
+   "faction": "lebanon",
    "clip": "086",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17840,17 +17840,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/087.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/087.wav",
+   "faction": "lebanon",
    "clip": "087",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17876,17 +17876,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/088.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/088.wav",
+   "faction": "lebanon",
    "clip": "088",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17912,17 +17912,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/089.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/089.wav",
+   "faction": "lebanon",
    "clip": "089",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17948,17 +17948,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/090.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/090.wav",
+   "faction": "lebanon",
    "clip": "090",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -17984,17 +17984,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/091.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/091.wav",
+   "faction": "lebanon",
    "clip": "091",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18020,17 +18020,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/092.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/092.wav",
+   "faction": "lebanon",
    "clip": "092",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18056,17 +18056,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/093.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/093.wav",
+   "faction": "lebanon",
    "clip": "093",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18092,17 +18092,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/094.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/094.wav",
+   "faction": "lebanon",
    "clip": "094",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18128,17 +18128,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/095.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/095.wav",
+   "faction": "lebanon",
    "clip": "095",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18164,17 +18164,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/096.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/096.wav",
+   "faction": "lebanon",
    "clip": "096",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18200,17 +18200,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/097.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/097.wav",
+   "faction": "lebanon",
    "clip": "097",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18236,17 +18236,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/098.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/098.wav",
+   "faction": "lebanon",
    "clip": "098",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18272,17 +18272,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/099.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/099.wav",
+   "faction": "lebanon",
    "clip": "099",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18308,17 +18308,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/100.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/100.wav",
+   "faction": "lebanon",
    "clip": "100",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18344,17 +18344,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/101.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/101.wav",
+   "faction": "lebanon",
    "clip": "101",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18380,17 +18380,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/102.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/102.wav",
+   "faction": "lebanon",
    "clip": "102",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18416,17 +18416,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/103.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/103.wav",
+   "faction": "lebanon",
    "clip": "103",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18452,17 +18452,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/104.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/104.wav",
+   "faction": "lebanon",
    "clip": "104",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18488,17 +18488,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/105.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/105.wav",
+   "faction": "lebanon",
    "clip": "105",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18524,17 +18524,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/106.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/106.wav",
+   "faction": "lebanon",
    "clip": "106",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18560,17 +18560,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/107.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/107.wav",
+   "faction": "lebanon",
    "clip": "107",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18596,17 +18596,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/108.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/108.wav",
+   "faction": "lebanon",
    "clip": "108",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18632,17 +18632,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/109.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/109.wav",
+   "faction": "lebanon",
    "clip": "109",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18668,17 +18668,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/120.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/120.wav",
+   "faction": "lebanon",
    "clip": "120",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18704,17 +18704,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/121.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/121.wav",
+   "faction": "lebanon",
    "clip": "121",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],
@@ -18740,17 +18740,17 @@
    "real_person_imitation": false
   },
   {
-   "filename": "eva/hezbollah/122.wav",
-   "faction": "hezbollah",
+   "filename": "eva/lebanon/122.wav",
+   "faction": "lebanon",
    "clip": "122",
-   "role": "hezbollah announcer (EVA): VHF field radio with a short slap",
+   "role": "lebanon announcer (EVA): VHF field radio with a short slap",
    "engine": "Kokoro-82M v1.0 (StyleTTS 2 + ISTFTNet)",
    "engine_id": "kokoro",
    "model": "hexgrad/Kokoro-82M",
    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
    "license": "Apache-2.0",
    "voice": {
-    "speaker": "hezbollah-eva",
+    "speaker": "lebanon-eva",
     "kokoro_voicepacks": [
      "bf_isabella"
     ],

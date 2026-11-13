@@ -28,7 +28,7 @@ Seven modern factions, each with its own doctrine, signature units and voice lin
 | Saudi Arabia | Playable |
 | Yemen | Playable |
 | Israel | Playable |
-| Hezbollah | Playable |
+| Lebanon | Playable |
 
 These are fictional game factions, not claims about real-world forces. The shared faction catalog (names, roles and stories used by the game and the website) lives in [alibad/OpenRA-AI](https://github.com/alibad/OpenRA-AI/blob/main/catalog/factions.json).
 

@@ -1,4 +1,4 @@
-"""Generate the Israel (Hebrew/English) and Hezbollah (Lebanese Arabic/English) unit voices for the RA2 mod.
+"""Generate the Israel (Hebrew/English) and Lebanon (Lebanese Arabic/English) unit voices for the RA2 mod.
 
 Speech comes from local, redistributable engines (voice_engines.py): Kokoro-82M for English and Chatterbox
 Multilingual for Hebrew and Arabic, cloned from a synthetic native reference that a Kokoro voicepack first spoke
@@ -131,44 +131,44 @@ ISRAEL = tuple(
     })
 )
 
-HEZBOLLAH = tuple(
-    lebanese("hz-inf", "generic infantry", "hezbollah-infantry", {
+LEBANON = tuple(
+    lebanese("hz-inf", "generic infantry", "lebanon-infantry", {
         "select": ("نحنا جاهزين.", "We're ready."),
         "move": ("ماشيين هلق.", "Moving now."),
         "attack": ("عم نشتبك.", "Engaging."),
         "action": ("تمام، وصلت.", "Copy that."),
     })
-    + lebanese("hz-spotter", "field spotter", "hezbollah-infantry", {
+    + lebanese("hz-spotter", "field spotter", "lebanon-infantry", {
         "select": ("المراقب جاهز.", "Spotter ready."),
         "move": ("رايح عالتلة.", "Heading for high ground."),
         "attack": ("الهدف محدد.", "Target marked."),
         "action": ("عم ببعت الإحداثيات.", "Sending coordinates."),
     })
-    + lebanese("hz-scout", "fictional scout", "hezbollah-infantry", {
+    + lebanese("hz-scout", "fictional scout", "lebanon-infantry", {
         "select": ("جاهز، شو المهمة؟", "Ready. What's the task?"),
         "move": ("ماشي بهدوء.", "Moving quietly."),
         "attack": ("شايف الهدف.", "Eyes on target."),
         "action": ("الطريق مفتوح.", "Path is clear."),
     })
-    + lebanese("hz-fpv", "FPV drone team", "hezbollah-infantry", {
+    + lebanese("hz-fpv", "FPV drone team", "lebanon-infantry", {
         "select": ("فريق المسيرات جاهز.", "Drone team ready."),
         "move": ("رايحين عالموقع الجديد.", "Moving to a new position."),
         "attack": ("طلعنا المسيرات.", "Drones away."),
         "action": ("الإشارة منيحة.", "Signal's good."),
     })
-    + lebanese("hz-veh", "generic vehicle crew", "hezbollah-crew", {
+    + lebanese("hz-veh", "generic vehicle crew", "lebanon-crew", {
         "select": ("الطاقم جاهز.", "Crew ready."),
         "move": ("منتحرك هلق.", "Moving out."),
         "attack": ("الهدف بالمرمى، عم نضرب.", "Target in range. Firing."),
         "action": ("تمام، منفذين.", "Copy, executing."),
     })
-    + lebanese("hz-drone", "generic drone operator", "hezbollah-crew", {
+    + lebanese("hz-drone", "generic drone operator", "lebanon-crew", {
         "select": ("المسيرة جاهزة.", "Drone ready."),
         "move": ("المسيرة رايحة عالنقطة.", "Drone heading to the waypoint."),
         "attack": ("الهدف عالشاشة.", "Target on screen."),
         "action": ("الصورة واضحة.", "Picture is clear."),
     })
-    + lebanese("hz-naval", "generic naval crew", "hezbollah-crew", {
+    + lebanese("hz-naval", "generic naval crew", "lebanon-crew", {
         "select": ("الزورق جاهز.", "Boat ready."),
         "move": ("رايحين عالساحل.", "Heading along the coast."),
         "attack": ("الهدف قدامنا.", "Target dead ahead."),
@@ -176,7 +176,7 @@ HEZBOLLAH = tuple(
     })
 )
 
-LINES = ISRAEL + HEZBOLLAH
+LINES = ISRAEL + LEBANON
 
 # Faction -> (ffmpeg chain, squelch tone in Hz, noise amplitude, character).
 CHAINS = {

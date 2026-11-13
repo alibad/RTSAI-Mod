@@ -4,7 +4,7 @@ aegis:
 
 apoc:
 	Buildable:
-		Prerequisites: ~naweap, natech, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~naweap, natech, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 atesla:
 	Buildable:
@@ -28,7 +28,7 @@ dlph:
 
 dron:
 	Buildable:
-		Prerequisites: ~naweap, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~naweap, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 e1:
 	Buildable:
@@ -36,11 +36,11 @@ e1:
 
 e2:
 	Buildable:
-		Prerequisites: ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 flakt:
 	Buildable:
-		Prerequisites: naradr, ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: naradr, ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 fv:
 	Buildable:
@@ -52,15 +52,15 @@ gapill:
 
 htnk:
 	Buildable:
-		Prerequisites: ~naweap, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~naweap, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 hyd:
 	Buildable:
-		Prerequisites: naradr, ~nayard, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: naradr, ~nayard, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 ivan:
 	Buildable:
-		Prerequisites: naradr, ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: naradr, ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 jumpjet:
 	Buildable:
@@ -80,11 +80,11 @@ mtnk:
 
 naflak:
 	Buildable:
-		Prerequisites: barracks, ~structures.soviets, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: barracks, ~structures.soviets, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 nalasr:
 	Buildable:
-		Prerequisites: barracks, ~structures.soviets, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: barracks, ~structures.soviets, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 nasam:
 	Buildable:
@@ -100,11 +100,11 @@ shad:
 
 shk:
 	Buildable:
-		Prerequisites: ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 sqd:
 	Buildable:
-		Prerequisites: natech, ~nayard, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: natech, ~nayard, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 sref:
 	Buildable:
@@ -112,7 +112,7 @@ sref:
 
 sub:
 	Buildable:
-		Prerequisites: ~nayard, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~nayard, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 tany:
 	Buildable:
@@ -120,12 +120,12 @@ tany:
 
 tesla:
 	Buildable:
-		Prerequisites: naradr, ~structures.soviets, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: naradr, ~structures.soviets, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 yuri:
 	Buildable:
-		Prerequisites: natech, ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: natech, ~nahand, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon
 
 zep:
 	Buildable:
-		Prerequisites: ~naweap, natech, ~!faction.iran, ~!faction.yemen, ~!faction.hezbollah
+		Prerequisites: ~naweap, natech, ~!faction.iran, ~!faction.yemen, ~!faction.lebanon

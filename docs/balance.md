@@ -5,27 +5,27 @@ on `main`, 0 errors: MIGRATION.md round C). Branch `rtsai/art-preview` (local, n
 engine `rtsai/engine` 68c1e95557 (local-only: missiles fired over raised ground or ramps hit, and the `WRot.SLerp`
 crash of round 3 is fixed). Round 3 (same day, rules a47654a) and the round-2 and round-1 records follow.
 
-Round 6 (2026-10-08) is the current state: the owner's request to put Hezbollah above Israel, with the tank coax cut
+Round 6 (2026-10-08) is the current state: the owner's request to put Lebanon above Israel, with the tank coax cut
 from 16 to 12, in both products. It comes first below. Round 5 (2026-10-07/08) follows. It balanced both products,
-`main` and the standalone game, with the same faction rules. Before it, a Hezbollah-only pass retuned "Salvo and
-swarm" on branch `rtsai/hezbollah-doctrine`; it is the third section.
+`main` and the standalone game, with the same faction rules. Before it, a Lebanon-only pass retuned "Salvo and
+swarm" on branch `rtsai/lebanon-doctrine`; it is the third section.
 
 How each result was established: **[ran]** means the matches or duels were played and the numbers come from their
 recorded results. **[inferred]** means it was reasoned from rules, code or those results and not tested directly.
 
-## Round 6: Hezbollah above Israel (2026-10-08)
+## Round 6: Lebanon above Israel (2026-10-08)
 
-[ran] Owner request: swap Israel's and Hezbollah's win rates, so Hezbollah is on top and Israel is where Hezbollah
+[ran] Owner request: swap Israel's and Lebanon's win rates, so Lebanon is on top and Israel is where Lebanon
 was. It was done in the same round as the planned fix for `main`'s Allied lean. Both products, same faction rules.
 
 Targets:
 
 | | Standalone, vs others | `main`, vs modern |
 |---|---|---|
-| Hezbollah | about 60% | about 56% |
+| Lebanon | about 60% | about 56% |
 | Israel | about 54% | about 42% |
 
-Every other faction stays inside 40-60% on standalone, and `main` meets at least 15 of its 16 targets. Hezbollah is
+Every other faction stays inside 40-60% on standalone, and `main` meets at least 15 of its 16 targets. Lebanon is
 lifted through its own doctrine: basic missiles, powerful soldiers, small drones. Israel is lowered with small,
 legible changes.
 
@@ -33,8 +33,8 @@ Setup:
 - **Starting rules:** `main` b8ed157 and `rtsai/standalone` 1a14e6b. Their rules are the round-5 final rules: the
   later commits change only text and render offsets.
 - **Engine and harness:** engine 68c1e95557, normal bots, 40-minute cap, 3 workers, `OPENRA_AI_HOST=0`.
-- **Probes:** a full round robin with 1 replicate, plus 1 more replicate of every Hezbollah and Israel pairing.
-  Each probe has 200 games on `main` and 128 on standalone, so Hezbollah and Israel get n=48 each. Every other
+- **Probes:** a full round robin with 1 replicate, plus 1 more replicate of every Lebanon and Israel pairing.
+  Each probe has 200 games on `main` and 128 on standalone, so Lebanon and Israel get n=48 each. Every other
   faction is scored from the round-robin part only.
 - **Tuning rounds:** three. Probe 1, then probe 2, then the final rule set measured at full scale.
 
@@ -45,12 +45,12 @@ All in `mods/rtsai/modern-factions` (ab878b8), each with its reason in a comment
 | # | Change | Why | Run |
 |---|---|---|---|
 | 1 | Coaxial machine gun `R2QilinCoax` damage 16 → 12 (Qilin, Bozkir, M1A2S, Merkava; and the Karrar, change 7) | At 16, `main`'s Allied side scored 66% against the Soviet side | probe 1 |
-| 2 | Hezbollah doctrine artillery share 175 → 250 | The salvo: more Rocket Batteries, Hezbollah's best trade at 1.8-2.3 destroyed per credit, and more Rail Technicals | probe 1 |
+| 2 | Lebanon doctrine artillery share 175 → 250 | The salvo: more Rocket Batteries, Lebanon's best trade at 1.8-2.3 destroyed per credit, and more Rail Technicals | probe 1 |
 | 3 | FPV Team: a drone regenerates every 100 ticks instead of 150 (still three per team) | The swarm: more drones in the air | probe 1 |
 | 4 | Merkava 1300 → 1400 | A third of Israel's kills | probe 1 |
 | 5 | Israeli AT team 500 → 550 | Israel's second killer: 17-20% of its kills at 1.3-1.4 per credit | probe 1 |
 | 6 | Merkava HP 640 → 580, still above the M1A2S's 520 | Probe 1 left Israel at 60% on `main` | probe 2 |
-| 7 | Iran's Karrar gets the coaxial machine gun, 850 → 900 | With Hezbollah stronger, Iran fell to 31% on `main` in both probes (0-7 against China). The Karrar traded 0.66-0.78 per credit | final |
+| 7 | Iran's Karrar gets the coaxial machine gun, 850 → 900 | With Lebanon stronger, Iran fell to 31% on `main` in both probes (0-7 against China). The Karrar traded 0.66-0.78 per credit | final |
 
 Effect by unit [ran], destroyed per credit, round-5 final → round-6 final:
 
@@ -64,14 +64,14 @@ Effect by unit [ran], destroyed per credit, round-5 final → round-6 final:
 | Bozkir | 1.46 → 1.24 | 1.59 → 1.41 |
 
 Share of production:
-- Rocket Batteries and Rail Technicals together: 10-12% → 16-17% of Hezbollah's production.
+- Rocket Batteries and Rail Technicals together: 10-12% → 16-17% of Lebanon's production.
 - The Merkava still makes 28% of Israel's kills.
 
 ### Standalone result
 
 [ran] Final round robin (`r6-sa-final`): 252 games, 0 errors, 36 draws (14%), median 19.8 game minutes.
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | vs others |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | vs others |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 6-5 (1d) | 5-3 (4d) | 2-7 (3d) | 6-5 (1d) | 2-8 (2d) | 2-8 (2d) | 41% (30-53) |
 | **iran** | 5-6 (1d) | — | 7-4 (1d) | 6-5 (1d) | 5-4 (3d) | 5-6 (1d) | 3-6 (3d) | 50% (39-61) |
@@ -79,9 +79,9 @@ Share of production:
 | **saudi** | 7-2 (3d) | 5-6 (1d) | 6-6 | — | 7-3 (2d) | 6-4 (2d) | 5-5 (2d) | 57% (45-68) |
 | **yemen** | 5-6 (1d) | 4-5 (3d) | 6-5 (1d) | 3-7 (2d) | — | 5-7 | 4-5 (3d) | 44% (34-56) |
 | **israel** | 8-2 (2d) | 6-5 (1d) | 7-4 (1d) | 4-6 (2d) | 7-5 | — | 4-7 (1d) | 55% (43-66) |
-| **hezbollah** | 8-2 (2d) | 6-3 (3d) | 9-1 (2d) | 5-5 (2d) | 5-4 (3d) | 7-4 (1d) | — | 65% (53-75) |
+| **lebanon** | 8-2 (2d) | 6-3 (3d) | 9-1 (2d) | 5-5 (2d) | 5-4 (3d) | 7-4 (1d) | — | 65% (53-75) |
 
-Probes are shown without an interval; Hezbollah and Israel are scored over every suite (n=48).
+Probes are shown without an interval; Lebanon and Israel are scored over every suite (n=48).
 
 | Faction | Target | R5 final | Probe 1 | Probe 2 | R6 final | Met |
 |---|---|---:|---:|---:|---:|---|
@@ -91,12 +91,12 @@ Probes are shown without an interval; Hezbollah and Israel are scored over every
 | Saudi Arabia | vs others 40-60% | 54% (43-65) | 60% | 42% | 57% (45-68) | yes |
 | Yemen | vs others 40-60% | 43% (32-55) | 50% | 54% | 44% (34-56) | yes |
 | Israel | vs others, about 54% | 60% (48-70) | 50% | 48% | 55% (43-66) | yes |
-| Hezbollah | vs others, about 60% | 54% (43-65) | 52% | 54% | 65% (53-75) | close: +5, 60 inside the interval |
+| Lebanon | vs others, about 60% | 54% (43-65) | 52% | 54% | 65% (53-75) | close: +5, 60 inside the interval |
 
 Each map, round-5 final and round-6 final. The faction columns are each faction's score against the others on that
 map:
 
-| Map, run | Games | Draws | Median minutes | Allied side vs Soviet side | China | Iran | Türkiye | Saudi Arabia | Yemen | Israel | Hezbollah |
+| Map, run | Games | Draws | Median minutes | Allied side vs Soviet side | China | Iran | Türkiye | Saudi Arabia | Yemen | Israel | Lebanon |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Harbor Line, R5 final | 126 | 14 (11%) | 14.0 | 65% (54-75) | 61% | 43% | 43% | 67% | 33% | 60% | 43% |
 | Twin Fords, R5 final | 126 | 26 (21%) | 25.5 | 42% (32-54) | 35% | 47% | 49% | 42% | 53% | 60% | 65% |
@@ -104,11 +104,11 @@ map:
 | Twin Fords, R6 final | 126 | 25 (20%) | 24.9 | 27% (18-38) | 38% | 62% | 39% | 46% | 60% | 32% | 74% |
 
 **Verdict, standalone.** [ran]
-- **Hezbollah is on top:** 54% → 65% (53-75). That is 5 points over "about 60%", and 60% is inside its interval.
+- **Lebanon is on top:** 54% → 65% (53-75). That is 5 points over "about 60%", and 60% is inside its interval.
 - **Israel:** 60% → 55% (43-66), on the 54% target.
 - **Türkiye** fell to 38% (28-50). It misses the 40-60% band by 2 points, within noise.
   - Türkiye depends on the coax most: the Bozkir is 34% of its production.
-  - It scored 1-9 (2 draws) against Hezbollah.
+  - It scored 1-9 (2 draws) against Lebanon.
 - Every other faction is inside 40-60%. Draws are 14%, which meets the 15% target.
 - **The coax cut did not fix Harbor Line.** The Allied side is still 64% there. On Twin Fords it fell from 42% to 27%.
   Overall the Allied side scores 45% (38-54); it was 54%.
@@ -122,7 +122,7 @@ map:
 [ran] Final round robin (`r6-main-final`): 420 games on Dustbowl and Official Tournament Map A, 0 errors, 68 draws
 (16%), median 23.8 game minutes. Draws by map: Dustbowl 54 (26%), Tournament Map A 14 (7%).
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | america | russia | vs modern | vs America+Russia |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 4-7 (1d) | 3-7 (2d) | 5-5 (2d) | 6-5 (1d) | 5-6 (1d) | 6-5 (1d) | 5-1 (6d) | 6-2 (4d) | 46% (35-57) | 67% (47-82) |
 | **iran** | 7-4 (1d) | — | 5-5 (2d) | 4-7 (1d) | 5-3 (4d) | 9-3 | 6-5 (1d) | 5-6 (1d) | 7-4 (1d) | 56% (45-67) | 54% (35-72) |
@@ -130,7 +130,7 @@ map:
 | **saudi** | 5-5 (2d) | 7-4 (1d) | 5-6 (1d) | — | 8-2 (2d) | 6-4 (2d) | 5-6 (1d) | 4-6 (2d) | 7-5 | 56% (45-67) | 50% (31-69) |
 | **yemen** | 5-6 (1d) | 3-5 (4d) | 3-5 (4d) | 2-8 (2d) | — | 4-5 (3d) | 4-7 (1d) | 4-4 (4d) | 4-4 (4d) | 40% (29-51) | 50% (31-69) |
 | **israel** | 6-5 (1d) | 3-9 | 2-7 (3d) | 4-6 (2d) | 5-4 (3d) | — | 5-5 (2d) | 5-5 (2d) | 7-5 | 42% (32-54) | 54% (35-72) |
-| **hezbollah** | 5-6 (1d) | 5-6 (1d) | 5-6 (1d) | 6-5 (1d) | 7-4 (1d) | 5-5 (2d) | — | 2-8 (2d) | 8-3 (1d) | 51% (39-62) | 48% (30-67) |
+| **lebanon** | 5-6 (1d) | 5-6 (1d) | 5-6 (1d) | 6-5 (1d) | 7-4 (1d) | 5-5 (2d) | — | 2-8 (2d) | 8-3 (1d) | 51% (39-62) | 48% (30-67) |
 | **america** | 1-5 (6d) | 6-5 (1d) | 3-5 (4d) | 6-4 (2d) | 4-4 (4d) | 5-5 (2d) | 8-2 (2d) | — | — | 52% (41-62) | — |
 | **russia** | 2-6 (4d) | 4-7 (1d) | 4-7 (1d) | 5-7 | 4-4 (4d) | 5-7 | 3-8 (1d) | — | — | 39% (29-49) | — |
 
@@ -142,14 +142,14 @@ map:
 | Saudi Arabia | vs modern 35-65% | 66% (54-76) | 46% | 56% | 56% (45-67) | yes |
 | Yemen | vs modern 35-65% | 35% (25-47) | 50% | 50% | 40% (29-51) | yes |
 | Israel | vs modern 35-65%, about 42% | 56% (45-67) | 60% | 51% | 42% (32-54) | yes |
-| Hezbollah | vs modern 35-65%, about 56% | 42% (32-54) | 62% | 60% | 51% (39-62) | yes; −5 from 56, inside the interval |
+| Lebanon | vs modern 35-65%, about 56% | 42% (32-54) | 62% | 60% | 51% (39-62) | yes; −5 from 56, inside the interval |
 | China | vs America+Russia ≥35% | 58% (39-76) | 69% | 31% | 67% (47-82) | yes |
 | Iran | vs America+Russia ≥35% | 46% (28-65) | 38% | 25% | 54% (35-72) | yes |
 | Türkiye | vs America+Russia ≥35% | 62% (43-79) | 75% | 56% | 60% (41-77) | yes |
 | Saudi Arabia | vs America+Russia ≥35% | 65% (45-80) | 38% | 62% | 50% (31-69) | yes |
 | Yemen | vs America+Russia ≥35% | 48% (30-67) | 50% | 69% | 50% (31-69) | yes |
 | Israel | vs America+Russia ≥35% | 71% (51-85) | 69% | 56% | 54% (35-72) | yes |
-| Hezbollah | vs America+Russia ≥35% | 46% (28-65) | 50% | 38% | 48% (30-67) | yes |
+| Lebanon | vs America+Russia ≥35% | 46% (28-65) | 50% | 38% | 48% (30-67) | yes |
 | America | vs modern ≤65% | 51% (40-61) | 38% | 61% | 52% (41-62) | yes |
 | Russia | vs modern ≤65% | 36% (27-47) | 54% | 46% | 39% (29-49) | yes |
 
@@ -164,24 +164,24 @@ Allied side 51% against the Soviet side.
 | Saudi Arabia | 51% (36-67) | 58% (32-81) | 51% (36-67) | 75% (47-91) |
 | Yemen | 50% (34-66) | 17% (5-45) | 43% (28-59) | 46% (22-71) |
 | Israel | 65% (49-79) | 62% (35-84) | 54% (38-69) | 62% (35-84) |
-| Hezbollah | 35% (21-51) | 46% (22-71) | 50% (34-66) | 29% (11-57) |
+| Lebanon | 35% (21-51) | 46% (22-71) | 50% (34-66) | 29% (11-57) |
 | America | 49% (34-63) | — | 51% (37-66) | — |
 | Russia | 49% (34-63) | — | 36% (23-51) | — |
 
-On the naval map Hezbollah rose from 35% to 50% against the modern factions and Israel fell from 65% to 54%. Hezbollah
+On the naval map Lebanon rose from 35% to 50% against the modern factions and Israel fell from 65% to 54%. Lebanon
 is at 29% (11-57) against America+Russia there, and Russia at 36% against the modern factions.
 
 **Verdict, main.** [ran] All 16 targets are met, up from 15 in round 5.
 - **Israel:** 56% → 42% (32-54) against the modern factions, on target.
-- **Hezbollah:** 42% → 51% (39-62). That is 5 points under "about 56%", and 56% is inside its interval.
-  Hezbollah is above Israel; Türkiye, Iran and Saudi Arabia (56-59%) are above both.
+- **Lebanon:** 42% → 51% (39-62). That is 5 points under "about 56%", and 56% is inside its interval.
+  Lebanon is above Israel; Türkiye, Iran and Saudi Arabia (56-59%) are above both.
 - **The Allied lean is fixed:** the Allied side scores 52% (44-60) against the Soviet side, down from 66%.
 - **Iran:** 40% → 56% with the Karrar's coax (31% in both probes without it).
 - **Yemen** is lowest of the modern factions at 40%, and Russia is at 39%.
 
 ### Round 6: what is left
 
-1. **The two products split the request differently.** The target is about 60% for Hezbollah on standalone and
+1. **The two products split the request differently.** The target is about 60% for Lebanon on standalone and
    about 56% on `main`. Shared rules moved both together; the result was 65% and 51%.
    - Across all probes and finals, the split between the products stayed inside the measurement noise. No change
      could aim at one product.
@@ -235,7 +235,7 @@ There were three tuning rounds:
 [ran] Final round robin (`r5-sa-final`): 252 games, both maps, every pairing in both orientations, 3 replicates. 0
 errors, 40 draws (16%).
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | vs others |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | vs others |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 3-4 (5d) | 7-5 | 4-6 (2d) | 6-5 (1d) | 3-6 (3d) | 5-5 (2d) | 48% (37-59) |
 | **iran** | 4-3 (5d) | — | 4-7 (1d) | 6-5 (1d) | 4-4 (4d) | 2-10 | 5-3 (4d) | 45% (34-57) |
@@ -243,10 +243,10 @@ errors, 40 draws (16%).
 | **saudi** | 6-4 (2d) | 5-6 (1d) | 6-5 (1d) | — | 7-5 | 7-3 (2d) | 5-7 | 54% (43-65) |
 | **yemen** | 5-6 (1d) | 4-4 (4d) | 6-3 (3d) | 5-7 | — | 0-8 (4d) | 4-6 (2d) | 43% (32-55) |
 | **israel** | 6-3 (3d) | 10-2 | 5-4 (3d) | 3-7 (2d) | 8-0 (4d) | — | 5-7 | 60% (48-70) |
-| **hezbollah** | 5-5 (2d) | 3-5 (4d) | 6-4 (2d) | 7-5 | 6-4 (2d) | 7-5 | — | 54% (43-65) |
+| **lebanon** | 5-5 (2d) | 3-5 (4d) | 6-4 (2d) | 7-5 | 6-4 (2d) | 7-5 | — | 54% (43-65) |
 
 The runs compared below:
-- **Baseline:** e2efdd2, 252 games. It has the round-4 rules plus Hezbollah's new doctrine.
+- **Baseline:** e2efdd2, 252 games. It has the round-4 rules plus Lebanon's new doctrine.
 - **Probes 1 and 2:** 84 games each, 1 replicate, shown without an interval.
 - **Final:** 841e844 plus the final rules, 252 games.
 
@@ -258,11 +258,11 @@ The runs compared below:
 | Saudi Arabia | vs others 40-60% | 47% (35-58) | 52% | 60% | 54% (43-65) | yes |
 | Yemen | vs others 40-60% | 56% (44-66) | 54% | 65% | 43% (32-55) | yes |
 | Israel | vs others 40-60% | 50% (39-61) | 44% | 50% | 60% (48-70) | yes |
-| Hezbollah | vs others 40-60% | 72% (61-81) | 56% | 48% | 54% (43-65) | yes |
+| Lebanon | vs others 40-60% | 72% (61-81) | 56% | 48% | 54% (43-65) | yes |
 
 Each map, baseline and final. The faction columns are each faction's score against the others on that map:
 
-| Map, run | Games | Draws | Median minutes | Allied side vs Soviet side | China | Iran | Türkiye | Saudi Arabia | Yemen | Israel | Hezbollah |
+| Map, run | Games | Draws | Median minutes | Allied side vs Soviet side | China | Iran | Türkiye | Saudi Arabia | Yemen | Israel | Lebanon |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Harbor Line, baseline | 126 | 17 (13%) | 15.5 | 40% (29-51) | 24% | 61% | 43% | 56% | 43% | 57% | 67% |
 | Twin Fords, baseline | 126 | 47 (37%) | 31.8 | 22% (14-32) | 26% | 61% | 36% | 38% | 68% | 43% | 78% |
@@ -291,7 +291,7 @@ Overall, the Allied side scores 54% (46-62) against the Soviet side; it was 31% 
 
 [ran] At baseline (e2efdd2), the Allied side scored 31% (24-39) against the Soviet side, and 22% on Twin Fords:
 - Allied side: China, Türkiye, Saudi Arabia, Israel.
-- Soviet side: Iran, Yemen, Hezbollah.
+- Soviet side: Iran, Yemen, Lebanon.
 
 **Not economy.**
 - By minute 10 the Allied factions had earned 23.9-25.8k, against 22.0-24.4k for the Soviet side.
@@ -305,7 +305,7 @@ about one per game.
 **The cause is doctrine against infantry.**
 - The Allied-side armies are tank-led. The MBT is 20-29% of their production, and its main gun does 25% damage to
   infantry. These tanks traded 0.80-0.87 destroyed per credit.
-- The Soviet-side armies are infantry-led. Their cheap riflemen, Yemen's Mountain Rifleman and Hezbollah's Line
+- The Soviet-side armies are infantry-led. Their cheap riflemen, Yemen's Mountain Rifleman and Lebanon's Line
   Fighter, trade 2.9 destroyed per credit.
 - China against the Soviet side:
   - the Qilin was 20% of China's production and made 12% of its kills (0.72 per credit);
@@ -351,8 +351,8 @@ Each change says which run first had it: probe 1, probe 2 or the final.
      - The base shares are 3, 3 and 6. Integer rounding takes them to 1, 1 and 3.
      - The bot now builds almost no Sancaks or Aras: 0-0.1% of production, down from 4-6%.
      - The money goes to Bozkirs: 34% of production and 42% of kills.
-5. **Hezbollah Line Fighter 275 → 300** (probe 1).
-   - It traded 2.88 per credit and made 30% of Hezbollah's kills.
+5. **Lebanon Line Fighter 275 → 300** (probe 1).
+   - It traded 2.88 per credit and made 30% of Lebanon's kills.
    - At 300 it still trades 2.86 in the standalone final, and 1.44 on `main`.
 6. **Yemen Mountain Rifleman 150 → 165** (final). It traded 2.88 per credit and made 30% of Yemen's kills; now 2.59.
 7. **Commando bot delay 20 → 10 minutes** (probe 1). This covers Saudi `r2falcon` and Israeli `r2ilrecon`, in every
@@ -364,7 +364,7 @@ Each change says which run first had it: probe 1, probe 2 or the final.
 (19%; 15% in round 4), median 23.8 game minutes. Draws by map: Dustbowl 62 (30%; round 4: 27%), Tournament Map A
 19 (9%; round 4: 4%).
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | america | russia | vs modern | vs America+Russia |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 6-4 (2d) | 6-4 (2d) | 5-5 (2d) | 7-5 | 5-4 (3d) | 4-2 (6d) | 4-6 (2d) | 9-3 | 56% (45-67) | 58% (39-76) |
 | **iran** | 4-6 (2d) | — | 5-6 (1d) | 2-7 (3d) | 4-7 (1d) | 4-7 (1d) | 5-6 (1d) | 3-5 (4d) | 4-4 (4d) | 40% (29-51) | 46% (28-65) |
@@ -372,13 +372,13 @@ Each change says which run first had it: probe 1, probe 2 or the final.
 | **saudi** | 5-5 (2d) | 7-2 (3d) | 7-4 (1d) | — | 9-0 (3d) | 6-2 (4d) | 7-5 | 7-4 (1d) | 6-2 (4d) | 66% (54-76) | 65% (45-80) |
 | **yemen** | 5-7 | 7-4 (1d) | 3-7 (2d) | 0-9 (3d) | — | 3-8 (1d) | 3-7 (2d) | 3-6 (3d) | 5-3 (4d) | 35% (25-47) | 48% (30-67) |
 | **israel** | 4-5 (3d) | 7-4 (1d) | 5-5 (2d) | 2-6 (4d) | 8-3 (1d) | — | 8-2 (2d) | 5-3 (4d) | 9-1 (2d) | 56% (45-67) | 71% (51-85) |
-| **hezbollah** | 2-4 (6d) | 6-5 (1d) | 3-9 | 5-7 | 7-3 (2d) | 2-8 (2d) | — | 4-5 (3d) | 3-4 (5d) | 42% (32-54) | 46% (28-65) |
+| **lebanon** | 2-4 (6d) | 6-5 (1d) | 3-9 | 5-7 | 7-3 (2d) | 2-8 (2d) | — | 4-5 (3d) | 3-4 (5d) | 42% (32-54) | 46% (28-65) |
 | **america** | 6-4 (2d) | 5-3 (4d) | 4-6 (2d) | 4-7 (1d) | 6-3 (3d) | 3-5 (4d) | 5-4 (3d) | — | — | 51% (40-61) | — |
 | **russia** | 3-9 | 4-4 (4d) | 2-6 (4d) | 2-6 (4d) | 3-5 (4d) | 1-9 (2d) | 4-3 (5d) | — | — | 36% (27-47) | — |
 
 The runs compared below:
 - **R5 baseline:** `main`'s rules before this round. The round-4 final (`r4-final`) has the same rules for every pair
-  without Hezbollah. Hezbollah's pairs come from its as-built run (`r5-hz-t5`, d646808, the rules `main` has since
+  without Lebanon. Lebanon's pairs come from its as-built run (`r5-hz-t5`, d646808, the rules `main` has since
   8357c9b). Together: 420 games.
 - **Probe 2:** the port plus the probe-2 rules, 140 games, shown without an interval.
 - **Final:** 7fd8f3f, 420 games.
@@ -391,14 +391,14 @@ The runs compared below:
 | Saudi Arabia | vs modern 35-65% | 41% (30-53) | 56% | 66% (54-76) | **no**, within noise |
 | Yemen | vs modern 35-65% | 64% (52-74) | 46% | 35% (25-47) | yes |
 | Israel | vs modern 35-65% | 46% (35-57) | 71% | 56% (45-67) | yes |
-| Hezbollah | vs modern 35-65% | 69% (57-78) | 42% | 42% (32-54) | yes |
+| Lebanon | vs modern 35-65% | 69% (57-78) | 42% | 42% (32-54) | yes |
 | China | vs America+Russia ≥35% | 54% (35-72) | 75% | 58% (39-76) | yes |
 | Iran | vs America+Russia ≥35% | 44% (26-63) | 56% | 46% (28-65) | yes |
 | Türkiye | vs America+Russia ≥35% | 52% (33-70) | 25% | 62% (43-79) | yes |
 | Saudi Arabia | vs America+Russia ≥35% | 50% (31-69) | 62% | 65% (45-80) | yes |
 | Yemen | vs America+Russia ≥35% | 42% (24-61) | 75% | 48% (30-67) | yes |
 | Israel | vs America+Russia ≥35% | 48% (30-67) | 69% | 71% (51-85) | yes |
-| Hezbollah | vs America+Russia ≥35% | 40% (23-59) | 50% | 46% (28-65) | yes |
+| Lebanon | vs America+Russia ≥35% | 40% (23-59) | 50% | 46% (28-65) | yes |
 | America | vs modern ≤65% | 54% (43-64) | 45% | 51% (40-61) | yes |
 | Russia | vs modern ≤65% | 52% (42-63) | 38% | 36% (27-47) | yes |
 
@@ -413,7 +413,7 @@ land one, from `r4-final-naval` and `r5-hz-t5-naval`. Final: 0 errors, 33 draws 
 | Saudi Arabia | 68% (52-81) | 67% (39-86) | 51% (36-67) | 58% (32-81) |
 | Yemen | 57% (41-72) | 46% (22-71) | 50% (34-66) | 17% (5-45) |
 | Israel | 46% (31-62) | 46% (22-71) | 65% (49-79) | 62% (35-84) |
-| Hezbollah | 46% (31-62) | 50% (25-75) | 35% (21-51) | 46% (22-71) |
+| Lebanon | 46% (31-62) | 50% (25-75) | 35% (21-51) | 46% (22-71) |
 | America | 46% (32-61) | — | 49% (34-63) | — |
 | Russia | 45% (31-60) | — | 49% (34-63) | — |
 
@@ -443,7 +443,7 @@ On `main` the balance swung from the Soviet side to the Allied side:
 Naval (not tuned for):
 - **Yemen** is 17% (5-45) against America+Russia: 1-10 with 1 draw. Its interval still reaches 35%.
 - **Israel** is 65% against the modern factions.
-- **Hezbollah** is 35% against the modern factions.
+- **Lebanon** is 35% against the modern factions.
 - Every other score is between 44% and 71%.
 
 ### The commando delay (Israeli and Saudi precision strikes)
@@ -487,7 +487,7 @@ The two bot commits were cherry-picked to `main`:
 
 Superweapon use in the finals:
 - `main`, 420 games: 202 teleports and 25 shields. America and the Allied-side modern factions teleport; Iran,
-  Russia, Yemen and Hezbollah shield.
+  Russia, Yemen and Lebanon shield.
 - Standalone, 252 games: 53 teleports and 21 shields.
 
 `make.cmd all` and `make.cmd test` on `main`: 0 warnings, 0 errors.
@@ -509,14 +509,14 @@ The round was capped at three tuning rounds, so these stay open.
 4. **Türkiye's halved shares.** They fell to 1 by integer rounding, so the bot builds almost no support or transport
    vehicles. That suited this pass. A doctrine that wants a small, non-zero share needs base shares above 3.
 
-## Round 5: Hezbollah "Salvo and swarm" (2026-10-07)
+## Round 5: Lebanon "Salvo and swarm" (2026-10-07)
 
-[ran] Branch `rtsai/hezbollah-doctrine` (local, from `main` 3db6883). Only Hezbollah changed. It now follows the
+[ran] Branch `rtsai/lebanon-doctrine` (local, from `main` 3db6883). Only Lebanon changed. It now follows the
 owner's doctrine: basic missiles, very powerful soldiers, very mini drones. The design and the build are in
-`docs/hezbollah-doctrine.md`. The other eight factions keep the round-4 rules, so the round-4 tables below still hold
-for every pair without Hezbollah.
+`docs/lebanon-doctrine.md`. The other eight factions keep the round-4 rules, so the round-4 tables below still hold
+for every pair without Lebanon.
 
-The campaigns (`docs/balance-data/r5-hz-campaigns.json`, `focus: [hezbollah]`) pit Hezbollah against all eight other
+The campaigns (`docs/balance-data/r5-hz-campaigns.json`, `focus: [lebanon]`) pit Lebanon against all eight other
 factions with normal bots and a 40-minute cap:
 - land: Dustbowl and Official Tournament Map A, both orientations, 3 replicates (96 games);
 - naval: Little Big Lake (48 games);
@@ -537,12 +537,12 @@ Every run had 0 errors.
 | Naval, round 4 final (reference) | e2c07b0 | 210 | 54% (38-69) | 67% (39-86) |
 | Naval, trim 5 | d646808 | 48 | 46% (31-62) | 50% (25-75) |
 
-Trim 5, Hezbollah's wins-losses (draws) against each faction:
+Trim 5, Lebanon's wins-losses (draws) against each faction:
 
 | | china | iran | turkey | saudi | yemen | israel | america | russia |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| **hezbollah**, land | 10-1 (1d) | 4-3 (5d) | 9-2 (1d) | 9-3 | 4-6 (2d) | 9-3 | 3-6 (3d) | 4-6 (2d) |
-| **hezbollah**, naval | 3-1 (2d) | 3-2 (1d) | 1-1 (4d) | 2-4 | 1-4 (1d) | 2-3 (1d) | 1-0 (5d) | 2-3 (1d) |
+| **lebanon**, land | 10-1 (1d) | 4-3 (5d) | 9-2 (1d) | 9-3 | 4-6 (2d) | 9-3 | 3-6 (3d) | 4-6 (2d) |
+| **lebanon**, naval | 3-1 (2d) | 3-2 (1d) | 1-1 (4d) | 2-4 | 1-4 (1d) | 2-3 (1d) | 1-0 (5d) | 2-3 (1d) |
 
 The trims:
 1. Trims 1-2 (b70d61e):
@@ -550,7 +550,7 @@ The trims:
    - the Line Fighter costs 275 (it traded 2.07 destroyed per credit at 225);
    - rough-ground cover goes from x0.80 to x0.90.
 2. Trim 3 (efe7750): the AT team gets its concealment back at 550, and the rifle drops from 16 to 14. Without
-   concealment, Hezbollah fell to 21% against America, whose bots field almost no detectors.
+   concealment, Lebanon fell to 21% against America, whose bots field almost no detectors.
 3. Trim 4 (85d07d4), aimed at the trade gap:
    - the AT rocket does 65% against heavy armour and 80% against medium armour (was 95% and 100%);
    - the AT team costs 500, with its concealment;
@@ -565,16 +565,16 @@ The trims:
 - Naval is inside the band on both sides: 46% (31-62) and 50% (25-75).
 - The modern band is missed by 4 points, within noise: 69% (57-78).
 
-[inferred] Hezbollah-side levers cannot separate the two scores:
+[inferred] Lebanon-side levers cannot separate the two scores:
 - Across the four trimmed rule sets, the modern score stayed at 69-72% while America+Russia moved from 32% to 75%.
-- Most of the gap is China, the round-4 miss (33% against the modern factions). Hezbollah beat China 11-1 in round
-  4 and 10-1 (1 draw) here. Against the other five modern factions, Hezbollah scores 65%.
+- Most of the gap is China, the round-4 miss (33% against the modern factions). Lebanon beat China 11-1 in round
+  4 and 10-1 (1 draw) here. Against the other five modern factions, Lebanon scores 65%.
 - The rest is defence. America's and Russia's infantry and base defences (pillboxes, Tesla coils, Prism towers,
-  sentry guns) kill about 27,000 credits of Hezbollah per game. The modern factions' rifle infantry, militia,
+  sentry guns) kill about 27,000 credits of Lebanon per game. The modern factions' rifle infantry, militia,
   bunkers and bastions kill about 12,000.
 
 Closing the gap needs an all-faction pass: China's strength and the modern factions' anti-infantry. The full
-analysis is in `docs/hezbollah-doctrine.md`, "As built".
+analysis is in `docs/lebanon-doctrine.md`, "As built".
 
 ## Round 4 result
 
@@ -583,7 +583,7 @@ Official Tournament Map A: 0 errors, 65 tick-cap draws, median 24.8 game minutes
 
 Row's wins-losses (draws) against the column; the last two columns are the row's score with its 95% Wilson interval:
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | america | russia | vs modern | vs America+Russia |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 5-7 | 4-8 | 5-5 (2d) | 2-8 (2d) | 4-7 (1d) | 1-11 | 4-4 (4d) | 5-3 (4d) | 33% (23-44) | 54% (35-72) |
 | **iran** | 7-5 | — | 7-3 (2d) | 6-5 (1d) | 5-6 (1d) | 7-1 (4d) | 3-7 (2d) | 3-8 (1d) | 6-4 (2d) | 56% (44-66) | 44% (26-63) |
@@ -591,7 +591,7 @@ Row's wins-losses (draws) against the column; the last two columns are the row's
 | **saudi** | 5-5 (2d) | 5-6 (1d) | 8-4 | — | 2-8 (2d) | 3-7 (2d) | 9-3 | 7-2 (3d) | 3-8 (1d) | 49% (38-61) | 50% (31-69) |
 | **yemen** | 8-2 (2d) | 6-5 (1d) | 8-3 (1d) | 8-2 (2d) | — | 4-4 (4d) | 6-4 (2d) | 2-6 (4d) | 5-5 (2d) | 64% (52-74) | 42% (24-61) |
 | **israel** | 7-4 (1d) | 1-7 (4d) | 5-6 (1d) | 7-3 (2d) | 4-4 (4d) | — | 5-7 | 7-4 (1d) | 2-6 (4d) | 49% (37-60) | 48% (30-67) |
-| **hezbollah** | 11-1 | 7-3 (2d) | 6-4 (2d) | 3-9 | 4-6 (2d) | 7-5 | — | 3-8 (1d) | 7-3 (2d) | 57% (45-68) | 48% (30-67) |
+| **lebanon** | 11-1 | 7-3 (2d) | 6-4 (2d) | 3-9 | 4-6 (2d) | 7-5 | — | 3-8 (1d) | 7-3 (2d) | 57% (45-68) | 48% (30-67) |
 | **america** | 4-4 (4d) | 8-3 (1d) | 5-3 (4d) | 2-7 (3d) | 6-2 (4d) | 4-7 (1d) | 8-3 (1d) | — | — | 55% (44-65) | — |
 | **russia** | 3-5 (4d) | 4-6 (2d) | 3-6 (3d) | 8-3 (1d) | 5-5 (2d) | 6-2 (4d) | 3-7 (2d) | — | — | 49% (38-59) | — |
 
@@ -611,14 +611,14 @@ Targets, as scores (draw = half a win). Each row shows four runs:
 | Saudi Arabia | vs modern 35-65% | 44% (34-56) | 41% (30-53) | 46% | 49% (38-61) | yes |
 | Yemen | vs modern 35-65% | 67% (56-77) | 72% (60-81) | 62% | 64% (52-74) | yes |
 | Israel | vs modern 35-65% | 42% (32-54) | 45% (34-57) | 42% | 49% (37-60) | yes |
-| Hezbollah | vs modern 35-65% | 62% (50-72) | 62% (51-73) | 52% | 57% (45-68) | yes |
+| Lebanon | vs modern 35-65% | 62% (50-72) | 62% (51-73) | 52% | 57% (45-68) | yes |
 | China | vs America+Russia ≥35% | 33% (18-53) | 21% (9-40) | 50% | 54% (35-72) | yes |
 | Iran | vs America+Russia ≥35% | 40% (23-59) | 42% (24-61) | 38% | 44% (26-63) | yes |
 | Türkiye | vs America+Russia ≥35% | 46% (28-65) | 33% (18-53) | 56% | 52% (33-70) | yes |
 | Saudi Arabia | vs America+Russia ≥35% | 65% (45-80) | 50% (31-69) | 31% | 50% (31-69) | yes |
 | Yemen | vs America+Russia ≥35% | 42% (24-61) | 48% (30-67) | 62% | 42% (24-61) | yes |
 | Israel | vs America+Russia ≥35% | 54% (35-72) | 42% (24-61) | 62% | 48% (30-67) | yes |
-| Hezbollah | vs America+Russia ≥35% | 54% (35-72) | 40% (23-59) | 38% | 48% (30-67) | yes |
+| Lebanon | vs America+Russia ≥35% | 54% (35-72) | 40% (23-59) | 38% | 48% (30-67) | yes |
 | America | vs modern ≤65% | 62% (52-72) | 66% (55-75) | 59% | 55% (44-65) | yes |
 | Russia | vs modern ≤65% | 42% (32-53) | 55% (45-66) | 45% | 49% (38-59) | yes |
 
@@ -631,7 +631,7 @@ faction. Then it made four changes against the re-baseline those fixes produced.
 - The one miss is China against the modern factions, 33% (23-44). It is within noise, so it is recorded and tuning
   stops here.
 - On the naval map (reported, not tuned for):
-  - Hezbollah fell from 69% (R3 final) and 67% (R4 baseline) to 54% (38-69) against the modern factions.
+  - Lebanon fell from 69% (R3 final) and 67% (R4 baseline) to 54% (38-69) against the modern factions.
   - Saudi Arabia is now at 68% (52-81) and Türkiye at 33% (20-50). Both are within noise.
   - America is at 45% and Russia at 42%.
 
@@ -646,7 +646,7 @@ The naval-reachability check keeps both navies on this map (its water is 11-12 c
 | Saudi Arabia | 51% (36-67) | 71% (43-89) | 68% (52-81) | 67% (39-86) |
 | Yemen | 51% (36-67) | 58% (32-81) | 53% (37-68) | 46% (22-71) |
 | Israel | 54% (38-69) | 75% (47-91) | 43% (28-59) | 46% (22-71) |
-| Hezbollah | 67% (50-80) | 75% (47-91) | 54% (38-69) | 67% (39-86) |
+| Lebanon | 67% (50-80) | 75% (47-91) | 54% (38-69) | 67% (39-86) |
 | America | 31% (19-46) | — | 45% (31-60) | — |
 | Russia | 56% (41-70) | — | 42% (28-57) | — |
 
@@ -689,14 +689,14 @@ Production share before and after the fix (R3 final → R4 baseline, land maps):
 | Saudi Arabia | 8.0% → 0% | 11.9% → 8.2% |
 | Yemen | 9.1% → 0% | — |
 | Israel | 8.8% → 0% | 11.5% → 9.0% |
-| Hezbollah | 9.5% → 0% | — |
+| Lebanon | 9.5% → 0% | — |
 | America | 8.4% → 0% | 11.5% → 6.7% |
 | Russia | 7.4% → 0% | — |
 
 What the fix did to the balance [ran] (R3 final → R4 baseline, against the modern factions):
 - All the money went into the land war, and draws fell from 102 to 52.
-- The modern factions on the Soviet side (Iran, Yemen, Hezbollah) gained the most. Iran went 56% → 64%, Yemen 67% → 72%,
-  Hezbollah 62% → 62%. Their infantry-heavy armies, with cheap anti-tank teams, met more of the vehicle-heavy Allied-side
+- The modern factions on the Soviet side (Iran, Yemen, Lebanon) gained the most. Iran went 56% → 64%, Yemen 67% → 72%,
+  Lebanon 62% → 62%. Their infantry-heavy armies, with cheap anti-tank teams, met more of the vehicle-heavy Allied-side
   armies.
 - China fell 37% → 33% and Türkiye 41% → 33%. China fell to 21% against America and Russia.
 - America rose 62% → 66%: its jets had been its worst spending.
@@ -713,7 +713,7 @@ All in e2c07b0. The last column shows the effect:
 |---|---|---|---|
 | 16 | Naval reachability check (`NavalTargetRadius` 16) in the bot base builder, all factions | Ships on land maps: 7-12% of production | ships 0% of land production |
 | 17 | `UnitLimits` 1 for each airfield jet, all factions and profiles | Jets 11.5-11.9% of three factions' production at 0.28-0.42 | jets 6.7-9.0% of production, never more than one alive |
-| 18 | Yemen and Hezbollah RPG teams 300 → 350 credits | 80 damage at 95% against heavy armour every 90 ticks for 300 credits is 2.8 per tick per 1,000 credits, the most of any AT team; at 350 it is 2.4, the Saudi ATGM's. RPGs were 29% and 25% of Yemen's and Hezbollah's production and caused 30% and 26% of China's and Türkiye's losses to Yemen | Yemen 0.85 → 0.62, Hezbollah 0.86 → 0.75 |
+| 18 | Yemen and Lebanon RPG teams 300 → 350 credits | 80 damage at 95% against heavy armour every 90 ticks for 300 credits is 2.8 per tick per 1,000 credits, the most of any AT team; at 350 it is 2.4, the Saudi ATGM's. RPGs were 29% and 25% of Yemen's and Lebanon's production and caused 30% and 26% of China's and Türkiye's losses to Yemen | Yemen 0.85 → 0.62, Lebanon 0.86 → 0.75 |
 | 19 | ZBD autocannon: Burst 2 → 3, ReloadDelay 40 → 30 | It fired 0.7 damage per tick for 850 credits, half the Bradley's 1.4 at the same cost | 0.33 → 0.79 |
 | 20 | China support share 150 → 100 | Lynx 4.2% of production at 0.24 | Lynx share 4.2 → 2.0% |
 | 21 | Türkiye main-battle-tank share 130 → 110 | Bozkır 30% of production at 0.83; riflemen 1.26 and AT teams 1.18 | Bozkır 0.83 → 0.91 |
@@ -727,10 +727,10 @@ against each other, but at 140 games its scores are ±20 points, and the final f
 ## Round 4: what is left
 
 - **China against the modern factions, 33% (23-44): within noise, not tuned further.** [ran] China now beats America
-  and Russia (54%), but it lost to Hezbollah 1-11 and Yemen 2-8.
+  and Russia (54%), but it lost to Lebanon 1-11 and Yemen 2-8.
   - Its Qilin and PHL are 38% of its production and destroyed 0.68 and 0.75 per credit against the modern factions.
   - Its riflemen and AT teams destroyed 1.58 and 1.21.
-  - Hezbollah and Yemen's infantry, RPG and rocket-truck armies kill exactly the vehicles China's doctrine leads with.
+  - Lebanon and Yemen's infantry, RPG and rocket-truck armies kill exactly the vehicles China's doctrine leads with.
 
   [inferred] This is the same counter structure as Yemen in round 3. The doctrine-consistent next step would be a
   smaller China MBT share, which is a doctrine-identity choice for the owner rather than a balance number.
@@ -746,7 +746,7 @@ against each other, but at 140 games its scores are ±20 points, and the final f
 102 tick-cap draws, median 26.0 game minutes. Row's wins-losses (draws) against the column; the last two columns are
 the row's score with its 95% Wilson interval:
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | america | russia | vs modern | vs America+Russia |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 5-5 (2d) | 7-3 (2d) | 2-7 (3d) | 1-9 (2d) | 4-5 (3d) | 1-10 (1d) | 1-7 (4d) | 3-5 (4d) | 37% (27-48) | 33% (18-53) |
 | **iran** | 5-5 (2d) | — | 9-2 (1d) | 8-1 (3d) | 1-7 (4d) | 7-2 (3d) | 2-6 (4d) | 1-6 (5d) | 5-5 (2d) | 56% (45-67) | 40% (23-59) |
@@ -754,7 +754,7 @@ the row's score with its 95% Wilson interval:
 | **saudi** | 7-2 (3d) | 1-8 (3d) | 4-4 (4d) | — | 4-6 (2d) | 4-5 (3d) | 4-7 (1d) | 4-5 (3d) | 8-0 (4d) | 44% (34-56) | 65% (45-80) |
 | **yemen** | 9-1 (2d) | 7-1 (4d) | 7-3 (2d) | 6-4 (2d) | — | 5-4 (3d) | 5-1 (6d) | 3-8 (1d) | 6-5 (1d) | 67% (56-77) | 42% (24-61) |
 | **israel** | 5-4 (3d) | 2-7 (3d) | 3-7 (2d) | 5-4 (3d) | 4-5 (3d) | — | 3-6 (3d) | 4-6 (2d) | 6-2 (4d) | 42% (32-54) | 54% (35-72) |
-| **hezbollah** | 10-1 (1d) | 6-2 (4d) | 6-4 (2d) | 7-4 (1d) | 1-5 (6d) | 6-3 (3d) | — | 4-5 (3d) | 5-2 (5d) | 62% (50-72) | 54% (35-72) |
+| **lebanon** | 10-1 (1d) | 6-2 (4d) | 6-4 (2d) | 7-4 (1d) | 1-5 (6d) | 6-3 (3d) | — | 4-5 (3d) | 5-2 (5d) | 62% (50-72) | 54% (35-72) |
 | **america** | 7-1 (4d) | 6-1 (5d) | 4-3 (5d) | 5-4 (3d) | 8-3 (1d) | 6-4 (2d) | 5-4 (3d) | — | — | 62% (52-72) | — |
 | **russia** | 5-3 (4d) | 5-5 (2d) | 5-4 (3d) | 0-8 (4d) | 5-6 (1d) | 2-6 (4d) | 2-5 (5d) | — | — | 42% (32-53) | — |
 
@@ -771,14 +771,14 @@ runs and are shown without intervals:
 | Saudi Arabia | vs modern 35-65% | 55% (43-66) | 42% | 60% | 44% (34-56) | yes |
 | Yemen | vs modern 35-65% | 79% (68-87) | 60% | 71% | 67% (56-77) | **no** |
 | Israel | vs modern 35-65% | 35% (25-46) | 58% | 46% | 42% (32-54) | yes |
-| Hezbollah | vs modern 35-65% | 69% (58-79) | 65% | 67% | 62% (50-72) | yes |
+| Lebanon | vs modern 35-65% | 69% (58-79) | 65% | 67% | 62% (50-72) | yes |
 | China | vs America+Russia ≥35% | 21% (9-40) | 44% | 62% | 33% (18-53) | **no** |
 | Iran | vs America+Russia ≥35% | 33% (18-53) | 44% | 44% | 40% (23-59) | yes |
 | Türkiye | vs America+Russia ≥35% | 25% (12-45) | 31% | 19% | 46% (28-65) | yes |
 | Saudi Arabia | vs America+Russia ≥35% | 52% (33-70) | 38% | 56% | 65% (45-80) | yes |
 | Yemen | vs America+Russia ≥35% | 46% (28-65) | 38% | 88% | 42% (24-61) | yes |
 | Israel | vs America+Russia ≥35% | 31% (16-51) | 44% | 31% | 54% (35-72) | yes |
-| Hezbollah | vs America+Russia ≥35% | 35% (20-55) | 69% | 44% | 54% (35-72) | yes |
+| Lebanon | vs America+Russia ≥35% | 35% (20-55) | 69% | 44% | 54% (35-72) | yes |
 | America | vs modern ≤65% | 71% (61-80) | 55% | 62% | 62% (52-72) | yes |
 | Russia | vs modern ≤65% | 59% (48-69) | 57% | 39% | 42% (32-53) | yes |
 
@@ -806,23 +806,23 @@ Score (95% Wilson interval):
 | Saudi Arabia | 56% (40-70) | 54% (29-78) | 47% (32-63) | 50% (25-75) |
 | Yemen | 61% (45-75) | 46% (22-71) | 64% (48-78) | 58% (32-81) |
 | Israel | 49% (33-64) | 54% (29-78) | 43% (28-59) | 71% (43-89) |
-| Hezbollah | 56% (40-70) | 21% (7-49) | 69% (53-82) | 50% (25-75) |
+| Lebanon | 56% (40-70) | 21% (7-49) | 69% (53-82) | 50% (25-75) |
 | America | 58% (43-72) | — | 46% (32-61) | — |
 | Russia | 61% (46-74) | — | 50% (36-64) | — |
 
 On the naval map the band is met more fully after round 3 than before.
-- Before, China was at 28% against the modern factions and Hezbollah at 21% against the originals.
+- Before, China was at 28% against the modern factions and Lebanon at 21% against the originals.
 - After, every modern faction scores at least 38% against America and Russia.
-- Against each other, all seven modern factions are within 35-65% except Hezbollah, at 69% (53-82).
+- Against each other, all seven modern factions are within 35-65% except Lebanon, at 69% (53-82).
 - America scores 46% and Russia 50% against the modern factions.
 
 Round 2's naval figures (five modern factions, older engine and art) are not comparable.
 
-**Engine crash found and fixed.** [ran] 2 of the 210 games in the after run crashed: yemen-hezbollah r0 and
+**Engine crash found and fixed.** [ran] 2 of the 210 games in the after run crashed: yemen-lebanon r0 and
 iran-yemen r1.
 - The error was `System.DivideByZeroException` in `WRot.SLerp`.
 - The engine owner traced it to one Little Big Lake cell, where a full-tile slope lies next to a half-ramp sloped
-  about the same axis. A vehicle tilting between them (Hezbollah's rocket truck in one game, Yemen's missile launcher
+  about the same axis. A vehicle tilting between them (Lebanon's rocket truck in one game, Yemen's missile launcher
   in the other) made `SLerp` blend two rotations one angle step apart. Integer truncation zeroed both weights, and the
   normalisation then divided by zero.
 - The fix is `rtsai/engine` 68c1e95557, preview pin 8c74dd4. It changes the result for no other input, so the other
@@ -835,11 +835,11 @@ iran-yemen r1.
 - **What was measured.** Branch `rtsai/art-preview`: the new faction art and the art agents' muzzle offsets, with the
   local engine `rtsai/engine` 265db7a4a7. That engine has two Missile fixes. ae14ce6b01 makes missiles fired over
   raised ground hit. 265db7a4a7 keeps low-cruise missiles clear of ramps, which fixed misses by the Yemen and
-  Hezbollah RPGs, the Iran Toophan and the coastal launchers. The engine was re-pinned to 265db7a4a7 while the first
+  Lebanon RPGs, the Iran Toophan and the coastal launchers. The engine was re-pinned to 265db7a4a7 while the first
   baseline was running. That baseline was discarded and the whole baseline was replayed on the new engine.
   Round 3 found a crash in that engine (`WRot.SLerp`, see the naval section). It was fixed in 68c1e95557, which
   changes no other result. The two crashed naval games were replayed on it.
-- **Factions and design.** The seven modern factions (now including the local Israel and Hezbollah packs) plus America
+- **Factions and design.** The seven modern factions (now including the local Israel and Lebanon packs) plus America
   and Russia. Every pairing with a modern faction was played (35 pairings; America-Russia was not played). Each was
   played from both spawn orientations on both maps with 3 replicates: 12 games per pairing as in round 2, 420 games per
   round robin. The naval map, Little Big Lake, used 6 games per pairing (210 games). Bots: `normal` on both sides,
@@ -866,7 +866,7 @@ iran-yemen r1.
 
 [ran] Baseline round robin, 420 games, 0 errors, 90 draws, median 26.1 min:
 
-| vs | china | iran | turkey | saudi | yemen | israel | hezbollah | america | russia | vs modern | vs America+Russia |
+| vs | china | iran | turkey | saudi | yemen | israel | lebanon | america | russia | vs modern | vs America+Russia |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | **china** | — | 1-9 (2d) | 2-9 (1d) | 2-8 (2d) | 1-11 | 3-3 (6d) | 0-11 (1d) | 1-8 (3d) | 2-9 (1d) | 21% (13-32) | 21% (9-40) |
 | **iran** | 9-1 (2d) | — | 6-2 (4d) | 4-3 (5d) | 1-8 (3d) | 5-4 (3d) | 4-6 (2d) | 2-9 (1d) | 4-5 (3d) | 53% (42-65) | 33% (18-53) |
@@ -874,22 +874,22 @@ iran-yemen r1.
 | **saudi** | 8-2 (2d) | 3-4 (5d) | 5-2 (5d) | — | 3-6 (3d) | 9-1 (2d) | 3-9 | 2-6 (4d) | 8-3 (1d) | 55% (43-66) | 52% (33-70) |
 | **yemen** | 11-1 | 8-1 (3d) | 11-0 (1d) | 6-3 (3d) | — | 10-0 (2d) | 5-4 (3d) | 4-7 (1d) | 4-3 (5d) | 79% (68-87) | 46% (28-65) |
 | **israel** | 3-3 (6d) | 4-5 (3d) | 4-6 (2d) | 1-9 (2d) | 0-10 (2d) | — | 4-5 (3d) | 3-7 (2d) | 3-8 (1d) | 35% (25-46) | 31% (16-51) |
-| **hezbollah** | 11-0 (1d) | 6-4 (2d) | 10-1 (1d) | 9-3 | 4-5 (3d) | 5-4 (3d) | — | 2-8 (2d) | 3-4 (5d) | 69% (58-79) | 35% (20-55) |
+| **lebanon** | 11-0 (1d) | 6-4 (2d) | 10-1 (1d) | 9-3 | 4-5 (3d) | 5-4 (3d) | — | 2-8 (2d) | 3-4 (5d) | 69% (58-79) | 35% (20-55) |
 | **america** | 8-1 (3d) | 9-2 (1d) | 6-1 (5d) | 6-2 (4d) | 7-4 (1d) | 7-3 (2d) | 8-2 (2d) | — | — | 71% (61-80) | — |
 | **russia** | 9-2 (1d) | 5-4 (3d) | 7-0 (5d) | 3-8 (1d) | 3-4 (5d) | 8-3 (1d) | 4-3 (5d) | — | — | 59% (48-69) | — |
 
 [ran] figures from that run unless marked:
 
 1. **Not the economy.** By 10 minutes China and Türkiye had each earned 22.3k credits with 2.1-2.2 refineries. Iran,
-   Yemen and Hezbollah had earned 20.3-20.8k, America 23.5k.
+   Yemen and Lebanon had earned 20.3-20.8k, America 23.5k.
 2. **The smallest standing armies.** Army value at 5 and 10 minutes:
    - China 2.6k and 3.1k, Türkiye 2.5k and 3.1k;
-   - Iran 4.5k and 6.0k, Yemen 4.8k and 5.9k, Hezbollah 4.5k and 6.2k.
+   - Iran 4.5k and 6.0k, Yemen 4.8k and 5.9k, Lebanon 4.5k and 6.2k.
 
    In the first 10 minutes China and Türkiye traded about even (7.4k and 7.3k destroyed for 7.8k and 7.7k lost), while
-   Yemen and Hezbollah destroyed 9.6-9.7k for 7.2-7.7k lost. China and Türkiye also put 0.9-2.0k more into buildings
+   Yemen and Lebanon destroyed 9.6-9.7k for 7.2-7.7k lost. China and Türkiye also put 0.9-2.0k more into buildings
    (Air Force Command, Türkiye's early service depot, AA sites and tech). Their mean time to the first enemy building
-   destroyed was 22 minutes, counting games with none as 40. Hezbollah's was 10 and Yemen's 11.
+   destroyed was 22 minutes, counting games with none as 40. Lebanon's was 10 and Yemen's 11.
 3. **Low-value spending.** Share of production and enemy value destroyed per credit:
 
    | Faction | Unit | Share | Destroyed / credit |
@@ -907,10 +907,10 @@ iran-yemen r1.
    | Iran | Toophan (ATGM team) | 33.8% | 0.84 |
    | Iran | Basij | 11.7% | 1.68 |
    | Israel | Merkava (MBT) | 30.8% | 0.63 |
-   | Yemen, Hezbollah | Rifleman | 12.8%, 16.1% | 1.93, 1.79 |
+   | Yemen, Lebanon | Rifleman | 12.8%, 16.1% | 1.93, 1.79 |
    | Saudi, Iran, Russia | M1A2S, Karrar, Rhino | 24.3%, 17.5%, 12.6% | 0.80, 0.76, 1.17 |
 
-   Riflemen were the most cost-effective unit of China, Türkiye, Iran, Yemen and Hezbollah (1.6-1.9 destroyed per
+   Riflemen were the most cost-effective unit of China, Türkiye, Iran, Yemen and Lebanon (1.6-1.9 destroyed per
    credit; most MBTs 0.6-0.8). China and Türkiye fielded the fewest of them.
 4. **Unit-stat causes** [inferred from the rules; the probes then confirmed the per-unit effect]:
    - Qilin and Bozkır fire the 105mm base, range 5c0. They are outranged by every modern ATGM team (6c-8c), the Rhino's
@@ -926,10 +926,10 @@ iran-yemen r1.
    commando.
 
 Other findings:
-- **Israel.** [ran] `bot-types.yaml` never listed Israel's or Hezbollah's aircraft, ships and defenses (the Levant
+- **Israel.** [ran] `bot-types.yaml` never listed Israel's or Lebanon's aircraft, ships and defenses (the Levant
   packs were added after the port tool built the lists), so their jets and boats joined the ground squads. Israel's
   Merkava had the same gun as the 1,100-credit M1A2S, 23% more HP, and cost 1,450.
-- **Yemen and Hezbollah** (79% and 69% against the modern factions). Their riflemen, at 135 credits, were the most
+- **Yemen and Lebanon** (79% and 69% against the modern factions). Their riflemen, at 135 credits, were the most
   cost-effective units in the game (1.93 and 1.79 destroyed per credit).
 - **America** (71%). [ran] Against the modern factions its GIs made 22% of its kills at 1.94 destroyed per credit. This
   includes the free paratroopers, whose cost is not counted. Rocketeers made 12% (1.43) and Prism tanks 10% (1.48). The
@@ -943,24 +943,24 @@ value destroyed per credit produced, baseline → final, for the unit changed.
 
 | # | Change | Reason | In | Destroyed / credit |
 |---|---|---|---|---|
-| 1 | `bot-types.yaml`: Israel's and Hezbollah's aircraft (`AirUnitsTypes`), ships (`NavalUnitsTypes`) and defenses (`DefenseTypes`) added to all five bot profiles | Bug: Levant units missing from the bot type lists | P1 | Israel's jet 0.20 → 0.28 (P1 0.62) |
+| 1 | `bot-types.yaml`: Israel's and Lebanon's aircraft (`AirUnitsTypes`), ships (`NavalUnitsTypes`) and defenses (`DefenseTypes`) added to all five bot profiles | Bug: Levant units missing from the bot type lists | P1 | Israel's jet 0.20 → 0.28 (P1 0.62) |
 | 2 | Bots train China's Red Spear and Türkiye's Grey Wolf only after 20 minutes (`UnitDelays` 30000), as the other five commandos | Commandos 8% of production at 0.77-0.85 | P1 | share 8.0 → 5.9%, 7.6 → 5.4% |
 | 3 | China line infantry 100 → 140, Türkiye 100 → 130 (`RoleShareModifiers`) | Riflemen China's and Türkiye's most cost-effective unit (1.67, 1.64 per credit) | P1 | rifle share 10.0 → 12.6%, 8.6 → 11.0% |
 | 4 | PHL rockets: Inaccuracy 1c0 → 0c512; 80% against heavy and 90% against medium armour (were 60/75) | 14% of China's production at 0.47 | P1 | 0.47 → 0.78 |
 | 5 | `R2DroneMissile` damage 35 → 60 (Cloud, Kuzgun, Mohajer) | 1,000-credit drones at 0.30-0.38 | P1 | Cloud 0.38 → 0.66, Kuzgun 0.30 → 0.38 |
 | 6 | Bozkır gun reload 70 → 60 | Rhino damage per credit at the Rhino's cost | P1 | 0.65 → 0.64 alone (P1) |
 | 7 | Merkava 1,450 → 1,250 credits | Same gun as the 1,100 M1A2S | P1 | 0.63 → 0.75 |
-| 8 | Hezbollah rifleman 135 → 150 credits | 69% against the modern factions; 1.79 per credit | P1 | 1.79 → 1.66 |
+| 8 | Lebanon rifleman 135 → 150 credits | 69% against the modern factions; 1.79 per credit | P1 | 1.79 → 1.66 |
 | 9 | Qilin and Bozkır guns: range 5c0 → 5c768, the reach of the Rhino's and Karrar's 120mm | Outranged by every ATGM team | P2 | Qilin 0.75 → 0.77, Bozkır 0.65 → 0.82 (P2 0.86) |
 | 10 | China anti-air share 40 → 25 | Mantis 0.27 per credit | P2 | Mantis share 4.5 → 3.1% |
 | 11 | China portable ATGM: damage 65 → 80, range 6c → 7c | 1.6 vs 2.4 damage per tick per 1,000 credits for the Saudi ATGM | final | 0.90 → 1.22 |
 | 12 | Türkiye portable ATGM: damage 60 → 75, range 6c → 7c | as 11 | final | 0.94 → 1.22 |
 | 13 | Türkiye support share 130 → 100 | Sancak 0.23 per credit | final | Sancak share 3.4 → 3.7% (unchanged) |
-| 14 | Yemeni Mountain Rifleman 135 → 150 credits | Yemen 79% against the modern factions; same step as its Hezbollah twin (8) | final | 1.93 → 1.85 |
+| 14 | Yemeni Mountain Rifleman 135 → 150 credits | Yemen 79% against the modern factions; same step as its Lebanon twin (8) | final | 1.93 → 1.85 |
 | 15 | Iran line infantry 100 → 120, anti-armor 110 → 100 | Basij 1.68 per credit, Toophan 0.84; Iran 33% against the originals | final | Basij share 11.7 → 14.8% |
 
 Each change answers a measured cause; none is a blanket cost cut. Weak units were made worth their cost. Where the bot
-misuses a unit (commandos, Mantis, Sancak), the bot now buys fewer of them. Yemen and Hezbollah were trimmed one cost
+misuses a unit (commandos, Mantis, Sancak), the bot now buys fewer of them. Yemen and Lebanon were trimmed one cost
 step each because their scores were above the band. America's and Russia's rules are unchanged.
 
 The three rounds [ran]:
@@ -969,7 +969,7 @@ The three rounds [ran]:
   Bozkır reload alone did not change the Bozkır's value (0.65 → 0.64).
 - **P2** (+ 9-10). The longer range raised the Qilin to 0.81 and the Bozkır to 0.86 per credit. Pooled over P1 and
   P2 (48 games each), China scored 53% against America and Russia but 21% against the modern factions: 0-8 against
-  Yemen, 0-6 against Saudi Arabia and Hezbollah. Its tanks still met ATGM teams that outranged and outdamaged its own.
+  Yemen, 0-6 against Saudi Arabia and Lebanon. Its tanks still met ATGM teams that outranged and outdamaged its own.
   This pointed to change 11.
 - **Final** (+ 11-15), the full round robin above. Changes 11-15 were not probed separately.
 
@@ -981,7 +981,7 @@ The three rounds [ran]:
   against America and Russia, which field more infantry. [inferred] A rock-paper-scissors effect of the doctrines, not
   of one unit. Another cost step on Yemen would take its score against the originals towards 35%. Moving the other
   modern doctrines away from vehicles would change their identity.
-- **Free units by side.** [ran] The Soviet-side factions (Iran, Yemen, Hezbollah, Russia) build the stock Cloning Vats,
+- **Free units by side.** [ran] The Soviet-side factions (Iran, Yemen, Lebanon, Russia) build the stock Cloning Vats,
   and their cloned infantry was 10-12% of the unit value they fielded. The Allied-side modern factions (China,
   Türkiye, Saudi Arabia, Israel) have no equivalent. America has its paratroopers. This side asymmetry comes from
   stock RA2 and was left alone. It favors the infantry-heavy Soviet-side factions.
@@ -1089,7 +1089,7 @@ It does not show:
   - A suite can carry a MiniYAML `rules` overlay. The tuning candidates were screened this way, on map copies,
     without editing the mod.
 - **Factions.** The five modern nations plus two original RA2 countries as baselines: America (Allied) and Russia
-  (Soviet). Round 3 adds Israel and Hezbollah (see "Round 3: method").
+  (Soviet). Round 3 adds Israel and Lebanon (see "Round 3: method").
 - **Bots.** `normal` on both sides, with the mod's doctrine bot modules. The stock countries use the same modules
   without a doctrine.
 - **Maps.** Two land 1v1 maps from the mod: Dustbowl (70x152) and Official Tournament Map A (87x134), both temperate.
@@ -1412,11 +1412,11 @@ value left.
 | `r4-p1` | Round 4: probe, one replicate (140) | + changes 18-21 |
 | `r4-final`, `r4-final-naval` | Round 4: final round robin (420) and naval (210) | e2c07b0 |
 | `r4-campaigns.json` | Round 4 campaign definitions | — |
-| `r5-hz-probe`, `r5-hz-designed` | Round 5: Hezbollah probe (32) and stopped land run (42), as designed | 2ed217e |
+| `r5-hz-probe`, `r5-hz-designed` | Round 5: Lebanon probe (32) and stopped land run (42), as designed | 2ed217e |
 | `r5-hz-probe-t1` | Round 5: probe with the trim-1 rules overlay (32) | 2ed217e + overlay |
 | `r5-hz-t2`, `r5-hz-t3`, `r5-hz-t4` | Round 5: land runs after trims 1-2 (96), 3 (47 of 96, stopped) and 4 (96) | b70d61e, efe7750, 85d07d4 |
 | `r5-hz-t5`, `r5-hz-t5-naval` | Round 5: land (96) and naval (48), as built | d646808 |
-| `r5-hz-campaigns.json` | Round 5 campaign definitions (Hezbollah focus) | — |
+| `r5-hz-campaigns.json` | Round 5 campaign definitions (Lebanon focus) | — |
 | `r5-sa-baseline` | Round 5, standalone: baseline round robin (252) | `rtsai/standalone` e2efdd2 |
 | `r5-sa-p1` | Round 5, standalone: probe 1, one replicate (84) | e2efdd2 + probe-1 changes |
 | `r5-sa-p2` | Round 5, standalone: probe 2, one replicate (84) | + the coax on the other three MBTs |
@@ -1425,9 +1425,9 @@ value left.
 | `r5-main-p2` | Round 5, `main`: probe 2, one replicate (140) | 8357c9b + the bot port + probe-2 rules |
 | `r5-main-final`, `r5-main-final-naval` | Round 5, `main`: final round robin (420) and naval (210) | 7fd8f3f |
 | `r5-campaigns.json` | Round 5 campaign definitions (`r5-main-*`; `r5-sa-*` run with `--standalone`) | — |
-| `r6-sa-p1`, `r6-sa-p2` | Round 6, standalone: probes (128 each: round robin + Hezbollah/Israel replicate) | 1a14e6b rules + changes 1-5; + 6 |
+| `r6-sa-p1`, `r6-sa-p2` | Round 6, standalone: probes (128 each: round robin + Lebanon/Israel replicate) | 1a14e6b rules + changes 1-5; + 6 |
 | `r6-sa-final` | Round 6, standalone: final round robin (252) | 841e844 maps + the ab878b8 rules |
-| `r6-main-p1`, `r6-main-p2` | Round 6, `main`: probes (200 each: round robin + Hezbollah/Israel replicate) | b8ed157 rules + changes 1-5; + 6 |
+| `r6-main-p1`, `r6-main-p2` | Round 6, `main`: probes (200 each: round robin + Lebanon/Israel replicate) | b8ed157 rules + changes 1-5; + 6 |
 | `r6-main-final`, `r6-main-final-naval` | Round 6, `main`: final round robin (420) and naval (210) | ab878b8 |
 | `r6-campaigns.json` | Round 6 campaign definitions (`r6-main-*`; `r6-sa-*` run with `--standalone`) | — |
 | `r2-duels-before`, `r2-duels-after` | Duels, rank 0 and 2, 8 per pair | 414f8fa / 31912c4 |
@@ -1458,7 +1458,7 @@ python tools/balance-harness.py run --campaign r3-round-robin --campaigns-file d
     --content <content> --output <scratch>/r3 --parallel 3
 python tools/balance-harness.py run --campaign r3-naval --campaigns-file docs/balance-data/r3-campaigns.json \
     --content <content> --output <scratch>/r3-naval --parallel 3
-# Round 5 (Hezbollah only): 96 land games, 48 naval
+# Round 5 (Lebanon only): 96 land games, 48 naval
 python tools/balance-harness.py run --campaign hz-land --campaigns-file docs/balance-data/r5-hz-campaigns.json \
     --content <content> --output <scratch>/r5-land --parallel 8
 python tools/balance-harness.py run --campaign hz-naval --campaigns-file docs/balance-data/r5-hz-campaigns.json \

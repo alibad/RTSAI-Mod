@@ -80,7 +80,7 @@ guardrails in `docs/story-bible.md` apply).
 | Saudi Arabia | Expensive Western kit: jet turbines, interceptor launches, smooth hydraulics | Patriot-style interceptor boost; the strike jet's flyby | Gulf Arabic |
 | Yemen | Improvised and rugged: diesel technicals, rattling metal, older rifles, boat outboards | Skiff motors; launch rails that clank | Yemeni Arabic |
 | Israel | Precision and defence: interceptor bursts, a heavy tank's engine, quiet electronics | Interceptor "pop and chase"; the anti-missile burst | Hebrew, terse |
-| Hezbollah | Cheap missiles, elite soldiers, micro-drones: launch tubes, FPV quad whine, close-quarters gunfire | FPV swarm whine; the elite soldiers' suppressed weapons | Levantine Arabic, low and calm |
+| Lebanon | Cheap missiles, elite soldiers, micro-drones: launch tubes, FPV quad whine, close-quarters gunfire | FPV swarm whine; the elite soldiers' suppressed weapons | Levantine Arabic, low and calm |
 
 ## 5. What every unit gets
 
