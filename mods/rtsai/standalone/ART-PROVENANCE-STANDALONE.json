@@ -8,9 +8,10 @@
   "shared vehicles": "coordinator, 2026-10-07 (batch 2)",
   "engineer, operative, dog": "coordinator, 2026-10-07 (rework)",
   "effects": "coordinator, 2026-10-07 (fx-v1), soft-smoke fx-v2 approved the same day",
-  "civilians and village buildings": "not yet reviewed (art/civilians, 2026-10-14)"
+  "civilians and village buildings": "not yet reviewed (art/civilians, 2026-10-14)",
+  "soft explosions (fx-v3, 38 blast effects)": "owner, 2026-11-14, on a moving side-by-side of four of them: \"Yes, put them in\""
  },
- "files": 453,
+ "files": 491,
  "problems": [],
  "records": [
   {
@@ -4898,6 +4899,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/apocexp.png",
+   "bytes": 98274,
+   "sha256": "09d8063414e1b35a87dc43989b74e51df4da32053a758515be71b4c0a2e47702",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/apocexp.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/apocexp.shp",
    "bytes": 26191,
    "sha256": "ac55e56c5f2929516af96c14244730e73b6dbf2b5d9bacd41383acefcb3f97ca",
@@ -4958,6 +4969,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/brrlexp1.png",
+   "bytes": 541332,
+   "sha256": "0f0cfaedcd52a90e571ac71dfe96e48d5740ea780fba528b938ad26cf8d7f18d",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/brrlexp1.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/brrlexp1.shp",
    "bytes": 212168,
    "sha256": "8b6f9de133d9a04aa5eafcb164ec8e76a677b28a5e456a8c2a844f697c601ec8",
@@ -4966,6 +4987,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/brrlexp2.png",
+   "bytes": 773534,
+   "sha256": "2da52eff9c0a8c5974ee197d725cb8497ae9fc416309881e9ccf244bf777ad57",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/brrlexp2.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/brrlexp2.shp",
@@ -4998,6 +5029,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/crivexp.png",
+   "bytes": 292302,
+   "sha256": "77cf1d82c8f77f51543d52e43207507a9498a09c08e6544197c7e9be219d430b",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/crivexp.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/crivexp.shp",
    "bytes": 112067,
    "sha256": "49e7f434a9472f732cf645f1de525ff57aeccdf8976e829640283b9eb0ca8771",
@@ -5008,6 +5049,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/crivexp2.png",
+   "bytes": 686646,
+   "sha256": "239e552d8d201fd6c50dd2382c79cf693d31bf477614d8d8632cc24a94dfc30f",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/crivexp2.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/crivexp2.shp",
    "bytes": 304316,
    "sha256": "8373aa233ebddc07c91b79dd495634e9e3c4aa2c6c52bfa6693d7cb42a98f8d9",
@@ -5016,6 +5067,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/demtexp.png",
+   "bytes": 447837,
+   "sha256": "92e092a4cde82a5f8c77f58bf73ae32a1aa16efd5ef59860cdff570cddcfa7a9",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/demtexp.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/demtexp.shp",
@@ -5038,6 +5099,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/explolb.png",
+   "bytes": 421642,
+   "sha256": "72ef1138884209acf22b17a6afbd30d9cdbb2e190925bfdf80b5070eae7a0bf8",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/explolb.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/explolb.shp",
    "bytes": 153880,
    "sha256": "c31ffde3e30b40e7bdebee9cfcff133fdda66612ae9db86a90614050295716ae",
@@ -5046,6 +5117,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/explolrg.png",
+   "bytes": 362695,
+   "sha256": "6f4982b5cc6db41f534166558058a7121924d2b824d8c762e690b45d921764da",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/explolrg.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/explolrg.shp",
@@ -5058,6 +5139,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/explomed.png",
+   "bytes": 67501,
+   "sha256": "bb7bb4bb419cd671d77e6342ce7715d7f6cbd0993c9f1fd45fcd7f2826341d3f",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/explomed.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/explomed.shp",
    "bytes": 18223,
    "sha256": "1f9c80faedf76627fe0d9bc09071281facf68eae11f2aa96e7e9222b215f6b36",
@@ -5066,6 +5157,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/explosml.png",
+   "bytes": 43633,
+   "sha256": "239be02232809a7a58260023c3f7e8ff4c0067cc247dbc321a3d27c69416ba30",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/explosml.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/explosml.shp",
@@ -5206,6 +5307,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/ktstlexp.png",
+   "bytes": 184540,
+   "sha256": "f0afaa67d5004a6d42052cf7ec7da8375e4543e7b6008ccbe1ae32d82855f45d",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/ktstlexp.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/ktstlexp.shp",
@@ -5428,6 +5539,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_bang16.png",
+   "bytes": 4899,
+   "sha256": "ebb868662f61dcd1df23add0f28ba08914550ee9bc1aeee8d73bd8be7d856765",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_bang16.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_bang16.shp",
    "bytes": 1077,
    "sha256": "64177cc01e8e286a5931a46d5de2a78c51ae141348e3d4fba460cf47a2f14df4",
@@ -5436,6 +5557,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_bang24.png",
+   "bytes": 6844,
+   "sha256": "31a311865cb3677273759d5098850bb1ee3eea4d5ad7bdc1163656f4087eafb3",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_bang24.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_bang24.shp",
@@ -5448,6 +5579,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_bang34.png",
+   "bytes": 22805,
+   "sha256": "333882d2bc9616e41226121d0feca82f72baf86db54d33962792ddbfed446738",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_bang34.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_bang34.shp",
    "bytes": 5431,
    "sha256": "44106e4f4a945a727d9f717f655ba9a731d99fda586ec1f3c2ae31e017586948",
@@ -5456,6 +5597,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_bang48.png",
+   "bytes": 284592,
+   "sha256": "6db71d0e55a9a2ad7b7665aaad54e565839335f0d78e5951bc19ff86008fc6e1",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_bang48.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_bang48.shp",
@@ -5468,6 +5619,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_brnl20.png",
+   "bytes": 16850,
+   "sha256": "6b471584e1d65633fa0821697fb79610c73dbdc06ee515d503fdd8208c399b26",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_brnl20.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_brnl20.shp",
    "bytes": 3737,
    "sha256": "2f68b9fc089e06483dfda7fe3f4480eef60172ef31e84edccd7dd29ddee23236",
@@ -5476,6 +5637,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_brnl30.png",
+   "bytes": 38309,
+   "sha256": "f9bd4851c354e8dcda378962b0015db5a79cb92f6fbfad28b685cd5311eb665c",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_brnl30.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_brnl30.shp",
@@ -5488,6 +5659,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_brnl40.png",
+   "bytes": 47999,
+   "sha256": "57236d89d4e6217ca0e2f33a157201ccc4328f1d9eca2fa45cba64d20b596c35",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_brnl40.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_brnl40.shp",
    "bytes": 9721,
    "sha256": "3ef3c9544ebb6402ee3162b71dfdd1367c227476c38a41aec0d2bd8fb8c49cb6",
@@ -5496,6 +5677,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_brnl58.png",
+   "bytes": 57472,
+   "sha256": "e0079947c78158f62b61b1246b7181ff850de870249d55d1842604a739d9dc86",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_brnl58.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_brnl58.shp",
@@ -5508,6 +5699,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_clsn16.png",
+   "bytes": 17556,
+   "sha256": "f5b1e39795c5a9de79e2855d7b2fda04dac2aabe64b6d3644e5bd258dd2ac463",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_clsn16.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_clsn16.shp",
    "bytes": 4298,
    "sha256": "f1a5ae13b61541814de185753845e5155cb3c373551d8524d6f0626a8c542aa7",
@@ -5516,6 +5717,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_clsn22.png",
+   "bytes": 26490,
+   "sha256": "0c3bd3357ef7f42151cede166717c361913a7a1addc0a9649cb1a3f9082be02f",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_clsn22.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_clsn22.shp",
@@ -5528,6 +5739,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_clsn30.png",
+   "bytes": 81177,
+   "sha256": "d1b61f98c69069648641051213471cf9ca851424712a3f039d65648cb4c1ea2a",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_clsn30.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_clsn30.shp",
    "bytes": 24201,
    "sha256": "acc19e8a91d1321c3a164ac1a12a3671cf35fdbbc75d107bdf3c844302dba760",
@@ -5536,6 +5757,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_clsn42.png",
+   "bytes": 102725,
+   "sha256": "3962b70abb055b7b3d83c93931c515dfd578909989a7931a545c869f9a32d81c",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_clsn42.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_clsn42.shp",
@@ -5548,6 +5779,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_clsn58.png",
+   "bytes": 321488,
+   "sha256": "7174d21dc147fb34d5cb40ab25d68a5204dc89fee8a8c20965b698941ce32df5",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_clsn58.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_clsn58.shp",
    "bytes": 176490,
    "sha256": "2631c30585a1b8cd571c073b3640aaa803778dc87764e92650fad1aee75d64ea",
@@ -5556,6 +5797,16 @@
    "rtsaiArtCommit": "d69510fd",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_tumu22.png",
+   "bytes": 25416,
+   "sha256": "cbd39dc5fca089c69ba6ff5d0f8985bb4cabb83ecc065a861a892132f2de236a",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_tumu22.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_tumu22.shp",
@@ -5568,6 +5819,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_tumu30.png",
+   "bytes": 46998,
+   "sha256": "c5ffe9dc2701331cd4d1ccce9b258fbabc842dfbc25d7c0f124ae6eb2b3570cb",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_tumu30.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_tumu30.shp",
    "bytes": 19114,
    "sha256": "e5c91fc8ff27bc201d8ec61fcc59780306d15077b5a7e3b99b8c3346c84d6aee",
@@ -5578,6 +5839,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/s_tumu42.png",
+   "bytes": 56124,
+   "sha256": "e989785c8b4b17c74f2b642f0523d0134bd6bb787f9ca5e3a495d2e72382c9fd",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_tumu42.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/s_tumu42.shp",
    "bytes": 23993,
    "sha256": "86eeff2506ca362017de6172133daa4d34cbf6edf3bfa90f13a1c587dfca3a49",
@@ -5586,6 +5857,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/s_tumu60.png",
+   "bytes": 309614,
+   "sha256": "e5870639b0d805fc371ffbe073c802e6d315dc6d9a588031baf06589f950aa50",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/s_tumu60.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/s_tumu60.shp",
@@ -5658,6 +5939,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/twlt026.png",
+   "bytes": 26221,
+   "sha256": "59fa33596998cd954966110ebcee0c0c75f587494f9cf2cf72d72fa9356cf5ec",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/twlt026.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/twlt026.shp",
    "bytes": 5161,
    "sha256": "a1cdaec008051cd4fbcd60653954fe3c9f977936e123c0f606d6950b55bb8f90",
@@ -5666,6 +5957,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/twlt036.png",
+   "bytes": 47825,
+   "sha256": "bdd5c3f6a03c1b5e62a04c496563733106eba8cf0632fbe3425058f244424532",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/twlt036.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/twlt036.shp",
@@ -5678,6 +5979,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/twlt050.png",
+   "bytes": 79333,
+   "sha256": "53ff3b7a3c07a6fc61fd852dd45942c3b352e40e0cd112324a52e9864eb5a0f7",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/twlt050.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/twlt050.shp",
    "bytes": 15436,
    "sha256": "6201c28292518ce2ae9952e831825ccdcbd15bed4a1b1a83060415deb9db550a",
@@ -5688,6 +5999,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/twlt070.png",
+   "bytes": 419825,
+   "sha256": "e8bdf553387996ad6445e4aca021c2f7ef886fb051138344cace4b7c07591ae8",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/twlt070.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/twlt070.shp",
    "bytes": 156819,
    "sha256": "3a540b744b53d65e3fe278126d8d0d76180141b6ca6e82a3cb16213535e55e9d",
@@ -5696,6 +6017,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/twlt100.png",
+   "bytes": 361876,
+   "sha256": "18dfe253db917ca2531203e819404d3ce21496b13f2f76ae46ff48efe51906ce",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/twlt100.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/twlt100.shp",
@@ -5716,6 +6047,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/vtexplod.png",
+   "bytes": 135130,
+   "sha256": "db6c4b134a2e723cef512fcda4e0f410a1ea846d10be2f6541e7f6a10c6ca4f5",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/vtexplod.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/vtexplod.shp",
@@ -5838,6 +6179,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/xgrymed1.png",
+   "bytes": 76420,
+   "sha256": "78497259ed36d6a18cf3d14a13e6d7a1c891c9462a794269b798c724357d457d",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/xgrymed1.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/xgrymed1.shp",
    "bytes": 26321,
    "sha256": "71cc963e9515f22d1ac770349b6b61338019bcd551e9db60ff29cdb5c6fed7ad",
@@ -5846,6 +6197,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/xgrymed2.png",
+   "bytes": 88271,
+   "sha256": "bcb45917f91b534e31541486c026178ca6f15fdabad40fac7a4f76c21982c993",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/xgrymed2.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/xgrymed2.shp",
@@ -5858,6 +6219,16 @@
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
   },
   {
+   "file": "effects/xgrysml1.png",
+   "bytes": 29372,
+   "sha256": "2011cfaa996a8e7e9bcf0ce902ccc86694015d2aba5b5e77147aa53d46ef7225",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/xgrysml1.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
+  },
+  {
    "file": "effects/xgrysml1.shp",
    "bytes": 7667,
    "sha256": "fbd6c80f71b9ab7ca26a180225fb1064fb92b0989379df92491d67cfdc9aec0f",
@@ -5866,6 +6237,16 @@
    "rtsaiArtCommit": "10c8e45b",
    "generator": "tools/fx_forge.py",
    "method": "Procedural particle and shape renderer (tools/fx_forge.py): noise-textured puffs, fire heat ramp, sparks, debris, rings, splashes, arcs; quantised to the project's anim.pal or written as RGBA PNG sheets; support-power icons rendered in Blender from tools/base_kit_designs.py design_pw_*; no EA files"
+  },
+  {
+   "file": "effects/xgrysml2.png",
+   "bytes": 34575,
+   "sha256": "d5e07f6921ce4f7c6164272394af39666c7e646c1b7b70760d00fd705e1eef4c",
+   "origin": "project-generated",
+   "candidate": "units/fx/candidates/fx-v3/xgrysml2.png",
+   "rtsaiArtCommit": "308ca5bd",
+   "generator": "tools/fx_soft.py",
+   "method": "Procedural explosion renderer (tools/fx_soft.py): turbulence noise and a temperature ramp drawn as one continuous fireball, ground light, dust ring, sparks, debris and soft smoke; written as RGBA PNG sheets on the canvas, frame count and ground line of the fx-v2 effect each replaces; no EA files"
   },
   {
    "file": "effects/xgrysml2.shp",

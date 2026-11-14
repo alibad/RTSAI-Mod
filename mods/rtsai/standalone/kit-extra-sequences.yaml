@@ -346,6 +346,86 @@ parach:
 	Defaults:
 		Filename: parach.png
 
+explosion:
+	building:
+		Filename: twlt070.png
+	small_explosion:
+		Filename: explosml.png
+	medium_explosion:
+		Filename: explomed.png
+	large_explosion:
+		Filename: explolrg.png
+	tiny_bang:
+		Filename: s_bang16.png
+	small_bang:
+		Filename: s_bang24.png
+	medium_bang:
+		Filename: s_bang34.png
+	large_bang:
+		Filename: s_bang48.png
+	tiny_brnl:
+		Filename: s_brnl20.png
+	small_brnl:
+		Filename: s_brnl30.png
+	medium_brnl:
+		Filename: s_brnl40.png
+	large_brnl:
+		Filename: s_brnl58.png
+	tiny_tumu:
+		Filename: s_tumu22.png
+	small_tumu:
+		Filename: s_tumu30.png
+	medium_tumu:
+		Filename: s_tumu42.png
+	large_tumu:
+		Filename: s_tumu60.png
+	tiny_clsn:
+		Filename: s_clsn16.png
+	small_clsn:
+		Filename: s_clsn22.png
+	medium_clsn:
+		Filename: s_clsn30.png
+	large_clsn:
+		Filename: s_clsn42.png
+	verylarge_clsn:
+		Filename: s_clsn58.png
+	tiny_twlt:
+		Filename: twlt026.png
+	small_twlt:
+		Filename: twlt036.png
+	medium_twlt:
+		Filename: twlt050.png
+	large_twlt:
+		Filename: twlt070.png
+	verylarge_twlt:
+		Filename: twlt100.png
+	tiny_grey_explosion:
+		Filename: xgrysml1.png
+	small_grey_explosion:
+		Filename: xgrysml2.png
+	medium_grey_explosion:
+		Filename: xgrymed1.png
+	large_grey_explosion:
+		Filename: xgrymed2.png
+	small_barrel_explosion:
+		Filename: brrlexp1.png
+	large_barrel_explosion:
+		Filename: brrlexp2.png
+	demotruck_explosion:
+		Filename: demtexp.png
+	elite_explosion:
+		Filename: vtexplod.png
+	apoc_explosion:
+		Filename: apocexp.png
+	kirovtesla:
+		Filename: ktstlexp.png
+	ivan_explosion:
+		Filename: crivexp.png
+	ivan_explosionE:
+		Filename: crivexp2.png
+	weatherboltexplosion:
+		Filename: explolb.png
+
 chrono:
 	warpin:
 		Filename: warpin.png
