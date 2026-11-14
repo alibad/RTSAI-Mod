@@ -41,11 +41,11 @@ def main():
     source = runtime / ('mods/rtsai-classic-core/maps/a-nuclear-winter' if a.mode == 'classic' else 'mods/rtsai/standalone/maps/twin-fords')
     support = a.out.resolve() / a.mode / 'support'
     support.mkdir(parents=True, exist_ok=True)
-    # Reuse installed content via a link, never duplicate or change the user's content.
+    # A real copy of the installed content, never a link: deleting a proof folder must not reach the user's content
+    # (owner rule, 31 October 2026; real copies chosen by the owner on 14 November 2026). The user's copy is only read.
     installed = Path(config['supportDirectory']) / 'Content'
     if installed.exists() and not (support / 'Content').exists():
-        import subprocess
-        subprocess.run(['cmd', '/c', 'mklink', '/J', str(support / 'Content'), str(installed)], check=True, capture_output=True)
+        shutil.copytree(installed, support / 'Content')
     manifest = (runtime / 'mods' / mode / 'mod.yaml').read_text(encoding='utf-8-sig')
     version = re.search(r'^\s*Version: (.+)$', manifest, re.M).group(1).strip()
     dest = support / 'maps' / mode / version / 'shared-content-proof'

@@ -16,12 +16,11 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def link(source, dest):
+def copy_tree(source, dest):
+    # A real copy, never a junction or symlink: a preview folder that links into a repository or the runtime cannot be
+    # deleted safely (owner rule, 31 October 2026; real copies chosen by the owner on 14 November 2026).
     dest.parent.mkdir(parents=True, exist_ok=True)
-    if os.name == 'nt':
-        subprocess.run(['cmd', '/c', 'mklink', '/J', str(dest), str(source)], check=True, capture_output=True)
-    else:
-        dest.symlink_to(source, target_is_directory=True)
+    shutil.copytree(source, dest)
 
 
 def build(web_root, log):
@@ -51,7 +50,9 @@ def build(web_root, log):
     if subprocess.check_output(['git', '-C', str(engine_source), 'rev-parse', 'HEAD'], text=True).strip() != config['engineCommit']:
         raise ValueError('Rebuild the canonical desktop runtime for the current engine first.')
     game = ROOT.parent / 'RTSAI-WebGame'
-    seed = game / 'build/shared-content-pilot-20261016'
+    # The seed of 14 November 2026 is the 16 October one with the seventh faction renamed to Lebanon and nothing else
+    # changed (D:\Generated\RTSAI\studio-content-20261114 has the script that made it).
+    seed = game / 'build/shared-content-pilot-20261114'
     run('git', '-C', game, 'fetch', 'origin', 'main')
     run('git', '-C', game, 'merge', '--ff-only', 'origin/main')
     host_commit = json.loads((seed / 'host/INPUTS.json').read_text())['head']
@@ -72,7 +73,7 @@ def build(web_root, log):
     native.mkdir()
     shutil.copytree(runtime / 'bin', native / 'bin')
     for name in ['glsl', 'mods/common', 'mods/common-content']:
-        link(runtime / name, native / name)
+        copy_tree(runtime / name, native / name)
     for name in ['VERSION', 'global mix database.dat', 'AUTHORS', 'COPYING']:
         if (runtime / name).is_file():
             shutil.copy2(runtime / name, native / name)
@@ -169,7 +170,7 @@ def build(web_root, log):
     # Rebuild the current committed web interface; only the unchanged simulation runtime is reused.
     frontend = out / 'frontend'
     run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', game, '--out', frontend, '--include', 'web', '--committed')
-    link(game / 'web/node_modules', frontend / 'web/node_modules')
+    copy_tree(game / 'web/node_modules', frontend / 'web/node_modules')
     run('node', game / 'tools/sync-catalog.mjs', '--from', web_root, '--out', frontend / 'web/src/data/factions.json')
     run('node', web_root / 'scripts/sync-shared-content.mjs', cwd=web_root)
     run('node', '--import', 'tsx', web_root / 'scripts/export-viewer-data.mts', frontend / 'web/public/viewer', cwd=web_root)
