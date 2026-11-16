@@ -20,6 +20,7 @@
 #
 # usage: packaging/macos/smoke-test.sh <dmg> <version> [seconds]
 set -o errexit -o pipefail
+PYTHON="${RTSAI_MAC_PYTHON:-python3}"
 
 DMG="$1"
 VERSION="$2"
@@ -78,6 +79,10 @@ done
 grep -q "Version: ${VERSION}" "${RESOURCES}/mods/${LAUNCHER_MOD}/mod.yaml" || fail "mod.yaml version"
 grep -Eq '^[0-9a-f]{40}$' "${RESOURCES}/VERSION" || fail "Resources/VERSION is not an engine commit"
 echo "engine: $(cat "${RESOURCES}/VERSION")"
+
+echo "== Approved original-country art"
+"${PYTHON}" "${ROOT}/packaging/macos/prepare-original-art.py" --resources "${RESOURCES}" --verify
+"${PYTHON}" "${ROOT}/companion/scripts/build-levant-flags.py" --check --installed-app "${APP}" --receipt "${WORK}/faction-flags.json"
 
 echo "== Payload"
 mods="$(cd "${RESOURCES}/mods" && ls | LC_ALL=C sort | tr '\n' ' ')"
@@ -176,6 +181,8 @@ skirmish() {
 
 run_checks() {
 	local arch="$1" mode
+	utility "${arch}" rtsai-ra2 --check-original-art
+	utility "${arch}" rtsai --check-original-art
 	for mode in $(cd "${RESOURCES}/mods" && ls); do
 		[ "${mode}" != "common" ] && [ "${mode}" != "common-content" ] || continue
 		utility "${arch}" "${mode}" --check-yaml
@@ -217,6 +224,6 @@ fi
 echo "== Native Library button handoffs"
 handoff_args=()
 [ -z "${CLASSIC_CONTENT}" ] || handoff_args+=(--classic-content "${CLASSIC_CONTENT}")
-python3 "${ROOT}/packaging/macos/test-library-handoff.py" "${APP}" --output "${WORK}/library-handoffs" "${handoff_args[@]}"
+"${PYTHON}" "${ROOT}/packaging/macos/test-library-handoff.py" "${APP}" --output "${WORK}/library-handoffs" "${handoff_args[@]}"
 
 echo "SMOKE PASS: ${DMG}"

@@ -29,15 +29,20 @@
 #
 # usage: packaging/macos/build-release.sh <version> <outputdir>
 set -o errexit -o pipefail
+PYTHON="${RTSAI_MAC_PYTHON:-python3}"
 
 if [[ "${OSTYPE}" != "darwin"* ]]; then
 	echo >&2 "macOS packaging requires a macOS host"
 	exit 1
 fi
 
-for tool in git clang lipo codesign iconutil hdiutil dotnet shasum perl; do
+for tool in git clang lipo codesign iconutil hdiutil dotnet shasum perl python3; do
 	command -v "${tool}" >/dev/null 2>&1 || { echo >&2 "macOS packaging requires ${tool}."; exit 1; }
 done
+"${PYTHON}" -c 'from PIL import Image' >/dev/null 2>&1 || {
+	echo >&2 'Native flag verification needs Python with Pillow. Set RTSAI_MAC_PYTHON to that interpreter.'
+	exit 1
+}
 
 if [ $# -ne 2 ]; then
 	echo "usage: $(basename "$0") <version> <outputdir>"
@@ -81,6 +86,14 @@ update_to_main() {
 }
 update_to_main "${ROOT}" RTSAI-Mod
 update_to_main "${ENGINE}" OpenRA
+WEBGAME="${RTSAI_MAC_WEBGAME:-$(cd "${ROOT}/.." && pwd)/RTSAI-WebGame}"
+# Original-country art is an approved loose-file input, not an owned-game install
+# requirement for players. Never silently ship the historical identical cubes.
+if [ -z "${RTSAI_MAC_ORIGINAL_ART}" ] || [ ! -f "${RTSAI_MAC_ORIGINAL_ART}/EA-INPUTS.json" ]; then
+	echo >&2 'Set RTSAI_MAC_ORIGINAL_ART to the approved loose-art cache containing EA-INPUTS.json. No archives/music/video are packaged.'
+	exit 1
+fi
+update_to_main "${WEBGAME}" RTSAI-WebGame
 MOD_COMMIT="$(git -C "${ROOT}" rev-parse HEAD)"
 ENGINE_COMMIT="$(git -C "${ENGINE}" rev-parse HEAD)"
 MOD_WORKFLOW_DELETIONS="$(rtsai_workflow_deletions_json "${ROOT}")"
@@ -215,6 +228,17 @@ for mod in ${MODS}; do
 done
 [ -f "${RESOURCES}/mods/${LAUNCHER_MOD}/mod.yaml" ] || { echo >&2 "No mods/${LAUNCHER_MOD} to package."; exit 1; }
 
+echo "== Approved original-country art (native render-only)"
+"${PYTHON}" "${PACKAGING_DIR}/prepare-original-art.py" --mod "${ROOT}" --webgame "${WEBGAME}" \
+	--art "${RTSAI_MAC_ORIGINAL_ART}" --resources "${RESOURCES}"
+HOST_ARCH="$(uname -m)"
+mkdir -p "${OUTPUTDIR}/verification-support"
+for mode in rtsai-ra2 rtsai; do
+	ENGINE_DIR="${RESOURCES}" SUPPORT_DIR="${OUTPUTDIR}/verification-support" \
+		"${CONTENTS}/MacOS/apphost-${HOST_ARCH}" "${CONTENTS}/MacOS/${HOST_ARCH}/libhostfxr.dylib" \
+		"${CONTENTS}/MacOS/${HOST_ARCH}/OpenRA.Utility.dll" "${mode}" --check-original-art
+done
+
 AI_MODE="none"
 if [ -n "${RTSAI_MAC_COMPANION}" ]; then
 	[ -x "${RTSAI_MAC_COMPANION}/rtsai-companion" ] || { echo >&2 "Missing frozen companion executable"; exit 1; }
@@ -268,6 +292,20 @@ MODS_JSON="$(printf '"%s", ' ${MODS})"
 printf '{"version": "%s", "modCommit": "%s", "engineCommit": "%s", "launcherMod": "%s", "mods": [%s], "companion": %s, "signing": "%s", "artifacts": ["%s"], "excludedWorkflowDeletions": {"mod": %s, "engine": %s}}\n' \
 	"${VERSION}" "${MOD_COMMIT}" "${ENGINE_COMMIT}" "${LAUNCHER_MOD}" "${MODS_JSON%, }" "$([ "${AI_MODE}" = "local" ] && echo true || echo false)" \
 	"${SIGNING}" "$(cat "${DMG}.sha256")" "${MOD_WORKFLOW_DELETIONS}" "${ENGINE_WORKFLOW_DELETIONS}" > "${OUTPUTDIR}/BUILD-INPUTS-macos.json"
+"${PYTHON}" - "${OUTPUTDIR}/BUILD-INPUTS-macos.json" "${RESOURCES}/native-original-art.json" <<'PY'
+import hashlib, json, sys
+from pathlib import Path
+manifest, original = map(Path, sys.argv[1:])
+data, art = json.loads(manifest.read_text()), json.loads(original.read_text())
+data['originalCountryArt'] = {
+    'approvedManifestSha256': art['approvedManifestSha256'], 'files': len(art['files']),
+    'generatorCommit': art['generatorCommit'], 'generatorSha256': art['generatorSha256'],
+    'gateSha256': art['gateSha256'], 'approvedPublicManifestSha256': art['approvedPublicManifestSha256'],
+    'gate': 'native-render-only-v1', 'gateRecordSha256': hashlib.sha256(original.read_bytes()).hexdigest(),
+    'renderOnly': True, 'notice': art['notice'], 'originalVoicesIncluded': False,
+}
+manifest.write_text(json.dumps(data, indent=2) + '\n')
+PY
 if [ "${RTSAI_MAC_KEEP_BUILD:-0}" = "1" ]; then
 	echo "Kept the build in ${BUILT}"
 else
