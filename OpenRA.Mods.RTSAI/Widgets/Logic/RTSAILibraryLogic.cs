@@ -40,6 +40,13 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			};
 			Build();
 			Console.WriteLine("RTSAI_LIBRARY|" + page);
+			var recoveryScreen = Environment.GetEnvironmentVariable("RTSAI_RECOVERY_SCREEN");
+			var openGame = NativeGameLibrary.Games.FirstOrDefault(g => recoveryScreen == "library-open-" + g.Id);
+			if (openGame != null)
+			{
+				Environment.SetEnvironmentVariable("RTSAI_RECOVERY_SCREEN", null);
+				Game.RunAfterTick(() => surface.Get<LibraryActionWidget>("OPEN_" + openGame.Id).OnClick());
+			}
 		}
 		void Go(string destination) { page = destination; message = ""; Build(); }
 		void Build()

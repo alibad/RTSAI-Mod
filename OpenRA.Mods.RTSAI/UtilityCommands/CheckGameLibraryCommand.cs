@@ -22,6 +22,7 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 				try { CommunityInstall.SafeEntryPath(Path.GetTempPath(), invalid); throw new InvalidOperationException("Archive traversal accepted."); }
 				catch (InvalidDataException) { }
 			}
+			CheckLaunchArguments();
 			var temporary = Path.Combine(Path.GetTempPath(), "rtsai-library-test-" + Guid.NewGuid().ToString("N") + ".yaml");
 			try
 			{
@@ -72,5 +73,39 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 			}
 			Console.WriteLine("Game library checks passed: three identities; independent saved setups and display/audio files; dependency closure; safe extraction boundaries.");
 		}
+
+		static void CheckLaunchArguments()
+		{
+			var root = Path.Combine(Path.GetTempPath(), "rtsai launch test " + Guid.NewGuid().ToString("N"));
+			var bin = Path.Combine(root, "RTS AI.app", "Contents", "MacOS");
+			var engine = Path.Combine(root, "RTS AI.app", "Contents", "Resources");
+			try
+			{
+				Directory.CreateDirectory(bin);
+				foreach (var arch in new[] { "arm64", "x86_64" })
+					foreach (var id in NativeGameLibrary.Games.Select(g => g.Id).Append(NativeGameLibrary.Hub))
+					{
+						var runtime = Path.Combine(bin, arch);
+						var host = Path.Combine(bin, "apphost-" + arch);
+						var info = NativeGameLibrary.CreateLaunchInfo(id, root, engine, runtime, host);
+						var args = info.ArgumentList.ToArray();
+						if (info.FileName != host || info.WorkingDirectory != engine || info.UseShellExecute || args.Length != 8 ||
+							args[0] != Path.Combine(runtime, "libhostfxr.dylib") || args[1] != Path.Combine(runtime, "OpenRA.dll") ||
+							args[2] != "Game.Mod=" + id || args[5] != "Engine.SupportDir=" + Path.Combine(root, "Games", id) ||
+							args[7] != "Engine.LaunchPath=" + Path.Combine(bin, "Launcher") || info.Environment["RTSAI_LIBRARY_SUPPORT"] != root)
+							throw new InvalidDataException("The Mac Library handoff lost its runtime, game identity or independent storage.");
+					}
+				var windows = NativeGameLibrary.CreateLaunchInfo("rtsai-ra2", root, engine, bin, Path.Combine(bin, "RTSAI.exe"));
+				if (windows.ArgumentList.Count != 6 || windows.ArgumentList[0] != "Game.Mod=rtsai-ra2")
+					throw new InvalidDataException("A packaged Windows game received Mac host arguments.");
+				File.WriteAllText(Path.Combine(bin, "OpenRA.exe"), "");
+				var development = NativeGameLibrary.CreateLaunchInfo("rtsai", root, engine, bin, "dotnet");
+				if (development.FileName != Path.Combine(bin, "OpenRA.exe") || development.ArgumentList.Count != 5)
+					throw new InvalidDataException("The development Library handoff changed.");
+			}
+			finally { if (Directory.Exists(root)) Directory.Delete(root, true); }
+			Console.WriteLine("Game Library launch checks passed: both Mac architectures, all three games and return to Library; paths with spaces; Windows and development arguments.");
+		}
+
 	}
 }

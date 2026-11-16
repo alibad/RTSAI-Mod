@@ -88,30 +88,44 @@ namespace OpenRA.Mods.RTSAI.Library
 				exitCurrent &= !preferences.KeepLibraryOpen;
 			}
 			Game.Settings.Save();
-			// A development build starts games with bin/OpenRA.exe. A release has only the branded launcher next to
-			// the engine; Engine.LaunchPath makes it run the game itself, keeping arguments with spaces in one piece.
-			var exe = Path.Combine(Platform.BinDir, "OpenRA.exe");
-			var packaged = !File.Exists(exe);
-			if (packaged)
-				exe = Environment.ProcessPath;
-			var info = new ProcessStartInfo(exe)
-			{
-				UseShellExecute = false, WorkingDirectory = Platform.EngineDir, CreateNoWindow = true
-			};
-			foreach (var arg in new[] { "Game.Mod=" + id, "Engine.EngineDir=" + Platform.EngineDir,
-				"Engine.ModSearchPaths=" + Path.Combine(Platform.EngineDir, "mods"),
-				"Engine.SupportDir=" + GameDirectory(id), "Game.FetchNews=false" })
-				info.ArgumentList.Add(arg);
-			if (packaged)
-				info.ArgumentList.Add("Engine.LaunchPath=" + exe);
-			info.Environment["RTSAI_LIBRARY_SUPPORT"] = Root;
+			var info = CreateLaunchInfo(id, Root, Platform.EngineDir, Platform.BinDir, Environment.ProcessPath);
 			info.Environment.Remove("OPENRA_UTILITY_EXPERIENCE_PROFILE");
 			info.Environment.Remove("RTSAI_RECOVERY_SCREEN");
 			info.Environment["RTSAI_LIBRARY_SCREEN"] = screen ?? "";
 			if (importPack != null) info.Environment["RTSAI_PENDING_ADDON"] = Path.GetFullPath(importPack);
-			_ = Process.Start(info) ?? throw new IOException("The game process could not be started.");
+			using var process = Process.Start(info) ?? throw new IOException("The game process could not be started.");
+			Console.WriteLine($"RTSAI_LIBRARY_CHILD|{id}|{process.Id}");
+			if (process.WaitForExit(500))
+				throw new IOException($"{Name(id)} could not start (exit code {process.ExitCode}). The current window is still open.");
 			if (exitCurrent)
 				Game.Exit();
+		}
+
+		internal static ProcessStartInfo CreateLaunchInfo(string id, string root, string engineDir, string binDir, string processPath)
+		{
+			var exe = Path.Combine(binDir, "OpenRA.exe");
+			var packaged = !File.Exists(exe);
+			if (packaged)
+				exe = processPath;
+			var info = new ProcessStartInfo(exe)
+			{
+				UseShellExecute = false, WorkingDirectory = engineDir, CreateNoWindow = true
+			};
+			var launchPath = exe;
+			if (packaged && Path.GetFileName(exe) is "apphost-arm64" or "apphost-x86_64")
+			{
+				info.ArgumentList.Add(Path.Combine(binDir, "libhostfxr.dylib"));
+				info.ArgumentList.Add(Path.Combine(binDir, "OpenRA.dll"));
+				launchPath = Path.Combine(Path.GetDirectoryName(exe), "Launcher");
+			}
+			foreach (var arg in new[] { "Game.Mod=" + id, "Engine.EngineDir=" + engineDir,
+				"Engine.ModSearchPaths=" + Path.Combine(engineDir, "mods"),
+				"Engine.SupportDir=" + Path.Combine(root, "Games", id), "Game.FetchNews=false" })
+				info.ArgumentList.Add(arg);
+			if (packaged)
+				info.ArgumentList.Add("Engine.LaunchPath=" + launchPath);
+			info.Environment["RTSAI_LIBRARY_SUPPORT"] = root;
+			return info;
 		}
 	}
 }

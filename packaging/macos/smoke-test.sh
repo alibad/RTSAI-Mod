@@ -13,6 +13,9 @@
 #     Classic needs the freeware Red Alert content: RTSAI_MAC_CLASSIC_CONTENT=<a Content folder holding ra/v2, as
 #     Classic installs it> runs its skirmish; without it the skirmish is reported as not run.
 #
+#  6. actual Library card callbacks open the selected native menu/Classic installer and each desktop returns to Library.
+#     This step opens test windows, uses isolated support folders and cleans up only its own processes.
+#
 # Steps 4-5 run natively, and again for the Intel slice when Rosetta 2 is available (otherwise it says so).
 #
 # usage: packaging/macos/smoke-test.sh <dmg> <version> [seconds]
@@ -210,5 +213,10 @@ if [ "${native}" = "arm64" ]; then
 		echo "== Rosetta 2 is not installed on this host: the Intel slice was built but not run here"
 	fi
 fi
+
+echo "== Native Library button handoffs"
+handoff_args=()
+[ -z "${CLASSIC_CONTENT}" ] || handoff_args+=(--classic-content "${CLASSIC_CONTENT}")
+python3 "${ROOT}/packaging/macos/test-library-handoff.py" "${APP}" --output "${WORK}/library-handoffs" "${handoff_args[@]}"
 
 echo "SMOKE PASS: ${DMG}"
