@@ -12,7 +12,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		public RTSAIPreviewAcceptanceLogic(Widget widget)
 		{
 			var target = Environment.GetEnvironmentVariable("RTSAI_VERIFY_MODE_SWITCH");
-			if (target == "rtsai" || target == "rtsai-topdown")
+			if (target == "rtsai" || target == "rtsai-topdown" || Environment.GetEnvironmentVariable("RTSAI_VERIFY_LIBRARY_HANDOFF") == "1")
 				Game.RunAfterTick(() => widget.Get<ButtonWidget>("CONTINUE_BUTTON").OnClick());
 		}
 	}

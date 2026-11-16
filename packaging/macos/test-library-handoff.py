@@ -67,9 +67,10 @@ def run_case(args, name, source, target, hook, installed=False):
     if installed:
         shutil.copytree(args.classic_content / "ra" / "v2", support / "Content" / "ra" / "v2")
     env = {key: value for key, value in os.environ.items()
-           if not key.startswith(("OPENRA_AI_", "RTSAI_LIBRARY_", "RTSAI_RECOVERY_"))}
+           if not key.startswith(("OPENRA_AI_", "RTSAI_LIBRARY_", "RTSAI_RECOVERY_", "RTSAI_VERIFY_"))}
     env.update({
         "RTSAI_RECOVERY_SCREEN": hook,
+        "RTSAI_VERIFY_LIBRARY_HANDOFF": "1",
         "RTSAI_LIBRARY_SUPPORT": str(support),
         # This test exercises navigation, with no sidecar or model downloads.
         "OPENRA_AI_COMPANION": "1",
