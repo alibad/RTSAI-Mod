@@ -37,10 +37,11 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def render_rules(generator, E, baseline):
+def render_rules(generator, E, baseline, raw_sources=None):
     """Hard allowlist: new simulation traits and unknown generator changes fail."""
     output = []
     dropped = []
+    compatibility = []
     for actor in generator.rules_nodes:
         node = E.Node(actor.key)
         for trait in actor.children:
@@ -64,11 +65,37 @@ def render_rules(generator, E, baseline):
                 require(actor.key == '^Palettes', 'Palette added outside the palette definition')
             elif kind not in RENDER:
                 raise ValueError('Non-render rule rejected: ' + actor.key + '.' + trait.key)
-            node.children.append(trait.clone())
+            copy = trait.clone()
+            if actor.key.lower() == 'sref' and kind == 'WithVoxelTurret':
+                native_grants_charge = any(t.val('Condition') == 'turretcharge'
+                                           for t in baseline['sref'].children)
+                condition = copy.get('RequiresCondition')
+                if not native_grants_charge and condition is not None and re.search(r'\bturretcharge\b', condition.value or ''):
+                    # The native project skin removes the charge-animation grants.
+                    # Keep its simulation untouched: display the ordinary original
+                    # turret, with charge-stage renderers disabled.
+                    condition.value = 'ea-art' if trait.key == 'WithVoxelTurret' else 'false'
+                    compatibility.append(actor.key + '.' + trait.key + ': no native turretcharge animation state')
+            node.children.append(copy)
+        if actor.key.lower() == 'r2crane':
+            consumes_original_art = any(re.search(r'\bea-art\b', t.val('RequiresCondition', ''))
+                                        for t in node.children if E.trait_type(t.key) in RENDER)
+            if not consumes_original_art:
+                node.children = [t for t in node.children if t.key != 'GrantConditionOnFaction@ea-art']
+                compatibility.append('r2crane: omitted unused render-only ea-art condition grant')
         if node.children:
             output.append(node)
     # Compare every non-render trait with the unmodified native definitions.
-    effective = {key.lower(): value for key, value in E.merge([list(baseline.values()), output]).items()}
+    sources = raw_sources if raw_sources is not None else [list(baseline.values())]
+    effective = {key.lower(): value for key, value in E.merge(sources + [output]).items()}
+    crane = effective.get('r2crane')
+    if crane is not None and crane.get('GrantConditionOnFaction@ea-art') is not None:
+        consumers = any(re.search(r'\bea-art\b', t.val('RequiresCondition', ''))
+                        for t in crane.children if E.trait_type(t.key) in RENDER)
+        if not consumers:
+            output.append(E.Node(crane.key, None, [E.Node('-GrantConditionOnFaction@ea-art')]))
+            compatibility.append('r2crane: omitted inherited unused render-only ea-art condition grant')
+            effective = {key.lower(): value for key, value in E.merge(sources + [output]).items()}
     for name, before in baseline.items():
         current = effective[name]
         def gameplay(actor):
@@ -83,6 +110,7 @@ def render_rules(generator, E, baseline):
                 result.append(copy)
             return E.dump(result)
         require(gameplay(current) == gameplay(before), 'Gameplay changed: ' + name)
+    generator.native_render_compatibility = compatibility
     return output, dropped
 
 
@@ -148,9 +176,11 @@ def main():
     # Read the native baseline independently before the shared generator performs
     # planning-only availability changes. Never compare against its mutated cur.
     native_rules = E._section((args.mod / 'mods/rtsai/mod.yaml').read_text(), 'Rules')
-    baseline = {key.lower(): value for key, value in E.ModFiles(args.mod.resolve(), content).load(native_rules).items()}
+    native_files = E.ModFiles(args.mod.resolve(), content)
+    raw_sources = [E.parse(native_files.path(path).read_text()) for path in native_rules]
+    baseline = {key.lower(): value for key, value in E.merge(raw_sources).items()}
     generator = E.Generator(args.mod.resolve(), content, target='native-render-only').plan().generate()
-    rules, dropped = render_rules(generator, E, baseline)
+    rules, dropped = render_rules(generator, E, baseline, raw_sources)
     art_out = args.resources / 'mods/rtsai/web/ea'
     art_out.mkdir(parents=True, exist_ok=True)
     content.mkdir(parents=True, exist_ok=True)
@@ -194,10 +224,12 @@ def main():
               'actors': sorted(generator.actors), 'files': files,
               'expectedOriginalImages': {name: {f: 'ea-' + image for f, image in facts['images'].items()}
                                          for name, facts in generator.actors.items() if 'images' in facts},
-              'expectedModernImages': {name: {f: E.render_image(baseline[name], f) for f in E.MODERN}
-                                       for name, facts in generator.actors.items() if 'images' in facts},
+              'expectedModernImages': {name: {f: E.render_image(actor, f) for f in E.MODERN}
+                                       for name, actor in baseline.items()
+                                       if not name.startswith('^') and actor.get('RenderSprites') is not None},
               'expectedVoxelImages': {name: 'ea-' + facts['voxel'] for name, facts in generator.actors.items() if 'voxel' in facts},
               'gameplayDeltasRejected': True, 'droppedNonRenderDeltas': dropped,
+              'renderCompatibility': generator.native_render_compatibility,
               'supportPowerIcons': 'Original9 native UI sprite/palette adapter; modern7 delegate to unchanged engine behavior.',
               'audio': 'Existing native voices retained; original web voices are not included.'}
     (args.resources / 'native-original-art.json').write_text(json.dumps(record, indent=2) + '\n')
