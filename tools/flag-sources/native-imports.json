@@ -1,0 +1,203 @@
+{
+  "schema": 1,
+  "source": "Approved flag-icons SVGs copied byte-for-byte from RTSAI-WebGame/web/public/flags; MIT",
+  "generator": "companion/scripts/build-levant-flags.py (rsvg-convert + Pillow)",
+  "regions": {
+    "america": [
+      0,
+      0,
+      45,
+      21
+    ],
+    "germany": [
+      0,
+      21,
+      45,
+      21
+    ],
+    "england": [
+      0,
+      42,
+      45,
+      21
+    ],
+    "france": [
+      0,
+      63,
+      45,
+      21
+    ],
+    "korea": [
+      0,
+      84,
+      45,
+      21
+    ],
+    "cuba": [
+      45,
+      0,
+      45,
+      21
+    ],
+    "libya": [
+      45,
+      21,
+      45,
+      21
+    ],
+    "iraq": [
+      45,
+      42,
+      45,
+      21
+    ],
+    "russia": [
+      45,
+      63,
+      45,
+      21
+    ],
+    "china": [
+      0,
+      256,
+      30,
+      15
+    ],
+    "iran": [
+      30,
+      256,
+      30,
+      15
+    ],
+    "turkey": [
+      60,
+      256,
+      30,
+      15
+    ],
+    "saudi": [
+      90,
+      256,
+      30,
+      15
+    ],
+    "yemen": [
+      120,
+      256,
+      30,
+      15
+    ],
+    "israel": [
+      260,
+      1,
+      30,
+      15
+    ],
+    "lebanon": [
+      260,
+      17,
+      30,
+      15
+    ]
+  },
+  "svg_sources": {
+    "korea": {
+      "file": "korea.svg",
+      "sha256": "1f655945767135500b67211184cc2765a3b2609d80d011dc48bad20bffcc392e"
+    },
+    "cuba": {
+      "file": "cuba.svg",
+      "sha256": "6a71fc76fcac008b3fb01aa74cebf2b308c3899ffb39233eea0ea885ea6cefa5"
+    },
+    "libya": {
+      "file": "libya.svg",
+      "sha256": "f4b5d9006abb120ee337b230f2bb9204e50431d2655a3b575f63e3bc525b0827"
+    },
+    "iraq": {
+      "file": "iraq.svg",
+      "sha256": "45cbbe60ebf3929cde160d30b2e8cc50bd49aa2aec8aab72bab23f903d0b3287"
+    }
+  },
+  "atlases": {
+    "1": {
+      "size": [
+        512,
+        512
+      ],
+      "outside_imports_rgba_sha256": "d61afec9ed5d550cd57cb258a68deffd5a2182fb16479174fb0cba7149754e75",
+      "tiles": {
+        "america": "5568b1665ff5ec4248422e8b4d70900bf3bb4864b0ecb73ddb709d162a59358a",
+        "germany": "5396b8060e26806e3b07e0c19baf6ba3447bb526231e8b54e7507635f7d4693f",
+        "england": "22778589ebd11fc2cb2db2034568fcbae8354fd79e2faa695331b991d25c2e5c",
+        "france": "5b7087df121d795e4bd61275ebaac3046b6d60861177077c00fa32a99bb7f1b3",
+        "korea": "0ca831ebfffb78de061e82fa41564ff09ec06b06a5b963f94a7109f5093c641d",
+        "cuba": "c2147381393cc48ff3a7fc41216804057e6c92e9169514ef54d5928b9a31ddff",
+        "libya": "016772b097f4298f51c96b64e604020acdf0caabd091412797c22d3b7bca875e",
+        "iraq": "0de5bee9e1bad15ae2dfe80838ef7103da0eb8d7d6a79f8a46e2b29e9810d162",
+        "russia": "87738368e04deb82948c53d0b3c59fb338e1e5a4eefe4856775dbf44cb3e52ff",
+        "china": "96c224bf0cb83dcbb2a5da9e33e587a2a8252034c7bafd554286f94310d04825",
+        "iran": "69df8fcf474c62bc095cb237ed5583111029d674f5a2cd4f5b851c5077a11b55",
+        "turkey": "68adb72a0ebd8b664ebcdebc5415ddbc986051528fa123fd7eca32c5dff8c6e6",
+        "saudi": "0e13b6c587d9c470318f1c26febece7e87350eecf7f16f6049ada592628d0032",
+        "yemen": "59884b1093710595c3d15ce26e7b864eca89dae30ae7dc32f8a129fe7818236e",
+        "israel": "eae1dfa57f247ca1c45f2cc8332f60d03f407b159536e970dcca203956666223",
+        "lebanon": "0eee03dcd91e1b589318ea7509ea8c49e0984291aaa66b8d625e2cc381c63e6c"
+      }
+    },
+    "2": {
+      "size": [
+        1024,
+        1024
+      ],
+      "outside_imports_rgba_sha256": "faa407b112f339ac7220a91403124a0369b2ecdb4de8b876089c20bbcd4fc5d5",
+      "tiles": {
+        "america": "f4e44ac113c2f7f6abdd0e1521a0933bad37ce08398de46893564ab373ee5d15",
+        "germany": "e93b3619791f677d6b02baa0a450c0e8e20542627482147faa9412ec812bab0c",
+        "england": "57a7e971043c2e91be7fbfe269a27161b05a7907778ae87447f38f62cdb2f9ac",
+        "france": "2417e6b6a5a6ee1a10d3134d45812eb66c53f3996a7dd66cd88641e08ce9163a",
+        "korea": "59243dc6914be96e593cf57e81bae6946d73bb1575c90cd5b7c4e3fd843333c6",
+        "cuba": "8f5a5c6735eb057592112119a13138b12454ca0ff2afe14d847381d7c88de569",
+        "libya": "73926dfa17c563344755ca0d889235573c748371f3cb15f6d61e1c539683a48c",
+        "iraq": "b0f307f9909a83728561ee069cec2e64b812a4346f77118160aa4bc819f2d607",
+        "russia": "4aef469707094f185daa41504c69608f50e2ec154e193f207819a97c27931232",
+        "china": "1bb46bfa733cd7e8af707caad46299d0984af6c487aad0b3654c39b1fb4c2d07",
+        "iran": "17cc5a0c7a1910435cdec89a76d2c8b7474bd9c2183c521f7058f3217a3a4fb3",
+        "turkey": "884240d979d4b9f1430f53cb3155da89025aead7fab4317af7586fe2fe931cc9",
+        "saudi": "cf15c165f6fd57312c79b0a3bc4561de232c0c0bf779344f72eb29f9ac524a4a",
+        "yemen": "7901492fc05873258b4231b3f3d0da0099164f25800f06bde029d74693c05440",
+        "israel": "5b8f8058bb67b2d2425d9ebc12e68a16754cdd75f5a1af91e752e0273ae4b806",
+        "lebanon": "df9b3b4eddde2e7054d5430f4caebd4bbf7b7966e02db1f0c810b94a0004a976"
+      }
+    },
+    "3": {
+      "size": [
+        2048,
+        2048
+      ],
+      "outside_imports_rgba_sha256": "46a2dc000e92c70effc7e2caf415d36a3d3c302eef2fc97f2392582f7516a080",
+      "tiles": {
+        "america": "467b3a3376f88233623e97392a3c34b7ff6e3ecd4b1483814bea94652789a4b4",
+        "germany": "1ce1c02326c3d33e1ddee1f1140f36f225d28a46992bb6eae2704f5ac6c51274",
+        "england": "ae2713271c2bbe9412b36f50e7f7248139a01e436bef45cb6c3d863fc26705e8",
+        "france": "ee8760de1c589741d132f1498dda90960e9ba9186cbb073ac9ac036a240307fc",
+        "korea": "85a7b8200d93154975a87026fd5c9971e7d0af870eb2073c0dd723131c08fe85",
+        "cuba": "508c18db317a405e2523de0f2bcb0fb19683ee8eeb0d994138d2eb0627a7f73c",
+        "libya": "f91c2009c594c209a012d608b5cf00ea5a983e89ecf789e9f45ebe895706d314",
+        "iraq": "f88b6946a52797d1654c8f61f77f1956c0673338ab6cbd030804fdbee6b35004",
+        "russia": "7805f98d68692c0d0385b66cdccfd2c069aa93656fa9442aba81493b2213dfbe",
+        "china": "3f2bac118a6b6a6f7cc9f8821b58af41b0803ec85f11cb59d9f954f349d22fae",
+        "iran": "7b5635e1d4df38e96529011f002c45557d072c89de44e0e24cf1c642c3482eb0",
+        "turkey": "7e647090b0e665f3c8ba2ba75e794983875ba2713b1e72956215b73bdfe26f2c",
+        "saudi": "497d6dc8943d26f6ee9e8f3efd3d8ae959a8b0e662e4e4cdcc2d872e6b3b63ce",
+        "yemen": "c8189ae389d80898b77556c939338bad510b8985c160aca3d16e6baadf6bb827",
+        "israel": "0e255081002505812997101dfa2a7198ae28f98b1dfedca7cda71de8fd406106",
+        "lebanon": "1b2a180bae09c6091949faad39c116589baeabdc33d909cb37c864d8893bd163"
+      }
+    }
+  },
+  "chrome_images": {
+    "Image": "ra2|modern-factions/ui/faction-flags.png",
+    "Image3x": "ra2|modern-factions/ui/faction-flags-3x.png",
+    "Image2x": "ra2|modern-factions/ui/faction-flags-2x.png"
+  }
+}

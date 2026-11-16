@@ -76,7 +76,8 @@ GENERATORS = {
                    "the flag-icons national flag (MIT; docs/art-provenance.md)",
         "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Lebanon region: the national flag "
                   "(tools/flag-sources/lebanon.svg, lipis/flag-icons v7.3.2, MIT), rasterized by "
-                  "tools/faction-flag.py. The EA chrome is never copied.",
+                  "tools/faction-flag.py. The korea/cuba/libya/iraq regions also import approved flag-icons SVGs "
+                  "from tools/flag-sources with companion/scripts/build-levant-flags.py. The EA chrome is never copied.",
     },
 }
 FLAG_DEFINITIONS = {
@@ -209,13 +210,12 @@ FLAG_SCRIPT_COMMIT = "18eb1082b4c761a19edfa1a8f7419406e3dbb562"
 
 
 def flag_entry(rel: str, digest: str, product: Path) -> dict:
-    script = "scripts/build-levant-flags.py"
-    # The flags were drawn in the former OpenRA-AI repository (archived 1 Nov 2026); its history pins the script.
-    commit = git(product, "log", "-1", "--format=%H", "--", script) if (product / script).exists() else FLAG_SCRIPT_COMMIT
     return {"sha256": digest, "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)", "origin": "procedural",
-            "generator": "procedural-flag", "script": f"OpenRA-AI {script}" + (f" @ {commit}" if commit else ""),
-            "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; "
-                     "the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon"}
+            "generator": "procedural-flag", "script": "RTSAI-Mod companion/scripts/build-levant-flags.py; tools/faction-flag.py (Lebanon)",
+            "chain": "base atlas drawn by the former OpenRA-AI script and padded to power-of-two sheets; "
+                     "Lebanon's national flag imported by tools/faction-flag.py; the korea/cuba/libya/iraq abbreviation tiles "
+                     "replaced from approved flag-icons SVGs by companion/scripts/build-levant-flags.py; "
+                     "source and native pixel hashes sealed in tools/flag-sources/native-imports.json"}
 
 
 def build(args) -> dict:

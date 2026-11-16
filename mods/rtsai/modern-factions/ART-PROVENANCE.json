@@ -23,7 +23,7 @@
   "procedural-flag": {
    "kind": "flag atlases drawn with PIL primitives (rectangles, lines, ellipses, polygons)",
    "license": "GPL-3.0-or-later (project code); national flags are public symbols; the Lebanon region is the flag-icons national flag (MIT; docs/art-provenance.md)",
-   "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Lebanon region: the national flag (tools/flag-sources/lebanon.svg, lipis/flag-icons v7.3.2, MIT), rasterized by tools/faction-flag.py. The EA chrome is never copied."
+   "inputs": "Drawn by OpenRA-AI scripts/build-levant-flags.py, except the Lebanon region: the national flag (tools/flag-sources/lebanon.svg, lipis/flag-icons v7.3.2, MIT), rasterized by tools/faction-flag.py. The korea/cuba/libya/iraq regions also import approved flag-icons SVGs from tools/flag-sources with companion/scripts/build-levant-flags.py. The EA chrome is never copied."
   }
  },
  "commercialRa2Data": "None found. Every unit sprite and cameo is a render of the project's own 3D model (a GLB generated locally from the project's concept picture), installed from a committed RTSAI-Art candidate with the same bytes; original RA2 files were read only locally to measure target statistics, never as input pixels; the flags are drawn from code. See docs/art-provenance.md.",
@@ -7962,30 +7962,30 @@
    "runtime": "referenced by rules/sequences"
   },
   "ui/faction-flags-2x.png": {
-   "sha256": "d68adc471dbce8e2e3d504d6c9207ec6465199958076cbed3a950246d2b850ce",
+   "sha256": "b68081b2e1ac09a0d207bfa804996562827a9cbf72bef0ce038c704e029f2239",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
-   "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon",
+   "script": "RTSAI-Mod companion/scripts/build-levant-flags.py; tools/faction-flag.py (Lebanon)",
+   "chain": "base atlas drawn by the former OpenRA-AI script and padded to power-of-two sheets; Lebanon's national flag imported by tools/faction-flag.py; the korea/cuba/libya/iraq abbreviation tiles replaced from approved flag-icons SVGs by companion/scripts/build-levant-flags.py; source and native pixel hashes sealed in tools/flag-sources/native-imports.json",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "ui/faction-flags-3x.png": {
-   "sha256": "e9b5e2e250365fb484eb20c9caadbb2aa8a91ec715132a48b35deea8fb4e74f4",
+   "sha256": "3b1024c6396aca0980fea96d2d625410adec14db49aac86114785d24e10d24b1",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
-   "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon",
+   "script": "RTSAI-Mod companion/scripts/build-levant-flags.py; tools/faction-flag.py (Lebanon)",
+   "chain": "base atlas drawn by the former OpenRA-AI script and padded to power-of-two sheets; Lebanon's national flag imported by tools/faction-flag.py; the korea/cuba/libya/iraq abbreviation tiles replaced from approved flag-icons SVGs by companion/scripts/build-levant-flags.py; source and native pixel hashes sealed in tools/flag-sources/native-imports.json",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "ui/faction-flags.png": {
-   "sha256": "2fd3e0e78a70fd6b15a3ee12d47b094d1c6bca029ce24ea22dbaedcd1449e2cc",
+   "sha256": "6d64cfed6f11164e2557ebfc2c79eea1e19af0930fa8c8216a74ff585f29b049",
    "type": "lobby flag atlas (PNG; 2x and 3x copies for high-DPI)",
    "origin": "procedural",
    "generator": "procedural-flag",
-   "script": "OpenRA-AI scripts/build-levant-flags.py @ 18eb1082b4c761a19edfa1a8f7419406e3dbb562",
-   "chain": "drawn by the script into modern-factions/ui/, padded to power-of-two sheets by RTSAI-Mod fa92525; the Lebanon region replaced with the national flag by tools/faction-flag.py lebanon",
+   "script": "RTSAI-Mod companion/scripts/build-levant-flags.py; tools/faction-flag.py (Lebanon)",
+   "chain": "base atlas drawn by the former OpenRA-AI script and padded to power-of-two sheets; Lebanon's national flag imported by tools/faction-flag.py; the korea/cuba/libya/iraq abbreviation tiles replaced from approved flag-icons SVGs by companion/scripts/build-levant-flags.py; source and native pixel hashes sealed in tools/flag-sources/native-imports.json",
    "runtime": "referenced by chrome.yaml (flags)"
   },
   "vehicles/china-prerender.pal": {
