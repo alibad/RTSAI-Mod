@@ -48,6 +48,7 @@ VERSION="$1"
 mkdir -p "$2"
 OUTPUTDIR="$(cd "$2" && pwd)"
 PACKAGING_DIR="$(cd "$(dirname "$0")" && pwd)"
+. "${PACKAGING_DIR}/source-status.sh"
 ROOT="$(cd "${PACKAGING_DIR}/../.." && pwd)"
 ARTWORK_DIR="${ROOT}/packaging/artwork"
 
@@ -76,12 +77,14 @@ update_to_main() {
 	[ "$(git -C "$1" rev-parse --abbrev-ref HEAD)" = "main" ] || { echo >&2 "$1 is not on main."; exit 1; }
 	git -C "$1" fetch "${remote}" main
 	git -C "$1" merge --ff-only "${remote}/main" || { echo >&2 "$1 cannot fast-forward to ${remote}/main."; exit 1; }
-	[ -z "$(git -C "$1" status --porcelain)" ] || { echo >&2 "Commit source changes before building: $1"; exit 1; }
+	rtsai_source_status_allowed "$(git -C "$1" status --porcelain)" || { echo >&2 "Commit source changes before building: $1 (only preserved, unstaged workflow removals may remain)"; exit 1; }
 }
 update_to_main "${ROOT}" RTSAI-Mod
 update_to_main "${ENGINE}" OpenRA
 MOD_COMMIT="$(git -C "${ROOT}" rev-parse HEAD)"
 ENGINE_COMMIT="$(git -C "${ENGINE}" rev-parse HEAD)"
+MOD_WORKFLOW_DELETIONS="$(rtsai_workflow_deletions_json "${ROOT}")"
+ENGINE_WORKFLOW_DELETIONS="$(rtsai_workflow_deletions_json "${ENGINE}")"
 
 STANDALONE="${PACKAGING_STANDALONE:-False}"
 LAUNCHER_MOD="${PACKAGING_LAUNCHER_MOD_ID:-${MOD_ID}}"
@@ -262,9 +265,9 @@ rm -f "${DMG}"
 hdiutil create "${DMG}" -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -format UDZO -imagekey zlib-level=9 -srcfolder "${BUILT}"
 (cd "${OUTPUTDIR}" && shasum -a 256 "$(basename "${DMG}")" > "$(basename "${DMG}").sha256")
 MODS_JSON="$(printf '"%s", ' ${MODS})"
-printf '{"version": "%s", "modCommit": "%s", "engineCommit": "%s", "launcherMod": "%s", "mods": [%s], "companion": %s, "signing": "%s", "artifacts": ["%s"]}\n' \
+printf '{"version": "%s", "modCommit": "%s", "engineCommit": "%s", "launcherMod": "%s", "mods": [%s], "companion": %s, "signing": "%s", "artifacts": ["%s"], "excludedWorkflowDeletions": {"mod": %s, "engine": %s}}\n' \
 	"${VERSION}" "${MOD_COMMIT}" "${ENGINE_COMMIT}" "${LAUNCHER_MOD}" "${MODS_JSON%, }" "$([ "${AI_MODE}" = "local" ] && echo true || echo false)" \
-	"${SIGNING}" "$(cat "${DMG}.sha256")" > "${OUTPUTDIR}/BUILD-INPUTS-macos.json"
+	"${SIGNING}" "$(cat "${DMG}.sha256")" "${MOD_WORKFLOW_DELETIONS}" "${ENGINE_WORKFLOW_DELETIONS}" > "${OUTPUTDIR}/BUILD-INPUTS-macos.json"
 if [ "${RTSAI_MAC_KEEP_BUILD:-0}" = "1" ]; then
 	echo "Kept the build in ${BUILT}"
 else
