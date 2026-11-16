@@ -112,6 +112,9 @@ def run_case(args, name, source, target, hook, installed=False):
                     child = int(match.group(1))
                     owned.add(child)
                     receipt["child_pid"] = child
+                    # The child may have started after this iteration's first
+                    # process snapshot, before its marker reached the log.
+                    table = process_table()
                 if "Failed to load Game.Mod=" in text:
                     raise RuntimeError("Mac apphost was invoked without its runtime preamble")
                 if child and not alive(child, table):
