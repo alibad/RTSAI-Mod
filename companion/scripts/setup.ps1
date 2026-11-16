@@ -5,8 +5,12 @@ $ErrorActionPreference = "Stop"
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $virtualEnvironment = Join-Path $repositoryRoot ".venv"
 $python = Join-Path $virtualEnvironment "Scripts\python.exe"
-$canonical = Join-Path (Split-Path -Parent $repositoryRoot) "OpenRA"
-$engineRoot = if (Test-Path (Join-Path $canonical "OpenRA.slnx")) { $canonical } else { Join-Path $repositoryRoot "engine\openra" }
+# The companion lives in RTSAI-Mod/companion, so the canonical engine is two levels up (games/OpenRA).
+$canonical = @(
+    (Join-Path (Split-Path -Parent (Split-Path -Parent $repositoryRoot)) "OpenRA"),
+    (Join-Path (Split-Path -Parent $repositoryRoot) "OpenRA")
+) | Where-Object { Test-Path (Join-Path $_ "OpenRA.slnx") } | Select-Object -First 1
+$engineRoot = if ($canonical) { $canonical } else { Join-Path $repositoryRoot "engine\openra" }
 
 if (-not (Test-Path -LiteralPath $python)) {
     python -m venv $virtualEnvironment
