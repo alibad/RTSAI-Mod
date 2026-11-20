@@ -327,13 +327,13 @@ class Advisor:
         if build_focus:
             return None
         if fighters and not snapshot.visible_enemy_buildings and not snapshot.remembered_enemy_buildings:
-            # Looking for the enemy base is an order like any other: one cheap scout, or, once there is an army, the
+            # Looking for the enemy base is an order like any other: one cheap scout, or, once there is an army of 12, the
             # fighters together. One order at a time: while any fighter is busy (out looking, or fighting), nobody
             # new is sent.
             if any(not unit.idle for unit in fighters):
                 return None
             goal = search_goal(snapshot)
-            if goal and len(fighters) >= 8:
+            if goal and len(fighters) >= 12:
                 group = sorted(fighters, key=lambda unit: unit.actor_id)[:12]
                 return Advice(
                     f"We haven't found the enemy base yet; advance {len(group)} units together across the map to find it.",
@@ -356,11 +356,14 @@ class Advisor:
                 f"We haven't found the enemy base yet; send a scout to explore the {100 - round(snapshot.explored_percent)}% of the map still in fog.",
                 key="scout",
             )
-        if len(fighters) >= 8 and (snapshot.visible_enemy_buildings or snapshot.remembered_enemy_buildings):
+        # An attack is a wave of fighters that are ready: 8 or more idle ones go together. Units already fighting are
+        # left to it, so the card does not come back every few seconds and fresh units do not trickle in one by one.
+        ready = [unit for unit in fighters if unit.idle]
+        if len(ready) >= 8 and (snapshot.visible_enemy_buildings or snapshot.remembered_enemy_buildings):
             target = (snapshot.visible_enemy_buildings or snapshot.remembered_enemy_buildings)[0]
-            attackers = sorted(fighters, key=lambda unit: (not unit.idle, unit.actor_id))[:12]
+            attackers = sorted(ready, key=lambda unit: unit.actor_id)[:12]
             return Advice(
-                f"Your {len(fighters)} combat units can push now; attack-move them to the enemy base.",
+                f"Your {len(ready)} combat units can push now; attack-move them to the enemy base.",
                 f"Attack-move {len(attackers)} units to the enemy base",
                 [{"action": "attack_move", "actor_id": unit.actor_id, "target_x": target.cell_x, "target_y": target.cell_y}
                  for unit in attackers],
