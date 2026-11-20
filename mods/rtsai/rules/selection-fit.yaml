@@ -1,0 +1,391 @@
+# Selection brackets and health bars that fit each unit's picture (owner, 20 Nov 2026: "I feel like unit selection
+# could be better than this, especially like these vehicles"). The boxes inherited from the RA2 mod sat 4 to 8 px too
+# low and were about twice the vehicles' size; aircraft boxes were too small, the Kirov's five times too big.
+# Measured on the web game: each unit drawn alone at the four diagonal facings (how units move along an isometric
+# map's cell rows); each box holds the picture at those facings with a 2 px margin. Only DecorationBounds changes (what
+# is drawn); Bounds, the click area, is unchanged. Infantry already fit and are not listed. Made by the first-five-min
+# session's fit-rules.mjs (D:\Generated\RTSAI\first-five-min-20261120\scripts\selection).
+
+aegis:
+	Selectable:
+		DecorationBounds: 2269, 2993, 0, -435
+
+amcv:
+	Selectable:
+		DecorationBounds: 1642, 2703, 0, -676
+
+apoc:
+	Selectable:
+		DecorationBounds: 1304, 2076, 0, -483
+
+beag:
+	Selectable:
+		DecorationBounds: 1352, 1931, 0, -290
+
+carrier:
+	Selectable:
+		DecorationBounds: 2462, 3138, 0, -580
+
+cmin:
+	Selectable:
+		DecorationBounds: 1473, 2462, -25, -483
+
+dest:
+	Selectable:
+		DecorationBounds: 2028, 2559, 0, -387
+
+dtruck:
+	Selectable:
+		DecorationBounds: 1255, 2221, 0, -580
+
+fv:
+	Selectable:
+		DecorationBounds: 1255, 1883, 0, -435
+
+harv:
+	Selectable:
+		DecorationBounds: 1473, 2462, -25, -483
+
+htk:
+	Selectable:
+		DecorationBounds: 1183, 2269, -25, -580
+
+htnk:
+	Selectable:
+		DecorationBounds: 1304, 2076, 0, -483
+
+hyd:
+	Selectable:
+		DecorationBounds: 2028, 2559, 0, -387
+
+jumpjet:
+	Selectable:
+		DecorationBounds: 845, 1593, 0, -531
+
+lcrf:
+	Selectable:
+		DecorationBounds: 1714, 2462, -25, -531
+
+mgtk:
+	Selectable:
+		DecorationBounds: 1352, 2028, 0, -483
+
+mtnk:
+	Selectable:
+		DecorationBounds: 1448, 2172, 0, -531
+
+orca:
+	Selectable:
+		DecorationBounds: 1835, 2366, 0, -387
+
+r2ah64sa:
+	Selectable:
+		DecorationBounds: 2172, 3234, 0, -724
+
+r2aras:
+	Selectable:
+		DecorationBounds: 1255, 1883, 0, -435
+
+r2azar:
+	Selectable:
+		DecorationBounds: 1207, 1642, 0, -338
+
+r2bozkir:
+	Selectable:
+		DecorationBounds: 1376, 2028, -25, -483
+
+r2bradley:
+	Selectable:
+		DecorationBounds: 1207, 2028, 0, -483
+
+r2caesar:
+	Selectable:
+		DecorationBounds: 1690, 2800, 0, -580
+
+r2cloud:
+	Selectable:
+		DecorationBounds: 1159, 1545, 0, -290
+
+r2coast:
+	Selectable:
+		DecorationBounds: 1352, 2317, 0, -628
+
+r2crane:
+	Selectable:
+		DecorationBounds: 2366, 3234, 0, -918
+
+r2deniz:
+	Selectable:
+		DecorationBounds: 1304, 1979, 0, -483
+
+r2ege:
+	Selectable:
+		DecorationBounds: 2028, 2559, 0, -387
+
+r2f15sa:
+	Selectable:
+		DecorationBounds: 1400, 1883, 0, -338
+
+r2fajr:
+	Selectable:
+		DecorationBounds: 1400, 2269, 0, -483
+
+r2ghadir:
+	Selectable:
+		DecorationBounds: 1738, 2172, 0, -194
+
+r2gokkalkan:
+	Selectable:
+		DecorationBounds: 1304, 2317, 0, -580
+
+r2haiwang:
+	Selectable:
+		DecorationBounds: 2462, 3138, 0, -580
+
+r2haiying:
+	Selectable:
+		DecorationBounds: 1835, 2366, 0, -387
+
+r2hodeidah:
+	Selectable:
+		DecorationBounds: 1352, 2028, 0, -338
+
+r2hzdrone:
+	Selectable:
+		DecorationBounds: 1062, 1400, 0, -290
+
+r2hzescort:
+	Selectable:
+		DecorationBounds: 1159, 2028, 0, -531
+
+r2hzmissileboat:
+	Selectable:
+		DecorationBounds: 1497, 2028, 0, -290
+
+r2hzrail:
+	Selectable:
+		DecorationBounds: 1159, 1690, 0, -387
+
+r2hzrecoilless:
+	Selectable:
+		DecorationBounds: 1207, 1883, 0, -580
+
+r2hzrockets:
+	Selectable:
+		DecorationBounds: 1304, 2028, 0, -483
+
+r2hzskiff:
+	Selectable:
+		DecorationBounds: 1207, 1642, 0, -290
+
+r2hzsurvey:
+	Selectable:
+		DecorationBounds: 1593, 2317, 0, -387
+
+r2hztechnical:
+	Selectable:
+		DecorationBounds: 1086, 2028, -25, -531
+
+r2ilfalcon:
+	Selectable:
+		DecorationBounds: 1207, 1545, 0, -338
+
+r2ilfrigate:
+	Selectable:
+		DecorationBounds: 2028, 2800, 0, -483
+
+r2ilgunship:
+	Selectable:
+		DecorationBounds: 2124, 3186, 0, -821
+
+r2ilhowitzer:
+	Selectable:
+		DecorationBounds: 1545, 2655, 0, -724
+
+r2ilpatrol:
+	Selectable:
+		DecorationBounds: 1497, 2172, 0, -387
+
+r2ilshield:
+	Selectable:
+		DecorationBounds: 1207, 2317, 0, -580
+
+r2iltender:
+	Selectable:
+		DecorationBounds: 1883, 2607, 0, -483
+
+r2jiaolong:
+	Selectable:
+		DecorationBounds: 2052, 2414, -25, -242
+
+r2jubail:
+	Selectable:
+		DecorationBounds: 1883, 2703, 0, -435
+
+r2karrar:
+	Selectable:
+		DecorationBounds: 1255, 2028, 0, -435
+
+r2kunlun:
+	Selectable:
+		DecorationBounds: 1979, 2848, 0, -483
+
+r2kuzgun:
+	Selectable:
+		DecorationBounds: 1159, 1593, 0, -483
+
+r2loiter:
+	Selectable:
+		DecorationBounds: 1159, 1642, 0, -290
+
+r2luyang:
+	Selectable:
+		DecorationBounds: 2269, 2993, 0, -435
+
+r2lynx:
+	Selectable:
+		DecorationBounds: 1231, 2221, -25, -531
+
+r2m1a2s:
+	Selectable:
+		DecorationBounds: 1352, 2124, 0, -483
+
+r2mantis:
+	Selectable:
+		DecorationBounds: 1304, 2317, 0, -580
+
+r2marmara:
+	Selectable:
+		DecorationBounds: 2221, 3041, 0, -531
+
+r2merkava:
+	Selectable:
+		DecorationBounds: 1255, 1979, 0, -483
+
+r2mohajer:
+	Selectable:
+		DecorationBounds: 1159, 1545, 0, -387
+
+r2mokha:
+	Selectable:
+		DecorationBounds: 1400, 2076, 0, -338
+
+r2namer:
+	Selectable:
+		DecorationBounds: 1328, 1979, -25, -483
+
+r2peykaap:
+	Selectable:
+		DecorationBounds: 1593, 2221, 0, -338
+
+r2phl:
+	Selectable:
+		DecorationBounds: 1207, 2172, 0, -580
+
+r2poyraz:
+	Selectable:
+		DecorationBounds: 1521, 2028, -25, -338
+
+r2qilin:
+	Selectable:
+		DecorationBounds: 1352, 2124, 0, -483
+
+r2raad:
+	Selectable:
+		DecorationBounds: 1304, 2414, 0, -676
+
+r2riyadh:
+	Selectable:
+		DecorationBounds: 1883, 2510, 0, -338
+
+r2sadiq:
+	Selectable:
+		DecorationBounds: 1593, 2028, 0, -290
+
+r2sads:
+	Selectable:
+		DecorationBounds: 1255, 2124, 0, -531
+
+r2sahaab:
+	Selectable:
+		DecorationBounds: 1497, 1786, 0, -242
+
+r2sahin:
+	Selectable:
+		DecorationBounds: 1207, 1642, 0, -338
+
+r2samad:
+	Selectable:
+		DecorationBounds: 1159, 1593, 0, -194
+
+r2sancak:
+	Selectable:
+		DecorationBounds: 1111, 2028, 0, -483
+
+r2skyspear:
+	Selectable:
+		DecorationBounds: 1352, 1931, 0, -290
+
+r2technical:
+	Selectable:
+		DecorationBounds: 1111, 1931, 0, -483
+
+r2toufan:
+	Selectable:
+		DecorationBounds: 2269, 3331, 0, -918
+
+r2turna:
+	Selectable:
+		DecorationBounds: 2269, 3138, 0, -918
+
+r2yildirim:
+	Selectable:
+		DecorationBounds: 1328, 2655, -25, -821
+
+r2ymlr:
+	Selectable:
+		DecorationBounds: 1255, 2221, 0, -580
+
+r2ytechrr:
+	Selectable:
+		DecorationBounds: 1135, 1979, -25, -531
+
+r2yzu:
+	Selectable:
+		DecorationBounds: 1062, 2076, 0, -628
+
+r2zbd:
+	Selectable:
+		DecorationBounds: 1352, 2028, 0, -483
+
+sapc:
+	Selectable:
+		DecorationBounds: 1400, 2028, 0, -435
+
+shad:
+	Selectable:
+		DecorationBounds: 2366, 3234, 0, -918
+
+smcv:
+	Selectable:
+		DecorationBounds: 1642, 2703, 0, -676
+
+sref:
+	Selectable:
+		DecorationBounds: 1352, 2124, 0, -531
+
+sub:
+	Selectable:
+		DecorationBounds: 2052, 2414, -25, -242
+
+tnkd:
+	Selectable:
+		DecorationBounds: 1352, 1786, 0, -338
+
+ttnk:
+	Selectable:
+		DecorationBounds: 1352, 2124, 0, -483
+
+zep:
+	Selectable:
+		DecorationBounds: 1159, 1545, 0, -290
