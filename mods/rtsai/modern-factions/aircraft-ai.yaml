@@ -1,6 +1,6 @@
 Player:
 	DoctrineBaseBuilderBotModule@naval:
-		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, gaairc, naradr
+		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, garefn, narefn, gaairc, naradr
 		BuildingFractions:
 			garefn: 20
 			narefn: 20
@@ -16,7 +16,7 @@ Player:
 			gatech: 5
 			natech: 5
 	DoctrineBaseBuilderBotModule@turtle:
-		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, gaairc, naradr
+		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, garefn, narefn, gaairc, naradr
 		BuildingFractions:
 			garefn: 20
 			narefn: 20
@@ -32,7 +32,7 @@ Player:
 			gatech: 5
 			natech: 5
 	DoctrineBaseBuilderBotModule@rush:
-		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, gaairc, naradr
+		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, garefn, narefn, gaairc, naradr
 		BuildingFractions:
 			garefn: 20
 			narefn: 20
@@ -48,7 +48,7 @@ Player:
 			gatech: 5
 			natech: 5
 	DoctrineBaseBuilderBotModule@medium:
-		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, gaairc, naradr
+		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, garefn, narefn, gaairc, naradr
 		BuildingFractions:
 			garefn: 20
 			narefn: 20
@@ -64,7 +64,7 @@ Player:
 			gatech: 5
 			natech: 5
 	DoctrineBaseBuilderBotModule@normal:
-		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, gaairc, naradr
+		InitialBuildOrder: gapowr, napowr, garefn, narefn, gapile, nahand, gaweap, naweap, garefn, narefn, gaairc, naradr
 		BuildingFractions:
 			garefn: 20
 			narefn: 20
