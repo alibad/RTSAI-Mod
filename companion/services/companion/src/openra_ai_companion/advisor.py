@@ -13,6 +13,7 @@ the compact state summary from :func:`state_summary` instead (see core.py).
 from __future__ import annotations
 
 import re
+import struct
 from dataclasses import dataclass, field
 
 from .models import GameSnapshot, ThreatAssessment
@@ -326,6 +327,32 @@ class Advisor:
         if build_focus:
             return None
         if fighters and not snapshot.visible_enemy_buildings and not snapshot.remembered_enemy_buildings:
+            # Looking for the enemy base is an order like any other: one fast scout, or, once there is an army, the
+            # idle fighters together. Whoever is already out looking is left to it.
+            def out(unit) -> bool:
+                return bool(snapshot.buildings) and all(
+                    (unit.cell_x - building.cell_x) ** 2 + (unit.cell_y - building.cell_y) ** 2 > 20 ** 2
+                    for building in snapshot.buildings)
+            if any(not unit.idle and out(unit) for unit in fighters):
+                return None
+            goal = search_goal(snapshot)
+            idle = sorted((unit for unit in fighters if unit.idle), key=lambda unit: (-unit.speed, unit.actor_id))
+            if goal and len(fighters) >= 8 and len(idle) >= 6:
+                group = idle[:12]
+                return Advice(
+                    f"We haven't found the enemy base yet; advance {len(group)} units together across the map to find it.",
+                    f"Advance {len(group)} units to find the enemy base",
+                    [{"action": "attack_move", "actor_id": unit.actor_id, "target_x": goal[0], "target_y": goal[1]}
+                     for unit in group],
+                    "sweep",
+                )
+            if goal and idle:
+                return Advice(
+                    f"We haven't found the enemy base yet; send your {self.name(idle[0].kind)} to scout the far side of the map.",
+                    f"Send the {self.name(idle[0].kind)} to scout",
+                    [{"action": "move", "actor_id": idle[0].actor_id, "target_x": goal[0], "target_y": goal[1]}],
+                    "scout",
+                )
             return Advice(
                 f"We haven't found the enemy base yet; send a scout to explore the {100 - round(snapshot.explored_percent)}% of the map still in fog.",
                 key="scout",
@@ -341,6 +368,30 @@ class Advisor:
                 "attack",
             )
         return None
+
+
+def search_goal(snapshot: GameSnapshot) -> tuple[int, int] | None:
+    """Where to look for an enemy base nobody has seen: the far side of the map from our own base (its mirror
+    through the centre), then the mirrors across each axis, then the centre; the first of them still unexplored.
+    None: all explored. The browser adviser (RTSAI-WebGame web/src/adviser.ts searchGoal) decides the same."""
+    width, height = snapshot.map_width, snapshot.map_height
+    own = snapshot.buildings or snapshot.units
+    if not own or width <= 0 or height <= 0:
+        return None
+    home_x = sum(actor.cell_x for actor in own) // len(own)
+    home_y = sum(actor.cell_y for actor in own) // len(own)
+    channels = snapshot.spatial_channels
+    grid = snapshot.spatial_map if channels >= 5 and len(snapshot.spatial_map) >= width * height * channels * 4 else None
+
+    def explored(x: int, y: int) -> bool:
+        return grid is not None and struct.unpack_from("<f", grid, ((y * width + x) * channels + 4) * 4)[0] >= 1
+
+    for x, y in ((width - 1 - home_x, height - 1 - home_y), (width - 1 - home_x, home_y),
+                 (home_x, height - 1 - home_y), (width // 2, height // 2)):
+        x, y = max(0, min(width - 1, x)), max(0, min(height - 1, y))
+        if (x - home_x) ** 2 + (y - home_y) ** 2 > 20 ** 2 and not explored(x, y):
+            return x, y
+    return None
 
 
 def state_summary(snapshot: GameSnapshot, threat: ThreatAssessment | None = None) -> str:
