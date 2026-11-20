@@ -327,18 +327,14 @@ class Advisor:
         if build_focus:
             return None
         if fighters and not snapshot.visible_enemy_buildings and not snapshot.remembered_enemy_buildings:
-            # Looking for the enemy base is an order like any other: one fast scout, or, once there is an army, the
-            # idle fighters together. Whoever is already out looking is left to it.
-            def out(unit) -> bool:
-                return bool(snapshot.buildings) and all(
-                    (unit.cell_x - building.cell_x) ** 2 + (unit.cell_y - building.cell_y) ** 2 > 20 ** 2
-                    for building in snapshot.buildings)
-            if any(not unit.idle and out(unit) for unit in fighters):
+            # Looking for the enemy base is an order like any other: one cheap scout, or, once there is an army, the
+            # fighters together. One order at a time: while any fighter is busy (out looking, or fighting), nobody
+            # new is sent.
+            if any(not unit.idle for unit in fighters):
                 return None
             goal = search_goal(snapshot)
-            idle = sorted((unit for unit in fighters if unit.idle), key=lambda unit: (-unit.speed, unit.actor_id))
-            if goal and len(fighters) >= 8 and len(idle) >= 6:
-                group = idle[:12]
+            if goal and len(fighters) >= 8:
+                group = sorted(fighters, key=lambda unit: unit.actor_id)[:12]
                 return Advice(
                     f"We haven't found the enemy base yet; advance {len(group)} units together across the map to find it.",
                     f"Advance {len(group)} units to find the enemy base",
@@ -346,11 +342,14 @@ class Advisor:
                      for unit in group],
                     "sweep",
                 )
-            if goal and idle:
+            if goal:
+                def price(unit) -> int:
+                    return int(self.tree.items.get(base_type(unit.kind), {}).get("cost", 99999))
+                scout = min(fighters, key=lambda unit: (price(unit), -unit.speed, unit.actor_id))
                 return Advice(
-                    f"We haven't found the enemy base yet; send your {self.name(idle[0].kind)} to scout the far side of the map.",
-                    f"Send the {self.name(idle[0].kind)} to scout",
-                    [{"action": "move", "actor_id": idle[0].actor_id, "target_x": goal[0], "target_y": goal[1]}],
+                    f"We haven't found the enemy base yet; send your {self.name(scout.kind)} to scout the far side of the map.",
+                    f"Send the {self.name(scout.kind)} to scout",
+                    [{"action": "move", "actor_id": scout.actor_id, "target_x": goal[0], "target_y": goal[1]}],
                     "scout",
                 )
             return Advice(
