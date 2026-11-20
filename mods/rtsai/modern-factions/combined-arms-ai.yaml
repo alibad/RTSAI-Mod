@@ -301,3 +301,24 @@ sqd:
 	StrategicRole:
 		Roles: submarine
 		Domain: naval
+
+# Original-country specialists that had no role (AI survey, 20 Nov 2026: 0 Terror Drones, Terrorists or
+# Demolition Trucks in 8 Soviet games). Listing them in UnitsToBuild (rules/ai.yaml) is not enough: a queue with any
+# role-tagged unit never falls back to that list. Their UnitLimits there still cap them (6, 4 and 2).
+dron:
+	StrategicRole:
+		# Fast anti-vehicle harasser from the War Factory.
+		Roles: support
+		Domain: ground
+
+dtruck:
+	StrategicRole:
+		# Libya: one-shot demolition vehicle.
+		Roles: support
+		Domain: ground
+
+terror:
+	StrategicRole:
+		# Cuba: one-shot bomber, best against vehicles and buildings; shares the share of the Tesla Trooper.
+		Roles: anti-armor
+		Domain: ground
