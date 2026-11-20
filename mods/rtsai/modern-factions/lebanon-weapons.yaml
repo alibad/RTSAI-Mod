@@ -128,6 +128,9 @@ R2HZRecoillessRifle:
 			Wood: 60
 			Steel: 45
 			Concrete: 50
+	# RA2's blast for a 78-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_clsn
 
 R2HZZU23:
 	Inherits: FlakTrackAAGun
@@ -173,7 +176,7 @@ R2HZRocketVolley:
 			Steel: 100
 			Concrete: 90
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
+		Explosions: small_grey_explosion
 		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
 
 # Rail Technical (Salvo and swarm): the cheap launcher. Four unguided rockets from a pickup rail pack.
@@ -208,7 +211,7 @@ R2HZRailRockets:
 			Steel: 90
 			Concrete: 70
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
+		Explosions: small_grey_explosion
 		ImpactSounds: ra2|modern-factions/audio/redsea-drone-impact.wav
 
 # The round-4 strike missile, kept for reference; no Lebanon unit fires it since Salvo and swarm.
@@ -292,6 +295,9 @@ R2HZHodeidahMissile:
 			Wood: 70
 			Steel: 60
 			Concrete: 50
+	# RA2's blast for a 42-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 R2HZUSVCharge:
 	Range: 1c512
@@ -371,6 +377,9 @@ R2HZYemenCoastalMissile:
 			Wood: 60
 			Steel: 60
 			Concrete: 50
+	# RA2's blast for a 42-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 # FPV Team launch link (CarrierParent ArmamentNames: launcher): each shot launches one drone at the target, so the
 # reload is the launch cadence. No damage of its own.

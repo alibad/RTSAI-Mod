@@ -83,6 +83,9 @@ R2IranCoastalMissile:
 			Wood: 75
 			Steel: 75
 			Concrete: 60
+	# RA2's blast for a 110-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: large_grey_explosion
 
 R2ToufanRocket:
 	Inherits: Maverick
@@ -103,6 +106,13 @@ R2ToufanRocket:
 			Wood: 50
 			Steel: 25
 			Concrete: 20
+	# RA2's blast for a 16-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: tiny_grey_explosion
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 11c256
+
 
 R2AzarStrike:
 	Inherits: Maverick
@@ -125,6 +135,9 @@ R2AzarStrike:
 			Wood: 110
 			Steel: 110
 			Concrete: 100
+	# RA2's blast for a 80-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
 
 R2LoiterCharge:
 	Inherits: Maverick
@@ -159,6 +172,9 @@ R2PeykaapMissile:
 		RangeLimit: 12c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
+	# RA2's blast for a 40-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 R2PeykaapAA:
 	Inherits: R2AirDefense
@@ -175,6 +191,13 @@ R2GhadirTorpedo:
 	BurstDelays: 12
 	Warhead@1Dam: SpreadDamage
 		Damage: 65
+	# RA2's blast for a 65-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@3EffGround:
+		Explosions: small_explosion
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 9c512
+
 
 R2BunkerGun:
 	Inherits: R2BasijRifle
@@ -218,3 +241,6 @@ R2IranFixedMissile:
 			Wood: 60
 			Steel: 60
 			Concrete: 50
+	# RA2's blast for a 70-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_explosion

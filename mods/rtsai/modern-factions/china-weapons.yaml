@@ -74,7 +74,7 @@ R2ChinaLongbowRockets:
 	Burst: 6
 	BurstDelays: 7
 	Projectile: Missile
-		RangeLimit: 16c0
+		RangeLimit: 17c256
 		Speed: 300
 		MinimumLaunchAngle: 90
 		MaximumLaunchAngle: 120
@@ -93,6 +93,9 @@ R2ChinaLongbowRockets:
 			Wood: 100
 			Steel: 90
 			Concrete: 80
+	# RA2's blast for a 34-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 R2ChinaInterceptor:
 	Inherits: R2AirDefense
@@ -113,6 +116,9 @@ R2ChinaNavalGun:
 	ReloadDelay: 90
 	Warhead@1Dam: SpreadDamage
 		Damage: 75
+	# RA2's blast for a 75-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
 
 R2ChinaASW:
 	Inherits: SubTorpedo
@@ -122,6 +128,10 @@ R2ChinaASW:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Underwater
 		Damage: 75
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 8c512
+
 
 R2ChinaCoastalMissile:
 	Inherits: Maverick
@@ -137,6 +147,9 @@ R2ChinaCoastalMissile:
 		RangeLimit: 16c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
+	# RA2's blast for a 40-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 R2ChinaNavalAA:
 	Inherits: R2AirDefense
@@ -159,6 +172,6 @@ R2ChinaSkyshield:
 	Burst: 2
 	BurstDelays: 7
 	Projectile: Missile
-		RangeLimit: 14c0
+		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 40

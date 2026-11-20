@@ -3,6 +3,7 @@ RedEye2:
 	Projectile: Missile
 		TrailImage: smokey2
 		LockOnProbability: 80
+		RangeLimit: 17c256
 
 MammothTusk:
 	Inherits: ^AAMissile
@@ -13,7 +14,7 @@ MammothTusk:
 	Projectile: Missile
 		ContrailLength: 8
 		Speed: 170
-		RangeLimit: 10c204
+		RangeLimit: 13c256
 		TrailImage: smokey2
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
@@ -42,7 +43,7 @@ Maverick:
 	Projectile: Missile
 		Speed: 373
 		Arm: 2
-		RangeLimit: 10c204
+		RangeLimit: 11c256
 		ContrailStartColor: D8D8FF
 		HorizontalRateOfTurn: 160
 		VerticalRateOfTurn: 160
@@ -66,6 +67,10 @@ Maverick2:
 	Report: vbleatta.wav, vbleattb.wav
 	Warhead@1Dam: SpreadDamage
 		Damage: 200
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 11c256
+
 
 Medusa:
 	Inherits: ^AAMissile
@@ -76,7 +81,7 @@ Medusa:
 	Projectile: Missile
 		ContrailLength: 35
 		LockOnProbability: 85
-		RangeLimit: 15c409
+		RangeLimit: 17c256
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
 		Damage: 100
@@ -147,7 +152,7 @@ SubTorpedo:
 		Speed: 102
 		TrailImage: bbblelrg
 		HorizontalRateOfTurn: 48
-		RangeLimit: 8c409
+		RangeLimit: 8c512
 		BoundToTerrainType: Water
 		Palette: shadow
 		TerrainHeightAware: true
@@ -180,6 +185,10 @@ SubTorpedo:
 SubTorpedoE:
 	Inherits: SubTorpedo
 	Burst: 2
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 8c512
+
 
 HornetBomb:
 	Inherits: ^Missile

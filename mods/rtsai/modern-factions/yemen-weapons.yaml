@@ -123,6 +123,9 @@ R2RecoillessRifle:
 			Wood: 60
 			Steel: 45
 			Concrete: 50
+	# RA2's blast for a 85-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_clsn
 
 R2ZU23:
 	Inherits: FlakTrackAAGun
@@ -214,6 +217,9 @@ R2HodeidahMissile:
 			Wood: 70
 			Steel: 60
 			Concrete: 50
+	# RA2's blast for a 60-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_explosion
 
 R2USVCharge:
 	Range: 1c512
@@ -292,3 +298,6 @@ R2YemenCoastalMissile:
 			Wood: 60
 			Steel: 60
 			Concrete: 50
+	# RA2's blast for a 75-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion

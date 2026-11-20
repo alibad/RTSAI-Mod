@@ -119,6 +119,8 @@ r2karrar:
 		Name: secondary
 		Weapon: R2QilinCoax
 		LocalOffset: 600,60,700
+		# A small gun flash for the coaxial machine gun too (weapon fidelity, 20 Nov 2026)
+		MuzzleSequence: muzzle
 	RTSAIVoiced:
 		VoiceSet: SovietVehicleVoice
 

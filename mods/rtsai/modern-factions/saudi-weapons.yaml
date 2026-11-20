@@ -128,6 +128,9 @@ R2AbramsGun:
 	Report: ra2|modern-factions/audio/redsea-m1-fire.wav
 	Warhead@1Dam: SpreadDamage
 		Damage: 105
+	# RA2's blast for a 105-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_clsn
 
 R2SADSInterceptor:
 	Inherits: R2AirDefense
@@ -157,6 +160,9 @@ R2CaesarShell:
 		Damage: 45
 		ValidTargets: R2Lased
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	# RA2's blast for a 90-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
 
 R2BradleyCannon:
 	Inherits: 20mm
@@ -221,6 +227,13 @@ R2F15Strike:
 		Damage: 30
 		ValidTargets: R2Lased
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	# RA2's blast for a 90-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 13c256
+
 
 R2ApacheCannon:
 	Inherits: 20mm
@@ -242,7 +255,7 @@ R2ApacheCannon:
 			Heavy: 20
 	Warhead@2Eff: CreateEffect
 		ValidTargets: Ground, Water
-
+		Explosions: piffpiff
 R2ApacheRockets:
 	Inherits: Maverick
 	Range: 7c0
@@ -267,6 +280,13 @@ R2ApacheRockets:
 		Damage: 20
 		ValidTargets: R2Lased
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	# RA2's blast for a 55-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_explosion
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 12c256
+
 
 R2SadiqCannon:
 	Inherits: 20mm
@@ -296,6 +316,9 @@ R2FrigateGun:
 	ReloadDelay: 90
 	Warhead@1Dam: SpreadDamage
 		Damage: 75
+	# RA2's blast for a 75-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
 
 R2FrigateCIWS:
 	Inherits: FlakTrackAAGun

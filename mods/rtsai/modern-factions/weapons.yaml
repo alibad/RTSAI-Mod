@@ -13,6 +13,9 @@ R2QilinGun:
 	ReloadDelay: 65
 	Warhead@1Dam: SpreadDamage
 		Damage: 68
+	# RA2's blast for a 68-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_clsn
 
 # Round 5: the coaxial machine gun of the Allied-side MBTs (Qilin, Bozkir, M1A2S, Merkava). Their tanks failed
 # to kill the infantry-led armies that beat them (the main guns do 25% to infantry); the coax gives each tank
@@ -31,6 +34,9 @@ R2KarrarGun:
 	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
 		Damage: 90
+	# RA2's blast for a 90-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_clsn
 
 # Reload 70 -> 60: Rhino damage per credit at the Rhino's cost.
 R2BozkirGun:
@@ -39,6 +45,9 @@ R2BozkirGun:
 	ReloadDelay: 60
 	Warhead@1Dam: SpreadDamage
 		Damage: 80
+	# RA2's blast for a 80-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_clsn
 
 R2ReconGun:
 	Inherits: 20mm
@@ -72,6 +81,9 @@ R2Howitzer:
 	Warhead@1Dam: SpreadDamage
 		Damage: 95
 		Spread: 341
+	# RA2's blast for a 95-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
 
 R2RocketSalvo:
 	Inherits: Maverick
@@ -89,6 +101,9 @@ R2RocketSalvo:
 	Warhead@1Dam: SpreadDamage
 		Damage: 30
 		Spread: 256
+	# RA2's blast for a 30-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 # Damage 35 -> 60: the 1000-credit Cloud, Kuzgun and Mohajer traded 0.3-0.4 per credit.
 R2DroneMissile:
@@ -97,3 +112,10 @@ R2DroneMissile:
 	ReloadDelay: 140
 	Warhead@1Dam: SpreadDamage
 		Damage: 60
+	# RA2's blast for a 60-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_explosion
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 11c256
+

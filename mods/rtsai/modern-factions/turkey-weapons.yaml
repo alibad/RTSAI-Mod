@@ -64,6 +64,13 @@ R2GunshipMissile:
 	ReloadDelay: 110
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
+	# RA2's blast for a 40-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
+	# Reaches the end of its range after its climb (weapon fidelity, 20 Nov 2026)
+	Projectile:
+		RangeLimit: 11c256
+
 
 R2InterceptorMissile:
 	Inherits: R2AirDefense
@@ -84,6 +91,9 @@ R2NavalGun:
 	ReloadDelay: 100
 	Warhead@1Dam: SpreadDamage
 		Damage: 90
+	# RA2's blast for a 90-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: medium_grey_explosion
 
 R2CoastalMissile:
 	Inherits: Maverick
@@ -98,6 +108,9 @@ R2CoastalMissile:
 		RangeLimit: 16c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
+	# RA2's blast for a 40-damage hit (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: small_grey_explosion
 
 R2DepthCharge:
 	Inherits: R2CoastalMissile
@@ -126,7 +139,7 @@ R2SiperMissile:
 	Inherits: R2AirDefense
 	Range: 12c0
 	Projectile: Missile
-		RangeLimit: 15c0
+		RangeLimit: 16c0
 	Burst: 2
 	BurstDelays: 8
 	ReloadDelay: 110
@@ -138,3 +151,6 @@ R2BoranGun:
 	ReloadDelay: 90
 	Warhead@1Dam: SpreadDamage
 		Damage: 100
+	# RA2's blast for a 100-damage shell (its AnimList rule; weapon fidelity, 20 Nov 2026)
+	Warhead@2Eff:
+		Explosions: large_grey_explosion
