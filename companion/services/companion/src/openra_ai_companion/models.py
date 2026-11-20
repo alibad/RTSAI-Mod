@@ -233,6 +233,8 @@ class GameSnapshot:
     visible_enemies: tuple[Unit, ...] = ()
     visible_enemy_buildings: tuple[Unit, ...] = ()
     remembered_enemy_buildings: tuple[Unit, ...] = ()
+    # Cells where enemy units were seen this match and not looked at since, newest first (advisor.EnemyBaseMemory).
+    enemy_trail: tuple[tuple[int, int], ...] = ()
     production: tuple[dict[str, Any], ...] = ()
     available_production: tuple[str, ...] = ()
     spatial_map: bytes = b""
@@ -285,6 +287,7 @@ class GameSnapshot:
             visible_enemies=tuple(Unit.from_dict(v) for v in value.get("visible_enemies", [])),
             visible_enemy_buildings=tuple(Unit.from_dict(v) for v in value.get("visible_enemy_buildings", [])),
             remembered_enemy_buildings=tuple(Unit.from_dict(v) for v in value.get("remembered_enemy_buildings", [])),
+            enemy_trail=tuple((int(p[0]), int(p[1])) for p in value.get("enemy_trail", [])),
             production=tuple(value.get("production", [])),
             available_production=tuple(str(item) for item in value.get("available_production", [])),
             spatial_map=cls._decode_bytes(value.get("spatial_map", b"")),

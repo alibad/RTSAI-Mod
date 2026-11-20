@@ -586,11 +586,14 @@ class EnemyBaseMemory:
 
     def __init__(self) -> None:
         self.seen: dict[int, object] = {}
+        # Where enemy units were seen, newest first; a place is dropped once it is in sight with no enemy there.
+        self.trail: list[tuple[int, int]] = []
         self.last_tick = -1
 
     def recall(self, snapshot: GameSnapshot) -> GameSnapshot:
         if snapshot.tick < self.last_tick:
             self.seen.clear()
+            self.trail = []
         self.last_tick = snapshot.tick
         visible = {building.actor_id for building in snapshot.visible_enemy_buildings}
         for building in snapshot.visible_enemy_buildings:
@@ -598,11 +601,22 @@ class EnemyBaseMemory:
         for actor_id, building in list(self.seen.items()):
             if actor_id not in visible and in_sight(snapshot, building.cell_x, building.cell_y):
                 del self.seen[actor_id]
+
+        def near(point: tuple[int, int], x: int, y: int) -> bool:
+            return (point[0] - x) ** 2 + (point[1] - y) ** 2 <= 3 ** 2
+
+        self.trail = [point for point in self.trail if not in_sight(snapshot, *point)
+                      or any(near(point, enemy.cell_x, enemy.cell_y) for enemy in snapshot.visible_enemies)]
+        for enemy in snapshot.visible_enemies:
+            if not any(near(point, enemy.cell_x, enemy.cell_y) for point in self.trail):
+                self.trail.insert(0, (enemy.cell_x, enemy.cell_y))
+        del self.trail[40:]
         known = visible | {building.actor_id for building in snapshot.remembered_enemy_buildings}
         extra = [building for building in self.seen.values() if building.actor_id not in known]
-        if not extra:
-            return snapshot
-        return dataclasses.replace(snapshot, remembered_enemy_buildings=(*snapshot.remembered_enemy_buildings, *extra))
+        changes = {"enemy_trail": tuple(self.trail)}
+        if extra:
+            changes["remembered_enemy_buildings"] = (*snapshot.remembered_enemy_buildings, *extra)
+        return dataclasses.replace(snapshot, **changes)
 
 
 def in_sight(snapshot: GameSnapshot, x: int, y: int) -> bool:
@@ -690,6 +704,15 @@ def search_goal(snapshot: GameSnapshot, start: tuple[float, float] | None = None
     home_x = sum(actor.cell_x for actor in own) // len(own)
     home_y = sum(actor.cell_y for actor in own) // len(own)
     grid = _spatial(snapshot)
+    # Enemy units come from their base and go back to it: the place an enemy was seen farthest from our base, not
+    # looked at since, comes first.
+    lead, lead_far = None, 20 ** 2
+    for x, y in snapshot.enemy_trail:
+        distance = (x - home_x) ** 2 + (y - home_y) ** 2
+        if distance > lead_far and land_reachable(snapshot, x, y):
+            lead, lead_far = (x, y), distance
+    if lead is not None:
+        return lead
 
     # The engine's grid: channel 3 land passable (1), channel 4 fog (0 never seen, 0.5 seen before, 1 in sight now).
     def explored(x: int, y: int) -> bool:

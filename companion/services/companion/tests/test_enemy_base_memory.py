@@ -36,3 +36,13 @@ def test_a_new_match_starts_empty() -> None:
     memory = EnemyBaseMemory()
     memory.recall(_snapshot(400, [YARD], lambda x, y: True))
     assert memory.recall(_snapshot(10, [], lambda x, y: False)).remembered_enemy_buildings == ()
+
+
+def test_where_enemy_units_were_seen_is_kept_until_looked_at() -> None:
+    memory = EnemyBaseMemory()
+    raider = {"actor_id": 70, "type": "r2karrar", "cell_x": 12, "cell_y": 4}
+    seen = GameSnapshot.from_dict({"tick": 20, "map_width": 20, "map_height": 20, "visible_enemies": [raider],
+                                   "spatial_map": _fog(lambda x, y: True), "spatial_channels": 5})
+    memory.recall(seen)
+    assert memory.recall(_snapshot(30, [], lambda x, y: False)).enemy_trail == ((12, 4),)
+    assert memory.recall(_snapshot(40, [], lambda x, y: (x, y) == (12, 4))).enemy_trail == ()
