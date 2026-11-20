@@ -4,7 +4,7 @@ This layer changes confirmed-action advice, never enables AUTO or issues orders 
 """
 from __future__ import annotations
 
-from .advisor import Advice, Advisor
+from .advisor import Advice, Advisor, EnemyBaseMemory
 from .models import GameSnapshot, ThreatAssessment
 from .strategy import base_center, desired_harvester_count, scout_targets, rally_target
 from .techtree import base_type, load
@@ -53,6 +53,8 @@ class ContextualStrategy:
         self.choices: list[str] = []
         self.reason = ""
         self.changed_tick = 0
+        # Enemy buildings seen this match, kept after they drop out of sight (the skirmish adviser).
+        self.enemy_base = EnemyBaseMemory()
 
     def select(self, strategy: str | None, reserve: int, snapshot: GameSnapshot) -> None:
         if strategy is not None and strategy not in STRATEGIES:
@@ -98,6 +100,8 @@ class ContextualStrategy:
         return Advice("No matching counter is buildable yet. Unlock your faction's counter units before committing.", key="blocked:counter")
 
     def advice(self, snapshot: GameSnapshot, threat: ThreatAssessment, *, build_focus: bool = False) -> Advice | None:
+        if not snapshot.mission_mode:
+            snapshot = self.enemy_base.recall(snapshot)
         advisor = Advisor(snapshot, threat)
         fallback = advisor.next_step(build_focus=build_focus)
         if self.active is None or snapshot.done or snapshot.mission_mode:

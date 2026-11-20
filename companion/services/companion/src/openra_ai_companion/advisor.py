@@ -12,6 +12,7 @@ the compact state summary from :func:`state_summary` instead (see core.py).
 
 from __future__ import annotations
 
+import dataclasses
 import math
 import re
 import struct
@@ -51,8 +52,8 @@ NAME_ROLES = (
 NON_COMBAT = frozenset({"harv", "cmin", "mcv", "amcv", "smcv"})
 # The engine takes at most 12 orders in one request (CompanionBridge MaxCommandsPerRequest).
 MAX_ORDERS = 12
-# An army worth sending: at least 8 fighters together worth 7,000 credits (about seven tanks and some infantry).
-WAVE_UNITS, WAVE_VALUE = 8, 7000
+# An army worth sending: at least 10 fighters together worth 10,000 credits (about ten tanks and some infantry).
+WAVE_UNITS, WAVE_VALUE = 10, 10000
 
 
 @dataclass
@@ -148,6 +149,11 @@ class Advisor:
                 entry.get("cost", 0) <= 400 or base_type(item) in {"e1", "e2"}
             ):
                 return item
+        if word == "tank":
+            # Countries without a tank (Lebanon, Yemen) field armed trucks: their first fighting vehicle.
+            return next((item for item in self.available
+                         if (not self.tree.known or self.tree.items.get(base_type(item), {}).get("queue") == queue)
+                         and armed_vehicle(self.name(item), self.tree.items.get(base_type(item), {}).get("cost", math.inf))), None)
         return None
 
     # -- the decision -------------------------------------------------------------------
@@ -380,6 +386,9 @@ class Advisor:
             if word == "infantry" and entry.get("cost", 0) <= 400 and not any(
                     skip in name for skip in ("engineer", "dog", "spy", "medic", "technician")):
                 return item
+        if word == "tank":
+            return next((item for item, entry in sorted(self.tree.items.items(), key=lambda pair: pair[1].get("order", 0))
+                         if entry.get("queue") == queue and armed_vehicle(entry["name"].lower(), entry.get("cost", math.inf))), None)
         return None
 
     def _harvester(self) -> Advice | None:
@@ -446,7 +455,7 @@ class Advisor:
             # Looking for the enemy base is an order like any other: one cheap scout, or, once there is an army of 12, the
             # fighters together. One order at a time: while any fighter is busy (out looking, or fighting), nobody
             # new is sent.
-            # A ready army (12 idle fighters worth 7,000 credits) searches whatever a few others are doing; a single
+            # A ready army (12 idle fighters worth 10,000 credits) searches whatever a few others are doing; a single
             # scout only goes when nobody is out.
             waiting = [unit for unit in fighters if unit.idle]
             army = len(waiting) >= 12 and sum(self.cost(unit.kind) for unit in waiting) >= WAVE_VALUE
@@ -530,7 +539,7 @@ class Advisor:
                  for unit in pressing],
                 "press",
             )
-        # An attack is a wave: the idle fighters go together once there are 8 or more worth 7,000 credits. A smaller
+        # An attack is a wave: the idle fighters go together once there are 10 or more worth 10,000 credits. A smaller
         # army stays home with the defences; units already fighting are left to it. One card carries at most 12 orders
         # (the engine refuses more): the strongest 12 go first, and the rest follow on the next card while what is left
         # is still an army.
@@ -546,7 +555,68 @@ class Advisor:
                  for unit in attackers],
                 "attack",
             )
+        # An attack under way (4 or more fighters busy nearer the enemy base than our own): the units at home join it
+        # rather than wait for a wave of their own, so the attack does not run out.
+        own = snapshot.buildings
+        if own and len(wave) >= 3:
+            hx = sum(building.cell_x for building in own) / len(own)
+            hy = sum(building.cell_y for building in own) / len(own)
+
+            def closest(unit) -> int:
+                return min((unit.cell_x - target.cell_x) ** 2 + (unit.cell_y - target.cell_y) ** 2 for target in targets)
+
+            out = [unit for unit in fighters if not unit.idle and closest(unit) < (unit.cell_x - hx) ** 2 + (unit.cell_y - hy) ** 2]
+            front = nearest(out) if len(out) >= 4 else None
+            if front is not None:
+                return Advice(
+                    f"Your attack is under way with {len(out)} units; send the {len(wave)} at home to join it.",
+                    f"Send {len(attackers)} units to join the attack",
+                    [{"action": "attack_move", "actor_id": unit.actor_id, "target_x": front.cell_x, "target_y": front.cell_y}
+                     for unit in attackers],
+                    "join",
+                )
         return None
+
+
+class EnemyBaseMemory:
+    """The enemy buildings the player has seen, kept after they drop out of sight (the observation's own remembered
+    list comes back empty in skirmish), so an army sent home to defend can go back to the enemy base. One is forgotten
+    once its cell is in sight again without it. One memory per match. The browser adviser (web/src/adviser.ts
+    EnemyBaseMemory) keeps the same."""
+
+    def __init__(self) -> None:
+        self.seen: dict[int, object] = {}
+        self.last_tick = -1
+
+    def recall(self, snapshot: GameSnapshot) -> GameSnapshot:
+        if snapshot.tick < self.last_tick:
+            self.seen.clear()
+        self.last_tick = snapshot.tick
+        visible = {building.actor_id for building in snapshot.visible_enemy_buildings}
+        for building in snapshot.visible_enemy_buildings:
+            self.seen[building.actor_id] = building
+        for actor_id, building in list(self.seen.items()):
+            if actor_id not in visible and in_sight(snapshot, building.cell_x, building.cell_y):
+                del self.seen[actor_id]
+        known = visible | {building.actor_id for building in snapshot.remembered_enemy_buildings}
+        extra = [building for building in self.seen.values() if building.actor_id not in known]
+        if not extra:
+            return snapshot
+        return dataclasses.replace(snapshot, remembered_enemy_buildings=(*snapshot.remembered_enemy_buildings, *extra))
+
+
+def in_sight(snapshot: GameSnapshot, x: int, y: int) -> bool:
+    """Whether a cell is in the player's sight now (the engine's grid, channel 4); False when the grid is not there."""
+    grid = _spatial(snapshot)
+    if grid is None or x < 0 or y < 0 or x >= snapshot.map_width or y >= snapshot.map_height:
+        return False
+    return _cell(snapshot, grid, x, y, 4) >= 1
+
+
+def armed_vehicle(name: str, cost: float) -> bool:
+    """A fighting vehicle for countries without a tank: cheap, and not a harvester, builder, AA gun, drone or carrier.
+    The browser adviser (web/src/adviser.ts basicUnit) decides the same."""
+    return cost <= 1000 and re.search(r"harvester|miner|construction|\baa\b|drone|carrier|transport", name.lower()) is None
 
 
 def is_basic_defence(entry: dict | None) -> bool:
