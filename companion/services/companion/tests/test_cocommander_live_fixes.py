@@ -272,7 +272,7 @@ class RosterRecognitionTests(unittest.TestCase):
     def test_tech_tree_data_is_consistent(self) -> None:
         data = load()
         self.assertEqual(sorted(data["profiles"]["standalone"]["factions"]),
-                         ["china", "lebanon", "iran", "israel", "saudi", "turkey", "yemen"])
+                         ["china", "iran", "israel", "lebanon", "saudi", "turkey", "yemen"])
         for profile in data["profiles"].values():
             for faction, tree in profile["factions"].items():
                 with self.subTest(faction=faction):
