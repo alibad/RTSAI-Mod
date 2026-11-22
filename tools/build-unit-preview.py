@@ -203,6 +203,9 @@ def build(web_root, log):
     run('node', game / 'web/node_modules/vite/bin/vite.js', 'build', '--outDir', out / 'web', cwd=frontend / 'web', env={**os.environ,
         'RTSAI_SITE_ROOT': str(web_root), 'VITE_GAME_MODES': 'public,public-classic',
         'VITE_DEFAULT_PROFILE': 'public', 'VITE_DEFAULT_RUNTIME': 'interp'})
+    if forge_manifest and (Path(forge) / 'experimental.json').is_file():
+        # The Battle simulator's opt-in Experimental switch reads this beside the page; only a drafts build has it.
+        shutil.copy2(Path(forge) / 'experimental.json', out / 'web/experimental.json')
     names = ['RTSAI_WEBGAME_PORT', 'RTSAI_WEB_COMPANION_GRPC', 'RTSAI_WEB_COMPANION_PORT', 'RTSAI_WEB_MOCK_AI_PORT', 'RTSAI_WEB_LOCAL_AI_PORT']
     ports, reservations = {}, []
     for name in names:
