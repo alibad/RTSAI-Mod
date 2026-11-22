@@ -23,6 +23,25 @@ def copy_tree(source, dest):
     shutil.copytree(source, dest)
 
 
+def merge_forge_drafts(src, mod):
+    """Concept Forge drafts (RTSAI-Art tools/forge/forge_install.py, owner 22 Nov 2026: play what the Forge made): a local-only
+    overlay outside git, merged into this snapshot's copy of the mod and never into the repository. Its actors need
+    ~forge.drafts, which only the overlay's own Player rule provides, and its files are appended to the copied mod.yaml."""
+    src = Path(src)
+    manifest = json.loads((src / 'manifest.json').read_text(encoding='utf-8'))
+    copy_tree(src, mod / 'forge-drafts')
+    lines = (mod / 'mod.yaml').read_text(encoding='utf-8').splitlines()
+    for section, entry in [('Rules', 'rules.yaml'), ('Sequences', 'sequences.yaml'), ('Weapons', 'weapons.yaml'),
+                           ('FluentMessages', 'forge-drafts.ftl')]:
+        start = next(i for i, line in enumerate(lines) if line.rstrip() == f'{section}:')
+        end = start + 1
+        while end < len(lines) and lines[end].startswith('\t'):
+            end += 1
+        lines.insert(end, f'\tra2|forge-drafts/{entry}')
+    (mod / 'mod.yaml').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    return manifest
+
+
 def build(web_root, log):
     def run(*args, **kw):
         subprocess.run(list(map(str, args)), check=True, stdout=log, stderr=log, **kw)
@@ -80,6 +99,9 @@ def build(web_root, log):
     for mod in (ROOT / 'mods').iterdir():
         if mod.is_dir():
             shutil.copytree(mod, native / 'mods' / mod.name)
+    # Concept Forge drafts: only when asked for (RTSAI_FORGE_DRAFTS or the Studio setting forgeDrafts), into this copy only.
+    forge = os.environ.get('RTSAI_FORGE_DRAFTS') or settings.get('forgeDrafts')
+    forge_manifest = merge_forge_drafts(forge, native / 'mods/rtsai') if forge else None
     if diff:
         code = out / 'mod-code'
         run(sys.executable, ROOT / 'tools/build-inputs.py', 'snapshot', '--repo', ROOT,
@@ -96,6 +118,10 @@ def build(web_root, log):
     if json.loads((native / 'mods/rtsai/unit-overrides/manifest.json').read_text())['revision'] != content['revision']:
         raise ValueError('Content changed during the preview snapshot; build again.')
     receipts = []
+    if forge_manifest:
+        subprocess.run([str(native / 'bin/OpenRA.Utility.exe'), 'rtsai', '--check-yaml'], cwd=native, check=True, stdout=log, stderr=log,
+                       env={**os.environ, 'OPENRA_AI_HOST': '0', 'ENGINE_DIR': str(native), 'SUPPORT_DIR': config['supportDirectory'],
+                            'MOD_SEARCH_PATHS': str(native / 'mods')})
     for mod in ['rtsai-classic-core', 'rtsai-ra2']:
         result = subprocess.check_output([str(native / 'bin/OpenRA.Utility.exe'), mod, '--check-unit-modifications', 'all'],
                                         cwd=native, env={**os.environ, 'OPENRA_AI_HOST': '0', 'ENGINE_DIR': str(native),
@@ -199,6 +225,9 @@ def build(web_root, log):
                'runtime': str(runtime_source), 'browserHostCommit': host_commit,
                'browserFrontendCommit': json.loads((frontend / 'INPUTS.json').read_text())['head'],
                'scope': 'Classic and RA2 unit content on desktop/web; installed Classic inputs remain local'}
+    if forge_manifest:
+        receipt.update(forgeDrafts={'concepts': forge_manifest['concepts'], 'sha256': forge_manifest['sha256'], 'source': str(forge)},
+                       scope='Concept Forge drafts merged into this local preview only (never the repository or a release)')
     receipt_file = out / 'receipt.json'
     unit.atomic(receipt_file, json.dumps(receipt, indent=2) + '\n')
     env = {**ports, 'RTSAI_WEB_DATA': str(data), 'RTSAI_WEB_DIST': str(out / 'web'),
@@ -246,11 +275,16 @@ def build(web_root, log):
         receipt.update(verified=True, verifiedAt=datetime.now(timezone.utc).isoformat(), webPid=server.pid)
         unit.atomic(native / 'content-build.json', json.dumps({'revision': content['revision'], 'verified': True, 'buildId': build_id}) + '\n')
         unit.atomic(receipt_file, json.dumps(receipt, indent=2) + '\n')
-        pointer = ROOT / '.recovery/content-current.json'
-        if pointer.exists():
-            unit.atomic(out / 'previous-pointer.json', pointer.read_text())
-        unit.atomic(pointer, json.dumps({'receipt': str(receipt_file), 'sha256': hashlib.sha256(receipt_file.read_bytes()).hexdigest()}, indent=2) + '\n')
-        unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
+        if forge_manifest:
+            # A drafts build never replaces the Studio's current local game: it gets its own pointer and address.
+            unit.atomic(ROOT / '.recovery/forge-drafts-current.json', json.dumps({'receipt': str(receipt_file), 'webUrl': web_url,
+                'sha256': hashlib.sha256(receipt_file.read_bytes()).hexdigest()}, indent=2) + '\n')
+        else:
+            pointer = ROOT / '.recovery/content-current.json'
+            if pointer.exists():
+                unit.atomic(out / 'previous-pointer.json', pointer.read_text())
+            unit.atomic(pointer, json.dumps({'receipt': str(receipt_file), 'sha256': hashlib.sha256(receipt_file.read_bytes()).hexdigest()}, indent=2) + '\n')
+            unit.atomic(web_root / '.cache/unit-preview-latest.json', json.dumps(receipt, indent=2) + '\n')
         print(json.dumps({'buildId': build_id, 'revision': content['revision'], 'verified': True, 'webUrl': web_url}))
     except Exception:
         server.terminate()
