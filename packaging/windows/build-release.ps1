@@ -45,6 +45,11 @@ param(
     [string]$OutputDirectory,
     [string]$EngineSource,
     [string]$CompanionDirectory,
+    # The approved original-art folder (EA-INPUTS.json and its files, from RTSAI-WebGame tools/prepare-ea-art.py),
+    # outside every repository: the nine original countries draw Westwood's art, as on the web and the Mac.
+    [string]$OriginalArt,
+    [string]$WebGameSource,
+    [string]$Python = "python",
     [switch]$HostedAI,
     [string]$VoicePack,
     [string]$WorkDirectory,
@@ -237,6 +242,48 @@ foreach ($mod in $mods) {
 }
 Set-Content -LiteralPath (Join-Path $stage "VERSION") -Value $engineCommit -Encoding ASCII
 
+$originalArtRecord = $null
+if ($OriginalArt) {
+    # The Mac's step (packaging/macos/prepare-original-art.py, ORIGINAL-ART.md): hash-approved loose art only, render-only
+    # rules checked against the native rules, EA's notice in the start-up prompt, the Credits and a NOTICE file.
+    Write-Host "== Approved original-country art (native render-only)"
+    $OriginalArt = (Resolve-Path -LiteralPath $OriginalArt).Path
+    if (-not (Test-Path -LiteralPath (Join-Path $OriginalArt "EA-INPUTS.json"))) { throw "No EA-INPUTS.json in $OriginalArt." }
+    foreach ($repository in @($root, $engine)) {
+        if ($OriginalArt.StartsWith($repository + [IO.Path]::DirectorySeparatorChar)) { throw "The original art must stay outside every repository." }
+    }
+    $webgame = if ($WebGameSource) { [IO.Path]::GetFullPath($WebGameSource) } else { Join-Path (Split-Path $root -Parent) "RTSAI-WebGame" }
+    Invoke-Native git @("-C", $webgame, "fetch", "origin", "main") "git fetch failed in $webgame"
+    # The generator must be the published one: tools/ as on origin/main, committed.
+    Invoke-Native git @("-C", $webgame, "diff", "--quiet", "origin/main", "--", "tools") "RTSAI-WebGame tools/ differ from origin/main"
+    if (& git -C $webgame status --porcelain -- tools) { throw "RTSAI-WebGame tools/ has uncommitted changes." }
+    $generatorCommit = (& git -C $webgame rev-parse origin/main).Trim()
+    $previousUtf8 = $env:PYTHONUTF8
+    $env:PYTHONUTF8 = "1"
+    try {
+        Invoke-Native $Python @((Join-Path $root "packaging\macos\prepare-original-art.py"), "--mod", $root, "--webgame", $webgame,
+            "--art", $OriginalArt, "--resources", $stage, "--generator-commit", $generatorCommit) "The original-art step failed"
+    } finally {
+        $env:PYTHONUTF8 = $previousUtf8
+    }
+    $verificationSupport = Join-Path $WorkDirectory "verification-support"
+    New-Item -ItemType Directory -Force -Path $verificationSupport | Out-Null
+    $previousEngineDir = $env:ENGINE_DIR; $previousSupportDir = $env:SUPPORT_DIR
+    $env:ENGINE_DIR = $stage; $env:SUPPORT_DIR = $verificationSupport
+    try {
+        foreach ($game in @("rtsai-ra2", "rtsai")) {
+            Invoke-Native (Join-Path $stage "OpenRA.Utility.exe") @($game, "--check-original-art") "$game --check-original-art failed" $stage
+        }
+    } finally {
+        $env:ENGINE_DIR = $previousEngineDir; $env:SUPPORT_DIR = $previousSupportDir
+    }
+    $originalArtRecord = [ordered]@{
+        record = (Get-FileHash -LiteralPath (Join-Path $stage "native-original-art.json") -Algorithm SHA256).Hash.ToLowerInvariant()
+        approvedManifest = (Get-FileHash -LiteralPath (Join-Path $OriginalArt "EA-INPUTS.json") -Algorithm SHA256).Hash.ToLowerInvariant()
+        generatorCommit = $generatorCommit
+    }
+}
+
 Write-Host "== $launcherName.exe launcher"
 $launcherObj = Join-Path $engine "OpenRA.WindowsLauncher\obj"
 if (Test-Path -LiteralPath $launcherObj) { Remove-Item -LiteralPath $launcherObj -Recurse -Force }
@@ -335,6 +382,7 @@ Set-Content -LiteralPath (Join-Path $OutputDirectory "SHA256SUMS.txt") -Value $s
 [ordered]@{
     version = $Version; modCommit = $modCommit; engineCommit = $engineCommit; launcherMod = $launcherMod
     mods = @($mods.Name); companion = [bool]$CompanionDirectory; companionCommit = $companionCommit; hostedAI = [bool]$HostedAI; signing = $signing
+    originalArt = $originalArtRecord
     artifacts = @($sums)
 } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $OutputDirectory "BUILD-INPUTS.json") -Encoding ASCII
 

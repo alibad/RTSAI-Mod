@@ -70,6 +70,61 @@ class OriginalArtScope(unittest.TestCase):
         once = helper['append_section'](yaml, 'Rules', 'native.yaml')
         self.assertEqual(helper['append_section'](once, 'Rules', 'native.yaml'), once)
 
+    def test_notice_fills_the_empty_prompt_line_once(self):
+        source = (HERE.parents[1] / 'mods/rtsai/chrome/mainmenu-prerelease-notification.yaml').read_text(encoding='utf-8')
+        once = helper['prompt_notice'](source)
+        line = '\t\t\tText: ' + helper['NOTICE_KEY']
+        self.assertEqual(once.splitlines().count(line), 1)
+        block = once.split('Label@PROMPT_TEXT_E:')[1].split('Button@CONTINUE_BUTTON:')[0]
+        self.assertIn(line, block)
+        self.assertEqual(helper['prompt_notice'](once), once)
+
+    def test_notice_refuses_a_prompt_line_that_says_something_else(self):
+        taken = '\t\tLabel@PROMPT_TEXT_E:\n\t\t\tX: 15\n\t\t\tText: other-key\n\t\tButton@CONTINUE_BUTTON:\n'
+        with self.assertRaisesRegex(ValueError, 'something else'):
+            helper['prompt_notice'](taken)
+
+    # The original voices: only voices, sounds and sound-only copies of death weapons may change.
+    RULES = ('^Vehicle:\n\tFireWarheadsOnDeath:\n\t\tWeapon: UnitExplode\n\t\tEmptyWeapon: UnitExplode\n'
+             'tank:\n\tInherits: ^Vehicle\n\tHealth:\n\t\tHP: 100\n\tRTSAIVoiced:\n\t\tVoiceSet: ProjectVoice\n'
+             '\tBuilding:\n\t\tBuildSounds: project.wav\n')
+    WEAPONS = 'UnitExplode:\n\tReport: boom.wav\n\tWarhead@1Dam:\n\t\tDamage: 50\n\t\tImpactSounds: hit.wav\n'
+
+    def voices(self, rules, weapons='', sets='EaTankVoice:\n\tVoices:\n\t\tSelect: ra2|web/ea/audio/vtank.wav\n'):
+        return types.SimpleNamespace(rules_nodes=E.parse(rules), weapon_nodes=E.parse(weapons), voice_nodes=E.parse(sets))
+
+    def gate(self, voices):
+        helper['sound_rules'](voices, E, [E.parse(self.RULES)], [E.parse(self.WEAPONS)], [E.parse('ProjectVoice:\n')])
+
+    def test_original_voice_and_death_sound_copy_pass(self):
+        self.gate(self.voices(
+            'tank:\n\tGrantConditionOnFaction@ea-voice:\n\t\tCondition: ea-voice\n\t\tFactions: america\n'
+            '\tRTSAIVoiced:\n\t\tRequiresCondition: !ea-voice\n'
+            '\tRTSAIVoiced@ea-voice:\n\t\tVoiceSet: EaTankVoice\n\t\tRequiresCondition: ea-voice\n'
+            '\tGrantConditionOnFaction@ea-death:\n\t\tCondition: ea-death\n\t\tFactions: america\n'
+            '\tFireWarheadsOnDeath:\n\t\tRequiresCondition: !ea-death\n'
+            '\tFireWarheadsOnDeath@ea-death:\n\t\tWeapon: ea-death-unitexplode\n\t\tEmptyWeapon: ea-death-unitexplode\n'
+            '\t\tRequiresCondition: ea-death\n'
+            '\tBuilding:\n\t\tBuildSounds: ra2|web/ea/audio/uplace.wav\n',
+            'ea-death-unitexplode:\n\tReport: ra2|web/ea/audio/gexp.wav\n\tWarhead@1Dam:\n\t\tDamage: 50\n'
+            '\t\tImpactSounds: ra2|web/ea/audio/hit.wav\n'))
+
+    def test_death_weapon_copy_with_other_damage_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'not a sound-only copy'):
+            self.gate(self.voices(
+                'tank:\n\tFireWarheadsOnDeath@ea-death:\n\t\tWeapon: ea-death-unitexplode\n\t\tEmptyWeapon: ea-death-unitexplode\n'
+                '\t\tRequiresCondition: ea-death\n',
+                'ea-death-unitexplode:\n\tReport: gexp.wav\n\tWarhead@1Dam:\n\t\tDamage: 500\n'))
+
+    def test_changed_existing_weapon_or_non_sound_field_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'Weapon changed beyond its sounds'):
+            self.gate(self.voices('tank:\n\tBuilding:\n\t\tBuildSounds: x.wav\n',
+                                  'UnitExplode:\n\tWarhead@1Dam:\n\t\tDamage: 51\n'))
+        with self.assertRaisesRegex(ValueError, 'Gameplay changed'):
+            self.gate(self.voices('tank:\n\tHealth:\n\t\tHP: 999\n'))
+        with self.assertRaisesRegex(ValueError, 'replaces a voice set'):
+            self.gate(self.voices('tank:\n\tBuilding:\n\t\tBuildSounds: x.wav\n', sets='ProjectVoice:\n'))
+
     def test_missing_power_widget_fails_instead_of_shipping_an_unused_adapter(self):
         with self.assertRaisesRegex(ValueError, 'binding is missing'):
             helper['power_widget_chrome']('Container@OTHER_PANEL:\n')
