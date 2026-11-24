@@ -40,6 +40,22 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		const int FeedPanelHeight = 356;
 		const int MaxFeedEntries = 80;
 		const int ButtonTextPadding = 6;
+
+		// The adviser card, drawn flat like the web game's co-commander card (Command Red, RTSAI-WebGame hud.css .cc-offer).
+		const int ApplyWidth = 96;
+		const int CancelSize = 30;
+		static readonly Color CardFill = Color.FromArgb(236, 24, 22, 14);
+		static readonly Color CardEdge = Color.FromArgb(140, 225, 90, 67);
+		static readonly Color Accent = Color.FromArgb(225, 90, 67);
+		static readonly Color AccentHover = Color.FromArgb(242, 117, 93);
+		static readonly Color AccentDisabled = Color.FromArgb(120, 70, 58);
+		static readonly Color InkOnAccent = Color.FromArgb(21, 23, 25);
+		static readonly Color KeycapFill = Color.FromArgb(70, 0, 0, 0);
+		static readonly Color CardText = Color.FromArgb(245, 239, 228);
+		static readonly Color CardMuted = Color.FromArgb(181, 184, 184);
+		static readonly Color CancelFill = Color.FromArgb(18, 255, 255, 255);
+		static readonly Color CancelHover = Color.FromArgb(40, 255, 255, 255);
+
 		sealed class FeedEntry
 		{
 			public readonly Widget Widget;
@@ -106,6 +122,18 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			var voiceButton = widget.Get<ButtonWidget>("VOICE_TOGGLE");
 			var feedbackButton = widget.Get<ButtonWidget>("FEEDBACK");
 			var askShortcut = widget.GetOrNull<LabelWidget>("ASK_SHORTCUT");
+
+			// The flat card (RTS games); Classic's chrome has none of these and keeps its old panel.
+			var cardFill = widget.GetOrNull<ColorBlockWidget>("CARD_FILL");
+			var cardEdges = new[] { "CARD_EDGE_TOP", "CARD_EDGE_BOTTOM", "CARD_EDGE_LEFT", "CARD_EDGE_RIGHT" };
+			var cardAccent = widget.GetOrNull<ColorBlockWidget>("CARD_ACCENT");
+			var applyFill = widget.GetOrNull<ColorBlockWidget>("APPLY_FILL");
+			var applyText = widget.GetOrNull<LabelWidget>("APPLY_TEXT");
+			var applyKeycap = widget.GetOrNull<ColorBlockWidget>("APPLY_KEYCAP");
+			var applyKeyLabel = widget.GetOrNull<LabelWidget>("APPLY_KEY");
+			var cancelFill = widget.GetOrNull<ColorBlockWidget>("CANCEL_FILL");
+			var flat = cardFill != null && cardAccent != null && applyFill != null && applyText != null
+				&& applyKeycap != null && applyKeyLabel != null && cancelFill != null;
 			if (askShortcut != null)
 				askShortcut.GetText = () => $"Hold {Binding("AIAsk")} to ask AI";
 			feedPanel = widget.Get<BackgroundWidget>("FEED_PANEL");
@@ -227,13 +255,95 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				return CompanionBridge.TryGetPendingAction(out _);
 			}
 
-			actionConfirmButton.GetText = () => actionRequestPending ? "WAIT" : "ACCEPT";
+			// Classic has no AI hotkeys: there the button just says APPLY.
+			var applyHotkey = modData.Hotkeys["AIApply"];
+			actionConfirmButton.GetText = () => actionRequestPending ? "APPLYING"
+				: applyHotkey.GetValue().IsValid() ? $"APPLY  {applyHotkey.GetValue().DisplayString()}" : "APPLY";
 			actionCancelButton.GetText = () => "CANCEL";
 			actionConfirmButton.IsVisible = HasPendingAction;
 			actionCancelButton.IsVisible = HasPendingAction;
 			actionConfirmButton.IsDisabled = () => actionRequestPending;
 			actionCancelButton.IsDisabled = () => actionRequestPending;
 			actionConfirmButton.IsHighlighted = HasPendingAction;
+			if (flat)
+			{
+				// Apply is a solid accent button with its key on it; Cancel is a quiet square X.
+				actionConfirmButton.GetText = () => "";
+				actionCancelButton.GetText = () => "X";
+				actionCancelButton.Contrast = false;
+				actionCancelButton.GetColor = () => Ui.MouseOverWidget == actionCancelButton ? CardText : CardMuted;
+				actionConfirmButton.IsHighlighted = () => false;
+				applyFill.IsVisible = applyText.IsVisible = HasPendingAction;
+				applyFill.GetColor = () => actionRequestPending ? AccentDisabled
+					: Ui.MouseOverWidget == actionConfirmButton ? AccentHover : Accent;
+				applyText.GetText = () => actionRequestPending ? "APPLYING" : "APPLY";
+				applyText.GetColor = () => InkOnAccent;
+				var keyShown = applyHotkey.GetValue().IsValid() ? applyHotkey.GetValue().DisplayString() : "";
+				applyKeycap.IsVisible = applyKeyLabel.IsVisible = () => HasPendingAction() && !actionRequestPending && keyShown.Length > 0;
+				applyKeycap.GetColor = () => KeycapFill;
+				applyKeyLabel.GetText = () => keyShown;
+				applyKeyLabel.GetColor = () => InkOnAccent;
+				cancelFill.IsVisible = HasPendingAction;
+				cancelFill.GetColor = () => Ui.MouseOverWidget == actionCancelButton ? CancelHover : CancelFill;
+				cardFill.GetColor = () => CardFill;
+				cardAccent.GetColor = () => HasPendingAction() ? Accent : threatLabel.GetColor();
+				foreach (var edge in cardEdges)
+					if (widget.GetOrNull<ColorBlockWidget>(edge) is ColorBlockWidget line)
+						line.GetColor = () => CardEdge;
+				feedToggleButton.Contrast = false;
+				feedToggleButton.GetColor = () => Ui.MouseOverWidget == feedToggleButton || feedExpanded ? CardText : CardMuted;
+				actionCancelButton.Font = "Bold";
+				statusButton.Contrast = false;
+			}
+
+			static void Place(Widget w, int x, int y, int width, int height)
+			{
+				w.Bounds.X = x;
+				w.Bounds.Y = y;
+				w.Bounds.Width = width;
+				w.Bounds.Height = height;
+			}
+
+			// Kicker top left, DETAILS top right, the message below; with an order waiting, Apply and X sit bottom right.
+			void LayoutCard(int width, int height, string state, string message)
+			{
+				Place(cardFill, 0, 0, width, height);
+				Place(cardAccent, 0, 0, 3, height);
+				var edgeBounds = new[] { (0, 0, width, 1), (0, height - 1, width, 1), (0, 0, 1, height), (width - 1, 0, 1, height) };
+				for (var i = 0; i < cardEdges.Length; i++)
+					if (widget.GetOrNull<ColorBlockWidget>(cardEdges[i]) is ColorBlockWidget line)
+						Place(line, edgeBounds[i].Item1, edgeBounds[i].Item2, edgeBounds[i].Item3, edgeBounds[i].Item4);
+
+				var detailsWidth = feedToggleButton.Bounds.Width;
+				Place(feedToggleButton, width - detailsWidth - 6, 4, detailsWidth, 18);
+				Place(threatLabel, 14, 5, width - detailsWidth - 30, 16);
+				var textRight = width - 14;
+				if (HasPendingAction())
+				{
+					var y = height - CancelSize - 10;
+					var cancelX = width - CancelSize - 10;
+					var applyX = cancelX - 8 - ApplyWidth;
+					Place(actionCancelButton, cancelX, y, CancelSize, CancelSize);
+					Place(cancelFill, cancelX, y, CancelSize, CancelSize);
+					Place(actionConfirmButton, applyX, y, ApplyWidth, CancelSize);
+					Place(applyFill, applyX, y, ApplyWidth, CancelSize);
+					Place(applyText, applyX + 12, y, ApplyWidth - 40, CancelSize);
+					Place(applyKeycap, applyX + ApplyWidth - 28, y + 6, 18, 18);
+					Place(applyKeyLabel, applyX + ApplyWidth - 28, y + 6, 18, 18);
+					textRight = applyX - 12;
+				}
+
+				Place(statusButton, 14, 22, textRight - 14, height - 22 - 8);
+				// The companion publishes "AI  •  <text>" (server.py); the card's kicker already says who speaks.
+				var text = (CompanionHudDisplay.Message(state, LocalizeShortcutMessage(message)) ?? "").Trim();
+				if (text.StartsWith("AI", StringComparison.Ordinal) && text.Length > 2)
+				{
+					var rest = text[2..].TrimStart();
+					if (rest.StartsWith('•') || rest.StartsWith('·'))
+						text = rest[1..].TrimStart();
+				}
+				displayMessage = FitToTwoLines(text, statusButton.Bounds.Width, font);
+			}
 			actionConfirmButton.OnClick = () => _ = SubmitActionAsync("confirm");
 			actionCancelButton.OnClick = () => _ = SubmitActionAsync("cancel");
 
@@ -257,18 +367,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 						Game.RunAfterTick(() => CompanionBridge.UpdateLocalStatus("action-rejected", "That proposal has expired. Ask for fresh advice."));
 						return;
 					}
+					// The panel shows the order itself: Apply sends it at once, with no second prompt.
 					var proposalId = pending.GetProperty("proposal_id").GetString();
-					var summary = pending.GetProperty("summary").GetString();
-					if (operation == "confirm")
-					{
-						var review = new TaskCompletionSource<bool>();
-						Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(modData,
-							title: "dialog-ai-proposal-title", text: "dialog-ai-proposal-review",
-							textArguments: ["summary", summary], onConfirm: () => review.TrySetResult(true),
-							confirmText: "dialog-ai-proposal-confirm", onCancel: () => review.TrySetResult(false), cancelText: "button-back"));
-						if (!await review.Task)
-							return;
-					}
 					await OpenRAAIProposalClient.ApplyAsync(uri, proposalId, operation);
 				}
 				catch (Exception e)
@@ -431,6 +531,9 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 				threatLabel.Bounds.Width = width - feedWidthButton - 36;
 				threatLabel.Bounds.Height = 20;
 				threatLabel.Align = TextAlign.Left;
+				if (flat)
+					LayoutCard(width, height, state, message);
+
 				// A numerical threat meter suggests precision we cannot promise before an observation.
 				threatTrack.IsVisible = () => false;
 				threatFill.IsVisible = () => false;
@@ -456,14 +559,15 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 			statusButton.GetText = () => displayMessage;
 			statusButton.IsHighlighted = () => feedExpanded;
-			threatLabel.GetText = () => CompanionBridge.TryGetThreat(out _, out var level, out var reason) && !string.IsNullOrWhiteSpace(reason)
+			threatLabel.GetText = () => HasPendingAction() ? "RECOMMENDED ORDER"
+				: CompanionBridge.TryGetThreat(out _, out var level, out var reason) && !string.IsNullOrWhiteSpace(reason)
 				? $"ADVISER / {level.ToUpperInvariant()}" : "ADVISER";
 			threatTrack.GetColor = () => Color.FromArgb(62, 66, 72);
 			threatFill.GetColor = () => CompanionBridge.TryGetThreat(out _, out var level, out _)
 				? ThreatColor(level)
 				: Color.LightGreen;
-			threatLabel.GetColor = () => CompanionBridge.TryGetThreat(out _, out var level, out _)
-				? ThreatColor(level)
+			threatLabel.GetColor = () => flat && HasPendingAction() ? Accent
+				: CompanionBridge.TryGetThreat(out _, out var level, out _) ? ThreatColor(level)
 				: Color.LightGreen;
 			statusButton.GetColor = () => Color.White;
 		}

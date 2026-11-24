@@ -12,6 +12,7 @@ Container@INGAME_ROOT:
 				MuteAudioKey: ToggleMute
 				AskKey: AIAsk
 				AcceptKey: AIAccept
+				ApplyKey: AIApply
 				RejectKey: AIReject
 				ToggleAutoKey: AIToggleAuto
 				ToggleVoiceKey: AIToggleVoice

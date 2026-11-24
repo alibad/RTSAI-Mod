@@ -21,7 +21,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.RTSAI.Widgets.Logic
 {
-	[ChromeLogicArgsHotkeys("AskKey", "AcceptKey", "RejectKey", "ToggleAutoKey", "ToggleVoiceKey")]
+	[ChromeLogicArgsHotkeys("AskKey", "AcceptKey", "ApplyKey", "RejectKey", "ToggleAutoKey", "ToggleVoiceKey")]
 	public sealed class AIHotkeyLogic : ChromeLogic
 	{
 		[FluentReference]
@@ -66,6 +66,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 		readonly ModData modData;
 		readonly HotkeyReference askKey;
 		readonly HotkeyReference acceptKey;
+		readonly HotkeyReference applyKey;
 		readonly HotkeyReference rejectKey;
 		readonly HotkeyReference toggleAutoKey;
 		readonly HotkeyReference toggleVoiceKey;
@@ -81,6 +82,7 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			this.modData = modData;
 			askKey = Resolve(modData, logicArgs, "AskKey");
 			acceptKey = Resolve(modData, logicArgs, "AcceptKey");
+			applyKey = Resolve(modData, logicArgs, "ApplyKey");
 			rejectKey = Resolve(modData, logicArgs, "RejectKey");
 			toggleAutoKey = Resolve(modData, logicArgs, "ToggleAutoKey");
 			toggleVoiceKey = Resolve(modData, logicArgs, "ToggleVoiceKey");
@@ -127,6 +129,11 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 
 			if (acceptKey.IsActivatedBy(e))
 				return StartOperation(() => ProposalAsync("confirm"));
+
+			// J, as on the web: one key applies the recommended order shown in the adviser panel.
+			// With no order waiting the key is left to the game.
+			if (applyKey.IsActivatedBy(e) && CompanionBridge.TryGetPendingAction(out _))
+				return e.IsRepeat || StartOperation(() => ProposalAsync("confirm"));
 			if (rejectKey.IsActivatedBy(e))
 				return StartOperation(() => ProposalAsync("cancel"));
 			if (toggleAutoKey.IsActivatedBy(e))
@@ -309,17 +316,8 @@ namespace OpenRA.Mods.RTSAI.Widgets.Logic
 			var proposalId = id.GetString();
 			if (string.IsNullOrEmpty(proposalId))
 				return;
-			var summary = pending.GetProperty("summary").GetString();
-			if (action == "cancel")
-			{
-				await OpenRAAIProposalClient.ApplyAsync(baseUri, proposalId, action);
-				return;
-			}
-			Game.RunAfterTick(() => ConfirmationDialogs.ButtonPrompt(modData,
-				title: "dialog-ai-proposal-title", text: "dialog-ai-proposal-review",
-				textArguments: ["summary", summary],
-				onConfirm: () => StartOperation(() => OpenRAAIProposalClient.ApplyAsync(baseUri, proposalId, "confirm")),
-				confirmText: "dialog-ai-proposal-confirm", onCancel: () => { }, cancelText: "button-back"));
+			// The adviser panel already shows the order: the key applies it at once, with no second prompt.
+			await OpenRAAIProposalClient.ApplyAsync(baseUri, proposalId, action);
 		}
 
 		static async Task PostAsync(string path)

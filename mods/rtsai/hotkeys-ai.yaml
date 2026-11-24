@@ -5,6 +5,11 @@ AIAsk: SPACE Ctrl
 	Platform:
 		OSX: SPACE Alt
 
+AIApply: J
+	Description: hotkey-description-ai-apply
+	Types: AIAssistant
+	Contexts: player, spectator
+
 AIAccept: RETURN Ctrl
 	Description: hotkey-description-ai-accept
 	Types: AIAssistant

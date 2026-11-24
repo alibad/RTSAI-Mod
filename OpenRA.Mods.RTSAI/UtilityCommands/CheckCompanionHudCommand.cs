@@ -34,8 +34,9 @@ namespace OpenRA.Mods.RTSAI.UtilityCommands
 				var (x, width, height) = CompanionHudDisplay.Layout(viewport, pending);
 				if (x < 16 || x + width > viewport - 250 - 16 || width > 540 || width < 300 || height < 60)
 					throw new InvalidDataException("Adviser controls overlap the sidebar or leave the battlefield.");
-				if (pending && height < 100)
-					throw new InvalidDataException("Pending orders have no dedicated review row.");
+				// The order's Apply and Cancel sit beside its text, below the kicker row (CompanionStatusLogic.LayoutCard).
+				if (pending && height < 70)
+					throw new InvalidDataException("Pending orders have no room for Apply and Cancel.");
 			}
 			const string unavailable = "AI ALERTS ONLY  •  AI GATEWAY NOT RUNNING";
 			if (CompanionHudDisplay.Message("ready:normal", unavailable) != unavailable)

@@ -16,9 +16,23 @@ Container@PLAYER_WIDGETS:
 			Y: 8
 			Width: 430
 			Height: 30
-			Background: dialog4
+			Background:
 			ClickThrough: false
 			Children:
+				ColorBlock@CARD_FILL:
+				ColorBlock@CARD_ACCENT:
+				ColorBlock@CARD_EDGE_TOP:
+				ColorBlock@CARD_EDGE_BOTTOM:
+				ColorBlock@CARD_EDGE_LEFT:
+				ColorBlock@CARD_EDGE_RIGHT:
+				ColorBlock@APPLY_FILL:
+				Label@APPLY_TEXT:
+					Font: Bold
+				ColorBlock@APPLY_KEYCAP:
+				Label@APPLY_KEY:
+					Font: TinyBold
+					Align: Center
+				ColorBlock@CANCEL_FILL:
 				Label@ASK_SHORTCUT:
 					X: 8
 					Y: 30
@@ -55,6 +69,7 @@ Container@PLAYER_WIDGETS:
 					Background:
 					VisualHeight: 0
 				Button@FEED_TOGGLE:
+					Background:
 					X: PARENT_WIDTH - 136
 					Y: 4
 					Width: 34
@@ -72,6 +87,7 @@ Container@PLAYER_WIDGETS:
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 				Button@ACTION_CONFIRM:
+					Background:
 					Y: 4
 					Width: 76
 					Height: 22
@@ -79,6 +95,7 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Visible: false
 				Button@ACTION_CANCEL:
+					Background:
 					Y: 4
 					Width: 58
 					Height: 22

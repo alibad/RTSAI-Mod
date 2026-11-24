@@ -21,7 +21,7 @@ namespace OpenRA.Mods.RTSAI.Companion
 		{
 			var battlefield = Math.Max(1, viewportWidth - 250);
 			var width = Math.Min(540, Math.Max(1, battlefield - 32));
-			return (Math.Max(16, (battlefield - width) / 2), width, pending ? 100 : 64);
+			return (Math.Max(16, (battlefield - width) / 2), width, pending ? 72 : 60);
 		}
 
 		public static string Message(string state, string message)

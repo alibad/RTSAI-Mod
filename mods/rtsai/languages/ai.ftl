@@ -42,6 +42,7 @@ dialog-ai-voice-setup-unsupported =
     Local voice input is unavailable in this build.
     Choose a cloud listening model under Settings > AI > Voice.
 hotkey-description-ai-accept = Accept the pending AI action
+hotkey-description-ai-apply = Apply the AI's recommended order
 hotkey-description-ai-ask = Hold to ask the AI
 hotkey-description-ai-reject = Reject the pending AI action
 hotkey-description-ai-toggle-auto = Toggle AI AUTO mode
